@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="design_doc_mode" content="canvas">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+</style>
+</helmet>
+
+<div style="position:absolute;left:0;top:0;width:380px">
+  <div data-drags-parent="1" style="font:500 13px 'Geist Mono',monospace;color:#7a6f57;margin-bottom:14px">01 — Primary mark</div>
+  <div style="background:#ece2cb;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:46px;display:flex;align-items:center;justify-content:center">
+    <svg width="220" height="220" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/>
+      <polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/>
+      <line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/>
+      <line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/>
+      <path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="16" cy="29" r="2.6" fill="#2f5436"/>
+      <path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/>
+      <path d="M30 27 q1.6 2.4 0 3.6 q-1.6 -1.2 0 -3.6 Z" fill="#3a6b8f"/>
+      <path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/>
+      <ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/>
+      <ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/>
+    </svg>
+  </div>
+</div>
+
+<div style="position:absolute;left:440px;top:0;width:380px">
+  <div data-drags-parent="1" style="font:500 13px 'Geist Mono',monospace;color:#7a6f57;margin-bottom:14px">02 — App icon</div>
+  <div style="background:#ece2cb;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:46px;display:flex;align-items:center;justify-content:center">
+    <div style="width:220px;height:220px;border-radius:48px;background:#2f5436;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(34,28,16,.18)">
+      <svg width="150" height="150" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M37 13 Q33 19 30 25" stroke="#cdbfa0" stroke-width="1.3" stroke-linecap="round"/>
+        <polygon points="46,3 55,13 46,23 37,13" fill="#dca85b"/>
+        <line x1="46" y1="3" x2="46" y2="23" stroke="#2f5436" stroke-width="1.3"/>
+        <line x1="37" y1="13" x2="55" y2="13" stroke="#2f5436" stroke-width="1.3"/>
+        <path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#dca85b" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#ece2cb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="16" cy="29" r="2.6" fill="#ece2cb"/>
+        <path d="M16 31 L16 40" stroke="#ece2cb" stroke-width="4" stroke-linecap="round"/>
+        <path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#ece2cb"/>
+        <ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#cdbfa0"/>
+        <ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#2f5436"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div style="position:absolute;left:880px;top:0;width:380px">
+  <div data-drags-parent="1" style="font:500 13px 'Geist Mono',monospace;color:#7a6f57;margin-bottom:14px">03 — Mono / line</div>
+  <div style="background:#ece2cb;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:46px;display:flex;align-items:center;justify-content:center">
+    <svg width="220" height="220" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#221c10" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M37 13 Q33 19 30 25" stroke-width="1.6"/>
+      <polygon points="46,3 55,13 46,23 37,13"/>
+      <line x1="46" y1="3" x2="46" y2="23" stroke-width="1.6"/>
+      <line x1="37" y1="13" x2="55" y2="13" stroke-width="1.6"/>
+      <path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke-width="1.6"/>
+      <path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke-width="3"/>
+      <circle cx="15.6" cy="29" r="2.6"/>
+      <path d="M16 31 L16 40" stroke-width="3"/>
+      <path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z"/>
+      <ellipse cx="26" cy="40" rx="18" ry="4.6"/>
+    </svg>
+  </div>
+</div>
+
+<div style="position:absolute;left:0;top:430px;width:720px">
+  <div data-drags-parent="1" style="font:500 13px 'Geist Mono',monospace;color:#7a6f57;margin-bottom:14px">04 — Horizontal lockup</div>
+  <div style="background:#ece2cb;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:46px 50px;display:flex;align-items:center;gap:22px">
+    <svg width="74" height="74" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+      <path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/>
+      <polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/>
+      <line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/>
+      <line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/>
+      <path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="16" cy="29" r="2.6" fill="#2f5436"/>
+      <path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/>
+      <path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/>
+      <ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/>
+      <ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/>
+    </svg>
+    <div>
+      <div style="font:800 40px 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;line-height:1"><span style="color:#2f5436">Kite</span>Sink</div>
+      <div style="font:500 12px 'Geist Mono',monospace;letter-spacing:.14em;color:#8a7a58;margin-top:6px;text-transform:uppercase">A one-person studio · kitesink.co</div>
+    </div>
+  </div>
+</div>
+
+<div style="position:absolute;left:780px;top:430px;width:480px">
+  <div data-drags-parent="1" style="font:500 13px 'Geist Mono',monospace;color:#7a6f57;margin-bottom:14px">05 — Small sizes &amp; favicon</div>
+  <div style="background:#ece2cb;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:40px;display:flex;align-items:flex-end;gap:34px">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#2f5436"/><path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/>
+      </svg>
+      <span style="font:500 11px 'Geist Mono',monospace;color:#8a7a58">56px</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <div style="width:40px;height:40px;border-radius:9px;background:#2f5436;display:flex;align-items:center;justify-content:center">
+        <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="46,3 55,13 46,23 37,13" fill="#dca85b"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#dca85b" stroke-width="1.6" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#ece2cb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#ece2cb"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#cdbfa0"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#2f5436"/>
+        </svg>
+      </div>
+      <span style="font:500 11px 'Geist Mono',monospace;color:#8a7a58">40px</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <div style="width:24px;height:24px;border-radius:6px;background:#2f5436;display:flex;align-items:center;justify-content:center">
+        <svg width="17" height="17" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="46,3 55,13 46,23 37,13" fill="#dca85b"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#ece2cb" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#ece2cb"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#2f5436"/>
+        </svg>
+      </div>
+      <span style="font:500 11px 'Geist Mono',monospace;color:#8a7a58">24px</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

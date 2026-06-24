@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:#e7d9b9;font-family:Georgia,'Times New Roman',serif;color:#2c2418;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:#b98a2e;color:#f5eedb}
+  img{display:block}
+  @keyframes ctToast{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+  @keyframes ctPin{0%,100%{transform:translate(-50%,-100%)}50%{transform:translate(-50%,-118%)}}
+  @keyframes ctFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  @keyframes ctBlink{0%,55%{opacity:1}56%,100%{opacity:0}}
+  @keyframes ctRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div style="overflow-x:hidden">
+
+<!-- ===================== NAV ===================== -->
+<nav style="position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 22px;background:rgba(31,48,36,0.96);border-bottom:2px solid #163024;box-shadow:0 2px 14px rgba(15,12,6,0.35);flex-wrap:wrap">
+  <a href="#top" style="display:flex;align-items:center;gap:9px;color:#f5eedb">
+    <span style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:14px solid #e0b35c"></span>
+    <span style="font-family:Georgia,serif;font-weight:bold;font-size:16px;letter-spacing:1px">CAMPGROUND <span style="color:#e0b35c">TYCOON</span></span>
+  </a>
+  <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+    <a href="#demo" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Demo</a>
+    <a href="#regions" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Regions</a>
+    <a href="#guests" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Guests</a>
+    <a href="#seasons" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Seasons</a>
+    <div style="display:flex;align-items:center;gap:5px;margin-left:8px;padding:3px;background:rgba(245,238,219,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:9px">
+      <span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#728a6e;padding:0 4px;text-transform:uppercase">Look</span>
+      <button onClick="{{ setHeroA }}" style="{{ heroBtnAStyle }}">Almanac</button>
+      <button onClick="{{ setHeroB }}" style="{{ heroBtnBStyle }}">Nightfall</button>
+    </div>
+    <a href="#wishlist" style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:12px;letter-spacing:.5px;color:#2c1f08;background:linear-gradient(180deg,#e0b35c,#b98a2e);border:1px solid #8a6620;border-bottom-width:3px;padding:7px 15px;border-radius:8px;margin-left:4px">Wishlist</a>
+  </div>
+</nav>
+
+<div id="top"></div>
+
+<!-- ===================== HERO A — ALMANAC ===================== -->
+<sc-if value="{{ heroIsA }}" hint-placeholder-val="{{ true }}">
+<section style="position:relative;background:radial-gradient(ellipse 120% 90% at 70% 0%,#f0e4c4 0%,#e7d9b9 45%,#dcc99f 100%);padding:64px 24px 70px;overflow:hidden">
+  <div style="position:absolute;inset:0;opacity:0.35;background:repeating-linear-gradient(0deg,transparent 0 38px,rgba(120,95,50,0.06) 38px 39px);pointer-events:none"></div>
+  <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;gap:48px;align-items:center;flex-wrap:wrap">
+    <div style="flex:1;min-width:330px">
+      <div style="font-family:ui-monospace,Menlo,monospace;color:#b98a2e;font-size:12px;letter-spacing:6px;margin-bottom:10px">— EST. TODAY · POP. YOU —</div>
+      <h1 style="font-family:Georgia,serif;font-size:clamp(44px,6.4vw,78px);line-height:0.98;letter-spacing:1px;color:#2c2418;text-shadow:0 2px 0 rgba(255,255,255,0.4)">CAMPGROUND<br><span style="color:#b98a2e">TYCOON</span></h1>
+      <p style="font-family:Georgia,serif;font-style:italic;font-size:20px;line-height:1.5;color:#5f5036;max-width:480px;margin:18px 0 8px">Buy a scrap of wilderness. Pitch a few tents. Keep the campers happy through four fickle seasons — and try not to go broke before the leaves turn.</p>
+      <p style="font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#8a795a;letter-spacing:.3px;max-width:460px;margin-bottom:26px">A cozy isometric tycoon sim. 15 regions, procedural land, weather, anglers, hunters &amp; leaf-peepers — and a deeply chunky CRT booking terminal.</p>
+      <div style="{{ ctaRowStyle }}">{{ ctaButtons }}</div>
+      <a href="#demo" style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#2f4836;border-bottom:2px solid #b98a2e;padding-bottom:2px">▶ Play the demo right here — no download</a>
+    </div>
+    <div style="flex:0 0 auto;width:min(440px,92vw);position:relative;animation:ctFloat 7s ease-in-out infinite">
+      <div style="position:absolute;left:50%;top:-26px;transform:translate(-50%,-100%);z-index:4;animation:ctPin 3.2s ease-in-out infinite">
+        <div style="width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e8c876,#b98a2e 62%,#7e5d18);box-shadow:0 10px 0 -5px #7e5d18,0 5px 9px rgba(0,0,0,0.45)"></div>
+      </div>
+      <div style="background:linear-gradient(168deg,#f7f1e1,#efe5cc);border:1px solid #b3996b;border-radius:6px;padding:14px 14px 16px;box-shadow:0 1px 0 rgba(255,255,255,0.5) inset,0 22px 50px rgba(20,14,6,0.4);transform:rotate(-1.4deg)">
+        <div style="position:absolute;left:50%;top:6px;transform:translateX(-50%) rotate(-2deg);width:110px;height:22px;background:rgba(185,138,46,0.32);border:1px dashed rgba(138,102,32,0.5)"></div>
+        <img src="site_assets/season_fall.png" alt="New England in fall" style="width:100%;border-radius:3px;image-rendering:pixelated;border:3px solid #5a4f3c;box-shadow:0 0 0 5px #8f8266"/>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:11px;padding:0 2px">
+          <span style="font-family:Georgia,serif;font-weight:bold;font-size:17px;color:#1f3024">New England · Fall</span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;letter-spacing:1px">DAY 41 · ★4.6</span>
+        </div>
+        <div style="font-family:Georgia,serif;font-style:italic;font-size:13px;color:#5f5036;margin-top:3px;padding:0 2px">"Leaf-peepers everywhere. Best week we've ever booked."</div>
+      </div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<!-- ===================== HERO B — NIGHTFALL ===================== -->
+<sc-if value="{{ heroIsB }}" hint-placeholder-val="{{ false }}">
+<section style="position:relative;min-height:640px;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 24px;background:linear-gradient(180deg,rgba(12,17,13,0.25),rgba(12,17,13,0.78)),url(site_assets/picker_bg.png) center 40%/cover no-repeat,#0c110d;overflow:hidden">
+  <div style="position:relative;max-width:780px">
+    <div style="font-family:ui-monospace,Menlo,monospace;color:#e0b35c;font-size:12px;letter-spacing:7px;margin-bottom:14px;text-shadow:0 1px 6px rgba(0,0,0,0.6)">A COZY WILDERNESS TYCOON</div>
+    <h1 style="font-family:Georgia,serif;font-size:clamp(46px,8vw,96px);line-height:0.96;letter-spacing:2px;color:#f5eedb;text-shadow:0 3px 0 rgba(0,0,0,0.5),0 0 50px rgba(224,179,92,0.28)">CAMPGROUND<br><span style="color:#e0b35c">TYCOON</span></h1>
+    <p style="font-family:Georgia,serif;font-style:italic;font-size:21px;line-height:1.5;color:#cfe0c8;max-width:560px;margin:22px auto 30px;text-shadow:0 1px 8px rgba(0,0,0,0.7)">Out past the firelight, your little park is filling up. Plant your flag, build the grounds, and keep the campers coming back season after season.</p>
+    <div style="display:flex;justify-content:center;{{ ctaRowStyle }}">{{ ctaButtons }}</div>
+    <a href="#demo" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#e7eede;border:1px solid rgba(245,238,219,0.4);border-radius:8px;padding:9px 16px;background:rgba(20,16,10,0.35)">▶ Play the demo right here — no download</a>
+  </div>
+  <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:2px;color:#728a6e">SCROLL TO MAKE CAMP ↓</div>
+</section>
+</sc-if>
+
+<!-- ===================== CORE LOOP ===================== -->
+<section style="background:#1f3024;padding:54px 24px;color:#e7eede">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:38px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">THE LOOP</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);color:#f5eedb">Dirt today. Cabins by fall.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px">
+      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 01</div>
+        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Plant your flag</div>
+        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Pick from 15 regions across a folded park map. Each one rolls a fresh, procedurally-generated plot of water, forest, prairie &amp; hills.</p>
+      </div>
+      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 02</div>
+        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Build the grounds</div>
+        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Clear plots and pitch tents, RV pads and cabins. Plant flower beds, set lamp posts, and watch your beauty score climb.</p>
+      </div>
+      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 03</div>
+        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Keep guests happy</div>
+        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Check campers in, clean up, fix what breaks, shoo the bears. Anglers want water; hunters want quiet; sightseers want it pretty.</p>
+      </div>
+      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 04</div>
+        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Survive the seasons</div>
+        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Ride the fall goldrush, then bank cash for the winter dead-zone. Weather, reviews and demand all turn with the calendar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEMO ===================== -->
+<section id="demo" style="background:linear-gradient(180deg,#e7d9b9,#dcc99f);padding:56px 24px 64px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:30px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">PLAYABLE DEMO</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#2c2418">Build a campground right now</h2>
+      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#5f5036;max-width:560px;margin:10px auto 0">Pick a tool, click the open plots, and watch the campers — and the cash — roll in. Change the season to see the whole park turn.</p>
+    </div>
+
+    <div style="background:linear-gradient(168deg,#d8cfb8,#c4b89c);border-radius:18px;padding:14px;box-shadow:0 26px 64px rgba(0,0,0,0.4),0 2px 0 rgba(255,255,255,0.5) inset">
+      <div style="background:#f5eedb;border:3px solid #5a4f3c;border-radius:10px;box-shadow:0 0 0 6px #8f8266,0 10px 26px rgba(0,0,0,0.25) inset;overflow:hidden">
+
+        <!-- HUD -->
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;background:#1f3024;padding:10px 14px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <div style="display:flex;flex-direction:column;background:rgba(245,238,219,0.1);border-radius:8px;padding:6px 12px;min-width:96px">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#9fb89b">CASH</span>
+              <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:18px;color:#e0b35c">{{ cashLabel }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;background:rgba(245,238,219,0.1);border-radius:8px;padding:6px 12px;min-width:80px">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#9fb89b">RATING</span>
+              <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:18px;color:#f5eedb">★ {{ ratingLabel }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;background:rgba(245,238,219,0.1);border-radius:8px;padding:6px 12px;min-width:120px">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#9fb89b">BEAUTY · {{ beautyNum }}</span>
+              <div style="margin-top:4px;height:7px;background:rgba(0,0,0,0.3);border-radius:4px;overflow:hidden"><div style="{{ beautyBarStyle }}"></div></div>
+            </div>
+            <div style="display:flex;flex-direction:column;background:rgba(245,238,219,0.1);border-radius:8px;padding:6px 12px;min-width:80px">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#9fb89b">GUESTS</span>
+              <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:18px;color:#f5eedb">{{ guests }}</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:3px;background:rgba(0,0,0,0.22);border-radius:8px;padding:3px">{{ seasonChips }}</div>
+        </div>
+
+        <!-- board + toasts -->
+        <div style="position:relative;padding:24px 12px 18px;background:radial-gradient(ellipse 80% 70% at 50% 40%,rgba(31,48,36,0.06),transparent)">
+          <div style="overflow-x:auto;display:flex;justify-content:center">
+            <div style="position:relative;width:516px;height:284px;flex:0 0 auto">
+              <sc-for list="{{ tiles }}" as="t" hint-placeholder-count="36">
+                <button onClick="{{ t.onClick }}" style="{{ t.diamondStyle }}" style-hover="filter:brightness(1.08)"></button>
+              </sc-for>
+              <sc-for list="{{ tiles }}" as="t" hint-placeholder-count="36">
+                <div style="{{ t.spriteWrap }}">{{ t.sprite }}</div>
+              </sc-for>
+            </div>
+          </div>
+          <!-- toasts -->
+          <div style="position:absolute;left:14px;bottom:14px;display:flex;flex-direction:column-reverse;gap:6px;max-width:320px;pointer-events:none;z-index:500">
+            <sc-for list="{{ toasts }}" as="n" hint-placeholder-count="0">
+              <div style="{{ n.style }}">{{ n.text }}</div>
+            </sc-for>
+          </div>
+        </div>
+
+        <!-- toolbar -->
+        <div style="background:#efe5cc;border-top:1px solid #cdb685;padding:12px 14px">
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:2px;color:#8a795a;margin-bottom:8px">BUILD MENU — click a plot to place</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ tools }}" as="tool" hint-placeholder-count="6">
+              <button onClick="{{ tool.onSelect }}" style="{{ tool.btnStyle }}">
+                <span style="font-family:Georgia,serif;font-weight:bold;font-size:14px">{{ tool.name }}</span>
+                <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;{{ tool.costColor }}">{{ tool.costLabel }}</span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:11px;flex-wrap:wrap">
+            <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a">Sites earn money as guests check in · Beauty &amp; sites lift your rating</div>
+            <button onClick="{{ resetDemo }}" style="font-family:ui-monospace,Menlo,monospace;font-size:11px;padding:6px 14px;border-radius:7px;border:1px solid #b3996b;background:#f5eedb;color:#5f5036;cursor:pointer">↺ Reset park</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:12px;letter-spacing:.5px">A taste of the loop — the full game adds staff, loans, weather events, wildlife &amp; the booking terminal.</div>
+  </div>
+</section>
+
+<!-- ===================== REGIONS ===================== -->
+<section id="regions" style="background:#26392c;padding:56px 24px 64px;color:#e7eede">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:30px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">THE FOLDED PARK MAP</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#f5eedb">Fifteen regions. Pick your fight.</h2>
+      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#b9c9b3;max-width:600px;margin:10px auto 0">From the gentle Smokies to the brutal Montana fall crunch — every region mixes its own guests, terrain and difficulty. Click a pin.</p>
+    </div>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:stretch">
+      <div style="flex:1;min-width:320px;position:relative;border-radius:14px;overflow:hidden;background:#e3d2a6 url(site_assets/usa_map.png) center/cover no-repeat;border:1px solid #b3996b;box-shadow:0 16px 40px rgba(10,8,4,0.4),0 1px 0 rgba(255,255,255,0.4) inset;min-height:430px">
+        <div style="position:absolute;left:18px;top:16px;font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:3px;color:#8a6620">UNITED STATES · CAMPGROUNDS &amp; COUNTRY</div>
+        <sc-for list="{{ regionPins }}" as="p" hint-placeholder-count="15">
+          <button onClick="{{ p.onClick }}" style="{{ p.style }}">
+            <span style="{{ p.dotStyle }}"></span>
+            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">{{ p.abbr }}</span>
+          </button>
+        </sc-for>
+      </div>
+      <div style="flex:0 0 360px;max-width:100%;background:linear-gradient(168deg,#f7f1e1,#efe5cc);border-radius:14px;border:1px solid #b3996b;border-top:5px solid #2f4836;padding:20px 20px 22px;color:#2c2418;box-shadow:0 12px 30px rgba(10,8,4,0.3)">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
+          <div>
+            <div style="font-family:Georgia,serif;font-size:26px;font-weight:bold;line-height:1;color:#1f3024">{{ regName }}</div>
+            <div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1.5px;color:#8a6620;text-transform:uppercase;margin-top:4px">{{ regState }}</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-family:ui-monospace,Menlo,monospace;font-size:8px;letter-spacing:1px;color:#8a795a">DIFFICULTY</div>
+            <div style="display:flex;gap:3px;justify-content:flex-end;margin-top:3px">
+              <sc-for list="{{ diffDots }}" as="d" hint-placeholder-count="4">
+                <span style="{{ d.style }}"></span>
+              </sc-for>
+            </div>
+            <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b5642a;margin-top:3px">{{ diffLabel }}</div>
+          </div>
+        </div>
+
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#8a795a;margin:18px 0 8px">WHO SHOWS UP</div>
+        <sc-for list="{{ mixBars }}" as="m" hint-placeholder-count="2">
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px">
+            <span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">{{ m.name }}</span>
+            <div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="{{ m.barStyle }}"></div></div>
+          </div>
+        </sc-for>
+
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#8a795a;margin:16px 0 8px">TERRAIN TENDENCY</div>
+        <sc-for list="{{ terrBars }}" as="t" hint-placeholder-count="4">
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px">
+            <span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">{{ t.name }}</span>
+            <div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="{{ t.barStyle }}"></div></div>
+          </div>
+        </sc-for>
+
+        <p style="font-family:Georgia,serif;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2a;margin-top:16px">{{ regBlurb }}</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:18px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#9fb89b">
+      <span style="color:#728a6e;letter-spacing:1px">DOMINANT DRAW:</span>
+      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#2f6d7a;display:inline-block"></i>Fishing</span>
+      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#b5642a;display:inline-block"></i>Hunting</span>
+      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#5e7d45;display:inline-block"></i>Hiking</span>
+      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#b98a2e;display:inline-block"></i>Tourism</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GUESTS ===================== -->
+<section id="guests" style="background:#e7d9b9;padding:56px 24px 60px">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:34px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">FOUR KINDS OF CAMPER</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#2c2418">Everybody wants something different</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #b98a2e;border-radius:12px;padding:20px">
+        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Sightseers</div>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b98a2e;letter-spacing:1px;margin:2px 0 12px">PEAK: SUMMER → FALL</div>
+        <p style="font-size:14px;line-height:1.55;color:#5f5036">Want the grounds <b>beautiful</b>. Tip big when it's pretty and swoon over the elk — neglect your beauty score and they'll let you hear about it.</p>
+      </div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #2f6d7a;border-radius:12px;padding:20px">
+        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Anglers</div>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#2f6d7a;letter-spacing:1px;margin:2px 0 12px">PEAK: SPRING → SUMMER</div>
+        <p style="font-size:14px;line-height:1.55;color:#5f5036">Want a site <b>near water</b> and a short walk to the lakeshore. No lake on the rolled map? Expect sour reviews.</p>
+      </div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #b5642a;border-radius:12px;padding:20px">
+        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Hunters</div>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b5642a;letter-spacing:1px;margin:2px 0 12px">PEAK: FALL</div>
+        <p style="font-size:14px;line-height:1.55;color:#5f5036">Want <b>quiet wooded-edge</b> sites and pay the most. Arrive in a huge fall wave, tolerate rough grounds — then vanish for the year.</p>
+      </div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #5e7d45;border-radius:12px;padding:20px">
+        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Backpackers</div>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#5e7d45;letter-spacing:1px;margin:2px 0 12px">PEAK: SUMMER</div>
+        <p style="font-size:14px;line-height:1.55;color:#5f5036">Low nightly rate, <b>high volume</b>, forgiving. Want trailhead sites and rent from the gear shack. Build it and they will come.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SEASONS ===================== -->
+<section id="seasons" style="background:#1f3024;padding:56px 24px 62px;color:#e7eede">
+  <div style="max-width:1080px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:28px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">SIX DAYS A SEASON · FOUR SEASONS A YEAR</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#f5eedb">The whole park turns with the calendar</h2>
+    </div>
+    <div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin-bottom:18px">{{ seasonTabs }}</div>
+    <div style="background:linear-gradient(168deg,#d8cfb8,#c4b89c);border-radius:16px;padding:12px;box-shadow:0 22px 50px rgba(0,0,0,0.4)">
+      {{ seasonShotImg }}
+    </div>
+    <div style="text-align:center;font-family:Georgia,serif;font-style:italic;font-size:17px;color:#cfe0c8;margin-top:16px">{{ seasonShotCaption }}</div>
+  </div>
+</section>
+
+<!-- ===================== TERMINAL ===================== -->
+<section style="background:#e7d9b9;padding:56px 24px 60px">
+  <div style="max-width:1180px;margin:0 auto;display:flex;gap:44px;align-items:center;flex-wrap:wrap">
+    <div style="flex:1;min-width:300px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">RANGEMASTER 2000™</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);color:#2c2418;line-height:1.05">Run the whole park from one delightfully chunky CRT</h2>
+      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#5f5036;margin:14px 0 18px">CAMP·OS v2.4 boots up with a satisfying hum. Reply to reviews, slide your nightly rates, buy upgrades, hire staff and take out loans — all in glorious amber-and-scanline.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F1 Reviews</span>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F2 Pricing</span>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F3 Shop</span>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F5 Staff</span>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F6 Front Desk</span>
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F7 Bank</span>
+      </div>
+    </div>
+    <div style="flex:0 0 auto;width:min(460px,92vw)">
+      <div style="background:linear-gradient(168deg,#d8cfb8,#b0a384);border-radius:18px;padding:18px;box-shadow:0 26px 64px rgba(0,0,0,0.45),0 2px 0 rgba(255,255,255,0.5) inset">
+        <img src="site_assets/region_board.png" alt="CAMP·OS terminal" style="width:100%;border-radius:8px;border:3px solid #5a4f3c;box-shadow:0 0 0 6px #8f8266"/>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6e6248;letter-spacing:2px">
+          <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#7adf6a;box-shadow:0 0 7px #7adf6a;vertical-align:-1px;margin-right:6px"></span>PWR</span>
+          <span style="font-weight:bold">RANGEMASTER 2000</span>
+          <span style="width:90px;height:8px;background:repeating-linear-gradient(90deg,#a4977a 0 5px,transparent 5px 9px);border-radius:3px"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section style="background:#dcc99f;padding:54px 24px 58px">
+  <div style="max-width:1080px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:30px">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">FROM THE GUEST BOOK</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);color:#2c2418">★ ★ ★ ★ ☆ &nbsp;4.6 / 5</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,0.12)">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#e8b93c;margin-bottom:6px">★★★★★</div>
+        <p style="font-size:15px;line-height:1.5;color:#2c2418">"Bought a swamp in Louisiana, accidentally got attached to a fictional bear. Sent the kids to bed an hour ago. Send help."</p>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:10px">— Park Ranger, 41 hrs played</div>
+      </div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,0.12)">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#e8b93c;margin-bottom:6px">★★★★★</div>
+        <p style="font-size:15px;line-height:1.5;color:#2c2418">"The fall foliage week is genuinely the most stressful and most beautiful thing in any tycoon game I've played. The CRT terminal is *chef's kiss*."</p>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:10px">— Backpacker_Bex, 120 hrs played</div>
+      </div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,0.12)">
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#e8b93c;margin-bottom:6px">★★★★☆</div>
+        <p style="font-size:15px;line-height:1.5;color:#2c2418">"Picked Montana for my first park. Got buried in snow with two tents and a loan. Ten out of ten, restarting in Tennessee like a coward."</p>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:10px">— firsttimekeeper, 8 hrs played</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section id="wishlist" style="position:relative;padding:80px 24px;text-align:center;background:linear-gradient(180deg,rgba(12,17,13,0.35),rgba(12,17,13,0.82)),url(site_assets/picker_bg.png) center 55%/cover no-repeat,#0c110d;color:#f5eedb">
+  <div style="position:relative;max-width:680px;margin:0 auto">
+    <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:5px;color:#e0b35c;margin-bottom:12px">COMING 2026</div>
+    <h2 style="font-family:Georgia,serif;font-size:clamp(32px,5.4vw,56px);line-height:1.02;text-shadow:0 2px 0 rgba(0,0,0,0.5),0 0 40px rgba(224,179,92,0.25)">Three plots of land are waiting.</h2>
+    <p style="font-family:Georgia,serif;font-style:italic;font-size:19px;color:#cfe0c8;margin:16px auto 30px;max-width:520px">Wishlist now and be first into the wilderness when the gates open.</p>
+    <div style="display:flex;justify-content:center;{{ ctaRowStyle }}">{{ ctaButtons }}</div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer style="background:#141a14;padding:30px 24px;text-align:center;color:#728a6e">
+  <div style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:8px">
+    <span style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid #e0b35c"></span>
+    <span style="font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:1px;color:#cfe0c8">CAMPGROUND TYCOON</span>
+  </div>
+  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px">An isometric pixel-art tycoon sim · Made with Georgia &amp; a lot of brass · © 2026</div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.ROWS = 6; this.COLS = 6;
+    this.TOOLS = {
+      tent:   { name:'Tent',   cost:40,  beauty:4,  rate:20, site:true },
+      rv:     { name:'RV Pad', cost:90,  beauty:8,  rate:55, site:true },
+      cabin:  { name:'Cabin',  cost:160, beauty:14, rate:90, site:true },
+      flower: { name:'Flowers',cost:45,  beauty:3,  rate:0,  site:false },
+      lamp:   { name:'Lamp',   cost:65,  beauty:3,  rate:0,  site:false },
+      bulldoze:{name:'Clear',  cost:0,   beauty:0,  rate:0,  site:false },
+    };
+    this.SEASONS = [
+      { key:'spring', name:'Spring', grass:'#5e7a4a', dirt:'#8a7a5e', water:'#4a7a92', canopy:['#5d7d44','#6b8a4c','#7a9455'], shot:'site_assets/season_spring.png', cap:'Spring · Gulf Coast — muddy, slow, and the redfish are running.' },
+      { key:'summer', name:'Summer', grass:'#55714a', dirt:'#8a7a5e', water:'#3f6d86', canopy:['#3f6136','#4b6c3c','#577842'], shot:'site_assets/season_summer.png', cap:'Summer · Rockies — the park crush. Pack them in while the sun holds.' },
+      { key:'fall',   name:'Fall',   grass:'#6e6b3f', dirt:'#857257', water:'#3a647c', canopy:['#b0532b','#c27a2c','#a8402f','#cf9a3a'], shot:'site_assets/season_fall.png', cap:'Fall · New England — the leaf-peeper goldrush. Your busiest week.' },
+      { key:'winter', name:'Winter', grass:'#c9cdd2', dirt:'#9a917e', water:'#9fb6c4', canopy:['#6b7280','#7d8490','#5a6068'], shot:'site_assets/season_winter.png', cap:'Winter · Northwoods at night — dead quiet. Did you save enough?' },
+    ];
+    this.REGIONS = this.buildRegions();
+    this.state = {
+      heroDir: 'A',
+      season: 2,
+      cash: 150, beauty: 10, rating: 3.0, guests: 0,
+      ratingTarget: 2.9, sites: 0,
+      tool: 'tent',
+      grid: this.freshGrid(),
+      toasts: [],
+      region: 'smokies',
+    };
+    this._tid = 0;
+  }
+
+  buildRegions(){
+    const A = { fishing:'#2f6d7a', hunting:'#b5642a', hiking:'#5e7d45', tourism:'#b98a2e' };
+    const AN = { fishing:'Anglers', hunting:'Hunters', hiking:'Backpackers', tourism:'Sightseers' };
+    const T = { water:'#2f6d7a', forest:'#3d5a44', prairie:'#b98a2e', hills:'#7a6a4a' };
+    const r = (name,state,abbr,x,y,diff,mix,terr,blurb)=>({name,state,abbr,x,y,diff,
+      mix: mix.map(([k,w])=>({name:AN[k],color:A[k],w})),
+      terr: terr.map(([k,w])=>({name:k,color:T[k],w})),
+      dom: A[mix[0][0]], blurb });
+    return {
+      smokies:    r('Smokies','Tennessee','TN',0.655,0.55,1,[['tourism',0.6],['hiking',0.4]],[['forest',0.7],['hills',0.5],['water',0.2],['prairie',0.1]],'Huge, forgiving, all-season sightseers. The friendly place to learn the ropes.'),
+      keys:       r('Gulf Keys','Florida','FL',0.74,0.80,1,[['fishing',0.55],['tourism',0.45]],[['water',0.25],['prairie',0.4],['forest',0.3],['hills',0.05]],'Year-round warmth and almost no off-season — winter is the busy season here.'),
+      bayou:      r('Bayou','Louisiana','LA',0.585,0.72,2,[['fishing',0.55],['tourism',0.45]],[['water',0.25],['forest',0.45],['prairie',0.3],['hills',0.0]],'Spring redfish runs; gentle winters keep a steady trickle of anglers.'),
+      hillcountry:r('Hill Country','Texas','TX',0.47,0.69,2,[['tourism',0.55],['hunting',0.45]],[['prairie',0.6],['hills',0.35],['forest',0.25],['water',0.1]],'Spring festivals draw crowds; fall deer leases sprawl over open grassland.'),
+      redrock:    r('Red Rock','Arizona','AZ',0.275,0.62,2,[['tourism',0.6],['hiking',0.4]],[['hills',0.6],['prairie',0.4],['forest',0.15],['water',0.05]],'Winter peak, summer-heat lull — trade the snowbelt for desert dusk.'),
+      greenmtns:  r('Green Mountains','Vermont','VT',0.845,0.27,2,[['tourism',0.6],['hiking',0.4]],[['forest',0.6],['hills',0.5],['water',0.2],['prairie',0.1]],'A leaf-peeper goldrush every single fall. Spring stays muddy and slow.'),
+      greatlakes: r('Great Lakes','Michigan','MI',0.645,0.36,2,[['fishing',0.55],['tourism',0.45]],[['water',0.25],['forest',0.5],['prairie',0.2],['hills',0.15]],'Big-water walleye all summer; hunters fill the hardwoods come fall.'),
+      cascades:   r('Cascades','Washington','WA',0.165,0.255,2,[['hiking',0.55],['fishing',0.45]],[['hills',0.6],['forest',0.55],['water',0.25],['prairie',0.05]],'Long, wet shoulder seasons keep a steady stream of backpackers moving.'),
+      highdesert: r('High Desert','Oregon','OR',0.17,0.355,2,[['hiking',0.55],['fishing',0.45]],[['prairie',0.5],['hills',0.4],['water',0.2],['forest',0.2]],'Fly-fishing rivers and big trail miles under wide high-desert skies.'),
+      yellowstone:r('Yellowstone Gate','Wyoming','WY',0.345,0.355,3,[['tourism',0.6],['hiking',0.4]],[['hills',0.55],['forest',0.45],['prairie',0.35],['water',0.2]],'A summer park crush, then a hard mountain quiet. Bank it while it lasts.'),
+      rockies:    r('Rockies','Colorado','CO',0.355,0.50,3,[['hiking',0.55],['tourism',0.45]],[['hills',0.7],['forest',0.45],['prairie',0.2],['water',0.15]],'Summer-loaded and gorgeous, then buried in winter. Beauty pays here.'),
+      northwoods: r('Northwoods','Wisconsin','WI',0.585,0.345,3,[['fishing',0.55],['hunting',0.45]],[['forest',0.6],['water',0.25],['prairie',0.15],['hills',0.1]],'Feast or famine: summer fish, a fall hunt, then dead snow. Plan ahead.'),
+      boundary:   r('Boundary Waters','Minnesota','MN',0.545,0.27,3,[['fishing',0.55],['hunting',0.45]],[['forest',0.6],['water',0.25],['hills',0.15],['prairie',0.1]],'Remote paddle-in fishing and brutal winters. For the steady-handed.'),
+      maine:      r('North Woods','Maine','ME',0.875,0.205,4,[['hunting',0.55],['hiking',0.45]],[['forest',0.7],['hills',0.4],['water',0.2],['prairie',0.05]],'A massive fall hunting spike — then snowed in for months. Brutal.'),
+      bigsky:     r('Big Sky','Montana','MT',0.335,0.275,4,[['hunting',0.55],['hiking',0.45]],[['prairie',0.5],['hills',0.5],['forest',0.4],['water',0.1]],'Remote, short season, and an enormous fall hunting wave. The deep end.'),
+    };
+  }
+
+  freshGrid(){
+    const grid = [];
+    const water = new Set(['4-1','5-1','4-0','5-0']);
+    for(let row=0; row<this.ROWS; row++){
+      for(let col=0; col<this.COLS; col++){
+        const border = (row===0||col===0||row===this.ROWS-1||col===this.COLS-1);
+        let type = 'grass', built = null;
+        if(water.has(row+'-'+col)) type = 'water';
+        else if(border) type = 'tree';
+        grid.push({ type, built });
+      }
+    }
+    return grid;
+  }
+
+  componentDidMount(){
+    this._iv = setInterval(()=>{
+      this.setState(s=>{
+        const tgt = s.ratingTarget;
+        let rating = s.rating + (tgt - s.rating) * 0.28;
+        rating = Math.round(rating*100)/100;
+        const siteKinds = [];
+        s.grid.forEach(t=>{ if(t.built && this.TOOLS[t.built].site) siteKinds.push(t.built); });
+        const ns = { rating };
+        if(siteKinds.length){
+          const pick = siteKinds[(Math.random()*siteKinds.length)|0];
+          const pay = Math.round(this.TOOLS[pick].rate * (0.7 + rating/8));
+          ns.cash = s.cash + pay;
+          ns.guests = s.guests + 1;
+          const who = this.guestType();
+          const id = ++this._tid;
+          ns.toasts = [...s.toasts, { id, text: who+' checked in  +$'+pay, kind:'good' }];
+          setTimeout(()=>this.dropToast(id), 3600);
+        }
+        return ns;
+      });
+    }, 2400);
+  }
+  componentWillUnmount(){ clearInterval(this._iv); }
+
+  guestType(){
+    const sNames = [
+      ['An angler','A fly-fisher','A bass guy'],
+      ['A backpacker','A through-hiker','A trail family'],
+      ['A leaf-peeper','A sightseeing couple','A photographer'],
+      ['A hunting party','A bowhunter','A weekend hunter'],
+    ];
+    const grp = sNames[(Math.random()*sNames.length)|0];
+    return grp[(Math.random()*grp.length)|0];
+  }
+
+  dropToast(id){ this.setState(s=>({ toasts: s.toasts.filter(t=>t.id!==id) })); }
+  toast(text, kind){
+    const id = ++this._tid;
+    this.setState(s=>({ toasts: [...s.toasts, { id, text, kind:kind||'info' }] }));
+    setTimeout(()=>this.dropToast(id), 3200);
+  }
+
+  recompute(grid){
+    let beauty = 10, sites = 0;
+    for(const t of grid){ if(t.built){ const d=this.TOOLS[t.built]; beauty += d.beauty; if(d.site) sites++; } }
+    beauty = Math.min(100, beauty);
+    const target = Math.max(2.7, Math.min(5, 2.7 + beauty/42 + (sites>0?0.25:0)));
+    return { beauty, sites, ratingTarget: Math.round(target*100)/100 };
+  }
+
+  place(idx){
+    const s = this.state;
+    const row = (idx/this.COLS)|0, col = idx%this.COLS;
+    const border = (row===0||col===0||row===this.ROWS-1||col===this.COLS-1);
+    const t = s.grid[idx];
+    if(t.type!=='grass' || border){ this.toast('Build on the open plots in the middle.','warn'); return; }
+    const tool = s.tool;
+    if(tool==='bulldoze'){
+      if(!t.built){ return; }
+      const grid = s.grid.slice(); grid[idx] = { ...t, built:null };
+      this.toast('Cleared the plot.','info');
+      this.setState({ grid, ...this.recompute(grid) });
+      return;
+    }
+    const def = this.TOOLS[tool];
+    if(t.built){ this.toast('That plot is taken — Clear it first.','warn'); return; }
+    if(s.cash < def.cost){ this.toast('Not enough cash for a '+def.name+'.','bad'); return; }
+    const grid = s.grid.slice(); grid[idx] = { ...t, built:tool };
+    this.toast('Built a '+def.name+'   −$'+def.cost,'money');
+    this.setState({ grid, cash: s.cash - def.cost, ...this.recompute(grid) });
+  }
+
+  resetDemo(){
+    this.setState({ grid:this.freshGrid(), cash:150, beauty:10, rating:3.0, guests:0, ratingTarget:2.9, sites:0, tool:'tent' });
+    this.toast('Fresh plot of land. Make camp.','info');
+  }
+
+  // ---- sprite builders ----
+  sprite(built, sc){
+    const R = React.createElement;
+    if(built==='tent') return R('div',{style:{position:'relative',width:'30px',height:'24px'}},
+      R('div',{key:'t',style:{position:'absolute',left:'2px',bottom:0,width:0,height:0,borderLeft:'13px solid transparent',borderRight:'13px solid transparent',borderBottom:'24px solid #c79a52'}}),
+      R('div',{key:'d',style:{position:'absolute',left:'11px',bottom:0,width:0,height:0,borderLeft:'4px solid transparent',borderRight:'4px solid transparent',borderBottom:'13px solid #6b4f2a'}}));
+    if(built==='rv') return R('div',{style:{position:'relative',width:'40px',height:'22px'}},
+      R('div',{key:'b',style:{position:'absolute',left:0,bottom:'4px',width:'40px',height:'15px',borderRadius:'4px',background:'#e9e4d4',boxShadow:'inset 0 -4px 0 rgba(0,0,0,0.12)'}}),
+      R('div',{key:'s',style:{position:'absolute',left:'4px',bottom:'10px',width:'32px',height:'4px',background:'#7fa6c4'}}),
+      R('div',{key:'w1',style:{position:'absolute',left:'7px',bottom:0,width:'8px',height:'8px',borderRadius:'50%',background:'#2c2418'}}),
+      R('div',{key:'w2',style:{position:'absolute',right:'7px',bottom:0,width:'8px',height:'8px',borderRadius:'50%',background:'#2c2418'}}));
+    if(built==='cabin') return R('div',{style:{position:'relative',width:'34px',height:'30px'}},
+      R('div',{key:'rf',style:{position:'absolute',left:'1px',top:0,width:0,height:0,borderLeft:'16px solid transparent',borderRight:'16px solid transparent',borderBottom:'14px solid #5a3d22'}}),
+      R('div',{key:'bd',style:{position:'absolute',left:'4px',bottom:0,width:'26px',height:'18px',background:'#7a5230',boxShadow:'inset 0 -4px 0 rgba(0,0,0,0.2)'}}),
+      R('div',{key:'wn',style:{position:'absolute',left:'9px',bottom:'5px',width:'8px',height:'8px',background:'#a9c4d6'}}),
+      R('div',{key:'dr',style:{position:'absolute',right:'6px',bottom:0,width:'7px',height:'11px',background:'#4a3119'}}));
+    if(built==='flower') return R('div',{style:{position:'relative',width:'24px',height:'12px'}},
+      R('div',{key:'p',style:{position:'absolute',left:'2px',bottom:0,width:'20px',height:'7px',borderRadius:'5px',background:sc.canopy[0]}}),
+      R('div',{key:'f1',style:{position:'absolute',left:'4px',bottom:'4px',width:'4px',height:'4px',borderRadius:'50%',background:'#d36b7a'}}),
+      R('div',{key:'f2',style:{position:'absolute',left:'10px',bottom:'6px',width:'4px',height:'4px',borderRadius:'50%',background:'#e0b35c'}}),
+      R('div',{key:'f3',style:{position:'absolute',left:'15px',bottom:'4px',width:'4px',height:'4px',borderRadius:'50%',background:'#9b6fb0'}}));
+    if(built==='lamp') return R('div',{style:{position:'relative',width:'14px',height:'30px'}},
+      R('div',{key:'p',style:{position:'absolute',left:'6px',bottom:0,width:'3px',height:'24px',background:'#3a3122'}}),
+      R('div',{key:'b',style:{position:'absolute',left:'3px',top:0,width:'9px',height:'9px',borderRadius:'50%',background:'#e8b93c',boxShadow:'0 0 8px #e8b93c'}}));
+    return null;
+  }
+  treeSprite(sc){
+    const R = React.createElement; const c = sc.canopy;
+    return R('div',{style:{position:'relative',width:'26px',height:'34px'}},
+      R('div',{key:'tr',style:{position:'absolute',left:'11px',bottom:0,width:'5px',height:'10px',background:'#6b4a28'}}),
+      R('div',{key:'c1',style:{position:'absolute',left:'2px',bottom:'7px',width:'22px',height:'14px',borderRadius:'9px',background:c[0]}}),
+      R('div',{key:'c2',style:{position:'absolute',left:'5px',bottom:'14px',width:'16px',height:'12px',borderRadius:'8px',background:c[1]}}),
+      R('div',{key:'c3',style:{position:'absolute',left:'8px',bottom:'20px',width:'10px',height:'9px',borderRadius:'5px',background:c[2]||c[0]}}));
+  }
+
+  setHero(d){ this.setState({ heroDir:d }); }
+  setSeason(i){ this.setState({ season:i }); }
+  setTool(k){ this.setState({ tool:k }); }
+  selectRegion(k){ this.setState({ region:k }); }
+
+  renderVals(){
+    const s = this.state;
+    const sc = this.SEASONS[s.season];
+
+    // hero toggle buttons
+    const heroBtn = (active)=>('font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px;cursor:pointer;padding:6px 11px;border-radius:7px;border:none;'+(active?'background:#e0b35c;color:#2c1f08;font-weight:bold':'background:transparent;color:#b9c9b3'));
+
+    // CTA buttons (shared) — built as React element so both heroes & footer reuse
+    const R = React.createElement;
+    const ctaBtn = (label, sub, primary, glyph)=>R('a',{key:label,href:'#wishlist',style:{
+      display:'inline-flex',alignItems:'center',gap:'9px',padding:'11px 18px',borderRadius:'10px',cursor:'pointer',
+      fontFamily:'ui-monospace,Menlo,monospace',
+      background: primary?'linear-gradient(180deg,#e0b35c,#b98a2e)':'rgba(245,238,219,0.10)',
+      color: primary?'#2c1f08':'#f5eedb',
+      border: primary?'1px solid #8a6620':'1px solid rgba(245,238,219,0.4)',
+      borderBottomWidth: primary?'4px':'1px',
+      boxShadow: primary?'0 6px 18px rgba(224,179,92,0.28)':'none'
+    }},
+      R('span',{key:'g',style:{fontSize:'17px',lineHeight:1}},glyph),
+      R('span',{key:'l',style:{display:'flex',flexDirection:'column',lineHeight:1.15,textAlign:'left'}},
+        R('span',{key:'s',style:{fontSize:'9px',letterSpacing:'1px',opacity:0.8}},sub),
+        R('span',{key:'m',style:{fontSize:'14px',fontWeight:'bold'}},label)));
+    const ctaButtons = R('div',{style:{display:'flex',gap:'10px',flexWrap:'wrap'}},
+      ctaBtn('Wishlist','ON STEAM',true,'◢'),
+      ctaBtn('itch.io','GET ON',false,'▰'),
+      ctaBtn('App Store','DOWNLOAD',false,''),
+      ctaBtn('Google Play','GET IT ON',false,'▶'));
+
+    // demo HUD
+    const beautyPct = Math.round(s.beauty);
+    const beautyColor = s.beauty>55?'#5e7d45':(s.beauty>30?'#c2992f':'#b14a32');
+    const beautyBarStyle = { width: beautyPct+'%', height:'100%', borderRadius:'4px', background:beautyColor, transition:'width .4s ease, background .4s ease' };
+
+    // season chips
+    const seasonChips = this.SEASONS.map((se,i)=>R('button',{key:se.key,onClick:()=>this.setSeason(i),style:{
+      fontFamily:'ui-monospace,Menlo,monospace',fontSize:'11px',padding:'5px 11px',borderRadius:'6px',cursor:'pointer',border:'none',
+      background: i===s.season?'#e0b35c':'transparent', color: i===s.season?'#2c1f08':'#9fb89b', fontWeight:i===s.season?'bold':'normal'
+    }}, se.name));
+
+    // tiles
+    const TW=86, TH=44;
+    const originX = (this.ROWS-1)*TW/2;
+    const tiles = s.grid.map((t,idx)=>{
+      const row=(idx/this.COLS)|0, col=idx%this.COLS;
+      const left = originX + (col-row)*TW/2;
+      const top = (col+row)*TH/2;
+      const border = (row===0||col===0||row===this.ROWS-1||col===this.COLS-1);
+      const buildable = (t.type==='grass' && !border);
+      let fill;
+      if(t.type==='water') fill = sc.water;
+      else if(t.built && this.TOOLS[t.built].site) fill = sc.dirt;
+      else fill = sc.grass;
+      const z = (row+col)*2;
+      const diamondStyle = { position:'absolute', left:left+'px', top:top+'px', width:TW+'px', height:TH+'px',
+        clipPath:'polygon(50% 0,100% 50%,50% 100%,0 50%)', background:fill, border:'none', padding:0,
+        cursor: buildable?'pointer':'default', boxShadow:'inset 0 0 0 1px rgba(20,14,6,0.10)',
+        transition:'filter .12s, background .45s', zIndex:z,
+        outline: (buildable && !t.built)?'1px dashed rgba(44,36,24,0.22)':'none', outlineOffset:'-8px' };
+      let spr=null;
+      if(t.type==='tree') spr=this.treeSprite(sc);
+      else if(t.built) spr=this.sprite(t.built, sc);
+      const spriteWrap = { position:'absolute', left:left+'px', top:(top-16)+'px', width:TW+'px',
+        display:'flex', justifyContent:'center', alignItems:'flex-end', height:TH+'px', pointerEvents:'none', zIndex:z+1 };
+      return { idx, diamondStyle, spriteWrap, sprite:spr, onClick:()=>this.place(idx) };
+    });
+
+    // toolbar
+    const toolOrder = ['tent','rv','cabin','flower','lamp','bulldoze'];
+    const tools = toolOrder.map(k=>{
+      const d=this.TOOLS[k]; const active = s.tool===k;
+      const afford = s.cash>=d.cost || k==='bulldoze';
+      return { key:k, name:d.name,
+        costLabel: k==='bulldoze'?'free':'$'+d.cost,
+        costColor: active?'color:#2c1f08':(afford?'color:#8a6620':'color:#b14a32'),
+        onSelect:()=>this.setTool(k),
+        btnStyle: 'display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:74px;padding:8px 12px;border-radius:9px;cursor:pointer;text-align:left;'+
+          (active?'background:linear-gradient(180deg,#e0b35c,#cda043);border:1px solid #8a6620;border-bottom-width:3px;color:#2c1f08':'background:#fbf6e9;border:1px solid #cdb685;color:#2c2418')
+      };
+    });
+
+    // toasts
+    const tColor = { good:'#5e7d45', money:'#b98a2e', bad:'#b14a32', warn:'#c2992f', info:'#8a795a' };
+    const toasts = s.toasts.map(n=>({ id:n.id, text:n.text,
+      style:'pointer-events:none;padding:7px 12px;font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:1.3;border-radius:6px;background:linear-gradient(175deg,#f5eedb,#e7d9b9);border:1px solid #b3996b;border-left:5px solid '+(tColor[n.kind]||'#8a795a')+';box-shadow:0 2px 8px rgba(20,14,6,0.35);animation:ctToast .35s ease' }));
+
+    // region pins
+    const reg = this.REGIONS[s.region];
+    const regionPins = Object.entries(this.REGIONS).map(([k,v])=>{
+      const sel = k===s.region;
+      return { key:k, abbr:v.abbr, onClick:()=>this.selectRegion(k),
+        style:'position:absolute;left:'+(v.x*100)+'%;top:'+(v.y*100)+'%;transform:translate(-50%,-50%)'+(sel?' translateY(-3px)':'')+';display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;'+
+          'background:'+(sel?'#f7f1e1':'linear-gradient(175deg,#efe4c4,#e2d2a8)')+';border:1px solid '+(sel?'#b98a2e':'#b3996b')+';'+
+          'box-shadow:'+(sel?'0 0 0 2px rgba(185,138,46,0.55),0 8px 18px rgba(20,14,6,0.4)':'0 1px 3px rgba(20,14,6,0.3)')+';z-index:'+(sel?20:5),
+        dotStyle:'width:8px;height:8px;border-radius:50%;background:'+v.dom+';display:inline-block' };
+    });
+
+    const diffLabels = ['','Gentle','Moderate','Tough','Brutal'];
+    const diffDots = [1,2,3,4].map(i=>({ style:'width:9px;height:9px;border-radius:50%;display:inline-block;'+(i<=reg.diff?'background:#b5642a':'background:rgba(44,36,24,0.18)') }));
+    const mixBars = reg.mix.map(m=>({ name:m.name, barStyle:'height:100%;border-radius:5px;width:'+Math.round(m.w*100)+'%;background:'+m.color }));
+    const terrBars = reg.terr.map(t=>({ name:t.name, barStyle:'height:100%;border-radius:5px;width:'+Math.round(t.w*100)+'%;background:'+t.color+';transition:width .4s ease' }));
+
+    // season tabs (big)
+    const seasonTabs = this.SEASONS.map((se,i)=>R('button',{key:se.key,onClick:()=>this.setSeason(i),style:{
+      fontFamily:'Georgia,serif',fontSize:'15px',fontWeight:'bold',padding:'9px 20px',borderRadius:'9px',cursor:'pointer',border:'none',
+      background: i===s.season?'#e0b35c':'rgba(245,238,219,0.08)', color: i===s.season?'#2c1f08':'#b9c9b3',
+      boxShadow: i===s.season?'0 -2px 0 #8a6620 inset':'none'
+    }}, se.name));
+
+    return {
+      // hero
+      heroIsA: s.heroDir==='A', heroIsB: s.heroDir==='B',
+      setHeroA:()=>this.setHero('A'), setHeroB:()=>this.setHero('B'),
+      heroBtnAStyle: heroBtn(s.heroDir==='A'), heroBtnBStyle: heroBtn(s.heroDir==='B'),
+      ctaButtons, ctaRowStyle:'display:flex;gap:10px;flex-wrap:wrap',
+      // demo
+      cashLabel:'$'+s.cash.toLocaleString(), ratingLabel:s.rating.toFixed(1), beautyNum:beautyPct, beautyBarStyle, guests:s.guests,
+      seasonChips, tiles, tools, toasts, resetDemo:()=>this.resetDemo(),
+      // regions
+      regionPins, regName:reg.name, regState:reg.state+' · '+reg.abbr, regBlurb:reg.blurb,
+      diffDots, diffLabel:diffLabels[reg.diff], mixBars, terrBars,
+      // seasons
+      seasonTabs, seasonShotCaption:sc.cap,
+      seasonShotImg: R('img',{src:sc.shot,alt:'seasonal screenshot',style:{width:'100%',borderRadius:'8px',imageRendering:'pixelated',border:'3px solid #5a4f3c',boxShadow:'0 0 0 5px #8f8266',display:'block'}}),
+    };
+  }
+}
+</script>
+</body>
+</html>
