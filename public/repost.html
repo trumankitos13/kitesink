@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KiteSink — Post composer</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ece2cb">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:#ece2cb;color:#221c10;font-family:'Geist',system-ui,sans-serif;-webkit-text-size-adjust:100%}
+  a{color:inherit}
+  .wrap{max-width:640px;margin:0 auto;padding:0 clamp(16px,5vw,28px) 64px}
+  header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px clamp(16px,5vw,28px);background:rgba(236,226,203,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.16)}
+  .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#221c10}
+  .brand b{font:800 17px 'Geist';letter-spacing:-.03em}
+  .brand b span{color:#2f5436}
+  .back{font:600 12px 'Geist Mono',monospace;color:#2f5436;text-decoration:none}
+  h1{font:800 clamp(28px,7vw,40px)/1 'Geist';letter-spacing:-.035em;color:#1d1810;margin:28px 0 8px}
+  h1 i{font-style:italic;font-weight:700;color:#b07227}
+  .lead{font:400 15px/1.55 'Geist';color:#5e5238;margin:0 0 20px;max-width:46ch}
+  /* mode toggle */
+  .modes{display:flex;gap:8px;padding:5px;background:#f3ecd9;border:1.5px solid rgba(34,28,16,.18);border-radius:40px;margin:0 0 8px}
+  .mode{flex:1;font:700 13px 'Geist';border:none;background:transparent;color:#5e5238;border-radius:40px;padding:11px 12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px}
+  .mode[data-mode="repost"].on{background:#b07227;color:#fff}
+  .mode[data-mode="original"].on{background:#2f5436;color:#f0e8d6}
+  label{display:block;font:600 11px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#7a6a48;margin:16px 0 6px}
+  label .opt{color:#a89878;text-transform:none;letter-spacing:0;font-weight:500}
+  input[type=text],input[type=url],textarea{width:100%;font:400 16px 'Geist';color:#221c10;background:#f3ecd9;border:1.5px solid rgba(34,28,16,.2);border-radius:11px;padding:12px 14px;-webkit-appearance:none}
+  input:focus,textarea:focus{outline:none;border-color:#2f5436}
+  textarea{resize:vertical;min-height:64px;line-height:1.5}
+  .row2{display:flex;gap:12px;flex-wrap:wrap}
+  .row2>div{flex:1 1 150px}
+  .hint{font:500 12px 'Geist Mono',monospace;color:#8a7a58;margin-top:6px;word-break:break-all}
+  .check{display:flex;align-items:center;gap:10px;font:600 14px 'Geist';color:#221c10;text-transform:none;letter-spacing:0;margin-top:18px}
+  .check input{width:20px;height:20px;accent-color:#2f5436}
+  .preview-wrap{margin-top:26px;border-top:1px solid rgba(34,28,16,.16);padding-top:18px}
+  .mini{font:600 11px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#a89878;margin-bottom:12px}
+  .pv{padding:18px 14px;border-top:1px solid rgba(34,28,16,.16);border-bottom:1px solid rgba(34,28,16,.16);border-radius:10px}
+  .pv.ext{background:linear-gradient(90deg,rgba(176,114,39,.07),transparent 60%)}
+  .pv .date{font:600 11px 'Geist Mono',monospace;color:#a89878;margin-bottom:8px}
+  .pv .eye{font:600 11px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+  .pv.ext .eye{color:#b07227}.pv.mine .eye{color:#2f5436}
+  .pv .ttl{font:700 22px/1.2 'Geist';letter-spacing:-.02em;color:#221c10;margin:0}
+  .pv .ttl .arr{color:#b07227;font-size:.8em}
+  .pv .fbadge{font:600 10px 'Geist Mono',monospace;letter-spacing:.1em;color:#2f5436;background:rgba(47,84,54,.12);border-radius:30px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+  .pv .dek{font:400 14px/1.5 'Geist';color:#5e5238;margin:8px 0 0}
+  .pv .note{font:italic 400 13px/1.5 'Geist';color:#7a6a48;margin:8px 0 0;padding-left:12px;border-left:2px solid #b07227}
+  pre{margin:14px 0 0;background:#1d2a20;color:#e7eede;border-radius:12px;padding:16px;overflow:auto;font:500 13px/1.55 'Geist Mono',monospace;-webkit-overflow-scrolling:touch}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;position:sticky;bottom:0;padding:14px 0;background:linear-gradient(0deg,#ece2cb 70%,transparent)}
+  button.act,.btn{flex:1 1 160px;font:700 14px 'Geist';border-radius:40px;padding:15px 18px;border:1.5px solid transparent;cursor:pointer;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+  .primary{background:#2f5436;color:#f0e8d6}.primary:active{background:#23402b}
+  .ghost{background:transparent;color:#221c10;border-color:rgba(34,28,16,.32)}.ghost:active{border-color:#2f5436;color:#2f5436}
+  .copied{color:#2f5436}
+  .steps{margin-top:24px;font:400 14px/1.7 'Geist';color:#5e5238;background:#f3ecd9;border:1px solid rgba(34,28,16,.16);border-radius:12px;padding:16px 18px}
+  .steps b{color:#221c10}.steps ol{margin:8px 0 0;padding-left:20px}
+  .steps code{font:600 12px 'Geist Mono',monospace;background:rgba(34,28,16,.08);border-radius:5px;padding:1px 6px}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/blog.html">
+    <svg width="26" height="26" viewBox="0 0 64 64" fill="none"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg>
+    <b><span>Kite</span>Sink</b>
+  </a>
+  <a class="back" href="/blog.html">← Blog</a>
+</header>
+
+<div class="wrap">
+  <h1>Post <i>composer.</i></h1>
+
+  <div class="modes" role="tablist" aria-label="Entry type">
+    <button class="mode on" data-mode="repost" type="button">↗ Repost</button>
+    <button class="mode" data-mode="original" type="button">✍ Original</button>
+  </div>
+  <p class="lead" id="lead"></p>
+
+  <!-- repost: URL first -->
+  <div data-only="repost">
+    <label for="url">Article URL</label>
+    <input id="url" type="url" inputmode="url" placeholder="https://…" autocomplete="off">
+  </div>
+
+  <label for="title">Title</label>
+  <input id="title" type="text" placeholder="The title" autocomplete="off">
+
+  <!-- original: slug -->
+  <div data-only="original">
+    <label for="slug">Slug <span class="opt">— the page's URL name</span></label>
+    <input id="slug" type="text" inputmode="url" placeholder="my-post-slug" autocomplete="off">
+    <div class="hint" id="slugHint">→ /blog/my-post-slug.html</div>
+  </div>
+
+  <!-- repost: source -->
+  <div data-only="repost">
+    <label for="source">Source <span class="opt">— author or publication</span></label>
+    <input id="source" type="text" placeholder="Stratechery · or · Paul Graham" autocomplete="off">
+  </div>
+
+  <div class="row2">
+    <div>
+      <label for="cat">Category <span class="opt">— comma for several</span></label>
+      <input id="cat" type="text" placeholder="Reading" autocomplete="off">
+    </div>
+    <div>
+      <label for="read">Read time <span class="opt">— optional</span></label>
+      <input id="read" type="text" placeholder="6 min" autocomplete="off">
+    </div>
+  </div>
+
+  <label for="date">Date</label>
+  <input id="date" type="text" inputmode="numeric" placeholder="2026.06.25" autocomplete="off">
+
+  <label for="dek" id="dekLabel">Summary <span class="opt">— one line</span></label>
+  <textarea id="dek" placeholder="One line for the index…"></textarea>
+
+  <!-- repost: why -->
+  <div data-only="repost">
+    <label for="note">Why I'm featuring it <span class="opt">— your take, optional</span></label>
+    <textarea id="note" placeholder="The best thing I've read on…"></textarea>
+  </div>
+
+  <!-- original: featured -->
+  <div data-only="original">
+    <label class="check"><input type="checkbox" id="featured"> Featured <span class="opt">&nbsp;— the big card on top</span></label>
+  </div>
+
+  <div class="preview-wrap">
+    <div class="mini">Preview — how it lands on the blog</div>
+    <div class="pv" id="pv"></div>
+  </div>
+
+  <div class="mini" style="margin-top:22px">Snippet to paste into <code style="font-family:'Geist Mono'">posts.js</code></div>
+  <pre id="out" aria-label="Generated posts.js entry"></pre>
+
+  <div class="btns">
+    <button class="act primary" id="copyBtn" type="button">Copy snippet</button>
+    <a class="btn ghost" id="newPageBtn" target="_blank" rel="noopener" data-only="original">New post page ↗</a>
+    <a class="btn ghost" id="ghBtn" target="_blank" rel="noopener">Open posts.js ↗</a>
+  </div>
+
+  <div class="steps" data-only="repost">
+    <b>Repost — from your phone:</b>
+    <ol>
+      <li>Fill the fields (paste the article link first).</li>
+      <li>Tap <b>Copy snippet</b>.</li>
+      <li>Tap <b>Open posts.js</b> — the file's editor opens on GitHub.</li>
+      <li>Put the cursor just after the <code>[</code> line and <b>paste</b>, then <b>Commit</b>.</li>
+    </ol>
+  </div>
+
+  <div class="steps" data-only="original" hidden>
+    <b>Original essay — two quick commits:</b>
+    <ol>
+      <li>Fill the fields — the <b>slug</b> auto-fills from the title.</li>
+      <li>Tap <b>New post page</b> → name it <code id="fnHint">my-post-slug.html</code>, paste the contents of <code>public/blog/_template.html</code>, write your post, <b>Commit</b>.</li>
+      <li>Tap <b>Copy snippet</b>, then <b>Open posts.js</b>, paste under the <code>[</code>, <b>Commit</b>.</li>
+    </ol>
+    <div style="margin-top:8px;color:#8a7a58;font-size:13px">On a phone the writing is the slow part — for long essays it's easier on a laptop. The composer still saves you the index entry + the right <code>href</code>.</div>
+  </div>
+
+  <div class="steps" style="margin-top:14px;background:transparent;border:0;padding:0;color:#8a7a58;font-size:13px">
+    Nothing here is saved — it just writes valid JS for you; the commit is the GitHub step. Add this page to your Home Screen, or see <code>docs/REPOST-FROM-PHONE.md</code> for the share-sheet shortcut.
+  </div>
+</div>
+
+<script>
+(function(){
+  var REPO = "trumankitos13/kitesink";
+  var BRANCH = "main";                       // change if you deploy a different branch
+  var FILE = "public/blog/posts.js";
+  document.getElementById("ghBtn").href = "https://github.com/" + REPO + "/edit/" + BRANCH + "/" + FILE;
+
+  var ids = ["url","title","slug","source","cat","read","date","dek","note"];
+  var el = {}; ids.forEach(function(i){ el[i] = document.getElementById(i); });
+  var featured = document.getElementById("featured");
+  var out = document.getElementById("out"), pv = document.getElementById("pv"), copyBtn = document.getElementById("copyBtn");
+  var newPageBtn = document.getElementById("newPageBtn"), slugHint = document.getElementById("slugHint"), fnHint = document.getElementById("fnHint");
+  var dekLabel = document.getElementById("dekLabel"), lead = document.getElementById("lead");
+  var mode = "repost", slugEdited = false;
+
+  function v(id){ return (el[id].value || "").trim(); }
+  function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function jsStr(s){ return JSON.stringify(String(s)); }
+  function slugify(s){ return String(s).toLowerCase().trim().replace(/['"’]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,80); }
+  function today(){ var d=new Date(),p=function(n){return(n<10?"0":"")+n;}; return d.getFullYear()+"."+p(d.getMonth()+1)+"."+p(d.getDate()); }
+
+  // prefill from the share-sheet shortcut / a bookmarklet
+  var qs = new URLSearchParams(location.search);
+  if (qs.get("url"))    el.url.value = qs.get("url");
+  if (qs.get("title"))  el.title.value = qs.get("title");
+  if (qs.get("source")) el.source.value = qs.get("source");
+  if (qs.get("mode") === "original") mode = "original";
+  if (!el.date.value)   el.date.value = today();
+
+  el.slug.addEventListener("input", function(){ slugEdited = true; });
+
+  function cats(){ return (v("cat") || "Reading").split(",").map(function(s){return s.trim();}).filter(Boolean); }
+  function catLiteral(){ var c=cats(); return c.length>1 ? "["+c.map(jsStr).join(", ")+"]" : jsStr(c[0]||"Reading"); }
+  function slug(){ return slugify(v("slug") || v("title") || "untitled"); }
+
+  function snippet(){
+    var f = [];
+    if (mode === "repost") {
+      f.push("external: true");
+      f.push("cat: " + catLiteral());
+      f.push("date: " + jsStr(v("date") || today()));
+      if (v("read")) f.push("read: " + jsStr(v("read")));
+      f.push("title: " + jsStr(v("title")));
+      f.push("source: " + jsStr(v("source")));
+      f.push("url: " + jsStr(v("url")));
+      if (v("dek"))  f.push("dek: " + jsStr(v("dek")));
+      if (v("note")) f.push("note: " + jsStr(v("note")));
+    } else {
+      f.push("cat: " + catLiteral());
+      f.push("date: " + jsStr(v("date") || today()));
+      if (v("read")) f.push("read: " + jsStr(v("read")));
+      f.push("title: " + jsStr(v("title")));
+      if (v("dek")) f.push("dek: " + jsStr(v("dek")));
+      f.push("href: " + jsStr("/blog/" + slug() + ".html"));
+      if (featured.checked) f.push("featured: true");
+    }
+    return "  {\n    " + f.join(",\n    ") + "\n  },";
+  }
+
+  function preview(){
+    var date = esc(v("date") || today()) + (v("read") ? " · " + esc(v("read")) : "");
+    if (mode === "repost") {
+      pv.className = "pv ext";
+      pv.innerHTML =
+        '<div class="date">' + date + '</div>' +
+        '<div class="eye">↗ ' + esc(v("source") || "External") + '</div>' +
+        '<h3 class="ttl">' + esc(v("title") || "Untitled") + ' <span class="arr">↗</span></h3>' +
+        (v("dek") ? '<p class="dek">' + esc(v("dek")) + '</p>' : '') +
+        (v("note") ? '<p class="note">' + esc(v("note")) + '</p>' : '');
+    } else {
+      pv.className = "pv mine";
+      pv.innerHTML =
+        '<div class="date">' + date + '</div>' +
+        '<div class="eye">' + esc(cats().join(" · ")) + '</div>' +
+        '<h3 class="ttl">' + esc(v("title") || "Untitled") + (featured.checked ? ' <span class="fbadge">FEATURED</span>' : '') + '</h3>' +
+        (v("dek") ? '<p class="dek">' + esc(v("dek")) + '</p>' : '');
+    }
+  }
+
+  function syncMode(){
+    document.querySelectorAll(".mode").forEach(function(b){ b.classList.toggle("on", b.getAttribute("data-mode")===mode); });
+    document.querySelectorAll("[data-only]").forEach(function(n){ n.hidden = n.getAttribute("data-only") !== mode; });
+    lead.innerHTML = mode === "repost"
+      ? "A link out to someone else's writing — renders in <b>brass with an ↗</b> and opens in a new tab. No page to build."
+      : "One of your own essays — renders in <b>green</b>. You also create its page from the template (button below).";
+    dekLabel.innerHTML = mode === "repost"
+      ? 'What it’s about <span class="opt">— one line</span>'
+      : 'Summary <span class="opt">— one line for the index</span>';
+    el.cat.placeholder = mode === "repost" ? "Reading" : "Training";
+    render();
+  }
+
+  function render(){
+    if (mode === "original" && !slugEdited) el.slug.value = slugify(v("title"));
+    var sl = slug();
+    slugHint.textContent = "→ /blog/" + sl + ".html";
+    if (fnHint) fnHint.textContent = sl + ".html";
+    newPageBtn.href = "https://github.com/" + REPO + "/new/" + BRANCH + "/public/blog?filename=" + encodeURIComponent(sl + ".html");
+    out.textContent = snippet();
+    preview();
+  }
+
+  ids.forEach(function(i){ el[i].addEventListener("input", render); });
+  featured.addEventListener("change", render);
+  document.querySelectorAll(".mode").forEach(function(b){
+    b.addEventListener("click", function(){ mode = b.getAttribute("data-mode"); syncMode(); });
+  });
+
+  copyBtn.addEventListener("click", function(){
+    var text = snippet();
+    function done(){ var t=copyBtn.textContent; copyBtn.textContent="Copied ✓"; copyBtn.classList.add("copied"); setTimeout(function(){copyBtn.textContent=t;copyBtn.classList.remove("copied");},1600); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, fb); } else { fb(); }
+    function fb(){ var ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.focus(); ta.select(); try{document.execCommand("copy");done();}catch(e){alert("Copy failed — long-press the snippet to select it.");} document.body.removeChild(ta); }
+  });
+
+  syncMode();
+})();
+</script>
+</body>
+</html>
