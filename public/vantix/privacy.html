@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantix &mdash; Privacy</title>
+<meta name="description" content="How Vantix handles your training and health data &mdash; plain-language: never sold, always exportable, no black box.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: oklch(0.205 0.012 250); color: oklch(0.82 0.012 250); font-family: 'Space Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #92a6cc; color: oklch(0.18 0.02 250); }
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-thumb { background: oklch(0.36 0.012 250); }
+  ::-webkit-scrollbar-track { background: oklch(0.22 0.012 250); }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  .gk { font-family: 'Space Grotesk', sans-serif; }
+  p { text-wrap: pretty; }
+  section { scroll-margin-top: 104px; }
+  .ks-link { transition: color .15s; }
+  .ks-link:hover { color: #2f5436 !important; }
+  .vx-sub:hover { color: oklch(0.92 0.012 250) !important; }
+  @media (max-width: 760px){ .vx-railwrap{ grid-template-columns: 1fr !important; } .vx-2col{ grid-template-columns: 1fr !important; } .vx-stat4{ grid-template-columns: repeat(2,1fr) !important; } .vx-ia7{ grid-template-columns: repeat(2,1fr) !important; } .vx-sticky{ position: static !important; } }
+</style>
+<!--KS-SEO-->
+<link rel="canonical" href="https://kitesink.com/vantix/privacy.html">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<meta name="theme-color" content="#ece2cb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KiteSink">
+<meta property="og:title" content="Vantix &mdash; Privacy">
+<meta property="og:description" content="How Vantix handles your training and health data &mdash; plain-language: never sold, always exportable, no black box.">
+<meta property="og:url" content="https://kitesink.com/vantix/privacy.html">
+<meta property="og:image" content="https://kitesink.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vantix &mdash; Privacy">
+<meta name="twitter:description" content="How Vantix handles your training and health data &mdash; plain-language: never sold, always exportable, no black box.">
+<meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #92a6cc;outline-offset:2px}</style>
+</head>
+<body>
+
+<!-- ============ [B] KITESINK TOP BAR (cream, sticky) — verbatim ============ -->
+<div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:'Geist',-apple-system,system-ui,sans-serif;box-sizing:border-box"><a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none"><svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="font:800 14px 'Geist',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a><nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px 'Geist Mono',ui-monospace,monospace;color:#5e5238"><a href="/#work" class="ks-link" style="color:inherit;text-decoration:none">Work</a><a href="/blog.html" class="ks-link" style="color:inherit;text-decoration:none">Writing</a><a href="/campground-tycoon.html" class="ks-link" style="color:inherit;text-decoration:none">Games</a><a href="/about.html" class="ks-link" style="color:inherit;text-decoration:none">About</a></nav></div>
+
+<div style="background: oklch(0.205 0.012 250); min-height: 100vh; font-family: 'Space Grotesk', sans-serif; color: oklch(0.82 0.012 250);">
+
+  <!-- ============ [C] VANTIX SUB-NAV (sticky under KS bar) ============ -->
+  <div style="position: sticky; top: 38px; z-index: 30; background: oklch(0.215 0.012 250); border-bottom: 1px solid oklch(0.36 0.012 250); backdrop-filter: blur(8px);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px,4vw,32px); height: 58px; display: flex; align-items: center; gap: 16px;">
+      <a href="/vantix.html" style="display: flex; align-items: center; gap: 11px; text-decoration: none;">
+        <svg viewBox="0 0 56 56" width="24" height="24" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg>
+        <span class="gk" style="font-weight: 700; font-size: 17px; letter-spacing: 0.05em; color: oklch(0.95 0.012 250);">VANTIX</span>
+      </a>
+      <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250); letter-spacing: 0.1em; border-left: 1px solid oklch(0.38 0.012 250); padding-left: 16px;">PRIVACY</span>
+      <div class="gk" style="margin-left: auto; display: flex; align-items: center; gap: clamp(12px,2vw,20px); font-size: 13px;">
+        <a href="/vantix/roadmap.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Roadmap</a><a href="/vantix/changelog.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Changelog</a>
+        <a href="/vantix.html" class="gk vx-sub" style="color: oklch(0.7 0.012 250); text-decoration: none;">&#8592; Back to site</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ [D] PAGE BODY ============ -->
+
+  <!-- HERO -->
+  <section style="border-bottom: 1px solid oklch(0.34 0.012 250);">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 60px 32px 44px;">
+      <div class="mono" style="font-size: 12px; letter-spacing: 0.14em; color: oklch(0.58 0.012 250);">PRIVACY &middot; PLAIN-LANGUAGE SUMMARY &middot; UPDATED 2026&#8209;06&#8209;15</div>
+      <h1 class="gk" style="font-size: 44px; line-height: 1.06; font-weight: 700; letter-spacing: -0.025em; color: oklch(0.96 0.012 250); margin: 16px 0 0; max-width: 720px;">Your data stays yours. That's the whole product.</h1>
+      <p style="font-size: 16px; line-height: 1.65; color: oklch(0.72 0.012 250); margin: 18px 0 0; max-width: 700px;">Vantix only works if you trust it with everything you track. So privacy isn't a policy bolted on the side &mdash; it's the architecture. This page is the plain&#8209;language version; the full legal text links at the bottom of each section.</p>
+
+      <!-- promise tiles -->
+      <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+        <div style="background: oklch(0.235 0.012 250); padding: 22px 24px;">
+          <div class="mono" style="font-size: 10.5px; letter-spacing: 0.08em; color: #6f9f7a;">&#9679; NEVER SOLD</div>
+          <div class="gk" style="font-size: 17px; font-weight: 700; color: oklch(0.95 0.012 250); margin: 11px 0 0;">We don&rsquo;t sell your data</div>
+          <p style="font-size: 13px; line-height: 1.6; color: oklch(0.7 0.012 250); margin: 8px 0 0;">Not to advertisers, insurers, data brokers or anyone else. Our revenue is your subscription &mdash; never your data.</p>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 22px 24px;">
+          <div class="mono" style="font-size: 10.5px; letter-spacing: 0.08em; color: #92a6cc;">&#9679; YOURS TO LEAVE WITH</div>
+          <div class="gk" style="font-size: 17px; font-weight: 700; color: oklch(0.95 0.012 250); margin: 11px 0 0;">Export or delete, any day</div>
+          <p style="font-size: 13px; line-height: 1.6; color: oklch(0.7 0.012 250); margin: 8px 0 0;">Every raw payload is kept verbatim and exportable on request. Delete your account and it&rsquo;s gone, for good.</p>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 22px 24px;">
+          <div class="mono" style="font-size: 10.5px; letter-spacing: 0.08em; color: #d8a652;">&#9679; NO BLACK BOX</div>
+          <div class="gk" style="font-size: 17px; font-weight: 700; color: oklch(0.95 0.012 250); margin: 11px 0 0;">Derived, not hidden</div>
+          <p style="font-size: 13px; line-height: 1.6; color: oklch(0.7 0.012 250); margin: 8px 0 0;">Readiness, zones and trends are re-derived from inputs you own &mdash; so you can always see why a number is what it is.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section style="border-bottom: 1px solid oklch(0.34 0.012 250);">
+    <div class="vx-2col" style="max-width: 1100px; margin: 0 auto; padding: 48px 32px 72px; display: grid; grid-template-columns: 232px 1fr; gap: 56px; align-items: start;">
+
+      <!-- contents -->
+      <div class="vx-sticky" style="position: sticky; top: 104px;">
+        <div class="mono" style="font-size: 10.5px; letter-spacing: 0.1em; color: oklch(0.55 0.012 250); margin-bottom: 12px;">CONTENTS</div>
+        <div style="display: flex; flex-direction: column;">
+          <div class="vx-toc-row" data-target="p1" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">01</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Our stance</span>
+          </div>
+          <div class="vx-toc-row" data-target="p2" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">02</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">What we store</span>
+          </div>
+          <div class="vx-toc-row" data-target="p3" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">03</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">What we never do</span>
+          </div>
+          <div class="vx-toc-row" data-target="p4" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">04</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Integrations &amp; sources</span>
+          </div>
+          <div class="vx-toc-row" data-target="p5" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">05</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">AI &amp; the co-pilot</span>
+          </div>
+          <div class="vx-toc-row" data-target="p6" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">06</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Your controls</span>
+          </div>
+          <div class="vx-toc-row" data-target="p7" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">07</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Security &amp; retention</span>
+          </div>
+          <div class="vx-toc-row" data-target="p8" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
+            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">08</span>
+            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Changes &amp; contact</span>
+          </div>
+        </div>
+        <div class="mono" style="font-size: 11px; line-height: 1.6; color: oklch(0.5 0.012 250); margin-top: 22px; border-left: 2px solid oklch(0.38 0.012 250); padding-left: 13px;">Questions? <span style="color: #92a6cc;">privacy@vantix.app</span></div>
+      </div>
+
+      <!-- sections -->
+      <div style="display: flex; flex-direction: column; gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.42 0.012 250);">
+
+        <div id="p1" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">01</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Our stance</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Vantix is a periodization OS: it only works if you connect the apps, wearables, logs and labs that describe your whole training and health life. We treat that as a serious responsibility, not a growth lever.</p>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">The short version: we collect what we need to run the product for you, we keep it transparent and portable, and we never monetize it beyond the subscription you pay.</p>
+        </div>
+
+        <div id="p2" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">02</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">What we store</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Everything you import or connect lands on one universal event spine. We keep two layers, deliberately:</p>
+          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 250); border: 1px solid oklch(0.32 0.012 250);">
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">RAW PAYLOAD</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">The original export or API response, stored verbatim and unchanged &mdash; so any derived value can be re-computed and audited.</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NORMALIZED EVENT</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">The canonical event we derive from it (hrv, set, macro, sleep, lab) used to power the surfaces.</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #d8a652; letter-spacing: 0.02em;">ACCOUNT</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Email, authentication and subscription status. That&rsquo;s the extent of the identity we hold.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="p3" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">03</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">What we never do</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Some lines we will not cross, by design:</p>
+          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 250); border: 1px solid oklch(0.32 0.012 250);">
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NO SELLING</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">We never sell, rent or share your data with advertisers, insurers or brokers.</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NO SILENT AI</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">We never feed your data to a model you didn&rsquo;t explicitly opt into.</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NO LOCK-IN</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">We never withhold your data to keep you subscribed &mdash; export is always available.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="p4" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">04</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Integrations &amp; sources</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">You choose what to connect. Live connections (via our aggregator) and manual file imports both flow through the same import engine and the same privacy rules.</p>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">We request the narrowest scope each source allows, and a missed or revoked connection is shown to you rather than quietly back-filled. Disconnect a source any time; its already-imported events stay yours to keep or delete.</p>
+        </div>
+
+        <div id="p5" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">05</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">AI &amp; the co-pilot</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">The AI co-pilot reads the parts of your plan and history needed to propose a change &mdash; and it can only ever propose. Every suggestion is a diff you review; nothing is written without your confirmation through the review-gate.</p>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">On Pro, you can bring your own model keys (e.g. via OpenRouter). When you do, requests go directly to that provider under their terms; we don&rsquo;t retain the prompt contents beyond what&rsquo;s needed to render your session.</p>
+        </div>
+
+        <div id="p6" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">06</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Your controls</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">You hold the switches:</p>
+          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 250); border: 1px solid oklch(0.32 0.012 250);">
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">EXPORT</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Download your raw payloads and normalized events at any time, in open formats.</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">DELETE</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Delete individual sources, a date range, or your entire account &mdash; hard deletes, not flags.</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
+              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">OPT-IN</span>
+              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Every AI and data-sharing feature is off until you turn it on.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="p7" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">07</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Security &amp; retention</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Data is encrypted in transit and at rest. Access is scoped to the systems that run the product, and we keep your data only while your account is active or as long as the law requires.</p>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">When you delete data, it is removed from primary storage immediately and purged from backups on their normal rotation. We&rsquo;ll tell you the current window on request.</p>
+        </div>
+
+        <div id="p8" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">08</span>
+            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Changes &amp; contact</h2>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">If this summary changes materially, we&rsquo;ll surface it in-app before it takes effect &mdash; not bury it in a diff. Substantive history is kept so you can see what changed and when.</p>
+          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Privacy questions, export requests or deletion requests: privacy@vantix.app. We aim to respond within a few business days.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ [E] VANTIX FOOTER (cross-linked) ============ -->
+  <div style="border-top: 1px solid oklch(0.34 0.012 250); background: oklch(0.215 0.012 250);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 30px clamp(16px,4vw,32px); display: flex; align-items: center; gap: 16px 20px; flex-wrap: wrap;">
+      <a href="/vantix.html" style="display: flex; align-items: center; gap: 10px; text-decoration:none;"><svg viewBox="0 0 56 56" width="21" height="21" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg><span class="gk" style="font-weight: 700; font-size: 15px; letter-spacing: 0.05em; color: oklch(0.92 0.012 250);">VANTIX</span></a>
+      <span class="mono" style="font-size: 11.5px; color: oklch(0.55 0.012 250);">This summary is provided in good faith and does not replace the full legal policy.</span>
+      <div class="gk" style="margin-left: auto; display: flex; gap: 18px; font-size: 13px; color: oklch(0.62 0.012 250); flex-wrap: wrap;">
+        <a href="/vantix.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Overview</a>
+        <a href="/vantix/roadmap.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Roadmap</a>
+        <a href="/vantix/changelog.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Changelog</a>
+        <a href="/vantix/privacy.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Privacy</a>
+        <span class="mono" style="color: oklch(0.45 0.012 250);">&copy; 2026</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ [F] KITESINK BOTTOM BAR (cream) — verbatim ============ -->
+<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#8a7a58"><span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="color:#221c10">&copy; 2026 KiteSink</span></span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="/blog.html" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="/about.html" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span></div>
+
+<script>
+  (function () {
+    function scrollToTarget(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var y = el.getBoundingClientRect().top + window.scrollY - 104;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    var rows = document.querySelectorAll('.vx-toc-row');
+    for (var i = 0; i < rows.length; i++) {
+      rows[i].addEventListener('click', function () {
+        scrollToTarget(this.getAttribute('data-target'));
+      });
+    }
+  })();
+</script>
+</body>
+</html>
