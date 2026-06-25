@@ -12,3 +12,5 @@ node_modules/
 docs/cg-tycoon/
 sotd-priv-terms.zip
 docs/handover/
+docs/*.jpg
+docs/*.png
