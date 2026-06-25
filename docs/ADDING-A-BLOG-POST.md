@@ -1,11 +1,24 @@
 # How to add a blog post
 
-The blog is plain static HTML — no build step. A post is **one HTML file** in `public/blog/`,
-plus **one entry** in the list on `public/blog.html`. Takes ~5 minutes.
+The blog holds **two kinds of entry**, both driven by the `POSTS` array in `public/blog.html`:
+
+- **Your essay** — something you wrote. Needs its own HTML file in `public/blog/` _and_ a `POSTS`
+  entry. Renders in green; this is the default. Steps 1–4 below.
+- **A repost / external link** — a link out to someone else's writing you want to feature. **No
+  page file** — just one `POSTS` entry with `external: true`. Renders in **brass with an ↗**, opens
+  in a new tab, and can carry a short blurb on _why_ you're featuring it. See
+  [Reposting an external link](#reposting-an-external-link) below.
+
+The index makes the difference obvious at a glance (legend: `✍ Mine` vs `↗ External link`) and adds
+a **↗ Reposts** filter chip automatically once at least one repost exists. The rest is plain static
+HTML — no build step.
 
 ---
 
-## 1. Create the post page
+## 1. Create the post page (your own essays only)
+
+> Skip this whole section for reposts — an external link needs no page file.
+
 
 ```bash
 # from the repo root — pick a short, lowercase, hyphenated slug
@@ -61,7 +74,42 @@ there's one post.
 
 ---
 
-## 3. Add it to the sitemap (good for SEO)
+## Reposting an external link
+
+Want to feature someone else's article? Add **one** `POSTS` entry with `external: true` — that's the
+whole job. No file under `public/blog/`, no sitemap entry (it's not your URL), no step 1.
+
+```js
+{
+  external: true,                          // ← marks it as a repost (brass styling + ↗ + new tab)
+  cat: "AI",                               // topical category — still feeds the filter chips
+  date: "2026.07.01",                      // YYYY.MM.DD
+  read: "12 min",                          // optional — the linked piece's length
+  title: "The article's title",
+  source: "Publication or Author",         // shown as the byline, e.g. "Stratechery"
+  url: "https://example.com/the-article",  // the external link (opens in a new tab)
+  dek: "One line on what the piece is about.",
+  note: "Why I'm featuring this — my take in a sentence or two."   // optional but recommended
+},
+```
+
+How it renders vs. your own essays:
+
+| | Your essay | Repost (`external: true`) |
+|---|---|---|
+| Accent colour | green | **brass** |
+| Marker | — | **↗** after the title + brass `↗ Source` eyebrow |
+| Link | `href` → `/blog/slug.html`, same tab | `url` → external site, **new tab** (`rel="noopener"`) |
+| Blurb | the `dek` | the `dek` **plus** your `note` ("Why I'm featuring this") |
+| Needs a page file? | yes | **no** |
+
+Set `featured: true` on a repost and the big top card switches to the brass variant too. The index
+ships with one **example** repost (Paul Graham, _How to Do Great Work_) so you can see the styling —
+edit it to your first real link, or delete that object.
+
+---
+
+## 3. Add it to the sitemap (good for SEO — your own essays only)
 
 Open `public/sitemap.xml` and add one line before `</urlset>`:
 
