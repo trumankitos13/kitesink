@@ -1,15 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "kitesink",
+  "name": "kitesink-vantix",
   "compatibility_date": "2026-06-25",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "./public",
-    "not_found_handling": "404-page"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+    "directory": ".",
+    "not_found_handling": "single-page-application"
+  }
 }

@@ -1,135 +1,106 @@
 # Deploying KiteSink on Cloudflare
 
-This site is static, so the simplest, free, fast path is **Cloudflare Pages**. You'll set up
-two Pages projects from this one repo:
+This site deploys as a **Cloudflare Worker with Static Assets** (the modern successor to
+Pages). The repo already contains the Worker config, so deploying is mostly "push to `main`".
 
-| Project        | Output folder | Custom domain            |
-|----------------|---------------|--------------------------|
-| `kitesink`     | `public/`     | `kitesink.com` + `www`   |
-| `kitesink-vantix` | `vantix/`  | `vantix.kitesink.com`    |
+| What                | Config file           | Serves folder | Domain                  |
+|---------------------|-----------------------|---------------|-------------------------|
+| Main site           | `wrangler.jsonc`      | `public/`     | `kitesink.com` (+ `www`)|
+| Vantix placeholder  | `vantix/wrangler.jsonc` | `vantix/`   | `vantix.kitesink.com`   |
 
-> Why two projects? Each Pages project serves one folder at its own domain. The main site
-> lives in `public/`; the Vantix placeholder lives in `vantix/` and gets its own subdomain.
-> (You can skip the Vantix project for now and add it later — the link on the home page will
-> just 404 until then.)
-
----
-
-## 0. Prerequisites
-
-- A Cloudflare account (free) — https://dash.cloudflare.com
-- This repo pushed to GitHub (recommended) so Pages can auto-build on every push.
-  ```bash
-  git push -u origin dev-site-consolidation     # or merge to main first, then push main
-  ```
+> **Why not Pages?** A `wrangler.jsonc` was added when Cloudflare auto-configured Workers
+> Builds for this repo. With that file present, Cloudflare deploys a **Worker**, not a Pages
+> project — and a Worker route wins over a Pages custom domain. So we use Workers Static
+> Assets for both. (If you ever want plain Pages instead, you must delete `wrangler.jsonc`
+> *and* delete the Worker + its Workers-Build connection in the dashboard first.)
 
 ---
 
-## 1. Add `kitesink.com` to Cloudflare (DNS)
+## The bug this just fixed
 
-You need the domain's DNS managed by Cloudflare. Two cases:
-
-**A. You registered kitesink.com with Cloudflare Registrar** → DNS is already on Cloudflare.
-Skip to step 2.
-
-**B. The domain is registered elsewhere (GoDaddy, Namecheap, Google, etc.):**
-1. Cloudflare dashboard → **Add a site** → enter `kitesink.com` → choose the **Free** plan.
-2. Cloudflare scans existing DNS records. Review them.
-3. Cloudflare shows two **nameservers** (e.g. `xxx.ns.cloudflare.com`). Log in to your current
-   registrar and replace its nameservers with these two.
-4. Wait for activation (minutes to a few hours). Cloudflare emails you when `kitesink.com` is
-   **Active**.
-
-> Optional: you can transfer the registration to Cloudflare Registrar later
-> (Registrar → Manage Domains). Not required for hosting.
+The original auto-generated `wrangler.jsonc` had `"assets": { "directory": "." }` — it served
+the **repo root**, which has no `index.html` (the site lives in `public/`). Result:
+`kitesink.com` returned a **404 with an empty body**. It now points at `./public`, so once
+this lands on `main` and the Worker redeploys, the site loads.
 
 ---
 
-## 2. Create the main Pages project (`kitesink.com`)
+## 1. DNS — get `kitesink.com` onto Cloudflare
 
-**Dashboard → Workers & Pages → Create → Pages → Connect to Git.**
-
-1. Authorize GitHub and pick this repo.
-2. Build settings:
-   - **Production branch:** `main` (merge your work to `main` first) — or `dev-site-consolidation` while testing.
-   - **Framework preset:** `None`
-   - **Build command:** *(leave empty)*
-   - **Build output directory:** `public`
-3. **Save and Deploy.** You get a preview URL like `kitesink.pages.dev` — open it and click
-   through every page to confirm it works.
-
-### Attach the custom domain
-In the project → **Custom domains → Set up a custom domain**:
-1. Add `kitesink.com`. Because the domain is already on Cloudflare, Pages creates the DNS
-   record for you automatically. Click **Activate**.
-2. Add `www.kitesink.com` the same way (Pages will redirect it to the apex, or vice-versa).
-
-That's it — `https://kitesink.com` now serves `public/`.
+If you registered the domain with Cloudflare, this is already done. Otherwise:
+1. Dashboard → **Add a site** → `kitesink.com` → Free plan.
+2. Point your registrar's nameservers at the two Cloudflare gives you.
+3. Wait for the zone to go **Active**.
 
 ---
 
-## 3. Create the Vantix Pages project (`vantix.kitesink.com`)
+## 2. Main site Worker (`kitesink.com`)
 
-Repeat step 2 with one change:
+The repo is already connected via Workers Builds (that's where `wrangler.jsonc` came from).
+**To deploy: merge to `main` and the Worker rebuilds automatically.** Verify in the dashboard:
 
-**Create → Pages → Connect to Git → same repo**, but set:
-- **Project name:** `kitesink-vantix`
-- **Build output directory:** `vantix`
-- Build command empty, preset None.
+- **Workers & Pages → `kitesink`** → latest build is green, serving `./public`.
+- **Settings → Domains & Routes** → ensure `kitesink.com` is attached. Add `www.kitesink.com`
+  too (this also creates the `www` DNS record — that's why `www` currently fails to resolve).
 
-Then **Custom domains → Set up a custom domain → `vantix.kitesink.com` → Activate.**
-Pages adds the `vantix` CNAME automatically.
+If the Worker is **not** yet connected to the repo:
+- **Workers & Pages → Create → Workers → Connect to Git** → pick this repo, leave the build
+  defaults (it reads `wrangler.jsonc`), deploy. Then attach the domain as above.
 
-Now `https://vantix.kitesink.com` serves `vantix/`.
+### Deploy manually instead (optional)
+```bash
+npm i -g wrangler
+wrangler login
+wrangler deploy            # reads ./wrangler.jsonc, serves ./public
+```
+
+---
+
+## 3. Vantix subdomain (`vantix.kitesink.com`)
+
+`vantix.kitesink.com` currently doesn't resolve because no Worker/DNS exists for it yet.
+There's a ready config at `vantix/wrangler.jsonc` (a separate Worker named `kitesink-vantix`).
+
+**Connect a second Workers project** pointing at the `vantix/` folder:
+- **Workers & Pages → Create → Workers → Connect to Git** → same repo.
+- In the build settings set the **root directory** to `vantix` (so it uses
+  `vantix/wrangler.jsonc` and serves that folder).
+- Deploy, then **Settings → Domains & Routes → Add** `vantix.kitesink.com`.
+
+Or manually:
+```bash
+cd vantix && wrangler deploy
+# then add the custom domain in the dashboard
+```
 
 ---
 
 ## 4. Verify
 
-- `https://kitesink.com` → Home loads, nav works, blog filter + clock animate.
-- `https://kitesink.com/about.html`, `/blog.html`, `/blog/normalize.html`,
-  `/song-of-the-day.html`, `/campground-tycoon.html` all load.
-- The Vantix card on the home page → `https://vantix.kitesink.com` loads.
-- HTTPS padlock is present (Cloudflare issues the certificate automatically — may take a few
-  minutes after activating each domain).
-
----
-
-## Updating the site later
-
-With the Git integration, **just push to `main`**:
 ```bash
-git add -A && git commit -m "update site" && git push
+curl -I https://kitesink.com            # expect HTTP 200
+curl -I https://kitesink.com/about.html # 200
+curl -I https://www.kitesink.com        # 200 (after adding www)
+curl -I https://vantix.kitesink.com     # 200 (after step 3)
 ```
-Cloudflare Pages rebuilds and redeploys both projects automatically (each watches the repo;
-the main project publishes `public/`, the Vantix project publishes `vantix/`).
+Then open `https://kitesink.com` and click through Home → About → Blog → the project pages.
+A 404 on a real page means the asset path is wrong; a 404 on a *missing* path correctly serves
+`public/404.html`.
 
 ---
 
-## Alternative: deploy without GitHub (direct upload)
+## Updating later
 
-If you'd rather not connect Git, use Wrangler from your machine:
-```bash
-npm i -g wrangler
-wrangler login
-# main site
-wrangler pages deploy public --project-name kitesink
-# vantix
-wrangler pages deploy vantix --project-name kitesink-vantix
-```
-Then attach the custom domains in the dashboard as in steps 2–3. You re-run the
-`wrangler pages deploy …` command each time you want to publish changes.
+Push to `main`. Workers Builds rebuilds and redeploys each connected Worker automatically
+(`kitesink` → `public/`, `kitesink-vantix` → `vantix/`).
 
----
+## Gotchas
 
-## Notes & gotchas
-
-- **Root-relative links** (`/about.html`, `/blog/normalize.html`) require serving from a
-  domain root — which Pages does. They won't resolve from `file://`; use a local server for
-  testing (see README).
-- **Campground screenshots:** add the PNGs to `public/site_assets/` (see README) before they
-  show; the page degrades gracefully without them.
-- **Email placeholder:** replace `hello@kitesink.com` across the repo with your real contact
-  address before launch.
-- **Caching:** after redeploys, Cloudflare may cache aggressively. If you don't see a change,
-  purge cache: dashboard → the zone → **Caching → Configuration → Purge Everything**.
+- **`www` / `vantix` "can't resolve"** = no DNS record yet. Adding the custom domain to the
+  Worker (step 2/3) creates it.
+- **Still 404 after deploy?** Confirm the `kitesink` Worker's latest build is green and that
+  `wrangler.jsonc` shows `directory: ./public`. Purge cache: zone → **Caching → Purge
+  Everything**.
+- **Campground screenshots** still need to be added to `public/site_assets/` (see README); the
+  page degrades gracefully without them.
+- **Contact email** placeholder `hello@kitesink.com` should be replaced before launch.
