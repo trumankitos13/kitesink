@@ -72,7 +72,7 @@
 
   <section style="padding:clamp(40px,6vw,64px) clamp(20px,4vw,40px) 24px;max-width:1180px;margin:0 auto">
     <div style="display:flex;align-items:center;gap:10px;font:600 12px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.16em;color:#2f5436;margin-bottom:22px">
-      <span style="font-size:15px">✱</span><span>Writing · 14 essays &amp; counting</span>
+      <span style="font-size:15px">✱</span><span>Writing · <span id="introCount"></span></span>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,5vw,56px);align-items:flex-end">
       <h1 style="font:800 clamp(48px,8vw,104px)/.9 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810;margin:0;flex:1 1 360px">The<br><span style="font-style:italic;font-weight:700;color:#2f5436">logbook.</span></h1>
@@ -84,21 +84,8 @@
     <div id="chips" style="display:flex;gap:9px;flex-wrap:wrap;padding:18px 0;border-top:1px solid rgba(34,28,16,.16);border-bottom:1px solid rgba(34,28,16,.16)"></div>
   </section>
 
-  <section style="padding:clamp(34px,5vw,52px) clamp(20px,4vw,40px) 20px;max-width:1180px;margin:0 auto">
-    <a href="/blog/normalize.html" class="hv2" style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,44px);align-items:stretch;border:1.5px solid rgba(34,28,16,.2);border-radius:16px;overflow:hidden;background:#f3ecd9;transition:transform .2s,box-shadow .2s">
-      <div style="flex:1 1 300px;min-height:240px;background:linear-gradient(135deg,#2f5436,#23402b);position:relative;display:flex;align-items:flex-end;padding:26px">
-        <div aria-hidden="true" style="position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(125deg,transparent 0 16px,rgba(216,176,122,.14) 16px 17px)"></div>
-        <div style="position:relative">
-          <div style="font:600 11px 'Geist Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#d8b07a;margin-bottom:8px">Featured · Training</div>
-          <div style="font:800 clamp(26px,3vw,38px)/1.04 'Geist',sans-serif;letter-spacing:-.03em;color:#f0e8d6">Why I normalize every set I've ever logged</div>
-        </div>
-      </div>
-      <div style="flex:1 1 320px;padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;justify-content:center">
-        <div style="font:500 12px 'Geist Mono',monospace;color:#a89878;margin-bottom:12px">2026.06.18 · 9 min read</div>
-        <p style="font:400 18px/1.6 'Geist',sans-serif;color:#5e5238;margin:0">Raw tonnage lies. The only honest way to compare a brutal week to an easy one is to put everything on the same scale — and that one decision reshaped how I think about progress, fatigue, and what the data is really telling me.</p>
-        <div style="display:flex;align-items:center;gap:10px;margin-top:22px;font:600 13px 'Geist Mono',monospace;color:#2f5436">Read the essay <span style="width:30px;height:30px;border:1.5px solid #2f5436;border-radius:50%;display:flex;align-items:center;justify-content:center">→</span></div>
-      </div>
-    </a>
+  <section id="featuredSection" style="padding:clamp(34px,5vw,52px) clamp(20px,4vw,40px) 20px;max-width:1180px;margin:0 auto">
+    <div id="featured"></div>
   </section>
 
   <section style="padding:clamp(28px,4vw,40px) clamp(20px,4vw,40px) clamp(48px,7vw,72px);max-width:1180px;margin:0 auto">
@@ -118,7 +105,7 @@
       <div style="display:flex;gap:16px;font:500 13px 'Geist Mono',monospace;color:#2f5436;flex-wrap:wrap">
         <a href="/" class="hv4">Home</a>
         <a href="/about.html" class="hv4">About</a>
-        <span>@tkitos</span>
+        <span>@trumankitos13</span>
       </div>
     </div>
     <div style="margin-top:30px;padding-top:18px;border-top:1px solid rgba(34,28,16,.18);font:400 12px 'Geist Mono',monospace;color:#a89878">© 2026 KiteSink — all rights reserved.</div>
@@ -130,57 +117,82 @@
 (function () {
   // Live clock
   var clockEl = document.getElementById("clock");
-  function tick() {
-    clockEl.textContent = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
-  }
-  tick();
-  setInterval(tick, 1000);
+  function tick() { clockEl.textContent = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }); }
+  tick(); setInterval(tick, 1000);
 
-  var ALL_POSTS = [
-    { cat: "Training", date: "2026.06.18", read: "9 min", title: "Why I normalize every set I've ever logged", dek: "Raw tonnage lies. The only honest way to compare a brutal week to an easy one is to put everything on the same scale.", href: "/blog/normalize.html" },
-    { cat: "Longevity", date: "2026.06.04", read: "7 min", title: "Longevity is a UX problem", dek: "We already know what works. The hard part is designing habits a human will actually keep for forty years." },
-    { cat: "Culture", date: "2026.05.21", read: "5 min", title: "The case for one song a day", dek: "Infinite libraries made music disposable. A single daily pick is a small act of attention." },
-    { cat: "AI", date: "2026.05.09", read: "11 min", title: "Building alone, with a machine", dek: "What it actually feels like to ship four projects as one person in the year of the model." },
-    { cat: "Nutrition", date: "2026.04.27", read: "8 min", title: "Protein is boring and that's the point", dek: "The unglamorous lever almost nobody pulls consistently — and the simplest way I found to stop thinking about it." },
-    { cat: "Habit", date: "2026.04.12", read: "6 min", title: "The two-week rule for everything", dek: "How I decide whether a new system is worth keeping before sunk cost makes the decision for me." },
-    { cat: "Society", date: "2026.03.30", read: "10 min", title: "We optimized away the friction we needed", dek: "Some inconvenience was load-bearing. A field guide to the frictions worth putting back." },
-    { cat: "AI", date: "2026.03.14", read: "7 min", title: "Taste is the last moat", dek: "When anyone can generate anything, the scarce thing is knowing what's worth making at all." },
-    { cat: "Training", date: "2026.02.28", read: "12 min", title: "Mesocycles for people with jobs", dek: "Periodization theory assumes a life you don't have. Here's how I adapt it to real weeks." },
-    { cat: "Internet", date: "2026.02.10", read: "6 min", title: "In praise of the small web", dek: "Why I'd rather run four hand-built pages than one feed that owns my attention." },
-    { cat: "Success", date: "2026.01.26", read: "5 min", title: "Shipping is a skill, not a mood", dek: "The unsexy mechanics of finishing things when motivation has long since left the building." },
-    { cat: "Longevity", date: "2026.01.08", read: "9 min", title: "Sleep is the supplement", dek: "I tried the whole stack. The only thing that moved every marker was going to bed on time." },
-    { cat: "Nutrition", date: "2025.12.19", read: "7 min", title: "Cooking is data collection", dek: "Treating the kitchen like a lab made eating well boring enough to actually sustain." },
-    { cat: "Culture", date: "2025.12.02", read: "8 min", title: "Against the year in review", dek: "The annual recap flattens a life into a slideshow. What I do instead, all year long." }
+  // ===================== BLOG POSTS =====================
+  // Add one object per post, NEWEST FIRST. Each post also needs its own
+  // page file under /blog/ (copy public/blog/_template.html).
+  // Fields: cat, date "YYYY.MM.DD", read "N min", title, dek (one-line summary),
+  //         href "/blog/slug.html", featured (optional; true = big card on top).
+  // See docs/ADDING-A-BLOG-POST.md for the full steps.
+  var POSTS = [
+    // {
+    //   cat: "Training", date: "2026.07.01", read: "6 min",
+    //   title: "My first real post",
+    //   dek: "A one-sentence summary that shows on the index.",
+    //   href: "/blog/my-first-real-post.html", featured: true
+    // },
   ];
+  // ======================================================
 
-  var CATS = ["All", "Training", "Longevity", "Nutrition", "AI", "Culture", "Society", "Internet", "Habit", "Success"];
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
+  var introCount = document.getElementById("introCount");
+  var chipsEl = document.getElementById("chips");
+  var chipsSection = chipsEl.closest("section");
+  var featuredSection = document.getElementById("featuredSection");
+  var featuredEl = document.getElementById("featured");
+  var listEl = document.getElementById("postList");
+  var headingEl = document.getElementById("listHeading");
+  var shownEl = document.getElementById("shownCount");
+
+  // Empty state
+  if (!POSTS.length) {
+    introCount.textContent = "first essays landing soon";
+    if (chipsSection) chipsSection.style.display = "none";
+    if (featuredSection) featuredSection.style.display = "none";
+    headingEl.textContent = "No essays yet";
+    shownEl.textContent = "";
+    listEl.innerHTML = '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#8a7a58;padding:30px 0;border-top:1px solid rgba(34,28,16,.16)">The logbook is open but empty — the first essays are being written. Check back soon, or <a href="/" style="color:#2f5436">head home</a>.</p>';
+    return;
+  }
+
+  introCount.textContent = POSTS.length + (POSTS.length === 1 ? " essay" : " essays") + " & counting";
+
+  // Featured card
+  var featured = POSTS.filter(function (p) { return p.featured; })[0] || POSTS[0];
+  featuredEl.innerHTML =
+    '<a href="' + esc(featured.href || "/blog.html") + '" class="hv2" style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,44px);align-items:stretch;border:1.5px solid rgba(34,28,16,.2);border-radius:16px;overflow:hidden;background:#f3ecd9;transition:transform .2s,box-shadow .2s">' +
+      '<div style="flex:1 1 300px;min-height:240px;background:linear-gradient(135deg,#2f5436,#23402b);position:relative;display:flex;align-items:flex-end;padding:26px">' +
+        '<div aria-hidden="true" style="position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(125deg,transparent 0 16px,rgba(216,176,122,.14) 16px 17px)"></div>' +
+        '<div style="position:relative"><div style="font:600 11px \'Geist Mono\',monospace;letter-spacing:.16em;text-transform:uppercase;color:#d8b07a;margin-bottom:8px">Featured · ' + esc(featured.cat) + '</div>' +
+        '<div style="font:800 clamp(26px,3vw,38px)/1.04 \'Geist\',sans-serif;letter-spacing:-.03em;color:#f0e8d6">' + esc(featured.title) + '</div></div></div>' +
+      '<div style="flex:1 1 320px;padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;justify-content:center">' +
+        '<div style="font:500 12px \'Geist Mono\',monospace;color:#a89878;margin-bottom:12px">' + esc(featured.date) + ' · ' + esc(featured.read) + ' read</div>' +
+        '<p style="font:400 18px/1.6 \'Geist\',sans-serif;color:#5e5238;margin:0">' + esc(featured.dek) + '</p>' +
+        '<div style="display:flex;align-items:center;gap:10px;margin-top:22px;font:600 13px \'Geist Mono\',monospace;color:#2f5436">Read the essay <span style="width:30px;height:30px;border:1.5px solid #2f5436;border-radius:50%;display:flex;align-items:center;justify-content:center">→</span></div>' +
+      '</div></a>';
+
+  // Categories (derived from posts)
+  var cats = ["All"];
+  POSTS.forEach(function (p) { if (cats.indexOf(p.cat) < 0) cats.push(p.cat); });
   function chipStyle(on) {
     return "appearance:none;cursor:pointer;font:600 12px 'Geist Mono',monospace;letter-spacing:.04em;padding:8px 15px;border-radius:30px;transition:all .15s;" +
       (on ? "background:#2f5436;color:#f0e8d6;border:1.5px solid #2f5436" : "background:transparent;color:#5e5238;border:1.5px solid rgba(34,28,16,.22)");
   }
-
-  function esc(s) {
-    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  }
-
-  // Render chips
-  var chipsEl = document.getElementById("chips");
-  CATS.forEach(function (label) {
+  cats.forEach(function (label) {
     var b = document.createElement("button");
-    b.type = "button";
-    b.textContent = label;
-    b.setAttribute("data-cat", label);
+    b.type = "button"; b.textContent = label; b.setAttribute("data-cat", label);
     b.setAttribute("style", chipStyle(label === "All"));
     b.addEventListener("click", function () { setActive(label); });
     chipsEl.appendChild(b);
   });
 
-  // Render posts as static HTML
-  var listEl = document.getElementById("postList");
-  listEl.innerHTML = ALL_POSTS.map(function (p) {
+  // List
+  listEl.innerHTML = POSTS.map(function (p) {
     var href = p.href || "/blog.html";
-    return '<a href="' + href + '" data-cat="' + esc(p.cat) + '" class="hv3" style="display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline;padding:24px 0;border-top:1px solid rgba(34,28,16,.16)">' +
+    return '<a href="' + esc(href) + '" data-cat="' + esc(p.cat) + '" class="hv3" style="display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline;padding:24px 0;border-top:1px solid rgba(34,28,16,.16)">' +
       '<div style="flex:0 0 auto;width:118px;font:600 11px \'Geist Mono\',monospace;color:#a89878;padding-top:5px">' + esc(p.date) + '</div>' +
       '<div style="flex:1 1 420px;min-width:260px">' +
         '<div style="font:600 11px \'Geist Mono\',monospace;letter-spacing:.08em;text-transform:uppercase;color:#2f5436;margin-bottom:6px">' + esc(p.cat) + '</div>' +
@@ -191,26 +203,14 @@
     '</a>';
   }).join("");
 
-  var headingEl = document.getElementById("listHeading");
-  var shownEl = document.getElementById("shownCount");
   var postLinks = listEl.querySelectorAll("a[data-cat]");
-
   function setActive(active) {
-    // chips
-    chipsEl.querySelectorAll("button[data-cat]").forEach(function (b) {
-      b.setAttribute("style", chipStyle(b.getAttribute("data-cat") === active));
-    });
-    // posts
+    chipsEl.querySelectorAll("button[data-cat]").forEach(function (b) { b.setAttribute("style", chipStyle(b.getAttribute("data-cat") === active)); });
     var shown = 0;
-    postLinks.forEach(function (a) {
-      var match = active === "All" || a.getAttribute("data-cat") === active;
-      a.style.display = match ? "flex" : "none";
-      if (match) shown++;
-    });
+    postLinks.forEach(function (a) { var m = active === "All" || a.getAttribute("data-cat") === active; a.style.display = m ? "flex" : "none"; if (m) shown++; });
     headingEl.textContent = active === "All" ? "All essays" : active;
     shownEl.textContent = shown + " shown";
   }
-
   setActive("All");
 })();
 </script>
