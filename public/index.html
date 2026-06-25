@@ -215,7 +215,7 @@
       <a href="/blog.html" style="font:600 12px 'Geist Mono',monospace;color:#2f5436" class="hv8">Visit the log /blog →</a>
     </div>
 
-    <div style="border-top:1px solid rgba(34,28,16,.18);padding:30px 0"><p style="font:400 17px/1.6 'Geist',sans-serif;color:#8a7a58;margin:0;max-width:520px">The logbook is open but empty — the first essays are being written. <a href="/blog.html" style="color:#2f5436" class="hv8">Watch this space →</a></p></div>
+    <div id="logFeed"></div>
   </section>
 
   <div style="background:#2f5436;overflow:hidden;white-space:nowrap;padding:18px 0">
@@ -266,6 +266,7 @@
 
 </div>
 
+<script src="/blog/posts.js"></script>
 <script>
   (function () {
     function tick() {
@@ -275,6 +276,36 @@
     }
     tick();
     setInterval(tick, 1000);
+  })();
+
+  // ---- From the log: newest 5 entries, rendered from the shared /blog/posts.js ----
+  (function () {
+    var feed = document.getElementById("logFeed");
+    if (!feed) return;
+    function esc(s){ return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+    function catsOf(p){ return Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : []); }
+    var POSTS = (window.KS_POSTS || []).slice(0, 5);
+    if (!POSTS.length) {
+      feed.innerHTML = '<div style="border-top:1px solid rgba(34,28,16,.18);padding:30px 0"><p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#8a7a58;margin:0;max-width:520px">The logbook is open but empty — the first essays are being written. <a href="/blog.html" style="color:#2f5436" class="hv8">Watch this space →</a></p></div>';
+      return;
+    }
+    feed.innerHTML = POSTS.map(function (p) {
+      var ext = !!p.external;
+      var accent = ext ? "#b07227" : "#2f5436";
+      var href = ext ? (p.url || "#") : (p.href || "/blog.html");
+      var attrs = ext ? ' target="_blank" rel="noopener"' : '';
+      var eyebrow = ext ? ('↗ ' + esc(p.source || "External")) : catsOf(p).map(esc).join(" · ");
+      var tail = ext ? ' <span style="color:#b07227;font-size:.8em">↗</span>' : '';
+      var right = ext ? esc(p.read || "link") : esc(p.read || "");
+      return '<a href="' + esc(href) + '"' + attrs + ' class="hv5" style="display:flex;flex-wrap:wrap;gap:10px 24px;align-items:baseline;padding:20px 0;border-top:1px solid rgba(34,28,16,.16)">' +
+        '<span style="flex:0 0 auto;width:96px;font:600 11px \'Geist Mono\',monospace;color:#a89878">' + esc(p.date) + '</span>' +
+        '<span style="flex:1 1 360px;min-width:240px">' +
+          '<span style="display:block;font:600 10px \'Geist Mono\',monospace;letter-spacing:.1em;text-transform:uppercase;color:' + accent + ';margin-bottom:4px">' + eyebrow + '</span>' +
+          '<span style="display:block;font:700 clamp(18px,2vw,22px)/1.2 \'Geist\',sans-serif;letter-spacing:-.02em;color:#221c10">' + esc(p.title) + tail + '</span>' +
+        '</span>' +
+        '<span style="flex:0 0 auto;margin-left:auto;font:500 11px \'Geist Mono\',monospace;color:#a89878">' + right + '</span>' +
+      '</a>';
+    }).join("");
   })();
 </script>
 

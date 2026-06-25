@@ -11,13 +11,21 @@ runs in any browser by opening the file directly.
 public/                     ← deploy root for kitesink.com
   index.html                Home (selected work, blog teaser, song-of-the-day card)
   about.html                About
-  blog.html                 Writing index (live category filter)
+  blog.html                 Writing index (live filter; your essays + external reposts)
   blog/
-    normalize.html          Blog post — "Why I normalize every set…" (reading-progress bar)
-  song-of-the-day.html      Landing page for the Song of the Day iOS app (FAQ + theme switcher)
+    campground-tycoon-the-story-so-far.html   First post (reading-progress bar)
+  song-of-the-day.html      Landing for the Song of the Day iOS app (FAQ + theme switcher)
+  song-of-the-day/
+    privacy.html, terms.html  Legal pages
+    logos/                  Exported brand SVGs (marks, app icons, lockup)
   campground-tycoon.html    Campground Tycoon landing + interactive demo
+  campground-tycoon/
+    roadmap.html            Dev roadmap — trail of milestones + suggestion box
+  vantix.html               Vantix — the periodization OS (landing)
+  vantix/
+    roadmap.html, changelog.html, privacy.html   Vantix marketing sub-pages
   favicon.svg
-  site_assets/              ← drop Campground screenshot PNGs here (see note below)
+  site_assets/              Campground screenshot PNGs
 
 vantix/                     ← deploy root for vantix.kitesink.com (separate Pages project)
   index.html                Vantix brand / identity placeholder

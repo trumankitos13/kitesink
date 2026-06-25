@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +37,14 @@
 <meta name="twitter:description" content="Campground Tycoon — a cozy isometric wilderness tycoon sim. Buy land across 15 procedural regions, build the grounds, keep four kinds of camper happy, and survive four fickle seasons. Play the demo right here, no download.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
+<!-- Almanac (light) / Nightfall (dark) is a shared theme: the hero swaps with
+     [data-theme] on <html>, persisted to localStorage['ct_theme'] — the SAME key
+     /campground-tycoon/roadmap.html reads, so the choice carries across both pages. -->
+<style>
+  html[data-theme="dark"] #heroA{display:none !important}
+  html[data-theme="dark"] #heroB{display:flex !important}
+</style>
+<script>(function(){try{var t=localStorage.getItem('ct_theme');if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
 <!--KS-CHROME--><style>.ks-link{transition:color .15s}.ks-link:hover{color:#2f5436 !important}</style><div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:'Geist',-apple-system,system-ui,sans-serif;box-sizing:border-box"><a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none"><svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="font:800 14px 'Geist',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a><nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px 'Geist Mono',ui-monospace,monospace;color:#5e5238"><a href="/#work" class="ks-link" style="color:inherit;text-decoration:none">Work</a><a href="/blog.html" class="ks-link" style="color:inherit;text-decoration:none">Writing</a><a href="/campground-tycoon.html" class="ks-link" style="color:inherit;text-decoration:none">Games</a><a href="/about.html" class="ks-link" style="color:inherit;text-decoration:none">About</a></nav></div>
@@ -54,6 +62,7 @@
     <a href="#regions" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Regions</a>
     <a href="#guests" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Guests</a>
     <a href="#seasons" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Seasons</a>
+    <a href="/campground-tycoon/roadmap.html" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#e0b35c;padding:7px 12px;border-radius:7px">Roadmap ↗</a>
     <div style="display:flex;align-items:center;gap:5px;margin-left:8px;padding:3px;background:rgba(245,238,219,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:9px">
       <span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#728a6e;padding:0 4px;text-transform:uppercase">Look</span>
       <button id="heroBtnA" style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px;cursor:pointer;padding:6px 11px;border-radius:7px;border:none;background:#e0b35c;color:#2c1f08;font-weight:bold">Almanac</button>
@@ -74,7 +83,7 @@
       <h1 style="font-family:Georgia,serif;font-size:clamp(44px,6.4vw,78px);line-height:0.98;letter-spacing:1px;color:#2c2418;text-shadow:0 2px 0 rgba(255,255,255,0.4)">CAMPGROUND<br><span style="color:#b98a2e">TYCOON</span></h1>
       <p style="font-family:Georgia,serif;font-style:italic;font-size:20px;line-height:1.5;color:#5f5036;max-width:480px;margin:18px 0 8px">Buy a scrap of wilderness. Pitch a few tents. Keep the campers happy through four fickle seasons — and try not to go broke before the leaves turn.</p>
       <p style="font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#8a795a;letter-spacing:.3px;max-width:460px;margin-bottom:26px">A cozy isometric tycoon sim. 15 regions, procedural land, weather, anglers, hunters &amp; leaf-peepers — and a deeply chunky CRT booking terminal.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▶</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET IT ON</span><span style="font-size:14px;font-weight:bold">Google Play</span></span></a></div></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a></div></div>
       <a href="#demo" style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#2f4836;border-bottom:2px solid #b98a2e;padding-bottom:2px">▶ Play the demo right here — no download</a>
     </div>
     <div style="flex:0 0 auto;width:min(440px,92vw);position:relative;animation:ctFloat 7s ease-in-out infinite">
@@ -100,7 +109,7 @@
     <div style="font-family:ui-monospace,Menlo,monospace;color:#e0b35c;font-size:12px;letter-spacing:7px;margin-bottom:14px;text-shadow:0 1px 6px rgba(0,0,0,0.6)">A COZY WILDERNESS TYCOON</div>
     <h1 style="font-family:Georgia,serif;font-size:clamp(46px,8vw,96px);line-height:0.96;letter-spacing:2px;color:#f5eedb;text-shadow:0 3px 0 rgba(0,0,0,0.5),0 0 50px rgba(224,179,92,0.28)">CAMPGROUND<br><span style="color:#e0b35c">TYCOON</span></h1>
     <p style="font-family:Georgia,serif;font-style:italic;font-size:21px;line-height:1.5;color:#cfe0c8;max-width:560px;margin:22px auto 30px;text-shadow:0 1px 8px rgba(0,0,0,0.7)">Out past the firelight, your little park is filling up. Plant your flag, build the grounds, and keep the campers coming back season after season.</p>
-    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▶</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET IT ON</span><span style="font-size:14px;font-weight:bold">Google Play</span></span></a></div></div>
+    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a></div></div>
     <a href="#demo" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#e7eede;border:1px solid rgba(245,238,219,0.4);border-radius:8px;padding:9px 16px;background:rgba(20,16,10,0.35)">▶ Play the demo right here — no download</a>
   </div>
   <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:2px;color:#728a6e">SCROLL TO MAKE CAMP ↓</div>
@@ -376,13 +385,56 @@
   </div>
 </section>
 
+<!-- ===================== MILESTONES STRIP ===================== -->
+<section style="background:#1f3024;padding:48px 24px 52px;color:#f5eedb;border-top:1px solid #38503f">
+  <div style="max-width:1080px;margin:0 auto">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:26px">
+      <div>
+        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">THE TRAIL SO FAR</div>
+        <h2 style="font-family:Georgia,serif;font-size:clamp(26px,3.6vw,38px);color:#f5eedb;margin:0">From playable to fully pitched.</h2>
+      </div>
+      <a href="/campground-tycoon/roadmap.html" style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:12px;letter-spacing:.5px;color:#2c1f08;background:linear-gradient(180deg,#e0b35c,#b98a2e);border:1px solid #8a6620;border-bottom-width:3px;padding:9px 16px;border-radius:8px;white-space:nowrap">See the full roadmap →</a>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <div style="flex:1 1 200px;min-width:170px;background:rgba(245,238,219,0.06);border:1px solid #38503f;border-radius:11px;padding:15px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="width:18px;height:18px;border-radius:50%;background:#5e7d45;display:inline-flex;align-items:center;justify-content:center;color:#f5eedb;font-size:11px;flex-shrink:0">✓</span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#9fb89b">v0.1 · SHIPPED</span>
+        </div>
+        <div style="font-family:Georgia,serif;font-size:17px;color:#f5eedb">First Campground</div>
+      </div>
+      <div style="flex:1 1 200px;min-width:170px;background:rgba(224,179,92,0.10);border:1px solid #b98a2e;border-radius:11px;padding:15px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="width:13px;height:13px;background:#e0b35c;transform:rotate(45deg);display:inline-block;flex-shrink:0;margin:2px"></span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#e0b35c">v0.3 · YOU ARE HERE</span>
+        </div>
+        <div style="font-family:Georgia,serif;font-size:17px;color:#f5eedb">The Region Update</div>
+      </div>
+      <div style="flex:1 1 200px;min-width:170px;background:rgba(245,238,219,0.04);border:1px dashed #4a6150;border-radius:11px;padding:15px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="width:16px;height:16px;border-radius:50%;border:2px dashed #728a6e;display:inline-block;flex-shrink:0"></span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#728a6e">v0.4 · UP NEXT</span>
+        </div>
+        <div style="font-family:Georgia,serif;font-size:17px;color:#cfe0c8">Guests &amp; new ground</div>
+      </div>
+      <div style="flex:1 1 200px;min-width:170px;background:rgba(245,238,219,0.04);border:1px dashed #4a6150;border-radius:11px;padding:15px 16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="width:16px;height:16px;border-radius:50%;border:2px dashed #728a6e;display:inline-block;flex-shrink:0"></span>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#728a6e">LATER · ON THE HORIZON</span>
+        </div>
+        <div style="font-family:Georgia,serif;font-size:17px;color:#cfe0c8">Past the treeline</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== FINAL CTA ===================== -->
 <section id="wishlist" style="position:relative;padding:80px 24px;text-align:center;background:linear-gradient(180deg,rgba(12,17,13,0.35),rgba(12,17,13,0.82)),url(site_assets/picker_bg.png) center 55%/cover no-repeat,#0c110d;color:#f5eedb">
   <div style="position:relative;max-width:680px;margin:0 auto">
     <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:5px;color:#e0b35c;margin-bottom:12px">COMING 2026</div>
     <h2 style="font-family:Georgia,serif;font-size:clamp(32px,5.4vw,56px);line-height:1.02;text-shadow:0 2px 0 rgba(0,0,0,0.5),0 0 40px rgba(224,179,92,0.25)">Three plots of land are waiting.</h2>
     <p style="font-family:Georgia,serif;font-style:italic;font-size:19px;color:#cfe0c8;margin:16px auto 30px;max-width:520px">Wishlist now and be first into the wilderness when the gates open.</p>
-    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▶</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET IT ON</span><span style="font-size:14px;font-weight:bold">Google Play</span></span></a></div></div>
+    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a></div></div>
   </div>
 </section>
 
@@ -401,19 +453,32 @@
 (function(){
   "use strict";
 
-  // ---------- Hero A/B toggle (live) ----------
-  var heroA=document.getElementById('heroA'), heroB=document.getElementById('heroB');
+  // ---------- Almanac (light) / Nightfall (dark) = shared theme ----------
+  // Drives this page's hero AND the roadmap page, via localStorage['ct_theme'].
+  // Hero visibility is handled by the [data-theme] CSS in <head>; here we just
+  // keep the toggle buttons in sync and persist the choice.
   var btnA=document.getElementById('heroBtnA'), btnB=document.getElementById('heroBtnB');
   function heroBtn(active){return 'font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px;cursor:pointer;padding:6px 11px;border-radius:7px;border:none;'+(active?'background:#e0b35c;color:#2c1f08;font-weight:bold':'background:transparent;color:#b9c9b3');}
-  function setHero(dir){
-    var isA=dir==='A';
-    heroA.style.display=isA?'block':'none';
-    heroB.style.display=isA?'none':'flex';
-    btnA.setAttribute('style',heroBtn(isA));
-    btnB.setAttribute('style',heroBtn(!isA));
+  function paintButtons(theme){
+    var light=theme!=='dark';
+    if(btnA) btnA.setAttribute('style',heroBtn(light));
+    if(btnB) btnB.setAttribute('style',heroBtn(!light));
   }
-  if(btnA) btnA.addEventListener('click',function(){setHero('A');});
-  if(btnB) btnB.addEventListener('click',function(){setHero('B');});
+  function setTheme(theme){
+    document.documentElement.setAttribute('data-theme',theme);
+    paintButtons(theme);
+    try{localStorage.setItem('ct_theme',theme);}catch(e){}
+  }
+  paintButtons(document.documentElement.getAttribute('data-theme')||'light');
+  if(btnA) btnA.addEventListener('click',function(){setTheme('light');});
+  if(btnB) btnB.addEventListener('click',function(){setTheme('dark');});
+  // keep in sync if the roadmap (or another tab) changes the theme
+  window.addEventListener('storage',function(e){
+    if(e.key==='ct_theme'&&(e.newValue==='light'||e.newValue==='dark')){
+      document.documentElement.setAttribute('data-theme',e.newValue);
+      paintButtons(e.newValue);
+    }
+  });
 
   // ---------- Seasons (live) — chips + tabs swap the screenshot & caption ----------
   var SEASONS=[{"name":"Spring","shot":"site_assets/season_spring.png","cap":"Spring · Gulf Coast — muddy, slow, and the redfish are running."},{"name":"Summer","shot":"site_assets/season_summer.png","cap":"Summer · Rockies — the park crush. Pack them in while the sun holds."},{"name":"Fall","shot":"site_assets/season_fall.png","cap":"Fall · New England — the leaf-peeper goldrush. Your busiest week."},{"name":"Winter","shot":"site_assets/season_winter.png","cap":"Winter · Northwoods at night — dead quiet. Did you save enough?"}];

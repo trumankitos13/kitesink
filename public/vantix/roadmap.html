@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantix &mdash; Roadmap</title>
+<meta name="description" content="Vantix's product roadmap &mdash; build the core triad first, then integrate everything else, from v1.2 to the v2.0 platform.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: oklch(0.205 0.012 250); color: oklch(0.82 0.012 250); font-family: 'Space Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #92a6cc; color: oklch(0.18 0.02 250); }
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-thumb { background: oklch(0.36 0.012 250); }
+  ::-webkit-scrollbar-track { background: oklch(0.22 0.012 250); }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  .gk { font-family: 'Space Grotesk', sans-serif; }
+  p { text-wrap: pretty; }
+  section { scroll-margin-top: 104px; }
+  .ks-link { transition: color .15s; }
+  .ks-link:hover { color: #2f5436 !important; }
+  .vx-sub:hover { color: oklch(0.92 0.012 250) !important; }
+  @media (max-width: 760px){ .vx-railwrap{ grid-template-columns: 1fr !important; } .vx-2col{ grid-template-columns: 1fr !important; } .vx-stat4{ grid-template-columns: repeat(2,1fr) !important; } .vx-ia7{ grid-template-columns: repeat(2,1fr) !important; } .vx-sticky{ position: static !important; } }
+</style>
+<!--KS-SEO-->
+<link rel="canonical" href="https://kitesink.com/vantix/roadmap.html">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<meta name="theme-color" content="#ece2cb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KiteSink">
+<meta property="og:title" content="Vantix &mdash; Roadmap">
+<meta property="og:description" content="Vantix's product roadmap &mdash; build the core triad first, then integrate everything else, from v1.2 to the v2.0 platform.">
+<meta property="og:url" content="https://kitesink.com/vantix/roadmap.html">
+<meta property="og:image" content="https://kitesink.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vantix &mdash; Roadmap">
+<meta name="twitter:description" content="Vantix's product roadmap &mdash; build the core triad first, then integrate everything else, from v1.2 to the v2.0 platform.">
+<meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #92a6cc;outline-offset:2px}</style>
+</head>
+<body>
+
+<!-- KITESINK TOP BAR -->
+<div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:'Geist',-apple-system,system-ui,sans-serif;box-sizing:border-box"><a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none"><svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="font:800 14px 'Geist',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a><nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px 'Geist Mono',ui-monospace,monospace;color:#5e5238"><a href="/#work" class="ks-link" style="color:inherit;text-decoration:none">Work</a><a href="/blog.html" class="ks-link" style="color:inherit;text-decoration:none">Writing</a><a href="/campground-tycoon.html" class="ks-link" style="color:inherit;text-decoration:none">Games</a><a href="/about.html" class="ks-link" style="color:inherit;text-decoration:none">About</a></nav></div>
+
+<div style="background: oklch(0.205 0.012 250); min-height: 100vh; font-family: 'Space Grotesk', sans-serif; color: oklch(0.82 0.012 250);">
+
+  <!-- VANTIX SUB-NAV (sticky under KS bar) -->
+  <div style="position: sticky; top: 38px; z-index: 30; background: oklch(0.215 0.012 250); border-bottom: 1px solid oklch(0.36 0.012 250); backdrop-filter: blur(8px);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px,4vw,32px); height: 58px; display: flex; align-items: center; gap: 16px;">
+      <a href="/vantix.html" style="display: flex; align-items: center; gap: 11px; text-decoration: none;">
+        <svg viewBox="0 0 56 56" width="24" height="24" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg>
+        <span class="gk" style="font-weight: 700; font-size: 17px; letter-spacing: 0.05em; color: oklch(0.95 0.012 250);">VANTIX</span>
+      </a>
+      <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250); letter-spacing: 0.1em; border-left: 1px solid oklch(0.38 0.012 250); padding-left: 16px;">ROADMAP</span>
+      <div class="gk" style="margin-left: auto; display: flex; align-items: center; gap: clamp(12px,2vw,20px); font-size: 13px;">
+        <a href="/vantix/changelog.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Changelog</a><a href="/vantix/privacy.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Privacy</a>
+        <a href="/vantix.html" class="gk vx-sub" style="color: oklch(0.7 0.012 250); text-decoration: none;">&#8592; Back to site</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE BODY -->
+    <!-- HERO -->
+  <section style="border-bottom: 1px solid oklch(0.34 0.012 250);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 60px 32px 48px;">
+      <div class="mono" style="font-size: 12px; letter-spacing: 0.14em; color: oklch(0.58 0.012 250);">PRODUCT ROADMAP &middot; UPDATED 2026&#8209;06&#8209;15</div>
+      <h1 class="gk" style="font-size: 46px; line-height: 1.05; font-weight: 700; letter-spacing: -0.025em; color: oklch(0.96 0.012 250); margin: 16px 0 0; max-width: 860px;">Build the triad first. Integrate everything else.</h1>
+      <p style="font-size: 16px; line-height: 1.65; color: oklch(0.72 0.012 250); margin: 18px 0 0; max-width: 720px;">Every version is additive depth on a stable skeleton. The core logic and wiring for <span style="color: oklch(0.92 0.012 250);">all</span> surfaces ship up front; each release fleshes out one surface. The architecture never churns &mdash; flipping a flag ships a screen.</p>
+
+      <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);" class="vx-stat4">
+        <div style="background: oklch(0.235 0.012 250); padding: 20px 22px;">
+          <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; color: #92a6cc;">01 &middot; WIN CONDITION</div>
+          <div class="gk" style="font-size: 15px; font-weight: 700; color: oklch(0.94 0.012 250); margin: 10px 0 0;">Best at the triad</div>
+          <p style="font-size: 12px; line-height: 1.55; color: oklch(0.68 0.012 250); margin: 7px 0 0;">Programmable periodization, integration/normalization, and the AI co-pilot with a review-gate. Everything else is integrated.</p>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 20px 22px;">
+          <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; color: oklch(0.66 0.012 250);">02 &middot; WIRING CONTRACT</div>
+          <div class="gk" style="font-size: 15px; font-weight: 700; color: oklch(0.94 0.012 250); margin: 10px 0 0;">Scope now, build later</div>
+          <p style="font-size: 12px; line-height: 1.55; color: oklch(0.68 0.012 250); margin: 7px 0 0;">Data model, routes and domain seams for all tabs exist from v1.2, so the architecture never churns.</p>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 20px 22px;">
+          <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; color: oklch(0.66 0.012 250);">03 &middot; ADVANCED FIRST</div>
+          <div class="gk" style="font-size: 15px; font-weight: 700; color: oklch(0.94 0.012 250); margin: 10px 0 0;">Hardest version first</div>
+          <p style="font-size: 12px; line-height: 1.55; color: oklch(0.68 0.012 250); margin: 7px 0 0;">v1.x targets the advanced hybrid athlete. Difficulty scaling and onboarding arrive at v2.0+.</p>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 20px 22px;">
+          <div class="mono" style="font-size: 10px; letter-spacing: 0.06em; color: #6f9f7a;">04 &middot; FREE CORE</div>
+          <div class="gk" style="font-size: 15px; font-weight: 700; color: oklch(0.94 0.012 250); margin: 10px 0 0;">Free core, paid edges</div>
+          <p style="font-size: 12px; line-height: 1.55; color: oklch(0.68 0.012 250); margin: 7px 0 0;">The programming engine and review logic are always free. Advanced surfaces are the paywall candidates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERSION TRACK -->
+  <section style="border-bottom: 1px solid oklch(0.34 0.012 250);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 48px 32px 72px;">
+      <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;">
+        <div class="mono" style="font-size: 11px; letter-spacing: 0.12em; color: oklch(0.58 0.012 250);">THE VERSION TRACK</div>
+        <div class="mono" style="margin-left: auto; display: flex; gap: 16px; font-size: 11px; color: oklch(0.6 0.012 250);">
+          <span><span style="color: #6f9f7a;">&#9679;</span> shipped</span>
+          <span><span style="color: #92a6cc;">&#9679;</span> current</span>
+          <span><span style="color: #d8a652;">&#9661;</span> planned</span>
+        </div>
+      </div>
+      <h2 class="gk" style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: oklch(0.95 0.012 250); margin: 12px 0 0;">From core triad to platform.</h2>
+
+      <div style="margin-top: 28px; display: grid; grid-template-columns: 248px 1fr; gap: 44px; align-items: start;" class="vx-railwrap">
+
+        <!-- left: version index -->
+        <div class="vx-sticky" style="position: sticky; top: 104px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+          <div class="vx-vrow" data-ver="v1.2" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.27 0.014 250); border-left: 3px solid #92a6cc;">
+            <span class="vx-glyph" style="color: #92a6cc; font-size: 11px; text-align: center;">&#9679;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: #92a6cc;">v1.2</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.92 0.012 250);">Core triad</span>
+          </div>
+          <div class="vx-vrow" data-ver="v1.3" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">v1.3</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Cardio</span>
+          </div>
+          <div class="vx-vrow" data-ver="v1.4" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">v1.4</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Nutrition</span>
+          </div>
+          <div class="vx-vrow" data-ver="v1.5" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">v1.5</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Recovery &amp; Journal</span>
+          </div>
+          <div class="vx-vrow" data-ver="v1.6" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">v1.6</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Mobility / Balance</span>
+          </div>
+          <div class="vx-vrow" data-ver="v1.7" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">v1.7</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Health (chronic)</span>
+          </div>
+          <div class="vx-vrow" data-ver="perf" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">xc</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Performance</span>
+          </div>
+          <div class="vx-vrow" data-ver="v1.8" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">v1.8</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Mind</span>
+          </div>
+          <div class="vx-vrow" data-ver="v2.0" style="display: grid; grid-template-columns: 14px 50px 1fr; gap: 10px; align-items: center; padding: 13px 16px; cursor: pointer; background: oklch(0.235 0.012 250); border-left: 3px solid transparent;">
+            <span class="vx-glyph" style="color: #d8a652; font-size: 11px; text-align: center;">&#9661;</span>
+            <span class="mono vx-ver" style="font-size: 12px; font-weight: 700; color: oklch(0.82 0.012 250);">v2.0+</span>
+            <span class="gk vx-theme" style="font-size: 13px; font-weight: 500; color: oklch(0.66 0.012 250);">Platform</span>
+          </div>
+        </div>
+
+        <!-- right: detail -->
+        <div id="vx-detail" style="border: 1px solid oklch(0.42 0.012 250); background: oklch(0.238 0.012 250); padding: 34px 36px;">
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <span class="mono" style="font-size: 15px; font-weight: 700; color: #92a6cc; border: 1px solid #92a6cc; padding: 4px 12px;">v1.2</span>
+            <span class="gk" style="font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);">Core triad</span>
+            <span class="mono" style="margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: #92a6cc;">&#9679; CURRENT</span>
+          </div>
+          <p style="font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;">The deep work: the full macro&#8594;set programming hierarchy with every hard-rule validator, the AI co-pilot + review-gate, hardened integration/normalization, and the entire 7-tab IA wired &mdash; deep tabs real, the rest as SOON shells.</p>
+
+          <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;">
+            <div style="border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;">
+              <div class="mono" style="font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);">FLESHED TO DEPTH</div>
+                <div style="display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;"><span style="color: #92a6cc;">&#9656;</span><span>Strength/Training programming + cross-training overlay</span></div>
+                <div style="display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;"><span style="color: #92a6cc;">&#9656;</span><span>AI co-pilot &#8594; /coach/review diff + validator panel</span></div>
+                <div style="display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;"><span style="color: #92a6cc;">&#9656;</span><span>Dashboard landmark bars; Today shell (session + fuel)</span></div>
+            </div>
+            <div style="border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;">
+              <div class="mono" style="font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);">THE STEAL &middot; VANTIX FLAVOR</div>
+              <p style="font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;">Per-session auto-progression: read load&times;reps&times;RIR &#8594; propose next volume/load through the review-gate.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;">
+            <div style="display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;">
+              <span class="mono" style="font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);">GATING</span>
+              <span class="mono" style="font-size: 12px; line-height: 1.55; color: #d8a652;">Per-session auto-progression needs live sync &mdash; logic ships now, activates v2.0+. v1.2 ships weekly/meso proposals.</span>
+            </div>
+          </div>
+          <div class="mono" style="margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;">Done = build/adjust a meso, validate it, import Hevy/Cronometer/Apple Health, see effective volume vs landmarks, lock a review.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7-TAB IA -->
+  <section style="border-bottom: 1px solid oklch(0.34 0.012 250); background: oklch(0.222 0.012 250);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 48px 32px;">
+      <div class="mono" style="font-size: 11px; letter-spacing: 0.12em; color: oklch(0.58 0.012 250);">THE 7&#8209;TAB IA &middot; WIRED FROM v1.2</div>
+      <h2 class="gk" style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: oklch(0.95 0.012 250); margin: 12px 0 0;">Two rollups, two workbenches, three domain hubs.</h2>
+      <p style="font-size: 14.5px; line-height: 1.6; color: oklch(0.68 0.012 250); margin: 13px 0 0; max-width: 700px;">Every tab exists as a route from day one. Deep surfaces are real; the rest render as dimmed <span class="mono" style="color: #d8a652;">SOON</span> shells until their version lands.</p>
+      <div style="margin-top: 26px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);" class="vx-ia7">
+        <div style="background: oklch(0.235 0.012 250); padding: 16px 15px 18px; border-top: 3px solid #5d7396;">
+          <div class="gk" style="font-size: 14px; font-weight: 600; color: oklch(0.94 0.012 250);">Today</div>
+          <div class="mono" style="font-size: 9px; letter-spacing: 0.04em; color: oklch(0.55 0.012 250); margin-top: 5px;">daily rollup</div>
+          <div class="mono" style="font-size: 10px; font-weight: 700; color: #92a6cc; margin-top: 14px;">v1.2 shell</div>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 16px 15px 18px; border-top: 3px solid #6f9f7a;">
+          <div class="gk" style="font-size: 14px; font-weight: 600; color: oklch(0.94 0.012 250);">Dashboard</div>
+          <div class="mono" style="font-size: 9px; letter-spacing: 0.04em; color: oklch(0.55 0.012 250); margin-top: 5px;">weekly rollup</div>
+          <div class="mono" style="font-size: 10px; font-weight: 700; color: #6f9f7a; margin-top: 14px;">v1.2</div>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 16px 15px 18px; border-top: 3px solid #6f9f7a;">
+          <div class="gk" style="font-size: 14px; font-weight: 600; color: oklch(0.94 0.012 250);">Training</div>
+          <div class="mono" style="font-size: 9px; letter-spacing: 0.04em; color: oklch(0.55 0.012 250); margin-top: 5px;">workbench</div>
+          <div class="mono" style="font-size: 10px; font-weight: 700; color: #6f9f7a; margin-top: 14px;">v1.2</div>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 16px 15px 18px; border-top: 3px solid oklch(0.4 0.012 250);">
+          <div class="gk" style="font-size: 14px; font-weight: 600; color: oklch(0.94 0.012 250);">Nutrition</div>
+          <div class="mono" style="font-size: 9px; letter-spacing: 0.04em; color: oklch(0.55 0.012 250); margin-top: 5px;">workbench</div>
+          <div class="mono" style="font-size: 10px; font-weight: 700; color: #d8a652; margin-top: 14px;">v1.4</div>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 16px 15px 18px; border-top: 3px solid oklch(0.4 0.012 250);">
+          <div class="gk" style="font-size: 14px; font-weight: 600; color: oklch(0.94 0.012 250);">Recovery</div>
+          <div class="mono" style="font-size: 9px; letter-spacing: 0.04em; color: oklch(0.55 0.012 250); margin-top: 5px;">acute hub</div>
+          <div class="mono" style="font-size: 10px; font-weight: 700; color: #d8a652; margin-top: 14px;">v1.5</div>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 16px 15px 18px; border-top: 3px solid #5d7396;">
+          <div class="gk" style="font-size: 14px; font-weight: 600; color: oklch(0.94 0.012 250);">Performance</div>
+          <div class="mono" style="font-size: 9px; letter-spacing: 0.04em; color: oklch(0.55 0.012 250); margin-top: 5px;">output hub</div>
+          <div class="mono" style="font-size: 10px; font-weight: 700; color: #92a6cc; margin-top: 14px;">v1.2+</div>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); padding: 16px 15px 18px; border-top: 3px solid oklch(0.4 0.012 250);">
+          <div class="gk" style="font-size: 14px; font-weight: 600; color: oklch(0.94 0.012 250);">Health</div>
+          <div class="mono" style="font-size: 9px; letter-spacing: 0.04em; color: oklch(0.55 0.012 250); margin-top: 5px;">chronic hub</div>
+          <div class="mono" style="font-size: 10px; font-weight: 700; color: #d8a652; margin-top: 14px;">v1.7</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE VS PAID + PLATFORM -->
+  <section style="border-bottom: 1px solid oklch(0.34 0.012 250);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 48px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;" class="vx-2col">
+      <div>
+        <div class="mono" style="font-size: 11px; letter-spacing: 0.12em; color: oklch(0.58 0.012 250);">FREE vs PAID &middot; v2.0+ &middot; DIRECTIONAL</div>
+        <h2 class="gk" style="font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: oklch(0.95 0.012 250); margin: 12px 0 0; line-height: 1.14;">Program and review free, forever.</h2>
+        <p style="font-size: 14px; line-height: 1.6; color: oklch(0.68 0.012 250); margin: 12px 0 0;">We charge for the integrations, the agent, and the longevity depth &mdash; never for the programming brain.</p>
+        <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+          <div style="background: oklch(0.235 0.012 250); padding: 18px 20px;">
+            <div class="gk" style="font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: #6f9f7a;">ALWAYS FREE &middot; THE CORE</div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #6f9f7a;">&#10003;</span><span>Programming engine &mdash; macro&#8594;set, landmarks, effective volume, validators</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #6f9f7a;">&#10003;</span><span>Routine building</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #6f9f7a;">&#10003;</span><span>Weekly + meso review logic &mdash; diff &#8594; confirm/override &#8594; lock</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #6f9f7a;">&#10003;</span><span>Manual import + normalization</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #6f9f7a;">&#10003;</span><span>Today shell + the macrocycle builder</span></div>
+          </div>
+          <div style="background: oklch(0.235 0.012 250); padding: 18px 20px;">
+            <div class="gk" style="font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: #92a6cc;">PAID CANDIDATES &middot; ADVANCED</div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #92a6cc;">&#9656;</span><span>Live API sync (Terra aggregator)</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #92a6cc;">&#9656;</span><span>Recovery agent &mdash; daily narrated calls, confounder ranking</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #92a6cc;">&#9656;</span><span>Longevity / biomarker dashboard + supplement implications</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #92a6cc;">&#9656;</span><span>Advanced analytics + per-session auto-progression</span></div>
+              <div style="display: flex; gap: 10px; padding: 7px 0; font-size: 12.5px; line-height: 1.45; color: oklch(0.8 0.012 250); border-bottom: 1px solid oklch(0.3 0.012 250);"><span style="color: #92a6cc;">&#9656;</span><span>Training-plan importer (arbitrary external plan &#8594; CFF)</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="mono" style="font-size: 11px; letter-spacing: 0.12em; color: #92a6cc;">v2.0+ &middot; PLATFORM &middot; LAUNCH HORIZON</div>
+        <h2 class="gk" style="font-size: 25px; font-weight: 700; letter-spacing: -0.02em; color: oklch(0.95 0.012 250); margin: 12px 0 0; line-height: 1.14;">When the instrument becomes a platform.</h2>
+        <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+          <div style="background: oklch(0.235 0.012 250); padding: 15px 20px;">
+            <div class="gk" style="font-size: 14.5px; font-weight: 600; color: oklch(0.94 0.012 250);">Live sync (Terra)</div>
+            <p style="font-size: 12.5px; line-height: 1.55; color: oklch(0.7 0.012 250); margin: 6px 0 0;">Activates per-session auto-progression, push, and the live recovery agent &mdash; and replaces file import as the default path.</p>
+          </div>
+          <div style="background: oklch(0.235 0.012 250); padding: 15px 20px;">
+            <div class="gk" style="font-size: 14.5px; font-weight: 600; color: oklch(0.94 0.012 250);">Difficulty scaling</div>
+            <p style="font-size: 12.5px; line-height: 1.55; color: oklch(0.7 0.012 250); margin: 6px 0 0;">Onboarding sets a level that gates which tabs and features appear. Advanced sees everything; beginners see a curated subset.</p>
+          </div>
+          <div style="background: oklch(0.235 0.012 250); padding: 15px 20px;">
+            <div class="gk" style="font-size: 14.5px; font-weight: 600; color: oklch(0.94 0.012 250);">Multi-model + BYO keys</div>
+            <p style="font-size: 12.5px; line-height: 1.55; color: oklch(0.7 0.012 250); margin: 6px 0 0;">Pick models from OpenRouter and spend credits as you like. The base model stays unlimited; others are credit-based.</p>
+          </div>
+          <div style="background: oklch(0.235 0.012 250); padding: 15px 20px;">
+            <div class="gk" style="font-size: 14.5px; font-weight: 600; color: oklch(0.94 0.012 250);">Intra-training mode</div>
+            <p style="font-size: 12.5px; line-height: 1.55; color: oklch(0.7 0.012 250); margin: 6px 0 0;">An app-only mode for use during a session &mdash; with AI form analysis suggested for new compound lifts.</p>
+          </div>
+          <div style="background: oklch(0.235 0.012 250); padding: 15px 20px;">
+            <div class="gk" style="font-size: 14.5px; font-weight: 600; color: oklch(0.94 0.012 250);">Injury management</div>
+            <p style="font-size: 12.5px; line-height: 1.55; color: oklch(0.7 0.012 250); margin: 6px 0 0;">An injury mode set in Profile that cascades across every tab, adjusting programming, volume and validators.</p>
+          </div>
+          <div style="background: oklch(0.235 0.012 250); padding: 15px 20px;">
+            <div class="gk" style="font-size: 14.5px; font-weight: 600; color: oklch(0.94 0.012 250);">Training-plan importer</div>
+            <p style="font-size: 12.5px; line-height: 1.55; color: oklch(0.7 0.012 250); margin: 6px 0 0;">Drop in a coach&rsquo;s plan or a PDF; normalize it into a plan-shaped CFF and confirm it through the review-gate.</p>
+          </div>
+        </div>
+        <div class="mono" style="margin-top: 14px; font-size: 10.5px; color: oklch(0.5 0.012 250); line-height: 1.6;">Vantix goes public once v2.0 lands &mdash; difficulty scaling and live sync are what make the advanced instrument safe to hand to everyone.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div style="max-width: 1180px; margin: 0 auto; padding: 60px 32px; text-align: center;">
+      <h2 class="gk" style="font-size: 32px; font-weight: 700; letter-spacing: -0.02em; color: oklch(0.96 0.012 250); margin: 0;">Want in before v2.0?</h2>
+      <p style="font-size: 15px; line-height: 1.6; color: oklch(0.72 0.012 250); margin: 14px auto 0; max-width: 540px;">The programming core is free the day you arrive. Join early access and grow into the platform as it ships.</p>
+      <a href="/vantix.html" class="gk" style="display: inline-block; margin-top: 24px; background: #92a6cc; color: oklch(0.16 0.02 250); padding: 13px 28px; font-weight: 600; font-size: 14.5px; text-decoration: none;">Start free &#8594;</a>
+    </div>
+  </section>
+
+  <!-- VANTIX FOOTER -->
+  <div style="border-top: 1px solid oklch(0.34 0.012 250); background: oklch(0.215 0.012 250);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 30px clamp(16px,4vw,32px); display: flex; align-items: center; gap: 16px 20px; flex-wrap: wrap;">
+      <a href="/vantix.html" style="display: flex; align-items: center; gap: 10px; text-decoration:none;"><svg viewBox="0 0 56 56" width="21" height="21" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg><span class="gk" style="font-weight: 700; font-size: 15px; letter-spacing: 0.05em; color: oklch(0.92 0.012 250);">VANTIX</span></a>
+      <span class="mono" style="font-size: 11.5px; color: oklch(0.55 0.012 250);">Roadmap is canonical but directional &mdash; sequence may shift, the win condition won't.</span>
+      <div class="gk" style="margin-left: auto; display: flex; gap: 18px; font-size: 13px; color: oklch(0.62 0.012 250); flex-wrap: wrap;">
+        <a href="/vantix.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Overview</a>
+        <a href="/vantix/roadmap.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Roadmap</a>
+        <a href="/vantix/changelog.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Changelog</a>
+        <a href="/vantix/privacy.html" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Privacy</a>
+        <span class="mono" style="color: oklch(0.45 0.012 250);">&copy; 2026</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- KITESINK BOTTOM BAR -->
+<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#8a7a58"><span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="color:#221c10">&copy; 2026 KiteSink</span></span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="/blog.html" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="/about.html" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span></div>
+<script>
+(function(){
+  "use strict";
+  // Interactive version index — mirrors the surfaces tour on /vantix.html.
+  var VDATA = {"v1.2": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #92a6cc; border: 1px solid #92a6cc; padding: 4px 12px;\">v1.2</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Core triad</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: #92a6cc;\">&#9679; CURRENT</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">The deep work: the full macro&#8594;set programming hierarchy with every hard-rule validator, the AI co-pilot + review-gate, hardened integration/normalization, and the entire 7-tab IA wired &mdash; deep tabs real, the rest as SOON shells.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #92a6cc;\">&#9656;</span><span>Strength/Training programming + cross-training overlay</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #92a6cc;\">&#9656;</span><span>AI co-pilot &#8594; /coach/review diff + validator panel</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #92a6cc;\">&#9656;</span><span>Dashboard landmark bars; Today shell (session + fuel)</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">Per-session auto-progression: read load&times;reps&times;RIR &#8594; propose next volume/load through the review-gate.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: #d8a652;\">Per-session auto-progression needs live sync &mdash; logic ships now, activates v2.0+. v1.2 ships weekly/meso proposals.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">Done = build/adjust a meso, validate it, import Hevy/Cronometer/Apple Health, see effective volume vs landmarks, lock a review.</div>", "v1.3": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">v1.3</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Cardio</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; PLANNED</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">Zones 1&ndash;5, weekly Z2 and Z4&ndash;5 targets, a concurrent-training schedule grid validated against meso emphasis, and the unified lifting + cardio load chart.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Zones + Z2 / Z4&ndash;5 weekly targets</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Concurrent schedule grid + placement validation</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Unified sRPE + TSS fitness/fatigue/form chart</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">TrainingPeaks / intervals.icu PMC, reimagined as sRPE+TSS &mdash; and integrate intervals.icu as the cardio source of truth.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: oklch(0.65 0.012 250);\">Import works now; richer with live sync.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">The wedge: one fitness/fatigue/form view that finally counts lifting load, which CTL under-captures by ~15%.</div>", "v1.4": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">v1.4</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Nutrition</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; PLANNED</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">Macro + micro depth, hydration, electrolytes and a supplement stack &mdash; plus a weekly metabolism review built on adaptive TDEE.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Macros / micros, hydration, electrolytes</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Supplement stack + adherence</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Weekly metabolism review w/ adaptive TDEE</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">Curated review window: compute TDEE/adherence from only the days you confirm were complete &mdash; not naive averaging over partial logs.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: oklch(0.65 0.012 250);\">Needs hydration / electrolyte logic docs first.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">Subjective weekly inputs gate the math &mdash; MacroFactor-grade, but honest about partial data.</div>", "v1.5": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">v1.5</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Recovery &amp; Journal</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; PLANNED</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">Lights up the Today recovery engine &mdash; readiness call with shown drivers, ranked confounders, session autoreg, forecast &mdash; plus the Journal it depends on.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Readiness w/ shown drivers + override clause</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Ranked confounder stack + session autoreg diff</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>The Journal: tag chips, subjective state, sRPE</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">Long-term scores (cardiovascular age, resilience), a symptom radar, and a transparent 6-factor breakdown &mdash; never a hidden score.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: oklch(0.65 0.012 250);\">Deterministic now; the live recovery agent is v2.0+.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">Acute recovery lives here; the chronic side is Health, v1.7.</div>", "v1.6": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">v1.6</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Mobility / Balance</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; PLANNED</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">A ROM/stability assessment &#8594; per-region score &#8594; personalized routine you can attach to a session or run standalone.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Assessment &#8594; scored regions &#8594; routine</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Attach as warm-up/cooldown or keep standalone</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Adherence + ROM trend tracking</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">GOWOD-style assessment function &mdash; logging, not content. We measure adherence and ROM trend; we don&rsquo;t host a video library.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: oklch(0.55 0.012 250);\">&mdash; no external dependency</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">Same principle everywhere: steal the measurement layer, never rebuild a content app.</div>", "v1.7": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">v1.7</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Health (chronic)</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; PLANNED</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">The chronic, long-horizon surface &mdash; &quot;what you are&quot;: the macro arc + CP-A&hellip;E gates, DEXA bookends, body composition, and a biomarker dashboard with optimal (not just normal) ranges.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Macro arc + CP gates, DEXA bookends, body comp</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Biomarker dashboard w/ optimal ranges + bio-age</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Read-only macro arc reflects the editable builder</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">Biomarker results carry implications wired to the supplement stack &mdash; a flagged marker suggests a stack change, routed through the review-gate.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: oklch(0.65 0.012 250);\">Needs lab import / integration.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">Renamed from Longevity; /longevity redirects. The 300-day scorecard moved to Performance.</div>", "perf": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">xc</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Performance</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; CROSS-CUTTING</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">&quot;What you can do&quot; &mdash; pulled together across versions, not a single release: strength progression, cardio fitness, and the 300-day scorecard.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Strength e1RM + &Delta; + regression watch (live v1.2)</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Cardio fitness: VO&#8322;max / threshold / FTP (v1.3)</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>300-day scorecard (relocated from Health, v1.7)</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">The regression watch: a &#8805;2-consecutive-session danger signal during a cut, cross-linked to Recovery autoregulation.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: oklch(0.65 0.012 250);\">Strength live v1.2 &middot; cardio v1.3 &middot; scorecard v1.7.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">A cross-cutting hub: output, not state. Performance regression &#8596; Recovery autoregulation.</div>", "v1.8": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">v1.8</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Mind</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; PLANNED</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">Breathwork and meditation as measured interventions &mdash; not a content library. Did this session actually move your nervous system?</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Open-style HRV biofeedback during a session</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Logged as a recovery intervention</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Tied to readiness, not streaks</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">Open&rsquo;s live HR/HRV biofeedback &mdash; measure the intervention&rsquo;s effect, don&rsquo;t host guided-audio content.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: oklch(0.65 0.012 250);\">Needs live HR/HRV during a session.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">No streaks for streaks&rsquo; sake; the value is the measurement and its tie to readiness.</div>", "v2.0": "          <div style=\"display: flex; align-items: center; gap: 16px; flex-wrap: wrap;\">\n            <span class=\"mono\" style=\"font-size: 15px; font-weight: 700; color: #d8a652; border: 1px solid #d8a652; padding: 4px 12px;\">v2.0+</span>\n            <span class=\"gk\" style=\"font-size: 27px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250);\">Platform</span>\n            <span class=\"mono\" style=\"margin-left: auto; font-size: 10.5px; letter-spacing: 0.06em; color: oklch(0.6 0.012 250);\">&#9661; PLANNED</span>\n          </div>\n          <p style=\"font-size: 15px; line-height: 1.65; color: oklch(0.74 0.012 250); margin: 16px 0 0; max-width: 640px;\">The instrument becomes a platform: live sync, onboarding + difficulty scaling, paywalling, the live recovery agent, multi-model BYO keys, and the training-plan importer.</p>\n\n          <div style=\"margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;\">\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">FLESHED TO DEPTH</div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Live sync (Terra) &mdash; activates per-session auto-progression</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Onboarding + difficulty scaling gates tabs/features</span></div>\n                <div style=\"display: flex; gap: 9px; font-size: 13px; line-height: 1.5; color: oklch(0.78 0.012 250); margin-top: 11px;\"><span style=\"color: #d8a652;\">&#9656;</span><span>Training-plan importer: any external plan &#8594; CFF meso/macro</span></div>\n            </div>\n            <div style=\"border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 18px 20px;\">\n              <div class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">THE STEAL &middot; VANTIX FLAVOR</div>\n              <p style=\"font-size: 13px; line-height: 1.55; color: oklch(0.72 0.012 250); margin: 11px 0 0;\">Point the integration/normalization pillar at planning: drop in a coach&rsquo;s plan or a PDF, normalize it to a plan-shaped CFF, confirm it field-by-field.</p>\n            </div>\n          </div>\n\n          <div style=\"margin-top: 16px; border: 1px solid oklch(0.34 0.012 250); background: oklch(0.233 0.012 250); padding: 16px 20px;\">\n            <div style=\"display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: baseline;\">\n              <span class=\"mono\" style=\"font-size: 9.5px; letter-spacing: 0.08em; color: oklch(0.55 0.012 250);\">GATING</span>\n              <span class=\"mono\" style=\"font-size: 12px; line-height: 1.55; color: #92a6cc;\">The public launch horizon &mdash; difficulty scaling makes the advanced instrument safe for everyone.</span>\n            </div>\n          </div>\n          <div class=\"mono\" style=\"margin-top: 16px; font-size: 11px; color: oklch(0.48 0.012 250); line-height: 1.55;\">Also: intra-training mode, AI form analysis, injury management cascading across every tab, multi-user/cloud.</div>"};
+  var rows = Array.prototype.slice.call(document.querySelectorAll(".vx-vrow"));
+  var detail = document.getElementById("vx-detail");
+  function select(id){
+    rows.forEach(function(el){
+      var on = el.getAttribute("data-ver") === id;
+      el.style.background = on ? "oklch(0.27 0.014 250)" : "oklch(0.235 0.012 250)";
+      el.style.borderLeftColor = on ? "#92a6cc" : "transparent";
+      var ver = el.querySelector(".vx-ver");
+      var theme = el.querySelector(".vx-theme");
+      if(ver) ver.style.color = on ? "#92a6cc" : "oklch(0.82 0.012 250)";
+      if(theme) theme.style.color = on ? "oklch(0.92 0.012 250)" : "oklch(0.66 0.012 250)";
+    });
+    if(detail && VDATA[id]) detail.innerHTML = VDATA[id];
+  }
+  rows.forEach(function(el){
+    el.addEventListener("click", function(){ select(el.getAttribute("data-ver")); });
+  });
+  // Default selected = v1.2 (already rendered server-side; ensures sync if JS on).
+  select("v1.2");
+})();
+</script>
+</body>
+</html>

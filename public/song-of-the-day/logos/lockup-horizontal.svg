@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="140" viewBox="0 0 560 140">
+<defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#efc09d"></stop><stop offset="0.44" stop-color="#f4ddc6"></stop><stop offset="1" stop-color="#f8efe3"></stop></linearGradient></defs>
+<rect x="20" y="34" width="72" height="72" rx="17" fill="url(#sky2)"></rect>
+<g transform="translate(56,78) scale(0.74) translate(-60,-60)">
+    <path d="M16,70 A44,44 0 0 1 104,70" fill="none" stroke="#a43e13" stroke-width="2.4" stroke-linecap="round" opacity="0.24"></path>
+    <path d="M27,70 A33,33 0 0 1 93,70" fill="none" stroke="#a43e13" stroke-width="2.4" stroke-linecap="round" opacity="0.46"></path>
+    <path d="M38,70 A22,22 0 0 1 82,70 Z" fill="#a43e13"></path>
+    <line x1="14" y1="70" x2="106" y2="70" stroke="#4c3024" stroke-width="2.2" stroke-linecap="round"></line></g>
+<text x="116" y="70" font-family="Newsreader, Georgia, serif" font-style="italic" font-weight="500" font-size="40" letter-spacing="-1" fill="#16100c">Song of the Day</text>
+<text x="118" y="95" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="11" letter-spacing="3.4" fill="#76706d">ONE SONG A DAY, EVERY DAY</text>
+</svg>

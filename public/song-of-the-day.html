@@ -188,6 +188,54 @@
           </div>
 
         </div>
+
+        <!-- recently featured + streak -->
+        <div style="display:flex; gap:clamp(20px,4vw,28px); flex-wrap:wrap; margin-top:clamp(24px,4vw,40px);">
+
+          <!-- recently featured -->
+          <div style="flex:2 1 400px; min-width:300px; background:var(--paperD); border:1px solid var(--rule); border-radius:14px; padding:22px 24px 14px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+              <span style="font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3);">Recently featured</span>
+              <div style="flex:1; height:1px; background:var(--rule);"></div>
+            </div>
+            <a href="#" style="display:flex; align-items:center; gap:14px; padding:11px 0; border-bottom:1px dotted var(--rule); text-decoration:none;">
+              <span style="width:46px; height:46px; border-radius:7px; flex-shrink:0; background:linear-gradient(140deg, color-mix(in oklab, var(--wash) 70%, var(--paper)), color-mix(in oklab, var(--accent) 38%, var(--paperD)));"></span>
+              <span style="flex:1; min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-size:18px; line-height:1.1; color:var(--ink);">Clair de Lune</span><span style="display:block; margin-top:3px; font-family:var(--serif); font-size:14px; color:var(--ink2);">Claude Debussy</span></span>
+              <span style="font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); flex-shrink:0;">Yesterday</span>
+            </a>
+            <a href="#" style="display:flex; align-items:center; gap:14px; padding:11px 0; border-bottom:1px dotted var(--rule); text-decoration:none;">
+              <span style="width:46px; height:46px; border-radius:7px; flex-shrink:0; background:linear-gradient(140deg, color-mix(in oklab, var(--accent) 30%, var(--paper)), color-mix(in oklab, var(--wash) 55%, var(--paperD)));"></span>
+              <span style="flex:1; min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-size:18px; line-height:1.1; color:var(--ink);">Gymnopédie No. 1</span><span style="display:block; margin-top:3px; font-family:var(--serif); font-size:14px; color:var(--ink2);">Erik Satie</span></span>
+              <span style="font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); flex-shrink:0;">Sat</span>
+            </a>
+            <a href="#" style="display:flex; align-items:center; gap:14px; padding:11px 0; text-decoration:none;">
+              <span style="width:46px; height:46px; border-radius:7px; flex-shrink:0; background:linear-gradient(140deg, color-mix(in oklab, var(--wash) 50%, var(--paperD)), color-mix(in oklab, var(--accent) 26%, var(--paper)));"></span>
+              <span style="flex:1; min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-size:18px; line-height:1.1; color:var(--ink);">Prelude in C</span><span style="display:block; margin-top:3px; font-family:var(--serif); font-size:14px; color:var(--ink2);">J.S. Bach</span></span>
+              <span style="font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); flex-shrink:0;">Fri</span>
+            </a>
+          </div>
+
+          <!-- streak -->
+          <div style="flex:1 1 250px; min-width:240px; background:var(--paperD); border:1px solid var(--rule); border-radius:14px; padding:22px 24px; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+              <span style="font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3);">Your streak</span>
+              <div style="flex:1; height:1px; background:var(--rule);"></div>
+              <span style="font-family:var(--serif); font-style:italic; font-size:20px; color:var(--accent);">7</span>
+            </div>
+            <div style="display:flex; gap:7px; justify-content:space-between;">
+              <span style="flex:1; text-align:center;"><span style="display:block; width:100%; aspect-ratio:1; border-radius:7px; background:color-mix(in oklab, var(--accent) 78%, var(--paper));"></span><span style="display:block; margin-top:6px; font-family:var(--mono); font-size:9px; color:var(--ink3);">M</span></span>
+              <span style="flex:1; text-align:center;"><span style="display:block; width:100%; aspect-ratio:1; border-radius:7px; background:color-mix(in oklab, var(--accent) 78%, var(--paper));"></span><span style="display:block; margin-top:6px; font-family:var(--mono); font-size:9px; color:var(--ink3);">T</span></span>
+              <span style="flex:1; text-align:center;"><span style="display:block; width:100%; aspect-ratio:1; border-radius:7px; background:color-mix(in oklab, var(--accent) 78%, var(--paper));"></span><span style="display:block; margin-top:6px; font-family:var(--mono); font-size:9px; color:var(--ink3);">W</span></span>
+              <span style="flex:1; text-align:center;"><span style="display:block; width:100%; aspect-ratio:1; border-radius:7px; background:color-mix(in oklab, var(--accent) 78%, var(--paper));"></span><span style="display:block; margin-top:6px; font-family:var(--mono); font-size:9px; color:var(--ink3);">T</span></span>
+              <span style="flex:1; text-align:center;"><span style="display:block; width:100%; aspect-ratio:1; border-radius:7px; background:color-mix(in oklab, var(--accent) 78%, var(--paper));"></span><span style="display:block; margin-top:6px; font-family:var(--mono); font-size:9px; color:var(--ink3);">F</span></span>
+              <span style="flex:1; text-align:center;"><span style="display:block; width:100%; aspect-ratio:1; border-radius:7px; background:color-mix(in oklab, var(--accent) 78%, var(--paper));"></span><span style="display:block; margin-top:6px; font-family:var(--mono); font-size:9px; color:var(--ink3);">S</span></span>
+              <span style="flex:1; text-align:center;"><span style="display:block; width:100%; aspect-ratio:1; border-radius:7px; background:var(--accent); box-shadow:0 0 0 3px color-mix(in oklab, var(--accent) 30%, transparent), 0 4px 12px -2px color-mix(in oklab, var(--accent) 55%, transparent);"></span><span style="display:block; margin-top:6px; font-family:var(--mono); font-size:9px; color:var(--accent);">S</span></span>
+            </div>
+            <p style="margin:18px 0 0; font-family:var(--serif); font-size:14.5px; line-height:1.55; color:var(--ink2); text-wrap:pretty;">Open it with coffee — the streak takes care of itself.</p>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
