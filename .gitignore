@@ -11,3 +11,4 @@ node_modules/
 # staging / source artifacts (content lives in public/ and pages)
 docs/cg-tycoon/
 sotd-priv-terms.zip
+docs/handover/
