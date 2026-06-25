@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +37,14 @@
 <meta name="twitter:description" content="Campground Tycoon — a cozy isometric wilderness tycoon sim. Buy land across 15 procedural regions, build the grounds, keep four kinds of camper happy, and survive four fickle seasons. Play the demo right here, no download.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
+<!-- Almanac (light) / Nightfall (dark) is a shared theme: the hero swaps with
+     [data-theme] on <html>, persisted to localStorage['ct_theme'] — the SAME key
+     /campground-tycoon/roadmap.html reads, so the choice carries across both pages. -->
+<style>
+  html[data-theme="dark"] #heroA{display:none !important}
+  html[data-theme="dark"] #heroB{display:flex !important}
+</style>
+<script>(function(){try{var t=localStorage.getItem('ct_theme');if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
 <!--KS-CHROME--><style>.ks-link{transition:color .15s}.ks-link:hover{color:#2f5436 !important}</style><div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:'Geist',-apple-system,system-ui,sans-serif;box-sizing:border-box"><a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none"><svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="font:800 14px 'Geist',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a><nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px 'Geist Mono',ui-monospace,monospace;color:#5e5238"><a href="/#work" class="ks-link" style="color:inherit;text-decoration:none">Work</a><a href="/blog.html" class="ks-link" style="color:inherit;text-decoration:none">Writing</a><a href="/campground-tycoon.html" class="ks-link" style="color:inherit;text-decoration:none">Games</a><a href="/about.html" class="ks-link" style="color:inherit;text-decoration:none">About</a></nav></div>
@@ -445,19 +453,32 @@
 (function(){
   "use strict";
 
-  // ---------- Hero A/B toggle (live) ----------
-  var heroA=document.getElementById('heroA'), heroB=document.getElementById('heroB');
+  // ---------- Almanac (light) / Nightfall (dark) = shared theme ----------
+  // Drives this page's hero AND the roadmap page, via localStorage['ct_theme'].
+  // Hero visibility is handled by the [data-theme] CSS in <head>; here we just
+  // keep the toggle buttons in sync and persist the choice.
   var btnA=document.getElementById('heroBtnA'), btnB=document.getElementById('heroBtnB');
   function heroBtn(active){return 'font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px;cursor:pointer;padding:6px 11px;border-radius:7px;border:none;'+(active?'background:#e0b35c;color:#2c1f08;font-weight:bold':'background:transparent;color:#b9c9b3');}
-  function setHero(dir){
-    var isA=dir==='A';
-    heroA.style.display=isA?'block':'none';
-    heroB.style.display=isA?'none':'flex';
-    btnA.setAttribute('style',heroBtn(isA));
-    btnB.setAttribute('style',heroBtn(!isA));
+  function paintButtons(theme){
+    var light=theme!=='dark';
+    if(btnA) btnA.setAttribute('style',heroBtn(light));
+    if(btnB) btnB.setAttribute('style',heroBtn(!light));
   }
-  if(btnA) btnA.addEventListener('click',function(){setHero('A');});
-  if(btnB) btnB.addEventListener('click',function(){setHero('B');});
+  function setTheme(theme){
+    document.documentElement.setAttribute('data-theme',theme);
+    paintButtons(theme);
+    try{localStorage.setItem('ct_theme',theme);}catch(e){}
+  }
+  paintButtons(document.documentElement.getAttribute('data-theme')||'light');
+  if(btnA) btnA.addEventListener('click',function(){setTheme('light');});
+  if(btnB) btnB.addEventListener('click',function(){setTheme('dark');});
+  // keep in sync if the roadmap (or another tab) changes the theme
+  window.addEventListener('storage',function(e){
+    if(e.key==='ct_theme'&&(e.newValue==='light'||e.newValue==='dark')){
+      document.documentElement.setAttribute('data-theme',e.newValue);
+      paintButtons(e.newValue);
+    }
+  });
 
   // ---------- Seasons (live) — chips + tabs swap the screenshot & caption ----------
   var SEASONS=[{"name":"Spring","shot":"site_assets/season_spring.png","cap":"Spring · Gulf Coast — muddy, slow, and the redfish are running."},{"name":"Summer","shot":"site_assets/season_summer.png","cap":"Summer · Rockies — the park crush. Pack them in while the sun holds."},{"name":"Fall","shot":"site_assets/season_fall.png","cap":"Fall · New England — the leaf-peeper goldrush. Your busiest week."},{"name":"Winter","shot":"site_assets/season_winter.png","cap":"Winter · Northwoods at night — dead quiet. Did you save enough?"}];
