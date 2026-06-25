@@ -9,10 +9,14 @@ runs in any browser by opening the file directly.
 
 ```
 public/                     ← deploy root for kitesink.com
-  index.html                Home (selected work, blog teaser, song-of-the-day card)
+  index.html                Home (curated work, From-the-log feed, song-of-the-day card)
+  work.html                 Work — full index of everything built + external tools
+  games.html                Games — my games + games I love
+  projects.js               Shared data for Work + Games (KS_WORK / KS_GAMES). Edit to add more.
   about.html                About
   blog.html                 Writing index (live filter; your essays + external reposts)
   blog/
+    posts.js                Shared blog entries (KS_POSTS) — blog index + home feed read this
     campground-tycoon-the-story-so-far.html   First post (reading-progress bar)
   song-of-the-day.html      Landing for the Song of the Day iOS app (FAQ + theme switcher)
   song-of-the-day/
