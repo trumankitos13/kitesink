@@ -116,6 +116,7 @@
 
 </div>
 
+<script src="/blog/posts.js"></script>
 <script>
 (function () {
   // Live clock
@@ -123,48 +124,15 @@
   function tick() { clockEl.textContent = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }); }
   tick(); setInterval(tick, 1000);
 
-  // ===================== BLOG POSTS =====================
-  // Add one object per item, NEWEST FIRST. There are TWO kinds of entry:
-  //
-  // 1) MINE — an essay I wrote. Also needs its own page under /blog/
-  //    (copy public/blog/_template.html). Fields:
-  //      cat, date "YYYY.MM.DD", read "N min", title, dek (one-line summary),
-  //      href "/blog/slug.html", featured (optional; true = big card on top).
-  //
-  // 2) EXTERNAL — a repost / link to someone else's writing. No page needed.
-  //    Set external:true and give it `url` + `source` instead of `href`. Fields:
-  //      external:true, cat, date, read (optional — the piece's length),
-  //      title, source "Publication or Author", url "https://…",
-  //      dek (what it's about), note (optional — WHY I'm featuring it).
-  //    External items render in brass with an ↗ and open in a new tab, so it's
-  //    always clear what's mine vs. what's a link out. Add note to say why.
-  //
-  // See docs/ADDING-A-BLOG-POST.md for the full steps.
-  var POSTS = [
-    {
-      cat: "Devlog", date: "2026.06.24", read: "7 min",
-      title: "Campground Tycoon: the story so far",
-      dek: "From a static campground to a living valley in under two weeks — eighteen updates, the milestones, and what's next.",
-      href: "/blog/campground-tycoon-the-story-so-far.html", featured: true
-    },
-    // EXAMPLE repost — edit the note/url or delete this entry. Shows how an
-    // external link renders (brass, ↗, with a "why I'm featuring it" blurb).
-    {
-      external: true, cat: "Reading", date: "2026.06.20", read: "30 min",
-      title: "How to Do Great Work",
-      source: "Paul Graham",
-      url: "https://paulgraham.com/greatwork.html",
-      dek: "A field guide to doing work that matters, assembled from how the most productive people actually operate.",
-      note: "The best single thing I've read on following curiosity instead of a plan. Worth a re-read every few months."
-    },
-    // Add older items below (newest first). Templates:
-    // MINE:     { cat:"Training", date:"2026.07.01", read:"6 min", title:"…", dek:"…", href:"/blog/slug.html", featured:true }
-    // EXTERNAL: { external:true, cat:"AI", date:"2026.07.01", read:"12 min", title:"…", source:"…", url:"https://…", dek:"…", note:"why I'm sharing it" }
-  ];
-  // ======================================================
+  // Blog entries are the shared list in /blog/posts.js (window.KS_POSTS) — the
+  // single source of truth, also used by the home page's "From the log".
+  // See docs/ADDING-A-BLOG-POST.md.
+  var POSTS = (window.KS_POSTS || []).slice();
 
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
   function isExt(p) { return !!p.external; }
+  // A post's category can be a string or an array — normalize to an array.
+  function catsOf(p) { return Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : []); }
   function postHref(p) { return isExt(p) ? (p.url || "#") : (p.href || "/blog.html"); }
   function linkAttrs(p) { return isExt(p) ? ' target="_blank" rel="noopener"' : ''; }
 
@@ -203,7 +171,7 @@
     var ext = isExt(featured);
     var accent = ext ? "#b07227" : "#2f5436";
     var panelBg = ext ? "linear-gradient(135deg,#b07227,#7c4f1c)" : "linear-gradient(135deg,#2f5436,#23402b)";
-    var kicker = ext ? ("↗ Featured link" + (featured.source ? " · " + esc(featured.source) : "")) : ("Featured · " + esc(featured.cat));
+    var kicker = ext ? ("↗ Featured link" + (featured.source ? " · " + esc(featured.source) : "")) : ("Featured · " + catsOf(featured).map(esc).join(" · "));
     var metaLine = esc(featured.date) + (featured.read ? " · " + esc(featured.read) + (ext ? "" : " read") : "");
     var cta = ext ? ("Read on " + esc(featured.source || "their site")) : "Read the essay";
     var noteBlock = (ext && featured.note)
@@ -225,7 +193,7 @@
 
   // Categories (derived from posts) + an optional "↗ Reposts" filter
   var cats = ["All"];
-  POSTS.forEach(function (p) { if (cats.indexOf(p.cat) < 0) cats.push(p.cat); });
+  POSTS.forEach(function (p) { catsOf(p).forEach(function (c) { if (cats.indexOf(c) < 0) cats.push(c); }); });
   if (hasExt) cats.push("↗ Reposts");
   function chipStyle(on, isRepostChip) {
     var onColor = isRepostChip ? "#b07227" : "#2f5436";
@@ -245,14 +213,14 @@
   listEl.innerHTML = POSTS.map(function (p) {
     var ext = isExt(p);
     var accent = ext ? "#b07227" : "#2f5436";
-    var eyebrow = ext ? ('↗ ' + esc(p.source || "External")) : esc(p.cat);
+    var eyebrow = ext ? ('↗ ' + esc(p.source || "External")) : catsOf(p).map(esc).join(" · ");
     var titleSuffix = ext ? ' <span style="color:#b07227;font-size:.8em">↗</span>' : '';
     var rowBg = ext ? "background:linear-gradient(90deg,rgba(176,114,39,.06),transparent 55%);" : "";
     var noteBlock = (ext && p.note)
       ? '<p style="font:italic 400 14px/1.5 \'Geist\',sans-serif;color:#7a6a48;margin:8px 0 0;padding-left:12px;border-left:2px solid #b07227;max-width:620px">' + esc(p.note) + '</p>'
       : '';
     var rightCol = ext ? esc(p.read || "link") : esc(p.read);
-    return '<a href="' + esc(postHref(p)) + '"' + linkAttrs(p) + ' data-cat="' + esc(p.cat) + '" data-ext="' + (ext ? "1" : "0") + '" class="hv3" style="' + rowBg + 'display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline;padding:24px 0;border-top:1px solid rgba(34,28,16,.16)">' +
+    return '<a href="' + esc(postHref(p)) + '"' + linkAttrs(p) + ' data-cats="' + esc(catsOf(p).join("|")) + '" data-ext="' + (ext ? "1" : "0") + '" class="hv3" style="' + rowBg + 'display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline;padding:24px 0;border-top:1px solid rgba(34,28,16,.16)">' +
       '<div style="flex:0 0 auto;width:118px;font:600 11px \'Geist Mono\',monospace;color:#a89878;padding-top:5px">' + esc(p.date) + '</div>' +
       '<div style="flex:1 1 420px;min-width:260px">' +
         '<div style="font:600 11px \'Geist Mono\',monospace;letter-spacing:.08em;text-transform:uppercase;color:' + accent + ';margin-bottom:6px">' + eyebrow + '</div>' +
@@ -264,7 +232,7 @@
     '</a>';
   }).join("");
 
-  var postLinks = listEl.querySelectorAll("a[data-cat]");
+  var postLinks = listEl.querySelectorAll("a[data-cats]");
   function setActive(active) {
     chipsEl.querySelectorAll("button[data-cat]").forEach(function (b) {
       var lbl = b.getAttribute("data-cat");
@@ -273,7 +241,8 @@
     var reposts = active === "↗ Reposts";
     var shown = 0;
     postLinks.forEach(function (a) {
-      var m = active === "All" || (reposts ? a.getAttribute("data-ext") === "1" : a.getAttribute("data-cat") === active);
+      var rowCats = (a.getAttribute("data-cats") || "").split("|");
+      var m = active === "All" || (reposts ? a.getAttribute("data-ext") === "1" : rowCats.indexOf(active) >= 0);
       a.style.display = m ? "flex" : "none"; if (m) shown++;
     });
     headingEl.textContent = active === "All" ? "All writing" : (reposts ? "Reposts & links" : active);

@@ -1,6 +1,7 @@
 # How to add a blog post
 
-The blog holds **two kinds of entry**, both driven by the `POSTS` array in `public/blog.html`:
+The blog holds **two kinds of entry**, both driven by the `KS_POSTS` list in `public/blog/posts.js`
+(one shared file — the blog index _and_ the home page's "From the log" both read it):
 
 - **Your essay** — something you wrote. Needs its own HTML file in `public/blog/` _and_ a `POSTS`
   entry. Renders in green; this is the default. Steps 1–4 below.
@@ -50,13 +51,13 @@ The reading-progress bar, header, footer, and SEO/social tags all work automatic
 
 ## 2. List it on the blog index
 
-Open `public/blog.html`, find the `POSTS` array near the top of the `<script>`, and add an object
-**at the top** (newest first):
+Open `public/blog/posts.js` and add an object to `window.KS_POSTS` **at the top** (newest first):
 
 ```js
-var POSTS = [
+window.KS_POSTS = [
   {
-    cat: "Training",                       // category — chips are built from these automatically
+    cat: "Training",                       // category — chips are built from these automatically.
+                                           // Use an array for several: cat: ["Devlog", "Gaming"]
     date: "2026.07.01",                    // YYYY.MM.DD
     read: "6 min",
     title: "Your title",
@@ -68,8 +69,11 @@ var POSTS = [
 ];
 ```
 
-That's the single source of truth for the index — the featured card, the category filter chips,
-the post list, and the counts all render from it. The empty-state message disappears as soon as
+`cat` can be a **string or an array** — an array lists the entry under every one of those filter
+chips (e.g. `["Devlog", "Gaming"]` shows under both, and the eyebrow reads "Devlog · Gaming").
+
+That single file is the source of truth — the blog index (featured card, category chips, list,
+counts) **and** the home page's "From the log" (newest 5) both render from it. The empty-state message disappears as soon as
 there's one post.
 
 ---
