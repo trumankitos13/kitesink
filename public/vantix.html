@@ -35,6 +35,27 @@
 .hv4:hover{ color: oklch(0.9 0.012 250); }
 .hv5:hover{ color: oklch(0.9 0.012 250); }
 .hv6:hover{ color: oklch(0.9 0.012 250); }
+
+/* ---- mobile: stack to one column (matches the mobile handoff) ---- */
+@media (max-width: 760px){
+  /* collapse the big two/three-column section layouts */
+  [style*="grid-template-columns: 1.02fr 0.98fr"],
+  [style*="grid-template-columns: 1fr 1.04fr"],
+  [style*="grid-template-columns: 0.9fr 1.1fr"],
+  [style*="grid-template-columns: 264px 1fr"],
+  [style*="grid-template-columns: repeat(3, 1fr)"],
+  [style*="grid-template-columns: repeat(5, 1fr)"],
+  [style*="grid-template-columns: 1fr 1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"]{ grid-template-columns: 1fr !important; }
+  /* tighter gutters + phone-sized display type */
+  [style*="max-width: 1180px"]{ padding-left: 18px !important; padding-right: 18px !important; }
+  [style*="font-size: 53px"]{ font-size: 34px !important; line-height: 1.05 !important; }
+  [style*="font-size: 40px"]{ font-size: 28px !important; }
+  [style*="font-size: 34px"]{ font-size: 25px !important; }
+  /* the scroll-spy section links don't fit a phone nav — hide them, keep the CTA */
+  .ks-nav{ display: none !important; }
+  .mono{ overflow-wrap: anywhere; }
+}
 </style>
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/vantix.html">
