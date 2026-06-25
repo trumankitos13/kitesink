@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantix — a personal fitness OS</title>
+<meta name="description" content="Vantix brand identity and handoff spec — lockups, app icon ramp, monochrome rules, full glyph set, color tokens and copy-paste source for a personal fitness OS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: oklch(0.2 0.012 250); font-family: 'Space Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  .gk { font-family: 'Space Grotesk', sans-serif; }
+  .wm { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 0.05em; line-height: 1; text-transform: var(--wm, uppercase); white-space: nowrap; }
+  .eye { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: oklch(0.52 0.012 250); }
+  pre { margin: 0; }
+  p { text-wrap: pretty; }
+</style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--KS-CHROME--><style>.ks-link{transition:color .15s}.ks-link:hover{color:#2f5436 !important}</style><div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:'Geist',-apple-system,system-ui,sans-serif;box-sizing:border-box"><a href="https://kitesink.com/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none"><svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="font:800 14px 'Geist',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a><nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px 'Geist Mono',ui-monospace,monospace;color:#5e5238"><a href="https://kitesink.com/#work" class="ks-link" style="color:inherit;text-decoration:none">Work</a><a href="https://kitesink.com/blog.html" class="ks-link" style="color:inherit;text-decoration:none">Writing</a><a href="https://kitesink.com/campground-tycoon.html" class="ks-link" style="color:inherit;text-decoration:none">Games</a><a href="https://kitesink.com/about.html" class="ks-link" style="color:inherit;text-decoration:none">About</a></nav></div>
+
+<div style="--tone: #92a6cc; --accent: #d8a652; --wm: uppercase; background: oklch(0.2 0.012 250); min-height: 100vh; padding: 50px 40px 72px;">
+
+  <!-- ============ HEADER ============ -->
+  <div style="max-width: 1180px; margin: 0 auto 40px;">
+    <div class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: oklch(0.58 0.012 250);">BRAND HANDOFF &middot; IDENTITY SPEC &middot; READY FOR DASHBOARD</div>
+    <div style="display: flex; align-items: flex-end; gap: 22px; margin: 18px 0 0;">
+      <svg viewBox="0 0 56 56" width="62" height="62" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="var(--tone)" stroke-width="2.4"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="var(--tone)" stroke-width="2.4" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="var(--accent)" transform="rotate(45 28 28)"></rect></svg>
+      <h1 class="wm" style="font-size: 56px; color: oklch(0.96 0.012 250); margin: 0;">Vantix</h1>
+    </div>
+    <p style="font-size: 16px; line-height: 1.6; color: oklch(0.7 0.012 250); margin: 22px 0 0; max-width: 720px;">The Torvex nested&#8209;twist mark &mdash; rotation resolving to a single point &mdash; carried onto the <span style="color: oklch(0.92 0.012 250); font-weight: 500;">Vantix</span> name. Everything below is the implementation spec: lockups, icon ramp, monochrome rules, the full glyph set, color tokens and copy&#8209;paste source. Hand the whole sheet to the build session.</p>
+  </div>
+
+  <div style="max-width: 1180px; margin: 0 auto; border: 1px solid oklch(0.34 0.012 250);">
+
+    <!-- ===================== PRIMARY LOCKUP ===================== -->
+    <div style="padding: 18px 28px 28px;">
+      <div class="eye" style="padding: 14px 0 16px;">PRIMARY LOCKUP &mdash; HORIZONTAL</div>
+      <div style="background: oklch(0.235 0.012 250); border: 1px solid oklch(0.32 0.012 250); padding: 60px 40px; display: flex; align-items: center; justify-content: center; gap: 28px;">
+        <svg viewBox="0 0 56 56" width="80" height="80" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="var(--tone)" stroke-width="2.4"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="var(--tone)" stroke-width="2.4" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="var(--accent)" transform="rotate(45 28 28)"></rect></svg>
+        <span class="wm" style="font-size: 54px; color: oklch(0.96 0.012 250);">Vantix</span>
+      </div>
+    </div>
+
+    <!-- ===================== STACKED + ON LIGHT ===================== -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: oklch(0.34 0.012 250); border-top: 1px solid oklch(0.34 0.012 250);">
+      <div style="background: oklch(0.2 0.012 250); padding: 22px 28px 28px;">
+        <div class="eye" style="padding-bottom: 16px;">STACKED</div>
+        <div style="background: oklch(0.235 0.012 250); border: 1px solid oklch(0.32 0.012 250); padding: 42px; display: flex; flex-direction: column; align-items: center; gap: 20px; min-height: 196px; justify-content: center;">
+          <svg viewBox="0 0 56 56" width="74" height="74" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="var(--tone)" stroke-width="2.4"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="var(--tone)" stroke-width="2.4" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="var(--accent)" transform="rotate(45 28 28)"></rect></svg>
+          <span class="wm" style="font-size: 34px; color: oklch(0.96 0.012 250);">Vantix</span>
+        </div>
+      </div>
+      <div style="background: oklch(0.2 0.012 250); padding: 22px 28px 28px;">
+        <div class="eye" style="padding-bottom: 16px;">REVERSED &middot; ON LIGHT</div>
+        <div style="background: oklch(0.93 0.012 250); border: 1px solid oklch(0.32 0.012 250); padding: 42px; display: flex; align-items: center; justify-content: center; gap: 24px; min-height: 196px;">
+          <svg viewBox="0 0 56 56" width="64" height="64" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#2c3650" stroke-width="2.6"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#2c3650" stroke-width="2.6" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#b9842f" transform="rotate(45 28 28)"></rect></svg>
+          <span class="wm" style="font-size: 44px; color: oklch(0.24 0.012 250);">Vantix</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== APP ICON RAMP ===================== -->
+    <div style="padding: 22px 28px 28px; border-top: 1px solid oklch(0.34 0.012 250);">
+      <div class="eye" style="padding-bottom: 16px;">APP ICON &amp; FAVICON &mdash; MARK ONLY, SHARP SQUARE</div>
+      <div style="display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;">
+          <div style="width: 104px; height: 104px; background: oklch(0.235 0.012 250); border: 1px solid oklch(0.36 0.012 250); display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 56 56" width="64" height="64"><rect x="9" y="9" width="38" height="38" fill="none" stroke="var(--tone)" stroke-width="2.6"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="var(--tone)" stroke-width="2.6" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="var(--accent)" transform="rotate(45 28 28)"></rect></svg></div>
+          <span class="mono" style="font-size: 9.5px; color: oklch(0.5 0.012 250);">512 / 256</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;">
+          <div style="width: 68px; height: 68px; background: oklch(0.235 0.012 250); border: 1px solid oklch(0.36 0.012 250); display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 56 56" width="42" height="42"><rect x="9" y="9" width="38" height="38" fill="none" stroke="var(--tone)" stroke-width="3"></rect><rect x="16" y="16" width="24" height="24" fill="none" stroke="var(--tone)" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="23" y="23" width="10" height="10" fill="var(--accent)" transform="rotate(45 28 28)"></rect></svg></div>
+          <span class="mono" style="font-size: 9.5px; color: oklch(0.5 0.012 250);">128 / 64</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;">
+          <div style="width: 44px; height: 44px; background: oklch(0.235 0.012 250); border: 1px solid oklch(0.36 0.012 250); display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 56 56" width="28" height="28"><rect x="11" y="11" width="34" height="34" fill="none" stroke="var(--tone)" stroke-width="3.6"></rect><rect x="22" y="22" width="12" height="12" fill="var(--accent)" transform="rotate(45 28 28)"></rect></svg></div>
+          <span class="mono" style="font-size: 9.5px; color: oklch(0.5 0.012 250);">44 / 32</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;">
+          <div style="width: 28px; height: 28px; background: oklch(0.235 0.012 250); border: 1px solid oklch(0.36 0.012 250); display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 56 56" width="18" height="18"><rect x="11" y="11" width="34" height="34" fill="var(--tone)"></rect><rect x="23" y="23" width="10" height="10" fill="oklch(0.2 0.012 250)" transform="rotate(45 28 28)"></rect></svg></div>
+          <span class="mono" style="font-size: 9.5px; color: oklch(0.5 0.012 250);">16</span>
+        </div>
+        <div class="mono" style="margin-left: 8px; font-size: 11px; line-height: 1.65; color: oklch(0.55 0.012 250); max-width: 320px;">Drop the outer frames as size falls. At <span style="color: var(--tone);">128</span> two frames; at <span style="color: var(--tone);">44</span> one frame + diamond; at <span style="color: var(--tone);">16</span> the frame fills solid with a knockout diamond. Reads clean to favicon scale.</div>
+      </div>
+    </div>
+
+    <!-- ===================== MONOCHROME + CLEAR SPACE ===================== -->
+    <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 1px; background: oklch(0.34 0.012 250); border-top: 1px solid oklch(0.34 0.012 250);">
+      <div style="background: oklch(0.2 0.012 250); padding: 22px 28px 28px;">
+        <div class="eye" style="padding-bottom: 16px;">MONOCHROME TREATMENTS</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+          <div style="background: oklch(0.235 0.012 250); padding: 28px 0; display: flex; flex-direction: column; align-items: center; gap: 13px;"><svg viewBox="0 0 56 56" width="46" height="46"><rect x="9" y="9" width="38" height="38" fill="none" stroke="var(--tone)" stroke-width="2.6"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="var(--tone)" stroke-width="2.6" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="var(--tone)" transform="rotate(45 28 28)"></rect></svg><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: oklch(0.5 0.012 250);">ONE-COLOR</span></div>
+          <div style="background: oklch(0.235 0.012 250); padding: 28px 0; display: flex; flex-direction: column; align-items: center; gap: 13px;"><svg viewBox="0 0 56 56" width="46" height="46"><rect x="9" y="9" width="38" height="38" fill="none" stroke="oklch(0.96 0.012 250)" stroke-width="2.6"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="oklch(0.96 0.012 250)" stroke-width="2.6" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="oklch(0.96 0.012 250)" transform="rotate(45 28 28)"></rect></svg><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: oklch(0.5 0.012 250);">KNOCKOUT</span></div>
+          <div style="background: oklch(0.93 0.012 250); padding: 28px 0; display: flex; flex-direction: column; align-items: center; gap: 13px;"><svg viewBox="0 0 56 56" width="46" height="46"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#2c3650" stroke-width="2.6"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#2c3650" stroke-width="2.6" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#2c3650" transform="rotate(45 28 28)"></rect></svg><span class="mono" style="font-size: 9px; letter-spacing: 0.06em; color: oklch(0.42 0.012 250);">INK</span></div>
+        </div>
+      </div>
+      <div style="background: oklch(0.2 0.012 250); padding: 22px 28px 28px;">
+        <div class="eye" style="padding-bottom: 16px;">CLEAR SPACE &amp; MINIMUMS</div>
+        <div style="background: oklch(0.235 0.012 250); border: 1px solid oklch(0.32 0.012 250); padding: 20px; display: flex; align-items: center; justify-content: center;">
+          <div style="position: relative; padding: 28px; outline: 1px dashed oklch(0.4 0.012 250);">
+            <svg viewBox="0 0 56 56" width="56" height="56" style="display: block;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="var(--tone)" stroke-width="2.6"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="var(--tone)" stroke-width="2.6" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="var(--accent)" transform="rotate(45 28 28)"></rect></svg>
+            <span class="mono" style="position: absolute; top: 50%; left: 6px; transform: translateY(-50%); font-size: 8.5px; color: oklch(0.5 0.012 250);">x</span>
+            <span class="mono" style="position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 8.5px; color: oklch(0.5 0.012 250);">x</span>
+          </div>
+        </div>
+        <div class="mono" style="font-size: 11px; line-height: 1.65; color: oklch(0.52 0.012 250); margin-top: 14px;">Clear space &ge; x on every side, where x = the diamond&rsquo;s width. Min lockup width 96&#8239;px; below that use the mark alone.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== GLYPH SET ===================== -->
+  <div style="max-width: 1180px; margin: 32px auto 0; border: 1px solid oklch(0.34 0.012 250);">
+    <div style="padding: 22px 28px 8px;">
+      <div class="eye" style="padding-bottom: 4px;">TYPEFACE &mdash; SPACE GROTESK BOLD &middot; UPPERCASE WORDMARK</div>
+    </div>
+    <!-- name letters featured -->
+    <div style="padding: 6px 28px 26px;">
+      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+        <div style="background: oklch(0.235 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+          <span class="wm" style="font-size: 58px; color: oklch(0.96 0.012 250);">V</span>
+          <span class="mono" style="position: absolute; bottom: 9px; right: 11px; font-size: 9px; color: var(--accent);">01</span>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+          <span class="wm" style="font-size: 58px; color: oklch(0.96 0.012 250);">A</span>
+          <span class="mono" style="position: absolute; bottom: 9px; right: 11px; font-size: 9px; color: var(--accent);">02</span>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+          <span class="wm" style="font-size: 58px; color: oklch(0.96 0.012 250);">N</span>
+          <span class="mono" style="position: absolute; bottom: 9px; right: 11px; font-size: 9px; color: var(--accent);">03</span>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+          <span class="wm" style="font-size: 58px; color: oklch(0.96 0.012 250);">T</span>
+          <span class="mono" style="position: absolute; bottom: 9px; right: 11px; font-size: 9px; color: var(--accent);">04</span>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+          <span class="wm" style="font-size: 58px; color: oklch(0.96 0.012 250);">I</span>
+          <span class="mono" style="position: absolute; bottom: 9px; right: 11px; font-size: 9px; color: var(--accent);">05</span>
+        </div>
+        <div style="background: oklch(0.235 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+          <span class="wm" style="font-size: 58px; color: oklch(0.96 0.012 250);">X</span>
+          <span class="mono" style="position: absolute; bottom: 9px; right: 11px; font-size: 9px; color: var(--accent);">06</span>
+        </div>
+      </div>
+      <div class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250); margin-top: 12px;">V&middot;A&middot;N&middot;T&middot;I&middot;X &mdash; the wordmark glyphs, 700 weight, tracked +0.05em.</div>
+    </div>
+    <!-- full set -->
+    <div style="padding: 0 28px 28px;">
+      <div class="eye" style="padding-bottom: 14px;">FULL SET &mdash; A&ndash;Z &middot; 0&ndash;9</div>
+      <div style="display: grid; grid-template-columns: repeat(13, 1fr); gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">A</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">B</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">C</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">D</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">E</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">F</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">G</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">H</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">I</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">J</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">K</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">L</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">M</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">N</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">O</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">P</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">Q</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">R</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">S</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">T</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">U</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">V</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">W</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">X</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">Y</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: oklch(0.88 0.012 250);">Z</span></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(13, 1fr); gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250); border-top: none; margin-top: 1px;">
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">0</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">1</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">2</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">3</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">4</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">5</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">6</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">7</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">8</span></div>
+        <div style="background: oklch(0.225 0.012 250); aspect-ratio: 1; display: flex; align-items: center; justify-content: center;"><span class="wm" style="font-size: 26px; color: var(--tone);">9</span></div>
+        <div style="background: oklch(0.21 0.012 250); grid-column: span 3; display: flex; align-items: center; justify-content: center; gap: 14px;">
+          <span class="wm" style="font-size: 24px; color: oklch(0.6 0.012 250);">&amp;</span>
+          <span class="wm" style="font-size: 24px; color: oklch(0.6 0.012 250);">.</span>
+          <span class="wm" style="font-size: 24px; color: oklch(0.6 0.012 250);">/</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== TOKENS + SOURCE ===================== -->
+  <div style="max-width: 1180px; margin: 32px auto 0; display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 16px;">
+
+    <!-- PALETTE / TOKENS -->
+    <div style="border: 1px solid oklch(0.34 0.012 250);">
+      <div style="padding: 22px 26px 8px;"><div class="eye">COLOR TOKENS</div></div>
+      <div style="padding: 8px 26px 26px;">
+        <div style="display: flex; flex-direction: column; gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
+          <div style="display: flex; align-items: center; gap: 14px; background: oklch(0.235 0.012 250); padding: 13px 16px;">
+            <span style="width: 30px; height: 30px; flex: none; border: 1px solid oklch(0.42 0.012 250); background: #92A6CC;"></span>
+            <div style="min-width: 0;">
+              <div class="gk" style="font-size: 13px; font-weight: 600; color: oklch(0.9 0.012 250); line-height: 1.2;">Periwinkle</div>
+              <div class="mono" style="font-size: 9.5px; color: oklch(0.52 0.012 250); margin-top: 3px;">mark frames &middot; primary</div>
+            </div>
+            <div style="margin-left: auto; text-align: right;">
+              <div class="mono" style="font-size: 11.5px; color: oklch(0.82 0.012 250);">#92A6CC</div>
+              <div class="mono" style="font-size: 9px; color: oklch(0.48 0.012 250); margin-top: 3px;">oklch(0.70 0.05 264)</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; background: oklch(0.235 0.012 250); padding: 13px 16px;">
+            <span style="width: 30px; height: 30px; flex: none; border: 1px solid oklch(0.42 0.012 250); background: #D8A652;"></span>
+            <div style="min-width: 0;">
+              <div class="gk" style="font-size: 13px; font-weight: 600; color: oklch(0.9 0.012 250); line-height: 1.2;">Amber</div>
+              <div class="mono" style="font-size: 9.5px; color: oklch(0.52 0.012 250); margin-top: 3px;">focal diamond &middot; accent</div>
+            </div>
+            <div style="margin-left: auto; text-align: right;">
+              <div class="mono" style="font-size: 11.5px; color: oklch(0.82 0.012 250);">#D8A652</div>
+              <div class="mono" style="font-size: 9px; color: oklch(0.48 0.012 250); margin-top: 3px;">oklch(0.75 0.11 78)</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; background: oklch(0.235 0.012 250); padding: 13px 16px;">
+            <span style="width: 30px; height: 30px; flex: none; border: 1px solid oklch(0.42 0.012 250); background: #2C3650;"></span>
+            <div style="min-width: 0;">
+              <div class="gk" style="font-size: 13px; font-weight: 600; color: oklch(0.9 0.012 250); line-height: 1.2;">Ink</div>
+              <div class="mono" style="font-size: 9.5px; color: oklch(0.52 0.012 250); margin-top: 3px;">on-light stroke</div>
+            </div>
+            <div style="margin-left: auto; text-align: right;">
+              <div class="mono" style="font-size: 11.5px; color: oklch(0.82 0.012 250);">#2C3650</div>
+              <div class="mono" style="font-size: 9px; color: oklch(0.48 0.012 250); margin-top: 3px;">oklch(0.31 0.04 264)</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; background: oklch(0.235 0.012 250); padding: 13px 16px;">
+            <span style="width: 30px; height: 30px; flex: none; border: 1px solid oklch(0.42 0.012 250); background: #1E222A;"></span>
+            <div style="min-width: 0;">
+              <div class="gk" style="font-size: 13px; font-weight: 600; color: oklch(0.9 0.012 250); line-height: 1.2;">Canvas</div>
+              <div class="mono" style="font-size: 9.5px; color: oklch(0.52 0.012 250); margin-top: 3px;">dark surface</div>
+            </div>
+            <div style="margin-left: auto; text-align: right;">
+              <div class="mono" style="font-size: 11.5px; color: oklch(0.82 0.012 250);">#1E222A</div>
+              <div class="mono" style="font-size: 9px; color: oklch(0.48 0.012 250); margin-top: 3px;">oklch(0.20 0.012 250)</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; background: oklch(0.235 0.012 250); padding: 13px 16px;">
+            <span style="width: 30px; height: 30px; flex: none; border: 1px solid oklch(0.42 0.012 250); background: #E9E9E6;"></span>
+            <div style="min-width: 0;">
+              <div class="gk" style="font-size: 13px; font-weight: 600; color: oklch(0.9 0.012 250); line-height: 1.2;">Paper</div>
+              <div class="mono" style="font-size: 9.5px; color: oklch(0.52 0.012 250); margin-top: 3px;">light surface</div>
+            </div>
+            <div style="margin-left: auto; text-align: right;">
+              <div class="mono" style="font-size: 11.5px; color: oklch(0.82 0.012 250);">#E9E9E6</div>
+              <div class="mono" style="font-size: 9px; color: oklch(0.48 0.012 250); margin-top: 3px;">oklch(0.93 0.012 250)</div>
+            </div>
+          </div>
+        </div>
+        <div class="mono" style="font-size: 11px; line-height: 1.65; color: oklch(0.5 0.012 250); margin-top: 16px;">Periwinkle carries the frames, amber owns the focal diamond. On light surfaces stroke = Ink, diamond = #B9842F. Never tint the diamond and frames the same hue except in the one&#8209;color treatment.</div>
+      </div>
+    </div>
+
+    <!-- SVG / CSS SOURCE -->
+    <div style="border: 1px solid oklch(0.34 0.012 250);">
+      <div style="padding: 22px 26px 8px;"><div class="eye">COPY-PASTE SOURCE &mdash; PRIMARY MARK</div></div>
+      <div style="padding: 8px 26px 0;">
+        <pre class="mono" style="background: oklch(0.14 0.012 250); border: 1px solid oklch(0.3 0.012 250); padding: 16px; font-size: 11.5px; line-height: 1.6; color: oklch(0.8 0.012 250); white-space: pre; overflow-x: auto;">&lt;svg viewBox="0 0 56 56" fill="none"
+     xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;rect x="9"  y="9"  width="38" height="38"
+        stroke="#92A6CC" stroke-width="2.4"/&gt;
+  &lt;rect x="15" y="15" width="26" height="26"
+        stroke="#92A6CC" stroke-width="2.4"
+        transform="rotate(22 28 28)"/&gt;
+  &lt;rect x="22" y="22" width="12" height="12"
+        fill="#D8A652"
+        transform="rotate(45 28 28)"/&gt;
+&lt;/svg&gt;</pre>
+      </div>
+      <div style="padding: 18px 26px 8px;"><div class="eye">FAVICON SOURCE &mdash; &le; 16PX, SOLID</div></div>
+      <div style="padding: 8px 26px 0;">
+        <pre class="mono" style="background: oklch(0.14 0.012 250); border: 1px solid oklch(0.3 0.012 250); padding: 16px; font-size: 11.5px; line-height: 1.6; color: oklch(0.8 0.012 250); white-space: pre; overflow-x: auto;">&lt;svg viewBox="0 0 56 56"
+     xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;rect x="11" y="11" width="34" height="34"
+        fill="#92A6CC"/&gt;
+  &lt;rect x="23" y="23" width="10" height="10"
+        fill="#1E222A"
+        transform="rotate(45 28 28)"/&gt;
+&lt;/svg&gt;</pre>
+      </div>
+      <div style="padding: 18px 26px 8px;"><div class="eye">CSS CUSTOM PROPERTIES</div></div>
+      <div style="padding: 8px 26px 26px;">
+        <pre class="mono" style="background: oklch(0.14 0.012 250); border: 1px solid oklch(0.3 0.012 250); padding: 16px; font-size: 11.5px; line-height: 1.6; color: oklch(0.8 0.012 250); white-space: pre; overflow-x: auto;">:root {
+  --vtx-mark:   #92A6CC; /* frames    */
+  --vtx-accent: #D8A652; /* diamond   */
+  --vtx-ink:    #2C3650; /* on-light  */
+  --vtx-canvas: #1E222A; /* dk surf   */
+  --vtx-paper:  #E9E9E6; /* lt surf   */
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1180px; margin: 24px auto 0;">
+    <div class="mono" style="font-size: 11px; line-height: 1.65; color: oklch(0.48 0.012 250);">Mark tone, accent and wordmark casing are tweakable on this sheet (Tweaks panel) &mdash; values above update live so you can lock the final pairing before handoff. The dashboard mock currently runs a deeper blue canvas + flare&#8209;orange accent; say the word and I&rsquo;ll output a second token set mapped to those surfaces.</div>
+  </div>
+
+</div>
+<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#8a7a58"><span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="color:#221c10">&copy; 2026 KiteSink</span></span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="https://kitesink.com/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="https://kitesink.com/blog.html" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="https://kitesink.com/about.html" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span></div>
+</body>
+</html>

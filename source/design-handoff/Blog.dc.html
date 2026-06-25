@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: #ece2cb; }
+  a { color: inherit; text-decoration: none; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+</style>
+</helmet>
+
+<div style="background:#ece2cb;color:#221c10;font-family:'Geist',sans-serif;min-height:100%;overflow-x:hidden">
+
+  <header style="display:flex;justify-content:space-between;align-items:center;gap:14px 24px;flex-wrap:wrap;padding:16px clamp(20px,4vw,40px);border-bottom:1px solid rgba(34,28,16,.16);position:sticky;top:0;background:rgba(236,226,203,.85);backdrop-filter:blur(8px);z-index:30">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:11px">
+      <svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+        <path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/>
+        <polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/>
+        <line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/>
+        <line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/>
+        <path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="16" cy="29" r="2.6" fill="#2f5436"/>
+        <path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/>
+        <path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/>
+        <ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/>
+        <ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/>
+      </svg>
+      <span style="font:800 19px 'Geist',sans-serif;letter-spacing:-.035em;color:#221c10"><span style="color:#2f5436">Kite</span>Sink</span>
+    </a>
+    <nav style="display:flex;gap:clamp(16px,2.4vw,24px);font:500 13px 'Geist Mono',monospace;color:#5e5238;flex-wrap:wrap">
+      <a href="Home.dc.html#work" style-hover="color:#2f5436">Work</a>
+      <a href="Blog.dc.html" style="color:#2f5436;border-bottom:2px solid #2f5436;padding-bottom:2px">Writing</a>
+      <a href="Campground Tycoon.dc.html" style-hover="color:#2f5436">Games</a>
+      <a href="About.dc.html" style-hover="color:#2f5436">About</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:9px;font:500 12px 'Geist Mono',monospace;color:#2f5436">
+      <span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:pulse 2.4s ease-in-out infinite"></span>
+      <span>{{ clock }} · online</span>
+    </div>
+  </header>
+
+  <section style="padding:clamp(40px,6vw,64px) clamp(20px,4vw,40px) 24px;max-width:1180px;margin:0 auto">
+    <div style="display:flex;align-items:center;gap:10px;font:600 12px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.16em;color:#2f5436;margin-bottom:22px">
+      <span style="font-size:15px">✱</span><span>Writing · {{ totalCount }} essays &amp; counting</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,5vw,56px);align-items:flex-end">
+      <h1 style="font:800 clamp(48px,8vw,104px)/.9 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810;margin:0;flex:1 1 360px">The<br><span style="font-style:italic;font-weight:700;color:#2f5436">logbook.</span></h1>
+      <p style="font:400 18px/1.6 'Geist',sans-serif;color:#5e5238;margin:0;max-width:460px;flex:1 1 320px">Thinking out loud on training, longevity, nutrition, AI, culture, and what it actually takes to build alone. Long-form, infrequent, written by hand.</p>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(20px,4vw,40px);max-width:1180px;margin:0 auto">
+    <div style="display:flex;gap:9px;flex-wrap:wrap;padding:18px 0;border-top:1px solid rgba(34,28,16,.16);border-bottom:1px solid rgba(34,28,16,.16)">
+      <sc-for list="{{ categories }}" as="c" hint-placeholder-count="9">
+        <button onClick="{{ c.select }}" style="{{ c.style }}">{{ c.label }}</button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:clamp(34px,5vw,52px) clamp(20px,4vw,40px) 20px;max-width:1180px;margin:0 auto">
+    <a href="Post - Normalize.dc.html" style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,44px);align-items:stretch;border:1.5px solid rgba(34,28,16,.2);border-radius:16px;overflow:hidden;background:#f3ecd9;transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-3px);box-shadow:0 22px 44px rgba(34,28,16,.12)">
+      <div style="flex:1 1 300px;min-height:240px;background:linear-gradient(135deg,#2f5436,#23402b);position:relative;display:flex;align-items:flex-end;padding:26px">
+        <div aria-hidden="true" style="position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(125deg,transparent 0 16px,rgba(216,176,122,.14) 16px 17px)"></div>
+        <div style="position:relative">
+          <div style="font:600 11px 'Geist Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#d8b07a;margin-bottom:8px">Featured · Training</div>
+          <div style="font:800 clamp(26px,3vw,38px)/1.04 'Geist',sans-serif;letter-spacing:-.03em;color:#f0e8d6">Why I normalize every set I've ever logged</div>
+        </div>
+      </div>
+      <div style="flex:1 1 320px;padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;justify-content:center">
+        <div style="font:500 12px 'Geist Mono',monospace;color:#a89878;margin-bottom:12px">2026.06.18 · 9 min read</div>
+        <p style="font:400 18px/1.6 'Geist',sans-serif;color:#5e5238;margin:0">Raw tonnage lies. The only honest way to compare a brutal week to an easy one is to put everything on the same scale — and that one decision reshaped how I think about progress, fatigue, and what the data is really telling me.</p>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:22px;font:600 13px 'Geist Mono',monospace;color:#2f5436">Read the essay <span style="width:30px;height:30px;border:1.5px solid #2f5436;border-radius:50%;display:flex;align-items:center;justify-content:center">→</span></div>
+      </div>
+    </a>
+  </section>
+
+  <section style="padding:clamp(28px,4vw,40px) clamp(20px,4vw,40px) clamp(48px,7vw,72px);max-width:1180px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:6px">
+      <h2 style="font:700 22px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0">{{ listHeading }}</h2>
+      <span style="font:500 12px 'Geist Mono',monospace;color:#a89878">{{ shownCount }} shown</span>
+    </div>
+    <div>
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="8">
+        <a href="Post - Normalize.dc.html" style="display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline;padding:24px 0;border-top:1px solid rgba(34,28,16,.16)" style-hover="opacity:.66">
+          <div style="flex:0 0 auto;width:118px;font:600 11px 'Geist Mono',monospace;color:#a89878;padding-top:5px">{{ p.date }}</div>
+          <div style="flex:1 1 420px;min-width:260px">
+            <div style="font:600 11px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#2f5436;margin-bottom:6px">{{ p.cat }}</div>
+            <h3 style="font:700 clamp(21px,2.4vw,27px)/1.18 'Geist',sans-serif;letter-spacing:-.02em;color:#221c10;margin:0">{{ p.title }}</h3>
+            <p style="font:400 15px/1.55 'Geist',sans-serif;color:#5e5238;margin:8px 0 0;max-width:620px">{{ p.dek }}</p>
+          </div>
+          <div style="flex:0 0 auto;margin-left:auto;font:500 12px 'Geist Mono',monospace;color:#a89878;padding-top:5px">{{ p.read }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="padding:clamp(40px,5vw,54px) clamp(20px,4vw,40px) 46px;max-width:1240px;margin:0 auto;border-top:1px solid rgba(34,28,16,.18)">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
+      <div>
+        <div style="font:800 clamp(40px,6vw,72px)/.9 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810"><span style="color:#2f5436">Kite</span>Sink</div>
+        <p style="font:400 15px 'Geist',sans-serif;color:#8a7a58;margin:14px 0 0;max-width:340px">Independent maker &amp; founder. One workshop, many surfaces.</p>
+      </div>
+      <div style="display:flex;gap:16px;font:500 13px 'Geist Mono',monospace;color:#2f5436;flex-wrap:wrap">
+        <a href="Home.dc.html" style-hover="text-decoration:underline">Home</a>
+        <a href="About.dc.html" style-hover="text-decoration:underline">About</a>
+        <span>@tkitos</span>
+      </div>
+    </div>
+    <div style="margin-top:30px;padding-top:18px;border-top:1px solid rgba(34,28,16,.18);font:400 12px 'Geist Mono',monospace;color:#a89878">© 2026 KiteSink — all rights reserved.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1180, &quot;height&quot;: 1400}}">
+class Component extends DCLogic {
+  state = { clock: "--:--:--", active: "All" };
+  componentDidMount() {
+    const tick = () => {
+      const t = new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+      this.setState({ clock: t });
+    };
+    tick();
+    this._iv = setInterval(tick, 1000);
+  }
+  componentWillUnmount() { clearInterval(this._iv); }
+
+  ALL_POSTS = [
+    { cat: "Training", date: "2026.06.18", read: "9 min", title: "Why I normalize every set I've ever logged", dek: "Raw tonnage lies. The only honest way to compare a brutal week to an easy one is to put everything on the same scale." },
+    { cat: "Longevity", date: "2026.06.04", read: "7 min", title: "Longevity is a UX problem", dek: "We already know what works. The hard part is designing habits a human will actually keep for forty years." },
+    { cat: "Culture", date: "2026.05.21", read: "5 min", title: "The case for one song a day", dek: "Infinite libraries made music disposable. A single daily pick is a small act of attention." },
+    { cat: "AI", date: "2026.05.09", read: "11 min", title: "Building alone, with a machine", dek: "What it actually feels like to ship four projects as one person in the year of the model." },
+    { cat: "Nutrition", date: "2026.04.27", read: "8 min", title: "Protein is boring and that's the point", dek: "The unglamorous lever almost nobody pulls consistently — and the simplest way I found to stop thinking about it." },
+    { cat: "Habit", date: "2026.04.12", read: "6 min", title: "The two-week rule for everything", dek: "How I decide whether a new system is worth keeping before sunk cost makes the decision for me." },
+    { cat: "Society", date: "2026.03.30", read: "10 min", title: "We optimized away the friction we needed", dek: "Some inconvenience was load-bearing. A field guide to the frictions worth putting back." },
+    { cat: "AI", date: "2026.03.14", read: "7 min", title: "Taste is the last moat", dek: "When anyone can generate anything, the scarce thing is knowing what's worth making at all." },
+    { cat: "Training", date: "2026.02.28", read: "12 min", title: "Mesocycles for people with jobs", dek: "Periodization theory assumes a life you don't have. Here's how I adapt it to real weeks." },
+    { cat: "Internet", date: "2026.02.10", read: "6 min", title: "In praise of the small web", dek: "Why I'd rather run four hand-built pages than one feed that owns my attention." },
+    { cat: "Success", date: "2026.01.26", read: "5 min", title: "Shipping is a skill, not a mood", dek: "The unsexy mechanics of finishing things when motivation has long since left the building." },
+    { cat: "Longevity", date: "2026.01.08", read: "9 min", title: "Sleep is the supplement", dek: "I tried the whole stack. The only thing that moved every marker was going to bed on time." },
+    { cat: "Nutrition", date: "2025.12.19", read: "7 min", title: "Cooking is data collection", dek: "Treating the kitchen like a lab made eating well boring enough to actually sustain." },
+    { cat: "Culture", date: "2025.12.02", read: "8 min", title: "Against the year in review", dek: "The annual recap flattens a life into a slideshow. What I do instead, all year long." },
+  ];
+
+  renderVals() {
+    const cats = ["All", "Training", "Longevity", "Nutrition", "AI", "Culture", "Society", "Internet", "Habit", "Success"];
+    const active = this.state.active;
+    const chip = (on) => "appearance:none;cursor:pointer;font:600 12px 'Geist Mono',monospace;letter-spacing:.04em;padding:8px 15px;border-radius:30px;transition:all .15s;" +
+      (on ? "background:#2f5436;color:#f0e8d6;border:1.5px solid #2f5436" : "background:transparent;color:#5e5238;border:1.5px solid rgba(34,28,16,.22)");
+    const categories = cats.map(label => ({ label, style: chip(label === active), select: () => this.setState({ active: label }) }));
+
+    const posts = active === "All" ? this.ALL_POSTS : this.ALL_POSTS.filter(p => p.cat === active);
+    return {
+      clock: this.state.clock,
+      totalCount: this.ALL_POSTS.length,
+      categories,
+      posts,
+      listHeading: active === "All" ? "All essays" : active,
+      shownCount: posts.length,
+    };
+  }
+}
+</script>
+</body>
+</html>
