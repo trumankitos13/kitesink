@@ -11,6 +11,29 @@ text with `aria-hidden`; fonts use `display=swap`.
 
 ---
 
+## ✅ Applied (this pass)
+- **SEO:** Open Graph + Twitter cards on every page (with a generated `/og-image.png`), `robots.txt`,
+  `sitemap.xml`, and `<link rel=canonical>` sitewide. *(Items 1.P1, 1.P2 done.)*
+- **Accessibility:** global `prefers-reduced-motion` block + `:focus-visible` ring on every page.
+  *(2.P1, part of 2.P2.)*
+- **Icons/PWA:** `apple-touch-icon.png`, `favicon-32/16.png`, and `theme-color` sitewide. *(6.P2, 6.P3.)*
+- **Security:** `public/_headers` + `vantix/_headers` with nosniff, Referrer-Policy, frame options,
+  Permissions-Policy, and a CSP that allows Google Fonts + the itch.io embed. *(7.P2.)*
+- **Cleanup:** pruned the dead Campground build-menu JS. *(4.P3.)*
+- **Content/links:** added Song of the Day **Privacy** + **Terms** pages and wired the footer;
+  added the 7 Campground screenshots; fixed the Vantix `.co`→`.com` text on Home.
+
+### Still open (need your input or a decision)
+- Contrast tweak on gold-on-cream (2.P2) — changes the look, your call.
+- Shared header/footer partials + stylesheet refactor (4.P2/P3) — structural.
+- Self-hosted fonts (3.P3); the slim bar's extra Geist load on SOTD/Vantix (3.P2).
+- Real per-post blog pages + RSS (5.P2); analytics token (5.P3).
+- Remaining real links: contact email, X/Instagram/website URLs, App Store URL (see
+  UPDATE-LINKS-AND-IMAGES.md).
+- Legal: set the `<TODO: jurisdiction>` in the Terms page once incorporated.
+
+---
+
 ## 1. Discoverability / SEO
 
 - **P1 — No social-share previews (Open Graph / Twitter cards).** Only `song-of-the-day.html` has

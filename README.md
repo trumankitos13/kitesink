@@ -49,18 +49,14 @@ so nothing depends on an external runtime anymore.
 
 - **Contact email** — placeholder `hello@kitesink.com` is used on a few pages. Replace with
   your real address (search the repo for `hello@kitesink.com`).
-- **Campground screenshots** — `campground-tycoon.html` references `site_assets/*.png`
-  (season_*.png, region_board.png, picker_bg.png, usa_map.png) that were never in this repo.
-  Until you drop them into `public/site_assets/`, those spots show styled placeholder blocks
-  (no broken-image icons). Add the PNGs and they appear automatically.
+- **Campground screenshots** — ✅ added in `public/site_assets/` (the 7 PNGs are wired and live).
 - **Social links** — some footer handles (`@tkitos`, `@murdocnu`, `@rummaging13`) are `#`
   placeholders; fill in real profile URLs.
-- **Vantix `.co` vs `.com`** — the Home work-card visibly reads `vantix.kitesink.co`; the
-  link correctly points to `vantix.kitesink.com`. Update the display text if you want `.com`.
+- **Vantix `.co` vs `.com`** — ✅ fixed; the Home work-card now reads `vantix.kitesink.com`.
 - **Blog posts** — only the first post has a real page (`/blog/normalize.html`); the other 13
   link back to the index. Add per-post pages under `public/blog/` as you write them.
 
 ## Deploying
 
-See **[DEPLOY-CLOUDFLARE.md](DEPLOY-CLOUDFLARE.md)** for full step-by-step Cloudflare setup
+See **[docs/DEPLOY-CLOUDFLARE.md](docs/DEPLOY-CLOUDFLARE.md)** for full step-by-step Cloudflare setup
 (apex `kitesink.com` + `vantix.kitesink.com` subdomain).

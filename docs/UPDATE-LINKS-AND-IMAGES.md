@@ -7,6 +7,11 @@ shifted.
 > Fastest path: fill in the blanks in section 0, then either make the edits yourself or hand this
 > file back to me and I'll apply everything except the images in one pass.
 
+> **Status (auto-applied):** ✅ images wired · ✅ Vantix `.co`→`.com` · ✅ Privacy/Terms pages built
+> & linked.  ⬜ Still need your values: **contact email**, **X/Instagram/website URLs**,
+> **App Store URL** (sections 2–4, 6). Note: `source/` only yielded the original SOTD email
+> `hello@songoftheday.app` and the same placeholder App Store URL — no social URLs exist in the repo.
+
 ---
 
 ## 0. Fill these in first (your real values)
