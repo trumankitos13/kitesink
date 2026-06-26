@@ -23,6 +23,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/blog.html">
+<link rel="alternate" type="application/atom+xml" title="KiteSink — the log" href="/feed.xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
@@ -119,7 +120,7 @@
   var hasExt = POSTS.some(isExt);
   legendEl.innerHTML =
     '<span style="display:flex;align-items:center;gap:6px;color:#2f5436"><span style="font-size:13px">✍</span>Mine</span>' +
-    (hasExt ? '<span style="display:flex;align-items:center;gap:6px;color:#b07227"><span style="font-size:13px">↗</span>External link</span>' : '');
+    (hasExt ? '<span style="display:flex;align-items:center;gap:6px;color:#8a5a18"><span style="font-size:13px">↗</span>External link</span>' : '');
 
   // Featured card — newest featured (or newest overall); brass variant if external
   var featured = POSTS.filter(function (p) { return p.featured; })[0] || POSTS[0];
@@ -131,7 +132,7 @@
     var metaLine = esc(featured.date) + (featured.read ? " · " + esc(featured.read) + (ext ? "" : " read") : "");
     var cta = ext ? ("Read on " + esc(featured.source || "their site")) : "Read the essay";
     var noteBlock = (ext && featured.note)
-      ? '<p style="font:italic 400 15px/1.55 \'Geist\',sans-serif;color:#5e5238;margin:16px 0 0;padding-left:14px;border-left:2px solid #b07227"><span style="font:600 11px \'Geist Mono\',monospace;color:#b07227;display:block;margin-bottom:4px;letter-spacing:.06em">WHY I&#39;M FEATURING THIS</span>' + esc(featured.note) + '</p>'
+      ? '<p style="font:italic 400 15px/1.55 \'Geist\',sans-serif;color:#5e5238;margin:16px 0 0;padding-left:14px;border-left:2px solid #b07227"><span style="font:600 11px \'Geist Mono\',monospace;color:#8a5a18;display:block;margin-bottom:4px;letter-spacing:.06em">WHY I&#39;M FEATURING THIS</span>' + esc(featured.note) + '</p>'
       : '';
     featuredEl.innerHTML =
       '<a href="' + esc(postHref(featured)) + '"' + linkAttrs(featured) + ' class="hv2" style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,44px);align-items:stretch;border:1.5px solid rgba(34,28,16,.2);border-radius:16px;overflow:hidden;background:#f3ecd9;transition:transform .2s,box-shadow .2s">' +
@@ -170,7 +171,7 @@
     var ext = isExt(p);
     var accent = ext ? "#b07227" : "#2f5436";
     var eyebrow = ext ? ('↗ ' + esc(p.source || "External")) : catsOf(p).map(esc).join(" · ");
-    var titleSuffix = ext ? ' <span style="color:#b07227;font-size:.8em">↗</span>' : '';
+    var titleSuffix = ext ? ' <span style="color:#8a5a18;font-size:.8em">↗</span>' : '';
     var rowBg = ext ? "background:linear-gradient(90deg,rgba(176,114,39,.06),transparent 55%);" : "";
     var noteBlock = (ext && p.note)
       ? '<p style="font:italic 400 14px/1.5 \'Geist\',sans-serif;color:#7a6a48;margin:8px 0 0;padding-left:12px;border-left:2px solid #b07227;max-width:620px">' + esc(p.note) + '</p>'

@@ -706,6 +706,8 @@
     if(txt) txt.value=''; if(nm) nm.value='';
     render();
     flash('Pinned up — thanks! 📌');
+    // also send it to the inbox (best-effort; the pin above is the instant feedback)
+    if(window.ksSubmitForm) window.ksSubmitForm({ subject:'Campground Tycoon — suggestion', from_name: name || 'Anonymous camper', message: text, page: '/campground-tycoon/roadmap.html' }, function(){});
     var first=board.querySelector('.note');
     if(first){ first.style.animation='ctRise .35s ease both'; }
   });

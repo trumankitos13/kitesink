@@ -18,6 +18,12 @@
   // (Cloudflare dashboard → Analytics & Logs → Web Analytics → add a site → copy the token).
   var CF_TOKEN = "";
 
+  // Web3Forms access key for the site's forms (Vantix signup, Campground suggestion
+  // box). Register the key at https://web3forms.com using suggestions@kitesink.com,
+  // then paste it here — every form then emails there. Empty = friendly demo mode
+  // (forms confirm to the visitor but send nothing).
+  var KS_FORM_KEY = "";
+
   var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"]];
 
   var LOGO30 = '<svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#2f5436"/><path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/></svg>';
@@ -94,6 +100,28 @@
     s.setAttribute("data-cf-beacon", JSON.stringify({ token: CF_TOKEN }));
     document.head.appendChild(s);
   }
+
+  // Shared form submit → Web3Forms → the inbox that registered KS_FORM_KEY.
+  // payload: flat field object (e.g. {subject, email, message, from_name}). cb(err, data).
+  // Honeypot: if payload.botcheck is truthy the submit is silently skipped. In demo
+  // mode (no key) it calls cb(null,{demo:true}) so the page can still confirm to the user.
+  function ksSubmitForm(payload, cb) {
+    cb = cb || function () {};
+    payload = payload || {};
+    if (payload.botcheck) { cb(null, { skipped: true }); return; }
+    if (!KS_FORM_KEY) { cb(null, { demo: true }); return; }
+    var body = { access_key: KS_FORM_KEY };
+    for (var k in payload) { if (payload.hasOwnProperty(k) && k !== "botcheck") body[k] = payload[k]; }
+    if (!body.subject) body.subject = "New KiteSink form submission";
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(body)
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (d && d.success) cb(null, d); else cb(new Error((d && d.message) || "submit failed"));
+    }).catch(cb);
+  }
+  window.ksSubmitForm = ksSubmitForm;
 
   function inject() {
     var nodes = document.querySelectorAll("[data-ks]");

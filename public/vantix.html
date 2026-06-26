@@ -755,12 +755,14 @@
     <div style="max-width: 1180px; margin: 0 auto; padding: 84px 32px; text-align: center;">
       <h2 class="gk" style="font-size: 40px; font-weight: 700; letter-spacing: -0.025em; color: oklch(0.96 0.012 250); margin: 0; line-height: 1.08;">Retire the spreadsheet. Connect the dots.</h2>
       <p style="font-size: 16.5px; line-height: 1.6; color: oklch(0.72 0.012 250); margin: 18px auto 0; max-width: 560px;">Bring every app you train and live with, define your plan, and let an instrument hold the rules while a co‑pilot does the busywork. Free to start, nothing to break.</p>
-      <div style="display: flex; gap: 12px; justify-content: center; margin-top: 30px; max-width: 460px; margin-left: auto; margin-right: auto;">
-        <div style="flex: 1; display: flex; border: 1px solid oklch(0.42 0.012 250); background: oklch(0.235 0.012 250);">
-          <input type="email" placeholder="you@domain.com" class="mono" style="flex: 1; background: transparent; border: none; color: oklch(0.92 0.012 250); font-size: 13px; padding: 0 14px;">
+      <form id="vxForm" style="display: flex; gap: 12px; justify-content: center; margin-top: 30px; max-width: 460px; margin-left: auto; margin-right: auto; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px; display: flex; border: 1px solid oklch(0.42 0.012 250); background: oklch(0.235 0.012 250);">
+          <input id="vxEmail" type="email" name="email" required autocomplete="email" placeholder="you@domain.com" class="mono" style="flex: 1; background: transparent; border: none; color: oklch(0.92 0.012 250); font-size: 13px; padding: 0 14px;">
         </div>
-        <a href="https://vantix.kitesink.com" class="gk" style="display:inline-block; background: #92a6cc; color: oklch(0.16 0.02 250); padding: 13px 24px; font-weight: 600; font-size: 14.5px; cursor: pointer; white-space: nowrap; text-decoration: none;">Start free</a>
-      </div>
+        <input type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;">
+        <button type="submit" class="gk" style="display:inline-block; background: #92a6cc; color: oklch(0.16 0.02 250); padding: 13px 24px; font-weight: 600; font-size: 14.5px; cursor: pointer; white-space: nowrap; border: none;">Start free</button>
+      </form>
+      <div id="vxMsg" class="mono" role="status" aria-live="polite" style="font-size: 12px; color: oklch(0.7 0.012 250); margin-top: 12px; min-height: 16px; text-align: center;"></div>
     </div>
   </section>
 
@@ -782,6 +784,25 @@
 
 <div data-ks="bottombar"></div>
 <script>
+(function(){
+  // ---- CTA email capture → suggestions@kitesink.com (via ks.js ksSubmitForm) ----
+  var form=document.getElementById('vxForm'), email=document.getElementById('vxEmail'), msg=document.getElementById('vxMsg');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var v=(email&&email.value||'').trim();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ if(msg){ msg.textContent='Enter a valid email and I’ll be in touch.'; msg.style.color='#d8a652'; } if(email) email.focus(); return; }
+      var bot=form.querySelector('[name="botcheck"]'), btn=form.querySelector('button[type="submit"]');
+      if(msg){ msg.textContent='Sending…'; msg.style.color='oklch(0.7 0.012 250)'; }
+      if(btn){ btn.disabled=true; btn.style.opacity='.6'; }
+      (window.ksSubmitForm||function(p,cb){cb(null,{demo:true});})({ subject:'Vantix — new signup', email:v, from_name:v, message:'Start-free signup from kitesink.com/vantix', botcheck: bot&&bot.value }, function(err){
+        if(err){ if(msg){ msg.textContent='Hmm — that didn’t go through. Email hello@kitesink.com and I’ll add you.'; msg.style.color='#d8a652'; } if(btn){ btn.disabled=false; btn.style.opacity='1'; } return; }
+        form.style.display='none';
+        if(msg){ msg.textContent='✓ You’re on the list — I’ll be in touch.'; msg.style.color='#92a6cc'; }
+      });
+    });
+  }
+})();
 (function(){
   // ---- scroll-spy nav highlight ----
   var ids=['core','integrations','how','gate','scaling','pricing'];
