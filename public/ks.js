@@ -22,7 +22,7 @@
   // box). Register the key at https://web3forms.com using suggestions@kitesink.com,
   // then paste it here — every form then emails there. Empty = friendly demo mode
   // (forms confirm to the visitor but send nothing).
-  var KS_FORM_KEY = "";
+  var KS_FORM_KEY = "f164a9ec-56c5-4caa-9898-d238812f2073";
 
   var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"]];
 
