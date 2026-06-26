@@ -208,6 +208,7 @@
   }
   :focus-visible{outline:2px solid var(--forest);outline-offset:2px}
 </style>
+<link rel="stylesheet" href="/ks.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://kitesink.com/campground-tycoon/roadmap.html">
@@ -239,19 +240,7 @@
 </head>
 <body>
 
-<!-- ===================== KITESINK TOP BAR (cream chrome, themed) ===================== -->
-<div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:var(--ks-bar);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--ks-bar-line);font-family:'Geist',-apple-system,system-ui,sans-serif;box-sizing:border-box;transition:background .35s ease,border-color .35s ease">
-  <a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:var(--ks-ink);text-decoration:none">
-    <svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg>
-    <span style="font:800 14px 'Geist',sans-serif;letter-spacing:-.03em"><span style="color:var(--forest)">Kite</span>Sink</span>
-  </a>
-  <nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px 'Geist Mono',ui-monospace,monospace;color:var(--ks-ink-soft)">
-    <a href="/work.html" class="ks-link" style="color:inherit;text-decoration:none">Work</a>
-    <a href="/games.html" class="ks-link" style="color:inherit;text-decoration:none">Games</a>
-    <a href="/blog.html" class="ks-link" style="color:inherit;text-decoration:none">Writing</a>
-    <a href="/about.html" class="ks-link" style="color:inherit;text-decoration:none">About</a>
-  </nav>
-</div>
+<div data-ks="bar"></div>
 
 <div style="overflow-x:hidden">
 
@@ -728,5 +717,6 @@
   render();
 })();
 </script>
+<script src="/ks.js"></script>
 </body>
 </html>
