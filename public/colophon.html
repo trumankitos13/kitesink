@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KiteSink — Colophon</title>
+<meta name="description" content="How the KiteSink site is built — hand-written static HTML, CSS, and JS with no framework and no build step, shared chrome in one place, and hosted on Cloudflare.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: #ece2cb; }
+  a { color: inherit; text-decoration: none; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  .hv1:hover { color:#2f5436; }
+  .hv2:hover { background:#23402b; }
+  .hv3:hover { border-color:#2f5436;color:#2f5436; }
+  .hv4:hover { color:#d8b07a; }
+  .hv5:hover { opacity:.8; }
+  .hv6:hover { text-decoration:underline; }
+</style>
+  <link rel="stylesheet" href="/ks.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!--KS-SEO-->
+<link rel="canonical" href="https://kitesink.com/colophon.html">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KiteSink">
+<meta property="og:title" content="KiteSink — Colophon">
+<meta property="og:description" content="How the KiteSink site is built — hand-written static HTML, CSS, and JS with no framework and no build step, shared chrome in one place, and hosted on Cloudflare.">
+<meta property="og:url" content="https://kitesink.com/colophon.html">
+<meta property="og:image" content="https://kitesink.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KiteSink — Colophon">
+<meta name="twitter:description" content="How the KiteSink site is built — hand-written static HTML, CSS, and JS with no framework and no build step, shared chrome in one place, and hosted on Cloudflare.">
+<meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
+</head>
+<body>
+
+<div style="background:#ece2cb;color:#221c10;font-family:'Geist',sans-serif;min-height:100%;overflow-x:hidden">
+
+  <div data-ks="header" data-active=""></div>
+
+  <section style="padding:clamp(40px,6vw,68px) clamp(20px,4vw,40px) clamp(30px,4vw,44px);max-width:1180px;margin:0 auto">
+    <div style="display:flex;align-items:center;gap:10px;font:600 12px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.16em;color:#2f5436;margin-bottom:22px">
+      <span style="font-size:15px">✱</span><span>Colophon</span>
+    </div>
+    <h1 style="font:800 clamp(40px,6.4vw,84px)/.9 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810;margin:0">How it's <span style="font-style:italic;font-weight:700;color:#2f5436">built.</span></h1>
+    <p style="font:400 19px/1.65 'Geist',sans-serif;color:#5e5238;margin:26px 0 0;max-width:600px">A short note on the materials. KiteSink is small and hand-made on purpose — this is what it's made of and why.</p>
+  </section>
+
+  <section style="padding:clamp(24px,3.5vw,40px) clamp(20px,4vw,40px);max-width:1180px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(22px,3.4vw,40px)">
+
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">01</span>Static by hand</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Every page is hand-written static HTML, CSS, and JavaScript — no framework, no build step, no bundler. What you read is what's on disk. It keeps the whole thing legible, fast to ship, and easy to reason about a year from now.</p>
+      </div>
+
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">02</span>Type</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Set in <strong>Geist</strong> for display and body, and <strong>Geist Mono</strong> for labels and small print, both served from Google Fonts. One typeface family carries the whole voice of the workshop.</p>
+      </div>
+
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">03</span>Shared chrome</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">The header, footer, and stylesheet live in exactly one place. <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/ks.js</code> injects the shared nav and footer into placeholders on every page, and <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/ks.css</code> holds the reset, the accessibility defaults, and the link hovers. Change the chrome once, and it changes everywhere.</p>
+      </div>
+
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">04</span>Hosting</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Served on <strong>Cloudflare</strong> via Workers static assets — files pushed to the edge, close to wherever you are. No origin server to babysit, no moving parts between you and the page.</p>
+      </div>
+
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">05</span>From prototype to page</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Designs start life as in-house &ldquo;Design Component&rdquo; (<code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">.dc</code>) prototypes — a way to settle the look before committing to code — then get rebuilt by hand into the static pages you're reading. The prototype is the sketch; the page is the real thing.</p>
+      </div>
+
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">06</span>Accessibility &amp; security</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Baked in, not bolted on. The site honors <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">prefers-reduced-motion</code> and keeps a consistent focus ring for keyboard users, and it ships with security headers — including a Content Security Policy — so the defaults are sane before anyone has to think about them.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="padding:clamp(28px,4vw,44px) clamp(20px,4vw,40px);max-width:1180px;margin:0 auto">
+    <div style="background:#2f5436;border-radius:18px;padding:clamp(28px,4vw,44px);color:#ece2cb">
+      <div style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.16em;color:#d8b07a;margin-bottom:14px">Made by</div>
+      <p style="font:400 clamp(18px,2.4vw,24px)/1.5 'Geist',sans-serif;color:#f0e8d6;margin:0;max-width:680px">Built by one person — that's me, <strong style="font-weight:700">Truman</strong> — with an AI pair at the keyboard alongside me. It's how a workshop of one covers the surface area of a small team without cutting corners on the craft.</p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(24px,3.5vw,40px) clamp(20px,4vw,40px) clamp(48px,7vw,72px);max-width:1180px;margin:0 auto">
+    <div style="border-top:1px solid rgba(34,28,16,.18);padding-top:22px;font:500 12px 'Geist Mono',monospace;color:#a89878;letter-spacing:.04em">&copy; 2026 KiteSink</div>
+  </section>
+
+  <div data-ks="footer" data-active=""></div>
+
+</div>
+
+<script src="/ks.js"></script>
+</body>
+</html>

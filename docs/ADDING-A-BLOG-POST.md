@@ -123,7 +123,32 @@ Open `public/sitemap.xml` and add one line before `</urlset>`:
 
 ---
 
-## 4. Preview, then publish
+## 4. Add it to the RSS feed
+
+The feed at `public/feed.xml` (Atom) is what readers subscribe to; it's discovered automatically via
+the `<link rel="alternate" type="application/atom+xml">` tag in `blog.html`. It's a hand-maintained
+static file (no build step), so add a matching `<entry>` **at the top** (newest first) and bump the
+top-level `<updated>` to the new date:
+
+```xml
+<entry>
+  <title>Your title</title>
+  <link href="https://kitesink.com/blog/my-post-slug.html" rel="alternate" type="text/html"/>
+  <id>https://kitesink.com/blog/my-post-slug.html</id>
+  <published>2026-07-01T12:00:00Z</published>
+  <updated>2026-07-01T12:00:00Z</updated>
+  <category term="Training"/>
+  <summary>One-sentence summary — the same dek is fine.</summary>
+</entry>
+```
+
+For a **repost**, point `<link href>` at the external `url`, but keep the `<id>` namespaced to
+kitesink.com (e.g. `https://kitesink.com/feed.xml#a-slug`) so the id stays stable and yours. Dates
+are RFC-3339 (`YYYY-MM-DDT12:00:00Z`).
+
+---
+
+## 5. Preview, then publish
 
 ```bash
 cd public && python3 -m http.server 8000     # open http://localhost:8000/blog.html
@@ -143,7 +168,7 @@ The Cloudflare Worker redeploys and the post is live at `https://kitesink.com/bl
 ## Notes
 - **Filenames:** keep slugs lowercase-hyphenated; the URL is the filename.
 - **Categories** are free-form — a new `cat` value automatically becomes a new filter chip.
-- **Home page:** the "From the log" section currently shows an empty-state note. Once you have
-  posts, tell me and I'll wire it to feature your latest few (or you can copy the card markup).
+- **Home page:** the "From the log" section auto-renders the newest 5 entries from `posts.js` — no
+  extra step. It falls back to an empty-state note only when there are no posts.
 - **Template file** `public/blog/_template.html` starts with `_` so it's ignored as a real post;
   leave it in place to spin up the next one.

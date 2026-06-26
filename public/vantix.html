@@ -6,6 +6,7 @@
 <title>Vantix — The Periodization OS</title>
 <meta name="description" content="Vantix — a periodization OS / fitness operating system for advanced lifters. Normalized volume, mesocycle-aware training, one honest view.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/ks.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -78,8 +79,7 @@
 <style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
 </head>
 <body>
-<style>.ks-link{transition:color .15s}.ks-link:hover{color:#2f5436 !important}</style>
-<div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:'Geist',-apple-system,system-ui,sans-serif;box-sizing:border-box"><a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none"><svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="font:800 14px 'Geist',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a><nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px 'Geist Mono',ui-monospace,monospace;color:#5e5238"><a href="/work.html" class="ks-link" style="color:inherit;text-decoration:none">Work</a><a href="/games.html" class="ks-link" style="color:inherit;text-decoration:none">Games</a><a href="/blog.html" class="ks-link" style="color:inherit;text-decoration:none">Writing</a><a href="/about.html" class="ks-link" style="color:inherit;text-decoration:none">About</a></nav></div>
+<div data-ks="bar"></div>
 <div style="background: oklch(0.205 0.012 250); min-height: 100vh; font-family: 'Space Grotesk', sans-serif; color: oklch(0.82 0.012 250);">
 
   <!-- ============ NAV (anchored / scrollspy) ============ -->
@@ -755,12 +755,14 @@
     <div style="max-width: 1180px; margin: 0 auto; padding: 84px 32px; text-align: center;">
       <h2 class="gk" style="font-size: 40px; font-weight: 700; letter-spacing: -0.025em; color: oklch(0.96 0.012 250); margin: 0; line-height: 1.08;">Retire the spreadsheet. Connect the dots.</h2>
       <p style="font-size: 16.5px; line-height: 1.6; color: oklch(0.72 0.012 250); margin: 18px auto 0; max-width: 560px;">Bring every app you train and live with, define your plan, and let an instrument hold the rules while a co‑pilot does the busywork. Free to start, nothing to break.</p>
-      <div style="display: flex; gap: 12px; justify-content: center; margin-top: 30px; max-width: 460px; margin-left: auto; margin-right: auto;">
-        <div style="flex: 1; display: flex; border: 1px solid oklch(0.42 0.012 250); background: oklch(0.235 0.012 250);">
-          <input type="email" placeholder="you@domain.com" class="mono" style="flex: 1; background: transparent; border: none; color: oklch(0.92 0.012 250); font-size: 13px; padding: 0 14px;">
+      <form id="vxForm" style="display: flex; gap: 12px; justify-content: center; margin-top: 30px; max-width: 460px; margin-left: auto; margin-right: auto; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px; display: flex; border: 1px solid oklch(0.42 0.012 250); background: oklch(0.235 0.012 250);">
+          <input id="vxEmail" type="email" name="email" required autocomplete="email" placeholder="you@domain.com" class="mono" style="flex: 1; background: transparent; border: none; color: oklch(0.92 0.012 250); font-size: 13px; padding: 0 14px;">
         </div>
-        <a href="https://vantix.kitesink.com" class="gk" style="display:inline-block; background: #92a6cc; color: oklch(0.16 0.02 250); padding: 13px 24px; font-weight: 600; font-size: 14.5px; cursor: pointer; white-space: nowrap; text-decoration: none;">Start free</a>
-      </div>
+        <input type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;">
+        <button type="submit" class="gk" style="display:inline-block; background: #92a6cc; color: oklch(0.16 0.02 250); padding: 13px 24px; font-weight: 600; font-size: 14.5px; cursor: pointer; white-space: nowrap; border: none;">Start free</button>
+      </form>
+      <div id="vxMsg" class="mono" role="status" aria-live="polite" style="font-size: 12px; color: oklch(0.7 0.012 250); margin-top: 12px; min-height: 16px; text-align: center;"></div>
     </div>
   </section>
 
@@ -780,8 +782,27 @@
 
 </div>
 
-<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#8a7a58"><span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="color:#221c10">&copy; 2026 KiteSink</span></span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="/blog.html" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="/about.html" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span></div>
+<div data-ks="bottombar"></div>
 <script>
+(function(){
+  // ---- CTA email capture → suggestions@kitesink.com (via ks.js ksSubmitForm) ----
+  var form=document.getElementById('vxForm'), email=document.getElementById('vxEmail'), msg=document.getElementById('vxMsg');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var v=(email&&email.value||'').trim();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ if(msg){ msg.textContent='Enter a valid email and I’ll be in touch.'; msg.style.color='#d8a652'; } if(email) email.focus(); return; }
+      var bot=form.querySelector('[name="botcheck"]'), btn=form.querySelector('button[type="submit"]');
+      if(msg){ msg.textContent='Sending…'; msg.style.color='oklch(0.7 0.012 250)'; }
+      if(btn){ btn.disabled=true; btn.style.opacity='.6'; }
+      (window.ksSubmitForm||function(p,cb){cb(null,{demo:true});})({ subject:'Vantix — new signup', email:v, from_name:v, message:'Start-free signup from kitesink.com/vantix', botcheck: bot&&bot.value }, function(err){
+        if(err){ if(msg){ msg.textContent='Hmm — that didn’t go through. Email hello@kitesink.com and I’ll add you.'; msg.style.color='#d8a652'; } if(btn){ btn.disabled=false; btn.style.opacity='1'; } return; }
+        form.style.display='none';
+        if(msg){ msg.textContent='✓ You’re on the list — I’ll be in touch.'; msg.style.color='#92a6cc'; }
+      });
+    });
+  }
+})();
 (function(){
   // ---- scroll-spy nav highlight ----
   var ids=['core','integrations','how','gate','scaling','pricing'];
@@ -894,5 +915,6 @@
   }
 })();
 </script>
+<script src="/ks.js"></script>
 </body>
 </html>

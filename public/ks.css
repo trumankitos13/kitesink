@@ -1,0 +1,41 @@
+/* ===================== KiteSink shared styles =====================
+   Loaded on every page. Holds the reset, accessibility defaults, shared
+   keyframes, link hovers, and space-reservation for the JS-injected header /
+   footer (see ks.js) so they don't cause layout shift. Page-specific styling
+   stays inline on each page.
+   ================================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+
+/* shared keyframes (pulse dots, marquee bands, equalizer bars) */
+@keyframes ks-pulse   { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+@keyframes ks-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes ks-eq      { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+/* legacy aliases used inline on some pages */
+@keyframes pulse   { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* accessibility: respect reduced-motion + a consistent focus ring */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:focus-visible { outline: 2px solid #2f5436; outline-offset: 2px; }
+
+/* the KiteSink wordmark/nav link hover used in the cream chrome bar */
+.ks-link { transition: color .15s; text-decoration: none; }
+.ks-link:hover { color: #2f5436 !important; }
+
+/* full-header nav hover */
+.ks-nav-link { transition: color .15s; }
+.ks-nav-link:hover { color: #2f5436; }
+
+/* reserve space for the JS-injected chrome so there's no layout shift before
+   ks.js runs (matches the real bar/header heights + backgrounds) */
+[data-ks="bar"]:empty { display: block; height: 38px; background: rgba(236,226,203,.94); border-bottom: 1px solid rgba(34,28,16,.18); }
+[data-ks="header"]:empty { display: block; min-height: 63px; background: rgba(236,226,203,.85); border-bottom: 1px solid rgba(34,28,16,.16); }

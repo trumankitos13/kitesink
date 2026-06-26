@@ -5,8 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KiteSink — Post composer</title>
 <meta name="robots" content="noindex,nofollow">
+<meta name="description" content="A quick composer for KiteSink blog posts and reposts — fills in a posts.js entry to paste and commit.">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Compose">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="/ks.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +27,7 @@
   .brand b span{color:#2f5436}
   .back{font:600 12px 'Geist Mono',monospace;color:#2f5436;text-decoration:none}
   h1{font:800 clamp(28px,7vw,40px)/1 'Geist';letter-spacing:-.035em;color:#1d1810;margin:28px 0 8px}
-  h1 i{font-style:italic;font-weight:700;color:#b07227}
+  h1 i{font-style:italic;font-weight:700;color:#8a5a18}
   .lead{font:400 15px/1.55 'Geist';color:#5e5238;margin:0 0 20px;max-width:46ch}
   /* mode toggle */
   .modes{display:flex;gap:8px;padding:5px;background:#f3ecd9;border:1.5px solid rgba(34,28,16,.18);border-radius:40px;margin:0 0 8px}
@@ -45,9 +50,9 @@
   .pv.ext{background:linear-gradient(90deg,rgba(176,114,39,.07),transparent 60%)}
   .pv .date{font:600 11px 'Geist Mono',monospace;color:#a89878;margin-bottom:8px}
   .pv .eye{font:600 11px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-  .pv.ext .eye{color:#b07227}.pv.mine .eye{color:#2f5436}
+  .pv.ext .eye{color:#8a5a18}.pv.mine .eye{color:#2f5436}
   .pv .ttl{font:700 22px/1.2 'Geist';letter-spacing:-.02em;color:#221c10;margin:0}
-  .pv .ttl .arr{color:#b07227;font-size:.8em}
+  .pv .ttl .arr{color:#8a5a18;font-size:.8em}
   .pv .fbadge{font:600 10px 'Geist Mono',monospace;letter-spacing:.1em;color:#2f5436;background:rgba(47,84,54,.12);border-radius:30px;padding:2px 8px;margin-left:8px;vertical-align:middle}
   .pv .dek{font:400 14px/1.5 'Geist';color:#5e5238;margin:8px 0 0}
   .pv .note{font:italic 400 13px/1.5 'Geist';color:#7a6a48;margin:8px 0 0;padding-left:12px;border-left:2px solid #b07227}
@@ -288,5 +293,6 @@
   syncMode();
 })();
 </script>
+<script src="/ks.js"></script>
 </body>
 </html>
