@@ -47,7 +47,7 @@
 <meta name="twitter:image" content="https://kitesink.com/site_assets/season_fall.png">
 <style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
 </head>
-<body>
+<body class="ks-paper">
 
 <div style="background:#ece2cb;color:#221c10;font-family:'Geist',sans-serif;min-height:100%;overflow-x:hidden">
 
@@ -68,7 +68,7 @@
       </svg>
       <span style="font:800 19px 'Geist',sans-serif;letter-spacing:-.035em;color:#221c10"><span style="color:#2f5436">Kite</span>Sink</span>
     </a>
-    <nav style="display:flex;gap:clamp(16px,2.4vw,24px);font:500 13px 'Geist Mono',monospace;color:#5e5238;flex-wrap:wrap">
+    <nav class="ks-topnav" style="display:flex;gap:clamp(16px,2.4vw,24px);font:500 13px 'Geist Mono',monospace;color:#5e5238;flex-wrap:wrap">
       <a href="/work.html" class="hv1">Work</a>
       <a href="/games.html" class="hv1">Games</a>
       <a href="/blog.html" style="color:#2f5436;border-bottom:2px solid #2f5436;padding-bottom:2px">Writing</a>
@@ -174,17 +174,8 @@
     </div>
   </article>
 
-  <footer style="margin-top:clamp(48px,7vw,72px);padding:clamp(40px,5vw,54px) clamp(20px,4vw,40px) 46px;max-width:1240px;margin-left:auto;margin-right:auto;border-top:1px solid rgba(34,28,16,.18)">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
-      <div style="font:800 clamp(40px,6vw,72px)/.9 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810"><span style="color:#2f5436">Kite</span>Sink</div>
-      <div style="display:flex;gap:16px;font:500 13px 'Geist Mono',monospace;color:#2f5436;flex-wrap:wrap">
-        <a href="/" class="hv5">Home</a>
-        <a href="/blog.html" class="hv5">Blog</a>
-        <a href="/about.html" class="hv5">About</a>
-      </div>
-    </div>
-    <div style="margin-top:30px;padding-top:18px;border-top:1px solid rgba(34,28,16,.18);font:400 12px 'Geist Mono',monospace;color:#a89878">© 2026 KiteSink — all rights reserved.</div>
-  </footer>
+  <div style="height:clamp(48px,7vw,72px)"></div>
+  <div data-ks="footer" data-active="writing"></div>
 
 </div>
 
