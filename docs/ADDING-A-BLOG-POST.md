@@ -73,8 +73,8 @@ window.KS_POSTS = [
 chips (e.g. `["Devlog", "Gaming"]` shows under both, and the eyebrow reads "Devlog · Gaming").
 
 That single file is the source of truth — the blog index (featured card, category chips, list,
-counts) **and** the home page's "From the log" (newest 5) both render from it. The empty-state message disappears as soon as
-there's one post.
+counts) **and** the home page's "From the log" (newest 4, plus the entry count in its header link)
+both render from it. The empty-state message disappears as soon as there's one post.
 
 ---
 

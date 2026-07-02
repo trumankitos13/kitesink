@@ -8,13 +8,22 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; }
 
-/* shared keyframes (pulse dots, marquee bands, equalizer bars) */
+/* shared keyframes (pulse dots, marquee bands, equalizer bars, bobbing kite) */
 @keyframes ks-pulse   { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
 @keyframes ks-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes ks-eq      { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+@keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7px) rotate(3deg); } }
 /* legacy aliases used inline on some pages */
 @keyframes pulse   { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* paper-grain overlay — opt in with <body class="ks-paper"> (cream pages only;
+   the project pages keep their own art direction). Sits above content but
+   below the mobile pill nav; pointer-events:none keeps it inert. */
+body.ks-paper::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 80; opacity: .5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.13 0 0 0 0 0.11 0 0 0 0 0.06 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
 /* accessibility: respect reduced-motion + a consistent focus ring */
 @media (prefers-reduced-motion: reduce) {
@@ -35,7 +44,30 @@ html, body { margin: 0; }
 .ks-nav-link { transition: color .15s; }
 .ks-nav-link:hover { color: #2f5436; }
 
+/* dark-footer link hover (tan on #1f3024) */
+.ks-foot-link { transition: color .15s; }
+.ks-foot-link:hover { color: #d8b07a !important; }
+
+/* floating mobile pill nav (injected by ks.js on pages with the shared
+   header/footer). Hidden on desktop; the top nav hides ≤700px instead. */
+.ks-pillnav {
+  display: none; position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+  gap: 2px; background: rgba(31,48,36,.94);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-radius: 40px; padding: 5px; box-shadow: 0 12px 28px rgba(34,28,16,.3);
+  z-index: 90; white-space: nowrap;
+}
+.ks-pillnav a { font: 500 12px 'Geist Mono', monospace; color: rgba(236,226,203,.85); border-radius: 30px; padding: 12px 14px; text-decoration: none; }
+.ks-pillnav a.on { font-weight: 600; color: #1f3024; background: #ece2cb; }
+@media (max-width: 700px) {
+  .ks-topnav { display: none !important; }
+  .ks-kite { display: none !important; }
+  .ks-pillnav { display: flex; }
+  body.ks-haspill { padding-bottom: 82px; }
+}
+
 /* reserve space for the JS-injected chrome so there's no layout shift before
-   ks.js runs (matches the real bar/header heights + backgrounds) */
+   ks.js runs (matches the real bar/header/footer heights + backgrounds) */
 [data-ks="bar"]:empty { display: block; height: 38px; background: rgba(236,226,203,.94); border-bottom: 1px solid rgba(34,28,16,.18); }
 [data-ks="header"]:empty { display: block; min-height: 63px; background: rgba(236,226,203,.85); border-bottom: 1px solid rgba(34,28,16,.16); }
+[data-ks="footer"]:empty { display: block; min-height: 230px; background: #1f3024; }
