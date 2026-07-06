@@ -23,6 +23,8 @@
   @keyframes floaty2{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(-3deg)}}
   @keyframes arrowNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
   .navlink:hover{color:#e7e9ec}
+  .ksNav{transition:color .15s}
+  .ksNav:hover{color:#ffc879}
   .amberBtn:hover{background:#ffc879}
   .chit:hover{filter:drop-shadow(0 22px 48px rgba(248,171,60,.5))}
   .footlink:hover{color:#e7e9ec}
@@ -48,12 +50,24 @@
 </head>
 <body>
 
-<div data-ks="bar"></div>
-
 <div id="bl" style="--accent:#f8ab3c;--accent-bright:#ffc879;--cyan:#4bd6cf;--grain-op:1;--reel-play:running;background:#0b0c0f;overflow-x:clip">
 
+  <!-- ===================== KITESINK SITE BAR (dark, matches Backline; links back to the site) ===================== -->
+  <div style="border-bottom:1px solid rgba(255,255,255,.07);background:#090a0d">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding:9px clamp(18px,4vw,30px)">
+      <a href="/" style="display:inline-flex;align-items:center;gap:7px;font:700 15px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#e7e9ec"><span style="color:var(--accent)">Kite</span>Sink</a>
+      <nav aria-label="KiteSink" style="display:flex;align-items:center;gap:clamp(13px,2.5vw,22px);font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:#6b7079;flex-wrap:wrap">
+        <a href="/work.html" class="ksNav">Work</a>
+        <a href="/games.html" class="ksNav">Games</a>
+        <a href="/blog.html" class="ksNav">Writing</a>
+        <a href="/about.html" class="ksNav">About</a>
+        <a href="/listening-club" class="ksNav">Club</a>
+      </nav>
+    </div>
+  </div>
+
   <!-- ===================== NAV ===================== -->
-  <nav style="position:sticky;top:38px;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,30px);background:rgba(11,12,15,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap">
+  <nav style="position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,30px);background:rgba(11,12,15,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap">
     <a href="#top" style="display:flex;align-items:center;gap:10px" aria-label="Backline home">
       <div style="width:28px;height:28px;border-radius:8px;background:#141519;border:1px solid #2a2d35;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
         <div style="width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)"></div>
@@ -373,8 +387,6 @@
     <div style="border-top:1px solid #16181d;padding:18px clamp(20px,4vw,30px);text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;color:#41454e">© 2026 BACKLINE · A <a href="/" style="color:#71767f" class="footlink">KITESINK</a> PROJECT · THE SHOW GOES ON</div>
   </footer>
 </div>
-
-<div data-ks="bottombar"></div>
 
 <script>
 /* ===== Backline generative systems (ported verbatim from the design spec) =====
