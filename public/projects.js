@@ -51,6 +51,18 @@ window.KS_WORK = {
       dek: "A personal fitness OS for advanced lifters who outgrew simple trackers — data normalization, mesocycle-aware volume, and a unified view across training, nutrition & health.",
       tags: ["normalization", "mesocycle volume", "full front-end app"],
       related: []
+    },
+    {
+      title: "Backline",
+      href: "/backline.html",
+      icon: "amp",
+      status: "WIP · PROTOTYPE",
+      wip: true,                     // tan dot + tan accents + the gradient row tint
+      category: "MUSIC APP",
+      cta: "backline.kitesink.com",
+      dek: "Your scene, on call — a local-first network for musicians, bands, venues & gig techs. Find a sub, watch their reel, book them and pay them, all before the downbeat. SOS mode for when you need someone on stage tonight.",
+      tags: ["SOS mode", "reels", "book & pay"],
+      related: []
     }
   ],
 
