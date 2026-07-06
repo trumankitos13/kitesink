@@ -52,9 +52,12 @@
       '<a href="/" style="display:flex;align-items:center;gap:11px;text-decoration:none">' + LOGO30 +
         '<span style="font:800 19px \'Geist\',sans-serif;letter-spacing:-.035em;color:#221c10"><span style="color:#2f5436">Kite</span>Sink</span></a>' +
       '<nav class="ks-topnav" style="display:flex;gap:clamp(16px,2.4vw,24px);font:500 13px \'Geist Mono\',monospace;color:#5e5238;flex-wrap:wrap">' + navFull(active) + '</nav>' +
-      '<div style="display:flex;align-items:center;gap:9px;font:500 12px \'Geist Mono\',monospace;color:#2f5436">' +
-        '<span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span>' +
-        '<span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
+      '<div style="display:flex;align-items:center;gap:12px">' +
+        '<button class="ks-theme-toggle" type="button" aria-label="Toggle dark mode"></button>' +
+        '<div style="display:flex;align-items:center;gap:9px;font:500 12px \'Geist Mono\',monospace;color:#2f5436">' +
+          '<span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span>' +
+          '<span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
+      '</div>' +
     '</header>';
   }
 
@@ -160,6 +163,34 @@
     document.body.className += (document.body.className ? " " : "") + "ks-haspill";
   }
 
+  // ---- Night mode: toggle in the shared header, persisted to localStorage.ksTheme.
+  // The dark palette itself lives in ks.css (html[data-theme="dark"] overrides). ----
+  function ksTheme() { return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light"; }
+  function ksThemeIcon(dark) {
+    return dark
+      ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4l1.4-1.4M18 6l1.4-1.4"/></svg>'
+      : '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 14.8A8.2 8.2 0 1 1 9.2 3.5a8 8 0 0 0 11.3 11.3z"/></svg>';
+  }
+  function ksPaintToggle() {
+    var dark = ksTheme() === "dark", btns = document.querySelectorAll(".ks-theme-toggle");
+    for (var i = 0; i < btns.length; i++) { btns[i].innerHTML = ksThemeIcon(dark); btns[i].setAttribute("aria-pressed", dark ? "true" : "false"); btns[i].setAttribute("title", dark ? "Switch to light" : "Switch to dark"); }
+  }
+  function ksApplyTheme(t) {
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    try { localStorage.setItem("ksTheme", t); } catch (e) {}
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", t === "dark" ? "#16130d" : "#ece2cb");
+    ksPaintToggle();
+  }
+  function initTheme() {
+    var btns = document.querySelectorAll(".ks-theme-toggle");
+    if (!btns.length) return;
+    ksPaintToggle();
+    for (var i = 0; i < btns.length; i++) btns[i].addEventListener("click", function () { ksApplyTheme(ksTheme() === "dark" ? "light" : "dark"); });
+    window.addEventListener("storage", function (e) { if (e.key === "ksTheme") { ksApplyTheme(e.newValue === "dark" ? "dark" : "light"); } });
+  }
+
   function inject() {
     var nodes = document.querySelectorAll("[data-ks]");
     var pageActive = null;
@@ -178,6 +209,7 @@
       pillNav(pageActive || ((path === "/" || path === "/index.html") ? "home" : ""));
     }
     startClock();
+    initTheme();
     loadAnalytics();
   }
 
