@@ -5,6 +5,13 @@ and prioritized. Severity: **P1** = do before/just after launch · **P2** = soon
 to have. Each item notes whether I can do it for you (no new assets/decisions needed) or whether it
 needs input from you.
 
+> **Update 2026.07:** since this audit was written, the following have shipped — the 2026.07
+> visual redesign (hero card stack, dark footer, mobile pill nav, paper grain); shared
+> header/footer/stylesheet via `ks.js`/`ks.css`; WCAG-AA brass-on-cream contrast fix; Atom feed
+> (`/feed.xml`); JSON-LD on the home page; analytics scaffold (paste `CF_TOKEN` to enable) and
+> live Web3Forms wiring; `/now`, `/uses`, `/colophon` (footer-linked) and `/listening-club`.
+> Still open below: self-hosted fonts, real social profile URLs, legal-page jurisdiction review.
+
 Snapshot of what's already good: every page has `<html lang="en">`, a `<title>`, a meta
 description, and `alt` text on all images; the 404 page works; the marquees correctly duplicate
 text with `aria-hidden`; fonts use `display=swap`.

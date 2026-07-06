@@ -14,6 +14,10 @@ public/                     ← deploy root for kitesink.com
   games.html                Games — my games + games I love
   projects.js               Shared data for Work + Games (KS_WORK / KS_GAMES). Edit to add more.
   about.html                About
+  now.html, uses.html, colophon.html   Now / Uses / Colophon (linked from the shared footer)
+  listening-club.html       Album Listening Club — dark landing page, Discord front door
+                            (served extensionless at /listening-club)
+  repost.html               Phone composer for new posts/reposts (discreet ✎ link in the footer)
   blog.html                 Writing index (live filter; your essays + external reposts)
   blog/
     posts.js                Shared blog entries (KS_POSTS) — blog index + home feed read this
@@ -28,10 +32,13 @@ public/                     ← deploy root for kitesink.com
   vantix.html               Vantix — the periodization OS (landing)
   vantix/
     roadmap.html, changelog.html, privacy.html   Vantix marketing sub-pages
+  ks.js, ks.css             Shared chrome: header / dark footer / mobile pill nav / clock —
+                            plus the analytics token (CF_TOKEN) and forms key (KS_FORM_KEY)
+  feed.xml                  Atom feed (hand-maintained; see docs/ADDING-A-BLOG-POST.md)
   favicon.svg
   site_assets/              Campground screenshot PNGs
 
-vantix/                     ← deploy root for vantix.kitesink.com (separate Pages project)
+vantix/                     ← deploy root for vantix.kitesink.com (separate Worker)
   index.html                Vantix brand / identity placeholder
   favicon.svg
 
@@ -65,8 +72,12 @@ so nothing depends on an external runtime anymore.
 - **Social links** — some footer handles (`@tkitos`, `@murdocnu`, `@rummaging13`) are `#`
   placeholders; fill in real profile URLs.
 - **Vantix `.co` vs `.com`** — ✅ fixed; the Home work-card now reads `vantix.kitesink.com`.
-- **Blog posts** — only the first post has a real page (`/blog/normalize.html`); the other 13
-  link back to the index. Add per-post pages under `public/blog/` as you write them.
+- **Blog posts** — entries live in `public/blog/posts.js`; per-post pages under `public/blog/`
+  (copy `_template.html`). Full steps in `docs/ADDING-A-BLOG-POST.md`.
+- **Listening club** — replace the `discord.gg/INVITE` placeholder (4 links) and the Spotify
+  embed placeholder in `public/listening-club.html`; edit the next-session date band monthly.
+- **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in
+  `public/ks.js` (see `docs/ANALYTICS-AND-FORMS.md`). Forms are live via `KS_FORM_KEY`.
 
 ## Deploying
 

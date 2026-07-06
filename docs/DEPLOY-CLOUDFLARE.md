@@ -40,8 +40,15 @@ The repo is already connected via Workers Builds (that's where `wrangler.jsonc` 
 **To deploy: merge to `main` and the Worker rebuilds automatically.** Verify in the dashboard:
 
 - **Workers & Pages → `kitesink`** → latest build is green, serving `./public`.
-- **Settings → Domains & Routes** → ensure `kitesink.com` is attached. Add `www.kitesink.com`
-  too (this also creates the `www` DNS record — that's why `www` currently fails to resolve).
+- **Settings → Domains & Routes** → BOTH hostnames must be listed as **Custom Domains**:
+  `kitesink.com` (the canonical apex — every canonical/OG URL on the site uses it) and
+  `www.kitesink.com`. Adding a Custom Domain also creates its proxied DNS record; a hostname
+  that "can't be reached" is almost always just missing from this list. If adding the apex
+  warns about a conflicting DNS record, delete the old grey-cloud `kitesink.com` A/AAAA/CNAME
+  first, then re-add.
+- Recommended: consolidate on the apex with a Redirect Rule (zone → **Rules → Redirect
+  Rules**): when `Hostname equals www.kitesink.com` → 301 to
+  `concat("https://kitesink.com", http.request.uri.path)`, preserving the query string.
 
 If the Worker is **not** yet connected to the repo:
 - **Workers & Pages → Create → Workers → Connect to Git** → pick this repo, leave the build
@@ -80,7 +87,7 @@ cd vantix && wrangler deploy
 ```bash
 curl -I https://kitesink.com            # expect HTTP 200
 curl -I https://kitesink.com/about.html # 200
-curl -I https://www.kitesink.com        # 200 (after adding www)
+curl -I https://www.kitesink.com        # 301 → https://kitesink.com (with the redirect rule)
 curl -I https://vantix.kitesink.com     # 200 (after step 3)
 ```
 Then open `https://kitesink.com` and click through Home → About → Blog → the project pages.
@@ -96,8 +103,12 @@ Push to `main`. Workers Builds rebuilds and redeploys each connected Worker auto
 
 ## Gotchas
 
-- **`www` / `vantix` "can't resolve"** = no DNS record yet. Adding the custom domain to the
-  Worker (step 2/3) creates it.
+- **Apex / `www` / `vantix` "can't resolve"** = no proxied DNS record yet. Adding the hostname
+  as a Custom Domain on the Worker (step 2/3) creates it.
+- **Merged but the site didn't update?** Check, in order: the Workers Build ran and is green
+  (Deployments tab; if no build triggered, Settings → Builds branch control must watch `main`);
+  your browser cache (private tab); and that the hostname you're checking is attached to *this*
+  Worker, not an older Worker/Pages project — a Worker route wins over a Pages custom domain.
 - **Still 404 after deploy?** Confirm the `kitesink` Worker's latest build is green and that
   `wrangler.jsonc` shows `directory: ./public`. Purge cache: zone → **Caching → Purge
   Everything**.

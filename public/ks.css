@@ -65,6 +65,13 @@ body.ks-paper::after {
   .ks-pillnav { display: flex; }
   body.ks-haspill { padding-bottom: 82px; }
 }
+/* six pill items need a squeeze on narrow phones */
+@media (max-width: 430px) {
+  .ks-pillnav a { padding: 12px 10px; font-size: 11px; }
+}
+@media (max-width: 360px) {
+  .ks-pillnav a { padding: 12px 8px; font-size: 10.5px; }
+}
 
 /* reserve space for the JS-injected chrome so there's no layout shift before
    ks.js runs (matches the real bar/header/footer heights + backgrounds) */
