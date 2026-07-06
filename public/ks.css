@@ -78,3 +78,60 @@ body.ks-paper::after {
 [data-ks="bar"]:empty { display: block; height: 38px; background: rgba(236,226,203,.94); border-bottom: 1px solid rgba(34,28,16,.18); }
 [data-ks="header"]:empty { display: block; min-height: 63px; background: rgba(236,226,203,.85); border-bottom: 1px solid rgba(34,28,16,.16); }
 [data-ks="footer"]:empty { display: block; min-height: 230px; background: #1f3024; }
+
+/* ===================== NIGHT MODE (cream Geist pages) =====================
+   The cream pages use inline hex colors, so the dark theme remaps the known
+   palette tokens by attribute-matching the inline `color:`/`background:` values.
+   Toggle lives in the shared header (ks.js); persisted to localStorage.ksTheme;
+   a tiny pre-paint snippet in each page's <head> sets data-theme before paint.
+   Accent BACKGROUNDS (green/brass tiles, marquees) stay their brand color —
+   only text tokens, surfaces, and hairlines flip. ========================= */
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme="dark"] body { background: #16130d; }
+
+/* surfaces */
+html[data-theme="dark"] [style*="background:#ece2cb"] { background: #16130d !important; }
+html[data-theme="dark"] [style*="background:#f3ecd9"] { background: #211c13 !important; }
+html[data-theme="dark"] [style*="background:#e6dcc2"] { background: #241f15 !important; }
+html[data-theme="dark"] [style*="rgba(236,226,203,.85)"] { background: rgba(22,19,13,.86) !important; }
+html[data-theme="dark"] [style*="rgba(236,226,203,.94)"] { background: rgba(22,19,13,.92) !important; }
+
+/* text — ink → light */
+html[data-theme="dark"] [style*="color:#1d1810"] { color: #f2ead6 !important; }
+html[data-theme="dark"] [style*="color:#221c10"] { color: #e9dfc9 !important; }
+/* muted browns → lighter warm grays */
+html[data-theme="dark"] [style*="color:#5e5238"] { color: #b7ac8f !important; }
+html[data-theme="dark"] [style*="color:#8a7a58"] { color: #a99a7b !important; }
+html[data-theme="dark"] [style*="color:#7a6a48"] { color: #a2926f !important; }
+html[data-theme="dark"] [style*="color:#a89878"] { color: #8c8067 !important; }
+/* green accent text → brighter (backgrounds stay green) */
+html[data-theme="dark"] [style*="color:#2f5436"] { color: #82c795 !important; }
+/* brass accent text → brighter */
+html[data-theme="dark"] [style*="color:#8a5a18"] { color: #e0a94e !important; }
+html[data-theme="dark"] [style*="color:#b07227"] { color: #e0a94e !important; }
+
+/* hairlines: dark-on-cream → light-on-dark (borders) */
+html[data-theme="dark"] [style*="rgba(34,28,16,.12)"] { border-color: rgba(236,226,203,.09) !important; }
+html[data-theme="dark"] [style*="rgba(34,28,16,.16)"] { border-color: rgba(236,226,203,.1) !important; }
+html[data-theme="dark"] [style*="rgba(34,28,16,.18)"] { border-color: rgba(236,226,203,.13) !important; }
+html[data-theme="dark"] [style*="rgba(34,28,16,.2)"]  { border-color: rgba(236,226,203,.14) !important; }
+html[data-theme="dark"] [style*="rgba(34,28,16,.22)"] { border-color: rgba(236,226,203,.15) !important; }
+html[data-theme="dark"] [style*="rgba(34,28,16,.32)"] { border-color: rgba(236,226,203,.22) !important; }
+html[data-theme="dark"] [style*="rgba(34,28,16,.35)"] { border-color: rgba(236,226,203,.24) !important; }
+/* .09 is a fill (progress-bar tracks), not a border */
+html[data-theme="dark"] [style*="background:rgba(34,28,16,.09)"] { background: rgba(236,226,203,.09) !important; }
+
+/* injected chrome placeholders (pre-inject, dark) */
+html[data-theme="dark"] [data-ks="bar"]:empty { background: rgba(22,19,13,.92); border-bottom-color: rgba(236,226,203,.12); }
+html[data-theme="dark"] [data-ks="header"]:empty { background: rgba(22,19,13,.86); border-bottom-color: rgba(236,226,203,.1); }
+
+/* theme toggle button (in the shared header) */
+.ks-theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 50%; padding: 0; cursor: pointer;
+  border: 1px solid rgba(34,28,16,.2); background: transparent; color: #5e5238;
+  transition: color .15s, border-color .15s, background .15s; flex-shrink: 0;
+}
+.ks-theme-toggle:hover { color: #2f5436; border-color: #2f5436; }
+html[data-theme="dark"] .ks-theme-toggle { border-color: rgba(236,226,203,.2); color: #b7ac8f; }
+html[data-theme="dark"] .ks-theme-toggle:hover { color: #82c795; border-color: #82c795; }
