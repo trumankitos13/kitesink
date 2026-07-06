@@ -48,10 +48,12 @@
 </head>
 <body>
 
-<div id="bl" style="--accent:#f8ab3c;--accent-bright:#ffc879;--cyan:#4bd6cf;--grain-op:1;--reel-play:running;background:#0b0c0f;overflow-x:hidden">
+<div data-ks="bar"></div>
+
+<div id="bl" style="--accent:#f8ab3c;--accent-bright:#ffc879;--cyan:#4bd6cf;--grain-op:1;--reel-play:running;background:#0b0c0f;overflow-x:clip">
 
   <!-- ===================== NAV ===================== -->
-  <nav style="position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,30px);background:rgba(11,12,15,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap">
+  <nav style="position:sticky;top:38px;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,30px);background:rgba(11,12,15,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap">
     <a href="#top" style="display:flex;align-items:center;gap:10px" aria-label="Backline home">
       <div style="width:28px;height:28px;border-radius:8px;background:#141519;border:1px solid #2a2d35;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
         <div style="width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)"></div>
@@ -371,6 +373,8 @@
     <div style="border-top:1px solid #16181d;padding:18px clamp(20px,4vw,30px);text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;color:#41454e">© 2026 BACKLINE · A <a href="/" style="color:#71767f" class="footlink">KITESINK</a> PROJECT · THE SHOW GOES ON</div>
   </footer>
 </div>
+
+<div data-ks="bottombar"></div>
 
 <script>
 /* ===== Backline generative systems (ported verbatim from the design spec) =====
