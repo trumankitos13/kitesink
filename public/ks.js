@@ -84,14 +84,14 @@
     if (full) {
       left = '<div>' + LOGO54DARK +
         '<div style="font:800 clamp(44px,7vw,86px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:16px 0 0;max-width:360px">Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div>';
+        '<div style="display:flex;align-items:center;gap:13px;margin:16px 0 0;max-width:400px"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);flex-shrink:0"><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>';
       right = '<div style="text-align:right">' +
         '<div style="display:flex;align-items:center;gap:9px;justify-content:flex-end;font:500 12px \'Geist Mono\',monospace;color:#d8b07a;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span><span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
         '<div style="font:600 10px \'Geist Mono\',monospace;text-transform:uppercase;letter-spacing:.16em;color:rgba(236,226,203,.6);margin-bottom:10px">Find me as</div>' +
         '<div style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap;justify-content:flex-end"><span>@tkitos</span><span>@trumankitos13</span><span>@murdocnu</span><span>@rummaging13</span></div></div>';
     } else {
       left = '<div><div style="font:800 clamp(40px,6vw,72px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:14px 0 0;max-width:360px">Independent maker &amp; founder. One workshop, many surfaces.</p></div>';
+        '<div style="display:flex;align-items:center;gap:13px;margin:14px 0 0;max-width:400px"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);flex-shrink:0"><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces.</p></div></div>';
       right = '<nav style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap">' + footNav() + '</nav>';
     }
     return '<footer style="background:#1f3024;color:#ece2cb;padding:clamp(40px,5vw,54px) clamp(20px,4vw,40px) 46px"><div style="max-width:1240px;margin:0 auto">' +
