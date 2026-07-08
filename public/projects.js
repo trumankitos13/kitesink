@@ -103,5 +103,18 @@ window.KS_GAMES = {
          take: "One person, four years, a genre redefined.",
          url: "https://www.stardewvalley.net"
        } */
-  external: []
+  external: [
+    {
+      name: "Minecraft Classic", studio: "Mojang", year: "2009",
+      genre: "SANDBOX", letter: "M", color: "#4e7a3a",
+      take: "The original 2009 creative mode, free in a browser tab — a handful of blocks and a whole afternoon gone.",
+      url: "https://classic.minecraft.net"
+    },
+    {
+      name: "Half-Life 2", studio: "Valve", year: "2004",
+      genre: "FPS", letter: "λ", color: "#b95e23",
+      take: "Valve’s 2004 landmark, somehow running in a browser now. The gravity gun still feels like magic.",
+      url: "https://hl2.slqnt.dev/"
+    }
+  ]
 };
