@@ -28,7 +28,7 @@
   // Options from the design: "online" | "in the workshop" | "heads down" | "open to work"
   var KS_STATUS = "online";
 
-  var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"], ["Club", "/listening-club", "club"]];
+  var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Club", "/listening-club", "club"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"]];
 
   var LOGO30 = '<svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#2f5436"/><path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/></svg>';
   var LOGO18 = '<svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg>';
@@ -152,7 +152,7 @@
   // Floating mobile pill nav (shown ≤700px via ks.css; the top nav hides there).
   // "active": home|work|games|writing|about — cream pill on the current page.
   function pillNav(active) {
-    var items = [["Home", "/", "home"], ["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Log", "/blog.html", "writing"], ["About", "/about.html", "about"], ["Club", "/listening-club", "club"]];
+    var items = [["Home", "/", "home"], ["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Club", "/listening-club", "club"], ["Log", "/blog.html", "writing"], ["About", "/about.html", "about"]];
     var nav = document.createElement("nav");
     nav.className = "ks-pillnav";
     nav.setAttribute("aria-label", "Site navigation");
