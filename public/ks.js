@@ -28,7 +28,7 @@
   // Options from the design: "online" | "in the workshop" | "heads down" | "open to work"
   var KS_STATUS = "online";
 
-  var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"], ["Club", "/listening-club", "club"]];
+  var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Club", "/listening-club", "club"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"]];
 
   var LOGO30 = '<svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#2f5436"/><path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/></svg>';
   var LOGO18 = '<svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg>';
@@ -84,14 +84,14 @@
     if (full) {
       left = '<div>' + LOGO54DARK +
         '<div style="font:800 clamp(44px,7vw,86px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:16px 0 0;max-width:360px">Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div>';
+        '<div style="display:flex;align-items:center;gap:13px;margin:16px 0 0;max-width:400px"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);flex-shrink:0"><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>';
       right = '<div style="text-align:right">' +
         '<div style="display:flex;align-items:center;gap:9px;justify-content:flex-end;font:500 12px \'Geist Mono\',monospace;color:#d8b07a;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span><span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
         '<div style="font:600 10px \'Geist Mono\',monospace;text-transform:uppercase;letter-spacing:.16em;color:rgba(236,226,203,.6);margin-bottom:10px">Find me as</div>' +
         '<div style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap;justify-content:flex-end"><span>@tkitos</span><span>@trumankitos13</span><span>@murdocnu</span><span>@rummaging13</span></div></div>';
     } else {
       left = '<div><div style="font:800 clamp(40px,6vw,72px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:14px 0 0;max-width:360px">Independent maker &amp; founder. One workshop, many surfaces.</p></div>';
+        '<div style="display:flex;align-items:center;gap:13px;margin:14px 0 0;max-width:400px"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);flex-shrink:0"><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces.</p></div></div>';
       right = '<nav style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap">' + footNav() + '</nav>';
     }
     return '<footer style="background:#1f3024;color:#ece2cb;padding:clamp(40px,5vw,54px) clamp(20px,4vw,40px) 46px"><div style="max-width:1240px;margin:0 auto">' +
@@ -152,7 +152,7 @@
   // Floating mobile pill nav (shown ≤700px via ks.css; the top nav hides there).
   // "active": home|work|games|writing|about — cream pill on the current page.
   function pillNav(active) {
-    var items = [["Home", "/", "home"], ["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Log", "/blog.html", "writing"], ["About", "/about.html", "about"], ["Club", "/listening-club", "club"]];
+    var items = [["Home", "/", "home"], ["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Club", "/listening-club", "club"], ["Log", "/blog.html", "writing"], ["About", "/about.html", "about"]];
     var nav = document.createElement("nav");
     nav.className = "ks-pillnav";
     nav.setAttribute("aria-label", "Site navigation");
