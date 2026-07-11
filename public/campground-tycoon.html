@@ -120,32 +120,11 @@
 <section id="demo" style="background:#1f3024;padding:58px 24px 66px">
   <div style="max-width:900px;margin:0 auto;text-align:center">
     <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#e0b35c;margin-bottom:10px">PLAY IN YOUR BROWSER</div>
-    <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(26px,4vw,38px);color:#f5eedb">Pitch your first tent — right here</h2>
-    <p style="font-family:Georgia,serif;font-style:italic;font-size:16px;color:#b9c9b3;max-width:540px;margin:10px auto 0">A taste of the core loop, live on this page. The full game has 30 regions, five kinds of camper, and a lot more than five tools.</p>
+    <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(26px,4vw,38px);color:#f5eedb">Play the whole park — right here</h2>
+    <p style="font-family:Georgia,serif;font-style:italic;font-size:16px;color:#b9c9b3;max-width:560px;margin:10px auto 0">The full game, live on this page — build your park, ride the seasons, and keep the campers happy through fall's goldrush. No download; it loads straight from itch.io.</p>
   </div>
 
-  <div style="position:relative;max-width:820px;margin:30px auto 0;background:#e2d2a8;border:1px solid #b3996b;border-radius:14px;padding:16px;box-shadow:0 24px 54px rgba(0,0,0,.4)">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px;padding:0 4px">
-      <div id="ctSeasons" style="display:flex;gap:6px;flex-wrap:wrap"></div>
-      <div style="display:flex;gap:14px;font-family:'Oswald',sans-serif">
-        <div style="text-align:right"><div style="font-size:9px;letter-spacing:1.5px;color:#6e6248;text-transform:uppercase">Cash</div><div id="ctCash" style="font-size:17px;font-weight:700;color:#1f3024">$150</div></div>
-        <div style="text-align:right"><div style="font-size:9px;letter-spacing:1.5px;color:#6e6248;text-transform:uppercase">Beauty</div><div id="ctBeauty" style="font-size:17px;font-weight:700;color:#1f3024">10</div></div>
-      </div>
-    </div>
-    <div style="background:#f5eedb;border:3px solid #5a4f3c;border-radius:8px;box-shadow:0 0 0 5px #8f8266;padding:14px;position:relative;overflow:hidden">
-      <div id="ctTools" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"></div>
-      <div id="ctBoard" style="position:relative;width:460px;max-width:100%;height:280px;margin:0 auto;overflow:hidden"></div>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding:0 4px">
-      <button id="ctReset" type="button" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#6e6248;background:none;border:none;cursor:pointer;text-decoration:underline">↺ Reset plot</button>
-      <div style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:1px;color:#6e6248">GREEN MOUNTAINS · VERMONT</div>
-    </div>
-    <div id="ctToasts" style="position:absolute;left:0;right:0;bottom:52px;display:flex;flex-direction:column-reverse;gap:6px;padding:0 20px;pointer-events:none"></div>
-  </div>
-
-  <!-- the whole game, embedded from itch.io -->
-  <div style="max-width:820px;margin:40px auto 0">
-    <div style="text-align:center;font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#9fb89b;margin-bottom:14px">…OR PLAY THE WHOLE PARK</div>
+  <div style="max-width:900px;margin:30px auto 0">
     <div style="position:relative;width:100%;aspect-ratio:1280 / 740;background:#333;border:3px solid #5a4f3c;border-radius:10px;box-shadow:0 0 0 6px #8f8266,0 24px 54px rgba(0,0,0,.4);overflow:hidden">
       <iframe src="https://itch.io/embed-upload/17978855?color=333333" frameborder="0" allowfullscreen loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block" title="Campground Tycoon — playable on itch.io"><a href="https://murdocnu.itch.io/campground-tycoon">Play Campground Tycoon on itch.io</a></iframe>
     </div>
@@ -264,7 +243,7 @@
 
 <script src="/ks.js"></script>
 <script>
-/* ===== Campground Tycoon — landing: sunburst, teaser pins, era stubs, mini-demo ===== */
+/* ===== Campground Tycoon — landing: sunburst, teaser pins, era stubs ===== */
 (function () {
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 
@@ -302,117 +281,6 @@
         '<span style="width:7px;height:7px;border-radius:50%;background:' + e[1] + ';display:inline-block"></span><span>' + esc(e[0]) + '</span></div>';
     }).join("");
   }
-
-  // --- mini-demo ---
-  var board = document.getElementById("ctBoard");
-  if (!board) return;
-  var ROWS = 6, COLS = 6;
-  var TOOLS = { tent:{name:'Tent',cost:40,beauty:4,site:true}, rv:{name:'RV Pad',cost:90,beauty:8,site:true}, cabin:{name:'Cabin',cost:160,beauty:14,site:true}, flower:{name:'Flowers',cost:45,beauty:3,site:false}, lamp:{name:'Lamp',cost:65,beauty:3,site:false}, bulldoze:{name:'Clear',cost:0,beauty:0,site:false} };
-  var TOOL_ORDER = ['tent','rv','cabin','flower','lamp','bulldoze'];
-  var SEASONS = [ {key:'spring',name:'Spring',grass:'#5e7a4a',dirt:'#8a7a5e',water:'#4a7a92'}, {key:'summer',name:'Summer',grass:'#55714a',dirt:'#8a7a5e',water:'#3f6d86'}, {key:'fall',name:'Fall',grass:'#6e6b3f',dirt:'#857257',water:'#3a647c'}, {key:'winter',name:'Winter',grass:'#c9cdd2',dirt:'#9a917e',water:'#9fb6c4'} ];
-  var TCOLOR = { good:'#5e7d45', money:'#b98a2e', bad:'#b14a32', warn:'#c2992f', info:'#8a795a' };
-  var TW = 76, TH = 38, originX = (ROWS - 1) * TW / 2;
-  var state, tid = 0;
-
-  function freshGrid() {
-    var water = { '4-1':1,'5-1':1,'4-0':1,'5-0':1 }, grid = [];
-    for (var row = 0; row < ROWS; row++) for (var col = 0; col < COLS; col++) {
-      var border = (row === 0 || col === 0 || row === ROWS - 1 || col === COLS - 1);
-      grid.push({ type: water[row + '-' + col] ? 'water' : (border ? 'tree' : 'grass'), built: null });
-    }
-    return grid;
-  }
-  function recompute(grid) { var b = 10; grid.forEach(function (t) { if (t.built) b += TOOLS[t.built].beauty; }); return Math.min(100, b); }
-  function toast(text, kind) {
-    var id = ++tid; state.toasts.push({ id: id, text: text, kind: kind || 'info' }); renderToasts();
-    setTimeout(function () { state.toasts = state.toasts.filter(function (t) { return t.id !== id; }); renderToasts(); }, 3000);
-  }
-  var built = {
-    tree:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:15px solid #2c4a30;pointer-events:none"></span>',
-    tent:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-bottom:17px solid #c79a52;pointer-events:none"></span>',
-    rv:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);width:30px;height:13px;border-radius:3px;background:#e9e4d4;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15);pointer-events:none"></span>',
-    cabin:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);pointer-events:none"><span style="display:block;width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-bottom:11px solid #5a3d22;margin:0 auto"></span><span style="display:block;width:22px;height:11px;background:#7a5230;margin:0 auto"></span></span>',
-    flower:'<span style="position:absolute;left:50%;bottom:11px;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:#d36b7a;box-shadow:8px 2px 0 #e0b35c,-8px 2px 0 #9b6fb0;pointer-events:none"></span>',
-    lamp:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);pointer-events:none"><span style="display:block;width:9px;height:9px;border-radius:50%;background:#e8b93c;box-shadow:0 0 8px #e8b93c;margin:0 auto 2px"></span><span style="display:block;width:3px;height:16px;background:#3a3122;margin:0 auto"></span></span>'
-  };
-
-  function place(idx) {
-    var row = (idx / COLS) | 0, col = idx % COLS;
-    var border = (row === 0 || col === 0 || row === ROWS - 1 || col === COLS - 1);
-    var t = state.grid[idx];
-    if (t.type !== 'grass' || border) { toast('Build on the open plots in the middle.', 'warn'); return; }
-    if (state.tool === 'bulldoze') {
-      if (!t.built) return;
-      state.grid[idx] = { type: t.type, built: null }; toast('Cleared the plot.', 'info');
-      state.beauty = recompute(state.grid); renderBoard(); renderHud(); return;
-    }
-    var def = TOOLS[state.tool];
-    if (t.built) { toast('That plot is taken — Clear it first.', 'warn'); return; }
-    if (state.cash < def.cost) { toast('Not enough cash for a ' + def.name + '.', 'bad'); return; }
-    state.grid[idx] = { type: t.type, built: state.tool };
-    state.cash -= def.cost; state.beauty = recompute(state.grid);
-    toast('Built a ' + def.name + '   −$' + def.cost, 'money'); renderBoard(); renderHud();
-  }
-
-  function renderHud() {
-    document.getElementById("ctCash").textContent = '$' + state.cash.toLocaleString();
-    document.getElementById("ctBeauty").textContent = Math.round(state.beauty);
-  }
-  function renderSeasons() {
-    document.getElementById("ctSeasons").innerHTML = SEASONS.map(function (se, i) {
-      var on = i === state.season;
-      return '<button type="button" data-season="' + i + '" style="font-family:Oswald,sans-serif;font-weight:600;font-size:11px;letter-spacing:.5px;padding:6px 12px;border-radius:6px;cursor:pointer;border:1px solid ' +
-        (on ? '#8a6620' : '#c9b78a') + ';background:' + (on ? '#e0b35c' : '#f5eedb') + ';color:' + (on ? '#2c1f08' : '#5f5036') + '">' + se.name + '</button>';
-    }).join("");
-  }
-  function renderTools() {
-    document.getElementById("ctTools").innerHTML = TOOL_ORDER.map(function (k) {
-      var d = TOOLS[k], on = state.tool === k;
-      return '<button type="button" data-tool="' + k + '" style="display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:68px;padding:7px 11px;border-radius:8px;cursor:pointer;text-align:left;' +
-        (on ? 'background:linear-gradient(180deg,#e0b35c,#cda043);border:1px solid #8a6620;border-bottom-width:3px;color:#2c1f08' : 'background:#fbf6e9;border:1px solid #cdb685;color:#2c2418') + '">' +
-        '<span style="font-family:Oswald,sans-serif;font-weight:600;font-size:12px">' + d.name + '</span>' +
-        '<span style="font-family:Oswald,sans-serif;font-size:10px;opacity:.8">' + (k === 'bulldoze' ? 'free' : '$' + d.cost) + '</span></button>';
-    }).join("");
-  }
-  function renderBoard() {
-    var sc = SEASONS[state.season], html = "";
-    state.grid.forEach(function (t, idx) {
-      var row = (idx / COLS) | 0, col = idx % COLS;
-      var left = originX + (col - row) * TW / 2, top = (col + row) * TH / 2;
-      var border = (row === 0 || col === 0 || row === ROWS - 1 || col === COLS - 1);
-      var buildable = (t.type === 'grass' && !border);
-      var fill = t.type === 'water' ? sc.water : (t.built && TOOLS[t.built].site ? sc.dirt : sc.grass);
-      var z = (row + col) * 2;
-      html += '<button type="button" class="ct-demoTile' + (buildable ? ' build' : '') + '" data-idx="' + idx + '" style="position:absolute;left:' + left + 'px;top:' + top + 'px;width:' + TW + 'px;height:' + (TH * 2) +
-        'px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:' + fill + ';box-shadow:inset 0 0 0 1px rgba(20,14,6,.12);transition:filter .12s,background .45s;z-index:' + z + ';' +
-        (buildable && !t.built ? 'outline:1px dashed rgba(44,36,24,.22);outline-offset:-8px;' : '') + '">' +
-        (t.type === 'tree' ? built.tree : (t.built ? (built[t.built] || '') : '')) + '</button>';
-    });
-    board.innerHTML = html;
-  }
-  function renderToasts() {
-    document.getElementById("ctToasts").innerHTML = state.toasts.map(function (n) {
-      return '<div style="pointer-events:none;padding:7px 12px;font-family:Oswald,sans-serif;font-size:12px;line-height:1.3;border-radius:6px;background:#f5eedb;border:1px solid #b3996b;border-left:4px solid ' +
-        (TCOLOR[n.kind] || '#8a795a') + ';box-shadow:0 2px 8px rgba(20,14,6,.3);animation:ctToast .3s ease">' + esc(n.text) + '</div>';
-    }).join("");
-  }
-
-  function reset() { state = { cash: 150, beauty: 10, tool: 'tent', grid: freshGrid(), season: 2, toasts: [] }; renderSeasons(); renderTools(); renderBoard(); renderHud(); renderToasts(); }
-  reset();
-  state.toasts = []; // reset toast from init suppressed
-
-  document.getElementById("ctSeasons").addEventListener("click", function (e) {
-    var btn = e.target.closest("[data-season]"); if (!btn) return;
-    state.season = +btn.getAttribute("data-season"); renderSeasons(); renderBoard();
-  });
-  document.getElementById("ctTools").addEventListener("click", function (e) {
-    var btn = e.target.closest("[data-tool]"); if (!btn) return;
-    state.tool = btn.getAttribute("data-tool"); renderTools();
-  });
-  board.addEventListener("click", function (e) {
-    var btn = e.target.closest("[data-idx]"); if (!btn) return; place(+btn.getAttribute("data-idx"));
-  });
-  document.getElementById("ctReset").addEventListener("click", function () { reset(); toast('Fresh plot of land. Make camp.', 'info'); });
 })();
 </script>
 </body>
