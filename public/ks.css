@@ -24,6 +24,10 @@ body.ks-paper::after {
   content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 80; opacity: .5;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.13 0 0 0 0 0.11 0 0 0 0 0.06 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+/* dark: grain flips to faint light specks so it reads on the near-black page */
+html[data-theme="dark"] body.ks-paper::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.93 0 0 0 0 0.89 0 0 0 0 0.72 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
 /* accessibility: respect reduced-motion + a consistent focus ring */
 @media (prefers-reduced-motion: reduce) {
@@ -94,6 +98,7 @@ html[data-theme="dark"] body { background: #16130d; color: #e9dfc9; }
 html[data-theme="dark"] [style*="background:#ece2cb"] { background: #16130d !important; }
 html[data-theme="dark"] [style*="background:#f3ecd9"] { background: #211c13 !important; }
 html[data-theme="dark"] [style*="background:#e6dcc2"] { background: #241f15 !important; }
+html[data-theme="dark"] [style*="background:#f7f1e2"] { background: #241f15 !important; }
 html[data-theme="dark"] [style*="rgba(236,226,203,.85)"] { background: rgba(22,19,13,.86) !important; }
 html[data-theme="dark"] [style*="rgba(236,226,203,.94)"] { background: rgba(22,19,13,.92) !important; }
 
@@ -105,6 +110,7 @@ html[data-theme="dark"] [style*="color:#5e5238"] { color: #b7ac8f !important; }
 html[data-theme="dark"] [style*="color:#8a7a58"] { color: #a99a7b !important; }
 html[data-theme="dark"] [style*="color:#7a6a48"] { color: #a2926f !important; }
 html[data-theme="dark"] [style*="color:#a89878"] { color: #948872 !important; }
+html[data-theme="dark"] [style*="color:#9a8b6d"] { color: #948872 !important; }
 /* green accent text → brighter (backgrounds stay green) */
 html[data-theme="dark"] [style*="color:#2f5436"] { color: #82c795 !important; }
 /* brass accent text → brighter */
