@@ -163,8 +163,15 @@
     document.body.className += (document.body.className ? " " : "") + "ks-haspill";
   }
 
-  // ---- Night mode: toggle in the shared header, persisted to localStorage.ksTheme.
-  // The dark palette itself lives in ks.css (html[data-theme="dark"] overrides). ----
+  // ---- Night mode: follows the system (prefers-color-scheme) by default; the
+  // header toggle stores an override in localStorage.ksTheme. Picking the side
+  // the system is already on clears the override, so the page goes back to
+  // auto-following. The dark palette lives in ks.css (html[data-theme="dark"]
+  // overrides); a pre-paint snippet in each cream page's <head> mirrors this
+  // resolution so there's no flash. Cream pages only (body.ks-paper) — the
+  // product pages art-direct their own palettes. ----
+  function ksSysDark() { try { return window.matchMedia("(prefers-color-scheme: dark)").matches; } catch (e) { return false; } }
+  function ksStored() { try { var s = localStorage.getItem("ksTheme"); return s === "dark" || s === "light" ? s : null; } catch (e) { return null; } }
   function ksTheme() { return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light"; }
   function ksThemeIcon(dark) {
     return dark
@@ -178,17 +185,32 @@
   function ksApplyTheme(t) {
     if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
     else document.documentElement.removeAttribute("data-theme");
-    try { localStorage.setItem("ksTheme", t); } catch (e) {}
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", t === "dark" ? "#16130d" : "#ece2cb");
     ksPaintToggle();
   }
+  function ksSaveTheme(t) {
+    try {
+      if ((t === "dark") === ksSysDark()) localStorage.removeItem("ksTheme"); // matches the system → back to auto
+      else localStorage.setItem("ksTheme", t);
+    } catch (e) {}
+  }
   function initTheme() {
+    if (!document.body || !document.body.classList.contains("ks-paper")) return;
+    ksApplyTheme(ksStored() || (ksSysDark() ? "dark" : "light"));
     var btns = document.querySelectorAll(".ks-theme-toggle");
-    if (!btns.length) return;
-    ksPaintToggle();
-    for (var i = 0; i < btns.length; i++) btns[i].addEventListener("click", function () { ksApplyTheme(ksTheme() === "dark" ? "light" : "dark"); });
-    window.addEventListener("storage", function (e) { if (e.key === "ksTheme") { ksApplyTheme(e.newValue === "dark" ? "dark" : "light"); } });
+    for (var i = 0; i < btns.length; i++) btns[i].addEventListener("click", function () {
+      var next = ksTheme() === "dark" ? "light" : "dark";
+      ksApplyTheme(next); ksSaveTheme(next);
+    });
+    window.addEventListener("storage", function (e) {
+      if (e.key === "ksTheme") ksApplyTheme(e.newValue === "dark" || (e.newValue !== "light" && ksSysDark()) ? "dark" : "light");
+    });
+    try {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      var onSys = function (ev) { if (!ksStored()) ksApplyTheme(ev.matches ? "dark" : "light"); };
+      if (mq.addEventListener) mq.addEventListener("change", onSys); else if (mq.addListener) mq.addListener(onSys);
+    } catch (e) {}
   }
 
   function inject() {
