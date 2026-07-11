@@ -82,12 +82,13 @@ body.ks-paper::after {
 /* ===================== NIGHT MODE (cream Geist pages) =====================
    The cream pages use inline hex colors, so the dark theme remaps the known
    palette tokens by attribute-matching the inline `color:`/`background:` values.
-   Toggle lives in the shared header (ks.js); persisted to localStorage.ksTheme;
-   a tiny pre-paint snippet in each page's <head> sets data-theme before paint.
+   Follows the system (prefers-color-scheme) by default; the header toggle
+   stores an override in localStorage.ksTheme. A tiny pre-paint snippet in each
+   cream page's <head> resolves stored-else-system before paint.
    Accent BACKGROUNDS (green/brass tiles, marquees) stay their brand color —
    only text tokens, surfaces, and hairlines flip. ========================= */
 html[data-theme="dark"] { color-scheme: dark; }
-html[data-theme="dark"] body { background: #16130d; }
+html[data-theme="dark"] body { background: #16130d; color: #e9dfc9; }
 
 /* surfaces */
 html[data-theme="dark"] [style*="background:#ece2cb"] { background: #16130d !important; }
@@ -112,6 +113,7 @@ html[data-theme="dark"] [style*="color:#b07227"] { color: #e0a94e !important; }
 
 /* hairlines: dark-on-cream → light-on-dark (borders) */
 html[data-theme="dark"] [style*="rgba(34,28,16,.12)"] { border-color: rgba(236,226,203,.09) !important; }
+html[data-theme="dark"] [style*="rgba(34,28,16,.14)"] { border-color: rgba(236,226,203,.1) !important; }
 html[data-theme="dark"] [style*="rgba(34,28,16,.16)"] { border-color: rgba(236,226,203,.1) !important; }
 html[data-theme="dark"] [style*="rgba(34,28,16,.18)"] { border-color: rgba(236,226,203,.13) !important; }
 html[data-theme="dark"] [style*="rgba(34,28,16,.2)"]  { border-color: rgba(236,226,203,.14) !important; }

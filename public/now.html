@@ -22,7 +22,7 @@
   .hv6:hover { text-decoration:underline; }
   .hvTitle:hover { color:#2f5436; }
 </style>
-  <script>try{if(localStorage.ksTheme==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+  <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
   <link rel="stylesheet" href="/ks.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
