@@ -1,571 +1,419 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Campground Tycoon — build &amp; run your campground</title>
-<meta name="description" content="Campground Tycoon — a cozy isometric wilderness tycoon sim. Buy land across 15 procedural regions, build the grounds, keep four kinds of camper happy, and survive four fickle seasons. Play the demo right here, no download.">
+<meta name="description" content="Campground Tycoon — a cozy isometric wilderness tycoon sim. Settle 30 regions, build the grounds, keep five kinds of camper happy through four turning seasons, and earn a Park Service career. Play free in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Bitter:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:#e7d9b9;font-family:Georgia,'Times New Roman',serif;color:#2c2418;-webkit-font-smoothing:antialiased}
+  body{background:#f5eedb;font-family:Georgia,'Times New Roman',serif;color:#2c2418;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
+  a.ct-link:hover{color:#e0b35c}
   ::selection{background:#b98a2e;color:#f5eedb}
-  img{display:block}
+  img{display:block;max-width:100%}
+  button{font:inherit}
   @keyframes ctToast{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
-  @keyframes ctPin{0%,100%{transform:translate(-50%,-100%)}50%{transform:translate(-50%,-118%)}}
-  @keyframes ctFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-  @keyframes ctBlink{0%,55%{opacity:1}56%,100%{opacity:0}}
-  @keyframes ctRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-  .hvt:hover{filter:brightness(1.08)}
+  @keyframes ctGlow{0%,100%{opacity:.85}50%{opacity:1}}
+  .ct-demoTile{border:none;padding:0}
+  .ct-demoTile.build{cursor:pointer}
+  .ct-demoTile.build:hover{filter:brightness(1.07)}
+  @media (max-width:760px){
+    .ct-navlinks a.ct-navtext{display:none !important}
+    .ct-navlinks .ct-playbtn{display:inline-flex !important}
+  }
+  @media (max-width:640px){ section{padding-left:18px !important;padding-right:18px !important} }
 </style>
   <link rel="stylesheet" href="/ks.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/campground-tycoon.html">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#1f3024">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Campground Tycoon — build &amp; run your campground">
-<meta property="og:description" content="Campground Tycoon — a cozy isometric wilderness tycoon sim. Buy land across 15 procedural regions, build the grounds, keep four kinds of camper happy, and survive four fickle seasons. Play the demo right here, no download.">
+<meta property="og:description" content="A cozy isometric wilderness tycoon sim. Settle 30 regions, keep five kinds of camper happy through four turning seasons, and earn a Park Service career. Play free in your browser.">
 <meta property="og:url" content="https://kitesink.com/campground-tycoon.html">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Campground Tycoon — build &amp; run your campground">
-<meta name="twitter:description" content="Campground Tycoon — a cozy isometric wilderness tycoon sim. Buy land across 15 procedural regions, build the grounds, keep four kinds of camper happy, and survive four fickle seasons. Play the demo right here, no download.">
+<meta name="twitter:description" content="A cozy isometric wilderness tycoon sim. 30 regions, five kinds of camper, four turning seasons. Play free in your browser.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
-<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
-<!-- Almanac (light) / Nightfall (dark) is a shared theme: the hero swaps with
-     [data-theme] on <html>, persisted to localStorage['ct_theme'] — the SAME key
-     /campground-tycoon/roadmap.html reads, so the choice carries across both pages. -->
-<style>
-  html[data-theme="dark"] #heroA{display:none !important}
-  html[data-theme="dark"] #heroB{display:flex !important}
-</style>
-<script>(function(){try{var t=localStorage.getItem('ct_theme');if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #e0b35c;outline-offset:2px}</style>
 </head>
 <body>
-<div data-ks="bar"></div>
 
-<div style="overflow-x:hidden">
+<div style="background:#f5eedb;color:#2c2418;overflow-x:hidden">
 
 <!-- ===================== NAV ===================== -->
-<nav style="position:sticky;top:38px;z-index:200;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 22px;background:rgba(31,48,36,0.96);border-bottom:2px solid #163024;box-shadow:0 2px 14px rgba(15,12,6,0.35);flex-wrap:wrap">
-  <a href="#top" style="display:flex;align-items:center;gap:9px;color:#f5eedb">
-    <span style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:14px solid #e0b35c"></span>
-    <span style="font-family:Georgia,serif;font-weight:bold;font-size:16px;letter-spacing:1px">CAMPGROUND <span style="color:#e0b35c">TYCOON</span></span>
+<nav class="ct-nav" style="position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 26px;background:#1f3024;border-bottom:3px solid #b98a2e;flex-wrap:wrap">
+  <a href="/campground-tycoon.html" style="display:flex;align-items:center;gap:10px">
+    <span style="font-family:Georgia,serif;font-size:17px;color:#e0b35c;flex:none">✱</span>
+    <span style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:17px;letter-spacing:.3px;color:#f5eedb">CAMPGROUND <span style="color:#e0b35c">TYCOON</span></span>
   </a>
-  <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
-    <a href="#demo" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Demo</a>
-    <a href="#regions" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Regions</a>
-    <a href="#guests" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Guests</a>
-    <a href="#seasons" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#b9c9b3;padding:7px 12px;border-radius:7px">Seasons</a>
-    <a href="/campground-tycoon/roadmap.html" style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:#e0b35c;padding:7px 12px;border-radius:7px">Roadmap ↗</a>
-    <div style="display:flex;align-items:center;gap:5px;margin-left:8px;padding:3px;background:rgba(245,238,219,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:9px">
-      <span style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#728a6e;padding:0 4px;text-transform:uppercase">Look</span>
-      <button id="heroBtnA" style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px;cursor:pointer;padding:6px 11px;border-radius:7px;border:none;background:#e0b35c;color:#2c1f08;font-weight:bold">Almanac</button>
-      <button id="heroBtnB" style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px;cursor:pointer;padding:6px 11px;border-radius:7px;border:none;background:transparent;color:#b9c9b3">Nightfall</button>
-    </div>
-    <a href="#wishlist" style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:12px;letter-spacing:.5px;color:#2c1f08;background:linear-gradient(180deg,#e0b35c,#b98a2e);border:1px solid #8a6620;border-bottom-width:3px;padding:7px 15px;border-radius:8px;margin-left:4px">Wishlist</a>
+  <div class="ct-navlinks" style="display:flex;align-items:center;gap:2px;flex-wrap:wrap">
+    <a class="ct-link ct-navtext" href="/campground-tycoon.html" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#e0b35c;padding:8px 12px">Home</a>
+    <a class="ct-link ct-navtext" href="/campground-tycoon/features.html" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfd9c8;padding:8px 12px">Features</a>
+    <a class="ct-link ct-navtext" href="/campground-tycoon/regions.html" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfd9c8;padding:8px 12px">Regions</a>
+    <a class="ct-link ct-navtext" href="/campground-tycoon/roadmap.html" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfd9c8;padding:8px 12px">Roadmap</a>
+    <a class="ct-playbtn ct-link" href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:#1f2c17;background:linear-gradient(180deg,#e0b35c,#b98a2e);border:1px solid #8a6620;border-bottom-width:3px;padding:8px 15px;border-radius:7px;margin-left:8px">▶ Play Free</a>
   </div>
 </nav>
 
 <div id="top"></div>
 
-<!-- ===================== HERO A — ALMANAC ===================== -->
-<section id="heroA" style="position:relative;background:radial-gradient(ellipse 120% 90% at 70% 0%,#f0e4c4 0%,#e7d9b9 45%,#dcc99f 100%);padding:64px 24px 70px;overflow:hidden">
-  <div style="position:absolute;inset:0;opacity:0.35;background:repeating-linear-gradient(0deg,transparent 0 38px,rgba(120,95,50,0.06) 38px 39px);pointer-events:none"></div>
-  <div style="position:relative;max-width:1180px;margin:0 auto;display:flex;gap:48px;align-items:center;flex-wrap:wrap">
-    <div style="flex:1;min-width:330px">
-      <div style="font-family:ui-monospace,Menlo,monospace;color:#b98a2e;font-size:12px;letter-spacing:6px;margin-bottom:10px">— EST. TODAY · POP. YOU —</div>
-      <h1 style="font-family:Georgia,serif;font-size:clamp(44px,6.4vw,78px);line-height:0.98;letter-spacing:1px;color:#2c2418;text-shadow:0 2px 0 rgba(255,255,255,0.4)">CAMPGROUND<br><span style="color:#b98a2e">TYCOON</span></h1>
-      <p style="font-family:Georgia,serif;font-style:italic;font-size:20px;line-height:1.5;color:#5f5036;max-width:480px;margin:18px 0 8px">Buy a scrap of wilderness. Pitch a few tents. Keep the campers happy through four fickle seasons — and try not to go broke before the leaves turn.</p>
-      <p style="font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#8a795a;letter-spacing:.3px;max-width:460px;margin-bottom:26px">A cozy isometric tycoon sim. 15 regions, procedural land, weather, anglers, hunters &amp; leaf-peepers — and a deeply chunky CRT booking terminal.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a></div></div>
-      <a href="#demo" style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#2f4836;border-bottom:2px solid #b98a2e;padding-bottom:2px">▶ Play the demo right here — no download</a>
+<!-- ===================== HERO ===================== -->
+<section style="position:relative;min-height:740px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(180deg,#141f17 0%,#1d2d20 34%,#31412a 56%,#5d5533 74%,#9a7038 89%,#c9973f 100%)">
+  <div id="ctRays" style="position:absolute;left:50%;top:90%;width:10px;height:10px;transform:translate(-50%,-50%)">
+    <div style="position:absolute;left:50%;top:50%;width:190px;height:190px;border-radius:50%;background:#f3dda0;transform:translate(-50%,-50%);animation:ctGlow 4s ease-in-out infinite;box-shadow:0 0 60px rgba(243,221,160,.5)"></div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:46%;background:#1a2b20;clip-path:polygon(0% 100%,0% 62%,8% 50%,18% 64%,28% 40%,38% 60%,50% 32%,62% 58%,72% 42%,84% 62%,92% 46%,100% 60%,100% 100%)"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:30%;background:#243a2b;clip-path:polygon(0% 100%,0% 74%,10% 60%,22% 78%,34% 56%,46% 80%,58% 64%,70% 82%,82% 62%,92% 78%,100% 66%,100% 100%)"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:64px;background:#182a1e;background-image:linear-gradient(135deg,transparent 50%,#182a1e 50%),linear-gradient(225deg,transparent 50%,#182a1e 50%);background-size:34px 46px;background-position:0 18px,17px 18px"></div>
+  <div style="position:relative;z-index:10;max-width:840px;margin:0 auto;padding:24px 24px 90px;text-align:center">
+    <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;letter-spacing:6px;color:#f0cd82;margin-bottom:16px;text-shadow:0 1px 6px rgba(0,0,0,.5)">— EST. TODAY · POP. YOU —</div>
+    <h1 style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:clamp(46px,7.6vw,92px);line-height:.96;letter-spacing:.5px;color:#f8f1de;text-shadow:0 3px 0 rgba(0,0,0,.35)">CAMPGROUND<br><span style="color:#f0cd82">TYCOON</span></h1>
+    <p style="font-family:Georgia,serif;font-style:italic;font-size:20px;line-height:1.55;color:#f2ead4;max-width:600px;margin:22px auto 10px;text-shadow:0 1px 6px rgba(0,0,0,.35)">Pitch a tent on a scrap of wilderness. Keep the campers happy through four turning seasons, and build a park worth a Park Service career.</p>
+    <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.5px;color:#e7ddc0;margin-bottom:26px">30 regions to settle · 5 kinds of camper · a living world that keeps turning</div>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;align-items:center">
+      <a href="#demo" style="display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:10px;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.5px;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#241a06;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 8px 20px rgba(0,0,0,.32)"><span style="font-size:15px">▶</span> Play Free — itch.io</a>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.4px;background:rgba(20,16,8,.35);color:#f5eedb;border:1px dashed rgba(245,238,219,.5)"><svg viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="#f5eedb" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" style="flex:none"><rect x="9" y="3" width="14" height="26" rx="2.5"></rect><path d="M14 25 H18"></path></svg> iOS &amp; Android — coming with v1.5</span>
     </div>
-    <div style="flex:0 0 auto;width:min(440px,92vw);position:relative;animation:ctFloat 7s ease-in-out infinite">
-      <div style="position:absolute;left:50%;top:-26px;transform:translate(-50%,-100%);z-index:4;animation:ctPin 3.2s ease-in-out infinite">
-        <div style="width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e8c876,#b98a2e 62%,#7e5d18);box-shadow:0 10px 0 -5px #7e5d18,0 5px 9px rgba(0,0,0,0.45)"></div>
-      </div>
-      <div style="background:linear-gradient(168deg,#f7f1e1,#efe5cc);border:1px solid #b3996b;border-radius:6px;padding:14px 14px 16px;box-shadow:0 1px 0 rgba(255,255,255,0.5) inset,0 22px 50px rgba(20,14,6,0.4);transform:rotate(-1.4deg)">
-        <div style="position:absolute;left:50%;top:6px;transform:translateX(-50%) rotate(-2deg);width:110px;height:22px;background:rgba(185,138,46,0.32);border:1px dashed rgba(138,102,32,0.5)"></div>
-        <img src="site_assets/season_fall.png" alt="New England in fall" style="width:100%;border-radius:3px;image-rendering:pixelated;border:3px solid #5a4f3c;box-shadow:0 0 0 5px #8f8266"/>
-        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:11px;padding:0 2px">
-          <span style="font-family:Georgia,serif;font-weight:bold;font-size:17px;color:#1f3024">New England · Fall</span>
-          <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;letter-spacing:1px">DAY 41 · ★4.6</span>
-        </div>
-        <div style="font-family:Georgia,serif;font-style:italic;font-size:13px;color:#5f5036;margin-top:3px;padding:0 2px">"Leaf-peepers everywhere. Best week we've ever booked."</div>
-      </div>
-    </div>
+    <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:1.5px;color:#cfe0c8;margin-top:16px;opacity:.85">NO DOWNLOAD · RUNS RIGHT IN YOUR BROWSER</div>
   </div>
 </section>
 
-<!-- ===================== HERO B — NIGHTFALL (hidden by default, toggled) ===================== -->
-<section id="heroB" style="display:none;position:relative;min-height:640px;align-items:center;justify-content:center;text-align:center;padding:90px 24px;background:linear-gradient(180deg,rgba(12,17,13,0.25),rgba(12,17,13,0.78)),url(site_assets/picker_bg.png) center 40%/cover no-repeat,#0c110d;overflow:hidden">
-  <div style="position:relative;max-width:780px">
-    <div style="font-family:ui-monospace,Menlo,monospace;color:#e0b35c;font-size:12px;letter-spacing:7px;margin-bottom:14px;text-shadow:0 1px 6px rgba(0,0,0,0.6)">A COZY WILDERNESS TYCOON</div>
-    <h1 style="font-family:Georgia,serif;font-size:clamp(46px,8vw,96px);line-height:0.96;letter-spacing:2px;color:#f5eedb;text-shadow:0 3px 0 rgba(0,0,0,0.5),0 0 50px rgba(224,179,92,0.28)">CAMPGROUND<br><span style="color:#e0b35c">TYCOON</span></h1>
-    <p style="font-family:Georgia,serif;font-style:italic;font-size:21px;line-height:1.5;color:#cfe0c8;max-width:560px;margin:22px auto 30px;text-shadow:0 1px 8px rgba(0,0,0,0.7)">Out past the firelight, your little park is filling up. Plant your flag, build the grounds, and keep the campers coming back season after season.</p>
-    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a></div></div>
-    <a href="#demo" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#e7eede;border:1px solid rgba(245,238,219,0.4);border-radius:8px;padding:9px 16px;background:rgba(20,16,10,0.35)">▶ Play the demo right here — no download</a>
+<!-- ===================== STAT STRIP ===================== -->
+<section style="background:#f5eedb;padding:34px 24px">
+  <div style="max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;text-align:center">
+    <div style="padding:14px 10px;border-right:1px dashed #cdb685"><div style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:40px;color:#1f3024;line-height:1">30</div><div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a795a;margin-top:4px">Regions to settle</div></div>
+    <div style="padding:14px 10px;border-right:1px dashed #cdb685"><div style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:40px;color:#1f3024;line-height:1">5</div><div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a795a;margin-top:4px">Kinds of camper</div></div>
+    <div style="padding:14px 10px;border-right:1px dashed #cdb685"><div style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:40px;color:#1f3024;line-height:1">4</div><div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a795a;margin-top:4px">Seasons that turn</div></div>
+    <div style="padding:14px 10px"><div style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:40px;color:#1f3024;line-height:1">53</div><div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a795a;margin-top:4px">Updates shipped</div></div>
   </div>
-  <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:2px;color:#728a6e">SCROLL TO MAKE CAMP ↓</div>
 </section>
 
-<!-- ===================== CORE LOOP ===================== -->
-<section style="background:#1f3024;padding:54px 24px;color:#e7eede">
+<!-- ===================== THE LOOP ===================== -->
+<section style="background:#f5eedb;padding:20px 24px 60px">
   <div style="max-width:1180px;margin:0 auto">
-    <div style="text-align:center;margin-bottom:38px">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">THE LOOP</div>
-      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);color:#f5eedb">Dirt today. Cabins by fall.</h2>
+    <div style="text-align:center;margin-bottom:36px">
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#b98a2e;margin-bottom:10px">THE LOOP</div>
+      <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(28px,4vw,40px);color:#1f3024">Dirt today. A park by fall.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px">
-      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 01</div>
-        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Plant your flag</div>
-        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Pick from 15 regions across a folded park map. Each one rolls a fresh, procedurally-generated plot of water, forest, prairie &amp; hills.</p>
-      </div>
-      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 02</div>
-        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Build the grounds</div>
-        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Clear plots and pitch tents, RV pads and cabins. Plant flower beds, set lamp posts, and watch your beauty score climb.</p>
-      </div>
-      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 03</div>
-        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Keep guests happy</div>
-        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Check campers in, clean up, fix what breaks, shoo the bears. Anglers want water; hunters want quiet; sightseers want it pretty.</p>
-      </div>
-      <div style="background:#26392c;border:1px solid #38503f;border-radius:12px;padding:22px 20px">
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#e0b35c;letter-spacing:2px;margin-bottom:10px">STEP 04</div>
-        <div style="font-family:Georgia,serif;font-size:21px;font-weight:bold;margin-bottom:7px">Survive the seasons</div>
-        <p style="font-size:14px;line-height:1.55;color:#b9c9b3">Ride the fall goldrush, then bank cash for the winter dead-zone. Weather, reviews and demand all turn with the calendar.</p>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px">
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #b98a2e;border-radius:4px;padding:22px 20px"><div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;color:#b98a2e;letter-spacing:2px;margin-bottom:10px">STEP 01</div><div style="font-family:'Bitter',Georgia,serif;font-size:20px;font-weight:800;margin-bottom:7px;color:#1f3024">Plant your flag</div><p style="font-size:14px;line-height:1.55;color:#5f5036">Survey the folded park map and settle one of 30 regions — each rolls its own water, forest, prairie, desert or bayou.</p></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #b5642a;border-radius:4px;padding:22px 20px"><div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;color:#b5642a;letter-spacing:2px;margin-bottom:10px">STEP 02</div><div style="font-family:'Bitter',Georgia,serif;font-size:20px;font-weight:800;margin-bottom:7px;color:#1f3024">Build the grounds</div><p style="font-size:14px;line-height:1.55;color:#5f5036">Clear plots and pitch tents, RV pads and cabins. Plant flower beds and lamps, and watch your beauty score climb.</p></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #2f6d7a;border-radius:4px;padding:22px 20px"><div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;color:#2f6d7a;letter-spacing:2px;margin-bottom:10px">STEP 03</div><div style="font-family:'Bitter',Georgia,serif;font-size:20px;font-weight:800;margin-bottom:7px;color:#1f3024">Keep guests happy</div><p style="font-size:14px;line-height:1.55;color:#5f5036">Sightseers, anglers, hunters and backpackers all want something different. Check them in, tidy up, mind the wildlife.</p></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #5e7d45;border-radius:4px;padding:22px 20px"><div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;color:#5e7d45;letter-spacing:2px;margin-bottom:10px">STEP 04</div><div style="font-family:'Bitter',Georgia,serif;font-size:20px;font-weight:800;margin-bottom:7px;color:#1f3024">Ride the seasons</div><p style="font-size:14px;line-height:1.55;color:#5f5036">Spring runs to fall's goldrush, then the winter lull. Weather, demand and reviews all turn with the calendar.</p></div>
     </div>
+    <div style="text-align:center;margin-top:22px;font-family:Georgia,serif;font-style:italic;font-size:15px;color:#8a795a">Master a region, and the Park Service comes calling — <a class="ct-link" href="/campground-tycoon/features.html#parkservice" style="color:#8a6620;border-bottom:1px solid #b98a2e">see how →</a></div>
   </div>
 </section>
 
-<!-- ===================== PLAY (itch.io embed) ===================== -->
-<section id="demo" style="background:linear-gradient(180deg,#e7d9b9,#dcc99f);padding:56px 24px 64px">
-  <div style="max-width:1180px;margin:0 auto">
-    <div style="text-align:center;margin-bottom:30px">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">PLAY IN YOUR BROWSER</div>
-      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#2c2418">Play Campground Tycoon</h2>
-      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#5f5036;max-width:580px;margin:10px auto 0">The full game, right here in your browser &mdash; build your park, ride the seasons, and keep the campers happy. Loads straight from itch.io.</p>
-    </div>
+<!-- ===================== PLAY DEMO ===================== -->
+<section id="demo" style="background:#1f3024;padding:58px 24px 66px">
+  <div style="max-width:900px;margin:0 auto;text-align:center">
+    <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#e0b35c;margin-bottom:10px">PLAY IN YOUR BROWSER</div>
+    <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(26px,4vw,38px);color:#f5eedb">Pitch your first tent — right here</h2>
+    <p style="font-family:Georgia,serif;font-style:italic;font-size:16px;color:#b9c9b3;max-width:540px;margin:10px auto 0">A taste of the core loop, live on this page. The full game has 30 regions, five kinds of camper, and a lot more than five tools.</p>
+  </div>
 
-    <div style="background:linear-gradient(168deg,#d8cfb8,#c4b89c);border-radius:18px;padding:14px;box-shadow:0 26px 64px rgba(0,0,0,0.4),0 2px 0 rgba(255,255,255,0.5) inset">
-      <div style="position:relative;width:100%;aspect-ratio:1280 / 740;background:#333;border:3px solid #5a4f3c;border-radius:10px;box-shadow:0 0 0 6px #8f8266;overflow:hidden">
-        <iframe src="https://itch.io/embed-upload/17978855?color=333333" frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block" title="Campground Tycoon &mdash; playable on itch.io"><a href="https://murdocnu.itch.io/campground-tycoon">Play Campground Tycoon on itch.io</a></iframe>
+  <div style="position:relative;max-width:820px;margin:30px auto 0;background:#e2d2a8;border:1px solid #b3996b;border-radius:14px;padding:16px;box-shadow:0 24px 54px rgba(0,0,0,.4)">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px;padding:0 4px">
+      <div id="ctSeasons" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+      <div style="display:flex;gap:14px;font-family:'Oswald',sans-serif">
+        <div style="text-align:right"><div style="font-size:9px;letter-spacing:1.5px;color:#6e6248;text-transform:uppercase">Cash</div><div id="ctCash" style="font-size:17px;font-weight:700;color:#1f3024">$150</div></div>
+        <div style="text-align:right"><div style="font-size:9px;letter-spacing:1.5px;color:#6e6248;text-transform:uppercase">Beauty</div><div id="ctBeauty" style="font-size:17px;font-weight:700;color:#1f3024">10</div></div>
       </div>
     </div>
-    <div style="text-align:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:12px;letter-spacing:.5px">Game not loading? <a href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener" style="color:#8a6620;text-decoration:underline">Open it on itch.io &#8599;</a></div>
+    <div style="background:#f5eedb;border:3px solid #5a4f3c;border-radius:8px;box-shadow:0 0 0 5px #8f8266;padding:14px;position:relative;overflow:hidden">
+      <div id="ctTools" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"></div>
+      <div id="ctBoard" style="position:relative;width:460px;max-width:100%;height:280px;margin:0 auto;overflow:hidden"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding:0 4px">
+      <button id="ctReset" type="button" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#6e6248;background:none;border:none;cursor:pointer;text-decoration:underline">↺ Reset plot</button>
+      <div style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:1px;color:#6e6248">GREEN MOUNTAINS · VERMONT</div>
+    </div>
+    <div id="ctToasts" style="position:absolute;left:0;right:0;bottom:52px;display:flex;flex-direction:column-reverse;gap:6px;padding:0 20px;pointer-events:none"></div>
+  </div>
+
+  <!-- the whole game, embedded from itch.io -->
+  <div style="max-width:820px;margin:40px auto 0">
+    <div style="text-align:center;font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#9fb89b;margin-bottom:14px">…OR PLAY THE WHOLE PARK</div>
+    <div style="position:relative;width:100%;aspect-ratio:1280 / 740;background:#333;border:3px solid #5a4f3c;border-radius:10px;box-shadow:0 0 0 6px #8f8266,0 24px 54px rgba(0,0,0,.4);overflow:hidden">
+      <iframe src="https://itch.io/embed-upload/17978855?color=333333" frameborder="0" allowfullscreen loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block" title="Campground Tycoon — playable on itch.io"><a href="https://murdocnu.itch.io/campground-tycoon">Play Campground Tycoon on itch.io</a></iframe>
+    </div>
+    <div style="text-align:center;margin-top:14px;font-family:'Oswald',sans-serif;font-size:13px;color:#9fb89b">Game not loading? <a class="ct-link" href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener" style="color:#e0b35c;border-bottom:1px solid #e0b35c">Open it on itch.io ↗</a></div>
   </div>
 </section>
 
-<!-- ===================== REGIONS ===================== -->
-<section id="regions" style="background:#26392c;padding:56px 24px 64px;color:#e7eede">
+<!-- ===================== REGIONS TEASER ===================== -->
+<section style="background:#f5eedb;padding:60px 24px 64px">
   <div style="max-width:1180px;margin:0 auto">
     <div style="text-align:center;margin-bottom:30px">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">THE FOLDED PARK MAP</div>
-      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#f5eedb">Fifteen regions. Pick your fight.</h2>
-      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#b9c9b3;max-width:600px;margin:10px auto 0">From the gentle Smokies to the brutal Montana fall crunch — every region mixes its own guests, terrain and difficulty. Click a pin.</p>
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#b98a2e;margin-bottom:10px">THE FOLDED PARK MAP</div>
+      <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(28px,4vw,42px);color:#1f3024">Thirty flags. Every one its own country.</h2>
+      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#5f5036;max-width:620px;margin:10px auto 0">From blackwater bayou to gypsum dunes to granite alpine spires — every region on the survey rolls its own true terrain, wildlife and guests.</p>
     </div>
-    <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:stretch">
-      <div style="flex:1;min-width:320px;position:relative;border-radius:14px;overflow:hidden;background:#e3d2a6 url(site_assets/usa_map.png) center/cover no-repeat;border:1px solid #b3996b;box-shadow:0 16px 40px rgba(10,8,4,0.4),0 1px 0 rgba(255,255,255,0.4) inset;min-height:430px">
-        <div style="position:absolute;left:18px;top:16px;font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:3px;color:#8a6620">UNITED STATES · CAMPGROUNDS &amp; COUNTRY</div>
-          <button class="regpin regsel" data-region="smokies" style="position:absolute;left:65.5%;top:55.00000000000001%;transform:translate(-50%,-50%) translateY(-3px);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:#f7f1e1;border:1px solid #b98a2e;box-shadow:0 0 0 2px rgba(185,138,46,0.55),0 8px 18px rgba(20,14,6,0.4);z-index:20">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#b98a2e;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">TN</span>
-          </button>
-          <button class="regpin" data-region="keys" style="position:absolute;left:74%;top:80%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#2f6d7a;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">FL</span>
-          </button>
-          <button class="regpin" data-region="bayou" style="position:absolute;left:58.5%;top:72%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#2f6d7a;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">LA</span>
-          </button>
-          <button class="regpin" data-region="hillcountry" style="position:absolute;left:47%;top:69%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#b98a2e;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">TX</span>
-          </button>
-          <button class="regpin" data-region="redrock" style="position:absolute;left:27.500000000000004%;top:62%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#b98a2e;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">AZ</span>
-          </button>
-          <button class="regpin" data-region="greenmtns" style="position:absolute;left:84.5%;top:27%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#b98a2e;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">VT</span>
-          </button>
-          <button class="regpin" data-region="greatlakes" style="position:absolute;left:64.5%;top:36%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#2f6d7a;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">MI</span>
-          </button>
-          <button class="regpin" data-region="cascades" style="position:absolute;left:16.5%;top:25.5%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#5e7d45;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">WA</span>
-          </button>
-          <button class="regpin" data-region="highdesert" style="position:absolute;left:17%;top:35.5%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#5e7d45;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">OR</span>
-          </button>
-          <button class="regpin" data-region="yellowstone" style="position:absolute;left:34.5%;top:35.5%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#b98a2e;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">WY</span>
-          </button>
-          <button class="regpin" data-region="rockies" style="position:absolute;left:35.5%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#5e7d45;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">CO</span>
-          </button>
-          <button class="regpin" data-region="northwoods" style="position:absolute;left:58.5%;top:34.5%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#2f6d7a;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">WI</span>
-          </button>
-          <button class="regpin" data-region="boundary" style="position:absolute;left:54.50000000000001%;top:27%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#2f6d7a;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">MN</span>
-          </button>
-          <button class="regpin" data-region="maine" style="position:absolute;left:87.5%;top:20.5%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#b5642a;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">ME</span>
-          </button>
-          <button class="regpin" data-region="bigsky" style="position:absolute;left:33.5%;top:27.500000000000004%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:linear-gradient(175deg,#efe4c4,#e2d2a8);border:1px solid #b3996b;box-shadow:0 1px 3px rgba(20,14,6,0.3);z-index:5">
-            <span class="regdot" style="width:8px;height:8px;border-radius:50%;background:#b5642a;display:inline-block"></span>
-            <span style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:11px;color:#2c2418;letter-spacing:.5px">MT</span>
-          </button>
-      </div>
-      <div style="flex:0 0 360px;max-width:100%;background:linear-gradient(168deg,#f7f1e1,#efe5cc);border-radius:14px;border:1px solid #b3996b;border-top:5px solid #2f4836;padding:20px 20px 22px;color:#2c2418;box-shadow:0 12px 30px rgba(10,8,4,0.3)">
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
-          <div>
-            <div id="regName" style="font-family:Georgia,serif;font-size:26px;font-weight:bold;line-height:1;color:#1f3024">Smokies</div>
-            <div id="regState" style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1.5px;color:#8a6620;text-transform:uppercase;margin-top:4px">Tennessee · TN</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-family:ui-monospace,Menlo,monospace;font-size:8px;letter-spacing:1px;color:#8a795a">DIFFICULTY</div>
-            <div id="diffDots" style="display:flex;gap:3px;justify-content:flex-end;margin-top:3px">
-              <span style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#b5642a"></span>
-              <span style="width:9px;height:9px;border-radius:50%;display:inline-block;background:rgba(44,36,24,0.18)"></span>
-              <span style="width:9px;height:9px;border-radius:50%;display:inline-block;background:rgba(44,36,24,0.18)"></span>
-              <span style="width:9px;height:9px;border-radius:50%;display:inline-block;background:rgba(44,36,24,0.18)"></span>
-            </div>
-            <div id="diffLabel" style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b5642a;margin-top:3px">Gentle</div>
-          </div>
-        </div>
-
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#8a795a;margin:18px 0 8px">WHO SHOWS UP</div>
-        <div id="mixBars">
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">Sightseers</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:60%;background:#b98a2e"></div></div></div>
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">Backpackers</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:40%;background:#5e7d45"></div></div></div>
-        </div>
-
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:1.5px;color:#8a795a;margin:16px 0 8px">TERRAIN TENDENCY</div>
-        <div id="terrBars">
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">forest</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:70%;background:#3d5a44;transition:width .4s ease"></div></div></div>
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">hills</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:50%;background:#7a6a4a;transition:width .4s ease"></div></div></div>
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">water</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:20%;background:#2f6d7a;transition:width .4s ease"></div></div></div>
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">prairie</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:10%;background:#b98a2e;transition:width .4s ease"></div></div></div>
-        </div>
-
-        <p id="regBlurb" style="font-family:Georgia,serif;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2a;margin-top:16px">Huge, forgiving, all-season sightseers. The friendly place to learn the ropes.</p>
-      </div>
+    <div id="ctTeaserMap" style="position:relative;border-radius:14px;overflow:hidden;background:#e3d2a6 url(/site_assets/usa_map.png) center/cover no-repeat;border:1px solid #b3996b;box-shadow:0 16px 40px rgba(10,8,4,.32);min-height:400px">
+      <div style="position:absolute;left:16px;bottom:14px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:2px;color:#8a6620;background:rgba(245,238,219,.75);padding:4px 9px;border-radius:5px">30 REGIONS · 1 LOCKED FLAGSHIP</div>
     </div>
-    <div style="display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:18px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#9fb89b">
-      <span style="color:#728a6e;letter-spacing:1px">DOMINANT DRAW:</span>
-      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#2f6d7a;display:inline-block"></i>Fishing</span>
-      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#b5642a;display:inline-block"></i>Hunting</span>
-      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#5e7d45;display:inline-block"></i>Hiking</span>
-      <span style="display:flex;align-items:center;gap:5px"><i style="width:9px;height:9px;border-radius:50%;background:#b98a2e;display:inline-block"></i>Tourism</span>
+    <div style="text-align:center;margin-top:22px">
+      <a class="ct-link" href="/campground-tycoon/regions.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;letter-spacing:.5px;color:#f5eedb;background:#1f3024;padding:11px 20px;border-radius:9px">Explore all 30 regions →</a>
     </div>
   </div>
 </section>
 
-<!-- ===================== GUESTS ===================== -->
-<section id="guests" style="background:#e7d9b9;padding:56px 24px 60px">
+<!-- ===================== FEATURES TEASER ===================== -->
+<section style="background:#1f3024;padding:58px 24px 64px">
   <div style="max-width:1180px;margin:0 auto">
-    <div style="text-align:center;margin-bottom:34px">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">FOUR KINDS OF CAMPER</div>
-      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#2c2418">Everybody wants something different</h2>
+    <div style="text-align:center;margin-bottom:32px">
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#e0b35c;margin-bottom:10px">WHAT'S IN THE PARK</div>
+      <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(28px,4vw,42px);color:#f5eedb">A whole living wilderness</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
-      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #b98a2e;border-radius:12px;padding:20px">
-        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Sightseers</div>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b98a2e;letter-spacing:1px;margin:2px 0 12px">PEAK: SUMMER → FALL</div>
-        <p style="font-size:14px;line-height:1.55;color:#5f5036">Want the grounds <b>beautiful</b>. Tip big when it's pretty and swoon over the elk — neglect your beauty score and they'll let you hear about it.</p>
-      </div>
-      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #2f6d7a;border-radius:12px;padding:20px">
-        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Anglers</div>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#2f6d7a;letter-spacing:1px;margin:2px 0 12px">PEAK: SPRING → SUMMER</div>
-        <p style="font-size:14px;line-height:1.55;color:#5f5036">Want a site <b>near water</b> and a short walk to the lakeshore. No lake on the rolled map? Expect sour reviews.</p>
-      </div>
-      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #b5642a;border-radius:12px;padding:20px">
-        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Hunters</div>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#b5642a;letter-spacing:1px;margin:2px 0 12px">PEAK: FALL</div>
-        <p style="font-size:14px;line-height:1.55;color:#5f5036">Want <b>quiet wooded-edge</b> sites and pay the most. Arrive in a huge fall wave, tolerate rough grounds — then vanish for the year.</p>
-      </div>
-      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:5px solid #5e7d45;border-radius:12px;padding:20px">
-        <div style="font-family:Georgia,serif;font-size:22px;font-weight:bold;color:#1f3024">Backpackers</div>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#5e7d45;letter-spacing:1px;margin:2px 0 12px">PEAK: SUMMER</div>
-        <p style="font-size:14px;line-height:1.55;color:#5f5036">Low nightly rate, <b>high volume</b>, forgiving. Want trailhead sites and rent from the gear shack. Build it and they will come.</p>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px">
+      <a class="ct-link" href="/campground-tycoon/features.html#living" style="background:#26392c;border:1px solid #38503f;border-radius:10px;padding:22px 20px;display:block"><div style="margin-bottom:12px"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#e0b35c" stroke-width="2.2" stroke-linecap="round"><path d="M3 12c2 -3 5 -3 7 0s5 3 7 0 5 -3 7 0 5 3 7 0"></path><path d="M3 20c2 -3 5 -3 7 0s5 3 7 0 5 -3 7 0 5 3 7 0" opacity=".55"></path></svg></div><div style="font-family:'Bitter',Georgia,serif;font-size:19px;font-weight:800;color:#f5eedb;margin-bottom:7px">The Living Regions</div><p style="font-size:13.5px;line-height:1.55;color:#b9c9b3">Tides rise over the coast, snowpack builds in the Rockies, the desert blooms after monsoon season. Your park keeps breathing.</p><div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#e0b35c;margin-top:10px">See more →</div></a>
+      <a class="ct-link" href="/campground-tycoon/features.html#parkservice" style="background:#26392c;border:1px solid #38503f;border-radius:10px;padding:22px 20px;display:block"><div style="margin-bottom:12px"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#e0b35c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M16 3 L27 7 V15 C27 22 22 27 16 29 C10 27 5 22 5 15 V7 Z"></path><path d="M16 11 L18.2 15.6 L23 16.3 L19.5 19.6 L20.4 24.4 L16 22.1 L11.6 24.4 L12.5 19.6 L9 16.3 L13.8 15.6 Z" fill="#e0b35c" stroke="none"></path></svg></div><div style="font-family:'Bitter',Georgia,serif;font-size:19px;font-weight:800;color:#f5eedb;margin-bottom:7px">The Park Service</div><p style="font-size:13.5px;line-height:1.55;color:#b9c9b3">Every region carries a Service commission. Complete it, enshrine the park, and climb toward the flagship posting: Yellowstone.</p><div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#e0b35c;margin-top:10px">See more →</div></a>
+      <a class="ct-link" href="/campground-tycoon/features.html#terminal" style="background:#26392c;border:1px solid #38503f;border-radius:10px;padding:22px 20px;display:block"><div style="margin-bottom:12px"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#e0b35c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="5" width="24" height="17" rx="2"></rect><path d="M9 22 L9 26 M23 22 L23 26 M6 26 H26"></path><path d="M9 10 H19 M9 14 H23 M9 17.5 H16"></path></svg></div><div style="font-family:'Bitter',Georgia,serif;font-size:19px;font-weight:800;color:#f5eedb;margin-bottom:7px">CAMP·OS Terminal</div><p style="font-size:13.5px;line-height:1.55;color:#b9c9b3">Run the whole operation from one delightfully chunky CRT — reviews, pricing, staff and the bank, all in amber and scanlines.</p><div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#e0b35c;margin-top:10px">See more →</div></a>
+      <a class="ct-link" href="/campground-tycoon/features.html#mobile" style="background:#26392c;border:1px solid #38503f;border-radius:10px;padding:22px 20px;display:block"><div style="margin-bottom:12px"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="#e0b35c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="9" y="3" width="14" height="26" rx="2.5"></rect><path d="M14 25 H18"></path></svg></div><div style="font-family:'Bitter',Georgia,serif;font-size:19px;font-weight:800;color:#f5eedb;margin-bottom:7px">Coming to Mobile</div><p style="font-size:13.5px;line-height:1.55;color:#b9c9b3">The whole park is heading to iPhone and Android with v1.5 — camp-keeping from the couch.</p><div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#e0b35c;margin-top:10px">See more →</div></a>
     </div>
   </div>
 </section>
 
-<!-- ===================== SEASONS ===================== -->
-<section id="seasons" style="background:#1f3024;padding:56px 24px 62px;color:#e7eede">
-  <div style="max-width:1080px;margin:0 auto">
-    <div style="text-align:center;margin-bottom:28px">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">SIX DAYS A SEASON · FOUR SEASONS A YEAR</div>
-      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#f5eedb">The whole park turns with the calendar</h2>
+<!-- ===================== FIVE KINDS OF CAMPER ===================== -->
+<section style="background:#f5eedb;padding:56px 24px 60px">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:30px">
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#b98a2e;margin-bottom:10px">FIVE KINDS OF CAMPER</div>
+      <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(28px,4vw,42px);color:#1f3024">Everybody wants something different</h2>
     </div>
-    <div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin-bottom:18px"><button class="seasontab" data-season="0" style="font-family:Georgia,serif;font-size:15px;font-weight:bold;padding:9px 20px;border-radius:9px;cursor:pointer;border:none;background:rgba(245,238,219,0.08);color:#b9c9b3;box-shadow:none">Spring</button><button class="seasontab" data-season="1" style="font-family:Georgia,serif;font-size:15px;font-weight:bold;padding:9px 20px;border-radius:9px;cursor:pointer;border:none;background:rgba(245,238,219,0.08);color:#b9c9b3;box-shadow:none">Summer</button><button class="seasontab" data-season="2" style="font-family:Georgia,serif;font-size:15px;font-weight:bold;padding:9px 20px;border-radius:9px;cursor:pointer;border:none;background:#e0b35c;color:#2c1f08;box-shadow:0 -2px 0 #8a6620 inset">Fall</button><button class="seasontab" data-season="3" style="font-family:Georgia,serif;font-size:15px;font-weight:bold;padding:9px 20px;border-radius:9px;cursor:pointer;border:none;background:rgba(245,238,219,0.08);color:#b9c9b3;box-shadow:none">Winter</button></div>
-    <div style="background:linear-gradient(168deg,#d8cfb8,#c4b89c);border-radius:16px;padding:12px;box-shadow:0 22px 50px rgba(0,0,0,0.4)">
-      <img id="seasonShot" src="site_assets/season_fall.png" alt="seasonal screenshot" style="width:100%;border-radius:8px;image-rendering:pixelated;border:3px solid #5a4f3c;box-shadow:0 0 0 5px #8f8266;display:block"/>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #b98a2e;border-radius:4px;padding:18px"><div style="font-family:'Bitter',Georgia,serif;font-size:17px;font-weight:800;color:#1f3024">Sightseers</div><div style="font-family:'Oswald',sans-serif;font-size:10px;color:#b98a2e;letter-spacing:1px;margin:3px 0 9px;text-transform:uppercase">Peak · Summer→Fall</div><p style="font-size:13px;line-height:1.5;color:#5f5036">Want it <b>beautiful</b>. Tip big when it's pretty.</p></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #2f6d7a;border-radius:4px;padding:18px"><div style="font-family:'Bitter',Georgia,serif;font-size:17px;font-weight:800;color:#1f3024">Anglers</div><div style="font-family:'Oswald',sans-serif;font-size:10px;color:#2f6d7a;letter-spacing:1px;margin:3px 0 9px;text-transform:uppercase">Peak · Spring→Summer</div><p style="font-size:13px;line-height:1.5;color:#5f5036">Want a site <b>near water</b>, short walk to shore.</p></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #b5642a;border-radius:4px;padding:18px"><div style="font-family:'Bitter',Georgia,serif;font-size:17px;font-weight:800;color:#1f3024">Buck Hunters</div><div style="font-family:'Oswald',sans-serif;font-size:10px;color:#b5642a;letter-spacing:1px;margin:3px 0 9px;text-transform:uppercase">Peak · Fall</div><p style="font-size:13px;line-height:1.5;color:#5f5036">Want <b>quiet, wooded-edge</b> sites. Pay the most.</p></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #7d8a4a;border-radius:4px;padding:18px"><div style="font-family:'Bitter',Georgia,serif;font-size:17px;font-weight:800;color:#1f3024">Bird Hunters</div><div style="font-family:'Oswald',sans-serif;font-size:10px;color:#7d8a4a;letter-spacing:1px;margin:3px 0 9px;text-transform:uppercase">Peak · Fall</div><p style="font-size:13px;line-height:1.5;color:#5f5036">Want <b>open-edge</b> ground near the fields.</p></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-top:4px solid #5e7d45;border-radius:4px;padding:18px"><div style="font-family:'Bitter',Georgia,serif;font-size:17px;font-weight:800;color:#1f3024">Backpackers</div><div style="font-family:'Oswald',sans-serif;font-size:10px;color:#5e7d45;letter-spacing:1px;margin:3px 0 9px;text-transform:uppercase">Peak · Summer</div><p style="font-size:13px;line-height:1.5;color:#5f5036">Low rate, <b>high volume</b>. Want a trailhead site.</p></div>
     </div>
-    <div id="seasonCap" style="text-align:center;font-family:Georgia,serif;font-style:italic;font-size:17px;color:#cfe0c8;margin-top:16px">Fall · New England — the leaf-peeper goldrush. Your busiest week.</div>
-  </div>
-</section>
-
-<!-- ===================== TERMINAL ===================== -->
-<section style="background:#e7d9b9;padding:56px 24px 60px">
-  <div style="max-width:1180px;margin:0 auto;display:flex;gap:44px;align-items:center;flex-wrap:wrap">
-    <div style="flex:1;min-width:300px">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">RANGEMASTER 2000™</div>
-      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);color:#2c2418;line-height:1.05">Run the whole park from one delightfully chunky CRT</h2>
-      <p style="font-family:Georgia,serif;font-style:italic;font-size:17px;color:#5f5036;margin:14px 0 18px">CAMP·OS v2.4 boots up with a satisfying hum. Reply to reviews, slide your nightly rates, buy upgrades, hire staff and take out loans — all in glorious amber-and-scanline.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:8px">
-        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F1 Reviews</span>
-        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F2 Pricing</span>
-        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F3 Shop</span>
-        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F5 Staff</span>
-        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F6 Front Desk</span>
-        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#1f3024;color:#cfe0c8;padding:6px 12px;border-radius:7px">F7 Bank</span>
-      </div>
-    </div>
-    <div style="flex:0 0 auto;width:min(460px,92vw)">
-      <div style="background:linear-gradient(168deg,#d8cfb8,#b0a384);border-radius:18px;padding:18px;box-shadow:0 26px 64px rgba(0,0,0,0.45),0 2px 0 rgba(255,255,255,0.5) inset">
-        <img src="site_assets/region_board.png" alt="CAMP·OS terminal" style="width:100%;border-radius:8px;border:3px solid #5a4f3c;box-shadow:0 0 0 6px #8f8266"/>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6e6248;letter-spacing:2px">
-          <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#7adf6a;box-shadow:0 0 7px #7adf6a;vertical-align:-1px;margin-right:6px"></span>PWR</span>
-          <span style="font-weight:bold">RANGEMASTER 2000</span>
-          <span style="width:90px;height:8px;background:repeating-linear-gradient(90deg,#a4977a 0 5px,transparent 5px 9px);border-radius:3px"></span>
-        </div>
-      </div>
-    </div>
+    <div style="text-align:center;margin-top:20px;font-family:Georgia,serif;font-style:italic;font-size:15px;color:#8a795a">Meet them all on the <a class="ct-link" href="/campground-tycoon/features.html#guests" style="color:#8a6620;border-bottom:1px solid #b98a2e">Features page →</a></div>
   </div>
 </section>
 
 <!-- ===================== REVIEWS ===================== -->
-<section style="background:#dcc99f;padding:54px 24px 58px">
+<section style="background:#efe1bc;padding:54px 24px 58px">
   <div style="max-width:1080px;margin:0 auto">
     <div style="text-align:center;margin-bottom:30px">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#8a6620;margin-bottom:8px">FROM THE GUEST BOOK</div>
-      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);color:#2c2418">★ ★ ★ ★ ☆ &nbsp;4.6 / 5</h2>
+      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#8a6620;margin-bottom:10px">FROM THE GUEST BOOK</div>
+      <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(26px,4vw,38px);color:#1f3024">★ ★ ★ ★ ☆ &nbsp;4.6 / 5</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
-      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,0.12)">
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#e8b93c;margin-bottom:6px">★★★★★</div>
-        <p style="font-size:15px;line-height:1.5;color:#2c2418">"Bought a swamp in Louisiana, accidentally got attached to a fictional bear. Sent the kids to bed an hour ago. Send help."</p>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:10px">— Park Ranger, 41 hrs played</div>
-      </div>
-      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,0.12)">
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#e8b93c;margin-bottom:6px">★★★★★</div>
-        <p style="font-size:15px;line-height:1.5;color:#2c2418">"The fall foliage week is genuinely the most stressful and most beautiful thing in any tycoon game I've played. The CRT terminal is *chef's kiss*."</p>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:10px">— Backpacker_Bex, 120 hrs played</div>
-      </div>
-      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:12px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,0.12)">
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#e8b93c;margin-bottom:6px">★★★★☆</div>
-        <p style="font-size:15px;line-height:1.5;color:#2c2418">"Picked Montana for my first park. Got buried in snow with two tents and a loan. Ten out of ten, restarting in Tennessee like a coward."</p>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a795a;margin-top:10px">— firsttimekeeper, 8 hrs played</div>
-      </div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:8px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,.1)"><div style="font-family:'Oswald',sans-serif;font-size:12px;color:#e8b93c;margin-bottom:8px">★★★★★</div><p style="font-size:15px;line-height:1.5;color:#2c2418">"Bought a swamp in Louisiana, accidentally got attached to a fictional bear. Sent the kids to bed an hour ago. Send help."</p><div style="font-family:'Oswald',sans-serif;font-size:11px;color:#8a795a;margin-top:10px">— Park Ranger, 41 hrs played</div></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:8px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,.1)"><div style="font-family:'Oswald',sans-serif;font-size:12px;color:#e8b93c;margin-bottom:8px">★★★★★</div><p style="font-size:15px;line-height:1.5;color:#2c2418">"The fall foliage week is genuinely the most stressful and most beautiful thing in any tycoon game I've played."</p><div style="font-family:'Oswald',sans-serif;font-size:11px;color:#8a795a;margin-top:10px">— Backpacker_Bex, 120 hrs played</div></div>
+      <div style="background:#fbf6e9;border:1px solid #cdb685;border-radius:8px;padding:18px;box-shadow:0 2px 6px rgba(60,45,20,.1)"><div style="font-family:'Oswald',sans-serif;font-size:12px;color:#e8b93c;margin-bottom:8px">★★★★☆</div><p style="font-size:15px;line-height:1.5;color:#2c2418">"Enshrined my first park and got handed a commission for the next one. This game has a whole career now?? Did not see that coming."</p><div style="font-family:'Oswald',sans-serif;font-size:11px;color:#8a795a;margin-top:10px">— firsttimekeeper, 60 hrs played</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== MILESTONES STRIP ===================== -->
-<section style="background:#1f3024;padding:48px 24px 52px;color:#f5eedb;border-top:1px solid #38503f">
-  <div style="max-width:1080px;margin:0 auto">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:26px">
+<!-- ===================== ROADMAP TEASER ===================== -->
+<section style="background:#1f3024;padding:52px 24px 58px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px">
       <div>
-        <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:3px;color:#e0b35c;margin-bottom:8px">THE TRAIL SO FAR</div>
-        <h2 style="font-family:Georgia,serif;font-size:clamp(26px,3.6vw,38px);color:#f5eedb;margin:0">From playable to fully pitched.</h2>
+        <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#e0b35c;margin-bottom:10px">THE TRAIL SO FAR</div>
+        <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(26px,4vw,38px);color:#f5eedb">53 updates. One long game.</h2>
       </div>
-      <a href="/campground-tycoon/roadmap.html" style="font-family:ui-monospace,Menlo,monospace;font-weight:bold;font-size:12px;letter-spacing:.5px;color:#2c1f08;background:linear-gradient(180deg,#e0b35c,#b98a2e);border:1px solid #8a6620;border-bottom-width:3px;padding:9px 16px;border-radius:8px;white-space:nowrap">See the full roadmap →</a>
+      <a class="ct-link" href="/campground-tycoon/roadmap.html" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;letter-spacing:.5px;color:#e0b35c;border:1px solid rgba(224,179,92,.5);border-radius:8px;padding:9px 15px;white-space:nowrap">Walk the full trail →</a>
     </div>
-    <div style="display:flex;gap:14px;flex-wrap:wrap">
-      <div style="flex:1 1 200px;min-width:170px;background:rgba(245,238,219,0.06);border:1px solid #38503f;border-radius:11px;padding:15px 16px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-          <span style="width:18px;height:18px;border-radius:50%;background:#5e7d45;display:inline-flex;align-items:center;justify-content:center;color:#f5eedb;font-size:11px;flex-shrink:0">✓</span>
-          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#9fb89b">v0.1 · SHIPPED</span>
-        </div>
-        <div style="font-family:Georgia,serif;font-size:17px;color:#f5eedb">First Campground</div>
-      </div>
-      <div style="flex:1 1 200px;min-width:170px;background:rgba(224,179,92,0.10);border:1px solid #b98a2e;border-radius:11px;padding:15px 16px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-          <span style="width:13px;height:13px;background:#e0b35c;transform:rotate(45deg);display:inline-block;flex-shrink:0;margin:2px"></span>
-          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#e0b35c">v0.3 · YOU ARE HERE</span>
-        </div>
-        <div style="font-family:Georgia,serif;font-size:17px;color:#f5eedb">The Region Update</div>
-      </div>
-      <div style="flex:1 1 200px;min-width:170px;background:rgba(245,238,219,0.04);border:1px dashed #4a6150;border-radius:11px;padding:15px 16px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-          <span style="width:16px;height:16px;border-radius:50%;border:2px dashed #728a6e;display:inline-block;flex-shrink:0"></span>
-          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#728a6e">v0.4 · UP NEXT</span>
-        </div>
-        <div style="font-family:Georgia,serif;font-size:17px;color:#cfe0c8">Guests &amp; new ground</div>
-      </div>
-      <div style="flex:1 1 200px;min-width:170px;background:rgba(245,238,219,0.04);border:1px dashed #4a6150;border-radius:11px;padding:15px 16px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-          <span style="width:16px;height:16px;border-radius:50%;border:2px dashed #728a6e;display:inline-block;flex-shrink:0"></span>
-          <span style="font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:1px;color:#728a6e">LATER · ON THE HORIZON</span>
-        </div>
-        <div style="font-family:Georgia,serif;font-size:17px;color:#cfe0c8">Past the treeline</div>
-      </div>
-    </div>
+    <div id="ctEras" style="display:flex;gap:8px;flex-wrap:wrap"></div>
   </div>
 </section>
 
 <!-- ===================== FINAL CTA ===================== -->
-<section id="wishlist" style="position:relative;padding:80px 24px;text-align:center;background:linear-gradient(180deg,rgba(12,17,13,0.35),rgba(12,17,13,0.82)),url(site_assets/picker_bg.png) center 55%/cover no-repeat,#0c110d;color:#f5eedb">
+<section style="position:relative;padding:80px 24px;text-align:center;overflow:hidden;background:linear-gradient(180deg,#161f17 0%,#22301f 42%,#4a4a2e 68%,#8a6136 86%,#b9863c 100%)">
+  <div style="position:absolute;left:0;right:0;bottom:0;height:56px;background:#182a1e;background-image:linear-gradient(135deg,transparent 50%,#182a1e 50%),linear-gradient(225deg,transparent 50%,#182a1e 50%);background-size:34px 40px;background-position:0 14px,17px 14px"></div>
   <div style="position:relative;max-width:680px;margin:0 auto">
-    <div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:5px;color:#e0b35c;margin-bottom:12px">COMING 2026</div>
-    <h2 style="font-family:Georgia,serif;font-size:clamp(32px,5.4vw,56px);line-height:1.02;text-shadow:0 2px 0 rgba(0,0,0,0.5),0 0 40px rgba(224,179,92,0.25)">Three plots of land are waiting.</h2>
-    <p style="font-family:Georgia,serif;font-style:italic;font-size:19px;color:#cfe0c8;margin:16px auto 30px;max-width:520px">Wishlist now and be first into the wilderness when the gates open.</p>
-    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap"><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#2c1f08;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 6px 18px rgba(224,179,92,0.28)"><span style="font-size:17px;line-height:1">◢</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">ON STEAM</span><span style="font-size:14px;font-weight:bold">Wishlist</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1">▰</span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">GET ON</span><span style="font-size:14px;font-weight:bold">itch.io</span></span></a><a href="#wishlist" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:10px;cursor:pointer;font-family:ui-monospace,Menlo,monospace;background:rgba(245,238,219,0.10);color:#f5eedb;border:1px solid rgba(245,238,219,0.4);border-bottom-width:1px;box-shadow:none"><span style="font-size:17px;line-height:1"></span><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:9px;letter-spacing:1px;opacity:0.8">DOWNLOAD</span><span style="font-size:14px;font-weight:bold">App Store</span></span></a></div></div>
+    <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:5px;color:#f0cd82;margin-bottom:14px">FREE TO PLAY · IN YOUR BROWSER</div>
+    <h2 style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:clamp(30px,5vw,50px);line-height:1.04;color:#f8f1de;text-shadow:0 2px 0 rgba(0,0,0,.35)">Three plots of land are waiting.</h2>
+    <p style="font-family:Georgia,serif;font-style:italic;font-size:18px;color:#f2ead4;margin:16px auto 28px;max-width:480px">No download, no account — just you, a patch of wilderness, and whatever the season brings.</p>
+    <a href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:10px;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.5px;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#241a06;border:1px solid #8a6620;border-bottom-width:4px;box-shadow:0 8px 20px rgba(0,0,0,.3)"><span style="font-size:16px">▶</span> Play Free on itch.io</a>
   </div>
 </section>
 
 <!-- ===================== FOOTER ===================== -->
-<footer style="background:#141a14;padding:30px 24px;text-align:center;color:#728a6e">
-  <div style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:8px">
-    <span style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid #e0b35c"></span>
-    <span style="font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:1px;color:#cfe0c8">CAMPGROUND TYCOON</span>
+<footer style="background:#0a0f0b;padding:34px 24px;text-align:center;color:#728a6e">
+  <div style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:12px">
+    <span style="font-family:Georgia,serif;font-size:13px;color:#8a6620">✱</span>
+    <span style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:15px;letter-spacing:.5px;color:#cfe0c8">CAMPGROUND TYCOON</span>
   </div>
-  <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px">An isometric pixel-art tycoon sim · Made with Georgia &amp; a lot of brass · © 2026</div>
+  <div style="display:flex;justify-content:center;gap:16px;margin-bottom:12px;flex-wrap:wrap">
+    <a class="ct-link" href="/campground-tycoon.html" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Home</a>
+    <a class="ct-link" href="/campground-tycoon/features.html" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Features</a>
+    <a class="ct-link" href="/campground-tycoon/regions.html" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Regions</a>
+    <a class="ct-link" href="/campground-tycoon/roadmap.html" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Roadmap</a>
+    <a class="ct-link" href="/" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">KiteSink ↗</a>
+  </div>
+  <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px">An isometric pixel-art tycoon sim · Made with Georgia &amp; a lot of brass · © 2026 KiteSink</div>
 </footer>
 
 </div>
 
-<script>
-(function(){
-  "use strict";
-
-  // ---------- Almanac (light) / Nightfall (dark) = shared theme ----------
-  // Drives this page's hero AND the roadmap page, via localStorage['ct_theme'].
-  // Hero visibility is handled by the [data-theme] CSS in <head>; here we just
-  // keep the toggle buttons in sync and persist the choice.
-  var btnA=document.getElementById('heroBtnA'), btnB=document.getElementById('heroBtnB');
-  function heroBtn(active){return 'font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.5px;cursor:pointer;padding:6px 11px;border-radius:7px;border:none;'+(active?'background:#e0b35c;color:#2c1f08;font-weight:bold':'background:transparent;color:#b9c9b3');}
-  function paintButtons(theme){
-    var light=theme!=='dark';
-    if(btnA) btnA.setAttribute('style',heroBtn(light));
-    if(btnB) btnB.setAttribute('style',heroBtn(!light));
-  }
-  function setTheme(theme){
-    document.documentElement.setAttribute('data-theme',theme);
-    paintButtons(theme);
-    try{localStorage.setItem('ct_theme',theme);}catch(e){}
-  }
-  paintButtons(document.documentElement.getAttribute('data-theme')||'light');
-  if(btnA) btnA.addEventListener('click',function(){setTheme('light');});
-  if(btnB) btnB.addEventListener('click',function(){setTheme('dark');});
-  // keep in sync if the roadmap (or another tab) changes the theme
-  window.addEventListener('storage',function(e){
-    if(e.key==='ct_theme'&&(e.newValue==='light'||e.newValue==='dark')){
-      document.documentElement.setAttribute('data-theme',e.newValue);
-      paintButtons(e.newValue);
-    }
-  });
-
-  // ---------- Seasons (live) — chips + tabs swap the screenshot & caption ----------
-  var SEASONS=[{"name":"Spring","shot":"site_assets/season_spring.png","cap":"Spring · Gulf Coast — muddy, slow, and the redfish are running."},{"name":"Summer","shot":"site_assets/season_summer.png","cap":"Summer · Rockies — the park crush. Pack them in while the sun holds."},{"name":"Fall","shot":"site_assets/season_fall.png","cap":"Fall · New England — the leaf-peeper goldrush. Your busiest week."},{"name":"Winter","shot":"site_assets/season_winter.png","cap":"Winter · Northwoods at night — dead quiet. Did you save enough?"}];
-  var curSeason=2;
-  var shot=document.getElementById('seasonShot'), cap=document.getElementById('seasonCap');
-  function chipStyle(active){return 'font-family:ui-monospace,Menlo,monospace;font-size:11px;padding:5px 11px;border-radius:6px;cursor:pointer;border:none;background:'+(active?'#e0b35c':'transparent')+';color:'+(active?'#2c1f08':'#9fb89b')+';font-weight:'+(active?'bold':'normal');}
-  function tabStyle(active){return 'font-family:Georgia,serif;font-size:15px;font-weight:bold;padding:9px 20px;border-radius:9px;cursor:pointer;border:none;background:'+(active?'#e0b35c':'rgba(245,238,219,0.08)')+';color:'+(active?'#2c1f08':'#b9c9b3')+';box-shadow:'+(active?'0 -2px 0 #8a6620 inset':'none');}
-  var chips=[].slice.call(document.querySelectorAll('.seasonchip'));
-  var tabs=[].slice.call(document.querySelectorAll('.seasontab'));
-  function setSeason(i){
-    curSeason=i;
-    if(shot){shot.src=SEASONS[i].shot;}
-    if(cap){cap.textContent=SEASONS[i].cap;}
-    chips.forEach(function(c){c.setAttribute('style',chipStyle(+c.dataset.season===i));});
-    tabs.forEach(function(t){t.setAttribute('style',tabStyle(+t.dataset.season===i));});
-  }
-  chips.forEach(function(c){c.addEventListener('click',function(){setSeason(+c.dataset.season);});});
-  tabs.forEach(function(t){t.addEventListener('click',function(){setSeason(+t.dataset.season);});});
-
-  // ---------- Region pins (live) — swap detail panel ----------
-  var REGIONS={"smokies":{"name":"Smokies","state":"Tennessee","abbr":"TN","dom":"#b98a2e","diff":1,"mix":[{"name":"Sightseers","color":"#b98a2e","w":60},{"name":"Backpackers","color":"#5e7d45","w":40}],"terr":[{"name":"forest","color":"#3d5a44","w":70},{"name":"hills","color":"#7a6a4a","w":50},{"name":"water","color":"#2f6d7a","w":20},{"name":"prairie","color":"#b98a2e","w":10}],"blurb":"Huge, forgiving, all-season sightseers. The friendly place to learn the ropes."},"keys":{"name":"Gulf Keys","state":"Florida","abbr":"FL","dom":"#2f6d7a","diff":1,"mix":[{"name":"Anglers","color":"#2f6d7a","w":55},{"name":"Sightseers","color":"#b98a2e","w":45}],"terr":[{"name":"water","color":"#2f6d7a","w":25},{"name":"prairie","color":"#b98a2e","w":40},{"name":"forest","color":"#3d5a44","w":30},{"name":"hills","color":"#7a6a4a","w":5}],"blurb":"Year-round warmth and almost no off-season — winter is the busy season here."},"bayou":{"name":"Bayou","state":"Louisiana","abbr":"LA","dom":"#2f6d7a","diff":2,"mix":[{"name":"Anglers","color":"#2f6d7a","w":55},{"name":"Sightseers","color":"#b98a2e","w":45}],"terr":[{"name":"water","color":"#2f6d7a","w":25},{"name":"forest","color":"#3d5a44","w":45},{"name":"prairie","color":"#b98a2e","w":30},{"name":"hills","color":"#7a6a4a","w":0}],"blurb":"Spring redfish runs; gentle winters keep a steady trickle of anglers."},"hillcountry":{"name":"Hill Country","state":"Texas","abbr":"TX","dom":"#b98a2e","diff":2,"mix":[{"name":"Sightseers","color":"#b98a2e","w":55},{"name":"Hunters","color":"#b5642a","w":45}],"terr":[{"name":"prairie","color":"#b98a2e","w":60},{"name":"hills","color":"#7a6a4a","w":35},{"name":"forest","color":"#3d5a44","w":25},{"name":"water","color":"#2f6d7a","w":10}],"blurb":"Spring festivals draw crowds; fall deer leases sprawl over open grassland."},"redrock":{"name":"Red Rock","state":"Arizona","abbr":"AZ","dom":"#b98a2e","diff":2,"mix":[{"name":"Sightseers","color":"#b98a2e","w":60},{"name":"Backpackers","color":"#5e7d45","w":40}],"terr":[{"name":"hills","color":"#7a6a4a","w":60},{"name":"prairie","color":"#b98a2e","w":40},{"name":"forest","color":"#3d5a44","w":15},{"name":"water","color":"#2f6d7a","w":5}],"blurb":"Winter peak, summer-heat lull — trade the snowbelt for desert dusk."},"greenmtns":{"name":"Green Mountains","state":"Vermont","abbr":"VT","dom":"#b98a2e","diff":2,"mix":[{"name":"Sightseers","color":"#b98a2e","w":60},{"name":"Backpackers","color":"#5e7d45","w":40}],"terr":[{"name":"forest","color":"#3d5a44","w":60},{"name":"hills","color":"#7a6a4a","w":50},{"name":"water","color":"#2f6d7a","w":20},{"name":"prairie","color":"#b98a2e","w":10}],"blurb":"A leaf-peeper goldrush every single fall. Spring stays muddy and slow."},"greatlakes":{"name":"Great Lakes","state":"Michigan","abbr":"MI","dom":"#2f6d7a","diff":2,"mix":[{"name":"Anglers","color":"#2f6d7a","w":55},{"name":"Sightseers","color":"#b98a2e","w":45}],"terr":[{"name":"water","color":"#2f6d7a","w":25},{"name":"forest","color":"#3d5a44","w":50},{"name":"prairie","color":"#b98a2e","w":20},{"name":"hills","color":"#7a6a4a","w":15}],"blurb":"Big-water walleye all summer; hunters fill the hardwoods come fall."},"cascades":{"name":"Cascades","state":"Washington","abbr":"WA","dom":"#5e7d45","diff":2,"mix":[{"name":"Backpackers","color":"#5e7d45","w":55},{"name":"Anglers","color":"#2f6d7a","w":45}],"terr":[{"name":"hills","color":"#7a6a4a","w":60},{"name":"forest","color":"#3d5a44","w":55},{"name":"water","color":"#2f6d7a","w":25},{"name":"prairie","color":"#b98a2e","w":5}],"blurb":"Long, wet shoulder seasons keep a steady stream of backpackers moving."},"highdesert":{"name":"High Desert","state":"Oregon","abbr":"OR","dom":"#5e7d45","diff":2,"mix":[{"name":"Backpackers","color":"#5e7d45","w":55},{"name":"Anglers","color":"#2f6d7a","w":45}],"terr":[{"name":"prairie","color":"#b98a2e","w":50},{"name":"hills","color":"#7a6a4a","w":40},{"name":"water","color":"#2f6d7a","w":20},{"name":"forest","color":"#3d5a44","w":20}],"blurb":"Fly-fishing rivers and big trail miles under wide high-desert skies."},"yellowstone":{"name":"Yellowstone Gate","state":"Wyoming","abbr":"WY","dom":"#b98a2e","diff":3,"mix":[{"name":"Sightseers","color":"#b98a2e","w":60},{"name":"Backpackers","color":"#5e7d45","w":40}],"terr":[{"name":"hills","color":"#7a6a4a","w":55},{"name":"forest","color":"#3d5a44","w":45},{"name":"prairie","color":"#b98a2e","w":35},{"name":"water","color":"#2f6d7a","w":20}],"blurb":"A summer park crush, then a hard mountain quiet. Bank it while it lasts."},"rockies":{"name":"Rockies","state":"Colorado","abbr":"CO","dom":"#5e7d45","diff":3,"mix":[{"name":"Backpackers","color":"#5e7d45","w":55},{"name":"Sightseers","color":"#b98a2e","w":45}],"terr":[{"name":"hills","color":"#7a6a4a","w":70},{"name":"forest","color":"#3d5a44","w":45},{"name":"prairie","color":"#b98a2e","w":20},{"name":"water","color":"#2f6d7a","w":15}],"blurb":"Summer-loaded and gorgeous, then buried in winter. Beauty pays here."},"northwoods":{"name":"Northwoods","state":"Wisconsin","abbr":"WI","dom":"#2f6d7a","diff":3,"mix":[{"name":"Anglers","color":"#2f6d7a","w":55},{"name":"Hunters","color":"#b5642a","w":45}],"terr":[{"name":"forest","color":"#3d5a44","w":60},{"name":"water","color":"#2f6d7a","w":25},{"name":"prairie","color":"#b98a2e","w":15},{"name":"hills","color":"#7a6a4a","w":10}],"blurb":"Feast or famine: summer fish, a fall hunt, then dead snow. Plan ahead."},"boundary":{"name":"Boundary Waters","state":"Minnesota","abbr":"MN","dom":"#2f6d7a","diff":3,"mix":[{"name":"Anglers","color":"#2f6d7a","w":55},{"name":"Hunters","color":"#b5642a","w":45}],"terr":[{"name":"forest","color":"#3d5a44","w":60},{"name":"water","color":"#2f6d7a","w":25},{"name":"hills","color":"#7a6a4a","w":15},{"name":"prairie","color":"#b98a2e","w":10}],"blurb":"Remote paddle-in fishing and brutal winters. For the steady-handed."},"maine":{"name":"North Woods","state":"Maine","abbr":"ME","dom":"#b5642a","diff":4,"mix":[{"name":"Hunters","color":"#b5642a","w":55},{"name":"Backpackers","color":"#5e7d45","w":45}],"terr":[{"name":"forest","color":"#3d5a44","w":70},{"name":"hills","color":"#7a6a4a","w":40},{"name":"water","color":"#2f6d7a","w":20},{"name":"prairie","color":"#b98a2e","w":5}],"blurb":"A massive fall hunting spike — then snowed in for months. Brutal."},"bigsky":{"name":"Big Sky","state":"Montana","abbr":"MT","dom":"#b5642a","diff":4,"mix":[{"name":"Hunters","color":"#b5642a","w":55},{"name":"Backpackers","color":"#5e7d45","w":45}],"terr":[{"name":"prairie","color":"#b98a2e","w":50},{"name":"hills","color":"#7a6a4a","w":50},{"name":"forest","color":"#3d5a44","w":40},{"name":"water","color":"#2f6d7a","w":10}],"blurb":"Remote, short season, and an enormous fall hunting wave. The deep end."}};
-  var pins=[].slice.call(document.querySelectorAll('.regpin'));
-  var elName=document.getElementById('regName'), elState=document.getElementById('regState'),
-      elDiffDots=document.getElementById('diffDots'), elDiffLabel=document.getElementById('diffLabel'),
-      elMix=document.getElementById('mixBars'), elTerr=document.getElementById('terrBars'),
-      elBlurb=document.getElementById('regBlurb');
-  var diffLabels=['','Gentle','Moderate','Tough','Brutal'];
-  function selStyle(v,sel){
-    return 'position:absolute;left:'+(v.__x)+';top:'+(v.__y)+';transform:translate(-50%,-50%)'+(sel?' translateY(-3px)':'')+';display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;'+
-      'background:'+(sel?'#f7f1e1':'linear-gradient(175deg,#efe4c4,#e2d2a8)')+';border:1px solid '+(sel?'#b98a2e':'#b3996b')+';'+
-      'box-shadow:'+(sel?'0 0 0 2px rgba(185,138,46,0.55),0 8px 18px rgba(20,14,6,0.4)':'0 1px 3px rgba(20,14,6,0.3)')+';z-index:'+(sel?20:5);
-  }
-  function selectRegion(key){
-    var r=REGIONS[key]; if(!r) return;
-    elName.textContent=r.name;
-    elState.textContent=r.state+' · '+r.abbr;
-    elDiffLabel.textContent=diffLabels[r.diff];
-    var dd='';
-    for(var i=1;i<=4;i++){dd+='<span style="width:9px;height:9px;border-radius:50%;display:inline-block;'+(i<=r.diff?'background:#b5642a':'background:rgba(44,36,24,0.18)')+'"></span>';}
-    elDiffDots.innerHTML=dd;
-    var mx='';
-    r.mix.forEach(function(m){mx+='<div style="display:flex;align-items:center;gap:9px;margin-bottom:7px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">'+m.name+'</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:'+m.w+'%;background:'+m.color+'"></div></div></div>';});
-    elMix.innerHTML=mx;
-    var tr='';
-    r.terr.forEach(function(t){tr+='<div style="display:flex;align-items:center;gap:9px;margin-bottom:6px"><span style="width:78px;font-family:ui-monospace,Menlo,monospace;font-size:10px;text-transform:uppercase;color:#5f5036">'+t.name+'</span><div style="flex:1;height:9px;background:rgba(44,36,24,0.14);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:'+t.w+'%;background:'+t.color+';transition:width .4s ease"></div></div></div>';});
-    elTerr.innerHTML=tr;
-    elBlurb.textContent=r.blurb;
-    // update pin styles
-    pins.forEach(function(p){
-      var sel=p.dataset.region===key;
-      // keep original left/top from current style
-      var cs=p.getAttribute('style');
-      var left=(cs.match(/left:([^;]+);/)||[])[1];
-      var top=(cs.match(/top:([^;]+);/)||[])[1];
-      p.setAttribute('style','position:absolute;left:'+left+';top:'+top+';transform:translate(-50%,-50%)'+(sel?' translateY(-3px)':'')+';display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;background:'+(sel?'#f7f1e1':'linear-gradient(175deg,#efe4c4,#e2d2a8)')+';border:1px solid '+(sel?'#b98a2e':'#b3996b')+';box-shadow:'+(sel?'0 0 0 2px rgba(185,138,46,0.55),0 8px 18px rgba(20,14,6,0.4)':'0 1px 3px rgba(20,14,6,0.3)')+';z-index:'+(sel?20:5));
-      var dot=p.querySelector('.regdot');
-      if(dot) dot.style.background=REGIONS[p.dataset.region].dom;
-    });
-  }
-  pins.forEach(function(p){p.addEventListener('click',function(){selectRegion(p.dataset.region);});});
-
-})();
-</script>
-
-<script>
-/* Graceful fallback for screenshot assets not yet present (site_assets/*.png).
-   When a real PNG is dropped into public/site_assets/, the image loads normally. */
-(function(){
-  function patch(img){
-    if(img.dataset.fbk) return; img.dataset.fbk='1';
-    img.addEventListener('error',function(){
-      if(img.dataset.failed) return; img.dataset.failed='1';
-      img.removeAttribute('src');
-      img.style.minHeight='220px';
-      img.style.display='block';
-      img.style.background='repeating-linear-gradient(45deg,#cdbf9a,#cdbf9a 12px,#bfb085 12px,#bfb085 24px)';
-    },{once:false});
-  }
-  document.querySelectorAll('img[src*="site_assets/"]').forEach(function(img){
-    patch(img);
-    if(img.complete && img.naturalWidth===0) img.dispatchEvent(new Event('error'));
-  });
-})();
-</script>
-
-<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#8a7a58"><span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="color:#221c10">&copy; 2026 KiteSink</span></span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="/blog.html" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="/about.html" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span></div>
 <script src="/ks.js"></script>
+<script>
+/* ===== Campground Tycoon — landing: sunburst, teaser pins, era stubs, mini-demo ===== */
+(function () {
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+
+  // --- hero sunburst rays ---
+  var rays = document.getElementById("ctRays");
+  if (rays) {
+    var html = "";
+    for (var i = 0; i < 16; i++) {
+      var long = i % 2 === 0, len = long ? 98 : 68;
+      html += '<div style="position:absolute;left:50%;top:50%;width:' + (long ? 3 : 2) + 'px;height:' + len + 'px;background:' +
+        (long ? 'rgba(224,179,92,.55)' : 'rgba(224,179,92,.32)') + ';transform-origin:50% 0;transform:translate(-50%,0) rotate(' + (i * 22.5) + 'deg)"></div>';
+    }
+    rays.insertAdjacentHTML("afterbegin", html);
+  }
+
+  // --- regions teaser pins (30, family-colored) ---
+  var FAM = { pacific:'#3d5a44', rockies:'#5e7d45', desert:'#b5642a', northwoods:'#2f6d7a', appalachian:'#8a6620', plains:'#b98a2e', bayou:'#2f6d7a', coastal:'#b98a2e' };
+  var REGIONS = [['washington',12,18,'pacific'],['oregon',18,35,'desert'],['montana',27,16,'rockies'],['wyoming',28,31,'rockies'],['colorado',33,45,'rockies'],['arizona',24,58,'desert'],['texas',45,67,'plains'],['minnesota',49,14,'northwoods'],['wisconsin',56,28,'northwoods'],['michigan',68,23,'northwoods'],['maine',88,13,'northwoods'],['vermont',80,20,'appalachian'],['tennessee',66,51,'appalachian'],['louisiana',56,67,'bayou'],['florida',74,72,'coastal'],['utah',19,45,'desert'],['newmexico',33,63,'desert'],['georgia',69,64,'bayou'],['mississippi',61,59,'bayou'],['idaho',20,25,'rockies'],['westvirginia',74,40,'appalachian'],['kentucky',63,42,'appalachian'],['california',8,43,'pacific'],['crater',9,28,'pacific'],['kansas',46,49,'plains'],['southdakota',40,26,'desert'],['nebraska',42,37,'plains'],['northcarolina',87,51,'coastal'],['virginia',83,41,'coastal'],['southcarolina',78,56,'coastal']];
+  var map = document.getElementById("ctTeaserMap");
+  if (map) {
+    var pins = "";
+    REGIONS.forEach(function (r) {
+      pins += '<span style="position:absolute;left:' + r[1] + '%;top:' + (r[2] * 1.05) + '%;transform:translate(-50%,-50%);width:9px;height:9px;border-radius:50%;background:' +
+        (FAM[r[3]] || '#b98a2e') + ';box-shadow:0 0 0 2px rgba(245,238,219,.8),0 1px 3px rgba(20,14,6,.4)"></span>';
+    });
+    map.insertAdjacentHTML("afterbegin", pins);
+  }
+
+  // --- roadmap era stubs ---
+  var eras = [['Foundation','#5e7d45'],['The Long Game','#5e7d45'],['The Region Arc','#5e7d45'],['The Park Service','#5e7d45'],['The Living Regions','#5e7d45'],['What’s Ahead','#e0b35c']];
+  var eraEl = document.getElementById("ctEras");
+  if (eraEl) {
+    eraEl.innerHTML = eras.map(function (e) {
+      return '<div style="display:flex;align-items:center;gap:7px;font-family:Oswald,sans-serif;font-size:11px;letter-spacing:.5px;color:#cfd9c8;background:#26392c;border:1px solid #38503f;border-radius:20px;padding:7px 14px">' +
+        '<span style="width:7px;height:7px;border-radius:50%;background:' + e[1] + ';display:inline-block"></span><span>' + esc(e[0]) + '</span></div>';
+    }).join("");
+  }
+
+  // --- mini-demo ---
+  var board = document.getElementById("ctBoard");
+  if (!board) return;
+  var ROWS = 6, COLS = 6;
+  var TOOLS = { tent:{name:'Tent',cost:40,beauty:4,site:true}, rv:{name:'RV Pad',cost:90,beauty:8,site:true}, cabin:{name:'Cabin',cost:160,beauty:14,site:true}, flower:{name:'Flowers',cost:45,beauty:3,site:false}, lamp:{name:'Lamp',cost:65,beauty:3,site:false}, bulldoze:{name:'Clear',cost:0,beauty:0,site:false} };
+  var TOOL_ORDER = ['tent','rv','cabin','flower','lamp','bulldoze'];
+  var SEASONS = [ {key:'spring',name:'Spring',grass:'#5e7a4a',dirt:'#8a7a5e',water:'#4a7a92'}, {key:'summer',name:'Summer',grass:'#55714a',dirt:'#8a7a5e',water:'#3f6d86'}, {key:'fall',name:'Fall',grass:'#6e6b3f',dirt:'#857257',water:'#3a647c'}, {key:'winter',name:'Winter',grass:'#c9cdd2',dirt:'#9a917e',water:'#9fb6c4'} ];
+  var TCOLOR = { good:'#5e7d45', money:'#b98a2e', bad:'#b14a32', warn:'#c2992f', info:'#8a795a' };
+  var TW = 76, TH = 38, originX = (ROWS - 1) * TW / 2;
+  var state, tid = 0;
+
+  function freshGrid() {
+    var water = { '4-1':1,'5-1':1,'4-0':1,'5-0':1 }, grid = [];
+    for (var row = 0; row < ROWS; row++) for (var col = 0; col < COLS; col++) {
+      var border = (row === 0 || col === 0 || row === ROWS - 1 || col === COLS - 1);
+      grid.push({ type: water[row + '-' + col] ? 'water' : (border ? 'tree' : 'grass'), built: null });
+    }
+    return grid;
+  }
+  function recompute(grid) { var b = 10; grid.forEach(function (t) { if (t.built) b += TOOLS[t.built].beauty; }); return Math.min(100, b); }
+  function toast(text, kind) {
+    var id = ++tid; state.toasts.push({ id: id, text: text, kind: kind || 'info' }); renderToasts();
+    setTimeout(function () { state.toasts = state.toasts.filter(function (t) { return t.id !== id; }); renderToasts(); }, 3000);
+  }
+  var built = {
+    tree:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:15px solid #2c4a30;pointer-events:none"></span>',
+    tent:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-bottom:17px solid #c79a52;pointer-events:none"></span>',
+    rv:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);width:30px;height:13px;border-radius:3px;background:#e9e4d4;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15);pointer-events:none"></span>',
+    cabin:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);pointer-events:none"><span style="display:block;width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-bottom:11px solid #5a3d22;margin:0 auto"></span><span style="display:block;width:22px;height:11px;background:#7a5230;margin:0 auto"></span></span>',
+    flower:'<span style="position:absolute;left:50%;bottom:11px;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:#d36b7a;box-shadow:8px 2px 0 #e0b35c,-8px 2px 0 #9b6fb0;pointer-events:none"></span>',
+    lamp:'<span style="position:absolute;left:50%;bottom:9px;transform:translateX(-50%);pointer-events:none"><span style="display:block;width:9px;height:9px;border-radius:50%;background:#e8b93c;box-shadow:0 0 8px #e8b93c;margin:0 auto 2px"></span><span style="display:block;width:3px;height:16px;background:#3a3122;margin:0 auto"></span></span>'
+  };
+
+  function place(idx) {
+    var row = (idx / COLS) | 0, col = idx % COLS;
+    var border = (row === 0 || col === 0 || row === ROWS - 1 || col === COLS - 1);
+    var t = state.grid[idx];
+    if (t.type !== 'grass' || border) { toast('Build on the open plots in the middle.', 'warn'); return; }
+    if (state.tool === 'bulldoze') {
+      if (!t.built) return;
+      state.grid[idx] = { type: t.type, built: null }; toast('Cleared the plot.', 'info');
+      state.beauty = recompute(state.grid); renderBoard(); renderHud(); return;
+    }
+    var def = TOOLS[state.tool];
+    if (t.built) { toast('That plot is taken — Clear it first.', 'warn'); return; }
+    if (state.cash < def.cost) { toast('Not enough cash for a ' + def.name + '.', 'bad'); return; }
+    state.grid[idx] = { type: t.type, built: state.tool };
+    state.cash -= def.cost; state.beauty = recompute(state.grid);
+    toast('Built a ' + def.name + '   −$' + def.cost, 'money'); renderBoard(); renderHud();
+  }
+
+  function renderHud() {
+    document.getElementById("ctCash").textContent = '$' + state.cash.toLocaleString();
+    document.getElementById("ctBeauty").textContent = Math.round(state.beauty);
+  }
+  function renderSeasons() {
+    document.getElementById("ctSeasons").innerHTML = SEASONS.map(function (se, i) {
+      var on = i === state.season;
+      return '<button type="button" data-season="' + i + '" style="font-family:Oswald,sans-serif;font-weight:600;font-size:11px;letter-spacing:.5px;padding:6px 12px;border-radius:6px;cursor:pointer;border:1px solid ' +
+        (on ? '#8a6620' : '#c9b78a') + ';background:' + (on ? '#e0b35c' : '#f5eedb') + ';color:' + (on ? '#2c1f08' : '#5f5036') + '">' + se.name + '</button>';
+    }).join("");
+  }
+  function renderTools() {
+    document.getElementById("ctTools").innerHTML = TOOL_ORDER.map(function (k) {
+      var d = TOOLS[k], on = state.tool === k;
+      return '<button type="button" data-tool="' + k + '" style="display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:68px;padding:7px 11px;border-radius:8px;cursor:pointer;text-align:left;' +
+        (on ? 'background:linear-gradient(180deg,#e0b35c,#cda043);border:1px solid #8a6620;border-bottom-width:3px;color:#2c1f08' : 'background:#fbf6e9;border:1px solid #cdb685;color:#2c2418') + '">' +
+        '<span style="font-family:Oswald,sans-serif;font-weight:600;font-size:12px">' + d.name + '</span>' +
+        '<span style="font-family:Oswald,sans-serif;font-size:10px;opacity:.8">' + (k === 'bulldoze' ? 'free' : '$' + d.cost) + '</span></button>';
+    }).join("");
+  }
+  function renderBoard() {
+    var sc = SEASONS[state.season], html = "";
+    state.grid.forEach(function (t, idx) {
+      var row = (idx / COLS) | 0, col = idx % COLS;
+      var left = originX + (col - row) * TW / 2, top = (col + row) * TH / 2;
+      var border = (row === 0 || col === 0 || row === ROWS - 1 || col === COLS - 1);
+      var buildable = (t.type === 'grass' && !border);
+      var fill = t.type === 'water' ? sc.water : (t.built && TOOLS[t.built].site ? sc.dirt : sc.grass);
+      var z = (row + col) * 2;
+      html += '<button type="button" class="ct-demoTile' + (buildable ? ' build' : '') + '" data-idx="' + idx + '" style="position:absolute;left:' + left + 'px;top:' + top + 'px;width:' + TW + 'px;height:' + (TH * 2) +
+        'px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:' + fill + ';box-shadow:inset 0 0 0 1px rgba(20,14,6,.12);transition:filter .12s,background .45s;z-index:' + z + ';' +
+        (buildable && !t.built ? 'outline:1px dashed rgba(44,36,24,.22);outline-offset:-8px;' : '') + '">' +
+        (t.type === 'tree' ? built.tree : (t.built ? (built[t.built] || '') : '')) + '</button>';
+    });
+    board.innerHTML = html;
+  }
+  function renderToasts() {
+    document.getElementById("ctToasts").innerHTML = state.toasts.map(function (n) {
+      return '<div style="pointer-events:none;padding:7px 12px;font-family:Oswald,sans-serif;font-size:12px;line-height:1.3;border-radius:6px;background:#f5eedb;border:1px solid #b3996b;border-left:4px solid ' +
+        (TCOLOR[n.kind] || '#8a795a') + ';box-shadow:0 2px 8px rgba(20,14,6,.3);animation:ctToast .3s ease">' + esc(n.text) + '</div>';
+    }).join("");
+  }
+
+  function reset() { state = { cash: 150, beauty: 10, tool: 'tent', grid: freshGrid(), season: 2, toasts: [] }; renderSeasons(); renderTools(); renderBoard(); renderHud(); renderToasts(); }
+  reset();
+  state.toasts = []; // reset toast from init suppressed
+
+  document.getElementById("ctSeasons").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-season]"); if (!btn) return;
+    state.season = +btn.getAttribute("data-season"); renderSeasons(); renderBoard();
+  });
+  document.getElementById("ctTools").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-tool]"); if (!btn) return;
+    state.tool = btn.getAttribute("data-tool"); renderTools();
+  });
+  board.addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-idx]"); if (!btn) return; place(+btn.getAttribute("data-idx"));
+  });
+  document.getElementById("ctReset").addEventListener("click", function () { reset(); toast('Fresh plot of land. Make camp.', 'info'); });
+})();
+</script>
 </body>
 </html>
