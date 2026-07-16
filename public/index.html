@@ -31,7 +31,22 @@
   .hv7:hover { border-color:#2f5436; color:#2f5436; }
   .hv8:hover { text-decoration:underline; }
   .hv9:hover { opacity:.72; }
+  /* Backline hero card — the on-call toggle is class-driven (state on #stkBackline)
+     so night mode can restyle it without fighting inline styles. */
+  .blTrack { position:relative; width:56px; height:30px; border-radius:20px; background:#b9ac8e;
+             flex-shrink:0; box-shadow:inset 0 1px 3px rgba(0,0,0,.35); transition:background .22s ease; }
+  .blKnob  { position:absolute; left:3px; top:3px; width:24px; height:24px; border-radius:50%;
+             background:#f3ecd9; box-shadow:0 2px 5px rgba(0,0,0,.4); transition:left .22s ease; }
+  .blDemand { opacity:.4; transition:opacity .22s ease; }
+  #stkBackline.on .blTrack { background:#3a6b46; }
+  #stkBackline.on .blKnob { left:29px; }
+  #stkBackline.on .blDemand { opacity:1; }
+  .blLink:hover { color:#1d3a22; }
+  html[data-theme="dark"] .blTrack { background:#4d4536; }
+  html[data-theme="dark"] .blDark { background:#131009 !important; box-shadow:inset 0 0 0 1px rgba(236,226,203,.08); }
+  html[data-theme="dark"] .blLink:hover { color:#a8e0b8; }
 </style>
+  <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
   <link rel="stylesheet" href="/ks.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
@@ -102,11 +117,48 @@
         </div>
       </div>
 
-      <!-- hero card stack: 3 project cards, click/tap (or Enter) shuffles front → back -->
+      <!-- hero card stack: 4 project cards, click/tap (or Enter) shuffles front → back -->
       <div style="flex:1 1 320px;min-width:290px;max-width:420px;position:relative;padding-top:118px">
         <svg width="110" height="110" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;top:-16px;right:16px;animation:bob 5s ease-in-out infinite;z-index:6;pointer-events:none"><polygon points="32,4 52,26 32,48 12,26" fill="#b07227"></polygon><line x1="32" y1="4" x2="32" y2="48" stroke="#ece2cb" stroke-width="1.6"></line><line x1="12" y1="26" x2="52" y2="26" stroke="#ece2cb" stroke-width="1.6"></line><path d="M32 48 Q38 54 32 58 Q26 62 32 64" stroke="#b07227" stroke-width="1.8" stroke-linecap="round" fill="none"></path></svg>
         <div id="stack" role="button" tabindex="0" aria-label="Project cards — press to shuffle the stack" style="position:relative;height:358px">
-          <div id="stkSotd" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(0px) scale(1) rotate(-1deg);opacity:1;z-index:3">
+          <div id="stkBackline" class="on" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(0px) scale(1) rotate(-1deg);opacity:1;z-index:4">
+            <div style="border:1.5px solid rgba(34,28,16,.2);border-radius:14px;background:#f3ecd9;padding:22px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+                <div style="display:flex;align-items:center;gap:11px">
+                  <div class="blDark" style="width:30px;height:30px;border-radius:8px;background:#1d1810;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:7px;flex-shrink:0" aria-hidden="true">
+                    <span style="width:3px;height:7px;background:#2f5436;border-radius:2px"></span>
+                    <span style="width:3px;height:14px;background:#e0b877;border-radius:2px"></span>
+                    <span style="width:3px;height:10px;background:#3a6b46;border-radius:2px"></span>
+                  </div>
+                  <span style="font:800 18px 'Geist',sans-serif;letter-spacing:-.03em;color:#1d1810">Backline</span>
+                </div>
+                <span style="font:600 10px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.12em;color:#8a7a58;border:1px solid rgba(34,28,16,.22);border-radius:20px;padding:4px 9px;white-space:nowrap">For players</span>
+              </div>
+              <div class="blToggle blDark" role="switch" tabindex="0" aria-checked="true" aria-label="Backline demo — on call" style="display:flex;align-items:center;justify-content:space-between;background:#1d1810;border-radius:12px;padding:16px 18px;cursor:pointer;user-select:none;-webkit-user-select:none">
+                <div style="min-width:0">
+                  <div class="blTitle" style="font:600 15px 'Geist',sans-serif;color:#f0e8d6;letter-spacing:-.01em">You&rsquo;re on call</div>
+                  <div class="blSub" style="font:500 11px 'Geist Mono',monospace;color:#9a8b6d;margin-top:2px">Austin, TX · bass, guitar</div>
+                </div>
+                <div class="blTrack"><span class="blKnob"></span></div>
+              </div>
+              <div class="blDemand">
+                <div style="font:500 12px 'Geist Mono',monospace;color:#5e5238;margin:16px 0 2px"><span style="color:#8a5a18;font-weight:600">3 bands</span> within 2 mi need bass tonight</div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid rgba(34,28,16,.12)">
+                  <div style="min-width:0"><div style="font:600 14px 'Geist',sans-serif;color:#1d1810">The Velvet Hours</div><div style="font:500 10.5px 'Geist Mono',monospace;color:#8a7a58;margin-top:1px">9:00 · Continental Club</div></div>
+                  <span style="font:600 13px 'Geist Mono',monospace;color:#2f5436;flex-shrink:0">$130</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid rgba(34,28,16,.12)">
+                  <div style="min-width:0"><div style="font:600 14px 'Geist',sans-serif;color:#1d1810">Ramona Fault</div><div style="font:500 10.5px 'Geist Mono',monospace;color:#8a7a58;margin-top:1px">10:30 · Hole in the Wall</div></div>
+                  <span style="font:600 13px 'Geist Mono',monospace;color:#2f5436;flex-shrink:0">$90</span>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid rgba(34,28,16,.14)">
+                <span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58">Flip on. Get the call.</span>
+                <a href="/backline.html" class="blLink" style="font:600 12px 'Geist Mono',monospace;color:#2f5436">List yourself ↗</a>
+              </div>
+            </div>
+          </div>
+          <div id="stkSotd" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(24px) scale(.955) rotate(1.4deg);opacity:.93;z-index:3">
             <div style="border:1.5px solid rgba(34,28,16,.2);border-radius:14px;background:#f3ecd9;padding:20px 22px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px"><span style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.13em;color:#8a5a18">♪ Song of the day</span><span style="display:flex;align-items:center;gap:6px;font:600 10px 'Geist Mono',monospace;color:#2f5436"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:pulse 2.4s ease-in-out infinite"></span>TODAY</span></div>
               <div style="display:flex;align-items:center;gap:15px">
@@ -118,7 +170,7 @@
               <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:13px"><span style="font:500 11px 'Geist Mono',monospace;color:#8a7a58">a daily music rec · no. 158</span><a href="/song-of-the-day.html" style="font:600 12px 'Geist Mono',monospace;color:#2f5436" class="hv8">App Store ↗</a></div>
             </div>
           </div>
-          <div id="stkVantix" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(26px) scale(.95) rotate(1.4deg);opacity:.92;z-index:2">
+          <div id="stkVantix" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(44px) scale(.915) rotate(-1.6deg);opacity:.84;z-index:2">
             <div style="border:1.5px solid rgba(176,114,39,.45);border-radius:14px;background:#f3ecd9;padding:20px 22px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.13em;color:#8a5a18">◈ Vantix · the periodization OS</span><span style="display:flex;align-items:center;gap:6px;font:600 10px 'Geist Mono',monospace;color:#8a5a18"><span style="width:6px;height:6px;border-radius:50%;background:#b07227;animation:pulse 2.4s ease-in-out infinite"></span>WIP</span></div>
               <div style="font:700 20px/1.15 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Every fitness dot.<br>One instrument.</div>
@@ -132,7 +184,7 @@
               <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;border-top:1px dashed rgba(34,28,16,.2)"><span style="font:500 10px 'Geist Mono',monospace;color:#8a7a58;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">▽ under · ● band · ▲ over</span><a href="/vantix.html" style="font:600 12px 'Geist Mono',monospace;color:#8a5a18;white-space:nowrap;flex-shrink:0;margin-left:10px" class="hv8">vantix.kitesink.com ↗</a></div>
             </div>
           </div>
-          <div id="stkCgt" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(48px) scale(.9) rotate(-1.6deg);opacity:.8;z-index:1">
+          <div id="stkCgt" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(62px) scale(.88) rotate(1.2deg);opacity:.74;z-index:1">
             <div style="border:1.5px solid rgba(34,28,16,.2);border-radius:14px;background:#f3ecd9;padding:20px 22px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.13em;color:#2f5436">⛺ Campground Tycoon · game</span><span style="display:flex;align-items:center;gap:6px;font:600 10px 'Geist Mono',monospace;color:#2f5436"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:pulse 3.6s ease-in-out infinite"></span>LIVE · DEMO</span></div>
               <div style="flex:1;min-height:128px;border-radius:10px;background:url('/site_assets/picker_bg.png') center/cover;position:relative;border:1.5px solid rgba(34,28,16,.18)"><span style="position:absolute;top:10px;right:10px;font:700 9px 'Geist Mono',monospace;letter-spacing:.08em;background:#e0b35c;color:#221c10;border-radius:30px;padding:4px 10px">▶ PLAYABLE DEMO</span></div>
@@ -152,6 +204,7 @@
         <span style="padding:0 22px">SONG OF THE DAY</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">CAMPGROUND TYCOON</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">VANTIX</span><span style="color:#d8b07a">✱</span>
+        <span style="padding:0 22px">BACKLINE</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">THE BLOG</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">LISTENING CLUB</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">GAMES</span><span style="color:#d8b07a">✱</span>
@@ -161,6 +214,7 @@
         <span style="padding:0 22px">SONG OF THE DAY</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">CAMPGROUND TYCOON</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">VANTIX</span><span style="color:#d8b07a">✱</span>
+        <span style="padding:0 22px">BACKLINE</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">THE BLOG</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">LISTENING CLUB</span><span style="color:#d8b07a">✱</span>
         <span style="padding:0 22px">GAMES</span><span style="color:#d8b07a">✱</span>
@@ -199,8 +253,18 @@
       <div style="display:flex;align-items:center;gap:10px;font:600 13px 'Geist Mono',monospace;color:#2f5436;white-space:nowrap;margin-left:auto">Play demo <span style="width:34px;height:34px;border:1.5px solid #2f5436;border-radius:50%;display:flex;align-items:center;justify-content:center">↗</span></div>
     </a>
 
+    <a href="/backline.html" style="display:flex;flex-wrap:wrap;gap:18px 28px;padding:30px 0;border-top:2px solid rgba(34,28,16,.2);align-items:center;transition:background .2s" class="hv5">
+      <span style="font:700 15px 'Geist Mono',monospace;color:#a89878;width:34px;flex-shrink:0">03</span><div style="width:118px;height:78px;border-radius:9px;flex-shrink:0;background:#111216;border:1.5px solid rgba(34,28,16,.2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden" aria-hidden="true"><div style="width:11px;height:11px;border-radius:50%;background:#f8ab3c;box-shadow:0 0 12px #f8ab3c"></div><div style="position:absolute;top:calc(50% + 7px);width:2px;height:20px;background:linear-gradient(#f8ab3c,transparent)"></div></div>
+      <div style="flex:1 1 380px;min-width:240px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:7px;font:600 11px 'Geist Mono',monospace;flex-wrap:wrap"><span style="display:flex;align-items:center;gap:7px;color:#8a5a18"><span style="width:8px;height:8px;border-radius:50%;background:#b07227;animation:pulse 2.4s ease-in-out infinite"></span>WIP · PROTOTYPE</span><span style="color:#a89878">MUSICIANS · SOCIAL</span></div>
+        <h3 style="font:700 30px 'Geist',sans-serif;letter-spacing:-.025em;color:#1d1810;margin:0">Backline</h3>
+        <p style="font:400 15px/1.55 'Geist',sans-serif;color:#5e5238;margin:7px 0 0;max-width:560px">A local-first booking network for working musicians. Find a sub who's free tonight, watch a reel of them actually playing, message, book &amp; pay — all before soundcheck.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font:600 13px 'Geist Mono',monospace;color:#8a5a18;white-space:nowrap;margin-left:auto">See Backline <span style="width:34px;height:34px;border:1.5px solid #b07227;border-radius:50%;display:flex;align-items:center;justify-content:center">↗</span></div>
+    </a>
+
     <a href="/vantix.html" style="display:flex;flex-wrap:wrap;gap:18px 28px;padding:30px 0;border-top:2px solid rgba(34,28,16,.2);border-bottom:2px solid rgba(34,28,16,.2);align-items:center;transition:background .2s;background:linear-gradient(90deg,rgba(176,114,39,.07),transparent 65%)" class="hv6">
-      <span style="font:700 15px 'Geist Mono',monospace;color:#a89878;width:34px;flex-shrink:0">03</span><div style="width:118px;height:78px;border-radius:9px;flex-shrink:0;background:repeating-linear-gradient(-45deg,#f3ecd9,#f3ecd9 7px,#ece2cb 7px,#ece2cb 14px);border:1.5px solid rgba(176,114,39,.4);display:flex;align-items:center;justify-content:center"><span style="font:600 9px 'Geist Mono',monospace;color:#8a5a18;letter-spacing:.1em">APP SHOT</span></div>
+      <span style="font:700 15px 'Geist Mono',monospace;color:#a89878;width:34px;flex-shrink:0">04</span><div style="width:118px;height:78px;border-radius:9px;flex-shrink:0;background:repeating-linear-gradient(-45deg,#f3ecd9,#f3ecd9 7px,#ece2cb 7px,#ece2cb 14px);border:1.5px solid rgba(176,114,39,.4);display:flex;align-items:center;justify-content:center"><span style="font:600 9px 'Geist Mono',monospace;color:#8a5a18;letter-spacing:.1em">APP SHOT</span></div>
       <div style="flex:1 1 380px;min-width:240px">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:7px;font:600 11px 'Geist Mono',monospace;flex-wrap:wrap"><span style="display:flex;align-items:center;gap:7px;color:#8a5a18"><span style="width:8px;height:8px;border-radius:50%;background:#b07227;animation:pulse 2.4s ease-in-out infinite"></span>WIP</span><span style="color:#a89878">FITNESS OS · FLAGSHIP</span></div>
         <h3 style="font:700 32px 'Geist',sans-serif;letter-spacing:-.025em;color:#1d1810;margin:0">Vantix</h3>
@@ -279,15 +343,26 @@
   (function () {
     var wrap = document.getElementById("stack");
     if (!wrap) return;
-    var cards = { sotd: document.getElementById("stkSotd"), vantix: document.getElementById("stkVantix"), cgt: document.getElementById("stkCgt") };
-    var order = ["sotd", "vantix", "cgt"], prev = null, t = 1, raf = null, start = 0;
+    var cards = { backline: document.getElementById("stkBackline"), sotd: document.getElementById("stkSotd"), vantix: document.getElementById("stkVantix"), cgt: document.getElementById("stkCgt") };
+    var order = ["backline", "sotd", "vantix", "cgt"], prev = null, t = 1, raf = null, start = 0;
     var mq = window.matchMedia("(max-width: 700px)");
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var DESK = [{ y: 0, s: 1, r: -1, o: 1 }, { y: 26, s: .95, r: 1.4, o: .92 }, { y: 48, s: .9, r: -1.6, o: .8 }];
-    var MOB  = [{ y: 0, s: 1, r: 0, o: 1 }, { y: 14, s: .96, r: 0, o: .9 }, { y: 26, s: .92, r: 0, o: .7 }];
+    var DESK = [{ y: 0, s: 1, r: -1, o: 1 }, { y: 24, s: .955, r: 1.4, o: .93 }, { y: 44, s: .915, r: -1.6, o: .84 }, { y: 62, s: .88, r: 1.2, o: .74 }];
+    var MOB  = [{ y: 0, s: 1, r: 0, o: 1 }, { y: 12, s: .965, r: 0, o: .92 }, { y: 22, s: .93, r: 0, o: .8 }, { y: 31, s: .9, r: 0, o: .66 }];
+    function fit(S) {
+      // reserve layout height: deepest visual bottom across the (untransformed-
+      // height × target-pose scale, centered) cards, so nothing overlaps the caption
+      var h = 0;
+      for (var id in cards) {
+        var el = cards[id]; if (!el) continue;
+        var p = S[order.indexOf(id)];
+        h = Math.max(h, p.y + el.offsetHeight * (1 + p.s) / 2);
+      }
+      return Math.ceil(h);
+    }
     function render() {
       var S = mq.matches ? MOB : DESK;
-      wrap.style.height = (mq.matches ? 334 : 358) + "px";
+      wrap.style.height = fit(S) + "px";
       var ease = 1 - Math.pow(1 - t, 3);
       for (var id in cards) {
         var el = cards[id]; if (!el) continue;
@@ -298,7 +373,7 @@
         var lift = goingBack ? -Math.sin(Math.PI * ease) * 60 : 0;
         el.style.transform = "translateY(" + (L(from.y, to.y) + lift) + "px) scale(" + L(from.s, to.s) + ") rotate(" + L(from.r, to.r) + "deg)";
         el.style.opacity = L(from.o, to.o);
-        el.style.zIndex = (goingBack && ease < .5) ? 4 : (3 - toIdx);
+        el.style.zIndex = (goingBack && ease < .5) ? order.length + 1 : (order.length - toIdx);
       }
     }
     function tick(now) {
@@ -322,7 +397,28 @@
     for (var i = 0; i < links.length; i++) links[i].addEventListener("click", function (e) { e.stopPropagation(); });
     var onMq = function () { render(); };
     if (mq.addEventListener) mq.addEventListener("change", onMq); else mq.addListener(onMq);
+    window.addEventListener("resize", function () { if (t === 1) render(); }); // re-fit height on reflow
     render();
+  })();
+
+  // ---- Backline hero card: the "go on call" demo toggle. State lives as a
+  // class on #stkBackline (CSS drives track/knob/list); clicks/keys must not
+  // bubble into the stack shuffle. ----
+  (function () {
+    var card = document.getElementById("stkBackline");
+    if (!card) return;
+    var inset = card.querySelector(".blToggle"), title = card.querySelector(".blTitle"), sub = card.querySelector(".blSub");
+    function paint(on) {
+      card.classList.toggle("on", on);
+      inset.setAttribute("aria-checked", on ? "true" : "false");
+      title.textContent = on ? "You’re on call" : "You’re off call";
+      sub.textContent = on ? "Austin, TX · bass, guitar" : "Flip on to appear in searches";
+    }
+    var on = true;
+    inset.addEventListener("click", function (e) { e.stopPropagation(); on = !on; paint(on); });
+    inset.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); on = !on; paint(on); }
+    });
   })();
 </script>
 

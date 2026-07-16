@@ -28,7 +28,7 @@
   // Options from the design: "online" | "in the workshop" | "heads down" | "open to work"
   var KS_STATUS = "online";
 
-  var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"], ["Club", "/listening-club", "club"]];
+  var NAV = [["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Club", "/listening-club", "club"], ["Writing", "/blog.html", "writing"], ["About", "/about.html", "about"]];
 
   var LOGO30 = '<svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#2f5436"/><path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/></svg>';
   var LOGO18 = '<svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg>';
@@ -52,9 +52,12 @@
       '<a href="/" style="display:flex;align-items:center;gap:11px;text-decoration:none">' + LOGO30 +
         '<span style="font:800 19px \'Geist\',sans-serif;letter-spacing:-.035em;color:#221c10"><span style="color:#2f5436">Kite</span>Sink</span></a>' +
       '<nav class="ks-topnav" style="display:flex;gap:clamp(16px,2.4vw,24px);font:500 13px \'Geist Mono\',monospace;color:#5e5238;flex-wrap:wrap">' + navFull(active) + '</nav>' +
-      '<div style="display:flex;align-items:center;gap:9px;font:500 12px \'Geist Mono\',monospace;color:#2f5436">' +
-        '<span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span>' +
-        '<span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
+      '<div style="display:flex;align-items:center;gap:12px">' +
+        '<button class="ks-theme-toggle" type="button" aria-label="Toggle dark mode"></button>' +
+        '<div style="display:flex;align-items:center;gap:9px;font:500 12px \'Geist Mono\',monospace;color:#2f5436">' +
+          '<span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span>' +
+          '<span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
+      '</div>' +
     '</header>';
   }
 
@@ -81,14 +84,14 @@
     if (full) {
       left = '<div>' + LOGO54DARK +
         '<div style="font:800 clamp(44px,7vw,86px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:16px 0 0;max-width:360px">Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div>';
+        '<div style="display:flex;align-items:center;gap:13px;margin:16px 0 0;max-width:400px"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);flex-shrink:0"><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>';
       right = '<div style="text-align:right">' +
         '<div style="display:flex;align-items:center;gap:9px;justify-content:flex-end;font:500 12px \'Geist Mono\',monospace;color:#d8b07a;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span><span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
         '<div style="font:600 10px \'Geist Mono\',monospace;text-transform:uppercase;letter-spacing:.16em;color:rgba(236,226,203,.6);margin-bottom:10px">Find me as</div>' +
         '<div style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap;justify-content:flex-end"><span>@tkitos</span><span>@trumankitos13</span><span>@murdocnu</span><span>@rummaging13</span></div></div>';
     } else {
       left = '<div><div style="font:800 clamp(40px,6vw,72px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:14px 0 0;max-width:360px">Independent maker &amp; founder. One workshop, many surfaces.</p></div>';
+        '<div style="display:flex;align-items:center;gap:13px;margin:14px 0 0;max-width:400px"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);flex-shrink:0"><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces.</p></div></div>';
       right = '<nav style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap">' + footNav() + '</nav>';
     }
     return '<footer style="background:#1f3024;color:#ece2cb;padding:clamp(40px,5vw,54px) clamp(20px,4vw,40px) 46px"><div style="max-width:1240px;margin:0 auto">' +
@@ -149,7 +152,7 @@
   // Floating mobile pill nav (shown ≤700px via ks.css; the top nav hides there).
   // "active": home|work|games|writing|about — cream pill on the current page.
   function pillNav(active) {
-    var items = [["Home", "/", "home"], ["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Log", "/blog.html", "writing"], ["About", "/about.html", "about"], ["Club", "/listening-club", "club"]];
+    var items = [["Home", "/", "home"], ["Work", "/work.html", "work"], ["Games", "/games.html", "games"], ["Club", "/listening-club", "club"], ["Log", "/blog.html", "writing"], ["About", "/about.html", "about"]];
     var nav = document.createElement("nav");
     nav.className = "ks-pillnav";
     nav.setAttribute("aria-label", "Site navigation");
@@ -158,6 +161,56 @@
     }).join('');
     document.body.appendChild(nav);
     document.body.className += (document.body.className ? " " : "") + "ks-haspill";
+  }
+
+  // ---- Night mode: follows the system (prefers-color-scheme) by default; the
+  // header toggle stores an override in localStorage.ksTheme. Picking the side
+  // the system is already on clears the override, so the page goes back to
+  // auto-following. The dark palette lives in ks.css (html[data-theme="dark"]
+  // overrides); a pre-paint snippet in each cream page's <head> mirrors this
+  // resolution so there's no flash. Cream pages only (body.ks-paper) — the
+  // product pages art-direct their own palettes. ----
+  function ksSysDark() { try { return window.matchMedia("(prefers-color-scheme: dark)").matches; } catch (e) { return false; } }
+  function ksStored() { try { var s = localStorage.getItem("ksTheme"); return s === "dark" || s === "light" ? s : null; } catch (e) { return null; } }
+  function ksTheme() { return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light"; }
+  function ksThemeIcon(dark) {
+    return dark
+      ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4l1.4-1.4M18 6l1.4-1.4"/></svg>'
+      : '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 14.8A8.2 8.2 0 1 1 9.2 3.5a8 8 0 0 0 11.3 11.3z"/></svg>';
+  }
+  function ksPaintToggle() {
+    var dark = ksTheme() === "dark", btns = document.querySelectorAll(".ks-theme-toggle");
+    for (var i = 0; i < btns.length; i++) { btns[i].innerHTML = ksThemeIcon(dark); btns[i].setAttribute("aria-pressed", dark ? "true" : "false"); btns[i].setAttribute("title", dark ? "Switch to light" : "Switch to dark"); }
+  }
+  function ksApplyTheme(t) {
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", t === "dark" ? "#16130d" : "#ece2cb");
+    ksPaintToggle();
+  }
+  function ksSaveTheme(t) {
+    try {
+      if ((t === "dark") === ksSysDark()) localStorage.removeItem("ksTheme"); // matches the system → back to auto
+      else localStorage.setItem("ksTheme", t);
+    } catch (e) {}
+  }
+  function initTheme() {
+    if (!document.body || !document.body.classList.contains("ks-paper")) return;
+    ksApplyTheme(ksStored() || (ksSysDark() ? "dark" : "light"));
+    var btns = document.querySelectorAll(".ks-theme-toggle");
+    for (var i = 0; i < btns.length; i++) btns[i].addEventListener("click", function () {
+      var next = ksTheme() === "dark" ? "light" : "dark";
+      ksApplyTheme(next); ksSaveTheme(next);
+    });
+    window.addEventListener("storage", function (e) {
+      if (e.key === "ksTheme") ksApplyTheme(e.newValue === "dark" || (e.newValue !== "light" && ksSysDark()) ? "dark" : "light");
+    });
+    try {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      var onSys = function (ev) { if (!ksStored()) ksApplyTheme(ev.matches ? "dark" : "light"); };
+      if (mq.addEventListener) mq.addEventListener("change", onSys); else if (mq.addListener) mq.addListener(onSys);
+    } catch (e) {}
   }
 
   function inject() {
@@ -178,6 +231,7 @@
       pillNav(pageActive || ((path === "/" || path === "/index.html") ? "home" : ""));
     }
     startClock();
+    initTheme();
     loadAnalytics();
   }
 

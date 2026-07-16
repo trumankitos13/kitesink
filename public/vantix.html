@@ -22,6 +22,8 @@
   ::-webkit-scrollbar-track { background: oklch(0.22 0.012 250); }
   .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   .gk { font-family: 'Space Grotesk', sans-serif; }
+  .ksNav { color: inherit; text-decoration: none; transition: color .15s; }
+  .ksNav:hover { color: #92a6cc; }
   input::placeholder { color: oklch(0.5 0.012 250); }
   input:focus { outline: none; border-color: #92a6cc; }
   p { text-wrap: pretty; }
@@ -79,11 +81,23 @@
 <style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
 </head>
 <body>
-<div data-ks="bar"></div>
+<!-- KiteSink site bar (dark, matches Vantix; links back to the site) -->
+<div style="border-bottom:1px solid oklch(0.34 0.012 250);background:oklch(0.185 0.012 250)">
+  <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding:9px clamp(18px,4vw,32px)">
+    <a href="/" class="ksNav" style="display:inline-flex;align-items:center;gap:7px;font:700 15px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:oklch(0.92 0.012 250)"><span style="color:#92a6cc">Kite</span>Sink</a>
+    <nav aria-label="KiteSink" style="display:flex;align-items:center;gap:clamp(13px,2.5vw,22px);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.05em;color:oklch(0.6 0.012 250);flex-wrap:wrap">
+      <a href="/work.html" class="ksNav">Work</a>
+      <a href="/games.html" class="ksNav">Games</a>
+      <a href="/listening-club" class="ksNav">Club</a>
+      <a href="/blog.html" class="ksNav">Writing</a>
+      <a href="/about.html" class="ksNav">About</a>
+    </nav>
+  </div>
+</div>
 <div style="background: oklch(0.205 0.012 250); min-height: 100vh; font-family: 'Space Grotesk', sans-serif; color: oklch(0.82 0.012 250);">
 
   <!-- ============ NAV (anchored / scrollspy) ============ -->
-  <div style="position: sticky; top: 38px; z-index: 30; background: oklch(0.215 0.012 250); border-bottom: 1px solid oklch(0.36 0.012 250); backdrop-filter: blur(8px);">
+  <div style="position: sticky; top: 0; z-index: 30; background: oklch(0.215 0.012 250); border-bottom: 1px solid oklch(0.36 0.012 250); backdrop-filter: blur(8px);">
     <div style="max-width: 1180px; margin: 0 auto; padding: 0 32px; height: 58px; display: flex; align-items: center; gap: 30px;">
       <div style="display: flex; align-items: center; gap: 11px; cursor: pointer;">
         <svg viewBox="0 0 56 56" width="24" height="24" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg>
@@ -782,7 +796,19 @@
 
 </div>
 
-<div data-ks="bottombar"></div>
+<!-- KiteSink site bar, bottom (dark, matches Vantix) -->
+<div style="border-top:1px solid oklch(0.34 0.012 250);background:oklch(0.185 0.012 250)">
+  <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding:14px clamp(18px,4vw,32px);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.04em;color:oklch(0.6 0.012 250)">
+    <span style="color:oklch(0.72 0.012 250)"><span style="color:#92a6cc">Kite</span>Sink · &copy; 2026</span>
+    <span style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="/" class="ksNav">Home</a>
+      <a href="/work.html" class="ksNav">Work</a>
+      <a href="/games.html" class="ksNav">Games</a>
+      <a href="/blog.html" class="ksNav">Writing</a>
+      <a href="/about.html" class="ksNav">About</a>
+    </span>
+  </div>
+</div>
 <script>
 (function(){
   // ---- CTA email capture → suggestions@kitesink.com (via ks.js ksSubmitForm) ----
