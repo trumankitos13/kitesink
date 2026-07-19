@@ -24,6 +24,7 @@ public/                     ← deploy root for kitesink.com
     campground-tycoon-the-story-so-far.html   First post (reading-progress bar)
   song-of-the-day.html      Landing for the Song of the Day iOS app (FAQ + theme switcher)
   song-of-the-day/
+    support.html             Support hub, troubleshooting, and contact form
     privacy.html, terms.html  Legal pages
     logos/                  Exported brand SVGs (marks, app icons, lockup)
   campground-tycoon.html    Campground Tycoon landing + interactive demo
