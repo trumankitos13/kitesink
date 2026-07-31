@@ -1,3 +1,8 @@
+## Deployment
+
+- Pushing to or merging into `main`, or running `wrangler deploy`, can
+  publish production. Do not do so unless explicitly requested.
+
 ## Delegation
 
 - For complex or long-running work, the primary agent may delegate bounded,
