@@ -1,6 +1,28 @@
 /*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; frame-src https://itch.io https://*.itch.io https://*.itch.zone https://open.spotify.com; connect-src 'self' https:; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; frame-src https://itch.io https://*.itch.io https://*.itch.zone https://open.spotify.com; connect-src 'self' https://api.web3forms.com https://static.cloudflareinsights.com; form-action 'self'; upgrade-insecure-requests
+
+/*.css
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/*.js
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/*.png
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+/*.webp
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+/*.avif
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+/*.svg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000

@@ -36,7 +36,7 @@
   .lift:hover { transform:translateY(-4px); box-shadow:0 14px 28px rgba(34,28,16,.13); }
   html[data-theme="dark"] .lift:hover { box-shadow:0 14px 28px rgba(0,0,0,.5); }
   /* daily-loop dial */
-  .dial { background:conic-gradient(#1f3024 0 90deg,#b07227 90deg 120deg,#d8b07a 120deg 135deg,#2f5436 135deg 195deg,#c9b98e 195deg 210deg,#3a6b46 210deg 270deg,#c9b98e 270deg 300deg,#8a7a58 300deg 345deg,#1f3024 345deg 360deg); border:1.5px solid rgba(34,28,16,.28); }
+  .dial { background:conic-gradient(#1f3024 0 90deg,#b07227 90deg 120deg,#d8b07a 120deg 135deg,#2f5436 135deg 195deg,#c9b98e 195deg 210deg,#3a6b46 210deg 270deg,#c9b98e 270deg 300deg,#6f6040 300deg 345deg,#1f3024 345deg 360deg); border:1.5px solid rgba(34,28,16,.28); }
   html[data-theme="dark"] .dial { background:conic-gradient(#1f3024 0 90deg,#d99a4e 90deg 120deg,#d8b07a 120deg 135deg,#3f6b4a 135deg 195deg,#c9b98e 195deg 210deg,#4a7d56 210deg 270deg,#c9b98e 270deg 300deg,#a2956c 300deg 345deg,#1f3024 345deg 360deg); border-color:rgba(236,226,203,.18); }
   .dialhole { background:#ece2cb; border:1.5px solid rgba(34,28,16,.2); }
   html[data-theme="dark"] .dialhole { background:#16130d; border-color:rgba(236,226,203,.14); }
@@ -49,13 +49,13 @@
   <link rel="stylesheet" href="/ks.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
-<link rel="canonical" href="https://kitesink.com/now.html">
+<link rel="canonical" href="https://kitesink.com/now">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="KiteSink — Now">
 <meta property="og:description" content="What Truman is working on right now — the season at a glance. A living page: current projects, what's on the turntable, what's under the bar, and a running changelog.">
-<meta property="og:url" content="https://kitesink.com/now.html">
+<meta property="og:url" content="https://kitesink.com/now">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -63,7 +63,6 @@
 <meta name="twitter:title" content="KiteSink — Now">
 <meta name="twitter:description" content="What Truman is working on right now — the season at a glance, updated when the season changes.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
-<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
 </head>
 <body class="ks-paper">
 
@@ -91,11 +90,11 @@
       </div>
       <div style="flex:0 1 300px;min-width:250px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:22px 24px">
         <div style="display:flex;justify-content:space-between;align-items:baseline">
-          <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#8a7a58">FRESHNESS</span>
+          <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#6f6040">FRESHNESS</span>
           <span id="freshPct" style="font:800 34px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">100%</span>
         </div>
         <div class="nbar" style="margin-top:10px"><div id="freshFill" class="nfill g plain" style="width:100%"></div></div>
-        <div style="font:400 11px/1.6 'Geist Mono',monospace;color:#9a8b6d;margin-top:10px">watered <span id="freshAgo">today</span> · composts in 30 days</div>
+        <div style="font:400 11px/1.6 'Geist Mono',monospace;color:#6f6040;margin-top:10px">watered <span id="freshAgo">today</span> · composts in 30 days</div>
       </div>
     </div>
   </section>
@@ -110,22 +109,22 @@
           <div class="needle" style="position:absolute;top:3.5%;left:calc(50% - 2px);width:4px;height:13%;border-radius:4px"></div>
         </div>
         <div class="dialhole" style="position:absolute;inset:19.5%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;gap:3px">
-          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.2em;color:#8a7a58">RIGHT NOW</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.2em;color:#6f6040">RIGHT NOW</span>
           <span class="clock" style="font:800 clamp(26px,4vw,34px) 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">--:--:--</span>
-          <span style="font:500 10px 'Geist Mono',monospace;letter-spacing:.14em;color:#8a7a58;margin-top:5px">PROBABLY</span>
+          <span style="font:500 10px 'Geist Mono',monospace;letter-spacing:.14em;color:#6f6040;margin-top:5px">PROBABLY</span>
           <span id="nowActivity" style="font:600 13px/1.4 'Geist Mono',monospace;color:#2f5436">deep work</span>
         </div>
       </div>
       <div style="flex:1 1 280px;min-width:250px;display:flex;flex-direction:column;gap:9px">
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#1f3024;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">23:00–06:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">asleep, allegedly</span></div>
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#b07227;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">06:00–08:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">under the bar</span></div>
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#d8b07a;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">08:00–09:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">espresso + the log</span></div>
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#2f5436;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">09:00–13:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">deep work — Vantix</span></div>
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#c9b98e;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">13:00–14:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">walking off lunch</span></div>
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#3a6b46;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">14:00–18:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">building — club, site, Backline</span></div>
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#c9b98e;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">18:00–20:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">kitchen + life</span></div>
-        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#8a7a58;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#8a7a58;width:96px;flex-shrink:0">20:00–23:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">music, games, writing</span></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#9a8b6d;margin-top:10px">weekday loop — weekends run on campground rules.</div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#1f3024;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">23:00–06:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">asleep, allegedly</span></div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#b07227;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">06:00–08:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">under the bar</span></div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#d8b07a;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">08:00–09:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">espresso + the log</span></div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#2f5436;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">09:00–13:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">deep work — Vantix</span></div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#c9b98e;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">13:00–14:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">walking off lunch</span></div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#3a6b46;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">14:00–18:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">building — club, site, Backline</span></div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#c9b98e;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">18:00–20:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">kitchen + life</span></div>
+        <div style="display:flex;align-items:center;gap:11px"><span style="width:11px;height:11px;border-radius:50%;background:#6f6040;flex-shrink:0"></span><span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;width:96px;flex-shrink:0">20:00–23:00</span><span style="font:500 14px 'Geist',sans-serif;color:#221c10">music, games, writing</span></div>
+        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:10px">weekday loop — weekends run on campground rules.</div>
       </div>
     </div>
   </section>
@@ -134,35 +133,35 @@
   <section style="padding:clamp(28px,4vw,44px) clamp(20px,4vw,40px);max-width:1180px;margin:0 auto">
     <h2 style="font:800 clamp(30px,4.4vw,48px)/.98 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0 0 26px"><span style="color:#2f5436;font-size:.55em;vertical-align:middle">✱ </span>In motion</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px">
-      <a href="/vantix.html" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+      <a href="/vantix" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
           <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Vantix</span>
           <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px">BETA</span>
         </div>
         <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">Closed beta 0.4 out to 12 lifters. Chasing the boring bugs before the fun ones.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#8a7a58;margin-bottom:6px"><span>progress</span><span style="color:#2f5436;font-weight:600">62%</span></div>
+        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>progress</span><span style="color:#2f5436;font-weight:600">62%</span></div>
         <div class="nbar sm"><div class="nfill g" style="--w:62%;--d:.1s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#9a8b6d;margin-top:12px">last touched · JUL 01</div>
+        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUL 01</div>
       </a>
-      <a href="/backline.html" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+      <a href="/backline" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
           <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Backline</span>
           <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#b07227;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px">NEW</span>
         </div>
         <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">Hero direction locked this week. Now building the shell around it.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#8a7a58;margin-bottom:6px"><span>progress</span><span style="color:#b07227;font-weight:600">18%</span></div>
+        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>progress</span><span style="color:#b07227;font-weight:600">18%</span></div>
         <div class="nbar sm"><div class="nfill a" style="--w:18%;--d:.2s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#9a8b6d;margin-top:12px">last touched · JUL 08</div>
+        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUL 08</div>
       </a>
-      <a href="/campground-tycoon.html" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+      <a href="/campground-tycoon" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
           <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Campground Tycoon</span>
           <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px">UPDATE</span>
         </div>
         <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">Fall update in the oven: ranger routes and a proper season pass.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#8a7a58;margin-bottom:6px"><span>progress</span><span style="color:#2f5436;font-weight:600">38%</span></div>
+        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>progress</span><span style="color:#2f5436;font-weight:600">38%</span></div>
         <div class="nbar sm"><div class="nfill g" style="--w:38%;--d:.3s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#9a8b6d;margin-top:12px">last touched · JUN 30</div>
+        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUN 30</div>
       </a>
       <a href="/listening-club" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
@@ -170,9 +169,9 @@
           <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#b07227;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px">MONTHLY</span>
         </div>
         <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">July session posted — three albums, one quiet afternoon. Notes pending.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#8a7a58;margin-bottom:6px"><span>this month</span><span style="color:#b07227;font-weight:600">66%</span></div>
+        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>this month</span><span style="color:#b07227;font-weight:600">66%</span></div>
         <div class="nbar sm"><div class="nfill a" style="--w:66%;--d:.4s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#9a8b6d;margin-top:12px">last touched · JUL 05</div>
+        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUL 05</div>
       </a>
     </div>
   </section>
@@ -192,25 +191,25 @@
             <p style="font:400 13px/1.55 'Geist',sans-serif;color:rgba(236,226,203,.7);margin:6px 0 0">Notes due end of month. No skipping tracks.</p>
           </div>
         </div>
-        <a href="/song-of-the-day.html" style="font:600 12px 'Geist Mono',monospace;color:#d8b07a" class="hv6">today's Song of the Day is up →</a>
+        <a href="/song-of-the-day" style="font:600 12px 'Geist Mono',monospace;color:#d8b07a" class="hv6">today's Song of the Day is up →</a>
       </div>
       <div style="background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
-        <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#8a7a58">UNDER THE BAR</span>
+        <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#6f6040">UNDER THE BAR</span>
         <div>
           <div style="font:700 18px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Block 3 of 4 — squat focus</div>
           <p style="font:400 13px/1.55 'Geist',sans-serif;color:#5e5238;margin:6px 0 0">Quiet volume all week, heavy Fridays. Logged in Vantix, obviously.</p>
         </div>
         <div style="display:flex;gap:22px;margin-top:auto">
-          <div><div style="font:800 26px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">405</div><div style="font:500 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a7a58">SQUAT</div></div>
-          <div><div style="font:800 26px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">275</div><div style="font:500 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a7a58">BENCH</div></div>
-          <div><div style="font:800 26px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">500</div><div style="font:500 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a7a58">DEADLIFT</div></div>
+          <div><div style="font:800 26px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">405</div><div style="font:500 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#6f6040">SQUAT</div></div>
+          <div><div style="font:800 26px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">275</div><div style="font:500 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#6f6040">BENCH</div></div>
+          <div><div style="font:800 26px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">500</div><div style="font:500 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#6f6040">DEADLIFT</div></div>
         </div>
       </div>
       <div style="background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px;display:flex;flex-direction:column">
-        <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#8a7a58">INPUTS</span>
-        <div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px dashed rgba(34,28,16,.22);margin-top:8px"><span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.1em;color:#8a7a58">READING</span><span style="font:600 14px 'Geist',sans-serif;color:#1d1810;text-align:right">The Design of Everyday Things, again</span></div>
-        <div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.1em;color:#8a7a58">PLAYING</span><span style="font:600 14px 'Geist',sans-serif;color:#1d1810;text-align:right">a winter save of Stardew</span></div>
-        <div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:13px 0"><span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.1em;color:#8a7a58">DRINKING</span><span style="font:600 14px 'Geist',sans-serif;color:#1d1810;text-align:right">yerba mate, beyond reason</span></div>
+        <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#6f6040">INPUTS</span>
+        <div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px dashed rgba(34,28,16,.22);margin-top:8px"><span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040">READING</span><span style="font:600 14px 'Geist',sans-serif;color:#1d1810;text-align:right">The Design of Everyday Things, again</span></div>
+        <div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040">PLAYING</span><span style="font:600 14px 'Geist',sans-serif;color:#1d1810;text-align:right">a winter save of Stardew</span></div>
+        <div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:13px 0"><span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040">DRINKING</span><span style="font:600 14px 'Geist',sans-serif;color:#1d1810;text-align:right">yerba mate, beyond reason</span></div>
       </div>
     </div>
   </section>
@@ -219,11 +218,11 @@
   <section style="padding:clamp(28px,4vw,44px) clamp(20px,4vw,40px) clamp(48px,7vw,72px);max-width:1180px;margin:0 auto">
     <h2 style="font:800 clamp(30px,4.4vw,48px)/.98 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0 0 22px"><span style="color:#2f5436;font-size:.55em;vertical-align:middle">✱ </span>Changelog</h2>
     <div style="background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:8px clamp(20px,3vw,28px)">
-      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUL 10</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Gave <a href="/about.html" style="color:#2f5436;font-weight:600" class="hv6">About</a> and this page a new coat of paint. You're looking at it.</span></div>
-      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUL 08</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Backline: picked the <a href="/backline.html" style="color:#2f5436;font-weight:600" class="hv6">hero direction</a> after three dead ends.</span></div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUL 10</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Gave <a href="/about" style="color:#2f5436;font-weight:600" class="hv6">About</a> and this page a new coat of paint. You're looking at it.</span></div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUL 08</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Backline: picked the <a href="/backline" style="color:#2f5436;font-weight:600" class="hv6">hero direction</a> after three dead ends.</span></div>
       <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUL 05</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Posted the <a href="/listening-club" style="color:#2f5436;font-weight:600" class="hv6">July listening session</a> — three albums picked.</span></div>
       <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUL 01</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Vantix beta 0.4 shipped to twelve very patient lifters.</span></div>
-      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUN 24</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Wrote a fresh entry for <a href="/blog.html" style="color:#2f5436;font-weight:600" class="hv6">the log</a>.</span></div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0"><span style="font:600 12px 'Geist Mono',monospace;color:#b07227">JUN 24</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Wrote a fresh entry for <a href="/blog" style="color:#2f5436;font-weight:600" class="hv6">the log</a>.</span></div>
     </div>
     <div style="display:flex;justify-content:center;margin-top:34px">
       <a href="mailto:hello@kitesink.com" style="font:500 13px 'Geist Mono',monospace;color:#5e5238;border:1.5px solid rgba(34,28,16,.3);border-radius:40px;padding:12px 22px" class="hv3">this page goes stale on purpose — nudge me if it does →</a>

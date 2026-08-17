@@ -1,5 +1,5 @@
 /* ===================== KiteSink portfolio =====================
-   The Work (/work.html) and Games (/games.html) index pages render from this
+   The Work (/work) and Games (/games) index pages render from this
    one file. Everything is one of TWO kinds:
 
      • internal ("mine")  — built & hosted here; links to a page on the site.
@@ -16,8 +16,8 @@ window.KS_WORK = {
   mine: [
     {
       title: "Song of the Day",
-      href: "/song-of-the-day.html",
-      icon: "music",                 // music | tent | bars  (inline SVGs live in work.html)
+      href: "/song-of-the-day",
+      icon: "music",                 // music | tent | bars  (inline SVGs live in public/work.html)
       status: "LIVE",               // status pill text; set wip:true for the tan WIP styling
       wip: false,
       category: "iOS APP",
@@ -28,7 +28,7 @@ window.KS_WORK = {
     },
     {
       title: "Campground Tycoon",
-      href: "/campground-tycoon.html",
+      href: "/campground-tycoon",
       icon: "tent",
       status: "LIVE · DEMO",
       wip: false,
@@ -37,12 +37,12 @@ window.KS_WORK = {
       dek: "Build and run a campground anywhere you like. Play the lite version right in the browser; the full release links out to the stores.",
       tags: [],
       related: [
-        { kind: "DEVLOG", title: "Campground Tycoon: the story so far", href: "/blog/campground-tycoon-the-story-so-far.html" }
+        { kind: "DEVLOG", title: "Campground Tycoon: the story so far", href: "/blog/campground-tycoon-the-story-so-far" }
       ]
     },
     {
       title: "Vantix",
-      href: "/vantix.html",
+      href: "/vantix",
       icon: "bars",
       status: "WIP",
       wip: true,                     // tan dot + tan accents + the gradient row tint
@@ -54,7 +54,7 @@ window.KS_WORK = {
     },
     {
       title: "Backline",
-      href: "/backline.html",
+      href: "/backline",
       icon: "amp",
       status: "WIP · PROTOTYPE",
       wip: true,                     // tan dot + tan accents + the gradient row tint
@@ -82,15 +82,15 @@ window.KS_GAMES = {
   mine: [
     {
       title: "Campground Tycoon",
-      href: "/campground-tycoon.html",
-      demoHref: "/campground-tycoon.html#demo",
+      href: "/campground-tycoon",
+      demoHref: "/campground-tycoon#demo",
       wishlistUrl: "",               // external store URL once live; "" falls back to the product page
       eyebrow: "Isometric tycoon sim",
       status: "LIVE · DEMO",
       platforms: "PC · iOS · ANDROID",
       dek: "Buy a scrap of wilderness, pitch a few tents, and keep campers happy through four fickle seasons. 15 regions, procedural land, anglers, hunters & leaf-peepers — and a deeply chunky CRT booking terminal. Play the lite version right in the browser.",
       related: [
-        { kind: "DEVLOG", title: "Campground Tycoon: the story so far", href: "/blog/campground-tycoon-the-story-so-far.html" }
+        { kind: "DEVLOG", title: "Campground Tycoon: the story so far", href: "/blog/campground-tycoon-the-story-so-far" }
       ]
     }
   ],

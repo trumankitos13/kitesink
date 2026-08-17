@@ -107,10 +107,7 @@ html[data-theme="dark"] [style*="color:#1d1810"] { color: #f2ead6 !important; }
 html[data-theme="dark"] [style*="color:#221c10"] { color: #e9dfc9 !important; }
 /* muted browns → lighter warm grays */
 html[data-theme="dark"] [style*="color:#5e5238"] { color: #b7ac8f !important; }
-html[data-theme="dark"] [style*="color:#8a7a58"] { color: #a99a7b !important; }
-html[data-theme="dark"] [style*="color:#7a6a48"] { color: #a2926f !important; }
-html[data-theme="dark"] [style*="color:#a89878"] { color: #948872 !important; }
-html[data-theme="dark"] [style*="color:#9a8b6d"] { color: #948872 !important; }
+html[data-theme="dark"] [style*="color:#6f6040"] { color: #a99a7b !important; }
 /* green accent text → brighter (backgrounds stay green) */
 html[data-theme="dark"] [style*="color:#2f5436"] { color: #82c795 !important; }
 /* brass accent text → brighter */
