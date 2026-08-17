@@ -218,7 +218,11 @@
     var pageActive = null;
     for (var i = 0; i < nodes.length; i++) {
       var el = nodes[i], kind = el.getAttribute("data-ks"), active = el.getAttribute("data-active") || "";
-      if (kind === "header" || kind === "footer") {
+      if (kind === "page") {
+        if (pageActive === null) pageActive = active;
+        el.remove();
+      }
+      else if (kind === "header" || kind === "footer") {
         if (pageActive === null) pageActive = active;
         if (kind === "header") el.outerHTML = header(active);
         else el.outerHTML = footer(active, el.getAttribute("data-full") === "1");
