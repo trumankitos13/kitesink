@@ -5,12 +5,22 @@
   <link href="https://kitesink.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://kitesink.com/blog" rel="alternate" type="text/html"/>
   <id>https://kitesink.com/</id>
-  <updated>2026-06-24T12:00:00Z</updated>
+  <updated>2026-07-16T12:00:00Z</updated>
   <author><name>Truman Kitos</name><uri>https://kitesink.com/about</uri></author>
   <icon>https://kitesink.com/favicon-32.png</icon>
 
   <!-- Newest first. KEEP IN SYNC with public/blog/posts.js — see docs/ADDING-A-BLOG-POST.md.
        MINE → link to the /blog/ page.  EXTERNAL repost → link to the source and note it. -->
+
+  <entry>
+    <title>The World’s Most Complex Machine</title>
+    <link href="https://worksinprogress.co/issue/the-worlds-most-complex-machine/?utm_source=tldrnewsletter" rel="alternate" type="text/html"/>
+    <id>https://kitesink.com/feed.xml#the-worlds-most-complex-machine</id>
+    <published>2026-07-16T12:00:00Z</published>
+    <updated>2026-07-16T12:00:00Z</updated>
+    <category term="Reading"/>
+    <summary>A featured read from Works in Progress by Neil Hacker: how ASML's decades-long bet on extreme-ultraviolet lithography made it indispensable to cutting-edge chipmaking.</summary>
+  </entry>
 
   <entry>
     <title>Campground Tycoon: the story so far</title>
@@ -21,15 +31,5 @@
     <category term="Devlog"/>
     <category term="Gaming"/>
     <summary>From a static campground to a living valley in under two weeks — eighteen updates, the milestones, and what's next.</summary>
-  </entry>
-
-  <entry>
-    <title>How to Do Great Work</title>
-    <link href="https://paulgraham.com/greatwork.html" rel="alternate" type="text/html"/>
-    <id>https://kitesink.com/feed.xml#how-to-do-great-work</id>
-    <published>2026-06-20T12:00:00Z</published>
-    <updated>2026-06-20T12:00:00Z</updated>
-    <category term="Reading"/>
-    <summary>A featured repost — Paul Graham. The best single thing I've read on following curiosity instead of a plan. (Links out to paulgraham.com.)</summary>
   </entry>
 </feed>

@@ -22,20 +22,18 @@
    ================================================================= */
 window.KS_POSTS = [
   {
+    external: true, cat: "Reading", date: "2026.07.16",
+    title: "The World’s Most Complex Machine",
+    source: "Works in Progress · Neil Hacker",
+    url: "https://worksinprogress.co/issue/the-worlds-most-complex-machine/?utm_source=tldrnewsletter",
+    dek: "How a decades-long bet on extreme-ultraviolet lithography made ASML the indispensable chokepoint for cutting-edge chips.",
+    note: "A remarkable story about patient technical ambition, modular systems, tacit knowledge, and the five-thousand-company supply chain behind one machine."
+  },
+  {
     cat: ["Devlog", "Gaming"], date: "2026.06.24", read: "7 min",
     title: "Campground Tycoon: the story so far",
     dek: "From a static campground to a living valley in under two weeks — eighteen updates, the milestones, and what's next.",
     href: "/blog/campground-tycoon-the-story-so-far", featured: true
-  },
-  // EXAMPLE repost — edit the note/url or delete this entry. Shows how an
-  // external link renders (brass, ↗, with a "why I'm featuring it" blurb).
-  {
-    external: true, cat: "Reading", date: "2026.06.20", read: "30 min",
-    title: "How to Do Great Work",
-    source: "Paul Graham",
-    url: "https://paulgraham.com/greatwork.html",
-    dek: "A field guide to doing work that matters, assembled from how the most productive people actually operate.",
-    note: "The best single thing I've read on following curiosity instead of a plan. Worth a re-read every few months."
   }
   // Add older items below (newest first). Templates:
   // MINE:     { cat:"Training", date:"2026.07.01", read:"6 min", title:"…", dek:"…", href:"/blog/slug", featured:true }
