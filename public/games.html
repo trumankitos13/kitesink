@@ -27,13 +27,13 @@
   <link rel="stylesheet" href="/ks.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
-<link rel="canonical" href="https://kitesink.com/games.html">
+<link rel="canonical" href="https://kitesink.com/games">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="KiteSink — Games">
 <meta property="og:description" content="The games KiteSink makes, and the ones worth playing.">
-<meta property="og:url" content="https://kitesink.com/games.html">
+<meta property="og:url" content="https://kitesink.com/games">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -41,7 +41,6 @@
 <meta name="twitter:title" content="KiteSink — Games">
 <meta name="twitter:description" content="The games KiteSink makes, and the ones worth playing.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
-<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
 </head>
 <body class="ks-paper">
 
@@ -70,7 +69,7 @@
     <!-- Filled from window.KS_GAMES.mine -->
     <div id="madeFeature"></div>
 
-    <p style="font:400 13px/1.6 'Geist Mono',monospace;color:#a89878;margin:18px 0 0;max-width:560px">More in the workshop — the next one's already rolling its first region. <a href="/blog/campground-tycoon-the-story-so-far.html" style="color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4)">Follow the devlog</a></p>
+    <p style="font:400 13px/1.6 'Geist Mono',monospace;color:#6f6040;margin:18px 0 0;max-width:560px">More in the workshop — the next one's already rolling its first region. <a href="/blog/campground-tycoon-the-story-so-far" style="color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4)">Follow the devlog</a></p>
   </section>
 
   <div style="background:#2f5436;border-top:1px solid rgba(34,28,16,.2);border-bottom:1px solid rgba(34,28,16,.2);overflow:hidden;white-space:nowrap;padding:14px 0;margin-top:40px">
@@ -93,7 +92,7 @@
   <section style="padding:clamp(40px,6vw,56px) clamp(20px,4vw,40px) 10px;max-width:1240px;margin:0 auto">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:22px">
       <h2 style="font:800 clamp(30px,4.4vw,48px)/.95 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0"><span style="color:#8a5a18;font-size:.55em;vertical-align:middle">✱ </span>Games I love</h2>
-      <span style="font:500 12px 'Geist Mono',monospace;color:#a89878;max-width:320px;text-align:right">The ones that shaped my taste — and that I steal a little courage from every time I build.</span>
+      <span style="font:500 12px 'Geist Mono',monospace;color:#6f6040;max-width:320px;text-align:right">The ones that shaped my taste — and that I steal a little courage from every time I build.</span>
     </div>
 
     <!-- Filled from window.KS_GAMES.external; empty-state when no items -->
@@ -131,9 +130,9 @@
     if (madeEl) {
       if (!MINE.length) {
         madeEl.innerHTML =
-          '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#8a7a58;margin:22px 0 0;padding:30px 0;border-top:1px solid rgba(34,28,16,.16);max-width:600px">' +
+          '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#6f6040;margin:22px 0 0;padding:30px 0;border-top:1px solid rgba(34,28,16,.16);max-width:600px">' +
           'The workshop’s warming up — the first playable build lands here soon. In the meantime, ' +
-          '<a href="/blog/campground-tycoon-the-story-so-far.html" style="color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4)">read the devlog</a>.</p>';
+          '<a href="/blog/campground-tycoon-the-story-so-far" style="color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4)">read the devlog</a>.</p>';
       } else {
         madeEl.innerHTML = MINE.map(function (g) {
           var href = g.href || "#";
@@ -154,7 +153,7 @@
           }).join("");
           var chitsBlock = chits
             ? '<div style="display:flex;align-items:center;gap:8px;margin-top:18px;flex-wrap:wrap">' +
-                '<span style="font:600 10px \'Geist Mono\',monospace;letter-spacing:.12em;text-transform:uppercase;color:#a89878">From the log</span>' +
+                '<span style="font:600 10px \'Geist Mono\',monospace;letter-spacing:.12em;text-transform:uppercase;color:#6f6040">From the log</span>' +
                 chits +
               '</div>'
             : '';
@@ -172,7 +171,7 @@
               '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;font:600 11px \'Geist Mono\',monospace;flex-wrap:wrap">' +
                 '<span style="font:700 10px \'Geist Mono\',monospace;letter-spacing:.1em;color:#2f5436;background:rgba(47,84,54,.1);border-radius:30px;padding:3px 9px">MINE</span>' +
                 '<span style="display:flex;align-items:center;gap:7px;color:#2f5436"><span style="width:8px;height:8px;border-radius:50%;background:#2f5436;animation:pulse 3.6s ease-in-out infinite"></span>' + esc(g.status) + '</span>' +
-                '<span style="color:#a89878">' + esc(g.platforms) + '</span>' +
+                '<span style="color:#6f6040">' + esc(g.platforms) + '</span>' +
               '</div>' +
               '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#5e5238;margin:0">' + esc(g.dek) + '</p>' +
               chitsBlock +
@@ -191,7 +190,7 @@
     if (loveEl) {
       if (!EXTERNAL.length) {
         loveEl.innerHTML =
-          '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#8a7a58;margin:0;padding:30px 0;border-top:1px solid rgba(34,28,16,.16);max-width:620px">' +
+          '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#6f6040;margin:0;padding:30px 0;border-top:1px solid rgba(34,28,16,.16);max-width:620px">' +
           'The shelf’s still being stocked — the games that shaped my taste will land here. ' +
           'Think I’m missing one? <a href="mailto:hello@kitesink.com" style="color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4)">hello@kitesink.com</a></p>';
       } else {
@@ -202,7 +201,7 @@
               '<div style="width:46px;height:46px;border-radius:11px;background:' + esc(g.color) + ';display:flex;align-items:center;justify-content:center;font:800 20px \'Geist\',sans-serif;color:#ece2cb">' + esc(g.letter) + '</div>' +
               '<div>' +
                 '<div class="loveTitle" style="font:700 19px \'Geist\',sans-serif;letter-spacing:-.02em;color:#1d1810;transition:color .15s">' + esc(g.name) + '</div>' +
-                '<div style="font:500 11px \'Geist Mono\',monospace;color:#a89878">' + esc(g.studio) + ' · ' + esc(g.year) + '</div>' +
+                '<div style="font:500 11px \'Geist Mono\',monospace;color:#6f6040">' + esc(g.studio) + ' · ' + esc(g.year) + '</div>' +
               '</div>' +
             '</div>' +
             '<span style="align-self:flex-start;font:700 9px \'Geist Mono\',monospace;letter-spacing:.1em;color:#8a5a18;border:1px solid rgba(176,114,39,.5);border-radius:30px;padding:3px 9px;margin-bottom:12px">PLAYED ↗ · ' + esc(g.genre) + '</span>' +
@@ -212,7 +211,7 @@
 
         loveEl.innerHTML =
           '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px">' + cards + '</div>' +
-          '<p style="font:400 13px/1.6 \'Geist Mono\',monospace;color:#a89878;margin:22px 0 0;max-width:560px">A rotating shelf — what I’m playing changes the list. Think I’m missing one? <a href="mailto:hello@kitesink.com" style="color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4)">hello@kitesink.com</a></p>';
+          '<p style="font:400 13px/1.6 \'Geist Mono\',monospace;color:#6f6040;margin:22px 0 0;max-width:560px">A rotating shelf — what I’m playing changes the list. Think I’m missing one? <a href="mailto:hello@kitesink.com" style="color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4)">hello@kitesink.com</a></p>';
       }
     }
   })();

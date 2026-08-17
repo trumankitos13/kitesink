@@ -3,10 +3,10 @@
   <title>KiteSink — the log</title>
   <subtitle>Writing &amp; reposts from Truman — building apps, games, and tools, one at a time.</subtitle>
   <link href="https://kitesink.com/feed.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://kitesink.com/blog.html" rel="alternate" type="text/html"/>
+  <link href="https://kitesink.com/blog" rel="alternate" type="text/html"/>
   <id>https://kitesink.com/</id>
   <updated>2026-07-16T12:00:00Z</updated>
-  <author><name>Truman Kitos</name><uri>https://kitesink.com/about.html</uri></author>
+  <author><name>Truman Kitos</name><uri>https://kitesink.com/about</uri></author>
   <icon>https://kitesink.com/favicon-32.png</icon>
 
   <!-- Newest first. KEEP IN SYNC with public/blog/posts.js — see docs/ADDING-A-BLOG-POST.md.
@@ -24,8 +24,8 @@
 
   <entry>
     <title>Campground Tycoon: the story so far</title>
-    <link href="https://kitesink.com/blog/campground-tycoon-the-story-so-far.html" rel="alternate" type="text/html"/>
-    <id>https://kitesink.com/blog/campground-tycoon-the-story-so-far.html</id>
+    <link href="https://kitesink.com/blog/campground-tycoon-the-story-so-far" rel="alternate" type="text/html"/>
+    <id>https://kitesink.com/blog/campground-tycoon-the-story-so-far</id>
     <published>2026-06-24T12:00:00Z</published>
     <updated>2026-06-24T12:00:00Z</updated>
     <category term="Devlog"/>

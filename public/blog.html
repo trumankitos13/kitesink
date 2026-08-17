@@ -23,14 +23,14 @@
   <link rel="stylesheet" href="/ks.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
-<link rel="canonical" href="https://kitesink.com/blog.html">
+<link rel="canonical" href="https://kitesink.com/blog">
 <link rel="alternate" type="application/atom+xml" title="KiteSink — the log" href="/feed.xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="KiteSink — Writing">
 <meta property="og:description" content="The logbook — long-form, infrequent essays on training, longevity, nutrition, AI, culture, and what it takes to build alone.">
-<meta property="og:url" content="https://kitesink.com/blog.html">
+<meta property="og:url" content="https://kitesink.com/blog">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -38,7 +38,6 @@
 <meta name="twitter:title" content="KiteSink — Writing">
 <meta name="twitter:description" content="The logbook — long-form, infrequent essays on training, longevity, nutrition, AI, culture, and what it takes to build alone.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
-<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
 </head>
 <body class="ks-paper">
 
@@ -71,7 +70,7 @@
   <section style="padding:clamp(28px,4vw,40px) clamp(20px,4vw,40px) clamp(48px,7vw,72px);max-width:1180px;margin:0 auto">
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:6px">
       <h2 id="listHeading" style="font:700 22px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0">All essays</h2>
-      <span id="shownCount" style="font:500 12px 'Geist Mono',monospace;color:#a89878">14 shown</span>
+      <span id="shownCount" style="font:500 12px 'Geist Mono',monospace;color:#6f6040">14 shown</span>
     </div>
     <div id="postList"></div>
   </section>
@@ -92,7 +91,7 @@
   function isExt(p) { return !!p.external; }
   // A post's category can be a string or an array — normalize to an array.
   function catsOf(p) { return Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : []); }
-  function postHref(p) { return isExt(p) ? (p.url || "#") : (p.href || "/blog.html"); }
+  function postHref(p) { return isExt(p) ? (p.url || "#") : (p.href || "/blog"); }
   function linkAttrs(p) { return isExt(p) ? ' target="_blank" rel="noopener"' : ''; }
 
   var introCount = document.getElementById("introCount");
@@ -112,7 +111,7 @@
     if (featuredSection) featuredSection.style.display = "none";
     headingEl.textContent = "No essays yet";
     shownEl.textContent = "";
-    listEl.innerHTML = '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#8a7a58;padding:30px 0;border-top:1px solid rgba(34,28,16,.16)">The logbook is open but empty — the first essays are being written. Check back soon, or <a href="/" style="color:#2f5436">head home</a>.</p>';
+    listEl.innerHTML = '<p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#6f6040;padding:30px 0;border-top:1px solid rgba(34,28,16,.16)">The logbook is open but empty — the first essays are being written. Check back soon, or <a href="/" style="color:#2f5436">head home</a>.</p>';
     return;
   }
 
@@ -143,7 +142,7 @@
           '<div style="position:relative"><div style="font:600 11px \'Geist Mono\',monospace;letter-spacing:.16em;text-transform:uppercase;color:#f0d9b0;margin-bottom:8px">' + kicker + '</div>' +
           '<div style="font:800 clamp(26px,3vw,38px)/1.04 \'Geist\',sans-serif;letter-spacing:-.03em;color:#f0e8d6">' + esc(featured.title) + '</div></div></div>' +
         '<div style="flex:1 1 320px;padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;justify-content:center">' +
-          '<div style="font:500 12px \'Geist Mono\',monospace;color:#a89878;margin-bottom:12px">' + metaLine + '</div>' +
+          '<div style="font:500 12px \'Geist Mono\',monospace;color:#6f6040;margin-bottom:12px">' + metaLine + '</div>' +
           '<p style="font:400 18px/1.6 \'Geist\',sans-serif;color:#5e5238;margin:0">' + esc(featured.dek) + '</p>' +
           noteBlock +
           '<div style="display:flex;align-items:center;gap:10px;margin-top:22px;font:600 13px \'Geist Mono\',monospace;color:' + accent + '">' + cta + ' <span style="width:30px;height:30px;border:1.5px solid ' + accent + ';border-radius:50%;display:flex;align-items:center;justify-content:center">' + (ext ? "↗" : "→") + '</span></div>' +
@@ -176,18 +175,18 @@
     var titleSuffix = ext ? ' <span style="color:#8a5a18;font-size:.8em">↗</span>' : '';
     var rowBg = ext ? "background:linear-gradient(90deg,rgba(176,114,39,.06),transparent 55%);" : "";
     var noteBlock = (ext && p.note)
-      ? '<p style="font:italic 400 14px/1.5 \'Geist\',sans-serif;color:#7a6a48;margin:8px 0 0;padding-left:12px;border-left:2px solid #b07227;max-width:620px">' + esc(p.note) + '</p>'
+      ? '<p style="font:italic 400 14px/1.5 \'Geist\',sans-serif;color:#6f6040;margin:8px 0 0;padding-left:12px;border-left:2px solid #b07227;max-width:620px">' + esc(p.note) + '</p>'
       : '';
     var rightCol = ext ? esc(p.read || "link") : esc(p.read);
     return '<a href="' + esc(postHref(p)) + '"' + linkAttrs(p) + ' data-cats="' + esc(catsOf(p).join("|")) + '" data-ext="' + (ext ? "1" : "0") + '" class="hv3" style="' + rowBg + 'display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline;padding:24px 0;border-top:1px solid rgba(34,28,16,.16)">' +
-      '<div style="flex:0 0 auto;width:118px;font:600 11px \'Geist Mono\',monospace;color:#a89878;padding-top:5px">' + esc(p.date) + '</div>' +
+      '<div style="flex:0 0 auto;width:118px;font:600 11px \'Geist Mono\',monospace;color:#6f6040;padding-top:5px">' + esc(p.date) + '</div>' +
       '<div style="flex:1 1 420px;min-width:260px">' +
         '<div style="font:600 11px \'Geist Mono\',monospace;letter-spacing:.08em;text-transform:uppercase;color:' + accent + ';margin-bottom:6px">' + eyebrow + '</div>' +
         '<h3 style="font:700 clamp(21px,2.4vw,27px)/1.18 \'Geist\',sans-serif;letter-spacing:-.02em;color:#221c10;margin:0">' + esc(p.title) + titleSuffix + '</h3>' +
         '<p style="font:400 15px/1.55 \'Geist\',sans-serif;color:#5e5238;margin:8px 0 0;max-width:620px">' + esc(p.dek) + '</p>' +
         noteBlock +
       '</div>' +
-      '<div style="flex:0 0 auto;margin-left:auto;font:500 12px \'Geist Mono\',monospace;color:#a89878;padding-top:5px">' + rightCol + '</div>' +
+      '<div style="flex:0 0 auto;margin-left:auto;font:500 12px \'Geist Mono\',monospace;color:#6f6040;padding-top:5px">' + rightCol + '</div>' +
     '</a>';
   }).join("");
 

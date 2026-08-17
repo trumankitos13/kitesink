@@ -37,7 +37,7 @@ public/                     ← deploy root for kitesink.com
                             plus the analytics token (CF_TOKEN) and forms key (KS_FORM_KEY)
   feed.xml                  Atom feed (hand-maintained; see docs/ADDING-A-BLOG-POST.md)
   favicon.svg
-  site_assets/              Campground screenshot PNGs
+  site_assets/              Campground screenshots (AVIF/WebP with PNG fallbacks)
 
 vantix/                     ← deploy root for vantix.kitesink.com (separate Worker)
   index.html                Vantix brand / identity placeholder
@@ -55,7 +55,13 @@ These are static files — just open `public/index.html` in a browser, or serve 
 cd public && python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
-(Use a server rather than `file://` so the root-relative links like `/about.html` resolve.)
+(Use a server rather than `file://` so root-relative links like `/about` resolve.)
+
+Run the metadata, accessibility, image, and internal-link audit before committing:
+
+```bash
+python3 scripts/check_site.py
+```
 
 ## How this was built
 
@@ -69,14 +75,14 @@ so nothing depends on an external runtime anymore.
 
 - **Contact email** — placeholder `hello@kitesink.com` is used on a few pages. Replace with
   your real address (search the repo for `hello@kitesink.com`).
-- **Campground screenshots** — ✅ added in `public/site_assets/` (the 7 PNGs are wired and live).
+- **Campground screenshots** — ✅ added in `public/site_assets/` with modern formats and PNG fallbacks.
 - **Social links** — some footer handles (`@tkitos`, `@murdocnu`, `@rummaging13`) are `#`
   placeholders; fill in real profile URLs.
 - **Vantix `.co` vs `.com`** — ✅ fixed; the Home work-card now reads `vantix.kitesink.com`.
 - **Blog posts** — entries live in `public/blog/posts.js`; per-post pages under `public/blog/`
   (copy `_template.html`). Full steps in `docs/ADDING-A-BLOG-POST.md`.
-- **Listening club** — replace the `discord.gg/INVITE` placeholder (4 links) and the Spotify
-  embed placeholder in `public/listening-club.html`; edit the next-session date band monthly.
+- **Listening club** — the Discord invite is live; add the Spotify playlist ID when ready and
+  edit the next-session date band monthly.
 - **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in
   `public/ks.js` (see `docs/ANALYTICS-AND-FORMS.md`). Forms are live via `KS_FORM_KEY`.
 

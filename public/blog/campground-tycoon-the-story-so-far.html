@@ -20,7 +20,7 @@
   .prose em { font-style: italic; color: #2f5436; }
   .prose figure { margin: 36px 0 0; }
   .prose figure img { width: 100%; display: block; border-radius: 14px; border: 1px solid rgba(34,28,16,.18); }
-  .prose figcaption { font: 500 12px 'Geist Mono', monospace; color: #a89878; margin-top: 10px; text-align: center; }
+  .prose figcaption { font: 500 12px 'Geist Mono', monospace; color: #6f6040; margin-top: 10px; text-align: center; }
   .hv1:hover { color: #2f5436; }
   .hv2:hover { gap: 12px; }
   .hv3:hover { border-color: #2f5436; color: #2f5436; }
@@ -31,14 +31,14 @@
   <link rel="stylesheet" href="/ks.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
-<link rel="canonical" href="https://kitesink.com/blog/campground-tycoon-the-story-so-far.html">
+<link rel="canonical" href="https://kitesink.com/blog/campground-tycoon-the-story-so-far">
 <link rel="alternate" type="application/atom+xml" title="KiteSink — the log" href="/feed.xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="KiteSink — Campground Tycoon: the story so far">
 <meta property="og:description" content="How a cozy isometric wilderness tycoon sim went from a static campground to a living valley in a little under two weeks — eighteen updates, the big milestones, and where it's headed next.">
-<meta property="og:url" content="https://kitesink.com/blog/campground-tycoon-the-story-so-far.html">
+<meta property="og:url" content="https://kitesink.com/blog/campground-tycoon-the-story-so-far">
 <meta property="og:image" content="https://kitesink.com/site_assets/season_fall.png">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1080">
@@ -46,7 +46,6 @@
 <meta name="twitter:title" content="KiteSink — Campground Tycoon: the story so far">
 <meta name="twitter:description" content="How a cozy isometric wilderness tycoon sim went from a static campground to a living valley in a little under two weeks.">
 <meta name="twitter:image" content="https://kitesink.com/site_assets/season_fall.png">
-<style id="ks-a11y">@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}:focus-visible{outline:2px solid #2f5436;outline-offset:2px}</style>
 </head>
 <body class="ks-paper">
 
@@ -70,35 +69,35 @@
       <span style="font:800 19px 'Geist',sans-serif;letter-spacing:-.035em;color:#221c10"><span style="color:#2f5436">Kite</span>Sink</span>
     </a>
     <nav class="ks-topnav" style="display:flex;gap:clamp(16px,2.4vw,24px);font:500 13px 'Geist Mono',monospace;color:#5e5238;flex-wrap:wrap">
-      <a href="/work.html" class="hv1">Work</a>
-      <a href="/games.html" class="hv1">Games</a>
-      <a href="/blog.html" style="color:#2f5436;border-bottom:2px solid #2f5436;padding-bottom:2px">Writing</a>
-      <a href="/about.html" class="hv1">About</a>
+      <a href="/work" class="hv1">Work</a>
+      <a href="/games" class="hv1">Games</a>
+      <a href="/blog" style="color:#2f5436;border-bottom:2px solid #2f5436;padding-bottom:2px">Writing</a>
+      <a href="/about" class="hv1">About</a>
     </nav>
-    <div style="font:500 12px 'Geist Mono',monospace;color:#a89878"><span id="progress-pct">0</span>% read</div>
+    <div style="font:500 12px 'Geist Mono',monospace;color:#6f6040"><span id="progress-pct">0</span>% read</div>
   </header>
 
   <div id="progress-bar" style="position:fixed;top:0;left:0;height:3px;width:0%;background:#2f5436;z-index:40;transition:width .1s linear"></div>
 
   <article>
     <div style="max-width:720px;margin:0 auto;padding:clamp(36px,5vw,60px) clamp(20px,4vw,40px) 0">
-      <a href="/blog.html" style="display:inline-flex;align-items:center;gap:8px;font:500 12px 'Geist Mono',monospace;color:#2f5436;margin-bottom:24px" class="hv2">← All essays</a>
+      <a href="/blog" style="display:inline-flex;align-items:center;gap:8px;font:500 12px 'Geist Mono',monospace;color:#2f5436;margin-bottom:24px" class="hv2">← All essays</a>
       <div style="display:flex;align-items:center;gap:12px;font:600 11px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px">
-        <span style="color:#2f5436">Devlog</span><span style="color:#a89878">2026.06.24 · 7 min read</span>
+        <span style="color:#2f5436">Devlog</span><span style="color:#6f6040">2026.06.24 · 7 min read</span>
       </div>
       <h1 style="font:800 clamp(34px,5.4vw,60px)/1.02 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0;text-wrap:balance">Campground Tycoon: the story so far</h1>
       <p style="font:400 clamp(19px,2.2vw,23px)/1.5 'Geist',sans-serif;font-style:italic;color:#5e5238;margin:22px 0 0">In a little under two weeks it went from a static campground to a living valley that books itself, burns in a drought, and freezes over by December. Here's the road so far — and where it's headed.</p>
       <div style="display:flex;align-items:center;gap:13px;margin:28px 0 0;padding:18px 0;border-top:1px solid rgba(34,28,16,.16);border-bottom:1px solid rgba(34,28,16,.16)">
-        <img src="/img/pin-avatar.jpg" alt="Truman Kitos" width="38" height="38" style="width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:center 40%;display:block;flex-shrink:0;border:1.5px solid rgba(34,28,16,.18)">
+        <picture style="display:block;flex-shrink:0"><source srcset="/img/pin-avatar-80.avif" type="image/avif"><source srcset="/img/pin-avatar-80.webp" type="image/webp"><img src="/img/pin-avatar.jpg" alt="Truman Kitos" width="38" height="38" decoding="async" style="width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:center 40%;display:block;border:1.5px solid rgba(34,28,16,.18)"></picture>
         <div>
           <div style="font:600 14px 'Geist',sans-serif;color:#1d1810">Truman Kitos</div>
-          <div style="font:500 11px 'Geist Mono',monospace;color:#a89878">Building in the open at KiteSink · @trumankitos13</div>
+          <div style="font:500 11px 'Geist Mono',monospace;color:#6f6040">Building in the open at KiteSink · @trumankitos13</div>
         </div>
       </div>
     </div>
 
     <div style="max-width:1040px;margin:34px auto 0;padding:0 clamp(20px,4vw,40px)">
-      <div style="height:clamp(220px,34vw,440px);border-radius:16px;background:#23402b url('/site_assets/season_fall.png') center 32%/cover;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:clamp(20px,3vw,32px)">
+      <div style="height:clamp(220px,34vw,440px);border-radius:16px;background-color:#23402b;background-image:image-set(url('/site_assets/season_fall.avif') type('image/avif'),url('/site_assets/season_fall.webp') type('image/webp'),url('/site_assets/season_fall.png') type('image/png'));background-position:center 32%;background-size:cover;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:clamp(20px,3vw,32px)">
         <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,16,8,.6),transparent 55%)"></div>
         <div style="position:relative;font:500 12px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,232,214,.92)">Autumn in the Green Mountains — Campground Tycoon v1.16</div>
       </div>
@@ -126,7 +125,7 @@
       <p>This was the update that changed the genre of the game. You now <strong>free-design the whole park</strong> — every campsite and building is placed by you; only the entrance booth stays put — and once you've filled and upgraded your plots, you <strong>buy land to expand the map</strong> in a direction. The Almanac became a true calendar with slower fourteen-day seasons and a long-range forecast that gets fuzzier the further out you look.</p>
       <p>The booth, meanwhile, was reborn as the <strong>CAMP·OS Field Console</strong> — a left-rail dashboard that flips to a night theme after dark and runs reviews, pricing, the shop, staff, bookings, the bank and more from one screen. Campsite upgrades became a <strong>tiered ladder</strong> — picnic table → fire ring → flowers → trail sign → hookup → a site-specific upgrade → glamping — reservations now unlock at level 3, and beauty and ratings were rebalanced so a 4-star park is something you <em>earn</em>.</p>
       <figure>
-        <img src="/site_assets/region_board.png" alt="The CAMP·OS Field Console — a left-rail terminal showing the park's money, rating, beauty and occupancy over a campground backdrop.">
+        <picture><source srcset="/site_assets/region_board.avif" type="image/avif"><source srcset="/site_assets/region_board.webp" type="image/webp"><img src="/site_assets/region_board.png" alt="The CAMP·OS Field Console — a left-rail terminal showing the park's money, rating, beauty and occupancy over a campground backdrop." width="1920" height="1080" loading="lazy" decoding="async"></picture>
         <figcaption>CAMP·OS — the Field Console runs the whole front desk from one chunky terminal.</figcaption>
       </figure>
 
@@ -136,12 +135,12 @@
       <h2>Wilder country</h2>
       <p>Regions then got more <em>character</em>. New biomes — wetland marshes, rocky talus, open meadows — roll in alongside the old water/forest/prairie/hills, and they're functional, not just pretty: a marsh makes a plot "waterside," talus makes it "rocky," a meadow makes it "open," which is exactly what the site's environment upgrades look for. Bayous in Louisiana, talus in the Rockies, meadows in the Green Mountains. The starting map got cleaner (just the through-road; you lay the rest), the tutorial got fuller, and — a small but satisfying fix — you can finally name your ranger anything, because the W/A/S/D movement keys no longer get swallowed while you're typing.</p>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:36px 0 0">
-        <img src="/site_assets/season_spring.png" alt="A lakeside campsite in spring, anglers fishing from the dock" style="width:100%;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)">
-        <img src="/site_assets/season_summer.png" alt="A guided excursion gathering by the Tours booth in summer" style="width:100%;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)">
-        <img src="/site_assets/season_fall.png" alt="Campers around a fire amid autumn foliage" style="width:100%;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)">
-        <img src="/site_assets/season_winter.png" alt="A snowy night camp lit by lanterns and string lights" style="width:100%;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)">
+        <picture style="display:block"><source srcset="/site_assets/season_spring.avif" type="image/avif"><source srcset="/site_assets/season_spring.webp" type="image/webp"><img src="/site_assets/season_spring.png" alt="A lakeside campsite in spring, anglers fishing from the dock" width="1920" height="1080" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)"></picture>
+        <picture style="display:block"><source srcset="/site_assets/season_summer.avif" type="image/avif"><source srcset="/site_assets/season_summer.webp" type="image/webp"><img src="/site_assets/season_summer.png" alt="A guided excursion gathering by the Tours booth in summer" width="1920" height="1080" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)"></picture>
+        <picture style="display:block"><source srcset="/site_assets/season_fall.avif" type="image/avif"><source srcset="/site_assets/season_fall.webp" type="image/webp"><img src="/site_assets/season_fall.png" alt="Campers around a fire amid autumn foliage" width="1920" height="1080" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)"></picture>
+        <picture style="display:block"><source srcset="/site_assets/season_winter.avif" type="image/avif"><source srcset="/site_assets/season_winter.webp" type="image/webp"><img src="/site_assets/season_winter.png" alt="A snowy night camp lit by lanterns and string lights" width="1920" height="1080" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(34,28,16,.18)"></picture>
       </div>
-      <div style="font:500 12px 'Geist Mono',monospace;color:#a89878;margin-top:10px;text-align:center">The same valley — spring, summer, fall, winter. Fourteen in-game days apart.</div>
+      <div style="font:500 12px 'Geist Mono',monospace;color:#6f6040;margin-top:10px;text-align:center">The same valley — spring, summer, fall, winter. Fourteen in-game days apart.</div>
 
       <h2>Tools, safety &amp; seasons with teeth</h2>
       <p>The last stretch deepened the toolbox and the danger in equal measure. You can now earn <strong>milestone stamps</strong> in a national-park-passport-style Stamp Book (first camper, a 5-star review, a full year, master angler…), buy a <strong>Felling Axe and Pickaxe</strong> that make clearing land 75% cheaper, and shape the ground itself with a <strong>landscaping shovel</strong> — plant trees, dig ponds, regrade rough dirt into meadow. <strong>Group Sites</strong> fit a second tent for big families, <strong>returning regulars</strong> come back by name in a good mood, and small <strong>caravans</strong> roll in together for a happiness bonus when you seat them side by side.</p>
@@ -161,15 +160,15 @@
 
     <div style="max-width:720px;margin:clamp(40px,6vw,64px) auto 0;padding:0 clamp(20px,4vw,40px)">
       <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding-top:26px;border-top:1px solid rgba(34,28,16,.18)">
-        <span style="font:500 12px 'Geist Mono',monospace;color:#a89878">Filed under</span>
-        <a href="/blog.html" style="font:500 12px 'Geist Mono',monospace;color:#5e5238;border:1px solid rgba(34,28,16,.2);border-radius:30px;padding:6px 13px" class="hv3">Devlog</a>
-        <a href="/campground-tycoon.html" style="margin-left:auto;font:600 13px 'Geist Mono',monospace;color:#8a5a18">Play Campground Tycoon ↗</a>
+        <span style="font:500 12px 'Geist Mono',monospace;color:#6f6040">Filed under</span>
+        <a href="/blog" style="font:500 12px 'Geist Mono',monospace;color:#5e5238;border:1px solid rgba(34,28,16,.2);border-radius:30px;padding:6px 13px" class="hv3">Devlog</a>
+        <a href="/campground-tycoon" style="margin-left:auto;font:600 13px 'Geist Mono',monospace;color:#8a5a18">Play Campground Tycoon ↗</a>
       </div>
     </div>
 
     <div style="max-width:720px;margin:clamp(36px,5vw,52px) auto 0;padding:0 clamp(20px,4vw,40px)">
-      <a href="/campground-tycoon.html" style="display:block;padding:26px;border:1.5px solid rgba(34,28,16,.18);border-radius:14px;background:#f3ecd9" class="hv4">
-        <div style="font:500 11px 'Geist Mono',monospace;color:#a89878;margin-bottom:8px">Play it in your browser →</div>
+      <a href="/campground-tycoon" style="display:block;padding:26px;border:1.5px solid rgba(34,28,16,.18);border-radius:14px;background:#f3ecd9" class="hv4">
+        <div style="font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:8px">Play it in your browser →</div>
         <div style="font:700 21px/1.2 'Geist',sans-serif;color:#1d1810">Run your own campground — no download</div>
       </a>
     </div>

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://kitesink.com/</loc><lastmod>2026-07-02</lastmod><priority>1.0</priority></url>
-  <url><loc>https://kitesink.com/work.html</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://kitesink.com/games.html</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://kitesink.com/about.html</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://kitesink.com/now.html</loc><lastmod>2026-06-26</lastmod><priority>0.5</priority></url>
-  <url><loc>https://kitesink.com/uses.html</loc><lastmod>2026-06-26</lastmod><priority>0.5</priority></url>
-  <url><loc>https://kitesink.com/colophon.html</loc><lastmod>2026-06-26</lastmod><priority>0.4</priority></url>
-  <url><loc>https://kitesink.com/blog.html</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kitesink.com/work</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kitesink.com/games</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kitesink.com/about</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kitesink.com/now</loc><lastmod>2026-06-26</lastmod><priority>0.5</priority></url>
+  <url><loc>https://kitesink.com/uses</loc><lastmod>2026-06-26</lastmod><priority>0.5</priority></url>
+  <url><loc>https://kitesink.com/colophon</loc><lastmod>2026-06-26</lastmod><priority>0.4</priority></url>
+  <url><loc>https://kitesink.com/blog</loc><lastmod>2026-07-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://kitesink.com/listening-club</loc><lastmod>2026-07-03</lastmod><priority>0.6</priority></url>
-  <url><loc>https://kitesink.com/song-of-the-day.html</loc><lastmod>2026-06-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/song-of-the-day</loc><lastmod>2026-06-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://kitesink.com/song-of-the-day/support</loc><lastmod>2026-07-19</lastmod><priority>0.5</priority></url>
-  <url><loc>https://kitesink.com/campground-tycoon.html</loc><lastmod>2026-06-24</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kitesink.com/backline.html</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kitesink.com/song-of-the-day/privacy.html</loc><lastmod>2026-06-24</lastmod><priority>0.4</priority></url>
-  <url><loc>https://kitesink.com/song-of-the-day/terms.html</loc><lastmod>2026-06-24</lastmod><priority>0.4</priority></url>
-  <url><loc>https://kitesink.com/blog/campground-tycoon-the-story-so-far.html</loc><lastmod>2026-06-24</lastmod><priority>0.6</priority></url>
-  <url><loc>https://kitesink.com/vantix.html</loc><lastmod>2026-06-24</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kitesink.com/vantix/roadmap.html</loc><lastmod>2026-06-25</lastmod><priority>0.6</priority></url>
-  <url><loc>https://kitesink.com/vantix/changelog.html</loc><lastmod>2026-06-25</lastmod><priority>0.6</priority></url>
-  <url><loc>https://kitesink.com/vantix/privacy.html</loc><lastmod>2026-06-25</lastmod><priority>0.4</priority></url>
-  <url><loc>https://kitesink.com/campground-tycoon/features.html</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
-  <url><loc>https://kitesink.com/campground-tycoon/regions.html</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
-  <url><loc>https://kitesink.com/campground-tycoon/roadmap.html</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/campground-tycoon</loc><lastmod>2026-06-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/backline</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/song-of-the-day/privacy</loc><lastmod>2026-06-24</lastmod><priority>0.4</priority></url>
+  <url><loc>https://kitesink.com/song-of-the-day/terms</loc><lastmod>2026-06-24</lastmod><priority>0.4</priority></url>
+  <url><loc>https://kitesink.com/blog/campground-tycoon-the-story-so-far</loc><lastmod>2026-06-24</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/vantix</loc><lastmod>2026-06-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/vantix/roadmap</loc><lastmod>2026-06-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/vantix/changelog</loc><lastmod>2026-06-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/vantix/privacy</loc><lastmod>2026-06-25</lastmod><priority>0.4</priority></url>
+  <url><loc>https://kitesink.com/campground-tycoon/features</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/campground-tycoon/regions</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/campground-tycoon/roadmap</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
 </urlset>
