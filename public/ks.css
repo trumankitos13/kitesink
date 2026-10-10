@@ -44,6 +44,10 @@ html[data-theme="dark"] body.ks-paper::after {
 .ks-link { transition: color .15s; text-decoration: none; }
 .ks-link:hover { color: #2f5436 !important; }
 
+/* Keep the compact project-page bar usable as destinations are added. */
+.ks-barnav { min-width: 0; overflow-x: auto; white-space: nowrap; }
+.ks-barnav a { flex-shrink: 0; }
+
 /* full-header nav hover */
 .ks-nav-link { transition: color .15s; }
 .ks-nav-link:hover { color: #2f5436; }
@@ -60,8 +64,9 @@ html[data-theme="dark"] body.ks-paper::after {
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border-radius: 40px; padding: 5px; box-shadow: 0 12px 28px rgba(34,28,16,.3);
   z-index: 90; white-space: nowrap;
+  max-width: calc(100% - 24px); overflow-x: auto; scrollbar-width: thin;
 }
-.ks-pillnav a { font: 500 12px 'Geist Mono', monospace; color: rgba(236,226,203,.85); border-radius: 30px; padding: 12px 14px; text-decoration: none; }
+.ks-pillnav a { flex-shrink: 0; font: 500 12px 'Geist Mono', monospace; color: rgba(236,226,203,.85); border-radius: 30px; padding: 12px 14px; text-decoration: none; }
 .ks-pillnav a.on { font-weight: 600; color: #1f3024; background: #ece2cb; }
 @media (max-width: 700px) {
   .ks-topnav { display: none !important; }
@@ -69,7 +74,7 @@ html[data-theme="dark"] body.ks-paper::after {
   .ks-pillnav { display: flex; }
   body.ks-haspill { padding-bottom: 82px; }
 }
-/* six pill items need a squeeze on narrow phones */
+/* Compact spacing; the pill scrolls when all destinations cannot fit. */
 @media (max-width: 430px) {
   .ks-pillnav a { padding: 12px 10px; font-size: 11px; }
 }

@@ -13,6 +13,7 @@ public/                     ← deploy root for kitesink.com
   work.html                 Work — full index of everything built + external tools
   games.html                Games — my games + games I love
   projects.js               Shared data for Work + Games (KS_WORK / KS_GAMES). Edit to add more.
+  consulting.html           Kitesink Consulting — music workflow, operations and AI services
   about.html                About
   now.html, uses.html, colophon.html   Now / Uses / Colophon (linked from the shared footer)
   listening-club.html       Album Listening Club — dark landing page, Discord front door
@@ -73,8 +74,9 @@ so nothing depends on an external runtime anymore.
 
 ## Things to review / finish
 
-- **Contact email** — placeholder `hello@kitesink.com` is used on a few pages. Replace with
-  your real address (search the repo for `hello@kitesink.com`).
+- **Contact email** — `hello@kitesink.com` uses Cloudflare Email Routing. On 2026-10-10,
+  routing was enabled and ready, with an enabled rule forwarding to a verified destination.
+  The consulting page uses a direct email link; inbox delivery was not tested by sending a message.
 - **Campground screenshots** — ✅ added in `public/site_assets/` with modern formats and PNG fallbacks.
 - **Social links** — some footer handles (`@tkitos`, `@murdocnu`, `@rummaging13`) are `#`
   placeholders; fill in real profile URLs.

@@ -114,4 +114,5 @@ Push to `main`. Workers Builds rebuilds and redeploys each connected Worker auto
   Everything**.
 - **Campground screenshots** still need to be added to `public/site_assets/` (see README); the
   page degrades gracefully without them.
-- **Contact email** placeholder `hello@kitesink.com` should be replaced before launch.
+- **Contact email** `hello@kitesink.com` has an enabled forwarding rule to a verified
+  destination (routing ready and synced, checked 2026-10-10). See README for verification scope.

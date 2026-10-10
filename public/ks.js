@@ -7,7 +7,7 @@
 
    Placeholders a page can use:
      <div data-ks="bar"></div>                         slim cream KiteSink bar
-     <div data-ks="header" data-active="work"></div>   full Geist header (active: work|games|writing|about|"")
+     <div data-ks="header" data-active="work"></div>   full Geist header (active: work|consulting|games|writing|about|"")
      <div data-ks="footer" data-active="…"></div>      shared footer (wordmark + nav + ©)
      <div data-ks="bottombar"></div>                   cream KiteSink bottom strip (project pages)
    ================================================================= */
@@ -28,7 +28,7 @@
   // Options from the design: "online" | "in the workshop" | "heads down" | "open to work"
   var KS_STATUS = "online";
 
-  var NAV = [["Work", "/work", "work"], ["Games", "/games", "games"], ["Club", "/listening-club", "club"], ["Writing", "/blog", "writing"], ["About", "/about", "about"]];
+  var NAV = [["Work", "/work", "work"], ["Consulting", "/consulting", "consulting"], ["Games", "/games", "games"], ["Club", "/listening-club", "club"], ["Writing", "/blog", "writing"], ["About", "/about", "about"]];
 
   var LOGO30 = '<svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#2f5436"/><path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/></svg>';
   var LOGO18 = '<svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg>';
@@ -37,7 +37,7 @@
     return NAV.map(function (n) {
       var on = n[2] === active;
       var style = on ? 'color:#2f5436;border-bottom:2px solid #2f5436;padding-bottom:2px' : 'color:inherit;text-decoration:none';
-      return '<a href="' + n[1] + '" class="' + (on ? '' : 'ks-nav-link') + '" style="' + style + '">' + n[0] + '</a>';
+      return '<a href="' + n[1] + '"' + (on ? ' aria-current="page"' : '') + ' class="' + (on ? '' : 'ks-nav-link') + '" style="' + style + '">' + n[0] + '</a>';
     }).join('');
   }
   function navBar(active) {
@@ -65,7 +65,7 @@
     return '<div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:\'Geist\',-apple-system,system-ui,sans-serif;box-sizing:border-box">' +
       '<a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none">' + LOGO18 +
         '<span style="font:800 14px \'Geist\',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a>' +
-      '<nav style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px \'Geist Mono\',ui-monospace,monospace;color:#5e5238">' + navBar(active) + '</nav>' +
+      '<nav class="ks-barnav" style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px \'Geist Mono\',ui-monospace,monospace;color:#5e5238">' + navBar(active) + '</nav>' +
     '</div>';
   }
 
@@ -150,9 +150,9 @@
   window.ksSubmitForm = ksSubmitForm;
 
   // Floating mobile pill nav (shown ≤700px via ks.css; the top nav hides there).
-  // "active": home|work|games|writing|about — cream pill on the current page.
+  // "active": home|work|consulting|games|writing|about — cream pill on the current page.
   function pillNav(active) {
-    var items = [["Home", "/", "home"], ["Work", "/work", "work"], ["Games", "/games", "games"], ["Club", "/listening-club", "club"], ["Log", "/blog", "writing"], ["About", "/about", "about"]];
+    var items = [["Home", "/", "home"], ["Work", "/work", "work"], ["Consulting", "/consulting", "consulting"], ["Games", "/games", "games"], ["Club", "/listening-club", "club"], ["Log", "/blog", "writing"], ["About", "/about", "about"]];
     var nav = document.createElement("nav");
     nav.className = "ks-pillnav";
     nav.setAttribute("aria-label", "Site navigation");
@@ -160,6 +160,8 @@
       return '<a href="' + n[1] + '"' + (n[2] === active ? ' class="on" aria-current="page"' : '') + '>' + n[0] + '</a>';
     }).join('');
     document.body.appendChild(nav);
+    var current = nav.querySelector(".on");
+    if (current) nav.scrollLeft = current.offsetLeft - (nav.clientWidth - current.offsetWidth) / 2;
     document.body.className += (document.body.className ? " " : "") + "ks-haspill";
   }
 
