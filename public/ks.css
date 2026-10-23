@@ -131,6 +131,15 @@ html[data-theme="dark"] [style*="rgba(34,28,16,.35)"] { border-color: rgba(236,2
 /* .09 is a fill (progress-bar tracks), not a border */
 html[data-theme="dark"] [style*="background:rgba(34,28,16,.09)"] { background: rgba(236,226,203,.09) !important; }
 
+/* blog-post prose is styled from a <style> block, which the inline-style
+   matching above can't reach — remap it by class instead */
+html[data-theme="dark"] .prose p { color: #e9dfc9; }
+html[data-theme="dark"] .prose h2,
+html[data-theme="dark"] .prose strong { color: #f2ead6; }
+html[data-theme="dark"] .prose em { color: #82c795; }
+html[data-theme="dark"] .prose figcaption { color: #a99a7b; }
+html[data-theme="dark"] .prose figure img { border-color: rgba(236,226,203,.13); }
+
 /* injected chrome placeholders (pre-inject, dark) */
 html[data-theme="dark"] [data-ks="bar"]:empty { background: rgba(22,19,13,.92); border-bottom-color: rgba(236,226,203,.12); }
 html[data-theme="dark"] [data-ks="header"]:empty { background: rgba(22,19,13,.86); border-bottom-color: rgba(236,226,203,.1); }
