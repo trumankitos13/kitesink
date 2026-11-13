@@ -1,5 +1,6 @@
 /* ===================== KiteSink portfolio =====================
-   The Work (/work) and Games (/games) index pages render from this
+   The Games (/games) page renders from this (the old Work index at /work is gone;
+   its project list below is kept for reference)
    one file. Everything is one of TWO kinds:
 
      • internal ("mine")  — built & hosted here; links to a page on the site.
@@ -17,7 +18,7 @@ window.KS_WORK = {
     {
       title: "Song of the Day",
       href: "/song-of-the-day",
-      icon: "music",                 // music | tent | bars  (inline SVGs live in public/work.html)
+      icon: "music",                 // music | tent | bars  (icons for the old Work index)
       status: "COMING SOON",        // status pill text; set wip:true for the tan WIP styling
       wip: true,
       category: "iOS APP",

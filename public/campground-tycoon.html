@@ -270,21 +270,6 @@
   .ct-ledger b { color: var(--ct-ink); }
   @media (min-width: 720px) { .ct-ledger li { grid-template-columns: 170px 190px minmax(0, 1fr); align-items: baseline; } }
 
-  /* guest book notes */
-  .ct-notes { display: grid; gap: 18px; }
-  .ct-notes li { display: grid; gap: 10px; align-content: start; padding: 20px; border-radius: 4px; box-shadow: 0 10px 24px rgba(0,0,0,.3); }
-  .ct-notes .ct-stars { font: 500 14px/1 var(--ct-label); letter-spacing: .12em; color: var(--ct-rust); }
-  .ct-notes p { font-size: 17px; line-height: 1.5; }
-  .ct-notes cite { font: 500 13px/1.4 var(--ct-label); font-style: normal; letter-spacing: .04em; color: var(--ct-ink-soft); }
-  .ct-rating { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
-  .ct-rating span { color: var(--ct-brass); letter-spacing: .12em; }
-  @media (min-width: 860px) {
-    .ct-notes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .ct-notes li:nth-child(1) { rotate: -.7deg; }
-    .ct-notes li:nth-child(2) { rotate: .5deg; translate: 0 8px; }
-    .ct-notes li:nth-child(3) { rotate: -.3deg; }
-  }
-
   /* roadmap teaser: the six eras as a trail */
   .ct-eras { display: flex; flex-direction: column; }
   .ct-eras li { position: relative; display: flex; align-items: center; gap: 12px; min-height: 40px; font: 500 15px/1.2 var(--ct-label); letter-spacing: .05em; color: var(--ct-cream); }
@@ -556,21 +541,6 @@
       <li><h3>Backpackers</h3><span class="ct-label">Peak · Summer</span><p>Low rate, <b>high volume</b>. Want a trailhead site.</p></li>
     </ul>
     <p class="ct-after">Meet them all on the <a class="ct-link" href="/campground-tycoon/features#guests">Features page →</a></p>
-  </div>
-</section>
-
-<!-- ===== From the guest book ===== -->
-<section class="ct-band">
-  <div class="ct-wrap">
-    <div class="ct-head">
-      <p class="ct-kicker">From the guest book</p>
-      <h2 class="ct-rating"><span aria-hidden="true">★★★★☆</span> 4.6 / 5</h2>
-    </div>
-    <ul class="ct-notes">
-      <li class="ct-paper"><span class="ct-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><p>"Bought a swamp in Louisiana, accidentally got attached to a fictional bear. Sent the kids to bed an hour ago. Send help."</p><cite>— Park Ranger, 41 hrs played</cite></li>
-      <li class="ct-paper"><span class="ct-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><p>"The fall foliage week is genuinely the most stressful and most beautiful thing in any tycoon game I've played."</p><cite>— Backpacker_Bex, 120 hrs played</cite></li>
-      <li class="ct-paper"><span class="ct-stars" role="img" aria-label="4 out of 5 stars">★★★★☆</span><p>"Enshrined my first park and got handed a commission for the next one. This game has a whole career now?? Did not see that coming."</p><cite>— firsttimekeeper, 60 hrs played</cite></li>
-    </ul>
   </div>
 </section>
 

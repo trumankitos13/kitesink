@@ -58,14 +58,28 @@
   .vx-bar { position: relative; height: 12px; border-radius: 2px; background: rgba(255,255,255,.07); }
   .vx-bar i { display: block; height: 100%; border-radius: 2px; background: #6f9f7a; transition: width .6s var(--k-ease); }
   .vx-bar::before, .vx-bar::after { content: ""; position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(233,233,230,.45); }
-  .vx-bar::before { left: 40%; } .vx-bar::after { left: 72%; }
+  .vx-bar::before { left: 40%; } .vx-bar::after { left: 80%; }
   .vx-rows .under i { background: #d8a652; } .vx-rows .over i { background: #d27a52; }
   .vx-rows em { font-style: normal; text-align: right; color: #6f9f7a; font-weight: 600; white-space: nowrap; min-width: 92px; }
   .vx-rows .under em { color: #d8a652; } .vx-rows .over em { color: #d27a52; }
   .vx-read { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--pc-rule); min-height: 62px; font-size: 14px; line-height: 1.5; color: var(--pc-ink); }
-  .vx-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; margin-top: 16px; }
-  .vx-legend dt { font: 600 12px/1.3 var(--k-mono); color: var(--pc-accent); }
-  .vx-legend dd { margin: 2px 0 0; font-size: 13px; line-height: 1.4; color: var(--pc-copy); }
+  .vx-track { margin-top: 14px; }
+  .vx-weeks { list-style: none; margin: 0 0 6px; padding: 0; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 3px; }
+  .vx-weeks li { padding: 8px 0 7px; text-align: center; font: 600 11px/1 var(--k-mono); color: var(--pc-copy); background: rgba(255,255,255,.05); border-bottom: 2px solid #6f9f7a; }
+  .vx-weeks .ov { border-bottom-color: #d8a652; } .vx-weeks .dl { border-bottom-color: rgba(233,233,230,.4); }
+  .vx-weeks [aria-current] { background: var(--pc-tint); color: var(--pc-ink); box-shadow: inset 0 0 0 1px var(--pc-rule); }
+  .vx-key { font: 500 11px/1.5 var(--k-mono) !important; color: var(--pc-copy); margin-bottom: 12px; }
+  .vx-day { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 12px; margin-bottom: 6px; font: 600 14px/1.4 var(--k-sans) !important; color: var(--pc-ink) !important; }
+  .vx-day span { font: 500 11.5px/1.5 var(--k-mono); color: var(--pc-copy); }
+  .vx-tt-wrap { overflow-x: auto; }
+  .vx-tt { width: 100%; border-collapse: collapse; font: 500 12px/1.35 var(--k-mono); font-variant-numeric: tabular-nums; color: var(--pc-ink); }
+  .vx-tt th, .vx-tt td { padding: 8px 10px 3px 0; text-align: left; vertical-align: top; border-top: 1px solid var(--pc-rule); white-space: nowrap; }
+  .vx-tt tbody th { font-weight: 600; white-space: normal; }
+  .vx-tt thead th { border-top: 0; padding-bottom: 6px; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); }
+  .vx-tt .done th, .vx-tt .done td { border-top: 0; padding-top: 0; padding-bottom: 8px; }
+  .vx-tt .done th { font-weight: 500; color: #8fbf9a; }
+  .vx-tt .done td { color: var(--pc-copy); }
+  @media (max-width: 520px) { .vx-tt .opt { display: none; } }
   .vx-fine { font-size: 12.5px !important; line-height: 1.5 !important; margin-top: 14px; }
 
   /* ---------- tools ---------- */
@@ -363,9 +377,9 @@
           <div class="vx-copy">
             <div class="k-pc-top"><span class="k-pc-tag">◈ Vantix · the periodization OS</span><span class="k-status k-status--wip">In progress</span></div>
             <h2 class="k-pc-title" id="h-vantix">Every fitness dot. One instrument. Zero black boxes.</h2>
-            <p>You define the plan, macrocycle to set. Vantix normalizes what your apps and devices export into one record and checks every week against the volume landmarks you set. An AI co-pilot can propose changes; your hard rules decide whether they apply.</p>
+            <p>You define the plan, macrocycle to set. Vantix normalizes what your apps and devices export into one record and checks every week against the bands you set. An AI co-pilot can propose changes; your hard rules decide whether they apply.</p>
             <ul class="pillars">
-              <li><i>01</i><b>Programmable periodization</b><span>Volume landmarks, effective-set math and phase caps are computed continuously, not eyeballed.</span></li>
+              <li><i>01</i><b>Programmable periodization</b><span>Weekly bands, effective-set math and phase caps are computed continuously, not eyeballed.</span></li>
               <li><i>02</i><b>Integration &amp; normalization</b><span>Any source lands on one universal event spine, with raw payloads kept so everything can be re-derived.</span></li>
               <li><i>03</i><b>AI co-pilot with a review-gate</b><span>It never writes directly. It produces a diff you accept, reject or edit row by row.</span></li>
             </ul>
@@ -382,23 +396,38 @@
           </div>
           <div>
             <div class="vx-panel">
-              <div class="vx-panel-top"><span>Weekly volume vs landmarks</span><span>Example data</span></div>
-              <div class="vx-rows" id="vx-rows" role="group" aria-label="Example weekly volume by muscle group. Choose a row to read it.">
-                <button type="button" aria-pressed="true" data-read="Back — 19 sets against a ceiling of 25. Inside the band between the least that grows it and the most you can recover from."><span>Back</span><span class="vx-bar"><i style="width:76%"></i></span><em>19 ● in band</em></button>
-                <button type="button" aria-pressed="false" data-read="Side delt — 14 sets against a ceiling of 22. In band."><span>Side delt</span><span class="vx-bar"><i style="width:64%"></i></span><em>14 ● in band</em></button>
-                <button type="button" aria-pressed="false" data-read="Quads — 12 sets against a ceiling of 20. In band."><span>Quads</span><span class="vx-bar"><i style="width:60%"></i></span><em>12 ● in band</em></button>
-                <button type="button" class="under" aria-pressed="false" data-read="Rear delt — 5 sets against a ceiling of 18. Under the minimum effective volume: probably not enough to grow it."><span>Rear delt</span><span class="vx-bar"><i style="width:28%"></i></span><em>5 ▽ under</em></button>
-                <button type="button" class="over" aria-pressed="false" data-read="Triceps — 19 sets, over this phase’s cap of 18. In Vantix a proposed change that breaks a cap is blocked until you resolve it."><span>Triceps</span><span class="vx-bar"><i style="width:100%"></i></span><em>19 ▲ over</em></button>
+              <div class="vx-panel-top"><span>Weekly stimulating reps vs your band</span><span>Example data</span></div>
+              <div class="vx-rows" id="vx-rows" role="group" aria-label="An example week by muscle group. Choose a row to read it.">
+                <button type="button" aria-pressed="true" data-read="Shoulders: 73.6 stimulating reps this week, inside the band of 40 to 80."><span>Shoulders</span><span class="vx-bar"><i style="width:73.6%"></i></span><em>73.6 ● in</em></button>
+                <button type="button" aria-pressed="false" data-read="Back: 67.6 stimulating reps this week, inside the band of 40 to 80."><span>Back</span><span class="vx-bar"><i style="width:67.6%"></i></span><em>67.6 ● in</em></button>
+                <button type="button" aria-pressed="false" data-read="Chest: 54 stimulating reps this week, inside the band of 40 to 80."><span>Chest</span><span class="vx-bar"><i style="width:54%"></i></span><em>54 ● in</em></button>
+                <button type="button" class="under" aria-pressed="false" data-read="Abdominals: 30.5 stimulating reps this week, below the band of 40 to 80."><span>Abdominals</span><span class="vx-bar"><i style="width:30.5%"></i></span><em>30.5 ▽ below</em></button>
+                <button type="button" class="over" aria-pressed="false" data-read="Legs: 88.6 stimulating reps this week, above the band of 40 to 80. In Vantix the group opens to show which movements did it."><span>Legs</span><span class="vx-bar"><i style="width:88.6%"></i></span><em>88.6 ▲ above</em></button>
               </div>
-              <p class="vx-read" id="vx-read" aria-live="polite">Back — 19 sets against a ceiling of 25. Inside the band between the least that grows it and the most you can recover from.</p>
+              <p class="vx-read" id="vx-read" aria-live="polite">Shoulders: 73.6 stimulating reps this week, inside the band of 40 to 80.</p>
             </div>
-            <dl class="vx-legend">
-              <div><dt>MV</dt><dd>Maintenance volume: enough to keep what you have.</dd></div>
-              <div><dt>MEV</dt><dd>Minimum effective volume: the least that produces growth.</dd></div>
-              <div><dt>MAV</dt><dd>Maximum adaptive volume: where most of the progress happens.</dd></div>
-              <div><dt>MRV</dt><dd>Maximum recoverable volume: the most you can recover from.</dd></div>
-            </dl>
-            <p class="vx-fine">The bars use the example numbers from the Vantix page. Landmarks are coaching estimates that differ between people; they aren’t lab measurements.</p>
+            <div class="vx-panel vx-track">
+              <div class="vx-panel-top"><span>Track · planned, then done</span><span>Example data</span></div>
+              <ol class="vx-weeks" aria-label="A nine-week block. Week 2 is the current week.">
+                <li>W1</li><li aria-current="true">W2</li><li>W3</li><li>W4</li><li class="ov">W5</li><li class="ov">W6</li><li class="dl">W7</li><li class="dl">W8</li><li class="dl">W9</li>
+              </ol>
+              <p class="vx-key">W1-4 accumulation · W5-6 overload · W7-9 deload</p>
+              <p class="vx-day">Thu · Upper B (Tension/Power) <span>23 sets · 52% compound</span></p>
+              <div class="vx-tt-wrap">
+                <table class="vx-tt"><caption class="k-vh">Three exercises from one session: the planned line, then what was done</caption>
+                  <thead><tr><th scope="col">Exercise</th><th scope="col">Sets × reps</th><th scope="col">RIR</th><th scope="col">Stim</th><th scope="col" class="opt">Rest</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">Pull Up (Weighted)</th><td>3×5-8</td><td>1-2</td><td>≈10.5</td><td class="opt">3 min</td></tr>
+                    <tr class="done"><th scope="row"><span aria-hidden="true">✓</span> done as planned</th><td>3×6-8</td><td>≈0.5-1</td><td>12.5</td><td class="opt"></td></tr>
+                    <tr><th scope="row">Bent Over Row (Barbell)</th><td>3×6-10</td><td>1-2</td><td>≈10.5</td><td class="opt">2.5 min</td></tr>
+                    <tr class="done"><th scope="row"><span aria-hidden="true">✓</span> done as planned</th><td>3×7-9</td><td>≈1-1.5</td><td>11.5</td><td class="opt"></td></tr>
+                    <tr><th scope="row">Chest Dip (Weighted)</th><td>3×5-8</td><td>1-2</td><td>≈10.5</td><td class="opt">3 min</td></tr>
+                    <tr class="done"><th scope="row"><span aria-hidden="true">✓</span> done as planned</th><td>3×7-9</td><td>≈0.5-1.5</td><td>12</td><td class="opt"></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p class="vx-fine">Both panels use example data. A band is the weekly range of stimulating reps you set for a muscle group. Stimulating reps are estimated from the reps in reserve you log for each set.</p>
           </div>
         </div>
       </article>

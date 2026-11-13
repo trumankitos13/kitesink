@@ -124,7 +124,7 @@
         '<div class="ks-ft-cols">' +
           col("Sections", SECTIONS.map(function (s) { return [s.label, s.href]; })) +
           col("Current", [["Vantix", "/vantix"], ["Fitness tools", "/fitness#tools"], ["Song of the Day", "/song-of-the-day"], ["Backline", "/backline"], ["Listening Club", "/listening-club"]]) +
-          col("Library", [["Work index", "/work"], ["Games", "/games"], ["Writing", "/blog"], ["Now", "/now"], ["Uses", "/uses"], ["Colophon", "/colophon"]]) +
+          col("Library", [["Full index", "/library"], ["Games", "/games"], ["Writing", "/blog"], ["Now", "/now"], ["Uses", "/uses"], ["Colophon", "/colophon"]]) +
           col("Elsewhere", [["hello@kitesink.com", "mailto:hello@kitesink.com"], ["GitHub", "https://github.com/trumankitos13", 1], ["YouTube", "https://www.youtube.com/@rummaging13", 1], ["Bluesky", "https://bsky.app/profile/signal-shift.bsky.social", 1], ["Atom feed", "/feed.xml"]]) +
         '</div>' +
       '</div>' +

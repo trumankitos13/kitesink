@@ -13,7 +13,7 @@ runs in any browser by opening the file directly.
 | Consulting | `/consulting` | Services for music teams, how a project runs, the AI concierge offer, an enquiry form |
 | Fitness | `/fitness` | Vantix (`/vantix`, privacy), five free calculators, and a field guide in six areas (hypertrophy, powerlifting, meet day, nutrition, diet, health) with claims, key numbers, tables, a glossary and sources |
 | Music | `/music` | Song of the Day, Backline, Album Listening Club |
-| Library | `/library` | **Everything** — every project, tool, game, post and page, searchable. `/work`, `/games`, `/blog` and Campground Tycoon live here |
+| Library | `/library` | **Everything** — every project, tool, game, post and page, searchable. `/games`, `/blog` and Campground Tycoon live here. The old `/work` index is gone and redirects here |
 | About | `/about` | About, Now, Uses |
 
 The home page (`/`) is the landing page: a five-row index of the sections, a card deck that
@@ -151,11 +151,7 @@ so nothing depends on an external runtime anymore.
 - **Song of the Day** — "Coming soon" everywhere (`projects.js`, `site-index.js`, the product page),
   with no launch date printed. Every contact address is `hello@kitesink.com`.
   `song-of-the-day/terms.html` still has a `<TODO: jurisdiction>`.
-- **Song of the Day "Written by humans"** — the page says editors write every word. The app's
-  admin tools draft picks and blurbs with an AI model before a curator approves them. Reword the
-  claim if that is how it works.
-- **Campground Tycoon guest book** — the page shows "4.6 / 5" and three quoted players. Neither
-  this repo nor the game's has a source for them. Replace with real reviews or remove.
+- **Song of the Day "Written by humans"** — kept on purpose (owner decision).
 - **Campground Tycoon demo** — the embedded itch.io build requests `park-map.js` and itch answers
   404. That is in the game's itch upload, not this site.
 - **AI concierge** — `/consulting#concierge` describes the offer (learn the industry, observe the
@@ -169,6 +165,8 @@ so nothing depends on an external runtime anymore.
   authors) and what each entry says was written from the paper's abstract or the rulebook, not
   the full text. Entries marked "Coaching practice" have no study behind them and say so. Read
   the areas you know best and correct anything that does not match your experience.
+- **Work index** — removed. `/work` redirects to `/library` through `public/_redirects` (checked with
+  `wrangler dev`). `projects.js` still feeds `/games`.
 - **AI readers** — plain-text twins and `llms.txt` are live with the site; serving a twin at the
   page's own address is optional and off (see `docs/AI-PAGES.md`). No special offer is in them.
 - **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in

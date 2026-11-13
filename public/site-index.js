@@ -121,8 +121,6 @@ window.KS_INDEX = [
     d: "Essays, devlogs and reposts, newest first.", w: "blog posts essays log" },
   { t: "Atom feed", h: "/feed.xml", s: "library", k: "Feed", shelf: "writing",
     d: "Subscribe to the log in a feed reader.", w: "rss subscribe" },
-  { t: "Work index", h: "/work", s: "library", k: "Page", shelf: "workshop",
-    d: "The original index of everything built here.", w: "portfolio projects all" },
   { t: "Now", h: "/now", s: "about", k: "Page", shelf: "workshop",
     d: "What I'm on at the moment.", w: "current status update" },
   { t: "Uses", h: "/uses", s: "about", k: "Page", shelf: "workshop",
