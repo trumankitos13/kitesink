@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Validate one fitness content file (or several). Usage:
-     python3 -I validate_fitness.py FILE.json [FILE.json ...] [--offline]
+     python3 scripts/validate_fitness.py content/fitness/FILE.json [...] [--offline]
 Checks the schema, the writing limits, that every source resolves on Crossref
 (or its URL answers), that the metadata matches, and that nobody named
 Schoenfeld is an author of any source or mentioned anywhere. Exit 1 on any error."""
-import hashlib, json, re, sys, time, urllib.request, urllib.parse, difflib, unicodedata
+import hashlib, json, os, re, sys, tempfile, time, urllib.request, urllib.parse, difflib, unicodedata
 from pathlib import Path
 
-CACHE = Path(__file__).resolve().parents[1] / "cache" / "crossref"
+# Crossref answers are kept between runs, outside the repository.
+CACHE = Path(os.environ.get("KS_CROSSREF_CACHE") or Path(tempfile.gettempdir()) / "kitesink-crossref-cache")
 CACHE.mkdir(parents=True, exist_ok=True)
 DOMAINS = {"hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health"}
 TYPES = {"note", "mistake", "number", "term", "table", "checklist", "step", "claim"}
@@ -78,10 +79,10 @@ def check_file(path, offline):
     except Exception as e:
         err(f"{path}: not valid JSON ({e})"); return
     dom = data.get("domain")
-    if dom not in DOMAINS | {"claims"}:
+    if dom not in DOMAINS | {"claims", "tools"}:
         err(f"{path}: domain must be one of {sorted(DOMAINS | {'claims'})}")
     topics = {t.get("id") for t in data.get("topics", [])}
-    if dom != "claims" and not (3 <= len(topics) <= 10):
+    if dom not in ("claims", "tools") and not (3 <= len(topics) <= 10):
         err(f"{path}: give 3-10 topics, each {{id,label}} (found {len(topics)})")
     for t in data.get("topics", []):
         if not ID_RE.match(t.get("id", "")) or not t.get("label"):
@@ -156,7 +157,7 @@ def check_file(path, offline):
             if "—" in v: warn(f"{w}: {field} uses an em dash; prefer a full stop, comma or colon")
             if re.search(r"\b(game[- ]changer|unlock|supercharge|secret|hack|crush it|shred)\b", v, re.I): warn(f"{w}: {field} sounds like marketing")
     for key in sources:
-        if key not in used: err(f"{path}: source {key!r} is never cited")
+        if key not in used and dom != "tools": err(f"{path}: source {key!r} is never cited")   # tools.json is cited from page.html
     for key, s in sources.items():
         w = f"{path} source {key}"
         if not ID_RE.match(key): err(f"{w}: key must be lowercase-hyphenated, e.g. morton-2018")

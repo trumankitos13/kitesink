@@ -2,505 +2,948 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Song of the Day — a daily music rec</title>
-<meta name="description" content="One curated song every day, with the story, the lineage, and the liner notes to go with it. A daily music-discovery app for deep listening, on purpose.">
+<meta name="description" content="One curated song every day, with the story, the lineage, and the liner notes to go with it. A daily music-discovery app for deep listening, on purpose. iOS, coming soon.">
 <meta property="og:title" content="Song of the Day">
 <meta property="og:description" content="One song a day, read like literature.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://kitesink.com/song-of-the-day">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
-<link rel="stylesheet" href="/ks.css?v=2027.3">
-<link rel="icon" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'14'%20fill%3D'%23B5571F'%2F%3E%3Cpath%20d%3D'M20%2041%20a12%2012%200%200%201%2024%200%20z'%20fill%3D'%23F8F2E8'%2F%3E%3Crect%20x%3D'14'%20y%3D'40.6'%20width%3D'36'%20height%3D'2.4'%20rx%3D'1.2'%20fill%3D'%23F8F2E8'%2F%3E%3Cpath%20d%3D'M16%2033%20a16%2016%200%200%201%2032%200'%20fill%3D'none'%20stroke%3D'%23F8F2E8'%20stroke-width%3D'2'%20stroke-linecap%3D'round'%20opacity%3D'0.4'%2F%3E%3C%2Fsvg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-<style>
-  html,body{margin:0;padding:0;}
-  body{background:#efece6;}
-  *{ -webkit-font-smoothing:antialiased; box-sizing:border-box; }
-  ::selection{ background:rgba(181,87,31,0.18); }
-  a{ color:inherit; }
-  @keyframes sotd-dot { 0%,100%{ opacity:.35; transform:scale(1); } 50%{ opacity:1; transform:scale(1.5); } }
-  @keyframes sotd-wave { 0%,100%{ transform:scaleY(.4); } 50%{ transform:scaleY(1); } }
-  @keyframes sotd-rise { from{ opacity:0; transform:translateY(20px); } to{ opacity:1; transform:none; } }
-  @keyframes sotd-fade { from{ opacity:0; } to{ opacity:1; } }
-
-  /* skip-link focus */
-  .skip-link:focus{ left:12px !important; }
-
-  /* hover states */
-  .hv-nav:hover{ color:var(--accent); }
-  .hv-appstore:hover{ opacity:.88; }
-  .hv-readmore:hover{ gap:13px; }
-  .hv-footlink:hover{ color:var(--accent); }
-
-  /* ── mobile-first layer (the ≤740px experience is designed, not just wrapped) ── */
-  @media (max-width: 740px){
-    /* masthead: brand row + full-width nav row with real tap targets; drop the date */
-    .sotd-mast{ row-gap:0 !important; padding-top:14px !important; padding-bottom:4px !important; }
-    .sotd-date{ display:none !important; }
-    .sotd-nav{ width:100%; justify-content:space-between; gap:4px !important; }
-    .sotd-nav a{ padding:15px 2px !important; }
-    /* hero phone column: fill the row, never force overflow */
-    .sotd-phonecol{ flex:1 1 100% !important; min-width:0 !important; }
-    /* ticker: one swipeable row (snap), label above, scrollbar hidden */
-    .sotd-ticker{ display:block !important; }
-    .sotd-ticker-label{ padding:12px 0 2px !important; border-right:0 !important; }
-    .sotd-ticker-cells{ flex-wrap:nowrap !important; overflow-x:auto; -webkit-overflow-scrolling:touch; scroll-snap-type:x proximity; scrollbar-width:none; }
-    .sotd-ticker-cells::-webkit-scrollbar{ display:none; }
-    .sotd-ticker-cell{ flex:0 0 auto !important; width:216px; scroll-snap-align:start; padding:10px 16px 14px 0 !important; margin-right:16px; }
-    /* touch comfort in the footer */
-    .hv-footlink{ padding:5px 0 !important; }
-    #theme-switch button{ padding:10px 14px !important; }
-  }
-  @media (max-width: 480px){
-    /* one strong, thumb-sized CTA */
-    .hv-appstore{ width:100%; justify-content:center; }
-  }
-  @media (max-width: 359px){
-    /* keep the whole phone visible on the narrowest devices */
-    .sotd-phone{ transform:scale(.88); transform-origin:bottom center; }
-  }
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/song-of-the-day">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
+<meta name="theme-color" content="#ece2cb">
+<script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
+<link rel="stylesheet" href="/ks.css?v=2027.3">
+<link rel="icon" href="/song-of-the-day/logos/app-icon-terracotta.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Song of the Day — product page
+   Tokens mirror the iOS app's design system (paper / ink / rust,
+   Newsreader + JetBrains Mono + system sans; radii 10 / 13 / 14 / 16).
+   Reading surfaces stay paper. Glass is the floating control layer,
+   as on iOS: tab bar, day rail, lens, chips.
+   Themes: light (default) and html[data-theme="dark"].
+   ============================================================ */
+@property --pa { syntax: '<color>'; inherits: true; initial-value: #f0b94a; }
+@property --pb { syntax: '<color>'; inherits: true; initial-value: #d97f1f; }
+@property --pc { syntax: '<color>'; inherits: true; initial-value: #e8875c; }
+@property --tl { syntax: '<color>'; inherits: true; initial-value: #945716; }
+@property --td { syntax: '<color>'; inherits: true; initial-value: #f0b94a; }
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #F6F1E9; }
+html[data-theme="dark"] body { background: #2A2520; }
+
+.sotd {
+  --paper: #F6F1E9; --paperD: #EDE5D8; --paperE: #E4D9C8;
+  --ink: #2A2520; --ink2: #5C544B; --ink3: #8A8278; --ink3t: #655D53;   /* ink3t = text-safe ink3 (AA) */
+  --rule: #CFC6B6; --accent: #B5571F; --accentT: #9C4716; --accentI: #F8F2E8;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --gutter: clamp(20px, 5vw, 64px);
+  --ease: cubic-bezier(.2, .75, .2, 1);
+  /* glass: tint (the scrim that keeps text AA), solid fallback, edges */
+  --glass: rgba(246, 241, 233, .64); --glass-solid: #F1EADF;
+  --glass-edge: rgba(255, 255, 255, .58); --glass-hi: rgba(255, 255, 255, .95); --glass-lo: rgba(60, 40, 20, .09);
+  --glass-shade: rgba(60, 40, 20, .3); --glass-sheen: rgba(255, 255, 255, .5); --glass-sel: rgba(255, 255, 255, .82);
+  --field-o: 1; --shadow: rgba(60, 40, 20, .34); --tone: var(--tl); --wash-a: 45%;
+  --beat: .625s;
+  position: relative; background: var(--paper); color: var(--ink); font-family: var(--serif);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 96px;                       /* resting place for the dock */
+  transition: --pa .9s ease, --pb .9s ease, --pc .9s ease, --tl .9s ease, --td .9s ease;
+}
+html[data-theme="dark"] .sotd {
+  --paper: #2A2520; --paperD: #332D27; --paperE: #3E3730;
+  --ink: #EFE8DC; --ink2: #BAB0A2; --ink3: #8F8678; --ink3t: #ABA294;
+  --rule: #473F38; --accent: #D98B4E; --accentT: #E3A06B; --accentI: #2A2520;
+  --glass: rgba(51, 45, 39, .78); --glass-solid: #3A332D;
+  --glass-edge: rgba(255, 255, 255, .13); --glass-hi: rgba(255, 255, 255, .26); --glass-lo: rgba(0, 0, 0, .3);
+  --glass-shade: rgba(0, 0, 0, .55); --glass-sheen: rgba(255, 255, 255, .1); --glass-sel: rgba(30, 26, 22, .86);
+  --field-o: .5; --shadow: rgba(0, 0, 0, .6); --tone: var(--td); --wash-a: 34%;
+}
+html[data-theme="dark"] .sotd .pg, html[data-theme="dark"] .sotd .sheet { --tone: var(--td); }
+.sotd .pg, .sotd .sheet { --tone: var(--tl); }
+
+.sotd *, .sotd *::before, .sotd *::after { box-sizing: border-box; }
+.sotd ::selection { background: rgba(181, 87, 31, .22); }
+.sotd a { color: inherit; }
+.sotd :focus-visible { outline: 2px solid var(--accentT); outline-offset: 3px; border-radius: 6px; }
+.sotd img { display: block; max-width: 100%; }
+.vh { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 200; background: var(--ink); color: var(--paper) !important; padding: 12px 16px; border-radius: 8px; font: 500 14px var(--sans); text-decoration: none; }
+.skip:focus { left: 12px; }
+
+/* paper grain, as in the app's paper-texture treatment */
+.sotd::before { content: ""; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: .035;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+html[data-theme="dark"] .sotd::before { opacity: .06; }
+
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.eyebrow { font: 500 11px/1.3 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink3t); }
+.eyerow { display: flex; align-items: center; gap: 14px; }
+.eyerow::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.sotd h2 { margin: 18px 0 0; font: italic 500 clamp(32px, 4.4vw, 50px)/1.02 var(--serif); letter-spacing: -.02em; font-variation-settings: "opsz" 60; text-wrap: balance; }
+.sotd h2.eyebrow { margin: 0; font: 500 11px/1.3 var(--mono); letter-spacing: .18em; font-variation-settings: normal; }
+.lede { margin: 18px 0 0; max-width: 46ch; font: 400 clamp(17px, 1.55vw, 19px)/1.6 var(--serif); color: var(--ink2); text-wrap: pretty; }
+.sec { position: relative; isolation: isolate; z-index: 2; padding: clamp(64px, 9vw, 124px) 0; }
+
+/* ---------- glass ---------- */
+.glass {
+  position: relative; isolation: isolate;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(var(--blur, 22px)) saturate(180%);
+  backdrop-filter: blur(var(--blur, 22px)) saturate(180%);
+  box-shadow: inset 0 0 0 1px var(--glass-edge), inset 0 1.5px 0 0 var(--glass-hi), inset 0 -1px 0 0 var(--glass-lo),
+              0 20px 44px -20px var(--glass-shade), 0 3px 8px -3px var(--glass-shade);
+}
+.glass::before, .glass::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; }
+.glass::before { background: linear-gradient(140deg, var(--glass-sheen) 0%, transparent 36%, transparent 64%, color-mix(in srgb, var(--glass-sheen) 40%, transparent) 100%); }
+.glass::after { opacity: 0; transition: opacity .35s; background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 0%), var(--glass-sheen), transparent 62%); }
+@media (hover: hover) { .glass.lit::after { opacity: 1; } }
+.glass--dark { --glass: rgba(24, 19, 15, .7); --glass-solid: #241D18; --glass-edge: rgba(255, 255, 255, .2); --glass-hi: rgba(255, 255, 255, .34);
+  --glass-lo: rgba(0, 0, 0, .3); --glass-sheen: rgba(255, 255, 255, .14); --glass-shade: rgba(0, 0, 0, .55); color: #F6F1E9; }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: var(--glass-solid); }
+}
+
+/* ---------- colour field: the thing behind the glass ---------- */
+.field { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; opacity: var(--field-o); }
+.field i { position: absolute; border-radius: 50%; will-change: transform; }
+.field .b1 { background: radial-gradient(closest-side, var(--pa), transparent); }
+.field .b2 { background: radial-gradient(closest-side, var(--pb), transparent); }
+.field .b3 { background: radial-gradient(closest-side, var(--pc), transparent); }
+.field .b4 { background: radial-gradient(closest-side, var(--accent), transparent); }
+@keyframes drift-a { to { transform: translate3d(7%, -9%, 0) scale(1.14); } }
+@keyframes drift-b { to { transform: translate3d(-9%, 7%, 0) scale(.9); } }
+@keyframes drift-c { to { transform: translate3d(6%, 10%, 0) scale(1.1); } }
+@media (prefers-reduced-motion: no-preference) {
+  .field .b1 { animation: drift-a 19s ease-in-out infinite alternate; }
+  .field .b2 { animation: drift-b 23s ease-in-out infinite alternate; }
+  .field .b3 { animation: drift-c 17s ease-in-out infinite alternate; }
+  .field .b4 { animation: drift-a 29s ease-in-out infinite alternate-reverse; }
+}
+
+/* ---------- masthead ---------- */
+.mast { position: relative; z-index: 20; border-bottom: 1px solid var(--rule); }
+.mast-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; min-height: 44px; text-decoration: none; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+.brand b { font: italic 500 22px/1 var(--serif); letter-spacing: -.3px; white-space: nowrap; }
+.beat { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+@keyframes sotd-dot { from { opacity: .35; transform: scale(.85); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) { .beat, .pg .dot { animation: sotd-dot calc(var(--beat) / 2) ease-in-out infinite alternate; } }
+.mast nav { display: flex; align-items: center; gap: clamp(2px, 1.4vw, 18px); }
+.mast nav a { padding: 16px 7px; font: 500 11px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink2); text-decoration: none; transition: color .15s; }
+.mast nav a:hover { color: var(--accentT); }
+@media (max-width: 660px) { .mast nav a:not(.keep) { display: none; } .mast-in { min-height: 60px; } }
+
+/* ---------- dock: the app's floating tab bar, as page navigation ---------- */
+.dockwrap { position: sticky; top: calc(100vh - 82px); top: calc(100dvh - 82px - env(safe-area-inset-bottom, 0px)); z-index: 60; height: 0;
+  display: flex; justify-content: center; pointer-events: none; }
+.dock { --blur: 20px; pointer-events: auto; flex: none; position: relative; display: grid; grid-template-columns: repeat(4, 1fr);
+  width: min(calc(100vw - 28px), 352px); height: 66px; padding: 5px; border-radius: 999px; }
+.dock a { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  min-height: 56px; border-radius: 999px; font: 600 11px/1 var(--sans); letter-spacing: .01em; color: var(--ink); text-decoration: none; transition: color .2s; }
+.dock a svg { width: 23px; height: 23px; }
+.ico { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.dock a[aria-current] { color: var(--accentT); }
+.dock a:focus-visible { outline-offset: -3px; border-radius: 999px; }
+.dock-sel { position: absolute; z-index: 0; top: 5px; bottom: 5px; left: 5px; width: calc((100% - 10px) / 4); border-radius: 999px;
+  background: var(--glass-sel); box-shadow: inset 0 0 0 1px var(--glass-edge), 0 2px 8px -3px var(--glass-shade);
+  transform: translateX(calc(var(--tab, 0) * 100%)); opacity: 0; transition: transform .5s cubic-bezier(.3, 1.35, .5, 1), opacity .3s; }
+.dock.on .dock-sel { opacity: 1; }
+@media (hover: hover) { .dock a:hover { color: var(--accentT); } }
+
+/* ---------- hero ---------- */
+.hero { position: relative; isolation: isolate; z-index: 2; }
+.hero .field { -webkit-mask-image: linear-gradient(180deg, transparent 4%, #000 46%, #000 82%, transparent); mask-image: linear-gradient(180deg, transparent 4%, #000 46%, #000 82%, transparent); }
+.hero .b1 { width: 620px; height: 620px; right: -6%; bottom: 14%; }
+.hero .b2 { width: 520px; height: 520px; right: 30%; bottom: -8%; opacity: .8; }
+.hero .b3 { width: 480px; height: 480px; right: -14%; bottom: -12%; opacity: .85; }
+.hero .b4 { width: 360px; height: 360px; right: 22%; bottom: 44%; opacity: .5; }
+.hero-in { display: grid; grid-template-columns: 1fr; gap: 40px; padding-top: clamp(36px, 7vw, 72px); padding-bottom: clamp(48px, 7vw, 88px); }
+.hero h1 { margin: 20px 0 0; max-width: 12ch; font: italic 500 clamp(44px, 12vw, 72px)/.98 var(--serif); letter-spacing: -.022em; font-variation-settings: "opsz" 72; text-wrap: balance; }
+.dek { margin: 22px 0 0; max-width: 44ch; font: italic 400 clamp(18px, 2vw, 20.5px)/1.48 var(--serif); letter-spacing: -.01em; color: var(--ink2); text-wrap: pretty; }
+.cta { margin-top: 30px; display: flex; align-items: center; gap: 14px 16px; flex-wrap: wrap; }
+.badge { display: inline-flex; align-items: center; gap: 11px; height: 56px; padding: 0 22px 0 18px; border-radius: 14px; background: #0b0a09; color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16), 0 14px 28px -16px var(--shadow); }
+.badge svg { width: 21px; height: 25px; fill: #fff; flex: none; }
+.badge small { display: block; font: 400 11px/1 var(--sans); letter-spacing: .02em; }
+.badge b { display: block; margin-top: 3px; font: 600 19px/1 var(--sans); letter-spacing: -.4px; }
+.more { --blur: 16px; display: inline-flex; align-items: center; gap: 9px; height: 56px; padding: 0 22px; border-radius: 999px;
+  font: 600 16px/1 var(--sans); letter-spacing: -.1px; text-decoration: none; }
+.more svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s var(--ease); }
+.more:hover svg { transform: translateX(4px); }
+.meta { margin: 26px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 0; font: 500 11px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink3t); }
+.meta li { display: flex; align-items: center; margin-right: 14px; }
+.meta li::before { content: ""; width: 3px; height: 3px; margin-right: 9px; border-radius: 50%; background: var(--accent); }
+@media (max-width: 480px) { .badge, .more { flex: 1 1 100%; justify-content: center; } }
+
+/* stage: the app + its glass controls */
+.stage { position: relative; display: flex; flex-direction: column; align-items: center; }
+.phone { position: relative; z-index: 1; flex: none; width: clamp(262px, 76vw, 322px); padding: 10px; border-radius: 54px; background: #0b0a09; touch-action: pan-y;
+  box-shadow: 0 60px 90px -44px var(--shadow), 0 0 0 1px rgba(42, 37, 32, .55), inset 0 0 0 1.5px rgba(255, 255, 255, .15); }
+.screen { position: relative; aspect-ratio: 402 / 874; border-radius: 44px; overflow: hidden; background: var(--paper); container-type: inline-size; }
+.scr { position: absolute; inset: 0; --u: .75px; color: var(--ink); }
+@supports (width: 1cqw) { .scr { --u: calc(100cqw / 402); } }
+.sb { position: absolute; z-index: 6; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: calc(var(--u) * 21) calc(var(--u) * 34) 0; }
+.sb b { font: 600 calc(var(--u) * 17)/1 var(--sans); letter-spacing: .01em; }
+.sb svg { height: calc(var(--u) * 12.5); width: auto; fill: currentColor; }
+.sb span { display: flex; gap: calc(var(--u) * 6); align-items: center; }
+.island { position: absolute; z-index: 7; top: calc(var(--u) * 11); left: 50%; width: calc(var(--u) * 124); height: calc(var(--u) * 36); margin-left: calc(var(--u) * -62); border-radius: 99px; background: #000; }
+.pager { display: flex; height: 100%; transform: translateX(calc(var(--i, 0) * -100%)); transition: transform .8s cubic-bezier(.22, .8, .2, 1); }
+.pg { position: relative; flex: 0 0 100%; height: 100%; overflow: hidden; padding: 0 calc(var(--u) * 25); }
+.pg-wash { position: absolute; left: 50%; top: calc(var(--u) * 32); width: calc(var(--u) * 884); height: calc(var(--u) * 884); margin: calc(var(--u) * -442) 0 0 calc(var(--u) * -442); border-radius: 50%;
+  background: radial-gradient(closest-side, var(--pa), transparent 86%); opacity: .45; }
+html[data-theme="dark"] .pg-wash { background: radial-gradient(closest-side, var(--pb), transparent 86%); opacity: .55; }
+.pg > * { position: relative; }
+.pg > .pg-wash { position: absolute; }
+.pg-mast { margin-top: calc(var(--u) * 78); display: flex; align-items: center; justify-content: space-between; font: 500 calc(var(--u) * 10)/1.2 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink3t); }
+.pg-mast span:first-child { display: flex; align-items: center; gap: calc(var(--u) * 8); color: var(--ink2); }
+.pg .dot { width: calc(var(--u) * 7); height: calc(var(--u) * 7); border-radius: 50%; background: var(--accent); }
+.pg-mast.is-off { visibility: hidden; }
+.pg-pill { position: absolute !important; z-index: 3; top: calc(var(--u) * 66); left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: calc(var(--u) * 6); white-space: nowrap;
+  padding: calc(var(--u) * 9) calc(var(--u) * 14); border-radius: 99px; background: var(--paperD); box-shadow: inset 0 0 0 .75px var(--rule), 0 calc(var(--u) * 4) calc(var(--u) * 10) rgba(0, 0, 0, .1);
+  font: 500 calc(var(--u) * 13)/1 var(--sans); }
+.pg-pill svg { width: calc(var(--u) * 12); height: calc(var(--u) * 12); stroke-width: 2; }
+.pg-art { margin-top: calc(var(--u) * 26); aspect-ratio: 1; border-radius: calc(var(--u) * 10); background: var(--paperD);
+  box-shadow: 0 calc(var(--u) * 8) calc(var(--u) * 14) rgba(60, 40, 20, .3); }
+.pg-art { box-shadow: 0 calc(var(--u) * 8) calc(var(--u) * 14) rgba(60, 40, 20, .3), 0 calc(var(--u) * 36) calc(var(--u) * 44) color-mix(in srgb, var(--pa) 60%, transparent); }
+html[data-theme="dark"] .pg-art { box-shadow: 0 calc(var(--u) * 8) calc(var(--u) * 14) rgba(0, 0, 0, .5); }
+.pg-art > :first-child { width: 100%; height: 100%; border-radius: inherit; overflow: hidden; }
+.pg-art img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.fab { position: absolute; right: calc(var(--u) * -14); bottom: calc(var(--u) * -14); width: calc(var(--u) * 60); height: calc(var(--u) * 60); border-radius: 50%; display: grid; place-items: center;
+  background: var(--paper); box-shadow: inset 0 0 0 .75px var(--rule), 0 calc(var(--u) * 10) calc(var(--u) * 13) rgba(0, 0, 0, .35); font: italic 500 calc(var(--u) * 34)/1 var(--serif); padding-bottom: calc(var(--u) * 4); }
+.pg-title { margin-top: calc(var(--u) * 26); font: italic 500 calc(var(--u) * 42)/1.05 var(--serif); letter-spacing: -.012em; font-variation-settings: "opsz" 48; white-space: nowrap; }
+.pg-artist { margin-top: calc(var(--u) * 8); font: 400 calc(var(--u) * 19)/1.25 var(--serif); color: var(--ink2); }
+.pg-wave { margin-top: calc(var(--u) * 18); height: calc(var(--u) * 34); display: flex; align-items: center; gap: calc(var(--u) * 12); font: 500 calc(var(--u) * 9)/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink3t); }
+.pg-wave span:first-child { flex: none; width: calc(var(--u) * 54); }
+.pg-wave span:last-child { flex: none; width: calc(var(--u) * 36); text-align: right; }
+.wave { flex: 1; min-width: 0; height: 100%; overflow: visible; }
+.wave path { fill: none; stroke: var(--tone); stroke-width: 2; stroke-linecap: round; transform-box: fill-box; transform-origin: center; }
+.wave .w1 { opacity: .5; } .wave .w2 { opacity: .68; } .wave .w3 { opacity: .86; }
+@keyframes sotd-wave { from { transform: scaleY(.56); } to { transform: scaleY(1); } }
+@media (prefers-reduced-motion: no-preference) {
+  .wave .w1 { animation: sotd-wave .8s ease-in-out infinite alternate; }
+  .wave .w2 { animation: sotd-wave 1.15s ease-in-out -.4s infinite alternate; }
+  .wave .w3 { animation: sotd-wave 1.5s ease-in-out -.9s infinite alternate; }
+}
+.pg-share { margin-top: calc(var(--u) * 20); height: calc(var(--u) * 50); border-radius: calc(var(--u) * 14); background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center; gap: calc(var(--u) * 8); font: 600 calc(var(--u) * 15.5)/1 var(--sans); }
+.pg-share svg { width: calc(var(--u) * 17); height: calc(var(--u) * 17); stroke-width: 2; }
+.pills { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.pill { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; border-radius: 99px; box-shadow: inset 0 0 0 .75px var(--rule); font: 500 13px/1 var(--sans); color: var(--ink); }
+.pill svg { width: 20px; height: 20px; flex: none; }
+.pg .pills { margin-top: calc(var(--u) * 12); gap: calc(var(--u) * 10); }
+.pg .pill { min-height: calc(var(--u) * 46); gap: calc(var(--u) * 8); font-size: calc(var(--u) * 13); }
+.pg .pill svg { width: calc(var(--u) * 20); height: calc(var(--u) * 20); }
+/* the app's tab bar: a floating glass capsule */
+.ptab { position: absolute; z-index: 5; left: calc(var(--u) * 21); right: calc(var(--u) * 21); bottom: calc(var(--u) * 21); height: calc(var(--u) * 62); padding: calc(var(--u) * 4); border-radius: 99px;
+  display: grid; grid-template-columns: repeat(4, 1fr); background: rgba(246, 241, 233, .6);
+  -webkit-backdrop-filter: blur(9px) saturate(180%); backdrop-filter: blur(9px) saturate(180%);
+  box-shadow: inset 0 0 0 .75px rgba(255, 255, 255, .7), inset 0 1px 0 rgba(255, 255, 255, .95), 0 calc(var(--u) * 10) calc(var(--u) * 26) rgba(60, 40, 20, .22); }
+html[data-theme="dark"] .ptab { background: rgba(62, 55, 48, .62); box-shadow: inset 0 0 0 .75px rgba(255, 255, 255, .16), inset 0 1px 0 rgba(255, 255, 255, .28), 0 calc(var(--u) * 10) calc(var(--u) * 26) rgba(0, 0, 0, .45); }
+.ptab span { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--u) * 3); border-radius: 99px; font: 500 calc(var(--u) * 10)/1 var(--sans); color: var(--ink); }
+.ptab svg { width: calc(var(--u) * 24); height: calc(var(--u) * 24); }
+.ptab .on { color: var(--accent); font-weight: 600; background: rgba(120, 104, 88, .16); }
+html[data-theme="dark"] .ptab .on { background: rgba(255, 255, 255, .12); }
+.homeind { position: absolute; z-index: 6; left: 50%; bottom: calc(var(--u) * 8); width: calc(var(--u) * 134); height: calc(var(--u) * 5); margin-left: calc(var(--u) * -67); border-radius: 9px; background: var(--ink); opacity: .9; }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .ptab { background: var(--paperD); } }
+
+/* stand-in sleeves: abstract gradients with grain, as in the app's design file */
+.sl { position: relative; display: block; background: radial-gradient(90% 80% at 18% 12%, rgba(255, 240, 210, .38), transparent 56%), linear-gradient(135deg, var(--s1), var(--s2)); overflow: hidden; }
+.sl::after { content: ""; position: absolute; inset: 0; opacity: .5; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.32 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.sl-clair { --s1: #67aaed; --s2: #4a4e99; } .sl-gym { --s1: #69c27e; --s2: #007763; } .sl-prel { --s1: #e2a355; --s2: #a54a24; }
+.sl-elise { --s1: #8683c7; --s2: #5e5b94; } .sl-green { --s1: #cf6b58; --s2: #ab4235; } .sl-extra { --s1: #8f8fb0; --s2: #4b4862; }
+
+/* the day rail + now-showing card (glass) */
+.now { z-index: 3; width: min(100%, 360px); margin-top: -22px; padding: 16px 16px 13px; border-radius: 28px; }
+.now-txt { display: grid; }
+.np { grid-area: 1 / 1; display: flex; flex-direction: column; gap: 5px; min-width: 0; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .45s, transform .45s var(--ease), visibility 0s .45s; }
+.np0 { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.np small { font: 500 11px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink); }
+.np b { font: italic 500 27px/1.05 var(--serif); letter-spacing: -.015em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-bottom: 2px; }
+.np span { font: 400 15.5px/1.3 var(--serif); color: var(--ink); }
+.rail { margin: 13px 0 0; padding: 12px 0 0; border: 0; border-top: 1px solid var(--glass-lo); min-width: 0; }
+.rail legend { float: left; width: 100%; margin: 0 0 9px; padding: 0; font: 500 11px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.rail-row { clear: both; display: flex; justify-content: space-between; gap: 2px; }
+.rl { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1 1 0; min-width: 44px; padding: 4px 0 2px; cursor: pointer; }
+.rl input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.rl-art { width: 40px; height: 40px; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 6px 12px -5px var(--shadow); transition: transform .4s cubic-bezier(.3, 1.4, .5, 1), box-shadow .3s; }
+.rl-art img { width: 100%; height: 100%; object-fit: cover; }
+.rl-day { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
+.rl input:checked ~ .rl-art { transform: translateY(-4px) scale(1.14); box-shadow: 0 0 0 2px var(--glass-solid), 0 0 0 4px var(--ink), 0 12px 18px -8px var(--shadow); }
+.rl input:checked ~ .rl-day { font-weight: 600; }
+.rl input:focus-visible ~ .rl-art { outline: 2px solid var(--accentT); outline-offset: 6px; }
+@media (hover: hover) { .rl:hover .rl-art { transform: translateY(-3px) scale(1.06); } .rl:hover input:checked ~ .rl-art { transform: translateY(-4px) scale(1.14); } }
+.now-note { margin: 10px 0 0; font: italic 400 13.5px/1.35 var(--serif); color: var(--ink); }
+@media (min-width: 700px) {
+  .stage { flex-direction: row; justify-content: flex-end; align-items: flex-end; width: 596px; max-width: 100%; margin: 0 auto; }
+  .now { position: absolute; left: 0; bottom: 96px; width: 300px; margin: 0; }
+}
+@media (min-width: 1060px) {
+  .hero-in { grid-template-columns: minmax(0, 1fr) 596px; gap: clamp(24px, 3.4vw, 56px); align-items: center; }
+  .hero h1 { font-size: clamp(54px, 4.9vw, 70px); }
+  .hero .field { -webkit-mask-image: linear-gradient(90deg, transparent 30%, #000 58%); mask-image: linear-gradient(90deg, transparent 30%, #000 58%); }
+  .stage { margin: 0; }
+}
+
+/* ---------- The Daily ---------- */
+.daily .field { -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent); mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent); opacity: calc(var(--field-o) * .8); }
+.daily .b1 { width: 560px; height: 560px; left: -8%; top: 34%; opacity: .7; }
+.daily .b3 { width: 460px; height: 460px; left: 22%; top: 52%; opacity: .6; }
+.daily-grid { display: grid; grid-template-columns: 1fr; gap: 44px; }
+.listen { margin-top: 30px; max-width: 430px; padding: 18px 18px 18px; border-radius: 26px; }
+.listen p { margin: 8px 0 14px; font: 400 16px/1.5 var(--serif); color: var(--ink); text-wrap: pretty; }
+.listen .eyebrow { color: var(--ink); }
+.sheet { position: relative; margin: 0; width: 100%; max-width: 402px; justify-self: center; padding: 30px 25px 34px; border-radius: 30px; background: var(--paper); overflow: hidden;
+  box-shadow: 0 0 0 1px var(--rule), 0 44px 80px -44px var(--shadow); }
+.sheet-wash { position: absolute; left: 50%; top: 0; width: 884px; height: 884px; margin: -420px 0 0 -442px; border-radius: 50%; pointer-events: none; opacity: .45;
+  background: radial-gradient(closest-side, var(--pa), transparent 86%); }
+html[data-theme="dark"] .sheet-wash { background: radial-gradient(closest-side, var(--pb), transparent 86%); opacity: .5; }
+.sheet > * { position: relative; }
+.sheet > .sheet-wash { position: absolute; }
+.hd { display: flex; align-items: center; gap: 10px; margin: 34px 0 0; font: 500 11px/1.3 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink3t); }
+.hd:first-of-type { margin-top: 0; }
+.hd::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.hd2 { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 34px 0 14px; padding-top: 20px; border-top: 1px solid var(--rule); font: 500 11px/1.3 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink3t); }
+.hd2 i { font: italic 400 13px/1.3 var(--serif); letter-spacing: 0; text-transform: none; text-align: right; }
+.s-dek { margin: 22px 0 0; font: italic 400 23px/1.28 var(--serif); letter-spacing: -.01em; text-wrap: balance; }
+.s-body { margin: 20px 0 0; font: 400 16.5px/1.66 var(--serif); letter-spacing: -.003em; text-wrap: pretty; }
+.s-body::first-letter { float: left; margin: 5px 8px -2px 0; font: italic 500 61px/.82 var(--serif); color: var(--tone); }
+.s-foot { margin: 22px 0 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; font: 500 11px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink3t); }
+.s-foot i { font: italic 400 13px/1.3 var(--serif); letter-spacing: 0; text-transform: none; white-space: nowrap; }
+.wheel { display: block; width: min(100%, 268px); height: auto; margin: 22px auto 0; }
+.wheel .g { fill: none; stroke: var(--rule); stroke-width: .75; }
+.wheel .hit { fill: var(--tone); stroke: var(--tone); }
+.wheel .nb { fill: var(--tone); opacity: .16; }
+.wheel text { font: 500 11px var(--mono); letter-spacing: .06em; fill: var(--ink3t); text-anchor: middle; dominant-baseline: central; }
+.wheel text.n { fill: var(--ink2); } .wheel text.h { fill: var(--paper); font-weight: 600; }
+.wheel .c1 { font: italic 500 30px var(--serif); letter-spacing: -.02em; fill: var(--ink); }
+.wheel-cap { margin: 16px 0 0; text-align: center; font: 500 11px/1.4 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink2); }
+.wheel-cap i { display: block; margin-top: 6px; font: italic 400 13px/1.3 var(--serif); letter-spacing: 0; text-transform: none; color: var(--ink3t); }
+.facts { margin: 14px 0 0; }
+.facts > div { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 9px 0; background: linear-gradient(90deg, var(--rule) 1.2px, transparent 1.2px) 0 100% / 4.4px 1px repeat-x; }
+.facts > div:last-child { background: none; }
+.facts dt { padding-top: 3px; font: 500 11px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink3t); }
+.facts dd { margin: 0; font: 400 15px/1.45 var(--serif); color: var(--ink2); }
+.lineage { position: relative; border-radius: 10px; background: color-mix(in srgb, var(--paperD) 40%, transparent); box-shadow: inset 0 0 0 .75px var(--rule); }
+.lineage svg { display: block; width: 100%; height: auto; }
+.lineage .ln { fill: none; stroke: var(--rule); stroke-width: 1; }
+.lineage .nd { fill: var(--ink3); }
+.lineage .c-a { fill: var(--tone); opacity: .16; } .lineage .c-b { fill: none; stroke: var(--tone); stroke-width: 1.5; } .lineage .c-c { fill: var(--tone); }
+.lineage text { font: 500 11px var(--mono); letter-spacing: .12em; fill: var(--ink3t); text-transform: uppercase; }
+.lineage text.t { font: italic 500 14px var(--serif); letter-spacing: 0; fill: var(--ink); text-transform: none; }
+.lineage text.me { fill: var(--tone); }
+.notes { display: grid; gap: 10px; }
+.note { padding: 10px 14px 11px 12px; border-left: 2px solid var(--rule); border-radius: 4px; background: color-mix(in srgb, var(--paperD) 50%, transparent); }
+.note small { display: block; font: 500 11px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink3t); }
+.note p { margin: 4px 0 0; font: 400 15px/1.45 var(--serif); }
+.note.m { border-left-color: var(--tone); } .note.q { border-left-color: var(--ink2); } .note.q p { font-style: italic; } .note.f { border-left-color: var(--ink3); }
+.colophon { margin: 38px 0 0; text-align: center; font: 500 11px/1.3 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--ink3t); }
+.colophon::before { content: ""; display: block; width: 80px; height: 1px; margin: 0 auto 12px; background: var(--rule); }
+@media (min-width: 880px) {
+  .daily-grid { grid-template-columns: minmax(0, 1fr) 402px; gap: clamp(40px, 7vw, 110px); align-items: start; }
+  .daily-copy { position: sticky; top: 78px; }
+  .sheet { justify-self: end; }
+}
+
+/* ---------- History + the Friday Pressing ---------- */
+.press-grid { display: grid; grid-template-columns: 1fr; gap: 44px; align-items: center; }
+.around { margin-top: 26px; max-width: 520px; }
+.around > div { grid-template-columns: 112px 1fr; }
+.around dd { color: var(--ink2); font-size: 16px; }
+.cover { position: relative; isolation: isolate; width: 100%; max-width: 480px; justify-self: center; padding: 34px 24px 0; margin-bottom: 40px; border-radius: 34px; background: #211B17; color: #fff; text-align: center;
+  box-shadow: 0 50px 90px -46px var(--shadow), inset 0 0 0 1px rgba(255, 255, 255, .08); }
+.cover-bg { position: absolute; inset: 0; z-index: -1; border-radius: inherit; overflow: hidden; }
+.cover-bg::before { content: ""; position: absolute; inset: -20%; opacity: .5;
+  background: radial-gradient(40% 36% at 24% 30%, #d97f1f, transparent), radial-gradient(36% 34% at 78% 36%, #4a4e99, transparent), radial-gradient(44% 40% at 54% 74%, #ab4235, transparent), radial-gradient(30% 30% at 16% 82%, #007763, transparent); }
+.cover-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33, 27, 23, .2), rgba(33, 27, 23, .82)); }
+.cover small { display: block; text-wrap: balance; font: 500 11px/1.5 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: rgba(255, 255, 255, .78); }
+.cover-t { margin: 8px 0 0; font: italic 500 clamp(40px, 11vw, 50px)/.94 var(--serif); letter-spacing: -.02em; }
+.crate { position: relative; height: 300px; margin: 26px 0 22px; }
+.sleeve { position: absolute; left: 50%; bottom: 68px; width: min(49%, 190px); aspect-ratio: 1; margin-left: calc(min(49%, 190px) / -2); overflow: hidden;
+  box-shadow: 0 10px 22px -8px rgba(0, 0, 0, .6), inset 0 0 0 .5px rgba(255, 255, 255, .18);
+  transform: translate(calc(var(--d) * var(--dx, 21px)), calc(var(--ad) * 6px)) rotate(calc(var(--d) * 4.6deg)); transform-origin: 50% 100%; }
+.sleeve img { width: 100%; height: 100%; object-fit: cover; }
+.crate-front { position: absolute; left: 0; right: 0; bottom: 0; height: 112px; border-radius: 8px; background: #2E251F; box-shadow: 0 12px 28px rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 255, 255, .06); }
+.crate-front::before { content: ""; position: absolute; left: 0; right: 0; top: 18px; height: 1px; background: rgba(255, 255, 255, .08); box-shadow: 0 13px 0 1px rgba(0, 0, 0, .25); }
+.crate-front span { position: absolute; left: 0; right: 0; top: 50px; font: 500 11px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: rgba(255, 255, 255, .72); }
+.entry { --blur: 18px; position: relative; z-index: 2; display: flex; align-items: center; gap: 14px; margin: 22px -6px -40px; padding: 15px 18px 16px; border-radius: 22px; text-align: left; }
+.entry div { flex: 1; min-width: 0; }
+.entry small { display: flex; align-items: center; gap: 7px; letter-spacing: .14em; color: #F6F1E9; }
+.entry small::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #E9A873; flex: none; }
+.entry b { display: block; margin-top: 6px; font: italic 500 23px/1.1 var(--serif); letter-spacing: -.01em; }
+.entry span { display: block; margin-top: 4px; font: 400 15px/1.35 var(--serif); color: #F6F1E9; }
+.entry svg { width: 18px; height: 18px; flex: none; fill: none; stroke: #E9A873; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (min-width: 880px) {
+  .press-grid { grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: clamp(40px, 7vw, 110px); }
+  .press-copy { order: 2; }
+  .entry { margin: 22px -44px -40px 56px; }
+}
+
+/* ---------- The Almanac ---------- */
+.alm .field { -webkit-mask-image: linear-gradient(180deg, transparent, #000 34%, #000 74%, transparent); mask-image: linear-gradient(180deg, transparent, #000 34%, #000 74%, transparent); opacity: calc(var(--field-o) * .7); }
+.alm .b2 { width: 620px; height: 620px; right: -10%; top: 20%; opacity: .55; }
+.alm .b3 { width: 480px; height: 480px; left: -8%; top: 44%; opacity: .5; }
+.alm-head { display: grid; gap: 0 60px; }
+.alm-sheet { position: relative; margin-top: 40px; padding: 26px 25px 30px; border-radius: 30px; background: var(--paper); box-shadow: 0 0 0 1px var(--rule), 0 44px 80px -44px var(--shadow);
+  display: grid; grid-template-columns: 1fr; gap: 34px; }
+.tag { --blur: 14px; position: absolute; z-index: 3; top: -15px; right: 22px; padding: 8px 13px; border-radius: 999px; font: 500 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.alm-col { display: grid; gap: 34px; align-content: start; min-width: 0; }
+.alm-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.streak { display: inline-flex; align-items: center; gap: 6px; font: 500 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink3t); }
+.streak::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: .8; }
+.seg { display: inline-flex; padding: 3px; border-radius: 9px; background: var(--paperE); font: 500 12px/1 var(--sans); color: var(--ink2); }
+.seg span { padding: 7px 11px; border-radius: 6px; }
+.seg .on { background: var(--paper); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0, 0, 0, .08); }
+.seg--wide { display: flex; margin-top: 18px; font-size: 13px; }
+.seg--wide span { flex: 1; padding: 10px; text-align: center; }
+.kept { display: flex; align-items: baseline; gap: 12px; margin-top: 14px; }
+.kept b { font: 500 80px/.9 var(--serif); letter-spacing: -.02em; }
+.kept i { font: italic 400 18px/1.2 var(--serif); color: var(--ink2); }
+.blk-h { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font: 500 11px/1.3 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink3t); }
+.blk-h i { font: italic 400 14px/1.3 var(--serif); letter-spacing: 0; text-transform: none; color: var(--ink2); }
+.spec-wrap { position: relative; margin-top: 14px; padding: 9px 0; }
+.spec { display: flex; gap: 1.5px; height: 46px; border-radius: 6px; overflow: hidden; }
+.spec i { flex: var(--w) 1 0; background: linear-gradient(180deg, var(--s1), var(--s2)); }
+.lens { --blur: 5px; position: absolute; top: 0; left: var(--lx, 16.5%); width: 104px; height: 64px; margin-left: -52px; border-radius: 20px; display: grid; place-items: center; align-content: center; gap: 4px;
+  pointer-events: none; transition: left .5s cubic-bezier(.3, 1.3, .5, 1); --glass: rgba(246, 241, 233, .7); color: #2A2520; }
+html[data-theme="dark"] .lens { --glass: rgba(246, 241, 233, .74); --glass-edge: rgba(255, 255, 255, .5); --glass-hi: rgba(255, 255, 255, .8); --glass-sheen: rgba(255, 255, 255, .4); }
+.lens.live { transition: left .12s linear; }
+.lens b { font: italic 500 16px/1 var(--serif); }
+.lens span { font: 500 11px/1 var(--mono); letter-spacing: .12em; }
+.top3 { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.top3 li { display: flex; align-items: center; gap: 10px; font: italic 400 16px/1.2 var(--serif); color: var(--ink2); }
+.top3 li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--s2); flex: none; }
+.top3 span { margin-left: auto; font: 500 11px/1 var(--mono); letter-spacing: .12em; color: var(--ink3t); }
+.nums { margin-top: 4px; }
+.num { padding: 12px 0; background: linear-gradient(90deg, var(--rule) 1.2px, transparent 1.2px) 0 100% / 4.4px 1px repeat-x; }
+.num div { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; font: 500 11px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink3t); }
+.num div span { font: 400 15.5px/1.2 var(--serif); letter-spacing: 0; text-transform: none; color: var(--ink2); }
+.bar { height: 4px; margin-top: 7px; border-radius: 9px; background: var(--paperE); overflow: hidden; }
+.bar i { display: block; height: 100%; width: var(--bw); margin-left: var(--bs); border-radius: 9px; background: var(--accent); transform-origin: 0 50%; }
+.bar .tempo { background: linear-gradient(90deg, #4573A8, var(--accent)); }
+.grid42 { display: grid; grid-template-columns: repeat(14, 1fr); gap: 4px; margin-top: 14px; }
+.grid42 i { aspect-ratio: 1; border-radius: 3px; background: var(--accent); opacity: var(--o); }
+.anthem { display: flex; gap: 14px; padding: 14px; border-radius: 13px; background: var(--paperD); box-shadow: inset 0 0 0 .75px var(--rule); }
+.anthem picture { flex: none; }
+.anthem img { width: 92px; height: 92px; border-radius: 5px; box-shadow: 0 3px 8px rgba(0, 0, 0, .16); }
+.anthem small { display: block; margin-top: 2px; font: 500 11px/1.3 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--accentT); }
+.anthem b { display: block; margin-top: 6px; font: italic 500 23px/1.1 var(--serif); letter-spacing: -.01em; }
+.anthem span { display: block; margin-top: 5px; font: 400 15px/1.3 var(--serif); color: var(--ink2); }
+.suggest { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 13px; background: var(--paperD); box-shadow: inset 0 0 0 .75px var(--rule); }
+.suggest div { flex: 1; min-width: 0; }
+.suggest small { display: block; font: 500 11px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--accentT); }
+.suggest b { display: block; margin-top: 5px; font: italic 500 18px/1.2 var(--serif); }
+.suggest span { display: block; margin-top: 4px; font: 400 15px/1.35 var(--serif); color: var(--ink2); }
+.suggest i { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--paper); box-shadow: inset 0 0 0 .75px var(--rule); font: italic 500 22px/1 var(--serif); padding-bottom: 3px; }
+@media (min-width: 880px) {
+  .alm-head { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; }
+  .alm-head .lede { margin-bottom: 4px; }
+  .alm-sheet { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 34px clamp(40px, 6vw, 84px); padding: 40px clamp(30px, 4vw, 54px) 44px; }
+}
+
+/* ---------- The Story + For whom ---------- */
+.story-grid { display: grid; grid-template-columns: 1fr; gap: 56px; }
+.story p.lede { max-width: 40ch; }
+.pull { margin: 28px 0 0; max-width: 460px; padding: 16px 20px 17px; border-left: 2px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--paperD); }
+.pull small { display: block; font: 500 11px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink3t); }
+.pull p { margin: 8px 0 0; font: italic 400 clamp(20px, 2.2vw, 25px)/1.3 var(--serif); letter-spacing: -.01em; text-wrap: balance; }
+.whom { margin-top: 20px; }
+.whom article { padding: 26px 0; border-top: 1px solid var(--rule); }
+.whom article:first-child { border-top: 0; padding-top: 4px; }
+.whom small { font: 600 11px/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--accentT); }
+.whom h3 { margin: 10px 0 0; font: italic 500 clamp(22px, 2.5vw, 28px)/1.1 var(--serif); letter-spacing: -.015em; text-wrap: balance; }
+.whom p { margin: 12px 0 0; max-width: 46ch; font: 400 17px/1.6 var(--serif); color: var(--ink2); text-wrap: pretty; }
+@media (min-width: 880px) { .story-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 7vw, 110px); } }
+
+/* ---------- FAQ ---------- */
+.faq { padding-top: 0; }
+.faq-grid { margin-top: 8px; display: grid; grid-template-columns: 1fr; column-gap: clamp(28px, 4vw, 56px); align-items: start; }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary { position: relative; list-style: none; cursor: pointer; padding: 18px 40px 18px 0; min-height: 44px; font: 500 clamp(18px, 1.9vw, 20px)/1.3 var(--serif); letter-spacing: -.01em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 14px; font: italic 400 25px/1 var(--serif); color: var(--accentT); transition: transform .3s var(--ease); }
+.faq details[open] summary::after { content: "\2013"; }
+.faq details p { margin: -2px 0 20px; max-width: 60ch; font: 400 16.5px/1.6 var(--serif); color: var(--ink2); text-wrap: pretty; }
+@media (min-width: 880px) { .faq-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- status band ---------- */
+.soon { position: relative; isolation: isolate; z-index: 2; overflow: hidden; border-top: 1px solid var(--rule); }
+.soon-bg { position: absolute; inset: 0; z-index: -1; }
+.soon-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+html[data-theme="dark"] .soon-bg img { filter: brightness(.34) saturate(1.25) contrast(1.1); }
+.soon-in { display: flex; justify-content: center; padding-top: clamp(56px, 8vw, 104px); padding-bottom: clamp(56px, 8vw, 104px); }
+.soon-card { width: min(100%, 640px); padding: clamp(24px, 4vw, 40px); border-radius: 34px; display: grid; grid-template-columns: 1fr; gap: 22px; justify-items: start; }
+.appicon { position: relative; width: 84px; height: 84px; border-radius: 22.4%; overflow: hidden; box-shadow: 0 14px 26px -12px var(--shadow), inset 0 0 0 .5px rgba(255, 255, 255, .2); }
+.appicon img { width: 100%; height: 100%; }
+.appicon .dk, html[data-theme="dark"] .appicon .lt { display: none; }
+html[data-theme="dark"] .appicon .dk { display: block; }
+.soon-card h2 { margin: 0; font-size: clamp(34px, 5vw, 48px); }
+.soon-card p { margin: 12px 0 0; max-width: 40ch; font: 400 18px/1.55 var(--serif); color: var(--ink); text-wrap: pretty; }
+.soon-row { display: flex; align-items: center; gap: 12px 22px; flex-wrap: wrap; }
+.soon-row a { display: inline-flex; align-items: center; min-height: 44px; font: 600 16px/1.2 var(--sans); color: var(--ink); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+@media (min-width: 640px) { .soon-card { grid-template-columns: 84px 1fr; column-gap: 28px; } .soon-card .soon-row { grid-column: 2; } }
+
+/* ---------- footer ---------- */
+.foot { position: relative; z-index: 2; margin-bottom: -96px; padding-bottom: 96px; border-top: 1px solid var(--rule); background: var(--paperD); }
+.foot-in { padding-top: clamp(44px, 6vw, 72px); padding-bottom: clamp(28px, 4vw, 40px); }
+.foot-top { display: flex; gap: clamp(32px, 6vw, 80px); flex-wrap: wrap; justify-content: space-between; }
+.foot-brand p { margin: 16px 0 0; font: italic 400 18px/1.3 var(--serif); color: var(--ink2); }
+.foot-cols { display: flex; gap: clamp(36px, 6vw, 72px); flex-wrap: wrap; }
+.foot-cols h2 { margin: 0 0 10px; font: 500 11px/1.3 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--ink3t); font-variation-settings: normal; }
+.foot-cols a { display: flex; align-items: center; min-height: 44px; font: 400 15.5px/1.2 var(--sans); color: var(--ink2); text-decoration: none; transition: color .15s; }
+.foot-cols a:hover { color: var(--accentT); }
+.foot-base { margin-top: clamp(28px, 4vw, 44px); padding-top: 22px; border-top: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; gap: 16px 20px; flex-wrap: wrap; }
+.foot-base > span { font: 500 11px/1.4 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink3t); }
+.theme { display: flex; align-items: center; gap: 10px; }
+.theme > span { font: 500 11px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink3t); }
+.theme div { display: flex; padding: 3px; border-radius: 9px; background: var(--paperE); }
+.theme button { appearance: none; border: 0; cursor: pointer; min-height: 44px; padding: 0 15px; border-radius: 6px; background: transparent; color: var(--ink2); font: 500 13px/1 var(--sans); transition: background .15s, color .15s; }
+.theme button[aria-pressed="true"] { background: var(--paper); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
+
+/* ---------- scroll-linked motion (final state is the default everywhere else) ---------- */
+@keyframes sotd-rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@keyframes sotd-fan { from { transform: translate(0, 26px) rotate(0deg); } }
+@keyframes sotd-wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes sotd-grow { from { transform: scaleX(0); } }
+@keyframes sotd-float { from { translate: 0 34px; } to { translate: 0 -34px; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rv { animation: sotd-rise linear both; animation-timeline: view(); animation-range: entry 0px entry 200px; }
+    .sleeve { animation: sotd-fan linear both; animation-timeline: view(); animation-range: entry 20% cover 46%; }
+    .spec, .grid42 { animation: sotd-wipe linear both; animation-timeline: view(); animation-range: entry 10% cover 34%; }
+    .bar i { animation: sotd-grow linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+    .now, .entry { animation: sotd-float linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  }
+}
+/* per-pick palette: the page takes the colour of the day you flip to, as the app does */
+.sotd .p0{--pa:#f0b94a;--pb:#d97f1f;--pc:#e8875c;--tl:#945716;--td:#f0b94a}
+.sotd .p1{--pa:#67aaed;--pb:#4a4e99;--pc:#8e7fd6;--tl:#4a4e99;--td:#67aaed}
+.sotd:has(#pk1:checked){--pa:#67aaed;--pb:#4a4e99;--pc:#8e7fd6;--tl:#4a4e99;--td:#67aaed;--i:1;--beat:.5s}
+.sotd:has(#pk1:checked) .np1{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.sotd .p2{--pa:#69c27e;--pb:#007763;--pc:#b3d36a;--tl:#01735f;--td:#69c27e}
+.sotd:has(#pk2:checked){--pa:#69c27e;--pb:#007763;--pc:#b3d36a;--tl:#01735f;--td:#69c27e;--i:2;--beat:.5s}
+.sotd:has(#pk2:checked) .np2{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.sotd .p3{--pa:#e2a355;--pb:#a54a24;--pc:#f0c36b;--tl:#a54a24;--td:#e2a355}
+.sotd:has(#pk3:checked){--pa:#e2a355;--pb:#a54a24;--pc:#f0c36b;--tl:#a54a24;--td:#e2a355;--i:3;--beat:.5s}
+.sotd:has(#pk3:checked) .np3{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.sotd .p4{--pa:#8683c7;--pb:#5e5b94;--pc:#c79ad6;--tl:#5e5b94;--td:#a39fce}
+.sotd:has(#pk4:checked){--pa:#8683c7;--pb:#5e5b94;--pc:#c79ad6;--tl:#5e5b94;--td:#a39fce;--i:4;--beat:.5s}
+.sotd:has(#pk4:checked) .np4{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.sotd .p5{--pa:#cf6b58;--pb:#ab4235;--pc:#e39a6c;--tl:#ab4235;--td:#dc9280}
+.sotd:has(#pk5:checked){--pa:#cf6b58;--pb:#ab4235;--pc:#e39a6c;--tl:#ab4235;--td:#dc9280;--i:5;--beat:.5s}
+.sotd:has(#pk5:checked) .np5{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.sotd:has(.rail input:not(#pk0):checked) .np0{opacity:0;visibility:hidden;transform:translateY(6px);transition-delay:0s,0s,.45s}
+</style>
 </head>
 <body>
 <div data-ks="bar"></div>
 
-<div style="--paper:oklch(0.965 0.014 75); --paperD:oklch(0.935 0.018 72); --paperE:oklch(0.905 0.022 68); --ink:oklch(0.18 0.013 55); --ink2:oklch(0.38 0.012 55); --ink3:oklch(0.55 0.009 55); --rule:oklch(0.82 0.018 70); --accent:oklch(0.55 0.14 42); --accentI:oklch(0.97 0.018 70); --wash:oklch(0.68 0.16 70); --beat:0.341s; --serif:&quot;Newsreader&quot;,Georgia,serif; --sans:-apple-system,BlinkMacSystemFont,&quot;SF Pro Text&quot;,system-ui,sans-serif; --mono:&quot;JetBrains Mono&quot;,ui-monospace,Menlo,monospace; position:relative; min-height:100vh; background:var(--paper); color:var(--ink); font-family:&quot;Newsreader&quot;,Georgia,serif;" id="root">
+<div class="sotd" id="root">
+  <a class="skip" href="#main">Skip to content</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-bandcamp" viewBox="0 0 20 20"><rect width="20" height="20" rx="3" fill="#1AA1BF"/><path d="M7.1 6.2h9.4l-3.6 7.6H3.5z" fill="#fff"/></symbol><symbol id="i-youtube" viewBox="0 0 20 20"><rect y="2" width="20" height="16" rx="4" fill="#FF0029"/><path d="M8 7l5.2 3L8 13z" fill="#fff"/></symbol><symbol id="i-apple" viewBox="0 0 24 28"><path fill="#FA2E4F" d="M16.4 14.9c0-2.8 2.3-4.1 2.4-4.2-1.3-1.9-3.3-2.2-4-2.2-1.7-.2-3.3 1-4.1 1-.9 0-2.2-1-3.6-1-1.8 0-3.6 1.1-4.5 2.7-2 3.4-.5 8.4 1.4 11.1 1 1.3 2 2.8 3.5 2.7 1.4-.1 2-.9 3.6-.9 1.7 0 2.2.9 3.6.9 1.5 0 2.4-1.3 3.4-2.6 1-1.5 1.5-3 1.5-3-.1-.1-2.9-1.1-2.9-4.5zM13.7 6.4c.8-1 1.3-2.3 1.2-3.6-1.1.1-2.4.8-3.2 1.7-.7.8-1.3 2.2-1.2 3.4 1.2.1 2.4-.6 3.2-1.5z"/></symbol><symbol id="i-spotify" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#1CBA54"/><path d="M4.6 7.3c3.5-1.5 7.8-1.2 10.9.7M5 10.4c3-1.2 6.8-.9 9.6.8M5.6 13.3c2.6-.9 5.5-.7 7.9.6" fill="none" stroke="rgba(0,0,0,.82)" stroke-width="1.5" stroke-linecap="round"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v13M8 7l4-4 4 4"/><path d="M5 13v6.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V13"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="i-today" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-history" viewBox="0 0 24 24"><path d="M3.5 8a9 9 0 1 1-.5 5"/><path d="M3.5 3v5h5"/><path d="M12 7v5l3.5 2"/></symbol><symbol id="i-library" viewBox="0 0 24 24"><path d="M6 4.5h12v16l-6-3.6-6 3.6v-16z"/></symbol><symbol id="i-settings" viewBox="0 0 24 24"><path d="M5 7h3M12 7h7M5 12h7M18 12h1M5 17h3.5M13.5 17H19"/><circle cx="10" cy="7" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="11" cy="17" r="2"/></symbol><symbol id="i-about" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.3"/></symbol></svg>
 
-  <!-- paper grain -->
-  <div aria-hidden="true" style="position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035; background-image:url(&quot;data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
-
-  <!-- skip link -->
-  <a href="#main" class="skip-link" style="position:absolute; left:-9999px; top:8px; z-index:200; background:var(--ink); color:var(--paper); padding:10px 16px; border-radius:8px; font-family:var(--sans); font-size:14px; text-decoration:none;">Skip to content</a>
-
-  <!-- ───────────────────── MASTHEAD ───────────────────── -->
-  <header style="position:relative; z-index:20; border-bottom:1px solid var(--rule); background:color-mix(in oklab, var(--paper) 88%, transparent); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-    <div class="sotd-mast" style="max-width:1160px; margin:0 auto; padding:18px clamp(20px,5vw,64px); display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-      <a href="#top" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:0; display:flex; align-items:center; gap:11px; color:var(--ink); text-decoration:none;">
-        <div style="width:32px; height:32px; border-radius:8px; background:var(--accent); display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;">
-          <div style="position:relative; width:26px; height:18px;">
-            <div style="position:absolute; bottom:6px; left:50%; transform:translateX(-50%); width:24px; height:12px; border:1.3px solid var(--accentI); border-bottom:0; border-radius:24px 24px 0 0; opacity:.45;"></div>
-            <div style="position:absolute; bottom:6px; left:50%; transform:translateX(-50%); width:16px; height:8px; border-radius:16px 16px 0 0; background:var(--accentI);"></div>
-            <div style="position:absolute; bottom:4px; left:50%; transform:translateX(-50%); width:24px; height:1.4px; border-radius:9px; background:var(--accentI); opacity:.55;"></div>
-          </div>
-        </div>
-        <span style="display:flex; align-items:center; gap:9px;">
-          <span style="font-family:var(--serif); font-style:italic; font-weight:500; font-size:22px; letter-spacing:-.3px; color:var(--ink); white-space:nowrap;">Song of the Day</span>
-          <span style="width:6px; height:6px; border-radius:9px; background:var(--accent); animation:sotd-dot var(--beat) ease-in-out infinite;"></span>
-        </span>
+  <header class="mast">
+    <div class="wrap mast-in">
+      <a class="brand" href="#top">
+        <img src="/song-of-the-day/logos/app-icon-terracotta.svg" alt="" width="32" height="32">
+        <b>Song of the Day</b><i class="beat" aria-hidden="true"></i>
       </a>
-
-      <nav class="sotd-nav" style="display:flex; align-items:center; gap:clamp(14px,2.4vw,30px); flex-wrap:wrap;">
-        <a href="#today" class="hv-nav" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:4px 0; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink2); text-decoration:none;">Today</a>
-        <a href="#almanac" class="hv-nav" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:4px 0; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink2); text-decoration:none;">Library</a>
-        <a href="#story" class="hv-nav" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:4px 0; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink2); text-decoration:none;">About</a>
-        <a href="/song-of-the-day/support" class="hv-nav" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:4px 0; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink2); text-decoration:none;">Support</a>
-        <span class="sotd-date" style="font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3); white-space:nowrap; padding-left:6px; border-left:1px solid var(--rule);">Mon · Jun 22</span>
+      <nav aria-label="Song of the Day">
+        <a href="#today">Today</a>
+        <a href="#almanac">Library</a>
+        <a href="#story">About</a>
+        <a class="keep" href="/song-of-the-day/support">Support</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" style="position:relative; z-index:10;"><span id="top"></span>
+  <!-- The app's floating tab bar, used here as the page's own navigation. -->
+  <nav class="dockwrap" aria-label="Sections of this page">
+    <div class="dock glass">
+      <i class="dock-sel" aria-hidden="true"></i>
+      <a href="#today"><svg class="ico" aria-hidden="true"><use href="#i-today"/></svg>Today</a>
+      <a href="#history"><svg class="ico" aria-hidden="true"><use href="#i-history"/></svg>History</a>
+      <a href="#almanac"><svg class="ico" aria-hidden="true"><use href="#i-library"/></svg>Library</a>
+      <a href="#story"><svg class="ico" aria-hidden="true"><use href="#i-about"/></svg>About</a>
+    </div>
+  </nav>
 
-  <div data-screen-label="Landing">
+  <main id="main"><span id="top"></span>
 
-    <!-- ═══════════════ HERO — headline + the app itself ═══════════════ -->
-    <section id="today" style="position:relative; overflow:hidden; scroll-margin-top:70px; background:radial-gradient(110% 130% at 82% 0%, color-mix(in oklab, var(--wash) 22%, var(--paper)) 0%, var(--paper) 58%);">
-      <div style="max-width:1160px; margin:0 auto; padding:clamp(44px,6.5vw,76px) clamp(20px,5vw,64px) 0; display:flex; gap:clamp(32px,5vw,64px); flex-wrap:wrap; align-items:flex-end; justify-content:space-between; animation:sotd-rise .7s cubic-bezier(.2,.75,.2,1) both;">
-
-        <div style="flex:1 1 440px; min-width:0; padding-bottom:clamp(40px,6vw,64px); align-self:center;">
-          <div style="font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink3);">Vol. 412 · No. 31</div>
-          <h1 style="margin:22px 0 0; max-width:13ch; font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(42px,6.4vw,68px); line-height:.98; letter-spacing:-1.1px; color:var(--ink); font-variation-settings:'opsz' 72; text-wrap:balance;">One song a day, read like it matters.</h1>
-          <p style="margin:22px 0 0; max-width:44ch; font-family:var(--serif); font-style:italic; font-size:clamp(17.5px,2vw,19.5px); line-height:1.48; letter-spacing:-.2px; color:var(--ink2); text-wrap:pretty;">A single, hand-picked song each morning — the story behind it, the songs it descends from, the ones it made possible. No feed. No shuffle.</p>
-          <div style="margin-top:30px; display:flex; align-items:center; gap:22px; flex-wrap:wrap;">
-            <span aria-label="Song of the Day is coming soon to the App Store" style="display:inline-flex; align-items:center; gap:11px; background:#000; color:#fff; height:52px; padding:0 20px 0 18px; border-radius:11px; box-shadow:0 0 0 1px color-mix(in oklab, var(--ink) 14%, transparent);">
-              <svg width="21" height="25" viewBox="0 0 24 28" fill="#fff" aria-hidden="true"><path d="M16.4 14.9c0-2.8 2.3-4.1 2.4-4.2-1.3-1.9-3.3-2.2-4-2.2-1.7-.2-3.3 1-4.1 1-.9 0-2.2-1-3.6-1-1.8 0-3.6 1.1-4.5 2.7-2 3.4-.5 8.4 1.4 11.1 1 1.3 2 2.8 3.5 2.7 1.4-.1 2-.9 3.6-.9 1.7 0 2.2.9 3.6.9 1.5 0 2.4-1.3 3.4-2.6 1-1.5 1.5-3 1.5-3-.1-.1-2.9-1.1-2.9-4.5zM13.7 6.4c.8-1 1.3-2.3 1.2-3.6-1.1.1-2.4.8-3.2 1.7-.7.8-1.3 2.2-1.2 3.4 1.2.1 2.4-.6 3.2-1.5z"/></svg>
-              <span style="text-align:left; line-height:1;">
-                <span style="display:block; font-family:var(--sans); font-size:10px; letter-spacing:.02em;">App Store</span>
-                <span style="display:block; font-family:var(--sans); font-size:19px; font-weight:600; letter-spacing:-.4px; margin-top:2px;">Coming soon</span>
-              </span>
-            </span>
-            <a href="#almanac" class="hv-readmore" style="appearance:none; border:0; background:transparent; cursor:pointer; display:inline-flex; align-items:center; gap:9px; font-family:var(--sans); font-size:16px; font-weight:600; letter-spacing:-.1px; color:var(--ink); text-decoration:none;">
-              <span>Read what we do</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-            </a>
+    <!-- ═════════ TODAY ═════════ -->
+    <section class="hero" id="today" data-tab="0">
+      <div class="field" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <div class="eyebrow">Vol. 412 · No. 31</div>
+          <h1>One song a day, read like it matters.</h1>
+          <p class="dek">A single, hand-picked song each morning — the story behind it, the songs it descends from, the ones it made possible. No feed. No shuffle.</p>
+          <div class="cta">
+            <span class="badge"><svg viewBox="0 0 24 28" aria-hidden="true"><path d="M16.4 14.9c0-2.8 2.3-4.1 2.4-4.2-1.3-1.9-3.3-2.2-4-2.2-1.7-.2-3.3 1-4.1 1-.9 0-2.2-1-3.6-1-1.8 0-3.6 1.1-4.5 2.7-2 3.4-.5 8.4 1.4 11.1 1 1.3 2 2.8 3.5 2.7 1.4-.1 2-.9 3.6-.9 1.7 0 2.2.9 3.6.9 1.5 0 2.4-1.3 3.4-2.6 1-1.5 1.5-3 1.5-3-.1-.1-2.9-1.1-2.9-4.5zM13.7 6.4c.8-1 1.3-2.3 1.2-3.6-1.1.1-2.4.8-3.2 1.7-.7.8-1.3 2.2-1.2 3.4 1.2.1 2.4-.6 3.2-1.5z"/></svg><span><small>App Store</small><b>Coming soon</b></span></span>
+            <a class="more glass" href="#daily">Read what we do <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
           </div>
-          <div style="margin-top:26px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3);">
-            <span>Free</span><span style="width:3px; height:3px; border-radius:9px; background:var(--ink3);"></span>
-            <span>No ads</span><span style="width:3px; height:3px; border-radius:9px; background:var(--ink3);"></span>
-            <span>No account needed</span><span style="width:3px; height:3px; border-radius:9px; background:var(--ink3);"></span>
-            <span>Written by humans</span>
+          <ul class="meta"><li>Free</li><li>No ads</li><li>No account needed</li><li>Written by humans</li></ul>
+        </div>
+
+        <div class="stage">
+          <p class="vh">The phone shows the app’s Today screen for a sample pick: the cover, the title, a living waveform, a Share button, links to Bandcamp, YouTube, Apple Music and Spotify, and the app’s four tabs, Today, History, Library and Settings.</p>
+          <div class="phone" aria-hidden="true">
+            <div class="screen"><div class="scr">
+              <div class="sb"><b>9:41</b><span><svg viewBox="0 0 18 11"><rect y="7" width="3" height="4" rx=".7"/><rect x="4.5" y="4.8" width="3" height="6.2" rx=".7"/><rect x="9" y="2.5" width="3" height="8.5" rx=".7"/><rect x="13.5" width="3" height="11" rx=".7"/></svg><svg viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-opacity=".35"/><rect x="2" y="2" width="19" height="9" rx="2"/><path d="M25 4.5v4c.8-.3 1.5-1.3 1.5-2s-.7-1.7-1.5-2z" fill-opacity=".4"/></svg></span></div>
+              <div class="island"></div>
+              <div class="pager"><div class="pg p0"><i class="pg-wash"></i><div class="pg-mast"><span><i class="dot"></i>Song of the Day</span><span>Mon · Jun 22</span></div><div class="pg-art"><picture><source srcset="/img/sotd/maple-leaf-rag-500.avif" type="image/avif"><source srcset="/img/sotd/maple-leaf-rag-500.webp" type="image/webp"><img src="/img/sotd/maple-leaf-rag-500.jpg" alt="" width="500" height="500" decoding="async"></picture><span class="fab">+</span></div><div class="pg-title">Maple Leaf Rag</div><div class="pg-artist">Scott Joplin</div><div class="pg-wave"><span>96 bpm</span><svg class="wave" viewBox="0 0 216 34" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M1.0 16.0V18.0M5.0 16.0V18.0M9.1 15.9V18.1M13.1 13.4V20.6M17.2 14.4V19.6M21.2 15.7V18.3M25.2 16.0V18.0M37.3 13.2V20.8M45.4 15.0V19.0M49.5 14.1V19.9M61.6 14.3V19.7M77.7 12.2V21.8M97.9 13.8V20.2M150.4 15.3V18.7M162.5 14.0V20.0M174.6 13.4V20.6M178.7 15.4V18.6M190.8 15.8V18.2M194.8 16.0V18.0M198.8 12.6V21.4M202.9 14.0V20.0M206.9 15.9V18.1M211.0 16.0V18.0M215.0 16.0V18.0"/><path class="w2" d="M29.3 11.8V22.2M33.3 11.6V22.4M41.4 7.6V26.4M53.5 10.0V24.0M65.6 10.3V23.7M69.6 11.1V22.9M101.9 9.6V24.4M106.0 8.5V25.5M122.1 10.2V23.8M126.2 9.8V24.2M142.3 11.3V22.7M154.4 10.7V23.3M182.7 10.2V23.8M186.7 11.9V22.1"/><path class="w3" d="M57.5 5.6V28.4M73.7 5.5V28.5M81.8 2.2V31.8M85.8 6.0V28.0M89.8 2.3V31.7M93.9 7.4V26.6M110.0 6.2V27.8M114.1 6.4V27.6M118.1 1.9V32.1M130.2 6.2V27.8M134.2 7.3V26.7M138.3 3.2V30.8M146.4 6.5V27.5M158.5 6.8V27.2M166.5 5.5V28.5M170.6 6.3V27.7"/></svg><span>2/4</span></div><div class="pg-share"><svg class="ico" aria-hidden="true"><use href="#i-share"/></svg>Share</div><div class="pills"><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-bandcamp"/></svg>Bandcamp</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-apple"/></svg>Apple</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-spotify"/></svg>Spotify</span></div></div><div class="pg p1"><i class="pg-wash"></i><div class="pg-mast is-off"><span><i class="dot"></i>Song of the Day</span><span>Sun · Jun 21</span></div><div class="pg-pill"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>June 21<svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></div><div class="pg-art"><span class="sl sl-clair"></span><span class="fab">+</span></div><div class="pg-title">Clair de Lune</div><div class="pg-artist">Debussy</div><div class="pg-wave"><span></span><svg class="wave" viewBox="0 0 216 34" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M1.0 16.0V18.0M5.0 16.0V18.0M9.1 15.8V18.2M13.1 16.0V18.0M17.2 16.0V18.0M21.2 14.1V19.9M25.2 14.4V19.6M29.3 13.8V20.2M33.3 13.0V21.0M41.4 15.0V19.0M45.4 12.3V21.7M49.5 13.0V21.0M57.5 14.4V19.6M61.6 15.0V19.0M89.8 12.3V21.7M93.9 13.8V20.2M122.1 13.6V20.4M134.2 14.7V19.3M162.5 15.8V18.2M174.6 15.4V18.6M190.8 12.6V21.4M194.8 13.6V20.4M198.8 15.9V18.1M202.9 16.0V18.0M206.9 15.8V18.2M211.0 16.0V18.0M215.0 16.0V18.0"/><path class="w2" d="M37.3 7.6V26.4M53.5 12.2V21.8M65.6 7.5V26.5M73.7 8.5V25.5M97.9 7.8V26.2M110.0 11.0V23.0M114.1 7.7V26.3M118.1 7.5V26.5M130.2 9.1V24.9M154.4 8.3V25.7M166.5 9.7V24.3M170.6 8.4V25.6M178.7 7.9V26.1M182.7 12.2V21.8M186.7 9.9V24.1"/><path class="w3" d="M69.6 5.7V28.3M77.7 2.4V31.6M81.8 4.8V29.2M85.8 5.9V28.1M101.9 6.3V27.7M106.0 6.8V27.2M126.2 5.0V29.0M138.3 6.9V27.1M142.3 4.8V29.2M146.4 3.1V30.9M150.4 5.7V28.3M158.5 7.0V27.0"/></svg><span></span></div><div class="pg-share"><svg class="ico" aria-hidden="true"><use href="#i-share"/></svg>Share</div><div class="pills"><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-bandcamp"/></svg>Bandcamp</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-apple"/></svg>Apple</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-spotify"/></svg>Spotify</span></div></div><div class="pg p2"><i class="pg-wash"></i><div class="pg-mast is-off"><span><i class="dot"></i>Song of the Day</span><span>Sat · Jun 20</span></div><div class="pg-pill"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>June 20<svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></div><div class="pg-art"><span class="sl sl-gym"></span><span class="fab">+</span></div><div class="pg-title">Gymnopédie No. 1</div><div class="pg-artist">Satie</div><div class="pg-wave"><span></span><svg class="wave" viewBox="0 0 216 34" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M1.0 16.0V18.0M5.0 16.0V18.0M9.1 16.0V18.0M13.1 14.4V19.6M21.2 15.3V18.7M25.2 15.4V18.6M37.3 13.1V20.9M53.5 15.1V18.9M65.6 12.3V21.7M101.9 14.3V19.7M142.3 12.3V21.7M158.5 13.4V20.6M170.6 12.7V21.3M190.8 16.0V18.0M198.8 14.5V19.5M202.9 16.0V18.0M206.9 16.0V18.0M211.0 16.0V18.0M215.0 16.0V18.0"/><path class="w2" d="M17.2 12.0V22.0M29.3 11.4V22.6M33.3 12.2V21.8M45.4 11.6V22.4M49.5 9.4V24.6M57.5 9.7V24.3M61.6 7.6V26.4M73.7 9.0V25.0M77.7 10.6V23.4M85.8 10.6V23.4M93.9 7.8V26.2M97.9 9.6V24.4M114.1 11.4V22.6M118.1 7.8V26.2M122.1 8.4V25.6M126.2 8.3V25.7M130.2 8.7V25.3M134.2 11.8V22.2M146.4 8.9V25.1M150.4 11.0V23.0M154.4 9.7V24.3M166.5 11.7V22.3M174.6 9.6V24.4M178.7 9.1V24.9M182.7 11.0V23.0M186.7 12.1V21.9M194.8 11.0V23.0"/><path class="w3" d="M41.4 7.0V27.0M69.6 3.9V30.1M81.8 2.9V31.1M89.8 2.6V31.4M106.0 2.7V31.3M110.0 7.3V26.7M138.3 6.5V27.5M162.5 7.3V26.7"/></svg><span></span></div><div class="pg-share"><svg class="ico" aria-hidden="true"><use href="#i-share"/></svg>Share</div><div class="pills"><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-bandcamp"/></svg>Bandcamp</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-apple"/></svg>Apple</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-spotify"/></svg>Spotify</span></div></div><div class="pg p3"><i class="pg-wash"></i><div class="pg-mast is-off"><span><i class="dot"></i>Song of the Day</span><span>Fri · Jun 19</span></div><div class="pg-pill"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>June 19<svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></div><div class="pg-art"><span class="sl sl-prel"></span><span class="fab">+</span></div><div class="pg-title">Prelude in C</div><div class="pg-artist">Bach</div><div class="pg-wave"><span></span><svg class="wave" viewBox="0 0 216 34" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M1.0 16.0V18.0M5.0 16.0V18.0M9.1 16.0V18.0M13.1 15.0V19.0M17.2 12.9V21.1M21.2 14.8V19.2M49.5 12.4V21.6M53.5 14.0V20.0M77.7 12.8V21.2M106.0 15.3V18.7M110.0 14.2V19.8M158.5 12.7V21.3M174.6 12.6V21.4M182.7 15.5V18.5M186.7 12.5V21.5M194.8 14.9V19.1M198.8 14.9V19.1M202.9 15.8V18.2M206.9 14.8V19.2M211.0 16.0V18.0M215.0 16.0V18.0"/><path class="w2" d="M25.2 11.0V23.0M29.3 10.4V23.6M33.3 11.2V22.8M37.3 9.6V24.4M41.4 8.8V25.2M45.4 7.7V26.3M57.5 9.5V24.5M61.6 12.2V21.8M73.7 9.6V24.4M85.8 8.0V26.0M89.8 10.6V23.4M93.9 11.7V22.3M114.1 8.4V25.6M126.2 10.9V23.1M134.2 10.8V23.2M142.3 9.2V24.8M154.4 10.4V23.6M178.7 9.2V24.8M190.8 10.8V23.2"/><path class="w3" d="M65.6 4.3V29.7M69.6 3.6V30.4M81.8 6.2V27.8M97.9 5.8V28.2M101.9 4.8V29.2M118.1 6.1V27.9M122.1 5.1V28.9M130.2 4.8V29.2M138.3 5.4V28.6M146.4 6.8V27.2M150.4 6.4V27.6M162.5 6.9V27.1M166.5 7.1V26.9M170.6 6.3V27.7"/></svg><span></span></div><div class="pg-share"><svg class="ico" aria-hidden="true"><use href="#i-share"/></svg>Share</div><div class="pills"><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-bandcamp"/></svg>Bandcamp</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-apple"/></svg>Apple</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-spotify"/></svg>Spotify</span></div></div><div class="pg p4"><i class="pg-wash"></i><div class="pg-mast is-off"><span><i class="dot"></i>Song of the Day</span><span>Thu · Jun 18</span></div><div class="pg-pill"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>June 18<svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></div><div class="pg-art"><span class="sl sl-elise"></span><span class="fab">+</span></div><div class="pg-title">Für Elise</div><div class="pg-artist">Beethoven</div><div class="pg-wave"><span></span><svg class="wave" viewBox="0 0 216 34" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M1.0 16.0V18.0M5.0 15.7V18.3M9.1 16.0V18.0M13.1 16.0V18.0M17.2 15.5V18.5M21.2 13.3V20.7M29.3 14.8V19.2M33.3 15.5V18.5M37.3 13.4V20.6M41.4 15.6V18.4M45.4 15.4V18.6M49.5 14.8V19.2M93.9 13.8V20.2M130.2 14.8V19.2M142.3 13.4V20.6M154.4 14.5V19.5M158.5 12.3V21.7M162.5 14.6V19.4M182.7 13.0V21.0M186.7 14.1V19.9M190.8 12.6V21.4M194.8 12.7V21.3M198.8 16.0V18.0M202.9 13.5V20.5M206.9 14.5V19.5M211.0 16.0V18.0M215.0 16.0V18.0"/><path class="w2" d="M25.2 11.8V22.2M69.6 11.5V22.5M77.7 7.7V26.3M85.8 7.8V26.2M89.8 8.3V25.7M97.9 11.7V22.3M118.1 8.0V26.0M134.2 10.4V23.6M138.3 10.3V23.7M146.4 8.6V25.4M150.4 11.4V22.6M166.5 11.1V22.9M170.6 9.9V24.1M174.6 7.9V26.1M178.7 8.2V25.8"/><path class="w3" d="M53.5 7.0V27.0M57.5 5.7V28.3M61.6 4.1V29.9M65.6 4.6V29.4M73.7 4.6V29.4M81.8 3.1V30.9M101.9 6.3V27.7M106.0 4.0V30.0M110.0 4.0V30.0M114.1 6.6V27.4M122.1 2.2V31.8M126.2 5.8V28.2"/></svg><span></span></div><div class="pg-share"><svg class="ico" aria-hidden="true"><use href="#i-share"/></svg>Share</div><div class="pills"><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-bandcamp"/></svg>Bandcamp</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-apple"/></svg>Apple</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-spotify"/></svg>Spotify</span></div></div><div class="pg p5"><i class="pg-wash"></i><div class="pg-mast is-off"><span><i class="dot"></i>Song of the Day</span><span>Wed · Jun 17</span></div><div class="pg-pill"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>June 17<svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></div><div class="pg-art"><span class="sl sl-green"></span><span class="fab">+</span></div><div class="pg-title">Greensleeves</div><div class="pg-artist">Trad.</div><div class="pg-wave"><span></span><svg class="wave" viewBox="0 0 216 34" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M1.0 16.0V18.0M5.0 16.0V18.0M9.1 16.0V18.0M13.1 15.0V19.0M17.2 14.5V19.5M21.2 15.5V18.5M25.2 14.5V19.5M29.3 16.0V18.0M41.4 15.3V18.7M45.4 14.0V20.0M53.5 14.0V20.0M73.7 15.0V19.0M85.8 12.9V21.1M101.9 14.7V19.3M126.2 14.0V20.0M158.5 15.1V18.9M166.5 12.5V21.5M174.6 13.7V20.3M178.7 14.1V19.9M182.7 13.4V20.6M194.8 16.0V18.0M198.8 12.5V21.5M202.9 13.1V20.9M206.9 16.0V18.0M211.0 15.9V18.1M215.0 16.0V18.0"/><path class="w2" d="M33.3 9.1V24.9M37.3 11.3V22.7M49.5 11.4V22.6M57.5 10.7V23.3M65.6 11.3V22.7M77.7 9.9V24.1M89.8 10.8V23.2M118.1 8.9V25.1M122.1 9.6V24.4M134.2 9.2V24.8M146.4 8.2V25.8M150.4 10.8V23.2M154.4 12.2V21.8M170.6 9.8V24.2M186.7 11.5V22.5M190.8 10.4V23.6"/><path class="w3" d="M61.6 6.4V27.6M69.6 5.0V29.0M81.8 5.8V28.2M93.9 2.5V31.5M97.9 6.7V27.3M106.0 1.9V32.1M110.0 4.1V29.9M114.1 1.4V32.6M130.2 4.8V29.2M138.3 2.7V31.3M142.3 4.8V29.2M162.5 6.9V27.1"/></svg><span></span></div><div class="pg-share"><svg class="ico" aria-hidden="true"><use href="#i-share"/></svg>Share</div><div class="pills"><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-bandcamp"/></svg>Bandcamp</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-apple"/></svg>Apple</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-spotify"/></svg>Spotify</span></div></div></div>
+              <div class="ptab"><span class="on"><svg class="ico" aria-hidden="true"><use href="#i-today"/></svg>Today</span><span><svg class="ico" aria-hidden="true"><use href="#i-history"/></svg>History</span><span><svg class="ico" aria-hidden="true"><use href="#i-library"/></svg>Library</span><span><svg class="ico" aria-hidden="true"><use href="#i-settings"/></svg>Settings</span></div>
+              <div class="homeind"></div>
+            </div></div>
+          </div>
+
+          <div class="now glass">
+            <div class="now-txt" aria-hidden="true"><div class="np np0"><small>Sample pick · Mon · Jun 22</small><b>Maple Leaf Rag</b><span>Scott Joplin · 1899</span></div><div class="np np1"><small>Sample pick · Sun · Jun 21</small><b>Clair de Lune</b><span>Debussy</span></div><div class="np np2"><small>Sample pick · Sat · Jun 20</small><b>Gymnopédie No. 1</b><span>Satie</span></div><div class="np np3"><small>Sample pick · Fri · Jun 19</small><b>Prelude in C</b><span>Bach</span></div><div class="np np4"><small>Sample pick · Thu · Jun 18</small><b>Für Elise</b><span>Beethoven</span></div><div class="np np5"><small>Sample pick · Wed · Jun 17</small><b>Greensleeves</b><span>Trad.</span></div></div>
+            <fieldset class="rail">
+              <legend>Flip back through the week</legend>
+              <div class="rail-row"><label class="rl"><input type="radio" name="pk" id="pk0" checked aria-label="Monday, today: Maple Leaf Rag by Scott Joplin"><span class="rl-art"><picture><source srcset="/img/sotd/maple-leaf-rag-200.avif" type="image/avif"><source srcset="/img/sotd/maple-leaf-rag-200.webp" type="image/webp"><img src="/img/sotd/maple-leaf-rag-200.jpg" alt="" width="200" height="200" decoding="async"></picture></span><span class="rl-day" aria-hidden="true">Mon</span></label><label class="rl"><input type="radio" name="pk" id="pk1" aria-label="Sunday: Clair de Lune by Debussy"><span class="rl-art"><span class="sl sl-clair" style="display:block;width:100%;height:100%"></span></span><span class="rl-day" aria-hidden="true">Sun</span></label><label class="rl"><input type="radio" name="pk" id="pk2" aria-label="Saturday: Gymnopédie No. 1 by Satie"><span class="rl-art"><span class="sl sl-gym" style="display:block;width:100%;height:100%"></span></span><span class="rl-day" aria-hidden="true">Sat</span></label><label class="rl"><input type="radio" name="pk" id="pk3" aria-label="Friday: Prelude in C by Bach"><span class="rl-art"><span class="sl sl-prel" style="display:block;width:100%;height:100%"></span></span><span class="rl-day" aria-hidden="true">Fri</span></label><label class="rl"><input type="radio" name="pk" id="pk4" aria-label="Thursday: Für Elise by Beethoven"><span class="rl-art"><span class="sl sl-elise" style="display:block;width:100%;height:100%"></span></span><span class="rl-day" aria-hidden="true">Thu</span></label><label class="rl"><input type="radio" name="pk" id="pk5" aria-label="Wednesday: Greensleeves by Trad."><span class="rl-art"><span class="sl sl-green" style="display:block;width:100%;height:100%"></span></span><span class="rl-day" aria-hidden="true">Wed</span></label></div>
+            </fieldset>
+            <p class="now-note">Sample picks. Stand-in sleeves, except the first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ THE DAILY ═════════ -->
+    <section class="sec daily" id="daily" data-tab="0">
+      <div class="field" aria-hidden="true"><i class="b1"></i><i class="b3"></i></div>
+      <div class="wrap daily-grid">
+        <div class="daily-copy rv">
+          <div class="eyerow"><span class="eyebrow">The Daily</span></div>
+          <h2>A print feature, every morning.</h2>
+          <p class="lede">A dek, two paragraphs on why it matters, the facts, the lineage, liner notes from the editor's file. You don't skim it — you read it.</p>
+          <div class="listen glass">
+            <div class="eyebrow">Then listen</div>
+            <p>Open it in Apple Music, Spotify, YouTube, or Bandcamp when you are ready to hear it. The app links out. It does not host audio.</p>
+            <div class="pills"><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-bandcamp"/></svg>Bandcamp</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-apple"/></svg>Apple</span><span class="pill"><svg class="mk" aria-hidden="true"><use href="#i-spotify"/></svg>Spotify</span></div>
           </div>
         </div>
 
-        <!-- the app, in frame -->
-        <div aria-hidden="true" class="sotd-phonecol" style="flex:0 1 340px; min-width:300px; position:relative; display:flex; justify-content:center; align-self:flex-end;">
-          <div style="position:absolute; top:-20px; left:50%; transform:translateX(-50%); width:520px; height:520px; border-radius:50%; background:radial-gradient(closest-side, color-mix(in oklab, var(--wash) 26%, transparent), transparent 70%);"></div>
-          <div class="sotd-phone" style="position:relative; width:316px; border-radius:52px; background:#0b0a09; padding:10px; box-shadow:0 50px 90px -35px rgba(0,0,0,.55), 0 0 0 1px color-mix(in oklab, var(--ink) 16%, transparent); margin-bottom:-88px;">
-            <div style="position:relative; border-radius:43px; overflow:hidden; background:var(--paper); height:600px;">
-              <div style="position:absolute; top:9px; left:50%; transform:translateX(-50%); width:98px; height:28px; border-radius:18px; background:#000; z-index:6;"></div>
-              <div style="position:absolute; top:0; left:0; right:0; z-index:5; display:flex; align-items:center; justify-content:space-between; padding:15px 26px 0; color:var(--ink);">
-                <span style="font-family:var(--sans); font-weight:600; font-size:13px; letter-spacing:.2px;">9:41</span>
-                <span style="display:flex; align-items:center; gap:6px;">
-                  <svg width="15" height="9" viewBox="0 0 18 11"><rect x="0" y="7" width="3" height="4" rx=".7" fill="currentColor"/><rect x="4.5" y="4.8" width="3" height="6.2" rx=".7" fill="currentColor"/><rect x="9" y="2.5" width="3" height="8.5" rx=".7" fill="currentColor"/><rect x="13.5" y="0" width="3" height="11" rx=".7" fill="currentColor"/></svg>
-                  <svg width="21" height="10" viewBox="0 0 27 13"><rect x="0.5" y="0.5" width="23" height="12" rx="3.5" stroke="currentColor" stroke-opacity="0.35" fill="none"/><rect x="2" y="2" width="19" height="9" rx="2" fill="currentColor"/><path d="M25 4.5V8.5C25.8 8.2 26.5 7.2 26.5 6.5C26.5 5.8 25.8 4.8 25 4.5Z" fill="currentColor" fill-opacity="0.4"/></svg>
-                </span>
-              </div>
-              <div style="display:flex; align-items:center; justify-content:space-between; padding:52px 20px 0;">
-                <span style="display:flex; align-items:center; gap:7px;">
-                  <span style="width:5px; height:5px; border-radius:9px; background:var(--accent); animation:sotd-dot var(--beat) ease-in-out infinite;"></span>
-                  <span style="font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink2);">Song of the Day</span>
-                </span>
-                <span style="font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3);">Mon · Jun 22</span>
-              </div>
-              <div style="position:relative; margin:14px 20px 0; aspect-ratio:1/1; border-radius:9px; overflow:hidden; background:radial-gradient(90% 80% at 18% 12%, rgba(255,236,200,.35), transparent 55%), linear-gradient(135deg, #f0b94a, #d97f1f 52%, #6b3208); box-shadow:0 20px 36px -18px rgba(0,0,0,.45);">
-                <img src="/img/maple-leaf-rag.jpg" alt="" width="500" height="611" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-                <div style="position:absolute; inset:0; box-shadow:inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 0 1px rgba(0,0,0,.06);"></div>
-              </div>
-              <div style="margin:14px 20px 0; font-family:var(--serif); font-style:italic; font-weight:500; font-size:27px; line-height:1; letter-spacing:-.4px; color:var(--ink); font-variation-settings:'opsz' 48;">Maple Leaf Rag</div>
-              <div style="margin:7px 20px 0; display:flex; align-items:baseline; gap:8px;">
-                <span style="font-family:var(--serif); font-size:13.5px; color:var(--ink2);">Scott Joplin</span>
-                <span style="font-family:var(--mono); font-size:8.5px; letter-spacing:.06em; color:var(--ink3);">1899</span>
-              </div>
-              <div style="margin:12px 20px 0; display:flex; align-items:center; gap:9px;">
-                <span style="font-family:var(--mono); font-size:7.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3); flex-shrink:0;">96 bpm</span>
-                <div style="flex:1; display:flex; align-items:center; gap:4px; height:18px;">
-                  <div style="flex:1; height:42%; background:var(--wash); border-radius:9px; transform-origin:center; animation:sotd-wave 0.80s ease-in-out 0.00s infinite; opacity:.668;"></div>
-                  <div style="flex:1; height:86%; background:var(--wash); border-radius:9px; transform-origin:center; animation:sotd-wave 1.08s ease-in-out -0.21s infinite; opacity:.844;"></div>
-                  <div style="flex:1; height:56%; background:var(--wash); border-radius:9px; transform-origin:center; animation:sotd-wave 1.36s ease-in-out -0.42s infinite; opacity:.724;"></div>
-                  <div style="flex:1; height:100%; background:var(--wash); border-radius:9px; transform-origin:center; animation:sotd-wave 0.80s ease-in-out -0.63s infinite; opacity:.9;"></div>
-                  <div style="flex:1; height:62%; background:var(--wash); border-radius:9px; transform-origin:center; animation:sotd-wave 1.08s ease-in-out -0.84s infinite; opacity:.748;"></div>
-                  <div style="flex:1; height:80%; background:var(--wash); border-radius:9px; transform-origin:center; animation:sotd-wave 1.36s ease-in-out -1.05s infinite; opacity:.82;"></div>
-                </div>
-                <span style="font-family:var(--mono); font-size:7.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3); flex-shrink:0;">2/4</span>
-              </div>
-              <div style="margin:14px 20px 0; display:flex; gap:8px;">
-                <span style="flex:1; height:40px; border-radius:11px; background:var(--ink); color:var(--paper); display:flex; align-items:center; justify-content:center; gap:7px; font-family:var(--sans); font-size:12.5px; font-weight:600;">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13M8 7l4-4 4 4"/><path d="M5 13v6.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V13"/></svg>
-                  <span>Share</span>
-                </span>
-                <span style="flex:1; height:40px; border-radius:11px; border:1px solid var(--rule); background:var(--paperD); color:var(--ink); display:flex; align-items:center; justify-content:center; gap:7px; font-family:var(--sans); font-size:12.5px; font-weight:600;">
-                  <span style="font-family:var(--serif); font-style:italic; font-size:17px; line-height:0; color:var(--accent);">+</span>
-                  <span>Collect</span>
-                </span>
-              </div>
-              <div style="margin:9px 20px 0; display:flex; gap:7px;">
-                <span style="flex:1; height:34px; border-radius:9px; border:1px solid var(--rule); background:var(--paperD); color:var(--ink); display:flex; align-items:center; justify-content:center; gap:6px; font-family:var(--sans); font-size:10.5px; font-weight:500;"><span style="width:7px; height:7px; border-radius:9px; background:oklch(0.7 0.15 155);"></span><span>Spotify</span></span>
-                <span style="flex:1; height:34px; border-radius:9px; border:1px solid var(--rule); background:var(--paperD); color:var(--ink); display:flex; align-items:center; justify-content:center; gap:6px; font-family:var(--sans); font-size:10.5px; font-weight:500;"><span style="width:7px; height:7px; border-radius:9px; background:oklch(0.62 0.19 20);"></span><span>Music</span></span>
-                <span style="flex:1; height:34px; border-radius:9px; border:1px solid var(--rule); background:var(--paperD); color:var(--ink); display:flex; align-items:center; justify-content:center; gap:6px; font-family:var(--sans); font-size:10.5px; font-weight:500;"><span style="width:7px; height:7px; border-radius:9px; background:oklch(0.55 0.2 25);"></span><span>YouTube</span></span>
-              </div>
-              <div style="position:absolute; left:0; right:0; bottom:0; height:90px; background:linear-gradient(180deg, transparent, var(--paper) 78%);"></div>
+        <figure class="sheet" aria-label="What a daily entry holds, set the way the app sets it">
+          <i class="sheet-wash" aria-hidden="true"></i>
+          <div class="hd">The Story</div>
+          <p class="s-dek">One italic line sets the scene.</p>
+          <p class="s-body">Then the story: two paragraphs on why the song matters, where it came from and what it changed. The first letter is cut to the song’s tempo, wide and calm for a slow one, tight and slanted for a fast one.</p>
+          <div class="s-foot"><span>BPM · Time · Key</span><i>Drop cap set to tempo.</i></div>
+
+          <div class="hd">The Key</div>
+          <svg class="wheel" viewBox="0 0 280 280" role="img" aria-label="Camelot wheel. This example sits at 8B, C major, and mixes well with 7B, 9B and 8A."><path class="nb" d="M104.0 274.3A139.0 139.0 0 0 1 41.7 238.3L69.2 210.8A100.1 100.1 0 0 0 114.1 236.7Z"/><path class="nb" d="M5.7 176.0A139.0 139.0 0 0 1 5.7 104.0L43.3 114.1A100.1 100.1 0 0 0 43.3 165.9Z"/><path class="nb" d="M69.2 210.8A100.1 100.1 0 0 1 43.3 165.9L78.2 156.5A63.9 63.9 0 0 0 94.8 185.2Z"/><path class="hit" d="M41.7 238.3A139.0 139.0 0 0 1 5.7 176.0L43.3 165.9A100.1 100.1 0 0 0 69.2 210.8Z"/><circle class="g" cx="140" cy="140" r="139.0"/><circle class="g" cx="140" cy="140" r="100.1"/><circle class="g" cx="140" cy="140" r="63.9"/><path class="g" d="M123.5 78.2L104.0 5.7"/><path class="g" d="M156.5 78.2L176.0 5.7"/><path class="g" d="M185.2 94.8L238.3 41.7"/><path class="g" d="M201.8 123.5L274.3 104.0"/><path class="g" d="M201.8 156.5L274.3 176.0"/><path class="g" d="M185.2 185.2L238.3 238.3"/><path class="g" d="M156.5 201.8L176.0 274.3"/><path class="g" d="M123.5 201.8L104.0 274.3"/><path class="g" d="M94.8 185.2L41.7 238.3"/><path class="g" d="M78.2 156.5L5.7 176.0"/><path class="g" d="M78.2 123.5L5.7 104.0"/><path class="g" d="M94.8 94.8L41.7 41.7"/><text x="199.8" y="36.5">1B</text><text x="181.0" y="69.0">1A</text><text x="243.5" y="80.2">2B</text><text x="211.0" y="99.0">2A</text><text x="259.5" y="140.0">3B</text><text x="222.0" y="140.0">3A</text><text x="243.5" y="199.8">4B</text><text x="211.0" y="181.0">4A</text><text x="199.8" y="243.5">5B</text><text x="181.0" y="211.0">5A</text><text x="140.0" y="259.5">6B</text><text x="140.0" y="222.0">6A</text><text x="80.2" y="243.5" class="n">7B</text><text x="99.0" y="211.0">7A</text><text x="36.5" y="199.8" class="h">8B</text><text x="69.0" y="181.0" class="n">8A</text><text x="20.5" y="140.0" class="n">9B</text><text x="58.0" y="140.0">9A</text><text x="36.5" y="80.2">10B</text><text x="69.0" y="99.0">10A</text><text x="80.2" y="36.5">11B</text><text x="99.0" y="69.0">11A</text><text x="140.0" y="20.5">12B</text><text x="140.0" y="58.0">12A</text><text class="c1" x="140" y="132">8B</text><text x="140" y="160">C MAJOR</text></svg>
+          <p class="wheel-cap">Mixes well with 7B · 9B · 8A<i>One step on the wheel never clashes.</i></p>
+
+          <div class="hd">The Facts</div>
+          <dl class="facts">
+            <div><dt>Dek</dt><dd>The scene, in one line</dd></div>
+            <div><dt>Released</dt><dd>The day it first came out</dd></div>
+            <div><dt>Genre</dt><dd>Where it sits in the record shop</dd></div>
+            <div><dt>Themes</dt><dd>What it is about</dd></div>
+            <div><dt>Lineage</dt><dd>Ancestors → descendants</dd></div>
+          </dl>
+
+          <div class="hd2">Lineage <i>Where this song came from. Where it went.</i></div>
+          <div class="lineage"><svg viewBox="0 0 352 280" role="img" aria-label="Lineage map: three ancestor songs above, this song in the middle, three descendant songs below."><path class="ln" d="M58.7 62C58.7 90 176 90 176 114"/><path class="ln" d="M176 166C176 190 58.7 190 58.7 218"/><circle class="nd" cx="58.7" cy="52" r="3.5"/><circle class="nd" cx="58.7" cy="228" r="3.5"/><path class="ln" d="M176.0 62C176.0 90 176 90 176 114"/><path class="ln" d="M176 166C176 190 176.0 190 176.0 218"/><circle class="nd" cx="176.0" cy="52" r="3.5"/><circle class="nd" cx="176.0" cy="228" r="3.5"/><path class="ln" d="M293.3 62C293.3 90 176 90 176 114"/><path class="ln" d="M176 166C176 190 293.3 190 293.3 218"/><circle class="nd" cx="293.3" cy="52" r="3.5"/><circle class="nd" cx="293.3" cy="228" r="3.5"/><circle class="c-a" cx="176" cy="140" r="22"/><circle class="c-b" cx="176" cy="140" r="14"/><circle class="c-c" cx="176" cy="140" r="4"/><text class="t" x="176" y="30" text-anchor="middle">The songs it descends from</text><text class="t" x="176" y="258" text-anchor="middle">The ones it made possible</text><text class="me" x="142" y="144" text-anchor="end">This song</text><text class="t" x="210" y="145">Today’s pick</text></svg></div>
+
+          <div class="hd2">Liner notes <i>From the editor’s file.</i></div>
+          <div class="notes">
+            <div class="note m"><small>The moment</small><p>The second the song turns. The moment at 0:42.</p></div>
+            <div class="note q"><small>The quote</small><p>A line from the people who made it.</p></div>
+            <div class="note f"><small>The fact</small><p>The fact you’ll repeat at dinner.</p></div>
+          </div>
+
+          <p class="colophon">End · Vol. 412 · No. 31</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═════════ HISTORY + THE FRIDAY PRESSING ═════════ -->
+    <section class="sec press" id="history" data-tab="1">
+      <div class="wrap press-grid">
+        <div class="press-copy rv">
+          <div class="eyerow"><span class="eyebrow">History · The Friday Pressing</span></div>
+          <h2>Seven days, freshly pressed.</h2>
+          <p class="lede">The Friday Pressing gathers seven daily picks into one visual edition, tracing the week’s arc and the records you kept.</p>
+          <dl class="facts around">
+            <div><dt>History</dt><dd>Every song we’ve published, a season at a time</dd></div>
+            <div><dt>Share cards</dt><dd>Four editions: Postcard, Liner Note, Sonic Profile, Lineage Map</dd></div>
+            <div><dt>Widgets</dt><dd>Home Screen and Lock Screen</dd></div>
+            <div><dt>Reminders</dt><dd>Optional. One a day, at the time you choose</dd></div>
+            <div><dt>Themes</dt><dd>Light and dark</dd></div>
+          </dl>
+        </div>
+
+        <div class="cover" aria-hidden="true">
+          <div class="cover-bg"></div>
+          <small>Seven days · Your listening copy</small>
+          <div class="cover-t">The Friday<br>Pressing</div>
+          <div class="crate"><span class="sleeve sl sl-extra" style="--d:-3;--ad:3"></span><span class="sleeve sl sl-green" style="--d:-2;--ad:2"></span><span class="sleeve sl sl-elise" style="--d:-1;--ad:1"></span><span class="sleeve sl sl-prel" style="--d:0;--ad:0"></span><span class="sleeve sl sl-gym" style="--d:1;--ad:1"></span><span class="sleeve sl sl-clair" style="--d:2;--ad:2"></span><span class="sleeve" style="--d:3;--ad:3"><picture><source srcset="/img/sotd/maple-leaf-rag-200.avif" type="image/avif"><source srcset="/img/sotd/maple-leaf-rag-200.webp" type="image/webp"><img src="/img/sotd/maple-leaf-rag-200.jpg" alt="" width="200" height="200" decoding="async" loading="lazy"></picture></span><div class="crate-front"><span>SOTD · The week</span></div></div>
+          <small>Seven drops · One week · Your crate</small>
+          <div class="entry glass glass--dark">
+            <div><small>Latest edition · New</small><b>The Friday Pressing</b><span>Open your seven-song week</span></div>
+            <svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ THE ALMANAC ═════════ -->
+    <section class="sec alm" id="almanac" data-tab="2">
+      <div class="field" aria-hidden="true"><i class="b2"></i><i class="b3"></i></div>
+      <div class="wrap">
+        <div class="alm-head rv">
+          <div>
+            <div class="eyerow"><span class="eyebrow">The Almanac</span></div>
+            <h2>Your year, drawn as a portrait.</h2>
+          </div>
+          <p class="lede">Collect what stays with you; your Library redraws it — a taste spectrum, decades spanned, tempo range, streaks.</p>
+        </div>
+
+        <div class="alm-sheet">
+          <span class="tag glass">Sample library</span>
+          <div class="alm-col">
+            <div>
+              <div class="alm-top"><span class="streak">47 in a row</span><span class="seg" aria-hidden="true"><span class="on">2026</span><span>All time</span></span></div>
+              <div class="kept"><b>47</b><i>songs kept</i></div>
+              <div class="seg seg--wide" aria-hidden="true"><span class="on">Almanac</span><span>The Record</span></div>
             </div>
+            <div>
+              <div class="blk-h">Taste spectrum <span>5 genres</span></div>
+              <div class="spec-wrap" aria-hidden="true">
+                <div class="spec">
+                  <i style="--w:6;--s1:#d8953d;--s2:#b66d00" data-n="Folk" data-w="6"></i>
+                  <i style="--w:4;--s1:#cf6b58;--s2:#ab4235" data-n="Britpop" data-w="4"></i>
+                  <i style="--w:3;--s1:#1b9388;--s2:#006f6a" data-n="Trip-hop" data-w="3"></i>
+                  <i style="--w:3;--s1:#4472a1;--s2:#285077" data-n="Alt Rock" data-w="3"></i>
+                  <i style="--w:2;--s1:#8683c7;--s2:#5e5b94" data-n="Power Pop" data-w="2"></i>
+                </div>
+                <div class="lens glass"><b>Folk</b><span>33%</span></div>
+              </div>
+              <ul class="top3">
+                <li style="--s2:#b66d00">Folk <span>33%</span></li>
+                <li style="--s2:#ab4235">Britpop <span>22%</span></li>
+                <li style="--s2:#006f6a">Trip-hop <span>17%</span></li>
+              </ul>
+            </div>
+            <div class="suggest"><div><small>Suggest a song</small><b>What should we send tomorrow?</b><span>Editors read every submission.</span></div><i aria-hidden="true">+</i></div>
           </div>
-        </div>
-      </div>
-
-      <!-- recently featured ticker -->
-      <div style="position:relative; border-top:1px solid var(--rule); background:var(--paperD);">
-        <div class="sotd-ticker" style="max-width:1160px; margin:0 auto; padding:0 clamp(20px,5vw,64px); display:flex; align-items:stretch; flex-wrap:wrap;">
-          <span class="sotd-ticker-label" style="display:flex; align-items:center; padding:13px 20px 13px 0; font-family:var(--mono); font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3); border-right:1px solid var(--rule); white-space:nowrap;">Recently featured</span>
-          <div class="sotd-ticker-cells" style="flex:1; display:flex; flex-wrap:wrap; min-width:0;">
-            <span class="sotd-ticker-cell" style="flex:1 1 180px; display:flex; align-items:center; gap:10px; padding:11px 16px; border-right:1px dotted var(--rule); min-width:0;">
-              <span style="width:28px; height:28px; border-radius:6px; flex-shrink:0; background:linear-gradient(135deg, oklch(0.72 0.12 250), oklch(0.46 0.12 278)); box-shadow:0 5px 12px -7px rgba(0,0,0,.5);"></span>
-              <span style="min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-weight:500; font-size:14.5px; line-height:1.1; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Clair de Lune</span><span style="display:block; font-family:var(--mono); font-size:8.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:2px;">Debussy · Sun</span></span>
-            </span>
-            <span class="sotd-ticker-cell" style="flex:1 1 180px; display:flex; align-items:center; gap:10px; padding:11px 16px; border-right:1px dotted var(--rule); min-width:0;">
-              <span style="width:28px; height:28px; border-radius:6px; flex-shrink:0; background:linear-gradient(135deg, oklch(0.74 0.13 150), oklch(0.5 0.11 178)); box-shadow:0 5px 12px -7px rgba(0,0,0,.5);"></span>
-              <span style="min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-weight:500; font-size:14.5px; line-height:1.1; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Gymnopédie No. 1</span><span style="display:block; font-family:var(--mono); font-size:8.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:2px;">Satie · Sat</span></span>
-            </span>
-            <span class="sotd-ticker-cell" style="flex:1 1 180px; display:flex; align-items:center; gap:10px; padding:11px 16px; border-right:1px dotted var(--rule); min-width:0;">
-              <span style="width:28px; height:28px; border-radius:6px; flex-shrink:0; background:linear-gradient(135deg, oklch(0.76 0.12 70), oklch(0.52 0.13 42)); box-shadow:0 5px 12px -7px rgba(0,0,0,.5);"></span>
-              <span style="min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-weight:500; font-size:14.5px; line-height:1.1; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Prelude in C</span><span style="display:block; font-family:var(--mono); font-size:8.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:2px;">Bach · Fri</span></span>
-            </span>
-            <span class="sotd-ticker-cell" style="flex:1 1 180px; display:flex; align-items:center; gap:10px; padding:11px 16px; border-right:1px dotted var(--rule); min-width:0;">
-              <span style="width:28px; height:28px; border-radius:6px; flex-shrink:0; background:linear-gradient(135deg, oklch(0.64 0.1 285), oklch(0.5 0.09 285)); box-shadow:0 5px 12px -7px rgba(0,0,0,.5);"></span>
-              <span style="min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-weight:500; font-size:14.5px; line-height:1.1; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Für Elise</span><span style="display:block; font-family:var(--mono); font-size:8.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:2px;">Beethoven · Thu</span></span>
-            </span>
-            <span class="sotd-ticker-cell" style="flex:1 1 180px; display:flex; align-items:center; gap:10px; padding:11px 16px; border-right:1px dotted var(--rule); min-width:0;">
-              <span style="width:28px; height:28px; border-radius:6px; flex-shrink:0; background:linear-gradient(135deg, oklch(0.64 0.13 32), oklch(0.52 0.14 30)); box-shadow:0 5px 12px -7px rgba(0,0,0,.5);"></span>
-              <span style="min-width:0;"><span style="display:block; font-family:var(--serif); font-style:italic; font-weight:500; font-size:14.5px; line-height:1.1; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Greensleeves</span><span style="display:block; font-family:var(--mono); font-size:8.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:2px;">Trad. · Wed</span></span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ WHAT YOU GET — filled cards ═══════════════ -->
-    <section id="almanac" style="scroll-margin-top:70px;">
-      <div style="max-width:1160px; margin:0 auto; padding:clamp(40px,6vw,64px) clamp(20px,5vw,64px) 0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(300px,100%), 1fr)); gap:18px;">
-
-        <div style="background:var(--paperD); border:1px solid var(--rule); border-radius:13px; padding:22px 24px;">
-          <div style="font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:600;">The Daily</div>
-          <div style="margin-top:10px; font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(21px,2.2vw,24px); line-height:1.1; letter-spacing:-.3px; color:var(--ink);">A print feature, every morning.</div>
-          <p style="margin:10px 0 0; font-family:var(--serif); font-size:14.5px; line-height:1.55; color:var(--ink2); text-wrap:pretty;">A dek, two paragraphs on why it matters, the facts, the lineage, liner notes from the editor's file. You don't skim it — you read it.</p>
-          <div style="margin-top:14px; border-top:1px solid var(--rule);">
-            <div style="display:grid; grid-template-columns:72px 1fr; gap:10px; padding:7px 0; border-bottom:1px dotted var(--rule);"><span style="font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); padding-top:2px;">Dek</span><span style="font-family:var(--serif); font-style:italic; font-size:13px; color:var(--ink2);">The scene, in one line</span></div>
-            <div style="display:grid; grid-template-columns:72px 1fr; gap:10px; padding:7px 0;"><span style="font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); padding-top:2px;">Lineage</span><span style="font-family:var(--serif); font-style:italic; font-size:13px; color:var(--ink2);">Ancestors → descendants</span></div>
-          </div>
-        </div>
-
-        <div style="background:var(--paperD); border:1px solid var(--rule); border-radius:13px; padding:22px 24px;">
-          <div style="font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:600;">The Almanac</div>
-          <div style="margin-top:10px; font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(21px,2.2vw,24px); line-height:1.1; letter-spacing:-.3px; color:var(--ink);">Your year, drawn as a portrait.</div>
-          <p style="margin:10px 0 0; font-family:var(--serif); font-size:14.5px; line-height:1.55; color:var(--ink2); text-wrap:pretty;">Collect what stays with you; your Library redraws it — a taste spectrum, decades spanned, tempo range, streaks.</p>
-          <div style="margin-top:14px; display:flex; gap:3px; height:26px; border-radius:6px; overflow:hidden;">
-            <div style="flex:6; background:linear-gradient(180deg, oklch(0.72 0.13 70), oklch(0.6 0.14 68));"></div>
-            <div style="flex:4; background:linear-gradient(180deg, oklch(0.64 0.13 32), oklch(0.52 0.14 30));"></div>
-            <div style="flex:3; background:linear-gradient(180deg, oklch(0.6 0.1 185), oklch(0.48 0.1 190));"></div>
-            <div style="flex:3; background:linear-gradient(180deg, oklch(0.54 0.09 250), oklch(0.42 0.08 250));"></div>
-            <div style="flex:2; background:linear-gradient(180deg, oklch(0.64 0.1 285), oklch(0.5 0.09 285));"></div>
-          </div>
-          <div style="margin-top:10px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3);"><span>47 kept</span><span>60s–10s</span><span>64–176 bpm</span></div>
-        </div>
-
-        <div id="story" style="background:var(--paperD); border:1px solid var(--rule); border-radius:13px; padding:22px 24px; scroll-margin-top:70px;">
-          <div style="font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:600;">The Story</div>
-          <div style="margin-top:10px; font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(21px,2.2vw,24px); line-height:1.1; letter-spacing:-.3px; color:var(--ink);">Written by humans.</div>
-          <p style="margin:10px 0 0; font-family:var(--serif); font-size:14.5px; line-height:1.55; color:var(--ink2); text-wrap:pretty;">Real editors who know the records, writing every word themselves. Music as literature, not algorithm.</p>
-          <div style="margin-top:14px; padding:12px 14px; border-left:2px solid var(--accent); background:color-mix(in oklab, var(--accent) 8%, transparent); border-radius:0 8px 8px 0; font-family:var(--serif); font-style:italic; font-size:13.5px; line-height:1.45; color:var(--ink);">&ldquo;One considered pick a day beats a thousand the engine guessed at.&rdquo;</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ FOR WHOM ═══════════════ -->
-    <section style="">
-      <div style="max-width:1160px; margin:0 auto; padding:clamp(36px,5vw,56px) clamp(20px,5vw,64px) 0;">
-        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
-          <span style="font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3);">For whom</span>
-          <div style="flex:1; height:1px; background:var(--rule);"></div>
-        </div>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(300px,100%), 1fr)); gap:18px;">
-          <div style="background:var(--paperD); border:1px solid var(--rule); border-radius:13px; padding:22px 24px;">
-            <div style="font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600;">The curious</div>
-            <h3 style="margin:12px 0 0; font-family:var(--serif); font-weight:500; font-style:italic; font-size:clamp(21px,2.4vw,26px); line-height:1.1; letter-spacing:-.4px; color:var(--ink);">Discover something good without thinking about it.</h3>
-            <p style="margin:12px 0 0; max-width:46ch; font-family:var(--serif); font-size:15.5px; line-height:1.58; color:var(--ink2); text-wrap:pretty;">One calm push a day, timed for your morning. Free, no ads, no homework. Open it with coffee, tap through to play, get on with your life.</p>
-          </div>
-          <div style="background:var(--paperD); border:1px solid var(--rule); border-radius:13px; padding:22px 24px;">
-            <div style="font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600;">The obsessive</div>
-            <h3 style="margin:12px 0 0; font-family:var(--serif); font-weight:500; font-style:italic; font-size:clamp(21px,2.4vw,26px); line-height:1.1; letter-spacing:-.4px; color:var(--ink);">Context, lineage, the moment, the quote.</h3>
-            <p style="margin:12px 0 0; max-width:46ch; font-family:var(--serif); font-size:15.5px; line-height:1.58; color:var(--ink2); text-wrap:pretty;">The ancestors and descendants. The moment at 0:42. The fact you'll repeat at dinner. The whole record-shop conversation, every day.</p>
+          <div class="alm-col">
+            <div>
+              <div class="blk-h">By the numbers</div>
+              <div class="nums">
+                <div class="num"><div>Decades spanned <span>1960s–2010s</span></div><div class="bar"><i style="--bs:0%;--bw:100%"></i></div></div>
+                <div class="num"><div>Tempo range <span>64–176 bpm</span></div><div class="bar"><i class="tempo" style="--bs:10%;--bw:80%"></i></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="blk-h">Listening streak <i>47 days, unbroken</i></div>
+              <div class="grid42" aria-hidden="true"><i style="--o:1.00"></i><i style="--o:0.64"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:0.80"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:0.48"></i><i style="--o:1.00"></i><i style="--o:0.48"></i><i style="--o:0.64"></i><i style="--o:0.48"></i><i style="--o:0.80"></i><i style="--o:1.00"></i><i style="--o:0.48"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:0.80"></i><i style="--o:0.80"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:0.80"></i><i style="--o:0.48"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:0.80"></i><i style="--o:0.80"></i><i style="--o:0.48"></i><i style="--o:0.64"></i><i style="--o:1.00"></i><i style="--o:0.64"></i><i style="--o:1.00"></i><i style="--o:1.00"></i><i style="--o:0.80"></i><i style="--o:0.64"></i><i style="--o:0.80"></i><i style="--o:1.00"></i><i style="--o:0.80"></i><i style="--o:1.00"></i><i style="--o:0.64"></i></div>
+            </div>
+            <div class="anthem"><picture><source srcset="/img/sotd/maple-leaf-rag-200.avif" type="image/avif"><source srcset="/img/sotd/maple-leaf-rag-200.webp" type="image/webp"><img src="/img/sotd/maple-leaf-rag-200.jpg" alt="" width="200" height="200" decoding="async" loading="lazy"></picture><div><small>Your anthem</small><b>Maple Leaf Rag</b><span>Scott Joplin</span></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ FAQ ═══════════════ -->
-    <section id="faq" style="scroll-margin-top:70px;">
-      <div style="max-width:1160px; margin:0 auto; padding:clamp(36px,5vw,56px) clamp(20px,5vw,64px) clamp(44px,6vw,72px);">
-        <div style="display:flex; align-items:center; gap:14px; margin-bottom:6px;">
-          <span style="font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3);">Questions</span>
-          <div style="flex:1; height:1px; background:var(--rule);"></div>
+    <!-- ═════════ THE STORY + FOR WHOM ═════════ -->
+    <section class="sec story" id="story" data-tab="3">
+      <div class="wrap story-grid">
+        <div class="rv">
+          <div class="eyerow"><span class="eyebrow">The Story</span></div>
+          <h2>Written by humans.</h2>
+          <p class="lede">Real editors who know the records, writing every word themselves. Music as literature, not algorithm.</p>
+          <blockquote class="pull"><small>On the daily</small><p>&ldquo;One considered pick a day beats a thousand the engine guessed at.&rdquo;</p></blockquote>
         </div>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(320px,100%), 1fr)); column-gap:clamp(28px,4vw,48px); align-items:start;">
-
-          <div style="border-bottom:1px solid var(--rule);" class="faq-item">
-            <button type="button" class="faq-toggle" style="appearance:none; width:100%; background:transparent; border:0; cursor:pointer; text-align:left; padding:16px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; color:var(--ink);">
-              <span style="font-family:var(--serif); font-size:clamp(17px,1.9vw,19px); font-weight:500; letter-spacing:-.2px;">Is it free?</span>
-              <span class="faq-sign" style="font-family:var(--serif); font-style:italic; font-size:23px; color:var(--accent); line-height:1; flex-shrink:0; margin-top:-1px;">–</span>
-            </button>
-            <div class="faq-answer" style="padding:0 0 18px; max-width:60ch; font-family:var(--serif); font-size:15.5px; line-height:1.6; color:var(--ink2); letter-spacing:-.05px; text-wrap:pretty;">Yes — completely. No ads, no subscription, no in-app purchases. One song a day, on the house.</div>
+        <div class="rv">
+          <div class="eyerow"><span class="eyebrow">For whom</span></div>
+          <div class="whom">
+            <article>
+              <small>The curious</small>
+              <h3>Discover something good without thinking about it.</h3>
+              <p>One calm push a day, timed for your morning. Free, no ads, no homework. Open it with coffee, tap through to play, get on with your life.</p>
+            </article>
+            <article>
+              <small>The obsessive</small>
+              <h3>Context, lineage, the moment, the quote.</h3>
+              <p>The ancestors and descendants. The moment at 0:42. The fact you'll repeat at dinner. The whole record-shop conversation, every day.</p>
+            </article>
           </div>
-
-          <div style="border-bottom:1px solid var(--rule);" class="faq-item">
-            <button type="button" class="faq-toggle" style="appearance:none; width:100%; background:transparent; border:0; cursor:pointer; text-align:left; padding:16px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; color:var(--ink);">
-              <span style="font-family:var(--serif); font-size:clamp(17px,1.9vw,19px); font-weight:500; letter-spacing:-.2px;">Do I need an account?</span>
-              <span class="faq-sign" style="font-family:var(--serif); font-style:italic; font-size:23px; color:var(--accent); line-height:1; flex-shrink:0; margin-top:-1px;">+</span>
-            </button>
-            <div class="faq-answer" style="display:none; padding:0 0 18px; max-width:60ch; font-family:var(--serif); font-size:15.5px; line-height:1.6; color:var(--ink2); letter-spacing:-.05px; text-wrap:pretty;">No. The app works fully signed-out. Sign in with Apple or Google only if you want your collected songs to sync across devices — that&rsquo;s the single gated feature.</div>
-          </div>
-
-          <div style="border-bottom:1px solid var(--rule);" class="faq-item">
-            <button type="button" class="faq-toggle" style="appearance:none; width:100%; background:transparent; border:0; cursor:pointer; text-align:left; padding:16px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; color:var(--ink);">
-              <span style="font-family:var(--serif); font-size:clamp(17px,1.9vw,19px); font-weight:500; letter-spacing:-.2px;">Where does the music play?</span>
-              <span class="faq-sign" style="font-family:var(--serif); font-style:italic; font-size:23px; color:var(--accent); line-height:1; flex-shrink:0; margin-top:-1px;">+</span>
-            </button>
-            <div class="faq-answer" style="display:none; padding:0 0 18px; max-width:60ch; font-family:var(--serif); font-size:15.5px; line-height:1.6; color:var(--ink2); letter-spacing:-.05px; text-wrap:pretty;">Wherever you already listen. Each song links out to Spotify, Apple Music, or YouTube — your choice. We don&rsquo;t host audio; we hand you the story and the door.</div>
-          </div>
-
-          <div style="border-bottom:1px solid var(--rule);" class="faq-item">
-            <button type="button" class="faq-toggle" style="appearance:none; width:100%; background:transparent; border:0; cursor:pointer; text-align:left; padding:16px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; color:var(--ink);">
-              <span style="font-family:var(--serif); font-size:clamp(17px,1.9vw,19px); font-weight:500; letter-spacing:-.2px;">Who picks the songs?</span>
-              <span class="faq-sign" style="font-family:var(--serif); font-style:italic; font-size:23px; color:var(--accent); line-height:1; flex-shrink:0; margin-top:-1px;">+</span>
-            </button>
-            <div class="faq-answer" style="display:none; padding:0 0 18px; max-width:60ch; font-family:var(--serif); font-size:15.5px; line-height:1.6; color:var(--ink2); letter-spacing:-.05px; text-wrap:pretty;">Real human editors who know the records. A person reads, writes, and signs off on every pick before it goes out.</div>
-          </div>
-
-          <div style="border-bottom:1px solid var(--rule);" class="faq-item">
-            <button type="button" class="faq-toggle" style="appearance:none; width:100%; background:transparent; border:0; cursor:pointer; text-align:left; padding:16px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; color:var(--ink);">
-              <span style="font-family:var(--serif); font-size:clamp(17px,1.9vw,19px); font-weight:500; letter-spacing:-.2px;">When does it update?</span>
-              <span class="faq-sign" style="font-family:var(--serif); font-style:italic; font-size:23px; color:var(--accent); line-height:1; flex-shrink:0; margin-top:-1px;">+</span>
-            </button>
-            <div class="faq-answer" style="display:none; padding:0 0 18px; max-width:60ch; font-family:var(--serif); font-size:15.5px; line-height:1.6; color:var(--ink2); letter-spacing:-.05px; text-wrap:pretty;">Once a day, timed for your morning. One gentle notification, then it leaves you alone.</div>
-          </div>
-
-          <div style="border-bottom:1px solid var(--rule);" class="faq-item">
-            <button type="button" class="faq-toggle" style="appearance:none; width:100%; background:transparent; border:0; cursor:pointer; text-align:left; padding:16px 0; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; color:var(--ink);">
-              <span style="font-family:var(--serif); font-size:clamp(17px,1.9vw,19px); font-weight:500; letter-spacing:-.2px;">What&rsquo;s &ldquo;The Almanac&rdquo;?</span>
-              <span class="faq-sign" style="font-family:var(--serif); font-style:italic; font-size:23px; color:var(--accent); line-height:1; flex-shrink:0; margin-top:-1px;">+</span>
-            </button>
-            <div class="faq-answer" style="display:none; padding:0 0 18px; max-width:60ch; font-family:var(--serif); font-size:15.5px; line-height:1.6; color:var(--ink2); letter-spacing:-.05px; text-wrap:pretty;">Your library, reframed as a year-in-review data-portrait — taste spectrum, decades spanned, tempo range, listening streaks. It updates every time you collect a song.</div>
-          </div>
-
         </div>
       </div>
     </section>
 
-  </div>
+    <!-- ═════════ FAQ ═════════ -->
+    <section class="sec faq" id="faq" data-tab="3">
+      <div class="wrap">
+        <div class="eyerow"><h2 class="eyebrow">Questions</h2></div>
+        <div class="faq-grid">
+          <div>
+            <details name="sotd-faq" open><summary>Is it free?</summary><p>Yes — completely. No ads, no subscription, no in-app purchases. One song a day, on the house.</p></details>
+            <details name="sotd-faq"><summary>Do I need an account?</summary><p>No. The app works fully signed-out. Sign in with Apple or Google only if you want your collected songs to sync across devices — that&rsquo;s the single gated feature.</p></details>
+            <details name="sotd-faq"><summary>Where does the music play?</summary><p>Wherever you already listen. Each song links out to Spotify, Apple Music, YouTube, or Bandcamp — your choice. We don&rsquo;t host audio; we hand you the story and the door.</p></details>
+          </div>
+          <div>
+            <details name="sotd-faq"><summary>Who picks the songs?</summary><p>Real human editors who know the records. A person reads, writes, and signs off on every pick before it goes out.</p></details>
+            <details name="sotd-faq"><summary>When does it update?</summary><p>Once a day, timed for your morning. One gentle notification, then it leaves you alone.</p></details>
+            <details name="sotd-faq"><summary>What&rsquo;s &ldquo;The Almanac&rdquo;?</summary><p>Your library, reframed as a year-in-review data-portrait — taste spectrum, decades spanned, tempo range, listening streaks. It updates every time you collect a song.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
+    <!-- ═════════ STATUS ═════════ -->
+    <section class="soon" id="soon" data-tab="3" aria-labelledby="soon-h">
+      <picture class="soon-bg" aria-hidden="true"><source srcset="/img/sotd/paper-backdrop-941.avif" type="image/avif"><source srcset="/img/sotd/paper-backdrop-941.webp" type="image/webp"><img src="/img/sotd/paper-backdrop-941.jpg" alt="" width="941" height="662" loading="lazy" decoding="async"></picture>
+      <div class="wrap soon-in">
+        <div class="soon-card glass">
+          <span class="appicon">
+            <picture class="lt"><source srcset="/img/sotd/app-icon-240.avif" type="image/avif"><source srcset="/img/sotd/app-icon-240.webp" type="image/webp"><img src="/img/sotd/app-icon-240.png" alt="Song of the Day app icon: a sun rising over a horizon" width="240" height="240" loading="lazy" decoding="async"></picture>
+            <picture class="dk"><source srcset="/img/sotd/app-icon-dark-240.avif" type="image/avif"><source srcset="/img/sotd/app-icon-dark-240.webp" type="image/webp"><img src="/img/sotd/app-icon-dark-240.png" alt="Song of the Day app icon: a sun rising over a horizon" width="240" height="240" loading="lazy" decoding="async"></picture>
+          </span>
+          <div>
+            <h2 id="soon-h">Coming soon.</h2>
+            <p>Song of the Day is an iOS app. It is not on the App Store yet. Until it is, questions go to a person.</p>
+          </div>
+          <div class="soon-row">
+            <span class="badge"><svg viewBox="0 0 24 28" aria-hidden="true"><path d="M16.4 14.9c0-2.8 2.3-4.1 2.4-4.2-1.3-1.9-3.3-2.2-4-2.2-1.7-.2-3.3 1-4.1 1-.9 0-2.2-1-3.6-1-1.8 0-3.6 1.1-4.5 2.7-2 3.4-.5 8.4 1.4 11.1 1 1.3 2 2.8 3.5 2.7 1.4-.1 2-.9 3.6-.9 1.7 0 2.2.9 3.6.9 1.5 0 2.4-1.3 3.4-2.6 1-1.5 1.5-3 1.5-3-.1-.1-2.9-1.1-2.9-4.5zM13.7 6.4c.8-1 1.3-2.3 1.2-3.6-1.1.1-2.4.8-3.2 1.7-.7.8-1.3 2.2-1.2 3.4 1.2.1 2.4-.6 3.2-1.5z"/></svg><span><small>App Store</small><b>Coming soon</b></span></span>
+            <a href="/song-of-the-day/support">Support</a>
+            <a href="mailto:hello@kitesink.com">hello@kitesink.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ───────────────────── FOOTER ───────────────────── -->
-  <footer style="position:relative; z-index:10; border-top:1px solid var(--rule); background:var(--paperD);">
-    <div style="max-width:1160px; margin:0 auto; padding:clamp(44px,6vw,72px) clamp(20px,5vw,64px) clamp(36px,5vw,52px);">
-      <div style="display:flex; gap:clamp(32px,6vw,80px); flex-wrap:wrap; justify-content:space-between;">
-
-        <div style="flex:1 1 280px; min-width:240px;">
-          <div style="display:flex; align-items:center; gap:11px;">
-            <div style="width:32px; height:32px; border-radius:8px; background:var(--accent); display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;">
-              <div style="position:relative; width:26px; height:18px;">
-                <div style="position:absolute; bottom:6px; left:50%; transform:translateX(-50%); width:24px; height:12px; border:1.3px solid var(--accentI); border-bottom:0; border-radius:24px 24px 0 0; opacity:.45;"></div>
-                <div style="position:absolute; bottom:6px; left:50%; transform:translateX(-50%); width:16px; height:8px; border-radius:16px 16px 0 0; background:var(--accentI);"></div>
-                <div style="position:absolute; bottom:4px; left:50%; transform:translateX(-50%); width:24px; height:1.4px; border-radius:9px; background:var(--accentI); opacity:.55;"></div>
-              </div>
-            </div>
-            <span style="font-family:var(--serif); font-style:italic; font-weight:500; font-size:22px; letter-spacing:-.3px; color:var(--ink);">Song of the Day</span>
-          </div>
-          <div style="margin-top:16px; font-family:var(--serif); font-style:italic; font-size:18px; color:var(--ink2); max-width:24ch;">One song a day, every day.</div>
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="brand" href="#top"><img src="/song-of-the-day/logos/app-icon-terracotta.svg" alt="" width="32" height="32" loading="lazy"><b>Song of the Day</b></a>
+          <p>One song a day, every day.</p>
         </div>
-
-        <div style="display:flex; gap:clamp(36px,6vw,72px); flex-wrap:wrap;">
-          <div>
-            <div style="font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3); margin-bottom:16px;">Site</div>
-            <div style="display:flex; flex-direction:column; gap:11px; align-items:flex-start;">
-              <a href="#story" class="hv-footlink" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:0; font-family:var(--sans); font-size:15px; color:var(--ink2); text-decoration:none;">About</a>
-              <a href="#today" class="hv-footlink" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:0; font-family:var(--sans); font-size:15px; color:var(--ink2); text-decoration:none;">Today</a>
-              <a href="#faq" class="hv-footlink" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:0; font-family:var(--sans); font-size:15px; color:var(--ink2); text-decoration:none;">FAQ</a>
-            </div>
-          </div>
-          <div>
-            <div style="font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3); margin-bottom:16px;">Legal</div>
-            <div style="display:flex; flex-direction:column; gap:11px; align-items:flex-start;">
-              <a href="/song-of-the-day/privacy" class="hv-footlink" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:0; font-family:var(--sans); font-size:15px; color:var(--ink2); text-decoration:none;">Privacy</a>
-              <a href="/song-of-the-day/terms" class="hv-footlink" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:0; font-family:var(--sans); font-size:15px; color:var(--ink2); text-decoration:none;">Terms</a>
-            </div>
-          </div>
-          <div>
-            <div style="font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3); margin-bottom:16px;">Support</div>
-            <div style="display:flex; flex-direction:column; gap:11px; align-items:flex-start;">
-              <a href="/song-of-the-day/support" class="hv-footlink" style="appearance:none; border:0; background:transparent; cursor:pointer; padding:0; font-family:var(--sans); font-size:15px; color:var(--ink2); text-decoration:none;">Support</a>
-              <a href="mailto:hello@kitesink.com" class="hv-footlink" style="font-family:var(--sans); font-size:15px; color:var(--ink2); text-decoration:none;">hello@kitesink.com</a>
-            </div>
-          </div>
+        <div class="foot-cols">
+          <div><h2>Site</h2><a href="#story">About</a><a href="#today">Today</a><a href="#faq">FAQ</a></div>
+          <div><h2>Legal</h2><a href="/song-of-the-day/privacy">Privacy</a><a href="/song-of-the-day/terms">Terms</a></div>
+          <div><h2>Support</h2><a href="/song-of-the-day/support">Support</a><a href="mailto:hello@kitesink.com">hello@kitesink.com</a></div>
         </div>
       </div>
-
-      <div style="margin-top:clamp(36px,5vw,56px); padding-top:24px; border-top:1px solid var(--rule); display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
-        <span style="font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3);">© Song of the Day · 2026 · Made by humans</span>
-        <div style="display:flex; align-items:center; gap:10px;">
-          <span style="font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3);">Theme</span>
-          <div style="display:flex; background:var(--paperE); border-radius:9px; padding:3px;" id="theme-switch">
-            <button type="button" data-theme="system" style="flex:0 0 auto; appearance:none; cursor:pointer; border:0; padding:7px 12px; border-radius:6px; font-family:var(--sans); font-size:12px; letter-spacing:-0.05px; transition:all .12s;">System</button>
-            <button type="button" data-theme="light" style="flex:0 0 auto; appearance:none; cursor:pointer; border:0; padding:7px 12px; border-radius:6px; font-family:var(--sans); font-size:12px; letter-spacing:-0.05px; transition:all .12s;">Light</button>
-            <button type="button" data-theme="dark" style="flex:0 0 auto; appearance:none; cursor:pointer; border:0; padding:7px 12px; border-radius:6px; font-family:var(--sans); font-size:12px; letter-spacing:-0.05px; transition:all .12s;">Dark</button>
+      <div class="foot-base">
+        <span>© Song of the Day · 2026 · Made by humans</span>
+        <div class="theme"><span id="theme-label">Theme</span>
+          <div id="theme-switch" role="group" aria-labelledby="theme-label">
+            <button type="button" data-set="system" aria-pressed="true">System</button><button type="button" data-set="light" aria-pressed="false">Light</button><button type="button" data-set="dark" aria-pressed="false">Dark</button>
           </div>
         </div>
       </div>
     </div>
   </footer>
-
 </div>
 
+<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#6f6040"><span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 64 64" fill="none" style="flex-shrink:0" aria-hidden="true"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="color:#221c10">&copy; 2026 KiteSink</span></span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="/blog" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="/about" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span></div>
+<script src="/ks.js?v=2027.3"></script>
 <script>
-(function(){
+(function () {
   "use strict";
+  var d = document, root = d.getElementById("root");
+  function one(s, c) { return (c || d).querySelector(s); }
+  function all(s, c) { return Array.prototype.slice.call((c || d).querySelectorAll(s)); }
 
-  /* ── FAQ accordion (single-open, item 0 starts open) ── */
-  var items = Array.prototype.slice.call(document.querySelectorAll('#faq .faq-item'));
-  items.forEach(function(item){
-    var btn = item.querySelector('.faq-toggle');
-    var answer = item.querySelector('.faq-answer');
-    var sign = item.querySelector('.faq-sign');
-    btn.addEventListener('click', function(){
-      var isOpen = answer.style.display !== 'none';
-      // close all
-      items.forEach(function(o){
-        o.querySelector('.faq-answer').style.display = 'none';
-        o.querySelector('.faq-sign').textContent = '+';
+  /* Theme: shares the site-wide ksTheme key, so the choice follows you across KiteSink. */
+  var KEY = "ksTheme", mq = null;
+  try { mq = window.matchMedia("(prefers-color-scheme: dark)"); } catch (e) {}
+  function stored() { try { var s = localStorage.getItem(KEY); return s === "dark" || s === "light" ? s : null; } catch (e) { return null; } }
+  function paint() {
+    var s = stored(), dark = s ? s === "dark" : !!(mq && mq.matches);
+    if (dark) d.documentElement.setAttribute("data-theme", "dark"); else d.documentElement.removeAttribute("data-theme");
+    var meta = one('meta[name="theme-color"]'); if (meta) meta.setAttribute("content", dark ? "#16130d" : "#ece2cb");
+    all("#theme-switch button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === (s || "system"))); });
+  }
+  all("#theme-switch button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var v = b.getAttribute("data-set");
+      try { if (v === "system") localStorage.removeItem(KEY); else localStorage.setItem(KEY, v); } catch (e) {}
+      paint();
+    });
+  });
+  window.addEventListener("storage", function (e) { if (e.key === KEY) paint(); });
+  if (mq) { if (mq.addEventListener) mq.addEventListener("change", paint); else if (mq.addListener) mq.addListener(paint); }
+  paint();
+
+  /* Dock: mark the section in view and slide the selection lozenge to it. */
+  var dock = one(".dock"), tabs = all(".dock a");
+  function setTab(n) {
+    dock.style.setProperty("--tab", n); dock.classList.add("on");
+    tabs.forEach(function (a, i) { if (i === n) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+  }
+  if (dock && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) setTab(+en.target.getAttribute("data-tab")); });
+    }, { rootMargin: "-45% 0px -54% 0px" });
+    all("[data-tab]").forEach(function (s) { io.observe(s); });
+  }
+
+  /* Flip the day by swiping the phone, like paging back through days in the app.
+     The radio group does the rest in CSS. */
+  var radios = all(".rail input"), phone = one(".phone");
+  function step(by) {
+    var at = 0; radios.forEach(function (r, i) { if (r.checked) at = i; });
+    var to = Math.max(0, Math.min(radios.length - 1, at + by));
+    if (to !== at) radios[to].checked = true;
+  }
+  if (phone && radios.length) {
+    var sx = null, sy = 0;
+    phone.addEventListener("pointerdown", function (e) { sx = e.clientX; sy = e.clientY; });
+    phone.addEventListener("pointerup", function (e) {
+      if (sx === null) return;
+      var dx = e.clientX - sx, dy = e.clientY - sy; sx = null;
+      if (Math.abs(dx) > 34 && Math.abs(dx) > Math.abs(dy) * 1.4) step(dx < 0 ? 1 : -1);
+    });
+    phone.addEventListener("pointercancel", function () { sx = null; });
+  }
+
+  /* Almanac lens: slides along the taste spectrum and names what is under it. */
+  var wrap = one(".spec-wrap"), lens = one(".lens");
+  if (wrap && lens) {
+    var segs = all(".spec i").map(function (i) { return { n: i.getAttribute("data-n"), w: +i.getAttribute("data-w") }; });
+    var total = segs.reduce(function (a, s) { return a + s.w; }, 0), name = one("b", lens), pct = one("span", lens);
+    var move = function (e, live) {
+      var r = wrap.getBoundingClientRect(), x = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)), acc = 0, hit = segs[segs.length - 1];
+      for (var i = 0; i < segs.length; i++) { acc += segs[i].w / total; if (x <= acc) { hit = segs[i]; break; } }
+      var half = 52 / r.width;
+      lens.classList.toggle("live", !!live);
+      lens.style.setProperty("--lx", (Math.max(half, Math.min(1 - half, x)) * 100).toFixed(2) + "%");
+      name.textContent = hit.n; pct.textContent = Math.round(hit.w / total * 100) + "%";
+    };
+    wrap.addEventListener("pointerdown", function (e) { move(e, false); });
+    if (window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+      wrap.addEventListener("pointermove", function (e) { move(e, true); });
+      wrap.addEventListener("pointerleave", function () { lens.classList.remove("live"); });
+    }
+  }
+
+  /* Glass: a specular highlight that follows the pointer (hover devices only). */
+  if (window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+    all(".glass", root).forEach(function (g) {
+      g.addEventListener("pointermove", function (e) {
+        var r = g.getBoundingClientRect();
+        g.style.setProperty("--mx", (e.clientX - r.left) + "px"); g.style.setProperty("--my", (e.clientY - r.top) + "px");
+        g.classList.add("lit");
       });
-      if(!isOpen){
-        answer.style.display = '';
-        sign.textContent = '–';
-      }
-    });
-  });
-
-  /* ── Theme switcher: swaps CSS variables on #root + body bg ── */
-  var root = document.getElementById('root');
-  var themeLight = {
-    '--paper':'oklch(0.965 0.014 75)','--paperD':'oklch(0.935 0.018 72)','--paperE':'oklch(0.905 0.022 68)',
-    '--ink':'oklch(0.18 0.013 55)','--ink2':'oklch(0.38 0.012 55)','--ink3':'oklch(0.55 0.009 55)',
-    '--rule':'oklch(0.82 0.018 70)','--accent':'oklch(0.55 0.14 42)','--accentI':'oklch(0.97 0.018 70)',
-    '--wash':'oklch(0.68 0.16 70)','--bodyBg':'#efece6'
-  };
-  var themeDark = {
-    '--paper':'oklch(0.19 0.012 55)','--paperD':'oklch(0.235 0.014 55)','--paperE':'oklch(0.285 0.015 55)',
-    '--ink':'oklch(0.94 0.014 75)','--ink2':'oklch(0.74 0.014 70)','--ink3':'oklch(0.58 0.013 65)',
-    '--rule':'oklch(0.32 0.014 55)','--accent':'oklch(0.74 0.13 48)','--accentI':'oklch(0.19 0.012 55)',
-    '--wash':'oklch(0.5 0.15 65)','--bodyBg':'#211d19'
-  };
-
-  var pref;
-  try{ pref = (JSON.parse(localStorage.getItem('sotd_site_v1')||'{}').theme) || 'system'; }catch(e){ pref = 'system'; }
-
-  function isDark(theme){
-    if(theme === 'dark') return true;
-    if(theme === 'light') return false;
-    try{ return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
-    catch(e){ return false; }
-  }
-
-  function applyTheme(theme){
-    var dark = isDark(theme);
-    var vars = dark ? themeDark : themeLight;
-    for(var k in vars){ if(k !== '--bodyBg') root.style.setProperty(k, vars[k]); }
-    document.body.style.background = vars['--bodyBg'];
-    // active button styling
-    Array.prototype.forEach.call(document.querySelectorAll('#theme-switch button'), function(b){
-      var on = b.getAttribute('data-theme') === theme;
-      b.style.background = on ? 'var(--paper)' : 'transparent';
-      b.style.color = on ? 'var(--ink)' : 'var(--ink2)';
-      b.style.fontWeight = on ? '600' : '500';
-      b.style.boxShadow = on ? '0 1px 2px rgba(0,0,0,0.12)' : 'none';
+      g.addEventListener("pointerleave", function () { g.classList.remove("lit"); });
     });
   }
-
-  Array.prototype.forEach.call(document.querySelectorAll('#theme-switch button'), function(b){
-    b.addEventListener('click', function(){
-      pref = b.getAttribute('data-theme');
-      try{ localStorage.setItem('sotd_site_v1', JSON.stringify({theme:pref})); }catch(e){}
-      applyTheme(pref);
-    });
-  });
-
-  // react to system preference changes while on "system"
-  try{
-    var mq = window.matchMedia('(prefers-color-scheme: dark)');
-    var onChange = function(){ if(pref === 'system') applyTheme('system'); };
-    if(mq.addEventListener) mq.addEventListener('change', onChange);
-    else if(mq.addListener) mq.addListener(onChange);
-  }catch(e){}
-
-  applyTheme(pref);
 })();
 </script>
-
-<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#6f6040"><span style="display:flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg><span style="color:#221c10">&copy; 2026 KiteSink</span></span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="/blog" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="/about" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span></div>
-<script src="/ks.js?v=2027.3"></script>
 </body>
 </html>

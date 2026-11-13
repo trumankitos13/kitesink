@@ -1,18 +1,12 @@
-# Fitness knowledge base: content brief for research agents
+# Fitness field guide: how to write an entry
 
-You are writing the DATA for a large, filterable fitness reference on
-kitesink.com/fitness. You write one JSON file. You do not touch the website
-repository. Another process turns the JSON into the page.
+The data behind kitesink.com/fitness lives in this folder: one JSON file per area and
+`claims.json`. `scripts/build_fitness.py` turns them into the page. This file is the
+format and the rules for anyone, person or agent, who adds or changes an entry.
 
-The owner's instruction: the page should be "a huge set of data and information
-that is easily digestible and understandable and filterable or sortable". The
-site brusovcoach.org and its sub-sites are the starting point for WHICH topics to
-cover. A map of their topics is in
-`/tmp/claude-0/-home-user-kitesink/979f9ab3-a7c6-5a0d-a6f1-8942c2017751/scratchpad/recon/brusov.md`.
-Read the part for your domain and cover at least that ground, plus anything
-important it misses. Use it as a topic checklist only. Every word you write is
-your own: never copy or closely paraphrase their sentences, their numbering or
-their named frameworks.
+The page should be a large set of information that is easy to digest, filter and sort.
+Every word is written for this site: never copy or closely paraphrase another site's
+sentences, numbering or named frameworks.
 
 ## Absolute rules
 1. NO SOURCE MAY HAVE SCHOENFELD AS AN AUTHOR, in any author position, and the
@@ -49,9 +43,8 @@ questions, no "it's not X, it's Y". A sixteen-year-old lifter and a
 fifty-year-old beginner should both follow it.
 
 ## The file
-Write to
-`/tmp/claude-0/-home-user-kitesink/979f9ab3-a7c6-5a0d-a6f1-8942c2017751/scratchpad/content/<domain>.json`
-(domains: hypertrophy, powerlifting, meet, nutrition, diet, health, claims).
+One file per area in this folder: `hypertrophy.json`, `powerlifting.json`, `meet.json`,
+`nutrition.json`, `diet.json`, `health.json`, plus `claims.json`.
 
 ```json
 {
@@ -133,14 +126,8 @@ guidelines; then well-run trials. Reuse a source across entries rather than
 citing a weaker second one.
 
 ## Validate before you report
-`python3 -I /tmp/claude-0/-home-user-kitesink/979f9ab3-a7c6-5a0d-a6f1-8942c2017751/scratchpad/tools/validate_fitness.py <your file>`
+`python3 scripts/validate_fitness.py content/fitness/<file>.json`, then `python3 scripts/build_fitness.py`
 It checks the schema, text lengths, that every DOI exists on Crossref with a
 matching title, year, first author and author count, and that Schoenfeld is not
 among any paper's authors. Fix everything it reports as ERROR. Read the warnings.
 Work in passes: write a batch of entries, validate, fix, continue.
-
-## Report (final message, under 300 words)
-Counts by type and by confidence; number of sources; the validator's last line;
-topics from the brusov map you deliberately left out and why; any entry you are
-least sure about (by id) so the reviewer can check it; anything you could not
-verify.

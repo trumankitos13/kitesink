@@ -1,6 +1,7 @@
 /* ===================== KiteSink — fitness tools =====================
-   The four calculators on /fitness. Plain JS, no dependencies, nothing
-   leaves the browser (inputs are remembered in localStorage only).
+   The five calculators on /fitness, and the filters for its reference
+   lists. Plain JS, no dependencies, nothing leaves the browser (inputs
+   are remembered in localStorage only).
 
    The maths lives in KSFit (pure functions, exported on window so they
    can be checked from the console or a test); the bottom half wires
@@ -13,6 +14,8 @@
      • 1RM             — Epley: w·(1 + r/30)   ·   Brzycki (1993): w·36/(37 − r)
      • Effective reps  — a coaching heuristic, not a measured quantity: the reps that
                          fall inside the last five before failure
+     • Meet attempts   — a coaching convention: fixed fractions of a current best single,
+                         rounded to the 2.5 kg a meet loads
    ================================================================== */
 (function () {
   "use strict";
@@ -57,6 +60,27 @@
     brzycki: function (w, r) { return r <= 1 ? w : (r >= 37 ? NaN : w * 36 / (37 - r)); },
     // load to use for `reps` reps with `rir` left in the tank (Epley, inverted)
     loadFor: function (oneRm, reps, rir) { var r = reps + rir; return r <= 1 ? oneRm : oneRm / (1 + r / 30); },
+
+    // Meet attempts. Opener, second and third as fractions of the best single you could
+    // lift today. A convention, not a rule: "first" aims for nine good lifts, "bold" ends
+    // on a small personal best. Rounded to 2.5 kg and always rising by at least one step.
+    ATTEMPT_STYLES: { first: [0.88, 0.94, 0.98], standard: [0.91, 0.96, 1], bold: [0.92, 0.975, 1.025] },
+    attempts: function (bestKg, style) {
+      var p = F.ATTEMPT_STYLES[style] || F.ATTEMPT_STYLES.standard, out = [], prev = 0;
+      for (var i = 0; i < 3; i++) { var v = F.round(bestKg * p[i], 2.5); if (v <= prev) v = prev + 2.5; out.push(v); prev = v; }
+      return out;
+    },
+    // Warm-up ladder to an opener: the empty 20 kg bar, then rising fractions of the opener
+    // with fewer reps each time. Every step is heavier than the last and lighter than the opener.
+    warmups: function (openerKg) {
+      var steps = [[0.4, 5], [0.55, 3], [0.7, 2], [0.8, 1], [0.9, 1]], out = [], prev = 0;
+      if (openerKg > 25) { out.push({ kg: 20, reps: 8 }); prev = 20; }
+      steps.forEach(function (st) {
+        var v = F.round(openerKg * st[0], 2.5);
+        if (v > prev && v < openerKg) { out.push({ kg: v, reps: st[1] }); prev = v; }
+      });
+      return out;
+    },
     // reps to failure at a fraction of 1RM (Epley, inverted)
     repsAt: function (pct) { return 30 * (1 / pct - 1); }
   };
@@ -288,7 +312,7 @@
 
   /* ---------- tabs: one tool at a time; each has its own #hash ---------- */
   boot(function () {
-    var ids = ["macros", "reps", "loads", "travel"];
+    var ids = ["macros", "reps", "loads", "travel", "attempts"].filter(function (id) { return $("tab-" + id) && $(id); });
     var tabs = ids.map(function (id) { return $("tab-" + id); }), panels = ids.map($);
     function show(id, focus) {
       var i = ids.indexOf(id); if (i < 0) return false;
@@ -540,22 +564,245 @@
     box.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) pick(b); });
   });
 
-  /* ---------- Claims, checked: filter by topic + free-text ---------- */
+  /* ---------- 5. meet attempts ---------- */
   boot(function () {
-    var box = $("claims-list"); if (!box) return;
-    var items = [].slice.call(box.querySelectorAll(".k-qa")), q = $("claims-q"), count = $("claims-count");
-    var topic = seg($("claims-topic"), "all", "all", apply);
-    function apply() {
-      var t = topic.get(), words = q.value.toLowerCase().split(/\s+/).filter(Boolean), shown = 0;
-      items.forEach(function (el) {
-        var okT = t === "all" || el.getAttribute("data-topic") === t, text = el.textContent.toLowerCase();
-        var ok = okT && words.every(function (w) { return text.indexOf(w) >= 0; });
-        el.hidden = !ok; if (ok) shown++;
-      });
-      count.textContent = shown + " of " + items.length + (shown === 0 ? " — nothing matches; try a broader word." : "");
+    if (!$("a-rows")) return;
+    var LIFTS = [["squat", "Squat", "a-squat"], ["bench", "Bench", "a-bench"], ["dead", "Deadlift", "a-dead"]];
+    var NOTES = {
+      first: "First meet: an opener you could triple on a bad day and a third just under your best. The aim is nine good lifts.",
+      standard: "Standard: open near 91% and finish on your current best.",
+      bold: "Chasing PRs: the third is a small personal best. Take it only if the second moved well."
+    };
+    var sv = saved.att || {}, kg = {};
+    var units = seg($("a-units"), sv.units, "kg", function () { show(); calc(); });
+    var style = seg($("a-style"), sv.style, "first", calc);
+    var warm = seg($("a-warm"), sv.warm, "squat", calc);
+    LIFTS.forEach(function (l) {
+      kg[l[0]] = sv[l[0]] > 0 ? +sv[l[0]] : val(l[2]);   // kept in kg, shown in the chosen unit
+      $(l[2]).addEventListener("input", function () { var v = val(l[2]); kg[l[0]] = units.get() === "lb" ? F.kg(v) : v; calc(); });
+    });
+    function show() {
+      var u = units.get();
+      LIFTS.forEach(function (l) { if (isFinite(kg[l[0]])) $(l[2]).value = Math.round((u === "lb" ? F.lb(kg[l[0]]) : kg[l[0]]) * 10) / 10; });
+      [].forEach.call(document.querySelectorAll(".a-unit"), function (el) { el.textContent = u; });
     }
-    q.addEventListener("input", apply);
-    apply();
+    function wt(v) { return num(v, v % 1 ? 1 : 0); }
+    // A meet loads kilograms, so kilograms always lead; pounds follow when that is the chosen unit.
+    function cell(v) { return wt(v) + " kg" + (units.get() === "lb" ? "<small>" + num(F.lb(v)) + " lb</small>" : ""); }
+    function calc() {
+      var st = style.get(), sets = {}, valid = 0;
+      $("a-style-note").textContent = NOTES[st];
+      $("a-rows").innerHTML = LIFTS.map(function (l) {
+        var ok = kg[l[0]] > 0; if (ok) { sets[l[0]] = F.attempts(kg[l[0]], st); valid++; }
+        return "<tr><th scope=\"row\">" + l[1] + "</th>" + (ok ? sets[l[0]].map(function (v) { return "<td>" + cell(v) + "</td>"; }).join("") : "<td colspan=\"3\">Enter your best single.</td>") + "</tr>";
+      }).join("");
+      var allIn = valid === LIFTS.length;
+      $("a-out").classList.toggle("is-empty", !allIn);
+      function sum(i) { return LIFTS.reduce(function (t, l) { return t + sets[l[0]][i]; }, 0); }
+      $("a-total").innerHTML = allIn ? cell(sum(2)) : "—";
+      $("a-total2").innerHTML = allIn ? cell(sum(1)) : "—";
+      var w = warm.get(), name = LIFTS.filter(function (l) { return l[0] === w; })[0][1];
+      $("a-warm-h").textContent = name + " warm-up ladder";
+      $("a-ladder").innerHTML = sets[w] ? F.warmups(sets[w][0]).map(function (x) {
+        return "<li><span>" + wt(x.kg) + " kg" + (units.get() === "lb" ? " · " + num(F.lb(x.kg)) + " lb" : "") + "</span><span>× " + x.reps + "</span></li>";
+      }).join("") + "<li><span>" + wt(sets[w][0]) + " kg</span><span>opener, on the platform</span></li>" : "";
+      say("a-say", allIn ? "Suggested openers: squat " + wt(sets.squat[0]) + ", bench " + wt(sets.bench[0]) + ", deadlift " + wt(sets.dead[0]) + " kilograms. Total if every third goes: " + wt(sum(2)) + " kilograms."
+        : "Enter your best single for each lift.");
+      store.set({ att: { units: units.get(), style: st, warm: w, squat: kg.squat, bench: kg.bench, dead: kg.dead } });
+    }
+    show(); calc();
+  });
+
+  /* ---------- The reference: field guide, claims, numbers, tables, glossary ----------
+     Every entry is already in the page (scripts/build_fitness.py writes it), so this only
+     hides, counts and reorders. One "area" lens is shared by all five lists; each list
+     adds its own facets, search box and sort. */
+  boot(function () {
+    var guide = $("g-list"); if (!guide) return;
+    var AREAS = ["hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health"];
+    var CONF = ["strong", "rule", "moderate", "limited", "practice"], LEVEL = ["beginner", "intermediate", "advanced"];
+    var VERD = ["true", "mostly", "depends", "overstated", "false"];
+    var EVID = ["meta-analysis", "guideline", "position", "rct", "rulebook", "review", "cohort", "mixed"];
+    var area = "all", lists = [];
+    function all(sel, root) { return [].slice.call((root || document).querySelectorAll(sel)); }
+    function attr(el, name) { return el.getAttribute("data-" + name) || ""; }
+    function rank(list, v) { var i = list.indexOf(v); return i < 0 ? 99 : i; }
+    function words(input) { return input ? input.value.toLowerCase().split(/\s+/).filter(Boolean) : []; }
+    function byOrder(a, b) { return attr(a, "o") - attr(b, "o"); }
+    function reorder(parent, els, cmp) { els.slice().sort(function (a, b) { return cmp(a, b) || byOrder(a, b); }).forEach(function (el) { parent.appendChild(el); }); }
+
+    // A filterable list. cfg: items, noun, lens, facets {name: {el, test(el, value)}}, q, count, empty, after(state, shown, active)
+    function makeList(cfg) {
+      var rows = cfg.items.map(function (el) { return { el: el, d: attr(el, "d"), text: el.textContent.toLowerCase() }; });
+      var facets = cfg.facets || {}, names = Object.keys(facets), state = {};
+      names.forEach(function (n) { state[n] = "all"; });
+      function ok(r, skip, w) {
+        if (skip !== "area" && area !== "all" && r.d !== area) return false;
+        for (var i = 0; i < names.length; i++) { var n = names[i]; if (n !== skip && state[n] !== "all" && !facets[n].test(r.el, state[n])) return false; }
+        for (var j = 0; j < w.length; j++) if (r.text.indexOf(w[j]) < 0) return false;
+        return true;
+      }
+      function apply() {
+        var w = words(cfg.q), shown = 0;
+        rows.forEach(function (r) { var v = ok(r, null, w); r.el.hidden = !v; if (v) shown++; });
+        names.forEach(function (n) {
+          all("button.fx", facets[n].el).forEach(function (b) {
+            b.setAttribute("aria-pressed", b.value === state[n] ? "true" : "false");
+            var c = b.querySelector("b"); if (!c) return;
+            var k = 0; rows.forEach(function (r) { if (ok(r, n, w) && facets[n].test(r.el, b.value)) k++; });
+            c.textContent = k; b.classList.toggle("is-zero", k === 0);
+          });
+        });
+        if (cfg.lens) all("button", cfg.lens).forEach(function (b) {
+          b.setAttribute("aria-pressed", b.value === area ? "true" : "false");
+          var c = b.querySelector("b"); if (!c) return;
+          var k = 0; rows.forEach(function (r) { if (r.d === b.value && ok(r, "area", w)) k++; });
+          c.textContent = k;
+        });
+        var active = (area !== "all" ? 1 : 0) + names.filter(function (n) { return state[n] !== "all"; }).length + (w.length ? 1 : 0);
+        if (cfg.count) {
+          cfg.count.textContent = "Showing " + shown + " of " + rows.length + " " + cfg.noun + (active ? ". " : "");
+          if (active) { var x = document.createElement("button"); x.type = "button"; x.className = "k-linkbtn"; x.textContent = "Clear filters"; x.addEventListener("click", function () { api.reset(); setArea("all"); }); cfg.count.appendChild(x); }
+        }
+        if (cfg.empty) cfg.empty.hidden = shown !== 0;
+        if (cfg.after) cfg.after(state, shown, active);
+      }
+      names.forEach(function (n) {
+        facets[n].el.addEventListener("click", function (e) { var b = e.target.closest("button.fx"); if (!b) return; state[n] = b.value; apply(); });
+      });
+      if (cfg.q) cfg.q.addEventListener("input", apply);
+      var api = { apply: apply, state: state, rows: rows, reset: function () { names.forEach(function (n) { state[n] = "all"; }); if (cfg.q) cfg.q.value = ""; } };
+      lists.push(api);
+      return api;
+    }
+    function applyAll() { lists.forEach(function (l) { l.apply(); }); }
+    function setArea(v, quiet) {
+      area = AREAS.indexOf(v) >= 0 ? v : "all";
+      if (gList) gList.state.topic = "all";
+      applyAll();
+      if (!quiet) history.replaceState(null, "", area === "all" ? location.pathname + location.search : "#" + area);
+    }
+    function lensOf(id) { var sec = $(id); return sec ? sec.querySelector(".lens") : null; }
+    all(".lens").forEach(function (lens) {
+      lens.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) setArea(b.value); });
+    });
+    function facetEl(root, name) { return root.querySelector('[data-facet="' + name + '"]'); }
+    function eq(name) { return function (el, v) { return attr(el, name) === v; }; }
+
+    // ---- field guide
+    var gHeads = all(".g-head", guide), gItems = all("details.g", guide), gRail = $("g-rail"), gTopic = facetEl(gRail, "topic");
+    var gList = makeList({
+      items: gItems, noun: "entries", lens: lensOf("guide"), q: $("g-q"), count: $("g-count"), empty: $("g-empty"),
+      facets: {
+        kind: { el: facetEl(gRail, "kind"), test: eq("k") },
+        level: { el: facetEl(gRail, "level"), test: eq("l") },
+        conf: { el: facetEl(gRail, "conf"), test: eq("c") },
+        topic: { el: gTopic, test: function (el, v) { return attr(el, "d") + ":" + attr(el, "tp") === v; } }
+      },
+      after: function (state, shown, active) {
+        var sorted = $("g-sort").value !== "suggested";
+        gHeads.forEach(function (h) { h.hidden = sorted || !gItems.some(function (el) { return !el.hidden && attr(el, "d") === attr(h, "d"); }); });
+        gTopic.hidden = area === "all";   // topics only make sense inside one area
+        all("button.fx[data-d]", gTopic).forEach(function (b) { b.hidden = attr(b, "d") !== area; });
+        $("g-active").textContent = active ? "· " + active + " on" : "";
+      }
+    });
+    function title(el) { var t = el.querySelector(".g-title") || el.querySelector("summary") || el; return t.textContent.toLowerCase(); }
+    $("g-sort").addEventListener("change", function () {
+      var v = this.value;
+      if (v === "suggested") reorder(guide, gHeads.concat(gItems), function () { return 0; });
+      else reorder(guide, gItems, {
+        az: function (a, b) { return title(a) < title(b) ? -1 : title(a) > title(b) ? 1 : 0; },
+        conf: function (a, b) { return rank(CONF, attr(a, "c")) - rank(CONF, attr(b, "c")); },
+        level: function (a, b) { return rank(LEVEL, attr(a, "l")) - rank(LEVEL, attr(b, "l")); },
+        newest: function (a, b) { return attr(b, "y") - attr(a, "y"); }
+      }[v]);
+      gList.apply();
+    });
+    $("g-open").addEventListener("click", function () {
+      var on = this.getAttribute("aria-pressed") !== "true";
+      this.setAttribute("aria-pressed", on ? "true" : "false"); this.textContent = on ? "Close all" : "Open all";
+      gItems.forEach(function (el) { if (!el.hidden || !on) el.open = on; });
+    });
+    // the filter rail is a side column on wide screens and a closed drawer on small ones
+    var wide = window.matchMedia("(min-width: 1000px)"), drawer = $("g-filters");
+    function fitDrawer() { drawer.open = wide.matches; }
+    fitDrawer(); if (wide.addEventListener) wide.addEventListener("change", fitDrawer); else wide.addListener(fitDrawer);
+
+    // ---- claims
+    var qBox = $("q-list"), qCtl = $("q-controls"), qItems = all("details.q", qBox);
+    var qList = makeList({
+      items: qItems, noun: "claims", lens: lensOf("claims"), q: $("q-q"), count: $("q-count"), empty: $("q-empty"),
+      facets: {
+        verdict: { el: facetEl(qCtl, "verdict"), test: eq("v") },
+        tag: { el: facetEl(qCtl, "tag"), test: function (el, v) { return (" " + attr(el, "tags") + " ").indexOf(" " + v + " ") >= 0; } },
+        evidence: { el: facetEl(qCtl, "evidence"), test: eq("e") }
+      }
+    });
+    $("q-sort").addEventListener("change", function () {
+      reorder(qBox, qItems, {
+        suggested: function () { return 0; },
+        verdict: function (a, b) { return rank(VERD, attr(a, "v")) - rank(VERD, attr(b, "v")); },
+        "verdict-rev": function (a, b) { return rank(VERD, attr(b, "v")) - rank(VERD, attr(a, "v")); },
+        az: function (a, b) { return title(a) < title(b) ? -1 : title(a) > title(b) ? 1 : 0; },
+        evidence: function (a, b) { return rank(EVID, attr(a, "e")) - rank(EVID, attr(b, "e")); },
+        newest: function (a, b) { return attr(b, "y") - attr(a, "y"); }
+      }[this.value]);
+    });
+
+    // ---- key numbers: the lens filters, the column headings sort
+    var nTable = $("n-table");
+    if (nTable) {
+      var nBody = nTable.tBodies[0], nRows = all("tr", nBody), nKey = null, nDir = 1;
+      makeList({ items: nRows, noun: "numbers", lens: lensOf("numbers"), empty: $("n-empty") });
+      var nGet = {
+        n: function (r) { return +attr(r, "n"); }, t: function (r) { return r.cells[1].textContent.toLowerCase(); },
+        d: function (r) { return rank(AREAS, attr(r, "d")); }, c: function (r) { return rank(CONF, attr(r, "c")); }
+      };
+      all("thead button", nTable).forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var k = attr(btn, "sort"); nDir = nKey === k ? -nDir : 1; nKey = k;
+          reorder(nBody, nRows, function (a, b) { var x = nGet[k](a), y = nGet[k](b); return (x < y ? -1 : x > y ? 1 : 0) * nDir; });
+          all("thead th", nTable).forEach(function (th) { th.removeAttribute("aria-sort"); });
+          btn.parentNode.setAttribute("aria-sort", nDir > 0 ? "ascending" : "descending");
+        });
+      });
+    }
+
+    // ---- reference tables and glossary
+    makeList({ items: all("#t-list details.rt"), noun: "tables", lens: lensOf("tables"), empty: $("t-empty") });
+    makeList({ items: all("#gl-list .gl-item"), noun: "terms", lens: lensOf("glossary"), q: $("gl-q"), count: $("gl-count"), empty: $("gl-empty") });
+
+    all("[data-reset]").forEach(function (b) { b.addEventListener("click", function () { lists.forEach(function (l) { l.reset(); }); setArea("all"); }); });
+
+    // ---- the meet bag: ticks are remembered in this browser
+    all(".ck").forEach(function (box) {
+      var key = attr(box, "ck"), inputs = all("input[type=checkbox]", box), out = box.querySelector(".ck-n");
+      var ticks = (store.get().ck || {})[key] || [];
+      inputs.forEach(function (i) { i.checked = ticks.indexOf(+attr(i, "i")) >= 0; });
+      function save() {
+        var on = inputs.filter(function (i) { return i.checked; }).map(function (i) { return +attr(i, "i"); });
+        var ck = store.get().ck || {}; ck[key] = on; store.set({ ck: ck }); out.textContent = on.length;
+      }
+      out.textContent = inputs.filter(function (i) { return i.checked; }).length;
+      box.addEventListener("change", save);
+      box.querySelector(".ck-clear").addEventListener("click", function () { inputs.forEach(function (i) { i.checked = false; }); save(); });
+    });
+
+    // ---- links: #hypertrophy and friends choose an area; #<entry id> opens that entry
+    function reveal(id) {
+      if (!id) return false;
+      if (AREAS.indexOf(id) >= 0) { setArea(id, true); var top = $("guide").getBoundingClientRect().top + window.scrollY - 100; window.scrollTo(0, top); return true; }
+      var el = $(id);
+      if (!el || !el.matches("details.g, details.q, details.rt, .gl-item, #n-table tr, .ck")) return false;
+      if (el.hidden) { lists.forEach(function (l) { l.reset(); }); setArea("all", true); }
+      if (el.tagName === "DETAILS") el.open = true;
+      el.scrollIntoView({ block: "center" });
+      return true;
+    }
+    window.addEventListener("hashchange", function () { reveal(location.hash.slice(1)); });
+    applyAll();
+    if (location.hash) setTimeout(function () { reveal(location.hash.slice(1)); }, 90);
   });
 
   booting = false; // from here on, changes are announced

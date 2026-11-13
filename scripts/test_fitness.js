@@ -64,5 +64,18 @@ for (const format of ['circuit', 'intervals', 'sets']) {
   const size = s => s.main.reduce((n, blk) => n + blk.items.length, 0) + '|' + s.rule;
   if (size(a) === size(b)) { fail++; console.log('FAIL 15 and 20 minute ' + format + ' are identical'); } else console.log('ok   15 vs 20 minute ' + format + ' differ');
 }
+// meet attempts: every attempt is a multiple of 2.5 kg, each is heavier than the last,
+// "standard" ends on the lifter's best, and the warm-up ladder climbs to just under the opener
+for (const style of ['first', 'standard', 'bold']) for (const best of [42.5, 60, 100, 137.5, 182.5, 300, 20]) {
+  const a = F.attempts(best, style);
+  const good = a.length === 3 && a.every(v => Math.abs(v / 2.5 - Math.round(v / 2.5)) < 1e-9) && a[0] < a[1] && a[1] < a[2] && a[0] > best * 0.8 && a[2] < best * 1.08 + 2.5;
+  if (!good) { fail++; console.log(`FAIL attempts ${style} ${best}: ${a}`); }
+  const w = F.warmups(a[0]);
+  const climbing = w.every((x, i) => x.kg < a[0] && (!i || x.kg > w[i - 1].kg) && x.reps >= 1 && Math.abs(x.kg / 2.5 - Math.round(x.kg / 2.5)) < 1e-9);
+  if (!climbing) { fail++; console.log(`FAIL warm-ups to ${a[0]}: ${JSON.stringify(w)}`); }
+}
+console.log('ok   meet attempts and warm-up ladders (21 cases)');
+eq('standard third attempt is the best single', F.attempts(180, 'standard')[2], 180, 1e-9);
+eq('unknown style falls back to standard', F.attempts(180, 'nope')[0], F.attempts(180, 'standard')[0], 1e-9);
 console.log(fail ? 'FAILURES: ' + fail : 'ALL PASS');
 process.exit(fail ? 1 : 0);

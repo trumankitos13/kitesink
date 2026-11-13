@@ -147,6 +147,59 @@ def audit_index() -> list[str]:
     return issues
 
 
+# Plain-text twins for AI readers (docs/AI-PAGES.md): page route -> file in public/.
+TWINS = {
+    "/": "index.md", "/consulting": "consulting.md", "/fitness": "fitness.md", "/vantix": "vantix.md",
+    "/music": "music.md", "/listening-club": "listening-club.md", "/about": "about.md",
+}
+
+
+def audit_twins() -> list[str]:
+    """Every twin exists, is announced by its page and by /llms.txt, and links only to
+    things that exist. The optional worker must route exactly the pages that have one."""
+    issues: list[str] = []
+    llms = (PUBLIC / "llms.txt").read_text(encoding="utf-8") if (PUBLIC / "llms.txt").is_file() else ""
+    if not llms:
+        issues.append("public/llms.txt is missing")
+    routes = page_routes()
+    for route, name in TWINS.items():
+        twin = PUBLIC / name
+        if not twin.is_file():
+            issues.append(f"public/{name}: missing (the plain-text twin of {route})")
+            continue
+        page = routes.get(route)
+        tag = f'<link rel="alternate" type="text/markdown" href="https://kitesink.com/{name}"'
+        if page is None or tag not in page.read_text(encoding="utf-8"):
+            issues.append(f"{route}: the page does not announce its twin; add {tag} …> to its <head>")
+    for twin in sorted(list(PUBLIC.glob("*.md")) + list(PUBLIC.glob("*/*.md")) + [PUBLIC / "llms.txt"]):
+        if not twin.is_file():
+            continue
+        label = twin.relative_to(ROOT).as_posix()
+        if twin.suffix == ".md" and f"https://kitesink.com/{twin.relative_to(PUBLIC).as_posix()}" not in llms:
+            issues.append(f"{label}: not listed in public/llms.txt")
+        for url in set(re.findall(r"https://kitesink\.com(/[^\s)>\]#?]*)", twin.read_text(encoding="utf-8"))):
+            url = url.rstrip(".,")
+            target = PUBLIC / url.lstrip("/")
+            if not (target.is_file() if re.search(r"\.[a-z0-9]+$", url) else resolves(url)):
+                issues.append(f"{label}: links to https://kitesink.com{url}, which does not exist")
+    config = ROOT / "wrangler.ai-twins.jsonc"
+    if config.is_file():
+        match = re.search(r'"run_worker_first"\s*:\s*\[([^\]]*)\]', config.read_text(encoding="utf-8"))
+        routed = set(re.findall(r'"([^"]+)"', match.group(1))) if match else set()
+        if routed != set(TWINS):
+            issues.append(f"wrangler.ai-twins.jsonc: run_worker_first lists {sorted(routed)} but the twins are for {sorted(TWINS)}")
+    return issues
+
+
+def audit_fitness_build() -> list[str]:
+    """/fitness and its twins are generated; fail if they are older than their data."""
+    import subprocess
+    result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_fitness.py"), "--check"], capture_output=True, text=True)
+    if result.returncode:
+        return ["fitness: " + (result.stdout.strip() or result.stderr.strip().splitlines()[-1])]
+    return []
+
+
 def audit_asset_versions() -> list[str]:
     """Every page must request the same ?v= of the shared CSS/JS, or returning
     visitors can get a new page with an old cached stylesheet."""
@@ -239,6 +292,7 @@ def main() -> int:
     issues = [issue for page in pages for issue in audit(page)]
     issues += audit_index()
     issues += audit_asset_versions()
+    # audit_twins() and audit_fitness_build() are switched on when the new /fitness page lands.
 
     deployed_text = "\n".join(
         path.read_text(encoding="utf-8")
