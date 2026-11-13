@@ -366,6 +366,59 @@ Who was studied: Grgic 2018: 10 placebo-controlled studies on one-rep-max streng
 
 Evidence: Meta-analysis · Well supported · Sources: [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Maughan 2018](https://doi.org/10.1136/bjsports-2018-099027)
 
+### Can a calorie calculator tell you exactly how much to eat?
+
+**Verdict: Not supported.** No. Even the best equation misses by more than 10 percent for a share of people, so treat it as a starting point.
+
+A systematic review compared four equations for resting metabolic rate, the energy you burn at rest. Mifflin-St Jeor predicted within 10 percent of the measured value for more people than the others, and it still missed for a share of individuals. Daily need is that figure times an activity factor, and FAO/WHO/UNU gives about 1.40 to 2.40 as the range sustained by free-living adults. On a 2,400 kcal day, 10 percent is 240 kcal.
+
+Who was studied: Frankenfield: systematic review of four equations in healthy adults with and without obesity. FAO/WHO/UNU: expert report on human energy requirements.
+
+- Eat your estimate for two to three weeks while weighing yourself daily.
+- Adjust by 100 to 200 kcal if the weekly average moves the wrong way.
+
+Evidence: Review · Well supported · Sources: [Frankenfield 2005](https://doi.org/10.1016/j.jada.2005.02.005), [FAO/WHO/UNU 2004](https://www.fao.org/4/y5686e/y5686e07.htm)
+
+### How much protein do you need to build muscle?
+
+**Verdict: Mostly holds.** About 1.6 g per kg a day covers most lifters, and returns shrink as intake rises above that.
+
+The ISSN position stand calls 1.4 to 2.0 g per kg a day sufficient for most exercising people. A meta-analysis of 74 trials found added protein helped lean mass in adults under 65 who ate 1.6 g per kg or more. A dose-response review of 105 articles (5,402 participants) found each extra 0.1 g per kg added 0.39 kg of lean mass below 1.3 g per kg a day and 0.12 kg above it.
+
+Who was studied: Nunes: 74 trials of added protein with resistance exercise. Tagawa: 105 articles, 5,402 participants. Jager: the ISSN position stand.
+
+- Aim for about 1.6 to 2.2 g per kg a day: 128 to 176 g at 80 kg (176 lb).
+- Hit the daily total before you worry about timing or splits.
+
+Evidence: Meta-analysis · Well supported · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Nunes 2022b](https://doi.org/10.1002/jcsm.12922), [Tagawa 2021](https://doi.org/10.1093/nutrit/nuaa104)
+
+### Will drinking alcohol ruin your gains?
+
+**Verdict: Depends.** A very heavy dose after training blunted muscle repair in one small study, and light drinking has not been tested.
+
+Eight active men trained, then drank alcohol at 1.5 g per kg (about 12 standard drinks) with protein or carbohydrate. Muscle protein synthesis was 24 percent lower with alcohol and protein, and 37 percent lower with alcohol and carbohydrate, than with protein alone. A meta-analysis of 22 studies (701 participants) found people did not eat less to offset alcohol: total energy intake rose by 1,072 kJ (about 256 kcal).
+
+Who was studied: Parr: 8 active men, one session, 8 hours of measurement. Kwok: 22 studies with 701 participants.
+
+- Keep heavy drinking away from the days you most want to recover.
+- If you drink after a hard session, eat a protein-containing meal too.
+- Log drinks like food, and count mixers.
+
+Evidence: Mixed · Thin evidence · Sources: [Parr 2014](https://doi.org/10.1371/journal.pone.0088384), [Kwok 2019](https://doi.org/10.1017/S0007114518003677)
+
+### Can plant protein build as much muscle as animal protein?
+
+**Verdict: Mostly holds.** When total protein is enough, strength gains match, and soy matched milk protein for muscle. Some other plant proteins fell behind.
+
+A meta-analysis of 18 studies found protein source did not change absolute lean mass or strength, though younger adults gained 0.41 kg more lean mass on animal protein. A 2025 meta-analysis of 30 trials found a small animal advantage for muscle mass, with no difference between soy and milk across 17 trials, and no difference in strength. In a 12-week trial, 19 vegans and 19 omnivores on about 1.6 g per kg gained alike.
+
+Who was studied: Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by age and protein source. Hevia: 19 vegans and 19 omnivores for 12 weeks.
+
+- If you eat no animal foods, aim for the upper half of the protein range.
+- Lean on soy and mix legumes and grains across the day.
+
+Evidence: Meta-analysis · Well supported · Sources: [Lim 2021](https://doi.org/10.3390/nu13020661), [Hevia-Larraín 2021](https://doi.org/10.1007/s40279-021-01434-9), [Reid-McCann 2025](https://doi.org/10.1093/nutrit/nuae200)
+
 ## Diet
 
 ### Is low-carb better than low-fat for fat loss?
@@ -501,6 +554,88 @@ Who was studied: Bellicha 2021: overview of 12 systematic reviews and meta-analy
 - Use food to set your calorie deficit and training to protect muscle and fitness.
 
 Evidence: Review · Some support · Sources: [Bellicha 2021](https://doi.org/10.1111/obr.13256)
+
+### Can you lose weight fast without losing muscle?
+
+**Verdict: Depends.** Slower is safer for muscle: about 0.5 to 1 percent of body weight a week, and the low end did better in the one trial that tested it.
+
+A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less to limit fat-free mass loss. In 24 athletes, the group losing 0.7 percent a week gained 2.1 percent lean mass, while the group losing 1.4 percent a week kept lean mass unchanged. That is one small trial. Leaner people have less to spare, so the safe pace is likely slower for them.
+
+Who was studied: Garthe: 24 athletes in a controlled weight-loss trial. Helms and Roberts: reviews written for lean physique athletes and lifters.
+
+- Pick a weekly percentage, convert it to kg or lb, and check it against your four-week trend.
+- Keep lifting and keep protein high while you diet.
+
+Evidence: Mixed · Thin evidence · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096)
+
+### Do you just have to put up with hunger when you diet?
+
+**Verdict: Overstated.** Some hunger comes with a deficit, but protein, water-rich whole foods and enough sleep each lowered it in trials.
+
+A meta-analysis of 49 acute trials found protein lowered hunger and raised fullness at a meal, while 19 long-term trials were inconclusive. In 97 women with obesity over a year, those told to eat more water-rich fruit and vegetables lost 7.9 kg against 6.4 kg and reported less hunger. In 20 adults on a ward, ultra-processed meals led to 508 kcal a day more intake. In 10 adults, short sleep on a diet raised hunger.
+
+Who was studied: Kohanmoo: 49 acute and 19 long-term trials. Ello-Martin: 97 women, 1 year. Hall: 20 adults on a ward. Nedeltcheva: 10 adults for 14 days.
+
+- Build meals around protein and whole foods before cutting portion size.
+- Add vegetables or fruit to fill the plate for few calories.
+- Protect seven to nine hours in bed while dieting.
+
+Evidence: Mixed · Some support · Sources: [Kohanmoo 2020](https://doi.org/10.1016/j.physbeh.2020.113123), [Ello-Martin 2007](https://doi.org/10.1093/ajcn/85.6.1465), [Hall 2019](https://doi.org/10.1016/j.cmet.2019.05.008), [Nedeltcheva 2010](https://doi.org/10.7326/0003-4819-153-7-201010050-00006)
+
+### Has your diet stopped working if the scale has not moved in two weeks?
+
+**Verdict: Overstated.** Probably not. Two-week weight changes are mostly water, so judge a weekly average over three to four weeks of honest logging.
+
+In 46 adults, two-week weight changes were largely fat-free mass and water: 84 percent of a unit change was fat-free mass. Weight runs higher on Sunday and Monday in 80 adults, and fluid retention peaks at the start of menstrual flow in 62 women. Ten people who reported no loss on under 1,200 kcal had under-reported intake by 47 percent. In a one-year trial of 48 adults, calorie-restricted people stopped losing on weekends.
+
+Who was studied: Bhutani: 46 adults. Orsama: 80 adults. White: 62 women. Lichtman: 10 dieters who reported no loss. Racette: 48 adults for a year.
+
+- Weigh under the same conditions most mornings and read the weekly average.
+- Wait three to four weeks, then trim 100 to 200 kcal a day or add steps.
+- Check weekends, cooking oil and drinks before cutting food.
+
+Evidence: Mixed · Some support · Sources: [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Orsama 2014](https://doi.org/10.1159/000356147), [White 2011](https://doi.org/10.1155/2011/138451), [Lichtman 1992](https://doi.org/10.1056/NEJM199212313272701), [Racette 2008](https://doi.org/10.1038/oby.2008.320)
+
+### Does your body have a set point it fights to defend?
+
+**Verdict: Overstated.** Your body does push back when you lose weight, but a single fixed set point does not explain why body weight has risen across populations.
+
+A review of competing models says the set point model fits the biology of intake and expenditure but cannot explain the rise in body weight since the 1980s, while the settling point model fits the environment but struggles with genetics. Newer models combine the two. Beyond what a smaller body predicts, adaptive thermogenesis averages about 120 kcal a day and takes more than two weeks to develop. In one 52-week trial, eating rose about 100 kcal a day per kg lost.
+
+Who was studied: Speakman: expert review of four models. Muller: review of controlled underfeeding studies. Polidori: 153 people in a 52-week trial.
+
+- Plan for more hunger and less fidgeting while you diet.
+- Keep daily steps up, since unplanned movement falls first.
+- Treat maintenance as a phase with its own plan.
+
+Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653)
+
+### Does everyone regain the weight after a diet?
+
+**Verdict: Overstated.** Most people regain a lot, but not all of it, and a minority keep most of it off by staying active and weighing themselves.
+
+In 171 women, participants regained 52 percent of the weight lost at one year and 89 percent at two. A meta-analysis of 29 US studies found that five years after a programme the average person was still more than 3 kg lighter. Among 2,886 National Weight Control Registry members, mean loss was 31.3 kg at entry and 23.1 kg at ten years. They report about an hour of activity a day, regular weighing and consistent eating. The registry is self-selected.
+
+Who was studied: Martins: 171 overweight women. Anderson: 29 US studies. Thomas: 2,886 registry members. Wing: review of the registry.
+
+- Plan your maintenance calories and weight range before the diet ends.
+- Keep activity and weekly weighing going after the diet.
+
+Evidence: Mixed · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S)
+
+### Can you build muscle and lose fat at the same time?
+
+**Verdict: Depends.** Yes for beginners and people with more fat to lose. It is likely slow or marginal for lean, advanced lifters.
+
+In 40 young men on a 40 percent deficit with heavy training, lean mass rose 1.2 kg with 2.4 g per kg of protein and 0.1 kg with 1.2 g per kg, while fat mass fell 4.8 and 3.5 kg. In 24 athletes, a 0.7 percent weekly loss gained 2.1 percent lean mass. A meta-regression found a deficit of about 500 kcal a day prevented gains in lean mass. Trials are short, so treat the numbers as a pattern.
+
+Who was studied: Longland: 40 young men for 4 weeks. Garthe: 24 athletes. Murphy: meta-regression of resistance-training trials in energy deficit.
+
+- Keep protein high and training hard with progressive loads.
+- Use a small deficit unless you are new to lifting.
+- Track strength and waist, not only the scale.
+
+Evidence: Mixed · Thin evidence · Sources: [Longland 2016](https://doi.org/10.3945/ajcn.115.119339), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Murphy 2022](https://doi.org/10.1111/sms.14075)
 
 ## Health
 

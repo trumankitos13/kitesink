@@ -75,7 +75,7 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
 - **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. Backline and the blog
   post template carry their own small KiteSink nav — search for `/consulting` in those files.
   Every other page mounts the shared header or slim bar.
-- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.3` on the
+- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.4` on the
   `<link>`/`<script>` tags in every page (find-and-replace) and `ASSET_V` at the top of `ks.js`. Those files are cached for an hour or more, and a new page with an
   old cached stylesheet looks broken. The audit checks every page uses the same version.
 - **Design tokens:** `--k-*` custom properties at the top of `ks.css` (light + dark). New pages

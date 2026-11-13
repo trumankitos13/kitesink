@@ -84,6 +84,16 @@ In 153 people losing weight without being aware of the deficit, a model found ea
 
 Hunger and fullness · Intermediate · Thin evidence · Sources: [Polidori 2016](https://doi.org/10.1002/oby.21653)
 
+### Water-rich fruit and vegetables lower hunger for the same calories
+
+**In one year-long trial, women who ate more water-rich foods lost more weight and reported less hunger.**
+
+In 97 women with obesity told to cut fat, one group was also told to eat more water-rich foods, mainly fruit and vegetables, with no calorie goal. Among completers after a year, that group lost 7.9 kg against 6.4 kg, ate a greater weight of food at a lower energy density, and reported less hunger. It is one trial in women with obesity, not lifters.
+
+- Fill half the plate with vegetables or fruit before adding the rest.
+
+Hunger and fullness · Beginner · Thin evidence · Sources: [Ello-Martin 2007](https://doi.org/10.1093/ajcn/85.6.1465), [Hall 2019](https://doi.org/10.1016/j.cmet.2019.05.008)
+
 ### Metabolic slowdown with dieting is real but smaller than most people fear
 
 **Adaptation is real but small, tens to low hundreds of kcal a day in most studies, so check your log first.**
@@ -113,6 +123,16 @@ Ten people who reported not losing weight on under 1,200 kcal actually under-rep
 - Wait three to four weeks, then cut by about 100 to 200 kcal or add steps.
 
 Scale, plateaus and metabolism · Beginner · Some support · Sources: [Lichtman 1992](https://doi.org/10.1056/NEJM199212313272701), [Racette 2008](https://doi.org/10.1038/oby.2008.320), [Bhutani 2017](https://doi.org/10.14814/phy2.13336)
+
+### Weighing yourself regularly goes with more loss inside a programme
+
+**Programmes that included self-weighing beat minimal care by 3.4 kg, and daily weighing did no better than weekly.**
+
+A meta-analysis found 15 trials of multi-component programmes that included self-weighing lost 3.4 kg more than minimal or no intervention, with no significant difference between daily and weekly weighing. Only one study tested self-weighing alone, and it found no evidence of an effect. The scale works as a feedback tool inside a plan, not as a plan.
+
+- Weigh on a fixed schedule, then act on the weekly average.
+
+Scale, plateaus and metabolism · Beginner · Some support · Sources: [Madigan 2015](https://doi.org/10.1186/s12966-015-0267-4)
 
 ### Diet breaks and refeeds give mixed fat-loss results and may ease hunger
 
@@ -153,6 +173,16 @@ A network meta-analysis of 22 trials (647 people) found two meals a day slightly
 - Choose a meal pattern around your day, and keep protein in each meal.
 
 Diet type and meal pattern · Beginner · Some support · Sources: [Schwingshackl 2020](https://doi.org/10.1093/advances/nmaa056), [Cameron 2010](https://doi.org/10.1017/S0007114509992984), [Young 2023](https://doi.org/10.1111/obr.13537), [Vujović 2022](https://doi.org/10.1016/j.cmet.2022.09.007)
+
+### Weight lost tracked sticking to the diet, not which diet it was
+
+**In one year-long trial, weight lost followed how closely people kept to their diet, with no link to the diet they chose.**
+
+In 160 overweight or obese adults with heart-risk factors, assigned to Atkins, Zone, Weight Watchers or Ornish, mean one-year loss was 2.1 to 3.3 kg and only 50 to 65 percent finished. Loss correlated with self-reported adherence (r = 0.60) but not with diet type (r = 0.07). Adherence was self-reported and chosen by the participants, so this shows who did well, not that pushing adherence causes loss.
+
+- Pick the eating pattern you can see yourself keeping for a year.
+
+Diet type and meal pattern · Beginner · Some support · Sources: [Dansinger 2005](https://doi.org/10.1001/jama.293.1.43), [Johnston 2014](https://doi.org/10.1001/jama.2014.10397)
 
 ### Exercise adds to fat loss, and daily movement drops on diets if you let it
 
@@ -208,16 +238,6 @@ Gaining phases · Intermediate · Thin evidence · Sources: [Longland 2016](http
 
 ## Common mistakes
 
-### Cutting calories after a short stall
-
-**Short stalls are mostly water and weekend noise, and cutting on them stacks deficit on top of a working plan.**
-
-A two-week plateau can come from water, a missed weekend or logging drift, as 48 adults who stopped losing on weekends showed. Cutting calories on a stall moves you toward the 500 kcal limit sooner. Wait three to four weeks, check the log, and only then change calories or steps.
-
-- Check the four-week trend and the log before changing calories.
-
-Scale, plateaus and metabolism · Beginner · Some support · Sources: [Racette 2008](https://doi.org/10.1038/oby.2008.320), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Murphy 2022](https://doi.org/10.1111/sms.14075)
-
 ### Dieting faster than 1 percent of body weight a week
 
 **Faster loss retained less lean mass in athletes, and the speed is hard to keep up.**
@@ -238,15 +258,15 @@ Higher protein held on to lean mass in trials of lean lifters, and training redu
 
 Keeping muscle · Beginner · Some support · Sources: [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [Bellicha 2021](https://doi.org/10.1111/obr.13256)
 
-### Treating a gaining phase as a licence to eat anything
+### Cutting calories after a short stall
 
-**A large surplus mainly added fat in a trial, and extra fat has to be dieted off later.**
+**Short stalls are mostly water and weekend noise, and cutting on them stacks deficit on top of a working plan.**
 
-In 17 lifters, a 15 percent surplus mostly increased fat gain rather than strength or muscle thickness. A review suggests 10 to 20 percent for physique athletes, less for advanced lifters. The extra fat then has to be dieted off.
+A two-week plateau can come from water, a missed weekend or logging drift, as 48 adults who stopped losing on weekends showed. Cutting calories on a stall moves you toward the 500 kcal limit sooner. Wait three to four weeks, check the log, and only then change calories or steps.
 
-- Use a measured surplus and watch the rate of weight gain.
+- Check the four-week trend and the log before changing calories.
 
-Gaining phases · Intermediate · Thin evidence · Sources: [Helms 2023](https://doi.org/10.1186/s40798-023-00651-y), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+Scale, plateaus and metabolism · Beginner · Some support · Sources: [Racette 2008](https://doi.org/10.1038/oby.2008.320), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Murphy 2022](https://doi.org/10.1111/sms.14075)
 
 ### Dieting with no end date and no plan for after
 
@@ -259,16 +279,26 @@ In 171 women, 52 percent of lost weight was regained after one year and 89 perce
 
 Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S)
 
+### Treating a gaining phase as a licence to eat anything
+
+**A large surplus mainly added fat in a trial, and extra fat has to be dieted off later.**
+
+In 17 lifters, a 15 percent surplus mostly increased fat gain rather than strength or muscle thickness. A review suggests 10 to 20 percent for physique athletes, less for advanced lifters. The extra fat then has to be dieted off.
+
+- Use a measured surplus and watch the rate of weight gain.
+
+Gaining phases · Intermediate · Thin evidence · Sources: [Helms 2023](https://doi.org/10.1186/s40798-023-00651-y), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+
 ## Key numbers
 
 | Number | What it is | Support | Sources |
 |---|---|---|---|
 | 0.5-1 % body weight per week | Rate of loss: Usual pace for keeping muscle; at 80 kg (176 lb) that is 0.4 to 0.8 kg a week. | Some support | [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97) |
 | 500 kcal per day | Deficit that stopped lean-mass gains: In a meta-regression, deficits around this size prevented gains in lean mass in trained lifters. | Well supported | [Murphy 2022](https://doi.org/10.1111/sms.14075) |
-| 2.3-3.1 g per kg lean mass | Protein in a deficit: ISSN and review ranges for lean lifters dieting; raise it as the deficit and leanness grow. | Well supported | [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8) |
 | 3,500 kcal per lb | Energy per pound of weight lost: The classic rule of thumb, which equals about 7,700 kcal per kg and varies with body fat. | Some support | [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720) |
-| 2,380 kcal per kg | Energy per kg for short-term changes: Two-week changes of 1 to 3 kg were mostly fat-free mass and water, so they carry less energy than fat. | Some support | [Bhutani 2017](https://doi.org/10.14814/phy2.13336) |
+| 2.3-3.1 g per kg lean mass | Protein in a deficit: ISSN and review ranges for lean lifters dieting; raise it as the deficit and leanness grow. | Well supported | [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8) |
 | 100 kcal per day per kg | Appetite rise per kg of weight lost: In one trial, eating drifted above baseline by about this much for each kilogram lost. | Thin evidence | [Polidori 2016](https://doi.org/10.1002/oby.21653) |
+| 2,380 kcal per kg | Energy per kg for short-term changes: Two-week changes of 1 to 3 kg were mostly fat-free mass and water, so they carry less energy than fat. | Some support | [Bhutani 2017](https://doi.org/10.14814/phy2.13336) |
 | 10-20 % above maintenance | Surplus for a gaining phase: Suggested range for novice and intermediate lifters in a physique-sport review; advanced lifters go lower. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154) |
 | 0.25-0.5 % body weight per week | Rate of gain, novice to intermediate: At 80 kg (176 lb) that is 0.2 to 0.4 kg (0.4 to 0.9 lb) a week. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154) |
 
@@ -285,18 +315,6 @@ Approximate weekly loss for a daily deficit at 7,700 kcal per kg (3,500 per lb),
 
 Some support · Sources: [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Murphy 2022](https://doi.org/10.1111/sms.14075), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97)
 
-## Rate of gain by training age
-
-Suggested pace of weight gain in a gaining phase; the research is thin and the rates are conservative.
-
-| Lifter | Weekly rate | At 80 kg (176 lb) | Surplus | Note |
-|---|---|---|---|---|
-| Novice or intermediate | 0.25-0.5% a week | 0.2-0.4 kg (0.4-0.9 lb) | About 10-20% | Review suggestion for bodybuilders |
-| Advanced | Lower than novice rate | Lower than the row above | Smaller than 10-20% | No studied figure; be conservative |
-| Large surplus (15%) | Faster gain | More body mass | 15% above maintenance | Mostly extra fat in an 8-week trial |
-
-Thin evidence · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [Helms 2023](https://doi.org/10.1186/s40798-023-00651-y), [Slater 2019](https://doi.org/10.3389/fnut.2019.00131)
-
 ## What moves scale weight day to day
 
 Short-term causes of scale changes that are not fat gain or loss.
@@ -311,6 +329,18 @@ Short-term causes of scale changes that are not fat gain or loss.
 
 Some support · Sources: [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Orsama 2014](https://doi.org/10.1159/000356147), [White 2011](https://doi.org/10.1155/2011/138451), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20)
 
+## Rate of gain by training age
+
+Suggested pace of weight gain in a gaining phase; the research is thin and the rates are conservative.
+
+| Lifter | Weekly rate | At 80 kg (176 lb) | Surplus | Note |
+|---|---|---|---|---|
+| Novice or intermediate | 0.25-0.5% a week | 0.2-0.4 kg (0.4-0.9 lb) | About 10-20% | Review suggestion for bodybuilders |
+| Advanced | Lower than novice rate | Lower than the row above | Smaller than 10-20% | No studied figure; be conservative |
+| Large surplus (15%) | Faster gain | More body mass | 15% above maintenance | Mostly extra fat in an 8-week trial |
+
+Thin evidence · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [Helms 2023](https://doi.org/10.1186/s40798-023-00651-y), [Slater 2019](https://doi.org/10.3389/fnut.2019.00131)
+
 ## Terms
 
 - **Adaptive thermogenesis (metabolic adaptation)**: A fall in energy use beyond what the loss of body mass explains, seen during and after weight loss. Studies find it ranges from small to modest.
@@ -318,6 +348,7 @@ Some support · Sources: [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S
 - **Energy deficit**: Eating less energy than you use. It is the one requirement for losing body fat. A daily deficit of 500 kcal is about 3,500 kcal a week.
 - **NEAT (non-exercise activity)**: Non-exercise activity thermogenesis: energy spent on walking, standing, fidgeting and chores. It can fall during a diet without you noticing.
 - **Recomposition**: Gaining muscle and losing fat at the same time, so body weight changes little while the body changes shape.
+- **Set point and settling point**: Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete.
 - **Time-restricted eating**: Eating all meals within a set daily window, such as eight hours, and fasting for the rest. It is one form of intermittent fasting.
 
 ---

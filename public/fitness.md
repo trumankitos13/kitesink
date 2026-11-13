@@ -8,9 +8,9 @@ Free training and nutrition reference by Truman Kitos-Lindsey: a field guide in 
 - [Powerlifting](https://kitesink.com/fitness/powerlifting.md): A bigger squat, bench press and deadlift. 51 entries.
 - [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 46 entries.
 - [Nutrition](https://kitesink.com/fitness/nutrition.md): Eating to support training, and tracking it honestly. 52 entries.
-- [Diet](https://kitesink.com/fitness/diet.md): Losing or gaining weight on purpose. 42 entries.
+- [Diet](https://kitesink.com/fitness/diet.md): Losing or gaining weight on purpose. 46 entries.
 - [Health](https://kitesink.com/fitness/health.md): Training for a long working life. 55 entries.
-- [Claims, checked](https://kitesink.com/fitness/claims.md): 45 common claims with a verdict, who was studied, and the source.
+- [Claims, checked](https://kitesink.com/fitness/claims.md): 55 common claims with a verdict, who was studied, and the source.
 
 ## Calculators (on the page, no sign-up)
 
