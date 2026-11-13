@@ -14,6 +14,9 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 SPECIAL_PAGES = {PUBLIC / "404.html", PUBLIC / "repost.html", PUBLIC / "blog/_template.html"}
+# Kept at their addresses but hidden on purpose: not in the site index or the sitemap,
+# not linked from any listed page, and marked noindex. The audit holds them to that.
+UNLISTED_PAGES = {PUBLIC / "vantix/roadmap.html", PUBLIC / "vantix/changelog.html"}
 
 
 class Document(HTMLParser):
@@ -79,7 +82,11 @@ def resolves(path: str) -> bool:
 
 def page_routes() -> dict[str, Path]:
     """Every public page that should be reachable, keyed by its route."""
-    return {route_for(path): path for path in sorted(PUBLIC.rglob("*.html")) if path not in SPECIAL_PAGES}
+    return {route_for(path): path for path in sorted(PUBLIC.rglob("*.html")) if path not in SPECIAL_PAGES | UNLISTED_PAGES}
+
+
+def unlisted_routes() -> set[str]:
+    return {route_for(path) for path in UNLISTED_PAGES}
 
 
 def audit_index() -> list[str]:
@@ -124,6 +131,8 @@ def audit_index() -> list[str]:
             if target.is_file() and not built and not re.search(rf"""\bid=["']{re.escape(parsed.fragment)}["']""", target.read_text(encoding="utf-8")):
                 issues.append(f"public/site-index.js: {href} — no element with id=\"{parsed.fragment}\" on that page")
 
+    for route in sorted(unlisted_routes() & listed):
+        issues.append(f"public/site-index.js: lists {route}, which is meant to be unlisted")
     for route in page_routes():
         if route != "/" and route not in listed:
             issues.append(f"public/site-index.js: page {route} is not in the site index (add it, or it is unreachable from the Library)")
@@ -185,6 +194,9 @@ def audit(path: Path) -> list[str]:
     if path not in SPECIAL_PAGES and not meta_names.get("description"):
         add("missing meta description")
 
+    if path in UNLISTED_PAGES and "noindex" not in meta_names.get("robots", "").lower():
+        add("unlisted page must be noindex")
+
     if path == PUBLIC / "404.html":
         if "noindex" not in meta_names.get("robots", "").lower():
             add("404 page must be noindex")
@@ -216,6 +228,8 @@ def audit(path: Path) -> list[str]:
             add(f"internal URL is not extensionless: {href}")
         if internal_path.startswith("/") and not resolves(internal_path):
             add(f"broken internal link: {href}")
+        if path not in UNLISTED_PAGES and (internal_path.rstrip("/") or "/") in unlisted_routes():
+            add(f"links to an unlisted page: {href}")
 
     return issues
 

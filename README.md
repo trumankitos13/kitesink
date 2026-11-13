@@ -70,7 +70,7 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
 - **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. Vantix, Backline,
   the Listening Club and the blog post template carry their own small KiteSink nav — search for
   `/consulting` in those files.
-- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.2` on the
+- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.3` on the
   `<link>`/`<script>` tags in every page (find-and-replace) and `ASSET_V` at the top of `ks.js`. Those files are cached for an hour or more, and a new page with an
   old cached stylesheet looks broken. The audit checks every page uses the same version.
 - **Design tokens:** `--k-*` custom properties at the top of `ks.css` (light + dark). New pages
@@ -122,27 +122,27 @@ so nothing depends on an external runtime anymore.
 - **Vantix `.co` vs `.com`** — ✅ fixed; the Home work-card now reads `vantix.kitesink.com`.
 - **Blog posts** — entries live in `public/blog/posts.js`; per-post pages under `public/blog/`
   (copy `_template.html`). Full steps in `docs/ADDING-A-BLOG-POST.md`.
-- **Listening club** — relaunched for 2027: every page says the inaugural session is Sat 16 Jan 2027
-  (the third Saturday). The cadence after that is worded neutrally ("one Saturday a month") because
-  the old copy said "last Saturday" — decide which it is, then edit `listening-club.html` (date band,
-  Format and rhythm sections), `music.html`, `index.html` and the club entry in `site-index.js`.
+- **Listening club** — relaunched for 2027: the inaugural session is Sat 16 Jan 2027, then the last
+  Saturday of every month. The pages do not say whether January also gets a session on the 30th.
   The Spotify playlist embed is still a placeholder.
-- **Vantix tiers** — `/vantix#pricing` now shows Free (v1.0 "The Free Core", in progress, target
-  Dec 31), Plus (paid athlete tier, no price) and Pro · Coach (v2.5, planned, no dates). No year is
-  printed on "Dec 31". `/vantix/roadmap` and `/vantix/changelog` predate that plan (they still say
-  v1.2 is CURRENT and list shipped releases); the hubs no longer link to them and the Library marks
-  them "Out of date". Rewrite or retire them. `/vantix/privacy` still says "On Pro, you can bring
-  your own model keys".
+- **Vantix tiers** — `/vantix#pricing` shows Free (v1.0 "The Free Core", in progress, target
+  Dec 31, 2026), Plus (paid athlete tier, no price) and Pro · Coach (v2.5, planned, no dates).
+- **Vantix roadmap and changelog** — hidden, not deleted. Both pages still load at their addresses
+  but are `noindex` and out of the nav, the Library, the sitemap and every link. They are listed in
+  `UNLISTED_PAGES` in `scripts/check_site.py`, which fails the audit if a listed page links to them.
+  The plan is to rebuild them on the Vantix subdomain; delete the two files when that exists.
 - **Vantix "500+ apps"** — the Vantix page still says it connects 500+ apps. Check that against the
   Free Core, which lists manual import.
-- **Song of the Day** — "Coming soon" everywhere (`projects.js`, `site-index.js`, the product page).
-  No launch date is printed. `song-of-the-day/terms.html` still has a `<TODO: jurisdiction>`.
+- **Song of the Day** — "Coming soon" everywhere (`projects.js`, `site-index.js`, the product page),
+  with no launch date printed. Every contact address is `hello@kitesink.com`.
+  `song-of-the-day/terms.html` still has a `<TODO: jurisdiction>`.
 - **AI concierge** — `/consulting#concierge` describes the offer (learn the industry, observe the
   work, then AI automation / deterministic programs / custom software). No prices, call cadence or
   response times are promised; add them when they are decided.
-- **Backline** — the page shows player counts ("3,900 players · live now" and similar) for a
-  prototype. Confirm or remove.
-- **Now page** — still dated July 2026.
+- **Backline** — the page shows player counts for a prototype. Kept on purpose for now.
+- **Now page** — one "Last updated" date (in the hero box; edit it there). The project cards were
+  rewritten on 2026-11-13. The three personal cards (On rotation, Under the bar, Inputs) were
+  carried over from July and need the owner's own words.
 - **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in
   `public/ks.js` (see `docs/ANALYTICS-AND-FORMS.md`). Forms are live via `KS_FORM_KEY`.
 

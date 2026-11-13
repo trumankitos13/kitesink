@@ -41,7 +41,7 @@
   // The release of the shared files. It must match the ?v= on every page's
   // ks.css / ks.js / site-index.js tags (scripts/check_site.py checks), so a
   // file fetched from here and the same file named by a page are one cache entry.
-  var ASSET_V = "2027.2";
+  var ASSET_V = "2027.3";
 
   // The five sections. Order = nav order. `quiet` renders Library understated:
   // always reachable, never the loudest thing on the page.
