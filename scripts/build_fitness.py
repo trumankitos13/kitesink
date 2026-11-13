@@ -269,6 +269,17 @@ def build_claims(lib, data):
     claims = data["claims"]["entries"]
     used_tags = [t for t in TAGS if any(t in c.get("tags", []) for c in claims)]
     used_ev = [v for v in EVIDENCE if any(c.get("evidence") == v for c in claims)]
+    def related(c):
+        """Up to three other claims that share the most topics with this one."""
+        scored = []
+        for o in claims:
+            if o is c:
+                continue
+            score = 2 * len(set(c.get("tags", [])) & set(o.get("tags", []))) + (o["domain"] == c["domain"])
+            if score >= 2:
+                scored.append((-score, claims.index(o), o))
+        return [o for _, _, o in sorted(scored)[:3]]
+
     rows = []
     for i, c in enumerate(claims):
         label, cls = VERDICTS[c["verdict"]]
@@ -278,6 +289,9 @@ def build_claims(lib, data):
             body += '<ul class="g-do">' + "".join(f"<li>{esc(x)}</li>" for x in c["do"]) + "</ul>"
         meta = " · ".join([DOMAINS[c["domain"]][0], EVIDENCE[c["evidence"]]] + [TAGS[t] for t in c.get("tags", [])])
         body += f'<p class="q-meta">{esc(meta)}</p>' + lib.cite_html("claims", c.get("sources", []))
+        rel = related(c)
+        if rel:
+            body += '<p class="q-rel">Related: ' + " · ".join(f'<a href="#{esc(o["id"])}">{esc(o["title"])}</a>' for o in rel) + "</p>"
         rows.append(
             f'<details class="k-qa q" id="{esc(c["id"])}" data-d="{c["domain"]}" data-v="{c["verdict"]}" data-e="{c["evidence"]}" '
             f'data-tags="{esc(" ".join(c.get("tags", [])))}" data-l="{c["level"]}" data-c="{c["confidence"]}" data-y="{lib.year("claims", c.get("sources", []))}" data-o="{i}">'

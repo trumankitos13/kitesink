@@ -128,7 +128,9 @@ so nothing depends on an external runtime anymore.
 
 - **Contact email** — `hello@kitesink.com` uses Cloudflare Email Routing. On 2026-10-10,
   routing was enabled and ready, with an enabled rule forwarding to a verified destination.
-  The consulting page uses a direct email link; inbox delivery was not tested by sending a message.
+  The consulting page now has an enquiry form that posts through `ksSubmitForm` (Web3Forms) with
+  the visitor's address as reply-to. It was tested with the request intercepted, never with a real
+  send: submit one yourself and check how the message reads in the inbox.
 - **Campground screenshots** — ✅ added in `public/site_assets/` with modern formats and PNG fallbacks.
 - **Vantix `.co` vs `.com`** — ✅ fixed; the Home work-card now reads `vantix.kitesink.com`.
 - **Blog posts** — entries live in `public/blog/posts.js`; per-post pages under `public/blog/`
@@ -142,8 +144,10 @@ so nothing depends on an external runtime anymore.
   but are `noindex` and out of the nav, the Library, the sitemap and every link. They are listed in
   `UNLISTED_PAGES` in `scripts/check_site.py`, which fails the audit if a listed page links to them.
   The plan is to rebuild them on the Vantix subdomain; delete the two files when that exists.
-- **Vantix "500+ apps"** — the Vantix page still says it connects 500+ apps. Check that against the
-  Free Core, which lists manual import.
+- **Vantix "500+ apps"** — kept on purpose (owner decision).
+- **Vantix page design** — rewritten to the app's design system (`DESIGN.md` in the app repo):
+  mono body text, square corners. The page describes difficulty scaling in the present tense while
+  the app's roadmap places it later; check the wording.
 - **Song of the Day** — "Coming soon" everywhere (`projects.js`, `site-index.js`, the product page),
   with no launch date printed. Every contact address is `hello@kitesink.com`.
   `song-of-the-day/terms.html` still has a `<TODO: jurisdiction>`.
@@ -154,6 +158,12 @@ so nothing depends on an external runtime anymore.
 - **Now page** — one "Last updated" date (in the hero box; edit it there). The project cards were
   rewritten on 2026-11-13. The three personal cards (On rotation, Under the bar, Inputs) were
   carried over from July and need the owner's own words.
+- **Fitness content** — 349 entries. Every source was checked against Crossref (title, year,
+  authors) and what each entry says was written from the paper's abstract or the rulebook, not
+  the full text. Entries marked "Coaching practice" have no study behind them and say so. Read
+  the areas you know best and correct anything that does not match your experience.
+- **AI readers** — plain-text twins and `llms.txt` are live with the site; serving a twin at the
+  page's own address is optional and off (see `docs/AI-PAGES.md`). No special offer is in them.
 - **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in
   `public/ks.js` (see `docs/ANALYTICS-AND-FORMS.md`). Forms are live via `KS_FORM_KEY`.
 
