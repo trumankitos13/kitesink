@@ -4,258 +4,694 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Campground Tycoon — Regions</title>
-<meta name="description" content="Thirty regions to settle in Campground Tycoon, each its own country — eight true landscape families from Pacific redwoods to blackwater bayou. Click a pin to read the survey: difficulty, who shows up, and the terrain.">
+<meta name="description" content="Thirty regions to settle in Campground Tycoon, each its own country — eight true landscape families from Pacific redwoods to blackwater bayou. Pick a tack on the map to read the survey: difficulty, who shows up, and the terrain.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Bitter:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ks.css?v=2027.3">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:#f5eedb;font-family:Georgia,'Times New Roman',serif;color:#2c2418;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  a.ct-link:hover{color:#e0b35c}
-  ::selection{background:#b98a2e;color:#f5eedb}
-  button{font:inherit}
-  @media (max-width:760px){ .ct-navlinks a.ct-navtext{display:none !important} .ct-navlinks .ct-playbtn{display:inline-flex !important} }
-  @media (max-width:640px){ section{padding-left:18px !important;padding-right:18px !important} }
-  @media (max-width:880px){ .ct-mapRow{flex-direction:column !important} .ct-mapPreview{flex-basis:auto !important;width:100% !important} }
+  /* ============================================================
+     Campground Tycoon sub-brand: night forest, cream paper, campfire brass.
+     PART 1 is the same on all four pages (tokens, type, nav, footer, parts).
+     PART 2, further down, is this page's own layout.
+     ============================================================ */
+  :root {
+    --ct-pine: #1f3024;  --ct-night: #141f17;  --ct-moss: #26392c;  --ct-line: #3b5443;   /* dark surfaces */
+    --ct-cream: #f5eedb; --ct-sage: #c4d2bd;   --ct-brass: #e0b35c; --ct-gold: #f0cd82;   /* text on dark */
+    --ct-ember: #e5935a; --ct-brass-fill: #b98a2e;
+    --ct-paper: #fbf6e9; --ct-kraft: #efe1bc;  --ct-edge: #cdb685;                        /* paper objects */
+    --ct-ink: #2c2418;   --ct-ink-soft: #5f5036; --ct-brass-deep: #775614; --ct-rust: #99501d;  /* text on paper */
+    --ct-display: 'Bitter', 'CT Bitter Fallback', Georgia, serif;
+    --ct-label: 'Oswald', 'CT Oswald Fallback', 'Arial Narrow', Arial, sans-serif;
+    --ct-body: Georgia, 'Times New Roman', serif;
+    --ct-gutter: clamp(18px, 4.5vw, 40px);
+    --ct-max: 1120px;
+    --ct-band: clamp(56px, 8vw, 96px);   /* space above and below every section */
+    --ct-nav-h: 56px;
+  }
+  /* stand-ins sized to the width of Bitter and Oswald, shown for the instant before the web fonts arrive, so headings do not re-wrap when they do */
+  @font-face { font-family: 'CT Bitter Fallback'; font-weight: 700 900; size-adjust: 110%;
+    src: local('Times New Roman Bold'), local('TimesNewRomanPS-BoldMT'), local('Liberation Serif Bold'); }
+  @font-face { font-family: 'CT Oswald Fallback'; font-weight: 500 700; size-adjust: 80%;
+    src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'); }
+  html { background: var(--ct-pine); scroll-behavior: smooth; scroll-padding-top: calc(var(--ct-nav-h) + 20px); }
+  body { background: var(--ct-pine); }
+  .ct { color: var(--ct-cream); font: 400 17px/1.6 var(--ct-body); -webkit-font-smoothing: antialiased; }
+  .ct ::selection { background: var(--ct-brass); color: var(--ct-night); }
+  .ct :focus-visible { outline: 3px solid var(--ct-gold); outline-offset: 3px; border-radius: 4px; }
+  .ct .ct-paper :focus-visible { outline-color: var(--ct-pine); }
+  /* element resets sit inside :where() so any class below can override them */
+  .ct :where(h1, h2, h3, h4, p, ul, ol, dl, dd, figure) { margin: 0; }
+  .ct :where(ul, ol) { padding: 0; list-style: none; }
+  .ct :where(img) { display: block; max-width: 100%; height: auto; }
+  .ct :where(a) { color: inherit; }
+  .ct :where(button, input, textarea, select) { font: inherit; color: inherit; }
+
+  /* type scale: one h1 size per page type, one h2, one h3, one kicker, one lede */
+  .ct :where(h1, h2, h3, h4) { font-family: var(--ct-display); text-wrap: balance; }
+  .ct :where(h1) { font-weight: 900; font-size: clamp(34px, 6.2vw, 60px); line-height: 1.02; color: #f8f1de; }
+  .ct :where(h2) { font-weight: 800; font-size: clamp(27px, 4.2vw, 40px); line-height: 1.08; }
+  .ct :where(h3) { font-weight: 800; font-size: 20px; line-height: 1.2; }
+  .ct-kicker { font: 600 12px/1.4 var(--ct-label); letter-spacing: .24em; text-transform: uppercase; color: var(--ct-brass); }
+  .ct-lede { font-style: italic; font-size: clamp(17px, 2vw, 19px); line-height: 1.55; color: var(--ct-sage); max-width: 60ch; text-wrap: pretty; }
+  .ct-label { font: 500 12px/1.4 var(--ct-label); letter-spacing: .1em; text-transform: uppercase; }
+  .ct-link { color: var(--ct-brass); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  .ct-link:hover { color: var(--ct-gold); }
+  .ct-paper .ct-link { color: var(--ct-brass-deep); }
+  .ct-paper .ct-link:hover { color: var(--ct-ink); }
+  .ct-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+  /* layout: one container, one section rhythm, one section head */
+  .ct-wrap { width: min(100% - 2 * var(--ct-gutter), var(--ct-max)); margin-inline: auto; }
+  .ct-band { padding-block: var(--ct-band); }
+  .ct-band--night { background: var(--ct-night); }
+  .ct-head { display: grid; gap: 12px; max-width: 720px; margin-bottom: clamp(28px, 4vw, 44px); }
+  .ct-paper { background: var(--ct-paper); color: var(--ct-ink); }
+  .ct-paper h2, .ct-paper h3 { color: var(--ct-pine); }
+  .ct-paper .ct-kicker, .ct-paper .ct-label { color: var(--ct-brass-deep); }
+
+  /* buttons */
+  .ct-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 10px 22px;
+    border: 1px solid #8a6620; border-bottom-width: 4px; border-radius: 10px; background: linear-gradient(180deg, #e8bd68, #c4942f);
+    color: #241a06; font: 600 16px/1.2 var(--ct-label); letter-spacing: .04em; text-decoration: none; cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,.3); transition: translate .15s, filter .15s; }
+  .ct-btn:hover { filter: brightness(1.07); translate: 0 -1px; }
+  .ct-btn:active { translate: 0 1px; }
+  .ct-btn[disabled] { filter: saturate(.4); cursor: progress; }
+  .ct-btn--quiet { background: transparent; border: 1px solid rgba(224,179,92,.55); border-bottom-width: 1px; box-shadow: none; }
+  .ct-btn--quiet { color: var(--ct-brass); }
+  .ct-btn--quiet:hover { border-color: var(--ct-gold); filter: none; }
+  .ct-btn--quiet:hover { color: var(--ct-gold); }
+
+  /* game screenshots: a dark bezel so they read as screens, never as cards */
+  .ct-shot { display: block; overflow: hidden; border-radius: 8px; background: #0c130e; border: 1px solid #55503f; box-shadow: 0 0 0 4px #24231c, 0 22px 50px rgba(0,0,0,.45); }
+  .ct-shot img { width: 100%; }
+  .ct-shot--px img { image-rendering: pixelated; }
+
+  /* sub-nav: one sticky row on every page. On a phone the wordmark folds to its mark and the links scroll sideways. */
+  .ct-nav { position: sticky; top: 0; z-index: 200; display: flex; align-items: center; gap: 4px 18px; min-height: var(--ct-nav-h);
+    padding: 0 var(--ct-gutter); background: var(--ct-pine); border-bottom: 3px solid var(--ct-brass-fill); view-transition-name: ct-nav; }
+  .ct-nav__brand { flex: none; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none;
+    font: 800 17px/1 var(--ct-display); letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
+  .ct-nav__brand b { color: var(--ct-brass); font-weight: 800; }
+  .ct-nav__mark { font: 400 18px/1 Georgia, serif; color: var(--ct-brass); }
+  .ct-nav__links { flex: 1; min-width: 0; display: flex; justify-content: flex-end; overflow-x: auto; scrollbar-width: none; }
+  .ct-nav__links::-webkit-scrollbar { display: none; }
+  .ct-nav__links a { flex: none; display: inline-flex; align-items: center; min-height: 53px; padding: 0 13px; white-space: nowrap; text-decoration: none;
+    font: 600 13px/1 var(--ct-label); letter-spacing: .1em; text-transform: uppercase; color: var(--ct-sage);
+    box-shadow: inset 0 -3px 0 transparent; transition: color .15s, box-shadow .15s; }
+  .ct-nav__links a:hover { color: var(--ct-cream); }
+  .ct-nav__links a[aria-current] { color: var(--ct-brass); box-shadow: inset 0 -3px 0 var(--ct-brass); }
+  .ct-nav__links a:focus-visible { outline-offset: -4px; }
+  .ct-nav__home { color: var(--ct-sage); }
+  .ct-nav__play { flex: none; min-height: 44px; padding: 6px 15px; border-bottom-width: 3px; border-radius: 8px; box-shadow: none;
+    font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+  @media (max-width: 760px) {
+    .ct-nav { padding: 0 12px 0 6px; gap: 2px; }
+    .ct-nav__brand { width: 44px; justify-content: center; }
+    .ct-nav__word, .ct-nav__free { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .ct-nav__links { justify-content: flex-start; padding-right: 10px;
+      -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent); }
+    .ct-nav__links a { padding: 0 11px; }
+    .ct-nav__home { display: none !important; }
+    .ct-nav__play { padding-inline: 12px; }
+  }
+
+  /* page hero used by Features, Regions and Roadmap (the landing page has its own, taller one) */
+  .ct-hero { position: relative; overflow: hidden; padding-block: clamp(44px, 7vw, 84px) clamp(44px, 6vw, 76px);
+    background: linear-gradient(180deg, var(--ct-night) 0%, #1a2a1e 62%, var(--ct-pine) 100%); }
+  .ct-hero::before, .ct-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; pointer-events: none; }
+  .ct-hero::before { height: 58%; background: #19291d; clip-path: polygon(0 100%, 0 62%, 8% 50%, 18% 64%, 28% 40%, 38% 60%, 50% 32%, 62% 58%, 72% 42%, 84% 62%, 92% 46%, 100% 60%, 100% 100%); }
+  .ct-hero::after { height: 34%; background: var(--ct-pine); clip-path: polygon(0 100%, 0 74%, 10% 60%, 22% 78%, 34% 56%, 46% 80%, 58% 64%, 70% 82%, 82% 62%, 92% 78%, 100% 66%, 100% 100%); }
+  .ct-hero > .ct-wrap { position: relative; z-index: 1; display: grid; gap: 14px; }
+  .ct-hero h1 { max-width: 10.6em; }
+  .ct-hero + .ct-band { padding-top: clamp(36px, 5vw, 60px); }
+
+  /* closing call to action: the campfire dusk from the game's title poster */
+  .ct-dusk { position: relative; overflow: hidden; padding-block: clamp(64px, 9vw, 104px); text-align: center;
+    background: linear-gradient(180deg, var(--ct-night) 0%, #22301f 44%, #4a4a2e 70%, #8a6136 88%, #b9863c 100%); }
+  .ct-dusk::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 30%; background: var(--ct-night); pointer-events: none;
+    clip-path: polygon(0 100%, 0 70%, 7% 40%, 14% 72%, 22% 30%, 30% 68%, 39% 44%, 47% 76%, 55% 36%, 64% 70%, 73% 42%, 81% 74%, 90% 34%, 96% 66%, 100% 48%, 100% 100%); }
+  .ct-dusk > .ct-wrap { position: relative; z-index: 1; display: grid; justify-items: center; gap: 16px; padding-bottom: clamp(28px, 5vw, 56px); }
+  .ct-dusk h2 { font-weight: 900; font-size: clamp(30px, 5vw, 48px); color: #f8f1de; text-shadow: 0 2px 0 rgba(0,0,0,.35); max-width: 10em; }
+  .ct-dusk p { color: #f2ead4; max-width: 46ch; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+  .ct-dusk .ct-kicker { color: var(--ct-gold); }
+  .ct-dusk .ct-btn { margin-top: 8px; }
+
+  /* footer */
+  .ct-foot { background: #0f1811; padding-block: 36px 44px; color: var(--ct-sage); }
+  .ct-foot__in { display: grid; justify-items: center; gap: 12px; text-align: center; }
+  .ct-foot__brand { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; text-decoration: none;
+    font: 800 15px/1 var(--ct-display); letter-spacing: .04em; text-transform: uppercase; color: var(--ct-cream); }
+  .ct-foot__brand span { font: 400 14px/1 Georgia, serif; color: var(--ct-brass); }
+  .ct-foot__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 6px; }
+  .ct-foot__links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; text-decoration: none;
+    font: 500 13px/1 var(--ct-label); letter-spacing: .06em; color: var(--ct-sage); }
+  .ct-foot__links a:hover { color: var(--ct-brass); }
+  .ct-foot__small { font: 400 12px/1.6 var(--ct-label); letter-spacing: .05em; color: #9fb89b; max-width: 46ch; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ct *, .ct *::before, .ct *::after { animation: none !important; transition: none !important; }
+  }
+
+  /* ============================================================
+     PART 2: this page only.
+     ============================================================ */
+  /* the survey: folded map on the left, the ranger's clipboard on the right */
+  .ct-survey { display: grid; gap: 22px; align-items: start; }
+  .ct-map { padding: clamp(10px, 1.8vw, 20px); border: 1px solid #b3996b; border-radius: 4px; background: #e7d9b9; box-shadow: 0 24px 56px rgba(0,0,0,.45), inset 0 1px rgba(255,255,255,.55); }
+  .ct-map__cap { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 0 2px 10px; font-size: 14px; font-style: italic; color: var(--ct-ink-soft); }
+  .ct-map__cap span { font: 600 12px/1.4 var(--ct-label); font-style: normal; letter-spacing: .26em; text-transform: uppercase; color: var(--ct-brass-deep); }
+  .ct-map__plate { --pin: clamp(7px, 1.3vw, 15px); --ring: clamp(2px, .3vw, 3.5px); position: relative; aspect-ratio: 1126 / 704; overflow: hidden;
+    border: 1px solid #c4ab7c; background: linear-gradient(150deg, #ead9b2, #e3d2a6 55%, #d9c496); cursor: pointer; }
+  .ct-map__plate svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ct-map__plate::before, .ct-map__plate::after { content: ""; position: absolute; top: 0; bottom: 0; width: 26px; z-index: 1; pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(70,52,20,.14) 46%, rgba(255,250,235,.35) 54%, transparent); }
+  .ct-map__plate::before { left: 33%; }
+  .ct-map__plate::after { left: 66%; }
+  .ct-pin { position: absolute; z-index: 2; left: calc(var(--x) * 1%); top: calc(var(--y) * 1%); width: var(--pin); height: var(--pin); margin: calc(var(--pin) / -2) 0 0 calc(var(--pin) / -2);
+    border: 1px solid #6e4f16; border-radius: 50%; background: radial-gradient(circle at 34% 28%, #f0cd82, #b98a2e 55%, #8a6620);
+    box-shadow: 0 0 0 var(--ring) var(--fam), 0 2px 5px rgba(20,14,6,.45); transition: scale .15s; }
+  .ct-pin.is-on { z-index: 4; scale: 1.5; box-shadow: 0 0 0 var(--ring) var(--fam), 0 0 0 calc(var(--ring) + 2px) #fffaf0, 0 3px 8px rgba(20,14,6,.55); }
+  .ct-pin--flag { width: auto; height: auto; margin: 0; translate: 6px calc(-100% - 5px); padding: 3px 6px; border: 1px dashed var(--ct-brass-deep); border-radius: 3px; background: #e7d9b9; box-shadow: 0 2px 5px rgba(20,14,6,.3);
+    font: 700 11px/1 var(--ct-label); font-style: normal; letter-spacing: .08em; color: var(--ct-ink-soft); }
+  .ct-pin--flag.is-on { scale: 1.15; box-shadow: 0 0 0 2px #fffaf0, 0 3px 8px rgba(20,14,6,.55); }
+  .ct-map__tag { position: absolute; z-index: 5; left: calc(var(--x) * 1%); top: calc(var(--y) * 1%); translate: 14px -50%; padding: 4px 8px; border: 1px solid #a88b57; background: #fbf6e9;
+    box-shadow: 2px 3px 4px rgba(30,20,8,.25); font: 800 13px/1.2 var(--ct-display); color: var(--ct-ink); white-space: nowrap; pointer-events: none; }
+  .ct-map__tag.is-left { translate: calc(-100% - 14px) -50%; }
+  .ct-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 12px 2px 0; font: 500 12px/1.4 var(--ct-label); letter-spacing: .06em; color: var(--ct-ink-soft); }
+  .ct-legend li { display: inline-flex; align-items: center; gap: 7px; }
+  .ct-tack { flex: none; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: radial-gradient(circle at 34% 28%, #f0cd82, #b98a2e 60%); box-shadow: 0 0 0 3px var(--fam), 0 0 0 4px rgba(255,250,240,.75); }
+  .ct-map__note { padding: 12px 2px 0; font-size: 15px; color: var(--ct-ink-soft); }
+
+  .ct-board { padding: 9px; border-radius: 14px; background: #5a4630; box-shadow: 0 20px 45px rgba(0,0,0,.45); }
+  .ct-board__paper { display: grid; gap: 16px; padding: clamp(16px, 2.4vw, 22px); border-radius: 6px; }
+  .ct-pick { display: none; gap: 6px; }
+  .ct-js .ct-pick { display: grid; }
+  .ct-pick select { width: 100%; min-height: 48px; padding: 8px 12px; border: 1px solid var(--ct-edge); border-radius: 8px; background: #fffaf0; color: var(--ct-ink); font: 400 17px/1.3 var(--ct-body); }
+  .ct-sv { display: grid; gap: 12px; }
+  .ct-sv:focus { outline: none; }
+  .ct-sv__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .ct-sv h3 { font-size: 26px; line-height: 1.05; }
+  .ct-sv__diff { display: grid; justify-items: end; gap: 4px; text-align: right; }
+  .ct-sv__diff b { font: 600 14px/1 var(--ct-label); letter-spacing: .04em; color: var(--ct-rust); }
+  .ct-dots { display: inline-flex; gap: 3px; }
+  .ct-dots i { width: 10px; height: 10px; border-radius: 50%; background: rgba(44,36,24,.16); }
+  .ct-dots i.on { background: var(--ct-rust); }
+  .ct-sv__fam { display: inline-flex; align-items: center; gap: 10px; justify-self: start; padding: 5px 11px 5px 9px; border-radius: 5px; background: rgba(44,36,24,.07); font: 500 13px/1.3 var(--ct-label); letter-spacing: .06em; color: var(--ct-ink-soft); }
+  .ct-bars { display: grid; gap: 7px; }
+  .ct-bars li { display: grid; grid-template-columns: 104px minmax(0, 1fr) 38px; align-items: center; gap: 9px; font: 500 13px/1.2 var(--ct-label); letter-spacing: .04em; text-transform: uppercase; color: var(--ct-ink-soft); }
+  .ct-bars b { height: 10px; border-radius: 5px; background: linear-gradient(90deg, var(--c) var(--w), rgba(44,36,24,.12) var(--w)); }
+  .ct-bars em { font-style: normal; text-align: right; }
+  .ct-sv__blurb { font-style: italic; color: #4a3f2a; }
+  .ct-sv__why { color: var(--ct-ink-soft); }
+  .ct-sv--flag { justify-items: center; text-align: center; }
+  @media (min-width: 980px) { .ct-survey { grid-template-columns: minmax(0, 1fr) 372px; } }
+
+  /* eight landscapes, each with a screenshot and its regions */
+  .ct-fam { display: grid; gap: 22px clamp(24px, 3.4vw, 44px); padding-block: clamp(28px, 4vw, 44px); border-top: 1px solid var(--ct-line); }
+  .ct-fam:last-child { padding-bottom: 0; }
+  .ct-fam__pic { display: grid; gap: 10px; align-content: start; }
+  .ct-fam__pic figcaption { font-size: 15px; font-style: italic; color: var(--ct-sage); }
+  .ct-fam__body { display: grid; gap: 10px; align-content: start; }
+  .ct-fam h3 { display: flex; align-items: center; gap: 13px; font-size: 23px; }
+  .ct-fam h3 .ct-tack { width: 11px; height: 11px; }
+  .ct-fam__desc { color: var(--ct-sage); }
+  .ct-regs { display: grid; gap: 0 28px; margin-top: 6px; }
+  .ct-regs li { display: grid; gap: 3px; align-content: start; padding: 13px 0 13px 12px; border-top: 1px dashed var(--ct-line); border-left: 3px solid transparent; }
+  .ct-regs li.is-on { border-left-color: var(--ct-brass); }
+  .ct-regs h4 { font: 800 18px/1.25 var(--ct-display); }
+  .ct-regs .ct-label { color: var(--ct-brass); }
+  .ct-regs p { font-size: 16px; line-height: 1.5; color: var(--ct-sage); }
+  .ct-regs button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin: -10px 0 -8px; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+  .ct-regs button::after { content: "survey →"; font: 500 12px/1 var(--ct-label); letter-spacing: .12em; text-transform: uppercase; color: var(--ct-brass); }
+  .ct-regs button:hover { color: var(--ct-gold); }
+  @media (min-width: 620px) { .ct-regs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 900px) { .ct-fam { grid-template-columns: minmax(0, 360px) minmax(0, 1fr); } }
 </style>
-  <link rel="stylesheet" href="/ks.css?v=2027.3">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/campground-tycoon/regions">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#1f3024">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Campground Tycoon — Regions">
-<meta property="og:description" content="Thirty regions, eight true landscape families from Pacific redwoods to blackwater bayou. Click a pin to read the survey.">
+<meta property="og:description" content="Thirty regions, eight true landscape families from Pacific redwoods to blackwater bayou. Pick a tack on the map to read the survey.">
 <meta property="og:url" content="https://kitesink.com/campground-tycoon/regions">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Campground Tycoon — Regions">
-<meta name="twitter:description" content="Thirty regions, eight landscape families. Click a pin to read the survey.">
+<meta name="twitter:description" content="Thirty regions, eight landscape families. Pick a tack on the map to read the survey.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<script>document.documentElement.className += " ct-js";</script><!-- shows the region menu from the first paint, so nothing moves when the page script starts -->
 </head>
 <body>
+<div class="ct">
+<!-- ===== Sub-nav (same on all four pages; aria-current marks this one) ===== -->
+<header class="ct-nav">
+  <a class="ct-nav__brand" href="/campground-tycoon"><span class="ct-nav__mark" aria-hidden="true">✱</span><span class="ct-nav__word">Campground <b>Tycoon</b></span></a>
+  <nav class="ct-nav__links" aria-label="Campground Tycoon">
+    <a href="/campground-tycoon">Overview</a>
+    <a href="/campground-tycoon/features">Features</a>
+    <a href="/campground-tycoon/regions" aria-current="page">Regions</a>
+    <a href="/campground-tycoon/roadmap">Roadmap</a>
+    <a class="ct-nav__home" href="/">KiteSink ↗</a>
+  </nav>
+  <a class="ct-btn ct-nav__play" href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Play<span class="ct-nav__free"> free</span></a>
+</header>
 
-<div style="background:#f5eedb;color:#2c2418;overflow-x:hidden">
+<main>
 
-<!-- ===================== NAV ===================== -->
-<nav class="ct-nav" style="position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 26px;background:#1f3024;border-bottom:3px solid #b98a2e;flex-wrap:wrap">
-  <a href="/campground-tycoon" style="display:flex;align-items:center;gap:10px">
-    <span style="font-family:Georgia,serif;font-size:17px;color:#e0b35c;flex:none">✱</span>
-    <span style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:17px;letter-spacing:.3px;color:#f5eedb">CAMPGROUND <span style="color:#e0b35c">TYCOON</span></span>
-  </a>
-  <div class="ct-navlinks" style="display:flex;align-items:center;gap:2px;flex-wrap:wrap">
-    <a class="ct-link ct-navtext" href="/campground-tycoon" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfd9c8;padding:8px 12px">Home</a>
-    <a class="ct-link ct-navtext" href="/campground-tycoon/features" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfd9c8;padding:8px 12px">Features</a>
-    <a class="ct-link ct-navtext" href="/campground-tycoon/regions" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#e0b35c;padding:8px 12px">Regions</a>
-    <a class="ct-link ct-navtext" href="/campground-tycoon/roadmap" style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfd9c8;padding:8px 12px">Roadmap</a>
-    <a class="ct-playbtn ct-link" href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:#1f2c17;background:linear-gradient(180deg,#e0b35c,#b98a2e);border:1px solid #8a6620;border-bottom-width:3px;padding:8px 15px;border-radius:7px;margin-left:8px">▶ Play Free</a>
-  </div>
-</nav>
-<div id="top"></div>
-
-<!-- ===================== HERO ===================== -->
-<section style="position:relative;min-height:320px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(180deg,#141f17 0%,#243626 60%,#3a4a30 100%)">
-  <div style="position:relative;z-index:10;max-width:760px;margin:0 auto;padding:24px;text-align:center">
-    <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:5px;color:#f0cd82;margin-bottom:14px">THE FOLDED PARK MAP</div>
-    <h1 style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:clamp(32px,5.2vw,54px);line-height:1.02;color:#f8f1de">Thirty flags. Every one its own country.</h1>
-    <p style="font-family:Georgia,serif;font-style:italic;font-size:16px;line-height:1.55;color:#cfe0c8;max-width:600px;margin:14px auto 0">Every region rolls its own true terrain, wildlife and guests. Click a pin to read the survey.</p>
+<!-- ===== Hero ===== -->
+<section class="ct-hero">
+  <div class="ct-wrap">
+    <p class="ct-kicker">Campground Tycoon · The folded park map</p>
+    <h1>Thirty flags. Every one its own country.</h1>
+    <p class="ct-lede">Every region rolls its own true terrain, wildlife and guests. Pick a tack to read the survey.</p>
   </div>
 </section>
 
-<!-- ===================== MAP ===================== -->
-<section style="background:#f5eedb;padding:44px 24px 30px">
-  <div style="max-width:1220px;margin:0 auto">
-    <div class="ct-mapRow" style="display:flex;gap:20px;align-items:stretch">
-      <div id="ctMap" style="flex:1;position:relative;border-radius:14px;overflow:hidden;background-color:#e3d2a6;background-image:image-set(url('/site_assets/usa_map.avif') type('image/avif'),url('/site_assets/usa_map.webp') type('image/webp'),url('/site_assets/usa_map.png') type('image/png'));background-position:center;background-size:cover;background-repeat:no-repeat;border:1px solid #b3996b;box-shadow:0 16px 40px rgba(10,8,4,.32);min-height:480px">
-        <div style="position:absolute;left:16px;top:14px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:3px;color:#8a6620">UNITED STATES · CAMPGROUNDS &amp; COUNTRY</div>
+<!-- ===== Survey map + clipboard ===== -->
+<section class="ct-band" id="survey">
+  <h2 class="ct-sr">The survey map</h2>
+  <div class="ct-wrap ct-survey">
+    <div class="ct-map ct-paper">
+      <p class="ct-map__cap"><span>The folded park map</span> tack = territory · washer colour = landscape</p>
+      <div class="ct-map__plate" id="ctMap">
+        <svg viewBox="0 0 1126 704" role="img" aria-label="Map of the lower 48 states with a brass tack for each of the 30 regions and a locked flag for Yellowstone.">
+          <defs><linearGradient id="ctLand" x1="0" y1="0" x2=".25" y2="1"><stop offset="0" stop-color="#587455"/><stop offset="1" stop-color="#3e5a41"/></linearGradient></defs>
+          <g stroke="rgba(138,102,32,.2)" stroke-width="1.5" stroke-dasharray="4 7">
+            <path d="M123.3 0V704"/><path d="M306.5 0V704"/><path d="M489.7 0V704"/><path d="M672.9 0V704"/><path d="M856.1 0V704"/><path d="M1039.4 0V704"/><path d="M0 630.8H1126"/><path d="M0 515.6H1126"/><path d="M0 400.4H1126"/><path d="M0 285.2H1126"/><path d="M0 169.9H1126"/>
+          </g>
+          <path d="M176.4 458L172.8 446.5L152.6 429.4L128.8 414.2L111.4 410.1L110.5 396.9L88.5 363.5L77.5 336.3L55.5 310.5L53.7 289.8L42.7 276L47.3 258.9L39.9 219.7L47.3 199.9L49.1 176.9L50.9 142.3L48.2 123.9L37.2 91.6L64.7 93.9L72.9 77.8L578.6 77.8L580.4 69.2L588.3 83.8L610.6 87L627.1 90.4L647.3 99.2L682.1 100.8L727.9 103.1L768.2 126.2L781 141.4L790.2 151.5L809.4 161.9L812.2 193L811.8 216L810.9 221.8L799.2 237.2L798.4 242.5L847 231.7L874.6 219.3L873.4 209.8L914.8 201.5L921 190.7L947.7 170.4L953.2 169.9L1011.9 169.7L1019.6 162.8L1027.4 159.3L1033.9 149.2L1039.4 130.8L1053.5 113.3L1070.3 115.8L1079.8 122.2L1079.8 153.8L1091.9 166.7L1094.3 174.6L1076 183.8L1061.3 186.1L1043 196.4L1035.7 203.1L1025.6 214.2L1024.7 222.9L1039.4 241.4L1032.9 248.3L1013.7 251.5L986.2 256.6L967.9 263.7L966.1 272.5L963.3 292.1L949.6 309.6L945.9 313.3L946.8 320.9L929.4 349.7L931.3 364.7L938.6 395.3L920.3 409.6L894.6 425.7L876.3 431.3L858 451.8L837.8 468.8L829.6 499.5L832.3 520.2L847 550.9L855.2 589.4L853.8 613.1L839.7 627.6L825 610.1L821.3 596.3L806.7 573.2L803.9 557.1L807.6 541L788.4 517.9L775.5 515.6L759 523L748 511L737.1 506.9L718.7 509.2L709.6 510.5L689.4 508.7L683.9 538.7L671.1 536.4L656.4 537.5L649.1 527.1L630.8 526.5L603.3 522.5L583.2 531.1L564.8 541L555.7 552.5L541 571.4L537.4 589.4L541.9 609L524.5 606.4L506.2 598.6L499.8 584.3L498.9 573.2L484.2 555.3L477.6 538.9L464.1 520.9L447.6 518.4L437.9 530.6L432.9 539.1L420.3 532.7L407.3 524.8L399.6 501.8L376.1 482L370.1 474.6L339.3 474.6L339.3 485L286.9 485L218.2 458.2L220 452.9Z" fill="rgba(45,32,12,.28)" transform="translate(4 8)"/>
+          <path d="M176.4 458L172.8 446.5L152.6 429.4L128.8 414.2L111.4 410.1L110.5 396.9L88.5 363.5L77.5 336.3L55.5 310.5L53.7 289.8L42.7 276L47.3 258.9L39.9 219.7L47.3 199.9L49.1 176.9L50.9 142.3L48.2 123.9L37.2 91.6L64.7 93.9L72.9 77.8L578.6 77.8L580.4 69.2L588.3 83.8L610.6 87L627.1 90.4L647.3 99.2L682.1 100.8L727.9 103.1L768.2 126.2L781 141.4L790.2 151.5L809.4 161.9L812.2 193L811.8 216L810.9 221.8L799.2 237.2L798.4 242.5L847 231.7L874.6 219.3L873.4 209.8L914.8 201.5L921 190.7L947.7 170.4L953.2 169.9L1011.9 169.7L1019.6 162.8L1027.4 159.3L1033.9 149.2L1039.4 130.8L1053.5 113.3L1070.3 115.8L1079.8 122.2L1079.8 153.8L1091.9 166.7L1094.3 174.6L1076 183.8L1061.3 186.1L1043 196.4L1035.7 203.1L1025.6 214.2L1024.7 222.9L1039.4 241.4L1032.9 248.3L1013.7 251.5L986.2 256.6L967.9 263.7L966.1 272.5L963.3 292.1L949.6 309.6L945.9 313.3L946.8 320.9L929.4 349.7L931.3 364.7L938.6 395.3L920.3 409.6L894.6 425.7L876.3 431.3L858 451.8L837.8 468.8L829.6 499.5L832.3 520.2L847 550.9L855.2 589.4L853.8 613.1L839.7 627.6L825 610.1L821.3 596.3L806.7 573.2L803.9 557.1L807.6 541L788.4 517.9L775.5 515.6L759 523L748 511L737.1 506.9L718.7 509.2L709.6 510.5L689.4 508.7L683.9 538.7L671.1 536.4L656.4 537.5L649.1 527.1L630.8 526.5L603.3 522.5L583.2 531.1L564.8 541L555.7 552.5L541 571.4L537.4 589.4L541.9 609L524.5 606.4L506.2 598.6L499.8 584.3L498.9 573.2L484.2 555.3L477.6 538.9L464.1 520.9L447.6 518.4L437.9 530.6L432.9 539.1L420.3 532.7L407.3 524.8L399.6 501.8L376.1 482L370.1 474.6L339.3 474.6L339.3 485L286.9 485L218.2 458.2L220 452.9Z" fill="url(#ctLand)" stroke="#5a4426" stroke-width="2.5" stroke-linejoin="round"/>
+          <g fill="#a9c7d1" stroke="rgba(70,52,20,.3)" stroke-width="1.5">
+            <ellipse cx="713.2" cy="110" rx="58.6" ry="19.6" transform="rotate(-8 713.2 110)"/><ellipse cx="726.1" cy="193" rx="13.7" ry="48.4" transform="rotate(3 726.1 193)"/><ellipse cx="808.5" cy="174.6" rx="21.1" ry="31.1" transform="rotate(20 808.5 174.6)"/><ellipse cx="837.8" cy="235.6" rx="29.3" ry="10.4" transform="rotate(-22 837.8 235.6)"/><ellipse cx="900.1" cy="202.2" rx="19.2" ry="9.2" transform="rotate(-12 900.1 202.2)"/>
+          </g>
+        </svg>
+        <i class="ct-pin" data-region="washington" style="--x:8.7;--y:16;--fam:#2f4836"></i>
+        <i class="ct-pin" data-region="oregon" style="--x:9.3;--y:27.4;--fam:#b5642a"></i>
+        <i class="ct-pin" data-region="montana" style="--x:25.1;--y:23.2;--fam:#5e7d45"></i>
+        <i class="ct-pin" data-region="wyoming" style="--x:28.4;--y:27.4;--fam:#5e7d45"></i>
+        <i class="ct-pin" data-region="colorado" style="--x:34.1;--y:41.8;--fam:#5e7d45"></i>
+        <i class="ct-pin" data-region="arizona" style="--x:24.3;--y:57.2;--fam:#b5642a"></i>
+        <i class="ct-pin" data-region="texas" style="--x:45.3;--y:72.3;--fam:#b98a2e"></i>
+        <i class="ct-pin" data-region="minnesota" style="--x:57.3;--y:14.6;--fam:#2f6d7a"></i>
+        <i class="ct-pin" data-region="wisconsin" style="--x:60.4;--y:21.5;--fam:#2f6d7a"></i>
+        <i class="ct-pin" data-region="michigan" style="--x:66.9;--y:24.8;--fam:#2f6d7a"></i>
+        <i class="ct-pin" data-region="maine" style="--x:93.9;--y:21.5;--fam:#2f6d7a"></i>
+        <i class="ct-pin" data-region="vermont" style="--x:87.9;--y:27.4;--fam:#8a6620"></i>
+        <i class="ct-pin is-on" data-region="tennessee" style="--x:70.3;--y:54.6;--fam:#8a6620"></i>
+        <i class="ct-pin" data-region="louisiana" style="--x:57.8;--y:73.2;--fam:#3f7a63"></i>
+        <i class="ct-pin" data-region="florida" style="--x:74.4;--y:89.9;--fam:#5f8aa0"></i>
+        <i class="ct-pin" data-region="utah" style="--x:27.4;--y:46.1;--fam:#b5642a"></i>
+        <i class="ct-pin" data-region="newmexico" style="--x:33.2;--y:64.1;--fam:#b5642a"></i>
+        <i class="ct-pin" data-region="georgia" style="--x:72.3;--y:70.6;--fam:#3f7a63"></i>
+        <i class="ct-pin" data-region="mississippi" style="--x:58.3;--y:62.1;--fam:#3f7a63"></i>
+        <i class="ct-pin" data-region="idaho" style="--x:19.2;--y:27.1;--fam:#5e7d45"></i>
+        <i class="ct-pin" data-region="westvirginia" style="--x:74.2;--y:47.4;--fam:#8a6620"></i>
+        <i class="ct-pin" data-region="kentucky" style="--x:70;--y:47.7;--fam:#8a6620"></i>
+        <i class="ct-pin" data-region="california" style="--x:4.4;--y:36.3;--fam:#2f4836"></i>
+        <i class="ct-pin" data-region="crater" style="--x:7.5;--y:31;--fam:#2f4836"></i>
+        <i class="ct-pin" data-region="kansas" style="--x:49;--y:45.7;--fam:#b98a2e"></i>
+        <i class="ct-pin" data-region="southdakota" style="--x:39.7;--y:28.1;--fam:#b98a2e"></i>
+        <i class="ct-pin" data-region="nebraska" style="--x:41.1;--y:33.6;--fam:#b98a2e"></i>
+        <i class="ct-pin" data-region="northcarolina" style="--x:83.2;--y:55.6;--fam:#5f8aa0"></i>
+        <i class="ct-pin" data-region="virginia" style="--x:83.5;--y:47.4;--fam:#5f8aa0"></i>
+        <i class="ct-pin" data-region="southcarolina" style="--x:75.2;--y:65.4;--fam:#5f8aa0"></i>
+        <i class="ct-pin ct-pin--flag" data-region="yellowstone" style="--x:26.4;--y:25.4">YS</i>
+        <span class="ct-map__tag" id="ctTag" style="--x:70.3;--y:54.6" aria-hidden="true">Smokies</span>
       </div>
-      <div id="ctPanel" class="ct-mapPreview" style="flex:0 0 380px;max-width:100%;background:#fbf6e9;border-radius:14px;border:1px solid #b3996b;border-top:5px solid #2f4836;padding:20px 20px 22px;box-shadow:0 12px 30px rgba(10,8,4,.22)"></div>
+      <ul class="ct-legend" aria-label="Landscape families">
+        <li><i class="ct-tack" style="--fam:#2f4836" aria-hidden="true"></i>Pacific</li>
+        <li><i class="ct-tack" style="--fam:#5e7d45" aria-hidden="true"></i>Northern Rockies</li>
+        <li><i class="ct-tack" style="--fam:#b5642a" aria-hidden="true"></i>High Desert</li>
+        <li><i class="ct-tack" style="--fam:#2f6d7a" aria-hidden="true"></i>Northwoods</li>
+        <li><i class="ct-tack" style="--fam:#8a6620" aria-hidden="true"></i>Appalachian Hollow</li>
+        <li><i class="ct-tack" style="--fam:#b98a2e" aria-hidden="true"></i>Plains</li>
+        <li><i class="ct-tack" style="--fam:#3f7a63" aria-hidden="true"></i>Bayou</li>
+        <li><i class="ct-tack" style="--fam:#5f8aa0" aria-hidden="true"></i>Coastal</li>
+      </ul>
+      <p class="ct-map__note">The dashed flag marked YS is Yellowstone, the Service flagship. It stays locked until you enshrine three parks. <a class="ct-link" href="/campground-tycoon/features#parkservice">Read about the Park Service →</a></p>
     </div>
-    <div id="ctFamLegend" style="display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:18px;font-family:'Oswald',sans-serif;font-size:10.5px;color:#5f5036">
-      <span style="color:#8a795a;letter-spacing:1px">LANDSCAPE FAMILY:</span>
+
+    <div class="ct-board">
+      <div class="ct-board__paper ct-paper">
+        <div class="ct-pick">
+          <label class="ct-label" for="ctRegion">Choose a region</label>
+          <select id="ctRegion">
+          <optgroup label="Pacific &amp; Redwood Coast">
+            <option value="washington">Cascades — Washington</option>
+            <option value="california">Redwood Coast — California</option>
+            <option value="crater">Crater Lake — Oregon</option>
+          </optgroup>
+          <optgroup label="Northern Rockies &amp; Big Sky">
+            <option value="montana">Big Sky — Montana</option>
+            <option value="wyoming">Yellowstone Gate — Wyoming</option>
+            <option value="colorado">Rockies — Colorado</option>
+            <option value="idaho">Sawtooths — Idaho</option>
+          </optgroup>
+          <optgroup label="High Desert &amp; Canyon Country">
+            <option value="oregon">High Desert — Oregon</option>
+            <option value="arizona">Red Rock — Arizona</option>
+            <option value="utah">Canyonlands — Utah</option>
+            <option value="newmexico">White Sands — New Mexico</option>
+          </optgroup>
+          <optgroup label="Northwoods &amp; Lake Country">
+            <option value="minnesota">Boundary Waters — Minnesota</option>
+            <option value="wisconsin">Northwoods — Wisconsin</option>
+            <option value="michigan">Great Lakes — Michigan</option>
+            <option value="maine">North Woods — Maine</option>
+          </optgroup>
+          <optgroup label="Appalachian Hollow">
+            <option value="vermont">Green Mountains — Vermont</option>
+            <option value="tennessee" selected>Smokies — Tennessee</option>
+            <option value="westvirginia">New River Gorge — West Virginia</option>
+            <option value="kentucky">Red River Gorge — Kentucky</option>
+          </optgroup>
+          <optgroup label="Plains &amp; Hill Country">
+            <option value="texas">Hill Country — Texas</option>
+            <option value="kansas">Flint Hills — Kansas</option>
+            <option value="southdakota">Badlands — South Dakota</option>
+            <option value="nebraska">Sandhills — Nebraska</option>
+          </optgroup>
+          <optgroup label="Bayou &amp; Blackwater">
+            <option value="louisiana">Bayou — Louisiana</option>
+            <option value="georgia">Okefenokee — Georgia</option>
+            <option value="mississippi">Delta Bottoms — Mississippi</option>
+          </optgroup>
+          <optgroup label="Coastal &amp; Tropical Shore">
+            <option value="florida">Gulf Keys — Florida</option>
+            <option value="northcarolina">Outer Banks — North Carolina</option>
+            <option value="virginia">Assateague — Virginia</option>
+            <option value="southcarolina">Sea Islands — South Carolina</option>
+          </optgroup>
+            <optgroup label="Flagship">
+              <option value="yellowstone">Yellowstone — locked</option>
+            </optgroup>
+          </select>
+        </div>
+      <div class="ct-sv" id="ctPanel" tabindex="-1" aria-live="polite">
+        <div class="ct-sv__top">
+          <div><h3>Smokies</h3><p class="ct-label">Tennessee · TN</p></div>
+          <div class="ct-sv__diff"><span class="ct-label">Difficulty</span><span class="ct-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><b>Gentle</b></div>
+        </div>
+        <p class="ct-sv__fam"><i class="ct-tack" style="--fam:#8a6620" aria-hidden="true"></i>Appalachian Hollow</p>
+        <p class="ct-label">Who shows up</p>
+        <ul class="ct-bars">
+          <li><span>Sightseers</span><b style="--w:45%;--c:#b98a2e"></b><em>45%</em></li>
+          <li><span>Backpackers</span><b style="--w:35%;--c:#5e7d45"></b><em>35%</em></li>
+          <li><span>Buck Hunters</span><b style="--w:12%;--c:#b5642a"></b><em>12%</em></li>
+          <li><span>Anglers</span><b style="--w:8%;--c:#2f6d7a"></b><em>8%</em></li>
+        </ul>
+        <p class="ct-sv__blurb">Huge, forgiving volume — all-season sightseers and easy trail crowds.</p>
+        <p class="ct-label ct-sv__why">mild weather · steady traffic all year</p>
+      </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== LANDSCAPE FAMILIES ===================== -->
-<section style="background:#1f3024;padding:56px 24px 62px">
-  <div style="max-width:1180px;margin:0 auto">
-    <div style="text-align:center;margin-bottom:30px">
-      <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#e0b35c;margin-bottom:10px">EIGHT TRUE LANDSCAPES</div>
-      <h2 style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:clamp(26px,4vw,38px);color:#f5eedb">Not a palette swap — a different country</h2>
-      <p style="font-family:Georgia,serif;font-style:italic;font-size:16px;color:#b9c9b3;max-width:640px;margin:10px auto 0">Each family gets its own signature terrain system, flora and water character — Montana feels nothing like the bayou.</p>
+<!-- ===== Eight landscapes: every region, by family ===== -->
+<section class="ct-band ct-band--night">
+  <div class="ct-wrap">
+    <div class="ct-head">
+      <p class="ct-kicker">Eight true landscapes</p>
+      <h2>Not a palette swap — a different country</h2>
+      <p class="ct-lede">Each family gets its own signature terrain system, flora and water character — Montana feels nothing like the bayou.</p>
     </div>
-    <div id="ctFamCards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px"></div>
+    <article class="ct-fam" id="fam-pacific">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_pacific-480.avif 480w, /site_assets/ct_land_pacific-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_pacific-480.webp 480w, /site_assets/ct_land_pacific-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_pacific-960.png" alt="Game screenshot: the Redwood Coast in California, with tall red-barked redwoods and the sea along one edge." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Redwood Coast, California</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#2f4836" aria-hidden="true"></i>Pacific &amp; Redwood Coast</h3>
+        <p class="ct-fam__desc">Giant conifers, sea stacks and drizzle bands along the coast.</p>
+        <ul class="ct-regs">
+          <li data-region="washington" data-abbr="WA" data-state="Washington" data-diff="2" data-mix="hiking:40,fishing:30,tourism:20,hunting:10"><h4>Cascades</h4><span class="ct-label">Washington · Moderate</span><p>Long wet shoulder seasons and a steady stream of backpackers off the high trails.</p></li>
+          <li data-region="california" data-abbr="CA" data-state="California" data-diff="2" data-mix="hiking:40,tourism:35,fishing:20,hunting:5"><h4>Redwood Coast</h4><span class="ct-label">California · Moderate</span><p>The tallest trees on Earth. Fog drips off the canopy; campers talk in whispers.</p></li>
+          <li data-region="crater" data-abbr="CL" data-state="Oregon" data-diff="3" data-mix="tourism:45,hiking:40,fishing:10,hunting:5"><h4>Crater Lake</h4><span class="ct-label">Oregon · Tough</span><p>A rim of road around impossible blue water; snowbound for half the year.</p></li>
+        </ul>
+      </div>
+    </article>
+    <article class="ct-fam" id="fam-rockies">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_rockies-480.avif 480w, /site_assets/ct_land_rockies-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_rockies-480.webp 480w, /site_assets/ct_land_rockies-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_rockies-960.png" alt="Game screenshot: Big Sky, Montana, with grey talus ridges, pines and a braided river." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Big Sky, Montana</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#5e7d45" aria-hidden="true"></i>Northern Rockies &amp; Big Sky</h3>
+        <p class="ct-fam__desc">Rocky ridgelines, alpine meadows and a braided river.</p>
+        <ul class="ct-regs">
+          <li data-region="montana" data-abbr="MT" data-state="Montana" data-diff="4" data-mix="hiking:35,hunting:28,tourism:15,birdhunting:12,fishing:10"><h4>Big Sky</h4><span class="ct-label">Montana · Brutal</span><p>Remote, short season, then an enormous fall hunting wave. Not for beginners.</p></li>
+          <li data-region="wyoming" data-abbr="WY" data-state="Wyoming" data-diff="3" data-mix="tourism:40,hiking:35,hunting:15,fishing:10"><h4>Yellowstone Gate</h4><span class="ct-label">Wyoming · Tough</span><p>A summer park crush of sightseers, then a hard mountain quiet.</p></li>
+          <li data-region="colorado" data-abbr="CO" data-state="Colorado" data-diff="3" data-mix="hiking:40,tourism:35,fishing:15,hunting:10"><h4>Rockies</h4><span class="ct-label">Colorado · Tough</span><p>Summer-loaded hiking and tourism; winter buries the whole place.</p></li>
+          <li data-region="idaho" data-abbr="ID" data-state="Idaho" data-diff="4" data-mix="hiking:35,fishing:30,hunting:20,tourism:15"><h4>Sawtooths</h4><span class="ct-label">Idaho · Brutal</span><p>Granite spires over cold alpine water. A short, glorious backcountry season.</p></li>
+        </ul>
+      </div>
+    </article>
+    <article class="ct-fam" id="fam-desert">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_desert-480.avif 480w, /site_assets/ct_land_desert-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_desert-480.webp 480w, /site_assets/ct_land_desert-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_desert-960.png" alt="Game screenshot: Red Rock, Arizona, with saguaro cacti, a red mesa wall and a ranger station by the road." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Red Rock, Arizona</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#b5642a" aria-hidden="true"></i>High Desert &amp; Canyon Country</h3>
+        <p class="ct-fam__desc">Arroyos, mesas, slickrock canyons and gypsum dunes.</p>
+        <ul class="ct-regs">
+          <li data-region="oregon" data-abbr="OR" data-state="Oregon" data-diff="2" data-mix="hiking:40,fishing:30,tourism:15,birdhunting:10,hunting:5"><h4>High Desert</h4><span class="ct-label">Oregon · Moderate</span><p>Fly-fishing rivers in the canyons and big trail miles across the sage.</p></li>
+          <li data-region="arizona" data-abbr="AZ" data-state="Arizona" data-diff="2" data-mix="hiking:40,tourism:40,birdhunting:10,fishing:5,hunting:5"><h4>Red Rock</h4><span class="ct-label">Arizona · Moderate</span><p>Inverted seasons — winter is peak, summer heat is the lull. Stunning vistas.</p></li>
+          <li data-region="utah" data-abbr="UT" data-state="Utah" data-diff="3" data-mix="hiking:45,tourism:40,fishing:5,hunting:5,birdhunting:5"><h4>Canyonlands</h4><span class="ct-label">Utah · Tough</span><p>Slickrock canyons and standing buttes; hikers pour in spring and fall, summer bakes.</p></li>
+          <li data-region="newmexico" data-abbr="NM" data-state="New Mexico" data-diff="3" data-mix="hiking:40,tourism:40,birdhunting:10,hunting:8,fishing:2"><h4>White Sands</h4><span class="ct-label">New Mexico · Tough</span><p>Gypsum dunes roll like snowdrifts. Golden-hour sightseers; a brutal summer sun.</p></li>
+        </ul>
+      </div>
+    </article>
+    <article class="ct-fam" id="fam-northwoods">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_northwoods-480.avif 480w, /site_assets/ct_land_northwoods-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_northwoods-480.webp 480w, /site_assets/ct_land_northwoods-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_northwoods-960.png" alt="Game screenshot: the Boundary Waters in Minnesota, with small kettle lakes among birch and pine." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Boundary Waters, Minnesota</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#2f6d7a" aria-hidden="true"></i>Northwoods &amp; Lake Country</h3>
+        <p class="ct-fam__desc">Kettle lakes, granite shore and loons calling at dusk.</p>
+        <ul class="ct-regs">
+          <li data-region="minnesota" data-abbr="MN" data-state="Minnesota" data-diff="3" data-mix="fishing:38,hunting:22,hiking:20,birdhunting:10,tourism:10"><h4>Boundary Waters</h4><span class="ct-label">Minnesota · Tough</span><p>Remote paddle-in fishing and fall hunts; then brutal northern winters.</p></li>
+          <li data-region="wisconsin" data-abbr="WI" data-state="Wisconsin" data-diff="3" data-mix="fishing:34,hunting:24,tourism:20,birdhunting:12,hiking:10"><h4>Northwoods</h4><span class="ct-label">Wisconsin · Tough</span><p>Feast or famine: summer fish, fall hunt, dead snowed-in winters.</p></li>
+          <li data-region="michigan" data-abbr="MI" data-state="Michigan" data-diff="2" data-mix="fishing:40,tourism:30,hiking:20,hunting:10"><h4>Great Lakes</h4><span class="ct-label">Michigan · Moderate</span><p>Big-water walleye all summer; hunters in the hardwoods come fall.</p></li>
+          <li data-region="maine" data-abbr="ME" data-state="Maine" data-diff="4" data-mix="hunting:40,hiking:30,tourism:20,fishing:10"><h4>North Woods</h4><span class="ct-label">Maine · Brutal</span><p>A massive fall spike of hunters, then snowed in for months on end.</p></li>
+        </ul>
+      </div>
+    </article>
+    <article class="ct-fam" id="fam-appalachian">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_appalachian-480.avif 480w, /site_assets/ct_land_appalachian-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_appalachian-480.webp 480w, /site_assets/ct_land_appalachian-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_appalachian-960.png" alt="Game screenshot: the Smokies in Tennessee in fall, a dense canopy of orange hardwoods over creeks and ridges." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Smokies, Tennessee</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#8a6620" aria-hidden="true"></i>Appalachian Hollow</h3>
+        <p class="ct-fam__desc">Ridge-and-valley hollows under a dense, fall-showpiece canopy.</p>
+        <ul class="ct-regs">
+          <li data-region="vermont" data-abbr="VT" data-state="Vermont" data-diff="2" data-mix="tourism:50,hiking:25,hunting:15,fishing:10"><h4>Green Mountains</h4><span class="ct-label">Vermont · Moderate</span><p>A leaf-peeper goldrush every fall; springs are muddy and slow.</p></li>
+          <li data-region="tennessee" data-abbr="TN" data-state="Tennessee" data-diff="1" data-mix="tourism:45,hiking:35,hunting:12,fishing:8"><h4>Smokies</h4><span class="ct-label">Tennessee · Gentle</span><p>Huge, forgiving volume — all-season sightseers and easy trail crowds.</p></li>
+          <li data-region="westvirginia" data-abbr="WV" data-state="West Virginia" data-diff="2" data-mix="hiking:40,tourism:30,fishing:15,hunting:15"><h4>New River Gorge</h4><span class="ct-label">West Virginia · Moderate</span><p>Whitewater and climbers under the gorge rim; the fall color pulls big crowds.</p></li>
+          <li data-region="kentucky" data-abbr="KY" data-state="Kentucky" data-diff="1" data-mix="hiking:45,tourism:30,hunting:15,fishing:10"><h4>Red River Gorge</h4><span class="ct-label">Kentucky · Gentle</span><p>Sandstone arches over easy green hollows — a gentle place to learn the trade.</p></li>
+        </ul>
+      </div>
+    </article>
+    <article class="ct-fam" id="fam-plains">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_plains-480.avif 480w, /site_assets/ct_land_plains-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_plains-480.webp 480w, /site_assets/ct_land_plains-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_plains-960.png" alt="Game screenshot: Hill Country, Texas, open grass and wildflower flats with one creek lined by shade trees." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Hill Country, Texas</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#b98a2e" aria-hidden="true"></i>Plains &amp; Hill Country</h3>
+        <p class="ct-fam__desc">Tallgrass to the horizon, wildflower flats, striped badlands walls and big-sky sunsets.</p>
+        <ul class="ct-regs">
+          <li data-region="texas" data-abbr="TX" data-state="Texas" data-diff="2" data-mix="tourism:40,hunting:16,birdhunting:16,hiking:16,fishing:12"><h4>Hill Country</h4><span class="ct-label">Texas · Moderate</span><p>Spring festival tourism and fall deer leases over wide-open grassland.</p></li>
+          <li data-region="kansas" data-abbr="KS" data-state="Kansas" data-diff="2" data-mix="birdhunting:30,hunting:20,hiking:20,tourism:20,fishing:10"><h4>Flint Hills</h4><span class="ct-label">Kansas · Moderate</span><p>Tallgrass to the horizon. Upland birds burst from the bluestem come fall.</p></li>
+          <li data-region="southdakota" data-abbr="SD" data-state="South Dakota" data-diff="3" data-mix="tourism:35,hiking:25,hunting:20,birdhunting:15,fishing:5"><h4>Badlands</h4><span class="ct-label">South Dakota · Tough</span><p>Striped rock walls rise straight out of the grass. Summer crowds, hard winds after.</p></li>
+          <li data-region="nebraska" data-abbr="NE" data-state="Nebraska" data-diff="3" data-mix="birdhunting:30,fishing:20,tourism:20,hunting:15,hiking:15"><h4>Sandhills</h4><span class="ct-label">Nebraska · Tough</span><p>Grass-anchored dunes and spring-fed lakes; cranes darken the sky each spring.</p></li>
+        </ul>
+      </div>
+    </article>
+    <article class="ct-fam" id="fam-bayou">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_bayou-480.avif 480w, /site_assets/ct_land_bayou-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_bayou-480.webp 480w, /site_assets/ct_land_bayou-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_bayou-960.png" alt="Game screenshot: the Louisiana bayou, with winding marsh channels and cypress trees on the islands between them." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Bayou, Louisiana</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#3f7a63" aria-hidden="true"></i>Bayou &amp; Blackwater</h3>
+        <p class="ct-fam__desc">Braided marsh channels, cypress and gators in the shallows.</p>
+        <ul class="ct-regs">
+          <li data-region="louisiana" data-abbr="LA" data-state="Louisiana" data-diff="2" data-mix="fishing:50,tourism:25,hiking:15,hunting:10"><h4>Bayou</h4><span class="ct-label">Louisiana · Moderate</span><p>Spring redfish runs draw anglers; gentle winters keep a steady trickle.</p></li>
+          <li data-region="georgia" data-abbr="GA" data-state="Georgia" data-diff="2" data-mix="fishing:40,tourism:20,hunting:15,hiking:15,birdhunting:10"><h4>Okefenokee</h4><span class="ct-label">Georgia · Moderate</span><p>Blackwater swamp prairie — paddlers and anglers thread the cypress all year.</p></li>
+          <li data-region="mississippi" data-abbr="MS" data-state="Mississippi" data-diff="2" data-mix="fishing:35,hunting:20,birdhunting:20,tourism:15,hiking:10"><h4>Delta Bottoms</h4><span class="ct-label">Mississippi · Moderate</span><p>River-bottom hardwoods and sloughs — catfish all summer, duck blinds come fall.</p></li>
+        </ul>
+      </div>
+    </article>
+    <article class="ct-fam" id="fam-coastal">
+      <figure class="ct-fam__pic">
+        <span class="ct-shot"><picture>
+<source type="image/avif" srcset="/site_assets/ct_land_coastal-480.avif 480w, /site_assets/ct_land_coastal-960.avif 960w" sizes="(min-width: 900px) 360px, 100vw">
+<source type="image/webp" srcset="/site_assets/ct_land_coastal-480.webp 480w, /site_assets/ct_land_coastal-960.webp 960w" sizes="(min-width: 900px) 360px, 100vw">
+<img src="/site_assets/ct_land_coastal-960.png" alt="Game screenshot: the Gulf Keys in Florida, with palms, white dunes and the sea along the southern edge." width="960" height="600" loading="lazy" decoding="async">
+</picture></span>
+        <figcaption>Pictured: Gulf Keys, Florida</figcaption>
+      </figure>
+      <div class="ct-fam__body">
+        <h3><i class="ct-tack" style="--fam:#5f8aa0" aria-hidden="true"></i>Coastal &amp; Tropical Shore</h3>
+        <p class="ct-fam__desc">Dune bands, shore pines and palms, and a tide that keeps time.</p>
+        <ul class="ct-regs">
+          <li data-region="florida" data-abbr="FL" data-state="Florida" data-diff="1" data-mix="fishing:45,tourism:40,hiking:10,hunting:5"><h4>Gulf Keys</h4><span class="ct-label">Florida · Gentle</span><p>Year-round warmth with almost no off-season. The gentlest start of all.</p></li>
+          <li data-region="northcarolina" data-abbr="NC" data-state="North Carolina" data-diff="3" data-mix="fishing:45,tourism:35,birdhunting:10,hiking:10"><h4>Outer Banks</h4><span class="ct-label">North Carolina · Tough</span><p>Surf-casting off wind-bent dunes. Hurricane season keeps a keeper honest.</p></li>
+          <li data-region="virginia" data-abbr="VA" data-state="Virginia" data-diff="2" data-mix="tourism:40,fishing:35,hiking:15,birdhunting:10"><h4>Assateague</h4><span class="ct-label">Virginia · Moderate</span><p>Wild ponies graze the dune line; beach campers pack the summer.</p></li>
+          <li data-region="southcarolina" data-abbr="SC" data-state="South Carolina" data-diff="1" data-mix="tourism:40,fishing:35,birdhunting:15,hiking:10"><h4>Sea Islands</h4><span class="ct-label">South Carolina · Gentle</span><p>Warm tidal creeks behind the palms — gentle water, gentle winters.</p></li>
+        </ul>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ===================== CTA ===================== -->
-<section style="position:relative;padding:60px 24px;text-align:center;overflow:hidden;background:linear-gradient(180deg,#161f17 0%,#22301f 42%,#4a4a2e 68%,#8a6136 86%,#b9863c 100%)">
-  <div style="position:relative;max-width:600px;margin:0 auto">
-    <h2 style="font-family:'Bitter',Georgia,serif;font-weight:900;font-size:clamp(26px,4.4vw,40px);color:#f8f1de">Which flag will you plant first?</h2>
-    <p style="font-family:Georgia,serif;font-style:italic;font-size:16px;color:#f2ead4;margin:14px auto 24px;max-width:480px">All thirty regions are playable right now, free, in your browser.</p>
-    <a href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:10px;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.5px;background:linear-gradient(180deg,#e0b35c,#b98a2e);color:#241a06;border:1px solid #8a6620;border-bottom-width:4px">▶ Play Free on itch.io</a>
+<!-- ===== Closing call ===== -->
+<section class="ct-dusk">
+  <div class="ct-wrap">
+    <h2>Which flag will you plant first?</h2>
+    <p>All thirty regions are playable right now, free, in your browser.</p>
+    <a class="ct-btn" href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Play free on itch.io</a>
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
-<footer style="background:#0a0f0b;padding:34px 24px;text-align:center;color:#728a6e">
-  <div style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:12px">
-    <span style="font-family:Georgia,serif;font-size:13px;color:#8a6620">✱</span>
-    <span style="font-family:'Bitter',Georgia,serif;font-weight:800;font-size:15px;letter-spacing:.5px;color:#cfe0c8">CAMPGROUND TYCOON</span>
+</main>
+
+<!-- ===== Footer (same on all four pages) ===== -->
+<footer class="ct-foot">
+  <div class="ct-wrap ct-foot__in">
+    <a class="ct-foot__brand" href="/campground-tycoon"><span aria-hidden="true">✱</span> Campground Tycoon</a>
+    <nav class="ct-foot__links" aria-label="Campground Tycoon, footer">
+      <a href="/campground-tycoon">Overview</a>
+      <a href="/campground-tycoon/features">Features</a>
+      <a href="/campground-tycoon/regions">Regions</a>
+      <a href="/campground-tycoon/roadmap">Roadmap</a>
+      <a href="https://murdocnu.itch.io/campground-tycoon" target="_blank" rel="noopener">itch.io ↗</a>
+      <a href="/">KiteSink ↗</a>
+    </nav>
+    <p class="ct-foot__small">An isometric pixel-art tycoon sim · Made with Georgia &amp; a lot of brass · © 2026 KiteSink</p>
   </div>
-  <div style="display:flex;justify-content:center;gap:16px;margin-bottom:12px;flex-wrap:wrap">
-    <a class="ct-link" href="/campground-tycoon" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Home</a>
-    <a class="ct-link" href="/campground-tycoon/features" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Features</a>
-    <a class="ct-link" href="/campground-tycoon/regions" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Regions</a>
-    <a class="ct-link" href="/campground-tycoon/roadmap" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">Roadmap</a>
-    <a class="ct-link" href="/" style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px;color:#9fb89b">KiteSink ↗</a>
-  </div>
-  <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.5px">An isometric pixel-art tycoon sim · Made with Georgia &amp; a lot of brass · © 2026 KiteSink</div>
 </footer>
-
 </div>
 
 <script src="/ks.js?v=2027.3"></script>
 <script>
-/* ===== Campground Tycoon — Regions: interactive pin picker + detail panel ===== */
+/* keep the current sub-nav link in view when the row scrolls (phones) */
 (function () {
+  var row = document.querySelector(".ct-nav__links"), cur = row && row.querySelector("[aria-current]");
+  if (cur && row.scrollWidth > row.clientWidth) row.scrollLeft = cur.offsetLeft - (row.clientWidth - cur.offsetWidth) / 2;
+})();
+/* Regions: pick a region from the map, the menu or the list; the clipboard shows its survey.
+   Every fact is read from the list in the page, so there is one copy of the data. */
+(function () {
+  var map = document.getElementById("ctMap"), panel = document.getElementById("ctPanel"), menu = document.getElementById("ctRegion"), tag = document.getElementById("ctTag");
+  if (!map || !panel || !menu || !tag) return;
+  var ACT = { tourism: ["Sightseers", "#b98a2e"], fishing: ["Anglers", "#2f6d7a"], hunting: ["Buck Hunters", "#b5642a"], birdhunting: ["Bird Hunters", "#7d8a4a"], hiking: ["Backpackers", "#5e7d45"] };
+  var DIFF = { 1: "Gentle", 2: "Moderate", 3: "Tough", 4: "Brutal" };
+  var WHY = { 1: "mild weather · steady traffic all year", 2: "real seasons · the occasional storm", 3: "hard seasonal swings · severe weather", 4: "short season · brutal weather · boom and bust" };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-  var ACT = { tourism:{name:'Sightseers',color:'#b98a2e'}, fishing:{name:'Anglers',color:'#2f6d7a'}, hunting:{name:'Buck Hunters',color:'#b5642a'}, birdhunting:{name:'Bird Hunters',color:'#7d8a4a'}, hiking:{name:'Backpackers',color:'#5e7d45'} };
-  var FAM = {
-    pacific:{name:'Pacific & Redwood Coast',color:'#2f4836',desc:'Giant conifers, sea stacks and drizzle bands along the coast.'},
-    rockies:{name:'Northern Rockies & Big Sky',color:'#5e7d45',desc:'Rocky ridgelines, alpine meadows and a braided river.'},
-    desert:{name:'High Desert & Canyon Country',color:'#b5642a',desc:'Arroyos, mesas, gypsum dunes and striped badlands.'},
-    northwoods:{name:'Northwoods & Lake Country',color:'#2f6d7a',desc:'Kettle lakes, granite shore and loons calling at dusk.'},
-    appalachian:{name:'Appalachian Hollow',color:'#8a6620',desc:'Ridge-and-valley hollows under a dense, fall-showpiece canopy.'},
-    plains:{name:'Plains & Hill Country',color:'#b98a2e',desc:'Tallgrass to the horizon, wildflower flats, big-sky sunsets.'},
-    bayou:{name:'Bayou & Blackwater',color:'#3f7a63',desc:'Braided marsh channels, cypress and gators in the shallows.'},
-    coastal:{name:'Coastal & Tropical Shore',color:'#5f8aa0',desc:'Dune bands, shore pines and palms, and a tide that keeps time.'}
-  };
-  // [key,name,state,abbr,x,y,diff,family,mix,blurb]
-  var REGIONS = [
-    ['washington','Cascades','Washington','WA',12,18,2,'pacific',{hiking:.40,fishing:.30,tourism:.20,hunting:.10},'Long wet shoulder seasons and a steady stream of backpackers off the high trails.'],
-    ['oregon','High Desert','Oregon','OR',18,35,2,'desert',{hiking:.40,fishing:.30,tourism:.15,birdhunting:.10,hunting:.05},'Fly-fishing rivers in the canyons and big trail miles across the sage.'],
-    ['montana','Big Sky','Montana','MT',27,16,4,'rockies',{hiking:.35,hunting:.28,tourism:.15,birdhunting:.12,fishing:.10},'Remote, short season, then an enormous fall hunting wave. Not for beginners.'],
-    ['wyoming','Yellowstone Gate','Wyoming','WY',28,31,3,'rockies',{tourism:.40,hiking:.35,hunting:.15,fishing:.10},'A summer park crush of sightseers, then a hard mountain quiet.'],
-    ['colorado','Rockies','Colorado','CO',33,45,3,'rockies',{hiking:.40,tourism:.35,fishing:.15,hunting:.10},'Summer-loaded hiking and tourism; winter buries the whole place.'],
-    ['arizona','Red Rock','Arizona','AZ',24,58,2,'desert',{hiking:.40,tourism:.40,birdhunting:.10,fishing:.05,hunting:.05},'Inverted seasons — winter is peak, summer heat is the lull. Stunning vistas.'],
-    ['texas','Hill Country','Texas','TX',45,67,2,'plains',{tourism:.40,hunting:.16,birdhunting:.16,hiking:.16,fishing:.12},'Spring festival tourism and fall deer leases over wide-open grassland.'],
-    ['minnesota','Boundary Waters','Minnesota','MN',49,14,3,'northwoods',{fishing:.38,hunting:.22,hiking:.20,birdhunting:.10,tourism:.10},'Remote paddle-in fishing and fall hunts; then brutal northern winters.'],
-    ['wisconsin','Northwoods','Wisconsin','WI',56,28,3,'northwoods',{fishing:.34,hunting:.24,tourism:.20,birdhunting:.12,hiking:.10},'Feast or famine: summer fish, fall hunt, dead snowed-in winters.'],
-    ['michigan','Great Lakes','Michigan','MI',68,23,2,'northwoods',{fishing:.40,tourism:.30,hiking:.20,hunting:.10},'Big-water walleye all summer; hunters in the hardwoods come fall.'],
-    ['maine','North Woods','Maine','ME',88,13,4,'northwoods',{hunting:.40,hiking:.30,tourism:.20,fishing:.10},'A massive fall spike of hunters, then snowed in for months on end.'],
-    ['vermont','Green Mountains','Vermont','VT',80,20,2,'appalachian',{tourism:.50,hiking:.25,hunting:.15,fishing:.10},'A leaf-peeper goldrush every fall; springs are muddy and slow.'],
-    ['tennessee','Smokies','Tennessee','TN',66,51,1,'appalachian',{tourism:.45,hiking:.35,hunting:.12,fishing:.08},'Huge, forgiving volume — all-season sightseers and easy trail crowds.'],
-    ['louisiana','Bayou','Louisiana','LA',56,67,2,'bayou',{fishing:.50,tourism:.25,hiking:.15,hunting:.10},'Spring redfish runs draw anglers; gentle winters keep a steady trickle.'],
-    ['florida','Gulf Keys','Florida','FL',74,72,1,'coastal',{fishing:.45,tourism:.40,hiking:.10,hunting:.05},'Year-round warmth with almost no off-season. The gentlest start of all.'],
-    ['utah','Canyonlands','Utah','UT',19,45,3,'desert',{hiking:.45,tourism:.40,birdhunting:.05,fishing:.05,hunting:.05},'Slickrock canyons and standing buttes; hikers pour in spring and fall, summer bakes.'],
-    ['newmexico','White Sands','New Mexico','NM',33,63,3,'desert',{hiking:.40,tourism:.40,birdhunting:.10,hunting:.08,fishing:.02},'Gypsum dunes roll like snowdrifts. Golden-hour sightseers; a brutal summer sun.'],
-    ['georgia','Okefenokee','Georgia','GA',69,64,2,'bayou',{fishing:.40,tourism:.20,hunting:.15,hiking:.15,birdhunting:.10},'Blackwater swamp prairie — paddlers and anglers thread the cypress all year.'],
-    ['mississippi','Delta Bottoms','Mississippi','MS',61,59,2,'bayou',{fishing:.35,hunting:.20,birdhunting:.20,tourism:.15,hiking:.10},'River-bottom hardwoods and sloughs — catfish all summer, duck blinds come fall.'],
-    ['idaho','Sawtooths','Idaho','ID',20,25,4,'rockies',{hiking:.35,fishing:.30,hunting:.20,tourism:.15},'Granite spires over cold alpine water. A short, glorious backcountry season.'],
-    ['westvirginia','New River Gorge','West Virginia','WV',74,40,2,'appalachian',{hiking:.40,tourism:.30,fishing:.15,hunting:.15},'Whitewater and climbers under the gorge rim; the fall color pulls big crowds.'],
-    ['kentucky','Red River Gorge','Kentucky','KY',63,42,1,'appalachian',{hiking:.45,tourism:.30,hunting:.15,fishing:.10},'Sandstone arches over easy green hollows — a gentle place to learn the trade.'],
-    ['california','Redwood Coast','California','CA',8,43,2,'pacific',{hiking:.40,tourism:.35,fishing:.20,hunting:.05},'The tallest trees on Earth. Fog drips off the canopy; campers talk in whispers.'],
-    ['crater','Crater Lake','Oregon','CL',9,28,3,'pacific',{tourism:.45,hiking:.40,fishing:.10,hunting:.05},'A rim of road around impossible blue water; snowbound for half the year.'],
-    ['kansas','Flint Hills','Kansas','KS',46,49,2,'plains',{birdhunting:.30,tourism:.20,hiking:.20,hunting:.20,fishing:.10},'Tallgrass to the horizon. Upland birds burst from the bluestem come fall.'],
-    ['southdakota','Badlands','South Dakota','SD',40,26,3,'desert',{tourism:.35,hiking:.25,hunting:.20,birdhunting:.15,fishing:.05},'Striped rock walls rise straight out of the grass. Summer crowds, hard winds after.'],
-    ['nebraska','Sandhills','Nebraska','NE',42,37,3,'plains',{birdhunting:.30,fishing:.20,tourism:.20,hunting:.15,hiking:.15},'Grass-anchored dunes and spring-fed lakes; cranes darken the sky each spring.'],
-    ['northcarolina','Outer Banks','North Carolina','NC',87,51,3,'coastal',{fishing:.45,tourism:.35,birdhunting:.10,hiking:.10},'Surf-casting off wind-bent dunes. Hurricane season keeps a keeper honest.'],
-    ['virginia','Assateague','Virginia','VA',83,41,2,'coastal',{fishing:.35,tourism:.40,birdhunting:.10,hiking:.15},'Wild ponies graze the dune line; beach campers pack the summer.'],
-    ['southcarolina','Sea Islands','South Carolina','SC',78,56,1,'coastal',{tourism:.40,fishing:.35,birdhunting:.15,hiking:.10},'Warm tidal creeks behind the palms — gentle water, gentle winters.']
-  ];
-  var DIFF_LABEL = { 1:'Gentle', 2:'Moderate', 3:'Tough', 4:'Brutal' };
-  var DIFF_WHY = { 1:'mild weather · steady traffic all year', 2:'real seasons · the occasional storm', 3:'hard seasonal swings · severe weather', 4:'short season · brutal weather · boom and bust' };
+  var pins = map.querySelectorAll(".ct-pin"), rows = {};
 
-  var state = { region: 'tennessee', flagship: false };
-  var map = document.getElementById("ctMap"), panel = document.getElementById("ctPanel");
-  if (!map || !panel) return;
+  [].forEach.call(document.querySelectorAll(".ct-regs li"), function (li) {
+    var fam = li.closest(".ct-fam"), h = li.querySelector("h4"), name = h.textContent;
+    rows[li.getAttribute("data-region")] = {
+      li: li, name: name, state: li.getAttribute("data-state"), abbr: li.getAttribute("data-abbr"), diff: +li.getAttribute("data-diff"),
+      mix: li.getAttribute("data-mix").split(",").map(function (p) { return p.split(":"); }), blurb: li.querySelector("p").textContent,
+      fam: fam.querySelector("h3").textContent, tack: fam.querySelector(".ct-tack").getAttribute("style")
+    };
+    // the region name becomes a button that opens its survey
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = name;
+    b.addEventListener("click", function () { pick(li.getAttribute("data-region"), true); });
+    h.textContent = ""; h.appendChild(b);
+  });
 
-  function renderPins() {
-    // remove old pins (keep the corner label = first child)
-    Array.prototype.slice.call(map.querySelectorAll("[data-region],[data-flagship]")).forEach(function (n) { n.remove(); });
-    var html = "";
-    REGIONS.forEach(function (r) {
-      var sel = !state.flagship && r[0] === state.region, f = FAM[r[7]];
-      html += '<button type="button" data-region="' + r[0] + '" style="position:absolute;left:' + r[4] + '%;top:' + (r[5] * 1.05) + '%;transform:translate(-50%,-50%)' + (sel ? ' translateY(-3px)' : '') +
-        ';display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;cursor:pointer;border:1px solid ' + (sel ? '#b98a2e' : '#b3996b') + ';background:' +
-        (sel ? '#f7f1e1' : 'linear-gradient(175deg,#efe4c4,#e2d2a8)') + ';box-shadow:' + (sel ? '0 0 0 2px rgba(185,138,46,.55),0 8px 18px rgba(20,14,6,.4)' : '0 1px 3px rgba(20,14,6,.3)') +
-        ';z-index:' + (sel ? 20 : 5) + '"><span style="width:8px;height:8px;border-radius:50%;background:' + f.color + ';display:inline-block"></span>' +
-        '<span style="font-family:\'Oswald\',sans-serif;font-weight:700;font-size:11px;color:#2c2418;letter-spacing:.3px">' + r[3] + '</span></button>';
+  function survey(r) {
+    var dots = "", bars = "";
+    for (var i = 1; i <= 4; i++) dots += "<i" + (i <= r.diff ? ' class="on"' : "") + "></i>";
+    r.mix.forEach(function (m) { bars += "<li><span>" + ACT[m[0]][0] + '</span><b style="--w:' + m[1] + "%;--c:" + ACT[m[0]][1] + '"></b><em>' + m[1] + "%</em></li>"; });
+    return '<div class="ct-sv__top"><div><h3>' + esc(r.name) + '</h3><p class="ct-label">' + esc(r.state) + " · " + esc(r.abbr) + "</p></div>" +
+      '<div class="ct-sv__diff"><span class="ct-label">Difficulty</span><span class="ct-dots" aria-hidden="true">' + dots + "</span><b>" + DIFF[r.diff] + "</b></div></div>" +
+      '<p class="ct-sv__fam"><i class="ct-tack" style="' + esc(r.tack) + '" aria-hidden="true"></i>' + esc(r.fam) + "</p>" +
+      '<p class="ct-label">Who shows up</p><ul class="ct-bars">' + bars + "</ul>" +
+      '<p class="ct-sv__blurb">' + esc(r.blurb) + '</p><p class="ct-label ct-sv__why">' + WHY[r.diff] + "</p>";
+  }
+  var FLAGSHIP = '<h3>Yellowstone</h3><p class="ct-label">Wyoming · The Service flagship · locked</p>' +
+    '<p class="ct-sv__blurb">Geyser basins, wolf packs and bison jams — the Service sends only its proven rangers. Enshrine three parks in the National Registry to earn this posting.</p>' +
+    '<p><a class="ct-link" href="/campground-tycoon/features#parkservice">Read about the Park Service →</a></p>';
+
+  function pick(key, jump) {
+    var r = rows[key], flag = key === "yellowstone";
+    if (!r && !flag) return;
+    [].forEach.call(pins, function (p) {
+      var on = p.getAttribute("data-region") === key;
+      p.classList.toggle("is-on", on);
+      if (on) {
+        tag.style.setProperty("--x", p.style.getPropertyValue("--x")); tag.style.setProperty("--y", p.style.getPropertyValue("--y"));
+        tag.classList.toggle("is-left", parseFloat(p.style.getPropertyValue("--x")) > 58);
+      }
     });
-    var fs = state.flagship;
-    html += '<button type="button" data-flagship="1" style="position:absolute;left:29%;top:24%;transform:translate(-50%,-50%)' + (fs ? ' translateY(-3px)' : '') +
-      ';display:flex;align-items:center;gap:4px;padding:4px 9px;border-radius:8px;cursor:pointer;border:1px solid ' + (fs ? '#b98a2e' : '#6e6248') + ';background:' +
-      (fs ? '#f7f1e1' : 'linear-gradient(175deg,#d8cfb0,#c4b890)') + ';font-size:10px;box-shadow:' + (fs ? '0 0 0 2px rgba(185,138,46,.55),0 8px 18px rgba(20,14,6,.4)' : '0 1px 3px rgba(20,14,6,.3)') +
-      ';z-index:' + (fs ? 21 : 6) + '">🔒 <span style="font-family:\'Oswald\',sans-serif;font-weight:700;font-size:10px;letter-spacing:.5px">YS</span></button>';
-    map.insertAdjacentHTML("beforeend", html);
-  }
-
-  function renderPanel() {
-    if (state.flagship) {
-      panel.innerHTML =
-        '<div style="text-align:center;padding:20px 6px">' +
-          '<svg viewBox="0 0 120 120" width="86" height="86" style="display:block;margin:0 auto 14px"><circle cx="60" cy="60" r="56" fill="#1f3024" stroke="#8a6620" stroke-width="4"></circle><polygon points="24,80 46,52 60,68 74,48 96,80" fill="#6b5f45"></polygon><rect x="16" y="82" width="88" height="17" rx="2" fill="#e7d9b9" stroke="#6e4f16" stroke-width="1.5"></rect><text x="60" y="94" text-anchor="middle" font-family="Oswald, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#1f3024">LOCKED</text></svg>' +
-          '<div style="font-family:\'Bitter\',Georgia,serif;font-size:22px;font-weight:800;color:#1f3024">Yellowstone</div>' +
-          '<div style="font-family:\'Oswald\',sans-serif;font-size:10px;letter-spacing:1.5px;color:#8a6620;text-transform:uppercase;margin-top:4px">Wyoming · The Service Flagship</div>' +
-          '<p style="font-family:Georgia,serif;font-style:italic;font-size:13.5px;line-height:1.55;color:#5f5036;margin-top:14px">Geyser basins, wolf packs and bison jams — the Service sends only its proven rangers. Enshrine three parks in the National Registry to earn this posting.</p>' +
-          '<a class="ct-link" href="/campground-tycoon/features#parkservice" style="display:inline-block;margin-top:14px;font-family:\'Oswald\',sans-serif;font-size:12px;color:#8a6620;border-bottom:1px solid #b98a2e">Read about the Park Service →</a>' +
-        '</div>';
-      return;
+    tag.textContent = flag ? "Yellowstone" : r.name;
+    for (var k in rows) rows[k].li.classList.toggle("is-on", k === key);
+    menu.value = key;
+    panel.classList.toggle("ct-sv--flag", flag);
+    panel.innerHTML = flag ? FLAGSHIP : survey(r);
+    if (jump) {
+      panel.focus({ preventScroll: true });
+      document.getElementById("survey").scrollIntoView({ block: "start" });
     }
-    var r = REGIONS.filter(function (x) { return x[0] === state.region; })[0] || REGIONS[0];
-    var name = r[1], st = r[2], abbr = r[3], diff = r[6], fam = FAM[r[7]], mix = r[8], blurb = r[9];
-    var diffDots = "";
-    for (var i = 1; i <= 4; i++) diffDots += '<span style="width:9px;height:9px;border-radius:50%;display:inline-block;' + (i <= diff ? 'background:#b5642a' : 'background:rgba(44,36,24,.16)') + '"></span>';
-    var bars = Object.keys(mix).map(function (k) { return [k, mix[k]]; }).sort(function (a, b) { return b[1] - a[1]; }).map(function (e) {
-      return '<div style="display:flex;align-items:center;gap:9px;margin-bottom:7px"><span style="width:92px;font-family:\'Oswald\',sans-serif;font-size:10px;text-transform:uppercase;color:#5f5036">' + esc(ACT[e[0]].name) + '</span>' +
-        '<div style="flex:1;height:9px;background:rgba(44,36,24,.12);border-radius:5px;overflow:hidden"><div style="height:100%;border-radius:5px;width:' + Math.round(e[1] * 100) + '%;background:' + ACT[e[0]].color + '"></div></div></div>';
-    }).join("");
-    panel.innerHTML =
-      '<div><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">' +
-        '<div><div style="font-family:\'Bitter\',Georgia,serif;font-size:25px;font-weight:800;line-height:1;color:#1f3024">' + esc(name) + '</div>' +
-        '<div style="font-family:\'Oswald\',sans-serif;font-size:10px;letter-spacing:1.5px;color:#8a6620;text-transform:uppercase;margin-top:5px">' + esc(st + ' · ' + abbr) + '</div></div>' +
-        '<div style="text-align:right"><div style="font-family:\'Oswald\',sans-serif;font-size:8px;letter-spacing:1px;color:#8a795a">DIFFICULTY</div>' +
-        '<div style="display:flex;gap:3px;justify-content:flex-end;margin-top:4px">' + diffDots + '</div>' +
-        '<div style="font-family:\'Oswald\',sans-serif;font-size:11px;color:#b5642a;margin-top:3px">' + DIFF_LABEL[diff] + '</div></div></div>' +
-        '<div style="font-family:\'Oswald\',sans-serif;font-weight:500;font-size:10px;letter-spacing:1px;color:#8a795a;background:rgba(44,36,24,.06);display:inline-block;padding:3px 9px;border-radius:5px;margin-top:8px">' + esc(fam.name) + '</div>' +
-        '<div style="font-family:\'Oswald\',sans-serif;font-size:9px;letter-spacing:1.5px;color:#8a795a;margin:16px 0 8px">WHO SHOWS UP</div>' + bars +
-        '<p style="font-family:Georgia,serif;font-style:italic;font-size:14px;line-height:1.55;color:#4a3f2a;margin-top:16px">' + esc(blurb) + '</p>' +
-        '<div style="font-family:\'Oswald\',sans-serif;font-size:9px;letter-spacing:1px;color:#8a795a;margin-top:14px">' + esc(DIFF_WHY[diff]) + '</div></div>';
   }
 
-  // one-time: family legend + family cards
-  var legend = document.getElementById("ctFamLegend");
-  Object.keys(FAM).forEach(function (fk) {
-    var f = FAM[fk], span = document.createElement("span");
-    span.style.cssText = "display:flex;align-items:center;gap:5px";
-    span.innerHTML = '<i style="width:9px;height:9px;border-radius:50%;background:' + f.color + ';display:inline-block"></i>' + esc(f.name.split(" & ")[0]);
-    legend.appendChild(span);
-  });
-  document.getElementById("ctFamCards").innerHTML = Object.keys(FAM).map(function (fk) {
-    var f = FAM[fk];
-    var members = REGIONS.filter(function (r) { return r[7] === fk; }).map(function (r) { return r[1]; }).join(" · ");
-    return '<div style="background:#26392c;border:1px solid #38503f;border-top:4px solid ' + f.color + ';border-radius:8px;padding:18px">' +
-      '<div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><span style="width:12px;height:12px;border-radius:50%;background:' + f.color + ';display:inline-block;flex:none"></span>' +
-      '<span style="font-family:\'Bitter\',Georgia,serif;font-size:17px;font-weight:800;color:#f5eedb">' + esc(f.name) + '</span></div>' +
-      '<p style="font-size:13px;line-height:1.5;color:#b9c9b3;margin-bottom:10px">' + esc(f.desc) + '</p>' +
-      '<div style="font-family:\'Oswald\',sans-serif;font-size:10.5px;color:#8fae6f;letter-spacing:.3px">' + esc(members) + '</div></div>';
-  }).join("");
-
+  // a click anywhere on the map takes the nearest tack, so small tacks are still easy to hit
   map.addEventListener("click", function (e) {
-    var rb = e.target.closest("[data-region]"), fb = e.target.closest("[data-flagship]");
-    if (rb) { state.region = rb.getAttribute("data-region"); state.flagship = false; renderPins(); renderPanel(); }
-    else if (fb) { state.flagship = true; renderPins(); renderPanel(); }
+    var best = e.target.closest ? e.target.closest(".ct-pin--flag") : null, bestD = 44 * 44;
+    if (!best) [].forEach.call(pins, function (p) {
+      var b = p.getBoundingClientRect(), dx = b.left + b.width / 2 - e.clientX, dy = b.top + b.height / 2 - e.clientY, d = dx * dx + dy * dy;
+      if (d < bestD) { bestD = d; best = p; }
+    });
+    if (best) pick(best.getAttribute("data-region"));
   });
+  menu.addEventListener("change", function () { pick(menu.value); });
 
-  renderPins();
-  renderPanel();
+  rows[menu.value] && rows[menu.value].li.classList.add("is-on");
 })();
 </script>
 </body>
