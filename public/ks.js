@@ -38,6 +38,11 @@
   // Options from the design: "online" | "in the workshop" | "heads down" | "open to work"
   var KS_STATUS = "online";
 
+  // The release of the shared files. It must match the ?v= on every page's
+  // ks.css / ks.js / site-index.js tags (scripts/check_site.py checks), so a
+  // file fetched from here and the same file named by a page are one cache entry.
+  var ASSET_V = "2027.1";
+
   // The five sections. Order = nav order. `quiet` renders Library understated:
   // always reachable, never the loudest thing on the page.
   var SECTIONS = [
@@ -248,10 +253,10 @@
     document.head.appendChild(s);
   }
   var indexCache = null, indexWaiters = null;
-  // loadIndex(cb): cb(items). Items are /site-index.js entries plus the blog
+  // loadIndex(cb): cb(items, ok) — ok is false when /site-index.js could not be loaded. Items are /site-index.js entries plus the blog
   // posts from /blog/posts.js, both fetched on first use and then cached.
   function loadIndex(cb) {
-    if (indexCache) { cb(indexCache); return; }
+    if (indexCache) { cb(indexCache, true); return; }
     if (indexWaiters) { indexWaiters.push(cb); return; }
     indexWaiters = [cb];
     var pending = 0;
@@ -262,12 +267,13 @@
         var ext = !!p.external;
         items.push({ t: p.title, h: ext ? p.url : p.href, s: "library", k: ext ? "Reading" : "Writing", d: p.dek || "", w: [].concat(p.cat || []).join(" ") + " " + (p.source || "") + " blog log post essay", ext: ext, date: p.date });
       });
-      indexCache = items;
+      var ok = !!window.KS_INDEX;   // posts alone are not the index
+      if (ok) indexCache = items;   // a failed load is not remembered, so the next call tries again
       var w = indexWaiters; indexWaiters = null;
-      w.forEach(function (fn) { fn(items); });
+      w.forEach(function (fn) { fn(items, ok); });
     }
     var need = [];
-    if (!window.KS_INDEX) need.push("/site-index.js");
+    if (!window.KS_INDEX) need.push("/site-index.js?v=" + ASSET_V);
     if (!window.KS_POSTS) need.push("/blog/posts.js");
     if (!need.length) { pending = 1; finish(); return; }
     pending = need.length;
@@ -312,9 +318,11 @@
         '<input class="ks-find-in" type="search" placeholder="Find a project, tool or page…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" role="combobox" aria-expanded="true" aria-controls="ks-find-list" aria-autocomplete="list" aria-label="Find anything on KiteSink">' +
         '<button class="ks-find-x" type="button" aria-label="Close">esc</button></div>' +
       '<ul class="ks-find-list" id="ks-find-list" role="listbox" aria-label="Results"></ul>' +
+      '<p class="k-vh" role="status"></p>' +
       '<div class="ks-find-foot"><span>↑↓ to move · ↵ to open</span><a href="/library">Browse the full library →</a></div>';
     document.body.appendChild(dlg);
-    var input = dlg.querySelector(".ks-find-in"), list = dlg.querySelector(".ks-find-list"), items = [], shown = [], cur = 0, loaded = false;
+    var input = dlg.querySelector(".ks-find-in"), list = dlg.querySelector(".ks-find-list"), items = [], shown = [], cur = 0, loaded = false, indexOk = false, sayT = null;
+    var status = dlg.querySelector('[role="status"]');
 
     function row(it, i) {
       return '<li role="option" id="ks-find-o' + i + '" aria-selected="' + (i === cur) + '"' + (i === cur ? ' class="on"' : '') + '>' +
@@ -324,9 +332,10 @@
     }
     function render() {
       var q = input.value.trim(), html = "";
-      if (!items.length) {
+      if (!loaded || !indexOk) {   // still fetching, or /site-index.js did not arrive
         shown = [];
-        list.innerHTML = '<li class="ks-find-empty">' + (loaded ? 'The index didn’t load. <a href="/library" style="display:inline;padding:0;color:var(--k-green);text-decoration:underline">Open the library</a> instead.' : 'Loading the index…') + '</li>';
+        list.innerHTML = '<li class="ks-find-empty">' + (loaded ? 'The index didn’t load. <a href="/library" style="display:inline;padding:0;color:var(--k-green);text-decoration:underline">Open the library</a> instead, or close this and try again.' : 'Loading the index…') + '</li>';
+        input.removeAttribute("aria-activedescendant");
         return;
       }
       if (!q) {
@@ -344,7 +353,10 @@
           : '<li class="ks-find-empty">Nothing matches “' + esc(q) + '”. The <a href="/library" style="display:inline;padding:0;color:var(--k-green);text-decoration:underline">library</a> lists everything.</li>';
       }
       list.innerHTML = html;
-      input.setAttribute("aria-activedescendant", shown.length ? "ks-find-o" + cur : "");
+      if (shown.length) input.setAttribute("aria-activedescendant", "ks-find-o" + cur); else input.removeAttribute("aria-activedescendant");
+      clearTimeout(sayT); // tell screen-reader users how the search went, once typing pauses
+      if (q) sayT = setTimeout(function () { status.textContent = shown.length ? shown.length + (shown.length === 1 ? " result" : " results") : "No results"; }, 500);
+      else status.textContent = "";
     }
     function move(d) {
       if (!shown.length) return;
@@ -375,7 +387,7 @@
         input.value = prefill || ""; cur = 0;
         if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
         render(); input.focus();
-        loadIndex(function (all) { items = all; loaded = true; render(); });
+        loadIndex(function (all, ok) { items = all; loaded = true; indexOk = ok; render(); });
       }
     };
   }
@@ -431,7 +443,7 @@
       if (!hit) return;
       hit.classList.add("on"); hit.setAttribute("aria-current", "true");
       var row = hit.parentNode;
-      if (row.scrollWidth > row.clientWidth) row.scrollTo({ left: hit.offsetLeft - (row.clientWidth - hit.offsetWidth) / 2, behavior: "smooth" });
+      if (row.scrollWidth > row.clientWidth) row.scrollBy({ left: hit.getBoundingClientRect().left - row.getBoundingClientRect().left - (row.clientWidth - hit.offsetWidth) / 2, behavior: "smooth" });
     }
     function queue() { if (!queued) { queued = true; requestAnimationFrame(update); } }
     window.addEventListener("scroll", queue, { passive: true });

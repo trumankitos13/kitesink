@@ -36,7 +36,7 @@
   .ways-say a { white-space: nowrap; }
 
   /* feature bands: one product each, in its own colours */
-  .feat { padding-block: clamp(18px, 2.6vw, 28px); scroll-margin-top: 122px; }
+  .feat { padding-block: clamp(18px, 2.6vw, 28px); }
   .feat:first-of-type { padding-top: clamp(26px, 4vw, 44px); }
   .feat .k-pc { padding: clamp(22px, 4vw, 44px); transition: filter .35s, outline-color .35s, translate .25s var(--k-ease), box-shadow .25s; }
   .feat-grid { display: grid; gap: clamp(22px, 4vw, 52px); }
@@ -170,7 +170,7 @@
               <div><b>Maple Leaf Rag</b><span>Scott Joplin · 1899</span></div>
             </div>
             <div class="eq" id="eq" aria-hidden="true"><i style="animation-duration:1.15s;animation-delay:-.2s"></i><i style="animation-duration:.95s;animation-delay:-.55s"></i><i style="animation-duration:1.3s;animation-delay:-.85s"></i><i style="animation-duration:1.05s;animation-delay:-.35s"></i><i style="animation-duration:1.4s;animation-delay:-.7s"></i><i style="animation-duration:.9s;animation-delay:-.1s"></i><i style="animation-duration:1.2s;animation-delay:-.95s"></i><i style="animation-duration:1.1s;animation-delay:-.5s"></i><i style="animation-duration:1.35s;animation-delay:-.28s"></i><i style="animation-duration:1s;animation-delay:-.78s"></i><i style="animation-duration:1.25s;animation-delay:-.42s"></i><i style="animation-duration:1.08s;animation-delay:-.64s"></i><i style="animation-duration:1.18s;animation-delay:-.15s"></i><i style="animation-duration:.98s;animation-delay:-.6s"></i><i style="animation-duration:1.32s;animation-delay:-.9s"></i><i style="animation-duration:1.06s;animation-delay:-.3s"></i></div>
-            <div class="sample-foot"><span class="k-label">The meter is decoration; the app links out to play.</span><button type="button" id="eq-toggle" aria-pressed="false">Pause the meter</button></div>
+            <div class="sample-foot"><span class="k-label">The meter is decoration; the app links out to play.</span><button type="button" id="eq-toggle">Pause the meter</button></div>
           </div>
         </div>
       </article>
@@ -287,8 +287,7 @@
     var btn = $("eq-toggle"), eq = $("eq"); if (!btn) return;
     btn.addEventListener("click", function () {
       var paused = eq.classList.toggle("paused");
-      btn.setAttribute("aria-pressed", paused ? "true" : "false");
-      btn.textContent = paused ? "Run the meter" : "Pause the meter";
+      btn.textContent = paused ? "Run the meter" : "Pause the meter";   // the label says what it does; no pressed state on top
     });
   })();
 

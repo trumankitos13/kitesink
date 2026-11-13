@@ -47,13 +47,22 @@ for (const equip of kits) for (const minutes of [15, 20, 30, 45]) for (const lev
     const okKit = [].concat(ex.e).some(k => k === 'bw' || equip.includes(k));
     if (!okKit || ex.l > level || !m.dose) { bad++; console.log('BAD', JSON.stringify(m), equip, level); }
   }
-  const names = moves.map(m => m.name);
-  if (new Set(names).size !== names.length && equip.length) { /* repeats allowed only when the pool is exhausted */ }
+  // the main block must fit the minutes it was given
+  if (!(s.mainSec > 0) || s.mainSec > s.budgetSec) { bad++; console.log('TOO LONG', minutes, level, format, s.mainSec + 's of ' + s.budgetSec + 's'); }
+  if (/emom|amrap/.test(s.title)) { bad++; console.log('TITLE CASE', s.title); }
 }
 console.log('travel sessions built:', n, 'bad:', bad); fail += bad;
 // same seed → same session
 const a = JSON.stringify(F.travel({ equip: ['db'], minutes: 30, level: 2, format: 'circuit', seed: 42 })), b = JSON.stringify(F.travel({ equip: ['db'], minutes: 30, level: 2, format: 'circuit', seed: 42 }));
 console.log('deterministic:', a === b); if (a !== b) fail++;
 console.log(F.travelText(F.travel({ equip: ['db', 'bench'], minutes: 30, level: 2, format: 'circuit', seed: 7 })));
+// the load tool inverts the same equation it estimates with: what you lifted comes back out
+for (const [w, r] of [[100, 5], [60, 12], [142.5, 3], [225, 1]]) eq(`round trip ${w}x${r}`, F.loadFor(F.epley(w, r), r, 0), w, 1e-9);
+// a 15-minute session and a 20-minute session are not the same workout
+for (const format of ['circuit', 'intervals', 'sets']) {
+  const a = F.travel({ equip: [], minutes: 15, level: 2, format, seed: 3 }), b = F.travel({ equip: [], minutes: 20, level: 2, format, seed: 3 });
+  const size = s => s.main.reduce((n, blk) => n + blk.items.length, 0) + '|' + s.rule;
+  if (size(a) === size(b)) { fail++; console.log('FAIL 15 and 20 minute ' + format + ' are identical'); } else console.log('ok   15 vs 20 minute ' + format + ' differ');
+}
 console.log(fail ? 'FAILURES: ' + fail : 'ALL PASS');
 process.exit(fail ? 1 : 0);

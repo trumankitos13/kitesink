@@ -95,8 +95,8 @@
   .macros .p { border-color: #d8b07a; } .macros .c { border-color: #8fc39b; } .macros .f { border-color: #e9dfc9; }
   .macros b { display: block; font: 800 clamp(22px, 4vw, 28px)/1.1 var(--k-sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
   .warn { padding: 12px 14px; border-radius: 10px; background: rgba(216,166,82,.16); border: 1px solid rgba(216,176,122,.5); font-size: 14px; line-height: 1.5; color: #f3e3c4; }
-  details.more { border-top: 1px solid var(--k-rule); padding-top: 14px; }
-  details.more > summary { cursor: pointer; font: 600 15px/1.3 var(--k-sans); color: var(--k-ink); list-style: none; display: flex; justify-content: space-between; gap: 10px; }
+  details.more { border-top: 1px solid var(--k-rule); padding-top: 4px; }
+  details.more > summary { cursor: pointer; font: 600 15px/1.3 var(--k-sans); color: var(--k-ink); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 44px; }
   details.more > summary::-webkit-details-marker { display: none; }
   details.more > summary::after { content: "+"; font: 400 20px/1 var(--k-mono); color: var(--k-mute); transition: rotate .25s var(--k-ease); }
   details.more[open] > summary::after { rotate: 45deg; }
@@ -362,12 +362,12 @@
               <div><p class="k-label">Load for your target</p><p class="k-stat"><span id="l-load">—<small id="l-load-u">kg</small></span></p></div>
             </div>
             <p class="k-small"><span id="l-note"></span> <span id="l-pct"></span></p>
-            <div class="kv hide-empty"><div><span class="k-label">Epley</span><b id="l-epley">—</b></div><div><span class="k-label">Brzycki</span><b id="l-brzycki">—</b></div></div>
+            <div class="kv hide-empty"><div><span class="k-label">Epley · used here</span><b id="l-epley">—</b></div><div><span class="k-label">Brzycki · for comparison</span><b id="l-brzycki">—</b></div></div>
             <table class="ltable hide-empty"><caption class="k-vh">Loads and approximate reps to failure at each percentage of the estimated one-rep max</caption>
               <thead><tr><th scope="col">% of 1RM</th><th scope="col">Load</th><th scope="col">Reps to failure</th></tr></thead>
               <tbody id="l-rows"></tbody>
             </table>
-            <p class="k-small">The estimate is the mean of the Epley and Brzycki equations. Both work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. <span class="cite"><a href="#src-brzycki1993">Brzycki 1993</a> · <a href="#src-reynolds2006">Reynolds 2006</a> · <a href="#src-lesuer1997">LeSuer 1997</a></span></p>
+            <p class="k-small">The estimate and every load come from the Epley equation, 1RM = weight × (1 + reps ÷ 30); Brzycki’s is shown beside it for comparison. Both work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. <span class="cite"><a href="#src-brzycki1993">Brzycki 1993</a> · <a href="#src-reynolds2006">Reynolds 2006</a> · <a href="#src-lesuer1997">LeSuer 1997</a></span></p>
           </div>
         </div>
       </div>
@@ -406,7 +406,7 @@
   <section id="training" class="k-band" aria-labelledby="h-training">
     <div class="k-wrap">
       <header class="k-shead k-reveal">
-        <div><span class="k-num">Notes</span><h2 class="k-h2" id="h-training">Training, <em>in eight numbers.</em></h2></div>
+        <div><span class="k-num">Notes</span><h2 class="k-h2" id="h-training">Training, <em>in eight findings.</em></h2></div>
         <p class="k-small" style="max-width:36ch">Mostly meta-analyses. Where the evidence is thin, the card says so.</p>
       </header>
       <div class="facts-grid">

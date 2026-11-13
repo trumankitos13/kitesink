@@ -168,46 +168,59 @@
     function take(patterns) { return patterns.map(pick).filter(Boolean).map(line); }
 
     var T = { 15: [3, 10, 2], 20: [4, 14, 2], 30: [5, 22, 3], 45: [6, 35, 4] }[o.minutes] || [4, 14, 2];
-    var M = T[1], rest = [0, 90, 60, 45][level], main = [], rule = "";
+    // M = minutes for the main block. `sec` is how long the plan below should take,
+    // counting about 45 s per set or station; it must not exceed M (the tests check).
+    var M = T[1], rest = [0, 90, 60, 45][level], main = [], rule = "", sec = 0;
 
     if (o.format === "circuit") {
-      var pats = ["squat", "push", "hinge", "pull", "core"]; if (M >= 22) pats.push("cond");
-      var items = take(pats), rounds = Math.max(2, Math.min(6, Math.floor(M * 60 / (items.length * 55 + rest))));
+      var pats = M < 14 ? ["squat", "push", "hinge", "pull"] : ["squat", "push", "hinge", "pull", "core"]; if (M >= 22) pats.push("cond");
+      var items = take(pats), rounds = Math.max(2, Math.min(6, Math.floor(M * 60 / (items.length * 45 + rest))));
       rule = rounds + " rounds · move straight from one exercise to the next · rest " + rest + " s between rounds";
       main.push({ title: "The circuit", items: items });
+      sec = rounds * (items.length * 45 + rest) - rest;
     } else if (o.format === "emom") {
       var st = take(M >= 14 ? ["squat", "push", "hinge", "pull"] : ["squat", "push"]), mins = M - (M % st.length);
       rule = "Every minute on the minute for " + mins + " minutes · do the reps, rest for whatever is left of the minute";
       main.push({ title: "Rotate each minute", items: st.map(function (it, i) { it.tag = "Min " + (i + 1); return it; }) });
+      sec = mins * 60;
     } else if (o.format === "amrap") {
       if (M >= 22) {
         var each = Math.floor((M - 3) / 2);
         rule = "Two blocks of " + each + " minutes · as many good rounds as you can · rest 3 minutes between blocks";
         main.push({ title: "Block A · " + each + " min", items: take(["squat", "push", "core"]) });
         main.push({ title: "Block B · " + each + " min", items: take(["hinge", "pull", "cond"]) });
+        sec = (each * 2 + 3) * 60;
       } else {
         rule = M + " minutes · as many good rounds as you can · note your score";
         main.push({ title: "One round", items: take(["squat", "push", "hinge", "pull"]) });
+        sec = M * 60;
       }
     } else if (o.format === "intervals") {
-      var blocks = Math.max(2, Math.min(6, Math.floor(M / 5))), plan = [["squat", "push"], ["cond", "core"], ["hinge", "pull"], ["cond", "squat"], ["push", "core"], ["cond", "hinge"]];
+      // a block is 4 minutes of work plus a minute's rest before the next
+      var blocks = Math.max(2, Math.min(6, Math.floor((M + 1) / 5))), plan = [["squat", "push"], ["cond", "core"], ["hinge", "pull"], ["cond", "squat"], ["push", "core"], ["cond", "hinge"]];
       rule = blocks + " blocks · 20 s work / 10 s rest × 8, alternating the two moves · rest 1 minute between blocks";
       for (var b = 0; b < blocks; b++) main.push({ title: "Block " + (b + 1) + " · 4 min", items: take(plan[b]).map(function (it) { it.dose = "20 s"; return it; }) });
-    } else { // straight sets
-      var count = M < 14 ? 3 : M < 22 ? 4 : M < 35 ? 5 : 6;
-      var order = ["squat", "push", "hinge", "pull", "core", "push"].slice(0, count), list = take(order);
-      var sr = [0, 90, 75, 60][level], sets = Math.max(2, Math.min(4, Math.floor(M * 60 / (list.length * (40 + sr)))));
+      sec = blocks * 240 + (blocks - 1) * 60;
+    } else { // straight sets: pick as many moves as fit at two sets each (three in a longer session)
+      var sr = [0, 90, 75, 60][level], per = 45 + sr, aim = M >= 22 ? 3 : 2;
+      var count = Math.max(2, Math.min(6, Math.floor(M * 60 / (aim * per))));
+      var list = take(["squat", "push", "pull", "hinge", "core", "push"].slice(0, count));
+      var sets = Math.max(2, Math.min(4, Math.floor(M * 60 / (list.length * per))));
       rule = sets + " sets of each · rest " + sr + " s between sets · leave 1–3 reps in reserve";
       main.push({ title: "In order", items: list.map(function (it) { it.dose = sets + " × " + it.dose; return it; }) });
+      sec = list.length * sets * per;
     }
 
-    var warm = ["Easy march or jog on the spot · " + (T[0] > 4 ? "90 s" : "60 s"), "Arm circles and hip circles · 30 s each", "Bodyweight squat × 8, then walk the hands out to a plank × 4"];
+    var warm = ["Easy march or jog on the spot · " + (T[0] >= 4 ? "90 s" : "60 s"), "Arm circles and hip circles · 30 s each", "Bodyweight squat × 8, then walk the hands out to a plank × 4"];
     if (T[0] >= 5) warm.push("One easy practice set of the first two exercises");
-    var cool = ["Walk and slow your breathing · " + (T[2] > 2 ? "90 s" : "60 s"), "Hip-flexor stretch and doorway chest stretch · 30 s per side"];
+    var cool = T[2] <= 2 ? ["Walk and slow your breathing · 60 s", "Hip-flexor stretch · 30 s per side"]
+      : ["Walk and slow your breathing · " + (T[2] > 3 ? "2 min" : "60 s"), "Hip-flexor stretch and doorway chest stretch · 30 s per side"];
+    var fname = o.format === "emom" || o.format === "amrap" ? FORMATS[o.format] : FORMATS[o.format].toLowerCase();
     return {
-      title: o.minutes + "-minute " + FORMATS[o.format].toLowerCase() + " · " + LEVELS[level].toLowerCase(),
+      title: o.minutes + "-minute " + fname + " · " + LEVELS[level].toLowerCase(),
       kit: ["Bodyweight"].concat(o.equip.map(function (k) { return EQUIP[k]; })).join(", "),
       rule: rule, warm: warm, warmMin: T[0], main: main, cool: cool, coolMin: T[2],
+      mainSec: sec, budgetSec: M * 60,
       loaded: main.some(function (blk) { return blk.items.some(function (it) { return it.loaded; }); })
     };
   };
@@ -236,9 +249,11 @@
   function num(v, d) { return Number(v).toLocaleString("en-US", { maximumFractionDigits: d || 0, minimumFractionDigits: d || 0 }); }
   function val(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : NaN; }
   function pressed(group, value) { [].forEach.call(group.querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", b.value === value ? "true" : "false"); }); }
-  // a segmented button group that behaves like a radio set: seg(el, initial, onChange) → getter
-  function seg(el, initial, onChange) {
-    var cur = initial; pressed(el, cur);
+  // a segmented button group that behaves like a radio set: seg(el, wanted, fallback, onChange) → getter.
+  // `wanted` usually comes from localStorage, so anything that isn't one of the buttons falls back.
+  function seg(el, wanted, fallback, onChange) {
+    var values = [].map.call(el.querySelectorAll("button"), function (b) { return b.value; });
+    var cur = values.indexOf(String(wanted)) >= 0 ? String(wanted) : fallback; pressed(el, cur);
     el.addEventListener("click", function (e) {
       var b = e.target.closest("button"); if (!b || b.value === cur) return;
       cur = b.value; pressed(el, cur); onChange(cur);
@@ -252,19 +267,27 @@
   var saved = store.get();
   // Screen-reader status: one short sentence per tool, sent once the sliders settle,
   // instead of a live region around a whole results card.
-  var sayTimers = {};
+  var sayTimers = {}, booting = true; // nothing is announced while the page is still setting itself up
   function say(id, text) {
+    if (booting) return;
     clearTimeout(sayTimers[id]);
     sayTimers[id] = setTimeout(function () { var el = $(id); if (el) el.textContent = text; }, 700);
   }
   function copy(text, btn) {
-    function done(ok) { var t = btn.textContent; btn.textContent = ok ? "Copied ✓" : "Press ⌘C / Ctrl C"; setTimeout(function () { btn.textContent = t; }, 1600); }
+    if (!btn.getAttribute("data-label")) btn.setAttribute("data-label", btn.textContent); // remember the real label once
+    function done(ok) {
+      btn.textContent = ok ? "Copied ✓" : "Press ⌘C / Ctrl C";
+      clearTimeout(btn._ksT); btn._ksT = setTimeout(function () { btn.textContent = btn.getAttribute("data-label"); }, 1600);
+    }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
     else done(false);
   }
 
+  // Each tool starts inside boot(), so a failure in one cannot stop the others.
+  function boot(fn) { try { fn(); } catch (err) { if (window.console) console.error("A fitness tool failed to start:", err); } }
+
   /* ---------- tabs: one tool at a time; each has its own #hash ---------- */
-  (function () {
+  boot(function () {
     var ids = ["macros", "reps", "loads", "travel"];
     var tabs = ids.map(function (id) { return $("tab-" + id); }), panels = ids.map($);
     function show(id, focus) {
@@ -272,7 +295,8 @@
       tabs.forEach(function (t, j) { t.setAttribute("aria-selected", j === i ? "true" : "false"); t.tabIndex = j === i ? 0 : -1; });
       panels.forEach(function (p, j) { p.hidden = j !== i; });
       if (focus) tabs[i].focus();
-      if (tabs[i].scrollIntoView) tabs[i].scrollIntoView({ block: "nearest", inline: "center" });
+      var bar = tabs[i].parentNode; // centre the tab in its own strip; never move the page
+      if (bar.scrollWidth > bar.clientWidth) bar.scrollLeft += tabs[i].getBoundingClientRect().left - bar.getBoundingClientRect().left - (bar.clientWidth - tabs[i].offsetWidth) / 2;
       return true;
     }
     tabs.forEach(function (t, i) {
@@ -289,37 +313,43 @@
     show("macros");
     window.addEventListener("hashchange", fromHash);
     if (location.hash) setTimeout(fromHash, 60);
-  })();
+  });
 
   /* ---------- 1. energy & macros ---------- */
-  (function () {
-    var units = seg($("m-units"), saved.units || "metric", function (u) { swapUnits(u); calc(); });
-    var sex = seg($("m-sex"), saved.sex || "m", calc);
-    var goal = seg($("m-goal"), saved.goal || "lose", function () { goalChanged(); calc(); });
+  boot(function () {
+    var units = seg($("m-units"), saved.units, "metric", function () { showBody(); paintUnits(); calc(); });
+    var sex = seg($("m-sex"), saved.sex, "m", calc);
+    var goal = seg($("m-goal"), saved.goal, "lose", function () { goalChanged(); calc(); });
     var protTouched = !!saved.protTouched;
-    ["m-age", "m-cm", "m-ft", "m-in", "m-weight", "m-bf", "m-act", "m-rate", "m-fat", "m-diet", "m-meals", "m-cook", "m-avoid"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    // The maths runs on these metric values. The fields only display them, so switching
+    // units back and forth cannot drift the number that was entered.
+    var body = { kg: saved.kg > 0 ? +saved.kg : val("m-weight"), cm: saved.cm > 0 ? +saved.cm : val("m-cm") };
+    function showBody() {
+      var imp = units.get() === "imperial";
+      if (isFinite(body.kg)) $("m-weight").value = imp ? Math.round(F.lb(body.kg)) : Math.round(body.kg * 10) / 10;
+      if (isFinite(body.cm)) {
+        if (imp) { var tot = Math.round(body.cm / 2.54); $("m-ft").value = Math.floor(tot / 12); $("m-in").value = tot % 12; }
+        else $("m-cm").value = Math.round(body.cm);
+      }
+    }
+    $("m-weight").addEventListener("input", function () { var v = val("m-weight"); body.kg = units.get() === "imperial" ? F.kg(v) : v; calc(); });
+    ["m-cm", "m-ft", "m-in"].forEach(function (id) {
+      $(id).addEventListener("input", function () {
+        var inch = val("m-in");
+        body.cm = units.get() === "imperial" ? ((val("m-ft") * 12) + (isFinite(inch) ? inch : 0)) * 2.54 : val("m-cm");
+        calc();
+      });
+    });
+    ["m-age", "m-bf", "m-act", "m-rate", "m-fat", "m-diet", "m-meals", "m-cook", "m-avoid"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("m-prot").addEventListener("input", function () { protTouched = true; calc(); });
     $("m-copy").addEventListener("click", function () { copy($("m-prompt").value, $("m-copy")); });
 
     if (saved.age) $("m-age").value = saved.age;
-    if (saved.cm) $("m-cm").value = saved.cm;
-    if (saved.kg) $("m-weight").value = Math.round(saved.kg * 10) / 10;
     if (saved.bf) $("m-bf").value = saved.bf;
-    if (saved.pal) $("m-act").value = saved.pal;
+    if (saved.pal) [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) $("m-act").value = o.value; }); // 2 must find "2.0"
     if (saved.fatPct) $("m-fat").value = saved.fatPct;
     if (saved.protein && protTouched) $("m-prot").value = saved.protein;
 
-    function swapUnits(u) {
-      var imp = u === "imperial", w = val("m-weight"), cm = val("m-cm"), ft = val("m-ft"), inch = val("m-in");
-      if (imp) {
-        if (isFinite(w)) $("m-weight").value = Math.round(F.lb(w));
-        if (isFinite(cm)) { var tot = Math.round(cm / 2.54); $("m-ft").value = Math.floor(tot / 12); $("m-in").value = tot % 12; }
-      } else {
-        if (isFinite(w)) $("m-weight").value = Math.round(F.kg(w) * 10) / 10;
-        if (isFinite(ft)) $("m-cm").value = Math.round(((ft * 12) + (isFinite(inch) ? inch : 0)) * 2.54);
-      }
-      paintUnits();
-    }
     function paintUnits() {
       var imp = units.get() === "imperial";
       $("m-h-metric").hidden = imp; $("m-h-imperial").hidden = !imp;
@@ -334,11 +364,10 @@
     }
 
     function calc() {
-      var imp = units.get() === "imperial";
-      var kg = imp ? F.kg(val("m-weight")) : val("m-weight");
-      var cm = imp ? ((val("m-ft") * 12) + (isFinite(val("m-in")) ? val("m-in") : 0)) * 2.54 : val("m-cm");
+      var imp = units.get() === "imperial", kg = body.kg, cm = body.cm;
       var age = val("m-age"), bf = val("m-bf"), g = goal.get(), rate = val("m-rate");
-      var prot = val("m-prot"), fatPct = val("m-fat"), pal = val("m-act");
+      var act = $("m-act").selectedOptions[0] || $("m-act").options[1];
+      var prot = val("m-prot"), fatPct = val("m-fat"), pal = parseFloat(act.value);
       $("m-prot-read").textContent = num(prot, 1) + " g/kg" + (isFinite(kg) ? " · " + num(prot / LB, 2) + " g/lb" : "");
       $("m-fat-read").textContent = num(fatPct) + "% of calories";
       $("m-rate-label").textContent = g === "gain" ? "Surplus" : "Rate of loss";
@@ -346,7 +375,12 @@
 
       var ok = kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 16 && age <= 95;
       $("m-out").classList.toggle("is-empty", !ok);
-      if (!ok) { $("m-kcal").textContent = "—"; $("m-sub").textContent = "Enter age, height and weight to see your numbers."; $("m-warn").hidden = true; return; }
+      if (!ok) {
+        $("m-kcal").textContent = "—"; $("m-sub").textContent = "Enter age, height and weight to see your numbers."; $("m-warn").hidden = true;
+        $("m-prompt").value = ""; $("m-copy").disabled = true;
+        say("m-say", "Enter age, height and weight to see your numbers.");
+        return;
+      }
 
       var r = F.energy({ sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, pal: pal, goal: g, rate: rate, protein: prot, fatPct: fatPct });
       var carbs = Math.max(0, r.carbs);
@@ -363,18 +397,21 @@
       $("m-bar-p").style.flexGrow = r.protein * 4 / tot; $("m-bar-c").style.flexGrow = carbs * 4 / tot; $("m-bar-f").style.flexGrow = r.fat * 9 / tot;
       $("m-bar").setAttribute("aria-label", "Calorie split: protein " + num(r.protein * 4 / tot * 100) + "%, carbohydrate " + num(carbs * 4 / tot * 100) + "%, fat " + num(r.fat * 9 / tot * 100) + "%");
 
-      var warn = "";
-      if (r.belowRmr) warn = "This target is below your estimated resting energy use. That is an aggressive deficit — slow the rate, or talk to a clinician before running it.";
-      else if (r.deficitPct > 25) warn = "That is a deficit of more than 25% of maintenance. Expect it to be hard to sustain; a slower rate usually keeps more muscle.";
-      else if (r.carbs < 50) warn = "Protein and fat use almost all of this budget, leaving very little carbohydrate. Lower one of them or ease the deficit.";
+      var over = r.carbs < 0, warns = []; // over: protein + fat alone are more than the target
+      if (over) warns.push("Protein and fat alone come to more than this calorie target, so the split below does not add up. Lower one of them or ease the deficit.");
+      if (r.belowRmr) warns.push("This target is below your estimated resting energy use. That is an aggressive deficit — slow the rate, or talk to a clinician before running it.");
+      else if (r.deficitPct > 25) warns.push("That is a deficit of more than 25% of maintenance. Expect it to be hard to sustain; a slower rate usually keeps more muscle.");
+      if (!warns.length && r.carbs < 50) warns.push("Protein and fat use almost all of this budget, leaving very little carbohydrate. Lower one of them or ease the deficit.");
+      var warn = warns.join(" ");
       $("m-warn").hidden = !warn; $("m-warn").textContent = warn;
       say("m-say", "Daily target " + num(F.round(r.kcal, 10)) + " kilocalories: " + num(r.protein) + " grams protein, " + num(carbs) + " grams carbohydrate, " + num(r.fat) + " grams fat." + (warn ? " Warning: " + warn : ""));
 
       // meal-plan prompt
       var meals = val("m-meals"), diet = $("m-diet").value, cook = $("m-cook").value, avoid = $("m-avoid").value.trim();
-      var who = Math.round(age) + "-year-old " + (sex.get() === "f" ? "woman" : "man") + ", " + (imp ? num(F.lb(kg)) + " lb" : num(kg, 1) + " kg") + ", " + $("m-act").selectedOptions[0].getAttribute("data-short");
+      var who = Math.round(age) + "-year-old " + (sex.get() === "f" ? "woman" : "man") + ", " + (imp ? num(F.lb(kg)) + " lb" : num(kg, 1) + " kg") + ", " + act.getAttribute("data-short");
       var aim = g === "hold" ? "hold my current weight" : g === "lose" ? "lose about " + num(rate, 2) + "% of my body weight per week" : "gain slowly on a " + num(rate) + "% surplus";
-      $("m-prompt").value =
+      $("m-copy").disabled = over;
+      $("m-prompt").value = over ? "Protein and fat alone exceed the calorie target, so there is no plan to ask for yet. Lower the protein or fat slider, or ease the deficit." :
         "Build me a 7-day meal plan.\n\n" +
         "Daily targets (stay within 5%): " + num(F.round(r.kcal, 10)) + " kcal · " + num(r.protein) + " g protein · " + num(carbs) + " g carbohydrate · " + num(r.fat) + " g fat.\n" +
         "About me: " + who + ". Goal: " + aim + ".\n" +
@@ -382,20 +419,16 @@
         "For each day give every meal with ingredient weights in grams and its calories and protein, then a daily total against the targets. After day 7 add one consolidated shopping list and two swap options per meal.\n" +
         "Show the arithmetic for each daily total and flag any day that misses a target by more than 5%. Use ordinary supermarket food. Ask me before assuming anything about allergies or medical conditions.";
 
-      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: Math.round(cm), kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched };
+      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched };
       if (g === "lose") patch.loseRate = rate; else if (g === "gain") patch.gainRate = rate;
       store.set(patch); saved = store.get();
     }
 
-    if (units.get() === "imperial") { // stored values are metric; show them in imperial
-      var kg0 = val("m-weight"), cm0 = val("m-cm"), tot = Math.round(cm0 / 2.54);
-      $("m-weight").value = Math.round(F.lb(kg0)); $("m-ft").value = Math.floor(tot / 12); $("m-in").value = tot % 12;
-    }
-    paintUnits(); goalChanged(); calc();
-  })();
+    showBody(); paintUnits(); goalChanged(); calc();
+  });
 
   /* ---------- 2. effective reps ---------- */
-  (function () {
+  boot(function () {
     var log = [];
     function paint() {
       var reps = val("r-reps"), rir = val("r-rir"), eff = F.effective(reps, rir), html = "";
@@ -411,8 +444,8 @@
       $("r-rpe").textContent = "RPE " + F.rpe(rir);
       say("r-say", eff + " effective " + (eff === 1 ? "rep" : "reps") + " from " + reps + " at " + rir + " in reserve.");
       $("r-msg").textContent = eff === 0 ? "None of these reps reach the last five before failure. Under this model the set is a warm-up."
-        : eff >= 5 || eff === reps ? "Every rep the model can count is counted. Going further mostly adds fatigue."
-        : eff + " of the " + reps + " reps land inside the last five before failure.";
+        : rir === 0 ? "Taken to failure, so the set scores as much as this model allows."
+        : eff + " of the " + reps + (reps === 1 ? " rep lands" : " reps land") + " inside the last five before failure. Taken to failure, the set would score " + Math.min(5, reps + rir) + ".";
     }
     function paintLog() {
       var list = $("r-log"), sets = log.length, eff = 0, reps = 0;
@@ -425,42 +458,51 @@
     $("r-add").addEventListener("click", function () { var reps = val("r-reps"), rir = val("r-rir"); if (log.length < 30) log.push({ reps: reps, rir: rir, eff: F.effective(reps, rir) }); paintLog(); });
     $("r-clear").addEventListener("click", function () { log = []; paintLog(); });
     paint(); paintLog();
-  })();
+  });
 
   /* ---------- 3. 1RM & loads ---------- */
-  (function () {
-    var units = seg($("l-units"), saved.loadUnits || "kg", function (u) {
-      var w = val("l-w"); if (isFinite(w)) $("l-w").value = u === "lb" ? Math.round(F.lb(w) / 5) * 5 : Math.round(F.kg(w) / 2.5) * 2.5;
-      calc();
-    });
-    ["l-w", "l-reps", "l-treps", "l-trir"].forEach(function (id) { $(id).addEventListener("input", calc); });
-    if (saved.loadW) $("l-w").value = saved.loadW; if (saved.loadReps) $("l-reps").value = saved.loadReps;
+  boot(function () {
+    // The lift is kept in kg; the field shows it in the chosen unit, so switching units never changes it.
+    var liftKg = saved.loadKg > 0 ? +saved.loadKg : val("l-w");
+    var units = seg($("l-units"), saved.loadUnits, "kg", function () { showLift(); calc(); });
+    function showLift() { if (isFinite(liftKg)) $("l-w").value = Math.round((units.get() === "lb" ? F.lb(liftKg) : liftKg) * 10) / 10; }
+    $("l-w").addEventListener("input", function () { var v = val("l-w"); liftKg = units.get() === "lb" ? F.kg(v) : v; calc(); });
+    ["l-reps", "l-treps", "l-trir"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    if (saved.loadReps) $("l-reps").value = saved.loadReps;
+    showLift();
     function wt(v) { return num(v, v % 1 ? 1 : 0); } // 85 → "85", 82.5 → "82.5"
     function calc() {
-      var u = units.get(), step = u === "lb" ? 5 : 2.5, w = val("l-w"), reps = val("l-reps"), tr = val("l-treps"), ti = val("l-trir");
+      var u = units.get(), step = u === "lb" ? 5 : 2.5, w = u === "lb" ? F.lb(liftKg) : liftKg, reps = val("l-reps"), tr = val("l-treps"), ti = val("l-trir");
       $("l-unit").textContent = u; $("l-treps-read").textContent = tr + (tr === 1 ? " rep" : " reps"); $("l-trir-read").textContent = ti + " in reserve";
       var ok = w > 0 && reps >= 1 && reps <= 20;
       $("l-out").classList.toggle("is-empty", !ok);
-      if (!ok) { $("l-e1rm").firstChild.nodeValue = "—"; $("l-load").firstChild.nodeValue = "—"; $("l-rows").innerHTML = ""; $("l-note").textContent = "Enter a weight and the reps you got with it."; return; }
-      var e = F.epley(w, reps), b = F.brzycki(w, reps), one = (e + b) / 2;
+      if (!ok) {
+        $("l-e1rm").firstChild.nodeValue = "—"; $("l-load").firstChild.nodeValue = "—"; $("l-rows").innerHTML = ""; $("l-pct").textContent = "";
+        $("l-note").textContent = "Enter a weight and the reps you got with it (20 at most).";
+        say("l-say", "Enter a weight and the reps you got with it.");
+        return;
+      }
+      // Epley gives the estimate and, inverted, every load below, so the numbers agree with
+      // each other: the load for the reps you entered at 0 RIR is the weight you entered.
+      var e = F.epley(w, reps), b = F.brzycki(w, reps), one = e;
       $("l-e1rm").firstChild.nodeValue = num(one, one < 100 ? 1 : 0); $("l-e1rm-u").textContent = u;
       $("l-epley").textContent = num(e, 1) + " " + u; $("l-brzycki").textContent = num(b, 1) + " " + u;
       var load = F.loadFor(one, tr, ti);
       $("l-load").firstChild.nodeValue = wt(F.round(load, step)); $("l-load-u").textContent = u;
       $("l-pct").textContent = "≈ " + num(load / one * 100) + "% of the estimate · rounded to the nearest " + step + " " + u;
-      $("l-note").textContent = reps > 10 ? "Above 10 reps these equations drift. Treat this as a rough guide and re-test with a heavier set." : reps === 1 ? "A true single: the estimate is simply what you lifted." : "Estimated from " + wt(w) + " " + u + " × " + reps + ".";
+      $("l-note").textContent = reps > 10 ? "Above 10 reps these equations drift. Treat this as a rough guide and re-test with a heavier set." : reps === 1 ? "A true single: the estimate is simply what you lifted." : "Estimated from " + wt(Math.round(w * 10) / 10) + " " + u + " × " + reps + ".";
       $("l-rows").innerHTML = [0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6].map(function (p) {
         return "<tr><th scope=\"row\">" + Math.round(p * 100) + "%</th><td>" + wt(F.round(one * p, step)) + " " + u + "</td><td>≈ " + Math.max(1, Math.round(F.repsAt(p))) + "</td></tr>";
       }).join("");
       say("l-say", "Estimated one-rep max " + wt(Math.round(one * 10) / 10) + " " + u + ". Load " + wt(F.round(load, step)) + " " + u + " for " + tr + (tr === 1 ? " rep" : " reps") + " with " + ti + " in reserve.");
-      store.set({ loadUnits: u, loadW: w, loadReps: reps });
+      store.set({ loadUnits: u, loadKg: liftKg, loadReps: reps });
     }
     calc();
-  })();
+  });
 
   /* ---------- 4. travel workout ---------- */
-  (function () {
-    var time = seg($("t-time"), String(saved.tMin || 20), build), level = seg($("t-level"), String(saved.tLevel || 2), build), format = seg($("t-format"), saved.tFormat || "circuit", build);
+  boot(function () {
+    var time = seg($("t-time"), saved.tMin, "20", build), level = seg($("t-level"), saved.tLevel, "2", build), format = seg($("t-format"), saved.tFormat, "circuit", build);
     var seed = Math.floor(Math.random() * 1e9), last = null;
     var toggles = [].slice.call($("t-equip").querySelectorAll("button[value]"));
     (saved.tEquip || []).forEach(function (k) { toggles.forEach(function (b) { if (b.value === k) b.setAttribute("aria-pressed", "true"); }); });
@@ -485,10 +527,10 @@
       store.set({ tMin: +time.get(), tLevel: +level.get(), tFormat: format.get(), tEquip: equip });
     }
     build();
-  })();
+  });
 
   /* ---------- Vantix instrument: tap a row to read its state ---------- */
-  (function () {
+  boot(function () {
     var box = $("vx-rows"); if (!box) return;
     var out = $("vx-read"), rows = [].slice.call(box.querySelectorAll("button"));
     function pick(btn) {
@@ -496,13 +538,13 @@
       out.textContent = btn.getAttribute("data-read");
     }
     box.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) pick(b); });
-  })();
+  });
 
   /* ---------- Claims, checked: filter by topic + free-text ---------- */
-  (function () {
+  boot(function () {
     var box = $("claims-list"); if (!box) return;
     var items = [].slice.call(box.querySelectorAll(".k-qa")), q = $("claims-q"), count = $("claims-count");
-    var topic = seg($("claims-topic"), "all", apply);
+    var topic = seg($("claims-topic"), "all", "all", apply);
     function apply() {
       var t = topic.get(), words = q.value.toLowerCase().split(/\s+/).filter(Boolean), shown = 0;
       items.forEach(function (el) {
@@ -514,5 +556,7 @@
     }
     q.addEventListener("input", apply);
     apply();
-  })();
+  });
+
+  booting = false; // from here on, changes are announced
 })();

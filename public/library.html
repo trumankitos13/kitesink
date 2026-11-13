@@ -41,7 +41,10 @@
   .lib-q .k-input { padding-left: 44px; min-height: 48px; border-radius: 30px; background: var(--k-raised); }
   .lib-count { font: 500 12px/1.4 var(--k-mono); color: var(--k-mute); white-space: nowrap; }
 
-  .shelf { padding-block: clamp(30px, 4.6vw, 52px); border-top: 1px solid var(--k-rule); scroll-margin-top: 150px; }
+  .shelf { padding-block: clamp(30px, 4.6vw, 52px); border-top: 1px solid var(--k-rule); }
+  /* the search bar is sticky, and three rows tall on a phone: land anchors and focus below it */
+  html:has(.lib-bar) { scroll-padding-top: 244px; }
+  @media (min-width: 860px) { html:has(.lib-bar) { scroll-padding-top: 152px; } }
   .shelf:first-child { border-top: 0; }
   .shelf-h { display: grid; gap: 4px 20px; align-items: baseline; margin-bottom: 18px; }
   @media (min-width: 700px) { .shelf-h { grid-template-columns: auto minmax(0, 1fr) auto; } }
@@ -121,7 +124,6 @@
   "use strict";
   var box = document.getElementById("shelves"), q = document.getElementById("q"), kinds = document.getElementById("kinds"), count = document.getElementById("count");
   var esc = KS.esc, kind = "all";
-  var SHELVES = window.KS_SHELVES || [];
 
   function kindOf(it) { return it.k === "Reading" ? "Writing" : (it.k === "Legal" || it.k === "Feed") ? "Docs" : (it.k === "Section" || it.k === "Notes") ? (it.k === "Notes" ? "Tool" : "Page") : it.k; }
   function shelfOf(it) { return it.shelf || ((it.k === "Writing" || it.k === "Reading") ? "writing" : "workshop"); }
@@ -134,7 +136,12 @@
       (it.d ? '<span class="d">' + esc(it.d) + '</span>' : '') + '</a>';
   }
 
-  KS.loadIndex(function (items) {
+  KS.loadIndex(function (items, ok) {
+    var SHELVES = window.KS_SHELVES || [];   // read here: site-index.js may only just have arrived
+    if (!ok || !SHELVES.length) {
+      box.innerHTML = '<div class="lib-empty"><p>The library index didn’t load. Reload the page, or start from the <a class="k-inline" href="/sitemap.xml">sitemap</a>.</p></div>';
+      return;
+    }
     function render() {
       var v = q.value.trim();
       var pool = KS.search(items, v).filter(function (it) { return kind === "all" || kindOf(it) === kind; });

@@ -70,8 +70,8 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
 - **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. Vantix, Backline,
   the Listening Club and the blog post template carry their own small KiteSink nav — search for
   `/consulting` in those files.
-- **Change `ks.css` or `ks.js`:** bump the `?v=2027.1` on the `<link>`/`<script>` tags in every
-  page (find-and-replace). Those files are cached for an hour or more, and a new page with an
+- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.1` on the
+  `<link>`/`<script>` tags in every page (find-and-replace) and `ASSET_V` at the top of `ks.js`. Those files are cached for an hour or more, and a new page with an
   old cached stylesheet looks broken. The audit checks every page uses the same version.
 - **Design tokens:** `--k-*` custom properties at the top of `ks.css` (light + dark). New pages
   opt into the component kit with `<body class="ks-paper k2">`.

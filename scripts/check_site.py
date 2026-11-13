@@ -89,12 +89,19 @@ def audit_index() -> list[str]:
     issues: list[str] = []
     index_js = (PUBLIC / "site-index.js").read_text(encoding="utf-8")
     posts_js = (PUBLIC / "blog/posts.js").read_text(encoding="utf-8")
-    def code(js: str) -> str:  # drop /* block */ comments and whole-line // comments (the templates)
-        js = re.sub(r"/\*.*?\*/", "", js, flags=re.S)
+    def code(js: str) -> str:
+        """Drop comments that start a line: /* block */ and // (the entry templates).
+        Anchoring to the line start keeps a "/*" inside a string from eating real entries."""
+        js = re.sub(r"(?ms)^[ \t]*/\*.*?\*/", "", js)
         return "\n".join(line for line in js.splitlines() if not line.lstrip().startswith("//"))
 
-    hrefs = re.findall(r"""\bh:\s*["']([^"']+)["']""", code(index_js))
-    hrefs += re.findall(r"""\bhref:\s*["']([^"']+)["']""", code(posts_js))
+    quoted = r"""(?:"([^"]+)"|'([^']+)'|`([^`$]+)`)"""   # "x", 'x' or a plain `x`
+    def values(js: str, key: str) -> list[str]:
+        return ["".join(m) for m in re.findall(rf"""(?<![\w$])["']?{key}["']?\s*:\s*{quoted}""", code(js))]
+
+    hrefs = values(index_js, "h") + values(posts_js, "href")
+    # ids that exist only once JavaScript has rendered them: the Library's shelves
+    shelf_ids = set(re.findall(r"""\bid\s*:\s*["']([\w-]+)["']""", code(index_js)))
     if not hrefs:
         return ["public/site-index.js: no entries found"]
 
@@ -113,7 +120,8 @@ def audit_index() -> list[str]:
         listed.add(path.rstrip("/") or "/")
         if parsed.fragment:
             target = PUBLIC / (path.strip("/") + ".html")
-            if target.is_file() and not re.search(rf"""\bid=["']{re.escape(parsed.fragment)}["']""", target.read_text(encoding="utf-8")):
+            built = path == "/library" and parsed.fragment in shelf_ids
+            if target.is_file() and not built and not re.search(rf"""\bid=["']{re.escape(parsed.fragment)}["']""", target.read_text(encoding="utf-8")):
                 issues.append(f"public/site-index.js: {href} — no element with id=\"{parsed.fragment}\" on that page")
 
     for route in page_routes():
@@ -135,9 +143,17 @@ def audit_asset_versions() -> list[str]:
     visitors can get a new page with an old cached stylesheet."""
     seen: dict[str, set[str]] = {}
     for path in sorted(PUBLIC.rglob("*.html")):
-        for name, version in re.findall(r"""["']/(ks\.css|ks\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
+        for name, version in re.findall(r"""["']/(ks\.css|ks\.js|site-index\.js|fitness\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
             seen.setdefault(name, set()).add(version or "(none)")
-    return [f"public: pages request different versions of /{name}: {', '.join(sorted(v))}" for name, v in seen.items() if len(v) > 1]
+    issues = [f"public: pages request different versions of /{name}: {', '.join(sorted(v))}" for name, v in seen.items() if len(v) > 1]
+    # ks.js fetches /site-index.js itself (for the Find palette) and must name the same release
+    declared = re.search(r"""\bASSET_V\s*=\s*["']([^"']+)["']""", (PUBLIC / "ks.js").read_text(encoding="utf-8"))
+    everywhere = set().union(*seen.values()) if seen else set()
+    if not declared:
+        issues.append("public/ks.js: ASSET_V is missing")
+    elif everywhere and everywhere != {declared.group(1)}:
+        issues.append(f"public/ks.js: ASSET_V is {declared.group(1)!r} but pages request {', '.join(sorted(everywhere))}")
+    return issues
 
 
 def audit(path: Path) -> list[str]:
