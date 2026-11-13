@@ -40,8 +40,9 @@ public/                     ← deploy root for kitesink.com
   ks.js, ks.css             Shared chrome + design system: header, slim bar, footer, mobile pill nav,
                             the Find palette (⌘K / Ctrl K / "/"), theme toggle, tokens (--k-*), the
                             .k-* component kit — plus the analytics token (CF_TOKEN) and forms key
-  work.html, games.html     Older index pages, now shelved under Library (still linked, still work)
-  projects.js               Data for work.html + games.html (KS_WORK / KS_GAMES)
+  games.html                Older index page, now shelved under Library
+  projects.js               Data for games.html (KS_GAMES)
+  _redirects                /work -> /library
   now.html, uses.html, colophon.html   Now / Uses / Colophon
   blog.html                 Writing index (live filter; your essays + external reposts)
   blog/
