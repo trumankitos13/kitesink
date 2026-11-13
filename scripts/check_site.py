@@ -292,7 +292,8 @@ def main() -> int:
     issues = [issue for page in pages for issue in audit(page)]
     issues += audit_index()
     issues += audit_asset_versions()
-    # audit_twins() and audit_fitness_build() are switched on when the new /fitness page lands.
+    issues += audit_twins()
+    issues += audit_fitness_build()
 
     deployed_text = "\n".join(
         path.read_text(encoding="utf-8")

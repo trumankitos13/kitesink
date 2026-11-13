@@ -1,0 +1,2189 @@
+{
+ "domain": "nutrition",
+ "topics": [
+  {
+   "id": "energy",
+   "label": "Energy and maintenance"
+  },
+  {
+   "id": "protein",
+   "label": "Protein"
+  },
+  {
+   "id": "macros",
+   "label": "Carbs, fat and fibre"
+  },
+  {
+   "id": "timing",
+   "label": "Timing, fluids and alcohol"
+  },
+  {
+   "id": "supplements",
+   "label": "Supplements"
+  },
+  {
+   "id": "tracking",
+   "label": "Tracking food"
+  }
+ ],
+ "entries": [
+  {
+   "id": "nut-energy-balance-slow",
+   "type": "note",
+   "title": "Body weight follows energy balance, but it moves slowly",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "hall-2011",
+    "hall-2019"
+   ],
+   "take": "Eat above what you burn and weight rises, eat below and it falls, but the change takes months to show its full size.",
+   "body": "A mathematical model of adult metabolism found that body weight responds slowly to a change in intake, with a half time of about one year. It also estimated that a persistent gap of only about 30 kJ (7 kcal) a day lies behind the average weight gain seen in the US. In a ward study of 20 adults, weight change tracked energy intake closely (r = 0.8). Small daily gaps add up, and a single day rarely shows.",
+   "do": [
+    "Judge a calorie target over weeks, not days."
+   ]
+  },
+  {
+   "id": "nut-maintenance-is-an-estimate",
+   "type": "note",
+   "title": "Calorie calculators give a starting point, not your maintenance",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "frankenfield-2005",
+    "fao-2004"
+   ],
+   "take": "Even the best resting-rate equation is within 10 percent of measured for most people, and many individuals fall outside it.",
+   "body": "A systematic review compared four equations for resting metabolic rate. Mifflin-St Jeor predicted within 10 percent of the measured value for more people than the others, and it still missed for a share of individuals. Total daily need is that resting figure multiplied by an activity level, and the FAO/WHO/UNU report gives about 1.40 to 2.40 as the range sustained by free-living adults. A wide range of activity levels means a wide range of totals.",
+   "do": [
+    "Eat your estimate for two to three weeks while weighing yourself daily.",
+    "Adjust by 100 to 200 kcal if weight moves the wrong way."
+   ]
+  },
+  {
+   "id": "nut-protein-range",
+   "type": "note",
+   "title": "Most lifters do well on 1.6 to 2.2 g of protein per kg a day",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "jager-2017",
+    "nunes-2022",
+    "tagawa-2021",
+    "iraki-2019"
+   ],
+   "take": "About 1.6 to 2.2 g per kg (0.7 to 1.0 g per lb) of body weight a day covers most people who lift to build muscle.",
+   "body": "The ISSN position stand calls 1.4 to 2.0 g/kg a day sufficient for most exercising people. A meta-analysis of 74 trials found added protein helped lean mass in adults under 65 who ate 1.6 g/kg or more. A dose-response review of 105 trials (5,402 participants) found each extra 0.1 g/kg added 0.39 kg of lean mass below 1.3 g/kg a day and 0.12 kg above it. Returns shrink as intake rises.",
+   "do": [
+    "Set a daily target in grams from your body weight, then check it weekly.",
+    "Take the lower half of the range if food budget is tight."
+   ]
+  },
+  {
+   "id": "nut-protein-kidneys",
+   "type": "note",
+   "title": "High protein does not harm kidney function in healthy adults",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "devries-2018"
+   ],
+   "take": "In healthy adults without kidney disease, higher protein intakes did not reduce kidney filtration in trials.",
+   "body": "A meta-analysis pooled 28 trials with 1,358 participants who ate 1.5 g/kg a day or more, or at least 20 percent of energy, against lower intakes. Filtration rate was slightly higher after high-protein eating, and the change from baseline did not differ between groups. The trials were short and had some risk of selection bias. This does not cover people who already have kidney disease. They should ask their clinician.",
+   "do": [
+    "If you have kidney disease or a family history, check your protein plan with a clinician first."
+   ]
+  },
+  {
+   "id": "nut-protein-per-meal",
+   "type": "note",
+   "title": "Spread protein over several meals, but the split matters less than the total",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "jager-2017",
+    "moore-2014",
+    "mamerow-2014",
+    "hudson-2020",
+    "trommelen-2023"
+   ],
+   "take": "About 0.25 g per kg or 20 to 40 g per meal is a sound target, and the daily total is what matters most.",
+   "body": "The ISSN stand suggests 0.25 g/kg or 20 to 40 g per serving, spread across the day. Muscle protein synthesis levelled off at about 0.24 g/kg in younger men and 0.40 g/kg in older men. In eight adults, even meals raised 24-hour synthesis 25 percent more than a skewed pattern. A review calls the distribution evidence limited and inconsistent, and a tracer study found 100 g produced a larger, longer response than 25 g, so there is no hard cap per meal.",
+   "do": [
+    "Aim for three to five protein-containing meals.",
+    "Do not worry about one bigger protein meal."
+   ]
+  },
+  {
+   "id": "nut-protein-timing-window",
+   "type": "note",
+   "title": "Protein timing around training matters little next to the daily total",
+   "topic": "timing",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "wirth-2020",
+    "jager-2017"
+   ],
+   "take": "Eating protein straight after training is fine, but a precise window does not change results once daily intake is met.",
+   "body": "A systematic review of 65 studies with 2,907 participants found protein supplementation raised lean body mass in adults and older adults, and subgroup analyses showed no benefit from any specific timing. The ISSN position says the anabolic effect of exercise lasts at least 24 hours. A protein-containing meal before or after training is a reasonable habit, and it is not urgent.",
+   "do": [
+    "Eat a protein meal within a few hours either side of training."
+   ]
+  },
+  {
+   "id": "nut-protein-plant-animal",
+   "type": "note",
+   "title": "Plant protein builds muscle about as well, given enough total protein",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "lim-2021",
+    "hevia-2021",
+    "messina-2018",
+    "vanvliet-2015"
+   ],
+   "take": "When total protein is adequate, plant and animal sources give similar muscle and strength gains over months.",
+   "body": "A meta-analysis of 18 studies found protein source did not change absolute lean mass or strength, though animal protein favoured percent lean mass, and younger adults gained 0.41 kg more lean mass with animal protein. In a 12-week trial, 19 vegans and 19 omnivores on 1.6 g/kg gained muscle alike. A soy-versus-animal meta-analysis of nine studies agreed. Single-meal studies do show a lower response to soy and wheat, which is why total intake matters.",
+   "do": [
+    "If you eat no animal foods, aim for the upper half of the protein range.",
+    "Mix soy, legumes and grains across the day."
+   ]
+  },
+  {
+   "id": "nut-carbs-for-lifting",
+   "type": "note",
+   "title": "Carbohydrate boosts lifting only in long, high-volume sessions",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "henselmans-2022",
+    "burke-2011",
+    "iraki-2019"
+   ],
+   "take": "Carbohydrate intake had little effect on strength training in short fed sessions, and may help when volume is high.",
+   "body": "A systematic review of 49 studies found that carbohydrate intake per se is unlikely to change strength training performance in a fed state in workouts of up to 10 sets per muscle group. Acute gains showed up mostly in fasted comparisons and higher volumes. For long or very hard sessions, a sports nutrition review gives 30 to 60 g an hour during sessions of more than an hour. Physique-athlete reviews suggest at least 3 to 5 g/kg a day.",
+   "do": [
+    "After protein and fat are set, fill the rest of your calories with carbohydrate you enjoy."
+   ]
+  },
+  {
+   "id": "nut-fat-minimum",
+   "type": "note",
+   "title": "Keep fat from falling too low: about 15 to 30 percent of calories",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "iraki-2019",
+    "helms-2014-prep",
+    "roberts-2020",
+    "whittaker-2021"
+   ],
+   "take": "Fat of roughly 0.5 to 1.5 g per kg, or 15 to 30 percent of energy, is a sound band, and very low fat has costs.",
+   "body": "Reviews for lean physique athletes suggest 15 to 30 percent of calories from fat, or 0.5 to 1.5 g/kg in the off-season, with a low end of 10 to 25 percent in contest preparation. A meta-analysis of six trials (206 men) found low-fat diets lowered total testosterone (standardised difference -0.38) against high-fat diets. This is mainly a floor for hormones and diet quality, not a target to push higher.",
+   "do": [
+    "Do not cut fat below about 0.5 g per kg of body weight for long."
+   ]
+  },
+  {
+   "id": "nut-fibre-target",
+   "type": "note",
+   "title": "Aim for 25 to 29 g of fibre a day",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "reynolds-2019"
+   ],
+   "take": "In large analyses, health benefits from fibre were greatest at about 25 to 29 g a day, with more possibly better.",
+   "body": "A series of meta-analyses covered 185 prospective studies and 58 trials with 4,635 adults. Observational data suggested 15 to 30 percent lower all-cause and cardiovascular mortality in the highest fibre eaters against the lowest, and trials showed lower body weight, blood pressure and cholesterol with more fibre. Risk reduction was greatest at 25 to 29 g a day. Raise intake gradually and drink fluids with it.",
+   "do": [
+    "Add fibre slowly over a few weeks."
+   ]
+  },
+  {
+   "id": "nut-meal-timing-training",
+   "type": "note",
+   "title": "Pre-workout eating helps in long sessions, and little else about timing is critical",
+   "topic": "timing",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "thomas-2016",
+    "henselmans-2022",
+    "helms-2014-prep"
+   ],
+   "take": "Daily totals decide results, and a meal before training mostly helps if you train fasted or do high volume.",
+   "body": "The joint position stand of the Academy of Nutrition and Dietetics, Dietitians of Canada and the ACSM says performance and recovery improve with well-chosen type, amount and timing of food and fluids. In the carbohydrate review, the acute benefits appeared mostly in fasted comparisons and workouts above 10 sets per muscle group. Physique reviews suggest a protein dose of 0.4 to 0.5 g/kg before and after sessions as a convenient pattern.",
+   "do": [
+    "Eat a normal meal one to three hours before hard sessions."
+   ]
+  },
+  {
+   "id": "nut-hydration-performance",
+   "type": "note",
+   "title": "Being under-hydrated lowers strength and muscle endurance",
+   "topic": "timing",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "savoie-2015"
+   ],
+   "take": "Hypohydration reduced strength by about 5.5 percent and muscle endurance by about 8 percent in a meta-analysis.",
+   "body": "A meta-analysis of 28 papers found hypohydration, meaning a body fluid deficit, cut muscle endurance by 8.3 percent, strength by 5.5 percent and anaerobic power by 5.8 percent. Dehydrating by exercise hurt more than passive methods, and trained people tended to lose less. This is about ordinary fluid habits. Deliberate dehydration to make a weight class is risky and needs an experienced coach and clinician.",
+   "do": [
+    "Start sessions well hydrated and drink during long or hot ones.",
+    "Never use extreme dehydration to change weight quickly."
+   ]
+  },
+  {
+   "id": "nut-alcohol-recovery",
+   "type": "note",
+   "title": "Heavy drinking after hard training blunts the muscle repair signal",
+   "topic": "timing",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "parr-2014"
+   ],
+   "take": "A very large dose of alcohol after training cut muscle protein synthesis by 24 to 37 percent in one small study.",
+   "body": "Eight active men did a hard session of legs and cycling, then drank alcohol at 1.5 g/kg (about 12 standard drinks) with either protein or carbohydrate. Muscle protein synthesis was 24 percent lower with alcohol and protein, and 37 percent lower with alcohol and carbohydrate, than with protein alone. That is one small study at a heavy dose. Effects of one or two drinks were not tested.",
+   "do": [
+    "Keep drinking light on the days you most want to recover."
+   ]
+  },
+  {
+   "id": "nut-alcohol-energy",
+   "type": "note",
+   "title": "Alcohol adds calories that people do not offset by eating less",
+   "topic": "timing",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "kwok-2019",
+    "fao-2003"
+   ],
+   "take": "Across 22 studies, people did not eat less after drinking, so total energy for the day rose.",
+   "body": "A meta-analysis of 22 studies with 701 participants found no compensation for alcoholic energy: food intake rose by 343 kJ (about 82 kcal), and total energy intake rose by 1,072 kJ (about 256 kcal). Alcohol itself provides 7 kcal per gram on the standard Atwater scale, between carbohydrate and fat. Counting drinks in your log is the only way to see this.",
+   "do": [
+    "Log drinks like food, and count mixers."
+   ]
+  },
+  {
+   "id": "nut-creatine",
+   "type": "note",
+   "title": "Creatine monohydrate is the best-supported lifting supplement",
+   "topic": "supplements",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "delpino-2022",
+    "kreider-2017",
+    "iraki-2019"
+   ],
+   "take": "Taking 3 to 5 g of creatine monohydrate a day adds lean mass when combined with training, and it is safe for healthy people.",
+   "body": "A meta-analysis of 35 trials with 1,192 participants found creatine added 1.10 kg of lean mass when combined with resistance training. Men gained 1.46 kg, and women a non-significant 0.29 kg, though women were fewer in the data. The ISSN position stand finds supplementation up to 30 g a day for 5 years safe in healthy people. The 3 to 5 g daily dose comes from a physique-athlete review.",
+   "do": [
+    "Take 3 to 5 g of creatine monohydrate every day."
+   ]
+  },
+  {
+   "id": "nut-caffeine",
+   "type": "note",
+   "title": "Caffeine gives a small, real boost to strength and power",
+   "topic": "supplements",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "grgic-2018",
+    "iraki-2019"
+   ],
+   "take": "In a meta-analysis, caffeine raised maximal strength and power slightly, mostly in the upper body.",
+   "body": "A meta-analysis of 10 studies on strength and 10 on power found caffeine improved both (standardised differences 0.20 and 0.17). The effect was significant for upper-body strength, and not for lower-body. The review also notes poor blinding and little data for women. A narrative review for bodybuilders lists about 5 to 6 mg/kg as the studied dose.",
+   "do": [
+    "Test your dose in training before a key session."
+   ]
+  },
+  {
+   "id": "nut-beta-alanine-citrulline",
+   "type": "note",
+   "title": "Beta-alanine and citrulline help in specific cases, with modest effects",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "trexler-2015",
+    "varvik-2021"
+   ],
+   "take": "Beta-alanine helps efforts of one to four minutes, and citrulline malate added about three reps per exercise.",
+   "body": "The ISSN stand says 4 to 6 g of beta-alanine daily for two to four weeks improves exercise performance, most clearly in tasks lasting 1 to 4 minutes, and tingling is the main side effect. A meta-analysis of eight studies (137 participants) found 6 to 8 g of citrulline malate taken 40 to 60 minutes before lifting added about 3 repetitions (6.4 percent). Both effects are small next to training and sleep.",
+   "do": [
+    "Consider these only after protein, creatine and training are in place."
+   ]
+  },
+  {
+   "id": "nut-supplement-skepticism",
+   "type": "note",
+   "title": "Most supplements lack good evidence, and some carry risks",
+   "topic": "supplements",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "maughan-2018",
+    "wolfe-2017",
+    "clemesha-2020"
+   ],
+   "take": "The IOC finds only a few supplements, including caffeine and creatine, have good evidence, and the rest are unproven.",
+   "body": "The IOC consensus says nutrition makes a small but valuable contribution and few supplements have good evidence of benefit; some risk contamination with banned substances. BCAA pills have no human studies of oral BCAA alone on muscle synthesis. A review of 50 testosterone-booster products found no testosterone data for 61.5 percent of them, and data showing a rise for 24.8 percent.",
+   "do": [
+    "Buy from brands with third-party testing if you compete in a tested sport."
+   ]
+  },
+  {
+   "id": "nut-logging-helps",
+   "type": "note",
+   "title": "Logging food is linked to better results, and frequency matters most",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "burke-2011sm",
+    "harvey-2019"
+   ],
+   "take": "People who logged more often lost more, and a rough log kept consistently beats a perfect one kept rarely.",
+   "body": "A systematic review of 22 studies found a significant association between self-monitoring and weight loss, though the evidence was weak because of method limits. In a 24-week program of 142 people, those losing 5 percent or more of their weight logged in 2.4 times a day against 1.6 for the rest, and time per day fell from about 23 to 15 minutes. These are observational links, not proof logging causes the loss.",
+   "do": [
+    "Log at the time you eat, and aim for most days, not perfect days."
+   ]
+  },
+  {
+   "id": "nut-label-tolerance",
+   "type": "note",
+   "title": "US labels may legally run up to 20 percent above the declared calories",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "cfr-101-9",
+    "jumpertz-2013"
+   ],
+   "take": "A US food is misbranded only if its calories exceed the declared value by more than 20 percent.",
+   "body": "Under 21 CFR 101.9(g)(5), a food is deemed misbranded if the measured calories, sugars, fat, saturated fat, trans fat, cholesterol or sodium exceed the label by more than 20 percent. Measured snack foods did better than that: in 24 products the median was 4.3 percent above the label, in the legal range. Other countries have their own tolerances, so check yours. Treat any label as an estimate.",
+   "do": [
+    "Expect small errors, and weigh food rather than trust serving counts."
+   ]
+  },
+  {
+   "id": "nut-under-reporting",
+   "type": "note",
+   "title": "Under-reporting is the norm, even among athletes and dietitians",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "burrows-2019",
+    "capling-2017",
+    "champagne-2002",
+    "lichtman-1992"
+   ],
+   "take": "Self-reported intake is usually below true intake, by around a fifth in athletes and by more in some groups.",
+   "body": "A systematic review of 59 studies of 6,298 adults, using doubly labeled water as the reference, found most reported significant under-reporting. In athletes, intake was 19 percent too low on average. In 20 women, dietitians under-reported by 223 kcal a day and controls by 429. Ten people who said they could not lose weight on under 1,200 kcal actually under-reported by 47 percent, a small group.",
+   "do": [
+    "If weight is not changing, assume your log is low before blaming metabolism."
+   ]
+  },
+  {
+   "id": "nut-tracking-risk",
+   "type": "note",
+   "title": "Tracking can feed disordered eating in people who are prone to it",
+   "topic": "tracking",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "levinson-2017",
+    "linardon-2019",
+    "simpson-2017"
+   ],
+   "take": "Calorie apps are linked to more eating-disorder symptoms in surveys, and many patients blame them.",
+   "body": "Among 105 people diagnosed with an eating disorder, about 75 percent used My Fitness Pal and 73 percent of those said it contributed to their illness. In 122 men, app users had higher eating-disorder symptoms than non-users, and 493 students showed the same link. These are cross-sectional surveys, so the app may attract people already at risk. Take the signal seriously either way.",
+   "do": [
+    "Stop tracking and talk to a clinician if logging brings guilt, fear or rules you cannot break."
+   ]
+  },
+  {
+   "id": "nut-hand-portions",
+   "type": "note",
+   "title": "Hand portions are a rougher but gentler way to estimate food",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "gibson-2016",
+    "helms-2019"
+   ],
+   "take": "Using your hand as a ruler reached within 25 percent of the true weight for most simple foods in one study.",
+   "body": "In 67 adults who estimated 42 pre-weighed foods, a finger-width method put 80 percent of geometric foods within 25 percent of true weight and 13 percent within 10 percent. Household cups and spoons managed 29 percent within 25 percent. A review of physique sport recommends flexible eating and structured monitoring to lower mental health risk. Hand portions suit people who find weighing food stressful.",
+   "do": [
+    "Use palm, fist, cupped hand and thumb, and check once against a scale."
+   ]
+  },
+  {
+   "id": "nut-mistake-raw-cooked",
+   "type": "mistake",
+   "title": "Weighing cooked food but logging the raw entry",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "Raw and cooked weights differ by the water gained or lost, so the entry must match the state you weighed.",
+   "body": "Rice, pasta and oats take up water when cooked and weigh more, while meat loses water and weighs less. A raw entry logged for cooked food (or the reverse) can be off by a large margin. Pick one habit: weigh raw before cooking, or choose a database entry that says cooked.",
+   "do": [
+    "Weigh food in the state the database entry names.",
+    "Weigh dry foods before they cook when you can."
+   ]
+  },
+  {
+   "id": "nut-mistake-cooking-oil",
+   "type": "mistake",
+   "title": "Forgetting cooking oil and butter",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "fao-2003"
+   ],
+   "take": "Fat has 9 kcal per gram, so a splash of oil in the pan can add a few hundred calories unseen.",
+   "body": "Fat provides 9 kcal per gram on the Atwater scale, so 10 g of oil adds about 90 kcal and a generous 25 g pour adds about 225. Oil is the classic missing entry in a log because it never sits on the plate as a measured item.",
+   "do": [
+    "Measure oil with a spoon or weigh the pan before and after.",
+    "Log sauces and dressings the same way."
+   ]
+  },
+  {
+   "id": "nut-mistake-eyeballing",
+   "type": "mistake",
+   "title": "Eyeballing dense foods like nut butter, cheese and cereal",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "gibson-2016"
+   ],
+   "take": "Eyeballed portions of calorie-dense foods are easy to get wrong, and small errors there cost the most calories.",
+   "body": "In a study of 67 adults, estimates of pre-weighed foods using cups and spoons landed within 25 percent of the true weight only 29 percent of the time. The foods that hide energy, such as nut butter or granola, have the most calories per gram, so small errors cost more. Weigh these items, and eyeball vegetables if you like.",
+   "do": [
+    "Weigh the dense foods; estimate the low-calorie ones."
+   ]
+  },
+  {
+   "id": "nut-mistake-database-entry",
+   "type": "mistake",
+   "title": "Taking the first database entry without checking it",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "evenepoel-2020",
+    "griffiths-2018"
+   ],
+   "take": "App databases are good on average but hold wrong and duplicate entries that can swing a meal by hundreds of calories.",
+   "body": "A validation of MyFitnessPal in 50 participants found cleaned values matched a lab database well for energy (r=0.96), but 2.8 percent of entries had to be removed as implausible, using a 1,500 kcal per portion ceiling. A comparison of five apps found values for some nutrients, including protein and fat, lower than research software. Barcode scans are as good as the product record behind them.",
+   "do": [
+    "Compare the entry to the packet label.",
+    "Prefer entries from the manufacturer, and delete odd ones."
+   ]
+  },
+  {
+   "id": "nut-mistake-bites-drinks",
+   "type": "mistake",
+   "title": "Not logging drinks, bites, tastes and sauces",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "burrows-2019"
+   ],
+   "take": "Small unlogged items are a large part of why logs read low.",
+   "body": "Under-reporting against doubly labeled water is common, but the reviews do not say which items go missing, so this is a practical reading and not a measured split. Milk in coffee, juice, snacks while cooking, and sauces add up across a week.",
+   "do": [
+    "Log as you go, not at the end of the day.",
+    "Count liquid calories too."
+   ]
+  },
+  {
+   "id": "nut-mistake-restaurant-menu",
+   "type": "mistake",
+   "title": "Logging a restaurant meal at the number on the menu",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "urban-2011",
+    "urban-2010",
+    "urban-2016"
+   ],
+   "take": "Restaurant meals often hold more energy than stated, and the error is largest on individual items.",
+   "body": "Laboratory analysis of 269 foods from 42 restaurants found the average stated value was close, but 19 percent of items contained at least 100 kcal more than stated. In 29 reduced-energy restaurant foods, measured energy averaged 18 percent above stated, and free side dishes pushed it far higher. Non-chain restaurant meals averaged about 1,205 kcal. A generous estimate is safer than a hopeful one.",
+   "do": [
+    "Add 10 to 20 percent for restaurant meals when your goal is losing weight."
+   ]
+  },
+  {
+   "id": "nut-mistake-weekends",
+   "type": "mistake",
+   "title": "Tracking weekdays carefully and weekends loosely",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "racette-2008",
+    "orsama-2014"
+   ],
+   "take": "Weekend eating and activity can erase much of a weekday deficit.",
+   "body": "In 48 adults, weight rose on weekend days at baseline, and in the calorie-restriction group weight loss stopped on weekends. An analysis of 4,657 weights from 80 adults found weight higher on Sunday and Monday, decreasing through the week, which is normal and not by itself a sign of gain. People who compensated most were most likely to lose or maintain.",
+   "do": [
+    "Log the weekend with the same effort, or compare weekly averages."
+   ]
+  },
+  {
+   "id": "nut-mistake-all-or-nothing",
+   "type": "mistake",
+   "title": "Treating the tracker as exact, or quitting after one bad day",
+   "topic": "tracking",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "odriscoll-2020",
+    "harvey-2019"
+   ],
+   "take": "Tracker numbers are estimates with real error, and a single high day changes little.",
+   "body": "Labels, databases, restaurant meals, wearables and your own memory all carry error, and wearable energy estimates vary widely with the activity. The log is useful for trends. A missed day or an over-target day matters little against weeks of data, and dropping the log altogether is the larger loss.",
+   "do": [
+    "Use a weekly average and adjust slowly.",
+    "Restart the next meal, not the next Monday."
+   ]
+  },
+  {
+   "id": "nut-num-protein-range",
+   "type": "number",
+   "title": "Daily protein for lifters",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "jager-2017",
+    "nunes-2022",
+    "iraki-2019"
+   ],
+   "value": "1.6-2.2",
+   "unit": "g per kg per day",
+   "sort": 1.6,
+   "take": "The common target for building muscle: 0.7 to 1.0 g per lb a day."
+  },
+  {
+   "id": "nut-num-protein-meal",
+   "type": "number",
+   "title": "Protein per serving",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "jager-2017"
+   ],
+   "value": "0.25",
+   "unit": "g per kg per meal",
+   "sort": 0.25,
+   "take": "ISSN guide for one serving: 20 to 40 g in absolute terms."
+  },
+  {
+   "id": "nut-num-atwater",
+   "type": "number",
+   "title": "Energy per gram of food",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "fao-2003"
+   ],
+   "value": "4 · 4 · 9 · 7",
+   "unit": "kcal per g",
+   "sort": 4,
+   "take": "Protein 4, carbohydrate 4, fat 9 and alcohol 7 kcal per gram on food labels."
+  },
+  {
+   "id": "nut-num-equation-error",
+   "type": "number",
+   "title": "Accuracy of the best equation",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "frankenfield-2005"
+   ],
+   "value": "10",
+   "unit": "% error band",
+   "sort": 10,
+   "take": "Mifflin-St Jeor was within 10 percent of measured resting rate for the most people."
+  },
+  {
+   "id": "nut-num-activity-range",
+   "type": "number",
+   "title": "Activity multiplier range",
+   "topic": "energy",
+   "level": "intermediate",
+   "confidence": "rule",
+   "sources": [
+    "fao-2004"
+   ],
+   "value": "1.40-2.40",
+   "unit": "times resting rate",
+   "sort": 1.4,
+   "take": "Long-term sustainable activity levels for free-living adults, per FAO/WHO/UNU."
+  },
+  {
+   "id": "nut-num-label-slack",
+   "type": "number",
+   "title": "US label tolerance",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "cfr-101-9",
+    "jumpertz-2013"
+   ],
+   "value": "+20",
+   "unit": "% over the label",
+   "sort": 20,
+   "take": "A food is misbranded only above this; a typical snack runs a few percent over."
+  },
+  {
+   "id": "nut-num-underreport",
+   "type": "number",
+   "title": "Under-reporting in athletes",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "capling-2017"
+   ],
+   "value": "19",
+   "unit": "% of true intake",
+   "sort": 19,
+   "take": "Self-reported energy intake was this much lower than measured expenditure."
+  },
+  {
+   "id": "nut-num-creatine",
+   "type": "number",
+   "title": "Creatine monohydrate dose",
+   "topic": "supplements",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "iraki-2019",
+    "delpino-2022"
+   ],
+   "value": "3-5",
+   "unit": "g per day",
+   "sort": 3,
+   "take": "Daily dose from a physique-athlete review; lean-mass gain was about 1.1 kg with training."
+  },
+  {
+   "id": "nut-num-caffeine",
+   "type": "number",
+   "title": "Caffeine dose often studied",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "iraki-2019",
+    "grgic-2018"
+   ],
+   "value": "5-6",
+   "unit": "mg per kg",
+   "sort": 5,
+   "take": "Dose a narrative review gives for physique athletes; 5 mg/kg is 2.3 mg per lb."
+  },
+  {
+   "id": "nut-num-fibre",
+   "type": "number",
+   "title": "Fibre target",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "reynolds-2019"
+   ],
+   "value": "25-29",
+   "unit": "g per day",
+   "sort": 25,
+   "take": "Intake at which health benefits were greatest in pooled studies."
+  },
+  {
+   "id": "nut-term-maintenance",
+   "type": "term",
+   "title": "Maintenance calories",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "The daily energy intake at which your body weight stays steady over weeks. Also called total daily energy expenditure."
+  },
+  {
+   "id": "nut-term-rmr",
+   "type": "term",
+   "title": "Resting metabolic rate (RMR)",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "The energy your body uses at rest to keep you alive, usually 60 to 70 percent of a day for inactive people, estimated by equations or measured."
+  },
+  {
+   "id": "nut-term-tef",
+   "type": "term",
+   "title": "Thermic effect of food (TEF)",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "The energy used to digest, absorb and store food, about 5 to 15 percent of daily energy expenditure on a mixed diet, and higher with protein and alcohol."
+  },
+  {
+   "id": "nut-term-atwater",
+   "type": "term",
+   "title": "Atwater factors",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "Standard energy values per gram that food labels use: 4 kcal for protein and carbohydrate, 9 for fat, 7 for alcohol. They are averages, not measurements of your food."
+  },
+  {
+   "id": "nut-term-macronutrients",
+   "type": "term",
+   "title": "Macronutrients (macros)",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "The three nutrients that provide most energy: protein, carbohydrate and fat. Alcohol is sometimes counted as a fourth source of energy."
+  },
+  {
+   "id": "nut-term-leucine",
+   "type": "term",
+   "title": "Leucine",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "An essential amino acid that acts as a trigger for muscle protein synthesis. Animal proteins contain more than most plant proteins, per gram of protein."
+  },
+  {
+   "id": "nut-term-kilojoule",
+   "type": "term",
+   "title": "Kilojoule (kJ) and kilocalorie (kcal)",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "Two units of food energy. One kcal, the calorie on most labels, equals 4.184 kJ. Many countries print kJ."
+  },
+  {
+   "id": "nut-term-ergogenic",
+   "type": "term",
+   "title": "Ergogenic aid",
+   "topic": "supplements",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "Something taken to improve exercise performance or training results. Creatine and caffeine are the best-supported examples."
+  },
+  {
+   "id": "nut-table-protein-targets",
+   "type": "table",
+   "title": "Protein targets by goal and body weight",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "jager-2017",
+    "roberts-2020",
+    "iraki-2019"
+   ],
+   "take": "Daily protein in g per kg and per lb, with worked examples for 70 kg (154 lb) and 90 kg (198 lb) people.",
+   "columns": [
+    "Goal",
+    "g per kg",
+    "g per lb",
+    "70 kg (154 lb)",
+    "90 kg (198 lb)"
+   ],
+   "rows": [
+    [
+     "Maintain or build muscle (ISSN, sufficient)",
+     "1.4-2.0",
+     "0.64-0.91",
+     "98-140 g",
+     "126-180 g"
+    ],
+    [
+     "Build muscle (common target)",
+     "1.6-2.2",
+     "0.73-1.00",
+     "112-154 g",
+     "144-198 g"
+    ],
+    [
+     "Physique athlete in contest prep",
+     "1.8-2.7",
+     "0.82-1.22",
+     "126-189 g",
+     "162-243 g"
+    ],
+    [
+     "Lean lifter in a calorie deficit",
+     "2.3-3.1",
+     "1.04-1.41",
+     "161-217 g",
+     "207-279 g"
+    ],
+    [
+     "One serving (ISSN guide)",
+     "0.25",
+     "0.11",
+     "about 18 g",
+     "about 23 g"
+    ]
+   ]
+  },
+  {
+   "id": "nut-table-hand-portions",
+   "type": "table",
+   "title": "Hand-portion guide",
+   "topic": "tracking",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "gibson-2016"
+   ],
+   "take": "A rough guide for estimating a serving with your own hand when you do not weigh food. Check it against a scale once.",
+   "columns": [
+    "Food group",
+    "Hand measure",
+    "Rough yield"
+   ],
+   "rows": [
+    [
+     "Protein foods (meat, fish, tofu)",
+     "Palm, same thickness",
+     "About 20-30 g protein"
+    ],
+    [
+     "Starchy carbohydrate (rice, pasta, potato)",
+     "Cupped hand, cooked",
+     "About 25-35 g carbohydrate"
+    ],
+    [
+     "Vegetables and salad",
+     "Fist",
+     "About 1 cup, low in energy"
+    ],
+    [
+     "Fats (oil, butter, nut butter)",
+     "Thumb",
+     "About 7-12 g fat"
+    ],
+    [
+     "Dense snacks (nuts, cheese)",
+     "Thumb of cheese, small handful of nuts",
+     "Wide range: weigh these when you can"
+    ]
+   ]
+  },
+  {
+   "id": "nut-table-supplements",
+   "type": "table",
+   "title": "Supplement evidence at a glance",
+   "topic": "supplements",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "kreider-2017",
+    "delpino-2022",
+    "grgic-2018",
+    "jager-2017",
+    "trexler-2015",
+    "varvik-2021",
+    "wolfe-2017",
+    "clemesha-2020",
+    "maughan-2018"
+   ],
+   "take": "How the common supplements rate for people who lift, from strongest to weakest evidence.",
+   "columns": [
+    "Supplement",
+    "Evidence",
+    "What it does",
+    "Typical dose"
+   ],
+   "rows": [
+    [
+     "Creatine monohydrate",
+     "Strong",
+     "Adds lean mass and strength with training",
+     "3-5 g a day"
+    ],
+    [
+     "Caffeine",
+     "Strong",
+     "Small gain in strength and power",
+     "About 5-6 mg/kg (limited data)"
+    ],
+    [
+     "Protein powder",
+     "Strong as a convenience",
+     "Helps meet daily protein, no special magic",
+     "20-40 g per serving"
+    ],
+    [
+     "Beta-alanine",
+     "Moderate",
+     "Helps efforts lasting 1 to 4 minutes",
+     "4-6 g a day for 2+ weeks"
+    ],
+    [
+     "Citrulline malate",
+     "Limited",
+     "About 3 extra reps per exercise in trials",
+     "6-8 g, 40-60 min before"
+    ],
+    [
+     "BCAA pills",
+     "Weak",
+     "No human data on oral BCAA alone for muscle",
+     "Not needed with enough protein"
+    ],
+    [
+     "Testosterone boosters",
+     "Poor",
+     "No testosterone data for most ingredients",
+     "Avoid"
+    ]
+   ]
+  }
+ ],
+ "sources": {
+  "jager-2017": {
+   "type": "position",
+   "authors": [
+    "Jäger R",
+    "Kerksick CM",
+    "Campbell BI",
+    "Cribb PJ",
+    "Wells SD",
+    "Skwiat TM",
+    "Purpura M",
+    "Ziegenfuss TN",
+    "Ferrando AA",
+    "Arent SM",
+    "Smith-Ryan AE",
+    "Stout JR",
+    "Arciero PJ",
+    "Ormsbee MJ",
+    "Taylor LW",
+    "Wilborn CD",
+    "Kalman DS",
+    "Kreider RB",
+    "Willoughby DS",
+    "Hoffman JR",
+    "Krzykowski JL",
+    "Antonio J"
+   ],
+   "year": 2017,
+   "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "doi": "10.1186/s12970-017-0177-8",
+   "volume": "14",
+   "issue": "1",
+   "pages": "20",
+   "pmid": "28642676",
+   "support": "General recommendations are 0.25 g of a high-quality protein per kg of body weight, or an absolute dose of 20-40 g. An overall daily protein intake in the range of 1.4-2.0 g protein/kg body weight/day is sufficient for most exercising individuals."
+  },
+  "nunes-2022": {
+   "type": "meta-analysis",
+   "authors": [
+    "Nunes EA",
+    "Colenso‐Semple L",
+    "McKellar SR",
+    "Yau T",
+    "Ali MU",
+    "Fitzpatrick‐Lewis D",
+    "Sherifali D",
+    "Gaudichon C",
+    "Tomé D",
+    "Atherton PJ",
+    "Robles MC",
+    "Naranjo‐Modad S",
+    "Braun M",
+    "Landi F",
+    "Phillips SM"
+   ],
+   "year": 2022,
+   "title": "Systematic review and meta‐analysis of protein intake to support muscle mass and function in healthy adults",
+   "journal": "Journal of Cachexia, Sarcopenia and Muscle",
+   "doi": "10.1002/jcsm.12922",
+   "volume": "13",
+   "issue": "2",
+   "pages": "795-810",
+   "pmid": "35187864",
+   "n_studies": 74,
+   "support": "Increasing daily protein ingestion may enhance gains in LBM in studies enrolling subjects in RE; significant for younger subjects (<65 years old) ingesting >=1.6 g of protein/kg/day."
+  },
+  "tagawa-2021": {
+   "type": "systematic-review",
+   "authors": [
+    "Tagawa R",
+    "Watanabe D",
+    "Ito K",
+    "Ueda K",
+    "Nakayama K",
+    "Sanbongi C",
+    "Miyachi M"
+   ],
+   "year": 2021,
+   "title": "Dose–response relationship between protein intake and muscle mass increase: a systematic review and meta-analysis of randomized controlled trials",
+   "journal": "Nutrition Reviews",
+   "doi": "10.1093/nutrit/nuaa104",
+   "volume": "79",
+   "issue": "1",
+   "pages": "66-75",
+   "pmid": "33300582",
+   "n_studies": 105,
+   "n_participants": 5402,
+   "support": "A total of 5402 study participants from 105 articles. Lean body mass rose 0.39 kg per 0.1 g/kg/d below 1.3 g/kg/d and 0.12 kg above it."
+  },
+  "iraki-2019": {
+   "type": "review",
+   "authors": [
+    "Iraki J",
+    "Fitschen P",
+    "Espinar S",
+    "Helms E"
+   ],
+   "year": 2019,
+   "title": "Nutrition Recommendations for Bodybuilders in the Off-Season: A Narrative Review",
+   "journal": "Sports",
+   "doi": "10.3390/sports7070154",
+   "volume": "7",
+   "issue": "7",
+   "pages": "154",
+   "pmid": "31247944",
+   "support": "Sufficient protein (1.6-2.2 g/kg/day) with 0.40-0.55 g/kg per meal; fat 0.5-1.5 g/kg/day; carbohydrate at least 3-5 g/kg/day; creatine monohydrate (3-5 g/day), caffeine (5-6 mg/kg), beta-alanine (3-5 g/day) and citrulline malate (8 g/day) might yield ergogenic effects."
+  },
+  "devries-2018": {
+   "type": "meta-analysis",
+   "authors": [
+    "Devries MC",
+    "Sithamparapillai A",
+    "Brimble KS",
+    "Banfield L",
+    "Morton RW",
+    "Phillips SM"
+   ],
+   "year": 2018,
+   "title": "'Changes in Kidney Function Do Not Differ between Healthy Adults Consuming Higher- Compared with Lower- or Normal-Protein Diets: A Systematic Review and Meta-Analysis",
+   "journal": "The Journal of Nutrition",
+   "doi": "10.1093/jn/nxy197",
+   "volume": "148",
+   "issue": "11",
+   "pages": "1760-1775",
+   "pmid": "30383278",
+   "n_studies": 28,
+   "n_participants": 1358,
+   "support": "28 trials with 1358 participants; HP intakes do not adversely influence kidney function on GFR in healthy adults."
+  },
+  "moore-2014": {
+   "type": "other",
+   "authors": [
+    "Moore DR",
+    "Churchward-Venne TA",
+    "Witard O",
+    "Breen L",
+    "Burd NA",
+    "Tipton KD",
+    "Phillips SM"
+   ],
+   "year": 2015,
+   "title": "Protein Ingestion to Stimulate Myofibrillar Protein Synthesis Requires Greater Relative Protein Intakes in Healthy Older Versus Younger Men",
+   "journal": "The Journals of Gerontology: Series A",
+   "doi": "10.1093/gerona/glu103",
+   "volume": "70",
+   "issue": "1",
+   "pages": "57-62",
+   "pmid": "25056502",
+   "support": "MPS reached a plateau after ingestion of 0.40 and 0.24 g/kg body mass in older and younger men."
+  },
+  "mamerow-2014": {
+   "type": "trial",
+   "authors": [
+    "Mamerow MM",
+    "Mettler JA",
+    "English KL",
+    "Casperson SL",
+    "Arentson-Lantz E",
+    "Sheffield-Moore M",
+    "Layman DK",
+    "Paddon-Jones D"
+   ],
+   "year": 2014,
+   "title": "Dietary Protein Distribution Positively Influences 24-h Muscle Protein Synthesis in Healthy Adults",
+   "journal": "The Journal of Nutrition",
+   "doi": "10.3945/jn.113.185280",
+   "volume": "144",
+   "issue": "6",
+   "pages": "876-880",
+   "pmid": "24477298",
+   "n_participants": 8,
+   "support": "24-h mixed muscle protein fractional synthesis rate was 25% higher in the EVEN vs the SKEW protein distribution (n = 8)."
+  },
+  "hudson-2020": {
+   "type": "review",
+   "authors": [
+    "Hudson J",
+    "Bergia R",
+    "Campbell W"
+   ],
+   "year": 2020,
+   "title": "Protein Distribution and Muscle-Related Outcomes: Does the Evidence Support the Concept?",
+   "journal": "Nutrients",
+   "doi": "10.3390/nu12051441",
+   "volume": "12",
+   "issue": "5",
+   "pages": "1441",
+   "pmid": "32429355",
+   "support": "The current evidence on the efficacy of consuming an optimal protein distribution is limited and inconsistent."
+  },
+  "trommelen-2023": {
+   "type": "trial",
+   "authors": [
+    "Trommelen J",
+    "van Lieshout GAA",
+    "Nyakayiru J",
+    "Holwerda AM",
+    "Smeets JSJ",
+    "Hendriks FK",
+    "van Kranenburg JMX",
+    "Zorenc AH",
+    "Senden JM",
+    "Goessens JPB",
+    "Gijsen AP",
+    "van Loon LJC"
+   ],
+   "year": 2023,
+   "title": "The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration in vivo in humans",
+   "journal": "Cell Reports Medicine",
+   "doi": "10.1016/j.xcrm.2023.101324",
+   "volume": "4",
+   "issue": "12",
+   "pages": "101324",
+   "pmid": "38118410",
+   "support": "Ingestion of 100 g protein results in a greater and more prolonged (>12 h) anabolic response when compared to 25 g protein."
+  },
+  "wirth-2020": {
+   "type": "systematic-review",
+   "authors": [
+    "Wirth J",
+    "Hillesheim E",
+    "Brennan L"
+   ],
+   "year": 2020,
+   "title": "The Role of Protein Intake and its Timing on Body Composition and Muscle Function in Healthy Adults: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+   "journal": "The Journal of Nutrition",
+   "doi": "10.1093/jn/nxaa049",
+   "volume": "150",
+   "issue": "6",
+   "pages": "1443-1460",
+   "pmid": "32232404",
+   "n_studies": 65,
+   "n_participants": 2907,
+   "support": "Data from 65 studies with 2907 participants; no beneficial effect of a specific timing of protein intake on LBM, handgrip strength, and leg press strength."
+  },
+  "lim-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Lim MT",
+    "Pan BJ",
+    "Toh DWK",
+    "Sutanto CN",
+    "Kim JE"
+   ],
+   "year": 2021,
+   "title": "Animal Protein versus Plant Protein in Supporting Lean Mass and Muscle Strength: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+   "journal": "Nutrients",
+   "doi": "10.3390/nu13020661",
+   "volume": "13",
+   "issue": "2",
+   "pages": "661",
+   "pmid": "33670701",
+   "n_studies": 18,
+   "support": "Protein source did not affect changes in absolute lean mass or muscle strength; animal protein favoured percent lean mass, and younger adults gained more with animal protein."
+  },
+  "hevia-2021": {
+   "type": "rct",
+   "authors": [
+    "Hevia-Larraín V",
+    "Gualano B",
+    "Longobardi I",
+    "Gil S",
+    "Fernandes AL",
+    "Costa LAR",
+    "Pereira RMR",
+    "Artioli GG",
+    "Phillips SM",
+    "Roschel H"
+   ],
+   "year": 2021,
+   "title": "High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet to Support Resistance Training Adaptations: A Comparison Between Habitual Vegans and Omnivores",
+   "journal": "Sports Medicine",
+   "doi": "10.1007/s40279-021-01434-9",
+   "volume": "51",
+   "issue": "6",
+   "pages": "1317-1330",
+   "pmid": "33599941",
+   "n_participants": 38,
+   "support": "A high-protein (~1.6 g/kg/day) exclusively plant-based diet is not different from a protein-matched mixed diet in supporting muscle strength and mass accrual (19 vegans, 19 omnivores, 12 weeks)."
+  },
+  "messina-2018": {
+   "type": "meta-analysis",
+   "authors": [
+    "Messina M",
+    "Lynch H",
+    "Dickinson JM",
+    "Reed KE"
+   ],
+   "year": 2018,
+   "title": "No Difference Between the Effects of Supplementing With Soy Protein Versus Animal Protein on Gains in Muscle Mass and Strength in Response to Resistance Exercise",
+   "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+   "doi": "10.1123/ijsnem.2018-0071",
+   "volume": "28",
+   "issue": "6",
+   "pages": "674-685",
+   "pmid": "29722584",
+   "n_studies": 9,
+   "n_participants": 266,
+   "support": "Nine studies involving 266 participants; soy protein supplementation produces similar gains in strength and LBM in response to RET as whey protein."
+  },
+  "vanvliet-2015": {
+   "type": "review",
+   "authors": [
+    "van Vliet S",
+    "Burd NA",
+    "van Loon LJ"
+   ],
+   "year": 2015,
+   "title": "The Skeletal Muscle Anabolic Response to Plant- versus Animal-Based Protein Consumption",
+   "journal": "The Journal of Nutrition",
+   "doi": "10.3945/jn.114.204305",
+   "volume": "145",
+   "issue": "9",
+   "pages": "1981-1991",
+   "pmid": "26224750",
+   "support": "Ingestion of plant-based proteins in soy and wheat results in a lower muscle protein synthetic response than several animal-based proteins; most plant proteins have a relatively low leucine content."
+  },
+  "henselmans-2022": {
+   "type": "systematic-review",
+   "authors": [
+    "Henselmans M",
+    "Bjørnsen T",
+    "Hedderman R",
+    "Vårvik FT"
+   ],
+   "year": 2022,
+   "title": "The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review",
+   "journal": "Nutrients",
+   "doi": "10.3390/nu14040856",
+   "volume": "14",
+   "issue": "4",
+   "pages": "856",
+   "pmid": "35215506",
+   "n_studies": 49,
+   "support": "49 studies; carbohydrate intake per se is unlikely to affect strength training performance in a fed state in workouts of up to 10 sets per muscle group; higher volumes may benefit."
+  },
+  "burke-2011": {
+   "type": "review",
+   "authors": [
+    "Burke LM",
+    "Hawley JA",
+    "Wong SHS",
+    "Jeukendrup AE"
+   ],
+   "year": 2011,
+   "title": "Carbohydrates for training and competition",
+   "journal": "Journal of Sports Sciences",
+   "doi": "10.1080/02640414.2011.585473",
+   "volume": "29",
+   "issue": "sup1",
+   "pages": "S17-S27",
+   "pmid": "21660838",
+   "support": "30-60 g/h is an appropriate target for sports of longer duration; events >2.5 h may benefit from up to 90 g/h."
+  },
+  "roberts-2020": {
+   "type": "review",
+   "authors": [
+    "Roberts BM",
+    "Helms ER",
+    "Trexler ET",
+    "Fitschen PJ"
+   ],
+   "year": 2020,
+   "title": "Nutritional Recommendations for Physique Athletes",
+   "journal": "Journal of Human Kinetics",
+   "doi": "10.2478/hukin-2019-0096",
+   "volume": "71",
+   "issue": "1",
+   "pages": "79-108",
+   "pmid": "32148575",
+   "support": "Low-end fat intake during contest preparation of 10-25% of calories; protein 1.8-2.7 g/kg; four or five protein boluses a day."
+  },
+  "helms-2014-prep": {
+   "type": "review",
+   "authors": [
+    "Helms ER",
+    "Aragon AA",
+    "Fitschen PJ"
+   ],
+   "year": 2014,
+   "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "doi": "10.1186/1550-2783-11-20",
+   "volume": "11",
+   "issue": "1",
+   "pages": "20",
+   "pmid": "24864135",
+   "support": "Most bodybuilders will respond best to 2.3-3.1 g/kg of lean body mass of protein, 15-30% of calories from fat, and the remainder from carbohydrate."
+  },
+  "whittaker-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Whittaker J",
+    "Wu K"
+   ],
+   "year": 2021,
+   "title": "Low-fat diets and testosterone in men: Systematic review and meta-analysis of intervention studies",
+   "journal": "The Journal of Steroid Biochemistry and Molecular Biology",
+   "doi": "10.1016/j.jsbmb.2021.105878",
+   "volume": "210",
+   "pages": "105878",
+   "pmid": "33741447",
+   "n_studies": 6,
+   "n_participants": 206,
+   "support": "6 eligible studies with 206 participants; significant decreases in sex hormones on low-fat vs high-fat diets (total testosterone SMD -0.38)."
+  },
+  "reynolds-2019": {
+   "type": "meta-analysis",
+   "authors": [
+    "Reynolds A",
+    "Mann J",
+    "Cummings J",
+    "Winter N",
+    "Mete E",
+    "Te Morenga L"
+   ],
+   "year": 2019,
+   "title": "Carbohydrate quality and human health: a series of systematic reviews and meta-analyses",
+   "journal": "The Lancet",
+   "doi": "10.1016/S0140-6736(18)31809-9",
+   "volume": "393",
+   "issue": "10170",
+   "pages": "434-445",
+   "pmid": "30638909",
+   "n_participants": 4635,
+   "support": "185 prospective studies and 58 clinical trials with 4635 adult participants; risk reduction was greatest when daily intake of dietary fibre was between 25 g and 29 g."
+  },
+  "savoie-2015": {
+   "type": "meta-analysis",
+   "authors": [
+    "Savoie FA",
+    "Kenefick RW",
+    "Ely BR",
+    "Cheuvront SN",
+    "Goulet EDB"
+   ],
+   "year": 2015,
+   "title": "Effect of Hypohydration on Muscle Endurance, Strength, Anaerobic Power and Capacity and Vertical Jumping Ability: A Meta-Analysis",
+   "journal": "Sports Medicine",
+   "doi": "10.1007/s40279-015-0349-0",
+   "volume": "45",
+   "issue": "8",
+   "pages": "1207-1227",
+   "pmid": "26178327",
+   "n_studies": 28,
+   "support": "28 manuscripts; hypohydration impaired muscle endurance by 8.3%, strength fell by 5.5%, anaerobic power by 5.8%."
+  },
+  "parr-2014": {
+   "type": "trial",
+   "authors": [
+    "Parr EB",
+    "Camera DM",
+    "Areta JL",
+    "Burke LM",
+    "Phillips SM",
+    "Hawley JA",
+    "Coffey VG"
+   ],
+   "year": 2014,
+   "title": "Alcohol Ingestion Impairs Maximal Post-Exercise Rates of Myofibrillar Protein Synthesis following a Single Bout of Concurrent Training",
+   "journal": "PLoS ONE",
+   "doi": "10.1371/journal.pone.0088384",
+   "volume": "9",
+   "issue": "2",
+   "pages": "e88384",
+   "pmid": "24533082",
+   "n_participants": 8,
+   "support": "Compared to protein alone, there was a reduction in MPS with alcohol plus protein (24%) and alcohol plus carbohydrate (37%); 8 active males, 1.5 g/kg alcohol."
+  },
+  "kwok-2019": {
+   "type": "meta-analysis",
+   "authors": [
+    "Kwok A",
+    "Dordevic AL",
+    "Paton G",
+    "Page MJ",
+    "Truby H"
+   ],
+   "year": 2019,
+   "title": "Effect of alcohol consumption on food energy intake: a systematic review and meta-analysis",
+   "journal": "British Journal of Nutrition",
+   "doi": "10.1017/S0007114518003677",
+   "volume": "121",
+   "issue": "5",
+   "pages": "481-495",
+   "pmid": "30630543",
+   "n_studies": 22,
+   "n_participants": 701,
+   "support": "22 studies involving 701 participants; no compensation for alcoholic beverage energy; food energy intake rose 343 kJ and total energy 1072 kJ."
+  },
+  "thomas-2016": {
+   "type": "position",
+   "authors": [
+    "Thomas DT",
+    "Erdman KA",
+    "Burke LM"
+   ],
+   "year": 2016,
+   "title": "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance",
+   "journal": "Journal of the Academy of Nutrition and Dietetics",
+   "doi": "10.1016/j.jand.2015.12.006",
+   "volume": "116",
+   "issue": "3",
+   "pages": "501-528",
+   "pmid": "26920240",
+   "support": "Performance and recovery are enhanced by well-chosen nutrition strategies; guidelines for the appropriate type, amount, and timing of intake of food, fluids, and supplements."
+  },
+  "kreider-2017": {
+   "type": "position",
+   "authors": [
+    "Kreider RB",
+    "Kalman DS",
+    "Antonio J",
+    "Ziegenfuss TN",
+    "Wildman R",
+    "Collins R",
+    "Candow DG",
+    "Kleiner SM",
+    "Almada AL",
+    "Lopez HL"
+   ],
+   "year": 2017,
+   "title": "International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "doi": "10.1186/s12970-017-0173-z",
+   "volume": "14",
+   "issue": "1",
+   "pages": "18",
+   "pmid": "28615996",
+   "support": "Short and long-term supplementation (up to 30 g/day for 5 years) is safe and well-tolerated in healthy individuals."
+  },
+  "delpino-2022": {
+   "type": "meta-analysis",
+   "authors": [
+    "Delpino FM",
+    "Figueiredo LM",
+    "Forbes SC",
+    "Candow DG",
+    "Santos HO"
+   ],
+   "year": 2022,
+   "title": "Influence of age, sex, and type of exercise on the efficacy of creatine supplementation on lean body mass: A systematic review and meta-analysis of randomized clinical trials",
+   "journal": "Nutrition",
+   "doi": "10.1016/j.nut.2022.111791",
+   "volume": "103-104",
+   "pages": "111791",
+   "pmid": "35986981",
+   "n_studies": 35,
+   "n_participants": 1192,
+   "support": "35 studies, 1192 participants; creatine with resistance training increased LBM by 1.10 kg; males +1.46 kg vs a non-significant 0.29 kg in females."
+  },
+  "grgic-2018": {
+   "type": "meta-analysis",
+   "authors": [
+    "Grgic J",
+    "Trexler ET",
+    "Lazinica B",
+    "Pedisic Z"
+   ],
+   "year": 2018,
+   "title": "Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "doi": "10.1186/s12970-018-0216-0",
+   "volume": "15",
+   "issue": "1",
+   "pages": "11",
+   "pmid": "29527137",
+   "n_studies": 20,
+   "support": "Caffeine improved strength (SMD 0.20) and power (SMD 0.17); upper but not lower body strength."
+  },
+  "trexler-2015": {
+   "type": "position",
+   "authors": [
+    "Trexler ET",
+    "Smith-Ryan AE",
+    "Stout JR",
+    "Hoffman JR",
+    "Wilborn CD",
+    "Sale C",
+    "Kreider RB",
+    "Jäger R",
+    "Earnest CP",
+    "Bannock L",
+    "Campbell B",
+    "Kalman D",
+    "Ziegenfuss TN",
+    "Antonio J"
+   ],
+   "year": 2015,
+   "title": "International society of sports nutrition position stand: Beta-Alanine",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "doi": "10.1186/s12970-015-0090-y",
+   "volume": "12",
+   "issue": "1",
+   "pages": "30",
+   "pmid": "26175657",
+   "support": "4-6 g daily for at least 2-4 weeks improves exercise performance, with more pronounced effects in tasks lasting 1-4 min; paraesthesia is the only reported side effect."
+  },
+  "varvik-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Vårvik FT",
+    "Bjørnsen T",
+    "Gonzalez AM"
+   ],
+   "year": 2021,
+   "title": "Acute Effect of Citrulline Malate on Repetition Performance During Strength Training: A Systematic Review and Meta-Analysis",
+   "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+   "doi": "10.1123/ijsnem.2020-0295",
+   "volume": "31",
+   "issue": "4",
+   "pages": "350-358",
+   "pmid": "34010809",
+   "n_studies": 8,
+   "n_participants": 137,
+   "support": "Eight studies, 137 participants; 6-8 g citrulline malate 40-60 min before exercise increased repetitions by 3 (6.4%) vs placebo."
+  },
+  "maughan-2018": {
+   "type": "position",
+   "authors": [
+    "Maughan RJ",
+    "Burke LM",
+    "Dvorak J",
+    "Larson-Meyer DE",
+    "Peeling P",
+    "Phillips SM",
+    "Rawson ES",
+    "Walsh NP",
+    "Garthe I",
+    "Geyer H",
+    "Meeusen R",
+    "van Loon LJC",
+    "Shirreffs SM",
+    "Spriet LL",
+    "Stuart M",
+    "Vernec A",
+    "Currell K",
+    "Ali VM",
+    "Budgett RG",
+    "Ljungqvist A",
+    "Mountjoy M",
+    "Pitsiladis YP",
+    "Soligard T",
+    "Erdener U",
+    "Engebretsen L"
+   ],
+   "year": 2018,
+   "title": "IOC consensus statement: dietary supplements and the high-performance athlete",
+   "journal": "British Journal of Sports Medicine",
+   "doi": "10.1136/bjsports-2018-099027",
+   "volume": "52",
+   "issue": "7",
+   "pages": "439-455",
+   "pmid": "29540367",
+   "support": "Only a few supplements (including caffeine, creatine, specific buffering agents and nitrate) have good evidence of benefits; inadvertent ingestion of prohibited substances is a known risk."
+  },
+  "wolfe-2017": {
+   "type": "review",
+   "authors": [
+    "Wolfe RR"
+   ],
+   "year": 2017,
+   "title": "Branched-chain amino acids and muscle protein synthesis in humans: myth or reality?",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "doi": "10.1186/s12970-017-0184-9",
+   "volume": "14",
+   "issue": "1",
+   "pages": "30",
+   "pmid": "28852372",
+   "support": "No studies in human subjects quantified the MPS response to orally ingested BCAAs alone; two intravenous studies found BCAAs decreased muscle protein synthesis."
+  },
+  "clemesha-2020": {
+   "type": "other",
+   "authors": [
+    "Clemesha CG",
+    "Thaker H",
+    "Samplaski MK"
+   ],
+   "year": 2020,
+   "title": "‘Testosterone Boosting’ Supplements Composition and Claims Are not Supported by the Academic Literature",
+   "journal": "The World Journal of Men's Health",
+   "doi": "10.5534/wjmh.190043",
+   "volume": "38",
+   "issue": "1",
+   "pages": "115",
+   "pmid": "31385468",
+   "support": "Fifty T-booster supplements; no data on testosterone for 61.5% of supplements; 24.8% had data showing an increase."
+  },
+  "frankenfield-2005": {
+   "type": "systematic-review",
+   "authors": [
+    "Frankenfield D",
+    "Roth-Yousey L",
+    "Compher C"
+   ],
+   "year": 2005,
+   "title": "Comparison of Predictive Equations for Resting Metabolic Rate in Healthy Nonobese and Obese Adults: A Systematic Review",
+   "journal": "Journal of the American Dietetic Association",
+   "doi": "10.1016/j.jada.2005.02.005",
+   "volume": "105",
+   "issue": "5",
+   "pages": "775-789",
+   "pmid": "15883556",
+   "support": "Mifflin-St Jeor was the most reliable, predicting RMR within 10% of measured in more nonobese and obese individuals than the other equations."
+  },
+  "hall-2011": {
+   "type": "other",
+   "authors": [
+    "Hall KD",
+    "Sacks G",
+    "Chandramohan D",
+    "Chow CC",
+    "Wang YC",
+    "Gortmaker SL",
+    "Swinburn BA"
+   ],
+   "year": 2011,
+   "title": "Quantification of the effect of energy imbalance on bodyweight",
+   "journal": "The Lancet",
+   "doi": "10.1016/S0140-6736(11)60812-X",
+   "volume": "378",
+   "issue": "9793",
+   "pages": "826-837",
+   "pmid": "21872751",
+   "support": "Bodyweight response to a change of energy intake is slow, with half times of about 1 year; a small persistent gap of about 30 kJ per day underlies observed average weight gain."
+  },
+  "hall-2019": {
+   "type": "rct",
+   "authors": [
+    "Hall KD",
+    "Ayuketah A",
+    "Brychta R",
+    "Cai H",
+    "Cassimatis T",
+    "Chen KY",
+    "Chung ST",
+    "Costa E",
+    "Courville A",
+    "Darcey V",
+    "Fletcher LA",
+    "Forde CG",
+    "Gharib AM",
+    "Guo J",
+    "Howard R",
+    "Joseph PV",
+    "McGehee S",
+    "Ouwerkerk R",
+    "Raisinger K",
+    "Rozga I",
+    "Stagliano M",
+    "Walter M",
+    "Walter PJ",
+    "Yang S",
+    "Zhou M"
+   ],
+   "year": 2019,
+   "title": "Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An Inpatient Randomized Controlled Trial of Ad Libitum Food Intake",
+   "journal": "Cell Metabolism",
+   "doi": "10.1016/j.cmet.2019.05.008",
+   "volume": "30",
+   "issue": "1",
+   "pages": "67-77.e3",
+   "pmid": "31105044",
+   "n_participants": 20,
+   "support": "20 weight-stable adults; weight changes were highly correlated with energy intake (r = 0.8); +0.9 kg on ultra-processed vs -0.9 kg on unprocessed diet."
+  },
+  "fao-2004": {
+   "type": "guideline",
+   "authors": [
+    "FAO/WHO/UNU"
+   ],
+   "year": 2004,
+   "title": "Human energy requirements: report of a joint FAO/WHO/UNU expert consultation",
+   "url": "https://www.fao.org/4/y5686e/y5686e07.htm",
+   "retrieved": "2026-11-13",
+   "support": "The PAL values that can be sustained for a long period of time by free-living adult populations range from about 1.40 to 2.40."
+  },
+  "fao-2003": {
+   "type": "guideline",
+   "authors": [
+    "FAO"
+   ],
+   "year": 2003,
+   "title": "Food energy: methods of analysis and conversion factors (Chapter 3: Calculation of the energy content of foods)",
+   "url": "https://www.fao.org/4/y5022e/y5022e04.htm",
+   "retrieved": "2026-11-13",
+   "support": "Energy values are 17 kJ/g (4.0 kcal/g) for protein, 37 kJ/g (9.0 kcal/g) for fat and 17 kJ/g (4.0 kcal/g) for carbohydrates; alcohol 29 kJ/g (7.0 kcal/g)."
+  },
+  "cfr-101-9": {
+   "type": "rulebook",
+   "authors": [
+    "US Food and Drug Administration"
+   ],
+   "year": 2023,
+   "title": "21 CFR 101.9 Nutrition labeling of food, paragraph (g)(5)",
+   "url": "https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-9.xml",
+   "retrieved": "2026-11-13",
+   "support": "A food with a label declaration of calories ... shall be deemed misbranded if the nutrient content of the composite is greater than 20 percent in excess of the value declared on the label.",
+   "edition": "CFR 2023, title 21, vol. 2"
+  },
+  "jumpertz-2013": {
+   "type": "other",
+   "authors": [
+    "Jumpertz R",
+    "Venti CA",
+    "Le DS",
+    "Michaels J",
+    "Parrington S",
+    "Krakoff J",
+    "Votruba S"
+   ],
+   "year": 2013,
+   "title": "Food label accuracy of common snack foods",
+   "journal": "Obesity",
+   "doi": "10.1002/oby.20185",
+   "volume": "21",
+   "issue": "1",
+   "pages": "164-169",
+   "pmid": "23505182",
+   "support": "24 popular snack products; metabolizable calories 4.3% higher than the label statement (median), overall well within FDA limits."
+  },
+  "urban-2011": {
+   "type": "other",
+   "authors": [
+    "Urban LE",
+    "McCrory MA",
+    "Dallal GE",
+    "Das SK",
+    "Saltzman E",
+    "Weber JL",
+    "Roberts SB"
+   ],
+   "year": 2011,
+   "title": "Accuracy of Stated Energy Contents of Restaurant Foods",
+   "journal": "JAMA",
+   "doi": "10.1001/jama.2011.993",
+   "volume": "306",
+   "issue": "3",
+   "pmid": "21771989",
+   "support": "269 items from 42 restaurants; 50 (19%) contained at least 100 kcal/portion more than stated."
+  },
+  "urban-2010": {
+   "type": "other",
+   "authors": [
+    "Urban LE",
+    "Dallal GE",
+    "Robinson LM",
+    "Ausman LM",
+    "Saltzman E",
+    "Roberts SB"
+   ],
+   "year": 2010,
+   "title": "The Accuracy of Stated Energy Contents of Reduced-Energy, Commercially Prepared Foods",
+   "journal": "Journal of the American Dietetic Association",
+   "doi": "10.1016/j.jada.2009.10.003",
+   "volume": "110",
+   "issue": "1",
+   "pages": "116-123",
+   "pmid": "20102837",
+   "support": "29 restaurant foods averaged 18% more energy than stated and 10 frozen meals 8% more; free side dishes raised energy to an average of 245% of stated values for the entrees."
+  },
+  "urban-2016": {
+   "type": "other",
+   "authors": [
+    "Urban LE",
+    "Weber JL",
+    "Heyman MB",
+    "Schichtl RL",
+    "Verstraete S",
+    "Lowery NS",
+    "Das SK",
+    "Schleicher MM",
+    "Rogers G",
+    "Economos C",
+    "Masters WA",
+    "Roberts SB"
+   ],
+   "year": 2016,
+   "title": "Energy Contents of Frequently Ordered Restaurant Meals and Comparison with Human Energy Requirements and US Department of Agriculture Database Information: A Multisite Randomized Study",
+   "journal": "Journal of the Academy of Nutrition and Dietetics",
+   "doi": "10.1016/j.jand.2015.11.009",
+   "volume": "116",
+   "issue": "4",
+   "pages": "590-598.e6",
+   "pmid": "26803805",
+   "support": "Meals from non-chain restaurants contained 1,205 +/- 465 kcal/meal, not significantly different from equivalent large-chain meals."
+  },
+  "evenepoel-2020": {
+   "type": "other",
+   "authors": [
+    "Evenepoel C",
+    "Clevers E",
+    "Deroover L",
+    "Van Loo W",
+    "Matthys C",
+    "Verbeke K"
+   ],
+   "year": 2020,
+   "title": "Accuracy of Nutrient Calculations Using the Consumer-Focused Online App MyFitnessPal: Validation Study",
+   "journal": "Journal of Medical Internet Research",
+   "doi": "10.2196/18237",
+   "volume": "22",
+   "issue": "10",
+   "pages": "e18237",
+   "pmid": "33084583",
+   "n_participants": 50,
+   "support": "50 participants kept 4-day records twice; cleaned MyFitnessPal values correlated strongly with the Belgian database for energy (r=0.96); cleaning removed 2.8% of entries; upper limit of 1500 kcal per portion."
+  },
+  "griffiths-2018": {
+   "type": "other",
+   "authors": [
+    "Griffiths C",
+    "Harnack L",
+    "Pereira MA"
+   ],
+   "year": 2018,
+   "title": "Assessment of the accuracy of nutrient calculations of five popular nutrition tracking applications",
+   "journal": "Public Health Nutrition",
+   "doi": "10.1017/S1368980018000393",
+   "volume": "21",
+   "issue": "8",
+   "pages": "1495-1502",
+   "pmid": "29534771",
+   "n_participants": 30,
+   "support": "Thirty 24-h recalls entered into five apps; correlations 0.73 to 0.96 for energy and macronutrients; for each app one or more mean nutrient values were significantly lower than the research software."
+  },
+  "burrows-2019": {
+   "type": "systematic-review",
+   "authors": [
+    "Burrows TL",
+    "Ho YY",
+    "Rollo ME",
+    "Collins CE"
+   ],
+   "year": 2019,
+   "title": "Validity of Dietary Assessment Methods When Compared to the Method of Doubly Labeled Water: A Systematic Review in Adults",
+   "journal": "Frontiers in Endocrinology",
+   "doi": "10.3389/fendo.2019.00850",
+   "volume": "10",
+   "pages": "850",
+   "pmid": "31920966",
+   "n_studies": 59,
+   "n_participants": 6298,
+   "support": "59 studies with 6,298 free living adults; the majority reported significant under-reporting of energy intake compared with doubly labeled water."
+  },
+  "capling-2017": {
+   "type": "systematic-review",
+   "authors": [
+    "Capling L",
+    "Beck K",
+    "Gifford J",
+    "Slater G",
+    "Flood V",
+    "O’Connor H"
+   ],
+   "year": 2017,
+   "title": "Validity of Dietary Assessment in Athletes: A Systematic Review",
+   "journal": "Nutrients",
+   "doi": "10.3390/nu9121313",
+   "volume": "9",
+   "issue": "12",
+   "pages": "1313",
+   "pmid": "29207495",
+   "n_studies": 18,
+   "support": "Self-reported energy intake in athletes was under-estimated by 19% against doubly labelled water (11 studies)."
+  },
+  "lichtman-1992": {
+   "type": "other",
+   "authors": [
+    "Lichtman SW",
+    "Pisarska K",
+    "Berman ER",
+    "Pestone M",
+    "Dowling H",
+    "Offenbacher E",
+    "Weisel H",
+    "Heshka S",
+    "Matthews DE",
+    "Heymsfield SB"
+   ],
+   "year": 1992,
+   "title": "Discrepancy between Self-Reported and Actual Caloric Intake and Exercise in Obese Subjects",
+   "journal": "New England Journal of Medicine",
+   "doi": "10.1056/NEJM199212313272701",
+   "volume": "327",
+   "issue": "27",
+   "pages": "1893-1898",
+   "pmid": "1454084",
+   "n_participants": 10,
+   "support": "Subjects with a history of diet resistance under-reported actual food intake by 47 +/- 16 percent and over-reported physical activity by 51 percent."
+  },
+  "champagne-2002": {
+   "type": "other",
+   "authors": [
+    "CHAMPAGNE CM",
+    "BRAY GA",
+    "KURTZ AA",
+    "MONTEIRO JBR",
+    "TUCKER E",
+    "VOLAUFOVA J",
+    "DELANY JP"
+   ],
+   "year": 2002,
+   "title": "Energy Intake and Energy Expenditure",
+   "journal": "Journal of the American Dietetic Association",
+   "doi": "10.1016/S0002-8223(02)90316-0",
+   "volume": "102",
+   "issue": "10",
+   "pages": "1428-1432",
+   "pmid": "12396160",
+   "n_participants": 20,
+   "support": "10 dietitians and 10 controls; the dietitians under-reported energy intake by 223 kcal/day and controls by 429 kcal/day against doubly labeled water."
+  },
+  "racette-2008": {
+   "type": "rct",
+   "authors": [
+    "Racette SB",
+    "Weiss EP",
+    "Schechtman KB",
+    "Steger‐May K",
+    "Villareal DT",
+    "Obert KA",
+    "Holloszy JO",
+    "Washington University School of Medicine CALERIE Team"
+   ],
+   "year": 2008,
+   "title": "Influence of Weekend Lifestyle Patterns on Body Weight",
+   "journal": "Obesity",
+   "doi": "10.1038/oby.2008.320",
+   "volume": "16",
+   "issue": "8",
+   "pages": "1826-1830",
+   "pmid": "18551108",
+   "n_participants": 48,
+   "support": "48 adults; participants gained weight on weekend days at baseline; on weekends calorie-restricted participants stopped losing weight."
+  },
+  "orsama-2014": {
+   "type": "cohort",
+   "authors": [
+    "Orsama AL",
+    "Mattila E",
+    "Ermes M",
+    "van Gils M",
+    "Wansink B",
+    "Korhonen I"
+   ],
+   "year": 2014,
+   "title": "Weight Rhythms: Weight Increases during Weekends and Decreases during Weekdays",
+   "journal": "Obesity Facts",
+   "doi": "10.1159/000356147",
+   "volume": "7",
+   "issue": "1",
+   "pages": "36-47",
+   "pmid": "24504358",
+   "n_participants": 80,
+   "support": "Daily weights of 80 adults, 4,657 measurements; higher weight on Sunday and Monday, decreasing during the week."
+  },
+  "harvey-2019": {
+   "type": "other",
+   "authors": [
+    "Harvey J",
+    "Krukowski R",
+    "Priest J",
+    "West D"
+   ],
+   "year": 2019,
+   "title": "Log Often, Lose More: Electronic Dietary Self‐Monitoring for Weight Loss",
+   "journal": "Obesity",
+   "doi": "10.1002/oby.22382",
+   "volume": "27",
+   "issue": "3",
+   "pages": "380-384",
+   "pmid": "30801989",
+   "n_participants": 142,
+   "support": "142 participants in a 24-week online program; those losing >=5% of weight logged in more times per day (2.4 vs 1.6)."
+  },
+  "burke-2011sm": {
+   "type": "systematic-review",
+   "authors": [
+    "Burke LE",
+    "Wang J",
+    "Sevick MA"
+   ],
+   "year": 2011,
+   "title": "Self-Monitoring in Weight Loss: A Systematic Review of the Literature",
+   "journal": "Journal of the American Dietetic Association",
+   "doi": "10.1016/j.jada.2010.10.008",
+   "volume": "111",
+   "issue": "1",
+   "pages": "92-102",
+   "pmid": "21185970",
+   "n_studies": 22,
+   "support": "22 studies; a significant association between self-monitoring and weight loss was consistently found; the level of evidence was weak because of methodologic limitations."
+  },
+  "levinson-2017": {
+   "type": "other",
+   "authors": [
+    "Levinson CA",
+    "Fewell L",
+    "Brosof LC"
+   ],
+   "year": 2017,
+   "title": "My Fitness Pal calorie tracker usage in the eating disorders",
+   "journal": "Eating Behaviors",
+   "doi": "10.1016/j.eatbeh.2017.08.003",
+   "volume": "27",
+   "pages": "14-16",
+   "pmid": "28843591",
+   "n_participants": 105,
+   "support": "105 individuals diagnosed with an eating disorder; ~75% used My Fitness Pal and 73% of these perceived the app as contributing to their eating disorder."
+  },
+  "linardon-2019": {
+   "type": "cohort",
+   "authors": [
+    "Linardon J",
+    "Messer M"
+   ],
+   "year": 2019,
+   "title": "My fitness pal usage in men: Associations with eating disorder symptoms and psychosocial impairment",
+   "journal": "Eating Behaviors",
+   "doi": "10.1016/j.eatbeh.2019.02.003",
+   "volume": "33",
+   "pages": "13-17",
+   "pmid": "30772765",
+   "n_participants": 122,
+   "support": "122 men; MFP users reported significantly higher levels of eating disorder symptoms than non-users."
+  },
+  "simpson-2017": {
+   "type": "cohort",
+   "authors": [
+    "Simpson CC",
+    "Mazzeo SE"
+   ],
+   "year": 2017,
+   "title": "Calorie counting and fitness tracking technology: Associations with eating disorder symptomatology",
+   "journal": "Eating Behaviors",
+   "doi": "10.1016/j.eatbeh.2017.02.002",
+   "volume": "26",
+   "pages": "89-92",
+   "pmid": "28214452",
+   "n_participants": 493,
+   "support": "493 college students; calorie tracker users showed higher eating concern and dietary restraint."
+  },
+  "gibson-2016": {
+   "type": "other",
+   "authors": [
+    "Gibson AA",
+    "Hsu MSH",
+    "Rangan AM",
+    "Seimon RV",
+    "Lee CMY",
+    "Das A",
+    "Finch CH",
+    "Sainsbury A"
+   ],
+   "year": 2016,
+   "title": "Accuracy of handsv. household measures as portion size estimation aids",
+   "journal": "Journal of Nutritional Science",
+   "doi": "10.1017/jns.2016.22",
+   "volume": "5",
+   "pages": "e29",
+   "pmid": "27547392",
+   "n_participants": 67,
+   "support": "67 participants estimated 42 pre-weighed foods; 80% of geometric foods estimated with the finger width method were within 25% of true weight and 13% within 10%, vs 29% within 25% for household measures."
+  },
+  "helms-2019": {
+   "type": "review",
+   "authors": [
+    "Helms ER",
+    "Prnjak K",
+    "Linardon J"
+   ],
+   "year": 2019,
+   "title": "Towards a Sustainable Nutrition Paradigm in Physique Sport: A Narrative Review",
+   "journal": "Sports",
+   "doi": "10.3390/sports7070172",
+   "volume": "7",
+   "issue": "7",
+   "pages": "172",
+   "pmid": "31315180",
+   "support": "Tentative best-practice recommendations include dietary flexibility, slower weight loss and structured monitoring."
+  },
+  "odriscoll-2020": {
+   "type": "meta-analysis",
+   "authors": [
+    "O’Driscoll R",
+    "Turicchi J",
+    "Beaulieu K",
+    "Scott S",
+    "Matu J",
+    "Deighton K",
+    "Finlayson G",
+    "Stubbs J"
+   ],
+   "year": 2020,
+   "title": "How well do activity monitors estimate energy expenditure? A systematic review and meta-analysis of the validity of current technologies",
+   "journal": "British Journal of Sports Medicine",
+   "doi": "10.1136/bjsports-2018-099643",
+   "volume": "54",
+   "issue": "6",
+   "pages": "332-340",
+   "pmid": "30194221",
+   "n_studies": 60,
+   "support": "60 studies (104 effect sizes); devices showed variable accuracy depending on activity type, with large heterogeneity."
+  }
+ }
+}

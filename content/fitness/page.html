@@ -317,10 +317,10 @@
   .lg dt { margin: 0; } .lg dd { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--k-copy); }
   .sources { columns: 1; margin: 0; padding-left: 0; list-style: none; font-size: 13.5px; line-height: 1.5; color: var(--k-copy); }
   @media (min-width: 900px) { .sources { columns: 2; column-gap: 40px; } }
-  .sources li { break-inside: avoid; padding: 9px 10px; margin: 0 -10px; border-radius: 8px; scroll-margin-top: 130px; }
+  .sources li { break-inside: avoid; padding: 9px 10px; margin: 0 -10px; border-radius: 8px; scroll-margin-top: 130px; overflow-wrap: anywhere; }
   .sources li:target { background: color-mix(in srgb, var(--k-brass-fill) 18%, transparent); }
   .sources b { color: var(--k-ink); font-weight: 600; }
-  .sources .as { font: 500 11px/1.5 var(--k-mono); color: var(--k-mute); white-space: nowrap; }
+  .sources .as { font: 500 11px/1.5 var(--k-mono); color: var(--k-mute); }
   .sources a { color: var(--k-green); word-break: break-word; }
 
   /* meet attempt planner */
