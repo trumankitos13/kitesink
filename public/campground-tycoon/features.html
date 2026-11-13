@@ -111,7 +111,7 @@
     .ct-nav__brand { width: 44px; justify-content: center; }
     .ct-nav__word, .ct-nav__free { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
     .ct-nav__links { justify-content: flex-start; padding-right: 10px;
-      -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent); }
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 26px), transparent); mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 26px), transparent); }
     .ct-nav__links a { padding: 0 11px; }
     .ct-nav__home { display: none !important; }
     .ct-nav__play { padding-inline: 12px; }
@@ -193,7 +193,7 @@
   /* terminal and Park Service: copy beside a picture */
   .ct-split { display: grid; gap: clamp(28px, 4vw, 56px); align-items: center; }
   .ct-split__copy { display: grid; gap: 14px; }
-  .ct-split__copy :where(p) { color: var(--ct-sage); }
+  .ct-split__copy :where(p:not([class])), .ct-split__copy .ct-fine { color: var(--ct-sage); }
   .ct-split__copy b { color: var(--ct-cream); }
   .ct-split__copy .ct-gold { color: var(--ct-brass); }
   .ct-chips { display: flex; flex-wrap: wrap; gap: 8px; }
