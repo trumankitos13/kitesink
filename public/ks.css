@@ -331,7 +331,11 @@ body.k2 ::selection { background: var(--k-green-fill); color: var(--k-on-green);
 a.k-chip { transition: color .15s, border-color .15s, background .15s; }
 a.k-chip:hover { color: var(--k-green); border-color: var(--k-green); background: color-mix(in srgb, var(--k-green) 8%, transparent); }
 .k-chips { display: flex; flex-wrap: wrap; gap: 7px; }
-@media (pointer: coarse) { a.k-chip { padding: 10px 13px; } .k-subnav a { padding-block: 13px; } .k-seg button { min-height: 44px; } }
+@media (pointer: coarse) {   /* fingers: give the small links and chips room */
+  a.k-chip { padding: 10px 13px; } .k-subnav a { padding-block: 13px; } .k-seg button { min-height: 44px; }
+  .k-go { padding-block: 12px; } .ks-find-x { min-height: 40px; padding-inline: 12px; }
+  .ks-ft-col a { padding-block: 10px; } .ks-ft-base a { display: inline-block; padding-block: 10px; }
+}
 
 /* cards */
 .k-card { position: relative; display: flex; flex-direction: column; gap: 14px; padding: clamp(20px, 3vw, 28px);

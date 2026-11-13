@@ -250,6 +250,13 @@
     set: function (patch) { try { var s = store.get(); for (var k in patch) s[k] = patch[k]; localStorage.setItem("ksFit", JSON.stringify(s)); } catch (e) {} }
   };
   var saved = store.get();
+  // Screen-reader status: one short sentence per tool, sent once the sliders settle,
+  // instead of a live region around a whole results card.
+  var sayTimers = {};
+  function say(id, text) {
+    clearTimeout(sayTimers[id]);
+    sayTimers[id] = setTimeout(function () { var el = $(id); if (el) el.textContent = text; }, 700);
+  }
   function copy(text, btn) {
     function done(ok) { var t = btn.textContent; btn.textContent = ok ? "Copied ✓" : "Press ⌘C / Ctrl C"; setTimeout(function () { btn.textContent = t; }, 1600); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
@@ -361,6 +368,7 @@
       else if (r.deficitPct > 25) warn = "That is a deficit of more than 25% of maintenance. Expect it to be hard to sustain; a slower rate usually keeps more muscle.";
       else if (r.carbs < 50) warn = "Protein and fat use almost all of this budget, leaving very little carbohydrate. Lower one of them or ease the deficit.";
       $("m-warn").hidden = !warn; $("m-warn").textContent = warn;
+      say("m-say", "Daily target " + num(F.round(r.kcal, 10)) + " kilocalories: " + num(r.protein) + " grams protein, " + num(carbs) + " grams carbohydrate, " + num(r.fat) + " grams fat." + (warn ? " Warning: " + warn : ""));
 
       // meal-plan prompt
       var meals = val("m-meals"), diet = $("m-diet").value, cook = $("m-cook").value, avoid = $("m-avoid").value.trim();
@@ -401,6 +409,7 @@
       $("r-dots").setAttribute("aria-label", reps + " reps performed, " + rir + " left in reserve; " + eff + " fall inside the last five before failure");
       $("r-eff").firstChild.nodeValue = eff;
       $("r-rpe").textContent = "RPE " + F.rpe(rir);
+      say("r-say", eff + " effective " + (eff === 1 ? "rep" : "reps") + " from " + reps + " at " + rir + " in reserve.");
       $("r-msg").textContent = eff === 0 ? "None of these reps reach the last five before failure. Under this model the set is a warm-up."
         : eff >= 5 || eff === reps ? "Every rep the model can count is counted. Going further mostly adds fatigue."
         : eff + " of the " + reps + " reps land inside the last five before failure.";
@@ -443,6 +452,7 @@
       $("l-rows").innerHTML = [0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6].map(function (p) {
         return "<tr><th scope=\"row\">" + Math.round(p * 100) + "%</th><td>" + wt(F.round(one * p, step)) + " " + u + "</td><td>≈ " + Math.max(1, Math.round(F.repsAt(p))) + "</td></tr>";
       }).join("");
+      say("l-say", "Estimated one-rep max " + wt(Math.round(one * 10) / 10) + " " + u + ". Load " + wt(F.round(load, step)) + " " + u + " for " + tr + (tr === 1 ? " rep" : " reps") + " with " + ti + " in reserve.");
       store.set({ loadUnits: u, loadW: w, loadReps: reps });
     }
     calc();
@@ -471,6 +481,7 @@
           s.main.map(function (blk) { return '<p class="blk">' + esc(blk.title) + '</p><ol class="moves">' + items(blk.items) + '</ol>'; }).join("") + '</div>' +
         '<div class="wk"><h4>Cool-down · ' + s.coolMin + ' min</h4><ul class="plain">' + s.cool.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + '</ul></div>' +
         (s.loaded ? '<p class="k-small">Weighted moves: pick a load that leaves about two reps in reserve.</p>' : '');
+      say("t-say", "Built: " + s.title + ", " + s.main.reduce(function (n, blk) { return n + blk.items.length; }, 0) + " moves.");
       store.set({ tMin: +time.get(), tLevel: +level.get(), tFormat: format.get(), tEquip: equip });
     }
     build();

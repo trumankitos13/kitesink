@@ -48,6 +48,7 @@
   .vx-rows button { display: grid; grid-template-columns: 68px minmax(0, 1fr) auto; gap: 10px; align-items: center; width: 100%; min-height: 40px; padding: 6px 8px;
     border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--pc-ink); cursor: pointer; text-align: left; font: 500 12px/1.2 var(--k-mono); transition: background .2s, border-color .2s; }
   .vx-rows button:hover { background: var(--pc-tint); }
+  @media (pointer: coarse) { .vx-rows button { min-height: 44px; } }
   .vx-rows button[aria-pressed="true"] { background: var(--pc-tint); border-color: var(--pc-rule); }
   .vx-bar { position: relative; height: 12px; border-radius: 2px; background: rgba(255,255,255,.07); }
   .vx-bar i { display: block; height: 100%; border-radius: 2px; background: #6f9f7a; transition: width .6s var(--k-ease); }
@@ -292,7 +293,8 @@
             </details>
           </div>
 
-          <div class="k-card tool-out" id="m-out" aria-live="polite">
+          <div class="k-card tool-out" id="m-out">
+            <p class="k-vh" id="m-say" role="status"></p>
             <div><p class="k-label">Daily target</p><p class="k-stat"><span id="m-kcal">—</span><small>kcal</small></p><p class="k-small" id="m-sub"></p></div>
             <div class="hide-empty">
               <div class="macrobar" id="m-bar" role="img" aria-label="Calorie split"><i id="m-bar-p"></i><i id="m-bar-c"></i><i id="m-bar-f"></i></div>
@@ -332,7 +334,8 @@
             <div><p class="k-label">This set</p><p class="k-stat"><span id="r-eff">3<small>effective reps</small></span></p><p class="k-small"><span id="r-rpe">RPE 8</span> on the reps-in-reserve scale <span class="cite"><a href="#src-zourdos2016">Zourdos 2016</a></span></p></div>
             <div class="dots" id="r-dots" role="img" aria-label=""></div>
             <div class="dots-key"><span><i style="background:rgba(240,232,214,.4)"></i>done</span><span><i style="background:#d8b07a"></i>done, in the last five</span><span><i style="border:2px dashed rgba(240,232,214,.5)"></i>left in reserve</span></div>
-            <p class="k-small" id="r-msg" aria-live="polite"></p>
+            <p class="k-small" id="r-msg"></p>
+            <p class="k-vh" id="r-say" role="status"></p>
             <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)"><b style="color:#f0e8d6">Read this as a heuristic, not a measurement.</b> No study has tested a cut-off at five reps. What the research supports is softer: growth tends to improve as sets end nearer to failure, and going all the way to failure adds little over stopping just short. <span class="cite"><a href="#src-nuckols">Nuckols, Stronger By Science</a> · <a href="#src-robinson2024">Robinson 2024</a> · <a href="#src-refalo2023">Refalo 2023</a></span></p>
           </div>
         </div>
@@ -352,7 +355,8 @@
             <label class="k-field"><span class="k-label">Target reps<span id="l-treps-read" style="text-transform:none;letter-spacing:0">8 reps</span></span><input class="k-range" id="l-treps" type="range" min="1" max="15" step="1" value="8"></label>
             <label class="k-field"><span class="k-label">Left in reserve<span id="l-trir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="l-trir" type="range" min="0" max="5" step="1" value="2"></label>
           </div>
-          <div class="k-card tool-out" id="l-out" aria-live="polite">
+          <div class="k-card tool-out" id="l-out">
+            <p class="k-vh" id="l-say" role="status"></p>
             <div class="row2">
               <div><p class="k-label">Estimated 1RM</p><p class="k-stat"><span id="l-e1rm">—<small id="l-e1rm-u">kg</small></span></p></div>
               <div><p class="k-label">Load for your target</p><p class="k-stat"><span id="l-load">—<small id="l-load-u">kg</small></span></p></div>
@@ -389,7 +393,8 @@
             <p class="k-small">EMOM: every minute on the minute. AMRAP: as many rounds as possible. Sessions are general fitness for healthy adults; skip anything that hurts in a way that isn’t effort.</p>
           </div>
           <div class="k-card tool-out">
-            <div id="t-out" aria-live="polite" style="display:grid;gap:14px"></div>
+            <div id="t-out" style="display:grid;gap:14px"></div>
+            <p class="k-vh" id="t-say" role="status"></p>
             <div class="k-actions"><button class="k-btn k-btn--sm k-btn--cream" id="t-again" type="button">Shuffle ↻</button><button class="k-btn k-btn--sm k-btn--ghost" id="t-copy" type="button">Copy as text</button></div>
           </div>
         </div>

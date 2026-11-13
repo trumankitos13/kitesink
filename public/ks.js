@@ -314,7 +314,7 @@
       '<ul class="ks-find-list" id="ks-find-list" role="listbox" aria-label="Results"></ul>' +
       '<div class="ks-find-foot"><span>↑↓ to move · ↵ to open</span><a href="/library">Browse the full library →</a></div>';
     document.body.appendChild(dlg);
-    var input = dlg.querySelector(".ks-find-in"), list = dlg.querySelector(".ks-find-list"), items = [], shown = [], cur = 0;
+    var input = dlg.querySelector(".ks-find-in"), list = dlg.querySelector(".ks-find-list"), items = [], shown = [], cur = 0, loaded = false;
 
     function row(it, i) {
       return '<li role="option" id="ks-find-o' + i + '" aria-selected="' + (i === cur) + '"' + (i === cur ? ' class="on"' : '') + '>' +
@@ -324,7 +324,11 @@
     }
     function render() {
       var q = input.value.trim(), html = "";
-      if (!items.length) { list.innerHTML = '<li class="ks-find-empty">Loading the index…</li>'; return; }
+      if (!items.length) {
+        shown = [];
+        list.innerHTML = '<li class="ks-find-empty">' + (loaded ? 'The index didn’t load. <a href="/library" style="display:inline;padding:0;color:var(--k-green);text-decoration:underline">Open the library</a> instead.' : 'Loading the index…') + '</li>';
+        return;
+      }
       if (!q) {
         // Nothing typed: the five sections, then what's current.
         var secs = items.filter(function (it) { return it.k === "Section"; });
@@ -371,7 +375,7 @@
         input.value = prefill || ""; cur = 0;
         if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
         render(); input.focus();
-        loadIndex(function (all) { items = all; render(); });
+        loadIndex(function (all) { items = all; loaded = true; render(); });
       }
     };
   }
@@ -395,14 +399,16 @@
     });
   }
 
-  // Prerender same-site pages on hover/touch-start so section hops feel instant
+  // Prefetch same-site pages on hover/touch-start so section hops feel quick
   // (Chromium's Speculation Rules; everything else just ignores the tag).
+  // Prefetch, not prerender: a prerendered page runs its scripts before anyone
+  // sees it, which would count page views that never happened once analytics is on.
   function speculate() {
     try {
       if (!(HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules"))) return;
       var s = document.createElement("script");
       s.type = "speculationrules";
-      s.textContent = JSON.stringify({ prerender: [{ where: { and: [{ href_matches: "/*" }, { not: { href_matches: "/repost*" } }, { not: { selector_matches: "[target=_blank],[download]" } }] }, eagerness: "moderate" }] });
+      s.textContent = JSON.stringify({ prefetch: [{ where: { and: [{ href_matches: "/*" }, { not: { href_matches: "/repost*" } }, { not: { selector_matches: "[target=_blank],[download]" } }] }, eagerness: "moderate" }] });
       document.head.appendChild(s);
     } catch (e) {}
   }
