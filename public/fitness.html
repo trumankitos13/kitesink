@@ -43,7 +43,7 @@
   .pillars b { font: 600 15.5px/1.3 var(--k-sans); letter-spacing: -.015em; }
   .pillars span { grid-column: 2; font-size: 13.5px; line-height: 1.45; color: var(--pc-copy); }
   .vx-panel { border: 1px solid var(--pc-rule); border-radius: 12px; padding: 16px; background: rgba(0,0,0,.18); }
-  .vx-panel-top { display: flex; justify-content: space-between; gap: 10px; font: 600 9.5px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); margin-bottom: 10px; }
+  .vx-panel-top { display: flex; justify-content: space-between; gap: 10px; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); margin-bottom: 10px; }
   .vx-rows { display: grid; gap: 4px; }
   .vx-rows button { display: grid; grid-template-columns: 68px minmax(0, 1fr) auto; gap: 10px; align-items: center; width: 100%; min-height: 40px; padding: 6px 8px;
     border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--pc-ink); cursor: pointer; text-align: left; font: 500 12px/1.2 var(--k-mono); transition: background .2s, border-color .2s; }
@@ -54,7 +54,7 @@
   .vx-bar::before, .vx-bar::after { content: ""; position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(233,233,230,.45); }
   .vx-bar::before { left: 40%; } .vx-bar::after { left: 72%; }
   .vx-rows .under i { background: #d8a652; } .vx-rows .over i { background: #d27a52; }
-  .vx-rows em { font-style: normal; text-align: right; color: #6f9f7a; font-weight: 600; white-space: nowrap; }
+  .vx-rows em { font-style: normal; text-align: right; color: #6f9f7a; font-weight: 600; white-space: nowrap; min-width: 92px; }
   .vx-rows .under em { color: #d8a652; } .vx-rows .over em { color: #d27a52; }
   .vx-read { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--pc-rule); min-height: 62px; font-size: 14px; line-height: 1.5; color: var(--pc-ink); }
   .vx-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; margin-top: 16px; }
@@ -119,7 +119,7 @@
   /* loads */
   .ltable { width: 100%; border-collapse: collapse; font: 500 13px/1.3 var(--k-mono); font-variant-numeric: tabular-nums; }
   .ltable th, .ltable td { padding: 8px 4px; text-align: left; border-top: 1px solid rgba(240,232,214,.16); }
-  .ltable thead th { border-top: 0; font: 600 9.5px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
+  .ltable thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
   .ltable tbody th { color: #d8b07a; font-weight: 600; }
 
   /* travel */
@@ -251,7 +251,7 @@
       <div class="tool" id="macros" role="tabpanel" aria-labelledby="tab-macros">
         <p class="k-copy tool-intro">Estimates what you burn in a day, sets a calorie target for your goal, and splits it into protein, carbohydrate and fat. Then it writes a meal-plan prompt you can hand to an AI assistant.</p>
         <div class="tool-grid">
-          <div class="k-card k-card--flat tool-in">
+          <div class="k-card tool-in">
             <div class="row2">
               <div class="k-field"><span class="k-label" id="m-units-l">Units</span><div class="k-seg" id="m-units" role="group" aria-labelledby="m-units-l"><button type="button" value="metric">Metric</button><button type="button" value="imperial">Imperial</button></div></div>
               <div class="k-field"><span class="k-label" id="m-sex-l">Sex (for the equation)</span><div class="k-seg" id="m-sex" role="group" aria-labelledby="m-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
@@ -318,7 +318,7 @@
       <div class="tool" id="reps" role="tabpanel" aria-labelledby="tab-reps">
         <p class="k-copy tool-intro">“Effective reps” is a coaching shorthand: the idea that the reps closest to failure do most of the work. Drag the sliders to see how a set scores under it, then tally a session.</p>
         <div class="tool-grid">
-          <div class="k-card k-card--flat tool-in">
+          <div class="k-card tool-in">
             <label class="k-field"><span class="k-label">Reps performed<span id="r-reps-read" style="text-transform:none;letter-spacing:0">10 reps</span></span><input class="k-range" id="r-reps" type="range" min="1" max="25" step="1" value="10"></label>
             <label class="k-field"><span class="k-label">Reps in reserve (RIR)<span id="r-rir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="r-rir" type="range" min="0" max="6" step="1" value="2"></label>
             <div class="k-actions"><button class="k-btn k-btn--sm" id="r-add" type="button">Add this set to the session</button><button class="k-btn k-btn--sm k-btn--ghost" id="r-clear" type="button" hidden>Clear</button></div>
@@ -342,7 +342,7 @@
       <div class="tool" id="loads" role="tabpanel" aria-labelledby="tab-loads">
         <p class="k-copy tool-intro">Enter a set you’ve done. It estimates your one-rep max, then tells you what to put on the bar for a target number of reps with a chosen number left in reserve.</p>
         <div class="tool-grid">
-          <div class="k-card k-card--flat tool-in">
+          <div class="k-card tool-in">
             <div class="k-field"><span class="k-label" id="l-units-l">Units</span><div class="k-seg" id="l-units" role="group" aria-labelledby="l-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
             <div class="row2">
               <label class="k-field"><span class="k-label">Weight lifted</span><span class="with-unit"><input class="k-input" id="l-w" type="number" inputmode="decimal" min="1" step="0.5" value="100"><span id="l-unit">kg</span></span></label>
@@ -372,7 +372,7 @@
       <div class="tool" id="travel" role="tabpanel" aria-labelledby="tab-travel">
         <p class="k-copy tool-intro">A hotel room, a spare room, a park. Say what you have and how long you’ve got; get a balanced session with a push, a pull, a squat, a hinge and some trunk work.</p>
         <div class="tool-grid">
-          <div class="k-card k-card--flat tool-in">
+          <div class="k-card tool-in">
             <div class="k-field"><span class="k-label" id="t-equip-l">What’s in the room</span>
               <div class="k-chips" id="t-equip" role="group" aria-labelledby="t-equip-l">
                 <button class="k-tog" type="button" aria-pressed="true" disabled>Bodyweight</button>
