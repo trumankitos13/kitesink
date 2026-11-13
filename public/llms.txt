@@ -1,0 +1,33 @@
+# KiteSink
+
+> The one-person workshop of Truman Kitos-Lindsey: consulting (including an AI concierge service), fitness tools and a sourced training and nutrition reference, music projects, and a game. Each link below is a plain-text version of a page on kitesink.com.
+
+## Start here
+
+- [KiteSink overview](https://kitesink.com/index.md): the five sections and what is being built now
+- [About](https://kitesink.com/about.md): who is behind it and how to reach him
+
+## Consulting
+
+- [KiteSink Consulting and the AI concierge](https://kitesink.com/consulting.md): services, how a project runs, what the concierge does, how to enquire
+
+## Fitness
+
+- [Fitness overview](https://kitesink.com/fitness.md): the calculators, Vantix, and how entries are graded
+- [Claims, checked](https://kitesink.com/fitness/claims.md): common training and nutrition claims with a verdict, who was studied, and the source
+- [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md)
+- [Powerlifting](https://kitesink.com/fitness/powerlifting.md)
+- [Meet day](https://kitesink.com/fitness/meet.md): a first powerlifting meet, in order
+- [Nutrition](https://kitesink.com/fitness/nutrition.md)
+- [Diet](https://kitesink.com/fitness/diet.md): losing or gaining weight on purpose
+- [Health](https://kitesink.com/fitness/health.md)
+- [Vantix](https://kitesink.com/vantix.md): the periodization app, its tiers and status
+
+## Music
+
+- [Music projects](https://kitesink.com/music.md): Song of the Day, Backline, the Album Listening Club
+- [Album Listening Club](https://kitesink.com/listening-club.md): dates, format and how to join
+
+## Optional
+
+- [Site index for people](https://kitesink.com/library): every page, searchable

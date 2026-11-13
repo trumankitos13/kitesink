@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kitesink.com/sitemap.xml
+
+# Plain-text index for AI readers: https://kitesink.com/llms.txt

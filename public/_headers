@@ -26,3 +26,12 @@
 
 /*.svg
   Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+# Plain-text twins of pages (see docs/AI-PAGES.md). Readable by anyone with the address,
+# kept out of search results so the HTML page stays the one people find.
+/*.md
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Cache-Control: public, max-age=3600

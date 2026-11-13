@@ -1,0 +1,179 @@
+{
+  "domain": "tools",
+  "note": "Sources cited by the calculators in page.html, as {{c:key}}.",
+  "entries": [],
+  "sources": {
+    "brzycki1993": {
+      "type": "other",
+      "authors": [
+        "Brzycki M"
+      ],
+      "year": 1993,
+      "title": "Strength Testing—Predicting a One-Rep Max from Reps-to-Fatigue",
+      "journal": "Journal of Physical Education, Recreation &amp; Dance",
+      "doi": "10.1080/07303084.1993.10606684",
+      "volume": "64",
+      "issue": "1",
+      "pages": "88-90"
+    },
+    "reynolds2006": {
+      "type": "trial",
+      "authors": [
+        "Reynolds JM",
+        "Gordon TJ",
+        "Robergs RA"
+      ],
+      "year": 2006,
+      "title": "Prediction of One Repetition Maximum Strength From Multiple Repetition Maximum Testing and Anthropometry",
+      "journal": "The Journal of Strength and Conditioning Research",
+      "doi": "10.1519/R-15304.1",
+      "volume": "20",
+      "issue": "3",
+      "pages": "584"
+    },
+    "lesuer1997": {
+      "type": "trial",
+      "authors": [
+        "LeSuer DA",
+        "McCormick JH",
+        "Mayhew JL",
+        "Wasserstein RL",
+        "Arnold MD"
+      ],
+      "year": 1997,
+      "title": "The Accuracy of Prediction Equations for Estimating 1-RM Performance in the Bench Press, Squat, and Deadlift",
+      "journal": "Journal of Strength and Conditioning Research",
+      "doi": "10.1519/00124278-199711000-00001",
+      "volume": "11",
+      "issue": "4",
+      "pages": "211-213"
+    },
+    "mifflin1990": {
+      "type": "trial",
+      "authors": [
+        "Mifflin M",
+        "St Jeor S",
+        "Hill L",
+        "Scott B",
+        "Daugherty S",
+        "Koh Y"
+      ],
+      "year": 1990,
+      "title": "A new predictive equation for resting energy expenditure in healthy individuals",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.1093/ajcn/51.2.241",
+      "volume": "51",
+      "issue": "2",
+      "pages": "241-247"
+    },
+    "frankenfield2005": {
+      "type": "systematic-review",
+      "authors": [
+        "Frankenfield D",
+        "Roth-Yousey L",
+        "Compher C"
+      ],
+      "year": 2005,
+      "title": "Comparison of Predictive Equations for Resting Metabolic Rate in Healthy Nonobese and Obese Adults: A Systematic Review",
+      "journal": "Journal of the American Dietetic Association",
+      "doi": "10.1016/j.jada.2005.02.005",
+      "volume": "105",
+      "issue": "5",
+      "pages": "775-789"
+    },
+    "cunningham1991": {
+      "type": "review",
+      "authors": [
+        "Cunningham J"
+      ],
+      "year": 1991,
+      "title": "Body composition as a determinant of energy expenditure: a synthetic review and a proposed general prediction equation",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.1093/ajcn/54.6.963",
+      "volume": "54",
+      "issue": "6",
+      "pages": "963-969"
+    },
+    "robinson2024": {
+      "type": "meta-analysis",
+      "authors": [
+        "Robinson ZP",
+        "Pelland JC",
+        "Remmert JF",
+        "Refalo MC",
+        "Jukic I",
+        "Steele J",
+        "Zourdos MC"
+      ],
+      "year": 2024,
+      "title": "Exploring the Dose–Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+      "journal": "Sports Medicine",
+      "doi": "10.1007/s40279-024-02069-2",
+      "volume": "54",
+      "issue": "9",
+      "pages": "2209-2231"
+    },
+    "refalo2023": {
+      "type": "meta-analysis",
+      "authors": [
+        "Refalo MC",
+        "Helms ER",
+        "Trexler ET",
+        "Hamilton DL",
+        "Fyfe JJ"
+      ],
+      "year": 2023,
+      "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+      "journal": "Sports Medicine",
+      "doi": "10.1007/s40279-022-01784-y",
+      "volume": "53",
+      "issue": "3",
+      "pages": "649-665"
+    },
+    "zourdos2016": {
+      "type": "trial",
+      "authors": [
+        "Zourdos MC",
+        "Klemp A",
+        "Dolan C",
+        "Quiles JM",
+        "Schau KA",
+        "Jo E",
+        "Helms E",
+        "Esgro B",
+        "Duncan S",
+        "Garcia Merino S",
+        "Blanco R"
+      ],
+      "year": 2016,
+      "title": "Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reserve",
+      "journal": "Journal of Strength and Conditioning Research",
+      "doi": "10.1519/JSC.0000000000001049",
+      "volume": "30",
+      "issue": "1",
+      "pages": "267-275"
+    },
+    "nuckols": {
+      "type": "other",
+      "authors": [
+        "Nuckols G"
+      ],
+      "year": 2019,
+      "title": "The Evidence is Lacking for “Effective Reps”",
+      "journal": "Stronger By Science (article, not peer-reviewed)",
+      "url": "https://www.strongerbyscience.com/effective-reps/",
+      "label": "Nuckols, Stronger By Science"
+    },
+    "fao2004": {
+      "type": "guideline",
+      "authors": [
+        "FAO/WHO/UNU"
+      ],
+      "year": 2004,
+      "title": "Human energy requirements: report of a joint expert consultation, Rome, 17–24 October 2001",
+      "journal": "FAO Food and Nutrition Technical Report Series 1, table 5.3",
+      "url": "https://www.fao.org/4/y5686e/y5686e07.htm",
+      "label": "FAO/WHO/UNU 2004"
+    }
+  }
+}

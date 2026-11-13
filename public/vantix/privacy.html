@@ -9,31 +9,175 @@
 <link rel="stylesheet" href="/ks.css?v=2027.3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; }
-  html, body { margin: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: oklch(0.205 0.012 250); color: oklch(0.82 0.012 250); font-family: 'Space Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  ::selection { background: #92a6cc; color: oklch(0.18 0.02 250); }
-  ::-webkit-scrollbar { width: 11px; height: 11px; }
-  ::-webkit-scrollbar-thumb { background: oklch(0.36 0.012 250); }
-  ::-webkit-scrollbar-track { background: oklch(0.22 0.012 250); }
-  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
-  .gk { font-family: 'Space Grotesk', sans-serif; }
-  p { text-wrap: pretty; }
-  section { scroll-margin-top: 104px; }
-  .ks-link { transition: color .15s; }
-  .ks-link:hover { color: #2f5436 !important; }
-  .vx-sub:hover { color: oklch(0.92 0.012 250) !important; }
-  @media (max-width: 760px){ .vx-railwrap{ grid-template-columns: 1fr !important; } .vx-2col{ grid-template-columns: 1fr !important; } .vx-stat4{ grid-template-columns: repeat(2,1fr) !important; } .vx-ia7{ grid-template-columns: repeat(2,1fr) !important; } .vx-sticky{ position: static !important; } [style*="max-width: 1180px"], [style*="max-width: 1100px"]{ padding-left: 18px !important; padding-right: 18px !important; } [style*="grid-template-columns: repeat(3, 1fr)"], [style*="grid-template-columns: 1fr 1fr"], [style*="grid-template-columns: 248px 1fr"], [style*="grid-template-columns: 232px 1fr"], [style*="grid-template-columns: 220px 1fr"]{ grid-template-columns: 1fr !important; } [style*="grid-template-columns: 84px 1fr"], [style*="grid-template-columns: 96px 1fr"], [style*="grid-template-columns: 150px 1fr"]{ grid-template-columns: 1fr !important; } .mono{ overflow-wrap: anywhere; } }
+/* =====================================================================
+   Vantix — privacy summary
+   Same tokens, type and chrome as /vantix (see that page's <style> block):
+   the app's Terminal palette, JetBrains Mono for copy, Space Grotesk for
+   headings and labels, square corners, 1px rules. Dark-only by design.
+
+   1 tokens · 2 base · 3 KiteSink chrome · 4 Vantix nav · 5 shared parts
+   6 this page
+   ===================================================================== */
+
+/* ---------- 1. tokens ---------- */
+:root {
+  color-scheme: dark;
+  --canvas: oklch(0.205 0.012 250);
+  --recessed: oklch(0.225 0.012 250);
+  --panel: oklch(0.245 0.012 250);
+  --cell: oklch(0.26 0.012 250);
+  --cell-active: oklch(0.32 0.03 250);
+  --rule: oklch(0.4 0.012 250);
+  --rule-mid: oklch(0.36 0.012 250);
+  --rule-soft: oklch(0.31 0.012 250);
+  --ink-bright: oklch(0.94 0.012 250);
+  --ink: oklch(0.88 0.012 250);
+  --ink-mid: oklch(0.7 0.012 250);   /* text never goes below this */
+  --blue: #92a6cc;
+  --amber: #d8a652;
+  --green: #6f9f7a;
+  --accent-ink: oklch(0.2 0.02 250);
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --label: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --gutter: clamp(16px, 4vw, 32px);
+  --frame: 1180px;
+  --nav-h: 56px;
+
+  /* shared KiteSink chrome (ks.css) re-tokened for this dark page */
+  --k-paper: oklch(0.185 0.012 250);
+  --k-raised: var(--panel);
+  --k-sunk: var(--canvas);
+  --k-ink: var(--ink-bright);
+  --k-copy: var(--ink-mid);
+  --k-mute: var(--ink-mid);
+  --k-green: var(--blue);
+  --k-rule: var(--rule-soft);
+  --k-rule-strong: var(--rule);
+  --k-tint: var(--cell);
+  --k-sans: var(--label);
+  --k-mono: var(--mono);
+}
+
+/* ---------- 2. base ---------- */
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 20px); }
+body {
+  background: var(--canvas); color: var(--ink);
+  font: 400 15px/1.65 var(--mono); font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased; overflow-wrap: break-word;
+}
+::selection { background: var(--blue); color: var(--accent-ink); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--rule-mid); }
+::-webkit-scrollbar-track { background: var(--recessed); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+h1, h2, h3, p, ol, dl, dd { margin: 0; }
+ol { padding: 0; list-style: none; }
+h1, h2, h3 { font-family: var(--label); font-weight: 700; color: var(--ink-bright); text-wrap: balance; }
+p { text-wrap: pretty; }
+a { color: inherit; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+svg { display: block; flex: none; }
+#vx-mark rect { fill: none; stroke: var(--blue); stroke-width: 3; }
+#vx-mark rect:last-child { fill: var(--amber); stroke: none; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 1100; padding: 15px 16px; background: var(--blue); color: var(--accent-ink); font: 700 14px/1 var(--label); text-decoration: none; }
+.skip:focus { top: 8px; }
+
+/* ---------- 3. KiteSink chrome on a dark page ---------- */
+.ks-bar, .ks-bottombar { padding-inline: max(var(--gutter), calc((100% - var(--frame)) / 2)); }   /* line up with the page frame */
+.ks-bar { position: static; height: 44px; background: var(--k-paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
+[data-ks="bar"]:empty { height: 44px; background: var(--k-paper); }
+.ks-bar .ks-brand { min-height: 44px; }
+.ks-barnav a { padding: 16px 0; }
+.ks-barnav button { width: 44px; height: 44px; margin-right: -12px; border-radius: 0; }
+.ks-logo .lg { fill: #4c8a5d; } .ks-logo .lgs { stroke: #4c8a5d; } .ks-logo .lgl { fill: #63a576; } .ks-logo .lgd { fill: #2f5436; }
+.ks-bottombar a { display: inline-flex; align-items: center; min-height: 44px; }
+.ks-find, .ks-find-list a, .ks-find-x { border-radius: 0; }
+
+/* ---------- 4. Vantix nav ---------- */
+.vx-head { position: sticky; top: 0; z-index: 40; background: var(--recessed); border-bottom: 1px solid var(--rule); }
+.vx-head-in { display: flex; align-items: center; gap: 14px; height: var(--nav-h); }
+.vx-brand { display: flex; align-items: center; gap: 10px; min-height: 44px; color: var(--ink-bright); text-decoration: none; font: 700 16px/1 var(--label); letter-spacing: .06em; }
+.vx-crumb { padding-left: 14px; border-left: 1px solid var(--rule); }
+.vx-back { display: inline-flex; align-items: center; min-height: 44px; margin-left: auto; color: var(--ink-mid); text-decoration: none; white-space: nowrap; font: 600 13px/1 var(--label); }
+.vx-back:hover { color: var(--ink-bright); }
+
+/* ---------- 5. shared parts ---------- */
+.wrap { max-width: calc(var(--frame) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+.band { border-bottom: 1px solid var(--rule-mid); }
+.cap { font: 500 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-mid); }
+.eyebrow { font: 500 12px/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mid); }
+.eyebrow span { white-space: nowrap; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid currentColor; font: 500 11px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.s-blue { color: var(--blue); } .s-amber { color: var(--amber); } .s-green { color: var(--green); }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 9999px; background: currentColor; }
+
+/* ---------- 6. this page ---------- */
+.hero .wrap { padding-block: clamp(36px, 6vw, 64px) clamp(36px, 5vw, 52px); }
+h1 { margin-top: 16px; max-width: 18ch; font-size: clamp(32px, 6vw, 48px); line-height: 1.05; letter-spacing: -.025em; }
+.lede { margin-top: 18px; max-width: 70ch; }
+
+/* three promises, one ruled frame */
+.promises { display: grid; margin-top: 32px; border: 1px solid var(--rule); background: var(--panel); }
+.promises > div { padding: 20px; }
+.promises > div + div { border-top: 1px solid var(--rule-mid); }
+.promises h2 { margin-top: 12px; font-size: 18px; line-height: 1.2; }
+.promises p { margin-top: 8px; color: var(--ink-mid); }
+@media (min-width: 860px) {
+  .promises { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .promises > div { padding: 22px 24px; }
+  .promises > div + div { border-top: 0; border-left: 1px solid var(--rule-mid); }
+  .promises p { font-size: 14px; }
+}
+
+/* contents beside the sections */
+.doc { display: grid; gap: 28px; padding-block: clamp(32px, 5vw, 48px) clamp(48px, 7vw, 76px); }
+.toc ol { margin-top: 10px; border-top: 1px solid var(--rule-mid); }
+.toc a { display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: center; min-height: 44px; padding: 6px 0; border-bottom: 1px solid var(--rule-soft); color: var(--ink); text-decoration: none; font: 600 14px/1.3 var(--label); }
+.toc a span { font: 500 12px/1 var(--mono); color: var(--ink-mid); }
+.toc a:hover { color: var(--ink-bright); background: color-mix(in oklch, var(--cell-active) 45%, transparent); }
+.toc-note { margin-top: 20px; padding-left: 13px; border-left: 2px solid var(--rule); font-size: 13px; color: var(--ink-mid); }
+.toc-note b { font-weight: 500; color: var(--blue); }
+@media (min-width: 900px) {
+  .doc { grid-template-columns: 236px minmax(0, 1fr); gap: 56px; align-items: start; }
+  .toc { position: sticky; top: calc(var(--nav-h) + 28px); }
+}
+
+.sections { border-top: 1px solid var(--rule); }
+.sections > section { padding: 30px 0 32px; border-bottom: 1px solid var(--rule-mid); }
+.sec-title { display: flex; align-items: baseline; gap: 14px; }
+.sec-title span { font: 700 13px/1 var(--mono); color: var(--blue); }
+.sec-title h2 { font-size: 23px; line-height: 1.15; letter-spacing: -.015em; }
+.sections p { margin-top: 16px; max-width: 70ch; }
+
+/* label / meaning rows */
+.kv { margin-top: 18px; border: 1px solid var(--rule); background: var(--panel); }
+.kv > div { padding: 14px 16px; }
+.kv > div + div { border-top: 1px solid var(--rule-soft); }
+.kv dt { font: 700 12px/1.3 var(--mono); letter-spacing: .04em; color: var(--ink-bright); }
+.kv dd { margin-top: 6px; color: var(--ink-mid); }
+@media (min-width: 640px) {
+  .kv > div { display: grid; grid-template-columns: 168px minmax(0, 1fr); column-gap: 18px; align-items: baseline; }
+  .kv dd { margin-top: 0; }
+}
+
+.vx-foot { background: var(--recessed); }
+.vx-foot .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px; padding-block: 20px; }
+.vx-foot .vx-brand { font-size: 15px; }
+.vx-foot p { font-size: 12.5px; color: var(--ink-mid); }
+.vx-foot nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font: 600 13px/1 var(--label); }
+.vx-foot nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-mid); text-decoration: none; }
+.vx-foot nav a:hover, .vx-foot nav a[aria-current] { color: var(--ink-bright); }
+.vx-foot nav span { font: 400 12.5px/1 var(--mono); color: var(--ink-mid); }
+@media (min-width: 900px) { .vx-foot nav { margin-left: auto; } }
 </style>
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/vantix/privacy">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<meta name="theme-color" content="#ece2cb">
+<meta name="theme-color" content="#13181d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Vantix &mdash; Privacy">
@@ -48,249 +192,153 @@
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
+<svg class="vh" width="0" height="0" aria-hidden="true"><symbol id="vx-mark" viewBox="0 0 56 56"><rect x="9" y="9" width="38" height="38"/><rect x="15" y="15" width="26" height="26" transform="rotate(22 28 28)"/><rect x="22" y="22" width="12" height="12" transform="rotate(45 28 28)"/></symbol></svg>
+
+<!-- KiteSink slim bar (shared chrome from ks.js; styled dark in the <style> block above) -->
 <div data-ks="bar"></div>
 
-<div style="background: oklch(0.205 0.012 250); min-height: 100vh; font-family: 'Space Grotesk', sans-serif; color: oklch(0.82 0.012 250);">
-
-  <!-- ============ [C] VANTIX SUB-NAV (sticky under KS bar) ============ -->
-  <div style="position: sticky; top: 38px; z-index: 30; background: oklch(0.215 0.012 250); border-bottom: 1px solid oklch(0.36 0.012 250); backdrop-filter: blur(8px);">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px,4vw,32px); height: 58px; display: flex; align-items: center; gap: 16px;">
-      <a href="/vantix" style="display: flex; align-items: center; gap: 11px; text-decoration: none;">
-        <svg viewBox="0 0 56 56" width="24" height="24" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg>
-        <span class="gk" style="font-weight: 700; font-size: 17px; letter-spacing: 0.05em; color: oklch(0.95 0.012 250);">VANTIX</span>
-      </a>
-      <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250); letter-spacing: 0.1em; border-left: 1px solid oklch(0.38 0.012 250); padding-left: 16px;">PRIVACY</span>
-      <div class="gk" style="margin-left: auto; display: flex; align-items: center; gap: clamp(12px,2vw,20px); font-size: 13px;">
-        <a href="/vantix" class="gk vx-sub" style="color: oklch(0.7 0.012 250); text-decoration: none;">&#8592; Back to site</a>
-      </div>
-    </div>
+<!-- ============ VANTIX NAV ============ -->
+<div class="vx-head">
+  <div class="wrap vx-head-in">
+    <a class="vx-brand" href="/vantix" aria-label="Vantix overview"><svg width="24" height="24" aria-hidden="true"><use href="#vx-mark"/></svg>VANTIX</a>
+    <span class="cap vx-crumb">Privacy</span>
+    <a class="vx-back" href="/vantix">&larr; Back to Vantix</a>
   </div>
-
-  <!-- ============ [D] PAGE BODY ============ -->
-
-  <!-- HERO -->
-  <section style="border-bottom: 1px solid oklch(0.34 0.012 250);">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 60px 32px 44px;">
-      <div class="mono" style="font-size: 12px; letter-spacing: 0.14em; color: oklch(0.58 0.012 250);">PRIVACY &middot; PLAIN-LANGUAGE SUMMARY &middot; UPDATED 2026&#8209;06&#8209;15</div>
-      <h1 class="gk" style="font-size: 44px; line-height: 1.06; font-weight: 700; letter-spacing: -0.025em; color: oklch(0.96 0.012 250); margin: 16px 0 0; max-width: 720px;">Your data stays yours. That's the whole product.</h1>
-      <p style="font-size: 16px; line-height: 1.65; color: oklch(0.72 0.012 250); margin: 18px 0 0; max-width: 700px;">Vantix only works if you trust it with everything you track. So privacy isn't a policy bolted on the side &mdash; it's the architecture. This page is the plain&#8209;language version; the full legal text links at the bottom of each section.</p>
-
-      <!-- promise tiles -->
-      <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.34 0.012 250);">
-        <div style="background: oklch(0.235 0.012 250); padding: 22px 24px;">
-          <div class="mono" style="font-size: 10.5px; letter-spacing: 0.08em; color: #6f9f7a;">&#9679; NEVER SOLD</div>
-          <div class="gk" style="font-size: 17px; font-weight: 700; color: oklch(0.95 0.012 250); margin: 11px 0 0;">We don&rsquo;t sell your data</div>
-          <p style="font-size: 13px; line-height: 1.6; color: oklch(0.7 0.012 250); margin: 8px 0 0;">Not to advertisers, insurers, data brokers or anyone else. Our revenue is your subscription &mdash; never your data.</p>
-        </div>
-        <div style="background: oklch(0.235 0.012 250); padding: 22px 24px;">
-          <div class="mono" style="font-size: 10.5px; letter-spacing: 0.08em; color: #92a6cc;">&#9679; YOURS TO LEAVE WITH</div>
-          <div class="gk" style="font-size: 17px; font-weight: 700; color: oklch(0.95 0.012 250); margin: 11px 0 0;">Export or delete, any day</div>
-          <p style="font-size: 13px; line-height: 1.6; color: oklch(0.7 0.012 250); margin: 8px 0 0;">Every raw payload is kept verbatim and exportable on request. Delete your account and it&rsquo;s gone, for good.</p>
-        </div>
-        <div style="background: oklch(0.235 0.012 250); padding: 22px 24px;">
-          <div class="mono" style="font-size: 10.5px; letter-spacing: 0.08em; color: #d8a652;">&#9679; NO BLACK BOX</div>
-          <div class="gk" style="font-size: 17px; font-weight: 700; color: oklch(0.95 0.012 250); margin: 11px 0 0;">Derived, not hidden</div>
-          <p style="font-size: 13px; line-height: 1.6; color: oklch(0.7 0.012 250); margin: 8px 0 0;">Readiness, zones and trends are re-derived from inputs you own &mdash; so you can always see why a number is what it is.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BODY -->
-  <section style="border-bottom: 1px solid oklch(0.34 0.012 250);">
-    <div class="vx-2col" style="max-width: 1100px; margin: 0 auto; padding: 48px 32px 72px; display: grid; grid-template-columns: 232px 1fr; gap: 56px; align-items: start;">
-
-      <!-- contents -->
-      <div class="vx-sticky" style="position: sticky; top: 104px;">
-        <div class="mono" style="font-size: 10.5px; letter-spacing: 0.1em; color: oklch(0.55 0.012 250); margin-bottom: 12px;">CONTENTS</div>
-        <div style="display: flex; flex-direction: column;">
-          <div class="vx-toc-row" data-target="p1" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">01</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Our stance</span>
-          </div>
-          <div class="vx-toc-row" data-target="p2" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">02</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">What we store</span>
-          </div>
-          <div class="vx-toc-row" data-target="p3" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">03</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">What we never do</span>
-          </div>
-          <div class="vx-toc-row" data-target="p4" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">04</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Integrations &amp; sources</span>
-          </div>
-          <div class="vx-toc-row" data-target="p5" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">05</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">AI &amp; the co-pilot</span>
-          </div>
-          <div class="vx-toc-row" data-target="p6" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">06</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Your controls</span>
-          </div>
-          <div class="vx-toc-row" data-target="p7" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">07</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Security &amp; retention</span>
-          </div>
-          <div class="vx-toc-row" data-target="p8" style="display: flex; align-items: baseline; gap: 11px; padding: 9px 0; cursor: pointer; border-bottom: 1px solid oklch(0.3 0.012 250);">
-            <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250);">08</span>
-            <span class="gk" style="font-size: 13.5px; color: oklch(0.74 0.012 250);">Changes &amp; contact</span>
-          </div>
-        </div>
-        <div class="mono" style="font-size: 11px; line-height: 1.6; color: oklch(0.5 0.012 250); margin-top: 22px; border-left: 2px solid oklch(0.38 0.012 250); padding-left: 13px;">Questions? <span style="color: #92a6cc;">privacy@vantix.app</span></div>
-      </div>
-
-      <!-- sections -->
-      <div style="display: flex; flex-direction: column; gap: 1px; background: oklch(0.34 0.012 250); border: 1px solid oklch(0.42 0.012 250);">
-
-        <div id="p1" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">01</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Our stance</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Vantix is a periodization OS: it only works if you connect the apps, wearables, logs and labs that describe your whole training and health life. We treat that as a serious responsibility, not a growth lever.</p>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">The short version: we collect what we need to run the product for you, we keep it transparent and portable, and we never monetize it beyond the subscription you pay.</p>
-        </div>
-
-        <div id="p2" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">02</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">What we store</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Everything you import or connect lands on one universal event spine. We keep two layers, deliberately:</p>
-          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 250); border: 1px solid oklch(0.32 0.012 250);">
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">RAW PAYLOAD</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">The original export or API response, stored verbatim and unchanged &mdash; so any derived value can be re-computed and audited.</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NORMALIZED EVENT</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">The canonical event we derive from it (hrv, set, macro, sleep, lab) used to power the surfaces.</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #d8a652; letter-spacing: 0.02em;">ACCOUNT</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Email, authentication and subscription status. That&rsquo;s the extent of the identity we hold.</span>
-            </div>
-          </div>
-        </div>
-
-        <div id="p3" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">03</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">What we never do</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Some lines we will not cross, by design:</p>
-          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 250); border: 1px solid oklch(0.32 0.012 250);">
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NO SELLING</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">We never sell, rent or share your data with advertisers, insurers or brokers.</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NO SILENT AI</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">We never feed your data to a model you didn&rsquo;t explicitly opt into.</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #6f9f7a; letter-spacing: 0.02em;">NO LOCK-IN</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">We never withhold your data to keep you subscribed &mdash; export is always available.</span>
-            </div>
-          </div>
-        </div>
-
-        <div id="p4" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">04</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Integrations &amp; sources</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">You choose what to connect. Live connections (via our aggregator) and manual file imports both flow through the same import engine and the same privacy rules.</p>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">We request the narrowest scope each source allows, and a missed or revoked connection is shown to you rather than quietly back-filled. Disconnect a source any time; its already-imported events stay yours to keep or delete.</p>
-        </div>
-
-        <div id="p5" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">05</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">AI &amp; the co-pilot</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">The AI co-pilot reads the parts of your plan and history needed to propose a change &mdash; and it can only ever propose. Every suggestion is a diff you review; nothing is written without your confirmation through the review-gate.</p>
-        </div>
-
-        <div id="p6" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">06</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Your controls</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">You hold the switches:</p>
-          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 250); border: 1px solid oklch(0.32 0.012 250);">
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">EXPORT</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Download your raw payloads and normalized events at any time, in open formats.</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">DELETE</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Delete individual sources, a date range, or your entire account &mdash; hard deletes, not flags.</span>
-            </div>
-            <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; background: oklch(0.228 0.012 250); padding: 13px 18px; align-items: baseline;">
-              <span class="mono" style="font-size: 11.5px; font-weight: 700; color: #92a6cc; letter-spacing: 0.02em;">OPT-IN</span>
-              <span class="gk" style="font-size: 13.5px; line-height: 1.55; color: oklch(0.76 0.012 250);">Every AI and data-sharing feature is off until you turn it on.</span>
-            </div>
-          </div>
-        </div>
-
-        <div id="p7" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">07</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Security &amp; retention</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Data is encrypted in transit and at rest. Access is scoped to the systems that run the product, and we keep your data only while your account is active or as long as the law requires.</p>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">When you delete data, it is removed from primary storage immediately and purged from backups on their normal rotation. We&rsquo;ll tell you the current window on request.</p>
-        </div>
-
-        <div id="p8" style="background: oklch(0.235 0.012 250); padding: 32px 36px;">
-          <div style="display: flex; align-items: baseline; gap: 14px;">
-            <span class="mono" style="font-size: 13px; font-weight: 700; color: #92a6cc;">08</span>
-            <h2 class="gk" style="font-size: 23px; font-weight: 700; letter-spacing: -0.015em; color: oklch(0.96 0.012 250); margin: 0;">Changes &amp; contact</h2>
-          </div>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">If this summary changes materially, we&rsquo;ll surface it in-app before it takes effect &mdash; not bury it in a diff. Substantive history is kept so you can see what changed and when.</p>
-          <p style="font-size: 14.5px; line-height: 1.7; color: oklch(0.76 0.012 250); margin: 16px 0 0; max-width: 680px;">Privacy questions, export requests or deletion requests: privacy@vantix.app. We aim to respond within a few business days.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ [E] VANTIX FOOTER (cross-linked) ============ -->
-  <div style="border-top: 1px solid oklch(0.34 0.012 250); background: oklch(0.215 0.012 250);">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 30px clamp(16px,4vw,32px); display: flex; align-items: center; gap: 16px 20px; flex-wrap: wrap;">
-      <a href="/vantix" style="display: flex; align-items: center; gap: 10px; text-decoration:none;"><svg viewBox="0 0 56 56" width="21" height="21" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg><span class="gk" style="font-weight: 700; font-size: 15px; letter-spacing: 0.05em; color: oklch(0.92 0.012 250);">VANTIX</span></a>
-      <span class="mono" style="font-size: 11.5px; color: oklch(0.55 0.012 250);">This summary is provided in good faith and does not replace the full legal policy.</span>
-      <div class="gk" style="margin-left: auto; display: flex; gap: 18px; font-size: 13px; color: oklch(0.62 0.012 250); flex-wrap: wrap;">
-        <a href="/vantix" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Overview</a>
-        <a href="/vantix/privacy" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Privacy</a>
-        <span class="mono" style="color: oklch(0.45 0.012 250);">&copy; 2026</span>
-      </div>
-    </div>
-  </div>
-
 </div>
 
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero band">
+    <div class="wrap">
+      <p class="eyebrow">Privacy &middot; Plain-language summary &middot; <span>Updated 2026-06-15</span></p>
+      <h1>Your data stays yours. That&rsquo;s the whole product.</h1>
+      <p class="lede">Vantix only works if you trust it with everything you track. So privacy isn&rsquo;t a policy bolted on the side &mdash; it&rsquo;s the architecture. This page is the plain-language version; the full legal text links at the bottom of each section.</p>
+
+      <div class="promises">
+        <div>
+          <span class="chip s-green"><i class="dot" aria-hidden="true"></i>Never sold</span>
+          <h2>We don&rsquo;t sell your data</h2>
+          <p>Not to advertisers, insurers, data brokers or anyone else. Our revenue is your subscription &mdash; never your data.</p>
+        </div>
+        <div>
+          <span class="chip s-blue"><i class="dot" aria-hidden="true"></i>Yours to leave with</span>
+          <h2>Export or delete, any day</h2>
+          <p>Every raw payload is kept verbatim and exportable on request. Delete your account and it&rsquo;s gone, for good.</p>
+        </div>
+        <div>
+          <span class="chip s-amber"><i class="dot" aria-hidden="true"></i>No black box</span>
+          <h2>Derived, not hidden</h2>
+          <p>Readiness, zones and trends are re-derived from inputs you own &mdash; so you can always see why a number is what it is.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE SUMMARY ============ -->
+  <div class="band">
+    <div class="wrap doc">
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <p class="cap" id="toc-title">Contents</p>
+        <ol>
+          <li><a href="#p1"><span>01</span>Our stance</a></li>
+          <li><a href="#p2"><span>02</span>What we store</a></li>
+          <li><a href="#p3"><span>03</span>What we never do</a></li>
+          <li><a href="#p4"><span>04</span>Integrations &amp; sources</a></li>
+          <li><a href="#p5"><span>05</span>AI &amp; the co-pilot</a></li>
+          <li><a href="#p6"><span>06</span>Your controls</a></li>
+          <li><a href="#p7"><span>07</span>Security &amp; retention</a></li>
+          <li><a href="#p8"><span>08</span>Changes &amp; contact</a></li>
+        </ol>
+        <p class="toc-note">Questions? <b>privacy@vantix.app</b></p>
+      </nav>
+
+      <div class="sections">
+
+        <section id="p1" aria-labelledby="p1-h">
+          <div class="sec-title"><span>01</span><h2 id="p1-h">Our stance</h2></div>
+          <p>Vantix is a periodization OS: it only works if you connect the apps, wearables, logs and labs that describe your whole training and health life. We treat that as a serious responsibility, not a growth lever.</p>
+          <p>The short version: we collect what we need to run the product for you, we keep it transparent and portable, and we never monetize it beyond the subscription you pay.</p>
+        </section>
+
+        <section id="p2" aria-labelledby="p2-h">
+          <div class="sec-title"><span>02</span><h2 id="p2-h">What we store</h2></div>
+          <p>Everything you import or connect lands on one universal event spine. We keep two layers, deliberately:</p>
+          <dl class="kv">
+            <div><dt>RAW PAYLOAD</dt><dd>The original export or API response, stored verbatim and unchanged &mdash; so any derived value can be re-computed and audited.</dd></div>
+            <div><dt>NORMALIZED EVENT</dt><dd>The canonical event we derive from it (hrv, set, macro, sleep, lab) used to power the surfaces.</dd></div>
+            <div><dt>ACCOUNT</dt><dd>Email, authentication and subscription status. That&rsquo;s the extent of the identity we hold.</dd></div>
+          </dl>
+        </section>
+
+        <section id="p3" aria-labelledby="p3-h">
+          <div class="sec-title"><span>03</span><h2 id="p3-h">What we never do</h2></div>
+          <p>Some lines we will not cross, by design:</p>
+          <dl class="kv">
+            <div><dt>NO SELLING</dt><dd>We never sell, rent or share your data with advertisers, insurers or brokers.</dd></div>
+            <div><dt>NO SILENT AI</dt><dd>We never feed your data to a model you didn&rsquo;t explicitly opt into.</dd></div>
+            <div><dt>NO LOCK-IN</dt><dd>We never withhold your data to keep you subscribed &mdash; export is always available.</dd></div>
+          </dl>
+        </section>
+
+        <section id="p4" aria-labelledby="p4-h">
+          <div class="sec-title"><span>04</span><h2 id="p4-h">Integrations &amp; sources</h2></div>
+          <p>You choose what to connect. Live connections (via our aggregator) and manual file imports both flow through the same import engine and the same privacy rules.</p>
+          <p>We request the narrowest scope each source allows, and a missed or revoked connection is shown to you rather than quietly back-filled. Disconnect a source any time; its already-imported events stay yours to keep or delete.</p>
+        </section>
+
+        <section id="p5" aria-labelledby="p5-h">
+          <div class="sec-title"><span>05</span><h2 id="p5-h">AI &amp; the co-pilot</h2></div>
+          <p>The AI co-pilot reads the parts of your plan and history needed to propose a change &mdash; and it can only ever propose. Every suggestion is a diff you review; nothing is written without your confirmation through the review-gate.</p>
+        </section>
+
+        <section id="p6" aria-labelledby="p6-h">
+          <div class="sec-title"><span>06</span><h2 id="p6-h">Your controls</h2></div>
+          <p>You hold the switches:</p>
+          <dl class="kv">
+            <div><dt>EXPORT</dt><dd>Download your raw payloads and normalized events at any time, in open formats.</dd></div>
+            <div><dt>DELETE</dt><dd>Delete individual sources, a date range, or your entire account &mdash; hard deletes, not flags.</dd></div>
+            <div><dt>OPT-IN</dt><dd>Every AI and data-sharing feature is off until you turn it on.</dd></div>
+          </dl>
+        </section>
+
+        <section id="p7" aria-labelledby="p7-h">
+          <div class="sec-title"><span>07</span><h2 id="p7-h">Security &amp; retention</h2></div>
+          <p>Data is encrypted in transit and at rest. Access is scoped to the systems that run the product, and we keep your data only while your account is active or as long as the law requires.</p>
+          <p>When you delete data, it is removed from primary storage immediately and purged from backups on their normal rotation. We&rsquo;ll tell you the current window on request.</p>
+        </section>
+
+        <section id="p8" aria-labelledby="p8-h">
+          <div class="sec-title"><span>08</span><h2 id="p8-h">Changes &amp; contact</h2></div>
+          <p>If this summary changes materially, we&rsquo;ll surface it in-app before it takes effect &mdash; not bury it in a diff. Substantive history is kept so you can see what changed and when.</p>
+          <p>Privacy questions, export requests or deletion requests: privacy@vantix.app. We aim to respond within a few business days.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ============ VANTIX FOOTER ============ -->
+<footer class="vx-foot">
+  <div class="wrap">
+    <a class="vx-brand" href="/vantix" aria-label="Vantix overview"><svg width="21" height="21" aria-hidden="true"><use href="#vx-mark"/></svg>VANTIX</a>
+    <p>This summary is provided in good faith and does not replace the full legal policy.</p>
+    <nav aria-label="Vantix">
+      <a href="/vantix">Overview</a>
+      <a href="/vantix/privacy" aria-current="page">Privacy</a>
+      <span>&copy; 2026</span>
+    </nav>
+  </div>
+</footer>
+
+<!-- KiteSink bottom strip (shared chrome from ks.js; styled dark above) -->
 <div data-ks="bottombar"></div>
 
-<script>
-  (function () {
-    function scrollToTarget(id) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      var y = el.getBoundingClientRect().top + window.scrollY - 104;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-    var rows = document.querySelectorAll('.vx-toc-row');
-    for (var i = 0; i < rows.length; i++) {
-      rows[i].addEventListener('click', function () {
-        scrollToTarget(this.getAttribute('data-target'));
-      });
-    }
-  })();
-</script>
 <script src="/ks.js?v=2027.3"></script>
 </body>
 </html>

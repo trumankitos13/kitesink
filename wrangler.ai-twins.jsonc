@@ -1,0 +1,21 @@
+// Optional deploy config: the normal site plus worker/ai-twins.js, which answers AI
+// readers with a page's plain-text twin at the page's own address. Not used unless you
+// deploy with it on purpose:  npx wrangler deploy -c wrangler.ai-twins.jsonc
+// Read docs/AI-PAGES.md first.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kitesink",
+  "main": "worker/ai-twins.js",
+  "compatibility_date": "2026-06-25",
+  "observability": { "enabled": true },
+  "vars": { "AI_TWINS": "agents" },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // The worker runs only for the pages that have a twin; every other request is
+    // served straight from static assets and never touches it.
+    "run_worker_first": ["/", "/consulting", "/fitness", "/vantix", "/music", "/listening-club", "/about"]
+  },
+  "compatibility_flags": ["nodejs_compat"]
+}

@@ -22,14 +22,16 @@ it to the right JSON file and run this script. scripts/check_site.py runs the
 """
 import html
 import json
+import os
 import re
 import sys
 from collections import Counter, OrderedDict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "content" / "fitness"
-PUBLIC = ROOT / "public"
+# The two environment variables exist for tests: build sample data into a scratch folder.
+SRC = Path(os.environ.get("KS_FITNESS_SRC") or ROOT / "content" / "fitness")
+PUBLIC = Path(os.environ.get("KS_FITNESS_OUT") or ROOT / "public")
 SITE = "https://kitesink.com"
 
 DOMAINS = OrderedDict([
@@ -505,6 +507,7 @@ def build():
     fills = {
         "guide": guide, "claims": claims, "meet": meet, "numbers": numbers, "tables": tables, "glossary": glossary, "sources": sources,
         "domains": domain_switch(counts),
+        "legend": '<dl class="lg">' + "".join(f'<div><dt>{tag("tg-c tg-" + c, CONF[c])}</dt><dd>{esc(CONF_HELP[c])}</dd></div>' for c in CONF) + "</dl>",
         "n:guide": n_guide, "n:claims": n_claims, "n:steps": n_steps, "n:numbers": n_numbers, "n:tables": n_tables,
         "n:terms": n_terms, "n:sources": sum(1 for k in lib.by_id if lib.uses[k]), "n:total": total, "updated": meta["updated_label"],
     }
@@ -530,7 +533,7 @@ def build():
 def main():
     out, stats = build()
     if "--check" in sys.argv:
-        stale = [str(p.relative_to(ROOT)) for p, text in out.items() if not p.is_file() or p.read_text(encoding="utf-8") != text]
+        stale = [p.name for p, text in out.items() if not p.is_file() or p.read_text(encoding="utf-8") != text]
         if stale:
             print("Out of date (run python3 scripts/build_fitness.py): " + ", ".join(stale))
             return 1
