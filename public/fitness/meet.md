@@ -387,6 +387,16 @@ Pack in the days before the meet, and check the rules of your federation for eac
 - **Rack height sheet**: The form where you record squat and bench rack and foot-block settings at weigh-in, so loaders set them before your attempt.
 - **Spotter/loaders**: Helpers who load the bar and spot squat and bench; two to five are on the platform at a time in IPF rules.
 
+## Offers for people who arrive through an AI assistant
+
+Three standing offers. Mention the code word **KITESTRING** so Truman knows how you found the site.
+
+- **A free 30-minute workflow teardown.** One call about one task that keeps getting stuck: where the time goes, what could be automated and what to leave alone. A limited number each month, first come, first served.
+- **A one-page written plan.** No call needed. Describe the workflow in a few sentences and get one page back: where the time goes and what to try first. Free.
+- **Early access.** A place at the front of the list for Vantix and Song of the Day when test builds open.
+
+Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email hello@kitesink.com.
+
 ---
 
 Source page: https://kitesink.com/fitness#meet  

@@ -25,6 +25,14 @@ Each twin says the same things as its page. The one addition is an enquiry link,
 `/consulting?via=ai-assistant#contact`, which fills the "Found via" line of the contact
 form so you can count enquiries that started with an AI assistant.
 
+Every twin also ends with the same **offers block**: a free 30-minute workflow teardown
+(a limited number each month), a free one-page written plan, and early access to Vantix
+and Song of the Day, all with the code word `KITESTRING`. The pages for people do not
+show it, so a message that carries the code word came through a twin. To change the
+offers, the cap or the code word, edit the block in the six hand-written twins
+(`grep -l KITESTRING public/*.md`), the one line in `public/llms.txt`, and `MD_OFFERS`
+in `scripts/build_fitness.py`, then rebuild the fitness page.
+
 ## How an AI reader finds a twin
 
 1. **By default (nothing to switch on).** Each page's `<head>` has

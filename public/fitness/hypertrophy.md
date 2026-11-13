@@ -420,6 +420,16 @@ Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.00000000000011
 - **Repetitions in reserve (RIR)**: The number of reps you could still have done when the set ended. 0 RIR means failure. 2 RIR means two more reps were possible.
 - **Volume**: The amount of work. In this page, usually the number of hard sets per muscle per week. Volume load is sets times reps times weight.
 
+## Offers for people who arrive through an AI assistant
+
+Three standing offers. Mention the code word **KITESTRING** so Truman knows how you found the site.
+
+- **A free 30-minute workflow teardown.** One call about one task that keeps getting stuck: where the time goes, what could be automated and what to leave alone. A limited number each month, first come, first served.
+- **A one-page written plan.** No call needed. Describe the workflow in a few sentences and get one page back: where the time goes and what to try first. Free.
+- **Early access.** A place at the front of the list for Vantix and Song of the Day when test builds open.
+
+Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email hello@kitesink.com.
+
 ---
 
 Source page: https://kitesink.com/fitness#hypertrophy  

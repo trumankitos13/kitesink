@@ -12,7 +12,7 @@ runs in any browser by opening the file directly.
 |---|---|---|
 | Consulting | `/consulting` | Services for music teams, how a project runs, the AI concierge offer, an enquiry form |
 | Fitness | `/fitness` | Vantix (`/vantix`, privacy), five free calculators, and a field guide in six areas (hypertrophy, powerlifting, meet day, nutrition, diet, health) with claims, key numbers, tables, a glossary and sources |
-| Music | `/music` | Song of the Day, Stage First (the product that absorbs Backline; still at `/backline`), Album Listening Club |
+| Music | `/music` | Song of the Day, Stage First (the product that absorbs Backline; `/backline` redirects to it), Album Listening Club |
 | Library | `/library` | **Everything** — every project, tool, game, post and page, searchable. `/games`, `/blog` and Campground Tycoon live here. The old `/work` index is gone and redirects here |
 | About | `/about` | About, Now, Uses |
 
@@ -52,7 +52,7 @@ public/                     ← deploy root for kitesink.com
   listening-club.html       Album Listening Club — its own palette; Discord front door
   song-of-the-day.html      Landing for the Song of the Day iOS app (+ support/privacy/terms)
   campground-tycoon.html    Campground Tycoon landing + demo (+ features/regions/roadmap)
-  backline.html             Stage First: the staffing app (Backline) and the closeout. URL kept
+  stage-first.html          Stage First: the staffing app (Backline) and the closeout
   vantix.html               Vantix — the periodization OS (+ roadmap/changelog/privacy)
   feed.xml                  Atom feed (hand-maintained; see docs/ADDING-A-BLOG-POST.md)
   sitemap.xml, robots.txt, _headers, 404.html
@@ -76,7 +76,7 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
 - **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. The blog
   post template carries its own small KiteSink nav — search for `/consulting` in that file.
   Every other page mounts the shared header or slim bar.
-- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.5` on the
+- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.6` on the
   `<link>`/`<script>` tags in every page (find-and-replace) and `ASSET_V` at the top of `ks.js`. Those files are cached for an hour or more, and a new page with an
   old cached stylesheet looks broken. The audit checks every page uses the same version.
 - **Design tokens:** `--k-*` custom properties at the top of `ks.css` (light + dark). New pages
@@ -136,8 +136,8 @@ so nothing depends on an external runtime anymore.
 - **Vantix `.co` vs `.com`** — ✅ fixed; the Home work-card now reads `vantix.kitesink.com`.
 - **Blog posts** — entries live in `public/blog/posts.js`; per-post pages under `public/blog/`
   (copy `_template.html`). Full steps in `docs/ADDING-A-BLOG-POST.md`.
-- **Listening club** — relaunched for 2027: the inaugural session is Sat 16 Jan 2027, then the last
-  Saturday of every month. The pages do not say whether January also gets a session on the 30th.
+- **Listening club** — relaunched for 2027: the inaugural session is Sat 30 Jan 2027, the last Saturday of
+  January, and the last Saturday of every month after that. One session in January.
   The Spotify playlist embed is still a placeholder.
 - **Vantix tiers** — `/vantix#pricing` shows Free (v1.0 "The Free Core", in progress, target
   Dec 31, 2026), Plus (paid athlete tier, no price) and Pro · Coach (v2.5, planned, no dates).
@@ -151,18 +151,27 @@ so nothing depends on an external runtime anymore.
   the app's roadmap places it later; check the wording.
 - **Song of the Day** — "Coming soon" everywhere (`projects.js`, `site-index.js`, the product page),
   with no launch date printed. Every contact address is `hello@kitesink.com`.
-  `song-of-the-day/terms.html` still has a `<TODO: jurisdiction>`.
+  `song-of-the-day/terms.html` names the United States as governing law; a state is usually named
+  too, so add one when the company is incorporated.
 - **Song of the Day "Written by humans"** — kept on purpose (owner decision).
 - **Campground Tycoon demo** — the embedded itch.io build requests `park-map.js` and itch answers
   404. That is in the game's itch upload, not this site.
 - **AI concierge** — `/consulting#concierge` describes the offer (learn the industry, observe the
   work, then AI automation / deterministic programs / custom software). No prices, call cadence or
   response times are promised; add them when they are decided.
-- **Stage First (Backline)** — `/backline` now presents Stage First: a staffing app in a staging beta
+- **Stage First** — `/stage-first` (`/backline` redirects there) presents Stage First: a staffing app in a staging beta
   (payments in test mode) and a closeout at design stage. The old player counts are kept, inside a
   screen labelled demo data. The page says a hand-run closeout pilot is being planned; change the
-  tense when it starts. Decide whether the page should move to `/stage-first` (add a line to
-  `public/_redirects` if so) and whether "Backline" stays as a public name.
+  tense when it starts. The page keeps one line saying the staffing app was called Backline.
+- **Song of the Day support page** — `song-of-the-day/support.html` fails colour-contrast checks
+  (about 16 text pairs in light, more when the site theme is dark). Not fixed yet; the terms and
+  privacy pages were.
+- **AI-page offers** — every plain-text twin ends with three offers (free 30-minute teardown,
+  one-page written plan, early access) and the code word `KITESTRING`. The teardown is capped as
+  "a limited number each month" with no figure; set one, or change the code word, as described in
+  `docs/AI-PAGES.md`.
+- **Kit, the search buddy** — the kite in the Find panel (`kit()` in `ks.js`, `.ks-kit` in
+  `ks.css`). It reports how the search went and, when nothing matches, offers the contact form.
 - **Now page** — one "Last updated" date (in the hero box; edit it there). The project cards were
   rewritten on 2026-11-13. The three personal cards (On rotation, Under the bar, Inputs) were
   carried over from July and need the owner's own words.

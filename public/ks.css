@@ -248,7 +248,41 @@ html[data-theme="dark"] .ks-logo .lgl { fill: #63a576; } html[data-theme="dark"]
 .ks-find-list a .s { grid-row: 1; grid-column: 2; font: 500 10.5px/1 var(--k-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--k-mute); white-space: nowrap; }
 .ks-find-list li.on a, .ks-find-list a:hover { background: color-mix(in srgb, var(--k-green) 12%, transparent); }
 .ks-find-list li.on a .t { color: var(--k-green); }
-.ks-find-empty { padding: 26px 14px; font: 400 15px/1.5 var(--k-sans); color: var(--k-copy); }
+.ks-find-empty { padding: 22px 14px 18px; font: 400 15px/1.5 var(--k-sans); color: var(--k-copy); }
+.ks-find-empty p { margin: 0; max-width: none; }
+.ks-find-empty .ks-find-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.ks-find-list a.ks-find-act { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px;
+  border: 1px solid var(--k-rule-strong); background: transparent; color: var(--k-ink); font: 600 14px/1 var(--k-sans); text-decoration: none; }
+.ks-find-list a.ks-find-act:hover { border-color: var(--k-green); background: transparent; }
+.ks-find-list a.ks-find-act--go { background: var(--k-green); border-color: var(--k-green); color: var(--k-paper); }
+.ks-find-list a.ks-find-act--go:hover { background: var(--k-green); filter: brightness(1.08); }
+
+/* Kit, the search buddy: a kite with eyes. Drawn by kit() in ks.js. It is decoration;
+   the words beside it carry the meaning. Moods: idle, busy, found, none. */
+.ks-find-kit { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 8px 16px 6px 16px;
+  border-bottom: 1px solid var(--k-rule); background: color-mix(in srgb, var(--k-brass-fill) 9%, transparent); }
+.ks-find-kit .ks-kit { width: 30px; height: 38px; }
+.ks-find-say { margin: 0; min-width: 0; max-width: none; font: 500 14px/1.4 var(--k-sans); color: var(--k-copy); }
+.ks-kit { flex: none; overflow: visible; transform-origin: 50% 36%; transition: rotate .4s var(--k-ease), translate .4s var(--k-ease); }
+.ks-kit .kd { fill: var(--k-brass-fill); }
+.ks-kit .kl { stroke: rgba(255,255,255,.34); }
+.ks-kit .kt { stroke: var(--k-brass-fill); transform-box: fill-box; transform-origin: 50% 0; animation: ks-kit-tail 2.6s ease-in-out infinite alternate; }
+.ks-kit .ke circle { fill: #fbf6e8; }
+.ks-kit .kp circle { fill: #1d1810; }
+.ks-kit .ke, .ks-kit .kp { transform-box: fill-box; transform-origin: center; animation: ks-kit-blink 5.4s infinite; }
+.ks-kit .kp { transition: translate .25s var(--k-ease); }
+.ks-kit .km, .ks-kit .km-o { stroke: #1d1810; }
+.ks-kit .km-o { display: none; }
+.ks-kit[data-mood="found"] { rotate: -5deg; }
+.ks-kit[data-mood="found"] .kp { translate: 0 1.4px; }            /* looks down at the results */
+.ks-kit[data-mood="busy"] .kp { translate: 1.2px -1px; }
+.ks-kit[data-mood="none"] { rotate: 13deg; translate: 0 3px; }     /* droops */
+.ks-kit[data-mood="none"] .kp { translate: -1px 1.3px; }
+.ks-kit[data-mood="none"] .km { display: none; }
+.ks-kit[data-mood="none"] .km-o { display: inline; }
+@keyframes ks-kit-tail { from { rotate: -8deg; } to { rotate: 8deg; } }
+@keyframes ks-kit-blink { 0%, 46%, 50%, 100% { scale: 1 1; } 48% { scale: 1 .1; } }
+@media (prefers-reduced-motion: reduce) { .ks-kit, .ks-kit * { animation: none !important; transition: none !important; } }
 .ks-find-foot { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 10px 16px; border-top: 1px solid var(--k-rule);
   font: 500 11px/1 var(--k-mono); color: var(--k-mute); }
 .ks-find-foot span { display: none; }

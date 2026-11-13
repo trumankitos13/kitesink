@@ -41,7 +41,7 @@
   // The release of the shared files. It must match the ?v= on every page's
   // ks.css / ks.js / site-index.js tags (scripts/check_site.py checks), so a
   // file fetched from here and the same file named by a page are one cache entry.
-  var ASSET_V = "2027.5";
+  var ASSET_V = "2027.6";
 
   // The five sections. Order = nav order. `quiet` renders Library understated:
   // always reachable, never the loudest thing on the page.
@@ -55,7 +55,7 @@
   var ALIAS = { work: "library", games: "library", writing: "library", blog: "library", club: "music", now: "about" };
   // A page can name its section with data-active; when it doesn't (the slim bar
   // on project pages), work it out from the URL.
-  var BY_PATH = [[/^\/(vantix|fitness)/, "fitness"], [/^\/(song-of-the-day|backline|listening-club|music)/, "music"], [/^\/consulting/, "consulting"],
+  var BY_PATH = [[/^\/(vantix|fitness)/, "fitness"], [/^\/(song-of-the-day|stage-first|listening-club|music)/, "music"], [/^\/consulting/, "consulting"],
                  [/^\/(campground-tycoon|blog|work|games|library|colophon)/, "library"], [/^\/(about|now|uses)/, "about"]];
   function sectionOf(active) {
     if (active) return ALIAS[active] || active;
@@ -123,7 +123,7 @@
           '<p>Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>' +
         '<div class="ks-ft-cols">' +
           col("Sections", SECTIONS.map(function (s) { return [s.label, s.href]; })) +
-          col("Current", [["Vantix", "/vantix"], ["Fitness tools", "/fitness#tools"], ["Song of the Day", "/song-of-the-day"], ["Stage First", "/backline"], ["Listening Club", "/listening-club"]]) +
+          col("Current", [["Vantix", "/vantix"], ["Fitness tools", "/fitness#tools"], ["Song of the Day", "/song-of-the-day"], ["Stage First", "/stage-first"], ["Listening Club", "/listening-club"]]) +
           col("Library", [["Full index", "/library"], ["Games", "/games"], ["Writing", "/blog"], ["Now", "/now"], ["Uses", "/uses"], ["Colophon", "/colophon"]]) +
           col("Elsewhere", [["hello@kitesink.com", "mailto:hello@kitesink.com"], ["GitHub", "https://github.com/trumankitos13", 1], ["YouTube", "https://www.youtube.com/@rummaging13", 1], ["Bluesky", "https://bsky.app/profile/signal-shift.bsky.social", 1], ["Atom feed", "/feed.xml"]]) +
         '</div>' +
@@ -307,8 +307,25 @@
     return "";
   }
 
+  // ---- Kit: the small kite that keeps you company in search. Not a chatbot. It only says
+  // how the search is going, and points to a person when the index has nothing.
+  // Moods: idle, busy, found, none (styled in ks.css under .ks-kit). ----
+  function kit(mood) {
+    return '<svg class="ks-kit" data-mood="' + (mood || "idle") + '" viewBox="0 0 48 60" width="40" height="50" aria-hidden="true" focusable="false">' +
+      '<path class="kt" d="M24 41q5 5 0 9q-5 4 0 9" fill="none" stroke-width="1.8" stroke-linecap="round"/>' +
+      '<g class="kb"><path class="kd" d="M24 2 42 22 24 42 6 22z"/><path class="kl" d="M24 2v40" fill="none" stroke-width="1"/>' +
+      '<g class="ke"><circle cx="17.5" cy="20" r="4"/><circle cx="30.5" cy="20" r="4"/></g>' +
+      '<g class="kp"><circle cx="17.5" cy="20.4" r="1.9"/><circle cx="30.5" cy="20.4" r="1.9"/></g>' +
+      '<path class="km" d="M20 28.5q4 3.4 8 0" fill="none" stroke-width="1.6" stroke-linecap="round"/>' +
+      '<path class="km-o" d="M21 30.5q3-2.4 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/></g></svg>';
+  }
+  var KIT_IDLE = ["I’m Kit. Tell me what you’re after.", "Try “macros”, “vantix” or “club”.", "A name, a topic or a tool: any of them works."];
+  function kitFound(n) {
+    return n === 1 ? "One match. That’ll be the one." : n >= 14 ? "Lots of matches. One more word will narrow it." : "Found " + n + ". My best guess is on top.";
+  }
+
   // ---- Find palette: ⌘K / Ctrl K / "/" or any [data-ks-find] button ----
-  var find = null;
+  var find = null, findOpens = 0;
   function buildFind() {
     var dlg = document.createElement("dialog");
     dlg.className = "ks-find";
@@ -317,12 +334,15 @@
       '<div class="ks-find-top">' + ICON_FIND +
         '<input class="ks-find-in" type="search" placeholder="Find a project, tool or page…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" role="combobox" aria-expanded="true" aria-controls="ks-find-list" aria-autocomplete="list" aria-label="Find anything on KiteSink">' +
         '<button class="ks-find-x" type="button" aria-label="Close">esc</button></div>' +
+      '<div class="ks-find-kit">' + kit("idle") + '<p class="ks-find-say"></p></div>' +
       '<ul class="ks-find-list" id="ks-find-list" role="listbox" aria-label="Results"></ul>' +
       '<p class="k-vh" role="status"></p>' +
       '<div class="ks-find-foot"><span>↑↓ to move · ↵ to open</span><a href="/library">Browse the full library →</a></div>';
     document.body.appendChild(dlg);
     var input = dlg.querySelector(".ks-find-in"), list = dlg.querySelector(".ks-find-list"), items = [], shown = [], cur = 0, loaded = false, indexOk = false, sayT = null;
     var status = dlg.querySelector('[role="status"]');
+    var kitEl = dlg.querySelector(".ks-kit"), say = dlg.querySelector(".ks-find-say"), idleLine = KIT_IDLE[0];
+    function tell(mood, text) { kitEl.setAttribute("data-mood", mood); say.textContent = text; }
 
     function row(it, i) {
       return '<li role="option" id="ks-find-o' + i + '" aria-selected="' + (i === cur) + '"' + (i === cur ? ' class="on"' : '') + '>' +
@@ -336,6 +356,7 @@
         shown = [];
         list.innerHTML = '<li class="ks-find-empty">' + (loaded ? 'The index didn’t load. <a href="/library" style="display:inline;padding:0;color:var(--k-green);text-decoration:underline">Open the library</a> instead, or close this and try again.' : 'Loading the index…') + '</li>';
         input.removeAttribute("aria-activedescendant");
+        if (loaded) tell("none", "The index got tangled on the way here."); else tell("busy", "Unrolling the index…");
         return;
       }
       if (!q) {
@@ -350,12 +371,15 @@
         shown = search(items, q).slice(0, 14);
         cur = Math.min(cur, Math.max(0, shown.length - 1));
         html = shown.length ? shown.map(row).join("")
-          : '<li class="ks-find-empty">Nothing matches “' + esc(q) + '”. The <a href="/library" style="display:inline;padding:0;color:var(--k-green);text-decoration:underline">library</a> lists everything.</li>';
+          : '<li class="ks-find-empty"><p>Nothing matches “' + esc(q) + '”. If it should be here, a person can tell you.</p>' +
+            '<p class="ks-find-acts"><a class="ks-find-act ks-find-act--go" href="/consulting#contact">Ask Truman directly</a>' +
+            '<a class="ks-find-act" href="/library">Browse the library</a></p></li>';
       }
       list.innerHTML = html;
+      tell(!q ? "idle" : shown.length ? "found" : "none", !q ? idleLine : shown.length ? kitFound(shown.length) : "Nothing on my string by that name.");
       if (shown.length) input.setAttribute("aria-activedescendant", "ks-find-o" + cur); else input.removeAttribute("aria-activedescendant");
       clearTimeout(sayT); // tell screen-reader users how the search went, once typing pauses
-      if (q) sayT = setTimeout(function () { status.textContent = shown.length ? shown.length + (shown.length === 1 ? " result" : " results") : "No results"; }, 500);
+      if (q) sayT = setTimeout(function () { status.textContent = shown.length ? shown.length + (shown.length === 1 ? " result" : " results") : "No results. You can ask Truman directly or browse the library."; }, 500);
       else status.textContent = "";
     }
     function move(d) {
@@ -385,6 +409,7 @@
       open: function (prefill) {
         if (dlg.open) return;
         input.value = prefill || ""; cur = 0;
+        idleLine = KIT_IDLE[findOpens++ % KIT_IDLE.length];
         if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
         render(); input.focus();
         loadIndex(function (all, ok) { items = all; loaded = true; indexOk = ok; render(); });
@@ -477,7 +502,7 @@
     loadAnalytics();
   }
 
-  window.KS = { sections: SECTIONS, loadIndex: loadIndex, search: search, openFind: openFind, sectionLabel: sectionLabel, esc: esc };
+  window.KS = { sections: SECTIONS, loadIndex: loadIndex, search: search, openFind: openFind, sectionLabel: sectionLabel, esc: esc, kit: kit };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", inject);
   else inject();

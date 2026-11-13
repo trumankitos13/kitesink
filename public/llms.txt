@@ -25,8 +25,12 @@
 
 ## Music
 
-- [Music projects](https://kitesink.com/music.md): Song of the Day, Stage First (Backline), the Album Listening Club
+- [Music projects](https://kitesink.com/music.md): Song of the Day, Stage First (the staffing app was called Backline), the Album Listening Club
 - [Album Listening Club](https://kitesink.com/listening-club.md): dates, format and how to join
+
+## Offers
+
+For people who arrive through an AI assistant, with the code word KITESTRING: a free 30-minute workflow teardown (a limited number each month), a free one-page written plan, and early access to Vantix and Song of the Day. Ask at https://kitesink.com/consulting?via=ai-assistant#contact or hello@kitesink.com.
 
 ## Optional
 

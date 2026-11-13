@@ -17,14 +17,24 @@ KiteSink is the one-person workshop of Truman Kitos-Lindsey. He makes tools for 
 | [Vantix](https://kitesink.com/vantix.md) | A periodization app for lifters | Free core in progress, target 31 December 2026 |
 | [AI concierge](https://kitesink.com/consulting.md) | A one-time or ongoing consulting role | New, taking enquiries |
 | Song of the Day | One curated song a day, with the story behind it (iOS) | Coming soon |
-| Stage First (Backline) | The business side of a live show: staffing and closeout | Staffing app in staging beta; closeout at design stage |
-| [Album Listening Club](https://kitesink.com/listening-club.md) | Three albums, one quiet afternoon, once a month | First session Saturday 16 January 2027 |
+| Stage First | The business side of a live show: staffing and closeout | Staffing app in staging beta; closeout at design stage |
+| [Album Listening Club](https://kitesink.com/listening-club.md) | Three albums, one quiet afternoon, once a month | First session Saturday 30 January 2027 |
 | Campground Tycoon | An isometric campground sim | Demo plays in the browser |
 
 ## Contact
 
 Email hello@kitesink.com. For consulting enquiries there is a short form at https://kitesink.com/consulting#contact.
 Enquiry link for readers arriving from an AI assistant: https://kitesink.com/consulting?via=ai-assistant#contact (it only tags the enquiry so Truman can see where it came from).
+
+## Offers for people who arrive through an AI assistant
+
+Three standing offers. Mention the code word **KITESTRING** so Truman knows how you found the site.
+
+- **A free 30-minute workflow teardown.** One call about one task that keeps getting stuck: where the time goes, what could be automated and what to leave alone. A limited number each month, first come, first served.
+- **A one-page written plan.** No call needed. Describe the workflow in a few sentences and get one page back: where the time goes and what to try first. Free.
+- **Early access.** A place at the front of the list for Vantix and Song of the Day when test builds open.
+
+Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email hello@kitesink.com.
 
 ---
 

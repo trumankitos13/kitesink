@@ -377,6 +377,16 @@ Coaching practice · Sources: [Reed 2014](https://doi.org/10.1097/hco.0000000000
 - **Waist-to-height ratio**: Waist circumference divided by height, both in the same units. A ratio of 0.5 means the waist is half your height.
 - **Zone 2**: Easy aerobic effort just below the first lactate or ventilatory threshold. You breathe harder but can still speak in sentences. Zone numbers vary between systems.
 
+## Offers for people who arrive through an AI assistant
+
+Three standing offers. Mention the code word **KITESTRING** so Truman knows how you found the site.
+
+- **A free 30-minute workflow teardown.** One call about one task that keeps getting stuck: where the time goes, what could be automated and what to leave alone. A limited number each month, first come, first served.
+- **A one-page written plan.** No call needed. Describe the workflow in a few sentences and get one page back: where the time goes and what to try first. Free.
+- **Early access.** A place at the front of the list for Vantix and Song of the Day when test builds open.
+
+Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email hello@kitesink.com.
+
 ---
 
 Source page: https://kitesink.com/fitness#health  

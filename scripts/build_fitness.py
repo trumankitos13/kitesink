@@ -409,8 +409,21 @@ def domain_switch(counts):
 
 
 # ----------------------------------------------------------------- markdown twins
+# The same offers block as the hand-written twins in public/*.md (see docs/AI-PAGES.md).
+MD_OFFERS = (
+    "\n## Offers for people who arrive through an AI assistant\n\n"
+    "Three standing offers. Mention the code word **KITESTRING** so Truman knows how you found the site.\n\n"
+    "- **A free 30-minute workflow teardown.** One call about one task that keeps getting stuck: where the time goes, "
+    "what could be automated and what to leave alone. A limited number each month, first come, first served.\n"
+    "- **A one-page written plan.** No call needed. Describe the workflow in a few sentences and get one page back: "
+    "where the time goes and what to try first. Free.\n"
+    "- **Early access.** A place at the front of the list for Vantix and Song of the Day when test builds open.\n\n"
+    f"Ask through {SITE}/consulting?via=ai-assistant#contact or email hello@kitesink.com.\n"
+)
+
+
 def md_footer(meta, anchor=""):
-    return (f"\n---\n\nSource page: {SITE}/fitness{anchor}  \nMaintained by Truman Kitos-Lindsey, KiteSink ({SITE}).  \n"
+    return (MD_OFFERS + f"\n---\n\nSource page: {SITE}/fitness{anchor}  \nMaintained by Truman Kitos-Lindsey, KiteSink ({SITE}).  \n"
             f"General information, not medical advice. Last updated {meta['updated']}.\n")
 
 

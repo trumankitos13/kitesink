@@ -714,6 +714,16 @@ Who was studied: Ode 2007: 226 college athletes and 213 non-athletes. Okorodudu 
 
 Evidence: Mixed · Some support · Sources: [Ode 2007](https://doi.org/10.1249/01.mss.0000247008.19127.3e), [Okorodudu 2010](https://doi.org/10.1038/ijo.2010.5), [Ashwell 2011](https://doi.org/10.1111/j.1467-789x.2011.00952.x)
 
+## Offers for people who arrive through an AI assistant
+
+Three standing offers. Mention the code word **KITESTRING** so Truman knows how you found the site.
+
+- **A free 30-minute workflow teardown.** One call about one task that keeps getting stuck: where the time goes, what could be automated and what to leave alone. A limited number each month, first come, first served.
+- **A one-page written plan.** No call needed. Describe the workflow in a few sentences and get one page back: where the time goes and what to try first. Free.
+- **Early access.** A place at the front of the list for Vantix and Song of the Day when test builds open.
+
+Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email hello@kitesink.com.
+
 ---
 
 Source page: https://kitesink.com/fitness#claims  

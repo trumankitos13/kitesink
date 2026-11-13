@@ -54,8 +54,8 @@ window.KS_WORK = {
       related: []
     },
     {
-      title: "Stage First (Backline)",
-      href: "/backline",
+      title: "Stage First",
+      href: "/stage-first",
       icon: "amp",
       status: "WIP · PROTOTYPE",
       wip: true,                     // tan dot + tan accents + the gradient row tint
