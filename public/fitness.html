@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.1">
+<link rel="stylesheet" href="/ks.css?v=2027.2">
 <style>
   .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
@@ -42,6 +42,10 @@
   .pillars i { font: 500 11px/1.6 var(--k-mono); color: var(--pc-accent); font-style: normal; }
   .pillars b { font: 600 15.5px/1.3 var(--k-sans); letter-spacing: -.015em; }
   .pillars span { grid-column: 2; font-size: 13.5px; line-height: 1.45; color: var(--pc-copy); }
+  .vx-tiers { margin: 2px 0 0; display: grid; gap: 0; }
+  .vx-tiers div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid var(--pc-rule); }
+  .vx-tiers dt { font: 600 12px/1.5 var(--k-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--pc-accent); }
+  .vx-tiers dd { margin: 0; font-size: 14px; line-height: 1.45; color: var(--pc-copy); }
   .vx-panel { border: 1px solid var(--pc-rule); border-radius: 12px; padding: 16px; background: rgba(0,0,0,.18); }
   .vx-panel-top { display: flex; justify-content: space-between; gap: 10px; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); margin-bottom: 10px; }
   .vx-rows { display: grid; gap: 4px; }
@@ -180,7 +184,7 @@
   <section class="k-hero k-wrap" aria-labelledby="page-title">
     <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
     <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-    <p class="k-lead">Vantix is the flagship, and it’s still being built. Until it ships, four free calculators and a set of sourced notes cover the maths. Everything runs in your browser.</p>
+    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, four free calculators and a set of sourced notes cover the maths. Everything runs in your browser.</p>
     <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains, each tied to the paper it comes from. They’re general information, not medical advice.</p>
   </section>
 
@@ -194,7 +198,7 @@
       <article class="k-pc k-pc--vantix k-reveal" style="padding:clamp(22px,4vw,44px)">
         <div class="vx">
           <div class="vx-copy">
-            <div class="k-pc-top"><span class="k-pc-tag">◈ Vantix · the periodization OS</span><span class="k-status k-status--wip">WIP</span></div>
+            <div class="k-pc-top"><span class="k-pc-tag">◈ Vantix · the periodization OS</span><span class="k-status k-status--wip">In progress</span></div>
             <h2 class="k-pc-title" id="h-vantix">Every fitness dot. One instrument. Zero black boxes.</h2>
             <p>You define the plan, macrocycle to set. Vantix normalizes what your apps and devices export into one record and checks every week against the volume landmarks you set. An AI co-pilot can propose changes; your hard rules decide whether they apply.</p>
             <ul class="pillars">
@@ -202,10 +206,15 @@
               <li><i>02</i><b>Integration &amp; normalization</b><span>Any source lands on one universal event spine, with raw payloads kept so everything can be re-derived.</span></li>
               <li><i>03</i><b>AI co-pilot with a review-gate</b><span>It never writes directly. It produces a diff you accept, reject or edit row by row.</span></li>
             </ul>
+            <dl class="vx-tiers">
+              <div><dt>Free</dt><dd>v1.0, “The Free Core”: the core athlete app. In progress, target Dec 31.</dd></div>
+              <div><dt>Plus</dt><dd>A paid athlete tier, later. No price yet.</dd></div>
+              <div><dt>Pro · Coach</dt><dd>The coach system. Planned, no dates.</dd></div>
+            </dl>
             <div class="k-actions" style="margin-top:6px">
               <a class="k-btn" style="background:#92a6cc;color:#1e222a !important" href="/vantix">See Vantix</a>
-              <a class="k-go" href="/vantix/roadmap">Roadmap</a>
-              <a class="k-go" href="/vantix/changelog">Changelog</a>
+              <a class="k-go" href="/vantix#pricing">Free and paid tiers</a>
+              <a class="k-go" href="/vantix#join">Join the list</a>
             </div>
           </div>
           <div>
@@ -622,7 +631,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.1"></script>
-<script src="/fitness.js?v=2027.1"></script>
+<script src="/ks.js?v=2027.2"></script>
+<script src="/fitness.js?v=2027.2"></script>
 </body>
 </html>

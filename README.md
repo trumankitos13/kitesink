@@ -70,7 +70,7 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
 - **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. Vantix, Backline,
   the Listening Club and the blog post template carry their own small KiteSink nav — search for
   `/consulting` in those files.
-- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.1` on the
+- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.2` on the
   `<link>`/`<script>` tags in every page (find-and-replace) and `ASSET_V` at the top of `ks.js`. Those files are cached for an hour or more, and a new page with an
   old cached stylesheet looks broken. The audit checks every page uses the same version.
 - **Design tokens:** `--k-*` custom properties at the top of `ks.css` (light + dark). New pages
@@ -119,20 +119,30 @@ so nothing depends on an external runtime anymore.
   routing was enabled and ready, with an enabled rule forwarding to a verified destination.
   The consulting page uses a direct email link; inbox delivery was not tested by sending a message.
 - **Campground screenshots** — ✅ added in `public/site_assets/` with modern formats and PNG fallbacks.
-- **Social links** — some footer handles (`@tkitos`, `@murdocnu`, `@rummaging13`) are `#`
-  placeholders; fill in real profile URLs.
 - **Vantix `.co` vs `.com`** — ✅ fixed; the Home work-card now reads `vantix.kitesink.com`.
 - **Blog posts** — entries live in `public/blog/posts.js`; per-post pages under `public/blog/`
   (copy `_template.html`). Full steps in `docs/ADDING-A-BLOG-POST.md`.
-- **Listening club** — the Discord invite is live; add the Spotify playlist ID when ready and
-  edit the next-session date band monthly (it still reads "Sat 29 Aug").
-- **Song of the Day status** — its own page says "App Store · Coming soon"; `projects.js`
-  (shown on `/work`) still says LIVE with an "App Store" CTA. The new pages follow the product
-  page. Set whichever is true in `projects.js` and `site-index.js`.
-- **AI concierge** — `/consulting#concierge` is placeholder positioning (marked in the HTML).
-  Replace it once the offer is defined.
-- **Name** — the site uses both "Truman Kitos" (JSON-LD, blog byline, feed) and "Truman
-  Kitos-Lindsey" (consulting). Pick one.
+- **Listening club** — relaunched for 2027: every page says the inaugural session is Sat 16 Jan 2027
+  (the third Saturday). The cadence after that is worded neutrally ("one Saturday a month") because
+  the old copy said "last Saturday" — decide which it is, then edit `listening-club.html` (date band,
+  Format and rhythm sections), `music.html`, `index.html` and the club entry in `site-index.js`.
+  The Spotify playlist embed is still a placeholder.
+- **Vantix tiers** — `/vantix#pricing` now shows Free (v1.0 "The Free Core", in progress, target
+  Dec 31), Plus (paid athlete tier, no price) and Pro · Coach (v2.5, planned, no dates). No year is
+  printed on "Dec 31". `/vantix/roadmap` and `/vantix/changelog` predate that plan (they still say
+  v1.2 is CURRENT and list shipped releases); the hubs no longer link to them and the Library marks
+  them "Out of date". Rewrite or retire them. `/vantix/privacy` still says "On Pro, you can bring
+  your own model keys".
+- **Vantix "500+ apps"** — the Vantix page still says it connects 500+ apps. Check that against the
+  Free Core, which lists manual import.
+- **Song of the Day** — "Coming soon" everywhere (`projects.js`, `site-index.js`, the product page).
+  No launch date is printed. `song-of-the-day/terms.html` still has a `<TODO: jurisdiction>`.
+- **AI concierge** — `/consulting#concierge` describes the offer (learn the industry, observe the
+  work, then AI automation / deterministic programs / custom software). No prices, call cadence or
+  response times are promised; add them when they are decided.
+- **Backline** — the page shows player counts ("3,900 players · live now" and similar) for a
+  prototype. Confirm or remove.
+- **Now page** — still dated July 2026.
 - **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in
   `public/ks.js` (see `docs/ANALYTICS-AND-FORMS.md`). Forms are live via `KS_FORM_KEY`.
 

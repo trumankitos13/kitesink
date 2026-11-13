@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kitesink Consulting — Better systems behind the music</title>
-<meta name="description" content="Music industry workflow automation, operations improvements and practical AI. Independent consulting by Truman Kitos-Lindsey for music teams — with an AI concierge service in development.">
+<meta name="description" content="Music industry workflow automation, operations improvements and practical AI. Independent consulting by Truman Kitos-Lindsey for music teams, and an AI concierge for any industry.">
 <link rel="canonical" href="https://kitesink.com/consulting">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kitesink Consulting — Better systems behind the music">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.1">
+<link rel="stylesheet" href="/ks.css?v=2027.2">
 <style>
 :root { --paper:#ece2cb; --raised:#f3ecd9; --ink:#1d1810; --copy:#5e5238; --green:#2f5436; --brass:#8a5a18; --rule:rgba(34,28,16,.23); }
 html[data-theme="dark"] { --paper:#16130d; --raised:#211c13; --ink:#f2ead6; --copy:#b7ac8f; --green:#82c795; --brass:#e0a94e; --rule:rgba(236,226,203,.23); }
@@ -89,9 +89,11 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
 .concierge .picks { display:flex; flex-wrap:wrap; gap:8px; }
 .concierge .button { margin-top:18px; }
 .concierge .fine { font-size:13px; margin-top:12px; }
+.process.three { margin-top:44px; }
+.fix-title { margin:52px 0 22px; font-size:28px; letter-spacing:-.035em; }
 @media(min-width:900px) { .concierge { grid-template-columns:1.15fr 1fr; gap:56px; align-items:center; } }
-@media(min-width:700px) { .process { grid-template-columns:repeat(2,1fr); } .service { grid-template-columns:1fr 1.5fr; gap:48px; } .bio { grid-template-columns:1fr 1.5fr; gap:48px; } }
-@media(min-width:1000px) { .hero { padding-top:54px; } .hero-grid { grid-template-columns:minmax(0,1.85fr) minmax(275px,1fr); gap:60px; } .intro { grid-template-columns:2fr 1fr; align-items:center; gap:70px; } .process { grid-template-columns:repeat(4,1fr); } }
+@media(min-width:700px) { .process { grid-template-columns:repeat(2,1fr); } .process.three { grid-template-columns:repeat(3,1fr); } .service { grid-template-columns:1fr 1.5fr; gap:48px; } .bio { grid-template-columns:1fr 1.5fr; gap:48px; } }
+@media(min-width:1000px) { .hero { padding-top:54px; } .hero-grid { grid-template-columns:minmax(0,1.85fr) minmax(275px,1fr); gap:60px; } .intro { grid-template-columns:2fr 1fr; align-items:center; gap:70px; } .process { grid-template-columns:repeat(4,1fr); } .process.three { grid-template-columns:repeat(3,1fr); } }
 @media(max-width:400px) { .identity span { font-size:11px; } .button { padding-inline:19px; } }
 </style>
 </head>
@@ -155,19 +157,18 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
     </ol>
     <div class="practical"><strong>Know what you’re taking on.</strong><p>We’ll make any recurring software costs, data access requirements and maintenance responsibilities clear before choosing a solution. Ongoing support, if needed, is something we agree on explicitly.</p></div>
   </section>
-  <!-- AI concierge: the next line of business. PLACEHOLDER POSITIONING — the offer isn't defined yet,
-       so this says only that it is coming and collects interest. Replace the copy once the offer is set. -->
+  <!-- AI concierge: the next line of business. It grew out of the music-team consulting above. -->
   <section id="concierge" class="section" aria-labelledby="concierge-title">
     <div class="concierge">
       <div>
-        <p class="status">In development</p>
+        <p class="status">New · still taking shape</p>
         <h2 id="concierge-title">Next: an AI concierge.</h2>
-        <p>A hands-on service for people and small teams who want AI doing useful work without having to run it themselves.</p>
-        <p>It isn’t open yet. The scope and pricing aren’t set, so there’s nothing to buy today. If it sounds like something you’d use, tell me what you’d hand off and I’ll write when it opens.</p>
+        <p>A one-time or ongoing role. I learn your industry, watch how the work actually gets done, in person or over Zoom, and then build ways to make it faster.</p>
+        <p>It grew out of the music work above. The method is the same in any industry.</p>
       </div>
       <div class="ask">
         <strong id="picks-label">What would you want handed off?</strong>
-        <p class="hint">Pick any that fit. Your answer goes into the email and helps shape the service.</p>
+        <p class="hint">Pick any that fit. Your answer goes into the email and tells me where to start.</p>
         <div class="picks" id="picks" role="group" aria-labelledby="picks-label">
           <button class="k-tog" type="button" aria-pressed="false">Inbox and follow-ups</button>
           <button class="k-tog" type="button" aria-pressed="false">Scheduling</button>
@@ -176,10 +177,31 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
           <button class="k-tog" type="button" aria-pressed="false">Keeping notes organised</button>
           <button class="k-tog" type="button" aria-pressed="false">Something else</button>
         </div>
-        <a class="button" id="concierge-mail" href="mailto:hello@kitesink.com?subject=AI%20concierge%20%E2%80%94%20tell%20me%20when%20it%20opens">Tell me when it opens</a>
+        <a class="button" id="concierge-mail" href="mailto:hello@kitesink.com?subject=AI%20concierge%20%E2%80%94%20what%20I%E2%80%99d%20hand%20off">Tell me what you’d hand off</a>
         <p class="fine">Opens your email app, addressed to hello@kitesink.com.</p>
       </div>
     </div>
+
+    <ol class="process three" aria-label="How the concierge works">
+      <li><h3>Learn</h3><p>Your industry, your tools, and the work as you do it today.</p></li>
+      <li><h3>Observe</h3><p>I sit in on the real thing, in person or on a call, and see where the time goes.</p></li>
+      <li><h3>Improve</h3><p>We choose what to fix first, and I build the fix.</p></li>
+    </ol>
+
+    <h3 class="fix-title">What the fix can be</h3>
+    <article class="service">
+      <h3>AI automation</h3>
+      <div><p>A model does the reading, sorting or drafting, and a person checks what matters.</p></div>
+    </article>
+    <article class="service">
+      <h3>Deterministic programs</h3>
+      <div><p>Where the rules are fixed, ordinary code does the job and gives the same answer every time.</p></div>
+    </article>
+    <article class="service">
+      <h3>Custom software</h3>
+      <div><p>Built for your team and maintained by me. It costs more, and there is a recurring cost to keep it running and up to date.</p></div>
+    </article>
+    <div class="practical"><strong>One-time or ongoing.</strong><p>One-time: learn, observe, fix what we agreed, hand it over. Ongoing: I stay on, keep watching the work and keep improving it. Prices aren’t published yet; we would agree the cost before any work starts.</p></div>
   </section>
   <section id="who" class="section bio" aria-labelledby="bio-title">
     <h2 id="bio-title">Music context.<br>Hands-on building.</h2>
@@ -195,9 +217,9 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
 </div>
 </main>
 <div data-ks="footer" data-active="consulting"></div>
-<script src="/ks.js?v=2027.1" defer></script>
+<script src="/ks.js?v=2027.2" defer></script>
 <script>
-// AI concierge interest: the picked items are written into the email so the reply is one tap.
+// AI concierge: the picked items are written into the email, so writing in takes one tap.
 (function () {
   var picks = document.getElementById("picks"), link = document.getElementById("concierge-mail");
   if (!picks || !link) return;
@@ -206,7 +228,7 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
     b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true");
     var chosen = [].filter.call(picks.querySelectorAll("button"), function (x) { return x.getAttribute("aria-pressed") === "true"; }).map(function (x) { return x.textContent; });
     var body = chosen.length ? "I’d want handed off: " + chosen.join(", ") + ".\r\n\r\nA bit more about what I do:\r\n" : "";
-    link.href = "mailto:hello@kitesink.com?subject=" + encodeURIComponent("AI concierge — tell me when it opens") + (body ? "&body=" + encodeURIComponent(body) : "");
+    link.href = "mailto:hello@kitesink.com?subject=" + encodeURIComponent("AI concierge — what I’d hand off") + (body ? "&body=" + encodeURIComponent(body) : "");
   });
 })();
 </script>

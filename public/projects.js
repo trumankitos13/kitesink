@@ -18,10 +18,10 @@ window.KS_WORK = {
       title: "Song of the Day",
       href: "/song-of-the-day",
       icon: "music",                 // music | tent | bars  (inline SVGs live in public/work.html)
-      status: "LIVE",               // status pill text; set wip:true for the tan WIP styling
-      wip: false,
+      status: "COMING SOON",        // status pill text; set wip:true for the tan WIP styling
+      wip: true,
       category: "iOS APP",
-      cta: "App Store",             // CTA label — an ↗ is always appended
+      cta: "See the app",           // CTA label — an ↗ is always appended
       dek: "One song, every day — a daily recommendation with the story behind it and links to listen. Landing page, privacy & contact built in.",
       tags: [],                      // optional feature pills (see Vantix)
       related: []                    // optional chits: { kind:"ESSAY"|"DEVLOG"|"FEATURED", title, href }
@@ -88,7 +88,7 @@ window.KS_GAMES = {
       eyebrow: "Isometric tycoon sim",
       status: "LIVE · DEMO",
       platforms: "PC · iOS · ANDROID",
-      dek: "Buy a scrap of wilderness, pitch a few tents, and keep campers happy through four fickle seasons. 15 regions, procedural land, anglers, hunters & leaf-peepers — and a deeply chunky CRT booking terminal. Play the lite version right in the browser.",
+      dek: "Buy a scrap of wilderness, pitch a few tents, and keep campers happy through four fickle seasons. 30 regions, procedural land, anglers, hunters & leaf-peepers — and a deeply chunky CRT booking terminal. Play the lite version right in the browser.",
       related: [
         { kind: "DEVLOG", title: "Campground Tycoon: the story so far", href: "/blog/campground-tycoon-the-story-so-far" }
       ]
