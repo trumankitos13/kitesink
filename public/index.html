@@ -113,11 +113,14 @@
     border-top: 1px dashed var(--k-rule-strong); font: 500 11px/1.3 var(--k-mono); color: var(--k-mute); }
   .dc-foot a { font: 600 12px/1.3 var(--k-mono); color: var(--k-green) !important; text-decoration: none; white-space: nowrap; padding: 6px 0; }
   .dc-foot a:hover { text-decoration: underline; }
-  @media (pointer: coarse) { .dc-foot a { padding: 12px 0; } .deck-cap button { min-height: 44px; padding-inline: 16px; } }
-  .deck-cap { text-align: center; margin-top: 14px; font: 500 11px/1.6 var(--k-mono); color: var(--k-mute); }
-  .deck-cap button { font: 600 11px var(--k-mono); color: var(--k-green); background: transparent; border: 1px solid var(--k-rule-strong);
-    border-radius: 30px; padding: 7px 12px; cursor: pointer; }
-  .deck-cap button:hover { border-color: var(--k-green); }
+  @media (pointer: coarse) { .dc-foot a { padding: 12px 0; } }
+  /* the pager: five fixed segments, one per card. Nothing here changes size, so nothing below it moves. */
+  .deck-pager { display: flex; justify-content: center; gap: 6px; margin-top: 8px; }
+  .deck-pager button { position: relative; width: 38px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; border-radius: 6px; }
+  .deck-pager button::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; translate: 0 -50%; border-radius: 3px;
+    background: var(--k-mute); opacity: .55; transition: height .2s var(--k-ease), background .2s, opacity .2s; }
+  .deck-pager button:hover::before { opacity: 1; }
+  .deck-pager button[aria-pressed="true"]::before { height: 7px; background: var(--k-green-fill); opacity: 1; }
   /* consulting card */
   .dc--pine { background: #23402b; color: #f0e8d6; border-color: transparent; }
   .dc--pine .dc-tag { color: #d8b07a; }
@@ -323,7 +326,7 @@
           </ol>
         </nav>
 
-      <!-- The deck: one card per section. Click/tap (or the shuffle button) cycles it. -->
+      <!-- The deck: one card per section. A row, a tap on the deck or the pager under it brings a card forward. -->
       <div class="deck-col">
         <svg class="deck-kite ks-kite" width="76" height="76" viewBox="0 0 64 64" fill="none" aria-hidden="true"><polygon points="32,4 52,26 32,48 12,26" fill="#b07227"/><line x1="32" y1="4" x2="32" y2="48" stroke="#ece2cb" stroke-width="1.6"/><line x1="12" y1="26" x2="52" y2="26" stroke="#ece2cb" stroke-width="1.6"/><path d="M32 48 Q38 54 32 58 Q26 62 32 64" stroke="#b07227" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
         <div class="deck" id="deck">
@@ -385,7 +388,13 @@
           </div>
 
         </div>
-        <p class="deck-cap">tap the deck or <button type="button" id="deckShuffle" aria-controls="deck">shuffle ↻</button> · ↗ opens the page</p>
+        <div class="deck-pager" id="deckPager" role="group" aria-label="Choose a card">
+          <button type="button" data-sec="consulting" aria-pressed="true" aria-label="Show the Consulting card"></button>
+          <button type="button" data-sec="fitness" aria-pressed="false" aria-label="Show the Fitness card"></button>
+          <button type="button" data-sec="music" aria-pressed="false" aria-label="Show the Music card"></button>
+          <button type="button" data-sec="library" aria-pressed="false" aria-label="Show the Library card"></button>
+          <button type="button" data-sec="about" aria-pressed="false" aria-label="Show the About card"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -599,9 +608,9 @@
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
-  // ---- The deck: one card per section. Click/tap or the shuffle button sends the
-  // front card to the back; hovering or focusing an index row brings that
-  // section's card forward. JS-driven so a card can lift over the stack. ----
+  // ---- The deck: one card per section. A tap on the deck sends the front card to
+  // the back; an index row (hover or focus) or a pager segment brings that section's
+  // card forward. JS-driven so a card can lift over the stack. ----
   (function () {
     var wrap = $("deck"); if (!wrap) return;
     var cards = {}, order = [];
@@ -611,9 +620,12 @@
     var DESK = [{ y: 0, s: 1, r: -1, o: 1 }, { y: 22, s: .955, r: 1.4, o: .93 }, { y: 41, s: .915, r: -1.6, o: .82 }, { y: 57, s: .88, r: 1.2, o: .66 }, { y: 66, s: .86, r: 0, o: 0 }];
     var MOB  = [{ y: 0, s: 1, r: 0, o: 1 }, { y: 12, s: .965, r: 0, o: .92 }, { y: 22, s: .93, r: 0, o: .8 }, { y: 31, s: .9, r: 0, o: .62 }, { y: 36, s: .88, r: 0, o: 0 }];
     function pose(S, i) { return S[Math.min(i, S.length - 1)]; }
+    // Height of the stack in its tallest possible arrangement (any card in any visible
+    // slot), so the deck keeps one height whichever card is in front and nothing
+    // under it moves when the cards change.
     function fit(S) {
       var h = 0;
-      for (var id in cards) { var p = pose(S, order.indexOf(id)); h = Math.max(h, p.y + cards[id].offsetHeight * (1 + p.s) / 2); }
+      for (var id in cards) for (var i = 0; i < S.length; i++) { if (S[i].o > 0) h = Math.max(h, S[i].y + cards[id].offsetHeight * (1 + S[i].s) / 2); }
       return Math.ceil(h);
     }
     function render() {
@@ -645,20 +657,31 @@
       if (raf) cancelAnimationFrame(raf);
       raf = requestAnimationFrame(tick);
     }
-    function shuffle() { go(order.slice(1).concat(order[0])); }
     function bring(id) { if (cards[id]) go([id].concat(order.filter(function (x) { return x !== id; }))); }
-    wrap.addEventListener("click", function (e) { if (!(e.target.closest && e.target.closest("a"))) shuffle(); });
-    $("deckShuffle").addEventListener("click", shuffle);
-    // back cards ignore the pointer, so a click that lands on one still shuffles
+
+    // index rows ↔ deck ↔ pager ↔ headline. `picked` is the section chosen on the deck
+    // or the pager; it stays highlighted (row + headline word) until another card is
+    // chosen or a row is hovered. Hovering a row highlights only while the pointer is there.
+    var h1 = $("hero-title"), rows = document.querySelectorAll(".idx-row"), timer = null, picked = null;
+    var pager = $("deckPager"), dots = pager ? pager.querySelectorAll("button") : [];
+    function mark(sec) {
+      if (h1) { if (sec) h1.setAttribute("data-on", sec); else h1.removeAttribute("data-on"); }
+    }
+    function sync() {
+      [].forEach.call(dots, function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-sec") === order[0] ? "true" : "false"); });
+      [].forEach.call(rows, function (r) { r.classList.toggle("is-on", !!picked && r.getAttribute("data-sec") === picked); });
+    }
+    function pick(sec) { picked = sec; bring(sec); mark(sec); sync(); }
+    wrap.addEventListener("click", function (e) { if (!(e.target.closest && e.target.closest("a"))) pick(order[1]); });
+    [].forEach.call(dots, function (b) { b.addEventListener("click", function () { pick(b.getAttribute("data-sec")); }); });
+    // back cards ignore the pointer, so a click that lands on one still moves the deck on
     wrap.style.cursor = "pointer";
 
-    // index rows ↔ deck ↔ headline
-    var h1 = $("hero-title"), rows = document.querySelectorAll(".idx-row"), timer = null;
     function on(sec) {
       clearTimeout(timer);
-      timer = setTimeout(function () { bring(sec); if (h1) h1.setAttribute("data-on", sec); }, 90);
+      timer = setTimeout(function () { picked = null; bring(sec); mark(sec); sync(); }, 90);
     }
-    function off() { clearTimeout(timer); if (h1) h1.removeAttribute("data-on"); }
+    function off() { clearTimeout(timer); mark(picked); }
     var canHover = window.matchMedia("(hover: hover)").matches;
     [].forEach.call(rows, function (row) {
       var sec = row.getAttribute("data-sec");
