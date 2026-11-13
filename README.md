@@ -151,6 +151,13 @@ so nothing depends on an external runtime anymore.
 - **Song of the Day** — "Coming soon" everywhere (`projects.js`, `site-index.js`, the product page),
   with no launch date printed. Every contact address is `hello@kitesink.com`.
   `song-of-the-day/terms.html` still has a `<TODO: jurisdiction>`.
+- **Song of the Day "Written by humans"** — the page says editors write every word. The app's
+  admin tools draft picks and blurbs with an AI model before a curator approves them. Reword the
+  claim if that is how it works.
+- **Campground Tycoon guest book** — the page shows "4.6 / 5" and three quoted players. Neither
+  this repo nor the game's has a source for them. Replace with real reviews or remove.
+- **Campground Tycoon demo** — the embedded itch.io build requests `park-map.js` and itch answers
+  404. That is in the game's itch upload, not this site.
 - **AI concierge** — `/consulting#concierge` describes the offer (learn the industry, observe the
   work, then AI automation / deterministic programs / custom software). No prices, call cadence or
   response times are promised; add them when they are decided.
