@@ -77,6 +77,69 @@ def resolves(path: str) -> bool:
     return candidate.is_file() or candidate.with_suffix(".html").is_file() or (candidate / "index.html").is_file()
 
 
+def page_routes() -> dict[str, Path]:
+    """Every public page that should be reachable, keyed by its route."""
+    return {route_for(path): path for path in sorted(PUBLIC.rglob("*.html")) if path not in SPECIAL_PAGES}
+
+
+def audit_index() -> list[str]:
+    """The site index (public/site-index.js + blog/posts.js) is what the Find palette,
+    the Library and the home page read. Hold it to two rules: every entry points at
+    something real, and every public page is in it — so nothing can go missing."""
+    issues: list[str] = []
+    index_js = (PUBLIC / "site-index.js").read_text(encoding="utf-8")
+    posts_js = (PUBLIC / "blog/posts.js").read_text(encoding="utf-8")
+    def code(js: str) -> str:  # drop /* block */ comments and whole-line // comments (the templates)
+        js = re.sub(r"/\*.*?\*/", "", js, flags=re.S)
+        return "\n".join(line for line in js.splitlines() if not line.lstrip().startswith("//"))
+
+    hrefs = re.findall(r"""\bh:\s*["']([^"']+)["']""", code(index_js))
+    hrefs += re.findall(r"""\bhref:\s*["']([^"']+)["']""", code(posts_js))
+    if not hrefs:
+        return ["public/site-index.js: no entries found"]
+
+    listed: set[str] = set()
+    for href in hrefs:
+        parsed = urlsplit(href)
+        if parsed.scheme or parsed.netloc:
+            continue
+        path = parsed.path or "/"
+        if path.endswith(".xml"):
+            if not (PUBLIC / path.lstrip("/")).is_file():
+                issues.append(f"public/site-index.js: entry points at a missing file: {href}")
+            continue
+        if not resolves(path):
+            issues.append(f"public/site-index.js: entry points at a missing page: {href}")
+        listed.add(path.rstrip("/") or "/")
+        if parsed.fragment:
+            target = PUBLIC / (path.strip("/") + ".html")
+            if target.is_file() and not re.search(rf"""\bid=["']{re.escape(parsed.fragment)}["']""", target.read_text(encoding="utf-8")):
+                issues.append(f"public/site-index.js: {href} — no element with id=\"{parsed.fragment}\" on that page")
+
+    for route in page_routes():
+        if route != "/" and route not in listed:
+            issues.append(f"public/site-index.js: page {route} is not in the site index (add it, or it is unreachable from the Library)")
+
+    sitemap = (PUBLIC / "sitemap.xml").read_text(encoding="utf-8")
+    in_sitemap = {urlsplit(loc).path.rstrip("/") or "/" for loc in re.findall(r"<loc>([^<]+)</loc>", sitemap)}
+    for route in page_routes():
+        if route not in in_sitemap:
+            issues.append(f"public/sitemap.xml: missing {route}")
+    for route in sorted(in_sitemap - set(page_routes())):
+        issues.append(f"public/sitemap.xml: lists {route}, which has no page")
+    return issues
+
+
+def audit_asset_versions() -> list[str]:
+    """Every page must request the same ?v= of the shared CSS/JS, or returning
+    visitors can get a new page with an old cached stylesheet."""
+    seen: dict[str, set[str]] = {}
+    for path in sorted(PUBLIC.rglob("*.html")):
+        for name, version in re.findall(r"""["']/(ks\.css|ks\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
+            seen.setdefault(name, set()).add(version or "(none)")
+    return [f"public: pages request different versions of /{name}: {', '.join(sorted(v))}" for name, v in seen.items() if len(v) > 1]
+
+
 def audit(path: Path) -> list[str]:
     source = path.read_text(encoding="utf-8")
     doc = Document()
@@ -144,6 +207,8 @@ def audit(path: Path) -> list[str]:
 def main() -> int:
     pages = sorted(PUBLIC.rglob("*.html"))
     issues = [issue for page in pages for issue in audit(page)]
+    issues += audit_index()
+    issues += audit_asset_versions()
 
     deployed_text = "\n".join(
         path.read_text(encoding="utf-8")
@@ -161,7 +226,7 @@ def main() -> int:
             print(f"- {issue}")
         return 1
 
-    print(f"Site audit passed: {len(pages)} HTML pages checked.")
+    print(f"Site audit passed: {len(pages)} HTML pages checked; site index and sitemap cover every page.")
     return 0
 
 

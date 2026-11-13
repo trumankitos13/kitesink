@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fitness — Vantix, free training tools &amp; sourced notes · KiteSink</title>
+<meta name="description" content="Vantix, the periodization OS, plus four free tools — an energy and macro calculator, an effective-reps explorer, a 1RM and load calculator, and a travel workout builder — and training and nutrition notes with their sources.">
+<link rel="canonical" href="https://kitesink.com/fitness">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KiteSink">
+<meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
+<meta property="og:description" content="Vantix, four free calculators, and training and nutrition notes tied to the papers they come from.">
+<meta property="og:url" content="https://kitesink.com/fitness">
+<meta property="og:image" content="https://kitesink.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
+<meta name="twitter:description" content="Vantix, four free calculators, and training and nutrition notes tied to the papers they come from.">
+<meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<meta name="theme-color" content="#ece2cb">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
+<link rel="stylesheet" href="/ks.css?v=2027.1">
+<style>
+  .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
+  .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
+  .cite a { color: inherit; text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 2px; }
+  .cite a:hover { color: var(--k-green); text-decoration-color: currentColor; }
+
+  /* ---------- vantix feature ---------- */
+  .vx { display: grid; gap: clamp(22px, 4vw, 48px); }
+  @media (min-width: 900px) { .vx { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; } }
+  .vx-copy { display: flex; flex-direction: column; gap: 16px; }
+  .vx .k-pc-title { font-size: clamp(28px, 4.4vw, 46px); }
+  .pillars { list-style: none; margin: 4px 0 0; padding: 0; }
+  .pillars li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 2px 8px; padding: 12px 0; border-top: 1px solid var(--pc-rule); }
+  .pillars i { font: 500 11px/1.6 var(--k-mono); color: var(--pc-accent); font-style: normal; }
+  .pillars b { font: 600 15.5px/1.3 var(--k-sans); letter-spacing: -.015em; }
+  .pillars span { grid-column: 2; font-size: 13.5px; line-height: 1.45; color: var(--pc-copy); }
+  .vx-panel { border: 1px solid var(--pc-rule); border-radius: 12px; padding: 16px; background: rgba(0,0,0,.18); }
+  .vx-panel-top { display: flex; justify-content: space-between; gap: 10px; font: 600 9.5px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); margin-bottom: 10px; }
+  .vx-rows { display: grid; gap: 4px; }
+  .vx-rows button { display: grid; grid-template-columns: 68px minmax(0, 1fr) auto; gap: 10px; align-items: center; width: 100%; min-height: 40px; padding: 6px 8px;
+    border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--pc-ink); cursor: pointer; text-align: left; font: 500 12px/1.2 var(--k-mono); transition: background .2s, border-color .2s; }
+  .vx-rows button:hover { background: var(--pc-tint); }
+  .vx-rows button[aria-pressed="true"] { background: var(--pc-tint); border-color: var(--pc-rule); }
+  .vx-bar { position: relative; height: 12px; border-radius: 2px; background: rgba(255,255,255,.07); }
+  .vx-bar i { display: block; height: 100%; border-radius: 2px; background: #6f9f7a; transition: width .6s var(--k-ease); }
+  .vx-bar::before, .vx-bar::after { content: ""; position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(233,233,230,.45); }
+  .vx-bar::before { left: 40%; } .vx-bar::after { left: 72%; }
+  .vx-rows .under i { background: #d8a652; } .vx-rows .over i { background: #d27a52; }
+  .vx-rows em { font-style: normal; text-align: right; color: #6f9f7a; font-weight: 600; white-space: nowrap; }
+  .vx-rows .under em { color: #d8a652; } .vx-rows .over em { color: #d27a52; }
+  .vx-read { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--pc-rule); min-height: 62px; font-size: 14px; line-height: 1.5; color: var(--pc-ink); }
+  .vx-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; margin-top: 16px; }
+  .vx-legend dt { font: 600 12px/1.3 var(--k-mono); color: var(--pc-accent); }
+  .vx-legend dd { margin: 2px 0 0; font-size: 13px; line-height: 1.4; color: var(--pc-copy); }
+  .vx-fine { font-size: 12.5px !important; line-height: 1.5 !important; margin-top: 14px; }
+
+  /* ---------- tools ---------- */
+  .tool { margin-top: 22px; }
+  .tool-grid { display: grid; gap: 18px; }
+  @media (min-width: 920px) { .tool-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .tool-out { position: sticky; top: 130px; } }
+  .tool-in { gap: 18px; }
+  .tool-intro { max-width: 62ch; margin-bottom: 18px; }
+  #vantix { padding-top: clamp(26px, 4vw, 44px); }
+  .k-hero { padding-bottom: clamp(26px, 3.4vw, 40px); }
+  .row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .with-unit { position: relative; }
+  .with-unit .k-input { padding-right: 44px; }
+  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; }
+  .tool-out { background: #23402b; color: #f0e8d6; border-color: transparent; gap: 16px; }
+  .tool-out .k-label { color: #a9b9a3; }
+  .tool-out .k-stat, .tool-out .k-h3 { color: #f0e8d6; }
+  .tool-out .k-stat small { color: #c2ceb9; }
+  .tool-out .k-small { color: #c2ceb9; }
+  .tool-out .cite { color: #a9b9a3; }
+  .tool-out .cite a:hover { color: #d8b07a; }
+  .tool-out.is-empty .k-stat { opacity: .45; }
+  .tool-out.is-empty .hide-empty { display: none; }
+  .kv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
+  .kv div b { display: block; font: 600 16px/1.3 var(--k-sans); font-variant-numeric: tabular-nums; }
+  .macrobar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; gap: 2px; }
+  .macrobar i { flex: 1 1 0; min-width: 4px; transition: flex-grow .5s var(--k-ease); }
+  #m-bar-p { background: #d8b07a; } #m-bar-c { background: #8fc39b; } #m-bar-f { background: #e9dfc9; }
+  .macros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .macros div { padding-top: 8px; border-top: 3px solid; }
+  .macros .p { border-color: #d8b07a; } .macros .c { border-color: #8fc39b; } .macros .f { border-color: #e9dfc9; }
+  .macros b { display: block; font: 800 clamp(22px, 4vw, 28px)/1.1 var(--k-sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .warn { padding: 12px 14px; border-radius: 10px; background: rgba(216,166,82,.16); border: 1px solid rgba(216,176,122,.5); font-size: 14px; line-height: 1.5; color: #f3e3c4; }
+  details.more { border-top: 1px solid var(--k-rule); padding-top: 14px; }
+  details.more > summary { cursor: pointer; font: 600 15px/1.3 var(--k-sans); color: var(--k-ink); list-style: none; display: flex; justify-content: space-between; gap: 10px; }
+  details.more > summary::-webkit-details-marker { display: none; }
+  details.more > summary::after { content: "+"; font: 400 20px/1 var(--k-mono); color: var(--k-mute); transition: rotate .25s var(--k-ease); }
+  details.more[open] > summary::after { rotate: 45deg; }
+  details.more > div { display: grid; gap: 14px; margin-top: 14px; }
+  #m-prompt { min-height: 230px; font: 400 13px/1.55 var(--k-mono); }
+
+  /* effective reps */
+  .dots { display: flex; flex-wrap: wrap; gap: 6px; min-height: 64px; align-content: flex-start; }
+  .dots i { width: 22px; height: 22px; border-radius: 50%; }
+  .dots .done { background: rgba(240,232,214,.4); }
+  .dots .eff { background: #d8b07a; box-shadow: 0 0 0 3px rgba(216,176,122,.25); }
+  .dots .left { border: 2px dashed rgba(240,232,214,.35); }
+  .dots .left.hot { border-color: rgba(216,176,122,.7); }
+  .dots-key { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 500 11px/1.4 var(--k-mono); color: #c2ceb9; }
+  .dots-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .dots-key i { width: 10px; height: 10px; border-radius: 50%; }
+  .setlog { list-style: none; margin: 0; padding: 0; }
+  .setlog li { display: grid; grid-template-columns: 60px minmax(0, 1fr) auto; gap: 10px; padding: 8px 0; border-top: 1px solid var(--k-rule); font: 500 13px/1.3 var(--k-mono); color: var(--k-copy); }
+  .setlog b { color: var(--k-ink); font-weight: 600; } .setlog em { font-style: normal; color: var(--k-brass); }
+
+  /* loads */
+  .ltable { width: 100%; border-collapse: collapse; font: 500 13px/1.3 var(--k-mono); font-variant-numeric: tabular-nums; }
+  .ltable th, .ltable td { padding: 8px 4px; text-align: left; border-top: 1px solid rgba(240,232,214,.16); }
+  .ltable thead th { border-top: 0; font: 600 9.5px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
+  .ltable tbody th { color: #d8b07a; font-weight: 600; }
+
+  /* travel */
+  .wk { padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
+  .wk h4 { margin: 0 0 8px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: #d8b07a; }
+  .wk .rule { font-size: 14.5px; line-height: 1.5; color: #f0e8d6; margin-bottom: 8px; }
+  .wk .blk { margin-top: 12px; font: 600 12px/1.4 var(--k-mono); color: #c2ceb9; }
+  .wk ul.plain { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #c2ceb9; }
+  .moves { list-style: none; margin: 6px 0 0; padding: 0; counter-reset: mv; }
+  .moves li { counter-increment: mv; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 9px 0; border-top: 1px solid rgba(240,232,214,.12); }
+  .moves li::before { content: counter(mv); font: 500 11px var(--k-mono); color: #a9b9a3; }
+  .moves li:has(.tag)::before { content: none; }
+  .moves li:has(.tag) { grid-template-columns: 46px minmax(0, 1fr) auto; }
+  .moves .tag { font: 600 10.5px var(--k-mono); color: #a9b9a3; }
+  .moves b { font: 600 15px/1.3 var(--k-sans); }
+  .moves em { font: 600 13px var(--k-mono); font-style: normal; color: #d8b07a; white-space: nowrap; }
+  .tool-out .k-btn--ghost { color: #f0e8d6 !important; border-color: rgba(240,232,214,.35); }
+  .tool-out .k-btn--ghost:hover { color: #d8b07a !important; border-color: #d8b07a; }
+
+  /* ---------- notes ---------- */
+  .facts-grid { display: grid; gap: 14px; }
+  @media (min-width: 640px) { .facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1060px) { .facts-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .fact { gap: 8px; box-shadow: none; }
+  .fact .big { font: 800 clamp(24px, 3.2vw, 30px)/1.05 var(--k-sans); letter-spacing: -.04em; color: var(--k-green); text-wrap: balance; }
+  .fact .unit { font: 500 12px/1.4 var(--k-mono); color: var(--k-mute); }
+  .fact p { font-size: 14px; line-height: 1.55; color: var(--k-copy); }
+  .fact .cite { margin-top: auto; padding-top: 8px; }
+
+  /* claims */
+  .claims-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-bottom: 18px; }
+  .claims-bar .k-input { flex: 1 1 220px; min-height: 42px; border-radius: 30px; padding-inline: 16px; background: var(--k-raised); }
+  .verdict { display: inline-block; padding: 4px 10px; border-radius: 30px; font: 600 10.5px/1.3 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+  .v-yes { background: color-mix(in srgb, var(--k-green) 16%, transparent); color: var(--k-green); }
+  .v-mixed { background: color-mix(in srgb, var(--k-brass-fill) 15%, transparent); color: var(--k-brass); }
+  .v-no { background: var(--k-tint); color: var(--k-copy); box-shadow: inset 0 0 0 1px var(--k-rule-strong); }
+  .k-qa > summary { grid-template-columns: minmax(0, 1fr) auto auto; }
+  @media (max-width: 560px) { .k-qa > summary { grid-template-columns: minmax(0, 1fr) auto; } .k-qa > summary .verdict { grid-row: 2; grid-column: 1; justify-self: start; } }
+
+  /* sources */
+  .sources { columns: 1; padding-left: 0; list-style: none; font-size: 13.5px; line-height: 1.5; color: var(--k-copy); }
+  @media (min-width: 900px) { .sources { columns: 2; column-gap: 40px; } }
+  .sources li { break-inside: avoid; padding: 9px 10px; margin: 0 -10px; border-radius: 8px; }
+  .sources li:target { background: color-mix(in srgb, var(--k-brass-fill) 18%, transparent); }
+  .sources b { color: var(--k-ink); font-weight: 600; }
+  .sources .as { font: 500 11px/1.5 var(--k-mono); color: var(--k-mute); }
+  .sources a { color: var(--k-green); word-break: break-word; }
+  .sources-h { margin: 26px 0 10px; }
+</style>
+</head>
+<body class="ks-paper k2">
+<a class="k-skip" href="#main">Skip to content</a>
+<div data-ks="header" data-active="fitness"></div>
+
+<main id="main">
+
+  <section class="k-hero k-wrap" aria-labelledby="page-title">
+    <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
+    <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
+    <p class="k-lead">Vantix is the flagship, and it’s still being built. Until it ships, four free calculators and a set of sourced notes cover the maths. Everything runs in your browser.</p>
+    <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains, each tied to the paper it comes from. They’re general information, not medical advice.</p>
+  </section>
+
+  <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
+    <a href="#vantix">Vantix</a><a href="#tools">Tools</a><a href="#training">Training</a><a href="#nutrition">Nutrition</a><a href="#claims">Claims, checked</a><a href="#sources">Sources</a>
+  </div></nav>
+
+  <!-- ===================== VANTIX ===================== -->
+  <section id="vantix" class="k-band" aria-labelledby="h-vantix">
+    <div class="k-wrap">
+      <article class="k-pc k-pc--vantix k-reveal" style="padding:clamp(22px,4vw,44px)">
+        <div class="vx">
+          <div class="vx-copy">
+            <div class="k-pc-top"><span class="k-pc-tag">◈ Vantix · the periodization OS</span><span class="k-status k-status--wip">WIP</span></div>
+            <h2 class="k-pc-title" id="h-vantix">Every fitness dot. One instrument. Zero black boxes.</h2>
+            <p>You define the plan, macrocycle to set. Vantix normalizes what your apps and devices export into one record and checks every week against the volume landmarks you set. An AI co-pilot can propose changes; your hard rules decide whether they apply.</p>
+            <ul class="pillars">
+              <li><i>01</i><b>Programmable periodization</b><span>Volume landmarks, effective-set math and phase caps are computed continuously, not eyeballed.</span></li>
+              <li><i>02</i><b>Integration &amp; normalization</b><span>Any source lands on one universal event spine, with raw payloads kept so everything can be re-derived.</span></li>
+              <li><i>03</i><b>AI co-pilot with a review-gate</b><span>It never writes directly. It produces a diff you accept, reject or edit row by row.</span></li>
+            </ul>
+            <div class="k-actions" style="margin-top:6px">
+              <a class="k-btn" style="background:#92a6cc;color:#1e222a !important" href="/vantix">See Vantix</a>
+              <a class="k-go" href="/vantix/roadmap">Roadmap</a>
+              <a class="k-go" href="/vantix/changelog">Changelog</a>
+            </div>
+          </div>
+          <div>
+            <div class="vx-panel">
+              <div class="vx-panel-top"><span>Weekly volume vs landmarks</span><span>Example data</span></div>
+              <div class="vx-rows" id="vx-rows" role="group" aria-label="Example weekly volume by muscle group. Choose a row to read it.">
+                <button type="button" aria-pressed="true" data-read="Back — 19 sets against a ceiling of 25. Inside the band between the least that grows it and the most you can recover from."><span>Back</span><span class="vx-bar"><i style="width:76%"></i></span><em>19 ● in band</em></button>
+                <button type="button" aria-pressed="false" data-read="Side delt — 14 sets against a ceiling of 22. In band."><span>Side delt</span><span class="vx-bar"><i style="width:64%"></i></span><em>14 ● in band</em></button>
+                <button type="button" aria-pressed="false" data-read="Quads — 12 sets against a ceiling of 20. In band."><span>Quads</span><span class="vx-bar"><i style="width:60%"></i></span><em>12 ● in band</em></button>
+                <button type="button" class="under" aria-pressed="false" data-read="Rear delt — 5 sets against a ceiling of 18. Under the minimum effective volume: probably not enough to grow it."><span>Rear delt</span><span class="vx-bar"><i style="width:28%"></i></span><em>5 ▽ under</em></button>
+                <button type="button" class="over" aria-pressed="false" data-read="Triceps — 19 sets, over this phase’s cap of 18. In Vantix a proposed change that breaks a cap is blocked until you resolve it."><span>Triceps</span><span class="vx-bar"><i style="width:100%"></i></span><em>19 ▲ over</em></button>
+              </div>
+              <p class="vx-read" id="vx-read" aria-live="polite">Back — 19 sets against a ceiling of 25. Inside the band between the least that grows it and the most you can recover from.</p>
+            </div>
+            <dl class="vx-legend">
+              <div><dt>MV</dt><dd>Maintenance volume: enough to keep what you have.</dd></div>
+              <div><dt>MEV</dt><dd>Minimum effective volume: the least that produces growth.</dd></div>
+              <div><dt>MAV</dt><dd>Maximum adaptive volume: where most of the progress happens.</dd></div>
+              <div><dt>MRV</dt><dd>Maximum recoverable volume: the most you can recover from.</dd></div>
+            </dl>
+            <p class="vx-fine">The bars use the example numbers from the Vantix page. Landmarks are coaching estimates that differ between people; they aren’t lab measurements.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== TOOLS ===================== -->
+  <section id="tools" class="k-band" aria-labelledby="h-tools">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Free tools</span><h2 class="k-h2" id="h-tools">Four calculators. <em>No sign-up.</em></h2></div>
+        <p class="k-small" style="max-width:34ch">Your inputs are remembered in this browser and go nowhere else.</p>
+      </header>
+
+      <div class="k-seg k-seg--scroll" role="tablist" aria-label="Tools">
+        <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
+        <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
+        <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
+        <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
+      </div>
+
+      <!-- ---------- 1. energy & macros ---------- -->
+      <div class="tool" id="macros" role="tabpanel" aria-labelledby="tab-macros">
+        <p class="k-copy tool-intro">Estimates what you burn in a day, sets a calorie target for your goal, and splits it into protein, carbohydrate and fat. Then it writes a meal-plan prompt you can hand to an AI assistant.</p>
+        <div class="tool-grid">
+          <div class="k-card k-card--flat tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="m-units-l">Units</span><div class="k-seg" id="m-units" role="group" aria-labelledby="m-units-l"><button type="button" value="metric">Metric</button><button type="button" value="imperial">Imperial</button></div></div>
+              <div class="k-field"><span class="k-label" id="m-sex-l">Sex (for the equation)</span><div class="k-seg" id="m-sex" role="group" aria-labelledby="m-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
+            </div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="m-age" type="number" inputmode="numeric" min="16" max="95" value="30"><span>yr</span></span></label>
+              <label class="k-field" id="m-h-metric"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="m-cm" type="number" inputmode="decimal" min="120" max="230" value="175"><span>cm</span></span></label>
+              <div class="k-field" id="m-h-imperial" hidden><span class="k-label" id="m-h-imp-l">Height</span><span style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><span class="with-unit"><input class="k-input" id="m-ft" type="number" inputmode="numeric" min="4" max="7" value="5" aria-label="Height, feet"><span>ft</span></span><span class="with-unit"><input class="k-input" id="m-in" type="number" inputmode="numeric" min="0" max="11" value="9" aria-label="Height, inches"><span>in</span></span></span></div>
+              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="m-weight" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="m-w-unit">kg</span></span></label>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional</span></span><span class="with-unit"><input class="k-input" id="m-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
+              <label class="k-field"><span class="k-label">Activity</span>
+                <select class="k-select" id="m-act">
+                  <option value="1.4" data-short="mostly sedentary">Sedentary · mostly sitting</option>
+                  <option value="1.6" data-short="lightly active" selected>Light · desk job, regular training</option>
+                  <option value="1.8" data-short="active">Active · on your feet or training hard</option>
+                  <option value="2.0" data-short="very active">Vigorous · physical job + hard training</option>
+                </select></label>
+            </div>
+            <div class="k-field"><span class="k-label" id="m-goal-l">Goal</span><div class="k-seg" id="m-goal" role="group" aria-labelledby="m-goal-l"><button type="button" value="lose">Lose fat</button><button type="button" value="hold">Maintain</button><button type="button" value="gain">Gain muscle</button></div></div>
+            <label class="k-field" id="m-rate-wrap"><span class="k-label"><span id="m-rate-label">Rate of loss</span><span id="m-rate-read" style="text-transform:none;letter-spacing:0">0.50% of body weight / week</span></span><input class="k-range" id="m-rate" type="range" min="0.25" max="1" step="0.05" value="0.5"></label>
+            <label class="k-field"><span class="k-label">Protein<span id="m-prot-read" style="text-transform:none;letter-spacing:0">2.0 g/kg</span></span><input class="k-range" id="m-prot" type="range" min="1.2" max="3" step="0.1" value="2"></label>
+            <label class="k-field"><span class="k-label">Fat<span id="m-fat-read" style="text-transform:none;letter-spacing:0">25% of calories</span></span><input class="k-range" id="m-fat" type="range" min="15" max="40" step="1" value="25"></label>
+
+            <details class="more">
+              <summary>Turn it into a meal-plan prompt</summary>
+              <div>
+                <div class="row3">
+                  <label class="k-field"><span class="k-label">Diet</span><select class="k-select" id="m-diet"><option value="none">No restrictions</option><option>vegetarian</option><option>vegan</option><option>pescatarian</option><option>halal</option><option>kosher</option><option>gluten-free</option><option>dairy-free</option></select></label>
+                  <label class="k-field"><span class="k-label">Meals / day</span><select class="k-select" id="m-meals"><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label>
+                  <label class="k-field"><span class="k-label">Cooking time</span><select class="k-select" id="m-cook"><option>up to 15 minutes</option><option selected>up to 30 minutes</option><option>up to 60 minutes</option></select></label>
+                </div>
+                <label class="k-field"><span class="k-label">Foods to avoid</span><input class="k-input" id="m-avoid" type="text" placeholder="e.g. mushrooms, shellfish" autocomplete="off"></label>
+                <label class="k-field"><span class="k-label">Your prompt</span><textarea class="k-input" id="m-prompt" readonly spellcheck="false"></textarea></label>
+                <div class="k-actions"><button class="k-btn k-btn--sm" id="m-copy" type="button">Copy prompt</button><span class="k-small">Paste it into the assistant you use. Check its arithmetic; language models make mistakes with numbers.</span></div>
+              </div>
+            </details>
+          </div>
+
+          <div class="k-card tool-out" id="m-out" aria-live="polite">
+            <div><p class="k-label">Daily target</p><p class="k-stat"><span id="m-kcal">—</span><small>kcal</small></p><p class="k-small" id="m-sub"></p></div>
+            <div class="hide-empty">
+              <div class="macrobar" id="m-bar" role="img" aria-label="Calorie split"><i id="m-bar-p"></i><i id="m-bar-c"></i><i id="m-bar-f"></i></div>
+              <div class="macros" style="margin-top:12px">
+                <div class="p"><b id="m-p">—</b><span class="k-label">Protein</span></div>
+                <div class="c"><b id="m-c">—</b><span class="k-label">Carbs</span></div>
+                <div class="f"><b id="m-f">—</b><span class="k-label">Fat</span></div>
+              </div>
+            </div>
+            <p class="warn" id="m-warn" hidden></p>
+            <div class="kv hide-empty">
+              <div><span class="k-label">Maintenance</span><b id="m-maint">—</b></div>
+              <div><span class="k-label">Expected change</span><b id="m-change">—</b></div>
+              <div><span class="k-label">Resting energy</span><b id="m-rmr">—</b><span class="k-small" id="m-eq" style="font-size:12px">Mifflin-St Jeor</span></div>
+              <div><span class="k-label">Activity level</span><b id="m-pal">—</b></div>
+            </div>
+            <p class="k-small">A starting estimate. The best equation lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. <span class="cite"><a href="#src-mifflin1990">Mifflin 1990</a> · <a href="#src-frankenfield2005">Frankenfield 2005</a> · <a href="#src-cunningham1991">Cunningham 1991</a> · <a href="#src-fao2004">FAO/WHO/UNU 2004</a></span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 2. effective reps ---------- -->
+      <div class="tool" id="reps" role="tabpanel" aria-labelledby="tab-reps">
+        <p class="k-copy tool-intro">“Effective reps” is a coaching shorthand: the idea that the reps closest to failure do most of the work. Drag the sliders to see how a set scores under it, then tally a session.</p>
+        <div class="tool-grid">
+          <div class="k-card k-card--flat tool-in">
+            <label class="k-field"><span class="k-label">Reps performed<span id="r-reps-read" style="text-transform:none;letter-spacing:0">10 reps</span></span><input class="k-range" id="r-reps" type="range" min="1" max="25" step="1" value="10"></label>
+            <label class="k-field"><span class="k-label">Reps in reserve (RIR)<span id="r-rir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="r-rir" type="range" min="0" max="6" step="1" value="2"></label>
+            <div class="k-actions"><button class="k-btn k-btn--sm" id="r-add" type="button">Add this set to the session</button><button class="k-btn k-btn--sm k-btn--ghost" id="r-clear" type="button" hidden>Clear</button></div>
+            <div>
+              <p class="k-label" style="margin-bottom:6px">Session tally</p>
+              <ol class="setlog" id="r-log"></ol>
+              <p class="k-small" id="r-total" style="margin-top:10px" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="k-card tool-out">
+            <div><p class="k-label">This set</p><p class="k-stat"><span id="r-eff">3<small>effective reps</small></span></p><p class="k-small"><span id="r-rpe">RPE 8</span> on the reps-in-reserve scale <span class="cite"><a href="#src-zourdos2016">Zourdos 2016</a></span></p></div>
+            <div class="dots" id="r-dots" role="img" aria-label=""></div>
+            <div class="dots-key"><span><i style="background:rgba(240,232,214,.4)"></i>done</span><span><i style="background:#d8b07a"></i>done, in the last five</span><span><i style="border:2px dashed rgba(240,232,214,.5)"></i>left in reserve</span></div>
+            <p class="k-small" id="r-msg" aria-live="polite"></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)"><b style="color:#f0e8d6">Read this as a heuristic, not a measurement.</b> No study has tested a cut-off at five reps. What the research supports is softer: growth tends to improve as sets end nearer to failure, and going all the way to failure adds little over stopping just short. <span class="cite"><a href="#src-nuckols">Nuckols, Stronger By Science</a> · <a href="#src-robinson2024">Robinson 2024</a> · <a href="#src-refalo2023">Refalo 2023</a></span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 3. 1RM & loads ---------- -->
+      <div class="tool" id="loads" role="tabpanel" aria-labelledby="tab-loads">
+        <p class="k-copy tool-intro">Enter a set you’ve done. It estimates your one-rep max, then tells you what to put on the bar for a target number of reps with a chosen number left in reserve.</p>
+        <div class="tool-grid">
+          <div class="k-card k-card--flat tool-in">
+            <div class="k-field"><span class="k-label" id="l-units-l">Units</span><div class="k-seg" id="l-units" role="group" aria-labelledby="l-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Weight lifted</span><span class="with-unit"><input class="k-input" id="l-w" type="number" inputmode="decimal" min="1" step="0.5" value="100"><span id="l-unit">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Reps you got</span><input class="k-input" id="l-reps" type="number" inputmode="numeric" min="1" max="20" value="5"></label>
+            </div>
+            <p class="k-label" style="margin-top:4px">What should I load?</p>
+            <label class="k-field"><span class="k-label">Target reps<span id="l-treps-read" style="text-transform:none;letter-spacing:0">8 reps</span></span><input class="k-range" id="l-treps" type="range" min="1" max="15" step="1" value="8"></label>
+            <label class="k-field"><span class="k-label">Left in reserve<span id="l-trir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="l-trir" type="range" min="0" max="5" step="1" value="2"></label>
+          </div>
+          <div class="k-card tool-out" id="l-out" aria-live="polite">
+            <div class="row2">
+              <div><p class="k-label">Estimated 1RM</p><p class="k-stat"><span id="l-e1rm">—<small id="l-e1rm-u">kg</small></span></p></div>
+              <div><p class="k-label">Load for your target</p><p class="k-stat"><span id="l-load">—<small id="l-load-u">kg</small></span></p></div>
+            </div>
+            <p class="k-small"><span id="l-note"></span> <span id="l-pct"></span></p>
+            <div class="kv hide-empty"><div><span class="k-label">Epley</span><b id="l-epley">—</b></div><div><span class="k-label">Brzycki</span><b id="l-brzycki">—</b></div></div>
+            <table class="ltable hide-empty"><caption class="k-vh">Loads and approximate reps to failure at each percentage of the estimated one-rep max</caption>
+              <thead><tr><th scope="col">% of 1RM</th><th scope="col">Load</th><th scope="col">Reps to failure</th></tr></thead>
+              <tbody id="l-rows"></tbody>
+            </table>
+            <p class="k-small">The estimate is the mean of the Epley and Brzycki equations. Both work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. <span class="cite"><a href="#src-brzycki1993">Brzycki 1993</a> · <a href="#src-reynolds2006">Reynolds 2006</a> · <a href="#src-lesuer1997">LeSuer 1997</a></span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 4. travel workout ---------- -->
+      <div class="tool" id="travel" role="tabpanel" aria-labelledby="tab-travel">
+        <p class="k-copy tool-intro">A hotel room, a spare room, a park. Say what you have and how long you’ve got; get a balanced session with a push, a pull, a squat, a hinge and some trunk work.</p>
+        <div class="tool-grid">
+          <div class="k-card k-card--flat tool-in">
+            <div class="k-field"><span class="k-label" id="t-equip-l">What’s in the room</span>
+              <div class="k-chips" id="t-equip" role="group" aria-labelledby="t-equip-l">
+                <button class="k-tog" type="button" aria-pressed="true" disabled>Bodyweight</button>
+                <button class="k-tog" type="button" value="db" aria-pressed="false">Dumbbells</button>
+                <button class="k-tog" type="button" value="kb" aria-pressed="false">Kettlebell</button>
+                <button class="k-tog" type="button" value="band" aria-pressed="false">Bands</button>
+                <button class="k-tog" type="button" value="bar" aria-pressed="false">Pull-up bar</button>
+                <button class="k-tog" type="button" value="bench" aria-pressed="false">Bench or sturdy chair</button>
+                <button class="k-tog" type="button" value="sus" aria-pressed="false">Suspension trainer</button>
+              </div></div>
+            <div class="k-field"><span class="k-label" id="t-time-l">Minutes</span><div class="k-seg" id="t-time" role="group" aria-labelledby="t-time-l"><button type="button" value="15">15</button><button type="button" value="20">20</button><button type="button" value="30">30</button><button type="button" value="45">45</button></div></div>
+            <div class="k-field"><span class="k-label" id="t-level-l">Level</span><div class="k-seg" id="t-level" role="group" aria-labelledby="t-level-l"><button type="button" value="1">Beginner</button><button type="button" value="2">Intermediate</button><button type="button" value="3">Advanced</button></div></div>
+            <div class="k-field"><span class="k-label" id="t-format-l">Format</span><div class="k-seg" id="t-format" role="group" aria-labelledby="t-format-l"><button type="button" value="circuit">Circuit</button><button type="button" value="emom">EMOM</button><button type="button" value="amrap">AMRAP</button><button type="button" value="intervals">Intervals</button><button type="button" value="sets">Straight sets</button></div></div>
+            <p class="k-small">EMOM: every minute on the minute. AMRAP: as many rounds as possible. Sessions are general fitness for healthy adults; skip anything that hurts in a way that isn’t effort.</p>
+          </div>
+          <div class="k-card tool-out">
+            <div id="t-out" aria-live="polite" style="display:grid;gap:14px"></div>
+            <div class="k-actions"><button class="k-btn k-btn--sm k-btn--cream" id="t-again" type="button">Shuffle ↻</button><button class="k-btn k-btn--sm k-btn--ghost" id="t-copy" type="button">Copy as text</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRAINING NOTES ===================== -->
+  <section id="training" class="k-band" aria-labelledby="h-training">
+    <div class="k-wrap">
+      <header class="k-shead k-reveal">
+        <div><span class="k-num">Notes</span><h2 class="k-h2" id="h-training">Training, <em>in eight numbers.</em></h2></div>
+        <p class="k-small" style="max-width:36ch">Mostly meta-analyses. Where the evidence is thin, the card says so.</p>
+      </header>
+      <div class="facts-grid">
+        <article class="k-card fact k-reveal"><span class="k-label">Weekly volume</span><p class="big">12–20 sets</p><span class="unit">per muscle per week · one suggested range</span>
+          <p>Growth rises with weekly sets, with less return from each one you add. Strength flattens sooner. The 12–20 range comes from a small review of trained men; the newest 67-study analysis found diminishing returns but no clear ceiling.</p><span class="cite"><a href="#src-pelland2026">Pelland 2026</a> · <a href="#src-schoenfeld2017vol">Schoenfeld 2017a</a> · <a href="#src-bazvalle2022">Baz-Valle 2022</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Effort</span><p class="big">Close to failure</p><span class="unit">not necessarily all the way</span>
+          <p>Growth tends to improve as sets end nearer to failure, while strength gains look similar across a wide range of reps in reserve. Momentary failure itself showed no clear edge over stopping short.</p><span class="cite"><a href="#src-robinson2024">Robinson 2024</a> · <a href="#src-refalo2023">Refalo 2023</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Load</span><p class="big">Any load</p><span class="unit">for size, if the set is hard</span>
+          <p>With sets taken to failure, light (60% of 1RM or less) and heavy loads built similar amounts of muscle. Heavier loads were better for one-rep-max strength.</p><span class="cite"><a href="#src-schoenfeld2017load">Schoenfeld 2017b</a> · <a href="#src-lopez2021">Lopez 2021</a> · <a href="#src-currier2023">Currier 2023</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Frequency</span><p class="big">Your call</p><span class="unit">once weekly volume is matched</span>
+          <p>With weekly volume equated, how often a muscle was trained made no significant difference to growth. More frequent practice does appear to help strength.</p><span class="cite"><a href="#src-schoenfeld2019">Schoenfeld 2019</a> · <a href="#src-pelland2026">Pelland 2026</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Rest between sets</span><p class="big">Over 60 s</p><span class="unit">little extra past 90 s</span>
+          <p>A small growth benefit to resting longer than a minute, and no appreciable difference beyond about 90 seconds. The direct comparisons all overlap zero, so treat it as a nudge.</p><span class="cite"><a href="#src-singer2024">Singer 2024</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Range of motion</span><p class="big">Full, by default</p><span class="unit">the edge is trivial</span>
+          <p>Full range beat partial range by a trivial margin on average, with an interval that includes zero. In a 2025 within-subject trial, lengthened partials and full range grew muscle about equally.</p><span class="cite"><a href="#src-wolf2023">Wolf 2023</a> · <a href="#src-wolf2025">Wolf 2025</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Deloads</span><p class="big">Unproven</p><span class="unit">two small trials so far</span>
+          <p>Coaches define a deload as a spell of reduced training stress to shed fatigue. In trials, a full week off mid-block didn’t help growth and slightly hurt strength, and reduced-volume weeks made no difference in untrained men.</p><span class="cite"><a href="#src-bell2023">Bell 2023</a> · <a href="#src-coleman2024">Coleman 2024</a> · <a href="#src-pancar2026">Pancar 2026</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">The health floor</span><p class="big">150–300 min</p><span class="unit">moderate activity a week</span>
+          <p>WHO guidance for adults: that, or 75–150 minutes of vigorous activity, plus muscle-strengthening work for all major groups on two or more days. For steps, risk of death falls steeply up to roughly 5,000–7,000 a day, then flattens.</p><span class="cite"><a href="#src-who2020">WHO 2020</a> · <a href="#src-ding2025">Ding 2025</a></span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NUTRITION NOTES ===================== -->
+  <section id="nutrition" class="k-band" aria-labelledby="h-nutrition">
+    <div class="k-wrap">
+      <header class="k-shead k-reveal">
+        <div><span class="k-num">Notes</span><h2 class="k-h2" id="h-nutrition">Nutrition, <em>in eight numbers.</em></h2></div>
+        <p class="k-small" style="max-width:36ch">The same ones the calculator above uses.</p>
+      </header>
+      <div class="facts-grid">
+        <article class="k-card fact k-reveal"><span class="k-label">Energy per gram</span><p class="big">4 · 4 · 9 · 7</p><span class="unit">kcal: protein, carbohydrate, fat, alcohol</span>
+          <p>The Atwater general factors that food labels are built on.</p><span class="cite"><a href="#src-fao2003">FAO 2003</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Protein</span><p class="big">1.6–2.2 g/kg</p><span class="unit">per day, if you lift</span>
+          <p>A 49-trial meta-analysis put the point of diminishing returns near 1.6 g/kg a day, with a wide interval (1.0 to 2.2). Later analyses found smaller gains continuing above it. 1.6–2.2 is the range the ISSN gives for people who resistance train.</p><span class="cite"><a href="#src-morton2018">Morton 2018</a> · <a href="#src-tagawa2021">Tagawa 2021</a> · <a href="#src-nunes2022">Nunes 2022</a> · <a href="#src-issn2026">ISSN 2026</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Protein, lean and dieting</span><p class="big">1.9–3.2 g/kg</p><span class="unit">per day, in a deficit</span>
+          <p>For lean, resistance-trained people in a deficit, the ISSN’s 2026 position is that this range can maximise lean-mass retention. An earlier review of six studies put it at 2.3–3.1 g per kg of fat-free mass.</p><span class="cite"><a href="#src-issn2026">ISSN 2026</a> · <a href="#src-helms2014protein">Helms 2014a</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Rate of loss</span><p class="big">0.5–1% a week</p><span class="unit">of body weight</span>
+          <p>The rate recommended for keeping muscle while getting lean. In a trial with elite athletes, the slower group (about 0.7% a week) gained lean mass while the faster group (about 1.0%) did not.</p><span class="cite"><a href="#src-helms2014prep">Helms 2014b</a> · <a href="#src-garthe2011">Garthe 2011</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Surplus</span><p class="big">360–480 kcal</p><span class="unit">a day, as a cautious start</span>
+          <p>Nobody has established the best surplus. A narrative review suggests starting at about 1,500–2,000 kJ a day; in one small trial, bigger surpluses mainly added fat.</p><span class="cite"><a href="#src-slater2019">Slater 2019</a> · <a href="#src-helms2023">Helms 2023</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Maintenance estimates</span><p class="big">± 10%</p><span class="unit">is as good as equations get</span>
+          <p>Mifflin-St Jeor predicted resting energy within 10% of the measured value for more people than any other equation tested, and still misses for many individuals. Multiply by an activity level of 1.4 to 2.4, then correct against the scale.</p><span class="cite"><a href="#src-mifflin1990">Mifflin 1990</a> · <a href="#src-frankenfield2005">Frankenfield 2005</a> · <a href="#src-fao2004">FAO/WHO/UNU 2004</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Creatine and caffeine</span><p class="big">3–5 g</p><span class="unit">creatine monohydrate a day</span>
+          <p>That dose raises muscle creatine stores over three to four weeks. Caffeine at 3–6 mg per kg consistently improves performance; very high doses mostly add side effects.</p><span class="cite"><a href="#src-kreider2017">Kreider 2017</a> · <a href="#src-guest2021">Guest 2021</a></span></article>
+        <article class="k-card fact k-reveal"><span class="k-label">Labels and logs</span><p class="big">+20%</p><span class="unit">legal slack on a US calorie label</span>
+          <p>US rules treat a label as misbranded only when a food’s actual calories exceed the declared value by more than 20%. Food logs can be further off: in one small study, “diet-resistant” adults under-reported intake by 47%.</p><span class="cite"><a href="#src-cfr101">21 CFR 101.9(g)(5)</a> · <a href="#src-lichtman1992">Lichtman 1992</a></span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLAIMS, CHECKED ===================== -->
+  <section id="claims" class="k-band" aria-labelledby="h-claims">
+    <div class="k-wrap">
+      <header class="k-shead k-reveal">
+        <div><span class="k-num">Claims, checked</span><h2 class="k-h2" id="h-claims">Twenty things <em>people say.</em></h2></div>
+        <p class="k-small" style="max-width:36ch">A verdict, the reason, and the paper. Open one to read it.</p>
+      </header>
+      <div class="claims-bar">
+        <div class="k-seg" id="claims-topic" role="group" aria-label="Topic"><button type="button" value="all">All</button><button type="button" value="training">Training</button><button type="button" value="nutrition">Nutrition</button></div>
+        <input class="k-input" id="claims-q" type="search" placeholder="Filter: protein, failure, fasting…" aria-label="Filter claims" autocomplete="off">
+        <span class="k-small" id="claims-count" aria-live="polite"></span>
+      </div>
+      <div id="claims-list">
+
+        <details class="k-qa" data-topic="training"><summary>You have to train to failure to grow.<span class="verdict v-mixed">Overstated</span></summary>
+          <div class="k-qa-body"><p>Getting close matters: growth tends to improve as sets end nearer to failure. But momentary failure itself showed no clear advantage over stopping short (effect size 0.12, with an interval spanning zero).</p><p><span class="cite"><a href="#src-robinson2024">Robinson 2024</a> · <a href="#src-refalo2023">Refalo 2023</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="training"><summary>Light weights tone, heavy weights build.<span class="verdict v-no">Not supported</span></summary>
+          <div class="k-qa-body"><p>When sets are taken to failure, light and heavy loads build similar amounts of muscle. What heavy loads do better is one-rep-max strength.</p><p><span class="cite"><a href="#src-schoenfeld2017load">Schoenfeld 2017b</a> · <a href="#src-lopez2021">Lopez 2021</a> · <a href="#src-currier2023">Currier 2023</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="training"><summary>Every muscle needs training twice a week.<span class="verdict v-mixed">Depends</span></summary>
+          <div class="k-qa-body"><p>For size, not on its own: with weekly volume matched, frequency made no significant difference. Higher frequency helped when it also meant more total work, and it does seem to help strength.</p><p><span class="cite"><a href="#src-schoenfeld2019">Schoenfeld 2019</a> · <a href="#src-pelland2026">Pelland 2026</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="training"><summary>Only the last five reps of a set count.<span class="verdict v-mixed">Unproven</span></summary>
+          <div class="k-qa-body"><p>“Effective reps” is a coaching heuristic with no primary study behind it. The soft version, that you need to get reasonably close to failure, fits the evidence. The hard version, a cut-off at five reps, hasn’t been tested, and the data show a gradual relationship with no threshold.</p><p><span class="cite"><a href="#src-nuckols">Nuckols, Stronger By Science</a> · <a href="#src-robinson2024">Robinson 2024</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="training"><summary>You need a deload every fourth week.<span class="verdict v-mixed">Unproven</span></summary>
+          <div class="k-qa-body"><p>Scheduled deloads are standard coaching practice, and a panel of coaches has agreed a definition. The outcome trials are few and small: a week of no training mid-block didn’t improve growth and slightly reduced strength gains; reduced-volume deload weeks made no measurable difference in untrained men.</p><p><span class="cite"><a href="#src-bell2023">Bell 2023</a> · <a href="#src-coleman2024">Coleman 2024</a> · <a href="#src-pancar2026">Pancar 2026</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="training"><summary>A calculated 1RM is as good as a tested one.<span class="verdict v-mixed">Depends</span></summary>
+          <div class="k-qa-body"><p>Prediction equations track tested maxes well from sets of ten or fewer; one study recommended using no more than ten reps and found a five-rep max predicted best. Another found the common equations under-estimated the deadlift. Good enough for choosing training loads.</p><p><span class="cite"><a href="#src-reynolds2006">Reynolds 2006</a> · <a href="#src-lesuer1997">LeSuer 1997</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="training"><summary>Zone 2 is the best cardio intensity for health.<span class="verdict v-mixed">Overstated</span></summary>
+          <div class="k-qa-body"><p>Higher cardiorespiratory fitness is strongly associated with lower mortality, with no upper limit of benefit observed. That is a finding about being fit, not about one training zone. A 2025 review concluded that current evidence does not support Zone 2 as the optimal intensity.</p><p><span class="cite"><a href="#src-mandsager2018">Mandsager 2018</a> · <a href="#src-lang2024">Lang 2024</a> · <a href="#src-storoschuk2025">Storoschuk 2025</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="training"><summary>You need 10,000 steps a day.<span class="verdict v-mixed">Overstated</span></summary>
+          <div class="k-qa-body"><p>A 57-study meta-analysis found the mortality curve bending at around 5,000–7,000 steps a day; 7,000 versus 2,000 was associated with a 47% lower risk of death from any cause. An earlier analysis put the plateau at 6,000–8,000 for adults over 60 and 8,000–10,000 for younger adults. These are observational data. More is fine; 10,000 isn’t a threshold.</p><p><span class="cite"><a href="#src-ding2025">Ding 2025</a> · <a href="#src-paluch2022">Paluch 2022</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>Low-carb beats low-fat for fat loss.<span class="verdict v-no">Not supported</span></summary>
+          <div class="k-qa-body"><p>In a 12-month trial of 609 adults, the healthy low-fat and healthy low-carb groups lost 5.3 kg and 6.0 kg; the difference wasn’t significant. In controlled-feeding studies with calories matched, lower-fat diets came out ahead by about 16 g of body fat a day, which is statistically real and practically nothing.</p><p><span class="cite"><a href="#src-gardner2018">Gardner 2018</a> · <a href="#src-hall2017">Hall 2017</a> · <a href="#src-issn2026">ISSN 2026</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>Intermittent fasting burns more fat than ordinary dieting.<span class="verdict v-mixed">Overstated</span></summary>
+          <div class="k-qa-body"><p>With calories matched, the results are small and mixed. A 12-month trial found 8.0 kg versus 6.3 kg lost, not a significant difference. A controlled-feeding trial found none. A 2026 meta-analysis found about 1.5 kg extra. A 16:8 trial with no calorie target found no weight benefit. The ISSN’s position is that fasting variants show no differential effect against continuous restriction.</p><p><span class="cite"><a href="#src-liu2022">Liu 2022</a> · <a href="#src-maruthur2024">Maruthur 2024</a> · <a href="#src-fernandes2026">Fernandes-Alves 2026</a> · <a href="#src-lowe2020">Lowe 2020</a> · <a href="#src-issn2026">ISSN 2026</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>You must eat protein within an hour of training.<span class="verdict v-mixed">Overstated</span></summary>
+          <div class="k-qa-body"><p>A meta-analysis found an apparent timing effect that disappeared once total protein intake was accounted for. Total daily protein was the strongest predictor of results.</p><p><span class="cite"><a href="#src-schoenfeld2013timing">Schoenfeld 2013</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>Your body can only use 30 g of protein per meal.<span class="verdict v-no">Not supported</span></summary>
+          <div class="k-qa-body"><p>In a tracer study, 100 g of protein after exercise produced a larger and longer-lasting anabolic response than 25 g, with little of the extra oxidised. That is an acute study, not a long-term outcome trial. Around 0.4–0.55 g per kg per meal over four meals is a practical way to reach a daily target, not a ceiling.</p><p><span class="cite"><a href="#src-trommelen2023">Trommelen 2023</a> · <a href="#src-schoenfeld2018meal">Schoenfeld 2018</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>Six small meals a day stoke your metabolism.<span class="verdict v-no">Not supported</span></summary>
+          <div class="k-qa-body"><p>A meta-analysis found an apparent benefit of eating more often that traced back to a single study; without it, nothing reliable remained. The ISSN’s position is that meal frequency isn’t crucial, though it suggests at least three protein-rich meals for athletes.</p><p><span class="cite"><a href="#src-schoenfeld2015freq">Schoenfeld 2015</a> · <a href="#src-issn2026">ISSN 2026</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>Fasted cardio burns more fat.<span class="verdict v-no">Not supported</span></summary>
+          <div class="k-qa-body"><p>In a four-week trial of 20 young women on matched diets, fasted and fed cardio produced the same fat loss. It is a small, short study, so read this as unproven, not disproven.</p><p><span class="cite"><a href="#src-schoenfeld2014fasted">Schoenfeld 2014</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>High-protein diets damage your kidneys.<span class="verdict v-no">Not supported</span></summary>
+          <div class="k-qa-body"><p>Across 28 trials and 1,358 adults without kidney disease, the change in kidney filtration rate did not differ between higher- and lower-protein diets. This says nothing about people who already have kidney disease; that is a conversation for a doctor.</p><p><span class="cite"><a href="#src-devries2018">Devries 2018</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>You can spot-reduce fat.<span class="verdict v-mixed">Mostly not</span></summary>
+          <div class="k-qa-body"><p>Six weeks of abdominal training did not reduce abdominal fat. Twelve weeks of single-leg training reduced fat in the arms and trunk but not in the trained leg. A meta-analysis of 13 studies found no local effect. One small 2023 trial did find more trunk-fat loss with abdominal endurance work than with matched running, so the question isn’t fully closed.</p><p><span class="cite"><a href="#src-vispute2011">Vispute 2011</a> · <a href="#src-ramirez2013">Ramírez-Campillo 2013</a> · <a href="#src-ramirez2022">Ramírez-Campillo 2022</a> · <a href="#src-brobakken2023">Brobakken 2023</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>Diet breaks speed up fat loss.<span class="verdict v-mixed">Depends</span></summary>
+          <div class="k-qa-body"><p>One trial in men with obesity found better fat loss from dieting in two-week blocks with two-week breaks. A trial in resistance-trained adults found no difference in fat or lean mass, though hunger was lower with breaks. Pooled across 12 trials: no difference in fat lost, and a smaller drop in resting metabolic rate.</p><p><span class="cite"><a href="#src-byrne2018">Byrne 2018</a> · <a href="#src-peos2021">Peos 2021</a> · <a href="#src-poon2025">Poon 2025</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>I track everything and can’t lose weight, so my metabolism is broken.<span class="verdict v-mixed">Usually not</span></summary>
+          <div class="k-qa-body"><p>In a classic study of ten “diet-resistant” adults, measured energy expenditure was within 5% of predicted. They were under-reporting food by 47% and over-reporting activity by 51%. That was a small, specific group. Metabolism does adapt during a diet, but logging error is the first thing to rule out.</p><p><span class="cite"><a href="#src-lichtman1992">Lichtman 1992</a> · <a href="#src-trexler2014">Trexler 2014</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>Sleep doesn’t matter if the calories are right.<span class="verdict v-no">Not supported</span></summary>
+          <div class="k-qa-body"><p>In a two-week crossover study of ten adults on the same deficit, cutting time in bed from 8.5 to 5.5 hours reduced the share of weight lost as fat by 55% and increased the fat-free mass lost by 60%. Small and lab-based, but the direction is clear.</p><p><span class="cite"><a href="#src-nedeltcheva2010">Nedeltcheva 2010</a></span></p></div></details>
+
+        <details class="k-qa" data-topic="nutrition"><summary>A bigger surplus builds more muscle.<span class="verdict v-mixed">Overstated</span></summary>
+          <div class="k-qa-body"><p>In an eight-week trial comparing maintenance, a 5% surplus and a 15% surplus, faster weight gain mostly meant faster fat gain. The trial was small (17 finishers), and the review literature says the optimal surplus is unknown.</p><p><span class="cite"><a href="#src-helms2023">Helms 2023</a> · <a href="#src-slater2019">Slater 2019</a></span></p></div></details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOURCES ===================== -->
+  <section id="sources" class="k-band" aria-labelledby="h-sources">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Sources</span><h2 class="k-h2" id="h-sources" style="font-size:clamp(28px,4.4vw,44px)">Where the numbers come from.</h2></div>
+        <p class="k-small" style="max-width:40ch">Every reference was checked against its DOI record on 13 November 2026. If one is wrong, <a class="k-inline" href="mailto:hello@kitesink.com?subject=Fitness%20notes%20correction">tell me</a>.</p>
+      </header>
+      <h3 class="k-label sources-h">Training · 26</h3>
+      <ol class="sources">
+        <li id="src-bazvalle2022"><b>Baz-Valle E, Balsalobre-Fernández C, Alix-Fages C et al. (2022).</b> A Systematic Review of the Effects of Different Resistance Training Volumes on Muscle Hypertrophy. <i>J Hum Kinet</i> 81:199–210. <a href="https://doi.org/10.2478/hukin-2022-0017" target="_blank" rel="noopener">doi:10.2478/hukin-2022-0017</a></li>
+        <li id="src-bell2023"><b>Bell L, Strafford BW, Coleman M et al. (2023).</b> Integrating Deloading into Strength and Physique Sports Training Programmes: An International Delphi Consensus Approach. <i>Sports Med Open</i> 9(1):87. <a href="https://doi.org/10.1186/s40798-023-00633-0" target="_blank" rel="noopener">doi:10.1186/s40798-023-00633-0</a></li>
+        <li id="src-brzycki1993"><b>Brzycki M (1993).</b> Strength Testing—Predicting a One-Rep Max from Reps-to-Fatigue. <i>J Phys Educ Recreat Dance</i> 64(1):88–90. <a href="https://doi.org/10.1080/07303084.1993.10606684" target="_blank" rel="noopener">doi:10.1080/07303084.1993.10606684</a></li>
+        <li id="src-who2020"><b>Bull FC, Al-Ansari SS, Biddle S et al. (2020).</b> World Health Organization 2020 guidelines on physical activity and sedentary behaviour. <i>Br J Sports Med</i> 54(24):1451–1462. <a href="https://doi.org/10.1136/bjsports-2020-102955" target="_blank" rel="noopener">doi:10.1136/bjsports-2020-102955</a> <span class="as">Cited above as WHO 2020.</span></li>
+        <li id="src-coleman2024"><b>Coleman M, Burke R, Augustin F et al. (2024).</b> Gaining more from doing less? The effects of a one-week deload period during supervised resistance training on muscular adaptations. <i>PeerJ</i> 12:e16777. <a href="https://doi.org/10.7717/peerj.16777" target="_blank" rel="noopener">doi:10.7717/peerj.16777</a></li>
+        <li id="src-currier2023"><b>Currier BS, Mcleod JC, Banfield L et al. (2023).</b> Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis. <i>Br J Sports Med</i> 57(18):1211–1220. <a href="https://doi.org/10.1136/bjsports-2023-106807" target="_blank" rel="noopener">doi:10.1136/bjsports-2023-106807</a></li>
+        <li id="src-ding2025"><b>Ding D, Nguyen B, Nau T et al. (2025).</b> Daily steps and health outcomes in adults: a systematic review and dose-response meta-analysis. <i>Lancet Public Health</i> 10(8):e668–e681. <a href="https://doi.org/10.1016/S2468-2667(25)00164-1" target="_blank" rel="noopener">doi:10.1016/S2468-2667(25)00164-1</a></li>
+        <li id="src-lang2024"><b>Lang JJ, Prince SA, Merucci K et al. (2024).</b> Cardiorespiratory fitness is a strong and consistent predictor of morbidity and mortality among adults: an overview of meta-analyses representing over 20.9 million observations from 199 unique cohort studies. <i>Br J Sports Med</i> 58(10):556–566. <a href="https://doi.org/10.1136/bjsports-2023-107849" target="_blank" rel="noopener">doi:10.1136/bjsports-2023-107849</a></li>
+        <li id="src-lesuer1997"><b>LeSuer DA, McCormick JH, Mayhew JL et al. (1997).</b> The Accuracy of Prediction Equations for Estimating 1-RM Performance in the Bench Press, Squat, and Deadlift. <i>J Strength Cond Res</i> 11(4):211–213. <a href="https://doi.org/10.1519/00124278-199711000-00001" target="_blank" rel="noopener">doi:10.1519/00124278-199711000-00001</a></li>
+        <li id="src-lopez2021"><b>Lopez P, Radaelli R, Taaffe DR et al. (2021).</b> Resistance Training Load Effects on Muscle Hypertrophy and Strength Gain: Systematic Review and Network Meta-analysis. <i>Med Sci Sports Exerc</i> 53(6):1206–1216. <a href="https://doi.org/10.1249/MSS.0000000000002585" target="_blank" rel="noopener">doi:10.1249/MSS.0000000000002585</a></li>
+        <li id="src-mandsager2018"><b>Mandsager K, Harb S, Cremer P et al. (2018).</b> Association of Cardiorespiratory Fitness With Long-term Mortality Among Adults Undergoing Exercise Treadmill Testing. <i>JAMA Netw Open</i> 1(6):e183605. <a href="https://doi.org/10.1001/jamanetworkopen.2018.3605" target="_blank" rel="noopener">doi:10.1001/jamanetworkopen.2018.3605</a></li>
+        <li id="src-nuckols"><b>Nuckols G.</b> The Evidence is Lacking for “Effective Reps”. <i>Stronger By Science</i> (article, not peer-reviewed). <a href="https://www.strongerbyscience.com/effective-reps/" target="_blank" rel="noopener">strongerbyscience.com/effective-reps</a></li>
+        <li id="src-paluch2022"><b>Paluch AE, Bajpai S, Bassett DR et al. (2022).</b> Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. <i>Lancet Public Health</i> 7(3):e219–e228. <a href="https://doi.org/10.1016/S2468-2667(21)00302-9" target="_blank" rel="noopener">doi:10.1016/S2468-2667(21)00302-9</a></li>
+        <li id="src-pancar2026"><b>Pancar Z, Ilhan MT, Darendeli MK et al. (2026).</b> Effects of deload periods in resistance training on muscle hypertrophy and strength endurance in untrained young men using a randomized within subject design. <i>Sci Rep</i> 16(1):10299. <a href="https://doi.org/10.1038/s41598-026-40612-5" target="_blank" rel="noopener">doi:10.1038/s41598-026-40612-5</a></li>
+        <li id="src-pelland2026"><b>Pelland JC, Remmert JF, Robinson ZP et al. (2026).</b> The Resistance Training Dose Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength Gains. <i>Sports Med</i> 56(2):481–505. <a href="https://doi.org/10.1007/s40279-025-02344-w" target="_blank" rel="noopener">doi:10.1007/s40279-025-02344-w</a></li>
+        <li id="src-refalo2023"><b>Refalo MC, Helms ER, Trexler ET et al. (2023).</b> Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis. <i>Sports Med</i> 53(3):649–665. <a href="https://doi.org/10.1007/s40279-022-01784-y" target="_blank" rel="noopener">doi:10.1007/s40279-022-01784-y</a></li>
+        <li id="src-reynolds2006"><b>Reynolds JM, Gordon TJ, Robergs RA (2006).</b> Prediction of One Repetition Maximum Strength From Multiple Repetition Maximum Testing and Anthropometry. <i>J Strength Cond Res</i> 20(3):584–592. <a href="https://doi.org/10.1519/R-15304.1" target="_blank" rel="noopener">doi:10.1519/R-15304.1</a></li>
+        <li id="src-robinson2024"><b>Robinson ZP, Pelland JC, Remmert JF et al. (2024).</b> Exploring the Dose–Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions. <i>Sports Med</i> 54(9):2209–2231. <a href="https://doi.org/10.1007/s40279-024-02069-2" target="_blank" rel="noopener">doi:10.1007/s40279-024-02069-2</a></li>
+        <li id="src-schoenfeld2019"><b>Schoenfeld BJ, Grgic J, Krieger J (2019).</b> How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency. <i>J Sports Sci</i> 37(11):1286–1295. <a href="https://doi.org/10.1080/02640414.2018.1555906" target="_blank" rel="noopener">doi:10.1080/02640414.2018.1555906</a></li>
+        <li id="src-schoenfeld2017load"><b>Schoenfeld BJ, Grgic J, Ogborn D et al. (2017).</b> Strength and Hypertrophy Adaptations Between Low- vs. High-Load Resistance Training: A Systematic Review and Meta-analysis. <i>J Strength Cond Res</i> 31(12):3508–3523. <a href="https://doi.org/10.1519/JSC.0000000000002200" target="_blank" rel="noopener">doi:10.1519/JSC.0000000000002200</a> <span class="as">Cited above as Schoenfeld 2017b.</span></li>
+        <li id="src-schoenfeld2017vol"><b>Schoenfeld BJ, Ogborn D, Krieger JW (2017).</b> Dose-response relationship between weekly resistance training volume and increases in muscle mass: A systematic review and meta-analysis. <i>J Sports Sci</i> 35(11):1073–1082. <a href="https://doi.org/10.1080/02640414.2016.1210197" target="_blank" rel="noopener">doi:10.1080/02640414.2016.1210197</a> <span class="as">Cited above as Schoenfeld 2017a.</span></li>
+        <li id="src-singer2024"><b>Singer A, Wolf M, Generoso L et al. (2024).</b> Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy. <i>Front Sports Act Living</i> 6:1429789. <a href="https://doi.org/10.3389/fspor.2024.1429789" target="_blank" rel="noopener">doi:10.3389/fspor.2024.1429789</a></li>
+        <li id="src-storoschuk2025"><b>Storoschuk KL, Moran-MacDonald A, Gibala MJ et al. (2025).</b> Much Ado About Zone 2: A Narrative Review Assessing the Efficacy of Zone 2 Training for Improving Mitochondrial Capacity and Cardiorespiratory Fitness in the General Population. <i>Sports Med</i> 55(7):1611–1624. <a href="https://doi.org/10.1007/s40279-025-02261-y" target="_blank" rel="noopener">doi:10.1007/s40279-025-02261-y</a></li>
+        <li id="src-wolf2025"><b>Wolf M, Androulakis Korakakis P, Piñero A et al. (2025).</b> Lengthened partial repetitions elicit similar muscular adaptations as full range of motion repetitions during resistance training in trained individuals. <i>PeerJ</i> 13:e18904. <a href="https://doi.org/10.7717/peerj.18904" target="_blank" rel="noopener">doi:10.7717/peerj.18904</a></li>
+        <li id="src-wolf2023"><b>Wolf M, Androulakis-Korakakis P, Fisher J et al. (2023).</b> Partial Vs Full Range of Motion Resistance Training: A Systematic Review and Meta-Analysis. <i>Int J Strength Cond</i> 3(1). <a href="https://doi.org/10.47206/ijsc.v3i1.182" target="_blank" rel="noopener">doi:10.47206/ijsc.v3i1.182</a></li>
+        <li id="src-zourdos2016"><b>Zourdos MC, Klemp A, Dolan C et al. (2016).</b> Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reserve. <i>J Strength Cond Res</i> 30(1):267–275. <a href="https://doi.org/10.1519/JSC.0000000000001049" target="_blank" rel="noopener">doi:10.1519/JSC.0000000000001049</a></li>
+      </ol>
+      <h3 class="k-label sources-h">Nutrition · 39</h3>
+      <ol class="sources">
+        <li id="src-issn2026"><b>Aragon AA, Campbell BI, Schoenfeld BJ et al. (2026).</b> International Society of Sports Nutrition position stand: diets for body weight reduction. <i>J Int Soc Sports Nutr</i> 23(1):2740266. <a href="https://doi.org/10.1080/15502783.2026.2740266" target="_blank" rel="noopener">doi:10.1080/15502783.2026.2740266</a> <span class="as">Cited above as ISSN 2026.</span></li>
+        <li id="src-brobakken2023"><b>Brobakken MF, Krogsæter I, Helgerud J et al. (2023).</b> Abdominal aerobic endurance exercise reveals spot reduction exists: A randomized controlled trial. <i>Physiol Rep</i> 11(22):e15853. <a href="https://doi.org/10.14814/phy2.15853" target="_blank" rel="noopener">doi:10.14814/phy2.15853</a></li>
+        <li id="src-byrne2018"><b>Byrne NM, Sainsbury A, King NA et al. (2018).</b> Intermittent energy restriction improves weight loss efficiency in obese men: the MATADOR study. <i>Int J Obes</i> 42(2):129–138. <a href="https://doi.org/10.1038/ijo.2017.206" target="_blank" rel="noopener">doi:10.1038/ijo.2017.206</a></li>
+        <li id="src-cunningham1991"><b>Cunningham J (1991).</b> Body composition as a determinant of energy expenditure: a synthetic review and a proposed general prediction equation. <i>Am J Clin Nutr</i> 54(6):963–969. <a href="https://doi.org/10.1093/ajcn/54.6.963" target="_blank" rel="noopener">doi:10.1093/ajcn/54.6.963</a></li>
+        <li id="src-devries2018"><b>Devries MC, Sithamparapillai A, Brimble KS et al. (2018).</b> Changes in Kidney Function Do Not Differ between Healthy Adults Consuming Higher- Compared with Lower- or Normal-Protein Diets: A Systematic Review and Meta-Analysis. <i>J Nutr</i> 148(11):1760–1775. <a href="https://doi.org/10.1093/jn/nxy197" target="_blank" rel="noopener">doi:10.1093/jn/nxy197</a></li>
+        <li id="src-fao2003"><b>FAO (2003).</b> Food energy: methods of analysis and conversion factors. <i>FAO Food and Nutrition Paper</i> 77, section 3.5.1. <a href="https://www.fao.org/4/y5022e/y5022e04.htm" target="_blank" rel="noopener">fao.org/4/y5022e</a></li>
+        <li id="src-fao2004"><b>FAO/WHO/UNU (2004).</b> Human energy requirements: report of a joint expert consultation, Rome, 17–24 October 2001. <i>FAO Food and Nutrition Technical Report Series</i> 1, table 5.3. <a href="https://www.fao.org/4/y5686e/y5686e07.htm" target="_blank" rel="noopener">fao.org/4/y5686e</a></li>
+        <li id="src-fernandes2026"><b>Fernandes-Alves D, Teixeira GP, Guimarães KC et al. (2026).</b> Systematic Review and Meta-analysis of Randomized Clinical Trials Comparing Time-Restricted Eating With and Without Caloric Restriction for Weight Loss. <i>Nutr Rev</i> 84(3):463–486. <a href="https://doi.org/10.1093/nutrit/nuaf053" target="_blank" rel="noopener">doi:10.1093/nutrit/nuaf053</a></li>
+        <li id="src-frankenfield2005"><b>Frankenfield D, Roth-Yousey L, Compher C (2005).</b> Comparison of Predictive Equations for Resting Metabolic Rate in Healthy Nonobese and Obese Adults: A Systematic Review. <i>J Am Diet Assoc</i> 105(5):775–789. <a href="https://doi.org/10.1016/j.jada.2005.02.005" target="_blank" rel="noopener">doi:10.1016/j.jada.2005.02.005</a></li>
+        <li id="src-gardner2018"><b>Gardner CD, Trepanowski JF, Del Gobbo LC et al. (2018).</b> Effect of Low-Fat vs Low-Carbohydrate Diet on 12-Month Weight Loss in Overweight Adults and the Association With Genotype Pattern or Insulin Secretion. <i>JAMA</i> 319(7):667–679. <a href="https://doi.org/10.1001/jama.2018.0245" target="_blank" rel="noopener">doi:10.1001/jama.2018.0245</a></li>
+        <li id="src-garthe2011"><b>Garthe I, Raastad T, Refsnes PE et al. (2011).</b> Effect of Two Different Weight-Loss Rates on Body Composition and Strength and Power-Related Performance in Elite Athletes. <i>Int J Sport Nutr Exerc Metab</i> 21(2):97–104. <a href="https://doi.org/10.1123/ijsnem.21.2.97" target="_blank" rel="noopener">doi:10.1123/ijsnem.21.2.97</a></li>
+        <li id="src-guest2021"><b>Guest NS, VanDusseldorp TA, Nelson MT et al. (2021).</b> International society of sports nutrition position stand: caffeine and exercise performance. <i>J Int Soc Sports Nutr</i> 18(1):1. <a href="https://doi.org/10.1186/s12970-020-00383-4" target="_blank" rel="noopener">doi:10.1186/s12970-020-00383-4</a></li>
+        <li id="src-hall2017"><b>Hall KD, Guo J (2017).</b> Obesity Energetics: Body Weight Regulation and the Effects of Diet Composition. <i>Gastroenterology</i> 152(7):1718–1727.e3. <a href="https://doi.org/10.1053/j.gastro.2017.01.052" target="_blank" rel="noopener">doi:10.1053/j.gastro.2017.01.052</a></li>
+        <li id="src-helms2014prep"><b>Helms ER, Aragon AA, Fitschen PJ (2014).</b> Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. <i>J Int Soc Sports Nutr</i> 11(1):20. <a href="https://doi.org/10.1186/1550-2783-11-20" target="_blank" rel="noopener">doi:10.1186/1550-2783-11-20</a> <span class="as">Cited above as Helms 2014b.</span></li>
+        <li id="src-helms2023"><b>Helms ER, Spence AJ, Sousa C et al. (2023).</b> Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals: A Parallel Groups Design. <i>Sports Med Open</i> 9(1):102. <a href="https://doi.org/10.1186/s40798-023-00651-y" target="_blank" rel="noopener">doi:10.1186/s40798-023-00651-y</a></li>
+        <li id="src-helms2014protein"><b>Helms ER, Zinn C, Rowlands DS et al. (2014).</b> A Systematic Review of Dietary Protein During Caloric Restriction in Resistance Trained Lean Athletes: A Case for Higher Intakes. <i>Int J Sport Nutr Exerc Metab</i> 24(2):127–138. <a href="https://doi.org/10.1123/ijsnem.2013-0054" target="_blank" rel="noopener">doi:10.1123/ijsnem.2013-0054</a> <span class="as">Cited above as Helms 2014a.</span></li>
+        <li id="src-kreider2017"><b>Kreider RB, Kalman DS, Antonio J et al. (2017).</b> International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine. <i>J Int Soc Sports Nutr</i> 14(1):18. <a href="https://doi.org/10.1186/s12970-017-0173-z" target="_blank" rel="noopener">doi:10.1186/s12970-017-0173-z</a></li>
+        <li id="src-lichtman1992"><b>Lichtman SW, Pisarska K, Berman ER et al. (1992).</b> Discrepancy between Self-Reported and Actual Caloric Intake and Exercise in Obese Subjects. <i>N Engl J Med</i> 327(27):1893–1898. <a href="https://doi.org/10.1056/NEJM199212313272701" target="_blank" rel="noopener">doi:10.1056/NEJM199212313272701</a></li>
+        <li id="src-liu2022"><b>Liu D, Huang Y, Huang C et al. (2022).</b> Calorie Restriction with or without Time-Restricted Eating in Weight Loss. <i>N Engl J Med</i> 386(16):1495–1504. <a href="https://doi.org/10.1056/NEJMoa2114833" target="_blank" rel="noopener">doi:10.1056/NEJMoa2114833</a></li>
+        <li id="src-lowe2020"><b>Lowe DA, Wu N, Rohdin-Bibby L et al. (2020).</b> Effects of Time-Restricted Eating on Weight Loss and Other Metabolic Parameters in Women and Men With Overweight and Obesity. <i>JAMA Intern Med</i> 180(11):1491–1499. <a href="https://doi.org/10.1001/jamainternmed.2020.4153" target="_blank" rel="noopener">doi:10.1001/jamainternmed.2020.4153</a></li>
+        <li id="src-maruthur2024"><b>Maruthur NM, Pilla SJ, White K et al. (2024).</b> Effect of Isocaloric, Time-Restricted Eating on Body Weight in Adults With Obesity. <i>Ann Intern Med</i> 177(5):549–558. <a href="https://doi.org/10.7326/M23-3132" target="_blank" rel="noopener">doi:10.7326/M23-3132</a></li>
+        <li id="src-mifflin1990"><b>Mifflin M, St Jeor S, Hill L et al. (1990).</b> A new predictive equation for resting energy expenditure in healthy individuals. <i>Am J Clin Nutr</i> 51(2):241–247. <a href="https://doi.org/10.1093/ajcn/51.2.241" target="_blank" rel="noopener">doi:10.1093/ajcn/51.2.241</a></li>
+        <li id="src-morton2018"><b>Morton RW, Murphy KT, McKellar SR et al. (2018).</b> A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <i>Br J Sports Med</i> 52(6):376–384. <a href="https://doi.org/10.1136/bjsports-2017-097608" target="_blank" rel="noopener">doi:10.1136/bjsports-2017-097608</a></li>
+        <li id="src-nedeltcheva2010"><b>Nedeltcheva AV, Kilkus JM, Imperial J et al. (2010).</b> Insufficient Sleep Undermines Dietary Efforts to Reduce Adiposity. <i>Ann Intern Med</i> 153(7):435–441. <a href="https://doi.org/10.7326/0003-4819-153-7-201010050-00006" target="_blank" rel="noopener">doi:10.7326/0003-4819-153-7-201010050-00006</a></li>
+        <li id="src-nunes2022"><b>Nunes EA, Colenso‐Semple L, McKellar SR et al. (2022).</b> Systematic review and meta‐analysis of protein intake to support muscle mass and function in healthy adults. <i>J Cachexia Sarcopenia Muscle</i> 13(2):795–810. <a href="https://doi.org/10.1002/jcsm.12922" target="_blank" rel="noopener">doi:10.1002/jcsm.12922</a></li>
+        <li id="src-peos2021"><b>Peos JJ, Helms ER, Fournier PA et al. (2021).</b> Continuous versus Intermittent Dieting for Fat Loss and Fat-Free Mass Retention in Resistance-trained Adults: The ICECAP Trial. <i>Med Sci Sports Exerc</i> 53(8):1685–1698. <a href="https://doi.org/10.1249/MSS.0000000000002636" target="_blank" rel="noopener">doi:10.1249/MSS.0000000000002636</a></li>
+        <li id="src-poon2025"><b>Poon ETC, Tsang JH, Sun F et al. (2025).</b> Effects of intermittent dieting with break periods on body composition and metabolic adaptation: a systematic review and meta-analysis. <i>Nutr Rev</i> 83(1):59–71. <a href="https://doi.org/10.1093/nutrit/nuad168" target="_blank" rel="noopener">doi:10.1093/nutrit/nuad168</a></li>
+        <li id="src-ramirez2013"><b>Ramírez-Campillo R, Andrade DC, Campos-Jara C et al. (2013).</b> Regional Fat Changes Induced by Localized Muscle Endurance Resistance Training. <i>J Strength Cond Res</i> 27(8):2219–2224. <a href="https://doi.org/10.1519/JSC.0b013e31827e8681" target="_blank" rel="noopener">doi:10.1519/JSC.0b013e31827e8681</a></li>
+        <li id="src-ramirez2022"><b>Ramírez-Campillo R, Andrade DC, Clemente FM et al. (2022).</b> A proposed model to test the hypothesis of exercise-induced localized fat reduction (spot reduction), including a systematic review with meta-analysis. <i>Hum Mov</i> 23(3):1–14. <a href="https://doi.org/10.5114/hm.2022.110373" target="_blank" rel="noopener">doi:10.5114/hm.2022.110373</a></li>
+        <li id="src-schoenfeld2018meal"><b>Schoenfeld BJ, Aragon AA (2018).</b> How much protein can the body use in a single meal for muscle-building? Implications for daily protein distribution. <i>J Int Soc Sports Nutr</i> 15(1):10. <a href="https://doi.org/10.1186/s12970-018-0215-1" target="_blank" rel="noopener">doi:10.1186/s12970-018-0215-1</a></li>
+        <li id="src-schoenfeld2013timing"><b>Schoenfeld BJ, Aragon AA, Krieger JW (2013).</b> The effect of protein timing on muscle strength and hypertrophy: a meta-analysis. <i>J Int Soc Sports Nutr</i> 10(1):53. <a href="https://doi.org/10.1186/1550-2783-10-53" target="_blank" rel="noopener">doi:10.1186/1550-2783-10-53</a></li>
+        <li id="src-schoenfeld2015freq"><b>Schoenfeld BJ, Aragon AA, Krieger JW (2015).</b> Effects of meal frequency on weight loss and body composition: a meta-analysis. <i>Nutr Rev</i> 73(2):69–82. <a href="https://doi.org/10.1093/nutrit/nuu017" target="_blank" rel="noopener">doi:10.1093/nutrit/nuu017</a></li>
+        <li id="src-schoenfeld2014fasted"><b>Schoenfeld BJ, Aragon AA, Wilborn CD et al. (2014).</b> Body composition changes associated with fasted versus non-fasted aerobic exercise. <i>J Int Soc Sports Nutr</i> 11(1):54. <a href="https://doi.org/10.1186/s12970-014-0054-7" target="_blank" rel="noopener">doi:10.1186/s12970-014-0054-7</a></li>
+        <li id="src-slater2019"><b>Slater GJ, Dieter BP, Marsh DJ et al. (2019).</b> Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training. <i>Front Nutr</i> 6:131. <a href="https://doi.org/10.3389/fnut.2019.00131" target="_blank" rel="noopener">doi:10.3389/fnut.2019.00131</a></li>
+        <li id="src-tagawa2021"><b>Tagawa R, Watanabe D, Ito K et al. (2021).</b> Dose–response relationship between protein intake and muscle mass increase: a systematic review and meta-analysis of randomized controlled trials. <i>Nutr Rev</i> 79(1):66–75. <a href="https://doi.org/10.1093/nutrit/nuaa104" target="_blank" rel="noopener">doi:10.1093/nutrit/nuaa104</a></li>
+        <li id="src-trexler2014"><b>Trexler ET, Smith-Ryan AE, Norton LE (2014).</b> Metabolic adaptation to weight loss: implications for the athlete. <i>J Int Soc Sports Nutr</i> 11(1):7. <a href="https://doi.org/10.1186/1550-2783-11-7" target="_blank" rel="noopener">doi:10.1186/1550-2783-11-7</a></li>
+        <li id="src-trommelen2023"><b>Trommelen J, van Lieshout GA, Nyakayiru J et al. (2023).</b> The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration in vivo in humans. <i>Cell Rep Med</i> 4(12):101324. <a href="https://doi.org/10.1016/j.xcrm.2023.101324" target="_blank" rel="noopener">doi:10.1016/j.xcrm.2023.101324</a></li>
+        <li id="src-cfr101"><b>US Code of Federal Regulations.</b> Title 21, §101.9(g)(5): Nutrition labeling of food, compliance. <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-A/section-101.9" target="_blank" rel="noopener">ecfr.gov, 21 CFR 101.9</a></li>
+        <li id="src-vispute2011"><b>Vispute SS, Smith JD, LeCheminant JD et al. (2011).</b> The Effect of Abdominal Exercise on Abdominal Fat. <i>J Strength Cond Res</i> 25(9):2559–2564. <a href="https://doi.org/10.1519/JSC.0b013e3181fb4a46" target="_blank" rel="noopener">doi:10.1519/JSC.0b013e3181fb4a46</a></li>
+      </ol>
+      <p class="k-small" style="margin-top:26px;max-width:70ch">The effective-reps explorer, the travel workout builder and the “verdict” format were prompted by tools on <a class="k-inline" href="https://www.brusovcoach.org/" target="_blank" rel="noopener">brusovcoach.org</a>; the code, numbers and wording here are original to this site.</p>
+    </div>
+  </section>
+
+</main>
+
+<div data-ks="footer"></div>
+
+<script src="/ks.js?v=2027.1"></script>
+<script src="/fitness.js?v=2027.1"></script>
+</body>
+</html>

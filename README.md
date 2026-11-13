@@ -1,52 +1,82 @@
 # KiteSink
 
-The personal site / portfolio for **kitesink.com** — apps, games & tools by one independent maker.
+The personal site for **kitesink.com** — one person's workshop, organised into five sections:
+**Consulting · Fitness · Music · Library · About**.
 
 Plain static HTML/CSS/JS. No build step, no framework, no runtime dependency. Every page
 runs in any browser by opening the file directly.
+
+## How the site is organised (2027 refresh)
+
+| Section | Hub page | What lives under it |
+|---|---|---|
+| Consulting | `/consulting` | Services for music teams, how a project runs, the AI concierge teaser, contact |
+| Fitness | `/fitness` | Vantix (`/vantix` + roadmap, changelog, privacy), four free tools, training & nutrition notes with sources |
+| Music | `/music` | Song of the Day, Backline, Album Listening Club |
+| Library | `/library` | **Everything** — every project, tool, game, post and page, searchable. `/work`, `/games`, `/blog` and Campground Tycoon live here |
+| About | `/about` | About, Now, Uses |
+
+The home page (`/`) is the landing page: a five-row index of the sections, a card deck that
+responds to it, then one band per section.
+
+**Nothing was deleted in the refresh.** Every pre-existing page still exists at the same URL;
+the product pages (Vantix, Backline, Song of the Day, Campground Tycoon, Listening Club) keep
+their own art direction and only their KiteSink nav changed.
 
 ## Structure
 
 ```
 public/                     ← deploy root for kitesink.com
-  index.html                Home (curated work, From-the-log feed, song-of-the-day card)
-  work.html                 Work — full index of everything built + external tools
-  games.html                Games — my games + games I love
-  projects.js               Shared data for Work + Games (KS_WORK / KS_GAMES). Edit to add more.
-  consulting.html           Kitesink Consulting — music workflow, operations and AI services
+  index.html                Landing page (index + deck + five section bands)
+  consulting.html           Consulting hub — music-team services + AI concierge teaser
+  fitness.html              Fitness hub — Vantix feature, four tools, notes, claims, sources
+  fitness.js                The four calculators (pure maths in window.KSFit + page wiring)
+  music.html                Music hub — Song of the Day, Backline, Listening Club
+  library.html              The full index, rendered from site-index.js + blog/posts.js
   about.html                About
-  now.html, uses.html, colophon.html   Now / Uses / Colophon (linked from the shared footer)
-  listening-club.html       Album Listening Club — dark landing page, Discord front door
-                            (served extensionless at /listening-club)
-  repost.html               Phone composer for new posts/reposts (discreet ✎ link in the footer)
+  site-index.js             ONE list of every page/tool/project (KS_INDEX + KS_SHELVES). The Find
+                            palette, /library and the home search all read it. Add a page → add a line.
+  ks.js, ks.css             Shared chrome + design system: header, slim bar, footer, mobile pill nav,
+                            the Find palette (⌘K / Ctrl K / "/"), theme toggle, tokens (--k-*), the
+                            .k-* component kit — plus the analytics token (CF_TOKEN) and forms key
+  work.html, games.html     Older index pages, now shelved under Library (still linked, still work)
+  projects.js               Data for work.html + games.html (KS_WORK / KS_GAMES)
+  now.html, uses.html, colophon.html   Now / Uses / Colophon
   blog.html                 Writing index (live filter; your essays + external reposts)
   blog/
-    posts.js                Shared blog entries (KS_POSTS) — blog index + home feed read this
-    campground-tycoon-the-story-so-far.html   First post (reading-progress bar)
-  song-of-the-day.html      Landing for the Song of the Day iOS app (FAQ + theme switcher)
-  song-of-the-day/
-    support.html             Support hub, troubleshooting, and contact form
-    privacy.html, terms.html  Legal pages
-    logos/                  Exported brand SVGs (marks, app icons, lockup)
-  campground-tycoon.html    Campground Tycoon landing + interactive demo
-  campground-tycoon/
-    roadmap.html            Dev roadmap — trail of milestones + suggestion box
-  vantix.html               Vantix — the periodization OS (landing)
-  vantix/
-    roadmap.html, changelog.html, privacy.html   Vantix marketing sub-pages
-  ks.js, ks.css             Shared chrome: header / dark footer / mobile pill nav / clock —
-                            plus the analytics token (CF_TOKEN) and forms key (KS_FORM_KEY)
+    posts.js                Blog entries (KS_POSTS) — the blog index, Library and Find read this
+    campground-tycoon-the-story-so-far.html   First post
+  repost.html               Phone composer for new posts/reposts (discreet ✎ link in the footer)
+  listening-club.html       Album Listening Club — its own palette; Discord front door
+  song-of-the-day.html      Landing for the Song of the Day iOS app (+ support/privacy/terms)
+  campground-tycoon.html    Campground Tycoon landing + demo (+ features/regions/roadmap)
+  backline.html             Backline prototype landing
+  vantix.html               Vantix — the periodization OS (+ roadmap/changelog/privacy)
   feed.xml                  Atom feed (hand-maintained; see docs/ADDING-A-BLOG-POST.md)
-  favicon.svg
-  site_assets/              Campground screenshots (AVIF/WebP with PNG fallbacks)
+  sitemap.xml, robots.txt, _headers, 404.html
 
 vantix/                     ← deploy root for vantix.kitesink.com (separate Worker)
-  index.html                Vantix brand / identity placeholder
-  favicon.svg
-
+scripts/
+  check_site.py             Site audit (metadata, a11y basics, links, site index, sitemap, asset versions)
+  test_fitness.js           Checks the calculator maths against hand-worked values
 source/                     ← archived ORIGINAL design-tool exports (.dc.html). Not deployed.
-                              Kept for reference; safe to delete once you're confident.
 ```
+
+## Changing things
+
+- **Add a page:** create the HTML, then add one entry to `public/site-index.js` and one line to
+  `public/sitemap.xml`. `scripts/check_site.py` fails if you forget either, so a page can't
+  become unreachable.
+- **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. Vantix, Backline,
+  the Listening Club and the blog post template carry their own small KiteSink nav — search for
+  `/consulting` in those files.
+- **Change `ks.css` or `ks.js`:** bump the `?v=2027.1` on the `<link>`/`<script>` tags in every
+  page (find-and-replace). Those files are cached for an hour or more, and a new page with an
+  old cached stylesheet looks broken. The audit checks every page uses the same version.
+- **Design tokens:** `--k-*` custom properties at the top of `ks.css` (light + dark). New pages
+  opt into the component kit with `<body class="ks-paper k2">`.
+- **Fitness notes:** every claim on `/fitness` links to an entry in its Sources list. Keep it
+  that way — if you add a number, add its paper.
 
 ## Local preview
 
@@ -58,10 +88,21 @@ cd public && python3 -m http.server 8000   # then visit http://localhost:8000
 
 (Use a server rather than `file://` so root-relative links like `/about` resolve.)
 
-Run the metadata, accessibility, image, and internal-link audit before committing:
+Extensionless URLs (`/fitness`, `/about`) are how the site links to itself, and Python's
+server doesn't resolve them. Wrangler's local server does, and behaves like production:
+
+```bash
+npx wrangler dev        # serves ./public on http://localhost:8787 — local only, deploys nothing
+```
+
+Run both checks before committing:
 
 ```bash
 python3 scripts/check_site.py
+```
+
+```bash
+node scripts/test_fitness.js
 ```
 
 ## How this was built
@@ -84,7 +125,14 @@ so nothing depends on an external runtime anymore.
 - **Blog posts** — entries live in `public/blog/posts.js`; per-post pages under `public/blog/`
   (copy `_template.html`). Full steps in `docs/ADDING-A-BLOG-POST.md`.
 - **Listening club** — the Discord invite is live; add the Spotify playlist ID when ready and
-  edit the next-session date band monthly.
+  edit the next-session date band monthly (it still reads "Sat 29 Aug").
+- **Song of the Day status** — its own page says "App Store · Coming soon"; `projects.js`
+  (shown on `/work`) still says LIVE with an "App Store" CTA. The new pages follow the product
+  page. Set whichever is true in `projects.js` and `site-index.js`.
+- **AI concierge** — `/consulting#concierge` is placeholder positioning (marked in the HTML).
+  Replace it once the offer is defined.
+- **Name** — the site uses both "Truman Kitos" (JSON-LD, blog byline, feed) and "Truman
+  Kitos-Lindsey" (consulting). Pick one.
 - **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in
   `public/ks.js` (see `docs/ANALYTICS-AND-FORMS.md`). Forms are live via `KS_FORM_KEY`.
 

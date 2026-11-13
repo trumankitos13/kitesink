@@ -82,6 +82,63 @@ cd vantix && wrangler deploy
 
 ---
 
+## Testing a branch before it goes live
+
+Production only changes when `main` changes (or someone runs `wrangler deploy`). To look at a
+branch — for example the 2027 refresh on `claude/wonderful-thompson-psvtdk` — without
+touching production, use one of these. None of them were run when this section was written;
+they are taken from Cloudflare's docs (links below), so check the dashboard wording as you go.
+
+**A. Locally (nothing leaves your machine)**
+
+```bash
+git fetch origin claude/wonderful-thompson-psvtdk
+```
+
+```bash
+git switch claude/wonderful-thompson-psvtdk
+```
+
+```bash
+npx wrangler dev
+```
+
+Then open `http://localhost:8787`.
+
+**B. A preview URL from your machine**
+
+```bash
+npx wrangler versions upload --preview-alias refresh-2027
+```
+
+This uploads a version *without deploying it* and gives it a URL of the form
+`refresh-2027-kitesink.<your-subdomain>.workers.dev`. Aliases must be lowercase letters,
+numbers and dashes, which is why the alias is given explicitly here instead of using the
+branch name (it contains a `/`). Newer Wrangler (4.135.0+) also has `npx wrangler preview
+--name refresh-2027`, which creates a Preview and does not promote it to production.
+
+**C. Automatic previews for every branch push**
+
+Workers & Pages → `kitesink` → **Settings → Build → Branch control → Enable Preview Builds**.
+With that on, every push to a branch other than `main` runs the Preview command instead of
+the deploy command. Cloudflare notes that Workers connected to Builds before "Worker
+Previews" existed keep the older preview model until a one-time, irreversible switch — read
+that prompt before accepting it.
+
+**Things to know**
+
+- Preview and version URLs are **public by default**. Put Cloudflare Access in front if you
+  don't want the draft visible. (workers.dev preview URLs are served with `noindex`.)
+- Version URLs need `workers_dev` enabled, and they don't run on the custom domain.
+- A preview serves the branch's `public/` exactly as production would, including `_headers`.
+
+Sources: [Build branches](https://developers.cloudflare.com/workers/ci-cd/builds/build-branches/),
+[Build configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/),
+[Previews](https://developers.cloudflare.com/workers/previews/),
+[Version URLs](https://developers.cloudflare.com/workers/versions-and-deployments/version-urls/).
+
+---
+
 ## 4. Verify
 
 ```bash
