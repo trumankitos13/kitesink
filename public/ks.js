@@ -1,15 +1,25 @@
 /* ===================== KiteSink shared chrome =====================
-   Loaded on every page. Injects the shared header / footer / cream bar into
-   [data-ks] placeholders, runs the live clock, and loads analytics — so the
-   nav, footer, and tracking live in ONE place instead of being copied across
-   every page. Page-unique chrome (the Vantix scroll-spy nav, the Campground
-   game nav, the SOTD masthead) stays inline on those pages.
+   Loaded on every page. Injects the shared header / footer / slim bar into
+   [data-ks] placeholders, adds the mobile pill nav and the Find palette,
+   runs the live clock, and loads analytics — so the nav, footer, and
+   tracking live in ONE place instead of being copied across every page.
+   Page-unique chrome (the Vantix scroll-spy nav, the Campground game nav,
+   the SOTD masthead) stays inline on those pages.
 
    Placeholders a page can use:
-     <div data-ks="bar"></div>                         slim cream KiteSink bar
-     <div data-ks="header" data-active="work"></div>   full Geist header (active: work|consulting|games|writing|about|"")
-     <div data-ks="footer" data-active="…"></div>      shared footer (wordmark + nav + ©)
-     <div data-ks="bottombar"></div>                   cream KiteSink bottom strip (project pages)
+     <div data-ks="header" data-active="fitness"></div>   full header
+     <div data-ks="footer"></div>                          shared footer
+     <div data-ks="bar" data-active="music"></div>         slim KiteSink bar (project pages)
+     <div data-ks="bottombar"></div>                       cream bottom strip (project pages)
+     <div data-ks="page" data-active="music"></div>        no chrome, just the pill nav + active state
+
+   data-active is one of the five sections below. The older values still
+   work and are mapped onto their new home (work/games/writing → library,
+   club → music, now → about), so legacy pages need no edits.
+
+   The site map itself (every page, tool and project) lives in
+   /site-index.js — the Find palette, the Library page and the home page
+   all read that one list.
    ================================================================= */
 (function () {
   "use strict";
@@ -28,85 +38,104 @@
   // Options from the design: "online" | "in the workshop" | "heads down" | "open to work"
   var KS_STATUS = "online";
 
-  var NAV = [["Work", "/work", "work"], ["Consulting", "/consulting", "consulting"], ["Games", "/games", "games"], ["Club", "/listening-club", "club"], ["Writing", "/blog", "writing"], ["About", "/about", "about"]];
+  // The release of the shared files. It must match the ?v= on every page's
+  // ks.css / ks.js / site-index.js tags (scripts/check_site.py checks), so a
+  // file fetched from here and the same file named by a page are one cache entry.
+  var ASSET_V = "2027.6";
 
-  var LOGO30 = '<svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#2f5436"/><path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/></svg>';
-  var LOGO18 = '<svg width="18" height="18" viewBox="0 0 64 64" fill="none" style="flex-shrink:0"><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/></svg>';
+  // The five sections. Order = nav order. `quiet` renders Library understated:
+  // always reachable, never the loudest thing on the page.
+  var SECTIONS = [
+    { id: "consulting", label: "Consulting", href: "/consulting" },
+    { id: "fitness",    label: "Fitness",    href: "/fitness" },
+    { id: "music",      label: "Music",      href: "/music" },
+    { id: "library",    label: "Library",    href: "/library", quiet: true },
+    { id: "about",      label: "About",      href: "/about" }
+  ];
+  var ALIAS = { work: "library", games: "library", writing: "library", blog: "library", club: "music", now: "about" };
+  // A page can name its section with data-active; when it doesn't (the slim bar
+  // on project pages), work it out from the URL.
+  var BY_PATH = [[/^\/(vantix|fitness)/, "fitness"], [/^\/(song-of-the-day|stage-first|listening-club|music)/, "music"], [/^\/consulting/, "consulting"],
+                 [/^\/(campground-tycoon|blog|work|games|library|colophon)/, "library"], [/^\/(about|now|uses)/, "about"]];
+  function sectionOf(active) {
+    if (active) return ALIAS[active] || active;
+    for (var i = 0; i < BY_PATH.length; i++) if (BY_PATH[i][0].test(location.pathname)) return BY_PATH[i][1];
+    return "";
+  }
 
-  function navFull(active) {
-    return NAV.map(function (n) {
-      var on = n[2] === active;
-      var style = on ? 'color:#2f5436;border-bottom:2px solid #2f5436;padding-bottom:2px' : 'color:inherit;text-decoration:none';
-      return '<a href="' + n[1] + '"' + (on ? ' aria-current="page"' : '') + ' class="' + (on ? '' : 'ks-nav-link') + '" style="' + style + '">' + n[0] + '</a>';
+  var IS_MAC = /Mac|iPhone|iPad/.test((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "");
+
+  function logo(size) {
+    return '<svg class="ks-logo" width="' + size + '" height="' + size + '" viewBox="0 0 64 64" fill="none" aria-hidden="true">' +
+      '<path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/>' +
+      '<polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/>' +
+      '<line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/>' +
+      '<path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/>' +
+      '<path class="lgs" d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<circle class="lg" cx="16" cy="29" r="2.6"/><path class="lgs" d="M16 31 L16 40" stroke-width="4" stroke-linecap="round"/>' +
+      '<path class="lg" d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z"/>' +
+      '<ellipse class="lgl" cx="26" cy="40" rx="18" ry="4.6"/><ellipse class="lgd" cx="26" cy="40" rx="13.5" ry="3"/></svg>';
+  }
+  var ICON_FIND = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>';
+
+  function brand(size) {
+    return '<a class="ks-brand" href="/" aria-label="KiteSink — home">' + logo(size) + '<span><b>Kite</b>Sink</span></a>';
+  }
+  function navLinks(active) {
+    var sec = sectionOf(active);
+    return SECTIONS.map(function (s) {
+      var on = s.id === sec;
+      return '<a href="' + s.href + '"' + (s.quiet ? ' class="is-quiet"' : '') + (on ? ' aria-current="page"' : '') + '>' + s.label + '</a>';
     }).join('');
   }
-  function navBar(active) {
-    return NAV.map(function (n) {
-      var on = n[2] === active;
-      return '<a href="' + n[1] + '" class="ks-link" style="color:' + (on ? '#2f5436' : 'inherit') + ';text-decoration:none">' + n[0] + '</a>';
-    }).join('');
+  function status() {
+    return '<span class="ks-status"><i></i><span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></span>';
   }
 
   function header(active) {
-    return '<header style="display:flex;justify-content:space-between;align-items:center;gap:14px 24px;flex-wrap:wrap;padding:16px clamp(20px,4vw,40px);border-bottom:1px solid rgba(34,28,16,.16);position:sticky;top:0;background:rgba(236,226,203,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:30">' +
-      '<a href="/" style="display:flex;align-items:center;gap:11px;text-decoration:none">' + LOGO30 +
-        '<span style="font:800 19px \'Geist\',sans-serif;letter-spacing:-.035em;color:#221c10"><span style="color:#2f5436">Kite</span>Sink</span></a>' +
-      '<nav class="ks-topnav" style="display:flex;gap:clamp(16px,2.4vw,24px);font:500 13px \'Geist Mono\',monospace;color:#5e5238;flex-wrap:wrap">' + navFull(active) + '</nav>' +
-      '<div style="display:flex;align-items:center;gap:12px">' +
+    return '<header class="ks-hd">' + brand(30) +
+      '<nav class="ks-nav" aria-label="Primary">' + navLinks(active) + '</nav>' +
+      '<div class="ks-tools">' +
+        '<button class="ks-findbtn" type="button" data-ks-find aria-haspopup="dialog" aria-label="Find anything on the site">' + ICON_FIND +
+          '<span>Find</span><kbd class="ks-kbd">' + (IS_MAC ? '⌘K' : 'Ctrl K') + '</kbd></button>' +
         '<button class="ks-theme-toggle" type="button" aria-label="Toggle dark mode"></button>' +
-        '<div style="display:flex;align-items:center;gap:9px;font:500 12px \'Geist Mono\',monospace;color:#2f5436">' +
-          '<span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span>' +
-          '<span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
-      '</div>' +
-    '</header>';
+        status() +
+      '</div></header>';
   }
 
   function bar(active) {
-    return '<div style="position:sticky;top:0;z-index:1000;height:38px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 clamp(16px,4vw,40px);background:rgba(236,226,203,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(34,28,16,.18);font-family:\'Geist\',-apple-system,system-ui,sans-serif;box-sizing:border-box">' +
-      '<a href="/" class="ks-link" style="display:flex;align-items:center;gap:7px;color:#221c10;text-decoration:none">' + LOGO18 +
-        '<span style="font:800 14px \'Geist\',sans-serif;letter-spacing:-.03em"><span style="color:#2f5436">Kite</span>Sink</span></a>' +
-      '<nav class="ks-barnav" style="display:flex;align-items:center;gap:clamp(12px,2.4vw,22px);font:500 12px \'Geist Mono\',ui-monospace,monospace;color:#5e5238">' + navBar(active) + '</nav>' +
-    '</div>';
+    return '<div class="ks-bar">' + brand(18) +
+      '<nav class="ks-barnav" aria-label="KiteSink">' + navLinks(active) +
+      '<button type="button" data-ks-find aria-haspopup="dialog" aria-label="Find anything on KiteSink">' + ICON_FIND + '</button></nav></div>';
   }
 
-  // Dark-green footer (redesign 2026.07). Standard variant on sub-pages;
-  // data-full="1" (the home page) adds the logo, live clock + socials column.
-  var LOGO54DARK = '<svg width="54" height="54" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:14px"><path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/><polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/><line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/><line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/><path d="M46 23 Q49 27 46 31 Q43 35 46 39" stroke="#b07227" stroke-width="1.4" stroke-linecap="round"/><path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#3a6b46" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="29" r="2.6" fill="#3a6b46"/><path d="M16 31 L16 40" stroke="#3a6b46" stroke-width="4" stroke-linecap="round"/><path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/><ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/></svg>';
-
-  function footNav() {
-    return NAV.map(function (n) {
-      return '<a href="' + n[1] + '" class="ks-foot-link" style="color:#d8b07a;text-decoration:none">' + n[0] + '</a>';
-    }).join('');
+  function col(title, links) {
+    return '<div class="ks-ft-col"><h2>' + title + '</h2>' + links.map(function (l) {
+      return '<a href="' + l[1] + '"' + (l[2] ? ' target="_blank" rel="noopener"' : '') + '>' + l[0] + '</a>';
+    }).join('') + '</div>';
   }
-
-  function footer(active, full) {
-    var left, right;
-    if (full) {
-      left = '<div>' + LOGO54DARK +
-        '<div style="font:800 clamp(44px,7vw,86px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<div style="display:flex;align-items:center;gap:13px;margin:16px 0 0;max-width:400px"><picture style="display:block;flex-shrink:0"><source srcset="/img/pin-avatar-80.avif" type="image/avif"><source srcset="/img/pin-avatar-80.webp" type="image/webp"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" loading="lazy" decoding="async" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);display:block"></picture><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>';
-      right = '<div style="text-align:right">' +
-        '<div style="display:flex;align-items:center;gap:9px;justify-content:flex-end;font:500 12px \'Geist Mono\',monospace;color:#d8b07a;margin-bottom:14px"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:ks-pulse 2.4s ease-in-out infinite"></span><span><span class="clock">--:--:--</span> · ' + KS_STATUS + '</span></div>' +
-        '<div style="font:600 10px \'Geist Mono\',monospace;text-transform:uppercase;letter-spacing:.16em;color:rgba(236,226,203,.6);margin-bottom:10px">Find me as</div>' +
-        '<div style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap;justify-content:flex-end"><span>@tkitos</span><span>@trumankitos13</span><span>@murdocnu</span><span>@rummaging13</span></div></div>';
-    } else {
-      left = '<div><div style="font:800 clamp(40px,6vw,72px)/.9 \'Geist\',sans-serif;letter-spacing:-.045em;color:#ece2cb"><span style="color:#d8b07a">Kite</span>Sink</div>' +
-        '<div style="display:flex;align-items:center;gap:13px;margin:14px 0 0;max-width:400px"><picture style="display:block;flex-shrink:0"><source srcset="/img/pin-avatar-80.avif" type="image/avif"><source srcset="/img/pin-avatar-80.webp" type="image/webp"><img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" loading="lazy" decoding="async" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 40%;border:2px solid rgba(216,176,122,.5);display:block"></picture><p style="font:400 15px \'Geist\',sans-serif;color:rgba(236,226,203,.6);margin:0">Independent maker &amp; founder. One workshop, many surfaces.</p></div></div>';
-      right = '<nav style="display:flex;gap:16px;font:500 13px \'Geist Mono\',monospace;color:#d8b07a;flex-wrap:wrap">' + footNav() + '</nav>';
-    }
-    return '<footer style="background:#1f3024;color:#ece2cb;padding:clamp(40px,5vw,54px) clamp(20px,4vw,40px) 46px"><div style="max-width:1240px;margin:0 auto">' +
-      '<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">' + left + right + '</div>' +
-      '<div style="margin-top:30px;padding-top:18px;border-top:1px solid rgba(236,226,203,.2);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font:400 12px \'Geist Mono\',monospace;color:rgba(236,226,203,.6)">' +
-        '<span>&copy; 2026 KiteSink — all rights reserved.</span>' +
-        '<span style="display:flex;gap:18px;flex-wrap:wrap"><a href="/" class="ks-foot-link" style="color:rgba(236,226,203,.6);text-decoration:none">Home</a><a href="/blog" class="ks-foot-link" style="color:rgba(236,226,203,.6);text-decoration:none">Blog</a><a href="/about" class="ks-foot-link" style="color:rgba(236,226,203,.6);text-decoration:none">About</a><a href="/now" class="ks-foot-link" style="color:rgba(236,226,203,.6);text-decoration:none">Now</a><a href="/uses" class="ks-foot-link" style="color:rgba(236,226,203,.6);text-decoration:none">Uses</a><a href="/colophon" class="ks-foot-link" style="color:rgba(236,226,203,.6);text-decoration:none">Colophon</a><a href="/repost" rel="nofollow" title="New post / repost" class="ks-foot-link" style="color:rgba(236,226,203,.6);text-decoration:none">✎ compose</a></span>' +
-      '</div></div></footer>';
+  function footer() {
+    return '<footer class="ks-ft"><div class="ks-ft-in">' +
+      '<div class="ks-ft-top">' +
+        '<div><div class="ks-ft-word"><b>Kite</b>Sink</div>' +
+          '<div class="ks-ft-me"><picture><source srcset="/img/pin-avatar-80.avif" type="image/avif"><source srcset="/img/pin-avatar-80.webp" type="image/webp">' +
+          '<img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" loading="lazy" decoding="async"></picture>' +
+          '<p>Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>' +
+        '<div class="ks-ft-cols">' +
+          col("Sections", SECTIONS.map(function (s) { return [s.label, s.href]; })) +
+          col("Current", [["Vantix", "/vantix"], ["Fitness tools", "/fitness#tools"], ["Song of the Day", "/song-of-the-day"], ["Stage First", "/stage-first"], ["Listening Club", "/listening-club"]]) +
+          col("Library", [["Full index", "/library"], ["Games", "/games"], ["Writing", "/blog"], ["Now", "/now"], ["Uses", "/uses"], ["Colophon", "/colophon"]]) +
+          col("Elsewhere", [["hello@kitesink.com", "mailto:hello@kitesink.com"], ["GitHub", "https://github.com/trumankitos13", 1], ["YouTube", "https://www.youtube.com/@rummaging13", 1], ["Bluesky", "https://bsky.app/profile/signal-shift.bsky.social", 1], ["Atom feed", "/feed.xml"]]) +
+        '</div>' +
+      '</div>' +
+      '<div class="ks-ft-base"><span>&copy; 2026 KiteSink — all rights reserved.</span>' + status() +
+        '<a href="/repost" rel="nofollow" title="New post / repost">✎ compose</a></div>' +
+    '</div></footer>';
   }
 
   function bottomBar() {
-    return '<div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:\'Geist Mono\',ui-monospace,monospace;font-size:12px;color:#6f6040">' +
-      '<span style="display:flex;align-items:center;gap:8px">' + LOGO18.replace('width="18" height="18"', 'width="15" height="15"') + '<span style="color:#221c10">&copy; 2026 KiteSink</span></span>' +
-      '<span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a><a href="/blog" class="ks-link" style="color:#5e5238;text-decoration:none">Blog</a><a href="/about" class="ks-link" style="color:#5e5238;text-decoration:none">About</a></span>' +
-    '</div>';
+    return '<div class="ks-bottombar"><span style="display:flex;align-items:center;gap:8px">' + logo(15) + '<span>&copy; 2026 KiteSink</span></span>' +
+      '<span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/">Home</a><a href="/library">Library</a><a href="/about">About</a></span></div>';
   }
 
   function startClock() {
@@ -150,28 +179,28 @@
   window.ksSubmitForm = ksSubmitForm;
 
   // Floating mobile pill nav (shown ≤700px via ks.css; the top nav hides there).
-  // "active": home|work|consulting|games|writing|about — cream pill on the current page.
+  // The five sections; the wordmark in the header is the way home.
   function pillNav(active) {
-    var items = [["Home", "/", "home"], ["Work", "/work", "work"], ["Consulting", "/consulting", "consulting"], ["Games", "/games", "games"], ["Club", "/listening-club", "club"], ["Log", "/blog", "writing"], ["About", "/about", "about"]];
+    var sec = sectionOf(active);
     var nav = document.createElement("nav");
     nav.className = "ks-pillnav";
-    nav.setAttribute("aria-label", "Site navigation");
-    nav.innerHTML = items.map(function (n) {
-      return '<a href="' + n[1] + '"' + (n[2] === active ? ' class="on" aria-current="page"' : '') + '>' + n[0] + '</a>';
+    nav.setAttribute("aria-label", "Sections, bottom bar");
+    nav.innerHTML = SECTIONS.map(function (s) {
+      return '<a href="' + s.href + '"' + (s.id === sec ? ' class="on" aria-current="page"' : '') + '>' + s.label + '</a>';
     }).join('');
     document.body.appendChild(nav);
     var current = nav.querySelector(".on");
     if (current) nav.scrollLeft = current.offsetLeft - (nav.clientWidth - current.offsetWidth) / 2;
-    document.body.className += (document.body.className ? " " : "") + "ks-haspill";
+    document.body.classList.add("ks-haspill");
   }
 
   // ---- Night mode: follows the system (prefers-color-scheme) by default; the
   // header toggle stores an override in localStorage.ksTheme. Picking the side
   // the system is already on clears the override, so the page goes back to
-  // auto-following. The dark palette lives in ks.css (html[data-theme="dark"]
-  // overrides); a pre-paint snippet in each cream page's <head> mirrors this
-  // resolution so there's no flash. Cream pages only (body.ks-paper) — the
-  // product pages art-direct their own palettes. ----
+  // auto-following. The dark palette lives in ks.css (html[data-theme="dark"]);
+  // a pre-paint snippet in each cream page's <head> mirrors this resolution so
+  // there's no flash. Cream pages only (body.ks-paper) — the product pages
+  // art-direct their own palettes. ----
   function ksSysDark() { try { return window.matchMedia("(prefers-color-scheme: dark)").matches; } catch (e) { return false; } }
   function ksStored() { try { var s = localStorage.getItem("ksTheme"); return s === "dark" || s === "light" ? s : null; } catch (e) { return null; } }
   function ksTheme() { return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light"; }
@@ -215,6 +244,238 @@
     } catch (e) {}
   }
 
+  // ---- The site index + search (shared by the Find palette, /library, and home) ----
+  function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function loadScript(src, done) {
+    var s = document.createElement("script");
+    s.src = src; s.onload = function () { done(); }; s.onerror = function () { done(); };
+    document.head.appendChild(s);
+  }
+  var indexCache = null, indexWaiters = null;
+  // loadIndex(cb): cb(items, ok) — ok is false when /site-index.js could not be loaded. Items are /site-index.js entries plus the blog
+  // posts from /blog/posts.js, both fetched on first use and then cached.
+  function loadIndex(cb) {
+    if (indexCache) { cb(indexCache, true); return; }
+    if (indexWaiters) { indexWaiters.push(cb); return; }
+    indexWaiters = [cb];
+    var pending = 0;
+    function finish() {
+      if (--pending > 0) return;
+      var items = (window.KS_INDEX || []).slice();
+      (window.KS_POSTS || []).forEach(function (p) {
+        var ext = !!p.external;
+        items.push({ t: p.title, h: ext ? p.url : p.href, s: "library", k: ext ? "Reading" : "Writing", d: p.dek || "", w: [].concat(p.cat || []).join(" ") + " " + (p.source || "") + " blog log post essay", ext: ext, date: p.date });
+      });
+      var ok = !!window.KS_INDEX;   // posts alone are not the index
+      if (ok) indexCache = items;   // a failed load is not remembered, so the next call tries again
+      var w = indexWaiters; indexWaiters = null;
+      w.forEach(function (fn) { fn(items, ok); });
+    }
+    var need = [];
+    if (!window.KS_INDEX) need.push("/site-index.js?v=" + ASSET_V);
+    if (!window.KS_POSTS) need.push("/blog/posts.js");
+    if (!need.length) { pending = 1; finish(); return; }
+    pending = need.length;
+    need.forEach(function (src) { loadScript(src, finish); });
+  }
+  // search(items, query) → ranked matches. Every word must match somewhere;
+  // title hits outrank description / keyword hits.
+  function search(items, query) {
+    var terms = norm(query).split(/\s+/).filter(Boolean);
+    if (!terms.length) return items.slice();
+    var out = [];
+    items.forEach(function (it, i) {
+      var title = norm(it.t), hay = title + " " + norm(it.d) + " " + norm(it.w) + " " + norm(it.k) + " " + norm(it.s), sc = 0;
+      for (var j = 0; j < terms.length; j++) {
+        var term = terms[j];
+        if (hay.indexOf(term) < 0) return;
+        if (title.indexOf(term) === 0) sc += 6;
+        else if (title.indexOf(" " + term) >= 0) sc += 4;
+        else if (title.indexOf(term) >= 0) sc += 3;
+        else sc += 1;
+      }
+      if (it.k === "Section") sc += .6;
+      if (it.now) sc += .4;
+      out.push({ it: it, sc: sc, i: i });
+    });
+    out.sort(function (a, b) { return b.sc - a.sc || a.i - b.i; });
+    return out.map(function (o) { return o.it; });
+  }
+  function sectionLabel(id) {
+    for (var i = 0; i < SECTIONS.length; i++) if (SECTIONS[i].id === id) return SECTIONS[i].label;
+    return "";
+  }
+
+  // ---- Kit: the small kite that keeps you company in search. Not a chatbot. It only says
+  // how the search is going, and points to a person when the index has nothing.
+  // Moods: idle, busy, found, none (styled in ks.css under .ks-kit). ----
+  function kit(mood) {
+    return '<svg class="ks-kit" data-mood="' + (mood || "idle") + '" viewBox="0 0 48 60" width="40" height="50" aria-hidden="true" focusable="false">' +
+      '<path class="kt" d="M24 41q5 5 0 9q-5 4 0 9" fill="none" stroke-width="1.8" stroke-linecap="round"/>' +
+      '<g class="kb"><path class="kd" d="M24 2 42 22 24 42 6 22z"/><path class="kl" d="M24 2v40" fill="none" stroke-width="1"/>' +
+      '<g class="ke"><circle cx="17.5" cy="20" r="4"/><circle cx="30.5" cy="20" r="4"/></g>' +
+      '<g class="kp"><circle cx="17.5" cy="20.4" r="1.9"/><circle cx="30.5" cy="20.4" r="1.9"/></g>' +
+      '<path class="km" d="M20 28.5q4 3.4 8 0" fill="none" stroke-width="1.6" stroke-linecap="round"/>' +
+      '<path class="km-o" d="M21 30.5q3-2.4 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/></g></svg>';
+  }
+  var KIT_IDLE = ["I’m Kit. Tell me what you’re after.", "Try “macros”, “vantix” or “club”.", "A name, a topic or a tool: any of them works."];
+  function kitFound(n) {
+    return n === 1 ? "One match. That’ll be the one." : n >= 14 ? "Lots of matches. One more word will narrow it." : "Found " + n + ". My best guess is on top.";
+  }
+
+  // ---- Find palette: ⌘K / Ctrl K / "/" or any [data-ks-find] button ----
+  var find = null, findOpens = 0;
+  function buildFind() {
+    var dlg = document.createElement("dialog");
+    dlg.className = "ks-find";
+    dlg.setAttribute("aria-label", "Find anything on KiteSink");
+    dlg.innerHTML =
+      '<div class="ks-find-top">' + ICON_FIND +
+        '<input class="ks-find-in" type="search" placeholder="Find a project, tool or page…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" role="combobox" aria-expanded="true" aria-controls="ks-find-list" aria-autocomplete="list" aria-label="Find anything on KiteSink">' +
+        '<button class="ks-find-x" type="button" aria-label="Close">esc</button></div>' +
+      '<div class="ks-find-kit">' + kit("idle") + '<p class="ks-find-say"></p></div>' +
+      '<ul class="ks-find-list" id="ks-find-list" role="listbox" aria-label="Results"></ul>' +
+      '<p class="k-vh" role="status"></p>' +
+      '<div class="ks-find-foot"><span>↑↓ to move · ↵ to open</span><a href="/library">Browse the full library →</a></div>';
+    document.body.appendChild(dlg);
+    var input = dlg.querySelector(".ks-find-in"), list = dlg.querySelector(".ks-find-list"), items = [], shown = [], cur = 0, loaded = false, indexOk = false, sayT = null;
+    var status = dlg.querySelector('[role="status"]');
+    var kitEl = dlg.querySelector(".ks-kit"), say = dlg.querySelector(".ks-find-say"), idleLine = KIT_IDLE[0];
+    function tell(mood, text) { kitEl.setAttribute("data-mood", mood); say.textContent = text; }
+
+    function row(it, i) {
+      return '<li role="option" id="ks-find-o' + i + '" aria-selected="' + (i === cur) + '"' + (i === cur ? ' class="on"' : '') + '>' +
+        '<a href="' + esc(it.h) + '"' + (it.ext ? ' target="_blank" rel="noopener"' : '') + ' tabindex="-1">' +
+        '<span class="t">' + esc(it.t) + (it.ext ? ' ↗' : '') + '</span><span class="s">' + esc(sectionLabel(it.s) + (it.k && it.k !== "Section" ? ' · ' + it.k : '')) + '</span>' +
+        (it.d ? '<span class="d">' + esc(it.d) + '</span>' : '') + '</a></li>';
+    }
+    function render() {
+      var q = input.value.trim(), html = "";
+      if (!loaded || !indexOk) {   // still fetching, or /site-index.js did not arrive
+        shown = [];
+        list.innerHTML = '<li class="ks-find-empty">' + (loaded ? 'The index didn’t load. <a href="/library" style="display:inline;padding:0;color:var(--k-green);text-decoration:underline">Open the library</a> instead, or close this and try again.' : 'Loading the index…') + '</li>';
+        input.removeAttribute("aria-activedescendant");
+        if (loaded) tell("none", "The index got tangled on the way here."); else tell("busy", "Unrolling the index…");
+        return;
+      }
+      if (!q) {
+        // Nothing typed: the five sections, then what's current.
+        var secs = items.filter(function (it) { return it.k === "Section"; });
+        var now = items.filter(function (it) { return it.now && it.k !== "Section"; });
+        shown = secs.concat(now);
+        cur = Math.min(cur, shown.length - 1);
+        html = '<li class="ks-find-group" role="presentation">Sections</li>' + secs.map(row).join("") +
+               '<li class="ks-find-group" role="presentation">Current</li>' + now.map(function (it, i) { return row(it, i + secs.length); }).join("");
+      } else {
+        shown = search(items, q).slice(0, 14);
+        cur = Math.min(cur, Math.max(0, shown.length - 1));
+        html = shown.length ? shown.map(row).join("")
+          : '<li class="ks-find-empty"><p>Nothing matches “' + esc(q) + '”. If it should be here, a person can tell you.</p>' +
+            '<p class="ks-find-acts"><a class="ks-find-act ks-find-act--go" href="/consulting#contact">Ask Truman directly</a>' +
+            '<a class="ks-find-act" href="/library">Browse the library</a></p></li>';
+      }
+      list.innerHTML = html;
+      tell(!q ? "idle" : shown.length ? "found" : "none", !q ? idleLine : shown.length ? kitFound(shown.length) : "Nothing on my string by that name.");
+      if (shown.length) input.setAttribute("aria-activedescendant", "ks-find-o" + cur); else input.removeAttribute("aria-activedescendant");
+      clearTimeout(sayT); // tell screen-reader users how the search went, once typing pauses
+      if (q) sayT = setTimeout(function () { status.textContent = shown.length ? shown.length + (shown.length === 1 ? " result" : " results") : "No results. You can ask Truman directly or browse the library."; }, 500);
+      else status.textContent = "";
+    }
+    function move(d) {
+      if (!shown.length) return;
+      cur = (cur + d + shown.length) % shown.length;
+      render();
+      var on = list.querySelector("li.on");
+      if (on && on.scrollIntoView) on.scrollIntoView({ block: "nearest" });
+    }
+    function go() {
+      var it = shown[cur];
+      if (!it) return;
+      dlg.close();
+      if (it.ext) window.open(it.h, "_blank", "noopener"); else location.href = it.h;
+    }
+    input.addEventListener("input", function () { cur = 0; render(); });
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { e.preventDefault(); move(1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); move(-1); }
+      else if (e.key === "Enter") { e.preventDefault(); go(); }
+      else if (e.key === "Escape") { e.preventDefault(); dlg.close(); } // a search field's own Esc only clears the text
+    });
+    dlg.querySelector(".ks-find-x").addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); }); // click the backdrop
+    list.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("a")) dlg.close(); });
+    return {
+      open: function (prefill) {
+        if (dlg.open) return;
+        input.value = prefill || ""; cur = 0;
+        idleLine = KIT_IDLE[findOpens++ % KIT_IDLE.length];
+        if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+        render(); input.focus();
+        loadIndex(function (all, ok) { items = all; loaded = true; indexOk = ok; render(); });
+      }
+    };
+  }
+  function openFind(prefill) {
+    if (!find) find = buildFind();
+    find.open(typeof prefill === "string" ? prefill : "");
+  }
+  function initFind() {
+    document.addEventListener("click", function (e) {
+      var t = e.target.closest && e.target.closest("[data-ks-find]");
+      if (t) { e.preventDefault(); openFind(); }
+    });
+    document.addEventListener("keydown", function (e) {
+      var k = (e.key || "").toLowerCase();
+      if ((e.metaKey || e.ctrlKey) && !e.altKey && !e.shiftKey && k === "k") { e.preventDefault(); openFind(); return; }
+      if (k === "/" && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        var el = document.activeElement, tag = el && el.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (el && el.isContentEditable)) return;
+        e.preventDefault(); openFind();
+      }
+    });
+  }
+
+  // Prefetch same-site pages on hover/touch-start so section hops feel quick
+  // (Chromium's Speculation Rules; everything else just ignores the tag).
+  // Prefetch, not prerender: a prerendered page runs its scripts before anyone
+  // sees it, which would count page views that never happened once analytics is on.
+  function speculate() {
+    try {
+      if (!(HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules"))) return;
+      var s = document.createElement("script");
+      s.type = "speculationrules";
+      s.textContent = JSON.stringify({ prefetch: [{ where: { and: [{ href_matches: "/*" }, { not: { href_matches: "/repost*" } }, { not: { selector_matches: "[target=_blank],[download]" } }] }, eagerness: "moderate" }] });
+      document.head.appendChild(s);
+    } catch (e) {}
+  }
+
+  // Scroll-spy for a hub page's in-page nav (.k-subnav): marks the link whose
+  // section holds a reference line a quarter of the way down the viewport.
+  function initSpy() {
+    var nav = document.querySelector(".k-subnav");
+    if (!nav) return;
+    var links = [].slice.call(nav.querySelectorAll('a[href^="#"]')), pairs = [], current = null, queued = false;
+    links.forEach(function (a) { var el = document.getElementById(a.getAttribute("href").slice(1)); if (el) pairs.push([el, a]); });
+    if (!pairs.length) return;
+    function update() {
+      queued = false;
+      var line = window.innerHeight * 0.26, hit = null;
+      for (var i = 0; i < pairs.length; i++) if (pairs[i][0].getBoundingClientRect().top <= line) hit = pairs[i][1];
+      if (hit === current) return;
+      if (current) { current.classList.remove("on"); current.removeAttribute("aria-current"); }
+      current = hit;
+      if (!hit) return;
+      hit.classList.add("on"); hit.setAttribute("aria-current", "true");
+      var row = hit.parentNode;
+      if (row.scrollWidth > row.clientWidth) row.scrollBy({ left: hit.getBoundingClientRect().left - row.getBoundingClientRect().left - (row.clientWidth - hit.offsetWidth) / 2, behavior: "smooth" });
+    }
+    function queue() { if (!queued) { queued = true; requestAnimationFrame(update); } }
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+    update();
+  }
+
   function inject() {
     var nodes = document.querySelectorAll("[data-ks]");
     var pageActive = null;
@@ -227,19 +488,21 @@
       else if (kind === "header" || kind === "footer") {
         if (pageActive === null) pageActive = active;
         if (kind === "header") el.outerHTML = header(active);
-        else el.outerHTML = footer(active, el.getAttribute("data-full") === "1");
+        else el.outerHTML = footer();
       }
       else if (kind === "bar") el.outerHTML = bar(active);
       else if (kind === "bottombar") el.outerHTML = bottomBar();
     }
-    if (pageActive !== null) {
-      var path = location.pathname;
-      pillNav(pageActive || ((path === "/" || path === "/index" || path === "/index.html") ? "home" : ""));
-    }
+    if (pageActive !== null) pillNav(pageActive);
     startClock();
     initTheme();
+    initFind();
+    initSpy();
+    speculate();
     loadAnalytics();
   }
+
+  window.KS = { sections: SECTIONS, loadIndex: loadIndex, search: search, openFind: openFind, sectionLabel: sectionLabel, esc: esc, kit: kit };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", inject);
   else inject();

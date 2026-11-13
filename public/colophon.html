@@ -22,7 +22,7 @@
   .hv6:hover { text-decoration:underline; }
 </style>
   <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-  <link rel="stylesheet" href="/ks.css">
+  <link rel="stylesheet" href="/ks.css?v=2027.6">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/colophon">
@@ -60,17 +60,17 @@
 
       <div>
         <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">01</span>Static by hand</h2>
-        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Every page is hand-written static HTML, CSS, and JavaScript — no framework, no build step, no bundler. What you read is what's on disk. It keeps the whole thing legible, fast to ship, and easy to reason about a year from now.</p>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Every page is plain static HTML, CSS, and JavaScript — no framework, no bundler. All but one are written by hand. The Fitness page is the exception: a small script writes it from data files, because it holds a few hundred sourced entries. What you read is what's on disk. It keeps the whole thing legible, fast to ship, and easy to reason about a year from now.</p>
       </div>
 
       <div>
         <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">02</span>Type</h2>
-        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Set in <strong>Geist</strong> for display and body, and <strong>Geist Mono</strong> for labels and small print, both served from Google Fonts. One family carries the voice of the workshop — with <strong>Newsreader</strong>, a serif, stepping in on the music pages (Song of the Day, the listening club).</p>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Set in <strong>Geist</strong> for display and body, and <strong>Geist Mono</strong> for labels and small print, both served from Google Fonts. One family carries the voice of the workshop. The project pages keep their own type: <strong>Newsreader</strong> on Song of the Day, <strong>Fraunces</strong> on the Listening Club, <strong>Space Grotesk</strong> and <strong>JetBrains Mono</strong> on Vantix, <strong>Space Grotesk</strong> and <strong>Space Mono</strong> on Stage First, <strong>Bitter</strong> and <strong>Oswald</strong> on Campground Tycoon.</p>
       </div>
 
       <div>
         <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">03</span>Shared chrome</h2>
-        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">The header, footer, and stylesheet live in exactly one place. <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/ks.js</code> injects the shared nav and footer into placeholders on every page, and <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/ks.css</code> holds the reset, the accessibility defaults, and the link hovers. Change the chrome once, and it changes everywhere.</p>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">The header, footer, and stylesheet live in exactly one place. <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/ks.js</code> injects the nav and footer into placeholders on the core pages and a slim KiteSink bar on several project pages, and <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/ks.css</code> holds the design tokens, the accessibility defaults, and the shared components. One more file, <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/site-index.js</code>, lists every page on the site; the Find palette and the Library both read it.</p>
       </div>
 
       <div>
@@ -80,7 +80,7 @@
 
       <div>
         <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">05</span>From prototype to page</h2>
-        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Designs start life as in-house &ldquo;Design Component&rdquo; (<code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">.dc</code>) prototypes — a way to settle the look before committing to code — then get rebuilt by hand into the static pages you're reading. The prototype is the sketch; the page is the real thing.</p>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">The first pages started life as in-house &ldquo;Design Component&rdquo; (<code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">.dc</code>) prototypes — a way to settle the look before committing to code — then were rebuilt by hand into static pages. The newer pages were designed directly in code. Either way the prototype is the sketch; the page is the real thing.</p>
       </div>
 
       <div>
@@ -88,12 +88,22 @@
         <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">Baked in, not bolted on. The site honors <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">prefers-reduced-motion</code>, keeps a consistent focus ring for keyboard users, and matches your system's light or dark theme out of the box — flip it yourself and the site remembers. It ships with security headers — including a Content Security Policy — so the defaults are sane before anyone has to think about them.</p>
       </div>
 
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">07</span>Checked before it ships</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">A small audit reads every page before a change goes out: titles and descriptions, links, the site index, the sitemap, and whether the Fitness page is older than its data. The calculators have their own tests, with the maths checked against values worked by hand.</p>
+      </div>
+
+      <div>
+        <h2 style="font:700 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin:0"><span style="color:#2f5436;font:600 11px 'Geist Mono',monospace;letter-spacing:.12em;display:block;margin-bottom:8px">08</span>Plain text for AI readers</h2>
+        <p style="font:400 16px/1.62 'Geist',sans-serif;color:#5e5238;margin:10px 0 0">The main pages have a plain-text twin, listed at <code style="font:500 14px 'Geist Mono',monospace;color:#8a5a18">/llms.txt</code>, so an assistant can read the facts without the layout. A twin says the same things as its page.</p>
+      </div>
+
     </div>
   </section>
 
   <section style="padding:clamp(28px,4vw,44px) clamp(20px,4vw,40px);max-width:1180px;margin:0 auto">
     <div style="background:#2f5436;border-radius:18px;padding:clamp(28px,4vw,44px);color:#ece2cb">
-      <div style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.16em;color:#d8b07a;margin-bottom:14px">Made by</div>
+      <div style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.16em;color:#ecd3a6;margin-bottom:14px">Made by</div>
       <p style="font:400 clamp(18px,2.4vw,24px)/1.5 'Geist',sans-serif;color:#f0e8d6;margin:0;max-width:680px">Built by one person — that's me, <strong style="font-weight:700">Truman</strong> — with an AI pair at the keyboard alongside me. It's how a workshop of one covers the surface area of a small team without cutting corners on the craft.</p>
     </div>
   </section>
@@ -106,6 +116,6 @@
 
 </div>
 
-<script src="/ks.js"></script>
+<script src="/ks.js?v=2027.6"></script>
 </body>
 </html>

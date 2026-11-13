@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Library — everything on KiteSink, in one index</title>
+<meta name="description" content="The full KiteSink index: every project, tool, game, essay, roadmap and page on the site, searchable and grouped into shelves.">
+<link rel="canonical" href="https://kitesink.com/library">
+<link rel="alternate" type="application/atom+xml" title="KiteSink — the log" href="/feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KiteSink">
+<meta property="og:title" content="Library — everything on KiteSink, in one index">
+<meta property="og:description" content="Every project, tool, game, essay and page on the site, searchable and grouped into shelves.">
+<meta property="og:url" content="https://kitesink.com/library">
+<meta property="og:image" content="https://kitesink.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Library — everything on KiteSink, in one index">
+<meta name="twitter:description" content="Every project, tool, game, essay and page on the site, searchable and grouped into shelves.">
+<meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<meta name="theme-color" content="#ece2cb">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
+<link rel="stylesheet" href="/ks.css?v=2027.6">
+<style>
+  .k-hero { padding-bottom: clamp(20px, 3vw, 30px); }
+  .k-hero .k-h1 { max-width: none; }
+
+  /* the search bar sticks under the header while you scroll the shelves */
+  .lib-bar { position: sticky; top: 60px; z-index: 50; padding-block: 12px; background: color-mix(in srgb, var(--k-paper) 92%, transparent);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--k-rule); }
+  .lib-bar-in { display: grid; gap: 10px; }
+  @media (min-width: 860px) { .lib-bar-in { grid-template-columns: minmax(260px, 420px) minmax(0, 1fr) auto; align-items: center; gap: 16px; } }
+  .lib-q { position: relative; }
+  .lib-q svg { position: absolute; left: 16px; top: 50%; translate: 0 -50%; color: var(--k-mute); pointer-events: none; }
+  .lib-q .k-input { padding-left: 44px; min-height: 48px; border-radius: 30px; background: var(--k-raised); }
+  .lib-count { font: 500 12px/1.4 var(--k-mono); color: var(--k-mute); white-space: nowrap; }
+
+  .shelf { padding-block: clamp(30px, 4.6vw, 52px); border-top: 1px solid var(--k-rule); }
+  /* the search bar is sticky, and three rows tall on a phone: land anchors and focus below it */
+  html:has(.lib-bar) { scroll-padding-top: 244px; }
+  @media (min-width: 860px) { html:has(.lib-bar) { scroll-padding-top: 152px; } }
+  .shelf:first-child { border-top: 0; }
+  .shelf-h { display: grid; gap: 4px 20px; align-items: baseline; margin-bottom: 18px; }
+  @media (min-width: 700px) { .shelf-h { grid-template-columns: auto minmax(0, 1fr) auto; } }
+  .shelf-h h2 { font: 800 clamp(24px, 3.6vw, 34px)/1.05 var(--k-sans); letter-spacing: -.04em; }
+  .shelf-h p { font-size: 14.5px; color: var(--k-copy); }
+  .shelf-h span { font: 500 12px var(--k-mono); color: var(--k-brass); }
+  .rows { display: grid; gap: 0 clamp(24px, 4vw, 48px); }
+  @media (min-width: 900px) { .rows { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 14px; align-items: baseline; padding: 14px 8px 14px 2px; border-top: 1px solid var(--k-rule);
+    text-decoration: none; transition: padding .25s var(--k-ease), background .25s; }
+  .row:hover { padding-left: 10px; background: linear-gradient(90deg, color-mix(in srgb, var(--k-green) 9%, transparent), transparent 75%); }
+  .row b { font: 600 clamp(16px, 2vw, 18px)/1.3 var(--k-sans); letter-spacing: -.02em; color: var(--k-ink); transition: color .2s; }
+  .row:hover b { color: var(--k-green); }
+  .row .d { grid-column: 1; font-size: 14px; line-height: 1.5; color: var(--k-copy); text-wrap: pretty; }
+  .row .m { grid-row: 1; grid-column: 2; display: flex; align-items: center; gap: 10px; font: 500 10.5px/1.6 var(--k-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--k-mute); white-space: nowrap; }
+  .row .k-status { font-size: 10px; }
+  @media (max-width: 520px) { .row { grid-template-columns: minmax(0, 1fr); } .row .m { grid-row: auto; grid-column: 1; } }
+  .lib-empty { padding: clamp(40px, 8vw, 80px) 0; text-align: center; }
+  .lib-empty p { font-size: 17px; color: var(--k-copy); max-width: none; }
+  .lib-empty .ks-kit { display: block; width: 44px; height: 55px; margin: 0 auto 16px; }
+  .lib-empty .lib-acts { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+  .lib-foot { padding-block: clamp(34px, 5vw, 56px) clamp(52px, 8vw, 90px); border-top: 1px solid var(--k-rule); }
+  noscript ul { columns: 2; padding-left: 18px; line-height: 2; }
+</style>
+</head>
+<body class="ks-paper k2">
+<a class="k-skip" href="#main">Skip to content</a>
+<div data-ks="header" data-active="library"></div>
+
+<main id="main">
+
+  <section class="k-hero k-wrap" aria-labelledby="page-title">
+    <p class="k-seclabel"><span class="k-num">04</span><span style="view-transition-name:sec-library">Library</span></p>
+    <h1 class="k-h1" id="page-title">Everything, in one <em>index.</em></h1>
+    <p class="k-lead">Every project, tool, game, essay and page on this site. Current work sits on the top shelf; the rest is filed below. Nothing gets thrown away.</p>
+  </section>
+
+  <div class="lib-bar"><div class="k-wrap lib-bar-in">
+    <div class="lib-q">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+      <input class="k-input" id="q" type="search" placeholder="Search the library…" autocomplete="off" spellcheck="false" aria-label="Search the library" aria-controls="shelves">
+    </div>
+    <div class="k-seg k-seg--scroll" id="kinds" role="group" aria-label="Filter by kind">
+      <button type="button" value="all" aria-pressed="true">All</button>
+      <button type="button" value="Project" aria-pressed="false">Projects</button>
+      <button type="button" value="Tool" aria-pressed="false">Tools</button>
+      <button type="button" value="Game" aria-pressed="false">Games</button>
+      <button type="button" value="Writing" aria-pressed="false">Writing</button>
+      <button type="button" value="Page" aria-pressed="false">Pages</button>
+      <button type="button" value="Docs" aria-pressed="false">Docs</button>
+    </div>
+    <span class="lib-count" id="count" aria-live="polite"></span>
+  </div></div>
+
+  <div class="k-wrap" id="shelves">
+    <noscript>
+      <p class="k-copy" style="padding-top:30px">The library is built with JavaScript. Without it, start from these:</p>
+      <ul>
+        <li><a href="/consulting">Consulting</a></li><li><a href="/fitness">Fitness</a></li><li><a href="/music">Music</a></li><li><a href="/about">About</a></li>
+        <li><a href="/vantix">Vantix</a></li><li><a href="/song-of-the-day">Song of the Day</a></li><li><a href="/stage-first">Stage First</a></li><li><a href="/listening-club">Album Listening Club</a></li>
+        <li><a href="/campground-tycoon">Campground Tycoon</a></li><li><a href="/games">Games</a></li><li><a href="/blog">Writing</a></li>
+        <li><a href="/now">Now</a></li><li><a href="/uses">Uses</a></li><li><a href="/colophon">Colophon</a></li><li><a href="/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </noscript>
+  </div>
+
+  <div class="k-wrap lib-foot">
+    <p class="k-copy">This search is on every page: press <kbd class="ks-kbd">⌘K</kbd> / <kbd class="ks-kbd">Ctrl K</kbd>, or <kbd class="ks-kbd">/</kbd>. Looking for something that used to be here and isn’t? <a class="k-inline" href="mailto:hello@kitesink.com?subject=Can%E2%80%99t%20find%20something%20on%20KiteSink">Tell me</a>.</p>
+  </div>
+</main>
+
+<div data-ks="footer"></div>
+
+<script src="/site-index.js?v=2027.6"></script>
+<script src="/blog/posts.js"></script>
+<script src="/ks.js?v=2027.6"></script>
+<script>
+(function () {
+  "use strict";
+  var box = document.getElementById("shelves"), q = document.getElementById("q"), kinds = document.getElementById("kinds"), count = document.getElementById("count");
+  var esc = KS.esc, kind = "all";
+
+  function kindOf(it) { return it.k === "Reading" ? "Writing" : (it.k === "Legal" || it.k === "Feed") ? "Docs" : (it.k === "Section" || it.k === "Notes") ? (it.k === "Notes" ? "Tool" : "Page") : it.k; }
+  function shelfOf(it) { return it.shelf || ((it.k === "Writing" || it.k === "Reading") ? "writing" : "workshop"); }
+
+  function row(it) {
+    var meta = esc(KS.sectionLabel(it.s)) + (it.k && it.k !== "Section" ? " · " + esc(it.k) : "");
+    var status = it.status ? '<span class="k-status' + (it.wip ? " k-status--wip" : "") + '">' + esc(it.status) + '</span>' : (it.date ? '<span>' + esc(it.date) + '</span>' : "");
+    return '<a class="row" href="' + esc(it.h) + '"' + (it.ext ? ' target="_blank" rel="noopener"' : '') + '>' +
+      '<b>' + esc(it.t) + (it.ext ? ' ↗' : '') + '</b><span class="m">' + status + '<span>' + meta + '</span></span>' +
+      (it.d ? '<span class="d">' + esc(it.d) + '</span>' : '') + '</a>';
+  }
+
+  KS.loadIndex(function (items, ok) {
+    var SHELVES = window.KS_SHELVES || [];   // read here: site-index.js may only just have arrived
+    if (!ok || !SHELVES.length) {
+      box.innerHTML = '<div class="lib-empty"><p>The library index didn’t load. Reload the page, or start from the <a class="k-inline" href="/sitemap.xml">sitemap</a>.</p></div>';
+      return;
+    }
+    function render() {
+      var v = q.value.trim();
+      var pool = KS.search(items, v).filter(function (it) { return kind === "all" || kindOf(it) === kind; });
+      var html = "";
+      SHELVES.forEach(function (sh) {
+        var list = pool.filter(function (it) { return shelfOf(it) === sh.id; });
+        if (!list.length) return;
+        if (!v) list.sort(function (a, b) { return (b.now ? 1 : 0) - (a.now ? 1 : 0); }); // current work first; otherwise file order
+        html += '<section class="shelf" id="' + sh.id + '" aria-labelledby="sh-' + sh.id + '"><div class="shelf-h"><h2 id="sh-' + sh.id + '">' + esc(sh.title) + '</h2><p>' + esc(sh.note) + '</p><span>' + list.length + '</span></div>' +
+          '<div class="rows">' + list.map(row).join("") + '</div></section>';
+      });
+      if (!html) html = '<div class="lib-empty">' + (window.KS && window.KS.kit ? window.KS.kit("none") : '') + '<p>Nothing in the library matches “' + esc(v) + '”' + (kind !== "all" ? ' under that filter' : '') + '.</p><p class="lib-acts"><button class="k-btn k-btn--ghost k-btn--sm" type="button" id="reset">Clear the search</button><a class="k-btn k-btn--sm" href="/consulting#contact">Ask Truman directly</a></p></div>';
+      box.innerHTML = html;
+      count.textContent = pool.length + " of " + items.length + (pool.length === 1 ? " entry" : " entries");
+      var reset = document.getElementById("reset");
+      if (reset) reset.addEventListener("click", function () { q.value = ""; setKind("all"); q.focus(); });
+    }
+    function setKind(k) {
+      kind = k;
+      [].forEach.call(kinds.querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", b.value === k ? "true" : "false"); });
+      render();
+    }
+    kinds.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) setKind(b.value); });
+    q.addEventListener("input", render);
+
+    // /library?q=term pre-fills the search; /library#games jumps to a shelf
+    try { var p = new URLSearchParams(location.search).get("q"); if (p) q.value = p; } catch (e) {}
+    render();
+    if (location.hash) { var el = document.getElementById(location.hash.slice(1)); if (el) el.scrollIntoView(); }
+  });
+
+  // "/" focuses this page's own search instead of opening the palette
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+    var el = document.activeElement, tag = el && el.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+    e.preventDefault(); e.stopImmediatePropagation(); q.focus();
+  }, true);
+})();
+</script>
+</body>
+</html>

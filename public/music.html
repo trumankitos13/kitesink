@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Music — Song of the Day, Stage First &amp; the Album Listening Club · KiteSink</title>
+<meta name="description" content="Three music projects from KiteSink: Song of the Day, a daily song with its story; Stage First (the app called Backline until now), the business side of a live show; and the Album Listening Club, a monthly listening room.">
+<link rel="canonical" href="https://kitesink.com/music">
+<link rel="alternate" type="text/markdown" href="https://kitesink.com/music.md" title="Plain-text version">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KiteSink">
+<meta property="og:title" content="Music — listen, play, sit with a record">
+<meta property="og:description" content="Song of the Day, Stage First and the Album Listening Club: an app for listening, the business side of a show, and a room for sitting with a record.">
+<meta property="og:url" content="https://kitesink.com/music">
+<meta property="og:image" content="https://kitesink.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Music — listen, play, sit with a record">
+<meta name="twitter:description" content="Song of the Day, Stage First and the Album Listening Club.">
+<meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<meta name="theme-color" content="#ece2cb">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
+<link rel="stylesheet" href="/ks.css?v=2027.6">
+<style>
+  .k-hero { padding-bottom: clamp(26px, 3.4vw, 40px); }
+
+  /* "which one is for me?" */
+  .ways-pick { margin-top: clamp(22px, 3vw, 30px); display: grid; gap: 12px; }
+  .ways-pick .k-seg { justify-self: start; }
+  .ways-say { min-height: 3.2em; font-size: 15.5px; line-height: 1.55; color: var(--k-copy); max-width: 62ch; }
+  .ways-say a { white-space: nowrap; }
+
+  /* feature bands: one product each, in its own colours */
+  .feat { padding-block: clamp(18px, 2.6vw, 28px); }
+  .feat:first-of-type { padding-top: clamp(26px, 4vw, 44px); }
+  .feat .k-pc { padding: clamp(22px, 4vw, 44px); transition: filter .35s, outline-color .35s, translate .25s var(--k-ease), box-shadow .25s; }
+  .feat-grid { display: grid; gap: clamp(22px, 4vw, 52px); }
+  @media (min-width: 900px) { .feat-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; } .feat-grid--flip > :first-child { order: 2; } }
+  .feat-copy { display: flex; flex-direction: column; gap: 16px; }
+  .feat .k-pc-title { font-size: clamp(30px, 5vw, 52px); }
+  .feat .k-pc p { font-size: clamp(15.5px, 1.8vw, 17.5px); max-width: 52ch; }
+  .feat-name { font: 600 13px/1.3 var(--k-mono); letter-spacing: .04em; color: var(--pc-ink); }
+  .feat-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 4px; }
+  .feat-links .k-chip { color: var(--pc-copy); border-color: var(--pc-rule); }
+  .feat-links .k-chip:hover { color: var(--pc-accent); border-color: var(--pc-accent); background: transparent; }
+  .feat-btn { background: var(--pc-accent); color: var(--pc-bg) !important; }
+  .feat-btn:hover { background: var(--pc-accent); filter: brightness(1.08); }
+  /* ring the features that match the chosen way in. The others lose some colour
+     but no opacity, so their text keeps its contrast. */
+  .feats[data-mode="listen"] .feat[data-for~="listen"] .k-pc,
+  .feats[data-mode="play"]   .feat[data-for~="play"] .k-pc,
+  .feats[data-mode="team"]   .feat[data-for~="team"] .k-pc { outline: 3px solid var(--k-green); outline-offset: 5px; }
+  .feats[data-mode="listen"] .feat:not([data-for~="listen"]) .k-pc,
+  .feats[data-mode="play"]   .feat:not([data-for~="play"]) .k-pc,
+  .feats[data-mode="team"]   .feat:not([data-for~="team"]) .k-pc { filter: saturate(.35); }
+  .feats .feat .k-pc:is(:hover, :focus-within) { filter: none; }
+
+  /* three-up lists inside a feature */
+  .trio { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .trio li { padding: 13px 0; border-top: 1px solid var(--pc-rule); display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 2px 8px; }
+  .trio li:last-child { border-bottom: 1px solid var(--pc-rule); }
+  .trio i { font: 500 11px/1.7 var(--k-mono); font-style: normal; color: var(--pc-accent); }
+  .trio b { font: 600 16px/1.3 var(--k-sans); letter-spacing: -.015em; }
+  .trio span { grid-column: 2; font-size: 14px; line-height: 1.5; color: var(--pc-copy); }
+
+  /* song of the day sample */
+  .sample { border-radius: 14px; border: 1px solid var(--pc-rule); background: var(--pc-tint); padding: 18px; display: grid; gap: 14px; }
+  .sample-top { display: flex; justify-content: space-between; gap: 10px; font: 600 10px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--pc-copy); }
+  .sample-now { display: flex; gap: 16px; align-items: center; }
+  .sample-now img { width: 96px; height: 117px; object-fit: cover; border-radius: 6px; border: 1px solid var(--pc-rule); background: #fff; flex-shrink: 0; }
+  .sample-now b { display: block; font: 700 clamp(20px, 3vw, 26px)/1.15 var(--k-sans); letter-spacing: -.025em; }
+  .sample-now span { display: block; margin-top: 4px; font-size: 15px; color: var(--pc-copy); }
+  @keyframes eqled { 0%,100% { clip-path: inset(58% 0 0 0); } 50% { clip-path: inset(4% 0 0 0); } }
+  .eq { display: flex; align-items: stretch; gap: 4px; height: 46px; padding-bottom: 2px; border-bottom: 2px solid var(--pc-rule); }
+  .eq i { flex: 1; background: linear-gradient(to top, var(--pc-accent) 0 70%, color-mix(in srgb, var(--pc-accent) 55%, var(--pc-ink)) 70% 100%);
+    -webkit-mask-image: repeating-linear-gradient(to top, #000 0 3px, transparent 3px 5px); mask-image: repeating-linear-gradient(to top, #000 0 3px, transparent 3px 5px);
+    animation: eqled 1.15s ease-in-out infinite; }
+  .eq.paused i { animation-play-state: paused; }
+  .sample-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .sample-foot button { border: 1px solid var(--pc-rule); background: transparent; color: var(--pc-ink); border-radius: 30px; padding: 9px 14px; min-height: 40px; cursor: pointer; font: 600 12px/1 var(--k-mono); }
+  .sample-foot button:hover { border-color: var(--pc-accent); color: var(--pc-accent); }
+
+  /* backline on-call demo */
+  .demo { border-radius: 14px; border: 1px solid rgba(255,255,255,.12); background: #111318; padding: 16px; }
+  .oncall { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #1a1d24; border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; padding: 13px 16px; cursor: pointer; user-select: none; -webkit-user-select: none; }
+  .oncall b { display: block; font: 600 16px/1.3 var(--k-sans); color: #f3f4f6; }
+  .oncall small { display: block; font: 500 11px/1.4 var(--k-mono); color: #8e949f; margin-top: 2px; }
+  .oncall-track { position: relative; width: 54px; height: 30px; border-radius: 20px; background: #3a3d45; flex-shrink: 0; transition: background .22s; }
+  .oncall-track::after { content: ""; position: absolute; left: 3px; top: 3px; width: 24px; height: 24px; border-radius: 50%; background: #f3f4f6; box-shadow: 0 2px 5px rgba(0,0,0,.4); transition: left .22s var(--k-ease); }
+  .oncall[aria-checked="true"] .oncall-track { background: #f8ab3c; }
+  .oncall[aria-checked="true"] .oncall-track::after { left: 27px; }
+  .gigs { transition: opacity .25s; margin-top: 12px; }
+  .oncall[aria-checked="false"] + .gigs { opacity: .3; }
+  .gigs-h { font: 500 12px/1.4 var(--k-mono); color: #a6abb5; }
+  .gigs-h b { color: #f8ab3c; font-weight: 600; }
+  .gig { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid rgba(255,255,255,.1); }
+  .gig:first-of-type { margin-top: 8px; }
+  .gig b { display: block; font: 600 15px/1.3 var(--k-sans); color: #f3f4f6; }
+  .gig small { font: 500 10.5px/1.3 var(--k-mono); color: #8e949f; }
+  .gig span { font: 600 13px var(--k-mono); color: #4bd6cf; flex-shrink: 0; }
+  .demo-note { margin-top: 10px; font: 500 11px/1.5 var(--k-mono) !important; color: #8e949f !important; }
+
+  /* listening club facts */
+  .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--pc-rule); border-radius: 12px; overflow: hidden; }
+  .facts div { padding: 16px 18px; border-top: 1px solid var(--pc-rule); border-left: 1px solid var(--pc-rule); margin: -1px 0 0 -1px; }
+  .facts b { display: block; font: 700 clamp(19px, 2.6vw, 24px)/1.2 var(--k-sans); letter-spacing: -.025em; }
+  .facts small { font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); }
+
+  .relaunch { padding: 12px 16px; border-left: 3px solid var(--pc-accent); background: var(--pc-tint); border-radius: 0 10px 10px 0; color: var(--pc-ink) !important; }
+  .relaunch b { color: var(--pc-accent); }
+  .team { display: grid; gap: 18px 40px; align-items: center; padding: clamp(24px, 4vw, 44px); border-radius: var(--k-r); }
+  @media (min-width: 820px) { .team { grid-template-columns: minmax(0, 1fr) auto; } }
+</style>
+</head>
+<body class="ks-paper k2">
+<a class="k-skip" href="#main">Skip to content</a>
+<div data-ks="header" data-active="music"></div>
+
+<main id="main">
+
+  <section class="k-hero k-wrap" aria-labelledby="page-title">
+    <p class="k-seclabel"><span class="k-num">03</span><span style="view-transition-name:sec-music">Music</span></p>
+    <h1 class="k-h1" id="page-title">Listen, play, sit with a <em>record.</em></h1>
+    <p class="k-lead">Three music projects: an app that brings one song a day, a network for players who need a sub tonight, and a monthly room for hearing albums start to finish, which starts fresh on 30 January 2027.</p>
+
+    <div class="ways-pick">
+      <p class="k-label" id="ways-label">Which one is for me?</p>
+      <div class="k-seg" id="ways" role="group" aria-labelledby="ways-label">
+        <button type="button" value="all" aria-pressed="true">Show all</button>
+        <button type="button" value="listen" aria-pressed="false">I listen</button>
+        <button type="button" value="play" aria-pressed="false">I play</button>
+        <button type="button" value="team" aria-pressed="false">I run a music team</button>
+      </div>
+      <p class="ways-say" id="ways-say" aria-live="polite">An app for listening, a network for playing, and a room for sitting with a record.</p>
+    </div>
+  </section>
+
+  <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
+    <a href="#song-of-the-day">Song of the Day</a><a href="#stage-first">Stage First</a><a href="#listening-club">Listening Club</a><a href="#for-teams">For music teams</a>
+  </div></nav>
+
+  <div class="feats k-wrap" id="feats" data-mode="all">
+
+    <!-- ===================== SONG OF THE DAY ===================== -->
+    <section class="feat" id="song-of-the-day" data-for="listen" aria-labelledby="h-sotd">
+      <article class="k-pc k-pc--sotd k-reveal">
+        <div class="feat-grid">
+          <div class="feat-copy">
+            <div class="k-pc-top"><span class="k-pc-tag">♪ Song of the Day · iOS app</span><span class="k-status k-status--soon">App Store · coming soon</span></div>
+            <h2 class="k-pc-title" id="h-sotd">One song a day, read like it matters.</h2>
+            <p>A single, hand-picked song each morning — the story behind it, the songs it descends from, the ones it made possible. No feed. No shuffle.</p>
+            <ul class="trio">
+              <li><i>01</i><b>The Daily</b><span>A print feature, every morning: why it matters, the facts, the lineage, liner notes.</span></li>
+              <li><i>02</i><b>The Almanac</b><span>Collect what stays with you; your Library redraws it as a portrait of your year.</span></li>
+              <li><i>03</i><b>The Story</b><span>Music as literature, not algorithm.</span></li>
+            </ul>
+            <div class="feat-links">
+              <a class="k-btn feat-btn" href="/song-of-the-day">See the app</a>
+              <a class="k-chip" href="/song-of-the-day/support">Support</a><a class="k-chip" href="/song-of-the-day/privacy">Privacy</a><a class="k-chip" href="/song-of-the-day/terms">Terms</a>
+            </div>
+          </div>
+          <div class="sample">
+            <div class="sample-top"><span>A sample pick</span><span>Free · no ads · no account</span></div>
+            <div class="sample-now">
+              <img src="/img/maple-leaf-rag.jpg" alt="Sheet-music cover of Maple Leaf Rag by Scott Joplin" width="500" height="611" decoding="async">
+              <div><b>Maple Leaf Rag</b><span>Scott Joplin · 1899</span></div>
+            </div>
+            <div class="eq" id="eq" aria-hidden="true"><i style="animation-duration:1.15s;animation-delay:-.2s"></i><i style="animation-duration:.95s;animation-delay:-.55s"></i><i style="animation-duration:1.3s;animation-delay:-.85s"></i><i style="animation-duration:1.05s;animation-delay:-.35s"></i><i style="animation-duration:1.4s;animation-delay:-.7s"></i><i style="animation-duration:.9s;animation-delay:-.1s"></i><i style="animation-duration:1.2s;animation-delay:-.95s"></i><i style="animation-duration:1.1s;animation-delay:-.5s"></i><i style="animation-duration:1.35s;animation-delay:-.28s"></i><i style="animation-duration:1s;animation-delay:-.78s"></i><i style="animation-duration:1.25s;animation-delay:-.42s"></i><i style="animation-duration:1.08s;animation-delay:-.64s"></i><i style="animation-duration:1.18s;animation-delay:-.15s"></i><i style="animation-duration:.98s;animation-delay:-.6s"></i><i style="animation-duration:1.32s;animation-delay:-.9s"></i><i style="animation-duration:1.06s;animation-delay:-.3s"></i></div>
+            <div class="sample-foot"><span class="k-label">The meter is decoration; the app links out to play.</span><button type="button" id="eq-toggle">Pause the meter</button></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== BACKLINE ===================== -->
+    <section class="feat" id="stage-first" data-for="play" aria-labelledby="h-backline">
+      <article class="k-pc k-pc--backline k-reveal">
+        <div class="feat-grid feat-grid--flip">
+          <div class="feat-copy">
+            <div class="k-pc-top"><span class="k-pc-tag">Stage First · the staffing side</span><span class="k-status">Prototype · staging beta</span></div>
+            <h2 class="k-pc-title" id="h-backline">Your drummer bailed. The show goes on.</h2>
+            <p>Find a sub nearby who’s free tonight, watch a reel of them actually playing, message, book and pay — all before soundcheck. This is the staffing side of Stage First, the app called Backline until now. Its other side, a closeout that turns the night’s ticket reports into one approved report, is at design stage.</p>
+            <ul class="trio">
+              <li><i>01</i><b>Hit SOS</b><span>Pick the role and the night. Only players who marked themselves free get pinged.</span></li>
+              <li><i>02</i><b>Watch them play</b><span>A reel of the real thing.</span></li>
+              <li><i>03</i><b>Send the offer, pay on hold</b><span>Role, time, venue, fee. Money is held and released after the show. Payments are still in test mode.</span></li>
+            </ul>
+            <div class="feat-links">
+              <a class="k-btn feat-btn" href="/stage-first">See Stage First</a>
+              <span class="k-label">A prototype, still in development.</span>
+            </div>
+          </div>
+          <div class="demo">
+            <div class="oncall" id="oncall" role="switch" tabindex="0" aria-checked="true" aria-label="Stage First demo: on call">
+              <div><b id="oncall-t">You’re on call</b><small id="oncall-s">Demo · bass, guitar</small></div>
+              <span class="oncall-track" aria-hidden="true"></span>
+            </div>
+            <div class="gigs" aria-hidden="true">
+              <p class="gigs-h"><b>3 bands</b> nearby need bass tonight</p>
+              <div class="gig"><div><b>The Velvet Hours</b><small>9:00 · demo listing</small></div><span>$130</span></div>
+              <div class="gig"><div><b>Ramona Fault</b><small>10:30 · demo listing</small></div><span>$90</span></div>
+              <div class="gig"><div><b>Paper Lanterns</b><small>11:15 · demo listing</small></div><span>$110</span></div>
+            </div>
+            <p class="demo-note">Flip the switch. This is a mock of the core idea with made-up listings.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== LISTENING CLUB ===================== -->
+    <section class="feat" id="listening-club" data-for="listen play" aria-labelledby="h-club">
+      <article class="k-pc k-pc--club k-reveal">
+        <div class="feat-grid">
+          <div class="feat-copy">
+            <div class="k-pc-top"><span class="k-pc-tag">Album Listening Club · in person</span><span class="k-status">Back for 2027</span></div>
+            <h2 class="k-pc-title" id="h-club">Three albums, one quiet afternoon, once a month.</h2>
+            <p>A listening club for the music-curious — welcoming, not gatekept. No ticket, no RSVP, nobody quizzed at the door.</p>
+            <p class="relaunch"><b>Starting fresh for 2027.</b> The inaugural session is Saturday 30 January, at midday. After that, the last Saturday of every month.</p>
+            <ul class="trio">
+              <li><i>01</i><b>Prompts</b><span>An optional prompt every fifteen minutes or so: composition, influence, emotional tone, production.</span></li>
+              <li><i>02</i><b>Best Pick</b><span>A vote at the end of every session. The winner enters the Album Hall of Fame.</span></li>
+              <li><i>03</i><b>Nothing compulsory</b><span>Every ritual is opt-in. Listening quietly counts as taking part.</span></li>
+            </ul>
+            <div class="feat-links">
+              <a class="k-btn feat-btn" href="/listening-club">How it works</a>
+              <a class="k-go k-go--out" href="https://discord.gg/Ext66DNAt" target="_blank" rel="noopener">Join the Discord</a>
+            </div>
+          </div>
+          <div>
+            <div class="facts">
+              <div><b>30 Jan</b><small>first session, 2027</small></div>
+              <div><b>Midday</b><small>doors open</small></div>
+              <div><b>~3 hrs</b><small>come and go</small></div>
+              <div><b>Free</b><small>bring a drink</small></div>
+            </div>
+            <p style="margin-top:14px;font-size:14px">Locations rotate and are posted in Discord. Questions: <a class="k-inline" style="color:var(--pc-accent) !important" href="mailto:club@kitesink.com">club@kitesink.com</a></p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== FOR MUSIC TEAMS ===================== -->
+    <section class="feat" id="for-teams" data-for="team" aria-labelledby="h-teams" style="padding-bottom:clamp(52px,8vw,96px)">
+      <article class="k-pc k-card--pine team k-reveal" style="--pc-bg:#23402b;--pc-ink:#f0e8d6;--pc-copy:#c2ceb9;--pc-accent:#d8b07a;--pc-rule:transparent">
+        <div>
+          <p class="k-pc-tag">KiteSink Consulting · for music teams</p>
+          <h2 class="k-pc-title" id="h-teams" style="margin-top:10px;font-size:clamp(26px,4vw,40px)">Work in music? Better systems behind it.</h2>
+          <p style="margin-top:12px">Workflow automation, operations improvements and practical AI for labels, artist teams and music companies.</p>
+        </div>
+        <a class="k-btn k-btn--cream" href="/consulting" style="justify-self:start">See Consulting</a>
+      </article>
+    </section>
+
+  </div>
+</main>
+
+<div data-ks="footer"></div>
+
+<script src="/ks.js?v=2027.6"></script>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+
+  // ---- "Which one is for me?" — rings the projects that fit ----
+  (function () {
+    var seg = $("ways"), feats = $("feats"), say = $("ways-say");
+    var SAY = {
+      all: 'An app for listening, a network for playing, and a room for sitting with a record.',
+      listen: 'Start with <a class="k-inline" href="#song-of-the-day">Song of the Day</a> for one good song each morning, and come to the <a class="k-inline" href="#listening-club">Listening Club</a> when you want a whole afternoon of it.',
+      play: 'The staffing side of <a class="k-inline" href="#stage-first">Stage First</a> is being built for you: find or be the sub. The <a class="k-inline" href="#listening-club">Listening Club</a> is where players and listeners share a room.',
+      team: 'That’s the consulting side: <a class="k-inline" href="#for-teams">better systems behind the music</a> — intake, handoffs, and the data in between.'
+    };
+    seg.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      [].forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      feats.setAttribute("data-mode", b.value);
+      say.innerHTML = SAY[b.value];
+    });
+  })();
+
+  // ---- Song of the Day: pause / resume the decorative meter ----
+  (function () {
+    var btn = $("eq-toggle"), eq = $("eq"); if (!btn) return;
+    btn.addEventListener("click", function () {
+      var paused = eq.classList.toggle("paused");
+      btn.textContent = paused ? "Run the meter" : "Pause the meter";   // the label says what it does; no pressed state on top
+    });
+  })();
+
+  // ---- Backline: "on call" demo switch ----
+  (function () {
+    var sw = $("oncall"); if (!sw) return;
+    var title = $("oncall-t"), sub = $("oncall-s"), on = true;
+    function flip() {
+      on = !on;
+      sw.setAttribute("aria-checked", on ? "true" : "false");
+      title.textContent = on ? "You’re on call" : "You’re off call";
+      sub.textContent = on ? "Demo · bass, guitar" : "Flip on to appear in searches";
+    }
+    sw.addEventListener("click", flip);
+    sw.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flip(); } });
+  })();
+})();
+</script>
+</body>
+</html>

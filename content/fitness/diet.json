@@ -1,0 +1,2290 @@
+{
+  "domain": "diet",
+  "topics": [
+    {
+      "id": "deficit",
+      "label": "Deficit and rate of loss"
+    },
+    {
+      "id": "muscle",
+      "label": "Keeping muscle"
+    },
+    {
+      "id": "hunger",
+      "label": "Hunger and fullness"
+    },
+    {
+      "id": "plateau",
+      "label": "Scale, plateaus and metabolism"
+    },
+    {
+      "id": "strategy",
+      "label": "Diet type and meal pattern"
+    },
+    {
+      "id": "movement",
+      "label": "Cardio and daily movement"
+    },
+    {
+      "id": "lean",
+      "label": "Very lean, regain and maintenance"
+    },
+    {
+      "id": "gain",
+      "label": "Gaining phases"
+    }
+  ],
+  "entries": [
+    {
+      "id": "diet-deficit-rule-of-thumb",
+      "type": "note",
+      "title": "The 3,500 kcal per pound rule is a rough guide that varies with body fat",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "hall-2007",
+        "hall-2011"
+      ],
+      "take": "About 3,500 kcal (7,700 per kg) per pound of loss is only an average, and leaner people need less per unit lost.",
+      "body": "The rule says a cumulative deficit of 3,500 kcal equals one pound (32.2 MJ per kg) of weight loss. A model found it approximately matches obese people with more than 30 kg of body fat, and it overestimates the deficit needed for people with less body fat. Weight also responds slowly: the half time was about one year in a separate model. Use it to size a plan, then correct against the scale.",
+      "do": [
+        "Use the rule to pick a starting deficit, then check the trend over three to four weeks."
+      ]
+    },
+    {
+      "id": "diet-deficit-rate",
+      "type": "note",
+      "title": "Aim to lose about 0.5 to 1 percent of body weight a week",
+      "topic": "deficit",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "helms-2014-prep",
+        "garthe-2011",
+        "roberts-2020"
+      ],
+      "take": "A pace of 0.5 to 1 percent of body weight a week is the usual advice for keeping muscle while getting leaner.",
+      "body": "A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the 1.4 percent group kept lean mass unchanged and lost 21 percent of fat mass. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).",
+      "do": [
+        "Pick a weekly percentage, convert it to kg or lb, and check against your four-week trend."
+      ]
+    },
+    {
+      "id": "diet-deficit-muscle-cost",
+      "type": "note",
+      "title": "Deficits much beyond 500 kcal a day cost lean mass in lifters",
+      "topic": "deficit",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "murphy-2021"
+      ],
+      "take": "In a meta-regression, a deficit of about 500 kcal a day stopped lean-mass gains from training, while strength held up.",
+      "body": "A systematic review and meta-analysis of resistance training in an energy deficit found lean-mass gains were impaired against training without a deficit (effect size -0.57), but strength gains were comparable. The meta-regression put the point where gains were prevented at roughly 500 kcal a day. For people trying to preserve lean mass rather than add it, the authors advise avoiding deficits above that size.",
+      "do": [
+        "Keep deficits at or below about 500 kcal a day if gaining or keeping muscle is the priority."
+      ]
+    },
+    {
+      "id": "diet-mistake-too-fast",
+      "type": "mistake",
+      "title": "Dieting faster than 1 percent of body weight a week",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "garthe-2011",
+        "helms-2014-prep"
+      ],
+      "take": "Faster loss retained less lean mass in athletes, and the speed is hard to keep up.",
+      "body": "In 24 athletes, a 1.4 percent weekly loss kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. Reviews recommend 0.5 to 1 percent a week.",
+      "do": [
+        "Slow the deficit to 0.5 to 1 percent of body weight a week."
+      ]
+    },
+    {
+      "id": "diet-num-rate",
+      "type": "number",
+      "title": "Rate of loss",
+      "topic": "deficit",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "helms-2014-prep",
+        "garthe-2011"
+      ],
+      "value": "0.5-1",
+      "unit": "% body weight per week",
+      "sort": 0.5,
+      "take": "Usual pace for keeping muscle; at 80 kg (176 lb) that is 0.4 to 0.8 kg a week."
+    },
+    {
+      "id": "diet-num-deficit-limit",
+      "type": "number",
+      "title": "Deficit that stopped lean-mass gains",
+      "topic": "deficit",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "murphy-2021"
+      ],
+      "value": "500",
+      "unit": "kcal per day",
+      "sort": 500,
+      "take": "In a meta-regression, deficits around this size prevented gains in lean mass in trained lifters."
+    },
+    {
+      "id": "diet-num-3500",
+      "type": "number",
+      "title": "Energy per pound of weight lost",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "hall-2007"
+      ],
+      "value": "3,500",
+      "unit": "kcal per lb",
+      "sort": 3500,
+      "take": "The classic rule of thumb, which equals about 7,700 kcal per kg and varies with body fat."
+    },
+    {
+      "id": "diet-term-energy-deficit",
+      "type": "term",
+      "title": "Energy deficit",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "Eating less energy than you use. It is the one requirement for losing body fat. A daily deficit of 500 kcal is about 3,500 kcal a week."
+    },
+    {
+      "id": "diet-table-deficit-rate",
+      "type": "table",
+      "title": "Deficit size versus expected weekly loss",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "hall-2007",
+        "helms-2014-prep",
+        "murphy-2021",
+        "garthe-2011"
+      ],
+      "take": "Approximate weekly loss for a daily deficit at 7,700 kcal per kg (3,500 per lb), for an 80 kg (176 lb) person. It overstates loss for lean people.",
+      "columns": [
+        "Daily deficit",
+        "Weekly total",
+        "Loss per week",
+        "Share of 80 kg (176 lb)",
+        "Comment"
+      ],
+      "rows": [
+        [
+          "250 kcal",
+          "1,750 kcal",
+          "0.23 kg (0.5 lb)",
+          "0.3%",
+          "Slow; below the usual range"
+        ],
+        [
+          "500 kcal",
+          "3,500 kcal",
+          "0.45 kg (1.0 lb)",
+          "0.6%",
+          "In range; near the limit seen for lean-mass trials"
+        ],
+        [
+          "750 kcal",
+          "5,250 kcal",
+          "0.68 kg (1.5 lb)",
+          "0.85%",
+          "In range; hold protein and training high"
+        ],
+        [
+          "1,000 kcal",
+          "7,000 kcal",
+          "0.91 kg (2.0 lb)",
+          "1.1%",
+          "Above 1%; more lean loss in athletes"
+        ]
+      ]
+    },
+    {
+      "id": "diet-protein-in-deficit",
+      "type": "note",
+      "title": "Eat more protein when you diet: about 2.3 to 3.1 g per kg of lean mass",
+      "topic": "muscle",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "helms-2014-protein",
+        "jager-2017",
+        "longland-2016",
+        "wycherley-2012"
+      ],
+      "take": "Lean lifters in a deficit kept more muscle with higher protein, around 2.3 to 3.1 g per kg of fat-free mass.",
+      "body": "A review of six studies in lean, resistance-trained athletes in a deficit put protein needs at 2.3 to 3.1 g per kg of fat-free mass, scaled up with the severity of the deficit and the leanness. The ISSN position gives 2.3 to 3.1 g per kg of body weight. In a 4-week trial of 40 young men on a large deficit, 2.4 g/kg gained 1.2 kg of lean mass against 0.1 kg on 1.2 g/kg. A meta-analysis of 24 trials found higher protein held on to 0.43 kg more fat-free mass.",
+      "do": [
+        "Set protein by your lean mass, and move up as the diet gets harder and you get leaner."
+      ]
+    },
+    {
+      "id": "diet-lift-in-deficit",
+      "type": "note",
+      "title": "Keep lifting while dieting, because training tells the body to keep muscle",
+      "topic": "muscle",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "bellicha-2021",
+        "sardeli-2018",
+        "murphy-2021"
+      ],
+      "take": "Resistance training reduced the lean mass lost in a diet, and strength was largely kept in deficit trials.",
+      "body": "An overview of 12 systematic reviews (149 studies) found resistance training limited lean mass loss during weight loss by about 0.8 kg. In six trials of older adults with obesity, training offset about 93 percent of the lean mass lost to calorie restriction. Strength gains in the deficit trials were comparable with and without a deficit.",
+      "do": [
+        "Keep the main lifts heavy, and drop sets before you drop load."
+      ]
+    },
+    {
+      "id": "diet-sleep-in-deficit",
+      "type": "note",
+      "title": "Short sleep shifts diet loss toward muscle and away from fat",
+      "topic": "muscle",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "nedeltcheva-2010"
+      ],
+      "take": "In ten adults, five and a half hours of sleep cut the fat share of weight lost by 55 percent.",
+      "body": "Ten overweight adults ate a reduced-calorie diet for 14 days in two conditions, with 8.5 or 5.5 hours in bed. Short sleep cut the fraction of weight lost as fat by 55 percent (1.4 vs 0.6 kg) and increased loss of fat-free mass by 60 percent (1.5 vs 2.4 kg). Hunger rose too. It is a very small and short crossover study, so treat it as a strong hint and not a finding.",
+      "do": [
+        "Protect seven to nine hours in bed while dieting."
+      ]
+    },
+    {
+      "id": "diet-mistake-low-protein-no-lifting",
+      "type": "mistake",
+      "title": "Cutting protein and stopping lifting while dieting",
+      "topic": "muscle",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "helms-2014-protein",
+        "bellicha-2021"
+      ],
+      "take": "The two habits that protect muscle in a deficit are protein and heavy training, and dropping both costs lean mass.",
+      "body": "Higher protein held on to lean mass in trials of lean lifters, and training reduced lean loss by about 0.8 kg across an overview of reviews.",
+      "do": [
+        "Keep protein high and lifts heavy until the diet ends."
+      ]
+    },
+    {
+      "id": "diet-num-protein-deficit",
+      "type": "number",
+      "title": "Protein in a deficit",
+      "topic": "muscle",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "helms-2014-protein",
+        "jager-2017"
+      ],
+      "value": "2.3-3.1",
+      "unit": "g per kg lean mass",
+      "sort": 2.3,
+      "take": "ISSN and review ranges for lean lifters dieting; raise it as the deficit and leanness grow."
+    },
+    {
+      "id": "diet-hunger-protein-food",
+      "type": "note",
+      "title": "Protein and unprocessed food help control hunger, at least in the short run",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "kohanmoo-2020",
+        "hall-2019"
+      ],
+      "take": "Protein reduced hunger in meal studies, and a ward trial found unprocessed meals led to about 500 kcal less intake.",
+      "body": "A meta-analysis of 49 acute studies found protein lowered hunger and raised fullness, but long-term trials were inconclusive. In a ward study of 20 adults, ultra-processed meals led to 508 kcal a day more intake than unprocessed meals matched on presented calories, sugar, fibre and sodium, with weight up 0.9 kg against down 0.9 kg over two weeks. That is one small, short crossover trial.",
+      "do": [
+        "Build meals around protein and whole foods before cutting portion size."
+      ]
+    },
+    {
+      "id": "diet-appetite-rises",
+      "type": "note",
+      "title": "Appetite rises as you lose weight, so hunger is part of the process",
+      "topic": "hunger",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "polidori-2016"
+      ],
+      "take": "In one 52-week trial, appetite rose enough to add about 100 kcal a day per kg of weight lost.",
+      "body": "In 153 people losing weight without being aware of the deficit, a model found eating drifted above baseline by about 100 kcal a day for each kilogram lost, more than three times the matching fall in energy expenditure. This is one analysis of one drug trial. It points to appetite, not metabolism, as the main pressure against keeping weight off.",
+      "do": [
+        "Plan for hunger to rise late in a diet, and use protein, fibre and a fixed end date."
+      ]
+    },
+    {
+      "id": "diet-num-appetite",
+      "type": "number",
+      "title": "Appetite rise per kg of weight lost",
+      "topic": "hunger",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "polidori-2016"
+      ],
+      "value": "100",
+      "unit": "kcal per day per kg",
+      "sort": 100,
+      "take": "In one trial, eating drifted above baseline by about this much for each kilogram lost."
+    },
+    {
+      "id": "diet-energy-density",
+      "type": "note",
+      "title": "Water-rich fruit and vegetables lower hunger for the same calories",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "limited",
+      "take": "In one year-long trial, women who ate more water-rich foods lost more weight and reported less hunger.",
+      "body": "In 97 women with obesity told to cut fat, one group was also told to eat more water-rich foods, mainly fruit and vegetables, with no calorie goal. Among completers after a year, that group lost 7.9 kg against 6.4 kg, ate a greater weight of food at a lower energy density, and reported less hunger. It is one trial in women with obesity, not lifters.",
+      "do": [
+        "Fill half the plate with vegetables or fruit before adding the rest."
+      ],
+      "sources": [
+        "ello-martin-2007",
+        "hall-2019"
+      ]
+    },
+    {
+      "id": "diet-metabolic-adaptation",
+      "type": "note",
+      "title": "Metabolic slowdown with dieting is real but smaller than most people fear",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "nunes-cl-2021",
+        "martins-2020",
+        "muller-2015",
+        "fothergill-2016"
+      ],
+      "take": "Adaptation is real but small, tens to low hundreds of kcal a day in most studies, so check your log first.",
+      "body": "A systematic review of 33 studies (2,528 participants) found adaptive thermogenesis in 27, with lower or non-significant values in the better-designed studies. In 171 women, the drop after loss was 54 kcal a day, and in a subset of 46 it was no longer significant at one and two years. In 32 men on a 50 percent deficit for three weeks, true adaptation was 72 kcal a day. After 6 years, 14 Biggest Loser contestants were 499 kcal a day below prediction, an extreme case.",
+      "do": [
+        "Check the log and weekends before blaming metabolism."
+      ]
+    },
+    {
+      "id": "diet-scale-noise",
+      "type": "note",
+      "title": "Day-to-day weight changes are mostly water, so read the trend",
+      "topic": "plateau",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "bhutani-2017",
+        "kreitzman-1992",
+        "orsama-2014",
+        "white-2011"
+      ],
+      "take": "Two-week changes of 1 to 3 kg were largely fat-free mass and water, not fat, in free-living adults.",
+      "body": "In 46 adults, a unit of two-week weight change was 84 percent fat-free mass, and the energy density of 1 to 3 kg changes was about 2,380 kcal per kg, well below that of fat. Glycogen is stored with three to four parts water. Weight runs higher on Sunday and Monday in 80 adults, and fluid retention peaks at the start of menstrual flow in 62 women. None of these is fat gain.",
+      "do": [
+        "Weigh at the same time under the same conditions, and judge the weekly average."
+      ]
+    },
+    {
+      "id": "diet-stall-not-failure",
+      "type": "note",
+      "title": "A two-week stall is not proof your diet stopped working",
+      "topic": "plateau",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "lichtman-1992",
+        "racette-2008",
+        "bhutani-2017"
+      ],
+      "take": "Check logging and weekend intake before cutting calories, since stalls are usually noise or under-logging.",
+      "body": "Ten people who reported not losing weight on under 1,200 kcal actually under-reported intake by 47 percent and over-reported activity by 51 percent. In a one-year trial of 48 adults, calorie-restricted participants stopped losing weight on weekends. Add water noise from the table above and a two-week stall tells you little. A real stall holds over three to four weeks of honest logging.",
+      "do": [
+        "Wait three to four weeks, then cut by about 100 to 200 kcal or add steps."
+      ]
+    },
+    {
+      "id": "diet-mistake-react-to-stall",
+      "type": "mistake",
+      "title": "Cutting calories after a short stall",
+      "topic": "plateau",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "racette-2008",
+        "bhutani-2017",
+        "murphy-2021"
+      ],
+      "take": "Short stalls are mostly water and weekend noise, and cutting on them stacks deficit on top of a working plan.",
+      "body": "A two-week plateau can come from water, a missed weekend or logging drift, as 48 adults who stopped losing on weekends showed. Cutting calories on a stall moves you toward the 500 kcal limit sooner. Wait three to four weeks, check the log, and only then change calories or steps.",
+      "do": [
+        "Check the four-week trend and the log before changing calories."
+      ]
+    },
+    {
+      "id": "diet-num-short-term-density",
+      "type": "number",
+      "title": "Energy per kg for short-term changes",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "bhutani-2017"
+      ],
+      "value": "2,380",
+      "unit": "kcal per kg",
+      "sort": 2380,
+      "take": "Two-week changes of 1 to 3 kg were mostly fat-free mass and water, so they carry less energy than fat."
+    },
+    {
+      "id": "diet-term-adaptive-thermogenesis",
+      "type": "term",
+      "title": "Adaptive thermogenesis (metabolic adaptation)",
+      "topic": "plateau",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "A fall in energy use beyond what the loss of body mass explains, seen during and after weight loss. Studies find it ranges from small to modest."
+    },
+    {
+      "id": "diet-table-scale-moves",
+      "type": "table",
+      "title": "What moves scale weight day to day",
+      "topic": "plateau",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "kreitzman-1992",
+        "orsama-2014",
+        "white-2011",
+        "bhutani-2017",
+        "helms-2014-prep"
+      ],
+      "take": "Short-term causes of scale changes that are not fat gain or loss.",
+      "columns": [
+        "Cause",
+        "What happens",
+        "Time scale"
+      ],
+      "rows": [
+        [
+          "Glycogen and water",
+          "Each gram of glycogen is stored with three to four parts water",
+          "Days, with carbohydrate changes"
+        ],
+        [
+          "Weekly rhythm",
+          "Weight is higher on Sunday and Monday, then falls",
+          "Weekly"
+        ],
+        [
+          "Menstrual cycle",
+          "Fluid retention scores peak on the first day of flow",
+          "Monthly"
+        ],
+        [
+          "Short-term free-living change",
+          "1-3 kg over two weeks is about 84% fat-free mass and water",
+          "Two weeks"
+        ],
+        [
+          "Fat change",
+          "Slow; about 0.5-1% of body weight a week at best",
+          "Weeks to months"
+        ]
+      ]
+    },
+    {
+      "id": "diet-self-weighing",
+      "type": "note",
+      "title": "Weighing yourself regularly goes with more loss inside a programme",
+      "topic": "plateau",
+      "level": "beginner",
+      "confidence": "moderate",
+      "take": "Programmes that included self-weighing beat minimal care by 3.4 kg, and daily weighing did no better than weekly.",
+      "body": "A meta-analysis found 15 trials of multi-component programmes that included self-weighing lost 3.4 kg more than minimal or no intervention, with no significant difference between daily and weekly weighing. Only one study tested self-weighing alone, and it found no evidence of an effect. The scale works as a feedback tool inside a plan, not as a plan.",
+      "do": [
+        "Weigh on a fixed schedule, then act on the weekly average."
+      ],
+      "sources": [
+        "madigan-2015"
+      ]
+    },
+    {
+      "id": "diet-term-set-point",
+      "type": "term",
+      "title": "Set point and settling point",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "practice",
+      "take": "Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete.",
+      "sources": [
+        "speakman-2011"
+      ]
+    },
+    {
+      "id": "diet-diet-breaks",
+      "type": "note",
+      "title": "Diet breaks and refeeds give mixed fat-loss results and may ease hunger",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "peos-2021",
+        "poon-2024",
+        "campbell-2020",
+        "byrne-2018"
+      ],
+      "take": "Planned weeks at maintenance did not improve fat loss in lifters, and they lowered hunger.",
+      "body": "In 61 resistance-trained adults over 12 weeks, alternating three weeks of restriction with one week at maintenance gave the same fat and lean mass as continuous dieting, with lower hunger. A meta-analysis of 12 trials (881 participants) found the same body composition and a smaller drop in resting rate. A small 7-week trial found a weekly two-day carb refeed kept more lean mass (-0.4 vs -1.3 kg). Results in men with obesity favoured breaks.",
+      "do": [
+        "Try a one-week break at maintenance if hunger or training quality is slipping."
+      ]
+    },
+    {
+      "id": "diet-diet-type",
+      "type": "note",
+      "title": "The best diet is the one you can keep to, since types differ little",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "johnston-2014",
+        "ge-2020",
+        "gardner-2018"
+      ],
+      "take": "Low-carb and low-fat diets lost about the same weight, so pick the one you can keep.",
+      "body": "A network meta-analysis of 48 randomized trials (7,286 people) found weight loss with any low-carbohydrate or low-fat diet, with small differences among named diets. A larger analysis of 121 trials (21,942 patients) found about 4.6 kg at 6 months with low carb and 4.4 kg with low fat. In a 12-month trial of 609 adults, the difference was 0.7 kg, not significant. Behavioural support added about 3.2 kg at six months in one analysis.",
+      "do": [
+        "Choose the pattern that fits your food preferences and schedule."
+      ]
+    },
+    {
+      "id": "diet-intermittent-fasting",
+      "type": "note",
+      "title": "Intermittent fasting works by eating less, with no clear extra effect",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "liu-2022",
+        "lowe-2020",
+        "maruthur-2024",
+        "fernandes-2025",
+        "ashtary-2021",
+        "keenan-2020"
+      ],
+      "take": "Time-restricted eating did not beat plain calorie control in long trials, though one pooled analysis disagrees.",
+      "body": "In 139 adults over 12 months, eating 8 am to 4 pm with calorie restriction lost 8.0 kg against 6.3 kg for calorie restriction alone, not a significant difference. A 12-week trial of 116 people found no advantage, and a 41-person feeding trial matched calories and found no effect on weight. A pooled analysis of 30 studies did report 1.46 kg more loss in matched comparisons. With lifting, an analysis of eight studies (221 participants) kept fat-free mass.",
+      "do": [
+        "Use a fasting window only if it makes eating less easier for you."
+      ]
+    },
+    {
+      "id": "diet-meal-frequency-timing",
+      "type": "note",
+      "title": "Meal frequency and late eating matter little for fat loss at equal calories",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "schwingshackl-2020",
+        "cameron-2010",
+        "young-2022",
+        "vujovic-2022"
+      ],
+      "take": "Differences between meal patterns are small at equal calories; fewer meals showed about 1 kg more loss in one analysis.",
+      "body": "A network meta-analysis of 22 trials (647 people) found two meals a day slightly lowered weight against three meals or six, by about 1 kg, under equal calories. In 16 obese adults on the same deficit, three meals and three snacks did no better than three meals. A meta-analysis of 9 trials found earlier eating gave 1.2 kg more loss, and a controlled crossover trial found late eating raised hunger. Pick the pattern you can follow.",
+      "do": [
+        "Choose a meal pattern around your day, and keep protein in each meal."
+      ]
+    },
+    {
+      "id": "diet-term-diet-break",
+      "type": "term",
+      "title": "Diet break and refeed",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "A diet break is a planned stretch, often one to two weeks, at maintenance calories. A refeed is shorter, usually one or two days of higher carbohydrate."
+    },
+    {
+      "id": "diet-term-time-restricted-eating",
+      "type": "term",
+      "title": "Time-restricted eating",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "Eating all meals within a set daily window, such as eight hours, and fasting for the rest. It is one form of intermittent fasting."
+    },
+    {
+      "id": "diet-adherence-beats-diet-type",
+      "type": "note",
+      "title": "Weight lost tracked sticking to the diet, not which diet it was",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "moderate",
+      "take": "In one year-long trial, weight lost followed how closely people kept to their diet, with no link to the diet they chose.",
+      "body": "In 160 overweight or obese adults with heart-risk factors, assigned to Atkins, Zone, Weight Watchers or Ornish, mean one-year loss was 2.1 to 3.3 kg and only 50 to 65 percent finished. Loss correlated with self-reported adherence (r = 0.60) but not with diet type (r = 0.07). Adherence was self-reported and chosen by the participants, so this shows who did well, not that pushing adherence causes loss.",
+      "do": [
+        "Pick the eating pattern you can see yourself keeping for a year."
+      ],
+      "sources": [
+        "dansinger-2005",
+        "johnston-2014"
+      ]
+    },
+    {
+      "id": "diet-cardio-and-steps",
+      "type": "note",
+      "title": "Exercise adds to fat loss, and daily movement drops on diets if you let it",
+      "topic": "movement",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "bellicha-2021",
+        "donnelly-2009",
+        "silva-2018",
+        "levine-1999"
+      ],
+      "take": "Exercise adds 1.5 to 3.5 kg of loss in reviews, and people on diets may move less outside the gym.",
+      "body": "An overview of 12 meta-analyses found exercise led to 1.5 to 3.5 kg of weight loss and similar results from aerobic and interval training when energy expenditure matched. The ACSM suggests 150 minutes a week as a floor and 200 to 300 for long-term loss. A systematic review of 36 articles found lower non-exercise activity in 63 percent of diet-only arms. In 16 overfed adults, NEAT explained the large differences in fat gain.",
+      "do": [
+        "Set a daily step or activity floor and keep it during the diet."
+      ]
+    },
+    {
+      "id": "diet-term-neat",
+      "type": "term",
+      "title": "NEAT (non-exercise activity)",
+      "topic": "movement",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "Non-exercise activity thermogenesis: energy spent on walking, standing, fidgeting and chores. It can fall during a diet without you noticing."
+    },
+    {
+      "id": "diet-very-lean-costs",
+      "type": "note",
+      "title": "Getting very lean costs hormones, mood and training quality, so go carefully",
+      "topic": "lean",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "fagerberg-2018",
+        "rossow-2013",
+        "hulmi-2017",
+        "loucks-2003",
+        "mountjoy-2023",
+        "helms-2019"
+      ],
+      "take": "Prolonged energy availability under about 25 kcal per kg of lean mass led to muscle loss and hormonal and mood problems.",
+      "body": "Reviews of lean athletes link a long period at low energy availability to muscle loss, hormone disruption and psychological problems. A case study of one natural bodybuilder saw body fat fall from 14.8 to 4.5 percent and testosterone from 9.22 to 2.27 ng/mL, recovering after the contest. In 27 women dieting for a fitness show, sex hormones fell and menstrual irregularities rose, and most recovered within three to four months. Involve a coach and clinician.",
+      "do": [
+        "Treat contest-level leanness as a short, supervised project, not a lifestyle.",
+        "See a clinician if periods stop or mood drops."
+      ]
+    },
+    {
+      "id": "diet-regain-and-maintenance",
+      "type": "note",
+      "title": "Weight regain is common, and maintenance is possible with sustained habits",
+      "topic": "lean",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "martins-2020",
+        "anderson-2001",
+        "thomas-jg-2014",
+        "wing-2005",
+        "hall-kahan-2018",
+        "rosenbaum-2010"
+      ],
+      "take": "Most people regain some weight, and a minority keep most of it off by staying active and weighing themselves.",
+      "body": "In 171 women, participants regained 52 percent of the weight lost at one year and 89 percent at two. A meta-analysis of 29 US studies found that after five years the average person kept off more than 3 kg. Among 2,886 National Weight Control Registry members, mean loss was 31.3 kg at entry and 23.1 kg at ten years. They report about an hour of activity a day, regular weighing and consistent eating on weekends. The registry is self-selected.",
+      "do": [
+        "After the diet, raise calories in steps and keep weighing weekly.",
+        "Keep activity and protein high."
+      ]
+    },
+    {
+      "id": "diet-mistake-no-end-plan",
+      "type": "mistake",
+      "title": "Dieting with no end date and no plan for after",
+      "topic": "lean",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "martins-2020",
+        "wing-2005"
+      ],
+      "take": "Regain follows the diet for most people, and a plan for the exit matters as much as the deficit.",
+      "body": "In 171 women, 52 percent of lost weight was regained after one year and 89 percent after two. Registry members who kept it off kept activity, regular weighing and steady eating. Set an end date for the diet.",
+      "do": [
+        "Plan the exit: a target date, a maintenance range and a weekly weigh-in.",
+        "Step calories up toward maintenance over several weeks."
+      ]
+    },
+    {
+      "id": "diet-surplus-size",
+      "type": "note",
+      "title": "A small surplus adds muscle, and a large surplus mostly adds fat",
+      "topic": "gain",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "iraki-2019",
+        "helms-2023",
+        "slater-2019"
+      ],
+      "take": "A surplus of about 10 to 20 percent over maintenance is a common starting range for lifters, and nobody has proven the best size.",
+      "body": "A narrative review for physique athletes suggests 10 to 20 percent above maintenance, with advanced lifters more conservative. In 17 lifters over 8 weeks, a 15 percent surplus mainly increased fat gain rather than strength or muscle thickness. Another review finds the ideal surplus is unknown. If maintenance is 2,500 kcal, 10 to 20 percent is 250 to 500 kcal. Evidence is thin and short.",
+      "do": [
+        "Start near the low end of the surplus and adjust to the scale."
+      ]
+    },
+    {
+      "id": "diet-recomposition",
+      "type": "note",
+      "title": "Recomposition works best for beginners, returners and people carrying more fat",
+      "topic": "gain",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "longland-2016",
+        "helms-2014-protein",
+        "murphy-2021"
+      ],
+      "take": "Gaining muscle while losing fat is realistic with high protein and hard training, and likely harder for lean, advanced lifters.",
+      "body": "In 40 young men on a roughly 40 percent deficit with heavy training and 2.4 g/kg of protein, lean mass rose 1.2 kg while fat mass fell 4.8 kg over four weeks. A review of six studies found that the groups that held on to or gained lean mass were among those with the highest body fat, the smallest deficit or a new training stimulus. Advanced lifters with low body fat have less room.",
+      "do": [
+        "Use a small deficit or maintenance with high protein and progressive training."
+      ]
+    },
+    {
+      "id": "diet-mistake-dirty-bulk",
+      "type": "mistake",
+      "title": "Treating a gaining phase as a licence to eat anything",
+      "topic": "gain",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "helms-2023",
+        "iraki-2019"
+      ],
+      "take": "A large surplus mainly added fat in a trial, and extra fat has to be dieted off later.",
+      "body": "In 17 lifters, a 15 percent surplus mostly increased fat gain rather than strength or muscle thickness. A review suggests 10 to 20 percent for physique athletes, less for advanced lifters. The extra fat then has to be dieted off.",
+      "do": [
+        "Use a measured surplus and watch the rate of weight gain."
+      ]
+    },
+    {
+      "id": "diet-num-surplus",
+      "type": "number",
+      "title": "Surplus for a gaining phase",
+      "topic": "gain",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "iraki-2019"
+      ],
+      "value": "10-20",
+      "unit": "% above maintenance",
+      "sort": 10,
+      "take": "Suggested range for novice and intermediate lifters in a physique-sport review; advanced lifters go lower."
+    },
+    {
+      "id": "diet-num-gain-rate",
+      "type": "number",
+      "title": "Rate of gain, novice to intermediate",
+      "topic": "gain",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "iraki-2019"
+      ],
+      "value": "0.25-0.5",
+      "unit": "% body weight per week",
+      "sort": 0.25,
+      "take": "At 80 kg (176 lb) that is 0.2 to 0.4 kg (0.4 to 0.9 lb) a week."
+    },
+    {
+      "id": "diet-term-recomposition",
+      "type": "term",
+      "title": "Recomposition",
+      "topic": "gain",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "Gaining muscle and losing fat at the same time, so body weight changes little while the body changes shape."
+    },
+    {
+      "id": "diet-table-gain-rate",
+      "type": "table",
+      "title": "Rate of gain by training age",
+      "topic": "gain",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "iraki-2019",
+        "helms-2023",
+        "slater-2019"
+      ],
+      "take": "Suggested pace of weight gain in a gaining phase; the research is thin and the rates are conservative.",
+      "columns": [
+        "Lifter",
+        "Weekly rate",
+        "At 80 kg (176 lb)",
+        "Surplus",
+        "Note"
+      ],
+      "rows": [
+        [
+          "Novice or intermediate",
+          "0.25-0.5% a week",
+          "0.2-0.4 kg (0.4-0.9 lb)",
+          "About 10-20%",
+          "Review suggestion for bodybuilders"
+        ],
+        [
+          "Advanced",
+          "Lower than novice rate",
+          "Lower than the row above",
+          "Smaller than 10-20%",
+          "No studied figure; be conservative"
+        ],
+        [
+          "Large surplus (15%)",
+          "Faster gain",
+          "More body mass",
+          "15% above maintenance",
+          "Mostly extra fat in an 8-week trial"
+        ]
+      ]
+    }
+  ],
+  "sources": {
+    "hall-2007": {
+      "type": "other",
+      "authors": [
+        "Hall KD"
+      ],
+      "year": 2008,
+      "title": "What is the required energy deficit per unit weight loss?",
+      "journal": "International Journal of Obesity",
+      "doi": "10.1038/sj.ijo.0803720",
+      "volume": "32",
+      "issue": "3",
+      "pages": "573-576",
+      "pmid": "17848938",
+      "support": "The rule of thumb approximately matches the predicted energy density of lost weight in obese subjects with an initial body fat above 30 kg but overestimates the cumulative energy deficit required per unit weight loss for people with lower initial body fat."
+    },
+    "hall-2011": {
+      "type": "other",
+      "authors": [
+        "Hall KD",
+        "Sacks G",
+        "Chandramohan D",
+        "Chow CC",
+        "Wang YC",
+        "Gortmaker SL",
+        "Swinburn BA"
+      ],
+      "year": 2011,
+      "title": "Quantification of the effect of energy imbalance on bodyweight",
+      "journal": "The Lancet",
+      "doi": "10.1016/S0140-6736(11)60812-X",
+      "volume": "378",
+      "issue": "9793",
+      "pages": "826-837",
+      "pmid": "21872751",
+      "support": "The bodyweight response to a change of energy intake is slow, with half times of about 1 year; adults with greater adiposity have a larger expected weight loss for the same change of energy intake."
+    },
+    "helms-2014-prep": {
+      "type": "review",
+      "authors": [
+        "Helms ER",
+        "Aragon AA",
+        "Fitschen PJ"
+      ],
+      "year": 2014,
+      "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+      "journal": "Journal of the International Society of Sports Nutrition",
+      "doi": "10.1186/1550-2783-11-20",
+      "volume": "11",
+      "issue": "1",
+      "pages": "20",
+      "pmid": "24864135",
+      "support": "Caloric intake should be set at a level that results in bodyweight losses of approximately 0.5 to 1%/wk to maximize muscle retention; 2.3-3.1 g/kg of lean body mass of protein."
+    },
+    "garthe-2011": {
+      "type": "rct",
+      "authors": [
+        "Garthe I",
+        "Raastad T",
+        "Refsnes PE",
+        "Koivisto A",
+        "Sundgot-Borgen J"
+      ],
+      "year": 2011,
+      "title": "Effect of Two Different Weight-Loss Rates on Body Composition and Strength and Power-Related Performance in Elite Athletes",
+      "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "doi": "10.1123/ijsnem.21.2.97",
+      "volume": "21",
+      "issue": "2",
+      "pages": "97-104",
+      "pmid": "21558571",
+      "n_participants": 24,
+      "support": "24 athletes; 0.7% vs 1.4% weekly loss; LBM increased 2.1% in the slow group and was unchanged (-0.2%) in the fast group."
+    },
+    "roberts-2020": {
+      "type": "review",
+      "authors": [
+        "Roberts BM",
+        "Helms ER",
+        "Trexler ET",
+        "Fitschen PJ"
+      ],
+      "year": 2020,
+      "title": "Nutritional Recommendations for Physique Athletes",
+      "journal": "Journal of Human Kinetics",
+      "doi": "10.2478/hukin-2019-0096",
+      "volume": "71",
+      "issue": "1",
+      "pages": "79-108",
+      "pmid": "32148575",
+      "support": "Slower rates of weight loss (<=0.5% of body mass per week) are preferable for attenuating the loss of fat-free mass, with diet breaks and refeeds possibly beneficial."
+    },
+    "murphy-2021": {
+      "type": "meta-analysis",
+      "authors": [
+        "Murphy C",
+        "Koehler K"
+      ],
+      "year": 2022,
+      "title": "Energy deficiency impairs resistance training gains in lean mass but not strength: A meta‐analysis and meta‐regression",
+      "journal": "Scandinavian Journal of Medicine & Science in Sports",
+      "doi": "10.1111/sms.14075",
+      "volume": "32",
+      "issue": "1",
+      "pages": "125-137",
+      "pmid": "34623696",
+      "support": "Meta-regression: an energy deficit of ~500 kcal/day prevented gains in lean mass; strength gains were comparable between conditions."
+    },
+    "helms-2014-protein": {
+      "type": "systematic-review",
+      "authors": [
+        "Helms ER",
+        "Zinn C",
+        "Rowlands DS",
+        "Brown SR"
+      ],
+      "year": 2014,
+      "title": "A Systematic Review of Dietary Protein During Caloric Restriction in Resistance Trained Lean Athletes: A Case for Higher Intakes",
+      "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "doi": "10.1123/ijsnem.2013-0054",
+      "volume": "24",
+      "issue": "2",
+      "pages": "127-138",
+      "pmid": "24092765",
+      "n_studies": 6,
+      "support": "Six studies; protein needs for energy-restricted resistance-trained athletes are likely 2.3-3.1 g/kg of FFM scaled upwards with severity of caloric restriction and leanness."
+    },
+    "jager-2017": {
+      "type": "position",
+      "authors": [
+        "Jäger R",
+        "Kerksick CM",
+        "Campbell BI",
+        "Cribb PJ",
+        "Wells SD",
+        "Skwiat TM",
+        "Purpura M",
+        "Ziegenfuss TN",
+        "Ferrando AA",
+        "Arent SM",
+        "Smith-Ryan AE",
+        "Stout JR",
+        "Arciero PJ",
+        "Ormsbee MJ",
+        "Taylor LW",
+        "Wilborn CD",
+        "Kalman DS",
+        "Kreider RB",
+        "Willoughby DS",
+        "Hoffman JR",
+        "Krzykowski JL",
+        "Antonio J"
+      ],
+      "year": 2017,
+      "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+      "journal": "Journal of the International Society of Sports Nutrition",
+      "doi": "10.1186/s12970-017-0177-8",
+      "volume": "14",
+      "issue": "1",
+      "pages": "20",
+      "pmid": "28642676",
+      "support": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods."
+    },
+    "longland-2016": {
+      "type": "rct",
+      "authors": [
+        "Longland TM",
+        "Oikawa SY",
+        "Mitchell CJ",
+        "Devries MC",
+        "Phillips SM"
+      ],
+      "year": 2016,
+      "title": "Higher compared with lower dietary protein during an energy deficit combined with intense exercise promotes greater lean mass gain and fat mass loss: a randomized trial",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.3945/ajcn.115.119339",
+      "volume": "103",
+      "issue": "3",
+      "pages": "738-746",
+      "pmid": "26817506",
+      "n_participants": 40,
+      "support": "40 young men, 4 weeks at about 40% energy deficit with resistance and interval training; 2.4 vs 1.2 g/kg protein: lean mass +1.2 vs +0.1 kg, fat mass -4.8 vs -3.5 kg."
+    },
+    "wycherley-2012": {
+      "type": "meta-analysis",
+      "authors": [
+        "Wycherley TP",
+        "Moran LJ",
+        "Clifton PM",
+        "Noakes M",
+        "Brinkworth GD"
+      ],
+      "year": 2012,
+      "title": "Effects of energy-restricted high-protein, low-fat compared with standard-protein, low-fat diets: a meta-analysis of randomized controlled trials",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.3945/ajcn.112.044321",
+      "volume": "96",
+      "issue": "6",
+      "pages": "1281-1298",
+      "pmid": "23097268",
+      "n_studies": 24,
+      "n_participants": 1063,
+      "support": "24 trials with 1063 individuals; high-protein diets mitigated reductions in fat-free mass (0.43 kg) and resting energy expenditure."
+    },
+    "sardeli-2018": {
+      "type": "systematic-review",
+      "authors": [
+        "Sardeli AV",
+        "Komatsu TR",
+        "Mori MA",
+        "Gáspari AF",
+        "Chacon-Mikahil MPT"
+      ],
+      "year": 2018,
+      "title": "Resistance Training Prevents Muscle Loss Induced by Caloric Restriction in Obese Elderly Individuals: A Systematic Review and Meta-Analysis",
+      "journal": "Nutrients",
+      "doi": "10.3390/nu10040423",
+      "volume": "10",
+      "issue": "4",
+      "pages": "423",
+      "pmid": "29596307",
+      "n_studies": 6,
+      "support": "Six RCTs in obese elderly individuals; resistance training reduced 93.5% of calorie-restriction-induced lean body mass loss."
+    },
+    "bellicha-2021": {
+      "type": "systematic-review",
+      "authors": [
+        "Bellicha A",
+        "van Baak MA",
+        "Battista F",
+        "Beaulieu K",
+        "Blundell JE",
+        "Busetto L",
+        "Carraça EV",
+        "Dicker D",
+        "Encantado J",
+        "Ermolao A",
+        "Farpour‐Lambert N",
+        "Pramono A",
+        "Woodward E",
+        "Oppert J"
+      ],
+      "year": 2021,
+      "title": "Effect of exercise training on weight loss, body composition changes, and weight maintenance in adults with overweight or obesity: An overview of 12 systematic reviews and 149 studies",
+      "journal": "Obesity Reviews",
+      "doi": "10.1111/obr.13256",
+      "volume": "22",
+      "issue": "S4",
+      "pages": "e13256",
+      "pmid": "33955140",
+      "n_studies": 12,
+      "support": "Overview of 12 systematic reviews (149 studies); exercise led to weight loss of 1.5-3.5 kg; resistance training reduced lean mass loss during weight loss; no difference between aerobic and HIIT when energy expenditure is equal."
+    },
+    "nedeltcheva-2010": {
+      "type": "rct",
+      "authors": [
+        "Nedeltcheva AV",
+        "Kilkus JM",
+        "Imperial J",
+        "Schoeller DA",
+        "Penev PD"
+      ],
+      "year": 2010,
+      "title": "Insufficient Sleep Undermines Dietary Efforts to Reduce Adiposity",
+      "journal": "Annals of Internal Medicine",
+      "doi": "10.7326/0003-4819-153-7-201010050-00006",
+      "volume": "153",
+      "issue": "7",
+      "pages": "435-441",
+      "pmid": "20921542",
+      "n_participants": 10,
+      "support": "10 overweight adults, 14 days of caloric restriction with 8.5 or 5.5 h of sleep opportunity; sleep curtailment decreased the proportion of weight lost as fat by 55% and increased loss of fat-free mass by 60%."
+    },
+    "hall-2019": {
+      "type": "rct",
+      "authors": [
+        "Hall KD",
+        "Ayuketah A",
+        "Brychta R",
+        "Cai H",
+        "Cassimatis T",
+        "Chen KY",
+        "Chung ST",
+        "Costa E",
+        "Courville A",
+        "Darcey V",
+        "Fletcher LA",
+        "Forde CG",
+        "Gharib AM",
+        "Guo J",
+        "Howard R",
+        "Joseph PV",
+        "McGehee S",
+        "Ouwerkerk R",
+        "Raisinger K",
+        "Rozga I",
+        "Stagliano M",
+        "Walter M",
+        "Walter PJ",
+        "Yang S",
+        "Zhou M"
+      ],
+      "year": 2019,
+      "title": "Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An Inpatient Randomized Controlled Trial of Ad Libitum Food Intake",
+      "journal": "Cell Metabolism",
+      "doi": "10.1016/j.cmet.2019.05.008",
+      "volume": "30",
+      "issue": "1",
+      "pages": "67-77.e3",
+      "pmid": "31105044",
+      "n_participants": 20,
+      "support": "20 weight-stable adults in a ward; energy intake was greater on the ultra-processed diet by 508 kcal/day; +0.9 kg vs -0.9 kg over 2 weeks."
+    },
+    "kohanmoo-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Kohanmoo A",
+        "Faghih S",
+        "Akhlaghi M"
+      ],
+      "year": 2020,
+      "title": "Effect of short- and long-term protein consumption on appetite and appetite-regulating gastrointestinal hormones, a systematic review and meta-analysis of randomized controlled trials",
+      "journal": "Physiology & Behavior",
+      "doi": "10.1016/j.physbeh.2020.113123",
+      "volume": "226",
+      "pages": "113123",
+      "pmid": "32768415",
+      "n_studies": 68,
+      "support": "49 acute and 19 long-term publications; acute protein ingestion suppresses appetite; results of long-term trials are inconclusive."
+    },
+    "polidori-2016": {
+      "type": "trial",
+      "authors": [
+        "Polidori D",
+        "Sanghvi A",
+        "Seeley RJ",
+        "Hall KD"
+      ],
+      "year": 2016,
+      "title": "How Strongly Does Appetite Counter Weight Loss? Quantification of the Feedback Control of Human Energy Intake",
+      "journal": "Obesity",
+      "doi": "10.1002/oby.21653",
+      "volume": "24",
+      "issue": "11",
+      "pages": "2289-2295",
+      "pmid": "27804272",
+      "n_participants": 153,
+      "support": "153 patients in a 52-week trial; weight loss led to a proportional increase in appetite, eating above baseline by about 100 kcal/day per kilogram of lost weight."
+    },
+    "peos-2021": {
+      "type": "rct",
+      "authors": [
+        "PEOS JJ",
+        "HELMS ER",
+        "FOURNIER PA",
+        "ONG J",
+        "HALL C",
+        "KRIEGER J",
+        "SAINSBURY A"
+      ],
+      "year": 2021,
+      "title": "Continuous versus Intermittent Dieting for Fat Loss and Fat-Free Mass Retention in Resistance-trained Adults: The ICECAP Trial",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "doi": "10.1249/MSS.0000000000002636",
+      "volume": "53",
+      "issue": "8",
+      "pages": "1685-1698",
+      "pmid": "33587549",
+      "n_participants": 61,
+      "support": "61 resistance-trained adults over 12 weeks; no difference in fat mass or fat-free mass between intermittent and continuous restriction; the intermittent group had lower hunger."
+    },
+    "campbell-2020": {
+      "type": "rct",
+      "authors": [
+        "Campbell BI",
+        "Aguilar D",
+        "Colenso-Semple LM",
+        "Hartke K",
+        "Fleming AR",
+        "Fox CD",
+        "Longstrom JM",
+        "Rogers GE",
+        "Mathas DB",
+        "Wong V",
+        "Ford S",
+        "Gorman J"
+      ],
+      "year": 2020,
+      "title": "Intermittent Energy Restriction Attenuates the Loss of Fat Free Mass in Resistance Trained Individuals. A Randomized Controlled Trial",
+      "journal": "Journal of Functional Morphology and Kinesiology",
+      "doi": "10.3390/jfmk5010019",
+      "volume": "5",
+      "issue": "1",
+      "pages": "19",
+      "pmid": "33467235",
+      "n_participants": 27,
+      "support": "27 resistance-trained adults over 7 weeks; the two-day carbohydrate refeed group kept fat-free mass (-0.4 kg vs -1.3 kg) and resting metabolic rate better than the continuous group."
+    },
+    "byrne-2018": {
+      "type": "rct",
+      "authors": [
+        "Byrne NM",
+        "Sainsbury A",
+        "King NA",
+        "Hills AP",
+        "Wood RE"
+      ],
+      "year": 2018,
+      "title": "Intermittent energy restriction improves weight loss efficiency in obese men: the MATADOR study",
+      "journal": "International Journal of Obesity",
+      "doi": "10.1038/ijo.2017.206",
+      "volume": "42",
+      "issue": "2",
+      "pages": "129-138",
+      "pmid": "28925405",
+      "n_participants": 51,
+      "support": "51 men with obesity; intermittent restriction gave greater weight loss (14.1 vs 9.1 kg) and fat loss than continuous restriction over the same 16 weeks of restriction."
+    },
+    "poon-2024": {
+      "type": "meta-analysis",
+      "authors": [
+        "Poon ETC",
+        "Tsang JH",
+        "Sun F",
+        "Zheng C",
+        "Wong SHS"
+      ],
+      "year": 2025,
+      "title": "Effects of intermittent dieting with break periods on body composition and metabolic adaptation: a systematic review and meta-analysis",
+      "journal": "Nutrition Reviews",
+      "doi": "10.1093/nutrit/nuad168",
+      "volume": "83",
+      "issue": "1",
+      "pages": "59-71",
+      "pmid": "38193357",
+      "n_studies": 12,
+      "n_participants": 881,
+      "support": "12 randomized trials with 881 participants; no group differences in body mass or fat loss; resting metabolic rate fell less after intermittent dieting with breaks."
+    },
+    "nunes-cl-2021": {
+      "type": "systematic-review",
+      "authors": [
+        "Nunes CL",
+        "Casanova N",
+        "Francisco R",
+        "Bosy-Westphal A",
+        "Hopkins M",
+        "Sardinha LB",
+        "Silva AM"
+      ],
+      "year": 2022,
+      "title": "Does adaptive thermogenesis occur after weight loss in adults? A systematic review",
+      "journal": "British Journal of Nutrition",
+      "doi": "10.1017/S0007114521001094",
+      "volume": "127",
+      "issue": "3",
+      "pages": "451-469",
+      "pmid": "33762040",
+      "n_studies": 33,
+      "n_participants": 2528,
+      "support": "33 studies with 2528 participants; adaptive thermogenesis observed in 27; well-designed studies reported lower or non-significant values."
+    },
+    "martins-2020": {
+      "type": "cohort",
+      "authors": [
+        "Martins C",
+        "Gower BA",
+        "Hill JO",
+        "Hunter GR"
+      ],
+      "year": 2020,
+      "title": "Metabolic adaptation is not a major barrier to weight-loss maintenance",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.1093/ajcn/nqaa086",
+      "volume": "112",
+      "issue": "3",
+      "pages": "558-565",
+      "pmid": "32386226",
+      "n_participants": 171,
+      "support": "171 overweight women followed 2 years; metabolic adaptation -54 kcal/d after loss and not significant at 1 or 2 years; participants regained 52% and 89% of weight lost at 1 and 2 years."
+    },
+    "muller-2015": {
+      "type": "trial",
+      "authors": [
+        "Müller MJ",
+        "Enderle J",
+        "Pourhassan M",
+        "Braun W",
+        "Eggeling B",
+        "Lagerpusch M",
+        "Glüer CC",
+        "Kehayias JJ",
+        "Kiosz D",
+        "Bosy-Westphal A"
+      ],
+      "year": 2015,
+      "title": "Metabolic adaptation to caloric restriction and subsequent refeeding: the Minnesota Starvation Experiment revisited",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.3945/ajcn.115.109173",
+      "volume": "102",
+      "issue": "4",
+      "pages": "807-819",
+      "pmid": "26399868",
+      "n_participants": 32,
+      "support": "32 nonobese men; 3 weeks at -50% of energy needs; adaptive thermogenesis 108 kcal/d, of which 72 kcal/d was true adaptive thermogenesis."
+    },
+    "fothergill-2016": {
+      "type": "cohort",
+      "authors": [
+        "Fothergill E",
+        "Guo J",
+        "Howard L",
+        "Kerns JC",
+        "Knuth ND",
+        "Brychta R",
+        "Chen KY",
+        "Skarulis MC",
+        "Walter M",
+        "Walter PJ",
+        "Hall KD"
+      ],
+      "year": 2016,
+      "title": "Persistent metabolic adaptation 6 years after “The Biggest Loser” competition",
+      "journal": "Obesity",
+      "doi": "10.1002/oby.21538",
+      "volume": "24",
+      "issue": "8",
+      "pages": "1612-1619",
+      "pmid": "27136388",
+      "n_participants": 14,
+      "support": "14 Biggest Loser participants; at 6 years RMR was 704 kcal/day below baseline and metabolic adaptation was -499 kcal/day."
+    },
+    "bhutani-2017": {
+      "type": "cohort",
+      "authors": [
+        "Bhutani S",
+        "Kahn E",
+        "Tasali E",
+        "Schoeller DA"
+      ],
+      "year": 2017,
+      "title": "Composition of two-week change in body weight under unrestricted free-living conditions",
+      "journal": "Physiological Reports",
+      "doi": "10.14814/phy2.13336",
+      "volume": "5",
+      "issue": "13",
+      "pages": "e13336",
+      "pmid": "28676555",
+      "n_participants": 46,
+      "support": "46 adults; two-week free-living weight changes were largely fat-free mass and water: 84% of a unit change in weight was fat-free mass; energy density of 1-3 kg changes averaged 2380 kcal/kg."
+    },
+    "orsama-2014": {
+      "type": "cohort",
+      "authors": [
+        "Orsama AL",
+        "Mattila E",
+        "Ermes M",
+        "van Gils M",
+        "Wansink B",
+        "Korhonen I"
+      ],
+      "year": 2014,
+      "title": "Weight Rhythms: Weight Increases during Weekends and Decreases during Weekdays",
+      "journal": "Obesity Facts",
+      "doi": "10.1159/000356147",
+      "volume": "7",
+      "issue": "1",
+      "pages": "36-47",
+      "pmid": "24504358",
+      "n_participants": 80,
+      "support": "80 adults, 4,657 measurements; higher weight early in the week (Sunday and Monday), decreasing during the week."
+    },
+    "kreitzman-1992": {
+      "type": "other",
+      "authors": [
+        "Kreitzman S",
+        "Coxon A",
+        "Szaz K"
+      ],
+      "year": 1992,
+      "title": "Glycogen storage: illusions of easy weight loss, excessive weight regain, and distortions in estimates of body composition",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.1093/ajcn/56.1.292S",
+      "volume": "56",
+      "issue": "1",
+      "pages": "292S-293S",
+      "pmid": "1615908",
+      "n_participants": 11,
+      "support": "Glycogen is stored in hydrated form (three to four parts water); changes in total body potassium in 11 subjects after 4 days on a very-low-calorie diet reflected glycogen mobilization."
+    },
+    "white-2011": {
+      "type": "cohort",
+      "authors": [
+        "White CP",
+        "Hitchcock CL",
+        "Vigna YM",
+        "Prior JC"
+      ],
+      "year": 2011,
+      "title": "Fluid Retention over the Menstrual Cycle: 1-Year Data from the Prospective Ovulation Cohort",
+      "journal": "Obstetrics and Gynecology International",
+      "doi": "10.1155/2011/138451",
+      "volume": "2011",
+      "pages": "1-7",
+      "pmid": "21845193",
+      "n_participants": 62,
+      "support": "765 menstrual cycles in 62 healthy women; fluid retention scores peaked on the first day of menstrual flow and were lowest in the mid-follicular period."
+    },
+    "lichtman-1992": {
+      "type": "other",
+      "authors": [
+        "Lichtman SW",
+        "Pisarska K",
+        "Berman ER",
+        "Pestone M",
+        "Dowling H",
+        "Offenbacher E",
+        "Weisel H",
+        "Heshka S",
+        "Matthews DE",
+        "Heymsfield SB"
+      ],
+      "year": 1992,
+      "title": "Discrepancy between Self-Reported and Actual Caloric Intake and Exercise in Obese Subjects",
+      "journal": "New England Journal of Medicine",
+      "doi": "10.1056/NEJM199212313272701",
+      "volume": "327",
+      "issue": "27",
+      "pages": "1893-1898",
+      "pmid": "1454084",
+      "n_participants": 10,
+      "support": "Subjects reporting diet resistance under-reported actual food intake by 47 percent and over-reported physical activity by 51 percent."
+    },
+    "racette-2008": {
+      "type": "rct",
+      "authors": [
+        "Racette SB",
+        "Weiss EP",
+        "Schechtman KB",
+        "Steger‐May K",
+        "Villareal DT",
+        "Obert KA",
+        "Holloszy JO",
+        "Washington University School of Medicine CALERIE Team"
+      ],
+      "year": 2008,
+      "title": "Influence of Weekend Lifestyle Patterns on Body Weight",
+      "journal": "Obesity",
+      "doi": "10.1038/oby.2008.320",
+      "volume": "16",
+      "issue": "8",
+      "pages": "1826-1830",
+      "pmid": "18551108",
+      "n_participants": 48,
+      "support": "48 adults; on weekends calorie-restricted participants stopped losing weight."
+    },
+    "johnston-2014": {
+      "type": "meta-analysis",
+      "authors": [
+        "Johnston BC",
+        "Kanters S",
+        "Bandayrel K",
+        "Wu P",
+        "Naji F",
+        "Siemieniuk RA",
+        "Ball GDC",
+        "Busse JW",
+        "Thorlund K",
+        "Guyatt G",
+        "Jansen JP",
+        "Mills EJ"
+      ],
+      "year": 2014,
+      "title": "Comparison of Weight Loss Among Named Diet Programs in Overweight and Obese Adults",
+      "journal": "JAMA",
+      "doi": "10.1001/jama.2014.10397",
+      "volume": "312",
+      "issue": "9",
+      "pages": "923",
+      "pmid": "25182101",
+      "n_studies": 48,
+      "n_participants": 7286,
+      "support": "59 articles reporting 48 randomized trials (7286 individuals); significant weight loss with any low-carbohydrate or low-fat diet; differences between named diets were small."
+    },
+    "ge-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Ge L",
+        "Sadeghirad B",
+        "Ball GDC",
+        "da Costa BR",
+        "Hitchcock CL",
+        "Svendrovski A",
+        "Kiflen R",
+        "Quadri K",
+        "Kwon HY",
+        "Karamouzian M",
+        "Adams-Webber T",
+        "Ahmed W",
+        "Damanhoury S",
+        "Zeraatkar D",
+        "Nikolakopoulou A",
+        "Tsuyuki RT",
+        "Tian J",
+        "Yang K",
+        "Guyatt GH",
+        "Johnston BC"
+      ],
+      "year": 2020,
+      "title": "Comparison of dietary macronutrient patterns of 14 popular named dietary programmes for weight and cardiovascular risk factor reduction in adults: systematic review and network meta-analysis of randomised trials",
+      "journal": "BMJ",
+      "doi": "10.1136/bmj.m696",
+      "pages": "m696",
+      "pmid": "32238384",
+      "n_studies": 121,
+      "n_participants": 21942,
+      "support": "121 eligible trials with 21,942 patients; low carbohydrate and low fat diets had a similar effect at six months on weight loss (4.63 vs 4.37 kg)."
+    },
+    "gardner-2018": {
+      "type": "rct",
+      "authors": [
+        "Gardner CD",
+        "Trepanowski JF",
+        "Del Gobbo LC",
+        "Hauser ME",
+        "Rigdon J",
+        "Ioannidis JPA",
+        "Desai M",
+        "King AC"
+      ],
+      "year": 2018,
+      "title": "Effect of Low-Fat vs Low-Carbohydrate Diet on 12-Month Weight Loss in Overweight Adults and the Association With Genotype Pattern or Insulin Secretion",
+      "journal": "JAMA",
+      "doi": "10.1001/jama.2018.0245",
+      "volume": "319",
+      "issue": "7",
+      "pages": "667",
+      "pmid": "29466592",
+      "n_participants": 609,
+      "support": "609 adults; weight change at 12 months was -5.3 kg for low-fat vs -6.0 kg for low-carbohydrate (difference 0.7 kg, 95% CI -0.2 to 1.6)."
+    },
+    "liu-2022": {
+      "type": "rct",
+      "authors": [
+        "Liu D",
+        "Huang Y",
+        "Huang C",
+        "Yang S",
+        "Wei X",
+        "Zhang P",
+        "Guo D",
+        "Lin J",
+        "Xu B",
+        "Li C",
+        "He H",
+        "He J",
+        "Liu S",
+        "Shi L",
+        "Xue Y",
+        "Zhang H"
+      ],
+      "year": 2022,
+      "title": "Calorie Restriction with or without Time-Restricted Eating in Weight Loss",
+      "journal": "New England Journal of Medicine",
+      "doi": "10.1056/NEJMoa2114833",
+      "volume": "386",
+      "issue": "16",
+      "pages": "1495-1504",
+      "pmid": "35443107",
+      "n_participants": 139,
+      "support": "139 patients with obesity; 12 months; weight loss -8.0 kg with time-restricted eating plus calorie restriction vs -6.3 kg with calorie restriction alone (not significantly different)."
+    },
+    "lowe-2020": {
+      "type": "rct",
+      "authors": [
+        "Lowe DA",
+        "Wu N",
+        "Rohdin-Bibby L",
+        "Moore AH",
+        "Kelly N",
+        "Liu YE",
+        "Philip E",
+        "Vittinghoff E",
+        "Heymsfield SB",
+        "Olgin JE",
+        "Shepherd JA",
+        "Weiss EJ"
+      ],
+      "year": 2020,
+      "title": "Effects of Time-Restricted Eating on Weight Loss and Other Metabolic Parameters in Women and Men With Overweight and Obesity",
+      "journal": "JAMA Internal Medicine",
+      "doi": "10.1001/jamainternmed.2020.4153",
+      "volume": "180",
+      "issue": "11",
+      "pages": "1491",
+      "pmid": "32986097",
+      "n_participants": 116,
+      "support": "116 participants, 12 weeks; time-restricted eating was not more effective for weight loss than eating throughout the day."
+    },
+    "maruthur-2024": {
+      "type": "rct",
+      "authors": [
+        "Maruthur NM",
+        "Pilla SJ",
+        "White K",
+        "Wu B",
+        "Maw MTT",
+        "Duan D",
+        "Turkson-Ocran RA",
+        "Zhao D",
+        "Charleston J",
+        "Peterson CM",
+        "Dougherty RJ",
+        "Schrack JA",
+        "Appel LJ",
+        "Guallar E",
+        "Clark JM"
+      ],
+      "year": 2024,
+      "title": "Effect of Isocaloric, Time-Restricted Eating on Body Weight in Adults With Obesity",
+      "journal": "Annals of Internal Medicine",
+      "doi": "10.7326/M23-3132",
+      "volume": "177",
+      "issue": "5",
+      "pages": "549-558",
+      "pmid": "38639542",
+      "n_participants": 41,
+      "support": "41 adults, isocaloric feeding for 12 weeks; weight decreased 2.3 kg with time-restricted eating and 2.6 kg with usual eating; any effect in earlier studies may be due to lower calorie intake."
+    },
+    "fernandes-2025": {
+      "type": "meta-analysis",
+      "authors": [
+        "Fernandes-Alves D",
+        "Teixeira GP",
+        "Guimarães KC",
+        "Crispim CA"
+      ],
+      "year": 2026,
+      "title": "Systematic Review and Meta-analysis of Randomized Clinical Trials Comparing Time-Restricted Eating With and Without Caloric Restriction for Weight Loss",
+      "journal": "Nutrition Reviews",
+      "doi": "10.1093/nutrit/nuaf053",
+      "volume": "84",
+      "issue": "3",
+      "pages": "463-486",
+      "pmid": "40298934",
+      "n_studies": 30,
+      "n_participants": 1341,
+      "support": "30 studies, 1341 participants; time-restricted eating reduced body weight even in isocaloric comparisons (-1.46 kg)."
+    },
+    "keenan-2020": {
+      "type": "systematic-review",
+      "authors": [
+        "Keenan S",
+        "Cooke MB",
+        "Belski R"
+      ],
+      "year": 2020,
+      "title": "The Effects of Intermittent Fasting Combined with Resistance Training on Lean Body Mass: A Systematic Review of Human Studies",
+      "journal": "Nutrients",
+      "doi": "10.3390/nu12082349",
+      "volume": "12",
+      "issue": "8",
+      "pages": "2349",
+      "pmid": "32781538",
+      "n_studies": 8,
+      "support": "Eight studies; intermittent fasting paired with resistance training generally maintains LBM and can promote fat loss."
+    },
+    "ashtary-2021": {
+      "type": "meta-analysis",
+      "authors": [
+        "Ashtary-Larky D",
+        "Bagheri R",
+        "Tinsley GM",
+        "Asbaghi O",
+        "Paoli A",
+        "Moro T"
+      ],
+      "year": 2021,
+      "title": "Effects of intermittent fasting combined with resistance training on body composition: a systematic review and meta‐analysis",
+      "journal": "Physiology & Behavior",
+      "doi": "10.1016/j.physbeh.2021.113453",
+      "volume": "237",
+      "pages": "113453",
+      "pmid": "33984329",
+      "n_studies": 8,
+      "n_participants": 221,
+      "support": "Eight studies including 221 participants; intermittent fasting plus resistance training reduced fat mass by 1.36 kg relative to non-IF diets without a significant effect on fat-free mass."
+    },
+    "schwingshackl-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Schwingshackl L",
+        "Nitschke K",
+        "Zähringer J",
+        "Bischoff K",
+        "Lohner S",
+        "Torbahn G",
+        "Schlesinger S",
+        "Schmucker C",
+        "Meerpohl JJ"
+      ],
+      "year": 2020,
+      "title": "Impact of Meal Frequency on Anthropometric Outcomes: A Systematic Review and Network Meta-Analysis of Randomized Controlled Trials",
+      "journal": "Advances in Nutrition",
+      "doi": "10.1093/advances/nmaa056",
+      "volume": "11",
+      "issue": "5",
+      "pages": "1108-1122",
+      "pmid": "32437566",
+      "n_studies": 22,
+      "n_participants": 647,
+      "support": "22 RCTs with 647 participants; two meals a day probably slightly reduces body weight compared with three (-1.02 kg) or six meals (-1.29 kg) under isocaloric conditions."
+    },
+    "cameron-2010": {
+      "type": "rct",
+      "authors": [
+        "Cameron JD",
+        "Cyr MJ",
+        "Doucet É"
+      ],
+      "year": 2010,
+      "title": "Increased meal frequency does not promote greater weight loss in subjects who were prescribed an 8-week equi-energetic energy-restricted diet",
+      "journal": "British Journal of Nutrition",
+      "doi": "10.1017/S0007114509992984",
+      "volume": "103",
+      "issue": "8",
+      "pages": "1098-1101",
+      "pmid": "19943985",
+      "n_participants": 16,
+      "support": "16 obese adults, 8 weeks at the same energy restriction; no differences in weight loss, appetite or gut peptides between 3 meals plus 3 snacks and 3 meals a day."
+    },
+    "young-2022": {
+      "type": "meta-analysis",
+      "authors": [
+        "Young IE",
+        "Poobalan A",
+        "Steinbeck K",
+        "O'Connor HT",
+        "Parker HM"
+      ],
+      "year": 2023,
+      "title": "Distribution of energy intake across the day and weight loss: A systematic review and meta‐analysis",
+      "journal": "Obesity Reviews",
+      "doi": "10.1111/obr.13537",
+      "volume": "24",
+      "issue": "3",
+      "pages": "e13537",
+      "pmid": "36530130",
+      "n_studies": 9,
+      "support": "Nine RCTs; in an energy-reduced diet, earlier distribution of intake gave greater weight loss (-1.23 kg; 95% CI -2.40 to -0.06)."
+    },
+    "vujovic-2022": {
+      "type": "trial",
+      "authors": [
+        "Vujović N",
+        "Piron MJ",
+        "Qian J",
+        "Chellappa SL",
+        "Nedeltcheva A",
+        "Barr D",
+        "Heng SW",
+        "Kerlin K",
+        "Srivastav S",
+        "Wang W",
+        "Shoji B",
+        "Garaulet M",
+        "Brady MJ",
+        "Scheer FAJL"
+      ],
+      "year": 2022,
+      "title": "Late isocaloric eating increases hunger, decreases energy expenditure, and modifies metabolic pathways in adults with overweight and obesity",
+      "journal": "Cell Metabolism",
+      "doi": "10.1016/j.cmet.2022.09.007",
+      "volume": "34",
+      "issue": "10",
+      "pages": "1486-1498.e7",
+      "pmid": "36198293",
+      "support": "Randomized crossover trial; late eating increased hunger and decreased waketime energy expenditure with nutrient intake, activity, sleep and light controlled."
+    },
+    "donnelly-2009": {
+      "type": "position",
+      "authors": [
+        "DONNELLY JE",
+        "BLAIR SN",
+        "JAKICIC JM",
+        "MANORE MM",
+        "RANKIN JW",
+        "SMITH BK"
+      ],
+      "year": 2009,
+      "title": "Appropriate Physical Activity Intervention Strategies for Weight Loss and Prevention of Weight Regain for Adults",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "doi": "10.1249/MSS.0b013e3181949333",
+      "volume": "41",
+      "issue": "2",
+      "pages": "459-471",
+      "pmid": "19127177",
+      "support": "A minimum of 150 min/wk of moderate-intensity physical activity for overweight adults; 200-300 min/wk recommended for long-term weight loss."
+    },
+    "silva-2018": {
+      "type": "systematic-review",
+      "authors": [
+        "Silva AM",
+        "Júdice PB",
+        "Carraça EV",
+        "King N",
+        "Teixeira PJ",
+        "Sardinha LB"
+      ],
+      "year": 2018,
+      "title": "What is the effect of diet and/or exercise interventions on behavioural compensation in non-exercise physical activity and related energy expenditure of free-living adults? A systematic review",
+      "journal": "British Journal of Nutrition",
+      "doi": "10.1017/S000711451800096X",
+      "volume": "119",
+      "issue": "12",
+      "pages": "1327-1345",
+      "pmid": "29845903",
+      "n_studies": 36,
+      "n_participants": 1561,
+      "support": "36 articles, 1561 participants; compensation (lower NEAT or NEPA) observed in 26 of 70 arms, representing 63% of diet-only, 27% of combined and 23% of exercise-only arms."
+    },
+    "levine-1999": {
+      "type": "trial",
+      "authors": [
+        "Levine JA",
+        "Eberhardt NL",
+        "Jensen MD"
+      ],
+      "year": 1999,
+      "title": "Role of Nonexercise Activity Thermogenesis in Resistance to Fat Gain in Humans",
+      "journal": "Science",
+      "doi": "10.1126/science.283.5399.212",
+      "volume": "283",
+      "issue": "5399",
+      "pages": "212-214",
+      "pmid": "9880251",
+      "n_participants": 16,
+      "support": "16 nonobese volunteers overfed by 1000 kcal/day for 8 weeks; changes in NEAT accounted for the 10-fold differences in fat storage."
+    },
+    "fagerberg-2018": {
+      "type": "review",
+      "authors": [
+        "Fagerberg P"
+      ],
+      "year": 2018,
+      "title": "Negative Consequences of Low Energy Availability in Natural Male Bodybuilding: A Review",
+      "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "doi": "10.1123/ijsnem.2016-0332",
+      "volume": "28",
+      "issue": "4",
+      "pages": "385-402",
+      "pmid": "28530498",
+      "support": "A prolonged energy availability under 25 kcal/kg FFM results in muscle loss, hormonal imbalances and psychological problems; a more tempered approach (>25 kcal/kg FFM) might result in less muscle loss."
+    },
+    "rossow-2013": {
+      "type": "other",
+      "authors": [
+        "Rossow LM",
+        "Fukuda DH",
+        "Fahs CA",
+        "Loenneke JP",
+        "Stout JR"
+      ],
+      "year": 2013,
+      "title": "Natural Bodybuilding Competition Preparation and Recovery: A 12-Month Case Study",
+      "journal": "International Journal of Sports Physiology and Performance",
+      "doi": "10.1123/ijspp.8.5.582",
+      "volume": "8",
+      "issue": "5",
+      "pages": "582-592",
+      "pmid": "23412685",
+      "n_participants": 1,
+      "support": "Case study of one natural bodybuilder; body fat fell from 14.8% to 4.5% and testosterone from 9.22 to 2.27 ng/mL during preparation, returning to baseline after competition."
+    },
+    "hulmi-2017": {
+      "type": "cohort",
+      "authors": [
+        "Hulmi JJ",
+        "Isola V",
+        "Suonpää M",
+        "Järvinen NJ",
+        "Kokkonen M",
+        "Wennerström A",
+        "Nyman K",
+        "Perola M",
+        "Ahtiainen JP",
+        "Häkkinen K"
+      ],
+      "year": 2017,
+      "title": "The Effects of Intensive Weight Reduction on Body Composition and Serum Hormones in Female Fitness Competitors",
+      "journal": "Frontiers in Physiology",
+      "doi": "10.3389/fphys.2016.00689",
+      "volume": "7",
+      "pmid": "28119632",
+      "n_participants": 50,
+      "support": "27 dieting women and 23 controls; ~12% body weight loss over 4 months; hormones including leptin, T3, testosterone and estradiol fell and menstrual irregularities increased; most recovered within 3-4 months."
+    },
+    "loucks-2003": {
+      "type": "trial",
+      "authors": [
+        "Loucks AB",
+        "Thuma JR"
+      ],
+      "year": 2003,
+      "title": "Luteinizing Hormone Pulsatility Is Disrupted at a Threshold of Energy Availability in Regularly Menstruating Women",
+      "journal": "The Journal of Clinical Endocrinology & Metabolism",
+      "doi": "10.1210/jc.2002-020369",
+      "volume": "88",
+      "issue": "1",
+      "pages": "297-311",
+      "pmid": "12519869",
+      "n_participants": 29,
+      "support": "29 young women; luteinizing hormone pulsatility was unaffected at 30 kcal/kg LBM/day of energy availability, and disrupted below this threshold."
+    },
+    "mountjoy-2023": {
+      "type": "position",
+      "authors": [
+        "Mountjoy M",
+        "Ackerman KE",
+        "Bailey DM",
+        "Burke LM",
+        "Constantini N",
+        "Hackney AC",
+        "Heikura IA",
+        "Melin A",
+        "Pensgaard AM",
+        "Stellingwerff T",
+        "Sundgot-Borgen JK",
+        "Torstveit MK",
+        "Jacobsen AU",
+        "Verhagen E",
+        "Budgett R",
+        "Engebretsen L",
+        "Erdener U"
+      ],
+      "year": 2023,
+      "title": "2023 International Olympic Committee’s (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs)",
+      "journal": "British Journal of Sports Medicine",
+      "doi": "10.1136/bjsports-2023-106994",
+      "volume": "57",
+      "issue": "17",
+      "pages": "1073-1098",
+      "pmid": "37752011",
+      "support": "2023 IOC consensus statement on Relative Energy Deficiency in Sport; health and performance outcomes of low energy availability in female and male athletes."
+    },
+    "thomas-jg-2014": {
+      "type": "cohort",
+      "authors": [
+        "Thomas JG",
+        "Bond DS",
+        "Phelan S",
+        "Hill JO",
+        "Wing RR"
+      ],
+      "year": 2014,
+      "title": "Weight-Loss Maintenance for 10 Years in the National Weight Control Registry",
+      "journal": "American Journal of Preventive Medicine",
+      "doi": "10.1016/j.amepre.2013.08.019",
+      "volume": "46",
+      "issue": "1",
+      "pages": "17-23",
+      "pmid": "24355667",
+      "n_participants": 2886,
+      "support": "2886 National Weight Control Registry participants; mean loss 31.3 kg at entry, 23.8 kg at 5 years and 23.1 kg at 10 years; more than 87% still maintaining at least a 10% loss at years 5 and 10."
+    },
+    "wing-2005": {
+      "type": "review",
+      "authors": [
+        "Wing RR",
+        "Phelan S"
+      ],
+      "year": 2005,
+      "title": "Long-term weight loss maintenance",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.1093/ajcn/82.1.222S",
+      "volume": "82",
+      "issue": "1",
+      "pages": "222S-225S",
+      "pmid": "16002825",
+      "support": "Members have lost an average of 33 kg and maintained the loss for more than 5 y, with about 1 h/d of physical activity, self-monitoring of weight and a consistent eating pattern across weekdays and weekends."
+    },
+    "anderson-2001": {
+      "type": "meta-analysis",
+      "authors": [
+        "Anderson JW",
+        "Konz EC",
+        "Frederich RC",
+        "Wood CL"
+      ],
+      "year": 2001,
+      "title": "Long-term weight-loss maintenance: a meta-analysis of US studies",
+      "journal": "The American Journal of Clinical Nutrition",
+      "doi": "10.1093/ajcn/74.5.579",
+      "volume": "74",
+      "issue": "5",
+      "pages": "579-584",
+      "pmid": "11684524",
+      "n_studies": 29,
+      "support": "29 US studies; 5 years after structured weight-loss programs the average individual maintained a weight loss of >3 kg and a reduced weight of >3%."
+    },
+    "rosenbaum-2010": {
+      "type": "review",
+      "authors": [
+        "Rosenbaum M",
+        "Leibel RL"
+      ],
+      "year": 2010,
+      "title": "Adaptive thermogenesis in humans",
+      "journal": "International Journal of Obesity",
+      "doi": "10.1038/ijo.2010.184",
+      "volume": "34",
+      "issue": "S1",
+      "pages": "S47-S55",
+      "pmid": "20935667",
+      "support": "Over 80% of people return to pre-weight-loss body fatness after otherwise successful weight loss; adaptive thermogenesis is operant in lean and obese individuals."
+    },
+    "iraki-2019": {
+      "type": "review",
+      "authors": [
+        "Iraki J",
+        "Fitschen P",
+        "Espinar S",
+        "Helms E"
+      ],
+      "year": 2019,
+      "title": "Nutrition Recommendations for Bodybuilders in the Off-Season: A Narrative Review",
+      "journal": "Sports",
+      "doi": "10.3390/sports7070154",
+      "volume": "7",
+      "issue": "7",
+      "pages": "154",
+      "pmid": "31247944",
+      "support": "A hyper-energetic diet (~10-20%) with a target weight gain of ~0.25-0.5% of body weight per week for novice/intermediate bodybuilders; advanced bodybuilders should be more conservative."
+    },
+    "helms-2023": {
+      "type": "rct",
+      "authors": [
+        "Helms ER",
+        "Spence AJ",
+        "Sousa C",
+        "Kreiger J",
+        "Taylor S",
+        "Oranchuk DJ",
+        "Dieter BP",
+        "Watkins CM"
+      ],
+      "year": 2023,
+      "title": "Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals: A Parallel Groups Design",
+      "journal": "Sports Medicine - Open",
+      "doi": "10.1186/s40798-023-00651-y",
+      "volume": "9",
+      "issue": "1",
+      "pages": "102",
+      "pmid": "37914977",
+      "n_participants": 17,
+      "support": "21 trained lifters randomized, 17 completers over 8 weeks; maintenance vs 5% vs 15% energy surplus; faster rates of body mass gain primarily increase rates of fat gain rather than augmenting strength or muscle thickness."
+    },
+    "slater-2019": {
+      "type": "review",
+      "authors": [
+        "Slater GJ",
+        "Dieter BP",
+        "Marsh DJ",
+        "Helms ER",
+        "Shaw G",
+        "Iraki J"
+      ],
+      "year": 2019,
+      "title": "Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training",
+      "journal": "Frontiers in Nutrition",
+      "doi": "10.3389/fnut.2019.00131",
+      "volume": "6",
+      "pages": "131",
+      "pmid": "31482093",
+      "support": "The specific energy surplus required to facilitate muscle hypertrophy is unknown; there is clear evidence of an anabolic stimulus from an energy surplus."
+    },
+    "helms-2019": {
+      "type": "review",
+      "authors": [
+        "Helms ER",
+        "Prnjak K",
+        "Linardon J"
+      ],
+      "year": 2019,
+      "title": "Towards a Sustainable Nutrition Paradigm in Physique Sport: A Narrative Review",
+      "journal": "Sports",
+      "doi": "10.3390/sports7070172",
+      "volume": "7",
+      "issue": "7",
+      "pages": "172",
+      "pmid": "31315180",
+      "support": "Physique athletes have higher body image and eating disorder rates; best-practice suggestions include dietary flexibility and slower weight loss."
+    },
+    "hall-kahan-2018": {
+      "type": "review",
+      "authors": [
+        "Hall KD",
+        "Kahan S"
+      ],
+      "year": 2018,
+      "title": "Maintenance of Lost Weight and Long-Term Management of Obesity",
+      "journal": "Medical Clinics of North America",
+      "doi": "10.1016/j.mcna.2017.08.012",
+      "volume": "102",
+      "issue": "1",
+      "pages": "183-197",
+      "pmid": "29156185",
+      "support": "Obesity interventions typically result in early weight loss followed by a weight plateau and progressive regain."
+    },
+    "dansinger-2005": {
+      "type": "rct",
+      "authors": [
+        "Dansinger ML",
+        "Gleason JA",
+        "Griffith JL",
+        "Selker HP",
+        "Schaefer EJ"
+      ],
+      "year": 2005,
+      "title": "Comparison of the Atkins, Ornish, Weight Watchers, and Zone Diets for Weight Loss and Heart Disease Risk Reduction",
+      "journal": "JAMA",
+      "volume": "293",
+      "issue": "1",
+      "pages": "43",
+      "doi": "10.1001/jama.293.1.43",
+      "pmid": "15632335",
+      "n_participants": 160,
+      "support": "160 adults randomised to 4 popular diets; 1-year weight loss 2.1 to 3.3 kg, 50 to 65 percent completed; weight loss associated with adherence (r = 0.60) but not diet type (r = 0.07)."
+    },
+    "ello-martin-2007": {
+      "type": "rct",
+      "authors": [
+        "Ello-Martin JA",
+        "Roe LS",
+        "Ledikwe JH",
+        "Beach AM",
+        "Rolls BJ"
+      ],
+      "year": 2007,
+      "title": "Dietary energy density in the treatment of obesity: a year-long trial comparing 2 weight-loss diets",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "85",
+      "issue": "6",
+      "pages": "1465-1477",
+      "doi": "10.1093/ajcn/85.6.1465",
+      "pmid": "17556681",
+      "n_participants": 97,
+      "support": "Obese women (n = 97) over 1 y; the group eating more water-rich foods lost 7.9 vs 6.4 kg, ate a greater weight of food at lower energy density and reported less hunger."
+    },
+    "madigan-2015": {
+      "type": "meta-analysis",
+      "authors": [
+        "Madigan CD",
+        "Daley AJ",
+        "Lewis AL",
+        "Aveyard P",
+        "Jolly K"
+      ],
+      "year": 2015,
+      "title": "Is self-weighing an effective tool for weight loss: a systematic literature review and meta-analysis",
+      "journal": "International Journal of Behavioral Nutrition and Physical Activity",
+      "volume": "12",
+      "issue": "1",
+      "doi": "10.1186/s12966-015-0267-4",
+      "pmid": "26293454",
+      "support": "Fifteen trials of multi-component interventions including self-weighing vs no or minimal intervention: -3.4 kg; no significant difference between weekly and daily weighing; only one study of self-weighing as a single strategy and no evidence it was effective."
+    },
+    "speakman-2011": {
+      "type": "review",
+      "authors": [
+        "Speakman JR",
+        "Levitsky DA",
+        "Allison DB",
+        "Bray MS",
+        "de Castro JM",
+        "Clegg DJ",
+        "Clapham JC",
+        "Dulloo AG",
+        "Gruer L",
+        "Haw S",
+        "Hebebrand J",
+        "Hetherington MM",
+        "Higgs S",
+        "Jebb SA",
+        "Loos RJF",
+        "Luckman S",
+        "Luke A",
+        "Mohammed-Ali V",
+        "O’Rahilly S",
+        "Pereira M",
+        "Perusse L",
+        "Robinson TN",
+        "Rolls B",
+        "Symonds ME",
+        "Westerterp-Plantenga MS"
+      ],
+      "year": 2011,
+      "title": "Set points, settling points and some alternative models: theoretical options to understand how genes and environments combine to regulate body adiposity",
+      "journal": "Disease Models & Mechanisms",
+      "volume": "4",
+      "issue": "6",
+      "pages": "733-745",
+      "doi": "10.1242/dmm.008698",
+      "pmid": "22065844",
+      "support": "The set point model is consistent with many biological aspects of energy balance but does not explain the rise in body weight since the 1980s; the settling point model accommodates environmental characteristics but struggles with biological and genetic aspects."
+    }
+  }
+}

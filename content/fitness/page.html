@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fitness — Vantix, free calculators &amp; a sourced field guide · KiteSink</title>
+<meta name="description" content="Vantix, the periodization OS, plus five free calculators and a field guide to hypertrophy, powerlifting, meet day, nutrition, diet and health: sourced entries, common claims checked, key numbers and reference tables you can filter and sort.">
+<link rel="canonical" href="https://kitesink.com/fitness">
+<link rel="alternate" type="text/markdown" href="https://kitesink.com/fitness.md" title="Plain-text version">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KiteSink">
+<meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
+<meta property="og:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health that you can filter and sort.">
+<meta property="og:url" content="https://kitesink.com/fitness">
+<meta property="og:image" content="https://kitesink.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
+<meta name="twitter:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health that you can filter and sort.">
+<meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<meta name="theme-color" content="#ece2cb">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
+<link rel="stylesheet" href="/ks.css?v=2027.6">
+<style>
+  .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
+  .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
+  .cite a { color: inherit; text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 2px; }
+  .cite a:hover { color: var(--k-green); text-decoration-color: currentColor; }
+
+  /* ---------- vantix feature ---------- */
+  .vx { display: grid; gap: clamp(22px, 4vw, 48px); }
+  .vx > * { min-width: 0; }   /* let the panels shrink so a wide table scrolls inside its own frame */
+  @media (min-width: 900px) { .vx { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; } }
+  .vx-copy { display: flex; flex-direction: column; gap: 16px; }
+  .vx .k-pc-title { font-size: clamp(28px, 4.4vw, 46px); }
+  .pillars { list-style: none; margin: 4px 0 0; padding: 0; }
+  .pillars li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 2px 8px; padding: 12px 0; border-top: 1px solid var(--pc-rule); }
+  .pillars i { font: 500 11px/1.6 var(--k-mono); color: var(--pc-accent); font-style: normal; }
+  .pillars b { font: 600 15.5px/1.3 var(--k-sans); letter-spacing: -.015em; }
+  .pillars span { grid-column: 2; font-size: 13.5px; line-height: 1.45; color: var(--pc-copy); }
+  .vx-tiers { margin: 2px 0 0; display: grid; gap: 0; }
+  .vx-tiers div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid var(--pc-rule); }
+  .vx-tiers dt { font: 600 12px/1.5 var(--k-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--pc-accent); }
+  .vx-tiers dd { margin: 0; font-size: 14px; line-height: 1.45; color: var(--pc-copy); }
+  .vx-panel { border: 1px solid var(--pc-rule); border-radius: 12px; padding: 16px; background: rgba(0,0,0,.18); }
+  .vx-panel-top { display: flex; justify-content: space-between; gap: 10px; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); margin-bottom: 10px; }
+  .vx-rows { display: grid; gap: 4px; }
+  .vx-rows button { display: grid; grid-template-columns: 68px minmax(0, 1fr) auto; gap: 10px; align-items: center; width: 100%; min-height: 40px; padding: 6px 8px;
+    border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--pc-ink); cursor: pointer; text-align: left; font: 500 12px/1.2 var(--k-mono); transition: background .2s, border-color .2s; }
+  .vx-rows button:hover { background: var(--pc-tint); }
+  @media (pointer: coarse) { .vx-rows button { min-height: 44px; } }
+  .vx-rows button[aria-pressed="true"] { background: var(--pc-tint); border-color: var(--pc-rule); }
+  .vx-bar { position: relative; height: 12px; border-radius: 2px; background: rgba(255,255,255,.07); }
+  .vx-bar i { display: block; height: 100%; border-radius: 2px; background: #6f9f7a; transition: width .6s var(--k-ease); }
+  .vx-bar::before, .vx-bar::after { content: ""; position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(233,233,230,.45); }
+  .vx-bar::before { left: 40%; } .vx-bar::after { left: 80%; }
+  .vx-rows .under i { background: #d8a652; } .vx-rows .over i { background: #d27a52; }
+  .vx-rows em { font-style: normal; text-align: right; color: #6f9f7a; font-weight: 600; white-space: nowrap; min-width: 92px; }
+  .vx-rows .under em { color: #d8a652; } .vx-rows .over em { color: #d27a52; }
+  .vx-read { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--pc-rule); min-height: 62px; font-size: 14px; line-height: 1.5; color: var(--pc-ink); }
+  .vx-track { margin-top: 14px; }
+  .vx-weeks { list-style: none; margin: 0 0 6px; padding: 0; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 3px; }
+  .vx-weeks li { padding: 8px 0 7px; text-align: center; font: 600 11px/1 var(--k-mono); color: var(--pc-copy); background: rgba(255,255,255,.05); border-bottom: 2px solid #6f9f7a; }
+  .vx-weeks .ov { border-bottom-color: #d8a652; } .vx-weeks .dl { border-bottom-color: rgba(233,233,230,.4); }
+  .vx-weeks [aria-current] { background: var(--pc-tint); color: var(--pc-ink); box-shadow: inset 0 0 0 1px var(--pc-rule); }
+  .vx-key { font: 500 11px/1.5 var(--k-mono) !important; color: var(--pc-copy); margin-bottom: 12px; }
+  .vx-day { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 12px; margin-bottom: 6px; font: 600 14px/1.4 var(--k-sans) !important; color: var(--pc-ink) !important; }
+  .vx-day span { font: 500 11.5px/1.5 var(--k-mono); color: var(--pc-copy); }
+  .vx-tt-wrap { overflow-x: auto; }
+  .vx-tt { width: 100%; border-collapse: collapse; font: 500 12px/1.35 var(--k-mono); font-variant-numeric: tabular-nums; color: var(--pc-ink); }
+  .vx-tt th, .vx-tt td { padding: 8px 10px 3px 0; text-align: left; vertical-align: top; border-top: 1px solid var(--pc-rule); white-space: nowrap; }
+  .vx-tt tbody th { font-weight: 600; white-space: normal; }
+  .vx-tt thead th { border-top: 0; padding-bottom: 6px; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); }
+  .vx-tt .done th, .vx-tt .done td { border-top: 0; padding-top: 0; padding-bottom: 8px; }
+  .vx-tt .done th { font-weight: 500; color: #8fbf9a; }
+  .vx-tt .done td { color: var(--pc-copy); }
+  @media (max-width: 520px) { .vx-tt .opt { display: none; } }
+  .vx-fine { font-size: 12.5px !important; line-height: 1.5 !important; margin-top: 14px; }
+
+  /* ---------- tools ---------- */
+  .tool { margin-top: 22px; }
+  .tool-grid { display: grid; gap: 18px; }
+  @media (min-width: 920px) { .tool-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .tool-out { position: sticky; top: 130px; } }
+  .tool-in { gap: 18px; }
+  .tool-intro { max-width: 62ch; margin-bottom: 18px; }
+  #vantix { padding-top: clamp(26px, 4vw, 44px); }
+  .k-hero { padding-bottom: clamp(26px, 3.4vw, 40px); }
+  .row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .with-unit { position: relative; }
+  .with-unit .k-input { padding-right: 44px; }
+  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; }
+  .tool-out { background: #23402b; color: #f0e8d6; border-color: transparent; gap: 16px; }
+  .tool-out .k-label { color: #a9b9a3; }
+  .tool-out .k-stat, .tool-out .k-h3 { color: #f0e8d6; }
+  .tool-out .k-stat small { color: #c2ceb9; }
+  .tool-out .k-small { color: #c2ceb9; }
+  .tool-out .cite { color: #a9b9a3; }
+  .tool-out .cite a:hover { color: #d8b07a; }
+  .tool-out.is-empty .k-stat { opacity: .45; }
+  .tool-out.is-empty .hide-empty { display: none; }
+  .kv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
+  .kv div b { display: block; font: 600 16px/1.3 var(--k-sans); font-variant-numeric: tabular-nums; }
+  .macrobar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; gap: 2px; }
+  .macrobar i { flex: 1 1 0; min-width: 4px; transition: flex-grow .5s var(--k-ease); }
+  #m-bar-p { background: #d8b07a; } #m-bar-c { background: #8fc39b; } #m-bar-f { background: #e9dfc9; }
+  .macros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .macros div { padding-top: 8px; border-top: 3px solid; }
+  .macros .p { border-color: #d8b07a; } .macros .c { border-color: #8fc39b; } .macros .f { border-color: #e9dfc9; }
+  .macros b { display: block; font: 800 clamp(22px, 4vw, 28px)/1.1 var(--k-sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .warn { padding: 12px 14px; border-radius: 10px; background: rgba(216,166,82,.16); border: 1px solid rgba(216,176,122,.5); font-size: 14px; line-height: 1.5; color: #f3e3c4; }
+  details.more { border-top: 1px solid var(--k-rule); padding-top: 4px; }
+  details.more > summary { cursor: pointer; font: 600 15px/1.3 var(--k-sans); color: var(--k-ink); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 44px; }
+  details.more > summary::-webkit-details-marker { display: none; }
+  details.more > summary::after { content: "+"; font: 400 20px/1 var(--k-mono); color: var(--k-mute); transition: rotate .25s var(--k-ease); }
+  details.more[open] > summary::after { rotate: 45deg; }
+  details.more > div { display: grid; gap: 14px; margin-top: 14px; }
+  #m-prompt { min-height: 230px; font: 400 13px/1.55 var(--k-mono); }
+
+  /* effective reps */
+  .dots { display: flex; flex-wrap: wrap; gap: 6px; min-height: 64px; align-content: flex-start; }
+  .dots i { width: 22px; height: 22px; border-radius: 50%; }
+  .dots .done { background: rgba(240,232,214,.4); }
+  .dots .eff { background: #d8b07a; box-shadow: 0 0 0 3px rgba(216,176,122,.25); }
+  .dots .left { border: 2px dashed rgba(240,232,214,.35); }
+  .dots .left.hot { border-color: rgba(216,176,122,.7); }
+  .dots-key { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 500 11px/1.4 var(--k-mono); color: #c2ceb9; }
+  .dots-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .dots-key i { width: 10px; height: 10px; border-radius: 50%; }
+  .setlog { list-style: none; margin: 0; padding: 0; }
+  .setlog li { display: grid; grid-template-columns: 60px minmax(0, 1fr) auto; gap: 10px; padding: 8px 0; border-top: 1px solid var(--k-rule); font: 500 13px/1.3 var(--k-mono); color: var(--k-copy); }
+  .setlog b { color: var(--k-ink); font-weight: 600; } .setlog em { font-style: normal; color: var(--k-brass); }
+
+  /* loads */
+  .ltable { width: 100%; border-collapse: collapse; font: 500 13px/1.3 var(--k-mono); font-variant-numeric: tabular-nums; }
+  .ltable th, .ltable td { padding: 8px 4px; text-align: left; border-top: 1px solid rgba(240,232,214,.16); }
+  .ltable thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
+  .ltable tbody th { color: #d8b07a; font-weight: 600; }
+
+  /* travel */
+  .wk { padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
+  .wk h4 { margin: 0 0 8px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: #d8b07a; }
+  .wk .rule { font-size: 14.5px; line-height: 1.5; color: #f0e8d6; margin-bottom: 8px; }
+  .wk .blk { margin-top: 12px; font: 600 12px/1.4 var(--k-mono); color: #c2ceb9; }
+  .wk ul.plain { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #c2ceb9; }
+  .moves { list-style: none; margin: 6px 0 0; padding: 0; counter-reset: mv; }
+  .moves li { counter-increment: mv; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 9px 0; border-top: 1px solid rgba(240,232,214,.12); }
+  .moves li::before { content: counter(mv); font: 500 11px var(--k-mono); color: #a9b9a3; }
+  .moves li:has(.tag)::before { content: none; }
+  .moves li:has(.tag) { grid-template-columns: 46px minmax(0, 1fr) auto; }
+  .moves .tag { font: 600 10.5px var(--k-mono); color: #a9b9a3; }
+  .moves b { font: 600 15px/1.3 var(--k-sans); }
+  .moves em { font: 600 13px var(--k-mono); font-style: normal; color: #d8b07a; white-space: nowrap; }
+  .tool-out .k-btn--ghost { color: #f0e8d6 !important; border-color: rgba(240,232,214,.35); }
+  .tool-out .k-btn--ghost:hover { color: #d8b07a !important; border-color: #d8b07a; }
+
+
+  /* ---------- featured ribbon on the Vantix card ---------- */
+  .vx-card { position: relative; }
+  .feat { position: absolute; top: -13px; left: clamp(22px, 4vw, 44px); z-index: 2; display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 30px;
+    background: #92a6cc; color: #1e222a; font: 700 11px/1 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; box-shadow: 0 6px 14px rgba(30,34,42,.28); }
+
+  /* ---------- the reference: one area lens, then facets, search and sort per list ---------- */
+  .lens { margin-bottom: 20px; }
+  .lens button b, .fx b { margin-left: 4px; font: 500 11px/1 var(--k-mono); color: var(--k-mute); font-variant-numeric: tabular-nums; }
+  .lens button[aria-pressed="true"] b { color: var(--k-copy); }
+  .fx-group { display: grid; gap: 8px; min-width: 0; }
+  .fx-group[hidden] { display: none; }
+  .fx-label { font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-mute); }
+  .fx-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .fx { display: inline-flex; align-items: center; min-height: 38px; padding: 6px 13px; border-radius: 30px; border: 1px solid var(--k-rule-strong); background: transparent;
+    color: var(--k-copy); font: 500 13.5px/1.2 var(--k-sans); cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
+  .fx[hidden] { display: none; }
+  @media (pointer: coarse) { .fx { min-height: 44px; padding-inline: 15px; } }
+  .fx:hover { border-color: var(--k-green); color: var(--k-green); }
+  .fx[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); }
+  .fx[aria-pressed="true"] b { color: inherit; opacity: .85; }
+  .fx.is-zero:not([aria-pressed="true"]) { opacity: .5; }
+
+  .gx { display: grid; gap: 14px 40px; }
+  .gx-main { min-width: 0; }
+  .gx-filters > summary { list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px; border-radius: 30px; cursor: pointer;
+    border: 1px solid var(--k-rule-strong); font: 600 13.5px/1 var(--k-sans); color: var(--k-ink); }
+  .gx-filters > summary::-webkit-details-marker { display: none; }
+  .gx-filters > summary::after { content: "+"; font: 400 18px/1 var(--k-mono); color: var(--k-mute); }
+  .gx-filters[open] > summary::after { content: "−"; }
+  .gx-filters > summary span { font: 500 12px/1 var(--k-mono); color: var(--k-brass); }
+  .gx-rail { display: grid; gap: 18px; padding-top: 16px; }
+  @media (min-width: 1000px) {
+    .gx { grid-template-columns: 236px minmax(0, 1fr); align-items: start; }
+    .gx-filters { position: sticky; top: 124px; max-height: calc(100vh - 148px); overflow-y: auto; padding-right: 6px; scrollbar-width: thin; }
+    .gx-filters > summary { display: none; }
+    .gx-rail { padding-top: 0; }
+  }
+  .gx-bar { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; margin-bottom: 10px; }
+  .gx-q { flex: 1 1 240px; min-height: 46px; border-radius: 30px; padding-inline: 18px; background: var(--k-raised); }
+  .gx-sort { display: grid; gap: 5px; flex: 0 1 220px; }
+  .gx-sort .k-select { min-height: 46px; background-color: var(--k-raised); }
+  .gx-count { min-height: 20px; margin-bottom: 4px; font: 500 12.5px/1.6 var(--k-mono); color: var(--k-mute); }
+  .gx-count .gx-count { display: inline; }
+  .gx-empty { padding: 28px 0; color: var(--k-copy); }
+  .k-linkbtn { background: none; border: 0; padding: 10px 0; margin: -10px 0; font: inherit; color: var(--k-green); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+  .qx-controls { display: grid; gap: 14px; margin-bottom: 8px; }
+
+  .g-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 38px 0 0; padding-bottom: 10px; border-bottom: 2px solid var(--k-ink); scroll-margin-top: 130px; }
+  .g-head[hidden] { display: none; }
+  .g-list > .g-head:first-child { margin-top: 8px; }
+  .g-head span { font: 800 clamp(22px, 3vw, 28px)/1.1 var(--k-sans); letter-spacing: -.035em; color: var(--k-ink); }
+  .g-head small { font: 400 14px/1.4 var(--k-sans); color: var(--k-copy); }
+  .g, .rt { border-bottom: 1px solid var(--k-rule); scroll-margin-top: 130px; }
+  :is(.g, .rt) > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) 22px; gap: 3px 12px; padding: 15px 2px; }
+  :is(.g, .rt) > summary::-webkit-details-marker { display: none; }
+  :is(.g, .rt) > summary::after { content: "+"; grid-column: 2; grid-row: 1 / span 4; justify-self: end; font: 400 20px/1.25 var(--k-mono); color: var(--k-mute); transition: rotate .25s var(--k-ease); }
+  :is(.g, .rt)[open] > summary::after { rotate: 45deg; }
+  .g-meta { grid-column: 1; font: 500 11px/1.5 var(--k-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--k-mute); }
+  .g-title { grid-column: 1; font: 650 16.5px/1.3 var(--k-sans); letter-spacing: -.015em; color: var(--k-ink); text-wrap: pretty; }
+  :is(.g, .rt) > summary:hover .g-title { color: var(--k-green); }
+  .g-take { grid-column: 1; font-size: 14.5px; line-height: 1.5; color: var(--k-copy); text-wrap: pretty; }
+  .g-tags { grid-column: 1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+  .g-body { display: grid; gap: 11px; padding: 0 2px 22px; max-width: 68ch; font-size: 15px; line-height: 1.6; color: var(--k-copy); }
+  @media (min-width: 760px) {
+    .g-list .g > summary { grid-template-columns: 150px minmax(0, 1fr) auto 22px; column-gap: 18px; }
+    .g-list .g-meta { grid-row: 1 / span 2; padding-top: 3px; }
+    .g-list .g-title, .g-list .g-take { grid-column: 2; }
+    .g-list .g-tags { grid-column: 3; grid-row: 1 / span 2; margin-top: 2px; justify-content: flex-end; align-content: start; max-width: 176px; }
+    .g-list .g > summary::after { grid-column: 4; }
+    .g-list .g-body { margin-left: 168px; }
+  }
+  .g-do { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+  .g-do li { position: relative; padding-left: 24px; color: var(--k-ink); }
+  .g-do li::before { content: "→"; position: absolute; left: 0; font-family: var(--k-mono); color: var(--k-green); }
+  .tg { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 30px; border: 1px solid var(--k-rule-strong); font: 600 10.5px/1.45 var(--k-mono); letter-spacing: .04em; white-space: nowrap; color: var(--k-copy); }
+  .tg-strong { border-color: transparent; color: var(--k-green); background: color-mix(in srgb, var(--k-green) 14%, transparent); }
+  .tg-rule { border-color: var(--k-ink); color: var(--k-ink); }
+  .tg-moderate { border-color: transparent; color: var(--k-brass); background: color-mix(in srgb, var(--k-brass-fill) 15%, transparent); }
+  .tg-limited { border-style: dashed; }
+  .tg-practice { border-color: transparent; background: var(--k-tint); }
+  .tg-k { border-color: var(--k-brass-fill); color: var(--k-brass); }
+  :is(.g, .rt, .gl-item, .q):target, .nx tr:target { background: color-mix(in srgb, var(--k-brass-fill) 12%, transparent); }
+
+  /* claims */
+  .verdict { display: inline-block; padding: 4px 10px; border-radius: 30px; font: 600 10.5px/1.3 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+  .v-yes { background: color-mix(in srgb, var(--k-green) 16%, transparent); color: var(--k-green); }
+  .v-mixed { background: color-mix(in srgb, var(--k-brass-fill) 15%, transparent); color: var(--k-brass); }
+  .v-no { background: var(--k-tint); color: var(--k-copy); box-shadow: inset 0 0 0 1px var(--k-rule-strong); }
+  .k-qa.q { scroll-margin-top: 130px; }
+  .k-qa.q > summary { grid-template-columns: minmax(0, 1fr) auto auto; }
+  @media (max-width: 560px) { .k-qa.q > summary { grid-template-columns: minmax(0, 1fr) auto; } .k-qa.q > summary .verdict { grid-row: 2; grid-column: 1; justify-self: start; } }
+  .q-take { color: var(--k-ink); font-weight: 600; }
+  .q-who { font-size: 14px; line-height: 1.55; }
+  .q-who b { color: var(--k-ink); font-weight: 600; }
+  .q-meta { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); }
+  .q-rel { font-size: 13.5px; line-height: 1.6; }
+  .q-rel a { color: var(--k-green); text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 2px; }
+  .q-rel a:hover { text-decoration-color: currentColor; }
+
+  /* meet day: a timeline, then the bag list */
+  .tl { list-style: none; margin: 0; padding: 0; }
+  .tl-phase { display: grid; gap: 2px 30px; padding: 18px 0 8px; border-top: 2px solid var(--k-ink); }
+  .tl-when { margin: 0; font: 800 clamp(19px, 2.4vw, 23px)/1.15 var(--k-sans); letter-spacing: -.03em; color: var(--k-green); }
+  .tl-steps { min-width: 0; }
+  .tl-steps .g:last-child { border-bottom: 0; }
+  .tl-steps .g-meta { display: none; }
+  @media (min-width: 860px) { .tl-phase { grid-template-columns: 200px minmax(0, 1fr); } .tl-when { position: sticky; top: 132px; align-self: start; padding-top: 14px; } }
+  .ck { margin-top: 36px; padding: clamp(18px, 3vw, 30px); border: 1px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); scroll-margin-top: 130px; }
+  .ck-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 10px 26px; margin-bottom: 16px; }
+  .ck-top .k-small { margin-top: 6px; max-width: 56ch; }
+  .ck-count { font: 500 13px/1.6 var(--k-mono); color: var(--k-copy); }
+  .ck-count b { color: var(--k-ink); }
+  .ck-groups { display: grid; gap: 20px 30px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .ck fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .ck legend { padding: 0; margin-bottom: 4px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-brass); }
+  .ck-item { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: start; min-height: 44px; padding: 11px 0; border-top: 1px solid var(--k-rule); cursor: pointer; font-size: 15px; line-height: 1.4; color: var(--k-ink); }
+  .ck-item input { width: 20px; height: 20px; margin: 0; accent-color: var(--k-green-fill); }
+  .ck-item:has(input:checked) span { color: var(--k-mute); text-decoration: line-through; }
+  .ck .cite { display: block; margin-top: 14px; }
+
+  /* key numbers: a sortable table that stacks on a phone */
+  .nx { width: 100%; border-collapse: collapse; }
+  .nx thead th { padding: 0 14px 4px 0; text-align: left; border-bottom: 2px solid var(--k-ink); white-space: nowrap; }
+  .nx thead button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; background: none; cursor: pointer;
+    font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-mute); }
+  .nx thead button::after { content: "↕"; font-size: 12px; opacity: .6; }
+  .nx th[aria-sort="ascending"] button, .nx th[aria-sort="descending"] button { color: var(--k-ink); }
+  .nx th[aria-sort="ascending"] button::after { content: "↑"; opacity: 1; }
+  .nx th[aria-sort="descending"] button::after { content: "↓"; opacity: 1; }
+  .nx tbody tr { scroll-margin-top: 130px; }
+  .nx tbody th, .nx tbody td { padding: 15px 14px 15px 0; border-bottom: 1px solid var(--k-rule); vertical-align: top; text-align: left; }
+  .nx tbody th { width: 190px; font-weight: 400; }
+  .nx-v { display: block; font: 800 clamp(22px, 3vw, 28px)/1.05 var(--k-sans); letter-spacing: -.035em; color: var(--k-green); font-variant-numeric: tabular-nums; }
+  .nx-u { display: block; margin-top: 4px; font: 500 11.5px/1.4 var(--k-mono); color: var(--k-mute); }
+  .nx td > b { display: block; font: 650 15.5px/1.3 var(--k-sans); color: var(--k-ink); }
+  .nx td > span { display: block; margin-top: 3px; max-width: 62ch; font-size: 14px; line-height: 1.5; color: var(--k-copy); }
+  .nx td > .tg { display: inline-flex; margin-top: 0; }
+  .nx td .cite { display: block; margin-top: 6px; }
+  .nx-d { font: 500 12px/1.6 var(--k-mono); color: var(--k-copy); white-space: nowrap; }
+  @media (max-width: 760px) {
+    .nx, .nx tbody, .nx tr, .nx tbody th, .nx td { display: block; width: auto; }
+    .nx thead { display: block; } .nx thead tr { display: flex; flex-wrap: wrap; gap: 0 18px; border-bottom: 2px solid var(--k-ink); } .nx thead th { border: 0; padding: 0; }
+    .nx tbody tr { padding: 16px 0; border-bottom: 1px solid var(--k-rule); }
+    .nx tbody th, .nx tbody td { padding: 0; border: 0; }
+    .nx tbody td { margin-top: 8px; }
+    .nx tbody td.nx-d, .nx tbody td.nx-c { display: inline-block; margin-right: 10px; }
+  }
+
+  /* reference tables */
+  .rt-scroll { overflow-x: auto; margin: 2px 0 12px; border: 1px solid var(--k-rule-strong); border-radius: 12px; background: var(--k-raised); }
+  .rt table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
+  .rt th, .rt td { padding: 10px 14px; text-align: left; vertical-align: top; border-top: 1px solid var(--k-rule); }
+  .rt thead th { border-top: 0; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-mute); }
+  .rt tbody th { font-weight: 650; color: var(--k-ink); }
+  .rt td { color: var(--k-copy); }
+  .rt > .tg { margin-bottom: 8px; }
+  .rt > .cite { display: block; margin-bottom: 18px; }
+
+  /* glossary */
+  .gl { margin: 0; columns: 1; column-gap: 44px; }
+  @media (min-width: 700px) { .gl { columns: 2; } }
+  @media (min-width: 1100px) { .gl { columns: 3; } }
+  .gl-item { break-inside: avoid; padding: 12px 0; border-top: 1px solid var(--k-rule); scroll-margin-top: 130px; }
+  .gl-item[hidden] { display: none; }
+  .gl dt { font: 650 15.5px/1.3 var(--k-sans); color: var(--k-ink); }
+  .gl dd { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: var(--k-copy); }
+  .gl-d { margin-left: 4px; font: 500 10.5px/1.4 var(--k-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--k-mute); white-space: nowrap; }
+
+  /* sources */
+  .lg { display: grid; gap: 10px 28px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin: 0 0 30px; }
+  .lg div { display: grid; gap: 6px; align-content: start; }
+  .lg dt { margin: 0; } .lg dd { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--k-copy); }
+  .sources { columns: 1; margin: 0; padding-left: 0; list-style: none; font-size: 13.5px; line-height: 1.5; color: var(--k-copy); }
+  @media (min-width: 900px) { .sources { columns: 2; column-gap: 40px; } }
+  .sources li { break-inside: avoid; padding: 9px 10px; margin: 0 -10px; border-radius: 8px; scroll-margin-top: 130px; overflow-wrap: anywhere; }
+  .sources li:target { background: color-mix(in srgb, var(--k-brass-fill) 18%, transparent); }
+  .sources b { color: var(--k-ink); font-weight: 600; }
+  .sources .as { font: 500 11px/1.5 var(--k-mono); color: var(--k-mute); }
+  .sources a { color: var(--k-green); word-break: break-word; }
+
+  /* meet attempt planner */
+  .att { width: 100%; border-collapse: collapse; font: 500 14px/1.3 var(--k-mono); font-variant-numeric: tabular-nums; }
+  .att th, .att td { padding: 10px 6px 10px 0; text-align: left; border-top: 1px solid rgba(240,232,214,.16); }
+  .att thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
+  .att tbody th { color: #d8b07a; font-weight: 600; }
+  .att td small { display: block; margin-top: 2px; font-size: 11px; color: #a9b9a3; }
+  .wu { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; font: 500 13px/1.3 var(--k-mono); }
+  .wu li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid rgba(240,232,214,.14); color: #f0e8d6; }
+  .wu li span:last-child { color: #c2ceb9; }
+</style>
+</head>
+<body class="ks-paper k2">
+<a class="k-skip" href="#main">Skip to content</a>
+<div data-ks="header" data-active="fitness"></div>
+
+<main id="main">
+
+  <section class="k-hero k-wrap" aria-labelledby="page-title">
+    <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
+    <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
+    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, five free calculators and a field guide cover the ground: {{n:total}} entries on hypertrophy, powerlifting, meet day, nutrition, diet and health. Everything runs in your browser.</p>
+    <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains. Each one names its source and says how well supported it is. They’re general information, not medical advice.</p>
+  </section>
+
+  <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
+    <a href="#vantix">Vantix</a><a href="#tools">Tools</a><a href="#guide">Field guide</a><a href="#claims">Claims, checked</a><a href="#meet-day">Meet day</a><a href="#numbers">Numbers</a><a href="#tables">Tables</a><a href="#glossary">Glossary</a><a href="#sources">Sources</a>
+  </div></nav>
+
+  <!-- ===================== VANTIX ===================== -->
+  <section id="vantix" class="k-band" aria-labelledby="h-vantix">
+    <div class="k-wrap">
+      <article class="k-pc k-pc--vantix k-reveal vx-card" style="padding:clamp(30px,4vw,48px) clamp(22px,4vw,44px) clamp(22px,4vw,44px)">
+        <span class="feat"><span aria-hidden="true">✱</span> Featured project</span>
+        <div class="vx">
+          <div class="vx-copy">
+            <div class="k-pc-top"><span class="k-pc-tag">◈ Vantix · the periodization OS</span><span class="k-status k-status--wip">In progress</span></div>
+            <h2 class="k-pc-title" id="h-vantix">Every fitness dot. One instrument. Zero black boxes.</h2>
+            <p>You define the plan, macrocycle to set. Vantix normalizes what your apps and devices export into one record and checks every week against the bands you set. An AI co-pilot can propose changes; your hard rules decide whether they apply.</p>
+            <ul class="pillars">
+              <li><i>01</i><b>Programmable periodization</b><span>Weekly bands, effective-set math and phase caps are computed continuously, not eyeballed.</span></li>
+              <li><i>02</i><b>Integration &amp; normalization</b><span>Any source lands on one universal event spine, with raw payloads kept so everything can be re-derived.</span></li>
+              <li><i>03</i><b>AI co-pilot with a review-gate</b><span>It never writes directly. It produces a diff you accept, reject or edit row by row.</span></li>
+            </ul>
+            <dl class="vx-tiers">
+              <div><dt>Free</dt><dd>v1.0, “The Free Core”: the core athlete app. In progress, target Dec 31, 2026.</dd></div>
+              <div><dt>Plus</dt><dd>A paid athlete tier, later. No price yet.</dd></div>
+              <div><dt>Pro · Coach</dt><dd>The coach system. Planned, no dates.</dd></div>
+            </dl>
+            <div class="k-actions" style="margin-top:6px">
+              <a class="k-btn" style="background:#92a6cc;color:#1e222a !important" href="/vantix">See Vantix</a>
+              <a class="k-go" href="/vantix#pricing">Free and paid tiers</a>
+              <a class="k-go" href="/vantix#join">Join the list</a>
+            </div>
+          </div>
+          <div>
+            <div class="vx-panel">
+              <div class="vx-panel-top"><span>Weekly stimulating reps vs your band</span><span>Example data</span></div>
+              <div class="vx-rows" id="vx-rows" role="group" aria-label="An example week by muscle group. Choose a row to read it.">
+                <button type="button" aria-pressed="true" data-read="Shoulders: 73.6 stimulating reps this week, inside the band of 40 to 80."><span>Shoulders</span><span class="vx-bar"><i style="width:73.6%"></i></span><em>73.6 ● in</em></button>
+                <button type="button" aria-pressed="false" data-read="Back: 67.6 stimulating reps this week, inside the band of 40 to 80."><span>Back</span><span class="vx-bar"><i style="width:67.6%"></i></span><em>67.6 ● in</em></button>
+                <button type="button" aria-pressed="false" data-read="Chest: 54 stimulating reps this week, inside the band of 40 to 80."><span>Chest</span><span class="vx-bar"><i style="width:54%"></i></span><em>54 ● in</em></button>
+                <button type="button" class="under" aria-pressed="false" data-read="Abdominals: 30.5 stimulating reps this week, below the band of 40 to 80."><span>Abdominals</span><span class="vx-bar"><i style="width:30.5%"></i></span><em>30.5 ▽ below</em></button>
+                <button type="button" class="over" aria-pressed="false" data-read="Legs: 88.6 stimulating reps this week, above the band of 40 to 80. In Vantix the group opens to show which movements did it."><span>Legs</span><span class="vx-bar"><i style="width:88.6%"></i></span><em>88.6 ▲ above</em></button>
+              </div>
+              <p class="vx-read" id="vx-read" aria-live="polite">Shoulders: 73.6 stimulating reps this week, inside the band of 40 to 80.</p>
+            </div>
+            <div class="vx-panel vx-track">
+              <div class="vx-panel-top"><span>Track · planned, then done</span><span>Example data</span></div>
+              <ol class="vx-weeks" aria-label="A nine-week block. Week 2 is the current week.">
+                <li>W1</li><li aria-current="true">W2</li><li>W3</li><li>W4</li><li class="ov">W5</li><li class="ov">W6</li><li class="dl">W7</li><li class="dl">W8</li><li class="dl">W9</li>
+              </ol>
+              <p class="vx-key">W1-4 accumulation · W5-6 overload · W7-9 deload</p>
+              <p class="vx-day">Thu · Upper B (Tension/Power) <span>23 sets · 52% compound</span></p>
+              <div class="vx-tt-wrap" tabindex="0" role="region" aria-label="Track sample: three exercises">
+                <table class="vx-tt"><caption class="k-vh">Three exercises from one session: the planned line, then what was done</caption>
+                  <thead><tr><th scope="col">Exercise</th><th scope="col">Sets × reps</th><th scope="col">RIR</th><th scope="col">Stim</th><th scope="col" class="opt">Rest</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">Pull Up (Weighted)</th><td>3×5-8</td><td>1-2</td><td>≈10.5</td><td class="opt">3 min</td></tr>
+                    <tr class="done"><th scope="row"><span aria-hidden="true">✓</span> done as planned</th><td>3×6-8</td><td>≈0.5-1</td><td>12.5</td><td class="opt"></td></tr>
+                    <tr><th scope="row">Bent Over Row (Barbell)</th><td>3×6-10</td><td>1-2</td><td>≈10.5</td><td class="opt">2.5 min</td></tr>
+                    <tr class="done"><th scope="row"><span aria-hidden="true">✓</span> done as planned</th><td>3×7-9</td><td>≈1-1.5</td><td>11.5</td><td class="opt"></td></tr>
+                    <tr><th scope="row">Chest Dip (Weighted)</th><td>3×5-8</td><td>1-2</td><td>≈10.5</td><td class="opt">3 min</td></tr>
+                    <tr class="done"><th scope="row"><span aria-hidden="true">✓</span> done as planned</th><td>3×7-9</td><td>≈0.5-1.5</td><td>12</td><td class="opt"></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p class="vx-fine">Both panels use example data. A band is the weekly range of stimulating reps you set for a muscle group. Stimulating reps are estimated from the reps in reserve you log for each set.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== TOOLS ===================== -->
+  <section id="tools" class="k-band" aria-labelledby="h-tools">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Free tools</span><h2 class="k-h2" id="h-tools">Five calculators. <em>No sign-up.</em></h2></div>
+        <p class="k-small" style="max-width:34ch">Your inputs are remembered in this browser and go nowhere else.</p>
+      </header>
+
+      <div class="k-seg k-seg--scroll" role="tablist" aria-label="Tools">
+        <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
+        <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
+        <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
+        <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
+        <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+      </div>
+
+      <!-- ---------- 1. energy & macros ---------- -->
+      <div class="tool" id="macros" role="tabpanel" aria-labelledby="tab-macros">
+        <p class="k-copy tool-intro">Estimates what you burn in a day, sets a calorie target for your goal, and splits it into protein, carbohydrate and fat. Then it writes a meal-plan prompt you can hand to an AI assistant.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="m-units-l">Units</span><div class="k-seg" id="m-units" role="group" aria-labelledby="m-units-l"><button type="button" value="metric">Metric</button><button type="button" value="imperial">Imperial</button></div></div>
+              <div class="k-field"><span class="k-label" id="m-sex-l">Sex (for the equation)</span><div class="k-seg" id="m-sex" role="group" aria-labelledby="m-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
+            </div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="m-age" type="number" inputmode="numeric" min="16" max="95" value="30"><span>yr</span></span></label>
+              <label class="k-field" id="m-h-metric"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="m-cm" type="number" inputmode="decimal" min="120" max="230" value="175"><span>cm</span></span></label>
+              <div class="k-field" id="m-h-imperial" hidden><span class="k-label" id="m-h-imp-l">Height</span><span style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><span class="with-unit"><input class="k-input" id="m-ft" type="number" inputmode="numeric" min="4" max="7" value="5" aria-label="Height, feet"><span>ft</span></span><span class="with-unit"><input class="k-input" id="m-in" type="number" inputmode="numeric" min="0" max="11" value="9" aria-label="Height, inches"><span>in</span></span></span></div>
+              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="m-weight" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="m-w-unit">kg</span></span></label>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional</span></span><span class="with-unit"><input class="k-input" id="m-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
+              <label class="k-field"><span class="k-label">Activity</span>
+                <select class="k-select" id="m-act">
+                  <option value="1.4" data-short="mostly sedentary">Sedentary · mostly sitting</option>
+                  <option value="1.6" data-short="lightly active" selected>Light · desk job, regular training</option>
+                  <option value="1.8" data-short="active">Active · on your feet or training hard</option>
+                  <option value="2.0" data-short="very active">Vigorous · physical job + hard training</option>
+                </select></label>
+            </div>
+            <div class="k-field"><span class="k-label" id="m-goal-l">Goal</span><div class="k-seg" id="m-goal" role="group" aria-labelledby="m-goal-l"><button type="button" value="lose">Lose fat</button><button type="button" value="hold">Maintain</button><button type="button" value="gain">Gain muscle</button></div></div>
+            <label class="k-field" id="m-rate-wrap"><span class="k-label"><span id="m-rate-label">Rate of loss</span><span id="m-rate-read" style="text-transform:none;letter-spacing:0">0.50% of body weight / week</span></span><input class="k-range" id="m-rate" type="range" min="0.25" max="1" step="0.05" value="0.5"></label>
+            <label class="k-field"><span class="k-label">Protein<span id="m-prot-read" style="text-transform:none;letter-spacing:0">2.0 g/kg</span></span><input class="k-range" id="m-prot" type="range" min="1.2" max="3" step="0.1" value="2"></label>
+            <label class="k-field"><span class="k-label">Fat<span id="m-fat-read" style="text-transform:none;letter-spacing:0">25% of calories</span></span><input class="k-range" id="m-fat" type="range" min="15" max="40" step="1" value="25"></label>
+
+            <details class="more">
+              <summary>Turn it into a meal-plan prompt</summary>
+              <div>
+                <div class="row3">
+                  <label class="k-field"><span class="k-label">Diet</span><select class="k-select" id="m-diet"><option value="none">No restrictions</option><option>vegetarian</option><option>vegan</option><option>pescatarian</option><option>halal</option><option>kosher</option><option>gluten-free</option><option>dairy-free</option></select></label>
+                  <label class="k-field"><span class="k-label">Meals / day</span><select class="k-select" id="m-meals"><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label>
+                  <label class="k-field"><span class="k-label">Cooking time</span><select class="k-select" id="m-cook"><option>up to 15 minutes</option><option selected>up to 30 minutes</option><option>up to 60 minutes</option></select></label>
+                </div>
+                <label class="k-field"><span class="k-label">Foods to avoid</span><input class="k-input" id="m-avoid" type="text" placeholder="e.g. mushrooms, shellfish" autocomplete="off"></label>
+                <label class="k-field"><span class="k-label">Your prompt</span><textarea class="k-input" id="m-prompt" readonly spellcheck="false"></textarea></label>
+                <div class="k-actions"><button class="k-btn k-btn--sm" id="m-copy" type="button">Copy prompt</button><span class="k-small">Paste it into the assistant you use. Check its arithmetic; language models make mistakes with numbers.</span></div>
+              </div>
+            </details>
+          </div>
+
+          <div class="k-card tool-out" id="m-out">
+            <p class="k-vh" id="m-say" role="status"></p>
+            <div><p class="k-label">Daily target</p><p class="k-stat"><span id="m-kcal">—</span><small>kcal</small></p><p class="k-small" id="m-sub"></p></div>
+            <div class="hide-empty">
+              <div class="macrobar" id="m-bar" role="img" aria-label="Calorie split"><i id="m-bar-p"></i><i id="m-bar-c"></i><i id="m-bar-f"></i></div>
+              <div class="macros" style="margin-top:12px">
+                <div class="p"><b id="m-p">—</b><span class="k-label">Protein</span></div>
+                <div class="c"><b id="m-c">—</b><span class="k-label">Carbs</span></div>
+                <div class="f"><b id="m-f">—</b><span class="k-label">Fat</span></div>
+              </div>
+            </div>
+            <p class="warn" id="m-warn" hidden></p>
+            <div class="kv hide-empty">
+              <div><span class="k-label">Maintenance</span><b id="m-maint">—</b></div>
+              <div><span class="k-label">Expected change</span><b id="m-change">—</b></div>
+              <div><span class="k-label">Resting energy</span><b id="m-rmr">—</b><span class="k-small" id="m-eq" style="font-size:12px">Mifflin-St Jeor</span></div>
+              <div><span class="k-label">Activity level</span><b id="m-pal">—</b></div>
+            </div>
+            <p class="k-small">A starting estimate. The best equation lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. {{c:mifflin1990,frankenfield2005,cunningham1991,fao2004}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 2. effective reps ---------- -->
+      <div class="tool" id="reps" role="tabpanel" aria-labelledby="tab-reps">
+        <p class="k-copy tool-intro">“Effective reps” is a coaching shorthand: the idea that the reps closest to failure do most of the work. Drag the sliders to see how a set scores under it, then tally a session.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <label class="k-field"><span class="k-label">Reps performed<span id="r-reps-read" style="text-transform:none;letter-spacing:0">10 reps</span></span><input class="k-range" id="r-reps" type="range" min="1" max="25" step="1" value="10"></label>
+            <label class="k-field"><span class="k-label">Reps in reserve (RIR)<span id="r-rir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="r-rir" type="range" min="0" max="6" step="1" value="2"></label>
+            <div class="k-actions"><button class="k-btn k-btn--sm" id="r-add" type="button">Add this set to the session</button><button class="k-btn k-btn--sm k-btn--ghost" id="r-clear" type="button" hidden>Clear</button></div>
+            <div>
+              <p class="k-label" style="margin-bottom:6px">Session tally</p>
+              <ol class="setlog" id="r-log"></ol>
+              <p class="k-small" id="r-total" style="margin-top:10px" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="k-card tool-out">
+            <div><p class="k-label">This set</p><p class="k-stat"><span id="r-eff">3<small>effective reps</small></span></p><p class="k-small"><span id="r-rpe">RPE 8</span> on the reps-in-reserve scale {{c:zourdos2016}}</p></div>
+            <div class="dots" id="r-dots" role="img" aria-label=""></div>
+            <div class="dots-key"><span><i style="background:rgba(240,232,214,.4)"></i>done</span><span><i style="background:#d8b07a"></i>done, in the last five</span><span><i style="border:2px dashed rgba(240,232,214,.5)"></i>left in reserve</span></div>
+            <p class="k-small" id="r-msg"></p>
+            <p class="k-vh" id="r-say" role="status"></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)"><b style="color:#f0e8d6">Read this as a heuristic, not a measurement.</b> No study has tested a cut-off at five reps. What the research supports is softer: growth tends to improve as sets end nearer to failure, and going all the way to failure adds little over stopping just short. {{c:nuckols,robinson2024,refalo2023}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 3. 1RM & loads ---------- -->
+      <div class="tool" id="loads" role="tabpanel" aria-labelledby="tab-loads">
+        <p class="k-copy tool-intro">Enter a set you’ve done. It estimates your one-rep max, then tells you what to put on the bar for a target number of reps with a chosen number left in reserve.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-field"><span class="k-label" id="l-units-l">Units</span><div class="k-seg" id="l-units" role="group" aria-labelledby="l-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Weight lifted</span><span class="with-unit"><input class="k-input" id="l-w" type="number" inputmode="decimal" min="1" step="0.5" value="100"><span id="l-unit">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Reps you got</span><input class="k-input" id="l-reps" type="number" inputmode="numeric" min="1" max="20" value="5"></label>
+            </div>
+            <p class="k-label" style="margin-top:4px">What should I load?</p>
+            <label class="k-field"><span class="k-label">Target reps<span id="l-treps-read" style="text-transform:none;letter-spacing:0">8 reps</span></span><input class="k-range" id="l-treps" type="range" min="1" max="15" step="1" value="8"></label>
+            <label class="k-field"><span class="k-label">Left in reserve<span id="l-trir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="l-trir" type="range" min="0" max="5" step="1" value="2"></label>
+          </div>
+          <div class="k-card tool-out" id="l-out">
+            <p class="k-vh" id="l-say" role="status"></p>
+            <div class="row2">
+              <div><p class="k-label">Estimated 1RM</p><p class="k-stat"><span id="l-e1rm">—<small id="l-e1rm-u">kg</small></span></p></div>
+              <div><p class="k-label">Load for your target</p><p class="k-stat"><span id="l-load">—<small id="l-load-u">kg</small></span></p></div>
+            </div>
+            <p class="k-small"><span id="l-note"></span> <span id="l-pct"></span></p>
+            <div class="kv hide-empty"><div><span class="k-label">Epley · used here</span><b id="l-epley">—</b></div><div><span class="k-label">Brzycki · for comparison</span><b id="l-brzycki">—</b></div></div>
+            <table class="ltable hide-empty"><caption class="k-vh">Loads and approximate reps to failure at each percentage of the estimated one-rep max</caption>
+              <thead><tr><th scope="col">% of 1RM</th><th scope="col">Load</th><th scope="col">Reps to failure</th></tr></thead>
+              <tbody id="l-rows"></tbody>
+            </table>
+            <p class="k-small">The estimate and every load come from the Epley equation, 1RM = weight × (1 + reps ÷ 30); Brzycki’s is shown beside it for comparison. Both work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. {{c:brzycki1993,reynolds2006,lesuer1997}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 4. travel workout ---------- -->
+      <div class="tool" id="travel" role="tabpanel" aria-labelledby="tab-travel">
+        <p class="k-copy tool-intro">A hotel room, a spare room, a park. Say what you have and how long you’ve got; get a balanced session with a push, a pull, a squat, a hinge and some trunk work.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-field"><span class="k-label" id="t-equip-l">What’s in the room</span>
+              <div class="k-chips" id="t-equip" role="group" aria-labelledby="t-equip-l">
+                <button class="k-tog" type="button" aria-pressed="true" disabled>Bodyweight</button>
+                <button class="k-tog" type="button" value="db" aria-pressed="false">Dumbbells</button>
+                <button class="k-tog" type="button" value="kb" aria-pressed="false">Kettlebell</button>
+                <button class="k-tog" type="button" value="band" aria-pressed="false">Bands</button>
+                <button class="k-tog" type="button" value="bar" aria-pressed="false">Pull-up bar</button>
+                <button class="k-tog" type="button" value="bench" aria-pressed="false">Bench or sturdy chair</button>
+                <button class="k-tog" type="button" value="sus" aria-pressed="false">Suspension trainer</button>
+              </div></div>
+            <div class="k-field"><span class="k-label" id="t-time-l">Minutes</span><div class="k-seg" id="t-time" role="group" aria-labelledby="t-time-l"><button type="button" value="15">15</button><button type="button" value="20">20</button><button type="button" value="30">30</button><button type="button" value="45">45</button></div></div>
+            <div class="k-field"><span class="k-label" id="t-level-l">Level</span><div class="k-seg" id="t-level" role="group" aria-labelledby="t-level-l"><button type="button" value="1">Beginner</button><button type="button" value="2">Intermediate</button><button type="button" value="3">Advanced</button></div></div>
+            <div class="k-field"><span class="k-label" id="t-format-l">Format</span><div class="k-seg" id="t-format" role="group" aria-labelledby="t-format-l"><button type="button" value="circuit">Circuit</button><button type="button" value="emom">EMOM</button><button type="button" value="amrap">AMRAP</button><button type="button" value="intervals">Intervals</button><button type="button" value="sets">Straight sets</button></div></div>
+            <p class="k-small">EMOM: every minute on the minute. AMRAP: as many rounds as possible. Sessions are general fitness for healthy adults; skip anything that hurts in a way that isn’t effort.</p>
+          </div>
+          <div class="k-card tool-out">
+            <div id="t-out" style="display:grid;gap:14px"></div>
+            <p class="k-vh" id="t-say" role="status"></p>
+            <div class="k-actions"><button class="k-btn k-btn--sm k-btn--cream" id="t-again" type="button">Shuffle ↻</button><button class="k-btn k-btn--sm k-btn--ghost" id="t-copy" type="button">Copy as text</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 5. meet attempts ---------- -->
+      <div class="tool" id="attempts" role="tabpanel" aria-labelledby="tab-attempts">
+        <p class="k-copy tool-intro">For a powerlifting meet. Enter the best single you could hit today on each lift. It suggests an opener, a second and a third attempt, rounded to what a meet loads, and a warm-up ladder to reach each opener.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-field"><span class="k-label" id="a-units-l">Units</span><div class="k-seg" id="a-units" role="group" aria-labelledby="a-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Squat</span><span class="with-unit"><input class="k-input" id="a-squat" type="number" inputmode="decimal" min="1" step="0.5" value="140"><span class="a-unit">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Bench</span><span class="with-unit"><input class="k-input" id="a-bench" type="number" inputmode="decimal" min="1" step="0.5" value="90"><span class="a-unit">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Deadlift</span><span class="with-unit"><input class="k-input" id="a-dead" type="number" inputmode="decimal" min="1" step="0.5" value="170"><span class="a-unit">kg</span></span></label>
+            </div>
+            <div class="k-field"><span class="k-label" id="a-style-l">How bold</span><div class="k-seg" id="a-style" role="group" aria-labelledby="a-style-l"><button type="button" value="first">First meet</button><button type="button" value="standard">Standard</button><button type="button" value="bold">Chasing PRs</button></div></div>
+            <p class="k-small" id="a-style-note"></p>
+            <div class="k-field"><span class="k-label" id="a-warm-l">Warm-up ladder for</span><div class="k-seg" id="a-warm" role="group" aria-labelledby="a-warm-l"><button type="button" value="squat">Squat</button><button type="button" value="bench">Bench</button><button type="button" value="dead">Deadlift</button></div></div>
+          </div>
+          <div class="k-card tool-out" id="a-out">
+            <p class="k-vh" id="a-say" role="status"></p>
+            <table class="att"><caption class="k-vh">Suggested attempts for each lift</caption>
+              <thead><tr><th scope="col">Lift</th><th scope="col">Opener</th><th scope="col">Second</th><th scope="col">Third</th></tr></thead>
+              <tbody id="a-rows"></tbody>
+            </table>
+            <div class="kv hide-empty"><div><span class="k-label">Total if every third goes</span><b id="a-total">—</b></div><div><span class="k-label">Total on seconds</span><b id="a-total2">—</b></div></div>
+            <div class="wk hide-empty"><h4 id="a-warm-h">Warm-up ladder</h4><ol class="wu" id="a-ladder"></ol></div>
+            <p class="k-small">These percentages are a common coaching convention, not a rule or a study result: an opener you could lift for a triple, a second that sets up the third, and a third near your best. Meets load in kilograms in 2.5 kg steps, so every attempt is rounded to that. Change a later attempt on the day by how the last one moved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FIELD GUIDE (generated by scripts/build_fitness.py from content/fitness/*.json) ===================== -->
+  <section id="guide" class="k-band" aria-labelledby="h-guide">
+    <div class="k-wrap">
+      <span id="training"></span>
+      <header class="k-shead">
+        <div><span class="k-num">Field guide</span><h2 class="k-h2" id="h-guide">Six areas, <em>one index.</em></h2></div>
+        <p class="k-small" style="max-width:40ch">{{n:guide}} entries. Pick an area, narrow by level or by how well supported a point is, then open one.</p>
+      </header>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      {{guide}}
+    </div>
+  </section>
+
+  <!-- ===================== CLAIMS ===================== -->
+  <section id="claims" class="k-band" aria-labelledby="h-claims">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Claims, checked</span><h2 class="k-h2" id="h-claims">{{n:claims}} things <em>people say.</em></h2></div>
+        <p class="k-small" style="max-width:38ch">A verdict, the reason, who was studied, and the paper. Open one to read it.</p>
+      </header>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      {{claims}}
+    </div>
+  </section>
+
+  <!-- ===================== MEET DAY ===================== -->
+  <section id="meet-day" class="k-band" aria-labelledby="h-meet">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Meet day</span><h2 class="k-h2" id="h-meet">Your first meet, <em>in order.</em></h2></div>
+        <p class="k-small" style="max-width:40ch">{{n:steps}} steps from signing up to the drive home, then a bag list that remembers your ticks. Rules differ between federations: check yours.</p>
+      </header>
+      {{meet}}
+    </div>
+  </section>
+
+  <!-- ===================== KEY NUMBERS ===================== -->
+  <section id="numbers" class="k-band" aria-labelledby="h-numbers">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Key numbers</span><h2 class="k-h2" id="h-numbers">The figures <em>worth knowing.</em></h2></div>
+        <p class="k-small" style="max-width:38ch">{{n:numbers}} numbers. Choose a column heading to sort by it.</p>
+      </header>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      {{numbers}}
+    </div>
+  </section>
+
+  <!-- ===================== REFERENCE TABLES ===================== -->
+  <section id="tables" class="k-band" aria-labelledby="h-tables">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Reference</span><h2 class="k-h2" id="h-tables">Tables to <em>look things up.</em></h2></div>
+        <p class="k-small" style="max-width:38ch">{{n:tables}} tables. Open one; wide ones scroll sideways.</p>
+      </header>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      <div id="t-list">
+      {{tables}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GLOSSARY ===================== -->
+  <section id="glossary" class="k-band" aria-labelledby="h-glossary">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Glossary</span><h2 class="k-h2" id="h-glossary">{{n:terms}} terms, <em>in plain words.</em></h2></div>
+      </header>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      {{glossary}}
+    </div>
+  </section>
+
+  <!-- ===================== SOURCES ===================== -->
+  <section id="sources" class="k-band" aria-labelledby="h-sources">
+    <div class="k-wrap">
+      <header class="k-shead">
+        <div><span class="k-num">Sources</span><h2 class="k-h2" id="h-sources">Where this <em>comes from.</em></h2></div>
+        <p class="k-small" style="max-width:40ch">{{n:sources}} sources, each checked against its record. Last updated {{updated}}.</p>
+      </header>
+      {{legend}}
+      {{sources}}
+    </div>
+  </section>
+
+</main>
+
+<div data-ks="footer"></div>
+
+<script src="/ks.js?v=2027.6"></script>
+<script src="/fitness.js?v=2027.6"></script>
+</body>
+</html>

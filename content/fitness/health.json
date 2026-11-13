@@ -1,0 +1,2385 @@
+{
+ "domain": "health",
+ "topics": [
+  {
+   "id": "guidelines",
+   "label": "Activity guidelines"
+  },
+  {
+   "id": "aerobic",
+   "label": "Aerobic base and zone 2"
+  },
+  {
+   "id": "fitness",
+   "label": "VO2 max and fitness"
+  },
+  {
+   "id": "strength",
+   "label": "Strength and muscle"
+  },
+  {
+   "id": "bones",
+   "label": "Bones and balance"
+  },
+  {
+   "id": "sleep",
+   "label": "Sleep and protein"
+  },
+  {
+   "id": "supplements",
+   "label": "Supplements"
+  },
+  {
+   "id": "markers",
+   "label": "Health markers"
+  }
+ ],
+ "entries": [
+  {
+   "id": "hlth-who-weekly-targets",
+   "type": "note",
+   "title": "WHO asks adults for 150 to 300 minutes of moderate activity a week",
+   "topic": "guidelines",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "bull-2020",
+    "piercy-2018",
+    "ukcmo-2019"
+   ],
+   "take": "Aim for 150 to 300 minutes of moderate or 75 to 150 minutes of vigorous aerobic activity a week, plus strength work on 2 or more days.",
+   "body": "The 2020 WHO guidelines give these ranges for all adults, with an equivalent mix of moderate and vigorous activity allowed. They also advise muscle-strengthening on 2 or more days a week. The US 2018 and UK 2019 guidelines set the same weekly minimums. Moderate means you can talk but not sing. Vigorous means you can say only a few words before a breath.",
+   "do": [
+    "Add up walks, rides and sessions across the week to reach the range.",
+    "Place two strength sessions on separate days."
+   ]
+  },
+  {
+   "id": "hlth-more-than-minimum",
+   "type": "note",
+   "title": "Mortality benefit levelled off at about two to five times the minimum",
+   "topic": "guidelines",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "arem-2015",
+    "lee-2022"
+   ],
+   "take": "In large cohorts, the lowest death rates sat near 2 to 5 times the guideline minimum, with no clear harm at higher amounts.",
+   "body": "Arem 2015 pooled 661,137 adults and found a 31% lower mortality risk at 1 to 2 times the minimum and 37% at 2 to 3 times, with the best result near 3 to 5 times and no excess risk at 10 or more times. Lee 2022 followed 116,221 US health professionals and found the near-maximum association at about 150 to 300 minutes a week of vigorous or 300 to 600 of moderate activity. Both studies are observational and rely on self-reported activity.",
+   "do": [
+    "Treat 300 minutes a week of moderate activity as a ceiling for health benefit, not a requirement."
+   ]
+  },
+  {
+   "id": "hlth-steps-and-mortality",
+   "type": "note",
+   "title": "Death risk in cohorts fell with daily steps and flattened around 5,000 to 8,000",
+   "topic": "guidelines",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "paluch-2022",
+    "ding-2025"
+   ],
+   "take": "Cohort data show the steepest gains in the first thousands of steps, with 7,000 steps linked to about half the risk of 2,000.",
+   "body": "Paluch 2022 pooled 15 cohorts (47,471 adults): risk fell until about 6,000 to 8,000 steps a day at age 60 and over and 8,000 to 10,000 under 60. Ding 2025 pooled 31 studies and found 7,000 steps a day linked to 47% lower all-cause mortality than 2,000 (HR 0.53). Evidence certainty was rated moderate. These are associations from device-measured cohorts.",
+   "do": [
+    "Use 7,000 steps as a realistic target and add more if it is easy."
+   ]
+  },
+  {
+   "id": "hlth-sitting-and-activity",
+   "type": "note",
+   "title": "About an hour of daily moderate activity matched the extra risk from long sitting",
+   "topic": "guidelines",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "ekelund-2016"
+   ],
+   "take": "People who sat over 8 hours but did about 60 to 75 minutes of moderate activity a day showed no raised mortality risk.",
+   "body": "This pooled analysis covered 16 studies, and the sitting analysis used 13 of them with 1,005,791 people. Those sitting more than 8 hours a day with the highest activity level had a hazard ratio of 1.04 (95% CI 0.99 to 1.10) against the most active, least sedentary group. High TV time stayed linked to higher risk, though less so in the most active. Self-reported sitting is imprecise.",
+   "do": [
+    "Break up long sitting spells and fit in a daily walk or ride."
+   ]
+  },
+  {
+   "id": "hlth-talk-test",
+   "type": "note",
+   "title": "The talk test finds moderate effort without a lab",
+   "topic": "aerobic",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "reed-2014",
+    "piercy-2018"
+   ],
+   "take": "If you can talk but not sing, you are in the moderate range, and if you can only say a few words, you are at vigorous effort.",
+   "body": "The talk test links speech to the ventilatory and lactate thresholds. A 2014 review describes it as valid, reliable and practical for healthy adults and heart patients, and comfortable speech is likely when you are below the threshold. The US guidelines give the same rule of thumb. The review notes it may not suit high-intensity intervals.",
+   "do": [
+    "Hold a steady pace where full sentences are easy.",
+    "Slow down if you need to catch your breath mid-sentence."
+   ]
+  },
+  {
+   "id": "hlth-zone2-definition",
+   "type": "note",
+   "title": "Zone 2 means effort just below the first lactate or ventilatory threshold",
+   "topic": "aerobic",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "sitko-2025",
+    "macintosh-2021"
+   ],
+   "take": "Experts define zone 2 as easy aerobic work just under the first threshold, where breathing rises but speech stays comfortable.",
+   "body": "A 14-person panel of sport scientists and coaches agreed that zone 2 is best placed immediately below the first lactate or ventilatory threshold. The thresholds differ from person to person and shift with training. The panel said the adaptations are likely not unique to zone 2 and can occur a little above or below. This is expert opinion, not trial evidence.",
+   "do": [
+    "Start with the talk test to find a steady, conversational pace."
+   ]
+  },
+  {
+   "id": "hlth-zone2-evidence",
+   "type": "note",
+   "title": "Evidence does not show zone 2 is the best intensity for health",
+   "topic": "aerobic",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "storoschuk-2025",
+    "sitko-2025"
+   ],
+   "take": "A 2025 review found no proof that zone 2 is optimal and argued harder work matters for health, especially at low weekly volumes.",
+   "body": "The review traced the zone 2 claims largely to observational data from elite endurance athletes who train a lot. It concluded the evidence does not support zone 2 as the optimal intensity for building mitochondrial or fat-burning capacity. It also said that higher intensities are important for cardiometabolic health when time is short. It is a narrative review, so it reflects the authors' reading.",
+   "do": [
+    "If time is short, keep some harder work in the week alongside easy sessions."
+   ]
+  },
+  {
+   "id": "hlth-intervals-vo2",
+   "type": "note",
+   "title": "Interval training raised VO2 max slightly more than steady training in short trials",
+   "topic": "aerobic",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "milanovic-2015",
+    "weston-2014"
+   ],
+   "take": "Pooled trials show interval training lifts VO2 max a little more than continuous training, by roughly 1 to 3 mL/kg/min.",
+   "body": "In healthy young to middle-aged adults, the gain was a possibly small 1.2 mL/kg/min more than endurance training (Milanovic 2015). In 273 patients with cardiometabolic disease across 10 studies, interval training beat moderate continuous training by 3.03 mL/kg/min, or 9.1% (Weston 2014). Both reviews pool short trials.",
+   "do": [
+    "Add one interval session a week if your clinician agrees you can train hard."
+   ]
+  },
+  {
+   "id": "hlth-fitness-mortality",
+   "type": "note",
+   "title": "Higher aerobic fitness goes with lower mortality, with no upper limit seen",
+   "topic": "fitness",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "lang-2024",
+    "mandsager-2018",
+    "kokkinos-2022",
+    "kodama-2009"
+   ],
+   "take": "Across large cohorts, each 1 MET higher fitness was linked to 11% to 17% lower all-cause mortality, and the top fitness group did best.",
+   "body": "An umbrella review of 26 reviews found high versus low fitness linked to a hazard ratio of 0.47 for all-cause mortality, with evidence certainty from very low to moderate. Kodama 2009 found low fitness carried a relative risk of 1.70 against high fitness. In 122,007 treadmill-tested patients and 750,302 veterans, the lowest risk was in the fittest group, with no rise in risk at the top. These are observational findings, and fitter people may differ in other ways.",
+   "do": [
+    "Test your fitness over time with a repeatable walk, run or ride."
+   ]
+  },
+  {
+   "id": "hlth-grip-mortality",
+   "type": "note",
+   "title": "Weaker grip strength tracks with higher risk of death in large cohorts",
+   "topic": "strength",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "leong-2015",
+    "celis-morales-2018",
+    "garcia-hermoso-2018"
+   ],
+   "take": "Each 5 kg (11 lb) lower grip strength went with about 16% to 20% higher all-cause mortality risk, a marker and not a proven cause.",
+   "body": "In 139,691 adults in the PURE study, the hazard ratio per 5 kg lower grip was 1.16 for all-cause death. In half a million UK Biobank participants it was 1.20 in women and 1.16 in men. A meta-analysis of 38 studies found higher grip linked to lower mortality (HR 0.69). The authors say trials are still needed to show that raising strength lowers risk.",
+   "do": [
+    "Track grip or another strength test over time and ask a clinician about low results."
+   ]
+  },
+  {
+   "id": "hlth-strength-dose",
+   "type": "note",
+   "title": "About 30 to 60 minutes a week of strength training was linked to the lowest mortality",
+   "topic": "strength",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "momma-2022",
+    "shailendra-2022"
+   ],
+   "take": "Pooled cohorts link any strength training to 10% to 17% lower mortality, with the best result near 30 to 60 minutes a week.",
+   "body": "Momma 2022 pooled 16 studies and found a J-shaped link, with the lowest risk at about 30 to 60 minutes a week. Shailendra 2022 pooled 10 studies and found 15% lower all-cause mortality for any resistance training, with a maximum reduction of 27% at about 60 minutes a week and smaller benefit at higher volumes. These are observational and training was self-reported.",
+   "do": [
+    "Start with 2 short strength sessions a week."
+   ]
+  },
+  {
+   "id": "hlth-strength-older-adults",
+   "type": "note",
+   "title": "Resistance training builds strength, muscle and function in older adults",
+   "topic": "strength",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "liu-2009",
+    "peterson-2010",
+    "peterson-2011",
+    "fragala-2019"
+   ],
+   "take": "Progressive resistance training reliably improves strength and daily function in people aged 60 and over, and harder training works better.",
+   "body": "A Cochrane review found a large effect on strength (73 trials, 3,059 people, SMD 0.84) and improved physical function. A meta-analysis of 47 studies found harder training gave bigger strength gains. Another of 49 studies found an average lean mass gain of 1.1 kg, with higher volume helping. The NSCA position statement backs resistance training for older adults. Serious adverse events were rare.",
+   "do": [
+    "Begin with a supervised program if you are new or have health conditions.",
+    "Raise the load gradually over weeks."
+   ]
+  },
+  {
+   "id": "hlth-muscle-loss-age",
+   "type": "note",
+   "title": "Strength falls two to five times faster than muscle size in later life",
+   "topic": "strength",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "mitchell-2012",
+    "cruz-jentoft-2018"
+   ],
+   "take": "At about age 75, strength drops about 2.5% to 4% a year while muscle mass drops under 1% a year.",
+   "body": "A review of longitudinal studies found muscle mass loss of 0.64% to 0.70% a year in women and 0.80% to 0.98% in men at age 75, with strength loss of 3% to 4% a year in men and 2.5% to 3% in women. Loss of strength carried a more consistent risk for disability and death than loss of muscle. The European consensus for sarcopenia now puts low strength first.",
+   "do": [
+    "Train strength, not only walking, to protect the quality that falls fastest."
+   ]
+  },
+  {
+   "id": "hlth-start-late",
+   "type": "note",
+   "title": "Raising activity in midlife was linked to similar mortality benefit to lifelong activity",
+   "topic": "strength",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "saint-maurice-2019",
+    "liu-2009"
+   ],
+   "take": "Adults who stepped up activity between ages 40 and 61 had a mortality risk similar to those who were always active.",
+   "body": "In a US cohort, those who kept high leisure activity through adulthood had a hazard ratio of 0.64 for all-cause death compared with the consistently inactive. Those who were less active until they raised it at ages 40 to 61 had 0.65. This is observational. Trials in older adults show strength and function improve with resistance training.",
+   "do": [
+    "Begin now with a modest plan and build over months."
+   ]
+  },
+  {
+   "id": "hlth-balance-falls",
+   "type": "note",
+   "title": "Exercise that challenges balance cuts falls by about a quarter in older adults at home",
+   "topic": "bones",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "sherrington-2019",
+    "sherrington-2017"
+   ],
+   "take": "Falls fall about 23% with exercise in community-dwelling older adults, and balance-challenging programs of over 3 hours a week did best.",
+   "body": "A Cochrane review of 108 trials (23,407 people, average age 76) found exercise reduced the rate of falls by 23% (rate ratio 0.77), with high-certainty evidence. An earlier meta-analysis found programs that challenged balance and ran over 3 hours a week gave a 39% cut. No effect was seen in aged care homes or after stroke. Most participants were women.",
+   "do": [
+    "Choose programs that include standing balance work, not only walking.",
+    "Ask a physiotherapist or clinician to pick safe options if you have fallen."
+   ]
+  },
+  {
+   "id": "hlth-liftmor-trial",
+   "type": "note",
+   "title": "LIFTMOR: supervised heavy lifting and impact work raised spine bone density",
+   "topic": "bones",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "watson-2018",
+    "brooke-wavell-2022"
+   ],
+   "take": "In 101 postmenopausal women with low bone mass, eight months of supervised heavy lifting and impact work improved spine bone density.",
+   "body": "LIFTMOR gave 49 women twice-weekly 30-minute supervised sessions of 5 sets of 5 repetitions at over 85% of one-rep max, with impact loading, while 52 did a home low-intensity program. Lumbar spine density changed by +2.9% versus -1.2% and femoral neck by +0.3% versus -1.9%. One minor adverse event occurred. Women were screened and supervised, so this does not suit unsupervised heavy training. The UK consensus advises resistance and impact exercise for bone and avoiding deep spinal flexion. After a vertebral fracture, impact should usually stay near brisk walking.",
+   "do": [
+    "Discuss any heavy or impact work with a clinician and use qualified supervision."
+   ]
+  },
+  {
+   "id": "hlth-sleep-7-hours",
+   "type": "note",
+   "title": "Adults are advised to sleep 7 or more hours a night",
+   "topic": "sleep",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "watson-2015",
+    "hirshkowitz-2015"
+   ],
+   "take": "The AASM and SRS consensus is 7 or more hours a night for adults, and the National Sleep Foundation gives 7 to 9 for most adults.",
+   "body": "The joint statement says regularly sleeping under 7 hours is linked to weight gain, diabetes, hypertension, heart disease, depression and higher mortality risk. The National Sleep Foundation panel put 7 to 9 hours for young adults and adults and 7 to 8 hours for older adults. Needs vary, and long-lasting trouble sleeping is a reason to speak to a clinician.",
+   "do": [
+    "Set a regular bedtime that leaves a 7 to 9 hour window."
+   ]
+  },
+  {
+   "id": "hlth-exercise-sleep",
+   "type": "note",
+   "title": "Regular exercise gave small to moderate gains in sleep quality",
+   "topic": "sleep",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "kredlow-2015"
+   ],
+   "take": "Across 66 studies, regular exercise improved total sleep time and efficiency a little and sleep quality moderately.",
+   "body": "A 2015 meta-analysis found acute exercise had small benefits for sleep onset and efficiency, and regular exercise had small benefits for total sleep time and efficiency, small to medium for time to fall asleep and moderate for sleep quality. Intensity did not clearly change the effects. Time of day, type and adherence did matter in places.",
+   "do": [
+    "Keep to regular training and notice how your sleep responds."
+   ]
+  },
+  {
+   "id": "hlth-protein-older-adults",
+   "type": "note",
+   "title": "Older adults are advised at least 1.0 to 1.2 g of protein per kg a day",
+   "topic": "sleep",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "bauer-2013",
+    "deutz-2014"
+   ],
+   "take": "Expert groups advise at least 1.0 to 1.2 g per kg (0.45 to 0.54 g per lb) a day over age 65, and more with exercise or illness.",
+   "body": "The PROT-AGE and ESPEN groups both advise 1.0 to 1.2 g/kg/day for healthy older people. PROT-AGE advises 1.2 g/kg or more for those exercising and 1.2 to 1.5 g/kg for many with illness. ESPEN gives 1.2 to 1.5 g/kg for those at risk of malnutrition. People with severe kidney disease may need to limit protein, so check with a clinician.",
+   "do": [
+    "Spread protein through the day and ask a clinician if you have kidney disease."
+   ]
+  },
+  {
+   "id": "hlth-creatine-older",
+   "type": "note",
+   "title": "Creatine plus resistance training added lean mass and some strength in older adults",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "chilibeck-2017",
+    "kreider-2017"
+   ],
+   "take": "Across 22 trials in adults averaging 57 to 70 years, creatine added 1.37 kg (3.0 lb) of lean mass and small strength gains.",
+   "body": "The meta-analysis (721 people, 7 to 52 weeks of training 2 to 3 days a week) found greater lean tissue gain (1.37 kg), chest press (SMD 0.35) and leg press strength (SMD 0.24) with creatine than placebo. The ISSN position states supplementation was safe and well tolerated in healthy people, up to 30 g a day for 5 years. People with kidney or other conditions should ask a clinician first.",
+   "do": [
+    "Talk to a clinician before use if you have kidney disease or take medication."
+   ]
+  },
+  {
+   "id": "hlth-vitamin-d",
+   "type": "note",
+   "title": "Vitamin D pills did not prevent fractures, falls or major disease in trials",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "bolland-2018",
+    "manson-2019-d",
+    "demay-2024"
+   ],
+   "take": "Large trials and meta-analyses of vitamin D supplements found no effect on fractures, falls or major disease in general adult groups.",
+   "body": "A meta-analysis of 81 trials (53,537 people) found no effect on fractures (RR 1.00), hip fractures or falls. The VITAL trial (25,871 adults, 2,000 IU a day, median 5.3 years) found no lower cancer or cardiovascular event rates. The 2024 Endocrine Society guideline suggests against routine blood testing and suggests supplements only for specific groups such as adults over 75. Results do not cover people who are deficient.",
+   "do": [
+    "Ask a clinician before supplementing, especially if you have a bone or kidney condition."
+   ]
+  },
+  {
+   "id": "hlth-omega-3",
+   "type": "note",
+   "title": "Omega-3 had little effect on death or heart events but lowered triglycerides",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "abdelhamid-2020",
+    "manson-2019-n3"
+   ],
+   "take": "A Cochrane review of 86 trials found little or no effect on mortality or cardiovascular events, with about a 15% drop in triglycerides.",
+   "body": "Across 86 trials (162,796 people), long-chain omega-3 had little or no effect on all-cause mortality (RR 0.97) or cardiovascular events (RR 0.96). It slightly reduced coronary heart disease events and triglycerides by about 15%. The VITAL trial of 1 g a day found no fewer major cardiovascular events or cancers. Trials were in adults at varying cardiovascular risk.",
+   "do": []
+  },
+  {
+   "id": "hlth-glucose-hba1c",
+   "type": "note",
+   "title": "Fasting glucose and HbA1c have published ranges for prediabetes and diabetes",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "ada-2025"
+   ],
+   "take": "The American Diabetes Association lists prediabetes at fasting glucose 100 to 125 mg/dL or HbA1c 5.7% to 6.4%.",
+   "body": "The ADA Standards of Care list prediabetes as fasting plasma glucose 100 to 125 mg/dL (5.6 to 6.9 mmol/L) or HbA1c 5.7% to 6.4% (39 to 47 mmol/mol). Diabetes is fasting glucose of 126 mg/dL (7.0 mmol/L) or more or HbA1c of 6.5% (48 mmol/mol) or more, with confirmation. Fasting means no calories for at least 8 hours. Results are for discussion with a clinician, who makes any diagnosis.",
+   "do": [
+    "Take your results to a clinician and ask what they mean for you."
+   ]
+  },
+  {
+   "id": "hlth-waist-to-height",
+   "type": "note",
+   "title": "Waist-to-height ratio of 0.5 or more marks increased health risk in NICE guidance",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "nice-ng246",
+    "ashwell-2012"
+   ],
+   "take": "NICE says a waist-to-height ratio of 0.5 to 0.59 means increased health risk and 0.6 or more means further increased risk.",
+   "body": "Divide waist by height in the same units, for example 85 cm (33.5 in) by 170 cm (67 in) is 0.5. A meta-analysis of 31 papers found the ratio discriminated cardiometabolic risk factors better than BMI or waist circumference alone. It is a screening measure, so discuss any result with a clinician.",
+   "do": [
+    "Measure your waist at the same point each time and compare with your height."
+   ]
+  },
+  {
+   "id": "hlth-resting-hr",
+   "type": "note",
+   "title": "A higher resting heart rate was linked to higher mortality risk in a meta-analysis",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "zhang-rhr-2016",
+    "medlineplus-pulse"
+   ],
+   "take": "Each 10 beats a minute higher resting rate went with 9% higher all-cause mortality risk, and readings over 80 with 45% higher.",
+   "body": "The 2016 meta-analysis found relative risk 1.09 per 10 beats/min and 1.45 for over 80 compared with the lowest category, with substantial heterogeneity and publication bias. MedlinePlus lists 60 to 100 beats a minute as the adult resting range and 40 to 60 for well-trained athletes. Measure at rest after 10 minutes, and discuss persistently high or low readings with a clinician.",
+   "do": [
+    "Record your pulse at rest on several mornings to see your average."
+   ]
+  },
+  {
+   "id": "hlth-apob",
+   "type": "note",
+   "title": "ApoB counts the particles that carry cholesterol and can disagree with LDL cholesterol",
+   "topic": "markers",
+   "level": "advanced",
+   "confidence": "moderate",
+   "sources": [
+    "soffer-2024",
+    "sniderman-2019"
+   ],
+   "take": "A National Lipid Association consensus says that when apoB and LDL-C disagree, risk tends to follow apoB.",
+   "body": "LDL-C measures cholesterol mass, while apoB reflects the number of atherogenic particles. The NLA consensus says apoB is a useful addition to a standard lipid panel and risk tends to track apoB when the two disagree. It lists 160 mg/dL LDL-C and 130 mg/dL apoB as about the 90th percentile of untreated adults, both risk-enhancing. Results are for discussion with a clinician.",
+   "do": []
+  },
+  {
+   "id": "hlth-mistake-age-formula",
+   "type": "mistake",
+   "title": "Using an age formula as your zone 2 heart rate",
+   "topic": "aerobic",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "tanaka-2001",
+    "jamnick-2020"
+   ],
+   "take": "Age formulas give a population average, so use them as a rough guide and check against how the effort feels.",
+   "body": "The common estimate of maximum heart rate is 208 minus 0.7 times age, drawn from 351 studies and 18,712 adults. It describes the average, not you. A review of exercise intensity methods found that fixed percentages of maximum heart rate have little merit for hitting a given physiological domain. Thresholds differ between people and move with training.",
+   "do": [
+    "Use the talk test as the main check.",
+    "Treat any heart rate number as a starting range."
+   ]
+  },
+  {
+   "id": "hlth-mistake-ten-thousand",
+   "type": "mistake",
+   "title": "Treating 10,000 steps as a pass mark",
+   "topic": "guidelines",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "ding-2025",
+    "paluch-2022"
+   ],
+   "take": "In cohorts, benefit rose steeply to about 7,000 steps, and 10,000 is a fine target without being a threshold.",
+   "body": "Ding 2025 found 7,000 steps a day linked to 47% lower all-cause mortality than 2,000. The authors say 10,000 can still suit more active people and 7,000 may be a more achievable target. Paluch 2022 found the benefit plateau at 6,000 to 8,000 steps for those 60 and over and 8,000 to 10,000 for younger adults. Both are observational.",
+   "do": [
+    "Compare today with your own usual number and add a few thousand steps."
+   ]
+  },
+  {
+   "id": "hlth-mistake-predictor-target",
+   "type": "mistake",
+   "title": "Treating a mortality predictor as a score to chase",
+   "topic": "fitness",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "leong-2015",
+    "lang-2024"
+   ],
+   "take": "Grip strength and fitness predict risk in cohorts, and that does not show that pushing the number up lowers risk by a set amount.",
+   "body": "The grip strength authors say further research is needed to test whether improving strength reduces mortality. An umbrella review of fitness found certainty of evidence from very low to moderate. Fitter and stronger people tend to differ in many other ways. Training is worth doing for the other benefits it brings, and heavy or extreme efforts need medical clearance when risk is present.",
+   "do": [
+    "Use test scores to track progress, not to promise outcomes."
+   ]
+  },
+  {
+   "id": "hlth-mistake-cardio-only",
+   "type": "mistake",
+   "title": "Doing only walking or cardio and skipping strength and balance work",
+   "topic": "strength",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "bull-2020",
+    "zhao-2020",
+    "fragala-2019"
+   ],
+   "take": "WHO advises strength work on 2 or more days for all adults and balance plus strength on 3 or more days for older adults.",
+   "body": "Cohort data on 479,856 adults linked meeting both aerobic and strength guidelines to a hazard ratio of 0.60 for all-cause death, against 0.71 for aerobic alone. Strength falls faster than muscle size with age, and resistance training is the main exercise approach shown to counter it. The NSCA position statement backs resistance training for older adults.",
+   "do": [
+    "Add two strength sessions a week.",
+    "Add balance practice if you are over 65."
+   ]
+  },
+  {
+   "id": "hlth-n-aerobic-minutes",
+   "type": "number",
+   "title": "Weekly aerobic target for adults",
+   "topic": "guidelines",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "bull-2020"
+   ],
+   "value": "150-300",
+   "unit": "min moderate per week",
+   "sort": 150,
+   "take": "WHO 2020 range for adults, or 75 to 150 minutes of vigorous activity, or an equivalent mix."
+  },
+  {
+   "id": "hlth-n-strength-days",
+   "type": "number",
+   "title": "Weekly strength days for adults",
+   "topic": "guidelines",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "bull-2020",
+    "piercy-2018"
+   ],
+   "value": "2+",
+   "unit": "days per week",
+   "sort": 2,
+   "take": "Muscle-strengthening on 2 or more days a week in WHO and US guidelines, working all major muscle groups."
+  },
+  {
+   "id": "hlth-n-older-multicomponent",
+   "type": "number",
+   "title": "Multicomponent days for older adults",
+   "topic": "bones",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "bull-2020"
+   ],
+   "value": "3+",
+   "unit": "days per week",
+   "sort": 3,
+   "take": "WHO advises older adults do varied activity stressing balance and strength on 3 or more days a week."
+  },
+  {
+   "id": "hlth-n-steps-7000",
+   "type": "number",
+   "title": "Daily steps linked to about half the death risk of 2,000",
+   "topic": "guidelines",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "ding-2025"
+   ],
+   "value": "7,000",
+   "unit": "steps per day",
+   "sort": 7000,
+   "take": "In a 2025 meta-analysis, 7,000 steps a day went with 47% lower all-cause mortality than 2,000 steps."
+  },
+  {
+   "id": "hlth-n-strength-minutes",
+   "type": "number",
+   "title": "Strength training time with the lowest risk",
+   "topic": "strength",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "momma-2022",
+    "shailendra-2022"
+   ],
+   "value": "30-60",
+   "unit": "min per week",
+   "sort": 30,
+   "take": "Cohort meta-analyses linked about 30 to 60 minutes a week to the largest mortality reduction."
+  },
+  {
+   "id": "hlth-n-sleep-hours",
+   "type": "number",
+   "title": "Sleep advised for adults",
+   "topic": "sleep",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "watson-2015"
+   ],
+   "value": "7+",
+   "unit": "hours per night",
+   "sort": 7,
+   "take": "The AASM and SRS consensus recommends adults sleep 7 or more hours a night on a regular basis."
+  },
+  {
+   "id": "hlth-n-protein-older",
+   "type": "number",
+   "title": "Minimum protein for healthy older adults",
+   "topic": "sleep",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "bauer-2013",
+    "deutz-2014"
+   ],
+   "value": "1.0-1.2",
+   "unit": "g per kg per day",
+   "sort": 1.0,
+   "take": "Expert groups advise at least this much for people over 65, which is 0.45 to 0.54 g per lb."
+  },
+  {
+   "id": "hlth-n-whtr",
+   "type": "number",
+   "title": "Waist-to-height ratio where NICE flags risk",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "nice-ng246"
+   ],
+   "value": "0.5",
+   "unit": "ratio (waist / height)",
+   "sort": 0.5,
+   "take": "NICE says 0.5 to 0.59 is increased health risk and 0.6 or more is further increased risk."
+  },
+  {
+   "id": "hlth-n-bp-normal",
+   "type": "number",
+   "title": "Blood pressure under which readings are normal",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "aha-2025"
+   ],
+   "value": "<120/80",
+   "unit": "mm Hg",
+   "sort": 120,
+   "take": "The AHA and ACC list under 120 systolic and under 80 diastolic as normal. Discuss readings with a clinician."
+  },
+  {
+   "id": "hlth-n-fasting-glucose",
+   "type": "number",
+   "title": "Fasting glucose range for prediabetes",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "ada-2025"
+   ],
+   "value": "100-125",
+   "unit": "mg/dL (5.6-6.9 mmol/L)",
+   "sort": 100,
+   "take": "The ADA range for impaired fasting glucose. 126 mg/dL or more is the diabetes threshold, with confirmation."
+  },
+  {
+   "id": "hlth-n-hba1c",
+   "type": "number",
+   "title": "HbA1c range for prediabetes",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "ada-2025"
+   ],
+   "value": "5.7-6.4",
+   "unit": "% (39-47 mmol/mol)",
+   "sort": 5.7,
+   "take": "The ADA range for prediabetes by HbA1c. 6.5% (48 mmol/mol) or higher is the diabetes threshold."
+  },
+  {
+   "id": "hlth-n-fitness-met",
+   "type": "number",
+   "title": "Lower all-cause mortality per 1 MET fitness gain",
+   "topic": "fitness",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "lang-2024"
+   ],
+   "value": "11-17",
+   "unit": "% lower risk",
+   "sort": 11,
+   "take": "An umbrella review linked each 1 MET higher fitness to this reduction in cohort studies."
+  },
+  {
+   "id": "hlth-t-vo2max",
+   "type": "term",
+   "title": "VO2 max",
+   "topic": "fitness",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "The highest rate at which your body can use oxygen during hard exercise, in mL of oxygen per kg of body weight per minute. It is the standard lab measure of aerobic fitness."
+  },
+  {
+   "id": "hlth-t-met",
+   "type": "term",
+   "title": "MET (metabolic equivalent)",
+   "topic": "fitness",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "A unit of effort. 1 MET is resting energy use, and brisk walking is about 3 to 5 METs. Fitness is often reported as the peak METs reached on a treadmill test."
+  },
+  {
+   "id": "hlth-t-zone2",
+   "type": "term",
+   "title": "Zone 2",
+   "topic": "aerobic",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "sitko-2025"
+   ],
+   "take": "Easy aerobic effort just below the first lactate or ventilatory threshold. You breathe harder but can still speak in sentences. Zone numbers vary between systems."
+  },
+  {
+   "id": "hlth-t-lactate-threshold",
+   "type": "term",
+   "title": "Lactate threshold",
+   "topic": "aerobic",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "macintosh-2021"
+   ],
+   "take": "The effort above which lactate starts to build up in the blood faster than it clears. The first threshold marks the end of easy effort and varies between people."
+  },
+  {
+   "id": "hlth-t-sarcopenia",
+   "type": "term",
+   "title": "Sarcopenia",
+   "topic": "strength",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "cruz-jentoft-2018"
+   ],
+   "take": "A condition of low muscle strength with low muscle quantity or quality, found mostly in older adults. A clinician diagnoses it using strength tests and a body measure."
+  },
+  {
+   "id": "hlth-t-dynapenia",
+   "type": "term",
+   "title": "Dynapenia",
+   "topic": "strength",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "mitchell-2012"
+   ],
+   "take": "The age-related loss of muscle strength. In later life it runs faster than the loss of muscle size, so strength and mass are tracked separately."
+  },
+  {
+   "id": "hlth-t-hba1c",
+   "type": "term",
+   "title": "HbA1c (glycated haemoglobin)",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "ada-2025"
+   ],
+   "take": "A blood test that shows average blood sugar over about the past 2 to 3 months. It is given as a percentage, and published ranges separate normal, prediabetes and diabetes."
+  },
+  {
+   "id": "hlth-t-apob",
+   "type": "term",
+   "title": "ApoB (apolipoprotein B)",
+   "topic": "markers",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "soffer-2024"
+   ],
+   "take": "A protein carried on each cholesterol-bearing particle that can clog arteries. The blood level reflects the number of these particles and can differ from LDL cholesterol."
+  },
+  {
+   "id": "hlth-t-whtr",
+   "type": "term",
+   "title": "Waist-to-height ratio",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "nice-ng246"
+   ],
+   "take": "Waist circumference divided by height, both in the same units. A ratio of 0.5 means the waist is half your height."
+  },
+  {
+   "id": "hlth-t-hazard-ratio",
+   "type": "term",
+   "title": "Hazard ratio (HR)",
+   "topic": "guidelines",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [],
+   "take": "A figure comparing risk between groups over time. 1.0 means no difference, 0.80 means 20% lower risk and 1.20 means 20% higher. It shows association, not cause."
+  },
+  {
+   "id": "hlth-tbl-weekly-targets",
+   "type": "table",
+   "title": "Weekly activity targets by guideline",
+   "topic": "guidelines",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "bull-2020",
+    "piercy-2018",
+    "ukcmo-2019"
+   ],
+   "take": "What WHO 2020, the US 2018 guidelines and the UK 2019 guidelines ask of adults each week.",
+   "columns": [
+    "Guideline",
+    "Aerobic activity",
+    "Strength",
+    "Older adults",
+    "More than minimum"
+   ],
+   "rows": [
+    [
+     "WHO 2020",
+     "150-300 min moderate or 75-150 min vigorous",
+     "2+ days, all major muscle groups",
+     "Multicomponent with balance, 3+ days",
+     "Above 300 min brings added benefit (conditional)"
+    ],
+    [
+     "US 2nd edition 2018",
+     "150-300 min moderate or 75-150 min vigorous",
+     "2+ days, all major muscle groups",
+     "Multicomponent with balance training",
+     "Additional benefits occur with more activity"
+    ],
+    [
+     "UK Chief Medical Officers 2019",
+     "150 min moderate or 75 min vigorous",
+     "2+ days a week",
+     "Strength, balance, flexibility, 2+ days",
+     "Benefits continue past 150 at a slower rate"
+    ]
+   ]
+  },
+  {
+   "id": "hlth-tbl-bp-categories",
+   "type": "table",
+   "title": "Blood pressure categories (AHA and ACC)",
+   "topic": "markers",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "aha-2025"
+   ],
+   "take": "Adult blood pressure categories in mm Hg from the AHA and ACC guideline. A clinician makes the diagnosis, and results are for discussion with a clinician.",
+   "columns": [
+    "Category",
+    "Systolic (top number)",
+    "Diastolic (bottom number)"
+   ],
+   "rows": [
+    [
+     "Normal",
+     "Under 120",
+     "and under 80"
+    ],
+    [
+     "Elevated",
+     "120-129",
+     "and under 80"
+    ],
+    [
+     "Stage 1 hypertension",
+     "130-139",
+     "or 80-89"
+    ],
+    [
+     "Stage 2 hypertension",
+     "140 or higher",
+     "or 90 or higher"
+    ]
+   ]
+  },
+  {
+   "id": "hlth-tbl-hr-zones",
+   "type": "table",
+   "title": "A simple heart-rate zone guide",
+   "topic": "aerobic",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "reed-2014",
+    "sitko-2025",
+    "piercy-2018"
+   ],
+   "take": "A five-zone effort guide with how each feels. Zones are a coaching convention and the boundaries differ between people and systems.",
+   "columns": [
+    "Zone",
+    "How it feels",
+    "Talk test",
+    "Heart rate"
+   ],
+   "rows": [
+    [
+     "1 Recovery",
+     "Very easy, little effort",
+     "Chat freely, can sing",
+     "Just above resting"
+    ],
+    [
+     "2 Easy aerobic",
+     "Steady, comfortable, can last long",
+     "Full sentences, cannot sing",
+     "Just below the first threshold"
+    ],
+    [
+     "3 Moderate",
+     "Working, pace feels brisk",
+     "Short sentences",
+     "Above the first threshold"
+    ],
+    [
+     "4 Hard",
+     "Uncomfortable, hard to hold",
+     "A few words at a time",
+     "Near the second threshold"
+    ],
+    [
+     "5 Maximal",
+     "All-out, only for short bursts",
+     "Cannot speak",
+     "Near your maximum"
+    ]
+   ]
+  }
+ ],
+ "sources": {
+  "abdelhamid-2020": {
+   "type": "systematic-review",
+   "authors": [
+    "Abdelhamid AS",
+    "Brown TJ",
+    "Brainard JS",
+    "Biswas P",
+    "Thorpe GC",
+    "Moore HJ",
+    "Deane KH",
+    "Summerbell CD",
+    "Worthington HV",
+    "Song F",
+    "Hooper L"
+   ],
+   "year": 2020,
+   "title": "Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "volume": "2020",
+   "issue": "3",
+   "doi": "10.1002/14651858.cd003177.pub5",
+   "pmid": "32114706",
+   "n_studies": 86,
+   "n_participants": 162796,
+   "support": "86 RCTs (162,796 participants). Little or no effect of increasing LCn3 on all-cause mortality (RR 0.97) or cardiovascular events (RR 0.96); slightly reduces coronary heart disease mortality and events; reduced triglycerides by about 15% in a dose-dependent way."
+  },
+  "ada-2025": {
+   "type": "guideline",
+   "authors": [
+    "American Diabetes Association Professional Practice Committee for Diabetes*",
+    "Bajaj M",
+    "McCoy RG",
+    "Balapattabi K",
+    "Bannuru RR",
+    "Bellini NJ",
+    "Bennett AK",
+    "Beverly EA",
+    "Briggs Early K",
+    "ChallaSivaKanaka S",
+    "Echouffo-Tcheugui JB",
+    "Everett BM",
+    "Garg R",
+    "Laffel LM",
+    "Lal R",
+    "Matfin G",
+    "Pandya N",
+    "Pekas EJ",
+    "Peters AL",
+    "Pilla SJ",
+    "Romeo GR",
+    "Rosas SE",
+    "Segal AR",
+    "Simmons KM",
+    "Szmuilowicz ED",
+    "ElSayed NA"
+   ],
+   "year": 2025,
+   "title": "2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026",
+   "journal": "Diabetes Care",
+   "volume": "49",
+   "issue": "Supplement_1",
+   "pages": "S27-S49",
+   "doi": "10.2337/dc26-s002",
+   "pmid": "41358893",
+   "support": "Prediabetes: FPG 100-125 mg/dL (5.6-6.9 mmol/L) or A1C 5.7-6.4% (39-47 mmol/mol). Diabetes: FPG >=126 mg/dL (>=7.0 mmol/L) or A1C >=6.5% (>=48 mmol/mol); fasting means no caloric intake for at least 8 h."
+  },
+  "aha-2025": {
+   "type": "guideline",
+   "authors": [
+    "Writing Committee Members*",
+    "Jones DW",
+    "Ferdinand KC",
+    "Taler SJ",
+    "Johnson HM",
+    "Shimbo D",
+    "Abdalla M",
+    "Altieri MM",
+    "Bansal N",
+    "Bello NA",
+    "Bress AP",
+    "Carter J",
+    "Cohen JB",
+    "Collins KJ",
+    "Commodore-Mensah Y",
+    "Davis LL",
+    "Egan B",
+    "Khan SS",
+    "Lloyd-Jones DM",
+    "Melnyk BM",
+    "Mistry EA",
+    "Ogunniyi MO",
+    "Schott SL",
+    "Smith SC",
+    "Talbot AW",
+    "Vongpatanasin W",
+    "Watson KE",
+    "Whelton PK",
+    "Williamson JD"
+   ],
+   "year": 2025,
+   "title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+   "journal": "Hypertension",
+   "volume": "82",
+   "issue": "10",
+   "doi": "10.1161/hyp.0000000000000249",
+   "pmid": "40811516",
+   "support": "2025 AHA/ACC high blood pressure guideline; the blood pressure criteria remain the same as the 2017 guideline. Normal under 120 and under 80; elevated 120-129 and under 80; stage 1 130-139 or 80-89; stage 2 140 or higher or 90 or higher (as stated in AHA release and NHLBI page)."
+  },
+  "arem-2015": {
+   "type": "cohort",
+   "authors": [
+    "Arem H",
+    "Moore SC",
+    "Patel A",
+    "Hartge P",
+    "Berrington de Gonzalez A",
+    "Visvanathan K",
+    "Campbell PT",
+    "Freedman M",
+    "Weiderpass E",
+    "Adami HO",
+    "Linet MS",
+    "Lee IM",
+    "Matthews CE"
+   ],
+   "year": 2015,
+   "title": "Leisure Time Physical Activity and Mortality",
+   "journal": "JAMA Internal Medicine",
+   "volume": "175",
+   "issue": "6",
+   "pages": "959",
+   "doi": "10.1001/jamainternmed.2015.0533",
+   "pmid": "25844730",
+   "n_participants": 661137,
+   "support": "We pooled data from 6 studies in the National Cancer Institute Cohort Consortium. A total of 661,137 men and women and 116,686 deaths were included. An upper threshold for mortality benefit occurred at 3 to 5 times the physical activity recommendation (HR, 0.61); no evidence of harm at 10 or more times the recommended minimum."
+  },
+  "ashwell-2012": {
+   "type": "meta-analysis",
+   "authors": [
+    "Ashwell M",
+    "Gunn P",
+    "Gibson S"
+   ],
+   "year": 2011,
+   "title": "Waist‐to‐height ratio is a better screening tool than waist circumference and BMI for adult cardiometabolic risk factors: systematic review and meta‐analysis",
+   "journal": "Obesity Reviews",
+   "volume": "13",
+   "issue": "3",
+   "pages": "275-286",
+   "doi": "10.1111/j.1467-789x.2011.00952.x",
+   "pmid": "22106927",
+   "n_studies": 31,
+   "support": "Thirty-one papers met the inclusion criteria. Waist-to-height ratio had significantly greater discriminatory power than BMI; WHtR was significantly better than waist circumference for diabetes, hypertension, CVD and all outcomes. Waist-to-height ratio should be considered as a screening tool."
+  },
+  "bauer-2013": {
+   "type": "position",
+   "authors": [
+    "Bauer J",
+    "Biolo G",
+    "Cederholm T",
+    "Cesari M",
+    "Cruz-Jentoft AJ",
+    "Morley JE",
+    "Phillips S",
+    "Sieber C",
+    "Stehle P",
+    "Teta D",
+    "Visvanathan R",
+    "Volpi E",
+    "Boirie Y"
+   ],
+   "year": 2013,
+   "title": "Evidence-Based Recommendations for Optimal Dietary Protein Intake in Older People: A Position Paper From the PROT-AGE Study Group",
+   "journal": "Journal of the American Medical Directors Association",
+   "volume": "14",
+   "issue": "8",
+   "pages": "542-559",
+   "doi": "10.1016/j.jamda.2013.05.021",
+   "pmid": "23867520",
+   "support": "The PROT-AGE study group recommends average daily intake at least in the range of 1.0 to 1.2 g protein per kg per day for older people (>65 years); higher (>=1.2 g/kg/d) for those exercising; 1.2-1.5 g/kg/d for most with acute or chronic disease; severe kidney disease (eGFR <30) is an exception."
+  },
+  "bolland-2018": {
+   "type": "meta-analysis",
+   "authors": [
+    "Bolland MJ",
+    "Grey A",
+    "Avenell A"
+   ],
+   "year": 2018,
+   "title": "Effects of vitamin D supplementation on musculoskeletal health: a systematic review, meta-analysis, and trial sequential analysis",
+   "journal": "The Lancet Diabetes &amp; Endocrinology",
+   "volume": "6",
+   "issue": "11",
+   "pages": "847-858",
+   "doi": "10.1016/s2213-8587(18)30265-1",
+   "pmid": "30293909",
+   "n_studies": 81,
+   "n_participants": 53537,
+   "support": "81 randomised controlled trials (n=53,537). Vitamin D had no effect on total fracture (RR 1.00), hip fracture (1.11), or falls (0.97). There is little justification to use vitamin D supplements to maintain or improve musculoskeletal health."
+  },
+  "brooke-wavell-2022": {
+   "type": "position",
+   "authors": [
+    "Brooke-Wavell K",
+    "Skelton DA",
+    "Barker KL",
+    "Clark EM",
+    "De Biase S",
+    "Arnold S",
+    "Paskins Z",
+    "Robinson KR",
+    "Lewis RM",
+    "Tobias JH",
+    "Ward KA",
+    "Whitney J",
+    "Leyland S"
+   ],
+   "year": 2022,
+   "title": "Strong, steady and straight: UK consensus statement on physical activity and exercise for osteoporosis",
+   "journal": "British Journal of Sports Medicine",
+   "volume": "56",
+   "issue": "15",
+   "pages": "837-846",
+   "doi": "10.1136/bjsports-2021-104634",
+   "pmid": "35577538",
+   "support": "People with osteoporosis should undertake resistance and impact exercise to maximise bone strength; activities to improve strength and balance to reduce falls; avoid postures involving a high degree of spinal flexion. People with vertebral fracture or multiple low trauma fractures should usually exercise only up to an impact equivalent to brisk walking."
+  },
+  "bull-2020": {
+   "type": "guideline",
+   "authors": [
+    "Bull FC",
+    "Al-Ansari SS",
+    "Biddle S",
+    "Borodulin K",
+    "Buman MP",
+    "Cardon G",
+    "Carty C",
+    "Chaput JP",
+    "Chastin S",
+    "Chou R",
+    "Dempsey PC",
+    "DiPietro L",
+    "Ekelund U",
+    "Firth J",
+    "Friedenreich CM",
+    "Garcia L",
+    "Gichu M",
+    "Jago R",
+    "Katzmarzyk PT",
+    "Lambert E",
+    "Leitzmann M",
+    "Milton K",
+    "Ortega FB",
+    "Ranasinghe C",
+    "Stamatakis E",
+    "Tiedemann A",
+    "Troiano RP",
+    "van der Ploeg HP",
+    "Wari V",
+    "Willumsen JF"
+   ],
+   "year": 2020,
+   "title": "World Health Organization 2020 guidelines on physical activity and sedentary behaviour",
+   "journal": "British Journal of Sports Medicine",
+   "volume": "54",
+   "issue": "24",
+   "pages": "1451-1462",
+   "doi": "10.1136/bjsports-2020-102955",
+   "pmid": "33239350",
+   "support": "All adults should undertake 150-300 min of moderate-intensity, or 75-150 min of vigorous-intensity physical activity, or some equivalent combination, per week. The guidelines recommend regular muscle-strengthening activity for all age groups."
+  },
+  "celis-morales-2018": {
+   "type": "cohort",
+   "authors": [
+    "Celis-Morales CA",
+    "Welsh P",
+    "Lyall DM",
+    "Steell L",
+    "Petermann F",
+    "Anderson J",
+    "Iliodromiti S",
+    "Sillars A",
+    "Graham N",
+    "Mackay DF",
+    "Pell JP",
+    "Gill JMR",
+    "Sattar N",
+    "Gray SR"
+   ],
+   "year": 2018,
+   "title": "Associations of grip strength with cardiovascular, respiratory, and cancer outcomes and all cause mortality: prospective cohort study of half a million UK Biobank participants",
+   "journal": "BMJ",
+   "pages": "k1651",
+   "doi": "10.1136/bmj.k1651",
+   "pmid": "29739772",
+   "support": "Prospective cohort study of half a million UK Biobank participants; hazard ratios per 5 kg lower grip strength 1.20 (women) and 1.16 (men) for all cause mortality."
+  },
+  "chilibeck-2017": {
+   "type": "meta-analysis",
+   "authors": [
+    "Chilibeck P",
+    "Kaviani M",
+    "Candow D",
+    "Zello GA"
+   ],
+   "year": 2017,
+   "title": "Effect of creatine supplementation during resistance training on lean tissue mass and muscular strength in older adults: a meta-analysis",
+   "journal": "Open Access Journal of Sports Medicine",
+   "volume": "Volume 8",
+   "pages": "213-226",
+   "doi": "10.2147/oajsm.s123529",
+   "pmid": "29138605",
+   "n_studies": 22,
+   "n_participants": 721,
+   "support": "Twenty-two studies, 721 participants (mean age 57-70 years). Creatine supplementation resulted in greater increases in lean tissue mass (MD 1.37 kg), chest press strength (SMD 0.35), and leg press strength (SMD 0.24)."
+  },
+  "cruz-jentoft-2018": {
+   "type": "position",
+   "authors": [
+    "Cruz-Jentoft AJ",
+    "Bahat G",
+    "Bauer J",
+    "Boirie Y",
+    "Bruyère O",
+    "Cederholm T",
+    "Cooper C",
+    "Landi F",
+    "Rolland Y",
+    "Sayer AA",
+    "Schneider SM",
+    "Sieber CC",
+    "Topinkova E",
+    "Vandewoude M",
+    "Visser M",
+    "Zamboni M",
+    "Writing Group for the European Working Group on Sarcopenia in Older People 2 (EWGSOP2), and the Extended Group for EWGSOP2",
+    "Bautmans I",
+    "Baeyens JP",
+    "Cesari M",
+    "Cherubini A",
+    "Kanis J",
+    "Maggio M",
+    "Martin F",
+    "Michel JP",
+    "Pitkala K",
+    "Reginster JY",
+    "Rizzoli R",
+    "Sánchez-Rodríguez D",
+    "Schols J"
+   ],
+   "year": 2018,
+   "title": "Sarcopenia: revised European consensus on definition and diagnosis",
+   "journal": "Age and Ageing",
+   "volume": "48",
+   "issue": "1",
+   "pages": "16-31",
+   "doi": "10.1093/ageing/afy169",
+   "pmid": "30312372",
+   "support": "EWGSOP2 focuses on low muscle strength as a key characteristic of sarcopenia, uses detection of low muscle quantity and quality to confirm the diagnosis, and identifies poor physical performance as indicative of severe sarcopenia. Cut-off points: grip strength <27 kg men, <16 kg women; chair stand >15 s for five rises."
+  },
+  "demay-2024": {
+   "type": "guideline",
+   "authors": [
+    "Demay MB",
+    "Pittas AG",
+    "Bikle DD",
+    "Diab DL",
+    "Kiely ME",
+    "Lazaretti-Castro M",
+    "Lips P",
+    "Mitchell DM",
+    "Murad MH",
+    "Powers S",
+    "Rao SD",
+    "Scragg R",
+    "Tayek JA",
+    "Valent AM",
+    "Walsh JME",
+    "McCartney CR"
+   ],
+   "year": 2024,
+   "title": "Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline",
+   "journal": "The Journal of Clinical Endocrinology &amp; Metabolism",
+   "volume": "109",
+   "issue": "8",
+   "pages": "1907-1947",
+   "doi": "10.1210/clinem/dgae290",
+   "pmid": "38828931",
+   "support": "The panel suggests empiric vitamin D for those aged 1 to 18 years and adults over 75 years of age, those who are pregnant, and those with high-risk prediabetes; suggests against routine 25(OH)D testing in the absence of established indications."
+  },
+  "deutz-2014": {
+   "type": "position",
+   "authors": [
+    "Deutz NEP",
+    "Bauer JM",
+    "Barazzoni R",
+    "Biolo G",
+    "Boirie Y",
+    "Bosy-Westphal A",
+    "Cederholm T",
+    "Cruz-Jentoft A",
+    "Krznariç Z",
+    "Nair KS",
+    "Singer P",
+    "Teta D",
+    "Tipton K",
+    "Calder PC"
+   ],
+   "year": 2014,
+   "title": "Protein intake and exercise for optimal muscle function with aging: Recommendations from the ESPEN Expert Group",
+   "journal": "Clinical Nutrition",
+   "volume": "33",
+   "issue": "6",
+   "pages": "929-936",
+   "doi": "10.1016/j.clnu.2014.04.007",
+   "pmid": "24814383",
+   "support": "For healthy older people, the diet should provide at least 1.0-1.2 g protein/kg body weight/day; 1.2-1.5 g/kg/day for those malnourished or at risk because of illness; daily physical activity or exercise should be undertaken by all older people."
+  },
+  "ding-2025": {
+   "type": "meta-analysis",
+   "authors": [
+    "Ding D",
+    "Nguyen B",
+    "Nau T",
+    "Luo M",
+    "del Pozo Cruz B",
+    "Dempsey PC",
+    "Munn Z",
+    "Jefferis BJ",
+    "Sherrington C",
+    "Calleja EA",
+    "Hau Chong K",
+    "Davis R",
+    "Francois ME",
+    "Tiedemann A",
+    "Biddle SJH",
+    "Okely A",
+    "Bauman A",
+    "Ekelund U",
+    "Clare P",
+    "Owen K"
+   ],
+   "year": 2025,
+   "title": "Daily steps and health outcomes in adults: a systematic review and dose-response meta-analysis",
+   "journal": "The Lancet Public Health",
+   "volume": "10",
+   "issue": "8",
+   "pages": "e668-e681",
+   "doi": "10.1016/s2468-2667(25)00164-1",
+   "pmid": "40713949",
+   "n_studies": 57,
+   "support": "57 studies from 35 cohorts. Compared with 2000 steps per day, 7000 steps per day was associated with a 47% lower risk of all-cause mortality (HR 0.53 [95% CI 0.46-0.60]). Inflection points at around 5000-7000 steps per day. Certainty moderate for most outcomes."
+  },
+  "ekelund-2016": {
+   "type": "meta-analysis",
+   "authors": [
+    "Ekelund U",
+    "Steene-Johannessen J",
+    "Brown WJ",
+    "Fagerland MW",
+    "Owen N",
+    "Powell KE",
+    "Bauman A",
+    "Lee IM"
+   ],
+   "year": 2016,
+   "title": "Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? A harmonised meta-analysis of data from more than 1 million men and women",
+   "journal": "The Lancet",
+   "volume": "388",
+   "issue": "10051",
+   "pages": "1302-1310",
+   "doi": "10.1016/s0140-6736(16)30370-1",
+   "pmid": "27475271",
+   "n_studies": 16,
+   "support": "High levels of moderate intensity physical activity (ie, about 60-75 min per day) seem to eliminate the increased risk of death associated with high sitting time. However, this high activity level attenuates, but does not eliminate the increased risk associated with high TV-viewing time."
+  },
+  "fragala-2019": {
+   "type": "position",
+   "authors": [
+    "Fragala MS",
+    "Cadore EL",
+    "Dorgo S",
+    "Izquierdo M",
+    "Kraemer WJ",
+    "Peterson MD",
+    "Ryan ED"
+   ],
+   "year": 2019,
+   "title": "Resistance Training for Older Adults: Position Statement From the National Strength and Conditioning Association",
+   "journal": "Journal of Strength and Conditioning Research",
+   "volume": "33",
+   "issue": "8",
+   "pages": "2019-2052",
+   "doi": "10.1519/jsc.0000000000003230",
+   "pmid": "31343601",
+   "support": "Countering muscle disuse through resistance training is a powerful intervention to combat the loss of muscle strength and muscle mass, physiological vulnerability, and their debilitating consequences on physical functioning, mobility, independence."
+  },
+  "garcia-hermoso-2018": {
+   "type": "meta-analysis",
+   "authors": [
+    "García-Hermoso A",
+    "Cavero-Redondo I",
+    "Ramírez-Vélez R",
+    "Ruiz JR",
+    "Ortega FB",
+    "Lee DC",
+    "Martínez-Vizcaíno V"
+   ],
+   "year": 2018,
+   "title": "Muscular Strength as a Predictor of All-Cause Mortality in an Apparently Healthy Population: A Systematic Review and Meta-Analysis of Data From Approximately 2 Million Men and Women",
+   "journal": "Archives of Physical Medicine and Rehabilitation",
+   "volume": "99",
+   "issue": "10",
+   "pages": "2100-2113.e5",
+   "doi": "10.1016/j.apmr.2018.01.008",
+   "pmid": "29425700",
+   "n_studies": 38,
+   "n_participants": 1907580,
+   "support": "Thirty-eight studies with 1,907,580 participants. Higher handgrip strength was associated with a reduced risk of all-cause mortality (HR=0.69; 95% CI, 0.64-0.74)."
+  },
+  "hirshkowitz-2015": {
+   "type": "position",
+   "authors": [
+    "Hirshkowitz M",
+    "Whiton K",
+    "Albert SM",
+    "Alessi C",
+    "Bruni O",
+    "DonCarlos L",
+    "Hazen N",
+    "Herman J",
+    "Katz ES",
+    "Kheirandish-Gozal L",
+    "Neubauer DN",
+    "O’Donnell AE",
+    "Ohayon M",
+    "Peever J",
+    "Rawding R",
+    "Sachdeva RC",
+    "Setters B",
+    "Vitiello MV",
+    "Ware JC",
+    "Adams Hillard PJ"
+   ],
+   "year": 2015,
+   "title": "National Sleep Foundation’s sleep time duration recommendations: methodology and results summary",
+   "journal": "Sleep Health",
+   "volume": "1",
+   "issue": "1",
+   "pages": "40-43",
+   "doi": "10.1016/j.sleh.2014.12.010",
+   "pmid": "29073412",
+   "support": "The panel agreed 7 to 9 hours for young adults and adults, and 7 to 8 hours of sleep for older adults, for healthy individuals with normal sleep."
+  },
+  "jamnick-2020": {
+   "type": "review",
+   "authors": [
+    "Jamnick NA",
+    "Pettitt RW",
+    "Granata C",
+    "Pyne DB",
+    "Bishop DJ"
+   ],
+   "year": 2020,
+   "title": "An Examination and Critique of Current Methods to Determine Exercise Intensity",
+   "journal": "Sports Medicine",
+   "volume": "50",
+   "issue": "10",
+   "pages": "1729-1756",
+   "doi": "10.1007/s40279-020-01322-8",
+   "pmid": "32729096",
+   "support": "Prescribing exercise intensity based on a fixed percentage of these maximal anchors has little merit for eliciting distinct or domain-specific homeostatic perturbations. There is some evidence to support the validity of LT1, GET, and VT to delineate the moderate and heavy domains of exercise."
+  },
+  "kodama-2009": {
+   "type": "meta-analysis",
+   "authors": [
+    "Kodama S"
+   ],
+   "year": 2009,
+   "title": "Cardiorespiratory Fitness as a Quantitative Predictor of All-Cause Mortality and Cardiovascular Events in Healthy Men and Women",
+   "journal": "JAMA",
+   "volume": "301",
+   "issue": "19",
+   "pages": "2024",
+   "doi": "10.1001/jama.2009.681",
+   "pmid": "19454641",
+   "n_studies": 33,
+   "n_participants": 102980,
+   "support": "Data from 33 eligible studies (all-cause mortality, 102,980 participants). Compared with participants with high CRF, those with low CRF had an RR for all-cause mortality of 1.70 (95% CI 1.51-1.92)."
+  },
+  "kokkinos-2022": {
+   "type": "cohort",
+   "authors": [
+    "Kokkinos P",
+    "Faselis C",
+    "Samuel IBH",
+    "Pittaras A",
+    "Doumas M",
+    "Murphy R",
+    "Heimall MS",
+    "Sui X",
+    "Zhang J",
+    "Myers J"
+   ],
+   "year": 2022,
+   "title": "Cardiorespiratory Fitness and Mortality Risk Across the Spectra of Age, Race, and Sex",
+   "journal": "Journal of the American College of Cardiology",
+   "volume": "80",
+   "issue": "6",
+   "pages": "598-609",
+   "doi": "10.1016/j.jacc.2022.05.031",
+   "pmid": "35926933",
+   "n_participants": 750302,
+   "support": "750,302 U.S. veterans. The adjusted association of CRF and mortality risk was inverse and graded across the age spectrum, sex, and race, with no increased risk with extreme fitness. Being unfit carried a greater risk than any of the cardiac risk factors examined."
+  },
+  "kredlow-2015": {
+   "type": "meta-analysis",
+   "authors": [
+    "Kredlow MA",
+    "Capozzoli MC",
+    "Hearon BA",
+    "Calkins AW",
+    "Otto MW"
+   ],
+   "year": 2015,
+   "title": "The effects of physical activity on sleep: a meta-analytic review",
+   "journal": "Journal of Behavioral Medicine",
+   "volume": "38",
+   "issue": "3",
+   "pages": "427-449",
+   "doi": "10.1007/s10865-015-9617-6",
+   "pmid": "25596964",
+   "n_studies": 66,
+   "support": "66 studies. Regular exercise has small beneficial effects on total sleep time and sleep efficiency, small-to-medium effects on sleep onset latency, and moderate beneficial effects on sleep quality."
+  },
+  "kreider-2017": {
+   "type": "position",
+   "authors": [
+    "Kreider RB",
+    "Kalman DS",
+    "Antonio J",
+    "Ziegenfuss TN",
+    "Wildman R",
+    "Collins R",
+    "Candow DG",
+    "Kleiner SM",
+    "Almada AL",
+    "Lopez HL"
+   ],
+   "year": 2017,
+   "title": "International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "volume": "14",
+   "issue": "1",
+   "doi": "10.1186/s12970-017-0173-z",
+   "pmid": "28615996",
+   "support": "Short and long-term supplementation (up to 30 g/day for 5 years) is safe and well-tolerated in healthy individuals and in a number of patient populations ranging from infants to the elderly."
+  },
+  "lang-2024": {
+   "type": "systematic-review",
+   "authors": [
+    "Lang JJ",
+    "Prince SA",
+    "Merucci K",
+    "Cadenas-Sanchez C",
+    "Chaput JP",
+    "Fraser BJ",
+    "Manyanga T",
+    "McGrath R",
+    "Ortega FB",
+    "Singh B",
+    "Tomkinson GR"
+   ],
+   "year": 2024,
+   "title": "Cardiorespiratory fitness is a strong and consistent predictor of morbidity and mortality among adults: an overview of meta-analyses representing over 20.9 million observations from 199 unique cohort studies",
+   "journal": "British Journal of Sports Medicine",
+   "volume": "58",
+   "issue": "10",
+   "pages": "556-566",
+   "doi": "10.1136/bjsports-2023-107849",
+   "pmid": "38599681",
+   "n_studies": 26,
+   "support": "26 systematic reviews. High versus low CRF HR=0.47 for all-cause mortality; every 1-MET higher level of CRF was associated with an 11%-17% reduction in all-cause mortality. The certainty of the evidence ranged from very low to moderate."
+  },
+  "lee-2022": {
+   "type": "cohort",
+   "authors": [
+    "Lee DH",
+    "Rezende LFM",
+    "Joh HK",
+    "Keum N",
+    "Ferrari G",
+    "Rey-Lopez JP",
+    "Rimm EB",
+    "Tabung FK",
+    "Giovannucci EL"
+   ],
+   "year": 2022,
+   "title": "Long-Term Leisure-Time Physical Activity Intensity and All-Cause and Cause-Specific Mortality: A Prospective Cohort of US Adults",
+   "journal": "Circulation",
+   "volume": "146",
+   "issue": "7",
+   "pages": "523-534",
+   "doi": "10.1161/circulationaha.121.058162",
+   "pmid": "35876019",
+   "n_participants": 116221,
+   "support": "A total of 116,221 adults from 2 large prospective US cohorts were analyzed. The nearly maximum association with lower mortality was achieved by performing about 150 to 300 min/wk of long-term leisure-time VPA, 300 to 600 min/wk of MPA, or an equivalent combination."
+  },
+  "leong-2015": {
+   "type": "cohort",
+   "authors": [
+    "Leong DP",
+    "Teo KK",
+    "Rangarajan S",
+    "Lopez-Jaramillo P",
+    "Avezum A",
+    "Orlandini A",
+    "Seron P",
+    "Ahmed SH",
+    "Rosengren A",
+    "Kelishadi R",
+    "Rahman O",
+    "Swaminathan S",
+    "Iqbal R",
+    "Gupta R",
+    "Lear SA",
+    "Oguz A",
+    "Yusoff K",
+    "Zatonska K",
+    "Chifamba J",
+    "Igumbor E",
+    "Mohan V",
+    "Anjana RM",
+    "Gu H",
+    "Li W",
+    "Yusuf S"
+   ],
+   "year": 2015,
+   "title": "Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study",
+   "journal": "The Lancet",
+   "volume": "386",
+   "issue": "9990",
+   "pages": "266-273",
+   "doi": "10.1016/s0140-6736(14)62000-6",
+   "pmid": "25982160",
+   "n_participants": 139691,
+   "support": "139,691 participants in PURE. Hazard ratio per 5 kg reduction in grip strength 1.16 for all-cause mortality. Further research is needed to test whether improvement in strength reduces mortality and cardiovascular disease."
+  },
+  "liu-2009": {
+   "type": "systematic-review",
+   "authors": [
+    "Liu Cj",
+    "Latham NK"
+   ],
+   "year": 2009,
+   "title": "Progressive resistance strength training for improving physical function in older adults",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "doi": "10.1002/14651858.cd002759.pub2",
+   "pmid": "19588334",
+   "support": "PRT had a large positive effect on muscle strength (73 trials, 3059 participants, SMD 0.84). This review provides evidence that PRT is an effective intervention for improving physical functioning in older people."
+  },
+  "macintosh-2021": {
+   "type": "review",
+   "authors": [
+    "MacIntosh BR",
+    "Murias JM",
+    "Keir DA",
+    "Weir JM"
+   ],
+   "year": 2021,
+   "title": "What Is Moderate to Vigorous Exercise Intensity?",
+   "journal": "Frontiers in Physiology",
+   "volume": "12",
+   "doi": "10.3389/fphys.2021.682233",
+   "pmid": "34630133",
+   "support": "Moderate intensity physical activity approaches VT1 and LT1 and vigorous intensity physical activity is between the two thresholds. Prescribing at a fixed metabolic rate or percentage of maximal heart rate does not acknowledge the individual variability of these metabolic boundaries."
+  },
+  "mandsager-2018": {
+   "type": "cohort",
+   "authors": [
+    "Mandsager K",
+    "Harb S",
+    "Cremer P",
+    "Phelan D",
+    "Nissen SE",
+    "Jaber W"
+   ],
+   "year": 2018,
+   "title": "Association of Cardiorespiratory Fitness With Long-term Mortality Among Adults Undergoing Exercise Treadmill Testing",
+   "journal": "JAMA Network Open",
+   "volume": "1",
+   "issue": "6",
+   "pages": "e183605",
+   "doi": "10.1001/jamanetworkopen.2018.3605",
+   "pmid": "30646252",
+   "n_participants": 122007,
+   "support": "122,007 patients undergoing treadmill testing. Cardiorespiratory fitness is inversely associated with long-term mortality with no observed upper limit of benefit (elite vs low: adjusted HR 0.20)."
+  },
+  "manson-2019-d": {
+   "type": "rct",
+   "authors": [
+    "Manson JE",
+    "Cook NR",
+    "Lee IM",
+    "Christen W",
+    "Bassuk SS",
+    "Mora S",
+    "Gibson H",
+    "Gordon D",
+    "Copeland T",
+    "D’Agostino D",
+    "Friedenberg G",
+    "Ridge C",
+    "Bubes V",
+    "Giovannucci EL",
+    "Willett WC",
+    "Buring JE"
+   ],
+   "year": 2019,
+   "title": "Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease",
+   "journal": "New England Journal of Medicine",
+   "volume": "380",
+   "issue": "1",
+   "pages": "33-44",
+   "doi": "10.1056/nejmoa1809944",
+   "pmid": "30415629",
+   "n_participants": 25871,
+   "support": "25,871 participants; vitamin D3 2000 IU per day; median follow-up 5.3 years. Supplementation with vitamin D did not result in a lower incidence of invasive cancer or cardiovascular events than placebo."
+  },
+  "manson-2019-n3": {
+   "type": "rct",
+   "authors": [
+    "Manson JE",
+    "Cook NR",
+    "Lee IM",
+    "Christen W",
+    "Bassuk SS",
+    "Mora S",
+    "Gibson H",
+    "Albert CM",
+    "Gordon D",
+    "Copeland T",
+    "D’Agostino D",
+    "Friedenberg G",
+    "Ridge C",
+    "Bubes V",
+    "Giovannucci EL",
+    "Willett WC",
+    "Buring JE"
+   ],
+   "year": 2019,
+   "title": "Marine n−3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer",
+   "journal": "New England Journal of Medicine",
+   "volume": "380",
+   "issue": "1",
+   "pages": "23-32",
+   "doi": "10.1056/nejmoa1811403",
+   "pmid": "30415637",
+   "n_participants": 25871,
+   "support": "Marine n-3 fatty acids at 1 g per day; supplementation with n-3 fatty acids did not result in a lower incidence of major cardiovascular events or cancer than placebo; total myocardial infarction HR 0.72 (secondary end point)."
+  },
+  "medlineplus-pulse": {
+   "type": "other",
+   "authors": [
+    "MedlinePlus, National Library of Medicine"
+   ],
+   "year": 2025,
+   "title": "Pulse: MedlinePlus Medical Encyclopedia",
+   "journal": "MedlinePlus",
+   "url": "https://medlineplus.gov/ency/article/003399.htm",
+   "retrieved": "2026-11-13",
+   "support": "Resting heart rate, children 10 years and older and adults (including seniors): 60 to 100 beats per minute; well-trained athletes: 40 to 60 beats per minute."
+  },
+  "milanovic-2015": {
+   "type": "meta-analysis",
+   "authors": [
+    "Milanović Z",
+    "Sporiš G",
+    "Weston M"
+   ],
+   "year": 2015,
+   "title": "Effectiveness of High-Intensity Interval Training (HIT) and Continuous Endurance Training for VO2max Improvements: A Systematic Review and Meta-Analysis of Controlled Trials",
+   "journal": "Sports Medicine",
+   "volume": "45",
+   "issue": "10",
+   "pages": "1469-1481",
+   "doi": "10.1007/s40279-015-0365-0",
+   "pmid": "26243014",
+   "support": "Endurance training and HIT both elicit large improvements in the VO2max of healthy, young to middle-aged adults, with the gains in VO2max being greater following HIT when compared with endurance training (1.2 mL/kg/min, possibly small)."
+  },
+  "mitchell-2012": {
+   "type": "review",
+   "authors": [
+    "Mitchell WK",
+    "Williams J",
+    "Atherton P",
+    "Larvin M",
+    "Lund J",
+    "Narici M"
+   ],
+   "year": 2012,
+   "title": "Sarcopenia, Dynapenia, and the Impact of Advancing Age on Human Skeletal Muscle Size and Strength; a Quantitative Review",
+   "journal": "Frontiers in Physiology",
+   "volume": "3",
+   "doi": "10.3389/fphys.2012.00260",
+   "pmid": "22934016",
+   "support": "Longitudinal studies show that in people aged 75 years, muscle mass is lost at a rate of 0.64-0.70% per year in women and 0.80-0.98% per year in men; strength is lost at 3-4% per year in men and 2.5-3% per year in women. Strength is lost 2-5 times faster than mass."
+  },
+  "momma-2022": {
+   "type": "meta-analysis",
+   "authors": [
+    "Momma H",
+    "Kawakami R",
+    "Honda T",
+    "Sawada SS"
+   ],
+   "year": 2022,
+   "title": "Muscle-strengthening activities are associated with lower risk and mortality in major non-communicable diseases: a systematic review and meta-analysis of cohort studies",
+   "journal": "British Journal of Sports Medicine",
+   "volume": "56",
+   "issue": "13",
+   "pages": "755-763",
+   "doi": "10.1136/bjsports-2021-105061",
+   "pmid": "35228201",
+   "n_studies": 16,
+   "support": "Sixteen studies. Muscle-strengthening activities were associated with a 10-17% lower risk of all-cause mortality, CVD, total cancer, diabetes and lung cancer; J-shaped associations with maximum risk reduction at approximately 30-60 min/week."
+  },
+  "nice-ng246": {
+   "type": "guideline",
+   "authors": [
+    "National Institute for Health and Care Excellence"
+   ],
+   "year": 2025,
+   "title": "Overweight and obesity management (NG246)",
+   "journal": "NICE",
+   "url": "https://www.nice.org.uk/guidance/ng246",
+   "retrieved": "2026-11-13",
+   "edition": "NG246, published 14 January 2025, last updated 8 January 2026",
+   "support": "Increased central adiposity: waist-to-height ratio 0.5 to 0.59, indicating increased health risks. High central adiposity: waist-to-height ratio 0.6 or more, indicating further increased health risks."
+  },
+  "paluch-2022": {
+   "type": "meta-analysis",
+   "authors": [
+    "Paluch AE",
+    "Bajpai S",
+    "Bassett DR",
+    "Carnethon MR",
+    "Ekelund U",
+    "Evenson KR",
+    "Galuska DA",
+    "Jefferis BJ",
+    "Kraus WE",
+    "Lee IM",
+    "Matthews CE",
+    "Omura JD",
+    "Patel AV",
+    "Pieper CF",
+    "Rees-Punia E",
+    "Dallmeier D",
+    "Klenk J",
+    "Whincup PH",
+    "Dooley EE",
+    "Pettee Gabriel K",
+    "Palta P",
+    "Pompeii LA",
+    "Chernofsky A",
+    "Larson MG",
+    "Vasan RS",
+    "Spartano N",
+    "Ballin M",
+    "Nordström P",
+    "Nordström A",
+    "Anderssen SA",
+    "Hansen BH",
+    "Cochrane JA",
+    "Dwyer T",
+    "Wang J",
+    "Ferrucci L",
+    "Liu F",
+    "Schrack J",
+    "Urbanek J",
+    "Saint-Maurice PF",
+    "Yamamoto N",
+    "Yoshitake Y",
+    "Newton RL",
+    "Yang S",
+    "Shiroma EJ",
+    "Fulton JE"
+   ],
+   "year": 2022,
+   "title": "Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts",
+   "journal": "The Lancet Public Health",
+   "volume": "7",
+   "issue": "3",
+   "pages": "e219-e228",
+   "doi": "10.1016/s2468-2667(21)00302-9",
+   "pmid": "35247352",
+   "n_studies": 15,
+   "n_participants": 47471,
+   "support": "15 studies, 47,471 adults, 3013 deaths. Progressively decreasing risk of mortality among adults aged 60 years and older with increasing number of steps per day until 6000-8000 steps per day and among adults younger than 60 years until 8000-10,000 steps per day."
+  },
+  "peterson-2010": {
+   "type": "meta-analysis",
+   "authors": [
+    "Peterson MD",
+    "Rhea MR",
+    "Sen A",
+    "Gordon PM"
+   ],
+   "year": 2010,
+   "title": "Resistance exercise for muscular strength in older adults: A meta-analysis",
+   "journal": "Ageing Research Reviews",
+   "volume": "9",
+   "issue": "3",
+   "pages": "226-237",
+   "doi": "10.1016/j.arr.2010.03.004",
+   "pmid": "20385254",
+   "n_studies": 47,
+   "n_participants": 1079,
+   "support": "Forty-seven studies, 1079 participants. RE is effective for improving strength among older adults, particularly with higher intensity training."
+  },
+  "peterson-2011": {
+   "type": "meta-analysis",
+   "authors": [
+    "PETERSON MD",
+    "SEN A",
+    "GORDON PM"
+   ],
+   "year": 2011,
+   "title": "Influence of Resistance Exercise on Lean Body Mass in Aging Adults",
+   "journal": "Medicine &amp; Science in Sports &amp; Exercise",
+   "volume": "43",
+   "issue": "2",
+   "pages": "249-258",
+   "doi": "10.1249/mss.0b013e3181eb6265",
+   "pmid": "20543750",
+   "n_studies": 49,
+   "n_participants": 1328,
+   "support": "Data from 49 studies, 1328 participants. The weighted pooled estimate of mean LBM change was 1.1 kg (95% CI 0.9-1.2 kg); higher-volume interventions were associated with greater increases in LBM, whereas older individuals experienced less increase."
+  },
+  "piercy-2018": {
+   "type": "guideline",
+   "authors": [
+    "Piercy KL",
+    "Troiano RP",
+    "Ballard RM",
+    "Carlson SA",
+    "Fulton JE",
+    "Galuska DA",
+    "George SM",
+    "Olson RD"
+   ],
+   "year": 2018,
+   "title": "The Physical Activity Guidelines for Americans",
+   "journal": "JAMA",
+   "volume": "320",
+   "issue": "19",
+   "pages": "2020",
+   "doi": "10.1001/jama.2018.14854",
+   "pmid": "30418471",
+   "support": "Adults should do at least 150 to 300 minutes of moderate-intensity aerobic activity a week; additional benefits occur with more physical activity; both aerobic and muscle-strengthening activity are beneficial."
+  },
+  "reed-2014": {
+   "type": "review",
+   "authors": [
+    "Reed JL",
+    "Pipe AL"
+   ],
+   "year": 2014,
+   "title": "The talk test",
+   "journal": "Current Opinion in Cardiology",
+   "volume": "29",
+   "issue": "5",
+   "pages": "475-480",
+   "doi": "10.1097/hco.0000000000000097",
+   "pmid": "25010379",
+   "support": "The talk test is a valid, reliable, practical and inexpensive tool for prescribing and monitoring exercise intensity. Comfortable speech is likely possible when exercise intensity is below the ventilatory or lactate threshold. It may not be practical for high-intensity interval training."
+  },
+  "saint-maurice-2019": {
+   "type": "cohort",
+   "authors": [
+    "Saint-Maurice PF",
+    "Coughlan D",
+    "Kelly SP",
+    "Keadle SK",
+    "Cook MB",
+    "Carlson SA",
+    "Fulton JE",
+    "Matthews CE"
+   ],
+   "year": 2019,
+   "title": "Association of Leisure-Time Physical Activity Across the Adult Life Course With All-Cause and Cause-Specific Mortality",
+   "journal": "JAMA Network Open",
+   "volume": "2",
+   "issue": "3",
+   "pages": "e190355",
+   "doi": "10.1001/jamanetworkopen.2019.0355",
+   "pmid": "30848809",
+   "support": "Compared with consistently inactive, maintaining higher LTPA was associated with lower all-cause mortality (HR 0.64); adults who increased LTPA in later adulthood (40-61 years) also had lower risk (HR 0.65). Midlife is not too late to start physical activity."
+  },
+  "shailendra-2022": {
+   "type": "meta-analysis",
+   "authors": [
+    "Shailendra P",
+    "Baldock KL",
+    "Li LSK",
+    "Bennie JA",
+    "Boyle T"
+   ],
+   "year": 2022,
+   "title": "Resistance Training and Mortality Risk: A Systematic Review and Meta-Analysis",
+   "journal": "American Journal of Preventive Medicine",
+   "volume": "63",
+   "issue": "2",
+   "pages": "277-285",
+   "doi": "10.1016/j.amepre.2022.03.020",
+   "pmid": "35599175",
+   "n_studies": 10,
+   "support": "Ten studies. Any amount of resistance training reduced the risk of all-cause mortality by 15%; a maximum risk reduction of 27% was observed at around 60 minutes per week; mortality risk reductions diminished at higher volumes."
+  },
+  "sherrington-2017": {
+   "type": "meta-analysis",
+   "authors": [
+    "Sherrington C",
+    "Michaleff ZA",
+    "Fairhall N",
+    "Paul SS",
+    "Tiedemann A",
+    "Whitney J",
+    "Cumming RG",
+    "Herbert RD",
+    "Close JCT",
+    "Lord SR"
+   ],
+   "year": 2016,
+   "title": "Exercise to prevent falls in older adults: an updated systematic review and meta-analysis",
+   "journal": "British Journal of Sports Medicine",
+   "volume": "51",
+   "issue": "24",
+   "pages": "1750-1758",
+   "doi": "10.1136/bjsports-2016-096547",
+   "pmid": "27707740",
+   "n_studies": 88,
+   "n_participants": 19478,
+   "support": "Exercise reduced the rate of falls in community-dwelling older people by 21%, with greater effects from programmes that challenged balance and involved more than 3 hours/week of exercise; in combination a 39% reduction in falls."
+  },
+  "sherrington-2019": {
+   "type": "systematic-review",
+   "authors": [
+    "Sherrington C",
+    "Fairhall NJ",
+    "Wallbank GK",
+    "Tiedemann A",
+    "Michaleff ZA",
+    "Howard K",
+    "Clemson L",
+    "Hopewell S",
+    "Lamb SE"
+   ],
+   "year": 2019,
+   "title": "Exercise for preventing falls in older people living in the community",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "volume": "2019",
+   "issue": "1",
+   "doi": "10.1002/14651858.cd012424.pub2",
+   "pmid": "30703272",
+   "n_studies": 108,
+   "n_participants": 23407,
+   "support": "108 RCTs with 23,407 participants. Exercise reduces the rate of falls by 23% (RaR 0.77, 95% CI 0.71 to 0.83; high-certainty evidence) and the number of people experiencing one or more falls by 15%."
+  },
+  "sitko-2025": {
+   "type": "other",
+   "authors": [
+    "Sitko S",
+    "Artetxe X",
+    "Bonnevie-Svendsen M",
+    "Galán-Rioja MÁ",
+    "Gallo G",
+    "Grappe F",
+    "Leo P",
+    "Mateo M",
+    "Mujika I",
+    "Sanders D",
+    "Seiler S",
+    "Zabala M",
+    "Valenzuela PL",
+    "Viribay A"
+   ],
+   "year": 2025,
+   "title": "What Is “Zone 2 Training”?: Experts’ Viewpoint on Definition, Training Methods, and Expected Adaptations",
+   "journal": "International Journal of Sports Physiology and Performance",
+   "volume": "20",
+   "issue": "11",
+   "pages": "1614-1617",
+   "doi": "10.1123/ijspp.2024-0303",
+   "pmid": "40010355",
+   "support": "Experts reached consensus that zone 2 training should preferably be performed at intensities located immediately below the first lactate or ventilatory threshold. These adaptations might not be unique to zone 2 and could also be induced with sessions performed at slightly higher and lower intensities."
+  },
+  "sniderman-2019": {
+   "type": "review",
+   "authors": [
+    "Sniderman AD",
+    "Thanassoulis G",
+    "Glavinovic T",
+    "Navar AM",
+    "Pencina M",
+    "Catapano A",
+    "Ference BA"
+   ],
+   "year": 2019,
+   "title": "Apolipoprotein B Particles and Cardiovascular Disease",
+   "journal": "JAMA Cardiology",
+   "volume": "4",
+   "issue": "12",
+   "pages": "1287",
+   "doi": "10.1001/jamacardio.2019.3780",
+   "pmid": "31642874",
+   "support": "Apolipoprotein B unifies, amplifies, and simplifies the information from the conventional lipid markers as to the atherogenic risk attributable to the apoB lipoproteins; all apoB particles are equally atherogenic with the exceptions of type III remnants and lipoprotein(a)."
+  },
+  "soffer-2024": {
+   "type": "position",
+   "authors": [
+    "Soffer DE",
+    "Marston NA",
+    "Maki KC",
+    "Jacobson TA",
+    "Bittner VA",
+    "Peña JM",
+    "Thanassoulis G",
+    "Martin SS",
+    "Kirkpatrick CF",
+    "Virani SS",
+    "Dixon DL",
+    "Ballantyne CM",
+    "Remaley AT"
+   ],
+   "year": 2024,
+   "title": "Role of apolipoprotein B in the clinical management of cardiovascular risk in adults: An Expert Clinical Consensus from the National Lipid Association",
+   "journal": "Journal of Clinical Lipidology",
+   "volume": "18",
+   "issue": "5",
+   "pages": "e647-e663",
+   "doi": "10.1016/j.jacl.2024.08.013",
+   "pmid": "39256087",
+   "support": "ApoB has been shown to be superior to LDL-C in risk assessment; when there is discordance between LDL-C and apoB, ASCVD risk generally aligns better with apoB or non-HDL-C. An LDL-C of 160 mg/dL and an apoB of 130 mg/dL correspond to about the 90th percentiles of the untreated adult population, both risk-enhancing factors warranting a clinician-patient discussion."
+  },
+  "storoschuk-2025": {
+   "type": "review",
+   "authors": [
+    "Storoschuk KL",
+    "Moran-MacDonald A",
+    "Gibala MJ",
+    "Gurd BJ"
+   ],
+   "year": 2025,
+   "title": "Much Ado About Zone 2: A Narrative Review Assessing the Efficacy of Zone 2 Training for Improving Mitochondrial Capacity and Cardiorespiratory Fitness in the General Population",
+   "journal": "Sports Medicine",
+   "volume": "55",
+   "issue": "7",
+   "pages": "1611-1624",
+   "doi": "10.1007/s40279-025-02261-y",
+   "pmid": "40560504",
+   "support": "Current evidence does not support Zone 2 training as the optimal intensity for improving mitochondrial or fatty acid oxidative capacity. Evidence suggests prioritizing higher exercise intensities (> Zone 2) is critical to maximize cardiometabolic health benefits, particularly in the context of lower training volumes."
+  },
+  "tanaka-2001": {
+   "type": "meta-analysis",
+   "authors": [
+    "Tanaka H",
+    "Monahan KD",
+    "Seals DR"
+   ],
+   "year": 2001,
+   "title": "Age-predicted maximal heart rate revisited",
+   "journal": "Journal of the American College of Cardiology",
+   "volume": "37",
+   "issue": "1",
+   "pages": "153-156",
+   "doi": "10.1016/s0735-1097(00)01054-8",
+   "pmid": "11153730",
+   "n_studies": 351,
+   "n_participants": 18712,
+   "support": "A regression equation to predict HRmax is 208 - 0.7 x age in healthy adults. HRmax is predicted, to a large extent, by age alone and is independent of gender and habitual physical activity status."
+  },
+  "ukcmo-2019": {
+   "type": "guideline",
+   "authors": [
+    "UK Chief Medical Officers"
+   ],
+   "year": 2019,
+   "title": "Physical activity guidelines: UK Chief Medical Officers' report",
+   "journal": "GOV.UK",
+   "url": "https://www.gov.uk/government/publications/physical-activity-guidelines-uk-chief-medical-officers-report",
+   "retrieved": "2026-11-13",
+   "support": "Adults should accumulate at least 150 minutes of moderate intensity activity, or 75 minutes of vigorous intensity activity; strengthening activities on at least 2 days a week; older adults should do muscle strength, balance and flexibility activities on at least 2 days a week."
+  },
+  "watson-2015": {
+   "type": "position",
+   "authors": [
+    "Watson NF",
+    "Badr MS",
+    "Belenky G",
+    "Bliwise DL",
+    "Buxton OM",
+    "Buysse D",
+    "Dinges DF",
+    "Gangwisch J",
+    "Grandner MA",
+    "Kushida C",
+    "Malhotra RK",
+    "Martin JL",
+    "Patel SR",
+    "Quan S",
+    "Tasali E"
+   ],
+   "year": 2015,
+   "title": "Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society",
+   "journal": "SLEEP",
+   "doi": "10.5665/sleep.4716",
+   "pmid": "26039963",
+   "support": "Adults should sleep 7 or more hours per night on a regular basis to promote optimal health (AASM and SRS consensus statement)."
+  },
+  "watson-2018": {
+   "type": "rct",
+   "authors": [
+    "Watson SL",
+    "Weeks BK",
+    "Weis LJ",
+    "Harding AT",
+    "Horan SA",
+    "Beck BR"
+   ],
+   "year": 2017,
+   "title": "High-Intensity Resistance and Impact Training Improves Bone Mineral Density and Physical Function in Postmenopausal Women With Osteopenia and Osteoporosis: The LIFTMOR Randomized Controlled Trial",
+   "journal": "Journal of Bone and Mineral Research",
+   "volume": "33",
+   "issue": "2",
+   "pages": "211-220",
+   "doi": "10.1002/jbmr.3284",
+   "pmid": "28975661",
+   "n_participants": 101,
+   "support": "101 postmenopausal women with low bone mass; 8 months of twice-weekly 30-minute supervised HiRIT (5 sets of 5 repetitions, >85% 1RM) versus home-based low-intensity exercise. LS BMD 2.9% vs -1.2%; only one adverse event reported in HiRIT (minor lower back spasm)."
+  },
+  "weston-2014": {
+   "type": "meta-analysis",
+   "authors": [
+    "Weston KS",
+    "Wisløff U",
+    "Coombes JS"
+   ],
+   "year": 2013,
+   "title": "High-intensity interval training in patients with lifestyle-induced cardiometabolic disease: a systematic review and meta-analysis",
+   "journal": "British Journal of Sports Medicine",
+   "volume": "48",
+   "issue": "16",
+   "pages": "1227-1234",
+   "doi": "10.1136/bjsports-2013-092576",
+   "pmid": "24144531",
+   "n_studies": 10,
+   "n_participants": 273,
+   "support": "10 studies with 273 patients. There was a significantly higher increase in the VO2peak after HIIT compared to MICT (MD 3.03 mL/kg/min, 95% CI 2.00 to 4.07), equivalent to 9.1%."
+  },
+  "zhang-rhr-2016": {
+   "type": "meta-analysis",
+   "authors": [
+    "Zhang D",
+    "Shen X",
+    "Qi X"
+   ],
+   "year": 2015,
+   "title": "Resting heart rate and all-cause and cardiovascular mortality in the general population: a meta-analysis",
+   "journal": "Canadian Medical Association Journal",
+   "volume": "188",
+   "issue": "3",
+   "pages": "E53-E63",
+   "doi": "10.1503/cmaj.150535",
+   "pmid": "26598376",
+   "support": "Relative risk with a 10 beats/min increment of resting heart rate was 1.09 for all-cause mortality; resting heart rate above 80 beats/min RR 1.45 versus the lowest category; substantial heterogeneity and publication bias were detected."
+  },
+  "zhao-2020": {
+   "type": "cohort",
+   "authors": [
+    "Zhao M",
+    "Veeranki SP",
+    "Magnussen CG",
+    "Xi B"
+   ],
+   "year": 2020,
+   "title": "Recommended physical activity and all cause and cause specific mortality in US adults: prospective cohort study",
+   "journal": "BMJ",
+   "pages": "m2031",
+   "doi": "10.1136/bmj.m2031",
+   "pmid": "32611588",
+   "n_participants": 479856,
+   "support": "479,856 adults. Compared with those who did not meet the guidelines, recommended muscle strengthening activity (HR 0.89) or aerobic activity (0.71) were at reduced risk of all cause mortality; even larger benefits in those engaged in both (0.60)."
+  }
+ }
+}

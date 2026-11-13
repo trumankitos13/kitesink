@@ -2,68 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KiteSink — apps, games &amp; tools</title>
-<meta name="description" content="KiteSink — one independent maker across many surfaces. iOS apps, browser games, and tools. Song of the Day, Campground Tycoon, Vantix, and the blog.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KiteSink — tools for work, training &amp; music</title>
+<meta name="description" content="KiteSink is a one-person workshop: consulting for music teams, Vantix and free fitness tools, a handful of music projects, and a library of everything else.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; }
-  html, body { margin: 0; }
-  body { background: #ece2cb; }
-  a { color: inherit; text-decoration: none; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @keyframes eqled { 0%,100% { clip-path: inset(58% 0 0 0); } 50% { clip-path: inset(4% 0 0 0); } }
-  @keyframes spinSlow { from { transform: rotate(0); } to { transform: rotate(360deg); } }
-  /* LED equalizer bar (hero SOTD card) — per-bar duration/delay set inline */
-  .eqb { flex:1; background:linear-gradient(to top,#2f5436 0 55%,#3a6b46 55% 78%,#b07227 78% 100%);
-         mask-image:repeating-linear-gradient(to top,#000 0 3px,transparent 3px 5px);
-         -webkit-mask-image:repeating-linear-gradient(to top,#000 0 3px,transparent 3px 5px);
-         animation:eqled 1.15s ease-in-out infinite; }
-  .hv1:hover { color:#2f5436; }
-  .hv2:hover { background:#23402b; }
-  .hv3:hover { border-color:#2f5436; color:#2f5436; }
-  .hv4:hover { transform:translateY(-3px); box-shadow:0 20px 38px rgba(34,28,16,.12); }
-  .hv5:hover { background:rgba(47,84,54,.05); }
-  .hv6:hover { background:linear-gradient(90deg,rgba(176,114,39,.12),transparent 65%); }
-  .hv7:hover { border-color:#2f5436; color:#2f5436; }
-  .hv8:hover { text-decoration:underline; }
-  .hv9:hover { opacity:.72; }
-  /* Backline hero card — the on-call toggle is class-driven (state on #stkBackline)
-     so night mode can restyle it without fighting inline styles. */
-  .blTrack { position:relative; width:56px; height:30px; border-radius:20px; background:#b9ac8e;
-             flex-shrink:0; box-shadow:inset 0 1px 3px rgba(0,0,0,.35); transition:background .22s ease; }
-  .blKnob  { position:absolute; left:3px; top:3px; width:24px; height:24px; border-radius:50%;
-             background:#f3ecd9; box-shadow:0 2px 5px rgba(0,0,0,.4); transition:left .22s ease; }
-  .blDemand { opacity:.4; transition:opacity .22s ease; }
-  #stkBackline.on .blTrack { background:#3a6b46; }
-  #stkBackline.on .blKnob { left:29px; }
-  #stkBackline.on .blDemand { opacity:1; }
-  .blLink:hover { color:#1d3a22; }
-  html[data-theme="dark"] .blTrack { background:#4d4536; }
-  html[data-theme="dark"] .blDark { background:#131009 !important; box-shadow:inset 0 0 0 1px rgba(236,226,203,.08); }
-  html[data-theme="dark"] .blLink:hover { color:#a8e0b8; }
-</style>
-  <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-  <link rel="stylesheet" href="/ks.css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<!--KS-SEO-->
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
+<link rel="stylesheet" href="/ks.css?v=2027.6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://kitesink.com/">
+<link rel="alternate" type="text/markdown" href="https://kitesink.com/index.md" title="Plain-text version">
 <link rel="alternate" type="application/atom+xml" title="KiteSink — the log" href="/feed.xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#ece2cb">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
-<meta property="og:title" content="KiteSink — apps, games &amp; tools">
-<meta property="og:description" content="KiteSink — one independent maker across many surfaces. iOS apps, browser games, and tools. Song of the Day, Campground Tycoon, Vantix, and the blog.">
+<meta property="og:title" content="KiteSink — tools for work, training &amp; music">
+<meta property="og:description" content="A one-person workshop: consulting for music teams, Vantix and free fitness tools, music projects, and a library of everything else.">
 <meta property="og:url" content="https://kitesink.com/">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="KiteSink — apps, games &amp; tools">
-<meta name="twitter:description" content="KiteSink — one independent maker across many surfaces. iOS apps, browser games, and tools. Song of the Day, Campground Tycoon, Vantix, and the blog.">
+<meta name="twitter:title" content="KiteSink — tools for work, training &amp; music">
+<meta name="twitter:description" content="A one-person workshop: consulting for music teams, Vantix and free fitness tools, music projects, and a library of everything else.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <script type="application/ld+json">
 {
@@ -72,7 +34,7 @@
     {
       "@type": "Person",
       "@id": "https://kitesink.com/#truman",
-      "name": "Truman Kitos",
+      "name": "Truman Kitos-Lindsey",
       "url": "https://kitesink.com/about",
       "email": "mailto:hello@kitesink.com",
       "jobTitle": "Independent maker & founder",
@@ -87,341 +49,777 @@
       "@id": "https://kitesink.com/#website",
       "url": "https://kitesink.com/",
       "name": "KiteSink",
-      "description": "One independent maker across many surfaces — iOS apps, browser games, and tools.",
+      "description": "A one-person workshop: consulting for music teams, fitness tools, music projects, and a library of everything else.",
       "inLanguage": "en",
       "publisher": { "@id": "https://kitesink.com/#truman" }
     }
   ]
 }
 </script>
+<style>
+  /* ---------- hero: headline + the five-door index + the card deck ---------- */
+  .hero { padding-block: clamp(22px, 2.6vw, 34px) clamp(44px, 7vw, 76px); }
+  @media (max-width: 480px) { .hero .k-eyebrow .wide { display: none; } }
+  .hero-grid { display: grid; gap: clamp(34px, 5vw, 64px); margin-top: clamp(20px, 2.4vw, 28px); }
+  .hero .k-h1 { font-size: clamp(42px, 6.3vw, 78px); margin-top: clamp(12px, 1.5vw, 18px); }
+  .hero .k-h1 span { transition: color .25s, text-decoration-color .25s; text-decoration: underline 0.06em transparent; text-underline-offset: .12em; }
+  .hero .k-h1[data-on="consulting"] .w-consulting,
+  .hero .k-h1[data-on="fitness"] .w-fitness,
+  .hero .k-h1[data-on="music"] .w-music { color: var(--k-green); text-decoration-color: var(--k-brass-fill); }
+  .hero .k-lead { margin-top: clamp(12px, 1.6vw, 18px); max-width: none; }
+  @media (min-width: 980px) {
+    .hero-grid { grid-template-columns: minmax(0, 1.62fr) minmax(300px, .8fr); align-items: start; }
+  }
+
+  /* the index: five rows = the whole site */
+  .idx { min-width: 0; }
+  .idx-list { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--k-rule); }
+  .idx-row { position: relative; display: grid; grid-template-columns: 30px minmax(0, 1fr) 26px;
+    grid-template-areas: "num name arrow" ". desc desc" ". chips chips"; gap: 6px 10px; align-items: baseline;
+    padding: 18px 8px 18px 10px; border-top: 1px solid var(--k-rule); transition: opacity .25s, background .3s; }
+  .idx-row::before { content: ""; position: absolute; inset: -1px auto -1px 0; width: 3px; background: var(--k-green-fill);
+    scale: 1 0; transform-origin: 50% 0; transition: scale .32s var(--k-ease); }
+  .idx-row:is(:hover, :focus-within, .is-on) { background: linear-gradient(90deg, color-mix(in srgb, var(--k-green) 9%, transparent), transparent 70%); }
+  .idx-row:is(:hover, :focus-within, .is-on)::before { scale: 1 1; }
+  .idx-row .k-num { grid-area: num; }
+  .idx-name { grid-area: name; font: 800 clamp(27px, 6.4vw, 36px)/1.05 var(--k-sans); letter-spacing: -.045em; color: var(--k-ink) !important;
+    text-decoration: none; transition: color .2s; }
+  .idx-name::before { content: ""; position: absolute; inset: 0; }
+  .idx-row:is(:hover, :focus-within, .is-on) .idx-name { color: var(--k-green) !important; }
+  .idx-desc { grid-area: desc; font-size: 14.5px; line-height: 1.45; color: var(--k-copy); text-wrap: pretty; }
+  .idx-chips { grid-area: chips; margin-top: 6px; }
+  .idx-chips .k-chip { position: relative; z-index: 1; background: var(--k-paper); }
+  .idx-arrow { grid-area: arrow; justify-self: end; font: 500 20px/1 var(--k-mono); color: var(--k-mute); transition: translate .25s var(--k-ease), color .2s; }
+  .idx-row:is(:hover, :focus-within, .is-on) .idx-arrow { translate: 5px 0; color: var(--k-green); }
+  @media (hover: hover) { .idx-list:has(.idx-row:hover) .idx-row:not(:hover) { opacity: .5; } }
+  @media (min-width: 640px) {
+    .idx-row { grid-template-columns: 34px minmax(132px, 178px) minmax(0, 1fr) 26px;
+      grid-template-areas: "num name desc arrow" "num name chips arrow"; column-gap: 16px; padding-block: 13px; }
+    .idx-name { font-size: clamp(26px, 2.7vw, 32px); }
+    .idx-chips { margin-top: 3px; }
+  }
+
+  /* the deck: one card per section; rows bring their card forward */
+  .deck-col { min-width: 0; position: relative; padding-top: 52px; }
+  .deck-kite { position: absolute; top: -16px; right: 14px; z-index: 8; pointer-events: none; animation: bob 5s ease-in-out infinite; }
+  @media (max-width: 700px) { .deck-col { padding-top: 0; } }
+  .deck { position: relative; height: 372px; max-width: 420px; margin-inline: auto; }
+  .deck-card { position: absolute; left: 0; right: 0; top: 0; cursor: pointer; will-change: transform, opacity; }
+  .dc { min-height: 308px; display: flex; flex-direction: column; border: 1.5px solid var(--k-rule-strong); border-radius: 14px;
+    background: var(--k-raised); color: var(--k-ink); padding: 18px 20px; box-shadow: var(--k-shadow); }
+  .dc-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .dc-tag { font: 600 11px/1.3 var(--k-mono); text-transform: uppercase; letter-spacing: .13em; color: var(--k-brass); }
+  .dc-h { font: 700 20px/1.15 var(--k-sans); letter-spacing: -.022em; color: inherit; }
+  .dc-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding-top: 12px;
+    border-top: 1px dashed var(--k-rule-strong); font: 500 11px/1.3 var(--k-mono); color: var(--k-mute); }
+  .dc-foot a { font: 600 12px/1.3 var(--k-mono); color: var(--k-green) !important; text-decoration: none; white-space: nowrap; padding: 6px 0; }
+  .dc-foot a:hover { text-decoration: underline; }
+  @media (pointer: coarse) { .dc-foot a { padding: 12px 0; } }
+  /* the pager: five fixed segments, one per card. Nothing here changes size, so nothing below it moves. */
+  .deck-pager { display: flex; justify-content: center; gap: 6px; margin-top: 8px; }
+  .deck-pager button { position: relative; width: 38px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; border-radius: 6px; }
+  .deck-pager button::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; translate: 0 -50%; border-radius: 3px;
+    background: var(--k-mute); opacity: .55; transition: height .2s var(--k-ease), background .2s, opacity .2s; }
+  .deck-pager button:hover::before { opacity: 1; }
+  .deck-pager button[aria-pressed="true"]::before { height: 7px; background: var(--k-green-fill); opacity: 1; }
+  /* consulting card */
+  .dc--pine { background: #23402b; color: #f0e8d6; border-color: transparent; }
+  .dc--pine .dc-tag { color: #d8b07a; }
+  .dc--pine .dc-foot { border-color: #688266; color: #c2ceb9; }
+  .dc--pine .dc-foot a { color: #d8b07a !important; }
+  .flow { list-style: none; padding: 0; margin: 4px 0 0; }
+  .flow li { position: relative; padding: 0 0 15px 27px; }
+  .flow li::before { content: ""; position: absolute; left: 0; top: 6px; width: 9px; height: 9px; border: 2px solid #d8b07a; border-radius: 50%; }
+  .flow li:not(:last-child)::after { content: ""; position: absolute; left: 3.5px; top: 20px; bottom: 2px; width: 2px; background: #688266; }
+  .flow b { display: block; font: 700 16.5px/1.25 var(--k-sans); letter-spacing: -.02em; }
+  .flow span { display: block; color: #c2ceb9; font-size: 12.5px; }
+  /* vantix card */
+  .dc--vantix { border-color: color-mix(in srgb, var(--k-brass-fill) 50%, transparent); }
+  .vol { display: flex; flex-direction: column; gap: 8px; flex: 1; justify-content: center; margin-top: 4px; }
+  .vol-meta { display: flex; justify-content: space-between; margin: 12px 0 2px; font: 600 10px/1 var(--k-mono); letter-spacing: .1em; color: var(--k-mute); }
+  .vol-row { display: flex; align-items: center; gap: 10px; font: 500 10.5px/1 var(--k-mono); color: var(--k-copy); }
+  .vol-row > span:first-child { width: 66px; flex-shrink: 0; }
+  .vol-bar { flex: 1; height: 9px; border-radius: 2px; background: var(--k-tint); position: relative; }
+  .vol-bar i { display: block; height: 100%; border-radius: 2px; background: var(--k-green-fill); }
+  .vol-bar::after { content: ""; position: absolute; top: -2px; bottom: -2px; left: 80%; width: 1.5px; background: var(--k-rule-strong); }
+  .vol-row b { width: 36px; text-align: right; flex-shrink: 0; font-weight: 600; color: var(--k-green); }
+  .vol-row.under i { background: var(--k-tan); } .vol-row.over i { background: var(--k-brass-fill); }
+  .vol-row:is(.under, .over) b { color: var(--k-brass); }
+  /* song of the day card */
+  .sotd-now { display: flex; align-items: center; gap: 14px; }
+  .sotd-now img { width: 62px; height: 76px; object-fit: cover; border-radius: 6px; border: 1px solid var(--k-rule-strong); flex-shrink: 0; background: #fff; }
+  .sotd-now .dc-h { font-size: 19px; }
+  .sotd-now span { display: block; font-size: 14px; color: var(--k-mute); margin-top: 2px; }
+  .eq { display: flex; align-items: stretch; gap: 4px; flex: 1; min-height: 40px; margin-top: 14px; padding-bottom: 2px; border-bottom: 2px solid var(--k-rule-strong); }
+  @keyframes eqled { 0%,100% { clip-path: inset(58% 0 0 0); } 50% { clip-path: inset(4% 0 0 0); } }
+  .eq i { flex: 1; background: linear-gradient(to top, #2f5436 0 55%, #3a6b46 55% 78%, #b07227 78% 100%);
+    -webkit-mask-image: repeating-linear-gradient(to top, #000 0 3px, transparent 3px 5px); mask-image: repeating-linear-gradient(to top, #000 0 3px, transparent 3px 5px);
+    animation: eqled 1.15s ease-in-out infinite; }
+  html[data-theme="dark"] .eq i { background: linear-gradient(to top, #4c8a5d 0 55%, #82c795 55% 78%, #e0a94e 78% 100%); }
+  .dc-meta { display: flex; justify-content: space-between; gap: 10px; margin-top: 11px; }
+  .dc-meta div { font: 600 12.5px/1.2 var(--k-mono); color: var(--k-ink); }
+  .dc-meta small { display: block; margin-top: 3px; font: 600 10px/1 var(--k-mono); letter-spacing: .1em; color: var(--k-mute); }
+  /* campground card */
+  .camp-shot { flex: 1; min-height: 132px; border-radius: 10px; border: 1.5px solid var(--k-rule); position: relative; background-position: center; background-size: cover;
+    background-image: image-set(url('/site_assets/picker_bg-card.avif') type('image/avif'), url('/site_assets/picker_bg-card.webp') type('image/webp'), url('/site_assets/picker_bg.png') type('image/png')); }
+  .camp-shot span { position: absolute; top: 10px; right: 10px; font: 700 10px/1 var(--k-mono); letter-spacing: .08em; background: #e0b35c; color: #221c10; border-radius: 30px; padding: 5px 10px; }
+  /* about card */
+  .dc--polaroid { background: #f7f1e2; padding: 12px 12px 14px; border-radius: 6px; }
+  html[data-theme="dark"] .dc--polaroid { background: #2a2418; }
+  .dc--polaroid picture, .dc--polaroid img { display: block; width: 100%; }
+  .dc--polaroid img { height: 236px; object-fit: cover; object-position: center 22%; border-radius: 3px; }
+  .dc--polaroid .dc-foot { border-top: 0; padding-top: 10px; }
+
+  /* ---------- bands ---------- */
+  .two { display: grid; gap: clamp(22px, 3.4vw, 40px); }
+  @media (min-width: 900px) { .two { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; } .two--even { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .three { display: grid; gap: clamp(16px, 2.2vw, 24px); }
+  @media (min-width: 760px) { .three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1060px) { .three { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  /* consulting: "what keeps getting stuck?" picker */
+  .stuck { margin-top: 28px; }
+  .stuck .k-seg { margin-top: 12px; background: rgba(240,232,214,.1); }
+  .stuck .k-seg button { color: #c2ceb9; }
+  .stuck .k-seg button:hover { color: #f0e8d6; }
+  .stuck .k-seg button[aria-selected="true"] { background: #ece2cb; color: #23402b; box-shadow: none; }
+  .stuck-panel { margin-top: 18px; padding: 20px 22px; border-radius: 14px; border: 1px solid rgba(240,232,214,.2); background: rgba(240,232,214,.05); min-height: 208px; }
+  .stuck-panel .k-h3 { margin-bottom: 8px; }
+  .stuck-panel .ex { margin-top: 14px; padding-top: 14px; border-top: 1px dashed rgba(240,232,214,.25); font-size: 14.5px; }
+  .stuck-panel .ex b { display: block; font: 500 11px/1.6 var(--k-mono); color: #d8b07a; margin-bottom: 3px; }
+  .next-card { border: 1.5px dashed rgba(216,176,122,.55); border-radius: var(--k-r); padding: clamp(20px, 3vw, 28px); display: flex; flex-direction: column; gap: 12px; }
+  .next-card .k-status { color: #d8b07a; }
+
+  /* fitness: vantix window + quick tool */
+  .pillars { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 0; }
+  .pillars li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 2px 8px; padding: 12px 0; border-top: 1px solid var(--pc-rule); }
+  .pillars i { font: 500 11px/1.6 var(--k-mono); color: var(--pc-accent); font-style: normal; }
+  .pillars b { font: 600 15.5px/1.3 var(--k-sans); letter-spacing: -.015em; }
+  .pillars span { grid-column: 2; font-size: 13.5px; line-height: 1.45; color: var(--pc-copy); }
+  .quick-out { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin-top: 4px; }
+  .quick-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: end; }
+  .toollist { list-style: none; margin: 0; padding: 0; }
+  .toollist a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 13px 2px; border-top: 1px solid var(--k-rule); text-decoration: none; transition: padding .25s var(--k-ease), color .2s; }
+  .toollist li:last-child a { border-bottom: 1px solid var(--k-rule); }
+  .toollist b { font: 600 16px/1.3 var(--k-sans); letter-spacing: -.015em; color: var(--k-ink); }
+  .toollist span { grid-column: 1; font-size: 13.5px; color: var(--k-copy); }
+  .toollist i { grid-row: 1 / span 2; grid-column: 2; align-self: center; font: 500 16px var(--k-mono); font-style: normal; color: var(--k-mute); transition: translate .25s var(--k-ease), color .2s; }
+  .toollist a:hover { padding-left: 8px; }
+  .toollist a:hover b, .toollist a:hover i { color: var(--k-green); }
+  .toollist a:hover i { translate: 4px 0; }
+
+  /* music: backline on-call demo */
+  .oncall { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #16181d; border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; padding: 12px 16px; cursor: pointer; user-select: none; -webkit-user-select: none; }
+  .oncall b { display: block; font: 600 15px/1.3 var(--k-sans); color: #f3f4f6; }
+  .oncall small { display: block; font: 500 11px/1.4 var(--k-mono); color: #8e949f; margin-top: 2px; }
+  .oncall-track { position: relative; width: 54px; height: 30px; border-radius: 20px; background: #3a3d45; flex-shrink: 0; transition: background .22s; }
+  .oncall-track::after { content: ""; position: absolute; left: 3px; top: 3px; width: 24px; height: 24px; border-radius: 50%; background: #f3f4f6; box-shadow: 0 2px 5px rgba(0,0,0,.4); transition: left .22s var(--k-ease); }
+  .oncall[aria-checked="true"] .oncall-track { background: #f8ab3c; }
+  .oncall[aria-checked="true"] .oncall-track::after { left: 27px; }
+  .gigs { transition: opacity .25s; }
+  .oncall[aria-checked="false"] + .gigs { opacity: .32; }
+  .gigs-h { font: 500 12px/1.4 var(--k-mono); color: #a6abb5; margin: 2px 0; }
+  .gigs-h b { color: #f8ab3c; font-weight: 600; }
+  .gig { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 0; border-top: 1px solid rgba(255,255,255,.1); }
+  .gig b { display: block; font: 600 14px/1.3 var(--k-sans); color: #f3f4f6; }
+  .gig small { font: 500 10.5px/1.3 var(--k-mono); color: #8e949f; }
+  .gig span { font: 600 13px var(--k-mono); color: #4bd6cf; flex-shrink: 0; }
+  .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--pc-rule); border-radius: 10px; overflow: hidden; }
+  .facts div { padding: 12px 14px; border-top: 1px solid var(--pc-rule); border-left: 1px solid var(--pc-rule); margin: -1px 0 0 -1px; }
+  .facts b { display: block; font: 700 17px/1.2 var(--k-sans); letter-spacing: -.02em; }
+  .facts small { font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-copy); }
+  .sotd-cover { display: flex; gap: 16px; align-items: center; padding: 14px; border-radius: 12px; background: var(--pc-tint); }
+  .sotd-cover img { width: 78px; height: 95px; object-fit: cover; border-radius: 6px; border: 1px solid var(--pc-rule); background: #fff; flex-shrink: 0; }
+  .sotd-cover b { display: block; font: 700 18px/1.2 var(--k-sans); letter-spacing: -.02em; }
+  .sotd-cover span { display: block; font-size: 14px; color: var(--pc-copy); }
+  .sotd-cover small { display: block; margin-top: 8px; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-accent); }
+
+  /* library: quiet on purpose */
+  #library { background: color-mix(in srgb, var(--k-sunk) 55%, var(--k-paper)); }
+  .lib-search { position: relative; margin-top: 22px; }
+  .lib-search svg { position: absolute; left: 16px; top: 17px; color: var(--k-mute); pointer-events: none; }
+  .lib-search .k-input { padding-left: 44px; padding-right: 76px; min-height: 52px; border-radius: 30px; background: var(--k-raised); }
+  .lib-search .ks-kbd { position: absolute; right: 14px; top: 15px; }
+  .lib-results { list-style: none; margin: 10px 0 0; padding: 0; }
+  .lib-results a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 11px 14px; border-radius: 10px; text-decoration: none; }
+  .lib-results a:hover { background: color-mix(in srgb, var(--k-green) 10%, transparent); }
+  .lib-results b { font: 600 15px/1.3 var(--k-sans); color: var(--k-ink); }
+  .lib-results span { grid-column: 1; font-size: 13px; color: var(--k-copy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lib-results i { grid-row: 1; grid-column: 2; font: 500 10.5px/1.6 var(--k-mono); font-style: normal; text-transform: uppercase; letter-spacing: .1em; color: var(--k-mute); }
+  .lib-results .none { padding: 12px 14px; font-size: 14.5px; color: var(--k-copy); }
+  .shelves { margin-top: 18px; }
+  .log a { display: block; padding: 18px 0; border-top: 1px solid var(--k-rule); text-decoration: none; transition: opacity .2s; }
+  .log a:hover { opacity: .72; }
+  .log a:last-child { border-bottom: 1px solid var(--k-rule); }
+  .log .meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font: 600 11px/1.5 var(--k-mono); color: var(--k-mute); }
+  .log .meta b { text-transform: uppercase; letter-spacing: .08em; color: var(--k-green); font-weight: 600; }
+  .log .meta b.ext { color: var(--k-brass); }
+  .log strong { display: block; margin-top: 6px; font: 700 20px/1.2 var(--k-sans); letter-spacing: -.02em; color: var(--k-ink); }
+  .log p { margin-top: 6px; font-size: 14.5px; line-height: 1.5; color: var(--k-copy); }
+
+  /* about */
+  .about-grid { display: grid; gap: clamp(26px, 5vw, 64px); align-items: center; }
+  @media (min-width: 820px) { .about-grid { grid-template-columns: minmax(0, 1fr) auto; } }
+  .polaroid { width: min(300px, 78vw); background: #f7f1e2; border: 1.5px solid var(--k-rule-strong); border-radius: 6px; padding: 12px 12px 14px;
+    box-shadow: 0 18px 40px rgba(34,28,16,.16); rotate: 2.2deg; transition: rotate .4s var(--k-ease), translate .4s var(--k-ease); justify-self: center; }
+  .polaroid:hover { rotate: -1deg; translate: 0 -4px; }
+  html[data-theme="dark"] .polaroid { background: #2a2418; }
+  .polaroid img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 3px; }
+  .polaroid figcaption { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font: 500 11px var(--k-mono); color: var(--k-mute); }
+  .polaroid figcaption i { width: 9px; height: 9px; background: var(--k-brass-fill); rotate: 45deg; }
+  .about-grid .k-copy + .k-copy { margin-top: 14px; }
+  .about-grid .k-copy { font-size: clamp(17px, 2vw, 19px); line-height: 1.62; }
+</style>
 </head>
-<body class="ks-paper">
+<body class="ks-paper k2">
+<a class="k-skip" href="#main">Skip to content</a>
+<div data-ks="header" data-active=""></div>
 
-<div style="background:#ece2cb;color:#221c10;font-family:'Geist',sans-serif;min-height:100%;overflow-x:hidden">
+<main id="main">
 
-  <div data-ks="header" data-active=""></div>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero k-wrap" aria-labelledby="hero-title">
+    <p class="k-eyebrow"><span class="ast" aria-hidden="true">✱</span><span>KiteSink</span><span aria-hidden="true">·</span><span>a one-person workshop</span><span class="wide" aria-hidden="true">·</span><span class="wide">est. 2026</span></p>
 
-  <section style="padding:clamp(38px,6vw,54px) clamp(20px,4vw,40px) 30px;max-width:1240px;margin:0 auto">
-    <div style="display:flex;align-items:center;gap:10px;font:600 12px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.16em;color:#2f5436;margin-bottom:26px">
-      <span style="font-size:15px">✱</span><span>Independent maker · founder · est. 2026</span>
-    </div>
+    <h1 class="k-h1" id="hero-title">I make <em>tools</em> for <span class="w-consulting">work,</span> <span class="w-fitness">training</span> &amp; <span class="w-music">music.</span></h1>
+    <p class="k-lead">Three lines of work under one roof. Pick a door; everything else is in the library.</p>
 
-    <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,48px);align-items:flex-start">
-      <div style="flex:1 1 480px;min-width:0">
-        <h1 style="font:800 clamp(52px,8.4vw,116px)/.9 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810;margin:0">I make <span style="font-style:italic;font-weight:700;color:#2f5436">apps,</span><br>games &amp;<br>tools.</h1>
-        <p style="font:400 18px/1.6 'Geist',sans-serif;color:#5e5238;margin:30px 0 0;max-width:520px">One operator across many surfaces — iOS, the web, and games. Small experiments get a page; large builds get their own domain. Everything below is live and in motion.</p>
-        <div style="display:flex;gap:13px;margin-top:30px;flex-wrap:wrap">
-          <a href="#work" style="font:600 14px 'Geist',sans-serif;color:#f0e8d6;background:#2f5436;border-radius:40px;padding:14px 26px" class="hv2">See the work →</a>
-          <a href="/blog" style="font:600 14px 'Geist',sans-serif;color:#221c10;border:1.5px solid rgba(34,28,16,.32);border-radius:40px;padding:14px 26px" class="hv3">Read the log</a>
+    <div class="hero-grid">
+        <!-- The index: these five rows are the whole site. Hovering or focusing a row brings its card forward. -->
+        <nav class="idx" aria-label="Everything on the site">
+          <ol class="idx-list">
+            <li class="idx-row" data-sec="consulting">
+              <span class="k-num">01</span>
+              <a class="idx-name" href="/consulting" style="view-transition-name:sec-consulting">Consulting</a>
+              <p class="idx-desc">For music teams, and an AI concierge for any industry.</p>
+              <div class="k-chips idx-chips"><a class="k-chip" href="/consulting#services">Music teams</a><a class="k-chip" href="/consulting#concierge">AI concierge · new</a><a class="k-chip" href="/consulting#contact">Contact</a></div>
+              <span class="idx-arrow" aria-hidden="true">→</span>
+            </li>
+            <li class="idx-row" data-sec="fitness">
+              <span class="k-num">02</span>
+              <a class="idx-name" href="/fitness" style="view-transition-name:sec-fitness">Fitness</a>
+              <p class="idx-desc">Vantix, free calculators, sourced training notes.</p>
+              <div class="k-chips idx-chips"><a class="k-chip" href="/vantix">Vantix</a><a class="k-chip" href="/fitness#tools">Tools</a><a class="k-chip" href="/fitness#training">Training</a><a class="k-chip" href="/fitness#nutrition">Nutrition</a></div>
+              <span class="idx-arrow" aria-hidden="true">→</span>
+            </li>
+            <li class="idx-row" data-sec="music">
+              <span class="k-num">03</span>
+              <a class="idx-name" href="/music" style="view-transition-name:sec-music">Music</a>
+              <p class="idx-desc">A daily song, a network for players, a listening room.</p>
+              <div class="k-chips idx-chips"><a class="k-chip" href="/song-of-the-day">Song of the Day</a><a class="k-chip" href="/stage-first">Stage First</a><a class="k-chip" href="/listening-club">Listening Club</a></div>
+              <span class="idx-arrow" aria-hidden="true">→</span>
+            </li>
+            <li class="idx-row" data-sec="library">
+              <span class="k-num">04</span>
+              <a class="idx-name" href="/library" style="view-transition-name:sec-library">Library</a>
+              <p class="idx-desc">The game, the log, and every page on the site.</p>
+              <div class="k-chips idx-chips"><a class="k-chip" href="/campground-tycoon">Campground Tycoon</a><a class="k-chip" href="/blog">Writing</a><a class="k-chip" href="/library">Full index</a></div>
+              <span class="idx-arrow" aria-hidden="true">→</span>
+            </li>
+            <li class="idx-row" data-sec="about">
+              <span class="k-num">05</span>
+              <a class="idx-name" href="/about">About</a>
+              <p class="idx-desc">Who I am, what I’m on now, how to reach me.</p>
+              <div class="k-chips idx-chips"><a class="k-chip" href="/about">About</a><a class="k-chip" href="/now">Now</a><a class="k-chip" href="mailto:hello@kitesink.com">hello@kitesink.com</a></div>
+              <span class="idx-arrow" aria-hidden="true">→</span>
+            </li>
+          </ol>
+        </nav>
+
+      <!-- The deck: one card per section. A row, a tap on the deck or the pager under it brings a card forward. -->
+      <div class="deck-col">
+        <svg class="deck-kite ks-kite" width="76" height="76" viewBox="0 0 64 64" fill="none" aria-hidden="true"><polygon points="32,4 52,26 32,48 12,26" fill="#b07227"/><line x1="32" y1="4" x2="32" y2="48" stroke="#ece2cb" stroke-width="1.6"/><line x1="12" y1="26" x2="52" y2="26" stroke="#ece2cb" stroke-width="1.6"/><path d="M32 48 Q38 54 32 58 Q26 62 32 64" stroke="#b07227" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <div class="deck" id="deck">
+
+          <div class="deck-card" data-sec="consulting">
+            <div class="dc dc--pine">
+              <div class="dc-top"><span class="dc-tag">KiteSink Consulting</span><span class="dc-tag" aria-hidden="true">01</span></div>
+              <p class="dc-h">A clearer path from intake to handoff</p>
+              <ol class="flow" style="margin-top:14px">
+                <li><b>Bring the inputs together</b><span>Files, forms and spreadsheets</span></li>
+                <li><b>Check what needs attention</b><span>Missing details and human review</span></li>
+                <li><b>Keep the work moving</b><span>A clear next step and an owner</span></li>
+              </ol>
+              <div class="dc-foot"><span>An example workflow</span><a href="/consulting">Consulting ↗</a></div>
+            </div>
+          </div>
+
+          <div class="deck-card" data-sec="fitness">
+            <div class="dc dc--vantix">
+              <div class="dc-top"><span class="dc-tag">◈ Vantix · the periodization OS</span><span class="k-status k-status--wip">Free core · WIP</span></div>
+              <p class="dc-h">Every fitness dot.<br>One instrument.</p>
+              <div class="vol-meta"><span>WEEKLY VOLUME</span><span>ILLUSTRATIVE</span></div>
+              <div class="vol" role="img" aria-label="Example weekly volume by muscle group: Back 19 sets in band, Quads 12 in band, Rear delt 5 under, Triceps 19 over.">
+                <div class="vol-row"><span>Back</span><span class="vol-bar"><i style="width:76%"></i></span><b>19 ●</b></div>
+                <div class="vol-row"><span>Quads</span><span class="vol-bar"><i style="width:60%"></i></span><b>12 ●</b></div>
+                <div class="vol-row under"><span>Rear Delt</span><span class="vol-bar"><i style="width:26%"></i></span><b>5 ▽</b></div>
+                <div class="vol-row over"><span>Triceps</span><span class="vol-bar"><i style="width:88%"></i></span><b>19 ▲</b></div>
+              </div>
+              <div class="dc-foot"><span>▽ under · ● band · ▲ over</span><a href="/vantix">Vantix ↗</a></div>
+            </div>
+          </div>
+
+          <div class="deck-card" data-sec="music">
+            <div class="dc">
+              <div class="dc-top"><span class="dc-tag">♪ Song of the Day</span><span class="k-status k-status--soon">Coming soon</span></div>
+              <div class="sotd-now">
+                <img src="/img/maple-leaf-rag.jpg" alt="Sheet-music cover of Maple Leaf Rag by Scott Joplin" width="500" height="611" decoding="async">
+                <div><p class="dc-h">Maple Leaf Rag</p><span>Scott Joplin</span></div>
+              </div>
+              <div class="eq" aria-hidden="true"><i style="animation-duration:1.15s;animation-delay:-.2s"></i><i style="animation-duration:.95s;animation-delay:-.55s"></i><i style="animation-duration:1.3s;animation-delay:-.85s"></i><i style="animation-duration:1.05s;animation-delay:-.35s"></i><i style="animation-duration:1.4s;animation-delay:-.7s"></i><i style="animation-duration:.9s;animation-delay:-.1s"></i><i style="animation-duration:1.2s;animation-delay:-.95s"></i><i style="animation-duration:1.1s;animation-delay:-.5s"></i><i style="animation-duration:1.35s;animation-delay:-.28s"></i><i style="animation-duration:1s;animation-delay:-.78s"></i><i style="animation-duration:1.25s;animation-delay:-.42s"></i><i style="animation-duration:1.08s;animation-delay:-.64s"></i></div>
+              <div class="dc-foot"><span>a sample pick · 1899</span><a href="/song-of-the-day">The app ↗</a></div>
+            </div>
+          </div>
+
+          <div class="deck-card" data-sec="library">
+            <div class="dc">
+              <div class="dc-top"><span class="dc-tag" style="color:var(--k-green)">⛺ Campground Tycoon · game</span><span class="k-status">Live · demo</span></div>
+              <div class="camp-shot" role="img" aria-label="Isometric pixel-art campground from Campground Tycoon"><span>▶ PLAYABLE DEMO</span></div>
+              <p class="dc-h" style="margin-top:13px">Build a campground, anywhere.</p>
+              <div class="dc-foot"><span>From the library</span><a href="/campground-tycoon">Play demo ↗</a></div>
+            </div>
+          </div>
+
+          <div class="deck-card" data-sec="about">
+            <div class="dc dc--polaroid">
+              <img src="/img/pin.jpg" alt="Truman — enamel-pin portrait" width="760" height="950" decoding="async">
+              <div class="dc-foot"><span>fig. 01 — the operator</span><a href="/about">About ↗</a></div>
+            </div>
+          </div>
+
         </div>
-      </div>
-
-      <!-- hero card stack: 4 project cards, click/tap (or the shuffle button) shuffles front → back -->
-      <div style="flex:1 1 320px;min-width:290px;max-width:420px;position:relative;padding-top:118px">
-        <svg width="110" height="110" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;top:-16px;right:16px;animation:bob 5s ease-in-out infinite;z-index:6;pointer-events:none"><polygon points="32,4 52,26 32,48 12,26" fill="#b07227"></polygon><line x1="32" y1="4" x2="32" y2="48" stroke="#ece2cb" stroke-width="1.6"></line><line x1="12" y1="26" x2="52" y2="26" stroke="#ece2cb" stroke-width="1.6"></line><path d="M32 48 Q38 54 32 58 Q26 62 32 64" stroke="#b07227" stroke-width="1.8" stroke-linecap="round" fill="none"></path></svg>
-        <div id="stack" style="position:relative;height:358px">
-          <div id="stkBackline" class="on" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(0px) scale(1) rotate(-1deg);opacity:1;z-index:4">
-            <div style="border:1.5px solid rgba(34,28,16,.2);border-radius:14px;background:#f3ecd9;padding:18px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-                <div style="display:flex;align-items:center;gap:11px">
-                  <div class="blDark" style="width:30px;height:30px;border-radius:8px;background:#1d1810;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:7px;flex-shrink:0" aria-hidden="true">
-                    <span style="width:3px;height:7px;background:#2f5436;border-radius:2px"></span>
-                    <span style="width:3px;height:14px;background:#e0b877;border-radius:2px"></span>
-                    <span style="width:3px;height:10px;background:#3a6b46;border-radius:2px"></span>
-                  </div>
-                  <span style="font:800 18px 'Geist',sans-serif;letter-spacing:-.03em;color:#1d1810">Backline</span>
-                </div>
-                <span style="font:600 10px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.12em;color:#6f6040;border:1px solid rgba(34,28,16,.22);border-radius:20px;padding:4px 9px;white-space:nowrap">For players</span>
-              </div>
-              <div class="blToggle blDark" role="switch" tabindex="0" aria-checked="true" aria-label="Backline demo — on call" style="display:flex;align-items:center;justify-content:space-between;background:#1d1810;border-radius:12px;padding:12px 18px;cursor:pointer;user-select:none;-webkit-user-select:none">
-                <div style="min-width:0">
-                  <div class="blTitle" style="font:600 15px 'Geist',sans-serif;color:#f0e8d6;letter-spacing:-.01em">You&rsquo;re on call</div>
-                  <div class="blSub" style="font:500 11px 'Geist Mono',monospace;color:#a99a7b;margin-top:2px">Austin, TX · bass, guitar</div>
-                </div>
-                <div class="blTrack"><span class="blKnob"></span></div>
-              </div>
-              <div class="blDemand">
-                <div style="font:500 12px 'Geist Mono',monospace;color:#5e5238;margin:12px 0 2px"><span style="color:#8a5a18;font-weight:600">3 bands</span> within 2 mi need bass tonight</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid rgba(34,28,16,.12)">
-                  <div style="min-width:0"><div style="font:600 14px 'Geist',sans-serif;color:#1d1810">The Velvet Hours</div><div style="font:500 10.5px 'Geist Mono',monospace;color:#6f6040;margin-top:1px">9:00 · Continental Club</div></div>
-                  <span style="font:600 13px 'Geist Mono',monospace;color:#2f5436;flex-shrink:0">$130</span>
-                </div>
-                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid rgba(34,28,16,.12)">
-                  <div style="min-width:0"><div style="font:600 14px 'Geist',sans-serif;color:#1d1810">Ramona Fault</div><div style="font:500 10.5px 'Geist Mono',monospace;color:#6f6040;margin-top:1px">10:30 · Hole in the Wall</div></div>
-                  <span style="font:600 13px 'Geist Mono',monospace;color:#2f5436;flex-shrink:0">$90</span>
-                </div>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid rgba(34,28,16,.14)">
-                <span style="font:500 12px 'Geist Mono',monospace;color:#6f6040">Flip on. Get the call.</span>
-                <a href="/backline" class="blLink" style="font:600 12px 'Geist Mono',monospace;color:#2f5436">List yourself ↗</a>
-              </div>
-            </div>
-          </div>
-          <div id="stkSotd" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(24px) scale(.955) rotate(1.4deg);opacity:.93;z-index:3">
-            <div style="border:1.5px solid rgba(34,28,16,.2);border-radius:14px;background:#f3ecd9;padding:20px 22px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px"><span style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.13em;color:#8a5a18">♪ Song of the day</span><span style="display:flex;align-items:center;gap:6px;font:600 10px 'Geist Mono',monospace;color:#2f5436"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:pulse 2.4s ease-in-out infinite"></span>TODAY</span></div>
-              <div style="display:flex;align-items:center;gap:15px">
-                <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#2f5436,#23402b);display:flex;align-items:center;justify-content:center;flex-shrink:0"><div style="width:18px;height:18px;border:3px solid #ece2cb;border-radius:50%;position:relative;animation:spinSlow 6s linear infinite"><span style="position:absolute;inset:5px;border-radius:50%;background:#ece2cb"></span></div></div>
-                <div style="min-width:0"><div style="font:600 18px 'Geist',sans-serif;letter-spacing:-.01em;color:#1d1810;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Alright</div><div style="font:400 14px 'Geist',sans-serif;color:#6f6040">Supergrass</div></div>
-              </div>
-              <div style="display:flex;align-items:stretch;gap:4px;flex:1;min-height:34px;margin:16px 0 0;padding-bottom:2px;border-bottom:2px solid rgba(34,28,16,.22)"><span class="eqb" style="animation-duration:1.15s;animation-delay:-.2s"></span><span class="eqb" style="animation-duration:.95s;animation-delay:-.55s"></span><span class="eqb" style="animation-duration:1.3s;animation-delay:-.85s"></span><span class="eqb" style="animation-duration:1.05s;animation-delay:-.35s"></span><span class="eqb" style="animation-duration:1.4s;animation-delay:-.7s"></span><span class="eqb" style="animation-duration:.9s;animation-delay:-.1s"></span><span class="eqb" style="animation-duration:1.2s;animation-delay:-.95s"></span><span class="eqb" style="animation-duration:1.1s;animation-delay:-.5s"></span><span class="eqb" style="animation-duration:1.35s;animation-delay:-.28s"></span><span class="eqb" style="animation-duration:1s;animation-delay:-.78s"></span><span class="eqb" style="animation-duration:1.25s;animation-delay:-.42s"></span><span class="eqb" style="animation-duration:1.08s;animation-delay:-.64s"></span></div>
-              <div style="display:flex;justify-content:space-between;margin-top:11px"><div><div style="font:600 13px 'Geist Mono',monospace;color:#221c10">104</div><div style="font:600 9px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040">BPM</div></div><div><div style="font:600 13px 'Geist Mono',monospace;color:#221c10">BRITPOP</div><div style="font:600 9px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040">GENRE</div></div><div><div style="font:600 13px 'Geist Mono',monospace;color:#221c10">3:01</div><div style="font:600 9px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040">LENGTH</div></div><div style="text-align:right"><div style="font:600 13px 'Geist Mono',monospace;color:#221c10">1995</div><div style="font:600 9px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040">YEAR</div></div></div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:13px"><span style="font:500 11px 'Geist Mono',monospace;color:#6f6040">a daily music rec · no. 158</span><a href="/song-of-the-day" style="font:600 12px 'Geist Mono',monospace;color:#2f5436" class="hv8">App Store ↗</a></div>
-            </div>
-          </div>
-          <div id="stkVantix" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(44px) scale(.915) rotate(-1.6deg);opacity:.84;z-index:2">
-            <div style="border:1.5px solid rgba(176,114,39,.45);border-radius:14px;background:#f3ecd9;padding:20px 22px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.13em;color:#8a5a18">◈ Vantix · the periodization OS</span><span style="display:flex;align-items:center;gap:6px;font:600 10px 'Geist Mono',monospace;color:#8a5a18"><span style="width:6px;height:6px;border-radius:50%;background:#b07227;animation:pulse 2.4s ease-in-out infinite"></span>WIP</span></div>
-              <div style="font:700 20px/1.15 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Every fitness dot.<br>One instrument.</div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin:13px 0 8px;font:600 9px 'Geist Mono',monospace;letter-spacing:.1em;color:#6f6040"><span>WEEKLY VOLUME · LIVE</span><span>MESO #4 · W2</span></div>
-              <div style="display:flex;flex-direction:column;gap:7px;flex:1;justify-content:center">
-                <div style="display:flex;align-items:center;gap:10px"><span style="font:500 10px 'Geist Mono',monospace;color:#5e5238;width:70px;flex-shrink:0">Back</span><span style="flex:1;height:9px;border-radius:2px;background:rgba(34,28,16,.09);position:relative;display:block"><span style="display:block;height:100%;width:76%;border-radius:2px;background:#2f5436"></span><span style="position:absolute;top:-2px;bottom:-2px;left:80%;width:1.5px;background:rgba(34,28,16,.35)"></span></span><span style="font:600 10px 'Geist Mono',monospace;color:#2f5436;width:38px;text-align:right;flex-shrink:0">19 ●</span></div>
-                <div style="display:flex;align-items:center;gap:10px"><span style="font:500 10px 'Geist Mono',monospace;color:#5e5238;width:70px;flex-shrink:0">Quads</span><span style="flex:1;height:9px;border-radius:2px;background:rgba(34,28,16,.09);position:relative;display:block"><span style="display:block;height:100%;width:60%;border-radius:2px;background:#2f5436"></span><span style="position:absolute;top:-2px;bottom:-2px;left:80%;width:1.5px;background:rgba(34,28,16,.35)"></span></span><span style="font:600 10px 'Geist Mono',monospace;color:#2f5436;width:38px;text-align:right;flex-shrink:0">12 ●</span></div>
-                <div style="display:flex;align-items:center;gap:10px"><span style="font:500 10px 'Geist Mono',monospace;color:#5e5238;width:70px;flex-shrink:0">Rear Delt</span><span style="flex:1;height:9px;border-radius:2px;background:rgba(34,28,16,.09);position:relative;display:block"><span style="display:block;height:100%;width:26%;border-radius:2px;background:#d8b07a"></span><span style="position:absolute;top:-2px;bottom:-2px;left:80%;width:1.5px;background:rgba(34,28,16,.35)"></span></span><span style="font:600 10px 'Geist Mono',monospace;color:#8a5a18;width:38px;text-align:right;flex-shrink:0">5 ▽</span></div>
-                <div style="display:flex;align-items:center;gap:10px"><span style="font:500 10px 'Geist Mono',monospace;color:#5e5238;width:70px;flex-shrink:0">Triceps</span><span style="flex:1;height:9px;border-radius:2px;background:rgba(34,28,16,.09);position:relative;display:block"><span style="display:block;height:100%;width:88%;border-radius:2px;background:#b07227"></span><span style="position:absolute;top:-2px;bottom:-2px;left:80%;width:1.5px;background:rgba(34,28,16,.35)"></span></span><span style="font:600 10px 'Geist Mono',monospace;color:#8a5a18;width:38px;text-align:right;flex-shrink:0">19 ▲</span></div>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;border-top:1px dashed rgba(34,28,16,.2)"><span style="font:500 10px 'Geist Mono',monospace;color:#6f6040;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">▽ under · ● band · ▲ over</span><a href="/vantix" style="font:600 12px 'Geist Mono',monospace;color:#8a5a18;white-space:nowrap;flex-shrink:0;margin-left:10px" class="hv8">vantix.kitesink.com ↗</a></div>
-            </div>
-          </div>
-          <div id="stkCgt" style="position:absolute;left:0;right:0;top:0;cursor:pointer;transform:translateY(62px) scale(.88) rotate(1.2deg);opacity:.74;z-index:1">
-            <div style="border:1.5px solid rgba(34,28,16,.2);border-radius:14px;background:#f3ecd9;padding:20px 22px;box-shadow:0 14px 30px rgba(34,28,16,.09);min-height:300px;display:flex;flex-direction:column">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font:600 11px 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.13em;color:#2f5436">⛺ Campground Tycoon · game</span><span style="display:flex;align-items:center;gap:6px;font:600 10px 'Geist Mono',monospace;color:#2f5436"><span style="width:6px;height:6px;border-radius:50%;background:#2f5436;animation:pulse 3.6s ease-in-out infinite"></span>LIVE · DEMO</span></div>
-              <div style="flex:1;min-height:128px;border-radius:10px;background-image:image-set(url('/site_assets/picker_bg-card.avif') type('image/avif'),url('/site_assets/picker_bg-card.webp') type('image/webp'),url('/site_assets/picker_bg.png') type('image/png'));background-position:center;background-size:cover;position:relative;border:1.5px solid rgba(34,28,16,.18)"><span style="position:absolute;top:10px;right:10px;font:700 9px 'Geist Mono',monospace;letter-spacing:.08em;background:#e0b35c;color:#221c10;border-radius:30px;padding:4px 10px">▶ PLAYABLE DEMO</span></div>
-              <div style="font:700 20px/1.15 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810;margin-top:13px">Build a campground, anywhere.</div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;border-top:1px dashed rgba(34,28,16,.2)"><span style="font:500 11px 'Geist Mono',monospace;color:#6f6040">PC · iOS · Android</span><a href="/campground-tycoon" style="font:600 12px 'Geist Mono',monospace;color:#2f5436" class="hv8">Play demo ↗</a></div>
-            </div>
-          </div>
+        <div class="deck-pager" id="deckPager" role="group" aria-label="Choose a card">
+          <button type="button" data-sec="consulting" aria-pressed="true" aria-label="Show the Consulting card"></button>
+          <button type="button" data-sec="fitness" aria-pressed="false" aria-label="Show the Fitness card"></button>
+          <button type="button" data-sec="music" aria-pressed="false" aria-label="Show the Music card"></button>
+          <button type="button" data-sec="library" aria-pressed="false" aria-label="Show the Library card"></button>
+          <button type="button" data-sec="about" aria-pressed="false" aria-label="Show the About card"></button>
         </div>
-        <div style="font:500 11px 'Geist Mono',monospace;color:#6f6040;text-align:center;margin-top:16px">tap the stack or <button type="button" id="stackShuffle" aria-controls="stack" style="font:600 11px 'Geist Mono',monospace;color:#2f5436;background:transparent;border:1px solid rgba(34,28,16,.22);border-radius:30px;padding:6px 12px;cursor:pointer">shuffle ↻</button> · ↗ opens the page</div>
       </div>
     </div>
   </section>
 
-  <div style="background:#2f5436;border-top:1px solid rgba(34,28,16,.2);border-bottom:1px solid rgba(34,28,16,.2);overflow:hidden;white-space:nowrap;padding:15px 0">
-    <div style="display:inline-flex;animation:marquee 26s linear infinite;animation-duration:26s">
-      <span style="display:inline-flex;align-items:center;font:700 24px 'Geist',sans-serif;letter-spacing:-.02em;color:#ece2cb">
-        <span style="padding:0 22px">SONG OF THE DAY</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">CAMPGROUND TYCOON</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">VANTIX</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">BACKLINE</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">THE BLOG</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">LISTENING CLUB</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">GAMES</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">SIDE PROJECTS</span><span style="color:#d8b07a">✱</span>
-      </span>
-      <span style="display:inline-flex;align-items:center;font:700 24px 'Geist',sans-serif;letter-spacing:-.02em;color:#ece2cb" aria-hidden="true">
-        <span style="padding:0 22px">SONG OF THE DAY</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">CAMPGROUND TYCOON</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">VANTIX</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">BACKLINE</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">THE BLOG</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">LISTENING CLUB</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">GAMES</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 22px">SIDE PROJECTS</span><span style="color:#d8b07a">✱</span>
-      </span>
+  <!-- ===================== MARQUEE (links; pauses on hover) ===================== -->
+  <div class="k-marquee" id="marquee" role="group" aria-label="Current projects">
+    <div class="k-marquee-track">
+      <span><a href="/vantix">VANTIX</a><i>✱</i><a href="/song-of-the-day">SONG OF THE DAY</a><i>✱</i><a href="/stage-first">STAGE FIRST</a><i>✱</i><a href="/listening-club">LISTENING CLUB</a><i>✱</i><a href="/consulting">CONSULTING</a><i>✱</i><a href="/fitness#tools">FITNESS TOOLS</a><i>✱</i><a href="/campground-tycoon">CAMPGROUND TYCOON</a><i>✱</i><a href="/blog">THE LOG</a><i>✱</i></span>
+      <span aria-hidden="true"><a href="/vantix" tabindex="-1">VANTIX</a><i>✱</i><a href="/song-of-the-day" tabindex="-1">SONG OF THE DAY</a><i>✱</i><a href="/stage-first" tabindex="-1">STAGE FIRST</a><i>✱</i><a href="/listening-club" tabindex="-1">LISTENING CLUB</a><i>✱</i><a href="/consulting" tabindex="-1">CONSULTING</a><i>✱</i><a href="/fitness#tools" tabindex="-1">FITNESS TOOLS</a><i>✱</i><a href="/campground-tycoon" tabindex="-1">CAMPGROUND TYCOON</a><i>✱</i><a href="/blog" tabindex="-1">THE LOG</a><i>✱</i></span>
     </div>
+    <button class="k-marquee-pause" id="marquee-pause" type="button" aria-label="Pause the scrolling list">❚❚</button>
   </div>
 
-  <section id="work" style="padding:clamp(48px,7vw,64px) clamp(20px,4vw,40px) 30px;max-width:1240px;margin:0 auto;scroll-margin-top:80px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:14px">
-      <h2 style="font:800 clamp(34px,5vw,56px)/.95 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0"><span style="color:#2f5436;font-size:.55em;vertical-align:middle">✱ </span>Selected work</h2>
-      <div style="display:flex;align-items:center;gap:16px;font:600 11px 'Geist Mono',monospace;color:#5e5238;flex-wrap:wrap">
-        <span style="display:flex;align-items:center;gap:7px"><span style="width:8px;height:8px;border-radius:50%;background:#2f5436;animation:pulse 3.6s ease-in-out infinite"></span>LIVE</span>
-        <span style="display:flex;align-items:center;gap:7px"><span style="width:8px;height:8px;border-radius:50%;background:#b07227;animation:pulse 2.4s ease-in-out infinite"></span>WIP</span>
-        <a href="/work" style="font:600 11px 'Geist Mono',monospace;color:#2f5436;border-bottom:1px solid rgba(47,84,54,.4);padding-bottom:1px" class="hv7">Full index — work &amp; tools →</a>
+  <!-- ===================== 01 CONSULTING ===================== -->
+  <section id="consulting" class="k-band k-pine" aria-labelledby="h-consulting">
+    <div class="k-wrap">
+      <header class="k-shead k-reveal">
+        <div><span class="k-num">01 — Consulting</span><h2 class="k-h2" id="h-consulting">Better systems <em>behind</em> the music.</h2></div>
+        <a class="k-go" href="/consulting">Open Consulting</a>
+      </header>
+      <div class="two">
+        <div class="k-reveal">
+          <p class="k-lead">Workflow automation, operations improvements and practical AI for music teams. I help music businesses untangle repetitive work and awkward handoffs, and build practical tools around their data and process bottlenecks.</p>
+          <div class="stuck">
+            <p class="k-label" id="stuck-label">What keeps getting stuck?</p>
+            <div class="k-seg" role="tablist" aria-labelledby="stuck-label">
+              <button type="button" role="tab" id="stuck-t0" aria-selected="true" aria-controls="stuck-panel">Repeated data entry</button>
+              <button type="button" role="tab" id="stuck-t1" aria-selected="false" aria-controls="stuck-panel" tabindex="-1">Handoffs that stall</button>
+              <button type="button" role="tab" id="stuck-t2" aria-selected="false" aria-controls="stuck-panel" tabindex="-1">Information nobody can find</button>
+            </div>
+            <div class="stuck-panel" id="stuck-panel" role="tabpanel" aria-labelledby="stuck-t0" aria-live="polite">
+              <h3 class="k-h3">Workflow automation</h3>
+              <p class="k-copy">Connect the steps between your existing tools: repeated data entry, file handling, intake and task routing. Give the routine work a reliable path, with exceptions brought back to a person.</p>
+              <p class="k-copy ex"><b>Possible project</b>Turn release asset intake into an organized checklist that flags missing files and routes the next task to the right person.</p>
+            </div>
+          </div>
+          <div class="k-actions" style="margin-top:26px">
+            <a class="k-btn k-btn--cream" href="/consulting#contact">Tell me what’s slowing you down</a>
+            <a class="k-go" href="/consulting#process">How a project runs</a>
+          </div>
+        </div>
+        <aside class="next-card k-reveal" aria-labelledby="h-concierge">
+          <span class="k-status">New</span>
+          <h3 class="k-h3" id="h-concierge">Next: an AI concierge.</h3>
+          <p class="k-copy">A one-time or ongoing role. I learn your industry, watch how the work gets done, in person or over Zoom, then fix what slows it down: with AI, with plain code, or with software built for you.</p>
+          <p class="k-small">It grew out of the music work. The method is the same in any industry.</p>
+          <a class="k-go" href="/consulting#concierge">How the concierge works</a>
+        </aside>
       </div>
     </div>
+  </section>
 
-    <a href="/song-of-the-day" style="display:flex;flex-wrap:wrap;gap:18px 28px;padding:30px 0;border-top:2px solid rgba(34,28,16,.2);align-items:center;transition:background .2s" class="hv5">
-      <span style="font:700 15px 'Geist Mono',monospace;color:#6f6040;width:34px;flex-shrink:0">01</span><div style="width:118px;height:78px;border-radius:9px;flex-shrink:0;background:linear-gradient(135deg,#2f5436,#23402b);display:flex;align-items:center;justify-content:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#ece2cb" stroke-width="1.5"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></div>
-      <div style="flex:1 1 380px;min-width:240px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:7px;font:600 11px 'Geist Mono',monospace;flex-wrap:wrap"><span style="display:flex;align-items:center;gap:7px;color:#2f5436"><span style="width:8px;height:8px;border-radius:50%;background:#2f5436;animation:pulse 3.6s ease-in-out infinite"></span>LIVE</span><span style="color:#6f6040">iOS APP</span></div>
-        <h3 style="font:700 30px 'Geist',sans-serif;letter-spacing:-.025em;color:#1d1810;margin:0">Song of the Day</h3>
-        <p style="font:400 15px/1.55 'Geist',sans-serif;color:#5e5238;margin:7px 0 0;max-width:560px">One song, every day — a daily recommendation with the story behind it and links to listen. Landing page, privacy &amp; contact built in.</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;font:600 13px 'Geist Mono',monospace;color:#2f5436;white-space:nowrap;margin-left:auto">App Store <span style="width:34px;height:34px;border:1.5px solid #2f5436;border-radius:50%;display:flex;align-items:center;justify-content:center">↗</span></div>
-    </a>
+  <!-- ===================== 02 FITNESS ===================== -->
+  <section id="fitness" class="k-band" aria-labelledby="h-fitness">
+    <div class="k-wrap">
+      <header class="k-shead k-reveal">
+        <div><span class="k-num">02 — Fitness</span><h2 class="k-h2" id="h-fitness">Tools for people who <em>lift.</em></h2></div>
+        <a class="k-go" href="/fitness">Open Fitness</a>
+      </header>
+      <div class="two">
+        <article class="k-pc k-pc--vantix k-reveal">
+          <div class="k-pc-top"><span class="k-pc-tag">◈ Vantix · flagship</span><span class="k-status k-status--wip">In progress</span></div>
+          <h3 class="k-pc-title"><a class="k-stretch" href="/vantix">Every fitness dot. One instrument. Zero black boxes.</a></h3>
+          <p>The periodization OS. You define the plan, macrocycle to set, and the engine checks it against your volume landmarks. Free from the start: the core app is in progress, with paid tiers to follow.</p>
+          <ul class="pillars">
+            <li><i>01</i><b>Programmable periodization</b><span>MV / MEV / MAV / MRV landmarks per muscle group, computed continuously.</span></li>
+            <li><i>02</i><b>Integration &amp; normalization</b><span>Any source onto one universal event spine.</span></li>
+            <li><i>03</i><b>AI co-pilot with a review-gate</b><span>It proposes a diff; your hard rules decide whether it applies.</span></li>
+          </ul>
+          <div class="k-pc-foot"><a class="k-go" href="/vantix">See Vantix</a><span class="k-chips"><a class="k-chip" style="color:#aab0bb;border-color:rgba(146,166,204,.35)" href="/vantix#pricing">Free and paid tiers</a><a class="k-chip" style="color:#aab0bb;border-color:rgba(146,166,204,.35)" href="/vantix#join">Join the list</a></span></div>
+        </article>
 
-    <a href="/campground-tycoon" style="display:flex;flex-wrap:wrap;gap:18px 28px;padding:30px 0;border-top:2px solid rgba(34,28,16,.2);align-items:center;transition:background .2s" class="hv5">
-      <span style="font:700 15px 'Geist Mono',monospace;color:#6f6040;width:34px;flex-shrink:0">02</span><div style="width:118px;height:78px;border-radius:9px;flex-shrink:0;background-image:image-set(url('/site_assets/season_summer-card.avif') type('image/avif'),url('/site_assets/season_summer-card.webp') type('image/webp'),url('/site_assets/season_summer.png') type('image/png'));background-position:center;background-size:cover;border:1.5px solid rgba(34,28,16,.18)"></div>
-      <div style="flex:1 1 380px;min-width:240px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:7px;font:600 11px 'Geist Mono',monospace;flex-wrap:wrap"><span style="display:flex;align-items:center;gap:7px;color:#2f5436"><span style="width:8px;height:8px;border-radius:50%;background:#2f5436;animation:pulse 3.6s ease-in-out infinite"></span>LIVE · DEMO</span><span style="color:#6f6040">GAME</span></div>
-        <h3 style="font:700 30px 'Geist',sans-serif;letter-spacing:-.025em;color:#1d1810;margin:0">Campground Tycoon</h3>
-        <p style="font:400 15px/1.55 'Geist',sans-serif;color:#5e5238;margin:7px 0 0;max-width:560px">Build and run a campground anywhere you like. Play the lite version right in the browser; the full release links out to the stores.</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;font:600 13px 'Geist Mono',monospace;color:#2f5436;white-space:nowrap;margin-left:auto">Play demo <span style="width:34px;height:34px;border:1.5px solid #2f5436;border-radius:50%;display:flex;align-items:center;justify-content:center">↗</span></div>
-    </a>
-
-    <a href="/backline" style="display:flex;flex-wrap:wrap;gap:18px 28px;padding:30px 0;border-top:2px solid rgba(34,28,16,.2);align-items:center;transition:background .2s" class="hv5">
-      <span style="font:700 15px 'Geist Mono',monospace;color:#6f6040;width:34px;flex-shrink:0">03</span><div style="width:118px;height:78px;border-radius:9px;flex-shrink:0;background:#111216;border:1.5px solid rgba(34,28,16,.2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden" aria-hidden="true"><div style="width:11px;height:11px;border-radius:50%;background:#f8ab3c;box-shadow:0 0 12px #f8ab3c"></div><div style="position:absolute;top:calc(50% + 7px);width:2px;height:20px;background:linear-gradient(#f8ab3c,transparent)"></div></div>
-      <div style="flex:1 1 380px;min-width:240px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:7px;font:600 11px 'Geist Mono',monospace;flex-wrap:wrap"><span style="display:flex;align-items:center;gap:7px;color:#8a5a18"><span style="width:8px;height:8px;border-radius:50%;background:#b07227;animation:pulse 2.4s ease-in-out infinite"></span>WIP · PROTOTYPE</span><span style="color:#6f6040">MUSICIANS · SOCIAL</span></div>
-        <h3 style="font:700 30px 'Geist',sans-serif;letter-spacing:-.025em;color:#1d1810;margin:0">Backline</h3>
-        <p style="font:400 15px/1.55 'Geist',sans-serif;color:#5e5238;margin:7px 0 0;max-width:560px">A local-first booking network for working musicians. Find a sub who's free tonight, watch a reel of them actually playing, message, book &amp; pay — all before soundcheck.</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;font:600 13px 'Geist Mono',monospace;color:#8a5a18;white-space:nowrap;margin-left:auto">See Backline <span style="width:34px;height:34px;border:1.5px solid #b07227;border-radius:50%;display:flex;align-items:center;justify-content:center">↗</span></div>
-    </a>
-
-    <a href="/vantix" style="display:flex;flex-wrap:wrap;gap:18px 28px;padding:30px 0;border-top:2px solid rgba(34,28,16,.2);border-bottom:2px solid rgba(34,28,16,.2);align-items:center;transition:background .2s;background:linear-gradient(90deg,rgba(176,114,39,.07),transparent 65%)" class="hv6">
-      <span style="font:700 15px 'Geist Mono',monospace;color:#6f6040;width:34px;flex-shrink:0">04</span><div style="width:118px;height:78px;border-radius:9px;flex-shrink:0;background:repeating-linear-gradient(-45deg,#f3ecd9,#f3ecd9 7px,#ece2cb 7px,#ece2cb 14px);border:1.5px solid rgba(176,114,39,.4);display:flex;align-items:center;justify-content:center"><span style="font:600 9px 'Geist Mono',monospace;color:#8a5a18;letter-spacing:.1em">APP SHOT</span></div>
-      <div style="flex:1 1 380px;min-width:240px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:7px;font:600 11px 'Geist Mono',monospace;flex-wrap:wrap"><span style="display:flex;align-items:center;gap:7px;color:#8a5a18"><span style="width:8px;height:8px;border-radius:50%;background:#b07227;animation:pulse 2.4s ease-in-out infinite"></span>WIP</span><span style="color:#6f6040">FITNESS OS · FLAGSHIP</span></div>
-        <h3 style="font:700 32px 'Geist',sans-serif;letter-spacing:-.025em;color:#1d1810;margin:0">Vantix</h3>
-        <p style="font:400 15px/1.55 'Geist',sans-serif;color:#5e5238;margin:7px 0 0;max-width:600px">A personal fitness OS for advanced lifters who outgrew simple trackers — data normalization, mesocycle-aware volume, and a unified view across training, nutrition &amp; health.</p>
-        <div style="display:flex;gap:8px;margin-top:11px;flex-wrap:wrap;font:500 11px 'Geist Mono',monospace;color:#6f6040">
-          <span style="border:1px solid rgba(34,28,16,.22);border-radius:30px;padding:4px 11px">normalization</span>
-          <span style="border:1px solid rgba(34,28,16,.22);border-radius:30px;padding:4px 11px">mesocycle volume</span>
-          <span style="border:1px solid rgba(34,28,16,.22);border-radius:30px;padding:4px 11px">full front-end app</span>
+        <div class="k-reveal">
+          <div class="k-card">
+            <div class="k-card-top"><span class="k-label">Try one · daily protein</span><div class="k-seg" role="group" aria-label="Units"><button type="button" id="qp-kg" aria-pressed="true">kg</button><button type="button" id="qp-lb" aria-pressed="false">lb</button></div></div>
+            <div class="quick-row">
+              <label class="k-field"><span class="k-label">Body weight <span id="qp-read">80 kg</span></span>
+                <input class="k-range" id="qp-w" type="range" min="40" max="160" step="1" value="80" aria-describedby="qp-note"></label>
+            </div>
+            <div class="quick-out" aria-live="polite"><span class="k-stat" id="qp-out">128–176<small>g / day</small></span></div>
+            <p class="k-small" id="qp-note">1.6–2.2 g per kg per day. A meta-analysis of 49 trials put the point of diminishing returns for muscle gain near 1.6, with an upper bound of 2.2. <a class="k-inline" href="/fitness#sources">Sources</a></p>
+          </div>
+          <ul class="toollist" style="margin-top:22px">
+            <li><a href="/fitness#macros"><b>Energy &amp; macro calculator</b><span>Maintenance, a target, and protein / carbs / fat.</span><i aria-hidden="true">→</i></a></li>
+            <li><a href="/fitness#reps"><b>Effective reps explorer</b><span>What a set is worth at each reps-in-reserve.</span><i aria-hidden="true">→</i></a></li>
+            <li><a href="/fitness#loads"><b>1RM &amp; load calculator</b><span>The load for any reps × RIR target.</span><i aria-hidden="true">→</i></a></li>
+            <li><a href="/fitness#travel"><b>Travel workout builder</b><span>Your kit, your minutes, a session.</span><i aria-hidden="true">→</i></a></li>
+          </ul>
+          <div class="k-actions" style="margin-top:18px"><a class="k-go" href="/fitness#training">Training notes</a><a class="k-go" href="/fitness#nutrition">Nutrition notes</a></div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;font:600 12px 'Geist Mono',monospace;color:#8a5a18;white-space:nowrap;margin-left:auto">vantix.kitesink.com <span style="width:34px;height:34px;border:1.5px solid #b07227;border-radius:50%;display:flex;align-items:center;justify-content:center">↗</span></div>
-    </a>
+    </div>
   </section>
 
-  <section style="padding:clamp(44px,6vw,60px) clamp(20px,4vw,40px) 50px;max-width:1240px;margin:0 auto">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:18px">
-      <h2 style="font:800 clamp(34px,5vw,56px)/.95 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0"><span style="color:#2f5436;font-size:.55em;vertical-align:middle">✱ </span>From the log</h2>
-      <a href="/blog" style="font:600 12px 'Geist Mono',monospace;color:#2f5436" class="hv8">All <span id="logCount"></span> entries /blog →</a>
-    </div>
+  <!-- ===================== 03 MUSIC ===================== -->
+  <section id="music" class="k-band" aria-labelledby="h-music">
+    <div class="k-wrap">
+      <header class="k-shead k-reveal">
+        <div><span class="k-num">03 — Music</span><h2 class="k-h2" id="h-music">Listen, play, <em>sit with a record.</em></h2></div>
+        <a class="k-go" href="/music">Open Music</a>
+      </header>
+      <div class="three">
 
-    <div id="logFeed" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0 40px"></div>
+        <article class="k-pc k-pc--sotd k-reveal">
+          <div class="k-pc-top"><span class="k-pc-tag">♪ iOS app</span><span class="k-status k-status--soon">Coming soon</span></div>
+          <h3 class="k-pc-title"><a class="k-stretch" href="/song-of-the-day">Song of the Day</a></h3>
+          <p>One curated song every day, with the story, the lineage, and the liner notes to go with it.</p>
+          <div class="sotd-cover">
+            <img src="/img/maple-leaf-rag.jpg" alt="" width="500" height="611" loading="lazy" decoding="async">
+            <div><b>Maple Leaf Rag</b><span>Scott Joplin · 1899</span><small>A sample pick</small></div>
+          </div>
+          <div class="k-pc-foot"><a class="k-go" href="/song-of-the-day">See the app</a><a class="k-chip" style="color:var(--pc-copy);border-color:var(--pc-rule)" href="/song-of-the-day/support">Support</a></div>
+        </article>
+
+        <article class="k-pc k-pc--backline k-reveal">
+          <div class="k-pc-top"><span class="k-pc-tag">The business side of a show</span><span class="k-status">Prototype</span></div>
+          <h3 class="k-pc-title"><a class="k-stretch" href="/stage-first">Stage First</a></h3>
+          <p>Your drummer bailed. The show goes on. The staffing app, called Backline until now, finds a sub who’s free tonight. A closeout for the night’s ticket reports is at design stage.</p>
+          <div>
+            <div class="oncall" id="oncall" role="switch" tabindex="0" aria-checked="true" aria-label="Stage First demo: on call">
+              <div><b id="oncall-t">You’re on call</b><small id="oncall-s">Demo · bass, guitar</small></div>
+              <span class="oncall-track" aria-hidden="true"></span>
+            </div>
+            <div class="gigs" aria-hidden="true" style="margin-top:10px">
+              <p class="gigs-h"><b>2 bands</b> nearby need bass tonight</p>
+              <div class="gig"><div><b>The Velvet Hours</b><small>9:00 · demo listing</small></div><span>$130</span></div>
+              <div class="gig"><div><b>Ramona Fault</b><small>10:30 · demo listing</small></div><span>$90</span></div>
+            </div>
+          </div>
+          <div class="k-pc-foot"><a class="k-go" href="/stage-first">See Stage First</a><span class="k-label">Flip the switch</span></div>
+        </article>
+
+        <article class="k-pc k-pc--club k-reveal">
+          <div class="k-pc-top"><span class="k-pc-tag">In person · monthly</span><span class="k-status">Back for 2027</span></div>
+          <h3 class="k-pc-title"><a class="k-stretch" href="/listening-club">Album Listening Club</a></h3>
+          <p>Three albums, one quiet afternoon, once a month. Starting fresh for 2027: the first session is Saturday 30 January, then the last Saturday of every month.</p>
+          <div class="facts">
+            <div><b>30 Jan</b><small>first session, 2027</small></div>
+            <div><b>Midday</b><small>doors open</small></div>
+            <div><b>~3 hrs</b><small>come and go</small></div>
+            <div><b>Free</b><small>bring a drink</small></div>
+          </div>
+          <div class="k-pc-foot"><a class="k-go" href="/listening-club">How it works</a><a class="k-go k-go--out" href="https://discord.gg/Ext66DNAt" target="_blank" rel="noopener">Discord</a></div>
+        </article>
+
+      </div>
+    </div>
   </section>
 
-  <div style="background:#2f5436;overflow:hidden;white-space:nowrap;padding:18px 0">
-    <div style="display:inline-flex;animation:marquee 22s linear infinite;animation-duration:22s">
-      <span style="display:inline-flex;align-items:center;font:800 30px 'Geist',sans-serif;letter-spacing:-.03em;color:#ece2cb">
-        <span style="padding:0 24px">LET'S BUILD SOMETHING</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 24px">SAY HELLO</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 24px">@TKITOS</span><span style="color:#d8b07a">✱</span>
-      </span>
-      <span style="display:inline-flex;align-items:center;font:800 30px 'Geist',sans-serif;letter-spacing:-.03em;color:#ece2cb" aria-hidden="true">
-        <span style="padding:0 24px">LET'S BUILD SOMETHING</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 24px">SAY HELLO</span><span style="color:#d8b07a">✱</span>
-        <span style="padding:0 24px">@TKITOS</span><span style="color:#d8b07a">✱</span>
-      </span>
+  <!-- ===================== 04 LIBRARY (quiet on purpose) ===================== -->
+  <section id="library" class="k-band" aria-labelledby="h-library">
+    <div class="k-wrap">
+      <div class="two two--even">
+        <div class="k-reveal">
+          <span class="k-num" style="display:block;margin-bottom:12px">04 — Library</span>
+          <h2 class="k-h2" id="h-library" style="font-size:clamp(28px,4.4vw,44px)">Everything else is in the library.</h2>
+          <p class="k-copy" style="margin-top:14px">The game, the log, roadmaps, and the pages about how this place runs. Search it here, or from any page.</p>
+          <div class="lib-search">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+            <input class="k-input" id="lib-q" type="search" placeholder="Search everything…" autocomplete="off" spellcheck="false" aria-label="Search everything on KiteSink" aria-controls="lib-results">
+            <kbd class="ks-kbd" aria-hidden="true">/</kbd>
+          </div>
+          <ul class="lib-results" id="lib-results"></ul>
+          <p class="k-vh" id="lib-say" role="status"></p>
+          <div class="k-chips shelves" id="lib-shelves">
+            <a class="k-chip" href="/library#current">Current projects</a><a class="k-chip" href="/library#tools">Tools &amp; notes</a><a class="k-chip" href="/library#games">Games</a><a class="k-chip" href="/library#writing">Writing</a><a class="k-chip" href="/library#workshop">The workshop</a><a class="k-chip" href="/library#docs">Docs &amp; legal</a>
+          </div>
+          <div class="k-actions" style="margin-top:20px"><a class="k-go" href="/library">Open the full library</a></div>
+        </div>
+        <div class="k-reveal">
+          <p class="k-label" style="margin-bottom:12px">From the log</p>
+          <div class="log" id="log"><a href="/blog"><strong>The log</strong><p>Essays, devlogs and things worth reading.</p></a></div>
+          <div class="k-actions" style="margin-top:14px"><a class="k-go" href="/blog">All entries</a></div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div data-ks="footer" data-active="" data-full="1"></div>
+  <!-- ===================== 05 ABOUT ===================== -->
+  <section id="about" class="k-band" aria-labelledby="h-about">
+    <div class="k-wrap about-grid">
+      <div class="k-reveal">
+        <span class="k-num" style="display:block;margin-bottom:12px">05 — About</span>
+        <h2 class="k-h2" id="h-about">Hi — I’m <em>Truman.</em></h2>
+        <p class="k-copy" style="margin-top:20px">I build apps, games, and tools as one person. KiteSink is the workshop where all of it lives — a kitchen-sink of everything I make, from a daily music app to an isometric tycoon to a fitness OS for serious lifters.</p>
+        <p class="k-copy">I care about craft, restraint, and finishing things. I’d rather ship six honest projects than talk about forty.</p>
+        <div class="k-actions" style="margin-top:26px">
+          <a class="k-btn" href="mailto:hello@kitesink.com">Say hello →</a>
+          <a class="k-btn k-btn--ghost" href="/about">More about me</a>
+          <a class="k-go" href="/now">What I’m on right now</a>
+        </div>
+      </div>
+      <figure class="polaroid k-reveal" style="margin:0">
+        <img src="/img/pin.jpg" alt="Truman — enamel-pin portrait" width="760" height="950" loading="lazy" decoding="async">
+        <figcaption><span>fig. 01 — the operator</span><i aria-hidden="true"></i></figcaption>
+      </figure>
+    </div>
+  </section>
 
-</div>
+</main>
 
+<div data-ks="footer"></div>
+
+<script src="/site-index.js?v=2027.6"></script>
 <script src="/blog/posts.js"></script>
+<script src="/ks.js?v=2027.6"></script>
 <script>
-  // ---- From the log: newest 4 entries as a 2-col teaser grid, from /blog/posts.js ----
-  (function () {
-    var feed = document.getElementById("logFeed");
-    if (!feed) return;
-    function esc(s){ return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-    function catsOf(p){ return Array.isArray(p.cat) ? p.cat : (p.cat ? [p.cat] : []); }
-    var ALL = window.KS_POSTS || [];
-    var countEl = document.getElementById("logCount");
-    if (countEl) countEl.textContent = ALL.length;
-    var POSTS = ALL.slice(0, 4);
-    if (!POSTS.length) {
-      feed.innerHTML = '<div style="grid-column:1/-1;border-top:1px solid rgba(34,28,16,.18);padding:30px 0"><p style="font:400 17px/1.6 \'Geist\',sans-serif;color:#6f6040;margin:0;max-width:520px">The logbook is open but empty — the first essays are being written. <a href="/blog" style="color:#2f5436" class="hv8">Watch this space →</a></p></div>';
-      return;
-    }
-    feed.innerHTML = POSTS.map(function (p) {
-      var ext = !!p.external;
-      var accent = ext ? "#8a5a18" : "#2f5436";
-      var href = ext ? (p.url || "#") : (p.href || "/blog");
-      var attrs = ext ? ' target="_blank" rel="noopener"' : '';
-      var eyebrow = ext ? ('↗ ' + esc(p.source || "External")) : catsOf(p).map(esc).join(" · ");
-      var tail = ext ? ' <span style="color:#8a5a18;font-size:.8em">↗</span>' : '';
-      return '<a href="' + esc(href) + '"' + attrs + ' class="hv9" style="padding:24px 0;border-top:1px solid rgba(34,28,16,.18);display:block">' +
-        '<span style="display:flex;align-items:center;gap:12px;margin-bottom:8px;font:600 11px \'Geist Mono\',monospace"><span style="text-transform:uppercase;letter-spacing:.08em;color:' + accent + '">' + eyebrow + '</span><span style="color:#6f6040">' + esc(p.date) + '</span></span>' +
-        '<span style="display:block;font:700 23px/1.2 \'Geist\',sans-serif;letter-spacing:-.02em;color:#221c10">' + esc(p.title) + tail + '</span>' +
-        '<span style="display:block;font:400 15px/1.55 \'Geist\',sans-serif;color:#5e5238;margin:8px 0 0">' + esc(p.dek || "") + '</span>' +
-      '</a>';
-    }).join("");
-  })();
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
-  // ---- Hero card stack: click/tap (or the shuffle button) cycles front → back with a
-  // 480ms ease-out arc (JS-driven; CSS transitions can't do the lift + re-layer) ----
+  // ---- The deck: one card per section. A tap on the deck sends the front card to
+  // the back; an index row (hover or focus) or a pager segment brings that section's
+  // card forward. JS-driven so a card can lift over the stack. ----
   (function () {
-    var wrap = document.getElementById("stack");
-    if (!wrap) return;
-    var cards = { backline: document.getElementById("stkBackline"), sotd: document.getElementById("stkSotd"), vantix: document.getElementById("stkVantix"), cgt: document.getElementById("stkCgt") };
-    var order = ["backline", "sotd", "vantix", "cgt"], prev = null, t = 1, raf = null, start = 0;
+    var wrap = $("deck"); if (!wrap) return;
+    var cards = {}, order = [];
+    [].forEach.call(wrap.querySelectorAll(".deck-card"), function (el) { var id = el.getAttribute("data-sec"); cards[id] = el; order.push(id); });
+    var prev = null, t = 1, raf = null, start = 0;
     var mq = window.matchMedia("(max-width: 700px)");
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var DESK = [{ y: 0, s: 1, r: -1, o: 1 }, { y: 24, s: .955, r: 1.4, o: .93 }, { y: 44, s: .915, r: -1.6, o: .84 }, { y: 62, s: .88, r: 1.2, o: .74 }];
-    var MOB  = [{ y: 0, s: 1, r: 0, o: 1 }, { y: 12, s: .965, r: 0, o: .92 }, { y: 22, s: .93, r: 0, o: .8 }, { y: 31, s: .9, r: 0, o: .66 }];
+    var DESK = [{ y: 0, s: 1, r: -1, o: 1 }, { y: 22, s: .955, r: 1.4, o: .93 }, { y: 41, s: .915, r: -1.6, o: .82 }, { y: 57, s: .88, r: 1.2, o: .66 }, { y: 66, s: .86, r: 0, o: 0 }];
+    var MOB  = [{ y: 0, s: 1, r: 0, o: 1 }, { y: 12, s: .965, r: 0, o: .92 }, { y: 22, s: .93, r: 0, o: .8 }, { y: 31, s: .9, r: 0, o: .62 }, { y: 36, s: .88, r: 0, o: 0 }];
+    function pose(S, i) { return S[Math.min(i, S.length - 1)]; }
+    // Height of the stack in its tallest possible arrangement (any card in any visible
+    // slot), so the deck keeps one height whichever card is in front and nothing
+    // under it moves when the cards change.
     function fit(S) {
-      // reserve layout height: deepest visual bottom across the (untransformed-
-      // height × target-pose scale, centered) cards, so nothing overlaps the caption
       var h = 0;
-      for (var id in cards) {
-        var el = cards[id]; if (!el) continue;
-        var p = S[order.indexOf(id)];
-        h = Math.max(h, p.y + el.offsetHeight * (1 + p.s) / 2);
-      }
+      for (var id in cards) for (var i = 0; i < S.length; i++) { if (S[i].o > 0) h = Math.max(h, S[i].y + cards[id].offsetHeight * (1 + S[i].s) / 2); }
       return Math.ceil(h);
     }
     function render() {
-      var S = mq.matches ? MOB : DESK;
+      var S = mq.matches ? MOB : DESK, n = order.length;
       wrap.style.height = fit(S) + "px";
       var ease = 1 - Math.pow(1 - t, 3);
       for (var id in cards) {
-        var el = cards[id]; if (!el) continue;
-        var toIdx = order.indexOf(id), to = S[toIdx];
-        var from = prev ? S[prev.indexOf(id)] : to;
+        var el = cards[id], toIdx = order.indexOf(id), to = pose(S, toIdx);
+        var fromIdx = prev ? prev.indexOf(id) : toIdx, from = pose(S, fromIdx);
         var L = function (a, b) { return a + (b - a) * ease; };
-        var goingBack = !!prev && t < 1 && prev.indexOf(id) === 0 && toIdx !== 0;
-        var lift = goingBack ? -Math.sin(Math.PI * ease) * 60 : 0;
+        var moving = !!prev && t < 1;
+        var leaving = moving && fromIdx === 0 && toIdx !== 0;          // front card tucks to the back
+        var arriving = moving && toIdx === 0 && fromIdx > 1;            // a deep card jumps to the front
+        var lift = leaving ? -Math.sin(Math.PI * ease) * 58 : arriving ? -Math.sin(Math.PI * ease) * 30 : 0;
         el.style.transform = "translateY(" + (L(from.y, to.y) + lift) + "px) scale(" + L(from.s, to.s) + ") rotate(" + L(from.r, to.r) + "deg)";
         el.style.opacity = L(from.o, to.o);
-        el.style.zIndex = (goingBack && ease < .5) ? order.length + 1 : (order.length - toIdx);
+        el.style.zIndex = (leaving && ease < .5) || arriving ? n + 1 : n - toIdx;
+        el.style.pointerEvents = toIdx === 0 ? "auto" : "none";
+        el.setAttribute("aria-hidden", toIdx === 0 ? "false" : "true");
+        [].forEach.call(el.querySelectorAll("a"), function (a) { a.tabIndex = toIdx === 0 ? 0 : -1; });
       }
     }
-    function tick(now) {
-      t = Math.min(1, (now - start) / 480);
-      render();
-      if (t < 1) raf = requestAnimationFrame(tick);
-    }
-    function shuffle() {
-      prev = order.slice();
-      order = order.slice(1).concat(order[0]);
+    function tick(now) { t = Math.min(1, (now - start) / 480); render(); if (t < 1) raf = requestAnimationFrame(tick); }
+    function go(next) {
+      if (next.join() === order.join()) return;
+      prev = order.slice(); order = next;
       if (reduce.matches) { t = 1; render(); return; }
       t = 0; start = performance.now();
       if (raf) cancelAnimationFrame(raf);
       raf = requestAnimationFrame(tick);
     }
-    // pointer users can tap anywhere on the stack; keyboard and screen-reader
-    // users get a real button, so the links inside keep their own Enter
-    wrap.addEventListener("click", shuffle);
-    var btn = document.getElementById("stackShuffle");
-    if (btn) btn.addEventListener("click", shuffle);
-    var links = wrap.querySelectorAll("a");
-    for (var i = 0; i < links.length; i++) links[i].addEventListener("click", function (e) { e.stopPropagation(); });
+    function bring(id) { if (cards[id]) go([id].concat(order.filter(function (x) { return x !== id; }))); }
+
+    // index rows ↔ deck ↔ pager ↔ headline. `picked` is the section chosen on the deck
+    // or the pager; it stays highlighted (row + headline word) until another card is
+    // chosen or a row is hovered. Hovering a row highlights only while the pointer is there.
+    var h1 = $("hero-title"), rows = document.querySelectorAll(".idx-row"), timer = null, picked = null;
+    var pager = $("deckPager"), dots = pager ? pager.querySelectorAll("button") : [];
+    function mark(sec) {
+      if (h1) { if (sec) h1.setAttribute("data-on", sec); else h1.removeAttribute("data-on"); }
+    }
+    function sync() {
+      [].forEach.call(dots, function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-sec") === order[0] ? "true" : "false"); });
+      [].forEach.call(rows, function (r) { r.classList.toggle("is-on", !!picked && r.getAttribute("data-sec") === picked); });
+    }
+    function pick(sec) { picked = sec; bring(sec); mark(sec); sync(); }
+    wrap.addEventListener("click", function (e) { if (!(e.target.closest && e.target.closest("a"))) pick(order[1]); });
+    [].forEach.call(dots, function (b) { b.addEventListener("click", function () { pick(b.getAttribute("data-sec")); }); });
+    // back cards ignore the pointer, so a click that lands on one still moves the deck on
+    wrap.style.cursor = "pointer";
+
+    function on(sec) {
+      clearTimeout(timer);
+      timer = setTimeout(function () { picked = null; bring(sec); mark(sec); sync(); }, 90);
+    }
+    function off() { clearTimeout(timer); mark(picked); }
+    var canHover = window.matchMedia("(hover: hover)").matches;
+    [].forEach.call(rows, function (row) {
+      var sec = row.getAttribute("data-sec");
+      if (canHover) { row.addEventListener("pointerenter", function () { on(sec); }); row.addEventListener("pointerleave", off); }
+      row.addEventListener("focusin", function () { on(sec); });
+      row.addEventListener("focusout", off);
+    });
+
     var onMq = function () { render(); };
     if (mq.addEventListener) mq.addEventListener("change", onMq); else mq.addListener(onMq);
-    window.addEventListener("resize", function () { if (t === 1) render(); }); // re-fit height on reflow
+    window.addEventListener("resize", function () { if (t === 1) render(); });
+    window.addEventListener("load", function () { if (t === 1) render(); });
     render();
   })();
 
-  // ---- Backline hero card: the "go on call" demo toggle. State lives as a
-  // class on #stkBackline (CSS drives track/knob/list); clicks/keys must not
-  // bubble into the stack shuffle. ----
+  // ---- Consulting: "what keeps getting stuck?" — three services, copy from /consulting ----
   (function () {
-    var card = document.getElementById("stkBackline");
-    if (!card) return;
-    var inset = card.querySelector(".blToggle"), title = card.querySelector(".blTitle"), sub = card.querySelector(".blSub");
-    function paint(on) {
-      card.classList.toggle("on", on);
-      inset.setAttribute("aria-checked", on ? "true" : "false");
-      title.textContent = on ? "You’re on call" : "You’re off call";
-      sub.textContent = on ? "Austin, TX · bass, guitar" : "Flip on to appear in searches";
+    var panel = $("stuck-panel"); if (!panel) return;
+    var tabs = [$("stuck-t0"), $("stuck-t1"), $("stuck-t2")];
+    var DATA = [
+      ["Workflow automation", "Connect the steps between your existing tools: repeated data entry, file handling, intake and task routing. Give the routine work a reliable path, with exceptions brought back to a person.", "Turn release asset intake into an organized checklist that flags missing files and routes the next task to the right person."],
+      ["Operations improvements", "Find where work slows down, clarify who owns the next step and simplify processes that have grown around the gaps. Make handoffs easier to follow and maintain.", "Map a campaign handoff across a music team, then build one shared view of responsibilities, status and outstanding decisions."],
+      ["AI and data solutions", "Make information easier to extract, classify, search and report on. Use AI where it helps, with human checks for uncertain results and decisions that need context.", "Extract key details from incoming documents into a review queue, or make an internal knowledge collection searchable with links back to its sources."]
+    ];
+    function pick(i, focus) {
+      tabs.forEach(function (tab, j) { tab.setAttribute("aria-selected", j === i ? "true" : "false"); tab.tabIndex = j === i ? 0 : -1; });
+      var d = DATA[i];
+      panel.setAttribute("aria-labelledby", tabs[i].id);
+      panel.innerHTML = '<h3 class="k-h3">' + esc(d[0]) + '</h3><p class="k-copy">' + esc(d[1]) + '</p><p class="k-copy ex"><b>Possible project</b>' + esc(d[2]) + '</p>';
+      if (focus) tabs[i].focus();
     }
-    var on = true;
-    inset.addEventListener("click", function (e) { e.stopPropagation(); on = !on; paint(on); });
-    inset.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); on = !on; paint(on); }
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { pick(i); });
+      tab.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); pick((i + 1) % tabs.length, true); }
+        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); pick((i + tabs.length - 1) % tabs.length, true); }
+      });
     });
   })();
-</script>
 
-<script src="/ks.js"></script>
+  // ---- Fitness: quick protein range (1.6–2.2 g/kg/day; see /fitness#sources) ----
+  (function () {
+    var w = $("qp-w"); if (!w) return;
+    var kgBtn = $("qp-kg"), lbBtn = $("qp-lb"), read = $("qp-read"), out = $("qp-out"), unit = "kg";
+    function paint() {
+      var v = +w.value, kg = unit === "kg" ? v : v / 2.2046226;
+      read.textContent = v + " " + unit;
+      out.firstChild.nodeValue = Math.round(kg * 1.6) + "–" + Math.round(kg * 2.2);
+    }
+    function setUnit(u) {
+      if (u === unit) return;
+      var kg = unit === "kg" ? +w.value : +w.value / 2.2046226;
+      unit = u;
+      if (u === "kg") { w.min = 40; w.max = 160; w.value = Math.round(kg); }
+      else { w.min = 90; w.max = 350; w.value = Math.round(kg * 2.2046226); }
+      kgBtn.setAttribute("aria-pressed", u === "kg"); lbBtn.setAttribute("aria-pressed", u === "lb");
+      paint();
+    }
+    w.addEventListener("input", paint);
+    kgBtn.addEventListener("click", function () { setUnit("kg"); });
+    lbBtn.addEventListener("click", function () { setUnit("lb"); });
+    paint();
+  })();
+
+  // ---- Marquee: a pause button, because hover can't pause it on a touch screen ----
+  (function () {
+    var band = $("marquee"), btn = $("marquee-pause"); if (!band || !btn) return;
+    btn.addEventListener("click", function () {
+      var paused = band.classList.toggle("is-paused");
+      btn.textContent = paused ? "▶" : "❚❚";
+      btn.setAttribute("aria-label", paused ? "Resume the scrolling list" : "Pause the scrolling list");
+    });
+  })();
+
+  // ---- Music: Backline "on call" demo switch ----
+  (function () {
+    var sw = $("oncall"); if (!sw) return;
+    var title = $("oncall-t"), sub = $("oncall-s"), on = true;
+    function flip() {
+      on = !on;
+      sw.setAttribute("aria-checked", on ? "true" : "false");
+      title.textContent = on ? "You’re on call" : "You’re off call";
+      sub.textContent = on ? "Demo · bass, guitar" : "Flip on to appear in searches";
+    }
+    sw.addEventListener("click", flip);
+    sw.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flip(); } });
+  })();
+
+  // ---- Library: live search over /site-index.js + the blog, and shelf counts ----
+  (function () {
+    var q = $("lib-q"), list = $("lib-results"), shelves = $("lib-shelves");
+    if (!q || !window.KS) return;
+    KS.loadIndex(function (items) {
+      if (shelves) [].forEach.call(shelves.querySelectorAll("a"), function (a) {
+        var id = a.getAttribute("href").split("#")[1];
+        var n = items.filter(function (it) { return id === "writing" ? (it.shelf === "writing" || it.k === "Writing" || it.k === "Reading") : it.shelf === id; }).length;
+        if (n) a.insertAdjacentHTML("beforeend", ' <span style="color:var(--k-mute)">' + n + '</span>');
+      });
+      var sayT = null, status = $("lib-say");
+      function render() {
+        var v = q.value.trim();
+        clearTimeout(sayT);
+        if (!v) { list.innerHTML = ""; status.textContent = ""; return; }
+        var hits = KS.search(items, v).slice(0, 6);
+        sayT = setTimeout(function () { status.textContent = hits.length ? hits.length + (hits.length === 1 ? " result" : " results") : "No results"; }, 500);
+        list.innerHTML = hits.length ? hits.map(function (it) {
+          return '<li><a href="' + esc(it.h) + '"' + (it.ext ? ' target="_blank" rel="noopener"' : '') + '><b>' + esc(it.t) + (it.ext ? ' ↗' : '') + '</b><i>' + esc(KS.sectionLabel(it.s)) + '</i><span>' + esc(it.d) + '</span></a></li>';
+        }).join("") : '<li class="none">Nothing matches “' + esc(v) + '”. <a class="k-inline" style="display:inline;padding:0" href="/library">Browse the full library</a> or <a class="k-inline" style="display:inline;padding:0" href="/consulting#contact">ask Truman directly</a>.</li>';
+      }
+      q.addEventListener("input", render);
+      q.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") { var first = list.querySelector("a"); if (first) first.click(); }
+      });
+    });
+    // "/" focuses this field on the home page instead of opening the palette
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+      var el = document.activeElement, tag = el && el.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      var r = q.getBoundingClientRect();
+      if (r.top < 0 || r.bottom > window.innerHeight) return; // off-screen → let the palette open
+      e.preventDefault(); e.stopImmediatePropagation(); q.focus();
+    }, true);
+  })();
+
+  // ---- From the log: the newest three entries from /blog/posts.js ----
+  (function () {
+    var feed = $("log"), posts = (window.KS_POSTS || []).slice(0, 3);
+    if (!feed || !posts.length) return;
+    feed.innerHTML = posts.map(function (p) {
+      var ext = !!p.external, cats = [].concat(p.cat || []).join(" · ");
+      return '<a href="' + esc(ext ? p.url : p.href) + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '>' +
+        '<span class="meta"><b' + (ext ? ' class="ext"' : '') + '>' + esc(ext ? "↗ " + (p.source || "External") : cats) + '</b><span>' + esc(p.date) + '</span></span>' +
+        '<strong>' + esc(p.title) + (ext ? ' ↗' : '') + '</strong><p>' + esc(p.dek || "") + '</p></a>';
+    }).join("");
+  })();
+})();
+</script>
 </body>
 </html>

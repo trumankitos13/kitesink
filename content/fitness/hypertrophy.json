@@ -1,0 +1,2284 @@
+{
+ "domain": "hypertrophy",
+ "topics": [
+  {
+   "id": "volume",
+   "label": "Volume"
+  },
+  {
+   "id": "effort",
+   "label": "Effort"
+  },
+  {
+   "id": "load",
+   "label": "Load and reps"
+  },
+  {
+   "id": "frequency",
+   "label": "Frequency and splits"
+  },
+  {
+   "id": "exercises",
+   "label": "Exercises and rest"
+  },
+  {
+   "id": "techniques",
+   "label": "Special techniques"
+  },
+  {
+   "id": "programming",
+   "label": "Programming"
+  },
+  {
+   "id": "recovery",
+   "label": "Recovery"
+  }
+ ],
+ "entries": [
+  {
+   "id": "hyp-volume-dose-response",
+   "type": "note",
+   "title": "More weekly sets build more muscle, with diminishing returns",
+   "topic": "volume",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "pelland-2026"
+   ],
+   "take": "Muscle growth rises with weekly hard sets per muscle, but each added set gives less than the one before it.",
+   "body": "A meta-regression of 67 studies and 2,058 participants (79% men, average age about 25) found that gains in muscle size rose as weekly set volume rose, with diminishing returns. Strength gains levelled off much sooner. The model gave a set that only trains a muscle as a helper half the credit of a direct set.",
+   "do": [
+    "Add sets slowly, and only when progress at your current number has stalled."
+   ]
+  },
+  {
+   "id": "hyp-volume-range-12-20",
+   "type": "note",
+   "title": "12 to 20 weekly sets per muscle is a reasonable range for trained lifters",
+   "topic": "volume",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "bazvalle-2022",
+    "pelland-2026"
+   ],
+   "take": "A review of trained young men found 12-20 sets per muscle per week a sensible target. Treat it as a guide, not a cap.",
+   "body": "A systematic review of seven trials in men with at least a year of lifting compared under 12, 12-20 and over 20 weekly sets (six trials were pooled). Moderate and high volumes did not differ for the quadriceps or biceps. High volume did better for the triceps. The newer 67-study analysis found diminishing returns but no clear ceiling, so 20 is not a hard limit.",
+   "do": [
+    "If you train a muscle fewer than 12 sets a week and progress is slow, test a small increase."
+   ]
+  },
+  {
+   "id": "hyp-volume-any-programme",
+   "type": "note",
+   "title": "Almost any structured programme beats no training, and multiple sets rank highest for size",
+   "topic": "volume",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "currier-2023"
+   ],
+   "take": "In a network meta-analysis, every prescription beat no exercise, and multi-set programmes ranked highest for hypertrophy.",
+   "body": "The hypertrophy network pooled 119 trials and 3,364 healthy adults. All 12 prescriptions beat non-exercise controls and promoted size comparably. The highest-ranked for hypertrophy was higher-load, multiple-set, twice-weekly training. Rankings are not proof that the top option is better than the rest.",
+   "do": [
+    "Choose a plan you can follow for months, with more than one set per exercise."
+   ]
+  },
+  {
+   "id": "hyp-effort-closer-to-failure",
+   "type": "note",
+   "title": "Sets ended closer to failure tended to build more muscle",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "robinson-2024"
+   ],
+   "take": "In a meta-regression, hypertrophy improved as sets ended nearer to failure, while strength gains were similar across a wide range.",
+   "body": "The analysis estimated reps in reserve (RIR, the reps left before failure) for each study from its description, so the exact shape of the curve is unclear, as the authors state. Muscle size had a clear negative slope with RIR. For strength, the intervals included zero, meaning no clear relationship.",
+   "do": [
+    "End most hard sets with only a few reps left in reserve."
+   ]
+  },
+  {
+   "id": "hyp-effort-failure-optional",
+   "type": "note",
+   "title": "Going to absolute failure has not shown a clear edge over stopping just short",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "refalo-2023",
+    "refalo-2024",
+    "vieira-2021"
+   ],
+   "take": "Training to momentary failure was not clearly better for muscle than stopping close to it.",
+   "body": "A meta-analysis of 15 studies found no advantage for momentary failure (effect size 0.12, interval -0.13 to 0.37). In a trial of 18 trained people over 8 weeks, legs trained to failure or to about 1-2 reps in reserve grew the same. A 13-study review found no hypertrophy difference when volume was equal.",
+   "do": [
+    "Use 1-2 reps in reserve on most sets, and save true failure for safe exercises such as machines."
+   ]
+  },
+  {
+   "id": "hyp-effort-rir-accuracy",
+   "type": "note",
+   "title": "Reps in reserve is a useful guide, but most lifters misjudge it",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "zourdos-2016",
+    "halperin-2022",
+    "pelland-2022"
+   ],
+   "take": "RIR tracks how hard a set was, but people tend to underpredict how many reps they have left, by about one rep on average.",
+   "body": "In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scoping review and meta-analysis of 12 studies and 414 people found lifters underpredicted reps to failure by 0.95 reps on average, with wide variation. Guesses were better close to the end of a set and on sets of 12 reps or fewer.",
+   "do": [
+    "Rate RIR on sets of about 12 reps or fewer.",
+    "Occasionally check yourself with one set to failure on a safe exercise."
+   ]
+  },
+  {
+   "id": "hyp-effort-effective-reps-idea",
+   "type": "note",
+   "title": "The effective-reps idea is a useful rule of thumb, not a measured law",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "robinson-2024",
+    "pelland-2022",
+    "halperin-2022"
+   ],
+   "take": "The idea that only the last few reps near failure drive growth fits the direction of the data. No fixed cut-off has been shown.",
+   "body": "Effective (or stimulating) reps is a coaching model. It matches the finding that sets nearer failure tend to build more size. The meta-regression showed a gradual slope with estimated RIR, not a cliff, and its authors note the RIR estimates are rough. The reviews of RIR methods find they differ in accuracy, so a hard rule such as \"the last five reps\" is not supported.",
+   "do": [
+    "Use the idea to remind yourself to make sets hard, not to count reps."
+   ]
+  },
+  {
+   "id": "hyp-effort-effective-reps-limits",
+   "type": "note",
+   "title": "Where the effective-reps model stops working",
+   "topic": "effort",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "morton-2019",
+    "refalo-2024",
+    "halperin-2022"
+   ],
+   "take": "The model assumes a rep near failure is worth the same at any load and that you can tell which reps those are. Both are shaky.",
+   "body": "It also leaves out exercise choice, muscle length and fatigue across sets. A trial that took sets to failure with heavier and lighter loads found similar fibre glycogen depletion in both fibre types, which fits with load mattering less at failure. Sets that stopped about 1-2 reps short still grew muscle as well as failure sets, and RIR is hard to judge exactly.",
+   "do": [
+    "Treat the model as a teaching tool and judge your plan by results over months."
+   ]
+  },
+  {
+   "id": "hyp-load-light-heavy-similar",
+   "type": "note",
+   "title": "Light and heavy loads build similar muscle when sets are hard",
+   "topic": "load",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "refalo-2021",
+    "lopez-2021",
+    "morton-2016"
+   ],
+   "take": "Muscle growth was similar with light and heavy loads when sets were taken close to failure.",
+   "body": "A meta-analysis of 45 studies found similar hypertrophy for loads above and at or below 60% of one-rep max (1RM). Another of 28 studies (747 adults), using sets to volitional failure, agreed. In 49 resistance-trained men over 12 weeks, 20-25 reps at about 30-50% 1RM grew muscle as much as 8-12 reps at 75-90%.",
+   "do": [
+    "Pick a load you can control through the full range and take the set close to failure."
+   ]
+  },
+  {
+   "id": "hyp-load-strength-heavier",
+   "type": "note",
+   "title": "Heavier loads give better strength gains",
+   "topic": "load",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "currier-2023",
+    "lopez-2021",
+    "refalo-2021"
+   ],
+   "take": "If one-rep-max strength matters to you, train with heavier loads at least part of the time.",
+   "body": "The network meta-analysis found loads above 80% of 1RM maximised strength gains. Pooled results of sets to failure showed high-load training beat low-load for strength. A separate analysis found higher loads improved 1RM strength, with an effect size of 0.34. Muscle size did not follow the same pattern.",
+   "do": [
+    "Include some sets in the 5-8 rep range if you also want a stronger one-rep max."
+   ]
+  },
+  {
+   "id": "hyp-load-progression-methods",
+   "type": "note",
+   "title": "Adding reps and adding weight both work as progression",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "chaves-2024"
+   ],
+   "take": "In new lifters, progressing by reps or by load gave the same strength and muscle gains over 10 weeks.",
+   "body": "Thirty-nine previously untrained people (20 men, 19 women) had one leg progress by load and the other by reps. Leg extension 1RM and thigh muscle area rose by similar amounts in both. This was a short trial in beginners, so it may not transfer to advanced lifters.",
+   "do": [
+    "Add reps within a range first, then raise the load and drop back to the low end of the range."
+   ]
+  },
+  {
+   "id": "hyp-freq-volume-matched",
+   "type": "note",
+   "title": "With weekly sets matched, training a muscle more often adds little growth",
+   "topic": "frequency",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "pelland-2026",
+    "hamarsland-2022",
+    "neves-2022"
+   ],
+   "take": "Once total weekly sets are equal, how often you train a muscle makes little difference to size.",
+   "body": "The meta-regression found the effect of frequency on hypertrophy compatible with a negligible effect. In 21 people given the same weekly volume over 9 weeks, two sessions a week and four sessions a week gave the same muscle and strength gains. In 24 men, training one or three times a week gave similar thigh results.",
+   "do": [
+    "Pick the number of weekly sessions you can keep, then spread your sets across them."
+   ]
+  },
+  {
+   "id": "hyp-freq-split-vs-full-body",
+   "type": "note",
+   "title": "Full-body and split routines give similar results",
+   "topic": "frequency",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "ramos-campo-2024"
+   ],
+   "take": "A meta-analysis found no meaningful difference in strength or muscle size between split and full-body routines.",
+   "body": "Fourteen studies with 392 participants compared the two. Gains in bench press and leg strength, arm and thigh muscle area and lean mass were similar. The review could not say what happens when volume differs, so choose the layout by schedule and preference.",
+   "do": [
+    "Choose the split that fits your week and that you enjoy."
+   ]
+  },
+  {
+   "id": "hyp-rom-full-default",
+   "type": "note",
+   "title": "Use a full range of motion by default; lengthened partials also work",
+   "topic": "exercises",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "pallares-2021",
+    "gschneidner-2025",
+    "havers-2025"
+   ],
+   "take": "Full range of motion is the safe default. Partial reps done in the stretched half held up well in newer trials.",
+   "body": "A meta-analysis of 16 studies found full range beat partial range for lower-limb muscle growth (effect size 0.88) and strength. No clear difference appeared in muscle thickness overall. A 12-week trial across 15 sites (163 and 134 people in the two arms) found lengthened-partial and full-range training practically equivalent for arm and thigh size, and an 8-week trial in 13 trained people agreed.",
+   "do": [
+    "Move through the full range you can control, and keep partial reps for the stretched end."
+   ]
+  },
+  {
+   "id": "hyp-length-stretched-position",
+   "type": "note",
+   "title": "Loading a muscle in its stretched position grew more in several trials",
+   "topic": "exercises",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "maeo-2021",
+    "maeo-2023",
+    "kassiano-2023"
+   ],
+   "take": "Exercises that load a muscle when it is long gave bigger gains than versions that load it short, in trials that compared them.",
+   "body": "Seated leg curls grew the whole hamstrings more than prone leg curls (+14% against +9%, 20 adults, 12 weeks). Overhead cable triceps extensions beat neutral-arm ones (+19.9% against +13.9%, 21 adults, 12 weeks). In 42 young women, calf raises done in the lower, stretched half grew the medial calf more than full or top-half range.",
+   "do": [
+    "Include one exercise per muscle that loads it stretched, such as seated leg curls or overhead triceps extensions."
+   ]
+  },
+  {
+   "id": "hyp-rest-between-sets",
+   "type": "note",
+   "title": "Rest long enough to repeat your reps; 2 to 5 minutes gave similar growth in trained men",
+   "topic": "exercises",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "desalles-2009",
+    "ahtiainen-2005",
+    "senna-2016",
+    "buresh-2009"
+   ],
+   "take": "Longer rest keeps reps up across sets. In trained men, resting 2 or 5 minutes gave similar muscle gains.",
+   "body": "A review of 35 studies found 3-5 minutes rest allowed more reps over several sets. In 13 strength-trained men, 2 and 5 minute rests gave similar muscle and strength gains over two 3-month blocks. A bench press needed 3-5 minutes to hold reps, a single-joint exercise about 2. In 12 untrained men, 2.5 minutes beat 1 minute for arm size.",
+   "do": [
+    "Rest about 3 minutes between heavy compound sets and about 2 minutes between isolation sets."
+   ]
+  },
+  {
+   "id": "hyp-tempo-controlled",
+   "type": "note",
+   "title": "Lift under control; very slow reps are not needed",
+   "topic": "exercises",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "bernardez-2022",
+    "amdi-2025",
+    "hackett-2018",
+    "wilk-2021"
+   ],
+   "take": "Controlled reps work. Reps of 10 seconds or more are best avoided, and slowing the lowering phase had no clear extra effect on size.",
+   "body": "An umbrella review of 14 meta-analyses suggested avoiding very slow reps of 10 seconds or more. A meta-analysis of nine studies found uncertain effects of slower lowering on hypertrophy. A review of six studies in 119 untrained people was mixed, and a tempo review notes the evidence is not clear-cut.",
+   "do": [
+    "Lower the weight in about 2 seconds and lift without bouncing."
+   ]
+  },
+  {
+   "id": "hyp-tech-drop-sets",
+   "type": "note",
+   "title": "Drop sets match straight sets for growth and can save time",
+   "topic": "techniques",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "sodal-2023",
+    "krzysztofik-2019"
+   ],
+   "take": "Drop sets built about the same muscle as normal sets in a pooled analysis, so the case for them is time and variety.",
+   "body": "A meta-analysis of six studies (142 adults) found both drop sets and normal sets increased muscle size, with no significant difference between them. A systematic review of advanced techniques also lists drop sets as a time-saving tool but says evidence is too thin for firm dosing guidance.",
+   "do": [
+    "Add one drop set at the end of an isolation exercise when you are short on time."
+   ]
+  },
+  {
+   "id": "hyp-tech-supersets",
+   "type": "note",
+   "title": "Supersets let you do the same work in less time",
+   "topic": "techniques",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "zhang-2025"
+   ],
+   "take": "Supersets gave similar volume and similar strength and size results in shorter sessions.",
+   "body": "A meta-analysis of 19 studies with 313 people compared supersets with straight sets. Total reps and volume load were similar and sessions were shorter. Supersets felt harder and raised markers of exertion. Pairing opposing muscles kept volume up better than pairing the same muscle.",
+   "do": [
+    "Pair opposing muscles, such as chest and back, when you are short on time."
+   ]
+  },
+  {
+   "id": "hyp-tech-rest-pause-cluster",
+   "type": "note",
+   "title": "Rest-pause and cluster sets are fatigue and time tools, not growth boosters",
+   "topic": "techniques",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "prestes-2019",
+    "jukic-2021",
+    "davies-2021"
+   ],
+   "take": "Pooled reviews found cluster sets and similar set structures give about the same size and strength as straight sets.",
+   "body": "A review of 17 studies found no set structure beat another for strength or hypertrophy, and a review of 29 studies found cluster sets matched traditional sets, possibly with less fatigue. One trial in 18 trained people found rest-pause grew thigh thickness more but not other sites.",
+   "do": [
+    "Use cluster or rest-pause sets when you want heavy reps with less fatigue, not as a growth hack."
+   ]
+  },
+  {
+   "id": "hyp-tech-blood-flow-restriction",
+   "type": "note",
+   "title": "Blood-flow restriction can build size with light loads, but needs care",
+   "topic": "techniques",
+   "level": "advanced",
+   "confidence": "moderate",
+   "sources": [
+    "lixandrao-2018",
+    "patterson-2019"
+   ],
+   "take": "Light loads with a cuff that restricts blood flow built muscle similarly to heavy training, but built less strength.",
+   "body": "A meta-analysis found similar hypertrophy for high-load training and low-load training with blood-flow restriction (BFR), while strength favoured high load. A position stand sets out methods and safety for practitioners. Cuff width and pressure matter, and people with vascular or clotting conditions should involve a clinician first.",
+   "do": [
+    "Learn cuff width and pressure from a qualified practitioner, and ask a clinician if you have a vascular condition."
+   ]
+  },
+  {
+   "id": "hyp-prog-exercise-order",
+   "type": "note",
+   "title": "Put the exercises that matter most first",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "simao-2012",
+    "fisher-2014"
+   ],
+   "take": "Reps and volume are higher for an exercise placed early in a session, and pre-exhaustion gave no extra benefit.",
+   "body": "A review of exercise order found total repetitions were higher when an exercise was done at the start of a session. A 12-week trial in 39 trained people found pre-exhaustion (isolation before compound) gave no greater benefit than putting compound exercises first.",
+   "do": [
+    "Start with the lifts and muscles you most want to improve."
+   ]
+  },
+  {
+   "id": "hyp-prog-warm-up",
+   "type": "note",
+   "title": "Warm up with lighter sets of the first lift; save long stretches for later",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "fradkin-2010",
+    "behm-2016",
+    "souza-2024"
+   ],
+   "take": "Warming up helps performance. Long static stretches right before lifting can reduce it slightly.",
+   "body": "A meta-analysis of 32 studies found warm-ups improved performance in 79% of measured outcomes. A review found static stretches of 60 seconds or more per muscle lowered performance by 4.6%, against 1.1% for shorter holds, when tested right afterwards. A squat trial found extra heavy or fast warm-up sets gave no clear gain in total reps or volume.",
+   "do": [
+    "Do two or three lighter, increasing sets of your first lift before working sets.",
+    "Hold long stretches for after training."
+   ]
+  },
+  {
+   "id": "hyp-prog-deload-evidence",
+   "type": "note",
+   "title": "Deloads are common practice, but trials do not yet show they are needed",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "bell-2023",
+    "rogerson-2024",
+    "pancar-2026"
+   ],
+   "take": "Coaches use deloads regularly. The one small trial in beginners found cutting volume in weeks 4 and 8 neither helped nor hurt.",
+   "body": "A deload is a period of reduced training stress, defined by consensus among 21 coaches who finished a Delphi study. In 246 strength and physique athletes, deloads came about every 5.6 weeks and lasted about 6.4 days. In 19 untrained men, deload weeks did not change muscle growth over 8 weeks. Experienced lifters were not tested.",
+   "do": [
+    "Take a lighter week when performance drops for several sessions or joints ache, rather than on a fixed date."
+   ]
+  },
+  {
+   "id": "hyp-prog-periodisation",
+   "type": "note",
+   "title": "Periodising your training helps strength more than muscle size",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "moesgaard-2022"
+   ],
+   "take": "When volume was equal, planned changes in volume and load helped strength but not muscle size.",
+   "body": "A meta-analysis of 35 studies found periodised training had a small advantage for 1RM strength over non-periodised training. Hypertrophy did not differ between periodised and non-periodised, or between linear and undulating, plans. Undulating beat linear plans for 1RM only in trained people.",
+   "do": [
+    "Vary rep ranges across the week if it keeps training interesting, but do not expect it to change size."
+   ]
+  },
+  {
+   "id": "hyp-prog-early-gains-swelling",
+   "type": "note",
+   "title": "Muscle size gains in the first weeks partly reflect swelling",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "defreitas-2011",
+    "damas-2016",
+    "damas-2018"
+   ],
+   "take": "Measured size rises in the first weeks, but some of that early gain is swelling from training stress, not new muscle tissue.",
+   "body": "In 25 sedentary men, thigh muscle area rose 9.6% over 8 weeks, and the authors judged real hypertrophy likely appeared around weeks 3-4. Other researchers found early increases came with swelling markers, and a review argues true hypertrophy appears after roughly 18 sessions. The timing is debated.",
+   "do": [
+    "Judge progress over months, not the first three weeks."
+   ]
+  },
+  {
+   "id": "hyp-prog-read-a-study",
+   "type": "note",
+   "title": "How to read a training study before you act on it",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "pelland-2026",
+    "pelland-2022"
+   ],
+   "take": "Check who was studied, for how long, how muscle was measured and how failure was defined before copying a result.",
+   "body": "Most volume and frequency data come from short trials in young people: in the 67-study set, the average age was about 25 and 79% were men. Studies also define failure differently and often do not report reps in reserve. A single trial is weak evidence next to a meta-analysis, and an interval that includes zero means no clear difference.",
+   "do": [
+    "Ask who was studied and for how many weeks before applying a finding."
+   ]
+  },
+  {
+   "id": "hyp-rec-sleep",
+   "type": "note",
+   "title": "Short sleep lowers lifting performance",
+   "topic": "recovery",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "craven-2022",
+    "knowles-2018",
+    "lamon-2021"
+   ],
+   "take": "Sleep loss lowered exercise performance in a large meta-analysis, and one small study found lower muscle protein synthesis after a sleepless night.",
+   "body": "A meta-analysis of 69 publications defined sleep loss as 6 hours or less in 24 and found an average 7.56% drop in performance. A review of 17 studies found restricted sleep reduced force on compound lifts. In 13 adults, one night without sleep cut muscle protein synthesis by 18%. Long-term growth effects were not tested.",
+   "do": [
+    "Protect regular, full nights of sleep, especially before heavy sessions."
+   ]
+  },
+  {
+   "id": "hyp-mistake-chasing-soreness",
+   "type": "mistake",
+   "title": "Judging a session by how sore you are",
+   "topic": "recovery",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "damas-2018"
+   ],
+   "take": "Soreness does not show that a session worked, and its absence does not show that it failed.",
+   "body": "A review found muscle damage is not what drives hypertrophy, and protocols causing little damage still grow muscle. Soreness is largest early on and fades as you adapt. Chasing it can lead to piling on volume or exercises you cannot recover from.",
+   "do": [
+    "Judge sessions by reps, load and effort recorded in a log."
+   ]
+  },
+  {
+   "id": "hyp-mistake-no-progression",
+   "type": "mistake",
+   "title": "Repeating the same weights and reps with no log",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "chaves-2024"
+   ],
+   "take": "Without a record, you cannot tell whether you are adding reps or load, which is what progression means.",
+   "body": "In 39 beginners, adding load and adding reps each raised strength and thigh muscle area over 10 weeks. Both methods need you to know last week's numbers. Writing down weight, reps and effort for each set takes little time and makes stalls easy to spot.",
+   "do": [
+    "Log weight, reps and reps in reserve for every working set."
+   ]
+  },
+  {
+   "id": "hyp-mistake-cutting-range",
+   "type": "mistake",
+   "title": "Cutting the range of motion to lift heavier",
+   "topic": "exercises",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "pallares-2021",
+    "gschneidner-2025"
+   ],
+   "take": "Shortening the rep to add weight tended to give up size in the lower body. Partials in the stretched half are different.",
+   "body": "A meta-analysis of 16 studies found full range gave larger lower-limb muscle gains than partial range. Lengthened partials, done on purpose in the stretched half with control, matched full range in a large 12-week trial. Half reps that skip the stretched part, done only to move more weight, are the mistake.",
+   "do": [
+    "Lower under control to the stretched position and drive up without bouncing."
+   ]
+  },
+  {
+   "id": "hyp-mistake-stopping-far-from-failure",
+   "type": "mistake",
+   "title": "Ending every set far from failure",
+   "topic": "effort",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "robinson-2024",
+    "steele-2022"
+   ],
+   "take": "Sets that stop well short of failure leave growth on the table, and self-chosen loads are often light.",
+   "body": "The meta-regression found muscle size improved as sets ended closer to failure. People who choose their own weights average about 53% of 1RM. Sets that stop when the work first feels uncomfortable can sit many reps from failure. Many beginners find it hard to judge how many reps remain.",
+   "do": [
+    "Raise the load or reps until the last rep of each working set looks slow and hard."
+   ]
+  },
+  {
+   "id": "hyp-mistake-volume-too-fast",
+   "type": "mistake",
+   "title": "Jumping to very high volume straight away",
+   "topic": "volume",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "pelland-2026",
+    "scarpelli-2022"
+   ],
+   "take": "More sets add less each time, so a big jump from your current volume mostly adds fatigue.",
+   "body": "The dose-response analysis shows diminishing returns on weekly sets. A small trial of 16 trained people found a volume built from each person's own logs beat a fixed 22 weekly sets. Coaches therefore add sets in small steps and watch whether performance holds.",
+   "do": [
+    "Add 1-3 sets per muscle per week, then check performance for two weeks."
+   ]
+  },
+  {
+   "id": "hyp-mistake-rest-too-short",
+   "type": "mistake",
+   "title": "Cutting rest so short that your reps fall",
+   "topic": "exercises",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "senna-2016",
+    "desalles-2009"
+   ],
+   "take": "Very short rests lower the reps you can do on later sets, and with it the total work.",
+   "body": "In a trial, a 1-minute rest gave fewer total reps over five sets than 3-5 minutes on a bench press. A review of 35 studies found 3-5 minutes allowed more reps over several sets. Short rests are fine for small isolation moves, but for compound lifts they cost volume.",
+   "do": [
+    "Rest long enough to repeat most of your first set's reps."
+   ]
+  },
+  {
+   "id": "hyp-num-weekly-sets",
+   "type": "number",
+   "title": "Weekly sets per muscle",
+   "topic": "volume",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "bazvalle-2022"
+   ],
+   "value": "12-20",
+   "unit": "sets per muscle per week",
+   "sort": 12,
+   "take": "A range from a review of trained young men; a newer analysis found no clear ceiling."
+  },
+  {
+   "id": "hyp-num-rir-error",
+   "type": "number",
+   "title": "Average underprediction of reps to failure",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "halperin-2022"
+   ],
+   "value": "0.95",
+   "unit": "reps, average miss",
+   "sort": 0.95,
+   "take": "Across 12 studies, lifters guessed they had about one rep fewer in the tank than they did."
+  },
+  {
+   "id": "hyp-num-self-selected-load",
+   "type": "number",
+   "title": "Load people choose when left alone",
+   "topic": "load",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "steele-2022"
+   ],
+   "value": "53",
+   "unit": "% of 1RM, average",
+   "sort": 53,
+   "take": "Average self-selected load across exercises in a scoping review; light unless sets end near failure."
+  },
+  {
+   "id": "hyp-num-heavy-threshold",
+   "type": "number",
+   "title": "Load that maximised strength gains",
+   "topic": "load",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "currier-2023"
+   ],
+   "value": "80+",
+   "unit": "% of 1RM",
+   "sort": 80,
+   "take": "Loads above this ranked best for strength in a network meta-analysis. All loads comparably built muscle."
+  },
+  {
+   "id": "hyp-num-light-threshold",
+   "type": "number",
+   "title": "Upper limit of light-load training in a meta-analysis",
+   "topic": "load",
+   "level": "intermediate",
+   "confidence": "strong",
+   "sources": [
+    "refalo-2021"
+   ],
+   "value": "60 or less",
+   "unit": "% of 1RM",
+   "sort": 60,
+   "take": "Training at or below this load built muscle similarly to heavier loads, but built less strength."
+  },
+  {
+   "id": "hyp-num-rest-minutes",
+   "type": "number",
+   "title": "Rest between sets with similar growth in trained men",
+   "topic": "exercises",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "ahtiainen-2005"
+   ],
+   "value": "2-5",
+   "unit": "minutes between sets",
+   "sort": 2,
+   "take": "In 13 strength-trained men, 2 and 5 minute rests gave similar muscle gains over three months."
+  },
+  {
+   "id": "hyp-num-deload-interval",
+   "type": "number",
+   "title": "Weeks between deloads reported by athletes",
+   "topic": "programming",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "rogerson-2024"
+   ],
+   "value": "5.6",
+   "unit": "weeks, average",
+   "sort": 5.6,
+   "take": "Reported by 246 strength and physique athletes. This is what they do, not what trials show is best."
+  },
+  {
+   "id": "hyp-num-deload-length",
+   "type": "number",
+   "title": "Typical deload length reported by athletes",
+   "topic": "programming",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "rogerson-2024"
+   ],
+   "value": "6.4",
+   "unit": "days, average",
+   "sort": 6.4,
+   "take": "Average length of a deload in the same survey of 246 strength and physique athletes."
+  },
+  {
+   "id": "hyp-num-sleep-loss",
+   "type": "number",
+   "title": "Average performance change after short sleep",
+   "topic": "recovery",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "craven-2022"
+   ],
+   "value": "-7.6",
+   "unit": "% performance change",
+   "sort": -7.56,
+   "take": "Pooled across 69 publications where sleep was 6 hours or less in 24 hours."
+  },
+  {
+   "id": "hyp-num-early-thigh-gain",
+   "type": "number",
+   "title": "Thigh muscle area gain in 8 weeks, sedentary men",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "defreitas-2011"
+   ],
+   "value": "9.6",
+   "unit": "% over 8 weeks",
+   "sort": 9.6,
+   "take": "Includes swelling in the first weeks. Typical for new lifters, not for trained ones."
+  },
+  {
+   "id": "hyp-term-volume",
+   "type": "term",
+   "title": "Volume",
+   "topic": "volume",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "pelland-2026"
+   ],
+   "take": "The amount of work. In this page, usually the number of hard sets per muscle per week. Volume load is sets times reps times weight."
+  },
+  {
+   "id": "hyp-term-hard-set",
+   "type": "term",
+   "title": "Hard set",
+   "topic": "volume",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "A working set taken close to failure, usually within a few reps. Warm-up sets and easy sets do not count towards weekly volume."
+  },
+  {
+   "id": "hyp-term-momentary-failure",
+   "type": "term",
+   "title": "Momentary muscular failure",
+   "topic": "effort",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "pelland-2022"
+   ],
+   "take": "The point where you cannot finish another rep despite maximal effort. Volitional failure means you stop by choice."
+  },
+  {
+   "id": "hyp-term-rir",
+   "type": "term",
+   "title": "Repetitions in reserve (RIR)",
+   "topic": "effort",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "zourdos-2016"
+   ],
+   "take": "The number of reps you could still have done when the set ended. 0 RIR means failure. 2 RIR means two more reps were possible."
+  },
+  {
+   "id": "hyp-term-rpe",
+   "type": "term",
+   "title": "Rate of perceived exertion (RPE)",
+   "topic": "effort",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "zourdos-2016"
+   ],
+   "take": "A 1-10 effort scale. On the RIR-based version, RPE 10 means 0 RIR, RPE 9 means 1 RIR, and so on."
+  },
+  {
+   "id": "hyp-term-1rm",
+   "type": "term",
+   "title": "One-rep max (1RM)",
+   "topic": "load",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "The heaviest load you can lift for one full rep. Training loads are often given as a percent of it, such as 70% of 1RM."
+  },
+  {
+   "id": "hyp-term-progressive-overload",
+   "type": "term",
+   "title": "Progressive overload",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "Gradually asking more of the muscle over time, by adding reps, load or sets, so it keeps having a reason to adapt."
+  },
+  {
+   "id": "hyp-term-deload",
+   "type": "term",
+   "title": "Deload",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "bell-2023"
+   ],
+   "take": "A period of reduced training stress meant to lower fatigue and prepare you for later training, as defined by a coach consensus."
+  },
+  {
+   "id": "hyp-term-lengthened",
+   "type": "term",
+   "title": "Lengthened-position training",
+   "topic": "exercises",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "maeo-2021"
+   ],
+   "take": "Loading a muscle while it is stretched, as at the bottom of a curl or squat. Several trials found it grew more than loading it short."
+  },
+  {
+   "id": "hyp-term-effect-size",
+   "type": "term",
+   "title": "Effect size and confidence interval",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "Effect size is how big a difference is, in standard deviations. The interval shows a plausible range. If it spans zero, there is no clear difference."
+  },
+  {
+   "id": "hyp-term-periodisation",
+   "type": "term",
+   "title": "Periodisation",
+   "topic": "programming",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "moesgaard-2022"
+   ],
+   "take": "Planned changes in volume, load or exercises over weeks and months, such as linear steps or weekly undulation."
+  },
+  {
+   "id": "hyp-table-rep-ranges",
+   "type": "table",
+   "title": "Rep ranges and what each is good for",
+   "topic": "load",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "currier-2023",
+    "lopez-2021",
+    "refalo-2021",
+    "morton-2016"
+   ],
+   "take": "Approximate loads for each rep range, with what research suggests about the result. Percentages are rough and vary by person and lift.",
+   "columns": [
+    "Reps per set",
+    "Rough load (% of 1RM)",
+    "What it is good for",
+    "Watch for"
+   ],
+   "rows": [
+    [
+     "1-5",
+     "Over 85%",
+     "Maximal strength; practising heavy lifts",
+     "Long rests; technique slips when tired"
+    ],
+    [
+     "6-8",
+     "About 75-85%",
+     "Strength and size; high-load range in Lopez 2021",
+     "Joint load on heavy compounds"
+    ],
+    [
+     "8-12",
+     "About 65-75%",
+     "Size; middle ground for most lifts",
+     "Stopping far from failure"
+    ],
+    [
+     "12-20",
+     "About 55-65%",
+     "Size on single-joint and machine lifts",
+     "Pump and burn limiting sets before muscle is tired"
+    ],
+    [
+     "20-30",
+     "About 30-50%",
+     "Size when taken to failure (49 trained men, 12 weeks)",
+     "Very hard sets; lower strength gains"
+    ]
+   ]
+  },
+  {
+   "id": "hyp-table-splits",
+   "type": "table",
+   "title": "Training splits compared",
+   "topic": "frequency",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "ramos-campo-2024",
+    "pelland-2026",
+    "hamarsland-2022"
+   ],
+   "take": "Splits differ in how often each muscle is trained and how the week is arranged. With weekly volume equal, results were similar.",
+   "columns": [
+    "Split",
+    "Days a week",
+    "Times each muscle is hit",
+    "Fits best",
+    "Trade-off"
+   ],
+   "rows": [
+    [
+     "Full body",
+     "2-4",
+     "2-4",
+     "Beginners; busy people",
+     "Long sessions; fatigue from big lifts"
+    ],
+    [
+     "Upper/lower",
+     "4",
+     "2",
+     "Most lifters at 4 days",
+     "Large sessions in the middle of the week"
+    ],
+    [
+     "Push/pull/legs",
+     "3 or 6",
+     "1 or 2",
+     "People who enjoy daily training",
+     "6 days a week is hard to sustain"
+    ],
+    [
+     "Body-part split",
+     "5-6",
+     "1",
+     "Experienced lifters wanting high volume per muscle",
+     "Each muscle only once a week"
+    ],
+    [
+     "Hybrid (upper/lower plus extras)",
+     "4-5",
+     "About 2",
+     "People wanting variety",
+     "Needs more planning"
+    ]
+   ]
+  },
+  {
+   "id": "hyp-table-rest-and-sets",
+   "type": "table",
+   "title": "Rest between sets and sets per week: a guide",
+   "topic": "volume",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "senna-2016",
+    "desalles-2009",
+    "bazvalle-2022",
+    "bernardez-2022",
+    "zhang-2025"
+   ],
+   "take": "A reading of the research on rest and weekly sets. Treat each line as a starting point, then adjust to how you recover.",
+   "columns": [
+    "Question",
+    "Starting point",
+    "What the evidence says"
+   ],
+   "rows": [
+    [
+     "Heavy compound lift",
+     "3-5 minutes",
+     "Held reps across sets on bench press (Senna 2016)"
+    ],
+    [
+     "Single-joint, lighter lift",
+     "About 2 minutes",
+     "2 minutes held reps on a chest fly (Senna 2016)"
+    ],
+    [
+     "Short on time",
+     "Superset opposing muscles",
+     "Similar volume and gains, shorter sessions (Zhang 2025)"
+    ],
+    [
+     "Weekly sets, general",
+     "At least 10 per muscle",
+     "Umbrella review: at least 10 sets is optimal"
+    ],
+    [
+     "Weekly sets, trained men",
+     "12-20 per muscle",
+     "Baz-Valle 2022; newer data show no clear ceiling"
+    ],
+    [
+     "Rest vs growth",
+     "2 or 5 minutes",
+     "Similar growth in trained men (Ahtiainen 2005)"
+    ]
+   ]
+  }
+ ],
+ "sources": {
+  "pelland-2026": {
+   "type": "meta-analysis",
+   "authors": [
+    "Pelland JC",
+    "Remmert JF",
+    "Robinson ZP",
+    "Hinson SR",
+    "Zourdos MC"
+   ],
+   "year": 2026,
+   "title": "The Resistance Training Dose Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength Gains",
+   "journal": "Sports Medicine",
+   "volume": "56",
+   "issue": "2",
+   "pages": "481-505",
+   "doi": "10.1007/s40279-025-02344-w",
+   "pmid": "41343037",
+   "n_studies": 67,
+   "n_participants": 2058,
+   "support": "The posterior probability of the marginal slope exceeding zero for the effect of volume on both hypertrophy and strength was 100%, indicating that gains in muscle size and strength increase as volume increases."
+  },
+  "bazvalle-2022": {
+   "type": "systematic-review",
+   "authors": [
+    "Baz-Valle E",
+    "Balsalobre-Fernández C",
+    "Alix-Fages C",
+    "Santos-Concejero J"
+   ],
+   "year": 2022,
+   "title": "A Systematic Review of the Effects of Different Resistance Training Volumes on Muscle Hypertrophy",
+   "journal": "Journal of Human Kinetics",
+   "volume": "81",
+   "pages": "199-210",
+   "doi": "10.2478/hukin-2022-0017",
+   "pmid": "35291645",
+   "n_studies": 7,
+   "support": "According to the results of this review, a range of 12-20 weekly sets per muscle group may be an optimum standard recommendation for increasing muscle hypertrophy in young, trained men."
+  },
+  "currier-2023": {
+   "type": "meta-analysis",
+   "authors": [
+    "Currier BS",
+    "Mcleod JC",
+    "Banfield L",
+    "Beyene J",
+    "Welton NJ",
+    "D'Souza AC",
+    "Keogh JAJ",
+    "Lin L",
+    "Coletta G",
+    "Yang A",
+    "Colenso-Semple L",
+    "Lau KJ",
+    "Verboom A",
+    "Phillips SM"
+   ],
+   "year": 2023,
+   "title": "Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis",
+   "journal": "British Journal of Sports Medicine",
+   "volume": "57",
+   "issue": "18",
+   "pages": "1211-1220",
+   "doi": "10.1136/bjsports-2023-106807",
+   "pmid": "37414459",
+   "support": "Higher-load (>80% of single repetition maximum) prescriptions maximised strength gains, and all prescriptions comparably promoted muscle hypertrophy."
+  },
+  "robinson-2024": {
+   "type": "meta-analysis",
+   "authors": [
+    "Robinson ZP",
+    "Pelland JC",
+    "Remmert JF",
+    "Refalo MC",
+    "Jukic I",
+    "Steele J",
+    "Zourdos MC"
+   ],
+   "year": 2024,
+   "title": "Exploring the Dose–Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+   "journal": "Sports Medicine",
+   "volume": "54",
+   "issue": "9",
+   "pages": "2209-2231",
+   "doi": "10.1007/s40279-024-02069-2",
+   "pmid": "38970765",
+   "support": "Strength gains were similar across a wide range of RIR, while muscle hypertrophy improves as sets are terminated closer to failure."
+  },
+  "refalo-2023": {
+   "type": "meta-analysis",
+   "authors": [
+    "Refalo MC",
+    "Helms ER",
+    "Trexler ET",
+    "Hamilton DL",
+    "Fyfe JJ"
+   ],
+   "year": 2023,
+   "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+   "journal": "Sports Medicine",
+   "volume": "53",
+   "issue": "3",
+   "pages": "649-665",
+   "doi": "10.1007/s40279-022-01784-y",
+   "pmid": "36334240",
+   "n_studies": 15,
+   "support": "CONCLUSION: Overall, our main findings suggest that (i) there is no evidence to support that resistance training performed to momentary muscular failure is superior to non-failure resistance training for muscle hypertrophy and (ii) higher velocity loss thresholds, and theoretically closer proximities-to-failure do not always elicit greater muscle hypertrophy."
+  },
+  "refalo-2024": {
+   "type": "rct",
+   "authors": [
+    "Refalo MC",
+    "Helms ER",
+    "Robinson ZP",
+    "Hamilton DL",
+    "Fyfe JJ"
+   ],
+   "year": 2024,
+   "title": "Similar muscle hypertrophy following eight weeks of resistance training to momentary muscular failure or with repetitions-in-reserve in resistance-trained individuals",
+   "journal": "Journal of Sports Sciences",
+   "volume": "42",
+   "issue": "1",
+   "pages": "85-101",
+   "doi": "10.1080/02640414.2024.2321021",
+   "pmid": "38393985",
+   "n_participants": 18,
+   "support": "Increases in quadriceps thickness (average of RF and VL) from pre- to post-intervention were similar for FAIL [0.181 cm (HDI: 0.119 to 0.243)] and RIR [0.182 cm (HDI: 0.115 to 0.247)]."
+  },
+  "vieira-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Vieira AF",
+    "Umpierre D",
+    "Teodoro JL",
+    "Lisboa SC",
+    "Baroni BM",
+    "Izquierdo M",
+    "Cadore EL"
+   ],
+   "year": 2021,
+   "title": "Effects of Resistance Training Performed to Failure or Not to Failure on Muscle Strength, Hypertrophy, and Power Output: A Systematic Review With Meta-Analysis",
+   "journal": "Journal of Strength & Conditioning Research",
+   "volume": "35",
+   "issue": "4",
+   "pages": "1165-1175",
+   "doi": "10.1519/jsc.0000000000003936",
+   "pmid": "33555822",
+   "n_studies": 13,
+   "support": "Resistance training performed to failure showed a greater increase in muscle hypertrophy than RTNF (SMD: 0.75; p = 0.005), whereas no difference was observed considering equalized RT volumes."
+  },
+  "zourdos-2016": {
+   "type": "trial",
+   "authors": [
+    "Zourdos MC",
+    "Klemp A",
+    "Dolan C",
+    "Quiles JM",
+    "Schau KA",
+    "Jo E",
+    "Helms E",
+    "Esgro B",
+    "Duncan S",
+    "Garcia Merino S",
+    "Blanco R"
+   ],
+   "year": 2016,
+   "title": "Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reserve",
+   "journal": "Journal of Strength and Conditioning Research",
+   "volume": "30",
+   "issue": "1",
+   "pages": "267-275",
+   "doi": "10.1519/jsc.0000000000001049",
+   "pmid": "26049792",
+   "n_participants": 29,
+   "support": "Our findings demonstrate an inverse relationship between average velocity and RPE/RIR."
+  },
+  "halperin-2022": {
+   "type": "systematic-review",
+   "authors": [
+    "Halperin I",
+    "Malleron T",
+    "Har-Nir I",
+    "Androulakis-Korakakis P",
+    "Wolf M",
+    "Fisher J",
+    "Steele J"
+   ],
+   "year": 2022,
+   "title": "Accuracy in Predicting Repetitions to Task Failure in Resistance Exercise: A Scoping Review and Exploratory Meta-analysis",
+   "journal": "Sports Medicine",
+   "volume": "52",
+   "issue": "2",
+   "pages": "377-390",
+   "doi": "10.1007/s40279-021-01559-x",
+   "pmid": "34542869",
+   "n_studies": 12,
+   "n_participants": 414,
+   "support": "RESULTS: The main multilevel meta-analysis model including all effects sizes (262 across 12 clusters) revealed that participants tended to underpredict the number of repetitions to task failure by 0.95 repetitions (95% confidence interval [CI] 0.17-1.73), but with considerable heterogeneity (Q(261) = 3060, p < 0.0001, I2 = 97.9%)."
+  },
+  "pelland-2022": {
+   "type": "review",
+   "authors": [
+    "Pelland JC",
+    "Robinson ZP",
+    "Remmert JF",
+    "Cerminaro RM",
+    "Benitez B",
+    "John TA",
+    "Helms ER",
+    "Zourdos MC"
+   ],
+   "year": 2022,
+   "title": "Methods for Controlling and Reporting Resistance Training Proximity to Failure: Current Issues and Future Directions",
+   "journal": "Sports Medicine",
+   "volume": "52",
+   "issue": "7",
+   "pages": "1461-1472",
+   "doi": "10.1007/s40279-022-01667-2",
+   "pmid": "35247203",
+   "support": "Consequently, it is difficult to make specific recommendations for per-set proximity to failure to maximize hypertrophy and strength."
+  },
+  "morton-2019": {
+   "type": "rct",
+   "authors": [
+    "Morton RW",
+    "Sonne MW",
+    "Farias Zuniga A",
+    "Mohammad IYZ",
+    "Jones A",
+    "McGlory C",
+    "Keir PJ",
+    "Potvin JR",
+    "Phillips SM"
+   ],
+   "year": 2019,
+   "title": "Muscle fibre activation is unaffected by load and repetition duration when resistance exercise is performed to task failure",
+   "journal": "The Journal of Physiology",
+   "volume": "597",
+   "issue": "17",
+   "pages": "4601-4613",
+   "doi": "10.1113/jp278056",
+   "pmid": "31294822",
+   "support": "We conclude that muscle fibre activation and subsequent anabolic signalling are independent of load, repetition duration and surface EMG amplitude when RE is performed to task failure."
+  },
+  "refalo-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Refalo MC",
+    "Hamilton DL",
+    "Paval DR",
+    "Gallagher IJ",
+    "Feros SA",
+    "Fyfe JJ"
+   ],
+   "year": 2021,
+   "title": "Influence of resistance training load on measures of skeletal muscle hypertrophy and improvements in maximal strength and neuromuscular task performance: A systematic review and meta-analysis",
+   "journal": "Journal of Sports Sciences",
+   "volume": "39",
+   "issue": "15",
+   "pages": "1723-1745",
+   "doi": "10.1080/02640414.2021.1898094",
+   "pmid": "33874848",
+   "n_studies": 45,
+   "support": "Higher- and lower-load RT therefore induce similar muscle hypertrophy (at multiple physiological levels), while higher-load RT elicits superior 1-RM and isometric strength."
+  },
+  "lopez-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Lopez P",
+    "Radaelli R",
+    "Taaffe DR",
+    "Newton RU",
+    "Galvão DA",
+    "Trajano GS",
+    "Teodoro JL",
+    "Kraemer WJ",
+    "Häkkinen K",
+    "Pinto RS"
+   ],
+   "year": 2021,
+   "title": "Resistance Training Load Effects on Muscle Hypertrophy and Strength Gain: Systematic Review and Network Meta-analysis",
+   "journal": "Medicine & Science in Sports & Exercise",
+   "volume": "53",
+   "issue": "6",
+   "pages": "1206-1216",
+   "doi": "10.1249/mss.0000000000002585",
+   "pmid": "33433148",
+   "n_studies": 28,
+   "n_participants": 747,
+   "support": "CONCLUSIONS: Although muscle hypertrophy improvements seem to be load independent, increases in muscle strength are superior in high-load RT programs."
+  },
+  "morton-2016": {
+   "type": "rct",
+   "authors": [
+    "Morton RW",
+    "Oikawa SY",
+    "Wavell CG",
+    "Mazara N",
+    "McGlory C",
+    "Quadrilatero J",
+    "Baechler BL",
+    "Baker SK",
+    "Phillips SM"
+   ],
+   "year": 2016,
+   "title": "Neither load nor systemic hormones determine resistance training-mediated hypertrophy or strength gains in resistance-trained young men",
+   "journal": "Journal of Applied Physiology",
+   "volume": "121",
+   "issue": "1",
+   "pages": "129-138",
+   "doi": "10.1152/japplphysiol.00154.2016",
+   "pmid": "27174923",
+   "n_participants": 49,
+   "support": "Our data show that in resistance-trained individuals, load, when exercises are performed to volitional failure, does not dictate hypertrophy or, for the most part, strength gains."
+  },
+  "chaves-2024": {
+   "type": "rct",
+   "authors": [
+    "Chaves TS",
+    "Scarpelli MC",
+    "Bergamasco JGA",
+    "Silva DGd",
+    "Medalha Junior RA",
+    "Dias NF",
+    "Bittencourt D",
+    "Carello Filho PC",
+    "Angleri V",
+    "Nóbrega SR",
+    "Roberts MD",
+    "Ugrinowitsch C",
+    "Libardi CA"
+   ],
+   "year": 2024,
+   "title": "Effects of Resistance Training Overload Progression Protocols on Strength and Muscle Mass",
+   "journal": "International Journal of Sports Medicine",
+   "volume": "45",
+   "issue": "07",
+   "pages": "504-510",
+   "doi": "10.1055/a-2256-5857",
+   "pmid": "38286426",
+   "n_participants": 39,
+   "support": "In conclusion, our findings indicate that the progression of overload through load or repetitions can be used to promote gains in strength and muscle hypertrophy in young men and women in the early stages of training."
+  },
+  "hamarsland-2022": {
+   "type": "rct",
+   "authors": [
+    "Hamarsland H",
+    "Moen H",
+    "Skaar OJ",
+    "Jorang PW",
+    "Rødahl HS",
+    "Rønnestad BR"
+   ],
+   "year": 2022,
+   "title": "Equal-Volume Strength Training With Different Training Frequencies Induces Similar Muscle Hypertrophy and Strength Improvement in Trained Participants",
+   "journal": "Frontiers in Physiology",
+   "volume": "12",
+   "pages": "789403",
+   "doi": "10.3389/fphys.2021.789403",
+   "pmid": "35069251",
+   "n_participants": 21,
+   "support": "These results suggest that training frequency is less decisive when weekly training volume is equated."
+  },
+  "neves-2022": {
+   "type": "rct",
+   "authors": [
+    "Neves RP",
+    "Vechin FC",
+    "Teixeira EL",
+    "da Silva DD",
+    "Ugrinowitsch C",
+    "Roschel H",
+    "Aihara AY",
+    "Tricoli V"
+   ],
+   "year": 2022,
+   "title": "Effect of different training frequencies on maximal strength performance and muscle hypertrophy in trained individuals—a within-subject design",
+   "journal": "PLOS ONE",
+   "volume": "17",
+   "issue": "10",
+   "pages": "e0276154",
+   "doi": "10.1371/journal.pone.0276154",
+   "pmid": "36228016",
+   "n_participants": 24,
+   "support": "Therefore, RT performed three times a week showed similar increases in 1RM and CSA to the program performed once a week, regardless of training volume equalization."
+  },
+  "ramos-campo-2024": {
+   "type": "meta-analysis",
+   "authors": [
+    "Ramos-Campo DJ",
+    "Benito-Peinado PJ",
+    "Andreu-Caravaca L",
+    "Rojo-Tirado MA",
+    "Rubio-Arias JÁ"
+   ],
+   "year": 2024,
+   "title": "Efficacy of Split Versus Full-Body Resistance Training on Strength and Muscle Growth: A Systematic Review With Meta-Analysis",
+   "journal": "Journal of Strength & Conditioning Research",
+   "volume": "38",
+   "issue": "7",
+   "pages": "1330-1340",
+   "doi": "10.1519/jsc.0000000000004774",
+   "pmid": "38595233",
+   "n_studies": 14,
+   "n_participants": 392,
+   "support": "14 studies (392 subjects) that compared Sp and FB routines in terms of strength adaptations and muscle growth were included."
+  },
+  "pallares-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Pallarés JG",
+    "Hernández‐Belmonte A",
+    "Martínez‐Cava A",
+    "Vetrovsky T",
+    "Steffl M",
+    "Courel‐Ibáñez J"
+   ],
+   "year": 2021,
+   "title": "Effects of range of motion on resistance training adaptations: A systematic review and meta‐analysis",
+   "journal": "Scandinavian Journal of Medicine & Science in Sports",
+   "volume": "31",
+   "issue": "10",
+   "pages": "1866-1881",
+   "doi": "10.1111/sms.14006",
+   "pmid": "34170576",
+   "n_studies": 16,
+   "support": "CONCLUSION: Full ROM resistance training is more effective than partial ROM to maximize muscle strength and lower-limb muscle hypertrophy."
+  },
+  "gschneidner-2025": {
+   "type": "rct",
+   "authors": [
+    "Gschneidner D",
+    "Carlson L",
+    "Steele J",
+    "Fisher JP"
+   ],
+   "year": 2025,
+   "title": "The effects of lengthened-partial range of motion resistance training of the limbs on arm and thigh muscle area: A multi-site randomised trial",
+   "journal": "Journal of Sports Sciences",
+   "volume": "43",
+   "issue": "23",
+   "pages": "2963-2976",
+   "doi": "10.1080/02640414.2025.2567805",
+   "pmid": "41055237",
+   "support": "These findings support previous evidence comparing fROM and lpROM specifically and suggest that between condition effects are small and practically equivalent."
+  },
+  "havers-2025": {
+   "type": "rct",
+   "authors": [
+    "Havers T",
+    "Wagner N",
+    "Held S",
+    "Geisler S",
+    "Wiewelhove T"
+   ],
+   "year": 2025,
+   "title": "Partial Range, Full Gains? The Effect of 8 Weeks of Partial Range of Motion Training at Long Muscle Lengths on Elbow Flexor Hypertrophy and Strength in Trained Individuals",
+   "journal": "European Journal of Sport Science",
+   "volume": "25",
+   "issue": "12",
+   "pages": "e70087",
+   "doi": "10.1002/ejsc.70087",
+   "pmid": "41247250",
+   "n_participants": 13,
+   "support": "The results indicate that both training modalities can induce beneficial adaptations, with pROMinitial offering slight advantages in specific contexts."
+  },
+  "maeo-2021": {
+   "type": "rct",
+   "authors": [
+    "Maeo S",
+    "Huang M",
+    "Wu Y",
+    "Sakurai H",
+    "Kusagawa Y",
+    "Sugiyama T",
+    "Kanehisa H",
+    "Isaka T"
+   ],
+   "year": 2021,
+   "title": "Greater Hamstrings Muscle Hypertrophy but Similar Damage Protection after Training at Long versus Short Muscle Lengths",
+   "journal": "Medicine & Science in Sports & Exercise",
+   "volume": "53",
+   "issue": "4",
+   "pages": "825-837",
+   "doi": "10.1249/mss.0000000000002523",
+   "pmid": "33009197",
+   "support": "CONCLUSION: Hamstrings muscle size can be more effectively increased by seated than prone leg curl training, suggesting that training at long muscle lengths promotes muscle hypertrophy, but both are similarly effective in reducing susceptibility to muscle damage."
+  },
+  "maeo-2023": {
+   "type": "rct",
+   "authors": [
+    "Maeo S",
+    "Wu Y",
+    "Huang M",
+    "Sakurai H",
+    "Kusagawa Y",
+    "Sugiyama T",
+    "Kanehisa H",
+    "Isaka T"
+   ],
+   "year": 2023,
+   "title": "Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position",
+   "journal": "European Journal of Sport Science",
+   "volume": "23",
+   "issue": "7",
+   "pages": "1240-1250",
+   "doi": "10.1080/17461391.2022.2100279",
+   "pmid": "35819335",
+   "n_participants": 21,
+   "support": "In conclusion, triceps brachii hypertrophy was substantially greater after elbow extension training performed in the overhead versus neutral arm position, even with lower absolute loads used during the training.HighlightsGrowing evidence suggests that resistance training a"
+  },
+  "kassiano-2023": {
+   "type": "rct",
+   "authors": [
+    "Kassiano W",
+    "Costa B",
+    "Kunevaliki G",
+    "Soares D",
+    "Zacarias G",
+    "Manske I",
+    "Takaki Y",
+    "Ruggiero MF",
+    "Stavinski N",
+    "Francsuel J",
+    "Tricoli I",
+    "Carneiro MAS",
+    "Cyrino ES"
+   ],
+   "year": 2023,
+   "title": "Greater Gastrocnemius Muscle Hypertrophy After Partial Range of Motion Training Performed at Long Muscle Lengths",
+   "journal": "Journal of Strength & Conditioning Research",
+   "volume": "37",
+   "issue": "9",
+   "pages": "1746-1753",
+   "doi": "10.1519/jsc.0000000000004460",
+   "pmid": "37015016",
+   "n_participants": 42,
+   "support": "The current results suggest that calf training performed at longer muscle lengths may optimize gastrocnemius muscle hypertrophy in young women."
+  },
+  "desalles-2009": {
+   "type": "review",
+   "authors": [
+    "de Salles BF",
+    "Simão R",
+    "Miranda F",
+    "da Silva Novaes J",
+    "Lemos A",
+    "Willardson JM"
+   ],
+   "year": 2009,
+   "title": "Rest Interval between Sets in Strength Training",
+   "journal": "Sports Medicine",
+   "volume": "39",
+   "issue": "9",
+   "pages": "765-777",
+   "doi": "10.2165/11315230-000000000-00000",
+   "pmid": "19691365",
+   "n_studies": 35,
+   "support": "In terms of acute responses, a key finding was that when training with loads between 50% and 90% of one repetition maximum, 3-5 minutes' rest between sets allowed for greater repetitions over multiple sets."
+  },
+  "ahtiainen-2005": {
+   "type": "trial",
+   "authors": [
+    "Ahtiainen JP",
+    "Pakarinen A",
+    "Alen M",
+    "Kraemer WJ",
+    "Häkkinen K"
+   ],
+   "year": 2005,
+   "title": "Short vs. Long Rest Period Between the Sets in Hypertrophic Resistance Training: Influence on Muscle Strength, Size, and Hormonal Adaptations in Trained Men",
+   "journal": "The Journal of Strength and Conditioning Research",
+   "volume": "19",
+   "issue": "3",
+   "pages": "572",
+   "doi": "10.1519/15604.1",
+   "pmid": "16095405",
+   "n_participants": 13,
+   "support": "5 minutes) did not have an influence on the magnitude of acute hormonal and neuromuscular responses or long-term training adaptations in muscle strength and mass in previously strength-trained men."
+  },
+  "senna-2016": {
+   "type": "trial",
+   "authors": [
+    "Senna GW",
+    "Willardson JM",
+    "Scudese E",
+    "Simão R",
+    "Queiroz C",
+    "Avelar R",
+    "Martin Dantas EH"
+   ],
+   "year": 2016,
+   "title": "Effect of Different Interset Rest Intervals on Performance of Single and Multijoint Exercises With Near-Maximal Loads",
+   "journal": "Journal of Strength and Conditioning Research",
+   "volume": "30",
+   "issue": "3",
+   "pages": "710-716",
+   "doi": "10.1519/jsc.0000000000001142",
+   "pmid": "26907842",
+   "support": "In conclusion, to maintain the best consistency in repetition performance, rest intervals of 2 minutes between sets are sufficient for the MCF and 3-5 minutes for the BP."
+  },
+  "buresh-2009": {
+   "type": "rct",
+   "authors": [
+    "Buresh R",
+    "Berg K",
+    "French J"
+   ],
+   "year": 2009,
+   "title": "The Effect of Resistive Exercise Rest Interval on Hormonal Response, Strength, and Hypertrophy With Training",
+   "journal": "Journal of Strength and Conditioning Research",
+   "volume": "23",
+   "issue": "1",
+   "pages": "62-71",
+   "doi": "10.1519/jsc.0b013e318185f14a",
+   "pmid": "19077743",
+   "n_participants": 12,
+   "support": "Arm CSA increased more with LR (12.3 +/- 7.2%) than with SR (5.1 +/- 2.9%, p < 0.05)."
+  },
+  "bernardez-2022": {
+   "type": "systematic-review",
+   "authors": [
+    "Bernárdez-Vázquez R",
+    "Raya-González J",
+    "Castillo D",
+    "Beato M"
+   ],
+   "year": 2022,
+   "title": "Resistance Training Variables for Optimization of Muscle Hypertrophy: An Umbrella Review",
+   "journal": "Frontiers in Sports and Active Living",
+   "volume": "4",
+   "pages": "949021",
+   "doi": "10.3389/fspor.2022.949021",
+   "pmid": "35873210",
+   "n_studies": 178,
+   "n_participants": 4784,
+   "support": "Based on this umbrella review, we can state that at least 10 sets per week per muscle group is optimal, that eccentric contractions seem important, very slow repetitions (≥10 s) should be avoided, and that blood flow restriction might be beneficial for some individuals."
+  },
+  "amdi-2025": {
+   "type": "meta-analysis",
+   "authors": [
+    "Amdi CH",
+    "King A"
+   ],
+   "year": 2025,
+   "title": "The effect of eccentric phase duration on maximal strength, muscle hypertrophy and countermovement jump height: A systematic review and meta-analysis",
+   "journal": "Journal of Sports Sciences",
+   "volume": "43",
+   "issue": "20",
+   "pages": "2447-2464",
+   "doi": "10.1080/02640414.2025.2535198",
+   "pmid": "40692176",
+   "n_studies": 9,
+   "n_participants": 166,
+   "support": "SEG enhanced CMJ by a practically worthwhile degree with moderate certainty (Hedge's g = -0.73 [90% CI = -1.34, -0.12; 90% PI = -1.34, -0.12]), while uncertain estimates were observed for maximal strength (g = 0.25 [90% CI = -0.17, 0.67; 90% PI = -0.86, 1.36]) and muscle hypertrophy (g = 0.05 [90% CI = -0.22, 0.33; 90% PI = -0.54, 0.64])."
+  },
+  "hackett-2018": {
+   "type": "systematic-review",
+   "authors": [
+    "Hackett DA",
+    "Davies TB",
+    "Orr R",
+    "Kuang K",
+    "Halaki M"
+   ],
+   "year": 2018,
+   "title": "Effect of movement velocity during resistance training on muscle‐specific hypertrophy: A systematic review",
+   "journal": "European Journal of Sport Science",
+   "volume": "18",
+   "issue": "4",
+   "pages": "473-482",
+   "doi": "10.1080/17461391.2018.1434563",
+   "pmid": "29431597",
+   "n_studies": 6,
+   "n_participants": 119,
+   "support": "Caution is required when interpreting the findings from this review due to the low number of studies, hence insufficient data."
+  },
+  "wilk-2021": {
+   "type": "review",
+   "authors": [
+    "Wilk M",
+    "Zajac A",
+    "Tufano JJ"
+   ],
+   "year": 2021,
+   "title": "The Influence of Movement Tempo During Resistance Training on Muscular Strength and Hypertrophy Responses: A Review",
+   "journal": "Sports Medicine",
+   "volume": "51",
+   "issue": "8",
+   "pages": "1629-1650",
+   "doi": "10.1007/s40279-021-01465-2",
+   "pmid": "34043184",
+   "support": "To further elaborate on the already unclear anecdotal evidence of different movement tempos on muscle hypertrophy and strength development, one must acknowledge that the related scientific research does not provide equivocal evidence."
+  },
+  "sodal-2023": {
+   "type": "meta-analysis",
+   "authors": [
+    "Sødal LK",
+    "Kristiansen E",
+    "Larsen S",
+    "van den Tillaar R"
+   ],
+   "year": 2023,
+   "title": "Effects of Drop Sets on Skeletal Muscle Hypertrophy: A Systematic Review and Meta-analysis",
+   "journal": "Sports Medicine - Open",
+   "volume": "9",
+   "issue": "1",
+   "pages": "66",
+   "doi": "10.1186/s40798-023-00620-5",
+   "pmid": "37523092",
+   "n_studies": 6,
+   "n_participants": 142,
+   "support": "No significant between-group difference was found (standardized mean difference: 0.155, 95% CI - 0.199 to - 0.509, p = 0.392)."
+  },
+  "krzysztofik-2019": {
+   "type": "systematic-review",
+   "authors": [
+    "Krzysztofik M",
+    "Wilk M",
+    "Wojdała G",
+    "Gołaś A"
+   ],
+   "year": 2019,
+   "title": "Maximizing Muscle Hypertrophy: A Systematic Review of Advanced Resistance Training Techniques and Methods",
+   "journal": "International Journal of Environmental Research and Public Health",
+   "volume": "16",
+   "issue": "24",
+   "pages": "4897",
+   "doi": "10.3390/ijerph16244897",
+   "pmid": "31817252",
+   "n_studies": 30,
+   "support": "CONCLUSIONS: Due to insufficient evidence, it is difficult to provide specific guidelines for volume, intensity of effort, and frequency of previously mentioned RT techniques and methods."
+  },
+  "zhang-2025": {
+   "type": "meta-analysis",
+   "authors": [
+    "Zhang X",
+    "Weakley J",
+    "Li H",
+    "Li Z",
+    "García-Ramos A"
+   ],
+   "year": 2025,
+   "title": "Superset Versus Traditional Resistance Training Prescriptions: A Systematic Review and Meta-analysis Exploring Acute and Chronic Effects on Mechanical, Metabolic, and Perceptual Variables",
+   "journal": "Sports Medicine",
+   "volume": "55",
+   "issue": "4",
+   "pages": "953-975",
+   "doi": "10.1007/s40279-025-02176-8",
+   "pmid": "39903375",
+   "n_studies": 19,
+   "n_participants": 313,
+   "support": "RESULTS: Nineteen studies involving 313 participants were included."
+  },
+  "prestes-2019": {
+   "type": "rct",
+   "authors": [
+    "Prestes J",
+    "A. Tibana R",
+    "de Araujo Sousa E",
+    "da Cunha Nascimento D",
+    "de Oliveira Rocha P",
+    "F. Camarço N",
+    "Frade de Sousa NM",
+    "Willardson JM"
+   ],
+   "year": 2019,
+   "title": "Strength and Muscular Adaptations After 6 Weeks of Rest-Pause vs. Traditional Multiple-Sets Resistance Training in Trained Subjects",
+   "journal": "Journal of Strength and Conditioning Research",
+   "volume": "33",
+   "issue": "1",
+   "pages": "S113-S121",
+   "doi": "10.1519/jsc.0000000000001923",
+   "pmid": "28617715",
+   "n_participants": 18,
+   "support": "Eighteen trained subjects (mean ± SD; age = 30.2 ± 6.6 years; weight = 74.8 ± 17.2 kg; height = 171.4 ± 10.3 cm) were randomly assigned to either a traditional multiple-set group (n = 9; 7 men and 2 women; 3 sets of 6 repetitions with 80% of 1-repetition maximum (1RM) and 2-minute rest intervals between sets) or a rest-pause group (n = 9; 7 men and 2 women)."
+  },
+  "jukic-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Jukic I",
+    "Van Hooren B",
+    "Ramos AG",
+    "Helms ER",
+    "McGuigan MR",
+    "Tufano JJ"
+   ],
+   "year": 2021,
+   "title": "The Effects of Set Structure Manipulation on Chronic Adaptations to Resistance Training: A Systematic Review and Meta-Analysis",
+   "journal": "Sports Medicine",
+   "volume": "51",
+   "issue": "5",
+   "pages": "1061-1086",
+   "doi": "10.1007/s40279-020-01423-4",
+   "pmid": "33417154",
+   "n_studies": 17,
+   "support": "Pooled results revealed that none of the set structures were more effective at inducing strength (standardised mean difference (SMD) = - 0.06) or hypertrophy (SMD = - 0.03)."
+  },
+  "davies-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Davies TB",
+    "Tran DL",
+    "Hogan CM",
+    "Haff GG",
+    "Latella C"
+   ],
+   "year": 2021,
+   "title": "Chronic Effects of Altering Resistance Training Set Configurations Using Cluster Sets: A Systematic Review and Meta-Analysis",
+   "journal": "Sports Medicine",
+   "volume": "51",
+   "issue": "4",
+   "pages": "707-736",
+   "doi": "10.1007/s40279-020-01408-3",
+   "pmid": "33475986",
+   "n_studies": 29,
+   "support": "CONCLUSION: Collectively, both cluster and traditional set configurations demonstrate equal effectiveness to positively induce muscular and neuromuscular adaptation(s)."
+  },
+  "lixandrao-2018": {
+   "type": "meta-analysis",
+   "authors": [
+    "Lixandrão ME",
+    "Ugrinowitsch C",
+    "Berton R",
+    "Vechin FC",
+    "Conceição MS",
+    "Damas F",
+    "Libardi CA",
+    "Roschel H"
+   ],
+   "year": 2018,
+   "title": "Magnitude of Muscle Strength and Mass Adaptations Between High-Load Resistance Training Versus Low-Load Resistance Training Associated with Blood-Flow Restriction: A Systematic Review and Meta-Analysis",
+   "journal": "Sports Medicine",
+   "volume": "48",
+   "issue": "2",
+   "pages": "361-378",
+   "doi": "10.1007/s40279-017-0795-y",
+   "pmid": "29043659",
+   "support": "CONCLUSIONS: Based on the present data, maximum muscle strength may be optimized by specific training methods (i.e., HL-RT) while both HL- and BFR-RT seem equally effective in increasing muscle mass."
+  },
+  "patterson-2019": {
+   "type": "position",
+   "authors": [
+    "Patterson SD",
+    "Hughes L",
+    "Warmington S",
+    "Burr J",
+    "Scott BR",
+    "Owens J",
+    "Abe T",
+    "Nielsen JL",
+    "Libardi CA",
+    "Laurentino G",
+    "Neto GR",
+    "Brandner C",
+    "Martin-Hernandez J",
+    "Loenneke J"
+   ],
+   "year": 2019,
+   "title": "Blood Flow Restriction Exercise: Considerations of Methodology, Application, and Safety",
+   "journal": "Frontiers in Physiology",
+   "volume": "10",
+   "pages": "533",
+   "doi": "10.3389/fphys.2019.00533",
+   "pmid": "31156448",
+   "support": "The current manuscript sets out a position stand for blood flow restriction (BFR) exercise, focusing on the methodology, application and safety of this mode of training."
+  },
+  "simao-2012": {
+   "type": "review",
+   "authors": [
+    "Simão R",
+    "de Salles BF",
+    "Figueiredo T",
+    "Dias I",
+    "Willardson JM"
+   ],
+   "year": 2012,
+   "title": "Exercise Order in Resistance Training",
+   "journal": "Sports Medicine",
+   "volume": "42",
+   "issue": "3",
+   "pages": "251-265",
+   "doi": "10.2165/11597240-000000000-00000",
+   "pmid": "22292516",
+   "support": "Generally, with relevance to acute responses, a key finding was that exercise order affects repetition performance over multiple sets, indicating that the total repetitions, and thus the volume, is greater when an exercise is placed at the beginning of an RT session, regardless of the relative amount of muscle mass involved."
+  },
+  "fisher-2014": {
+   "type": "rct",
+   "authors": [
+    "Fisher JP",
+    "Carlson L",
+    "Steele J",
+    "Smith D"
+   ],
+   "year": 2014,
+   "title": "The effects of pre-exhaustion, exercise order, and rest intervals in a full-body resistance training intervention",
+   "journal": "Applied Physiology, Nutrition, and Metabolism",
+   "volume": "39",
+   "issue": "11",
+   "pages": "1265-1270",
+   "doi": "10.1139/apnm-2014-0162",
+   "pmid": "25092528",
+   "n_participants": 39,
+   "support": "In conclusion, PreEx training offers no greater benefit to performing the same exercises with rest between them compared with exercises performed in an order that prioritises compound movements."
+  },
+  "fradkin-2010": {
+   "type": "meta-analysis",
+   "authors": [
+    "Fradkin AJ",
+    "Zazryn TR",
+    "Smoliga JM"
+   ],
+   "year": 2010,
+   "title": "Effects of Warming-up on Physical Performance: A Systematic Review With Meta-analysis",
+   "journal": "Journal of Strength and Conditioning Research",
+   "volume": "24",
+   "issue": "1",
+   "pages": "140-148",
+   "doi": "10.1519/jsc.0b013e3181c643a0",
+   "pmid": "19996770",
+   "n_studies": 32,
+   "support": "Warm-up was shown to improve performance in 79% of the criterions examined."
+  },
+  "behm-2016": {
+   "type": "systematic-review",
+   "authors": [
+    "Behm DG",
+    "Blazevich AJ",
+    "Kay AD",
+    "McHugh M"
+   ],
+   "year": 2016,
+   "title": "Acute effects of muscle stretching on physical performance, range of motion, and injury incidence in healthy active individuals: a systematic review",
+   "journal": "Applied Physiology, Nutrition, and Metabolism",
+   "volume": "41",
+   "issue": "1",
+   "pages": "1-11",
+   "doi": "10.1139/apnm-2015-0235",
+   "pmid": "26642915",
+   "support": "A dose-response relationship illustrated greater performance deficits with ≥60 s (-4.6%) than with <60 s (-1.1%) SS per muscle group."
+  },
+  "souza-2024": {
+   "type": "rct",
+   "authors": [
+    "Souza D",
+    "Silva AG",
+    "Vale A",
+    "Pessoni A",
+    "Galvão L",
+    "Araújo MA",
+    "de Paula Júnior C",
+    "Vieira C",
+    "Vieira A",
+    "Gentil P"
+   ],
+   "year": 2024,
+   "title": "Effect of warm-up protocols using lower and higher loads on multiple-set back squat volume-load",
+   "journal": "PeerJ",
+   "volume": "12",
+   "pages": "e17347",
+   "doi": "10.7717/peerj.17347",
+   "pmid": "39006036",
+   "support": "CONCLUSION: High or low equated-load CA used as warm-up strategies did not potentiate subsequent performance enhancement in multiple-set back squat exercise performed until muscle failure in comparison with usual warm-up."
+  },
+  "bell-2023": {
+   "type": "other",
+   "authors": [
+    "Bell L",
+    "Strafford BW",
+    "Coleman M",
+    "Androulakis Korakakis P",
+    "Nolan D"
+   ],
+   "year": 2023,
+   "title": "Integrating Deloading into Strength and Physique Sports Training Programmes: An International Delphi Consensus Approach",
+   "journal": "Sports Medicine - Open",
+   "volume": "9",
+   "issue": "1",
+   "pages": "87",
+   "doi": "10.1186/s40798-023-00633-0",
+   "pmid": "37730925",
+   "support": "A consensus definition is proposed: \"Deloading is a period of reduced training stress designed to mitigate physiological and psychological fatigue, promote recovery, and enhance preparedness for subsequent training.\" These findings contribute novel knowledge that might advance the current understanding of deloading in strength and physique sports."
+  },
+  "rogerson-2024": {
+   "type": "other",
+   "authors": [
+    "Rogerson D",
+    "Nolan D",
+    "Korakakis PA",
+    "Immonen V",
+    "Wolf M",
+    "Bell L"
+   ],
+   "year": 2024,
+   "title": "Deloading Practices in Strength and Physique Sports: A Cross-sectional Survey",
+   "journal": "Sports Medicine - Open",
+   "volume": "10",
+   "issue": "1",
+   "pages": "26",
+   "doi": "10.1186/s40798-024-00691-y",
+   "pmid": "38499934",
+   "n_participants": 246,
+   "support": "The typical duration of a deload was 6.4 ± 1.7 days, integrated into the training programme every 5.6 ± 2.3 weeks."
+  },
+  "pancar-2026": {
+   "type": "rct",
+   "authors": [
+    "Pancar Z",
+    "Ilhan MT",
+    "Darendeli MK",
+    "Karaca B",
+    "Ikidag MA",
+    "Tasdogan AM",
+    "Ulema MS",
+    "Alkhamees NH",
+    "Al-Mhanna SB",
+    "Batrakoulis A"
+   ],
+   "year": 2026,
+   "title": "Effects of deload periods in resistance training on muscle hypertrophy and strength endurance in untrained young men using a randomized within subject design",
+   "journal": "Scientific Reports",
+   "volume": "16",
+   "issue": "1",
+   "pages": "10299",
+   "doi": "10.1038/s41598-026-40612-5",
+   "pmid": "41730991",
+   "n_participants": 19,
+   "support": "In conclusion, reducing training volume and frequency at the midpoint and endpoint of an 8-week resistance training program does not appear to hinder adaptations in muscle hypertrophy and strength-endurance in untrained young men."
+  },
+  "moesgaard-2022": {
+   "type": "meta-analysis",
+   "authors": [
+    "Moesgaard L",
+    "Beck MM",
+    "Christiansen L",
+    "Aagaard P",
+    "Lundbye-Jensen J"
+   ],
+   "year": 2022,
+   "title": "Effects of Periodization on Strength and Muscle Hypertrophy in Volume-Equated Resistance Training Programs: A Systematic Review and Meta-analysis",
+   "journal": "Sports Medicine",
+   "volume": "52",
+   "issue": "7",
+   "pages": "1647-1666",
+   "doi": "10.1007/s40279-021-01636-1",
+   "pmid": "35044672",
+   "n_studies": 35,
+   "support": "Periodization of volume and intensity does not seem to affect muscle hypertrophy in volume-equated pre-post designs."
+  },
+  "defreitas-2011": {
+   "type": "trial",
+   "authors": [
+    "DeFreitas JM",
+    "Beck TW",
+    "Stock MS",
+    "Dillon MA",
+    "Kasishke PR"
+   ],
+   "year": 2011,
+   "title": "An examination of the time course of training-induced skeletal muscle hypertrophy",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "111",
+   "issue": "11",
+   "pages": "2785-2790",
+   "doi": "10.1007/s00421-011-1905-4",
+   "pmid": "21409401",
+   "n_participants": 25,
+   "support": "Therefore, significant skeletal muscle hypertrophy likely occurred around weeks 3-4."
+  },
+  "damas-2016": {
+   "type": "trial",
+   "authors": [
+    "Damas F",
+    "Phillips SM",
+    "Lixandrão ME",
+    "Vechin FC",
+    "Libardi CA",
+    "Roschel H",
+    "Tricoli V",
+    "Ugrinowitsch C"
+   ],
+   "year": 2016,
+   "title": "Early resistance training-induced increases in muscle cross-sectional area are concomitant with edema-induced muscle swelling",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "116",
+   "issue": "1",
+   "pages": "49-56",
+   "doi": "10.1007/s00421-015-3243-4",
+   "pmid": "26280652",
+   "support": "RESULT: Muscle CSA increased significantly at T2 (~2.7%) and T3 (~10.4%) versus T1."
+  },
+  "damas-2018": {
+   "type": "review",
+   "authors": [
+    "Damas F",
+    "Libardi CA",
+    "Ugrinowitsch C"
+   ],
+   "year": 2018,
+   "title": "The development of skeletal muscle hypertrophy through resistance training: the role of muscle damage and muscle protein synthesis",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "118",
+   "issue": "3",
+   "pages": "485-500",
+   "doi": "10.1007/s00421-017-3792-9",
+   "pmid": "29282529",
+   "support": "Thus, we conclude that muscle damage is not the process that mediates or potentiates RT-induced muscle hypertrophy."
+  },
+  "craven-2022": {
+   "type": "meta-analysis",
+   "authors": [
+    "Craven J",
+    "McCartney D",
+    "Desbrow B",
+    "Sabapathy S",
+    "Bellinger P",
+    "Roberts L",
+    "Irwin C"
+   ],
+   "year": 2022,
+   "title": "Effects of Acute Sleep Loss on Physical Performance: A Systematic and Meta-Analytical Review",
+   "journal": "Sports Medicine",
+   "volume": "52",
+   "issue": "11",
+   "pages": "2669-2690",
+   "doi": "10.1007/s40279-022-01706-y",
+   "pmid": "35708888",
+   "support": "Results indicated a negative impact of sleep loss on the percentage change (%Δ) in exercise performance (n = 959 [89%] male; mean %Δ = - 7.56%, 95% CI - 11.9 to - 3.13, p = 0.001, I2 = 98.1%)."
+  },
+  "knowles-2018": {
+   "type": "systematic-review",
+   "authors": [
+    "Knowles OE",
+    "Drinkwater EJ",
+    "Urwin CS",
+    "Lamon S",
+    "Aisbett B"
+   ],
+   "year": 2018,
+   "title": "Inadequate sleep and muscle strength: Implications for resistance training",
+   "journal": "Journal of Science and Medicine in Sport",
+   "volume": "21",
+   "issue": "9",
+   "pages": "959-968",
+   "doi": "10.1016/j.jsams.2018.01.012",
+   "pmid": "29422383",
+   "n_studies": 17,
+   "support": "CONCLUSION: Inadequate sleep impairs maximal muscle strength in compound movements when performed without specific interventions designed to increase motivation."
+  },
+  "lamon-2021": {
+   "type": "trial",
+   "authors": [
+    "Lamon S",
+    "Morabito A",
+    "Arentson‐Lantz E",
+    "Knowles O",
+    "Vincent GE",
+    "Condo D",
+    "Alexander SE",
+    "Garnham A",
+    "Paddon‐Jones D",
+    "Aisbett B"
+   ],
+   "year": 2021,
+   "title": "The effect of acute sleep deprivation on skeletal muscle protein synthesis and the hormonal environment",
+   "journal": "Physiological Reports",
+   "volume": "9",
+   "issue": "1",
+   "doi": "10.14814/phy2.14660",
+   "pmid": "33400856",
+   "n_participants": 13,
+   "support": "Acute sleep deprivation reduced muscle protein synthesis by 18% (CON: 0.072 ± 0.015% vs."
+  },
+  "steele-2022": {
+   "type": "systematic-review",
+   "authors": [
+    "Steele J",
+    "Malleron T",
+    "Har-Nir I",
+    "Androulakis-Korakakis P",
+    "Wolf M",
+    "Fisher JP",
+    "Halperin I"
+   ],
+   "year": 2022,
+   "title": "Are Trainees Lifting Heavy Enough? Self-Selected Loads in Resistance Exercise: A Scoping Review and Exploratory Meta-analysis",
+   "journal": "Sports Medicine",
+   "volume": "52",
+   "issue": "12",
+   "pages": "2909-2923",
+   "doi": "10.1007/s40279-022-01717-9",
+   "pmid": "35790622",
+   "support": "CONCLUSIONS: Participants selected loads equal to an average of 53% of 1RM across exercises."
+  },
+  "scarpelli-2022": {
+   "type": "rct",
+   "authors": [
+    "Scarpelli MC",
+    "Nóbrega SR",
+    "Santanielo N",
+    "Alvarez IF",
+    "Otoboni GB",
+    "Ugrinowitsch C",
+    "Libardi CA"
+   ],
+   "year": 2022,
+   "title": "Muscle Hypertrophy Response Is Affected by Previous Resistance Training Volume in Trained Individuals",
+   "journal": "Journal of Strength & Conditioning Research",
+   "volume": "36",
+   "issue": "4",
+   "pages": "1153-1157",
+   "doi": "10.1519/jsc.0000000000003558",
+   "pmid": "32108724",
+   "n_participants": 16,
+   "support": "Changes in the vastus lateralis CSA (difference from Pre to Post) were significantly higher for the IND protocol (p = 0.042; mean difference: 1.08 cm2; confidence interval [CI]: 0.04-2.11)."
+  }
+ }
+}

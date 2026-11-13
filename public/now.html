@@ -14,7 +14,6 @@
   body { background: #ece2cb; }
   a { color: inherit; text-decoration: none; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
-  @keyframes barfill { from { width: 0; } }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @keyframes spin { to { transform: rotate(360deg); } }
   .hv1:hover { color:#2f5436; }
@@ -23,15 +22,6 @@
   .hv4:hover { color:#d8b07a; }
   .hv6:hover { text-decoration:underline; }
   /* --- v2 page helpers (Now) --- */
-  .nbar { height:10px; border-radius:20px; background:rgba(34,28,16,.12); overflow:hidden; }
-  .nbar.sm { height:9px; }
-  .nfill { height:100%; border-radius:20px; width:var(--w); animation:barfill 1.1s var(--d,.1s) cubic-bezier(.2,.8,.2,1) both; }
-  .nfill.g { background:repeating-linear-gradient(135deg,#2f5436 0 7px,#3a6b46 7px 14px); }
-  .nfill.a { background:repeating-linear-gradient(135deg,#b07227 0 7px,#d8b07a 7px 14px); }
-  .nfill.plain { animation:none; width:0; transition:width .8s ease; }
-  html[data-theme="dark"] .nbar { background:rgba(236,226,203,.12); }
-  html[data-theme="dark"] .nfill.g { background:repeating-linear-gradient(135deg,#5c8f68 0 7px,#48734f 7px 14px); }
-  html[data-theme="dark"] .nfill.a { background:repeating-linear-gradient(135deg,#c98d43 0 7px,#9c6b2c 7px 14px); }
   .lift { transition:transform .22s ease, box-shadow .22s ease; }
   .lift:hover { transform:translateY(-4px); box-shadow:0 14px 28px rgba(34,28,16,.13); }
   html[data-theme="dark"] .lift:hover { box-shadow:0 14px 28px rgba(0,0,0,.5); }
@@ -48,7 +38,7 @@
   @media (max-width:900px) { .motion-grid { grid-template-columns:1fr; } }
 </style>
   <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-  <link rel="stylesheet" href="/ks.css">
+  <link rel="stylesheet" href="/ks.css?v=2027.6">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/now">
@@ -75,12 +65,12 @@
   <!-- ===================== TICKER ===================== -->
   <div style="background:#1f3024;overflow:hidden;border-bottom:1px solid rgba(34,28,16,.2)">
     <div style="display:flex;width:max-content;white-space:nowrap;animation:marquee 32s linear infinite">
-      <span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#d8b07a;padding:9px 0;text-transform:uppercase">NOW — JULY 2026&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;SEASON: SUMMER&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;BUILDING: VANTIX β0.4 + ORC&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;CLUB: JULY SESSION&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;LIFTS: ARMS + SHOULDERS&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;LAST WATERED: JUL 16&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;</span>
-      <span aria-hidden="true" style="font:500 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#d8b07a;padding:9px 0;text-transform:uppercase">NOW — JULY 2026&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;SEASON: SUMMER&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;BUILDING: VANTIX β0.4 + ORC&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;CLUB: JULY SESSION&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;LIFTS: ARMS + SHOULDERS&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;LAST WATERED: JUL 16&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;</span>
+      <span style="font:500 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#d8b07a;padding:9px 0;text-transform:uppercase">NOW&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;BUILDING: VANTIX FREE CORE&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;NEW: AI CONCIERGE&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;CLUB: BACK 30 JAN 2027&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;SONG OF THE DAY: COMING SOON&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;</span>
+      <span aria-hidden="true" style="font:500 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#d8b07a;padding:9px 0;text-transform:uppercase">NOW&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;BUILDING: VANTIX FREE CORE&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;NEW: AI CONCIERGE&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;CLUB: BACK 30 JAN 2027&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;SONG OF THE DAY: COMING SOON&nbsp;&nbsp;<span style="color:#ece2cb">✱</span>&nbsp;&nbsp;</span>
     </div>
   </div>
 
-  <!-- ===================== HERO + FRESHNESS ===================== -->
+  <!-- ===================== HERO + LAST UPDATED ===================== -->
   <section style="padding:clamp(40px,6vw,68px) clamp(20px,4vw,40px) clamp(30px,4vw,44px);max-width:1180px;margin:0 auto">
     <div style="display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,52px);align-items:flex-end;justify-content:space-between">
       <div style="flex:1 1 460px;min-width:0">
@@ -91,12 +81,9 @@
         <p style="font:400 19px/1.65 'Geist',sans-serif;color:#5e5238;margin:24px 0 0;max-width:560px">The season at a glance — what's in motion, what's on the turntable, what's under the bar. This page is a plant: I water it when the season changes.</p>
       </div>
       <div style="flex:0 1 300px;min-width:250px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:22px 24px">
-        <div style="display:flex;justify-content:space-between;align-items:baseline">
-          <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#6f6040">FRESHNESS</span>
-          <span id="freshPct" style="font:800 34px 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436">100%</span>
-        </div>
-        <div class="nbar" style="margin-top:10px"><div id="freshFill" class="nfill g plain" style="width:100%"></div></div>
-        <div style="font:400 11px/1.6 'Geist Mono',monospace;color:#6f6040;margin-top:10px">watered <span id="freshAgo">today</span> · composts in 30 days</div>
+        <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#6f6040">LAST UPDATED</span>
+        <!-- The page's one date. Change it here whenever the page is updated. -->
+        <div style="font:800 34px/1.1 'Geist',sans-serif;letter-spacing:-.03em;color:#2f5436;margin-top:8px"><time datetime="2026-11-13">13 Nov 2026</time></div>
       </div>
     </div>
   </section>
@@ -142,63 +129,59 @@
       <a href="/vantix" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
           <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Vantix</span>
-          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px">BETA</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px;white-space:nowrap">IN PROGRESS</span>
         </div>
-        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">Closed beta 0.4 out to 12 lifters. Chasing the boring bugs before the fun ones.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>progress</span><span style="color:#2f5436;font-weight:600">62%</span></div>
-        <div class="nbar sm"><div class="nfill g" style="--w:62%;--d:.1s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUL 01</div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">The free core, v1.0, is in progress. The target is 31 December 2026.</p>
       </a>
-      <a href="/backline" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+      <a href="/consulting#concierge" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
-          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Backline</span>
-          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px">NEW</span>
+          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">AI concierge</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px;white-space:nowrap">NEW</span>
         </div>
-        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">Hero direction locked this week. Now building the shell around it.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>progress</span><span style="color:#8a5a18;font-weight:600">18%</span></div>
-        <div class="nbar sm"><div class="nfill a" style="--w:18%;--d:.2s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUL 08</div>
-      </a>
-      <a href="/campground-tycoon" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
-          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Campground Tycoon</span>
-          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px">UPDATE</span>
-        </div>
-        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">Fall update in the oven: ranger routes and a proper season pass.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>progress</span><span style="color:#2f5436;font-weight:600">38%</span></div>
-        <div class="nbar sm"><div class="nfill g" style="--w:38%;--d:.3s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUN 30</div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">A one-time or ongoing role: I learn your industry, watch how the work gets done, then fix what slows it down.</p>
       </a>
       <a href="/listening-club" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
           <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Listening Club</span>
-          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px">MONTHLY</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px;white-space:nowrap">BACK 30 JAN</span>
         </div>
-        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">July session posted — three albums, one quiet afternoon. Notes pending.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>this month</span><span style="color:#8a5a18;font-weight:600">66%</span></div>
-        <div class="nbar sm"><div class="nfill a" style="--w:66%;--d:.4s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">last touched · JUL 05</div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">Starting fresh for 2027. The inaugural session is Saturday 30 January; after that, the last Saturday of every month.</p>
       </a>
-      <a href="https://github.com/trumankitos13/tkl-orc" target="_blank" rel="noopener" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+      <a href="/song-of-the-day" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
-          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">ORC</span>
-          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px">VAULT</span>
+          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Song of the Day</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px;white-space:nowrap">COMING SOON</span>
         </div>
-        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">The operating layer for my Obsidian knowledge base — useful to me and the agents working beside me.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>migration</span><span style="color:#2f5436;font-weight:600">44%</span></div>
-        <div class="nbar sm"><div class="nfill g" style="--w:44%;--d:.5s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">tkl-orc on GitHub ↗</div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">One curated song every day, with the story behind it. An iOS app.</p>
+      </a>
+      <a href="/stage-first" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
+          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Stage First</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px;white-space:nowrap">PROTOTYPE</span>
+        </div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">The business side of a live show. The staffing app, called Backline until now, is in a staging beta; the closeout is at design stage.</p>
+      </a>
+      <a href="/campground-tycoon" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
+          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Campground Tycoon</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px;white-space:nowrap">LIVE · DEMO</span>
+        </div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">An isometric campground sim. The demo plays in your browser.</p>
       </a>
       <div class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
           <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">The idea shelf</span>
-          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px">INCUBATING</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#8a5a18;border:1.5px solid #b07227;border-radius:30px;padding:3px 9px;white-space:nowrap">INCUBATING</span>
         </div>
-        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0 0 16px">Personal-vault migration, ModelFUT, and Vending Machines — loose parts waiting to become projects.</p>
-        <div style="display:flex;justify-content:space-between;font:500 11px 'Geist Mono',monospace;color:#6f6040;margin-bottom:6px"><span>signal strength</span><span style="color:#8a5a18;font-weight:600">12%</span></div>
-        <div class="nbar sm"><div class="nfill a" style="--w:12%;--d:.6s"></div></div>
-        <div style="font:400 11px 'Geist Mono',monospace;color:#6f6040;margin-top:12px">many ideas · no promises</div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">Personal-vault migration, ModelFUT, and Vending Machines — loose parts waiting to become projects. Many ideas, no promises.</p>
       </div>
+      <a href="/library" class="lift" style="display:block;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
+          <span style="font:700 20px 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">This site</span>
+          <span style="font:600 10px 'Geist Mono',monospace;letter-spacing:.12em;color:#2f5436;border:1.5px solid #2f5436;border-radius:30px;padding:3px 9px;white-space:nowrap">REFRESHED</span>
+        </div>
+        <p style="font:400 14px/1.55 'Geist',sans-serif;color:#5e5238;margin:0">Reorganised into five sections, with new Fitness, Music and Library pages. Everything is in the Library.</p>
+      </a>
     </div>
   </section>
 
@@ -217,7 +200,7 @@
             <p style="font:400 13px/1.55 'Geist',sans-serif;color:rgba(236,226,203,.7);margin:6px 0 0">Ambient Americana in general — cicadas buzzing through the pulsing summer heat.</p>
           </div>
         </div>
-        <a href="/song-of-the-day" style="font:600 12px 'Geist Mono',monospace;color:#d8b07a" class="hv6">today's Song of the Day is up →</a>
+        <a href="/song-of-the-day" style="font:600 12px 'Geist Mono',monospace;color:#d8b07a" class="hv6">Song of the Day is coming soon →</a>
       </div>
       <div style="background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
         <span style="font:600 11px 'Geist Mono',monospace;letter-spacing:.14em;color:#6f6040">UNDER THE BAR</span>
@@ -245,9 +228,10 @@
   <section style="padding:clamp(28px,4vw,44px) clamp(20px,4vw,40px) clamp(48px,7vw,72px);max-width:1180px;margin:0 auto">
     <h2 style="font:800 clamp(30px,4.4vw,48px)/.98 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0 0 22px"><span style="color:#2f5436;font-size:.55em;vertical-align:middle">✱ </span>Changelog</h2>
     <div style="background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;padding:8px clamp(20px,3vw,28px)">
-      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">JUL 16</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Watered <a href="/now" style="color:#2f5436;font-weight:600" class="hv6">Now</a>, refreshed About and Uses, added ORC to the bench, and swapped in a new featured read.</span></div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">NOV 13</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Reorganised the site into five sections with new <a href="/fitness" style="color:#2f5436;font-weight:600" class="hv6">Fitness</a>, <a href="/music" style="color:#2f5436;font-weight:600" class="hv6">Music</a> and <a href="/library" style="color:#2f5436;font-weight:600" class="hv6">Library</a> pages, restarted the Listening Club for 2027, and wrote up the AI concierge.</span></div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">JUL 16</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Watered <a href="/now" style="color:#2f5436;font-weight:600" class="hv6">Now</a>, refreshed About and Uses, and swapped in a new featured read.</span></div>
       <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">JUL 12</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Rebuilt Song of the Day as a mobile-first, app-forward landing and cleaned up its support details.</span></div>
-      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">JUL 11</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Turned Campground Tycoon into a four-page site, upgraded About and Now, and added the <a href="/backline" style="color:#2f5436;font-weight:600" class="hv6">Backline</a> hero card.</span></div>
+      <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">JUL 11</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Turned Campground Tycoon into a four-page site, upgraded About and Now, and added the <a href="/stage-first" style="color:#2f5436;font-weight:600" class="hv6">Backline</a> hero card.</span></div>
       <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px dashed rgba(34,28,16,.22)"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">JUL 08</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Stocked the games shelf, reordered the nav, corrected the Uses tooling, and gave the site a coherence pass.</span></div>
       <div style="display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:baseline;padding:15px 0"><span style="font:600 12px 'Geist Mono',monospace;color:#8a5a18">JUL 05</span><span style="font:400 15px/1.5 'Geist',sans-serif;color:#221c10">Opened the <a href="/listening-club" style="color:#2f5436;font-weight:600" class="hv6">Album Listening Club</a> — three albums, one quiet afternoon.</span></div>
     </div>
@@ -260,11 +244,10 @@
 
 </div>
 
-<script src="/ks.js"></script>
+<script src="/ks.js?v=2027.6"></script>
 <script>
-  // Daily-loop needle + "probably" activity (live), and the freshness meter.
+  // Daily-loop needle + "probably" activity (live).
   (function () {
-    var LAST = new Date(2026, 6, 16);           // Jul 16 2026 — bump when the page is watered
     var wrap = document.getElementById("nowNeedleWrap");
     var actEl = document.getElementById("nowActivity");
     function activityFor(d) {
@@ -294,13 +277,6 @@
     }
     tick();
     setInterval(tick, 1000);
-    // freshness — decays 100 → 4 over 30 days since LAST
-    var days = Math.max(0, Math.floor((Date.now() - LAST.getTime()) / 864e5));
-    var pct = Math.max(4, 100 - Math.round(days * 100 / 30));
-    var pctEl = document.getElementById("freshPct"), fill = document.getElementById("freshFill"), ago = document.getElementById("freshAgo");
-    if (pctEl) pctEl.textContent = pct + "%";
-    if (fill) requestAnimationFrame(function () { fill.style.width = pct + "%"; });
-    if (ago) ago.textContent = days === 0 ? "today" : days === 1 ? "yesterday" : days + " days ago";
   })();
 </script>
 </body>

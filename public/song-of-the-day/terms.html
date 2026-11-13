@@ -7,7 +7,7 @@
 <meta name="description" content="The terms for using Song of the Day, kept plain.">
 <link rel="canonical" href="https://kitesink.com/song-of-the-day/terms">
 <meta name="theme-color" content="#f7f1e6">
-<link rel="stylesheet" href="/ks.css">
+<link rel="stylesheet" href="/ks.css?v=2027.6">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,23 +19,31 @@
  .wrap{max-width:720px;margin:0 auto;padding:52px 22px 76px}
  h1{font-size:clamp(34px,6vw,52px);line-height:1.04;letter-spacing:-.02em;margin:0 0 8px}
  h2{font-size:23px;margin:40px 0 10px;letter-spacing:-.01em;color:#1d1a17}
- p,li{color:#3b342b} a{color:#B5571F}
+ p,li{color:#3b342b} a{color:#9a4a1a}
  ul{padding-left:20px} li{margin:7px 0}
  code{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.84em;background:rgba(181,87,31,.1);padding:1px 6px;border-radius:5px}
- .updated{font-family:'JetBrains Mono',monospace;font-size:13px;color:#8a7d6a;letter-spacing:.02em;margin:0 0 30px}
+ .updated{font-family:'JetBrains Mono',monospace;font-size:13px;color:#6b5f4d;letter-spacing:.02em;margin:0 0 30px}
  .updated strong{font-weight:500}
- .back{display:inline-block;margin:34px 0 0;font-family:'JetBrains Mono',monospace;font-size:13px;color:#B5571F;text-decoration:none}
+ .back{display:inline-block;margin:34px 0 0;font-family:'JetBrains Mono',monospace;font-size:13px;color:#9a4a1a;text-decoration:none}
  .back:hover{text-decoration:underline}
  .ks-link{transition:color .15s} .ks-link:hover{color:#2f5436!important}
- :focus-visible{outline:2px solid #B5571F;outline-offset:2px}
+ :focus-visible{outline:2px solid #9a4a1a;outline-offset:2px}
  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+ /* the site theme reaches these pages through ks.css, so they follow it */
+ html[data-theme="dark"] body{background:#16130d;color:#ece2cb}
+ html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] strong{color:#f2ead6}
+ html[data-theme="dark"] p,html[data-theme="dark"] li,html[data-theme="dark"] td,html[data-theme="dark"] th,html[data-theme="dark"] dd,html[data-theme="dark"] dt{color:#cfc4a8}
+ html[data-theme="dark"] a,html[data-theme="dark"] .back{color:#eda673}
+ html[data-theme="dark"] .updated,html[data-theme="dark"] .updated strong{color:#a99a7b}
+ html[data-theme="dark"] code{background:rgba(237,166,115,.16);color:#f2ead6}
+ html[data-theme="dark"] :focus-visible{outline-color:#eda673}
 </style>
 </head>
 <body>
 <div data-ks="bar"></div>
 <div class="wrap">
 <h1>Terms of Service</h1>
-<p class="updated"><strong>Last updated: June 22, 2026</strong></p>
+<p class="updated"><strong>Last updated: November 13, 2026</strong></p>
 <p>These are the terms for using Song of the Day. We've kept them plain, because terms you can't read aren't terms you've agreed to.</p>
 <h2>Acceptance</h2>
 <p>By using the app, you agree to these terms. If you don't, that's okay — just don't use the app.</p>
@@ -50,12 +58,12 @@
 <h2>Termination</h2>
 <p>We can suspend or close accounts that abuse the service. You can delete yours at any time — Settings → Account → Delete account — and everything goes with it.</p>
 <h2>Governing law</h2>
-<p>These terms are governed by the laws of <strong>&lt;TODO: jurisdiction&gt;</strong>, without regard to its conflict-of-laws rules. *(The owner will set this once the company is incorporated.)*</p>
+<p>These terms are governed by the laws of the United States, without regard to conflict-of-laws rules.</p>
 <h2>Contact</h2>
-<p>Questions about these terms? Email <a href="mailto:legal@songoftheday.app">legal@songoftheday.app</a>.</p>
+<p>Questions about these terms? Email <a href="mailto:hello@kitesink.com">hello@kitesink.com</a>.</p>
 <a class="back" href="/song-of-the-day">&larr; Back to Song of the Day</a>
 </div>
 <div style="background:#ece2cb;border-top:1px solid rgba(34,28,16,.18);padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;color:#6f6040"><span style="color:#221c10">&copy; 2026 KiteSink</span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/song-of-the-day" class="ks-link" style="color:#5e5238;text-decoration:none">Song of the Day</a><a href="/" class="ks-link" style="color:#5e5238;text-decoration:none">Home</a></span></div>
-<script src="/ks.js"></script>
+<script src="/ks.js?v=2027.6"></script>
 </body>
 </html>

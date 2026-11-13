@@ -1,5 +1,6 @@
 /* ===================== KiteSink portfolio =====================
-   The Work (/work) and Games (/games) index pages render from this
+   The Games (/games) page renders from this (the old Work index at /work is gone;
+   its project list below is kept for reference)
    one file. Everything is one of TWO kinds:
 
      • internal ("mine")  — built & hosted here; links to a page on the site.
@@ -17,11 +18,11 @@ window.KS_WORK = {
     {
       title: "Song of the Day",
       href: "/song-of-the-day",
-      icon: "music",                 // music | tent | bars  (inline SVGs live in public/work.html)
-      status: "LIVE",               // status pill text; set wip:true for the tan WIP styling
-      wip: false,
+      icon: "music",                 // music | tent | bars  (icons for the old Work index)
+      status: "COMING SOON",        // status pill text; set wip:true for the tan WIP styling
+      wip: true,
       category: "iOS APP",
-      cta: "App Store",             // CTA label — an ↗ is always appended
+      cta: "See the app",           // CTA label — an ↗ is always appended
       dek: "One song, every day — a daily recommendation with the story behind it and links to listen. Landing page, privacy & contact built in.",
       tags: [],                      // optional feature pills (see Vantix)
       related: []                    // optional chits: { kind:"ESSAY"|"DEVLOG"|"FEATURED", title, href }
@@ -53,8 +54,8 @@ window.KS_WORK = {
       related: []
     },
     {
-      title: "Backline",
-      href: "/backline",
+      title: "Stage First",
+      href: "/stage-first",
       icon: "amp",
       status: "WIP · PROTOTYPE",
       wip: true,                     // tan dot + tan accents + the gradient row tint
@@ -88,7 +89,7 @@ window.KS_GAMES = {
       eyebrow: "Isometric tycoon sim",
       status: "LIVE · DEMO",
       platforms: "PC · iOS · ANDROID",
-      dek: "Buy a scrap of wilderness, pitch a few tents, and keep campers happy through four fickle seasons. 15 regions, procedural land, anglers, hunters & leaf-peepers — and a deeply chunky CRT booking terminal. Play the lite version right in the browser.",
+      dek: "Buy a scrap of wilderness, pitch a few tents, and keep campers happy through four fickle seasons. 30 regions, procedural land, anglers, hunters & leaf-peepers — and a deeply chunky CRT booking terminal. Play the lite version right in the browser.",
       related: [
         { kind: "DEVLOG", title: "Campground Tycoon: the story so far", href: "/blog/campground-tycoon-the-story-so-far" }
       ]

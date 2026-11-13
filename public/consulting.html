@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kitesink Consulting — Better systems behind the music</title>
-<meta name="description" content="Music industry workflow automation, operations improvements and practical AI. Independent consulting by Truman Kitos-Lindsey for music teams and their data and process bottlenecks.">
+<title>KiteSink Consulting — Better systems behind the music</title>
+<meta name="description" content="Music industry workflow automation, operations improvements and practical AI. Independent consulting by Truman Kitos-Lindsey for music teams, and an AI concierge for any industry.">
 <link rel="canonical" href="https://kitesink.com/consulting">
+<link rel="alternate" type="text/markdown" href="https://kitesink.com/consulting.md" title="Plain-text version">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kitesink Consulting — Better systems behind the music">
+<meta property="og:title" content="KiteSink Consulting — Better systems behind the music">
 <meta property="og:description" content="Workflow automation, operations improvements and practical AI for music teams. By Truman Kitos-Lindsey.">
 <meta property="og:url" content="https://kitesink.com/consulting">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
@@ -18,7 +19,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=consulting-1">
+<script>document.documentElement.classList.add('cf-js')</script>
+<link rel="stylesheet" href="/ks.css?v=2027.6">
 <style>
 :root { --paper:#ece2cb; --raised:#f3ecd9; --ink:#1d1810; --copy:#5e5238; --green:#2f5436; --brass:#8a5a18; --rule:rgba(34,28,16,.23); }
 html[data-theme="dark"] { --paper:#16130d; --raised:#211c13; --ink:#f2ead6; --copy:#b7ac8f; --green:#82c795; --brass:#e0a94e; --rule:rgba(236,226,203,.23); }
@@ -29,7 +31,8 @@ a:hover { text-decoration-thickness:2px; }
 .wrap { max-width:1240px; margin:auto; padding-inline:clamp(22px,4vw,48px); }
 .skip { position:absolute; left:20px; top:-80px; z-index:110; padding:12px 20px; background:var(--raised); }
 .skip:focus { top:12px; }
-.hero { padding-block:48px 58px; }
+.hero { padding-block:34px 58px; }
+.k-seclabel { margin-bottom:22px; }
 .identity { display:flex; flex-wrap:wrap; gap:4px 22px; align-items:baseline; padding-bottom:30px; }
 .identity strong { color:var(--green); font-size:18px; font-weight:600; }
 .identity span { color:var(--copy); font:400 12px/1.7 'Geist Mono',monospace; }
@@ -53,7 +56,7 @@ h1 { font-size:clamp(52px,6.4vw,86px); font-weight:800; line-height:.98; letter-
 .intro { padding-block:34px 48px; border-top:1px solid var(--rule); display:grid; gap:24px; }
 .intro p { margin:0; font-size:clamp(21px,2.5vw,30px); line-height:1.45; letter-spacing:-.025em; max-width:900px; }
 .intro .audience { color:var(--copy); font-size:14px; letter-spacing:0; max-width:350px; }
-.section { padding-block:52px; border-top:1px solid var(--rule); scroll-margin-top:100px; }
+.section { padding-block:52px; border-top:1px solid var(--rule); scroll-margin-top:0; }
 h2 { font-size:clamp(32px,4.1vw,50px); line-height:1.06; letter-spacing:-.045em; margin:0; font-weight:800; text-wrap:balance; }
 .section-intro { color:var(--copy); max-width:610px; margin:16px 0 32px; }
 .service { display:grid; gap:14px; padding:28px 0; border-top:1px solid var(--rule); }
@@ -71,24 +74,146 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
 .bio { display:grid; gap:24px; }
 .bio p { color:var(--copy); max-width:650px; margin:0 0 16px; }
 .bio .name { font-size:23px; color:var(--ink); line-height:1.3; font-weight:600; letter-spacing:-.02em; }
-.contact { margin-block:20px 64px; padding:clamp(26px,5vw,56px); background:#23402b; color:#f0e8d6; border-radius:14px; scroll-margin-top:100px; }
+.contact { margin-block:20px 64px; padding:clamp(26px,5vw,56px); background:#23402b; color:#f0e8d6; border-radius:14px; scroll-margin-top:0; }
 .contact h2 { max-width:690px; }
-.contact p { max-width:590px; color:#c2ceb9; }
+.contact > p, .contact noscript p { max-width:590px; color:#c2ceb9; }
 .contact .button { background:#ece2cb; color:#23402b; }
+.contact noscript { display:block; }
 .contact .address { display:block; margin-top:18px; font:400 14px/1.6 'Geist Mono',monospace; color:#d8b07a; }
 .contact .note { margin-bottom:0; font-size:13px; }
 .contact a:focus-visible { outline-color:#d8b07a; }
-@media(min-width:700px) { .process { grid-template-columns:repeat(2,1fr); } .service { grid-template-columns:1fr 1.5fr; gap:48px; } .bio { grid-template-columns:1fr 1.5fr; gap:48px; } }
-@media(min-width:1000px) { .hero { padding-top:54px; } .hero-grid { grid-template-columns:minmax(0,1.85fr) minmax(275px,1fr); gap:60px; } .intro { grid-template-columns:2fr 1fr; align-items:center; gap:70px; } .process { grid-template-columns:repeat(4,1fr); } }
+
+/* Enquiry form. The panel is the same deep green in both themes; only the sheet follows the theme.
+   Without JavaScript the form stays hidden and the <noscript> email link is the way in. */
+.contact { --on:#f0e8d6; --mute:#c2ceb9; --tan:#d8b07a; --line:#86a283; --well:#1b3322; --bad:#ffb59e; color-scheme:dark;
+  --sheet:#f3ecd9; --sheet-ink:#1d1810; --sheet-copy:#5e5238; --sheet-key:#2f5436; --sheet-rule:rgba(34,28,16,.2); --sheet-mark:#e4d296; }
+html[data-theme="dark"] .contact { --sheet:#16130d; --sheet-ink:#f2ead6; --sheet-copy:#b7ac8f; --sheet-key:#82c795; --sheet-rule:rgba(236,226,203,.2); --sheet-mark:#3f3820; }
+html:not(.cf-js) .cf { display:none; }
+.cf { display:grid; gap:30px; margin-top:34px; }
+.cf > * { min-width:0; max-width:660px; }
+.cf fieldset { border:0; padding:0; margin:0; min-width:0; }
+.cf legend { padding:0; }
+.cf-q { display:block; margin-bottom:12px; font-size:19px; line-height:1.3; font-weight:600; letter-spacing:-.02em; color:var(--on); }
+.cf-sub { display:block; margin-bottom:9px; font-size:15px; line-height:1.35; font-weight:600; color:var(--on); }
+.cf .opt { margin-left:8px; font:500 11px/1 'Geist Mono',monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--tan); white-space:nowrap; }
+.cf-fields { display:grid; gap:32px; }
+.cf-need, .cf-extras { display:grid; gap:18px; min-width:0; }
+
+/* chips are real radios and checkboxes; the input covers its chip */
+.chips { display:flex; flex-wrap:wrap; gap:8px; }
+.chip { position:relative; display:flex; }
+.chip input { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer; }
+.chip span { display:flex; align-items:center; gap:9px; min-height:44px; padding:8px 16px 8px 12px; border:1.5px solid var(--line); border-radius:24px; color:var(--on); font-size:14px; line-height:1.25; font-weight:500; transition:background .15s,color .15s,border-color .15s; }
+.chip span::before { content:''; flex:none; width:14px; height:14px; border:1.5px solid currentColor; border-radius:50%; }
+.chip input[type="checkbox"] + span::before { border-radius:4px; }
+.chip:hover span { border-color:var(--on); }
+.chip input:checked + span { background:#ece2cb; border-color:#ece2cb; color:#23402b; }
+.chip input[type="radio"]:checked + span::before { background:#23402b; box-shadow:inset 0 0 0 2.5px #ece2cb; }
+.chip input[type="checkbox"]:checked + span::before { background:#23402b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 7.3l2.7 2.7L11 4.3' fill='none' stroke='%23ece2cb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat; }
+.contact .chip input:focus-visible + span { outline:2px solid var(--tan); outline-offset:3px; }
+
+/* One slot under the chips. Every state sits in the same grid cell, so the slot is always as tall
+   as its tallest state and choosing a different need never moves the fields below it. */
+.cf-slot { display:grid; }
+.cf-slot > * { grid-area:1/1; min-width:0; visibility:hidden; }
+.cf[data-need="automation"] [data-for="automation"], .cf[data-need="operations"] [data-for="operations"], .cf[data-need="ai"] [data-for="ai"],
+.cf[data-need="concierge"] [data-for="concierge"], .cf[data-need="unsure"] [data-for="unsure"] { visibility:visible; }
+.cf-note { align-self:start; padding:2px 0 2px 16px; border-left:2px solid var(--tan); color:var(--mute); font-size:15px; line-height:1.5; }
+.cf-note p { margin:0; }
+.cf-note p + p { margin-top:10px; }
+.cf-note b { display:block; margin-bottom:2px; color:var(--tan); font:500 11px/1.7 'Geist Mono',monospace; }
+
+.cf-field { min-width:0; }
+.cf-field input, .cf-field textarea { display:block; width:100%; min-height:50px; padding:12px 14px; border:1.5px solid var(--line); border-radius:10px; background:var(--well); color:var(--on); font:400 16px/1.45 'Geist',sans-serif; }
+.cf-field textarea { min-height:140px; resize:vertical; }
+.cf-field ::placeholder { color:#a9b9a3; opacity:1; }
+.cf-field input:-webkit-autofill { -webkit-text-fill-color:var(--on); box-shadow:inset 0 0 0 100px var(--well); caret-color:var(--on); }
+.contact .cf-field :focus-visible { outline:2px solid var(--tan); outline-offset:2px; border-color:var(--on); }
+.contact .cf-field [aria-invalid="true"] { border-color:var(--bad); }
+/* one reserved line under a field: the hint, or the error that replaces it */
+.cf-msg { margin:6px 0 0; min-height:20px; color:var(--mute); font-size:13px; line-height:20px; }
+.cf-err { color:var(--bad); font-weight:500; }
+.cf-err:not(:empty) + .cf-hint { display:none; }
+.cf-who { display:grid; gap:10px 18px; }
+.cf-hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* the sheet: the exact message, written as the form is filled in */
+.cf-sheet-title { margin:0 0 12px; color:var(--tan); font:500 12px/1.6 'Geist Mono',monospace; letter-spacing:0; }
+.cf-paper { display:flex; flex-direction:column; height:440px; border-radius:10px; overflow:hidden; background:var(--sheet); color:var(--sheet-ink); box-shadow:0 16px 34px rgba(0,0,0,.26); color-scheme:light; }
+html[data-theme="dark"] .cf-paper { color-scheme:dark; box-shadow:0 0 0 1px rgba(236,226,203,.14),0 16px 34px rgba(0,0,0,.3); }
+.cf-head { display:grid; gap:5px; margin:0; padding:16px 18px 14px; border-bottom:1px solid var(--sheet-rule); }
+.cf-head div { display:grid; grid-template-columns:66px minmax(0,1fr); align-items:baseline; }
+.cf-head dt { color:var(--sheet-copy); font:500 11px/1.6 'Geist Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+.cf-head dd { margin:0; font-size:15px; line-height:21px; font-weight:600; overflow-wrap:anywhere; }
+.cf-subject { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3; height:63px; overflow:hidden; }
+.cf-head a { display:inline-block; font-weight:500; }
+.cf-scroll { position:relative; flex:1; min-height:0; overflow-y:auto; padding:16px 18px 0; }
+/* a long message fades out at the bottom edge, which says there is more to scroll */
+.cf-scroll::after { content:''; display:block; position:sticky; bottom:0; height:26px; background:linear-gradient(transparent,var(--sheet) 85%); pointer-events:none; }
+.contact .cf-scroll:focus-visible { outline:2px solid var(--sheet-key); outline-offset:-4px; }
+.contact .cf-head a:focus-visible { outline-color:var(--sheet-key); outline-offset:3px; }
+.cf-scroll pre { margin:0; font:400 15px/1.6 'Geist',sans-serif; white-space:pre-wrap; overflow-wrap:anywhere; }
+.cf-scroll b { color:var(--sheet-key); font-weight:600; }
+.cf-scroll .is-new { border-radius:3px; animation:cf-mark 1.3s ease-out; }
+@keyframes cf-mark { from { background:var(--sheet-mark); } to { background:transparent; } }
+
+.cf-actions { display:grid; gap:16px; }
+.cf-fine { margin:0; max-width:540px; color:var(--mute); font-size:13px; line-height:1.55; }
+.cf-buttons { display:flex; flex-wrap:wrap; gap:10px 12px; }
+.cf-send { flex:1 1 100%; border:0; font-family:inherit; cursor:pointer; }
+.cf-send[aria-disabled="true"] { opacity:.78; cursor:progress; }
+.cf-alt { flex:1 1 auto; display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 18px; border:1.5px solid var(--line); border-radius:40px; background:none; color:var(--on); font:600 14px/1.3 'Geist',sans-serif; text-align:center; text-decoration:none; cursor:pointer; }
+.cf-alt:hover, .cf-actions[data-failed] .cf-alt { border-color:var(--on); }
+.contact .cf-buttons :focus-visible, .contact .cf-done :focus-visible { outline:2px solid var(--tan); outline-offset:4px; }
+.cf-status { margin:0; min-height:66px; color:var(--on); font-size:14px; line-height:22px; }
+.cf-status[data-kind="error"] { color:var(--bad); font-weight:500; }
+.cf-fields[hidden], .cf-actions[hidden], .cf-done[hidden] { display:none; }
+.cf-done { display:grid; gap:14px; justify-items:start; align-content:start; }
+.contact .cf-done:focus-visible { outline:2px solid var(--tan); outline-offset:10px; border-radius:4px; }
+.cf-done h3 { font-size:clamp(26px,3vw,34px); letter-spacing:-.035em; }
+.cf-done p { margin:0; max-width:470px; color:var(--mute); font-size:17px; line-height:1.5; }
+.cf-done strong { color:var(--on); overflow-wrap:anywhere; }
+.cf-done .cf-fine { font-size:14px; }
+.cf-done .cf-alt { margin-top:8px; }
+@media(max-width:349px) { .cf-status { min-height:88px; } }
+@media(max-width:559px) and (min-width:350px) { .cf-handoff .chips { display:grid; grid-template-columns:1fr 1fr; } .cf-handoff .chip span { flex:1; padding-right:10px; } }
+@media(min-width:560px) { .cf-who { grid-template-columns:1fr 1fr; } .cf-who .wide { grid-column:1/-1; } .cf-send { flex:0 0 auto; min-width:190px; } .cf-alt { flex:0 0 auto; } .cf-status { min-height:44px; } .cf-subject { -webkit-line-clamp:2; line-clamp:2; height:42px; } }
+@media(min-width:1000px) {
+  .cf { grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr); column-gap:clamp(36px,4.4vw,60px); align-items:start; }
+  .cf > * { max-width:none; }
+  .cf-fields, .cf-done { grid-column:1; grid-row:1; }
+  .cf-actions { grid-column:1; grid-row:2; }
+  .cf-sheet { grid-column:2; grid-row:1 / span 2; position:sticky; top:138px; }
+  .cf-paper { height:clamp(340px,calc(100vh - 250px),540px); }
+}
+@media(forced-colors:active) { .chip input:checked + span { forced-color-adjust:none; background:Highlight; border-color:Highlight; color:HighlightText; } }
+.concierge { border:1.5px dashed var(--brass); border-radius:14px; padding:clamp(24px,4.5vw,48px); display:grid; gap:28px; }
+.concierge .status { display:inline-flex; align-items:center; gap:8px; margin:0 0 14px; font:600 11px/1 'Geist Mono',monospace; letter-spacing:.13em; text-transform:uppercase; color:var(--brass); }
+.concierge .status::before { content:''; width:6px; height:6px; border-radius:50%; background:currentColor; animation:ks-pulse 2.4s ease-in-out infinite; }
+.concierge p { color:var(--copy); max-width:560px; margin:16px 0 0; }
+.concierge .ask { background:var(--raised); border-radius:12px; padding:22px; align-self:start; }
+.concierge .ask strong { display:block; font-size:17px; letter-spacing:-.015em; }
+.concierge .ask .hint { font-size:13px; margin:6px 0 14px; }
+.concierge .picks { display:flex; flex-wrap:wrap; gap:8px; }
+.concierge .ask-go { display:flex; flex-wrap:wrap; align-items:center; gap:4px 20px; margin-top:18px; }
+.concierge .ask-go .text-link { display:inline-flex; align-items:center; min-height:44px; }
+.concierge .fine { font-size:13px; margin-top:12px; }
+.process.three { margin-top:44px; }
+.fix-title { margin:52px 0 22px; font-size:28px; letter-spacing:-.035em; }
+@media(min-width:900px) { .concierge { grid-template-columns:1.15fr 1fr; gap:56px; align-items:center; } }
+@media(min-width:700px) { .process { grid-template-columns:repeat(2,1fr); } .process.three { grid-template-columns:repeat(3,1fr); } .service { grid-template-columns:1fr 1.5fr; gap:48px; } .bio { grid-template-columns:1fr 1.5fr; gap:48px; } }
+@media(min-width:1000px) { .hero { padding-top:54px; } .hero-grid { grid-template-columns:minmax(0,1.85fr) minmax(275px,1fr); gap:60px; } .intro { grid-template-columns:2fr 1fr; align-items:center; gap:70px; } .process { grid-template-columns:repeat(4,1fr); } .process.three { grid-template-columns:repeat(3,1fr); } }
 @media(max-width:400px) { .identity span { font-size:11px; } .button { padding-inline:19px; } }
 </style>
 </head>
 <body class="ks-paper">
 <a class="skip" href="#main">Skip to content</a>
 <div data-ks="header" data-active="consulting"></div>
-<main id="main" class="wrap">
+<main id="main">
+<div class="wrap">
   <section class="hero" aria-labelledby="hero-title">
-    <div class="identity"><strong>Kitesink Consulting</strong><span>By Truman Kitos-Lindsey</span></div>
+    <p class="k-seclabel"><span class="k-num">01</span><span style="view-transition-name:sec-consulting">Consulting</span></p>
+    <div class="identity"><strong>KiteSink Consulting</strong><span>By Truman Kitos-Lindsey</span></div>
     <div class="hero-grid">
       <div>
         <h1 id="hero-title">Better systems behind the music.</h1>
@@ -106,7 +231,12 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
       </aside>
     </div>
   </section>
-  <div class="intro">
+</div>
+<nav class="k-subnav" aria-label="On this page"><div class="wrap" style="display:flex">
+  <a href="#services">Services</a><a href="#process">How a project runs</a><a href="#concierge">AI concierge</a><a href="#who">Who you work with</a><a href="#contact">Contact</a>
+</div></nav>
+<div class="wrap">
+  <div class="intro" style="border-top:0">
     <p>I help music businesses untangle repetitive work and awkward handoffs, improve their operations, and build practical tools around their data and process bottlenecks.</p>
     <p class="audience">For labels, artist teams, music companies and independent businesses whose tools haven’t quite caught up with the work.</p>
   </div>
@@ -126,7 +256,7 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
       <div><p>Make information easier to extract, classify, search and report on. Use AI where it helps, with human checks for uncertain results and decisions that need context.</p><p class="example"><strong>Possible project</strong>Extract key details from incoming documents into a review queue, or make an internal knowledge collection searchable with links back to its sources.</p></div>
     </article>
   </section>
-  <section class="section" aria-labelledby="process-title">
+  <section id="process" class="section" aria-labelledby="process-title">
     <h2 id="process-title">A focused project, built around your team.</h2>
     <ol class="process">
       <li><h3>Understand the workflow</h3><p>Walk through the real steps, the tools you use and the places people have to work around them.</p></li>
@@ -136,19 +266,404 @@ h3 { font-size:24px; line-height:1.2; letter-spacing:-.03em; margin:0; }
     </ol>
     <div class="practical"><strong>Know what you’re taking on.</strong><p>We’ll make any recurring software costs, data access requirements and maintenance responsibilities clear before choosing a solution. Ongoing support, if needed, is something we agree on explicitly.</p></div>
   </section>
-  <section class="section bio" aria-labelledby="bio-title">
+  <!-- AI concierge: the next line of business. It grew out of the music-team consulting above. -->
+  <section id="concierge" class="section" aria-labelledby="concierge-title">
+    <div class="concierge">
+      <div>
+        <p class="status">New · still taking shape</p>
+        <h2 id="concierge-title">Next: an AI concierge.</h2>
+        <p>A one-time or ongoing role. I learn your industry, watch how the work actually gets done, in person or over Zoom, and then build ways to make it faster.</p>
+        <p>It grew out of the music work above. The method is the same in any industry.</p>
+      </div>
+      <div class="ask">
+        <strong id="picks-label">What would you want handed off?</strong>
+        <p class="hint">Pick any that fit. Your answer goes into the form below and tells me where to start.</p>
+        <div class="picks" id="picks" role="group" aria-labelledby="picks-label">
+          <button class="k-tog" type="button" aria-pressed="false">Inbox and follow-ups</button>
+          <button class="k-tog" type="button" aria-pressed="false">Scheduling</button>
+          <button class="k-tog" type="button" aria-pressed="false">Research and summaries</button>
+          <button class="k-tog" type="button" aria-pressed="false">Paperwork and forms</button>
+          <button class="k-tog" type="button" aria-pressed="false">Keeping notes organised</button>
+          <button class="k-tog" type="button" aria-pressed="false">Something else</button>
+        </div>
+        <div class="ask-go"><a class="button" id="concierge-go" href="#contact">Tell me what you’d hand off</a><a class="text-link" id="concierge-mail" href="mailto:hello@kitesink.com?subject=AI%20concierge%20%E2%80%94%20what%20I%E2%80%99d%20hand%20off">or email me</a></div>
+        <p class="fine">The button takes your picks to the form at the end of this page. Nothing is sent until you press Send.</p>
+      </div>
+    </div>
+
+    <ol class="process three" aria-label="How the concierge works">
+      <li><h3>Learn</h3><p>Your industry, your tools, and the work as you do it today.</p></li>
+      <li><h3>Observe</h3><p>I sit in on the real thing, in person or on a call, and see where the time goes.</p></li>
+      <li><h3>Improve</h3><p>We choose what to fix first, and I build the fix.</p></li>
+    </ol>
+
+    <h3 class="fix-title">What the fix can be</h3>
+    <article class="service">
+      <h3>AI automation</h3>
+      <div><p>A model does the reading, sorting or drafting, and a person checks what matters.</p></div>
+    </article>
+    <article class="service">
+      <h3>Deterministic programs</h3>
+      <div><p>Where the rules are fixed, ordinary code does the job and gives the same answer every time.</p></div>
+    </article>
+    <article class="service">
+      <h3>Custom software</h3>
+      <div><p>Built for your team and maintained by me. It costs more, and there is a recurring cost to keep it running and up to date.</p></div>
+    </article>
+    <div class="practical"><strong>One-time or ongoing.</strong><p>One-time: learn, observe, fix what we agreed, hand it over. Ongoing: I stay on, keep watching the work and keep improving it. Prices aren’t published yet; we would agree the cost before any work starts.</p></div>
+  </section>
+  <section id="who" class="section bio" aria-labelledby="bio-title">
     <h2 id="bio-title">Music context.<br>Hands-on building.</h2>
-    <div><p class="name">I’m Truman Kitos-Lindsey.</p><p>I’m an independent consultant bringing together music operations and hands-on data and software work. I’m interested in the practical details: how information comes in, where it gets stuck and what would make the next step easier.</p><p>You work directly with me, from the first workflow conversation through the build and handover.</p><a class="text-link" href="/work">Explore my independent projects</a></div>
+    <div><p class="name">I’m Truman Kitos-Lindsey.</p><p>I’m an independent consultant bringing together music operations and hands-on data and software work. I’m interested in the practical details: how information comes in, where it gets stuck and what would make the next step easier.</p><p>You work directly with me, from the first workflow conversation through the build and handover.</p><a class="text-link" href="/library#current">Explore my independent projects</a></div>
   </section>
   <section id="contact" class="contact" aria-labelledby="contact-title">
     <h2 id="contact-title">Tell me what’s slowing you down.</h2>
     <p>A few sentences are enough to start: what your team does, the problem you’re running into and the tools you use. You don’t need a finished brief.</p>
-    <a class="button" href="mailto:hello@kitesink.com?subject=Kitesink%20Consulting%20inquiry&amp;body=My%20team%3A%0D%0A%0D%0AWhat%E2%80%99s%20slowing%20us%20down%3A%0D%0A%0D%0ATools%20we%20use%3A%0D%0A">Email Truman Kitos-Lindsey</a>
-    <a class="address" href="mailto:hello@kitesink.com">hello@kitesink.com</a>
-    <p class="note">Opens your email app. Prefer webmail? Use the address above.</p>
+    <noscript>
+      <a class="button" href="mailto:hello@kitesink.com?subject=KiteSink%20Consulting%20inquiry&amp;body=My%20team%3A%0D%0A%0D%0AWhat%E2%80%99s%20slowing%20us%20down%3A%0D%0A%0D%0ATools%20we%20use%3A%0D%0A">Email Truman Kitos-Lindsey</a>
+      <a class="address" href="mailto:hello@kitesink.com">hello@kitesink.com</a>
+      <p class="note">Opens your email app. Prefer webmail? Use the address above.</p>
+    </noscript>
+    <form class="cf" id="cf" novalidate data-need="unsure">
+      <div class="cf-fields" id="cf-fields">
+        <div class="cf-need">
+          <fieldset>
+            <legend class="cf-q">What do you need?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="need" value="automation"><span>Workflow automation</span></label>
+              <label class="chip"><input type="radio" name="need" value="operations"><span>Operations improvements</span></label>
+              <label class="chip"><input type="radio" name="need" value="ai"><span>AI and data</span></label>
+              <label class="chip"><input type="radio" name="need" value="concierge"><span>AI concierge</span></label>
+              <label class="chip"><input type="radio" name="need" value="unsure" checked><span>Not sure yet</span></label>
+            </div>
+          </fieldset>
+          <div class="cf-slot">
+            <div class="cf-note" data-for="automation"><p>Connect the steps between your existing tools: repeated data entry, file handling, intake and task routing.</p><p><b>Possible project</b>Turn release asset intake into an organized checklist that flags missing files and routes the next task to the right person.</p></div>
+            <div class="cf-note" data-for="operations"><p>Find where work slows down, clarify who owns the next step and simplify processes that have grown around the gaps.</p><p><b>Possible project</b>Map a campaign handoff across a music team, then build one shared view of responsibilities, status and outstanding decisions.</p></div>
+            <div class="cf-note" data-for="ai"><p>Make information easier to extract, classify, search and report on.</p><p><b>Possible project</b>Extract key details from incoming documents into a review queue, or make an internal knowledge collection searchable with links back to its sources.</p></div>
+            <div class="cf-note" data-for="unsure"><p>That’s fine. Start with the task that keeps getting stuck.</p><p>The answer might be an automation, a simpler process or a tool that makes messy information useful.</p><p>Leave this as it is if nothing fits. The choice only tells me where to start.</p></div>
+            <fieldset class="cf-handoff" data-for="concierge">
+              <legend class="cf-sub">What would you want handed off? <span class="opt">Optional</span></legend>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="handoff" value="Inbox and follow-ups"><span>Inbox and follow-ups</span></label>
+                <label class="chip"><input type="checkbox" name="handoff" value="Scheduling"><span>Scheduling</span></label>
+                <label class="chip"><input type="checkbox" name="handoff" value="Research and summaries"><span>Research and summaries</span></label>
+                <label class="chip"><input type="checkbox" name="handoff" value="Paperwork and forms"><span>Paperwork and forms</span></label>
+                <label class="chip"><input type="checkbox" name="handoff" value="Keeping notes organised"><span>Keeping notes organised</span></label>
+                <label class="chip"><input type="checkbox" name="handoff" value="Something else"><span>Something else</span></label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="cf-field">
+          <label class="cf-q" for="cf-slow">What’s slowing you down?</label>
+          <textarea id="cf-slow" name="slow" rows="5" maxlength="4000" required aria-describedby="cf-slow-err cf-slow-hint" placeholder="For example: every release, someone copies the same details into three places, and files still go missing."></textarea>
+          <p class="cf-msg"><span class="cf-err" id="cf-slow-err"></span><span class="cf-hint" id="cf-slow-hint">A few sentences is enough.</span></p>
+        </div>
+        <div class="cf-extras">
+          <div class="cf-field">
+            <label class="cf-sub" for="cf-tools">Tools you use <span class="opt">Optional</span></label>
+            <input id="cf-tools" name="tools" type="text" maxlength="300" autocomplete="off" enterkeyhint="next" placeholder="Google Sheets, Dropbox, email">
+          </div>
+          <fieldset>
+            <legend class="cf-sub">Timing <span class="opt">Optional</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="timing" value="This month"><span>This month</span></label>
+              <label class="chip"><input type="radio" name="timing" value="This quarter"><span>This quarter</span></label>
+              <label class="chip"><input type="radio" name="timing" value="Just exploring"><span>Just exploring</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <fieldset>
+          <legend class="cf-q">Where should I reply?</legend>
+          <div class="cf-who">
+            <div class="cf-field">
+              <label class="cf-sub" for="cf-name">Your name</label>
+              <input id="cf-name" name="name" type="text" maxlength="100" autocomplete="name" enterkeyhint="next" aria-describedby="cf-name-err cf-name-hint">
+              <p class="cf-msg"><span class="cf-err" id="cf-name-err"></span><span class="cf-hint" id="cf-name-hint">Or give a team name instead.</span></p>
+            </div>
+            <div class="cf-field">
+              <label class="cf-sub" for="cf-team">Team or company <span class="opt">Optional</span></label>
+              <input id="cf-team" name="team" type="text" maxlength="120" autocomplete="organization" enterkeyhint="next">
+            </div>
+            <div class="cf-field wide">
+              <label class="cf-sub" for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" inputmode="email" maxlength="254" autocomplete="email" autocapitalize="off" spellcheck="false" enterkeyhint="send" required aria-describedby="cf-email-err">
+              <p class="cf-msg"><span class="cf-err" id="cf-email-err"></span></p>
+            </div>
+          </div>
+        </fieldset>
+        <div class="cf-hp" aria-hidden="true"><label>Leave this box empty <input type="checkbox" name="botcheck" id="cf-bot" tabindex="-1" autocomplete="off"></label></div>
+      </div>
+      <div class="cf-done" id="cf-done" role="group" aria-labelledby="cf-done-title" tabindex="-1" hidden>
+        <h3 id="cf-done-title">Sent. Thank you.</h3>
+        <p>I’ll reply to <strong id="cf-done-email"></strong>.</p>
+        <p class="cf-fine">If that address is wrong, write to <a href="mailto:hello@kitesink.com">hello@kitesink.com</a> so I can still reach you.</p>
+        <button class="cf-alt" type="button" id="cf-again">Write another message</button>
+      </div>
+      <div class="cf-sheet">
+        <h3 class="cf-sheet-title" id="cf-sheet-title">What I’ll receive</h3>
+        <div class="cf-paper">
+          <dl class="cf-head">
+            <div><dt>To</dt><dd><a href="mailto:hello@kitesink.com">hello@kitesink.com</a></dd></div>
+            <div><dt>Subject</dt><dd class="cf-subject" id="cf-subject">KiteSink Consulting: Not sure yet</dd></div>
+          </dl>
+          <div class="cf-scroll" role="group" aria-labelledby="cf-sheet-title" tabindex="0"><pre id="cf-preview"></pre></div>
+        </div>
+      </div>
+      <div class="cf-actions" id="cf-actions">
+        <p class="cf-fine">Send delivers this straight to me. Prefer your own email? Open the same message in your email app, or copy it. Your draft stays in this tab until it’s sent.</p>
+        <div class="cf-buttons">
+          <button class="button cf-send" type="submit" id="cf-send">Send message</button>
+          <a class="cf-alt" id="cf-mailto" href="mailto:hello@kitesink.com?subject=KiteSink%20Consulting%20inquiry">Open in my email app</a>
+          <button class="cf-alt" type="button" id="cf-copy">Copy message</button>
+        </div>
+        <p class="cf-status" id="cf-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
   </section>
+</div>
 </main>
 <div data-ks="footer" data-active="consulting"></div>
-<script src="/ks.js?v=consulting-1" defer></script>
+<script src="/ks.js?v=2027.6" defer></script>
+<script>
+// Enquiry form (#contact). One message, built in one place and handed off three ways:
+// Send (Web3Forms, through ksSubmitForm in /ks.js), the visitor's own email app, or the clipboard.
+(function () {
+  "use strict";
+  var form = document.getElementById("cf");
+  if (!form) return;
+  function $(id) { return document.getElementById(id); }
+  var TO = "hello@kitesink.com", DRAFT = "ksConsultingDraft";
+  var f = { slow: $("cf-slow"), tools: $("cf-tools"), name: $("cf-name"), team: $("cf-team"), email: $("cf-email") };
+  var fields = $("cf-fields"), actions = $("cf-actions"), done = $("cf-done"), sendBtn = $("cf-send"), mailLink = $("cf-mailto"),
+      status = $("cf-status"), pre = $("cf-preview"), sheetTitle = $("cf-sheet-title"),
+      picks = $("picks"), pickMail = $("concierge-mail"), go = $("concierge-go");
+  var sending = false, shown = null, drawn = "";   // shown/drawn: what the sheet last showed, so only real changes are marked
+
+  // ?need= preselects the need. ?via= records where the visitor came from; anything odd is ignored.
+  var q = { need: "", via: "website" };
+  try {
+    var qs = new URLSearchParams(location.search), qNeed = (qs.get("need") || "").toLowerCase(), qVia = qs.get("via") || "";
+    if (/^(automation|operations|ai|concierge)$/.test(qNeed)) q.need = qNeed;
+    if (/^[A-Za-z0-9-]{1,40}$/.test(qVia)) q.via = qVia;
+  } catch (e) {}
+
+  function inputs(name, checked) { return [].slice.call(form.querySelectorAll('input[name="' + name + '"]' + (checked ? ":checked" : ""))); }
+  function label(input) { return input.nextElementSibling.textContent; }
+  function clean(text) { return String(text).replace(/\r\n?/g, "\n").trim(); }
+  function say(text, kind) { status.textContent = text; if (kind) status.setAttribute("data-kind", kind); else status.removeAttribute("data-kind"); }
+
+  // What the form says right now. Hand-off picks only count while "AI concierge" is the need.
+  function read() {
+    var need = inputs("need", true)[0] || form.querySelector('input[name="need"][value="unsure"]'), timing = inputs("timing", true)[0];
+    return { need: need.value, needLabel: label(need), timing: timing ? label(timing) : "",
+      handoff: need.value === "concierge" ? inputs("handoff", true).map(label) : [],
+      slow: clean(f.slow.value), tools: clean(f.tools.value), name: clean(f.name.value), team: clean(f.team.value), email: clean(f.email.value) };
+  }
+
+  // The message: labelled lines in a fixed order, a blank line between groups.
+  // A row is [key, label, value, value goes on its own line]; 0 is a blank line.
+  function compose(s) {
+    var rows = [["name", "Name", s.name], ["team", "Team/company", s.team], ["email", "Email", s.email], 0,
+                ["need", "What they need", s.needLabel], 0,
+                ["slow", "What is slowing them down", s.slow, true], 0];
+    if (s.handoff.length) rows.push(["handoff", "What they would hand off", s.handoff.join(", ")]);
+    rows.push(["tools", "Tools in use", s.tools], ["timing", "Timing", s.timing], 0, ["via", "Found via", q.via]);
+    var who = s.name || s.team;
+    return { rows: rows, subject: "KiteSink Consulting: " + s.needLabel + (who ? " from " + who : ""),
+      message: rows.map(function (r) { return r ? r[1] + ":" + value(r) : ""; }).join("\n") };
+  }
+  function value(row) { return row[2] ? (row[3] ? "\n" : " ") + row[2] : ""; }
+  function mailto(m) { return "mailto:" + TO + "?subject=" + encodeURIComponent(m.subject) + "&body=" + encodeURIComponent(m.message.replace(/\n/g, "\r\n")); }
+
+  // Write the message onto the sheet. Its text is exactly what gets sent; a line that just changed is marked and scrolled into view.
+  function draw(m) {
+    if (m.subject + "\n" + m.message === drawn) return;
+    var frag = document.createDocumentFragment(), now = {}, changed = null, box = pre.parentNode;
+    m.rows.forEach(function (row, i) {
+      if (i) frag.appendChild(document.createTextNode("\n"));
+      if (!row) return;
+      var line = document.createElement("span"), b = document.createElement("b");
+      b.textContent = row[1] + ":";
+      line.appendChild(b);
+      line.appendChild(document.createTextNode(now[row[0]] = value(row)));
+      if (shown && shown[row[0]] !== now[row[0]]) { line.className = "is-new"; changed = changed || line; }
+      frag.appendChild(line);
+    });
+    pre.textContent = "";
+    pre.appendChild(frag);
+    $("cf-subject").textContent = m.subject;
+    shown = now; drawn = m.subject + "\n" + m.message;
+    if (!changed) return;
+    var top = changed.offsetTop, bottom = top + changed.offsetHeight;
+    if (top < box.scrollTop) box.scrollTop = top - 14;
+    if (bottom > box.scrollTop + box.clientHeight) box.scrollTop = bottom - box.clientHeight + 14;
+  }
+
+  // The concierge section's pick buttons mirror the form's hand-off boxes, so the two never disagree.
+  function syncPicks() {
+    if (!picks) return;
+    var chosen = inputs("handoff", true).map(label);
+    [].forEach.call(picks.querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", chosen.indexOf(b.textContent) > -1 ? "true" : "false"); });
+    if (pickMail) pickMail.href = "mailto:" + TO + "?subject=" + encodeURIComponent("AI concierge — what I’d hand off") +
+      (chosen.length ? "&body=" + encodeURIComponent("I’d want handed off: " + chosen.join(", ") + ".\r\n\r\nA bit more about what I do:\r\n") : "");
+  }
+
+  // The draft lives in this tab only, so a refresh does not lose what was typed.
+  function saveDraft(s) {
+    var timing = inputs("timing", true)[0];
+    try {
+      sessionStorage.setItem(DRAFT, JSON.stringify({ need: s.need, asked: q.need, timing: timing ? timing.value : "", handoff: inputs("handoff", true).map(label),
+        slow: f.slow.value, tools: f.tools.value, name: f.name.value, team: f.team.value, email: f.email.value }));
+    } catch (e) {}
+  }
+  function restore() {
+    var d = null;
+    try { d = JSON.parse(sessionStorage.getItem(DRAFT)); } catch (e) {}
+    if (d && typeof d === "object") {
+      Object.keys(f).forEach(function (k) { if (typeof d[k] === "string") f[k].value = d[k]; });
+      inputs("timing").forEach(function (r) { r.checked = r.value === d.timing; });
+      inputs("handoff").forEach(function (c) { c.checked = Array.isArray(d.handoff) && d.handoff.indexOf(c.value) > -1; });
+    } else d = {};
+    // A link with a new ?need= beats the draft; reloading the same address does not.
+    var need = q.need && q.need !== d.asked ? q.need : d.need || q.need;
+    inputs("need").forEach(function (r) { if (r.value === need) r.checked = true; });
+  }
+
+  // Redraw everything that follows from the form: the slot under the chips, the sheet, the email link, the picks, the draft.
+  function update(keep) {
+    var s = read(), m = compose(s);
+    form.setAttribute("data-need", s.need);
+    draw(m);
+    mailLink.href = mailto(m);
+    syncPicks();
+    if (keep !== false) saveDraft(s);
+    return { state: s, mail: m };
+  }
+
+  // Only three things are required: the problem, a name or a team, and an email address.
+  var rules = [
+    [f.slow, "cf-slow-err", function (s) { return s.slow ? "" : "Tell me a little about the problem."; }],
+    [f.name, "cf-name-err", function (s) { return s.name || s.team ? "" : "Add your name or your team."; }],
+    [f.email, "cf-email-err", function (s) { return !s.email ? "Add your email so I can reply." : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email) ? "" : "That address doesn’t look right."; }]
+  ];
+  function check(rule, s) {
+    var problem = rule[2](s);
+    $(rule[1]).textContent = problem;
+    if (problem) rule[0].setAttribute("aria-invalid", "true"); else rule[0].removeAttribute("aria-invalid");
+    return !problem;
+  }
+
+  function send(now) {
+    var settled = false, submit = window.ksSubmitForm;
+    var waiting = setTimeout(function () { say("Still sending. You can wait, or open the message in your email app or copy it instead."); }, 15000);
+    function finish(ok) {
+      if (settled) return;
+      settled = true; sending = false; clearTimeout(waiting);
+      sendBtn.removeAttribute("aria-disabled"); sendBtn.textContent = "Send message";
+      if (ok) sent(now); else failed();
+    }
+    sending = true;
+    sendBtn.setAttribute("aria-disabled", "true"); sendBtn.textContent = "Sending…";
+    actions.removeAttribute("data-failed");
+    say("Sending…");
+    if (typeof submit !== "function") { finish(false); return; }
+    try {
+      // ksSubmitForm drops botcheck from what it posts, and posts nothing at all if the box is ticked.
+      submit({ subject: now.mail.subject, from_name: now.state.name || now.state.team, email: now.state.email, replyto: now.state.email,
+        message: now.mail.message, botcheck: $("cf-bot").checked }, function (err, data) { finish(!err && !(data && data.demo)); });
+    } catch (e) { finish(false); }
+  }
+  function failed() {
+    actions.setAttribute("data-failed", "");
+    say("That didn’t send. Everything you typed is still here. Try Send again, or open the message in your email app, or copy it.", "error");
+  }
+  function sent(now) {
+    try { sessionStorage.removeItem(DRAFT); } catch (e) {}
+    form.reset();
+    shown = null; drawn = "";
+    draw(now.mail);                          // the sheet keeps showing exactly what went
+    pre.parentNode.scrollTop = 0;
+    sheetTitle.textContent = "What you sent";
+    $("cf-done-email").textContent = now.state.email;
+    fields.hidden = actions.hidden = true;
+    done.hidden = false;
+    syncPicks(); say("");
+    done.focus();
+  }
+  function again() {
+    done.hidden = true;
+    fields.hidden = actions.hidden = false;
+    sheetTitle.textContent = "What I’ll receive";
+    restore();
+    shown = null;
+    update(false);
+  }
+
+  form.addEventListener("input", function () {
+    var s = update().state;
+    rules.forEach(function (r) { if (r[0].hasAttribute("aria-invalid")) check(r, s); });
+  });
+  form.addEventListener("change", update);
+  f.email.addEventListener("blur", function () { if (f.email.value.trim()) check(rules[2], read()); });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (sending) return;
+    var now = update(), bad = rules.filter(function (r) { return !check(r, now.state); });
+    if (bad.length) {
+      say(bad.length > 1 ? bad.length + " things to fix before this can send." : "One thing to fix before this can send.", "error");
+      bad[0][0].focus();
+      return;
+    }
+    send(now);
+  });
+  mailLink.addEventListener("click", function () {
+    update();
+    say("Opening your email app. If nothing opens, copy the message and send it to " + TO + ".");
+  });
+  $("cf-copy").addEventListener("click", function () {
+    var text = update().mail.message;
+    function copied() { say("Copied. Paste it into an email to " + TO + "."); }
+    function select() {   // no clipboard access: select the message on the sheet instead
+      var range = document.createRange(), selection = window.getSelection(), ok = false;
+      range.selectNodeContents(pre);
+      selection.removeAllRanges(); selection.addRange(range);
+      try { ok = document.execCommand("copy"); } catch (e) {}
+      if (ok) copied(); else say("I couldn’t copy it for you. The message is selected on the sheet: copy it, then paste it into an email to " + TO + ".");
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(copied, select); else select();
+  });
+  $("cf-again").addEventListener("click", function () { again(); inputs("need", true)[0].focus(); });
+
+  // AI concierge section: a pick ticks the same box here, and the button brings the visitor down with "AI concierge" chosen.
+  if (picks) picks.addEventListener("click", function (e) {
+    var b = e.target.closest("button"), box = b && inputs("handoff").filter(function (c) { return c.value === b.textContent; })[0];
+    if (!box) return;
+    if (!done.hidden) again();
+    box.checked = !box.checked;
+    update();
+  });
+  if (go) go.addEventListener("click", function (e) {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;   // let "open in a new tab" be
+    e.preventDefault();
+    if (!done.hidden) again();
+    form.querySelector('input[name="need"][value="concierge"]').checked = true;
+    update();
+    // go to #contact as the link would, then put the cursor in the first field still empty
+    if (location.hash !== "#contact") history.pushState(null, "", "#contact");
+    $("contact").scrollIntoView();
+    var next = [f.slow, f.tools, f.name, f.team, f.email].filter(function (x) { return !x.value.trim(); })[0] || sendBtn, at;
+    next.focus({ preventScroll: true });
+    at = next.getBoundingClientRect();
+    if (at.top < 130 || at.bottom > window.innerHeight - 90) next.scrollIntoView({ block: "center" });
+  });
+
+  restore();
+  update(false);
+  // browsers put typed values back after a reload or Back; redraw once they have
+  window.addEventListener("pageshow", function () { if (done.hidden) update(false); });
+})();
+</script>
 </body>
 </html>
