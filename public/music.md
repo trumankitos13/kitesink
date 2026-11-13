@@ -6,9 +6,14 @@ Three music projects by Truman Kitos-Lindsey, plus consulting for music teams.
 
 One curated song every day, with the story, the lineage and the liner notes to go with it. An iOS app for deep listening. **Status: coming soon.** It is not on the App Store yet. The app works fully signed out; signing in with Apple or Google is only for syncing collected songs across devices. More: https://kitesink.com/song-of-the-day
 
-## Backline
+## Stage First (Backline)
 
-A booking network for working musicians. Find a sub nearby who is free tonight, watch a reel of them playing, then message, book and pay before soundcheck. **Status: prototype.** More: https://kitesink.com/backline
+The business side of a live show, from staffing the stage to closing out the night. It has two sides.
+
+- **Staffing** (the app called Backline until now): find a sub nearby who is free tonight, watch a reel of them playing, then message, book, check in before the show and pay through the app. A working web app in a staging beta. Payments are in test mode, so no real money moves yet.
+- **Closeout:** turn the ticket reports for a show into one approved report that the promoter and the artist's team can both stand behind. Designed and specified, not built. A small hand-run pilot is being planned.
+
+First cities planned: Austin and Nashville. Nothing is launched. More: https://kitesink.com/backline
 
 ## Album Listening Club
 

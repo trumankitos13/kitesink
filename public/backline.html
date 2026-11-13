@@ -3,503 +3,1540 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backline — the booking network for working musicians</title>
-<meta name="description" content="Your drummer bailed. The show goes on. Find a sub nearby who's free tonight, watch a 30-second reel of them actually playing, message, book and pay — all before soundcheck.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{background:#0b0c0f;color:#f3f4f6;font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  ::selection{background:rgba(248,171,60,.3);color:#fff}
-  @keyframes eq{0%,100%{transform:scaleY(.28)}20%{transform:scaleY(1)}40%{transform:scaleY(.5)}60%{transform:scaleY(.85)}80%{transform:scaleY(.4)}}
-  @keyframes sweep{0%{transform:translateX(-120%)}55%{transform:translateX(280%)}100%{transform:translateX(280%)}}
-  @keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-4%,3%)}50%{transform:translate(3%,-2%)}75%{transform:translate(-2%,-3%)}100%{transform:translate(2%,2%)}}
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-  @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(248,171,60,.5)}70%{box-shadow:0 0 0 14px rgba(248,171,60,0)}100%{box-shadow:0 0 0 0 rgba(248,171,60,0)}}
-  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-  @keyframes floaty2{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(-3deg)}}
-  @keyframes arrowNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
-  .navlink:hover{color:#e7e9ec}
-  .ksNav{transition:color .15s}
-  .ksNav:hover{color:#ffc879}
-  .amberBtn:hover{background:#ffc879}
-  .chit:hover{filter:drop-shadow(0 22px 48px rgba(248,171,60,.5))}
-  .footlink:hover{color:#e7e9ec}
-</style>
-  <link rel="stylesheet" href="/ks.css?v=2027.4">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Stage First — the business side of a live show · Backline</title>
+<meta name="description" content="Stage First is the business side of a live show, from staffing the stage to closing out the night. The staffing app, known so far as Backline, finds, books and pays players. The closeout turns ticket reports into one approved report. Prototype and design stage.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/backline">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><meta name="theme-color" content="#0b0c0f">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
-<meta property="og:title" content="Backline — the booking network for working musicians">
-<meta property="og:description" content="Your drummer bailed. The show goes on. Find a sub nearby who's free tonight, watch a reel of them actually playing, message, book and pay — all before soundcheck.">
+<meta property="og:title" content="Stage First — the business side of a live show · Backline">
+<meta property="og:description" content="From staffing the stage to closing out the night. The staffing app, known so far as Backline, is a working prototype in a staging beta. The closeout side is at the design stage.">
 <meta property="og:url" content="https://kitesink.com/backline">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Backline — the show goes on">
-<meta name="twitter:description" content="The booking network for working musicians. Find a sub tonight — watch them play, book them, pay them, all before soundcheck.">
+<meta name="twitter:title" content="Stage First — the business side of a live show · Backline">
+<meta name="twitter:description" content="From staffing the stage to closing out the night. The staffing app (Backline) is a prototype in a staging beta; the closeout side is at the design stage.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
+<link rel="stylesheet" href="/ks.css?v=2027.5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");</script>
+<style>
+/* =====================================================================
+   Stage First (the staffing app has been called Backline) — product page
+   Dark-only by design: it wears the staffing app's palette and does not
+   follow the site's light/dark toggle.
+
+   Two visual families, one per side of the product:
+   - Staffing: the app's own tokens (ink surfaces, one warm stage-light
+     accent, cyan for held/verified, Space Grotesk + Space Mono). The app
+     screens below are rebuilt in HTML/CSS from the app's components.
+     Two deliberate departures, both for legibility on a marketing page:
+     the low-emphasis text colour is lifted to pass AA, and the app's
+     9–10px mono labels are drawn at 11px.
+   - Closeout: the paper report from the Stage First landing page (white,
+     navy ink, one blue, system sans).
+
+   1 tokens · 2 base · 3 KiteSink chrome · 4 page nav · 5 shared parts
+   6 hero + the two doors · 7 app primitives (.bl-*) · 8 the night stepper
+   9 staffing blocks · 10 closeout (.co-*) · 11 meet, who, status, footer
+   ===================================================================== */
+
+/* ---------- 1. tokens ---------- */
+/* metric-matched stand-ins, so the swap to the web fonts does not re-wrap the page */
+@font-face { font-family: 'SG Fallback'; src: local('Arial'), local('Liberation Sans'); font-weight: 100 500; size-adjust: 110.8%; }
+@font-face { font-family: 'SG Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'); font-weight: 600 900; size-adjust: 102.3%; }
+@font-face { font-family: 'SM Fallback'; src: local('Courier New'), local('Liberation Mono'); size-adjust: 102%; }
+html:root, html[data-theme="dark"]:root {
+  color-scheme: dark;
+  --ink: #0b0c0f; --ink-near: #0c0d10; --band: #0e0f13;
+  --s900: #111216; --s850: #15171c; --sheet: #181a20; --s800: #1c1e23; --raised: #26282f;
+  --hair-sub: #22242b; --hair: #2b2d34; --hair-strong: #333640;
+  --hi: #f3f4f6; --mid: #a6abb5; --lo: #8f949d;
+  --amber: #ff8a3d; --amber-300: #ffb27a; --amber-200: #ffd2ab;
+  --cyan: #4bd6cf; --cyan-300: #5fe6df;
+  --danger: #ee7b73;
+  /* closeout paper */
+  --p-ink: #102138; --p-muted: #56647a; --p-blue: #285ed5; --p-line: #dce3ed; --p-surface: #f1f5fb;
+  --blue-d: #93b4ff;   /* the closeout blue, lifted for text on dark */
+  --sans: 'Space Grotesk', 'SG Fallback', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'Space Mono', 'SM Fallback', ui-monospace, 'SF Mono', 'Roboto Mono', monospace;
+  --paper-sans: Arial, Helvetica, sans-serif;
+  --gutter: clamp(20px, 4vw, 40px);
+  --frame: 1160px;
+  --nav-h: 56px;
+
+  /* shared KiteSink chrome (ks.css) re-tokened so the slim bar, bottom strip
+     and Find palette sit in this page's palette instead of cream */
+  --k-paper: #08090b;
+  --k-raised: var(--sheet);
+  --k-sunk: var(--ink);
+  --k-ink: var(--hi);
+  --k-copy: var(--mid);
+  --k-mute: var(--mid);
+  --k-green: var(--amber-300);
+  --k-rule: rgba(255,255,255,.09);
+  --k-rule-strong: rgba(255,255,255,.2);
+  --k-tint: rgba(255,255,255,.06);
+  --k-sans: var(--sans);
+  --k-mono: var(--mono);
+}
+
+/* ---------- 2. base ---------- */
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 20px); }
+body, html[data-theme="dark"] body {   /* the second selector outranks the site's night-mode body rule: this page is one theme */
+  background: var(--ink); color: var(--hi);
+  font: 400 16px/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-wrap: break-word;
+}
+::selection { background: rgba(255,138,61,.3); color: #fff; }
+:focus-visible, html[data-theme="dark"] :focus-visible { outline: 2px solid var(--amber-300); outline-offset: 3px; border-radius: 4px; }
+.paper :focus-visible { outline-color: var(--p-blue); }
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3, h4 { font-family: var(--sans); font-weight: 700; color: var(--hi); text-wrap: balance; }
+h2 { font-size: clamp(30px, 4.6vw, 52px); line-height: 1.04; letter-spacing: -.028em; }
+h3 { font-size: clamp(23px, 2.7vw, 32px); line-height: 1.1; letter-spacing: -.02em; }
+p { text-wrap: pretty; }
+a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+b, strong { font-weight: 700; }
+svg { display: block; flex: none; }
+.ic { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ic.fill { fill: currentColor; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 1100; padding: 15px 16px; border-radius: 10px; background: var(--amber); color: var(--ink-near); font: 700 14px/1 var(--sans); text-decoration: none; }
+.skip:focus { top: 8px; }
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(255,138,61,.55); } 70% { box-shadow: 0 0 0 14px rgba(255,138,61,0); } 100% { box-shadow: 0 0 0 0 rgba(255,138,61,0); } }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes arrowNudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+.blink { animation: blink 1.6s ease-in-out infinite; }
+.pulse { animation: pulseRing 2.2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .blink, .pulse, .chit-t span, .night-panel { animation: none !important; }
+}
+
+/* ---------- 3. KiteSink chrome on a dark page ---------- */
+.ks-bar, .ks-bottombar { padding-inline: max(var(--gutter), calc((100% - var(--frame)) / 2)); }   /* line up with the page frame */
+.ks-bar { position: static; height: 44px; background: var(--k-paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
+[data-ks="bar"]:empty { height: 44px; background: var(--k-paper); }
+.ks-bar .ks-brand { min-height: 44px; }
+.ks-barnav a { padding: 16px 0; }
+.ks-barnav button { width: 44px; height: 44px; margin-right: -12px; }
+.ks-logo .lg { fill: #4c8a5d; } .ks-logo .lgs { stroke: #4c8a5d; } .ks-logo .lgl { fill: #63a576; } .ks-logo .lgd { fill: #2f5436; }
+.ks-bottombar a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* ---------- 4. page nav: identity, sections, the one action ---------- */
+.sf-head { position: sticky; top: 0; z-index: 40; background: rgba(11,12,15,.92); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair-sub); }
+.sf-head-in { display: flex; align-items: stretch; height: var(--nav-h); }
+.sf-brand { display: flex; align-items: center; gap: 10px; padding-right: 22px; color: var(--hi); text-decoration: none; font: 700 19px/1 var(--sans); letter-spacing: -.035em; white-space: nowrap; }
+.sf-mark { display: flex; gap: 3px; align-items: flex-end; width: 21px; height: 19px; transform: skew(-12deg); }
+.sf-mark i { width: 5px; height: 18px; background: var(--amber); }
+.sf-mark i:nth-child(2) { height: 13px; }
+.sf-mark i:nth-child(3) { height: 8px; background: var(--blue-d); }
+.sf-bar { display: flex; flex: 1; min-width: 0; align-items: stretch; }
+.sf-links { display: flex; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.sf-links::-webkit-scrollbar { display: none; }
+.sf-links a {
+  display: inline-flex; flex: none; align-items: center; padding: 0 12px;
+  border-bottom: 2px solid transparent; color: var(--mid); text-decoration: none; white-space: nowrap;
+  font: 500 14px/1 var(--sans); transition: color .12s;
+}
+.sf-links a:hover { color: var(--hi); }
+.sf-links a[aria-current] { color: var(--hi); border-bottom-color: var(--amber); }
+.sf-links a:focus-visible { outline-offset: -4px; }
+.sf-cta { align-self: center; margin-left: 14px; }
+/* phones: identity on its own row, then one sticky row of sections with the action pinned at its end */
+@media (max-width: 820px) {
+  :root { --nav-h: 48px; }
+  .sf-head, .sf-head-in { display: contents; }
+  .sf-brand { height: 52px; padding: 0 var(--gutter); background: var(--ink); }
+  .sf-bar { position: sticky; top: 0; z-index: 40; height: var(--nav-h); background: var(--ink); border-block: 1px solid var(--hair-sub); }
+  .sf-links { padding: 0 26px 0 calc(var(--gutter) - 12px); -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 30px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 30px), transparent); }
+  .sf-bar .sf-cta { align-self: stretch; margin: 0; min-height: 0; padding: 0 16px; border: 0; border-radius: 0; }
+}
+
+/* ---------- 5. shared parts ---------- */
+.wrap { max-width: calc(var(--frame) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+.band { border-top: 1px solid var(--hair-sub); }
+.band > .wrap { padding-block: clamp(56px, 8vw, 104px); }
+.sec-head { max-width: 820px; }
+.sec-head h2, .sec-head h3 { margin-top: 16px; }
+.hl { color: var(--amber-300); }
+.lede { margin-top: 18px; max-width: 60ch; font-size: clamp(17px, 1.6vw, 19px); line-height: 1.55; color: var(--mid); }
+.lede strong { color: var(--hi); font-weight: 600; }
+.note { font-size: 15px; line-height: 1.55; color: var(--mid); max-width: 66ch; }
+.inl { display: inline-block; padding-block: 12px; margin-block: -12px; color: var(--amber-300); }
+.eyebrow .hi { color: var(--hi); }
+.eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; font: 700 12px/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lo); }
+.block { margin-top: clamp(56px, 8vw, 96px); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px;
+  border: 1px solid var(--hair-strong); border-radius: 12px; background: var(--s800); color: var(--hi);
+  font: 600 15px/1 var(--sans); text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color .15s, border-color .15s;
+}
+.btn:hover { background: var(--raised); }
+.btn-pri { border-color: transparent; background: var(--amber); color: var(--ink-near); font-weight: 700; }
+.btn-pri:hover { background: var(--amber-300); }
+.textlink { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--amber-300); font: 600 15px/1.3 var(--sans); }
+.paper .textlink, .door-office .textlink { color: var(--p-blue); }
+
+/* status labels: a dot or outline plus words, never colour alone */
+.st { display: inline-flex; align-items: center; gap: 7px; padding: 5px 10px; border: 1px solid; border-radius: 999px; font: 700 11px/1.25 var(--mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.st i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.st-beta { color: var(--amber-300); border-color: rgba(255,138,61,.45); background: rgba(255,138,61,.1); }
+.st-design { color: var(--blue-d); border-color: rgba(147,180,255,.5); background: rgba(147,180,255,.08); }
+.st-design i, .st-plan i { background: none; box-shadow: inset 0 0 0 1.5px currentColor; }
+.paper .st-design, .door-office .st-design { color: var(--p-blue); border-color: rgba(40,94,213,.5); background: #fff; }
+.st-plan { color: var(--mid); border-style: dashed; border-color: var(--hair-strong); }
+.tag-demo { display: inline-flex; align-items: center; padding: 3px 8px; border: 1px solid rgba(75,214,207,.4); border-radius: 6px; background: rgba(75,214,207,.1); color: var(--cyan-300); font: 700 11px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+
+/* ---------- 6. hero + the two doors ---------- */
+.hero { position: relative; }
+.hero-top { padding-block: clamp(40px, 6.5vw, 84px) clamp(30px, 4vw, 48px); }
+h1 { margin-top: 20px; font-size: clamp(42px, 10.4vw, 128px); line-height: .94; letter-spacing: -.045em; }
+.hero .lede { margin-top: 26px; font-size: clamp(18px, 1.9vw, 22px); color: #c1c5cd; }
+.aka { margin-top: 20px; padding-left: 14px; border-left: 2px solid var(--amber); font-size: 16px; line-height: 1.5; color: var(--mid); max-width: 58ch; }
+.aka strong { color: var(--hi); }
+
+.doors { display: grid; gap: 16px; padding-bottom: clamp(48px, 7vw, 88px); }
+.door { position: relative; display: flex; flex-direction: column; gap: 18px; min-width: 0; padding: clamp(20px, 2.8vw, 32px); border-radius: 22px; overflow: hidden; }
+.door-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.door-k { font: 700 13px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; }
+.door h2 { font-size: clamp(25px, 3vw, 36px); line-height: 1.06; letter-spacing: -.025em; }
+.door-copy { font-size: 16.5px; line-height: 1.55; max-width: 52ch; }
+.door-shot { position: relative; }
+.door-facts { display: grid; gap: 0; margin-top: auto; }
+.door-facts > div { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-top: 1px solid; font-size: 15px; line-height: 1.45; }
+.door-facts dt { font: 700 11px/1.9 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.door-stage { background: var(--s900); border: 1px solid rgba(255,138,61,.34); color: var(--hi); }
+.door-stage::before { content: ""; position: absolute; top: -110px; left: -70px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,138,61,.16); filter: blur(60px); pointer-events: none; }
+.door-stage > * { position: relative; }
+.door-stage .door-k { color: var(--amber-300); }
+.door-stage .door-copy, .door-stage dd { color: var(--mid); }
+.door-stage .door-facts > div { border-color: var(--hair); }
+.door-stage dt { color: var(--lo); }
+.door-office { background: #fff; border: 1px solid #fff; color: var(--p-ink); }
+.door-office h2 { color: var(--p-ink); font-family: var(--paper-sans); font-weight: 600; letter-spacing: -.045em; }
+.door-office .door-k { color: var(--p-blue); }
+.door-office .door-copy, .door-office dd { color: var(--p-muted); }
+.door-office .door-facts > div { border-color: var(--p-line); }
+.door-office dt { color: var(--p-muted); }
+.door-office :focus-visible { outline-color: var(--p-blue); }
+@media (min-width: 900px) { .doors { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; } }
+
+/* ---------- 7. app primitives, from the staffing app's components ---------- */
+.bl { font-family: var(--sans); font-size: 14px; line-height: 1.4; color: var(--hi); text-align: left; }
+.bl p { text-wrap: wrap; }
+.bl-mono { font: 400 11px/1.35 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.bl-mono.b { font-weight: 700; }
+.bl .hi { color: var(--hi); } .bl .mid { color: var(--mid); } .bl .lo { color: var(--lo); }
+.bl .am { color: var(--amber-300); } .bl .cy { color: var(--cyan-300); }
+.bl-strong { font-weight: 600; color: var(--hi); }
+.bl-xs { font-size: 12px; }
+.bl-row { display: flex; align-items: center; gap: 5px; }
+.bl .dot { display: inline-block; flex: none; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+.bl-chip { display: inline-flex; flex: none; align-items: center; gap: 6px; padding: 5px 12px; border: 1px solid var(--hair-strong); border-radius: 999px; background: var(--s800); color: var(--mid); font: 500 12px/1.3 var(--sans); white-space: nowrap; }
+.bl-chip .ic { font-size: 13px; }
+.bl-chip.on { border-color: rgba(255,138,61,.5); background: rgba(255,138,61,.15); color: var(--amber-300); }
+.bl-chip.on i { font-style: normal; font-weight: 400; color: var(--amber-200); }
+.bl-badge { display: inline-flex; flex: none; align-items: center; gap: 6px; padding: 3px 9px; border: 1px solid; border-radius: 999px; font: 700 11px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.bl-badge.cy { border-color: rgba(75,214,207,.4); background: rgba(75,214,207,.1); }
+.bl-badge.am { border-color: rgba(255,138,61,.4); background: rgba(255,138,61,.1); }
+.bl-badge .ic { font-size: 12px; }
+
+.bl-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; min-height: 44px; padding: 0 14px; white-space: nowrap; border: 1px solid transparent; border-radius: 12px; font: 600 14px/1.1 var(--sans); text-align: center; text-decoration: none; }
+.bl-btn .ic { font-size: 16px; }
+.bl-btn.pri { background: var(--amber); color: var(--ink-near); box-shadow: 0 10px 30px -12px var(--amber); }
+a.bl-btn.pri:hover { background: var(--amber-300); }
+.bl-btn.sos { font-weight: 700; }
+.bl-btn.sec { background: var(--s800); border-color: var(--hair-strong); color: var(--hi); }
+.bl-btn.gho { color: var(--mid); }
+.bl-btn.dan { color: var(--danger); border-color: rgba(238,123,115,.42); }
+.bl-btn.sm { min-height: 34px; padding: 0 12px; border-radius: 8px; font-size: 12px; }
+.bl-btn.lg { min-height: 48px; font-size: 16px; }
+.bl-btn.wide { display: flex; width: 100%; }
+.bl-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+/* fingerprint avatar + reel "gel": the app's two generative systems, computed from the demo ids */
+.bl-av { position: relative; display: block; flex: none; width: var(--s, 44px); height: var(--s, 44px); border-radius: calc(var(--s, 44px) * .28); overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,.1); }
+.bl-av::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.5), transparent); }
+.bl-av b { position: absolute; right: 4px; bottom: 1px; z-index: 1; font: 700 max(11px, calc(var(--s, 44px) * .2))/1.3 var(--mono); color: #fff; }
+.fp-dre { background: repeating-conic-gradient(from 32deg at 68% 50%, oklch(0.66 0.17 352) 0deg 10deg, transparent 10deg 20deg), repeating-radial-gradient(circle at 68% 50%, oklch(0.5 0.14 20) 0 1.5px, transparent 1.5px 8px), radial-gradient(circle at 68% 50%, oklch(0.44 0.13 352), oklch(0.15 0.05 20)); }
+.gel-dre1 { background: radial-gradient(130% 120% at 32% 38%, oklch(0.64 0.17 320) 0%, oklch(0.42 0.16 320) 28%, oklch(0.24 0.11 320) 62%, oklch(0.13 0.04 320) 100%); }
+.gel-dre2 { background: radial-gradient(130% 120% at 46% 30%, oklch(0.64 0.17 352) 0%, oklch(0.42 0.16 352) 28%, oklch(0.24 0.11 278) 62%, oklch(0.13 0.04 278) 100%); }
+.gel-dre3 { background: radial-gradient(130% 120% at 51% 23%, oklch(0.64 0.17 20) 0%, oklch(0.42 0.16 20) 28%, oklch(0.24 0.11 258) 62%, oklch(0.13 0.04 258) 100%); }
+.gel-sam1 { background: radial-gradient(130% 120% at 38% 35%, oklch(0.64 0.17 278) 0%, oklch(0.42 0.16 278) 28%, oklch(0.24 0.11 168) 62%, oklch(0.13 0.04 168) 100%); }
+.gel-jbird { background: radial-gradient(130% 120% at 41% 31%, oklch(0.64 0.17 196) 0%, oklch(0.42 0.16 196) 28%, oklch(0.24 0.11 20) 62%, oklch(0.13 0.04 20) 100%); }
+.gel-nina { background: radial-gradient(130% 120% at 46% 37%, oklch(0.64 0.17 42) 0%, oklch(0.42 0.16 42) 28%, oklch(0.24 0.11 278) 62%, oklch(0.13 0.04 278) 100%); }
+.gel-katie { background: radial-gradient(130% 120% at 38% 57%, oklch(0.64 0.17 258) 0%, oklch(0.42 0.16 258) 28%, oklch(0.24 0.11 258) 62%, oklch(0.13 0.04 258) 100%); }
+.gel-take { background: radial-gradient(130% 120% at 42% 23%, oklch(0.64 0.17 168) 0%, oklch(0.42 0.16 168) 28%, oklch(0.24 0.11 278) 62%, oklch(0.13 0.04 278) 100%); }
+.bl-reel { position: relative; display: block; flex: none; aspect-ratio: 9 / 16; border-radius: 16px; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,.1); color: #fff; text-decoration: none; }
+.bl-reel::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0) 46%, rgba(0,0,0,.28)); }
+.bl-eq { position: absolute; inset: 25% 14% 50%; display: flex; align-items: flex-end; justify-content: center; gap: 4px; opacity: .85; }
+.bl-eq i { width: 6px; max-width: 10%; height: var(--h); border-radius: 6px; background: rgba(255,178,122,.92); }
+.bl-play { position: absolute; inset: 0; margin: auto; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(0,0,0,.5); font-size: 18px; }
+.bl-dur { position: absolute; top: 8px; right: 8px; padding: 2px 6px; border-radius: 4px; background: rgba(0,0,0,.55); font: 400 11px/1.3 var(--mono); letter-spacing: .04em; }
+.bl-cap { position: absolute; inset: auto 8px 8px; display: grid; gap: 2px; font: 500 12px/1.25 var(--sans); }
+.bl-cap small { font: 400 11px/1.3 var(--mono); color: rgba(255,255,255,.86); }
+.bl-rate { display: inline-flex; flex: none; align-items: center; gap: 5px; font-weight: 700; font-size: 14px; white-space: nowrap; }
+.bl-rate .ic { font-size: 12px; color: var(--amber); }
+.bl-rate small { font: 400 11px/1 var(--mono); color: var(--lo); }
+
+/* the SOS banner (Discover) */
+.bl-sosb { position: relative; display: flex; align-items: flex-start; gap: 12px; padding: 16px; border: 1px solid rgba(255,138,61,.4); border-radius: 16px; background: var(--s900); box-shadow: 0 0 36px -14px var(--amber); }
+.bl-boltbox { display: grid; flex: none; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--amber); color: var(--ink-near); font-size: 22px; }
+.bl-boltbox.s { width: 36px; height: 36px; font-size: 18px; }
+.bl-sosb > div { min-width: 0; }
+.bl-sosb .t { margin-top: 2px; font-size: 16px; font-weight: 700; }
+.bl-sosb .d { margin-top: 4px; font-size: 14px; line-height: 1.5; color: var(--mid); }
+.bl-sosb .bl-btn { margin-top: 12px; }
+
+/* booking card (in-thread) */
+.bl-book { border: 1px solid rgba(255,138,61,.25); border-radius: 16px; background: var(--s900); overflow: hidden; }
+.bl-book-head { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-bottom: 1px solid rgba(255,138,61,.15); background: rgba(255,138,61,.1); color: var(--amber-300); font-size: 15px; }
+.bl-book-main { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 14px 16px; }
+.bl-book-main > div:first-child { min-width: 0; display: grid; gap: 2px; }
+.bl-fee { flex: none; text-align: right; }
+.bl-fee b { display: block; font: 700 24px/1.2 var(--mono); letter-spacing: .02em; color: var(--amber-300); }
+.bl-strip { padding: 12px 16px; border-top: 1px solid var(--hair-sub); background: rgba(28,30,35,.5); }
+.bl-strip.cyan { border-top-color: rgba(75,214,207,.2); background: rgba(75,214,207,.1); }
+.bl-strip .h { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; }
+.bl-strip .h .ic { font-size: 15px; }
+.bl-strip .s { margin-top: 4px; font-size: 12px; line-height: 1.5; color: var(--mid); }
+.bl-strip .bl-btn { margin-top: 8px; }
+.bl-stars { display: flex; gap: 8px; margin-top: 8px; font-size: 28px; color: #5d616b; }
+.bl-stars.sm { gap: 2px; margin: 0; font-size: 15px; color: var(--amber); }
+
+/* a screen: the app's mobile layout (status line, view, bottom tab bar with the raised SOS action) */
+.bl-screen { container-type: inline-size; position: relative; display: flex; flex-direction: column; width: 100%; max-width: 360px; height: 720px; margin-inline: auto; background: var(--ink); border: 1px solid var(--hair-strong); border-radius: 30px; overflow: hidden; box-shadow: 0 0 0 6px #121317, 0 50px 90px -50px #000; }
+.bl-status { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; height: 36px; padding: 0 18px; font: 700 11px/1 var(--mono); letter-spacing: .06em; }
+.bl-status span:last-child { color: var(--cyan-300); text-transform: uppercase; letter-spacing: .08em; }
+.bl-view { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+.bl-pad { padding: 10px 16px 0; }
+.bl-tabbar { position: relative; z-index: 2; flex: none; display: flex; align-items: stretch; height: 60px; border-top: 1px solid var(--hair); background: var(--ink); }
+.bl-tab { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 10px; color: var(--lo); font-size: 21px; }
+.bl-tab b { font: 400 11px/1 var(--mono); text-transform: uppercase; }
+.bl-tab.on { color: var(--amber-300); }
+.bl-sosbtn { position: relative; flex: none; width: 62px; }
+.bl-sosbtn span { position: absolute; top: -20px; left: 3px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; width: 56px; height: 56px; border-radius: 50%; background: var(--amber); color: var(--ink-near); font-size: 21px; box-shadow: 0 10px 30px -8px var(--amber); }
+.bl-sosbtn b { font: 700 11px/1 var(--mono); }
+
+/* Discover, as it sits under the SOS sheet */
+.bl-title { margin-top: 4px; font-size: 24px; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+.bl-under { gap: 12px; }
+.bl-under .bl-two .bl-reel { aspect-ratio: 3 / 4; }
+.bl-scrim { position: absolute; inset: 36px 0 0; z-index: 3; background: rgba(0,0,0,.72); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
+.bl-sheet { position: absolute; inset: auto 0 0; z-index: 4; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 12px 20px 22px; border: 1px solid var(--hair); border-bottom: 0; border-radius: 26px 26px 0 0; background: var(--sheet); box-shadow: 0 -30px 60px -30px #000; }
+.bl-grab { justify-self: center; width: 36px; height: 4px; border-radius: 4px; background: var(--hair-strong); }
+.bl-sheet-head { display: flex; align-items: center; gap: 10px; }
+.bl-sheet-head > div { min-width: 0; flex: 1; }
+.bl-sheet-head .x { color: var(--lo); font-size: 18px; }
+.bl-chips { display: flex; gap: 8px; margin-top: 8px; }
+.bl-chips.clip { margin-right: -20px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 78%, transparent); mask-image: linear-gradient(90deg, #000 78%, transparent); }
+.bl-chips.multi { flex-wrap: wrap; }
+.bl-hint { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid rgba(75,214,207,.3); border-radius: 12px; background: rgba(75,214,207,.1); color: var(--cyan-300); }
+.bl-hint .dot { color: var(--cyan); }
+.bl-sub { position: relative; display: flex; gap: 12px; padding: 12px; border: 1px solid var(--hair-sub); border-radius: 16px; background: var(--s900); }
+.bl-sub.fast { border-color: rgba(255,138,61,.45); }
+.bl-sub .bl-reel { width: 56px; align-self: flex-start; border-radius: 12px; }
+.bl-sub .bl-play { width: 30px; height: 30px; font-size: 14px; }
+.bl-sub-main { flex: 1; min-width: 0; display: grid; gap: 8px; }
+.bl-sub-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.bl-place { margin-top: 2px; }
+.bl-place .ic, .bl-ph .bl-xs .ic { display: inline-block; margin-right: 4px; vertical-align: -2px; }
+.bl-place .bl-mono { white-space: nowrap; }
+.bl-ribbon { position: absolute; top: -11px; right: 12px; display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; background: var(--amber); color: var(--ink-near); font: 700 11px/1.5 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.bl-avail { display: inline-flex; align-items: center; justify-self: start; gap: 6px; padding: 4px 8px; border: 1px solid rgba(255,138,61,.4); border-radius: 8px; background: rgba(255,138,61,.1); color: var(--amber-300); }
+.bl-avail .bl-mono { letter-spacing: .04em; }
+.bl-avail .dot { color: var(--amber); }
+.bl-v { display: inline-block; width: 15px; height: 15px; vertical-align: -2px; }
+
+/* player profile */
+.bl-back { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--mid); }
+.bl-back .ic { font-size: 17px; }
+.bl-ph { display: flex; align-items: flex-start; gap: 14px; margin-top: 10px; }
+.bl-ph > div { min-width: 0; display: grid; justify-items: start; gap: 3px; }
+.bl-name { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 21px; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+.bl-card { border: 1px solid var(--hair-sub); border-radius: 16px; background: var(--s900); overflow: hidden; }
+.bl-ratecard .bl-mono { letter-spacing: .03em; white-space: nowrap; }
+.bl-ratecard .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--hair-sub); }
+.bl-ratecard .big { display: flex; align-items: center; gap: 6px; font-size: 28px; font-weight: 700; line-height: 1.1; }
+.bl-ratecard .big .ic { font-size: 22px; color: var(--amber); }
+.bl-ratecard .big small { font: 400 11px/1 var(--mono); color: var(--lo); }
+.bl-ratecard .r { display: grid; justify-items: end; gap: 6px; text-align: right; }
+.bl-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+.bl-stats > div { display: grid; gap: 3px; padding: 9px 4px; text-align: center; }
+.bl-stats > div + div { border-left: 1px solid var(--hair-sub); }
+.bl-stats b { font: 700 13px/1.2 var(--mono); letter-spacing: .04em; }
+.bl-sec { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.bl-rail { display: flex; gap: 10px; margin-top: 8px; margin-right: -16px; overflow: hidden; }
+.bl-rail .bl-reel { width: 98px; border-radius: 14px; }
+.bl-cta { position: absolute; inset: auto 12px 10px; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px; border: 1px solid var(--hair); border-radius: 16px; background: rgba(17,18,22,.94); box-shadow: 0 20px 40px -10px #000; }
+
+/* chat thread */
+.bl-th-head { flex: none; display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--hair-sub); }
+.bl-th-head > .ic { font-size: 20px; color: var(--mid); }
+.bl-th-head > div { min-width: 0; flex: 1; display: grid; gap: 1px; }
+.bl-th-name { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px; white-space: nowrap; }
+.bl-msgs { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; padding: 12px 14px; overflow: hidden; }
+.bl-msg { max-width: 84%; display: grid; gap: 4px; }
+.bl-msg.me { align-self: flex-end; justify-items: end; }
+.bl-msg.card { width: 100%; max-width: 310px; }
+.bl-bub { padding: 9px 13px; border-radius: 16px 16px 16px 6px; background: var(--s800); font-size: 14px; line-height: 1.5; }
+.bl-msg.me .bl-bub { border: 1px solid rgba(255,138,61,.3); border-radius: 16px 16px 6px 16px; background: rgba(255,138,61,.15); }
+.bl-compose { flex: none; display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--hair-sub); }
+.bl-compose .bl-btn { min-height: 40px; padding: 0 12px; }
+.bl-input { flex: 1; min-width: 0; padding: 10px 14px; border: 1px solid var(--hair-strong); border-radius: 999px; background: var(--s800); color: var(--lo); font-size: 14px; white-space: nowrap; overflow: hidden; }
+.bl-send { display: grid; flex: none; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--s800); color: var(--lo); font-size: 17px; }
+
+/* the narrowest phones: the screens keep their layout and give up a little padding */
+@container (max-width: 330px) {
+  .bl-pad { padding-inline: 12px; }
+  .bl-sheet { padding-inline: 14px; }
+  .bl-sub { gap: 10px; padding: 10px; }
+  .bl-sub .bl-reel { width: 42px; }
+  .bl-sub .bl-btn, .bl-cta .bl-btn { padding: 0 6px; font-size: 13px; }
+  .bl-cta .ic, .bl-ratecard .r, .bl-msg.roomy { display: none; }
+  .bl-book-main { padding-inline: 12px; } .bl-strip { padding-inline: 12px; }
+}
+
+/* pre-show check-ins (inside the booking card) */
+.bl-ci { padding: 14px 16px; border-top: 1px solid rgba(255,138,61,.15); background: rgba(28,30,35,.35); }
+.bl-ci-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.bl-ci-head p { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+.bl-ci-row { padding: 12px; border: 1px solid var(--hair-sub); border-radius: 12px; background: var(--ink-near); }
+.bl-ci-row + .bl-ci-row { margin-top: 10px; }
+.bl-ci-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.bl-ci-top .due { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+.bl-ci-row .req { margin-top: 6px; font-size: 13px; line-height: 1.5; color: var(--mid); }
+.bl-take { position: relative; display: block; margin-top: 10px; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; color: #fff; }
+.bl-fakein { margin-top: 10px; padding: 9px 12px; border: 1px solid var(--hair-strong); border-radius: 12px; background: var(--s800); color: var(--lo); font-size: 12px; line-height: 1.45; }
+.bl-ci-row .bl-two { margin-top: 8px; }
+
+/* ---------- 8. the night stepper ---------- */
+.night { display: grid; gap: 18px; margin-top: clamp(26px, 4vw, 40px); }
+.night-tabs { display: flex; gap: 8px; margin-inline: calc(-1 * var(--gutter)); padding: 4px var(--gutter); overflow-x: auto; scrollbar-width: none; }
+.night-tabs::-webkit-scrollbar { display: none; }
+.night-tab { display: grid; flex: none; gap: 5px; min-height: 58px; padding: 10px 14px; border: 1px solid var(--hair); border-radius: 14px; background: var(--s900); color: var(--mid); font: 600 15px/1.2 var(--sans); text-align: left; cursor: pointer; transition: border-color .15s, background-color .15s, color .15s; }
+.night-tab span { font: 700 11px/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--lo); }
+.night-tab:hover { color: var(--hi); border-color: var(--hair-strong); }
+.night-tab[aria-selected="true"] { border-color: rgba(255,138,61,.55); background: rgba(255,138,61,.1); color: var(--hi); }
+.night-tab[aria-selected="true"] span { color: var(--amber-300); }
+.night-panel { display: grid; gap: 20px; min-width: 0; align-content: start; scroll-margin-top: calc(var(--nav-h) + 16px); }
+.js .night-panel:not(.is-on) { display: none; }
+.js .night-panel.is-on { animation: rise .28s ease both; }
+.night-cap { display: grid; align-content: start; gap: 10px; }
+.night-cap .when { font: 700 12px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--amber-300); }
+.night-cap h4 { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.1; letter-spacing: -.02em; }
+.night-cap p { font-size: 16.5px; line-height: 1.55; color: var(--mid); max-width: 44ch; }
+.night-next { margin-top: 2px; }
+html:not(.js) .night-tabs { display: none; }
+html:not(.js) .night-panels { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 40px 28px; }
+html:not(.js) .night-panel { grid-row: span 2; grid-template-rows: subgrid; }
+/* below the wide layout the step row rides along under the page nav, so a step can be changed while its screen is in view */
+@media (max-width: 1039px) {
+  .js .night-tabs { position: sticky; top: var(--nav-h); z-index: 30; padding-block: 10px; background: var(--ink); border-bottom: 1px solid var(--hair-sub); }
+  .night-tabs::after { content: ""; flex: none; width: 1px; }
+}
+@media (max-width: 699px) { .js .night-cap { min-height: 196px; } }
+@media (min-width: 700px) {
+  .js .night-panel { grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: center; }
+  .js .night-panel .bl-screen { order: -1; }
+  .night-cap p { font-size: 18px; }
+}
+@media (min-width: 1040px) {
+  .js .night { grid-template-columns: 252px minmax(0, 1fr); gap: 40px; align-items: center; }
+  .night-tabs { flex-direction: column; gap: 0; margin: 0; padding: 0; overflow: visible; }
+  .night-tab { grid-template-columns: 66px minmax(0, 1fr); align-items: baseline; gap: 10px; min-height: 54px; padding: 14px 10px 14px 18px; border: 0; border-left: 2px solid var(--hair); border-radius: 0; background: none; }
+  .night-tab:hover { border-color: var(--hair-strong); }
+  .night-tab[aria-selected="true"] { border-color: var(--amber); background: linear-gradient(90deg, rgba(255,138,61,.12), rgba(255,138,61,0)); }
+  .night-cap h4 { font-size: 36px; }
+}
+
+/* ---------- 9. staffing blocks ---------- */
+.staff-top { display: grid; gap: 28px; }
+.wm { display: inline-flex; align-items: baseline; font: 700 21px/1 var(--sans); letter-spacing: -.04em; color: var(--hi); text-transform: none; }
+.wm span { position: relative; display: inline-block; }
+.wm span i { position: absolute; left: 50%; top: .05em; width: .2em; height: .2em; border-radius: 50%; background: var(--amber); box-shadow: 0 0 .5em var(--amber); transform: translateX(-50%); }
+@media (min-width: 900px) { .staff-top { grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 48px; } }
+
+/* the ticket: this page's one link into the app */
+.chit-wrap { display: grid; gap: 12px; justify-items: start; }
+.chit { position: relative; display: inline-flex; align-items: stretch; max-width: 100%; border-radius: 15px; text-decoration: none; filter: drop-shadow(0 20px 40px rgba(255,138,61,.28)); transition: filter .2s; }
+.chit:hover { filter: drop-shadow(0 20px 44px rgba(255,138,61,.46)); }
+.chit-stub { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; padding: 0 16px; border-radius: 15px 0 0 15px; background: var(--amber); color: var(--ink-near); }
+.chit-stub i { width: 19px; height: 19px; border-radius: 50%; background: var(--ink-near); box-shadow: inset 0 0 0 2px rgba(255,255,255,.35); }
+.chit-stub b { font: 700 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.chit-body { display: flex; flex-direction: column; justify-content: center; gap: 5px; min-width: 0; padding: 15px 22px; border: 1px solid #2b2e36; border-left: 1.5px dashed #4a4e58; border-radius: 0 15px 15px 0; background: #141519; }
+.chit-k { font: 400 11px/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--mid); }
+.chit-t { display: flex; align-items: center; gap: 12px; font-size: clamp(18px, 2.2vw, 21px); font-weight: 700; color: #fff; }
+.chit-t span { display: inline-block; color: var(--amber); animation: arrowNudge 1.4s ease-in-out infinite; }
+.chit::before, .chit::after { content: ""; position: absolute; left: var(--notch, 93px); width: 16px; height: 16px; border-radius: 50%; background: var(--ink); }
+.chit::before { top: -9px; } .chit::after { bottom: -9px; }
+
+/* reels: a slice of the Discover grid */
+.reels { display: flex; gap: 14px; margin: 28px calc(-1 * var(--gutter)) 0; padding: 4px var(--gutter) 10px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--hair-strong) transparent; }
+.reel-cell { flex: none; width: 168px; display: grid; gap: 8px; scroll-snap-align: start; }
+.reel-cell .bl-reel { aspect-ratio: 3 / 4; }
+.reel-flag { position: absolute; top: 8px; left: 8px; padding: 2px 6px; border-radius: 6px; background: var(--amber); color: var(--ink-near); font: 700 11px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.reel-who { display: grid; gap: 3px; }
+.reel-who .n { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+.reel-who .m { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; }
+@media (min-width: 1000px) { .reels { margin-inline: 0; padding-inline: 0; overflow: visible; } .reel-cell { flex: 1; width: auto; } }
+
+/* held until the gig happens */
+.money { display: grid; gap: 40px; }
+.ticks { display: grid; gap: 12px; margin-top: 24px; }
+.ticks li { display: flex; align-items: flex-start; gap: 11px; font-size: 16px; line-height: 1.45; color: #c9cdd4; }
+.ticks li > span { display: grid; flex: none; place-items: center; width: 22px; height: 22px; margin-top: 1px; border-radius: 6px; background: rgba(75,214,207,.14); color: var(--cyan); font-size: 13px; }
+.ticks .ic { stroke-width: 3; }
+.testmode { display: flex; align-items: flex-start; gap: 10px; margin-top: 24px; padding: 13px 15px; border: 1px solid rgba(75,214,207,.26); border-radius: 12px; background: rgba(75,214,207,.07); font-size: 15px; line-height: 1.5; color: #b9ece8; max-width: 56ch; }
+.testmode .ic { margin-top: 3px; font-size: 16px; color: var(--cyan); }
+.states { margin-top: 32px; }
+.states-k { font: 700 12px/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lo); }
+.states ol { display: grid; gap: 0; margin-top: 12px; counter-reset: s; }
+.states li { position: relative; display: grid; grid-template-columns: 98px minmax(0, 1fr); gap: 14px; align-items: baseline; padding: 11px 0 11px 22px; border-top: 1px solid var(--hair-sub); font-size: 15px; line-height: 1.45; color: var(--mid); }
+.states li::before { content: ""; position: absolute; left: 3px; top: 18px; width: 8px; height: 8px; border-radius: 50%; background: var(--hair-strong); }
+.states li::after { content: ""; position: absolute; left: 6.5px; top: 28px; bottom: -18px; width: 1px; background: var(--hair-strong); }
+.states li:last-child::after { display: none; }
+.states li b { font: 700 12px/1.6 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--hi); }
+.states li.held::before, .states li.rel::before { background: var(--cyan); }
+.states li.held b, .states li.rel b { color: var(--cyan-300); }
+.states .also { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--hair-sub); }
+.checkin { display: grid; gap: 16px; align-content: start; min-width: 0; }
+.checkin h4 { font-size: 21px; line-height: 1.2; letter-spacing: -.015em; }
+.checkin .bl-book { max-width: 400px; }
+.checkin figcaption { margin-top: 10px; }
+@media (min-width: 940px) { .money { grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: clamp(40px, 6vw, 80px); } }
+
+/* an example screen that carries the demo figures */
+.demo { margin-top: 28px; border: 1px solid var(--hair); border-radius: 18px; background: var(--s900); overflow: hidden; }
+.demo-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; padding: 12px 16px; border-bottom: 1px solid var(--hair-sub); background: var(--s850); font: 700 12px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mid); }
+.demo-body { padding: 18px 16px 20px; }
+.demo-body .t { margin-top: 4px; font-size: 19px; font-weight: 700; letter-spacing: -.015em; }
+.scenes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; margin-top: 16px; }
+.scene { border: 1px solid var(--hair-sub); border-radius: 14px; background: var(--ink); overflow: hidden; }
+.scene i { display: block; height: 72px; }
+.scene div { display: grid; gap: 4px; padding: 13px 14px 14px; }
+.scene b { font-size: 17px; line-height: 1.2; }
+.scene .g1 { background: radial-gradient(120% 130% at 25% 20%, oklch(0.6 0.16 42), oklch(0.28 0.12 20) 60%, oklch(0.14 0.05 20)); }
+.scene .g2 { background: radial-gradient(120% 130% at 25% 20%, oklch(0.58 0.15 278), oklch(0.28 0.12 258) 60%, oklch(0.14 0.05 258)); }
+.scene .g3 { background: radial-gradient(120% 130% at 25% 20%, oklch(0.6 0.15 168), oklch(0.3 0.12 128) 55%, oklch(0.14 0.05 128)); }
+.demo-stats { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 16px; color: var(--mid); }
+.demo-stats b { font-weight: 400; color: var(--hi); }
+.scene-after { display: grid; gap: 6px; margin-top: 16px; }
+
+/* ---------- 10. closeout ---------- */
+.band-closeout { background: #0b0e15; }
+.co-grid { display: grid; gap: 36px; }
+.co-status { margin-top: 26px; padding: 14px 16px; border: 1px solid rgba(147,180,255,.3); border-radius: 12px; background: rgba(147,180,255,.06); font-size: 15.5px; line-height: 1.5; color: #cfdcff; max-width: 52ch; }
+.co-links { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-top: 14px; }
+.co-links .textlink { color: var(--blue-d); }
+.paper { color: var(--p-ink); font-family: var(--paper-sans); line-height: 1.5; text-align: left; }
+.paper p { color: var(--p-muted); text-wrap: wrap; }
+.co-visual { min-width: 0; padding: 16px; border: 1px solid #e5ecf4; border-radius: 16px; background: var(--p-surface); }
+.co-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 10px; margin-bottom: 10px; font-size: 11px; line-height: 1.6; letter-spacing: .04em; text-transform: uppercase; color: var(--p-muted); }
+.co-report { border: 1px solid var(--p-line); border-radius: 11px; background: #fff; overflow: hidden; box-shadow: 0 15px 50px rgba(21,53,93,.04); }
+.co-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 20px 22px 16px; border-bottom: 1px solid #e5eaf2; }
+.co-title { font-size: 18px; font-weight: 700; line-height: 1.35; letter-spacing: -.02em; color: var(--p-ink); }
+.paper .co-title { color: var(--p-ink); }
+.co-sub { margin-top: 3px; font-size: 12px; }
+.co-pillrow { display: flex; align-items: center; gap: 8px; }
+.co-pill { padding: 4px 8px; border: 1px solid #dfe5ee; border-radius: 4px; font-size: 12px; white-space: nowrap; color: var(--p-muted); }
+.co-tabs { display: flex; gap: 24px; padding: 13px 22px 0; border-bottom: 1px solid #e5eaf2; font-size: 13px; color: var(--p-muted); }
+.co-tabs span { padding-bottom: 11px; }
+.co-tabs .current { color: var(--p-ink); font-weight: 600; border-bottom: 2px solid var(--p-blue); }
+.co-body { padding: 20px 22px; }
+.co-amounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: 16px; font-variant-numeric: tabular-nums; }
+.co-amounts dt { font-size: 12px; color: var(--p-muted); }
+.co-amounts dd { font-size: clamp(27px, 3.2vw, 32px); font-weight: 600; line-height: 1.4; letter-spacing: -.05em; }
+.co-amounts .primary { color: var(--p-blue); }
+.co-filerow { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 16px 0 6px; }
+.co-files { display: flex; flex-wrap: wrap; gap: 6px; }
+.co-files li { padding: 4px 7px; border: 1px solid #dfe5ee; border-radius: 4px; font-size: 11px; white-space: nowrap; }
+.co-files b { margin-right: 4px; color: var(--p-blue); }
+.co-ded div { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid #e5eaf2; font-size: 13px; }
+.co-ded dt { color: var(--p-muted); }
+.co-ded dd { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.co-exc { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; padding: 12px; border: 1px solid #efd9b4; border-radius: 6px; background: #fff8ec; font-size: 13px; }
+.co-exc > div { flex: 1; min-width: 0; }
+.co-exc strong { font-weight: 600; }
+.co-exc p { margin-top: 3px; font-size: 12px; line-height: 1.45; color: #5a5140; }
+.co-sym { display: grid; flex: none; place-items: center; width: 17px; height: 17px; margin-top: 2px; border: 1px solid #8a5206; border-radius: 50%; color: #8a5206; font-size: 12px; font-weight: 700; line-height: 1; }
+.co-approval { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 18px; padding-top: 16px; border-top: 1px solid #e5eaf2; font-size: 13px; }
+.co-approval strong { display: block; font-weight: 600; }
+.co-approval p { margin-top: 2px; font-size: 12px; }
+.co-tagrow { display: flex; align-items: center; gap: 8px; }
+.co-tag { padding: 6px 10px; border-radius: 4px; background: #eef2f8; font-size: 11px; white-space: nowrap; }
+.co-note { margin-top: 12px; font-size: 12px; line-height: 1.5; }
+.co-n { display: inline-grid; flex: none; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--p-blue); color: #fff; font: 700 12px/1 var(--paper-sans); font-style: normal; }
+.co-path { display: grid; gap: 0; margin-top: clamp(36px, 5vw, 56px); }
+.co-path li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 4px 8px; padding: 18px 0; border-top: 1px solid rgba(147,180,255,.24); }
+.co-path .co-n { grid-row: 1 / 3; margin-top: 3px; }
+.co-path h3 { font-size: 19px; line-height: 1.3; letter-spacing: -.01em; }
+.co-path p { font-size: 15.5px; line-height: 1.55; color: var(--mid); }
+@media (min-width: 720px) {
+  .co-path { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+}
+@media (min-width: 1000px) {
+  .co-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 80px); align-items: center; }
+  .co-path { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
+  .co-path li { grid-template-columns: 1fr; gap: 8px; padding-top: 20px; }
+  .co-path .co-n { grid-row: auto; margin: 0 0 6px; }
+}
+
+/* ---------- 11. meet, who, status, involved, footer ---------- */
+.band-meet { background: var(--band); }
+.meet-h { margin-top: 18px; font-size: clamp(32px, 5.1vw, 60px); line-height: 1.02; letter-spacing: -.035em; text-wrap: wrap; }
+.meet-h span { display: block; }
+.meet-h b.a { color: var(--amber-300); } .meet-h b.b { color: var(--blue-d); }
+.sum { display: grid; gap: 10px; margin-top: clamp(32px, 5vw, 52px); }
+.sum > div { padding: 18px 20px 20px; border-radius: 16px; }
+.sum .k { font: 700 12px/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.sum .v { margin-top: 8px; font-size: clamp(20px, 2.2vw, 25px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--hi); }
+.sum .d { margin-top: 6px; font-size: 15px; line-height: 1.5; color: var(--mid); }
+.sum-a { border: 1px solid rgba(255,138,61,.34); background: var(--s900); } .sum-a .k { color: var(--amber-300); }
+.sum-b { border: 1px solid rgba(147,180,255,.36); background: #0f131c; } .sum-b .k { color: var(--blue-d); }
+.sum-c { border: 1px dashed #555a66; } .sum-c .k { color: var(--mid); }
+.sum-op { justify-self: center; font: 400 22px/1 var(--mono); color: var(--lo); }
+@media (max-width: 899px) { .sum-op.to { transform: rotate(90deg); } }
+@media (min-width: 900px) {
+  .sum { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; gap: 16px; }
+  .sum-op { align-self: center; }
+}
+
+.who { display: grid; gap: 40px; margin-top: clamp(32px, 5vw, 52px); }
+.who-col > .door-k { display: block; padding-bottom: 14px; border-bottom: 2px solid; }
+.who-stage > .door-k { color: var(--amber-300); border-color: var(--amber); }
+.who-office > .door-k { color: var(--blue-d); border-color: var(--blue-d); }
+.who dl > div { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--hair-sub); }
+.who dt { font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
+.who dd { font-size: 16px; line-height: 1.5; color: var(--mid); max-width: 48ch; }
+.roles { display: grid; gap: 4px 48px; margin-top: clamp(32px, 5vw, 52px); padding-top: clamp(24px, 3vw, 36px); border-top: 1px solid var(--hair); }
+.roles h3 { font-size: 21px; letter-spacing: -.015em; }
+.roles p { margin-top: 6px; font-size: 15.5px; color: var(--mid); }
+.role-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.role-chips button { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 15px; border: 1px solid var(--hair-strong); border-radius: 999px; background: var(--s800); color: var(--mid); font: 500 14px/1 var(--sans); white-space: nowrap; cursor: pointer; transition: background-color .15s, border-color .15s, color .15s; }
+.role-chips button .ic { font-size: 15px; }
+.role-chips button[aria-pressed="true"] { border-color: rgba(255,138,61,.5); background: rgba(255,138,61,.15); color: var(--amber-300); }
+.sig { margin-top: clamp(36px, 5vw, 56px); font-size: clamp(22px, 3vw, 34px); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--hi); }
+@media (min-width: 900px) { .who { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; } .roles { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); align-items: start; } .roles .role-chips { margin-top: 0; } }
+
+.stand { margin-top: clamp(28px, 4vw, 44px); border-bottom: 1px solid var(--hair); }
+.stand > div { display: grid; gap: 6px 24px; padding: 18px 0; border-top: 1px solid var(--hair); }
+.stand dt { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
+.stand dd { font-size: 16px; line-height: 1.5; color: var(--mid); max-width: 60ch; }
+@media (min-width: 820px) { .stand > div { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); align-items: baseline; } }
+
+.band-involved { position: relative; overflow: hidden; }
+.band-involved::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 130% at 50% 130%, rgba(255,138,61,.2), rgba(255,138,61,0) 58%); pointer-events: none; }
+.band-involved > .wrap { position: relative; display: grid; justify-items: center; text-align: center; }
+.band-involved h2 { margin-top: 20px; font-size: clamp(42px, 8vw, 84px); line-height: .98; letter-spacing: -.035em; }
+.band-involved .lede { margin-inline: auto; }
+.standby { display: inline-flex; align-items: center; gap: 9px; font: 700 12px/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mid); }
+.standby i { width: 7px; height: 7px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+.involve-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+.involve-btns .btn { min-height: 52px; padding: 0 22px; font-size: 16px; white-space: normal; text-align: center; }
+.mail { margin-top: 18px; font: 400 15px/1.5 var(--mono); color: var(--mid); }
+.involve-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 26px; margin-top: 8px; }
+
+.sf-foot { border-top: 1px solid var(--hair-sub); background: var(--ink); }
+.sf-foot .wrap { display: grid; gap: 22px; padding-block: 36px; }
+.sf-foot p { font-size: 15px; line-height: 1.5; color: var(--mid); max-width: 44ch; }
+.sf-foot .sf-brand { display: inline-flex; padding: 0; height: 44px; background: none; margin-bottom: 4px; }
+.sf-foot nav { display: flex; flex-wrap: wrap; gap: 0 22px; }
+.sf-foot nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; color: var(--mid); text-decoration: none; }
+.sf-foot nav a:hover { color: var(--hi); }
+.sf-foot .fine { font: 400 12px/1.5 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--lo); }
+@media (min-width: 820px) { .sf-foot .wrap { grid-template-columns: minmax(0, 1fr) auto; align-items: end; } .sf-foot .fine { grid-column: 1 / -1; } }
+</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div id="bl" style="--accent:#f8ab3c;--accent-bright:#ffc879;--cyan:#4bd6cf;--grain-op:1;--reel-play:running;background:#0b0c0f;overflow-x:clip">
+<!-- the staffing app's own icons, drawn once and reused in the screens below -->
+<svg class="vh" width="0" height="0" aria-hidden="true">
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 4.5 13.5H11L9.5 21.5 19.5 9.5H12.5L13 2.5Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2.5-7 4 14 2.5-7h5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2-3.2A8 8 0 1 1 21 12Z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 8h18c0-1-3-1-3-8"/><path d="M10 21h4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c1-4 4-6 7.5-6s6.5 2 7.5 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.3-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.7 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-verified" viewBox="0 0 24 24"><path d="M12 2l2.4 2 3.1-.4 1.2 2.9 2.8 1.4-.7 3.1 2 2.4-2 2.4.7 3.1-2.8 1.4-1.2 2.9-3.1-.4-2.4 2-2.4-2-3.1.4-1.2-2.9-2.8-1.4.7-3.1-2-2.4 2-2.4-.7-3.1 2.8-1.4L6.5 3.6l3.1.4Z" fill="#38bdf8" stroke="none"/><path d="m8.5 12.2 2.4 2.4 4.6-4.8" stroke="#0a0a0f" stroke-width="2" fill="none"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 2.8V6.2M16 2.8V6.2"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M16.5 7.5c0-1.7-2-2.8-4.5-2.8S7.5 5.8 7.5 7.7c0 4.4 9 2.3 9 6.8 0 1.9-2 3-4.5 3s-4.5-1.2-4.5-2.9"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10.5 13.5"/><path d="M21 3 14 21l-3.5-7.5L3 10Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><circle cx="7" cy="18" r="3"/><circle cx="17" cy="16" r="3"/><path d="M10 18V5.5L20 3.5V16"/><path d="M10 9.5 20 7.5"/></symbol>
+  <symbol id="i-guitar" viewBox="0 0 24 24"><path d="m20 4-6.5 6.5"/><path d="M19 3.5 20.5 5"/><path d="M13.9 10.1a4.5 4.5 0 0 0-6.2.5c-.9 1-.9 2-1.7 2.8-.8.8-2.2.7-2.7 2.4-.5 1.6.4 3.5 1.9 4.6 1.5 1.1 3.6 1.4 4.9.2.9-.9.9-2.2 1.6-3 .7-.8 1.9-.7 2.8-1.7a4.5 4.5 0 0 0-.6-5.8Z"/><circle cx="8.5" cy="15.5" r="1.2"/></symbol>
+  <symbol id="i-bass" viewBox="0 0 24 24"><path d="m21 3-8 8"/><path d="M12.6 11.4a5 5 0 0 0-6.8.4C4 13.6 4.6 15 3.8 16.4c-.6 1-1.4 2.2-.5 3.6.9 1.4 3 1.9 4.6 1.2 1.6-.6 1.8-2.2 3.2-3 1.2-.8 2.4-.5 3.6-1.9a5 5 0 0 0-2.1-4.9Z"/><path d="M18.5 2.5 20 4M20 2.5l1.5 1.5"/></symbol>
+  <symbol id="i-drums" viewBox="0 0 24 24"><ellipse cx="12" cy="9" rx="8" ry="3"/><path d="M4 9v7c0 1.7 3.6 3 8 3s8-1.3 8-3V9"/><path d="M4 12.5c0 1.7 3.6 3 8 3s8-1.3 8-3"/><path d="m7 3 5 3.5M17 3l-5 3.5"/></symbol>
+  <symbol id="i-keys" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10.5" rx="1.5"/><path d="M7.3 7v10.5M12 7v10.5M16.8 7v10.5"/></symbol>
+  <symbol id="i-vocals" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="10" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21M8.5 21h7"/></symbol>
+  <symbol id="i-sax" viewBox="0 0 24 24"><path d="M15 3.5c-1 0-1.7.6-1.7 1.7v8.3a5 5 0 0 1-10 0"/><path d="M3.3 10.5v3a6.7 6.7 0 0 0 13.4 0V5.2c0-.9.6-1.7 1.6-1.7"/><path d="M13.3 7h-2.5M13.3 9.5h-2.5M13.3 12h-2.5"/></symbol>
+  <symbol id="i-trumpet" viewBox="0 0 24 24"><path d="M3 10.5h11c2.5 0 4.5-1.5 6-3v9c-1.5-1.5-3.5-3-6-3H3Z"/><path d="M3 9v3M8.5 13.5v3.5M11.5 13.5v3.5M14.5 13.5v3.5"/></symbol>
+  <symbol id="i-violin" viewBox="0 0 24 24"><path d="m20.5 3.5-7 7"/><path d="M19 2.5 21.5 5"/><path d="M13.7 10.3c-1.5-1-3.6-.8-4.9.5-.9.9-1 1.9-.6 2.9-1.4-.2-2.6.1-3.5 1-1.5 1.5-1.4 4 .2 5.6 1.6 1.6 4.1 1.7 5.6.2.9-.9 1.2-2.1 1-3.5 1 .4 2 .3 2.9-.6 1.3-1.3 1.5-3.4.5-4.9"/></symbol>
+  <symbol id="i-steel" viewBox="0 0 24 24"><rect x="3" y="7.5" width="18" height="6" rx="1.5"/><path d="M5.5 13.5v6M18.5 13.5v6M3 10.5h18"/></symbol>
+  <symbol id="i-dj" viewBox="0 0 24 24"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><rect x="2.5" y="13" width="4.5" height="7" rx="1.5"/><rect x="17" y="13" width="4.5" height="7" rx="1.5"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M6 4v16M12 4v16M18 4v16"/><rect x="4" y="8" width="4" height="3" rx="1" fill="currentColor" stroke="none"/><rect x="10" y="13" width="4" height="3" rx="1" fill="currentColor" stroke="none"/><rect x="16" y="6" width="4" height="3" rx="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-light" viewBox="0 0 24 24"><circle cx="12" cy="10" r="5"/><path d="M12 2v1.5M4.9 4.9l1 1M19.1 4.9l-1 1M2 10h1.5M20.5 10H22"/><path d="M9.5 18h5M10.5 21h3M9.8 15h4.4"/></symbol>
+</svg>
 
-  <!-- ===================== KITESINK SITE BAR (dark, matches Backline; links back to the site) ===================== -->
-  <div style="border-bottom:1px solid rgba(255,255,255,.07);background:#090a0d">
-    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding:9px clamp(18px,4vw,30px)">
-      <a href="/" style="display:inline-flex;align-items:center;gap:7px;font:700 15px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#e7e9ec"><span style="color:var(--accent)">Kite</span>Sink</a>
-      <nav aria-label="KiteSink" style="display:flex;align-items:center;gap:clamp(13px,2.5vw,22px);font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.05em;color:#6b7079;flex-wrap:wrap">
-        <a href="/consulting" class="ksNav">Consulting</a>
-        <a href="/fitness" class="ksNav">Fitness</a>
-        <a href="/music" class="ksNav" aria-current="true" style="color:var(--accent)">Music</a>
-        <a href="/library" class="ksNav">Library</a>
-        <a href="/about" class="ksNav">About</a>
+<!-- KiteSink slim bar (shared chrome from ks.js; styled dark in the <style> block above) -->
+<div data-ks="bar"></div>
+
+<!-- ============ PAGE NAV ============ -->
+<div class="sf-head">
+  <div class="wrap sf-head-in">
+    <a class="sf-brand" href="#top" aria-label="Stage First, top of page"><span class="sf-mark" aria-hidden="true"><i></i><i></i><i></i></span>Stage First</a>
+    <div class="sf-bar">
+      <nav class="sf-links" aria-label="On this page">
+        <a href="#sides">Two sides</a>
+        <a href="#staffing">Staffing</a>
+        <a href="#closeout">Closeout</a>
+        <a href="#meet">Where they meet</a>
+        <a href="#who">Who it&rsquo;s for</a>
+        <a href="#status">Status</a>
       </nav>
+      <a class="btn btn-pri sf-cta" href="#involved">Get involved</a>
     </div>
   </div>
-
-  <!-- ===================== NAV ===================== -->
-  <nav style="position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,30px);background:rgba(11,12,15,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap">
-    <a href="#top" style="display:flex;align-items:center;gap:10px" aria-label="Backline home">
-      <div style="width:28px;height:28px;border-radius:8px;background:#141519;border:1px solid #2a2d35;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
-        <div style="width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)"></div>
-        <div style="position:absolute;bottom:-10px;width:2px;height:16px;background:linear-gradient(var(--accent),transparent)"></div>
-      </div>
-      <div style="font-weight:700;font-size:22px;letter-spacing:-.03em;display:flex;color:#f4f5f7">backl<span style="position:relative;display:inline-block">ı<span style="position:absolute;top:.06em;left:.06em;width:.2em;height:.2em;border-radius:50%;background:var(--accent);box-shadow:0 0 .45em var(--accent)"></span></span>ne</div>
-    </a>
-    <div style="display:flex;align-items:center;gap:clamp(14px,2.4vw,26px);flex-wrap:wrap">
-      <a href="#moment" class="navlink" style="font-size:14px;color:#a6abb5;font-weight:500;transition:color .15s">How it works</a>
-      <a href="#reels" class="navlink" style="font-size:14px;color:#a6abb5;font-weight:500;transition:color .15s">Reels</a>
-      <a href="#scene" class="navlink" style="font-size:14px;color:#a6abb5;font-weight:500;transition:color .15s">Cities</a>
-      <a href="https://backline.kitesink.com" target="_blank" rel="noopener" class="navlink" style="font-size:14px;color:#c9cdd4;font-weight:500;transition:color .15s">Log in</a>
-      <a href="https://backline.kitesink.com" target="_blank" rel="noopener" class="amberBtn" style="font-weight:700;font-size:14px;background:var(--accent);color:#0c0d10;padding:10px 18px;border-radius:11px;display:inline-flex;align-items:center;gap:7px;transition:background .15s">Open app →</a>
-    </div>
-  </nav>
-
-  <!-- ===================== HERO ===================== -->
-  <header id="top" style="position:relative;overflow:hidden">
-    <!-- stage beams -->
-    <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
-      <div style="position:absolute;top:-20%;left:12%;width:200px;height:120%;background:linear-gradient(180deg,rgba(248,171,60,.20),transparent 60%);transform:rotate(16deg);filter:blur(50px);animation:floaty 9s ease-in-out infinite"></div>
-      <div style="position:absolute;top:-20%;right:8%;width:160px;height:120%;background:linear-gradient(180deg,rgba(75,214,207,.14),transparent 58%);transform:rotate(-14deg);filter:blur(54px);animation:floaty 11s ease-in-out infinite"></div>
-      <div style="position:absolute;inset:0;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);background-size:130px;mix-blend-mode:overlay;opacity:calc(.08*var(--grain-op))"></div>
-    </div>
-
-    <div style="position:relative;max-width:1200px;margin:0 auto;padding:70px clamp(20px,4vw,30px) 90px;display:flex;flex-wrap:wrap;gap:52px;align-items:center;justify-content:center">
-      <!-- copy -->
-      <div style="flex:1;min-width:320px;max-width:620px">
-        <div style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;color:#e6c396;background:rgba(248,171,60,.08);border:1px solid rgba(248,171,60,.28);padding:6px 12px;border-radius:999px;margin-bottom:24px">
-          <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:blink 1.6s ease-in-out infinite"></span>THE BOOKING NETWORK FOR WORKING MUSICIANS
-        </div>
-        <h1 style="font-weight:700;font-size:clamp(46px,7vw,88px);line-height:.98;letter-spacing:-.03em;margin:0;color:#f6f7f9">Your drummer bailed.<br><span style="color:var(--accent-bright)">The show goes on.</span></h1>
-        <p style="font-size:18px;line-height:1.55;color:#b3b8c0;max-width:48ch;margin:24px 0 0">Find a sub nearby who's free tonight, watch a 30-second reel of them actually playing, message, book and pay — all before soundcheck. Built by people who've loaded out a van at 2am.</p>
-
-        <!-- CHIT -->
-        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:36px">
-          <a href="https://backline.kitesink.com" target="_blank" rel="noopener" class="chit" style="position:relative;display:inline-flex;align-items:stretch;border-radius:15px;filter:drop-shadow(0 22px 44px rgba(248,171,60,.34));animation:floaty 6s ease-in-out infinite;transition:filter .2s" aria-label="Find a sub tonight — open Backline">
-            <div style="background:var(--accent);border-radius:15px 0 0 15px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 17px;position:relative">
-              <div style="width:19px;height:19px;border-radius:50%;background:#0c0d10;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)"></div>
-              <span style="font-family:'Space Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.14em;color:#0c0d10;margin-top:7px">ADMIT ONE</span>
-            </div>
-            <div aria-hidden="true" style="position:absolute;left:57px;top:-9px;width:16px;height:16px;border-radius:50%;background:#0b0c0f"></div>
-            <div aria-hidden="true" style="position:absolute;left:57px;bottom:-9px;width:16px;height:16px;border-radius:50%;background:#0b0c0f"></div>
-            <div style="background:#141519;border:1px solid #2b2e36;border-left:1.5px dashed #3a3d45;border-radius:0 15px 15px 0;padding:15px 24px;display:flex;flex-direction:column;justify-content:center;gap:4px">
-              <span style="font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#71767f">TONIGHT'S PASS · #BL-0413</span>
-              <span style="font-size:21px;font-weight:700;color:#fff;display:flex;align-items:center;gap:12px">Find a sub tonight <span style="color:var(--accent);animation:arrowNudge 1.4s ease-in-out infinite;display:inline-block">→</span></span>
-            </div>
-          </a>
-          <a href="#moment" style="font-size:15px;font-weight:600;color:#c9cdd4;display:inline-flex;align-items:center;gap:8px">
-            <span style="width:38px;height:38px;border-radius:50%;border:1px solid #333640;display:inline-flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c9cdd4" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg></span>
-            See how it works
-          </a>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;font-family:'Space Mono',monospace;font-size:12px;color:#71767f">
-          <span><span style="color:#c9cdd4">8,400+</span> players &amp; techs</span>
-          <span><span style="color:#c9cdd4">12k+</span> gigs booked</span>
-          <span><span style="color:#c9cdd4">Austin</span> · Nashville · NOLA</span>
-        </div>
-      </div>
-
-      <!-- hero device -->
-      <div style="flex:none;position:relative;animation:floaty 8s ease-in-out infinite">
-        <!-- floating reel tile -->
-        <div aria-hidden="true" style="position:absolute;left:-64px;top:44px;z-index:3;width:104px;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:radial-gradient(130% 120% at 30% 18%, oklch(0.64 0.17 278) 0%, oklch(0.4 0.15 278) 30%, oklch(0.22 0.1 196) 66%, oklch(0.12 0.04 196) 100%);box-shadow:0 24px 50px -20px #000;transform:rotate(-8deg);animation:floaty2 7s ease-in-out infinite">
-          <div style="position:absolute;top:-10%;bottom:-10%;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,240,214,.3),transparent);animation:sweep 4.5s ease-in-out infinite;animation-play-state:var(--reel-play)"></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.7))"></div>
-          <div style="position:absolute;top:7px;left:7px;font-family:'Space Mono',monospace;font-size:8px;background:rgba(0,0,0,.4);color:#fff;padding:2px 6px;border-radius:5px">KEYS</div>
-          <div style="position:absolute;left:8px;bottom:8px;display:flex;align-items:flex-end;gap:2px;height:13px">
-            <div style="width:2.5px;height:60%;background:var(--accent);border-radius:2px;transform-origin:bottom;animation:eq .8s ease-in-out infinite;animation-play-state:var(--reel-play)"></div>
-            <div style="width:2.5px;height:100%;background:var(--accent);border-radius:2px;transform-origin:bottom;animation:eq .9s ease-in-out infinite;animation-delay:-.4s;animation-play-state:var(--reel-play)"></div>
-            <div style="width:2.5px;height:45%;background:var(--accent);border-radius:2px;transform-origin:bottom;animation:eq .7s ease-in-out infinite;animation-delay:-.6s;animation-play-state:var(--reel-play)"></div>
-            <div style="width:2.5px;height:85%;background:var(--accent);border-radius:2px;transform-origin:bottom;animation:eq 1s ease-in-out infinite;animation-delay:-.2s;animation-play-state:var(--reel-play)"></div>
-          </div>
-        </div>
-        <!-- floating booked toast -->
-        <div aria-hidden="true" style="position:absolute;right:-52px;bottom:96px;z-index:3;background:#141519;border:1px solid rgba(75,214,207,.35);border-radius:12px;padding:10px 13px;box-shadow:0 20px 44px -18px #000;transform:rotate(5deg);animation:floaty 6.5s ease-in-out infinite">
-          <div style="display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#4bd6cf"></span><span style="font-size:12.5px;font-weight:600;color:#c9f2ef">Booked · $180 held</span></div>
-          <div style="font-family:'Space Mono',monospace;font-size:9.5px;color:#6f9d99;margin-top:3px">RELEASES AFTER THE SHOW</div>
-        </div>
-
-        <!-- phone -->
-        <div style="width:300px;max-width:86vw;background:linear-gradient(#1c1d22,#0a0b0d);padding:8px;border-radius:44px;border:1px solid #2a2c33;box-shadow:0 50px 100px -40px #000;position:relative;z-index:2">
-          <div style="width:100%;height:600px;border-radius:37px;overflow:hidden;position:relative;background:#0b0c0f">
-            <div aria-hidden="true" style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:92px;height:26px;background:#000;border-radius:16px;z-index:5"></div>
-            <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:13px 22px 0;z-index:4">
-              <span style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#fff">7:58</span>
-              <span style="font-family:'Space Mono',monospace;font-size:10px;color:#fff">5G</span>
-            </div>
-            <div style="position:absolute;inset:0;padding:52px 16px 16px;overflow:hidden">
-              <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;color:#71767f">YOUR SCENE</div>
-              <div style="font-size:17px;font-weight:700;margin:2px 0 14px">Austin, TX</div>
-              <!-- SOS banner -->
-              <div style="background:linear-gradient(100deg,rgba(248,171,60,.18),rgba(248,171,60,.04));border:1px solid rgba(248,171,60,.42);border-radius:15px;padding:12px;display:flex;align-items:center;gap:11px;margin-bottom:14px">
-                <div style="width:38px;height:38px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center;animation:pulseRing 2.4s ease-out infinite"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0c0d10" aria-hidden="true"><polygon points="13,2 4,14 11,14 9,22 20,9 13,9"/></svg></div>
-                <div><div style="font-size:14px;font-weight:700;color:#fff">Someone bailed?</div><div style="font-size:11px;color:#e6c396">Find a sub tonight — fast.</div></div>
-              </div>
-              <!-- cards -->
-              <div style="display:flex;gap:10px;padding:11px;background:#111216;border:1px solid #22242b;border-radius:14px;margin-bottom:9px">
-                <div style="width:44px;height:44px;flex:none;border-radius:12px;overflow:hidden;position:relative"><div style="position:absolute;inset:0;background:repeating-conic-gradient(from 20deg at 42% 34%, oklch(0.66 0.17 42) 0deg 8deg, transparent 8deg 16deg),radial-gradient(circle at 42% 34%, oklch(0.44 0.13 42), oklch(0.15 0.05 352))"></div></div>
-                <div style="flex:1;min-width:0">
-                  <div style="display:flex;align-items:center;gap:4px"><span style="font-size:13.5px;font-weight:600">Nia Okafor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="rgba(75,214,207,.2)"/><polyline points="7,12 11,16 17,8" fill="none" stroke="#4bd6cf" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                  <div style="font-family:'Space Mono',monospace;font-size:9px;color:#8a8f98;margin-top:3px"><span style="color:var(--accent)">★</span> 4.9 · DRUMS · 1.2MI</div>
-                  <div style="display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-family:'Space Mono',monospace;font-size:8.5px;color:#e6c396;background:rgba(248,171,60,.12);border:1px solid rgba(248,171,60,.4);padding:3px 7px;border-radius:999px"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);animation:blink 1.6s ease-in-out infinite"></span>FREE TONIGHT</div>
-                </div>
-                <div style="width:34px;height:44px;flex:none;border-radius:8px;overflow:hidden;position:relative;background:radial-gradient(120% 120% at 30% 20%, oklch(0.6 0.16 42), oklch(0.14 0.05 20))"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:16px;height:16px;border-radius:50%;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center"><svg width="7" height="7" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg></div></div>
-              </div>
-              <div style="display:flex;gap:10px;padding:11px;background:#111216;border:1px solid #22242b;border-radius:14px">
-                <div style="width:44px;height:44px;flex:none;border-radius:12px;overflow:hidden;position:relative"><div style="position:absolute;inset:0;background:repeating-conic-gradient(from 60deg at 55% 40%, oklch(0.62 0.16 196) 0deg 9deg, transparent 9deg 18deg),radial-gradient(circle at 55% 40%, oklch(0.44 0.13 258), oklch(0.15 0.05 196))"></div></div>
-                <div style="flex:1;min-width:0">
-                  <div style="font-size:13.5px;font-weight:600">Cole Merritt</div>
-                  <div style="font-family:'Space Mono',monospace;font-size:9px;color:#8a8f98;margin-top:3px"><span style="color:var(--accent)">★</span> 4.8 · DRUMS · 0.6MI</div>
-                  <div style="display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-family:'Space Mono',monospace;font-size:8.5px;color:#e6c396;background:rgba(248,171,60,.12);border:1px solid rgba(248,171,60,.4);padding:3px 7px;border-radius:999px"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent)"></span>CAN BE THERE 8:05</div>
-                </div>
-                <div style="width:34px;height:44px;flex:none;border-radius:8px;overflow:hidden;position:relative;background:radial-gradient(120% 120% at 30% 20%, oklch(0.58 0.15 278), oklch(0.13 0.04 196))"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:16px;height:16px;border-radius:50%;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center"><svg width="7" height="7" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg></div></div>
-              </div>
-            </div>
-            <div style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-around;align-items:center;padding:10px 0 16px;background:linear-gradient(180deg,transparent,rgba(11,12,15,.9) 40%)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#5a5e66" aria-hidden="true"><rect x="3" y="6" width="18" height="2.6" rx="1.3"/><rect x="3" y="11" width="12" height="2.6" rx="1.3"/><rect x="3" y="16" width="18" height="2.6" rx="1.3"/></svg>
-              <div style="width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;transform:translateY(-4px);box-shadow:0 6px 16px -4px var(--accent)"><svg width="17" height="17" viewBox="0 0 24 24" fill="#0c0d10" aria-hidden="true"><polygon points="13,2 4,14 11,14 9,22 20,9 13,9"/></svg></div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a5e66" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-4 4V5z"/></svg>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a5e66" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke-linecap="round"/></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===================== THE MOMENT ===================== -->
-  <section id="moment" style="max-width:1120px;margin:0 auto;padding:76px clamp(20px,4vw,30px) 40px">
-    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:14px">
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--accent)">01</span>
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;color:#71767f">THE DEFINING MOMENT</span>
-    </div>
-    <h2 style="font-size:clamp(30px,4.5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0;max-width:20ch">Your drummer bailed at 8.<br><span style="color:var(--accent-bright)">Booked by 8:15.</span></h2>
-    <p style="font-size:17px;line-height:1.55;color:#a6abb5;max-width:56ch;margin:16px 0 0">Something went wrong two hours before the show. Backline fixes it before soundcheck — five taps, one warm light.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:36px">
-      <div style="background:#111216;border:1px solid #22242b;border-radius:16px;padding:20px">
-        <div style="font-family:'Space Mono',monospace;font-size:26px;font-weight:700;color:var(--accent)">01</div>
-        <div style="font-size:16px;font-weight:600;margin:10px 0 4px">Hit SOS</div>
-        <div style="font-size:13.5px;line-height:1.5;color:#8a8f98">Pick the role and the night. We ping only players who marked themselves free.</div>
-      </div>
-      <div style="background:#111216;border:1px solid #22242b;border-radius:16px;padding:20px">
-        <div style="font-family:'Space Mono',monospace;font-size:26px;font-weight:700;color:var(--accent)">02</div>
-        <div style="font-size:16px;font-weight:600;margin:10px 0 4px">Watch them play</div>
-        <div style="font-size:13.5px;line-height:1.5;color:#8a8f98">A 30-second reel of the real thing — sorted by who can get there fastest.</div>
-      </div>
-      <div style="background:#111216;border:1px solid #22242b;border-radius:16px;padding:20px">
-        <div style="font-family:'Space Mono',monospace;font-size:26px;font-weight:700;color:var(--accent)">03</div>
-        <div style="font-size:16px;font-weight:600;margin:10px 0 4px">Send the offer</div>
-        <div style="font-size:13.5px;line-height:1.5;color:#8a8f98">Role, time, venue, fee — one tap. They accept from the van.</div>
-      </div>
-      <div style="background:#111216;border:1px solid rgba(75,214,207,.28);border-radius:16px;padding:20px">
-        <div style="font-family:'Space Mono',monospace;font-size:26px;font-weight:700;color:#4bd6cf">04</div>
-        <div style="font-size:16px;font-weight:600;margin:10px 0 4px">Pay — held</div>
-        <div style="font-size:13.5px;line-height:1.5;color:#8a8f98">Money's held, not spent. Released after the show. Cancel-friendly up to 24h before.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== REELS ===================== -->
-  <section id="reels" style="position:relative;padding:60px 0 70px;border-top:1px solid #16181d;background:linear-gradient(180deg,#0b0c0f,#0e0f13,#0b0c0f)">
-    <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,4vw,30px)">
-      <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:14px">
-        <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--accent)">02</span>
-        <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;color:#71767f">THE SIGNATURE SURFACE</span>
-      </div>
-      <h2 style="font-size:clamp(30px,4.5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0">Hear them before you book.</h2>
-      <p style="font-size:17px;line-height:1.55;color:#a6abb5;max-width:54ch;margin:16px 0 0">Every profile is built around short video. No stock photos, no résumés — just players, playing. When there's no reel yet, we generate a soundprint so nobody looks empty.</p>
-    </div>
-    <div id="reelStrip" style="display:flex;gap:16px;overflow-x:auto;padding:34px clamp(20px,4vw,30px) 10px;scroll-snap-type:x mandatory"></div>
-  </section>
-
-  <!-- ===================== ROLES ===================== -->
-  <section style="max-width:1120px;margin:0 auto;padding:70px clamp(20px,4vw,30px);text-align:center">
-    <h2 style="font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.02em;margin:0">Pick everything you gig on.</h2>
-    <p style="font-size:16px;color:#a6abb5;margin:14px 0 30px">Techs count as players here. Tap what you do — <span style="color:#c9cdd4">this is your card.</span></p>
-    <div id="roleChips" style="display:flex;flex-wrap:wrap;gap:11px;justify-content:center;max-width:760px;margin:0 auto"></div>
-  </section>
-
-  <!-- ===================== BOOKING / TRUST ===================== -->
-  <section style="border-top:1px solid #16181d;background:#0e0f13">
-    <div style="max-width:1120px;margin:0 auto;padding:70px clamp(20px,4vw,30px);display:flex;flex-wrap:wrap;gap:48px;align-items:center;justify-content:center">
-      <div style="flex:1;min-width:300px;max-width:520px">
-        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:14px">
-          <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;color:#4bd6cf">03</span>
-          <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;color:#71767f">GET PAID, SAFELY</span>
-        </div>
-        <h2 style="font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.06;margin:0">Held until the gig happens.</h2>
-        <p style="font-size:16.5px;line-height:1.55;color:#a6abb5;margin:16px 0 22px">Send an offer, the money's held — not spent — and released to the player after the show. If tonight falls through, cancel up to 24 hours before for a full refund. No chasing Venmo at 1am.</p>
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <div style="display:flex;align-items:center;gap:11px"><span style="width:22px;height:22px;flex:none;border-radius:6px;background:rgba(75,214,207,.14);display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4bd6cf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12 9,17 20,6"/></svg></span><span style="font-size:14.5px;color:#c9cdd4">Funds held in escrow, released after the set</span></div>
-          <div style="display:flex;align-items:center;gap:11px"><span style="width:22px;height:22px;flex:none;border-radius:6px;background:rgba(75,214,207,.14);display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4bd6cf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12 9,17 20,6"/></svg></span><span style="font-size:14.5px;color:#c9cdd4">Cancel-friendly up to 24h before — full refund</span></div>
-          <div style="display:flex;align-items:center;gap:11px"><span style="width:22px;height:22px;flex:none;border-radius:6px;background:rgba(75,214,207,.14);display:flex;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4bd6cf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,12 9,17 20,6"/></svg></span><span style="font-size:14.5px;color:#c9cdd4">Verified players, ratings from real gigs</span></div>
-        </div>
-      </div>
-      <!-- booking card -->
-      <div style="flex:none;width:340px;max-width:100%;background:#15171c;border:1px solid #2b2d34;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px #000">
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 17px;background:linear-gradient(90deg,rgba(248,171,60,.10),transparent);border-bottom:1px solid #2b2d34">
-          <span style="font-weight:600;font-size:14.5px">Booking offer</span>
-          <span style="font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.08em;color:#5fe6df;background:rgba(75,214,207,.1);border:1px solid rgba(75,214,207,.4);padding:4px 9px;border-radius:999px">ACCEPTED</span>
-        </div>
-        <div style="padding:17px">
-          <div style="display:flex;justify-content:space-between;margin-bottom:9px"><span style="font-size:13px;color:#9aa0a9">When</span><span style="font-family:'Space Mono',monospace;font-size:13px;color:#e7e9ec">TONIGHT · 9:00 PM</span></div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:9px"><span style="font-size:13px;color:#9aa0a9">Where</span><span style="font-size:14px;font-weight:500">Stubb's, Austin</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin:14px 0 4px;padding-top:14px;border-top:1px dashed #2b2d34"><span style="font-size:13px;color:#9aa0a9">Performance fee</span><span style="font-family:'Space Mono',monospace;font-size:24px;font-weight:700;color:var(--accent)">$180</span></div>
-          <div style="display:flex;align-items:center;gap:8px;margin-top:13px;padding:10px 12px;background:rgba(75,214,207,.06);border:1px solid rgba(75,214,207,.18);border-radius:10px">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4bd6cf" stroke-width="2" style="flex:none" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/></svg>
-            <span style="font-size:11.5px;color:#9fdfd9;line-height:1.4">Held until the gig happens. Cancel-friendly up to 24h before.</span>
-          </div>
-          <a href="https://backline.kitesink.com" target="_blank" rel="noopener" class="amberBtn" style="display:block;text-align:center;width:100%;margin-top:14px;font-weight:700;font-size:15px;background:var(--accent);color:#0c0d10;border-radius:12px;padding:14px;transition:background .15s">Pay $189 — hold it</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CITIES / SCENE ===================== -->
-  <section id="scene" style="max-width:1120px;margin:0 auto;padding:70px clamp(20px,4vw,30px)">
-    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:14px">
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--accent)">04</span>
-      <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;color:#71767f">A LOCAL-FIRST NETWORK</span>
-    </div>
-    <h2 style="font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.02em;margin:0">Plugged into your city's scene.</h2>
-    <p style="font-size:16.5px;line-height:1.55;color:#a6abb5;max-width:56ch;margin:16px 0 30px">Open slots, venues hunting for house players, shows and open mics — a feed that keeps you in the loop where you actually gig.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
-      <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid #22242b;background:#111216">
-        <div style="height:96px;background:radial-gradient(120% 130% at 25% 20%, oklch(0.6 0.16 42), oklch(0.28 0.12 20) 60%, oklch(0.14 0.05 20))"></div>
-        <div style="padding:15px"><div style="font-size:17px;font-weight:700">Austin</div><div style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8f98;margin-top:4px">3,900 players · live now</div></div>
-      </div>
-      <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid #22242b;background:#111216">
-        <div style="height:96px;background:radial-gradient(120% 130% at 25% 20%, oklch(0.58 0.15 278), oklch(0.28 0.12 258) 60%, oklch(0.14 0.05 258))"></div>
-        <div style="padding:15px"><div style="font-size:17px;font-weight:700">Nashville</div><div style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8f98;margin-top:4px">2,700 players · live now</div></div>
-      </div>
-      <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid #22242b;background:#111216">
-        <div style="height:96px;background:radial-gradient(120% 130% at 25% 20%, oklch(0.6 0.15 168), oklch(0.3 0.12 128) 55%, oklch(0.14 0.05 128))"></div>
-        <div style="padding:15px"><div style="font-size:17px;font-weight:700">New Orleans</div><div style="font-family:'Space Mono',monospace;font-size:11px;color:#8a8f98;margin-top:4px">1,800 players · live now</div></div>
-      </div>
-      <a href="https://backline.kitesink.com" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:16px;border:1px dashed #3a3d45;background:#0e0f13;padding:20px;text-align:center">
-        <div style="width:34px;height:34px;border-radius:50%;border:1px solid #3a3d45;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px;margin-bottom:10px">+</div>
-        <div style="font-size:15px;font-weight:600;color:#e7e9ec">Your city next</div>
-        <div style="font-family:'Space Mono',monospace;font-size:10.5px;color:#71767f;margin-top:4px">REQUEST AN INVITE</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- ===================== PROOF ===================== -->
-  <section style="border-top:1px solid #16181d;background:#0e0f13">
-    <div style="max-width:1120px;margin:0 auto;padding:70px clamp(20px,4vw,30px)">
-      <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:700;letter-spacing:-.02em;margin:0 0 30px;text-align:center">Made by people who've loaded a van at 2am.</h2>
-      <div id="proofGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px"></div>
-    </div>
-  </section>
-
-  <!-- ===================== FINAL CTA ===================== -->
-  <section style="position:relative;overflow:hidden;border-top:1px solid #16181d">
-    <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(120% 130% at 50% 130%, rgba(248,171,60,.22), #0b0c0f 58%);pointer-events:none"></div>
-    <div style="position:relative;max-width:820px;margin:0 auto;padding:90px clamp(20px,4vw,30px);text-align:center">
-      <div style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;color:#8a8f98;margin-bottom:22px"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:blink 1.8s ease-in-out infinite"></span>POWER ON, READY TO PLAY</div>
-      <h2 style="font-size:clamp(40px,7vw,76px);font-weight:700;letter-spacing:-.03em;line-height:.98;margin:0">The show<br><span style="color:var(--accent-bright)">goes on.</span></h2>
-      <p style="font-size:17px;color:#b3b8c0;margin:22px 0 0">Free to join. You only pay when you book. Keep your first-call list one tap away.</p>
-
-      <div style="display:flex;justify-content:center;margin-top:36px">
-        <a href="https://backline.kitesink.com" target="_blank" rel="noopener" class="chit" style="position:relative;display:inline-flex;align-items:stretch;border-radius:15px;filter:drop-shadow(0 22px 44px rgba(248,171,60,.36));transition:filter .2s" aria-label="Open Backline">
-          <div style="background:var(--accent);border-radius:15px 0 0 15px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 18px;position:relative">
-            <div style="width:19px;height:19px;border-radius:50%;background:#0c0d10;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)"></div>
-            <span style="font-family:'Space Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.14em;color:#0c0d10;margin-top:7px">ADMIT ONE</span>
-          </div>
-          <div aria-hidden="true" style="position:absolute;left:59px;top:-9px;width:16px;height:16px;border-radius:50%;background:#0b0c0f"></div>
-          <div aria-hidden="true" style="position:absolute;left:59px;bottom:-9px;width:16px;height:16px;border-radius:50%;background:#0b0c0f"></div>
-          <div style="background:#141519;border:1px solid #2b2e36;border-left:1.5px dashed #3a3d45;border-radius:0 15px 15px 0;padding:16px 26px;display:flex;flex-direction:column;justify-content:center;gap:4px;text-align:left">
-            <span style="font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#71767f">TONIGHT'S PASS · #BL-0413</span>
-            <span style="font-size:22px;font-weight:700;color:#fff;display:flex;align-items:center;gap:12px">Open Backline <span style="color:var(--accent);animation:arrowNudge 1.4s ease-in-out infinite;display:inline-block">→</span></span>
-          </div>
-        </a>
-      </div>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
-        <a href="https://backline.kitesink.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#141519;border:1px solid #2b2e36;border-radius:12px;padding:11px 18px"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent)"></span><span style="font-size:13.5px;color:#c9cdd4">Download for iPhone</span></a>
-        <a href="https://backline.kitesink.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#141519;border:1px solid #2b2e36;border-radius:12px;padding:11px 18px"><span style="width:8px;height:8px;border-radius:50%;background:#4bd6cf"></span><span style="font-size:13.5px;color:#c9cdd4">Download for Android</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer style="border-top:1px solid #16181d;background:#0b0c0f">
-    <div style="max-width:1120px;margin:0 auto;padding:48px clamp(20px,4vw,30px) 40px;display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between">
-      <div style="max-width:300px">
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px">
-          <div style="width:24px;height:24px;border-radius:7px;background:#141519;border:1px solid #2a2d35;position:relative;display:flex;align-items:center;justify-content:center"><div style="width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)"></div></div>
-          <div style="font-weight:700;font-size:19px;letter-spacing:-.03em;display:flex;color:#f4f5f7">backl<span style="position:relative;display:inline-block">ı<span style="position:absolute;top:.06em;left:.06em;width:.2em;height:.2em;border-radius:50%;background:var(--accent)"></span></span>ne</div>
-        </div>
-        <p style="font-size:13px;line-height:1.55;color:#71767f;margin:0">The booking network for working musicians. Find a sub tonight — the show goes on.</p>
-      </div>
-      <div style="display:flex;gap:clamp(28px,5vw,56px);flex-wrap:wrap">
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5a5e66;margin-bottom:2px">PRODUCT</div>
-          <a href="https://backline.kitesink.com" target="_blank" rel="noopener" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">Find a sub</a>
-          <a href="#reels" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">Reels</a>
-          <a href="https://backline.kitesink.com" target="_blank" rel="noopener" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">For techs</a>
-          <a href="#scene" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">Cities</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5a5e66;margin-bottom:2px">COMPANY</div>
-          <a href="/about" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">About</a>
-          <a href="mailto:hello@kitesink.com" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">Contact</a>
-          <a href="/blog" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">The log</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5a5e66;margin-bottom:2px">KITESINK</div>
-          <a href="/" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">← kitesink.com</a>
-          <a href="/music" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">More music projects</a>
-          <a href="/vantix" class="footlink" style="font-size:13.5px;color:#a6abb5;transition:color .15s">Vantix</a>
-        </div>
-      </div>
-    </div>
-    <div style="border-top:1px solid #16181d;padding:18px clamp(20px,4vw,30px);text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;color:#41454e">© 2026 BACKLINE · A <a href="/" style="color:#71767f" class="footlink">KITESINK</a> PROJECT · THE SHOW GOES ON</div>
-  </footer>
 </div>
 
+<main id="main">
+
+  <!-- ============ HERO + THE TWO DOORS ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-top">
+      <p class="eyebrow"><span class="hi">Stage First</span><span>Prototype and design stage</span></p>
+      <h1>The business side of a <span class="hl">live show.</span></h1>
+      <p class="lede">From staffing the stage to closing out the night. One side finds, books and pays the players. The other turns the night&rsquo;s ticket reports into one approved report.</p>
+      <p class="aka">Stage First is the product. The staffing app on this page is the one that has been called <strong>Backline</strong>.</p>
+    </div>
+
+    <div class="wrap doors" id="sides">
+      <!-- staffing -->
+      <article class="door door-stage" aria-labelledby="door-staffing">
+        <div class="door-top"><span class="door-k">Staffing</span><span class="st st-beta"><i></i>Prototype · staging beta</span></div>
+        <h2 id="door-staffing">Find, book and pay the players.</h2>
+        <p class="door-copy">Find a sub who is free tonight, watch a reel of them playing, message, book, check in before the show, and pay through the app.</p>
+        <div class="door-shot bl">
+          <div class="bl-sosb">
+            <span class="bl-boltbox pulse"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+            <div>
+              <p class="bl-mono b am">Event at risk</p>
+              <p class="t">Someone bailed tonight?</p>
+              <p class="d"><span class="bl-mono hi">12</span> players are free tonight and ready to sub in. Radar-search the closest ones.</p>
+              <p style="margin-top:10px"><span class="tag-demo">Demo data</span></p>
+            </div>
+          </div>
+        </div>
+        <dl class="door-facts">
+          <div><dt>Today</dt><dd>A working web app, in a staging beta.</dd></div>
+          <div><dt>Money</dt><dd>Payments run in test mode. No real money moves yet.</dd></div>
+        </dl>
+        <a class="textlink" href="#staffing">See the app, screen by screen <span aria-hidden="true">↓</span></a>
+      </article>
+
+      <!-- closeout -->
+      <article class="door door-office" aria-labelledby="door-closeout">
+        <div class="door-top"><span class="door-k">Closeout</span><span class="st st-design"><i></i>Design stage · not built</span></div>
+        <h2 id="door-closeout">Turn the night&rsquo;s ticket reports into one approved report.</h2>
+        <p class="door-copy">One report the promoter and the artist&rsquo;s team can both stand behind. The promoter can approve it without an account.</p>
+        <div class="door-shot paper">
+          <div class="co-report">
+            <div class="co-head">
+              <div><p class="co-title">Lakeside Room</p><p class="co-sub">14 November · Final ticket report</p></div>
+              <span class="co-pill">Draft · v2</span>
+            </div>
+            <div class="co-body" style="padding-block:14px 16px">
+              <ul class="co-files" aria-label="Example source files"><li><b>CSV</b>Ticketing</li><li><b>XLSX</b>Box office</li><li><b>PDF</b>Settlement</li></ul>
+              <p class="co-note">Concept · synthetic data</p>
+            </div>
+          </div>
+        </div>
+        <dl class="door-facts">
+          <div><dt>Today</dt><dd>Designed and specified. Not built.</dd></div>
+          <div><dt>Pilot</dt><dd>A hand-run pilot is being planned.</dd></div>
+        </dl>
+        <a class="textlink" href="#closeout">See the path a report takes <span aria-hidden="true">↓</span></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ STAFFING ============ -->
+  <section class="band" id="staffing" aria-labelledby="h-staffing">
+    <div class="wrap">
+      <div class="staff-top">
+        <div class="sec-head">
+          <p class="eyebrow"><span class="wm" role="img" aria-label="Backline">backl<span aria-hidden="true">ı<i></i></span>ne</span> Staffing <span class="st st-beta"><i></i>Prototype · staging beta</span></p>
+          <h2 id="h-staffing">Your drummer bailed.<br><span class="hl">The show goes on.</span></h2>
+          <p class="lede">Find a sub nearby who&rsquo;s free tonight, watch a reel of them actually playing, message, book and pay — all before soundcheck. Built by people who&rsquo;ve loaded out a van at 2am.</p>
+        </div>
+        <div class="chit-wrap">
+          <a class="chit" href="https://backline.kitesink.com" target="_blank" rel="noopener">
+            <span class="chit-stub"><i aria-hidden="true"></i><b>Admit one</b></span>
+            <span class="chit-body"><span class="chit-k">Staging beta · test mode</span><span class="chit-t">Open the app <span aria-hidden="true">→</span></span></span>
+          </a>
+          <p class="note">Opens the staging build in a new tab.</p>
+        </div>
+      </div>
+
+      <!-- the night, screen by screen -->
+      <div class="block" id="moment">
+        <div class="sec-head">
+          <p class="eyebrow">The defining moment</p>
+          <h3>Your drummer bailed at 8. <span class="hl">Booked by 8:15.</span></h3>
+          <p class="lede">Something went wrong an hour before the show. The app fixes it in five taps, one warm light. These are its real screens, rebuilt here with its demo data.</p>
+        </div>
+
+        <div class="night" id="night">
+          <div class="night-tabs">
+            <button class="night-tab" type="button" id="night-t1" aria-selected="true"><span>8:00 PM</span>Hit SOS</button>
+            <button class="night-tab" type="button" id="night-t2"><span>8:02 PM</span>See who can make it</button>
+            <button class="night-tab" type="button" id="night-t3"><span>8:04 PM</span>Watch them play</button>
+            <button class="night-tab" type="button" id="night-t4"><span>8:07 PM</span>Send the offer</button>
+            <button class="night-tab" type="button" id="night-t5"><span>8:15 PM</span>Pay — held</button>
+            <button class="night-tab" type="button" id="night-t6"><span>After</span>Released, then rated</button>
+          </div>
+
+          <div class="night-panels">
+
+            <!-- 1 · SOS -->
+            <div class="night-panel is-on" id="night-1">
+              <div class="night-cap">
+                <p class="when">8:00 PM</p>
+                <h4>Hit SOS</h4>
+                <p>Pick the role and the night. The search only looks at players who marked themselves free.</p>
+                <p class="night-next"><a class="textlink" href="#night-2" data-night="1">Next: see who can make it <span aria-hidden="true">→</span></a></p>
+              </div>
+              <div class="bl-screen bl">
+                <div class="bl-status"><span>8:00 PM</span><span>Demo · mock data</span></div>
+                <div class="bl-view bl-pad bl-under" aria-hidden="true">
+                  <p class="bl-mono b lo">Discover</p>
+                  <p class="bl-title">Players near you</p>
+                  <p class="bl-row mid" style="margin-top:4px"><svg class="ic am"><use href="#i-pin"/></svg>Austin, TX</p>
+                  <div class="bl-sosb"><span class="bl-boltbox"><svg class="ic"><use href="#i-bolt"/></svg></span><div><p class="bl-mono b am">Event at risk</p><p class="t">Someone bailed tonight?</p><p class="d">12 players are free tonight and ready to sub in.</p><span class="bl-btn pri sos"><svg class="ic"><use href="#i-bolt"/></svg>Find a sub — SOS</span></div></div>
+                  <div class="bl-chips clip"><span class="bl-chip">Free tonight</span><span class="bl-chip">Verified</span><span class="bl-chip">&lt; 3 mi</span><span class="bl-chip">Drums</span></div>
+                  <div class="bl-two"><span class="bl-reel gel-dre1"></span><span class="bl-reel gel-jbird"></span></div>
+                </div>
+                <div class="bl-tabbar" aria-hidden="true">
+                  <span class="bl-tab"><svg class="ic"><use href="#i-pulse"/></svg><b>Feed</b></span>
+                  <span class="bl-tab on"><svg class="ic"><use href="#i-play"/></svg><b>Reels</b></span>
+                  <span class="bl-sosbtn"><span><svg class="ic"><use href="#i-bolt"/></svg><b>SOS</b></span></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-chat"/></svg><b>Chats</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-bell"/></svg><b>Alerts</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-user"/></svg><b>You</b></span>
+                </div>
+                <div class="bl-scrim" aria-hidden="true"></div>
+                <div class="bl-sheet">
+                  <span class="bl-grab" aria-hidden="true"></span>
+                  <div class="bl-sheet-head">
+                    <span class="bl-boltbox s pulse"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+                    <div><p class="bl-mono b am">Backline SOS</p><p class="bl-strong">Find a sub, fast</p></div>
+                    <svg class="ic x" aria-hidden="true"><use href="#i-close"/></svg>
+                  </div>
+                  <div>
+                    <p class="bl-mono lo">Who bailed?</p>
+                    <div class="bl-chips clip">
+                      <span class="bl-chip"><svg class="ic" aria-hidden="true"><use href="#i-guitar"/></svg>Gtr</span>
+                      <span class="bl-chip"><svg class="ic" aria-hidden="true"><use href="#i-bass"/></svg>Bass</span>
+                      <span class="bl-chip on"><svg class="ic" aria-hidden="true"><use href="#i-drums"/></svg>Drums</span>
+                      <span class="bl-chip"><svg class="ic" aria-hidden="true"><use href="#i-keys"/></svg>Keys</span>
+                      <span class="bl-chip"><svg class="ic" aria-hidden="true"><use href="#i-vocals"/></svg>Vox</span>
+                      <span class="bl-chip"><svg class="ic" aria-hidden="true"><use href="#i-sax"/></svg>Sax</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="bl-mono lo">When&rsquo;s the gig?</p>
+                    <div class="bl-chips multi"><span class="bl-chip on">Tonight</span><span class="bl-chip">Tomorrow</span><span class="bl-chip">This weekend</span></div>
+                  </div>
+                  <div class="bl-hint"><i class="dot blink"></i><span class="bl-mono">2 drummers free tonight within 5 mi</span></div>
+                  <a class="bl-btn pri sos lg pulse" href="#night-2" data-night="1"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg>Search near me</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 · results -->
+            <div class="night-panel" id="night-2">
+              <div class="night-cap">
+                <p class="when">8:02 PM</p>
+                <h4>See who can make it</h4>
+                <p>The subs who are free, sorted by who can get there fastest. Message one, send an offer, or alert them all at once: first yes wins.</p>
+                <p class="night-next"><a class="textlink" href="#night-3" data-night="2">Next: watch them play <span aria-hidden="true">→</span></a></p>
+              </div>
+              <div class="bl-screen bl">
+                <div class="bl-status"><span>8:02 PM</span><span>Demo · mock data</span></div>
+                <div class="bl-view bl-pad bl-under" aria-hidden="true">
+                  <p class="bl-mono b lo">Discover</p>
+                  <p class="bl-title">Players near you</p>
+                  <p class="bl-row mid" style="margin-top:4px"><svg class="ic am"><use href="#i-pin"/></svg>Austin, TX</p>
+                  <div class="bl-sosb"><span class="bl-boltbox"><svg class="ic"><use href="#i-bolt"/></svg></span><div><p class="bl-mono b am">Event at risk</p><p class="t">Someone bailed tonight?</p><p class="d">12 players are free tonight and ready to sub in.</p><span class="bl-btn pri sos"><svg class="ic"><use href="#i-bolt"/></svg>Find a sub — SOS</span></div></div>
+                  <div class="bl-chips clip"><span class="bl-chip">Free tonight</span><span class="bl-chip">Verified</span><span class="bl-chip">&lt; 3 mi</span><span class="bl-chip">Drums</span></div>
+                  <div class="bl-two"><span class="bl-reel gel-dre1"></span><span class="bl-reel gel-jbird"></span></div>
+                </div>
+                <div class="bl-tabbar" aria-hidden="true">
+                  <span class="bl-tab"><svg class="ic"><use href="#i-pulse"/></svg><b>Feed</b></span>
+                  <span class="bl-tab on"><svg class="ic"><use href="#i-play"/></svg><b>Reels</b></span>
+                  <span class="bl-sosbtn"><span><svg class="ic"><use href="#i-bolt"/></svg><b>SOS</b></span></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-chat"/></svg><b>Chats</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-bell"/></svg><b>Alerts</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-user"/></svg><b>You</b></span>
+                </div>
+                <div class="bl-scrim" aria-hidden="true"></div>
+                <div class="bl-sheet">
+                  <span class="bl-grab" aria-hidden="true"></span>
+                  <div class="bl-sheet-head">
+                    <span class="bl-boltbox s"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+                    <div><p class="bl-mono b am">Backline SOS</p><p class="bl-strong">2 subs can make it</p></div>
+                    <svg class="ic x" aria-hidden="true"><use href="#i-close"/></svg>
+                  </div>
+                  <p class="mid"><span class="hi">2 subs</span> can make it — sorted by who can get there fastest.</p>
+                  <div class="bl-sub fast">
+                    <span class="bl-ribbon"><svg class="ic fill" aria-hidden="true"><use href="#i-bolt"/></svg>Fastest · 1.2 mi</span>
+                    <a class="bl-reel gel-dre1" href="#night-3" data-night="2" aria-label="Watch Dre Okafor play"><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span></a>
+                    <div class="bl-sub-main">
+                      <div>
+                        <div class="bl-sub-top">
+                          <p class="bl-strong">Dre Okafor <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg></p>
+                          <span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(2)</small></span>
+                        </div>
+                        <p class="bl-xs mid bl-place"><svg class="ic lo" aria-hidden="true"><use href="#i-pin"/></svg>East Austin <span class="bl-mono hi">· $120–200</span></p>
+                      </div>
+                      <div class="bl-avail"><i class="dot blink"></i><span class="bl-mono">Free tonight · can be there 8:07</span></div>
+                      <div class="bl-two"><span class="bl-btn sec">Message</span><a class="bl-btn pri" href="#night-4" data-night="3">Send offer</a></div>
+                    </div>
+                  </div>
+                  <div class="bl-sub">
+                    <span class="bl-reel gel-sam1" aria-hidden="true"><span class="bl-play"><svg class="ic"><use href="#i-play"/></svg></span></span>
+                    <div class="bl-sub-main">
+                      <div>
+                        <div class="bl-sub-top">
+                          <p class="bl-strong">Sam Reyes <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg></p>
+                          <span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(1)</small></span>
+                        </div>
+                        <p class="bl-xs mid bl-place"><svg class="ic lo" aria-hidden="true"><use href="#i-pin"/></svg>South Congress <span class="bl-mono hi">· $100–160</span></p>
+                      </div>
+                      <div class="bl-avail"><i class="dot"></i><span class="bl-mono">Free tonight · can be there 8:16</span></div>
+                      <div class="bl-two"><span class="bl-btn sec">Message</span><span class="bl-btn pri">Send offer</span></div>
+                    </div>
+                  </div>
+                  <span class="bl-btn pri sos lg"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg>Alert all 2 at once</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 · profile + reels -->
+            <div class="night-panel" id="night-3">
+              <div class="night-cap">
+                <p class="when">8:04 PM</p>
+                <h4>Watch them play</h4>
+                <p>Every profile leads with short video: the player&rsquo;s own public TikTok or YouTube clips, played in place. Then the rating, the rate and how fast they reply.</p>
+                <p class="night-next"><a class="textlink" href="#night-4" data-night="3">Next: send the offer <span aria-hidden="true">→</span></a></p>
+              </div>
+              <div class="bl-screen bl">
+                <div class="bl-status"><span>8:04 PM</span><span>Demo · mock data</span></div>
+                <div class="bl-view bl-pad">
+                  <p class="bl-back"><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Back</p>
+                  <div class="bl-ph">
+                    <span class="bl-av fp-dre" style="--s:72px" aria-hidden="true"><b>DO</b></span>
+                    <div>
+                      <p class="bl-name">Dre Okafor <span class="bl-badge cy"><svg class="ic" aria-hidden="true"><use href="#i-verified"/></svg>Verified</span></p>
+                      <p class="bl-mono lo">@dreonthedrums</p>
+                      <p class="bl-xs mid"><svg class="ic lo" aria-hidden="true"><use href="#i-pin"/></svg>East Austin <span class="bl-mono lo">· 1.2 mi away</span></p>
+                      <span class="bl-badge am" style="margin-top:4px"><i class="dot blink"></i>Free tonight</span>
+                    </div>
+                  </div>
+                  <div class="bl-chips multi" style="margin-top:10px">
+                    <span class="bl-chip on"><svg class="ic" aria-hidden="true"><use href="#i-drums"/></svg>Drums <i>· Pro · 12 yrs</i></span>
+                    <span class="bl-chip">Funk</span><span class="bl-chip">Soul</span><span class="bl-chip">Hip-Hop</span>
+                  </div>
+                  <div class="bl-card bl-ratecard" style="margin-top:12px">
+                    <div class="top">
+                      <div><p class="big">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(2)</small></p><p class="bl-mono lo" style="margin-top:5px">Rating · 2 gigs rated</p></div>
+                      <div class="r"><span class="bl-stars sm" aria-hidden="true"><svg class="ic fill"><use href="#i-star"/></svg><svg class="ic fill"><use href="#i-star"/></svg><svg class="ic fill"><use href="#i-star"/></svg><svg class="ic fill"><use href="#i-star"/></svg><svg class="ic fill"><use href="#i-star"/></svg></span><p class="bl-mono lo">Rated on Backline</p></div>
+                    </div>
+                    <div class="bl-stats">
+                      <div><b>214</b><span class="bl-mono lo">gigs</span></div>
+                      <div><b>~8m</b><span class="bl-mono lo">reply</span></div>
+                      <div><b>$120–200</b><span class="bl-mono lo">per gig</span></div>
+                    </div>
+                  </div>
+                  <div class="bl-sec" style="margin-top:12px"><span class="bl-mono b lo">Reels</span><span class="bl-mono lo bl-row"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>43k plays</span></div>
+                  <div class="bl-rail">
+                    <span class="bl-reel gel-dre1"><span class="bl-eq" aria-hidden="true"><i style="--h:51%"></i><i style="--h:70%"></i><i style="--h:49%"></i><i style="--h:83%"></i><i style="--h:65%"></i><i style="--h:85%"></i><i style="--h:47%"></i></span><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="bl-dur">0:34</span><span class="bl-cap">Pocket groove @ 92bpm<small>▶ 13k</small></span></span>
+                    <span class="bl-reel gel-dre2"><span class="bl-eq" aria-hidden="true"><i style="--h:48%"></i><i style="--h:83%"></i><i style="--h:48%"></i><i style="--h:75%"></i><i style="--h:28%"></i><i style="--h:57%"></i><i style="--h:50%"></i></span><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="bl-dur">0:51</span><span class="bl-cap">Half-time shuffle breakdown<small>▶ 8.9k</small></span></span>
+                    <span class="bl-reel gel-dre3" aria-hidden="true"><span class="bl-eq"><i style="--h:45%"></i><i style="--h:26%"></i><i style="--h:47%"></i><i style="--h:67%"></i><i style="--h:28%"></i><i style="--h:29%"></i><i style="--h:86%"></i></span><span class="bl-play"><svg class="ic"><use href="#i-play"/></svg></span><span class="bl-dur">0:45</span><span class="bl-cap">Live at Sunset Ballroom<small>▶ 21k</small></span></span>
+                  </div>
+                  <div class="bl-cta"><span class="bl-btn sec"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Message</span><a class="bl-btn pri" href="#night-4" data-night="3"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg>Book for a gig</a></div>
+                </div>
+                <div class="bl-tabbar" aria-hidden="true">
+                  <span class="bl-tab"><svg class="ic"><use href="#i-pulse"/></svg><b>Feed</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-play"/></svg><b>Reels</b></span>
+                  <span class="bl-sosbtn"><span><svg class="ic"><use href="#i-bolt"/></svg><b>SOS</b></span></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-chat"/></svg><b>Chats</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-bell"/></svg><b>Alerts</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-user"/></svg><b>You</b></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 · the offer -->
+            <div class="night-panel" id="night-4">
+              <div class="night-cap">
+                <p class="when">8:07 PM</p>
+                <h4>Send the offer</h4>
+                <p>Role, time, venue, fee — one tap. They accept from the van. The offer lives in the chat thread, and nobody is charged until it is accepted.</p>
+                <p class="night-next"><a class="textlink" href="#night-5" data-night="4">Next: pay, held <span aria-hidden="true">→</span></a></p>
+              </div>
+              <div class="bl-screen bl">
+                <div class="bl-status"><span>8:07 PM</span><span>Demo · mock data</span></div>
+                <div class="bl-view">
+                  <div class="bl-th-head">
+                    <svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>
+                    <span class="bl-av fp-dre" style="--s:40px" aria-hidden="true"><b>DO</b></span>
+                    <div>
+                      <p class="bl-th-name">Dre Okafor <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg><span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(2)</small></span></p>
+                      <p class="bl-xs lo">Drums · <span class="bl-mono">~8m reply</span></p>
+                    </div>
+                  </div>
+                  <div class="bl-msgs">
+                    <div class="bl-msg me"><p class="bl-bub">Hey! Our drummer can&rsquo;t make it — can you cover?</p></div>
+                    <div class="bl-msg me card">
+                      <div class="bl-book">
+                        <div class="bl-book-head"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="bl-mono b">Booking offer</span></div>
+                        <div class="bl-book-main">
+                          <div><p class="bl-strong">Cedar &amp; Rye — Honky-Tonk Night</p><p class="mid">Rattlesnake Room</p><p class="bl-mono mid">Tonight · 9:00 PM</p></div>
+                          <div class="bl-fee"><b>$150</b><span class="bl-mono lo">for the night</span></div>
+                        </div>
+                        <div class="bl-strip">
+                          <p class="s" style="margin:0;font-size:14px">Waiting for Dre to accept…</p>
+                          <span class="bl-btn gho sm wide">Withdraw offer</span>
+                        </div>
+                      </div>
+                      <span class="bl-mono lo">8:07 PM</span>
+                    </div>
+                  </div>
+                  <div class="bl-compose" aria-hidden="true">
+                    <span class="bl-btn sec"><svg class="ic"><use href="#i-dollar"/></svg>Book</span>
+                    <span class="bl-input">Message Dre…</span>
+                    <span class="bl-send"><svg class="ic"><use href="#i-send"/></svg></span>
+                  </div>
+                </div>
+                <div class="bl-tabbar" aria-hidden="true">
+                  <span class="bl-tab"><svg class="ic"><use href="#i-pulse"/></svg><b>Feed</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-play"/></svg><b>Reels</b></span>
+                  <span class="bl-sosbtn"><span><svg class="ic"><use href="#i-bolt"/></svg><b>SOS</b></span></span>
+                  <span class="bl-tab on"><svg class="ic"><use href="#i-chat"/></svg><b>Chats</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-bell"/></svg><b>Alerts</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-user"/></svg><b>You</b></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 · held -->
+            <div class="night-panel" id="night-5">
+              <div class="night-cap">
+                <p class="when">8:15 PM</p>
+                <h4>Pay — held</h4>
+                <p>Money&rsquo;s held, not spent. Released after the show. Cancel-friendly up to 24h before. Today this runs in test mode, so no real money moves.</p>
+                <p class="night-next"><a class="textlink" href="#night-6" data-night="5">Next: after the show <span aria-hidden="true">→</span></a></p>
+              </div>
+              <div class="bl-screen bl">
+                <div class="bl-status"><span>8:15 PM</span><span>Demo · mock data</span></div>
+                <div class="bl-view">
+                  <div class="bl-th-head">
+                    <svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>
+                    <span class="bl-av fp-dre" style="--s:40px" aria-hidden="true"><b>DO</b></span>
+                    <div>
+                      <p class="bl-th-name">Dre Okafor <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg><span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(2)</small></span></p>
+                      <p class="bl-xs lo">Drums · <span class="bl-mono">~8m reply</span></p>
+                    </div>
+                  </div>
+                  <div class="bl-msgs">
+                    <div class="bl-msg me card">
+                      <div class="bl-book">
+                        <div class="bl-book-head"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="bl-mono b">Booking offer</span></div>
+                        <div class="bl-book-main">
+                          <div><p class="bl-strong">Cedar &amp; Rye — Honky-Tonk Night</p><p class="mid">Rattlesnake Room</p><p class="bl-mono mid">Tonight · 9:00 PM</p></div>
+                          <div class="bl-fee"><b>$150</b><span class="bl-mono lo">for the night</span></div>
+                        </div>
+                        <div class="bl-strip cyan">
+                          <p class="h cy"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Held — releases after the gig</p>
+                          <p class="s">Dre is locked in. The money moves 24h after showtime unless a participant reports a problem for review.</p>
+                          <span class="bl-btn sec sm wide">Gig played — release $150 now</span>
+                          <span class="bl-btn dan sm wide">Report a problem</span>
+                          <span class="bl-btn gho sm wide">Cancel booking</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bl-msg roomy"><p class="bl-bub">Hold confirmed — you&rsquo;re locked in. Sending you my stage plot now.</p><span class="bl-mono lo">8:15 PM</span></div>
+                  </div>
+                  <div class="bl-compose" aria-hidden="true">
+                    <span class="bl-btn sec"><svg class="ic"><use href="#i-dollar"/></svg>Book</span>
+                    <span class="bl-input">Message Dre…</span>
+                    <span class="bl-send"><svg class="ic"><use href="#i-send"/></svg></span>
+                  </div>
+                </div>
+                <div class="bl-tabbar" aria-hidden="true">
+                  <span class="bl-tab"><svg class="ic"><use href="#i-pulse"/></svg><b>Feed</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-play"/></svg><b>Reels</b></span>
+                  <span class="bl-sosbtn"><span><svg class="ic"><use href="#i-bolt"/></svg><b>SOS</b></span></span>
+                  <span class="bl-tab on"><svg class="ic"><use href="#i-chat"/></svg><b>Chats</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-bell"/></svg><b>Alerts</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-user"/></svg><b>You</b></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 · released + rating -->
+            <div class="night-panel" id="night-6">
+              <div class="night-cap">
+                <p class="when">After the show</p>
+                <h4>Released, then rated</h4>
+                <p>Once the gig has happened the fee is released to the player, and the booker rates how it went.</p>
+                <p class="night-next"><a class="textlink" href="#night-1" data-night="0">Back to 8:00 <span aria-hidden="true">↺</span></a></p>
+              </div>
+              <div class="bl-screen bl">
+                <div class="bl-status"><span>11:40 PM</span><span>Demo · mock data</span></div>
+                <div class="bl-view">
+                  <div class="bl-th-head">
+                    <svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>
+                    <span class="bl-av fp-dre" style="--s:40px" aria-hidden="true"><b>DO</b></span>
+                    <div>
+                      <p class="bl-th-name">Dre Okafor <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg><span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(2)</small></span></p>
+                      <p class="bl-xs lo">Drums · <span class="bl-mono">~8m reply</span></p>
+                    </div>
+                  </div>
+                  <div class="bl-msgs">
+                    <div class="bl-msg"><p class="bl-bub">Hold confirmed — you&rsquo;re locked in. Sending you my stage plot now.</p></div>
+                    <div class="bl-msg me card">
+                      <div class="bl-book">
+                        <div class="bl-book-head"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="bl-mono b">Booking offer</span></div>
+                        <div class="bl-book-main">
+                          <div><p class="bl-strong">Cedar &amp; Rye — Honky-Tonk Night</p><p class="mid">Rattlesnake Room</p><p class="bl-mono mid">Tonight · 9:00 PM</p></div>
+                          <div class="bl-fee"><b>$150</b><span class="bl-mono lo">for the night</span></div>
+                        </div>
+                        <div class="bl-strip cyan">
+                          <p class="h cy"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Released — $150 on its way to Dre</p>
+                          <p class="s">Paid through Backline. This lands on your paid-on-time record.</p>
+                        </div>
+                        <div class="bl-strip" style="background:none">
+                          <p class="bl-mono b lo">How was the gig?</p>
+                          <span class="bl-stars" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl-compose" aria-hidden="true">
+                    <span class="bl-btn sec"><svg class="ic"><use href="#i-dollar"/></svg>Book</span>
+                    <span class="bl-input">Message Dre…</span>
+                    <span class="bl-send"><svg class="ic"><use href="#i-send"/></svg></span>
+                  </div>
+                </div>
+                <div class="bl-tabbar" aria-hidden="true">
+                  <span class="bl-tab"><svg class="ic"><use href="#i-pulse"/></svg><b>Feed</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-play"/></svg><b>Reels</b></span>
+                  <span class="bl-sosbtn"><span><svg class="ic"><use href="#i-bolt"/></svg><b>SOS</b></span></span>
+                  <span class="bl-tab on"><svg class="ic"><use href="#i-chat"/></svg><b>Chats</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-bell"/></svg><b>Alerts</b></span>
+                  <span class="bl-tab"><svg class="ic"><use href="#i-user"/></svg><b>You</b></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- reels -->
+      <div class="block" id="reels">
+        <div class="sec-head">
+          <p class="eyebrow">The signature surface</p>
+          <h3>Hear them before you book.</h3>
+          <p class="lede">Every profile is built around short video. No stock photos, no résumés — just players, playing. When there&rsquo;s no reel yet, the app generates a soundprint so nobody looks empty.</p>
+        </div>
+        <div class="reels bl" tabindex="0" role="group" aria-label="Reel tiles from the app's Discover screen, demo data">
+          <div class="reel-cell">
+            <span class="bl-reel gel-dre1"><span class="reel-flag">Free</span><span class="bl-eq" aria-hidden="true"><i style="--h:51%"></i><i style="--h:70%"></i><i style="--h:49%"></i><i style="--h:83%"></i><i style="--h:65%"></i><i style="--h:85%"></i><i style="--h:47%"></i></span><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="bl-dur">0:34</span><span class="bl-cap">Pocket groove @ 92bpm<small>▶ 13k</small></span></span>
+            <div class="reel-who"><p class="n">Dre Okafor <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg></p><p class="m"><span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(2)</small></span><span class="bl-mono lo">1.2 mi</span></p></div>
+          </div>
+          <div class="reel-cell">
+            <span class="bl-reel gel-jbird"><span class="reel-flag">Free</span><span class="bl-eq" aria-hidden="true"><i style="--h:58%"></i><i style="--h:77%"></i><i style="--h:32%"></i><i style="--h:70%"></i><i style="--h:93%"></i><i style="--h:53%"></i><i style="--h:81%"></i></span><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="bl-dur">0:41</span><span class="bl-cap">Gospel chops but tasteful<small>▶ 19k</small></span></span>
+            <div class="reel-who"><p class="n">J-Bird Tolliver <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg></p><p class="m"><span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(1)</small></span><span class="bl-mono lo">1.9 mi</span></p></div>
+          </div>
+          <div class="reel-cell">
+            <span class="bl-reel gel-nina"><span class="bl-eq" aria-hidden="true"><i style="--h:76%"></i><i style="--h:36%"></i><i style="--h:75%"></i><i style="--h:85%"></i><i style="--h:31%"></i><i style="--h:77%"></i><i style="--h:67%"></i></span><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="bl-dur">0:47</span><span class="bl-cap">Bass + vox live loop<small>▶ 4.4k</small></span></span>
+            <div class="reel-who"><p class="n">Nina Vo</p><p class="m"><span class="bl-mono b lo">No ratings</span><span class="bl-mono lo">2.1 mi</span></p></div>
+          </div>
+          <div class="reel-cell">
+            <span class="bl-reel gel-katie"><span class="bl-eq" aria-hidden="true"><i style="--h:25%"></i><i style="--h:75%"></i><i style="--h:50%"></i><i style="--h:68%"></i><i style="--h:71%"></i><i style="--h:84%"></i><i style="--h:45%"></i></span><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="bl-dur">0:22</span><span class="bl-cap">Garage beat, one take<small>▶ 3.1k</small></span></span>
+            <div class="reel-who"><p class="n">Katie Lindqvist</p><p class="m"><span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(1)</small></span><span class="bl-mono lo">2.8 mi</span></p></div>
+          </div>
+          <div class="reel-cell">
+            <span class="bl-reel gel-sam1"><span class="reel-flag">Free</span><span class="bl-eq" aria-hidden="true"><i style="--h:25%"></i><i style="--h:42%"></i><i style="--h:85%"></i><i style="--h:88%"></i><i style="--h:89%"></i><i style="--h:80%"></i><i style="--h:72%"></i></span><span class="bl-play"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="bl-dur">0:28</span><span class="bl-cap">Cumbia groove, full kit<small>▶ 6.4k</small></span></span>
+            <div class="reel-who"><p class="n">Sam Reyes <svg class="bl-v" role="img" aria-label="Verified"><use href="#i-verified"/></svg></p><p class="m"><span class="bl-rate">5.0<svg class="ic fill" aria-hidden="true"><use href="#i-star"/></svg><small>(1)</small></span><span class="bl-mono lo">3.4 mi</span></p></div>
+          </div>
+        </div>
+        <p class="note" style="margin-top:14px"><span class="tag-demo">Demo data</span>&ensp;These tiles are the generated soundprints: the stand-in a profile gets until it has a reel of its own.</p>
+      </div>
+
+      <!-- money, states, check-ins -->
+      <div class="block money">
+        <div>
+          <div class="sec-head">
+            <p class="eyebrow">Get paid, safely</p>
+            <h3>Held until the gig happens.</h3>
+            <p class="lede">Send an offer, the money&rsquo;s held — not spent — and released to the player after the show. If tonight falls through, cancel up to 24 hours before for a full refund. No chasing a payment at 1am.</p>
+          </div>
+          <ul class="ticks">
+            <li><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Held before the show, released after the set</li>
+            <li><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Cancel-friendly up to 24h before — full refund</li>
+            <li><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Either side can report a problem, which freezes the release for review</li>
+          </ul>
+          <p class="testmode"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>Test mode today.</strong> The whole payment flow runs in test mode. No real money moves yet.</span></p>
+
+          <div class="states">
+            <p class="states-k">A booking&rsquo;s states, in the thread</p>
+            <ol>
+              <li><b>Offer</b><span>Sent in the chat. Waiting for the player to accept or pass.</span></li>
+              <li><b>Accepted</b><span>Ready for the payment step.</span></li>
+              <li class="held"><b>Held</b><span>The player is locked in. The fee is held and releases after the gig.</span></li>
+              <li class="rel"><b>Released</b><span>On its way to the player. The booker rates the gig.</span></li>
+            </ol>
+            <p class="note also">A booking can also end as <strong>declined</strong>, <strong>cancelled</strong> or <strong>refunded</strong>, or sit <strong>frozen for review</strong> when someone reports a problem.</p>
+          </div>
+        </div>
+
+        <figure class="checkin">
+          <div>
+            <h4>Booked further out? Ask for a check-in.</h4>
+            <p class="note" style="margin-top:8px">For a gig booked ahead, the booker can set deadlines and name the sections to record. The player sends a take; the booker approves it or asks for another.</p>
+          </div>
+          <div class="bl-book bl">
+            <div class="bl-book-head"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span class="bl-mono b">Booking offer</span></div>
+            <div class="bl-book-main">
+              <div><p class="bl-strong">Fill-in gig</p><p class="mid">The Blue Armadillo</p><p class="bl-mono mid">Sat · 9:00 PM</p></div>
+              <div class="bl-fee"><b>$130</b><span class="bl-mono lo">for the night</span></div>
+            </div>
+            <div class="bl-ci">
+              <div class="bl-ci-head"><p><svg class="ic am" aria-hidden="true"><use href="#i-note"/></svg>Pre-show check-ins</p><span class="bl-mono lo">1/2 approved</span></div>
+              <div class="bl-ci-row">
+                <div class="bl-ci-top"><p class="due"><svg class="ic am" aria-hidden="true"><use href="#i-clock"/></svg>Due Mon, 9:00 PM</p><span class="bl-mono b cy">Approved</span></div>
+                <p class="req">Record the sections of the set that need the most preparation.</p>
+              </div>
+              <div class="bl-ci-row">
+                <div class="bl-ci-top"><p class="due"><svg class="ic am" aria-hidden="true"><use href="#i-clock"/></svg>Due Thu, 9:00 PM</p><span class="bl-mono b lo">Ready for review</span></div>
+                <p class="req">Play the requested sections cleanly in one continuous take.</p>
+                <span class="bl-take gel-take" aria-hidden="true"><span class="bl-play"><svg class="ic"><use href="#i-play"/></svg></span></span>
+                <p class="bl-fakein">Optional feedback, or explain what to play in another take</p>
+                <div class="bl-two"><span class="bl-btn sec sm">Another take</span><span class="bl-btn pri sm"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Approve</span></div>
+              </div>
+            </div>
+            <div class="bl-strip cyan"><p class="h cy"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Held — releases after the gig</p></div>
+          </div>
+          <figcaption class="note"><span class="tag-demo">Demo data</span>&ensp;The booker&rsquo;s view of a booking with two check-ins.</figcaption>
+        </figure>
+      </div>
+
+      <!-- scene -->
+      <div class="block" id="scene">
+        <div class="sec-head">
+          <p class="eyebrow">A local-first network</p>
+          <h3>Plugged into your city&rsquo;s scene.</h3>
+          <p class="lede">Open slots, venues hunting for house players, shows and open mics — a feed that keeps you in the loop where you actually gig.</p>
+        </div>
+        <figure class="demo bl">
+          <figcaption class="demo-bar"><span>Example screen</span><span class="tag-demo">Demo data · not real usage</span></figcaption>
+          <div class="demo-body">
+            <p class="bl-mono b lo">Local scene</p>
+            <p class="t">Choose your scene</p>
+            <div class="scenes">
+              <div class="scene"><i class="g1" aria-hidden="true"></i><div><b>Austin</b><span class="bl-mono mid">3,900 players · demo data</span></div></div>
+              <div class="scene"><i class="g2" aria-hidden="true"></i><div><b>Nashville</b><span class="bl-mono mid">2,700 players · demo data</span></div></div>
+              <div class="scene"><i class="g3" aria-hidden="true"></i><div><b>New Orleans</b><span class="bl-mono mid">1,800 players · demo data</span></div></div>
+            </div>
+            <p class="demo-stats bl-mono"><span><b>8,400+</b> players &amp; techs</span><span><b>12k+</b> gigs booked</span><span><b>Austin</b> · Nashville · NOLA</span></p>
+          </div>
+        </figure>
+        <div class="scene-after">
+          <p class="note">Every figure in that screen is demo data, there to show the layout. None of it is real usage.</p>
+          <p class="note"><strong style="color:var(--hi)">First cities planned: Austin and Nashville.</strong> Somewhere else? <a class="inl" href="mailto:hello@kitesink.com?subject=Stage%20First%3A%20my%20city">Tell me your city</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSEOUT ============ -->
+  <section class="band band-closeout" id="closeout" aria-labelledby="h-closeout">
+    <div class="wrap">
+      <div class="co-grid">
+        <div class="sec-head">
+          <p class="eyebrow">Closeout <span class="st st-design"><i></i>Design stage · not built</span></p>
+          <h2 id="h-closeout">One report both sides can stand behind.</h2>
+          <p class="lede">After the show, the ticket reports for the night go in. What comes out is one approved report that the promoter and the artist&rsquo;s team can both stand behind. The promoter can approve it without an account.</p>
+          <p class="co-status"><strong>Where this side stands.</strong> It is designed and specified, not built. A small pilot, with closeouts run by hand, is being planned.</p>
+          <p class="co-links">
+            <a class="textlink" href="mailto:hello@kitesink.com?subject=Stage%20First%3A%20closeout%20pilot">Ask about a pilot</a>
+            <a class="textlink" href="https://stagefirst.app" target="_blank" rel="noopener">stagefirst.app <span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+
+        <figure class="co-visual paper">
+          <figcaption class="co-label"><span>Illustrative concept</span><span>Synthetic data</span></figcaption>
+          <div class="co-report">
+            <div class="co-head">
+              <div><p class="co-title">Lakeside Room</p><p class="co-sub">14 November · Final ticket report</p></div>
+              <span class="co-pillrow"><span class="co-pill">Draft · v2</span><i class="co-n" aria-hidden="true">3</i></span>
+            </div>
+            <div class="co-tabs" aria-hidden="true"><span class="current">Overview</span><span>Sources</span><span>Approval</span></div>
+            <div class="co-body">
+              <dl class="co-amounts"><div><dt>Gross ticket revenue</dt><dd>$24,840</dd></div><div><dt>Net ticket revenue</dt><dd class="primary">$21,975</dd></div></dl>
+              <div class="co-filerow"><ul class="co-files" aria-label="Example source files"><li><b>CSV</b>Ticketing</li><li><b>XLSX</b>Box office</li><li><b>PDF</b>Settlement</li></ul><i class="co-n" aria-hidden="true">1</i></div>
+              <dl class="co-ded"><div><dt>Refunds</dt><dd>− $620</dd></div><div><dt>Ticketing fees</dt><dd>− $1,245</dd></div><div><dt>Taxes withheld</dt><dd>− $1,000</dd></div></dl>
+              <div class="co-exc"><span class="co-sym" aria-hidden="true">!</span><div><strong>One fee difference to review</strong><p>Ticketing and settlement totals differ by $120</p></div><i class="co-n" aria-hidden="true">2</i></div>
+              <div class="co-approval"><div><strong>Promoter approval required</strong><p>Approval applies to this exact version</p></div><span class="co-tagrow"><span class="co-tag">Awaiting review</span><i class="co-n" aria-hidden="true">4</i></span></div>
+            </div>
+          </div>
+          <p class="co-note">A proposed interface, shown with sample figures. Not a working product.</p>
+        </figure>
+      </div>
+
+      <ol class="co-path" aria-label="The path a report takes">
+        <li><i class="co-n" aria-hidden="true">1</i><h3>Sources in</h3><p>The ticket reports for the show go in as they arrive, each one kept with the show it belongs to.</p></li>
+        <li><i class="co-n" aria-hidden="true">2</i><h3>Differences flagged</h3><p>Where two reports disagree, the difference is flagged for a person to review.</p></li>
+        <li><i class="co-n" aria-hidden="true">3</i><h3>A report version</h3><p>The reviewed numbers become one version of the report. A correction makes a new version.</p></li>
+        <li><i class="co-n" aria-hidden="true">4</i><h3>Approved, no account needed</h3><p>The promoter approves that exact version through a verified link, without signing up for anything.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ WHERE THE TWO MEET ============ -->
+  <section class="band band-meet" id="meet" aria-labelledby="h-meet">
+    <div class="wrap">
+      <p class="eyebrow">Where the two meet <span class="st st-plan"><i></i>Planned</span></p>
+      <h2 class="meet-h" id="h-meet"><span>One side knows what the show <b class="a">cost.</b></span> <span>The other knows what it <b class="b">made.</b></span></h2>
+      <p class="lede">The plan is to bring the two together into a settlement.</p>
+      <div class="sum">
+        <div class="sum-a"><p class="k">Staffing</p><p class="v">What the show cost</p><p class="d">The players booked and paid through the app.</p></div>
+        <span class="sum-op" aria-hidden="true">+</span>
+        <div class="sum-b"><p class="k">Closeout</p><p class="v">What the show made</p><p class="d">The approved report of the night&rsquo;s ticket sales.</p></div>
+        <span class="sum-op to" aria-hidden="true">→</span>
+        <div class="sum-c"><p class="k">Planned</p><p class="v">A settlement</p><p class="d">The two brought together for one show. Not built.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO IT'S FOR ============ -->
+  <section class="band" id="who" aria-labelledby="h-who">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Who it&rsquo;s for</p>
+        <h2 id="h-who">The people on the stage, and the people who settle up after.</h2>
+      </div>
+      <div class="who">
+        <div class="who-col who-stage">
+          <span class="door-k">Staffing</span>
+          <dl>
+            <div><dt>Bandleaders</dt><dd>Your drummer bailed at 8. Book a sub off a reel by 8:15, and the crowd never knows.</dd></div>
+            <div><dt>Players</dt><dd>Mark yourself free tonight and let your reel do the pitching.</dd></div>
+            <div><dt>Techs</dt><dd>Sound and lighting techs get found and booked the same way as the band.</dd></div>
+          </dl>
+        </div>
+        <div class="who-col who-office">
+          <span class="door-k">Closeout</span>
+          <dl>
+            <div><dt>Promoters</dt><dd>Review the final report for your show and approve that exact version, without creating an account.</dd></div>
+            <div><dt>Artist management</dt><dd>One approved report for each show, one that you and the promoter can both stand behind.</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="roles">
+        <div>
+          <h3>Pick everything you gig on.</h3>
+          <p>Techs count as players here. Tap what you do — <span style="color:#c9cdd4">this is your card.</span></p>
+        </div>
+        <div class="role-chips" id="roleChips">
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-guitar"/></svg>Guitar</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-bass"/></svg>Bass</button>
+          <button type="button" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-drums"/></svg>Drums</button>
+          <button type="button" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-keys"/></svg>Keys / Piano</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-vocals"/></svg>Vocals</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-sax"/></svg>Saxophone</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-trumpet"/></svg>Trumpet</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-violin"/></svg>Violin / Fiddle</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-steel"/></svg>Pedal Steel</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-dj"/></svg>DJ / Electronic</button>
+          <button type="button" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-sound"/></svg>Sound Tech</button>
+          <button type="button" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-light"/></svg>Lighting Tech</button>
+        </div>
+      </div>
+      <p class="sig">Made by people who&rsquo;ve loaded a van at 2am.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHERE IT STANDS ============ -->
+  <section class="band band-meet" id="status" aria-labelledby="h-status">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Where it stands</p>
+        <h2 id="h-status">Nothing here is launched. This is what exists.</h2>
+      </div>
+      <dl class="stand">
+        <div><dt>Staffing <span class="st st-beta"><i></i>Prototype · staging beta</span></dt><dd>A working web app: find a sub, watch a reel, message, book, check in before the show and pay. Payments run in test mode, so no real money moves yet.</dd></div>
+        <div><dt>Closeout <span class="st st-design"><i></i>Design stage</span></dt><dd>Designed and specified, not built. A small pilot, with closeouts run by hand, is being planned.</dd></div>
+        <div><dt>Settlement <span class="st st-plan"><i></i>Planned</span></dt><dd>Bringing what a show cost and what it made into one settlement.</dd></div>
+        <div><dt>First cities <span class="st st-plan"><i></i>Planned</span></dt><dd>Austin and Nashville.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ GET INVOLVED ============ -->
+  <section class="band band-involved" id="involved" aria-labelledby="h-involved">
+    <div class="wrap">
+      <p class="standby"><i aria-hidden="true"></i>On standby · not launched yet</p>
+      <h2 id="h-involved">The show<br><span class="hl">goes on.</span></h2>
+      <p class="lede">If you play, lead a band, promote shows or look after artists, I&rsquo;d like to hear from you. Ask to join the staffing beta, or ask about the closeout pilot that is being planned.</p>
+      <div class="involve-btns">
+        <a class="btn btn-pri" href="mailto:hello@kitesink.com?subject=Stage%20First%3A%20staffing%20beta">Ask about the beta</a>
+        <a class="btn" href="mailto:hello@kitesink.com?subject=Stage%20First%3A%20closeout%20pilot">Ask about a closeout pilot</a>
+      </div>
+      <p class="mail">Both go to <a class="inl" href="mailto:hello@kitesink.com">hello@kitesink.com</a></p>
+      <p class="involve-links">
+        <a class="textlink" href="https://backline.kitesink.com" target="_blank" rel="noopener">Open the staging app <span aria-hidden="true">↗</span></a>
+        <a class="textlink" href="https://stagefirst.app" target="_blank" rel="noopener">stagefirst.app <span aria-hidden="true">↗</span></a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="sf-foot">
+  <div class="wrap">
+    <div>
+      <a class="sf-brand" href="#top" aria-label="Stage First, top of page"><span class="sf-mark" aria-hidden="true"><i></i><i></i><i></i></span>Stage First</a>
+      <p>The business side of a live show, from staffing the stage to closing out the night. The staffing app has been called Backline.</p>
+    </div>
+    <nav aria-label="Stage First">
+      <a href="#staffing">Staffing</a>
+      <a href="#closeout">Closeout</a>
+      <a href="mailto:hello@kitesink.com">Contact</a>
+      <a href="/music">More music projects</a>
+      <a href="/blog">The log</a>
+    </nav>
+    <p class="fine">A KiteSink project · The show goes on</p>
+  </div>
+</footer>
+
+<!-- KiteSink bottom strip (shared chrome from ks.js; styled dark above) -->
+<div data-ks="bottombar"></div>
+
 <script>
-/* ===== Backline generative systems (ported verbatim from the design spec) =====
-   Deterministic, seed-based — the same reel gel / fingerprint avatar every render,
-   so brand-new users never look empty and nothing depends on stock media. */
 (function () {
-  var root = document.getElementById("bl");
+  'use strict';
+  function each(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
-  function hash(str){ var h=2166136261; str=String(str); for(var i=0;i<str.length;i++){ h^=str.charCodeAt(i); h=Math.imul(h,16777619);} return h>>>0; }
-  function rand(seed){ var s=(seed>>>0)||1; return function(){ s=Math.imul(s^(s>>>15),2246822519); s^=s>>>13; return (s>>>0)/4294967296; }; }
-  var GELS=[42,20,352,320,278,258,196,168,128];
+  // ---- The night stepper: six real app screens behind one tab list ----
+  var night = document.getElementById('night');
+  if (night) {
+    var list = night.querySelector('.night-tabs'), tabs = each('.night-tab', night), panels = each('.night-panel', night), at = 0;
+    list.setAttribute('role', 'tablist');
+    list.setAttribute('aria-label', 'The night, screen by screen');
+    tabs.forEach(function (tab, i) {
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', panels[i].id);
+      panels[i].setAttribute('role', 'tabpanel');
+      panels[i].setAttribute('aria-labelledby', tab.id);
+    });
+    var select = function (i, focus) {
+      at = (i + tabs.length) % tabs.length;
+      tabs.forEach(function (tab, n) {
+        var on = n === at;
+        tab.setAttribute('aria-selected', on ? 'true' : 'false');
+        tab.tabIndex = on ? 0 : -1;
+        panels[n].classList.toggle('is-on', on);
+      });
+      // keep the chosen tab in view inside its own sideways-scrolling row, without moving the page
+      if (list.scrollWidth > list.clientWidth) {
+        var t = tabs[at];
+        list.scrollTo({ left: t.offsetLeft - (list.clientWidth - t.offsetWidth) / 2, behavior: 'auto' });
+      }
+      if (focus) tabs[at].focus({ preventScroll: true });
+    };
+    tabs.forEach(function (tab, i) { tab.addEventListener('click', function () { select(i, false); }); });
+    list.addEventListener('keydown', function (e) {
+      var k = e.key, to = null;
+      if (k === 'ArrowRight' || k === 'ArrowDown') to = at + 1;
+      else if (k === 'ArrowLeft' || k === 'ArrowUp') to = at - 1;
+      else if (k === 'Home') to = 0;
+      else if (k === 'End') to = tabs.length - 1;
+      if (to === null) return;
+      e.preventDefault(); select(to, true);
+    });
+    // the screens' own buttons (and each "Next" link) walk the story forward
+    night.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('[data-night]') : null;
+      if (!a) return;
+      e.preventDefault();
+      select(parseInt(a.getAttribute('data-night'), 10), true);
+    });
+    var fromHash = function () {
+      var m = /^#night-([1-6])$/.exec(location.hash);
+      if (m) select(parseInt(m[1], 10) - 1, false);
+    };
+    select(0, false); fromHash();
+    window.addEventListener('hashchange', fromHash);
+  }
 
-  function fp(seed){ // fingerprint avatar → CSS background string
-    var g=GELS, h=hash(seed), r=rand(h);
-    var hA=g[h%g.length], hB=g[(Math.floor(h/9))%g.length];
-    var ang=Math.floor(r()*90), spoke=7+Math.floor(r()*7);
-    var px=26+Math.floor(r()*48), py=20+Math.floor(r()*40);
-    return 'repeating-conic-gradient(from '+ang+'deg at '+px+'% '+py+'%, oklch(0.66 0.17 '+hA+') 0deg '+spoke+'deg, transparent '+spoke+'deg '+(spoke*2)+'deg),'+
-           'repeating-radial-gradient(circle at '+px+'% '+py+'%, oklch(0.5 0.14 '+hB+') 0 1.5px, transparent 1.5px 8px),'+
-           'radial-gradient(circle at '+px+'% '+py+'%, oklch(0.44 0.13 '+hA+'), oklch(0.15 0.05 '+hB+'))';
-  }
-  function reelGrad(seed){ // reel "gel" video stand-in
-    var g=GELS, h=hash(seed), r=rand(h+3);
-    var hA=g[h%g.length], hB=g[(Math.floor(h/5))%g.length];
-    var px=18+Math.floor(r()*46), py=8+Math.floor(r()*34);
-    return 'radial-gradient(130% 120% at '+px+'% '+py+'%, oklch(0.64 0.17 '+hA+') 0%, oklch(0.42 0.16 '+hA+') 28%, oklch(0.24 0.11 '+hB+') 62%, oklch(0.13 0.04 '+hB+') 100%)';
-  }
-  function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-
-  var GRAIN = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
-  function bars(){
-    var specs=[[60,'.8s','0s'],[95,'.95s','-.4s'],[45,'.7s','-.6s'],[82,'1s','-.2s'],[58,'.84s','-.5s']];
-    return specs.map(function(b){ return '<div style="width:3px;height:'+b[0]+'%;background:var(--accent);border-radius:2px;transform-origin:bottom;animation:eq '+b[1]+' ease-in-out infinite;animation-delay:'+b[2]+';animation-play-state:var(--reel-play)"></div>'; }).join('');
-  }
-
-  // ---- Reels filmstrip ----
-  var reels=[
-    { seed:'nia', instr:'DRUMS', cap:'Funk breakdown — Mohawk', dur:'0:32' },
-    { seed:'reyna', instr:'KEYS', cap:'Rhodes solo take', dur:'0:24' },
-    { seed:'kojo', instr:'SAX', cap:'Stax-style horn line', dur:'0:28' },
-    { seed:'tasha', instr:'VOCALS', cap:'Harmony on the fly', dur:'0:19' },
-    { seed:'vela', instr:'DJ', cap:'Open-format blend', dur:'0:41' },
-    { seed:'sam', instr:'GUITAR', cap:'Tele twang to wash', dur:'0:26' }
-  ];
-  var strip=document.getElementById("reelStrip");
-  if(strip) strip.innerHTML = reels.map(function(r){
-    return '<div style="flex:none;width:196px;aspect-ratio:3/4;border-radius:18px;overflow:hidden;position:relative;scroll-snap-align:start;box-shadow:0 24px 50px -26px #000">'+
-      '<div style="position:absolute;inset:0;background:'+reelGrad(r.seed+'-reel')+'"></div>'+
-      '<div style="position:absolute;inset:0;background-image:'+GRAIN+';background-size:120px;mix-blend-mode:overlay;opacity:calc(.16*var(--grain-op));animation:grain .5s steps(3) infinite;animation-play-state:var(--reel-play)"></div>'+
-      '<div style="position:absolute;top:-10%;bottom:-10%;left:0;width:38%;background:linear-gradient(90deg,transparent,rgba(255,240,214,.26),transparent);animation:sweep 4.6s ease-in-out infinite;animation-play-state:var(--reel-play)"></div>'+
-      '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.16),transparent 30%,transparent 52%,rgba(0,0,0,.78))"></div>'+
-      '<div style="position:absolute;top:11px;left:11px;right:11px;display:flex;justify-content:space-between">'+
-        '<span style="font-family:\'Space Mono\',monospace;font-size:9px;letter-spacing:.08em;background:rgba(0,0,0,.42);backdrop-filter:blur(4px);color:#fff;padding:3px 7px;border-radius:6px">'+esc(r.instr)+'</span>'+
-        '<span style="font-family:\'Space Mono\',monospace;font-size:9px;background:rgba(0,0,0,.42);backdrop-filter:blur(4px);color:#fff;padding:3px 7px;border-radius:6px">'+esc(r.dur)+'</span>'+
-      '</div>'+
-      '<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);width:44px;height:44px;border-radius:50%;background:rgba(12,13,16,.4);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg></div>'+
-      '<div style="position:absolute;left:11px;right:11px;bottom:11px">'+
-        '<div style="display:flex;align-items:flex-end;gap:2px;height:15px;margin-bottom:8px">'+bars()+'</div>'+
-        '<div style="font-size:12.5px;font-weight:500;color:#fff;line-height:1.3">'+esc(r.cap)+'</div>'+
-      '</div>'+
-    '</div>';
-  }).join('');
-
-  // ---- Role chips (multi-select; amber-active) ----
-  var roles=['Guitar','Bass','Drums','Keys','Vocals','Horns','Strings','DJ','Sound tech','Lighting tech'];
-  var sel={ 'Drums':true, 'Sound tech':true, 'Keys':true };
-  var chipsEl=document.getElementById("roleChips");
-  function chipStyle(active){
-    var base='padding:9px 15px;border-radius:999px;cursor:pointer;font-family:\'Space Grotesk\',sans-serif;font-size:14px;font-weight:500;line-height:1;white-space:nowrap;transition:background .15s,border-color .15s,color .15s;';
-    return base + (active
-      ? 'background:rgba(248,171,60,.14);color:#ffc879;border:1px solid rgba(248,171,60,.5)'
-      : 'background:#131519;color:#a6abb5;border:1px solid #2b2e36');
-  }
-  function renderChips(){
-    if(!chipsEl) return;
-    chipsEl.innerHTML = roles.map(function(n){
-      return '<button type="button" data-role="'+esc(n)+'" aria-pressed="'+(!!sel[n])+'" style="'+chipStyle(!!sel[n])+'">'+esc(n)+'</button>';
-    }).join('');
-  }
-  renderChips();
-  if(chipsEl) chipsEl.addEventListener("click", function(e){
-    var b=e.target.closest("button[data-role]"); if(!b) return;
-    var n=b.getAttribute("data-role"); sel[n]=!sel[n];
-    b.setAttribute("aria-pressed", !!sel[n]);
-    b.setAttribute("style", chipStyle(!!sel[n]));
+  // ---- Role chips: pick everything you gig on ----
+  var chips = document.getElementById('roleChips');
+  if (chips) chips.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('button') : null;
+    if (b) b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
   });
 
-  // ---- Testimonials (fingerprint avatars) ----
-  var testimonials=[
-    { seed:'theo', quote:'Drummer bailed at 8. Booked a sub off a reel by 8:15. The crowd never knew.', name:'Theo Marsh', role:'Bandleader · The Lowlights' },
-    { seed:'nia', quote:'I sub three or four nights a week now. My reel does the pitching for me.', name:'Nia Okafor', role:'Drummer · Austin' },
-    { seed:'dov', quote:'Techs finally get treated like players. Booked two festivals through Backline.', name:'Dov Levin', role:'FOH engineer' }
-  ];
-  var proof=document.getElementById("proofGrid");
-  if(proof) proof.innerHTML = testimonials.map(function(t){
-    return '<div style="background:#111216;border:1px solid #22242b;border-radius:16px;padding:22px;display:flex;flex-direction:column">'+
-      '<span style="color:var(--accent);font-size:14px;letter-spacing:2px;margin-bottom:12px" aria-hidden="true">★★★★★</span>'+
-      '<p style="font-size:15.5px;line-height:1.55;color:#dde0e5;margin:0 0 18px;flex:1">&ldquo;'+esc(t.quote)+'&rdquo;</p>'+
-      '<div style="display:flex;align-items:center;gap:11px">'+
-        '<div style="width:42px;height:42px;flex:none;border-radius:12px;overflow:hidden;position:relative"><div style="position:absolute;inset:0;background:'+fp(t.seed)+'"></div></div>'+
-        '<div><div style="font-size:14px;font-weight:600">'+esc(t.name)+'</div><div style="font-family:\'Space Mono\',monospace;font-size:10.5px;color:#8a8f98;margin-top:2px">'+esc(t.role)+'</div></div>'+
-      '</div>'+
-    '</div>';
-  }).join('');
-
-  // ---- Respect reduced motion for the reel-heavy surfaces ----
-  try {
-    var mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    function applyMotion(){ if(root) root.style.setProperty("--reel-play", mq.matches ? "paused" : "running"); }
-    applyMotion();
-    if(mq.addEventListener) mq.addEventListener("change", applyMotion);
-  } catch(e){}
+  // ---- Page nav: mark the section in view ----
+  var strip = document.querySelector('.sf-links');
+  if (strip) {
+    var pairs = [], current = null, queued = false;
+    each('a[href^="#"]', strip).forEach(function (a) {
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (el) pairs.push([el, a]);
+    });
+    var update = function () {
+      queued = false;
+      var line = window.innerHeight * 0.3, hit = null;
+      for (var i = 0; i < pairs.length; i++) if (pairs[i][0].getBoundingClientRect().top <= line) hit = pairs[i][1];
+      if (hit === current) return;
+      if (current) current.removeAttribute('aria-current');
+      current = hit;
+      if (!hit) return;
+      hit.setAttribute('aria-current', 'true');
+      if (strip.scrollWidth > strip.clientWidth) strip.scrollTo({ left: hit.offsetLeft - (strip.clientWidth - hit.offsetWidth) / 2, behavior: 'auto' });
+    };
+    var queue = function () { if (!queued) { queued = true; requestAnimationFrame(update); } };
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    update();
+  }
 })();
 </script>
-<script src="/ks.js?v=2027.4"></script>
+<script src="/ks.js?v=2027.5"></script>
 </body>
 </html>

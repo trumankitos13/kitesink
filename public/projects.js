@@ -54,7 +54,7 @@ window.KS_WORK = {
       related: []
     },
     {
-      title: "Backline",
+      title: "Stage First (Backline)",
       href: "/backline",
       icon: "amp",
       status: "WIP · PROTOTYPE",

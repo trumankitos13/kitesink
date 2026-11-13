@@ -19,7 +19,7 @@ He spent his twenties splitting time between a squat rack, a record shelf and a 
 
 - Consulting and an AI concierge service: [https://kitesink.com/consulting.md](https://kitesink.com/consulting.md)
 - Vantix, five free fitness calculators and a sourced field guide: [https://kitesink.com/fitness.md](https://kitesink.com/fitness.md)
-- Song of the Day, Backline and the Album Listening Club: [https://kitesink.com/music.md](https://kitesink.com/music.md)
+- Song of the Day, Stage First and the Album Listening Club: [https://kitesink.com/music.md](https://kitesink.com/music.md)
 - Campground Tycoon and everything else: https://kitesink.com/library
 
 ## Contact

@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.4">
+<link rel="stylesheet" href="/ks.css?v=2027.5">
 <style>
   .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
@@ -35,6 +35,7 @@
 
   /* ---------- vantix feature ---------- */
   .vx { display: grid; gap: clamp(22px, 4vw, 48px); }
+  .vx > * { min-width: 0; }   /* let the panels shrink so a wide table scrolls inside its own frame */
   @media (min-width: 900px) { .vx { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; } }
   .vx-copy { display: flex; flex-direction: column; gap: 16px; }
   .vx .k-pc-title { font-size: clamp(28px, 4.4vw, 46px); }
@@ -413,7 +414,7 @@
               </ol>
               <p class="vx-key">W1-4 accumulation · W5-6 overload · W7-9 deload</p>
               <p class="vx-day">Thu · Upper B (Tension/Power) <span>23 sets · 52% compound</span></p>
-              <div class="vx-tt-wrap">
+              <div class="vx-tt-wrap" tabindex="0" role="region" aria-label="Track sample: three exercises">
                 <table class="vx-tt"><caption class="k-vh">Three exercises from one session: the planned line, then what was done</caption>
                   <thead><tr><th scope="col">Exercise</th><th scope="col">Sets × reps</th><th scope="col">RIR</th><th scope="col">Stim</th><th scope="col" class="opt">Rest</th></tr></thead>
                   <tbody>
@@ -1437,7 +1438,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.4"></script>
-<script src="/fitness.js?v=2027.4"></script>
+<script src="/ks.js?v=2027.5"></script>
+<script src="/fitness.js?v=2027.5"></script>
 </body>
 </html>

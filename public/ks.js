@@ -41,7 +41,7 @@
   // The release of the shared files. It must match the ?v= on every page's
   // ks.css / ks.js / site-index.js tags (scripts/check_site.py checks), so a
   // file fetched from here and the same file named by a page are one cache entry.
-  var ASSET_V = "2027.4";
+  var ASSET_V = "2027.5";
 
   // The five sections. Order = nav order. `quiet` renders Library understated:
   // always reachable, never the loudest thing on the page.
@@ -123,7 +123,7 @@
           '<p>Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>' +
         '<div class="ks-ft-cols">' +
           col("Sections", SECTIONS.map(function (s) { return [s.label, s.href]; })) +
-          col("Current", [["Vantix", "/vantix"], ["Fitness tools", "/fitness#tools"], ["Song of the Day", "/song-of-the-day"], ["Backline", "/backline"], ["Listening Club", "/listening-club"]]) +
+          col("Current", [["Vantix", "/vantix"], ["Fitness tools", "/fitness#tools"], ["Song of the Day", "/song-of-the-day"], ["Stage First", "/backline"], ["Listening Club", "/listening-club"]]) +
           col("Library", [["Full index", "/library"], ["Games", "/games"], ["Writing", "/blog"], ["Now", "/now"], ["Uses", "/uses"], ["Colophon", "/colophon"]]) +
           col("Elsewhere", [["hello@kitesink.com", "mailto:hello@kitesink.com"], ["GitHub", "https://github.com/trumankitos13", 1], ["YouTube", "https://www.youtube.com/@rummaging13", 1], ["Bluesky", "https://bsky.app/profile/signal-shift.bsky.social", 1], ["Atom feed", "/feed.xml"]]) +
         '</div>' +
