@@ -133,6 +133,7 @@ html[data-theme="dark"] .ks-logo .lgl { fill: #63a576; } html[data-theme="dark"]
 }
 .ks-findbtn:hover { color: var(--k-green); border-color: var(--k-green); }
 .ks-kbd { font: 500 10.5px/1 var(--k-mono); padding: 4px 6px; border-radius: 6px; background: var(--k-tint); color: var(--k-copy); }
+.ks-kbd[data-k]::after { content: attr(data-k); }   /* the header's shortcut hint: drawn here so the button's visible label is just "Find" */
 .ks-status { display: none; align-items: center; gap: 8px; font: 500 12px/1 var(--k-mono); color: var(--k-green); white-space: nowrap; }
 .ks-status i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: ks-pulse 2.4s ease-in-out infinite; }
 @media (min-width: 1100px) { .ks-status { display: inline-flex; } }
@@ -240,7 +241,7 @@ html[data-theme="dark"] .ks-logo .lgl { fill: #63a576; } html[data-theme="dark"]
 .ks-find::backdrop { background: rgba(20,16,8,.5); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
 .ks-find-top { display: flex; align-items: center; gap: 12px; padding: 6px 12px 6px 18px; border-bottom: 1px solid var(--k-rule); color: var(--k-mute); }
 .ks-find-in { flex: 1; min-width: 0; height: 52px; border: 0; background: transparent; color: var(--k-ink); font: 500 17px/1 var(--k-sans); outline: none; }
-.ks-find-in::placeholder { color: var(--k-mute); }
+.ks-find-in::placeholder { color: var(--k-mute); opacity: 1; }
 .ks-find .ks-find-in:focus-visible { outline: none; }   /* the caret marks focus; the field is the dialog's only input */
 .ks-find-in::-webkit-search-cancel-button { display: none; }
 .ks-find-x { border: 1px solid var(--k-rule-strong); background: transparent; color: var(--k-mute); border-radius: 8px;
@@ -405,7 +406,7 @@ a.k-card:hover, .k-card--link:hover { translate: 0 -3px; box-shadow: var(--k-sha
 .k-input, .k-select { width: 100%; min-height: 46px; padding: 10px 12px; border-radius: 10px; border: 1.5px solid var(--k-rule-strong);
   background: var(--k-paper); color: var(--k-ink); font: 500 16px/1.2 var(--k-sans); font-variant-numeric: tabular-nums; }
 .k-input:focus-visible, .k-select:focus-visible { outline-offset: 1px; border-color: var(--k-green); }
-.k-input::placeholder { color: var(--k-mute); opacity: .8; }
+.k-input::placeholder { color: var(--k-mute); opacity: 1; }   /* 1, not the browser default: Firefox dims placeholders */
 textarea.k-input { min-height: 84px; line-height: 1.45; resize: vertical; }
 .k-range { width: 100%; height: 28px; margin: 0; accent-color: var(--k-green-fill); cursor: pointer; }
 html[data-theme="dark"] .k-range { accent-color: #82c795; }
@@ -521,13 +522,16 @@ body.k2 [hidden] { display: none !important; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .26s; animation-timing-function: cubic-bezier(.2,.7,.2,1); }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
 
-/* scroll-driven reveals: content is fully visible wherever this isn't supported */
+/* scroll-driven reveals: content is fully visible wherever this isn't supported. The fill is
+   `forwards`, not `both`: a block that has not been scrolled to yet keeps its own opacity, so
+   print, full-page captures and anything that reads the page without scrolling see all of it. */
 @keyframes k-rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }   /* transform, so hover's `translate` stays free */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .k-reveal { animation: k-rise linear both; animation-timeline: view(); animation-range: entry 0px entry 180px; }   /* px, not %: a tall card is solid once 180px of it is on screen */
+    .k-reveal { animation: k-rise linear forwards; animation-timeline: view(); animation-range: entry 0px entry 180px; }   /* px, not %: a tall card is solid once 180px of it is on screen */
   }
 }
+@media print { .k-reveal { animation: none !important; opacity: 1 !important; transform: none !important; } }
 
 /* ---------- 6. legacy night mode (older inline-styled cream pages) ----------
    Those pages use inline hex colors, so the dark theme remaps the known

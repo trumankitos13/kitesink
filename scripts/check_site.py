@@ -200,6 +200,15 @@ def audit_fitness_build() -> list[str]:
     return []
 
 
+def audit_llms_full() -> list[str]:
+    """/llms-full.txt is every twin in one file; fail if a twin changed and it was not rebuilt."""
+    import subprocess
+    result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_llms_full.py"), "--check"], capture_output=True, text=True)
+    if result.returncode:
+        return ["llms-full: " + (result.stdout.strip() or result.stderr.strip().splitlines()[-1])]
+    return []
+
+
 def audit_asset_versions() -> list[str]:
     """Every page must request the same ?v= of the shared CSS/JS, or returning
     visitors can get a new page with an old cached stylesheet."""
@@ -294,6 +303,7 @@ def main() -> int:
     issues += audit_asset_versions()
     issues += audit_twins()
     issues += audit_fitness_build()
+    issues += audit_llms_full()
 
     deployed_text = "\n".join(
         path.read_text(encoding="utf-8")

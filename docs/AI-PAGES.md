@@ -21,6 +21,10 @@ page (`python3 scripts/build_fitness.py`). The others are hand-written files in
 `public/`: when a fact on a page changes, change its twin too. `scripts/check_site.py`
 checks that every twin exists, is linked from its page and has no broken links.
 
+`/llms-full.txt` is every twin in one file, for readers that want the whole site in one
+request. `python3 scripts/build_llms_full.py` writes it; run it after the fitness build
+and after editing any hand-written twin. The audit fails if it is out of date.
+
 Each twin says the same things as its page. The one addition is an enquiry link,
 `/consulting?via=ai-assistant#contact`, which fills the "Found via" line of the contact
 form so you can count enquiries that started with an AI assistant.
@@ -59,6 +63,12 @@ twin; every other request is served as before. To make it permanent, copy the `m
 back, deploy with the normal `wrangler.jsonc`. Set `AI_TWINS` to `accept` to answer only
 requests that ask for markdown, or `off` to disable it without removing the worker.
 
+`wrangler.ai-twins.jsonc` ships with `AI_TWINS` set to `accept`. That mode answers only
+requests that ask for markdown and never looks at the user agent. `agents` mode also
+switches for named crawlers, three of which (OAI-SearchBot, Claude-SearchBot,
+PerplexityBot) build search indexes; serving an indexer different content from people is
+the pattern search engines penalise, so leave it on `accept` unless you have a reason.
+
 If the zone is on a Cloudflare Pro plan or higher, Cloudflare's own "Markdown for
 Agents" setting does the `Accept: text/markdown` part without a worker, by converting
 the HTML page. It does not use these hand-written twins.
@@ -86,8 +96,9 @@ Claude relayed it far more than the others, that ChatGPT read the pages and neve
 mentioned it, and that nobody had acted on the offer when the results were published. A
 small personal site starts with few or no AI citations, so treat this as groundwork.
 
-There is no special offer in the twins. Ramp's pages carried one. If you want one, decide
-what it is and add the same sentence to each twin; I did not invent one.
+The twins do carry an offer now: the block described near the top of this file, added on
+13 November 2026 with the code word `KITESTRING`. Judge it on what Cloudflare's AI Crawl
+Control and Web Analytics show after a month.
 
 ## Sources
 

@@ -283,7 +283,7 @@ Evidence: Meta-analysis · Well supported · Sources: [Wirth 2020](https://doi.o
 
 **Verdict: Not supported.** In one tracer study, 100 g of protein gave a bigger and longer muscle response than 25 g, so a fixed per-meal cap is not supported.
 
-In 36 young men after whole-body exercise, 100 g of protein produced a greater and more prolonged (over 12 hours) anabolic response than 25 g, with a negligible effect on amino acid oxidation. This measured short-term protein synthesis, not muscle gained over months. The ISSN suggests 20 to 40 g per serving, spread every 3 to 4 hours, as a practical guide.
+In 36 young men after whole-body exercise, 100 g of milk protein, which is mostly slow-digesting casein, produced a greater and more prolonged (over 12 hours) anabolic response than 25 g, with a negligible effect on amino acid oxidation. This measured short-term protein synthesis, not muscle gained over months. The ISSN suggests 20 to 40 g per serving, spread every 3 to 4 hours, as a practical guide.
 
 Who was studied: Trommelen 2023: 36 healthy, recreationally active young men, one feeding of 0, 25 or 100 g protein after exercise, followed for 12 hours.
 
@@ -511,7 +511,7 @@ Evidence: Mixed · Some support · Sources: [Martins 2020](https://doi.org/10.10
 
 **Verdict: Not supported.** Training one body part did not reduce fat there in most studies, though one small trial of overweight men found otherwise.
 
-A meta-analysis of 13 controlled studies (1,158 participants) comparing trained and untrained limbs found no local effect (pooled effect size -0.03). Six weeks of abdominal exercise in 24 sedentary adults did not reduce abdominal fat, and 12 weeks of single-leg training reduced arm and trunk fat but not leg fat. A 2023 trial of 16 overweight men found more trunk fat loss when abdominal work was added to running, so the question is not fully closed.
+A meta-analysis of 13 controlled studies (1,158 participants) comparing trained and untrained limbs found no local effect (pooled effect size -0.03). Six weeks of abdominal exercise in 24 sedentary adults did not reduce abdominal fat, and 12 weeks of single-leg training reduced arm and trunk fat but not leg fat. A 2023 trial of 16 overweight men found more trunk fat loss when abdominal work replaced part of the running, with the two programmes designed to use the same energy from pilot measurements. One small trial does not outweigh the meta-analysis, so the question is not fully closed.
 
 Who was studied: Ramirez-Campillo 2022: 13 studies, 1,158 participants. Vispute 2011: 24 adults, 6 weeks. Ramirez-Campillo 2013: 11 adults, 12 weeks. Brobakken 2023: 16 men, 10 weeks.
 
@@ -728,4 +728,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness#claims  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-13.
+General information, not medical advice. Last updated 2026-11-14.

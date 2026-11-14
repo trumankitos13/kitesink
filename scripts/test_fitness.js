@@ -32,9 +32,18 @@ eq('rmr via bf', e.rmr, 1752.4); console.log('equation:', e.equation);
 eq('rpe', F.rpe(2), 8);
 // Epley 100×5 = 116.67 ; Brzycki 100×5 = 100·36/32 = 112.5 ; single = itself
 eq('epley', F.epley(100, 5), 116.6667, 0.001); eq('brzycki', F.brzycki(100, 5), 112.5); eq('epley single', F.epley(100, 1), 100); eq('brzycki single', F.brzycki(100, 1), 100);
-// loadFor is Epley inverted: 1RM 116.67, 5 reps @0 → 100
-eq('loadFor', F.loadFor(116.6667, 5, 0), 100, 0.001); eq('loadFor 8@2', F.loadFor(120, 8, 2), 90);
-eq('repsAt 75%', F.repsAt(0.75), 10);
+// The tool's estimate: up to 10 reps the mean of the two factors, above 10 Epley alone.
+//   100×5 → 100·(1.166667 + 1.125)/2 = 114.5833 ; 100×10 → both give 133.3333 ; 100×12 → Epley, 140 ; a single is itself
+eq('oneRm 100x5', F.oneRm(100, 5), 114.5833, 0.001); eq('oneRm 100x10', F.oneRm(100, 10), 133.3333, 0.001);
+eq('oneRm 100x12', F.oneRm(100, 12), 140, 0.001); eq('oneRm single', F.oneRm(100, 1), 100);
+// no step where the two meet: 10 and 11 reps differ by one Epley increment (100/30)
+eq('oneRm 10 to 11', F.oneRm(100, 11) - F.oneRm(100, 10), 3.3333, 0.001);
+// loadFor inverts the same estimate: 114.5833 for 5 @0 → 100 ; 120 for 8 @2 (ten reps) → 90 ;
+// one rep with one in reserve (two reps) → 100/((1.066667 + 1.028571)/2) = 95.4545
+eq('loadFor', F.loadFor(114.5833, 5, 0), 100, 0.001); eq('loadFor 8@2', F.loadFor(120, 8, 2), 90); eq('loadFor 1@1', F.loadFor(100, 1, 1), 95.4545, 0.001);
+// reps at a percentage inverts it again: 75% → 10 ; 100% → 1 ; 60% → Epley's 20 ; 95% → about 2.16, shown as 2
+eq('repsAt 75%', F.repsAt(0.75), 10, 0.001); eq('repsAt 100%', F.repsAt(1), 1); eq('repsAt 60%', F.repsAt(0.6), 20, 0.001);
+eq('repsAt 95%', F.repsAt(0.95), 2.158, 0.01); eq('repsAt 95% rounds to 2', Math.round(F.repsAt(0.95)), 2);
 // travel builder: every combination produces a session with moves, only using allowed kit and level
 const kits = [[], ['db'], ['kb', 'band'], ['bar', 'bench', 'sus'], ['db', 'kb', 'band', 'bar', 'bench', 'sus']];
 let n = 0, bad = 0;
@@ -56,8 +65,8 @@ console.log('travel sessions built:', n, 'bad:', bad); fail += bad;
 const a = JSON.stringify(F.travel({ equip: ['db'], minutes: 30, level: 2, format: 'circuit', seed: 42 })), b = JSON.stringify(F.travel({ equip: ['db'], minutes: 30, level: 2, format: 'circuit', seed: 42 }));
 console.log('deterministic:', a === b); if (a !== b) fail++;
 console.log(F.travelText(F.travel({ equip: ['db', 'bench'], minutes: 30, level: 2, format: 'circuit', seed: 7 })));
-// the load tool inverts the same equation it estimates with: what you lifted comes back out
-for (const [w, r] of [[100, 5], [60, 12], [142.5, 3], [225, 1]]) eq(`round trip ${w}x${r}`, F.loadFor(F.epley(w, r), r, 0), w, 1e-9);
+// the load tool inverts the same estimate it shows: what you lifted comes back out
+for (const [w, r] of [[100, 5], [60, 12], [142.5, 3], [225, 1], [80, 10], [80, 11]]) eq(`round trip ${w}x${r}`, F.loadFor(F.oneRm(w, r), r, 0), w, 1e-9);
 // a 15-minute session and a 20-minute session are not the same workout
 for (const format of ['circuit', 'intervals', 'sets']) {
   const a = F.travel({ equip: [], minutes: 15, level: 2, format, seed: 3 }), b = F.travel({ equip: [], minutes: 20, level: 2, format, seed: 3 });

@@ -34,4 +34,5 @@ For people who arrive through an AI assistant, with the code word KITESTRING: a 
 
 ## Optional
 
+- [Everything in one file](https://kitesink.com/llms-full.txt): every page above, one after another
 - [Site index for people](https://kitesink.com/library): every page, searchable

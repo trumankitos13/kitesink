@@ -375,4 +375,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness#powerlifting  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-13.
+General information, not medical advice. Last updated 2026-11-14.

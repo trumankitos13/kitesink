@@ -8,7 +8,7 @@
   "main": "worker/ai-twins.js",
   "compatibility_date": "2026-06-25",
   "observability": { "enabled": true },
-  "vars": { "AI_TWINS": "agents" },
+  "vars": { "AI_TWINS": "accept" },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",

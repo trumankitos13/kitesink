@@ -24,14 +24,14 @@
 (function () {
   "use strict";
 
-  // Paste your Cloudflare Web Analytics token here to turn on analytics
-  // (Cloudflare dashboard → Analytics & Logs → Web Analytics → add a site → copy the token).
-  var CF_TOKEN = "";
+  // Analytics: Cloudflare Web Analytics is switched on in the Cloudflare dashboard
+  // (automatic setup). Cloudflare adds its own script to each page at the edge, so there is
+  // nothing to load from here. Do not add a second snippet: it would count every visit twice.
 
-  // Web3Forms access key for the site's forms (Vantix signup, Campground suggestion
-  // box). Register the key at https://web3forms.com using suggestions@kitesink.com,
-  // then paste it here — every form then emails there. Empty = friendly demo mode
-  // (forms confirm to the visitor but send nothing).
+  // Web3Forms access key for the site's forms: the consulting enquiry, the Vantix list,
+  // the Listening Club question, the Campground suggestion box and Song of the Day
+  // support. Every form emails the inbox the key was registered with at web3forms.com.
+  // Empty = friendly demo mode (forms confirm to the visitor but send nothing).
   var KS_FORM_KEY = "f164a9ec-56c5-4caa-9898-d238812f2073";
 
   // Status shown next to the live clock in the header & footer.
@@ -41,7 +41,7 @@
   // The release of the shared files. It must match the ?v= on every page's
   // ks.css / ks.js / site-index.js tags (scripts/check_site.py checks), so a
   // file fetched from here and the same file named by a page are one cache entry.
-  var ASSET_V = "2027.7";
+  var ASSET_V = "2027.8";
 
   // The five sections. Order = nav order. `quiet` renders Library understated:
   // always reachable, never the loudest thing on the page.
@@ -97,16 +97,18 @@
       '<nav class="ks-nav" aria-label="Primary">' + navLinks(active) + '</nav>' +
       '<div class="ks-tools">' +
         '<button class="ks-findbtn" type="button" data-ks-find aria-haspopup="dialog" aria-label="Find anything on the site">' + ICON_FIND +
-          '<span>Find</span><kbd class="ks-kbd">' + (IS_MAC ? '⌘K' : 'Ctrl K') + '</kbd></button>' +
+          '<span>Find</span><kbd class="ks-kbd" aria-hidden="true" data-k="' + (IS_MAC ? '⌘K' : 'Ctrl K') + '"></kbd></button>' +
         '<button class="ks-theme-toggle" type="button" aria-label="Toggle dark mode"></button>' +
         status() +
       '</div></header>';
   }
 
   function bar(active) {
-    return '<div class="ks-bar">' + brand(18) +
-      '<nav class="ks-barnav" aria-label="KiteSink">' + navLinks(active) +
-      '<button type="button" data-ks-find aria-haspopup="dialog" aria-label="Find anything on KiteSink">' + ICON_FIND + '</button></nav></div>';
+    // one nav landmark holding the brand, the five sections and Find, so nothing in the bar
+    // sits outside a landmark
+    return '<nav class="ks-bar" aria-label="KiteSink">' + brand(18) +
+      '<div class="ks-barnav">' + navLinks(active) +
+      '<button type="button" data-ks-find aria-haspopup="dialog" aria-label="Find anything on KiteSink">' + ICON_FIND + '</button></div></nav>';
   }
 
   function col(title, links) {
@@ -119,7 +121,7 @@
       '<div class="ks-ft-top">' +
         '<div><div class="ks-ft-word"><b>Kite</b>Sink</div>' +
           '<div class="ks-ft-me"><picture><source srcset="/img/pin-avatar-80.avif" type="image/avif"><source srcset="/img/pin-avatar-80.webp" type="image/webp">' +
-          '<img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" loading="lazy" decoding="async"></picture>' +
+          '<img src="/img/pin-avatar.jpg" alt="Truman" width="40" height="40" decoding="async"></picture>' +
           '<p>Independent maker &amp; founder. One workshop, many surfaces — built &amp; maintained by one person.</p></div></div>' +
         '<div class="ks-ft-cols">' +
           col("Sections", SECTIONS.map(function (s) { return [s.label, s.href]; })) +
@@ -134,8 +136,8 @@
   }
 
   function bottomBar() {
-    return '<div class="ks-bottombar"><span style="display:flex;align-items:center;gap:8px">' + logo(15) + '<span>&copy; 2026 KiteSink</span></span>' +
-      '<span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/">Home</a><a href="/library">Library</a><a href="/about">About</a></span></div>';
+    return '<nav class="ks-bottombar" aria-label="KiteSink, bottom of page"><span style="display:flex;align-items:center;gap:8px">' + logo(15) + '<span>&copy; 2026 KiteSink</span></span>' +
+      '<span style="display:flex;gap:16px;flex-wrap:wrap"><a href="/">Home</a><a href="/library">Library</a><a href="/about">About</a></span></nav>';
   }
 
   function startClock() {
@@ -146,14 +148,6 @@
       for (var i = 0; i < els.length; i++) els[i].textContent = t;
     }
     tick(); setInterval(tick, 1000);
-  }
-
-  function loadAnalytics() {
-    if (!CF_TOKEN) return;
-    var s = document.createElement("script");
-    s.defer = true; s.src = "https://static.cloudflareinsights.com/beacon.min.js";
-    s.setAttribute("data-cf-beacon", JSON.stringify({ token: CF_TOKEN }));
-    document.head.appendChild(s);
   }
 
   // Shared form submit → Web3Forms → the inbox that registered KS_FORM_KEY.
@@ -511,7 +505,6 @@
     initFind();
     initSpy();
     speculate();
-    loadAnalytics();
   }
 
   window.KS = { sections: SECTIONS, loadIndex: loadIndex, search: search, openFind: openFind, sectionLabel: sectionLabel, esc: esc, kit: kit };

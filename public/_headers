@@ -30,8 +30,16 @@
 # Plain-text twins of pages (see docs/AI-PAGES.md). Readable by anyone with the address,
 # kept out of search results so the HTML page stays the one people find.
 /*.md
+  Content-Type: text/markdown; charset=utf-8
   X-Robots-Tag: noindex
   Cache-Control: public, max-age=3600
 
 /llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+# Every twin in one file (scripts/build_llms_full.py writes it).
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex
   Cache-Control: public, max-age=3600
