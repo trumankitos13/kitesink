@@ -14,9 +14,17 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 SPECIAL_PAGES = {PUBLIC / "404.html", PUBLIC / "repost.html", PUBLIC / "blog/_template.html"}
+# The ten pages of the /fitness split (scripts/build_fitness.py writes them from
+# content/fitness/routes.json). Phase 3a builds them and leaves them unlisted; Phase 3b lists
+# them: take them out of UNLISTED_PAGES, add them to site-index.js and sitemap.xml, drop their
+# noindex, and add their routes to run_worker_first in wrangler.ai-twins.jsonc.
+FITNESS_SUBPAGES = ("hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health", "claims", "glossary", "reference", "sources")
 # Kept at their addresses but hidden on purpose: not in the site index or the sitemap,
 # not linked from any listed page, and marked noindex. The audit holds them to that.
-UNLISTED_PAGES = {PUBLIC / "vantix/roadmap.html", PUBLIC / "vantix/changelog.html"}
+# (They may link to each other and to listed pages.)
+UNLISTED_PAGES = {PUBLIC / "vantix/roadmap.html", PUBLIC / "vantix/changelog.html"} | {
+    PUBLIC / f"fitness/{slug}.html" for slug in FITNESS_SUBPAGES   # Phase 3b lists these
+}
 
 
 class Document(HTMLParser):
@@ -151,17 +159,19 @@ def audit_index() -> list[str]:
 TWINS = {
     "/": "index.md", "/consulting": "consulting.md", "/fitness": "fitness.md", "/vantix": "vantix.md",
     "/music": "music.md", "/listening-club": "listening-club.md", "/about": "about.md",
+    **{f"/fitness/{slug}": f"fitness/{slug}.md" for slug in FITNESS_SUBPAGES},
 }
 
 
 def audit_twins() -> list[str]:
     """Every twin exists, is announced by its page and by /llms.txt, and links only to
-    things that exist. The optional worker must route exactly the pages that have one."""
+    things that exist. The optional worker must route exactly the listed pages that have
+    one; an unlisted page announces its twin but stays out of the worker until it is listed."""
     issues: list[str] = []
     llms = (PUBLIC / "llms.txt").read_text(encoding="utf-8") if (PUBLIC / "llms.txt").is_file() else ""
     if not llms:
         issues.append("public/llms.txt is missing")
-    routes = page_routes()
+    routes = {route_for(path): path for path in PUBLIC.rglob("*.html") if path not in SPECIAL_PAGES}
     for route, name in TWINS.items():
         twin = PUBLIC / name
         if not twin.is_file():
@@ -186,8 +196,54 @@ def audit_twins() -> list[str]:
     if config.is_file():
         match = re.search(r'"run_worker_first"\s*:\s*\[([^\]]*)\]', config.read_text(encoding="utf-8"))
         routed = set(re.findall(r'"([^"]+)"', match.group(1))) if match else set()
-        if routed != set(TWINS):
-            issues.append(f"wrangler.ai-twins.jsonc: run_worker_first lists {sorted(routed)} but the twins are for {sorted(TWINS)}")
+        listed = set(TWINS) - unlisted_routes()
+        if routed != listed:
+            issues.append(f"wrangler.ai-twins.jsonc: run_worker_first lists {sorted(routed)} but the twins are for {sorted(listed)}")
+    return issues
+
+
+def audit_fitness_homes() -> list[str]:
+    """Nothing the old one-page /fitness could be linked to may go missing in the split.
+    scripts/fixtures/fitness-legacy-ids.txt holds every id that page had. Each of them that
+    names an entry in content/fitness/ must be an element id on exactly one page under
+    /fitness/, its home: a term on the glossary, a claim on the claims page, anything else on
+    its area's page. Each source id (src-…) must be on /fitness/sources. The other ids in the
+    file belong to controls and sections and are not checked."""
+    import json
+    content = ROOT / "content" / "fitness"
+    fixture = ROOT / "scripts" / "fixtures" / "fitness-legacy-ids.txt"
+    if not fixture.is_file():
+        return ["scripts/fixtures/fitness-legacy-ids.txt is missing"]
+    legacy = fixture.read_text(encoding="utf-8").split()
+    routes = json.loads((content / "routes.json").read_text(encoding="utf-8"))["routes"]
+    slug_of = {(r.get("area") if r["kind"] == "area" else r["kind"]): r["slug"] for r in routes}
+    home: dict[str, str] = {}
+    for r in routes:
+        if r["kind"] == "area":
+            for entry in json.loads((content / f"{r['area']}.json").read_text(encoding="utf-8"))["entries"]:
+                home[entry["id"]] = slug_of["glossary"] if entry["type"] == "term" else r["slug"]
+    for entry in json.loads((content / "claims.json").read_text(encoding="utf-8"))["entries"]:
+        home[entry["id"]] = slug_of["claims"]
+
+    issues: list[str] = []
+    ids: dict[str, set[str]] = {}
+    for r in routes:
+        page = PUBLIC / "fitness" / f"{r['slug']}.html"
+        if not page.is_file():
+            issues.append(f"fitness: public/fitness/{r['slug']}.html is missing (run python3 scripts/build_fitness.py)")
+            continue
+        doc = Document()
+        doc.feed(page.read_text(encoding="utf-8"))
+        ids[r["slug"]] = set(doc.ids)
+    all_sources = ids.get(slug_of["sources"], set())
+    for legacy_id in legacy:
+        if legacy_id in home:
+            on = sorted(slug for slug, found in ids.items() if legacy_id in found)
+            if on != [home[legacy_id]]:
+                where = ", ".join("/fitness/" + slug for slug in on) or "no page"
+                issues.append(f"fitness: the entry {legacy_id} must be on /fitness/{home[legacy_id]} and nowhere else; it is on {where}")
+        elif legacy_id.startswith("src-") and legacy_id not in all_sources:
+            issues.append(f"fitness: /fitness/{slug_of['sources']} has nothing with id=\"{legacy_id}\", which /fitness had")
     return issues
 
 
@@ -214,7 +270,7 @@ def audit_asset_versions() -> list[str]:
     visitors can get a new page with an old cached stylesheet."""
     seen: dict[str, set[str]] = {}
     for path in sorted(PUBLIC.rglob("*.html")):
-        for name, version in re.findall(r"""["']/(ks\.css|ks\.js|site-index\.js|fitness\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
+        for name, version in re.findall(r"""["']/(ks\.css|ks\.js|site-index\.js|fitness\.js|fitness\.css|fitness-ref\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
             seen.setdefault(name, set()).add(version or "(none)")
     issues = [f"public: pages request different versions of /{name}: {', '.join(sorted(v))}" for name, v in seen.items() if len(v) > 1]
     # ks.js fetches /site-index.js itself (for the Find palette) and must name the same release
@@ -303,6 +359,7 @@ def main() -> int:
     issues += audit_asset_versions()
     issues += audit_twins()
     issues += audit_fitness_build()
+    issues += audit_fitness_homes()
     issues += audit_llms_full()
 
     deployed_text = "\n".join(

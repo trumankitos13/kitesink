@@ -1,0 +1,23 @@
+{
+  "note": "The corrections log on /fitness/sources and in sources.md, shown newest first. Add a row whenever a published entry or calculator changes what it says. date is YYYY-MM-DD. entry is the id of the entry that changed (the build links it to its home page); for anything else, give href instead.",
+  "corrections": [
+    {
+      "date": "2026-11-14",
+      "title": "Does spot reduction work?",
+      "entry": "claim-spot-reduction",
+      "note": "Reworded after reading the trial's full text: abdominal work replaced part of the running, and the two programmes were designed to use the same energy. The verdict did not change."
+    },
+    {
+      "date": "2026-11-14",
+      "title": "Can your body only use 30 grams of protein per meal?",
+      "entry": "claim-protein-meal-cap",
+      "note": "Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change."
+    },
+    {
+      "date": "2026-11-14",
+      "title": "1RM and load calculator",
+      "href": "/fitness#loads",
+      "note": "The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117."
+    }
+  ]
+}
