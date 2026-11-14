@@ -26,13 +26,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.6">
+<link rel="stylesheet" href="/ks.css?v=2027.7">
 <style>
   .k-hero { padding-bottom: clamp(20px, 3vw, 30px); }
   .k-hero .k-h1 { max-width: none; }
 
   /* the search bar sticks under the header while you scroll the shelves */
-  .lib-bar { position: sticky; top: 60px; z-index: 50; padding-block: 12px; background: color-mix(in srgb, var(--k-paper) 92%, transparent);
+  .lib-bar { position: sticky; top: var(--ks-hd-h, 60px); z-index: 50; padding-block: 12px; background: color-mix(in srgb, var(--k-paper) 92%, transparent);
     -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--k-rule); }
   .lib-bar-in { display: grid; gap: 10px; }
   @media (min-width: 860px) { .lib-bar-in { grid-template-columns: minmax(260px, 420px) minmax(0, 1fr) auto; align-items: center; gap: 16px; } }
@@ -118,9 +118,9 @@
 
 <div data-ks="footer"></div>
 
-<script src="/site-index.js?v=2027.6"></script>
+<script src="/site-index.js?v=2027.7"></script>
 <script src="/blog/posts.js"></script>
-<script src="/ks.js?v=2027.6"></script>
+<script src="/ks.js?v=2027.7"></script>
 <script>
 (function () {
   "use strict";

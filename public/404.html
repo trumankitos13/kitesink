@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KiteSink — page not found</title>
-<meta name="description" content="That page drifted off — head back to KiteSink.">
+<meta name="description" content="That page went down the drain — head back to KiteSink.">
 <meta name="robots" content="noindex,follow">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -12,46 +12,167 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.6">
+<link rel="stylesheet" href="/ks.css?v=2027.7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; }
-  body { background:#ece2cb; color:#221c10; font-family:'Geist',sans-serif;
-         display:flex; align-items:center; justify-content:center; text-align:center; padding:40px; }
-  a.home { color:#f0e8d6; background:#2f5436; border-radius:40px; padding:14px 26px;
-           font:600 14px 'Geist',sans-serif; text-decoration:none; display:inline-block; transition:background .2s; }
-  a.home:hover { background:#23402b; }
-  a.qk { color:#5e5238; text-decoration:none; transition:color .15s; }
-  a.qk:hover { color:#2f5436; }
-  html[data-theme="dark"] a.qk { color:#b7ac8f; }
-  html[data-theme="dark"] a.qk:hover { color:#82c795; }
+  /* Page-local styles. Colors that ks.css's night mode can remap stay inline
+     (it matches inline `color:` / `background:` / rgba() values); only hover
+     states, the SVG-only colors and the kite wobble live here. */
+  body { background: #ece2cb; }
+
+  .nf-btn { transition: background .15s, border-color .15s, color .15s; }
+  a.nf-primary:hover { background: #23402b !important; }
+  .nf-ghost:hover { color: #2f5436 !important; border-color: #2f5436 !important; }
+  html[data-theme="dark"] .nf-ghost:hover { color: #82c795 !important; border-color: #82c795 !important; }
+
+  .nf-card { transition: transform .48s cubic-bezier(.33,1,.68,1), box-shadow .48s cubic-bezier(.33,1,.68,1); }
+  .nf-card:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(34,28,16,.13); }
+  html[data-theme="dark"] .nf-card:hover { box-shadow: 0 16px 30px rgba(0,0,0,.5); }
+  .nf-arrow { transition: color .15s; }
+  a.nf-card:hover .nf-arrow { color: #2f5436 !important; }
+  html[data-theme="dark"] a.nf-card:hover .nf-arrow { color: #82c795 !important; }
+
+  /* the two 4s either side of the sink: tone-on-tone, like a watermark */
+  .nf-num { fill: rgba(34,28,16,.18); font: 800 220px 'Geist', -apple-system, system-ui, sans-serif; }
+  html[data-theme="dark"] .nf-num { fill: rgba(236,226,203,.14); }
+
+  /* the stuck kite rocks on its nose */
+  @keyframes nf-wobble { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(4deg); } }
+  .nf-kite { transform-box: fill-box; transform-origin: 50% 0%; animation: nf-wobble 3.2s ease-in-out infinite; }
 </style>
 </head>
 <body class="ks-paper">
-  <div>
-    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style="margin-bottom:18px">
-      <path d="M37 13 Q33 19 30 25" stroke="#5e5238" stroke-width="1.3" stroke-linecap="round"/>
-      <polygon points="46,3 55,13 46,23 37,13" fill="#b07227"/>
-      <line x1="46" y1="3" x2="46" y2="23" stroke="#ece2cb" stroke-width="1.3"/>
-      <line x1="37" y1="13" x2="55" y2="13" stroke="#ece2cb" stroke-width="1.3"/>
-      <path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="16" cy="29" r="2.6" fill="#2f5436"/>
-      <path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/>
-      <path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/>
-      <ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/>
-      <ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/>
-    </svg>
-    <h1 style="font:800 clamp(48px,12vw,96px)/.9 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810;margin:0">404</h1>
-    <p style="font:400 18px/1.6 'Geist',sans-serif;color:#5e5238;margin:18px 0 28px;max-width:420px">
-      That page drifted off. Let's get you back to solid ground.</p>
-    <a class="home" href="/">← Back to KiteSink</a>
-    <div style="margin-top:24px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font:500 12px 'Geist Mono',monospace">
-      <a class="qk" href="/consulting">Consulting</a><a class="qk" href="/fitness">Fitness</a><a class="qk" href="/music">Music</a><a class="qk" href="/library">Library</a><a class="qk" href="/about">About</a>
-    </div>
-  </div>
-<script src="/ks.js?v=2027.6"></script>
+
+<div style="background:#ece2cb;color:#221c10;font-family:'Geist',sans-serif;min-height:100%;overflow-x:hidden">
+
+  <div data-ks="header" data-active=""></div>
+
+  <main>
+
+    <section style="padding:clamp(38px,6vw,54px) clamp(20px,4vw,40px) 0">
+      <div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:48px">
+
+        <div style="flex:1.1 1 480px;min-width:0">
+          <div style="display:flex;align-items:center;gap:10px;font:600 11px/1.4 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.14em;color:#2f5436;margin-bottom:22px">
+            <span style="font-size:14px;letter-spacing:0">✱</span><span>Error 404 · page not found</span>
+          </div>
+          <h1 style="font:800 clamp(44px,6.4vw,86px)/.95 'Geist',sans-serif;letter-spacing:-.045em;color:#1d1810;margin:0">This one went down <span style="color:#2f5436">the drain.</span></h1>
+          <p style="font:400 clamp(19px,2vw,24px)/1.45 'Geist',sans-serif;letter-spacing:-.02em;color:#5e5238;margin:26px 0 0;max-width:570px">Either I moved it and forgot to leave a note, or the link was wrong from the start. The rest of the workshop is right where I left it.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+            <a class="nf-btn nf-primary" href="/" style="display:inline-flex;align-items:center;height:48px;padding:0 26px;border-radius:999px;font:600 14px/1.4 'Geist',sans-serif;color:#f3ecd9;background:#2f5436;text-decoration:none">Head home →</a>
+            <a class="nf-btn nf-ghost" href="/library" style="display:inline-flex;align-items:center;height:48px;padding:0 26px;border-radius:999px;font:600 14px/1.4 'Geist',sans-serif;color:#1d1810;border:1px solid rgba(34,28,16,.32);text-decoration:none">Browse the library →</a>
+            <button class="nf-btn nf-ghost" type="button" data-ks-find aria-haspopup="dialog" style="display:inline-flex;align-items:center;height:48px;padding:0 26px;border-radius:999px;font:600 14px/1.4 'Geist',sans-serif;color:#1d1810;background:transparent;border:1px solid rgba(34,28,16,.32);cursor:pointer">Search the site</button>
+          </div>
+          <p style="font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040;margin:24px 0 0;overflow-wrap:anywhere">error 404 · nothing at <span id="nf-path" style="color:#1d1810">this address</span></p>
+        </div>
+
+        <div style="flex:1 1 420px;min-width:0;max-width:560px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;overflow:hidden">
+          <div style="position:relative">
+            <svg viewBox="0 0 520 360" fill="none" role="img" aria-label="404, with a sink standing in for the zero. A kite is stuck nose-first in the basin." style="display:block;width:100%;height:auto">
+              <text class="nf-num" x="98" y="256" text-anchor="middle">4</text>
+              <text class="nf-num" x="422" y="256" text-anchor="middle">4</text>
+              <g transform="translate(150.8 16.6) scale(4.2)">
+                <path d="M21 40 L21 28 Q21 25 24 25 L30 25" stroke="#2f5436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="16" cy="29" r="2.6" fill="#2f5436"/>
+                <path d="M16 31 L16 40" stroke="#2f5436" stroke-width="4" stroke-linecap="round"/>
+                <path d="M8 40 L44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/>
+                <ellipse cx="26" cy="40" rx="18" ry="4.6" fill="#3a6b46"/>
+                <ellipse cx="26" cy="40" rx="13.5" ry="3" fill="#23402b"/>
+                <path d="M30 25 Q25.5 28.5 25.6 34.6" stroke="currentColor" stroke-width=".55" stroke-linecap="round" style="color:#5e5238"/>
+                <g transform="translate(32.5 37.5) rotate(200)">
+                  <g class="nf-kite">
+                    <polygon points="0,-8.5 7.5,0 0,8.5 -7.5,0" fill="#b07227"/>
+                    <line x1="0" y1="-8.5" x2="0" y2="8.5" stroke="#ece2cb" stroke-width=".55"/>
+                    <line x1="-7.5" y1="0" x2="7.5" y2="0" stroke="#ece2cb" stroke-width=".55"/>
+                    <path d="M0 8.5 Q2.6 11.5 0 14.5 Q-2.6 17.5 0 20.5" stroke="#b07227" stroke-width=".6" stroke-linecap="round"/>
+                  </g>
+                </g>
+                <!-- front of the basin, redrawn over the kite so its nose sits inside the bowl -->
+                <path d="M8 40 A18 4.6 0 0 0 44 40 L38 54 Q38 57 34 57 L18 57 Q14 57 14 54 Z" fill="#2f5436"/>
+                <path d="M8 40 A18 4.6 0 0 0 44 40 L39.5 40 A13.5 3 0 0 1 12.5 40 Z" fill="#3a6b46"/>
+                <path d="M45.5 30.5 L48.5 28.6 M46.6 34.4 L50.2 34 M9.2 33.6 L6 32.4" stroke="currentColor" stroke-width=".55" stroke-linecap="round" style="color:#6f6040"/>
+              </g>
+            </svg>
+            <div style="position:absolute;left:22px;top:16px;font:600 10px/1.4 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.14em;color:#8a5a18">Plate no. 404</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;padding:12px 22px;border-top:1px solid rgba(34,28,16,.12);font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040">
+            <span>fig. 1 · one kite, not flying</span>
+            <span style="color:#8a5a18">not to scale</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="padding:clamp(38px,6vw,54px) clamp(20px,4vw,40px) clamp(48px,7vw,72px)">
+      <div style="max-width:1240px;margin:0 auto">
+        <h2 style="font:800 clamp(30px,4.4vw,48px)/.98 'Geist',sans-serif;letter-spacing:-.04em;color:#1d1810;margin:0 0 32px"><span style="color:#2f5436;font-size:.55em;letter-spacing:0;vertical-align:.25em;margin-right:.35em">✱</span>Pages that do exist</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px">
+
+          <a class="nf-card" href="/consulting" style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;text-decoration:none">
+            <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 11px/1.4 'Geist Mono',monospace;letter-spacing:.14em;color:#8a5a18">01</span><span class="nf-arrow" aria-hidden="true" style="font:500 14px/1 'Geist Mono',monospace;color:#6f6040">→</span></span>
+            <span style="font:700 20px/1.25 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Consulting</span>
+            <span style="flex-grow:1;font:400 15px/1.5 'Geist',sans-serif;color:#5e5238">Workflow automation, operations and practical AI for music teams.</span>
+            <span style="font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040">kitesink.com/consulting</span>
+          </a>
+
+          <a class="nf-card" href="/fitness" style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;text-decoration:none">
+            <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 11px/1.4 'Geist Mono',monospace;letter-spacing:.14em;color:#8a5a18">02</span><span class="nf-arrow" aria-hidden="true" style="font:500 14px/1 'Geist Mono',monospace;color:#6f6040">→</span></span>
+            <span style="font:700 20px/1.25 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Fitness</span>
+            <span style="flex-grow:1;font:400 15px/1.5 'Geist',sans-serif;color:#5e5238">Vantix, five free calculators, and a sourced field guide in six areas.</span>
+            <span style="font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040">kitesink.com/fitness</span>
+          </a>
+
+          <a class="nf-card" href="/music" style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;text-decoration:none">
+            <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 11px/1.4 'Geist Mono',monospace;letter-spacing:.14em;color:#8a5a18">03</span><span class="nf-arrow" aria-hidden="true" style="font:500 14px/1 'Geist Mono',monospace;color:#6f6040">→</span></span>
+            <span style="font:700 20px/1.25 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Music</span>
+            <span style="flex-grow:1;font:400 15px/1.5 'Geist',sans-serif;color:#5e5238">Song of the Day, Stage First and the Album Listening Club.</span>
+            <span style="font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040">kitesink.com/music</span>
+          </a>
+
+          <a class="nf-card" href="/library" style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;text-decoration:none">
+            <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 11px/1.4 'Geist Mono',monospace;letter-spacing:.14em;color:#8a5a18">04</span><span class="nf-arrow" aria-hidden="true" style="font:500 14px/1 'Geist Mono',monospace;color:#6f6040">→</span></span>
+            <span style="font:700 20px/1.25 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Library</span>
+            <span style="flex-grow:1;font:400 15px/1.5 'Geist',sans-serif;color:#5e5238">Everything on the site in one index: projects, tools, games and pages.</span>
+            <span style="font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040">kitesink.com/library</span>
+          </a>
+
+          <a class="nf-card" href="/blog" style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;text-decoration:none">
+            <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 11px/1.4 'Geist Mono',monospace;letter-spacing:.14em;color:#8a5a18">05</span><span class="nf-arrow" aria-hidden="true" style="font:500 14px/1 'Geist Mono',monospace;color:#6f6040">→</span></span>
+            <span style="font:700 20px/1.25 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">Writing</span>
+            <span style="flex-grow:1;font:400 15px/1.5 'Geist',sans-serif;color:#5e5238">The logbook. Long-form, infrequent essays.</span>
+            <span style="font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040">kitesink.com/blog</span>
+          </a>
+
+          <a class="nf-card" href="/about" style="display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:#f3ecd9;border:1px solid rgba(34,28,16,.18);border-radius:14px;text-decoration:none">
+            <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 11px/1.4 'Geist Mono',monospace;letter-spacing:.14em;color:#8a5a18">06</span><span class="nf-arrow" aria-hidden="true" style="font:500 14px/1 'Geist Mono',monospace;color:#6f6040">→</span></span>
+            <span style="font:700 20px/1.25 'Geist',sans-serif;letter-spacing:-.02em;color:#1d1810">About</span>
+            <span style="flex-grow:1;font:400 15px/1.5 'Geist',sans-serif;color:#5e5238">The one person behind the workshop.</span>
+            <span style="font:500 12px/1.5 'Geist Mono',monospace;color:#6f6040">kitesink.com/about</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-ks="footer" data-active=""></div>
+
+</div>
+
+<script src="/ks.js?v=2027.7"></script>
+<script>
+/* Show the address that missed, so a typo is easy to spot. textContent only. */
+(function () {
+  try {
+    var el = document.getElementById("nf-path"), p = decodeURIComponent(location.pathname || "");
+    if (!el || !p || p === "/" || p === "/404" || p === "/404.html") return;
+    el.textContent = p.length > 64 ? p.slice(0, 63) + "…" : p;
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

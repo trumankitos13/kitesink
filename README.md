@@ -76,7 +76,7 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
 - **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. The blog
   post template carries its own small KiteSink nav — search for `/consulting` in that file.
   Every other page mounts the shared header or slim bar.
-- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.6` on the
+- **Change `ks.css`, `ks.js`, `site-index.js` or `fitness.js`:** bump the `?v=2027.7` on the
   `<link>`/`<script>` tags in every page (find-and-replace) and `ASSET_V` at the top of `ks.js`. Those files are cached for an hour or more, and a new page with an
   old cached stylesheet looks broken. The audit checks every page uses the same version.
 - **Design tokens:** `--k-*` custom properties at the top of `ks.css` (light + dark). New pages
@@ -166,6 +166,13 @@ so nothing depends on an external runtime anymore.
 - **Song of the Day support page** — `song-of-the-day/support.html` fails colour-contrast checks
   (about 16 text pairs in light, more when the site theme is dark). Not fixed yet; the terms and
   privacy pages were.
+- **iPhone fixes, not yet confirmed on a phone** — three changes in `ks.css` target iOS behaviour
+  that cannot be reproduced in Chromium: a paper-coloured strip above the sticky header (iOS 26
+  draws the page under the status bar), no `view-transition-name`/transform/blur on the header and
+  phone nav (they came out fuzzy during page changes), and `--ks-hd-h` so bars that stick under
+  the header sit flush. Check on a real iPhone after deploying.
+- **Vantix roadmap and changelog** — unlisted pages; both fail colour-contrast checks on their
+  small grey labels.
 - **AI-page offers** — every plain-text twin ends with three offers (free 30-minute teardown,
   one-page written plan, early access) and the code word `KITESTRING`. The teardown is capped as
   "a limited number each month" with no figure; set one, or change the code word, as described in

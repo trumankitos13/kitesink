@@ -8,7 +8,7 @@
 <title>Vantix &mdash; Roadmap</title>
 <meta name="description" content="Vantix's product roadmap &mdash; build the core triad first, then integrate everything else, from v1.2 to the v2.0 platform.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/ks.css?v=2027.6">
+<link rel="stylesheet" href="/ks.css?v=2027.7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,7 +28,20 @@
   .ks-link { transition: color .15s; }
   .ks-link:hover { color: #2f5436 !important; }
   .vx-sub:hover { color: oklch(0.92 0.012 250) !important; }
-  @media (max-width: 760px){ .vx-railwrap{ grid-template-columns: 1fr !important; } .vx-2col{ grid-template-columns: 1fr !important; } .vx-stat4{ grid-template-columns: repeat(2,1fr) !important; } .vx-ia7{ grid-template-columns: repeat(2,1fr) !important; } .vx-sticky{ position: static !important; } [style*="max-width: 1180px"], [style*="max-width: 1100px"]{ padding-left: 18px !important; padding-right: 18px !important; } [style*="grid-template-columns: repeat(3, 1fr)"], [style*="grid-template-columns: 1fr 1fr"], [style*="grid-template-columns: 248px 1fr"], [style*="grid-template-columns: 232px 1fr"], [style*="grid-template-columns: 220px 1fr"]{ grid-template-columns: 1fr !important; } [style*="grid-template-columns: 84px 1fr"], [style*="grid-template-columns: 96px 1fr"], [style*="grid-template-columns: 150px 1fr"]{ grid-template-columns: 1fr !important; } .mono{ overflow-wrap: anywhere; } }
+  /* sub-nav: nothing wraps. On phones the page label hides, "Back to site" shortens,
+     and the link group scrolls sideways if it ever runs out of room. */
+  .vx-subrow > a, .vx-subrow > span, .vx-subrow .vx-sub { white-space: nowrap; flex: none; }
+  .vx-subrow .vx-sub { display: inline-flex; align-items: center; min-height: 44px; }
+  .vx-sublinks { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .vx-sublinks::-webkit-scrollbar { display: none; }
+  .vx-back-short { display: none; }
+  @media (max-width: 480px) {
+    .vx-sublabel { display: none; }
+    .vx-back-long { display: none; } .vx-back-short { display: inline; }
+    .vx-subrow { gap: 12px !important; } .vx-sublinks { gap: 14px !important; }
+  }
+  @media (max-width: 340px) { .vx-subword { display: none; } }
+  @media (max-width: 760px){ .vx-railwrap{ grid-template-columns: 1fr !important; } .vx-2col{ grid-template-columns: 1fr !important; } .vx-stat4{ grid-template-columns: repeat(2,minmax(0,1fr)) !important; } .vx-stat4 > div{ overflow-wrap: anywhere; } .vx-ia7{ grid-template-columns: repeat(2,1fr) !important; } .vx-sticky{ position: static !important; } [style*="max-width: 1180px"], [style*="max-width: 1100px"]{ padding-left: 18px !important; padding-right: 18px !important; } [style*="grid-template-columns: repeat(3, 1fr)"], [style*="grid-template-columns: 1fr 1fr"], [style*="grid-template-columns: 248px 1fr"], [style*="grid-template-columns: 232px 1fr"], [style*="grid-template-columns: 220px 1fr"]{ grid-template-columns: 1fr !important; } [style*="grid-template-columns: 84px 1fr"], [style*="grid-template-columns: 96px 1fr"], [style*="grid-template-columns: 150px 1fr"]{ grid-template-columns: 1fr !important; } .mono{ overflow-wrap: anywhere; } }
 </style>
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/vantix/roadmap">
@@ -57,15 +70,15 @@
 
   <!-- VANTIX SUB-NAV (sticky under KS bar) -->
   <div style="position: sticky; top: 38px; z-index: 30; background: oklch(0.215 0.012 250); border-bottom: 1px solid oklch(0.36 0.012 250); backdrop-filter: blur(8px);">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px,4vw,32px); height: 58px; display: flex; align-items: center; gap: 16px;">
-      <a href="/vantix" style="display: flex; align-items: center; gap: 11px; text-decoration: none;">
+    <div class="vx-subrow" style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px,4vw,32px); height: 58px; display: flex; align-items: center; gap: 16px;">
+      <a href="/vantix" aria-label="Vantix" style="display: flex; align-items: center; gap: 11px; text-decoration: none; min-height: 44px;">
         <svg viewBox="0 0 56 56" width="24" height="24" style="flex: none;"><rect x="9" y="9" width="38" height="38" fill="none" stroke="#92a6cc" stroke-width="3"></rect><rect x="15" y="15" width="26" height="26" fill="none" stroke="#92a6cc" stroke-width="3" transform="rotate(22 28 28)"></rect><rect x="22" y="22" width="12" height="12" fill="#d8a652" transform="rotate(45 28 28)"></rect></svg>
-        <span class="gk" style="font-weight: 700; font-size: 17px; letter-spacing: 0.05em; color: oklch(0.95 0.012 250);">VANTIX</span>
+        <span class="gk vx-subword" style="font-weight: 700; font-size: 17px; letter-spacing: 0.05em; color: oklch(0.95 0.012 250);">VANTIX</span>
       </a>
-      <span class="mono" style="font-size: 11px; color: oklch(0.5 0.012 250); letter-spacing: 0.1em; border-left: 1px solid oklch(0.38 0.012 250); padding-left: 16px;">ROADMAP</span>
-      <div class="gk" style="margin-left: auto; display: flex; align-items: center; gap: clamp(12px,2vw,20px); font-size: 13px;">
+      <span class="mono vx-sublabel" style="font-size: 11px; color: oklch(0.5 0.012 250); letter-spacing: 0.1em; border-left: 1px solid oklch(0.38 0.012 250); padding-left: 16px;">ROADMAP</span>
+      <div class="gk vx-sublinks" style="margin-left: auto; display: flex; align-items: center; gap: clamp(12px,2vw,20px); font-size: 13px;">
         <a href="/vantix/changelog" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Changelog</a><a href="/vantix/privacy" class="gk vx-sub" style="color: oklch(0.62 0.012 250); text-decoration: none;">Privacy</a>
-        <a href="/vantix" class="gk vx-sub" style="color: oklch(0.7 0.012 250); text-decoration: none;">&#8592; Back to site</a>
+        <a href="/vantix" class="gk vx-sub" style="color: oklch(0.7 0.012 250); text-decoration: none;">&#8592;&nbsp;<span class="vx-back-long">Back to site</span><span class="vx-back-short">Vantix</span></a>
       </div>
     </div>
   </div>
@@ -360,6 +373,6 @@
   select("v1.2");
 })();
 </script>
-<script src="/ks.js?v=2027.6"></script>
+<script src="/ks.js?v=2027.7"></script>
 </body>
 </html>

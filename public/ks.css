@@ -110,8 +110,12 @@ html[data-theme="dark"] .ks-logo .lgl { fill: #63a576; } html[data-theme="dark"]
   background: color-mix(in srgb, var(--k-paper) 92%, transparent);   /* opaque enough that nav text keeps AA over dark cards */
   -webkit-backdrop-filter: blur(12px) saturate(1.3); backdrop-filter: blur(12px) saturate(1.3);
   border-bottom: 1px solid var(--k-rule); font-family: var(--k-sans);
-  view-transition-name: ks-hd;
 }
+/* Some phone browsers (iOS 26 Safari and browsers built on it) draw the page under the
+   status bar, so whatever has scrolled past shows above a sticky bar. This fills that
+   strip with the bar's own paper colour. Everywhere else it sits off-screen. */
+.ks-hd::before, .ks-bar::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 160px;
+  background: var(--k-paper); pointer-events: none; }
 .ks-nav { display: flex; align-items: center; gap: clamp(2px, .8vw, 8px); font: 500 13px/1 var(--k-mono); }
 .ks-nav a { color: var(--k-copy); text-decoration: none; padding: 10px 12px; border-radius: 30px;
   transition: color .15s, background .15s; white-space: nowrap; }
@@ -166,6 +170,8 @@ html[data-theme="dark"] .ks-logo .lgl { fill: #63a576; } html[data-theme="dark"]
   .ks-bar { padding: 0 12px; gap: 8px; }
   .ks-bar .ks-brand span { display: none; }   /* the kite + sink mark alone still links home */
   .ks-barnav { gap: 13px; font: 500 12px/1 var(--k-sans); }
+  /* on the narrowest phones the links scroll sideways; Find stays pinned at the end */
+  .ks-barnav button { position: sticky; right: 0; background: var(--k-paper); box-shadow: -8px 0 8px var(--k-paper); }
 }
 
 /* cream bottom strip (project sub-pages) */
@@ -200,14 +206,15 @@ html[data-theme="dark"] .ks-logo .lgl { fill: #63a576; } html[data-theme="dark"]
 /* floating mobile pill nav (injected by ks.js on pages with the shared
    header/footer). Hidden on desktop; the top nav hides ≤700px instead. */
 .ks-pillnav {
-  display: none; position: fixed; left: 50%; transform: translateX(-50%);
+  display: none; position: fixed; left: 0; right: 0; margin-inline: auto; width: fit-content;
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-  gap: 2px; background: rgba(31,48,36,.95);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  gap: 2px; background: #1f3024;
   border-radius: 40px; padding: 5px; box-shadow: 0 12px 28px rgba(20,16,8,.34);
   z-index: 90; white-space: nowrap; max-width: calc(100% - 20px); overflow-x: auto; scrollbar-width: none;
-  view-transition-name: ks-pill;
 }
+/* No view-transition-name, transform or backdrop blur on this bar or the header: on iOS
+   each one made its page-change snapshot come out as a soft rectangle. Both now ride in
+   the page's own cross-fade, where identical pixels stay put. */
 .ks-pillnav::-webkit-scrollbar { display: none; }
 .ks-pillnav a { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 44px; font: 500 12.5px/1 var(--k-sans); letter-spacing: -.005em; color: rgba(236,226,203,.86);
   border-radius: 30px; padding: 0 11px; text-decoration: none; transition: background .2s, color .2s; }
@@ -477,7 +484,7 @@ html[data-theme="dark"] .k-pc--club { --pc-bg: #1c1711; --pc-ink: #efe6d3; --pc-
 .k-qa-body > * + * { margin-top: 10px !important; }
 
 /* in-page section nav (hub pages): sticks under the header and tracks the section in view */
-.k-subnav { position: sticky; top: 60px; z-index: 50; background: color-mix(in srgb, var(--k-paper) 90%, transparent);
+.k-subnav { position: sticky; top: var(--ks-hd-h, 60px); z-index: 50; background: color-mix(in srgb, var(--k-paper) 90%, transparent);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--k-rule); }
 .k-subnav > div { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; padding-block: 7px; }
 .k-subnav > div::-webkit-scrollbar { display: none; }
