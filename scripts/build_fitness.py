@@ -227,7 +227,7 @@ def build_guide(lib, data):
         if not entries:
             continue
         topic_opts += [(f"{dom}:{tid}", tl, dom) for tid, tl in topics.items() if any(e.get("topic") == tid for e in entries)]
-        rows.append(f'<h3 class="g-head" id="{dom}" data-d="{dom}" data-o="{n}"><span>{esc(label)}</span><small>{esc(blurb)} {len(entries)} entries.</small></h3>')
+        rows.append(f'<h3 class="g-head" id="{dom}" data-d="{dom}" data-o="{n}"><span>{esc(label)}</span> <small>{esc(blurb)} {len(entries)} entries.</small></h3>')
         n += 1
         entries.sort(key=lambda e: (list(topics).index(e["topic"]) if e.get("topic") in topics else 99, e["type"] == "mistake"))
         for e in entries:
@@ -402,6 +402,13 @@ def build_glossary(lib, data):
     return out, len(rows)
 
 
+def lens_counts(html, pattern):
+    """How many items of one list sit in each area, counted from the list's own markup, so the
+    area buttons are right before any script runs (the page script recounts as filters change)."""
+    found = Counter(re.findall(pattern, html))
+    return {d: found.get(d, 0) for d in DOMAINS}
+
+
 def domain_switch(counts):
     btns = ['<button type="button" value="all" aria-pressed="true">All areas</button>']
     btns += [f'<button type="button" value="{d}" aria-pressed="false">{esc(l)} <b>{counts[d]}</b></button>' for d, (l, _) in DOMAINS.items()]
@@ -522,6 +529,16 @@ def build():
 
     counts = {d: len(data[d]["entries"]) for d in DOMAINS}
     counts["claims"] = n_claims
+    lens = {
+        "guide": (lens_counts(guide, r'<details class="g" id="[^"]*" data-d="([a-z]+)"'), n_guide),
+        "claims": (lens_counts(claims, r'<details class="k-qa q" id="[^"]*" data-d="([a-z]+)"'), n_claims),
+        "numbers": (lens_counts(numbers, r'<tr id="[^"]*" data-d="([a-z]+)"'), n_numbers),
+        "tables": (lens_counts(tables, r'<details class="rt" id="[^"]*" data-d="([a-z]+)"'), n_tables),
+        "glossary": (lens_counts(glossary, r'<div class="gl-item" id="[^"]*" data-d="([a-z]+)"'), n_terms),
+    }
+    for name, (per_area, n) in lens.items():
+        if sum(per_area.values()) != n:
+            raise SystemExit(f"area counts for the {name} list add up to {sum(per_area.values())}, not {n}")
     total = sum(counts.values())
 
     kinds = Counter(s.get("type", "other") for s in lib.by_id.values())
@@ -533,7 +550,7 @@ def build():
 
     fills = {
         "guide": guide, "claims": claims, "meet": meet, "numbers": numbers, "tables": tables, "glossary": glossary, "sources": sources,
-        "domains": domain_switch(counts),
+        **{"domains:" + name: domain_switch(per_area) for name, (per_area, _) in lens.items()},
         "legend": '<dl class="lg">' + "".join(f'<div><dt>{tag("tg-c tg-" + c, CONF[c])}</dt><dd>{esc(CONF_HELP[c])}</dd></div>' for c in CONF) + "</dl>",
         "n:guide": n_guide, "n:claims": n_claims, "n:steps": n_steps, "n:numbers": n_numbers, "n:tables": n_tables,
         "n:terms": n_terms, "n:sources": sum(1 for k in lib.by_id if lib.uses[k]), "n:total": total, "updated": meta["updated_label"],

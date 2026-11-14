@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.7">
+<link rel="stylesheet" href="/ks.css?v=2027.8">
 <style>
   /* ============ Album Listening Club ============
      The club keeps its own sub-brand under the shared KiteSink chrome:
@@ -608,7 +608,7 @@
         <p class="cl-label">Still unsure? Ask</p>
         <h3>Send us a question</h3>
         <p>Access needs, nerves, whether you&rsquo;ll be the only one there alone &mdash; all fair questions. Someone answers, usually the same day.</p>
-        <form id="club-contact">
+        <form id="club-contact" method="post">
           <input class="trap" name="botcheck" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div>
             <label for="c-name">Name or handle</label>
@@ -636,6 +636,7 @@
           <p class="slip-status" id="club-form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
+      <noscript><p class="slip-else">The form above needs JavaScript.</p></noscript>
       <p class="slip-else">You can also email <a href="mailto:club@kitesink.com">club@kitesink.com</a>, or just say hello in <a href="https://discord.gg/Ext66DNAt" target="_blank" rel="noopener">Discord</a> &mdash; the introductions channel is the fastest route, and lurking is allowed.</p>
     </div>
   </section>
@@ -662,7 +663,7 @@
 
 <div data-ks="footer" data-active="music"></div>
 
-<script src="/ks.js?v=2027.7"></script>
+<script src="/ks.js?v=2027.8"></script>
 <script>
 (function () {
   "use strict";

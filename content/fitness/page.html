@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.7">
+<link rel="stylesheet" href="/ks.css?v=2027.8">
 <style>
   .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
@@ -61,8 +61,8 @@
   .vx-bar::before, .vx-bar::after { content: ""; position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(233,233,230,.45); }
   .vx-bar::before { left: 40%; } .vx-bar::after { left: 80%; }
   .vx-rows .under i { background: #d8a652; } .vx-rows .over i { background: #d27a52; }
-  .vx-rows em { font-style: normal; text-align: right; color: #6f9f7a; font-weight: 600; white-space: nowrap; min-width: 92px; }
-  .vx-rows .under em { color: #d8a652; } .vx-rows .over em { color: #d27a52; }
+  .vx-rows em { font-style: normal; text-align: right; color: #80b08b; font-weight: 600; white-space: nowrap; min-width: 92px; }
+  .vx-rows .under em { color: #d8a652; } .vx-rows .over em { color: #e3936e; }   /* all three hold 4.5:1 on the pressed row's tint */
   .vx-read { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--pc-rule); min-height: 62px; font-size: 14px; line-height: 1.5; color: var(--pc-ink); }
   .vx-track { margin-top: 14px; }
   .vx-weeks { list-style: none; margin: 0 0 6px; padding: 0; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 3px; }
@@ -145,7 +145,15 @@
 
   /* travel */
   .wk { padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
-  .wk h4 { margin: 0 0 8px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: #d8b07a; }
+  /* the source list: open in the HTML so it reads without scripts; the page script folds it
+     and opens it again whenever a source link or #sources is followed */
+  .src-wrap > summary { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; margin: 18px 0 6px;
+    border: 1px solid var(--k-rule-strong); border-radius: 999px; font: 600 14px/1 var(--k-sans); color: var(--k-ink); cursor: pointer; list-style: none; }
+  .src-wrap > summary::-webkit-details-marker { display: none; }
+  .src-wrap > summary::after { content: "+"; font: 500 18px/1 var(--k-mono); color: var(--k-green); }
+  .src-wrap[open] > summary::after { content: "\2212"; }
+  .src-wrap > summary:hover { border-color: var(--k-green); color: var(--k-green); }
+  .wk h3 { margin: 0 0 8px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: #d8b07a; }
   .wk .rule { font-size: 14.5px; line-height: 1.5; color: #f0e8d6; margin-bottom: 8px; }
   .wk .blk { margin-top: 12px; font: 600 12px/1.4 var(--k-mono); color: #c2ceb9; }
   .wk ul.plain { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #c2ceb9; }
@@ -439,7 +447,7 @@
   <section id="tools" class="k-band" aria-labelledby="h-tools">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Free tools</span><h2 class="k-h2" id="h-tools">Five calculators. <em>No sign-up.</em></h2></div>
+        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Five calculators. <em>No sign-up.</em></h2></div>
         <p class="k-small" style="max-width:34ch">Your inputs are remembered in this browser and go nowhere else.</p>
       </header>
 
@@ -565,12 +573,12 @@
               <div><p class="k-label">Load for your target</p><p class="k-stat"><span id="l-load">—<small id="l-load-u">kg</small></span></p></div>
             </div>
             <p class="k-small"><span id="l-note"></span> <span id="l-pct"></span></p>
-            <div class="kv hide-empty"><div><span class="k-label">Epley · used here</span><b id="l-epley">—</b></div><div><span class="k-label">Brzycki · for comparison</span><b id="l-brzycki">—</b></div></div>
+            <div class="kv hide-empty"><div><span class="k-label">Epley</span><b id="l-epley">—</b></div><div><span class="k-label">Brzycki</span><b id="l-brzycki">—</b></div></div>
             <table class="ltable hide-empty"><caption class="k-vh">Loads and approximate reps to failure at each percentage of the estimated one-rep max</caption>
               <thead><tr><th scope="col">% of 1RM</th><th scope="col">Load</th><th scope="col">Reps to failure</th></tr></thead>
               <tbody id="l-rows"></tbody>
             </table>
-            <p class="k-small">The estimate and every load come from the Epley equation, 1RM = weight × (1 + reps ÷ 30); Brzycki’s is shown beside it for comparison. Both work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. {{c:brzycki1993,reynolds2006,lesuer1997}}</p>
+            <p class="k-small">For sets of up to ten reps the estimate is the average of two published equations, Epley’s and Brzycki’s, shown above; past ten it is Epley’s alone, and the two meet at ten. Every load on this card inverts that same estimate, so the numbers agree with each other. Both equations work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. {{c:brzycki1993,reynolds2006,lesuer1997}}</p>
           </div>
         </div>
       </div>
@@ -625,7 +633,7 @@
               <tbody id="a-rows"></tbody>
             </table>
             <div class="kv hide-empty"><div><span class="k-label">Total if every third goes</span><b id="a-total">—</b></div><div><span class="k-label">Total on seconds</span><b id="a-total2">—</b></div></div>
-            <div class="wk hide-empty"><h4 id="a-warm-h">Warm-up ladder</h4><ol class="wu" id="a-ladder"></ol></div>
+            <div class="wk hide-empty"><h3 id="a-warm-h">Warm-up ladder</h3><ol class="wu" id="a-ladder"></ol></div>
             <p class="k-small">These percentages are a common coaching convention, not a rule or a study result: an opener you could lift for a triple, a second that sets up the third, and a third near your best. Meets load in kilograms in 2.5 kg steps, so every attempt is rounded to that. Change a later attempt on the day by how the last one moved.</p>
           </div>
         </div>
@@ -638,10 +646,10 @@
     <div class="k-wrap">
       <span id="training"></span>
       <header class="k-shead">
-        <div><span class="k-num">Field guide</span><h2 class="k-h2" id="h-guide">Six areas, <em>one index.</em></h2></div>
+        <div><span class="k-num">Field guide</span> <h2 class="k-h2" id="h-guide">Six areas, <em>one index.</em></h2></div>
         <p class="k-small" style="max-width:40ch">{{n:guide}} entries. Pick an area, narrow by level or by how well supported a point is, then open one.</p>
       </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:guide}}</div>
       {{guide}}
     </div>
   </section>
@@ -650,10 +658,10 @@
   <section id="claims" class="k-band" aria-labelledby="h-claims">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Claims, checked</span><h2 class="k-h2" id="h-claims">{{n:claims}} things <em>people say.</em></h2></div>
+        <div><span class="k-num">Claims, checked</span> <h2 class="k-h2" id="h-claims">{{n:claims}} things <em>people say.</em></h2></div>
         <p class="k-small" style="max-width:38ch">A verdict, the reason, who was studied, and the paper. Open one to read it.</p>
       </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:claims}}</div>
       {{claims}}
     </div>
   </section>
@@ -662,7 +670,7 @@
   <section id="meet-day" class="k-band" aria-labelledby="h-meet">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Meet day</span><h2 class="k-h2" id="h-meet">Your first meet, <em>in order.</em></h2></div>
+        <div><span class="k-num">Meet day</span> <h2 class="k-h2" id="h-meet">Your first meet, <em>in order.</em></h2></div>
         <p class="k-small" style="max-width:40ch">{{n:steps}} steps from signing up to the drive home, then a bag list that remembers your ticks. Rules differ between federations: check yours.</p>
       </header>
       {{meet}}
@@ -673,10 +681,10 @@
   <section id="numbers" class="k-band" aria-labelledby="h-numbers">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Key numbers</span><h2 class="k-h2" id="h-numbers">The figures <em>worth knowing.</em></h2></div>
+        <div><span class="k-num">Key numbers</span> <h2 class="k-h2" id="h-numbers">The figures <em>worth knowing.</em></h2></div>
         <p class="k-small" style="max-width:38ch">{{n:numbers}} numbers. Choose a column heading to sort by it.</p>
       </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:numbers}}</div>
       {{numbers}}
     </div>
   </section>
@@ -685,10 +693,10 @@
   <section id="tables" class="k-band" aria-labelledby="h-tables">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Reference</span><h2 class="k-h2" id="h-tables">Tables to <em>look things up.</em></h2></div>
+        <div><span class="k-num">Reference</span> <h2 class="k-h2" id="h-tables">Tables to <em>look things up.</em></h2></div>
         <p class="k-small" style="max-width:38ch">{{n:tables}} tables. Open one; wide ones scroll sideways.</p>
       </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:tables}}</div>
       <div id="t-list">
       {{tables}}
       </div>
@@ -699,9 +707,9 @@
   <section id="glossary" class="k-band" aria-labelledby="h-glossary">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Glossary</span><h2 class="k-h2" id="h-glossary">{{n:terms}} terms, <em>in plain words.</em></h2></div>
+        <div><span class="k-num">Glossary</span> <h2 class="k-h2" id="h-glossary">{{n:terms}} terms, <em>in plain words.</em></h2></div>
       </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains}}</div>
+      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:glossary}}</div>
       {{glossary}}
     </div>
   </section>
@@ -710,11 +718,14 @@
   <section id="sources" class="k-band" aria-labelledby="h-sources">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Sources</span><h2 class="k-h2" id="h-sources">Where this <em>comes from.</em></h2></div>
+        <div><span class="k-num">Sources</span> <h2 class="k-h2" id="h-sources">Where this <em>comes from.</em></h2></div>
         <p class="k-small" style="max-width:40ch">{{n:sources}} sources, each checked against its record. Last updated {{updated}}.</p>
       </header>
       {{legend}}
-      {{sources}}
+      <details class="src-wrap" id="src-wrap" open>
+        <summary>All {{n:sources}} sources, A to Z</summary>
+        {{sources}}
+      </details>
     </div>
   </section>
 
@@ -722,7 +733,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.7"></script>
-<script src="/fitness.js?v=2027.7"></script>
+<script src="/ks.js?v=2027.8"></script>
+<script src="/fitness.js?v=2027.8"></script>
 </body>
 </html>

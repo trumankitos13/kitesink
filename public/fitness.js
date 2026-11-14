@@ -12,6 +12,7 @@
                          or, when body-fat % is given, Cunningham (1991): 370 + 21.6·FFM
      • Maintenance     — resting energy × physical activity level (FAO/WHO/UNU 2004 bands)
      • 1RM             — Epley: w·(1 + r/30)   ·   Brzycki (1993): w·36/(37 − r)
+                         The tool uses their mean up to 10 reps and Epley alone above; they meet at 10.
      • Effective reps  — a coaching heuristic, not a measured quantity: the reps that
                          fall inside the last five before failure
      • Meet attempts   — a coaching convention: fixed fractions of a current best single,
@@ -21,6 +22,12 @@
   "use strict";
 
   var LB = 2.2046226218, KCAL_PER_KG = 7700; // 7,700 kcal/kg is the usual rule of thumb, not a constant
+
+  // One-rep-max factor: estimate = weight × factor(reps). Up to ten reps it is the mean of
+  // the Epley and Brzycki factors, which sit either side of the usual percentage charts
+  // (two reps → 95.5%). Above ten it is Epley alone: the two are equal at ten reps, so there
+  // is no step, and Brzycki drifts badly past that. One rep is always the weight itself.
+  function e1Factor(r) { return r <= 1 ? 1 : r <= 10 ? ((1 + r / 30) + 36 / (37 - r)) / 2 : 1 + r / 30; }
 
   var F = {
     kg: function (lb) { return lb / LB; },
@@ -58,8 +65,10 @@
 
     epley: function (w, r) { return r <= 1 ? w : w * (1 + r / 30); },
     brzycki: function (w, r) { return r <= 1 ? w : (r >= 37 ? NaN : w * 36 / (37 - r)); },
-    // load to use for `reps` reps with `rir` left in the tank (Epley, inverted)
-    loadFor: function (oneRm, reps, rir) { var r = reps + rir; return r <= 1 ? oneRm : oneRm / (1 + r / 30); },
+    // the estimate the load tool uses (see e1Factor)
+    oneRm: function (w, r) { return w * e1Factor(r); },
+    // load to use for `reps` reps with `rir` left in the tank: the same estimate, inverted
+    loadFor: function (oneRm, reps, rir) { return oneRm / e1Factor(reps + rir); },
 
     // Meet attempts. Opener, second and third as fractions of the best single you could
     // lift today. A convention, not a rule: "first" aims for nine good lifts, "bold" ends
@@ -81,8 +90,13 @@
       });
       return out;
     },
-    // reps to failure at a fraction of 1RM (Epley, inverted)
-    repsAt: function (pct) { return 30 * (1 / pct - 1); }
+    // reps to failure at a fraction of the estimate: e1Factor inverted by bisection
+    repsAt: function (pct) {
+      var target = 1 / pct, lo = 1, hi = 60, mid;
+      if (!(target > 1)) return 1;
+      for (var i = 0; i < 50; i++) { mid = (lo + hi) / 2; if (e1Factor(mid) < target) lo = mid; else hi = mid; }
+      return (lo + hi) / 2;
+    }
   };
 
   /* ---------- travel workout builder ---------- */
@@ -506,9 +520,9 @@
         say("l-say", "Enter a weight and the reps you got with it.");
         return;
       }
-      // Epley gives the estimate and, inverted, every load below, so the numbers agree with
-      // each other: the load for the reps you entered at 0 RIR is the weight you entered.
-      var e = F.epley(w, reps), b = F.brzycki(w, reps), one = e;
+      // One estimate (F.oneRm) gives the headline and, inverted, every load below, so the numbers
+      // agree with each other: the load for the reps you entered at 0 RIR is the weight you entered.
+      var e = F.epley(w, reps), b = F.brzycki(w, reps), one = F.oneRm(w, reps);
       $("l-e1rm").firstChild.nodeValue = num(one, one < 100 ? 1 : 0); $("l-e1rm-u").textContent = u;
       $("l-epley").textContent = num(e, 1) + " " + u; $("l-brzycki").textContent = num(b, 1) + " " + u;
       var load = F.loadFor(one, tr, ti);
@@ -542,10 +556,10 @@
       function items(list) { return list.map(function (it) { return "<li>" + (it.tag ? '<span class="tag">' + esc(it.tag) + "</span>" : "") + "<b>" + esc(it.name) + "</b><em>" + esc(it.dose) + "</em></li>"; }).join(""); }
       $("t-out").innerHTML =
         '<p class="k-label">' + esc(s.kit) + '</p><h3 class="k-h3">' + esc(s.title.charAt(0).toUpperCase() + s.title.slice(1)) + '</h3>' +
-        '<div class="wk"><h4>Warm-up · ' + s.warmMin + ' min</h4><ul class="plain">' + s.warm.map(function (w) { return "<li>" + esc(w) + "</li>"; }).join("") + '</ul></div>' +
-        '<div class="wk wk--main"><h4>Main</h4><p class="rule">' + esc(s.rule) + '</p>' +
+        '<div class="wk"><h3>Warm-up · ' + s.warmMin + ' min</h3><ul class="plain">' + s.warm.map(function (w) { return "<li>" + esc(w) + "</li>"; }).join("") + '</ul></div>' +
+        '<div class="wk wk--main"><h3>Main</h3><p class="rule">' + esc(s.rule) + '</p>' +
           s.main.map(function (blk) { return '<p class="blk">' + esc(blk.title) + '</p><ol class="moves">' + items(blk.items) + '</ol>'; }).join("") + '</div>' +
-        '<div class="wk"><h4>Cool-down · ' + s.coolMin + ' min</h4><ul class="plain">' + s.cool.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + '</ul></div>' +
+        '<div class="wk"><h3>Cool-down · ' + s.coolMin + ' min</h3><ul class="plain">' + s.cool.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + '</ul></div>' +
         (s.loaded ? '<p class="k-small">Weighted moves: pick a load that leaves about two reps in reserve.</p>' : '');
       say("t-say", "Built: " + s.title + ", " + s.main.reduce(function (n, blk) { return n + blk.items.length; }, 0) + " moves.");
       store.set({ tMin: +time.get(), tLevel: +level.get(), tFormat: format.get(), tEquip: equip });
@@ -605,7 +619,7 @@
       $("a-warm-h").textContent = name + " warm-up ladder";
       $("a-ladder").innerHTML = sets[w] ? F.warmups(sets[w][0]).map(function (x) {
         return "<li><span>" + wt(x.kg) + " kg" + (units.get() === "lb" ? " · " + num(F.lb(x.kg)) + " lb" : "") + "</span><span>× " + x.reps + "</span></li>";
-      }).join("") + "<li><span>" + wt(sets[w][0]) + " kg</span><span>opener, on the platform</span></li>" : "";
+      }).join("") + "<li><span>" + wt(sets[w][0]) + " kg" + (units.get() === "lb" ? " · " + num(F.lb(sets[w][0])) + " lb" : "") + "</span><span>opener, on the platform</span></li>" : "";
       say("a-say", allIn ? "Suggested openers: squat " + wt(sets.squat[0]) + ", bench " + wt(sets.bench[0]) + ", deadlift " + wt(sets.dead[0]) + " kilograms. Total if every third goes: " + wt(sum(2)) + " kilograms."
         : "Enter your best single for each lift.");
       store.set({ att: { units: units.get(), style: st, warm: w, squat: kg.squat, bench: kg.bench, dead: kg.dead } });
@@ -789,9 +803,24 @@
       box.querySelector(".ck-clear").addEventListener("click", function () { inputs.forEach(function (i) { i.checked = false; }); save(); });
     });
 
+    // ---- the source list is open in the HTML; fold it here, and open it whenever a
+    // source link, #sources or a #src-… address is followed
+    var srcWrap = $("src-wrap");
+    function wantsSources(id) { return id === "sources" || id.indexOf("src-") === 0; }
+    if (srcWrap && !wantsSources(location.hash.slice(1))) srcWrap.open = false;
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#src-"], a[href="#sources"]');
+      if (a && srcWrap) srcWrap.open = true;   // before the browser scrolls to it
+    });
+
     // ---- links: #hypertrophy and friends choose an area; #<entry id> opens that entry
     function reveal(id) {
       if (!id) return false;
+      if (wantsSources(id)) {
+        if (srcWrap) srcWrap.open = true;
+        var s = $(id); if (s && id !== "sources") s.scrollIntoView({ block: "center" });
+        return true;
+      }
       if (AREAS.indexOf(id) >= 0) { setArea(id, true); var top = $("guide").getBoundingClientRect().top + window.scrollY - 100; window.scrollTo(0, top); return true; }
       var el = $(id);
       if (!el || !el.matches("details.g, details.q, details.rt, .gl-item, #n-table tr, .ck")) return false;

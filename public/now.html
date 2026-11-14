@@ -38,7 +38,7 @@
   @media (max-width:900px) { .motion-grid { grid-template-columns:1fr; } }
 </style>
   <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-  <link rel="stylesheet" href="/ks.css?v=2027.7">
+  <link rel="stylesheet" href="/ks.css?v=2027.8">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <!--KS-SEO-->
 <link rel="canonical" href="https://kitesink.com/now">
@@ -57,10 +57,12 @@
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 </head>
 <body class="ks-paper">
+<a class="k-skip" href="#main">Skip to content</a>
 
 <div style="background:#ece2cb;color:#221c10;font-family:'Geist',sans-serif;min-height:100%;overflow-x:hidden">
 
   <div data-ks="header" data-active="now"></div>
+  <main id="main">
 
   <!-- ===================== TICKER ===================== -->
   <div style="background:#1f3024;overflow:hidden;border-bottom:1px solid rgba(34,28,16,.2)">
@@ -240,11 +242,12 @@
     </div>
   </section>
 
+  </main>
   <div data-ks="footer" data-active="now"></div>
 
 </div>
 
-<script src="/ks.js?v=2027.7"></script>
+<script src="/ks.js?v=2027.8"></script>
 <script>
   // Daily-loop needle + "probably" activity (live).
   (function () {

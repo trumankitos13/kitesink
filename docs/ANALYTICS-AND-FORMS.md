@@ -1,60 +1,56 @@
-# Analytics & forms — turning them on
+# Analytics and forms
 
-Both are wired and ship **off by default** behind two empty constants at the top of
-`public/ks.js`. Paste a key into each to switch it on — no other code changes needed.
-
-```js
-var CF_TOKEN  = "";   // Cloudflare Web Analytics  → analytics
-var KS_FORM_KEY = ""; // Web3Forms access key      → the site's forms email you
-```
-
-Empty = the feature stays dormant (analytics simply doesn't load; forms run in a friendly
-"demo mode" that confirms to the visitor but sends nothing). Nothing breaks while they're blank.
+Both are on. This page says where each is switched on and how to check it.
 
 ---
 
 ## 1. Analytics (Cloudflare Web Analytics)
 
-Privacy-friendly and cookie-free — no consent banner required, no personal data collected.
+Cookie-free, with no personal data collected, so no consent banner is needed.
 
-1. Cloudflare dashboard → **Analytics & Logs → Web Analytics → Add a site** (`kitesink.com`).
-2. Copy the **token** (the long string in the `data-cf-beacon` snippet Cloudflare shows you).
-3. Paste it into `CF_TOKEN` in `public/ks.js`. Commit & deploy.
+It is switched on in the Cloudflare dashboard, not in this repository: **Web Analytics →
+Add a site → `kitesink.com`**, using the automatic setup. Cloudflare then adds its script
+to each page as it serves it. There is no token in `public/ks.js` and nothing to deploy.
 
-`ks.js` then injects the beacon on every page (it's loaded site-wide, including the two blog-post
-pages). The CSP in `public/_headers` already allow-lists `https://static.cloudflareinsights.com`
-for `script-src`, and `connect-src https:` covers the beacon's POST — so no header change is needed.
+- **Do not paste a snippet or token into the site as well.** Two scripts would count every
+  visit twice.
+- **No header change is needed.** The CSP in `public/_headers` allows the script from
+  `https://static.cloudflareinsights.com`, and automatic setup reports to the site's own
+  origin (`/cdn-cgi/rum`), which `connect-src 'self'` covers. Only a hand-pasted snippet
+  reports to `cloudflareinsights.com`, which the CSP does not allow.
+- **Checking it.** Open the site in a browser, then DevTools → Network, and look for a
+  `POST` to `/cdn-cgi/rum`. `curl` will not show the script: Cloudflare adds it for
+  browsers only.
 
-> Prefer something else? Any snippet works — drop it in `loadAnalytics()` in `ks.js` and add its
-> host to `script-src` in `_headers`. Plausible / Fathom are good cookie-free alternatives.
+Source: https://developers.cloudflare.com/web-analytics/faq/
 
 ---
 
-## 2. Forms → suggestions@kitesink.com (Web3Forms)
+## 2. Forms (Web3Forms)
 
-Two forms post to email through one shared helper (`ksSubmitForm` in `ks.js`):
+Five forms post to email through one shared helper, `ksSubmitForm` in `public/ks.js`:
 
-| Form | Where | What it sends |
-|---|---|---|
-| Vantix signup | bottom CTA of `vantix.html` | the visitor's email |
-| Campground suggestion box | `campground-tycoon/roadmap.html` | the idea text + name (still pins locally too) |
+| Form | Where |
+|---|---|
+| Consulting enquiry | `consulting.html`, `#contact` |
+| Vantix list | `vantix.html`, `#join` |
+| Listening Club question | `listening-club.html` |
+| Campground suggestion box | `campground-tycoon/roadmap.html` |
+| Song of the Day support | `song-of-the-day/support.html` |
 
-**Setup (one key, both forms):**
+The access key is `KS_FORM_KEY` at the top of `public/ks.js`. Every form emails the inbox
+that key was registered with at https://web3forms.com. To change the inbox, register a new
+key there and replace the constant. An empty key puts the forms in a demo mode that
+confirms to the visitor and sends nothing.
 
-1. Go to **https://web3forms.com**, enter **`suggestions@kitesink.com`** as the destination, and
-   copy the **Access Key** (a UUID) it emails you.
-2. Paste it into `KS_FORM_KEY` in `public/ks.js`. Commit & deploy.
-
-That's it — every form now emails `suggestions@kitesink.com`. The helper sends a JSON `POST` to
-`https://api.web3forms.com/submit`; `connect-src https:` in `_headers` already permits it.
+The helper sends a JSON `POST` to `https://api.web3forms.com/submit`, which `connect-src`
+in `public/_headers` names explicitly.
 
 **Built in:**
-- **Honeypot** — each form has a hidden `botcheck` field; `ksSubmitForm` silently drops a submission
-  if it's filled.
-- **Inline UX** — sending / success / error states, `aria-live` for screen readers. The Vantix form
-  validates the email and disables the button while sending; the suggestion box keeps its instant
-  "pin it to the cork board" animation and emails in the background (best-effort).
-- **Demo mode** — with no key, forms still confirm to the visitor so nothing looks broken in dev.
+- **Honeypot.** Each form has a hidden `botcheck` field; a submission that fills it is dropped.
+- **States.** Sending, success and error messages, announced to screen readers.
+- **Where an enquiry came from.** The consulting form records `?via=` from the address in a
+  "Found via" line, which is how enquiries from the plain-text pages are counted.
 
-> Prefer Formspree (or another provider)? Point the `fetch` URL in `ksSubmitForm` at your endpoint
-> and adjust the payload field names; the per-form wiring doesn't change.
+**After any deploy that touches `ks.js`,** send one real consulting enquiry from
+`/consulting?via=ai-assistant#contact` and confirm it arrives with that line.
