@@ -41,7 +41,7 @@
   // The release of the shared files. It must match the ?v= on every page's
   // ks.css / ks.js / site-index.js tags (scripts/check_site.py checks), so a
   // file fetched from here and the same file named by a page are one cache entry.
-  var ASSET_V = "2027.6";
+  var ASSET_V = "2027.7";
 
   // The five sections. Order = nav order. `quiet` renders Library understated:
   // always reachable, never the loudest thing on the page.
@@ -307,6 +307,17 @@
     return "";
   }
 
+  // ---- The header is taller on phones than on desktop. Publish its real height as
+  // --ks-hd-h so bars that stick under it (.k-subnav, the library's search bar) sit
+  // flush against it instead of sliding a few pixels behind. ----
+  function trackHeader() {
+    var hd = document.querySelector(".ks-hd");
+    if (!hd) return;
+    var set = function () { document.documentElement.style.setProperty("--ks-hd-h", hd.offsetHeight + "px"); };
+    set();
+    if (window.ResizeObserver) new ResizeObserver(set).observe(hd); else window.addEventListener("resize", set);
+  }
+
   // ---- Kit: the small kite that keeps you company in search. Not a chatbot. It only says
   // how the search is going, and points to a person when the index has nothing.
   // Moods: idle, busy, found, none (styled in ks.css under .ks-kit). ----
@@ -494,6 +505,7 @@
       else if (kind === "bottombar") el.outerHTML = bottomBar();
     }
     if (pageActive !== null) pillNav(pageActive);
+    trackHeader();
     startClock();
     initTheme();
     initFind();
