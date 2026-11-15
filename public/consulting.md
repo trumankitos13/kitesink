@@ -19,9 +19,9 @@ Workflow automation, operations improvements and practical AI for labels, artist
 
 Recurring software costs, data access needs and maintenance responsibilities are made clear before a solution is chosen. Ongoing support is agreed explicitly if it is needed.
 
-## The AI concierge
+## The AI concierge (new)
 
-A one-time or ongoing role for a business in any industry.
+A one-time or ongoing role for a business in any industry. It is the expanded version of the music-team work above: the same method, now open to any business.
 
 1. **Learn.** Your industry, your tools, and the work as you do it today.
 2. **Observe.** Truman sits in on the real work, in person or over Zoom, and sees where the time goes.
