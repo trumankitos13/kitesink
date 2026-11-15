@@ -1,0 +1,3168 @@
+{
+  "domain": "recovery",
+  "topics": [
+    {
+      "id": "overtraining",
+      "label": "Overreaching and overtraining"
+    },
+    {
+      "id": "monitoring",
+      "label": "Signs and monitoring"
+    },
+    {
+      "id": "model",
+      "label": "Fitness, fatigue and supercompensation"
+    },
+    {
+      "id": "rest",
+      "label": "Rest days and easy days"
+    },
+    {
+      "id": "structure",
+      "label": "Hard, easy and medium days"
+    },
+    {
+      "id": "frequency",
+      "label": "Twice a day and six days a week"
+    },
+    {
+      "id": "soreness",
+      "label": "Soreness"
+    },
+    {
+      "id": "layoff",
+      "label": "Layoffs and coming back"
+    },
+    {
+      "id": "stress",
+      "label": "Dieting and life stress"
+    }
+  ],
+  "entries": [
+    {
+      "id": "rec-term-overtraining-syndrome",
+      "type": "term",
+      "title": "Overtraining syndrome (OTS)",
+      "topic": "overtraining",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "meeusen-2013",
+        "carrard-2022"
+      ],
+      "take": "A performance drop lasting months, usually with fatigue and mood change, after a long stretch in which training and life stress outran recovery. No test confirms it; doctors reach it by excluding other causes."
+    },
+    {
+      "id": "rec-term-functional-overreaching",
+      "type": "term",
+      "title": "Functional overreaching",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "meeusen-2013",
+        "kreher-2012"
+      ],
+      "take": "A short dip in performance after a block of harder training that clears within days to about two weeks of easier work and is followed by performance at or above the earlier level."
+    },
+    {
+      "id": "rec-term-nonfunctional-overreaching",
+      "type": "term",
+      "title": "Non-functional overreaching",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "meeusen-2013",
+        "kreher-2012"
+      ],
+      "take": "A performance drop from more training than recovery allowed that takes weeks to months to clear, often with mood, sleep or hormonal symptoms. Rest restores the old level, but nothing is gained."
+    },
+    {
+      "id": "rec-table-fatigue-states",
+      "type": "table",
+      "title": "From normal tiredness to overtraining syndrome: four states",
+      "topic": "overtraining",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "meeusen-2013",
+        "kreher-2012",
+        "halson-2004"
+      ],
+      "take": "The states differ mainly in how long performance stays down, which is known only afterwards. Times follow the ECSS and ACSM consensus.",
+      "columns": [
+        "State",
+        "Performance stays down for",
+        "What follows",
+        "Sensible response"
+      ],
+      "rows": [
+        [
+          "Ordinary training fatigue",
+          "Hours to a day or two",
+          "Back to normal. This is how training works",
+          "Sleep, eat and train as planned"
+        ],
+        [
+          "Functional overreaching",
+          "Days to about two weeks",
+          "Performance returns to the old level or above it",
+          "Take the easier week or two that was planned"
+        ],
+        [
+          "Non-functional overreaching",
+          "Weeks to months",
+          "Full recovery with rest, but the time is lost and nothing is gained",
+          "Cut training well back; fix sleep, food and stress; see a doctor if it does not lift"
+        ],
+        [
+          "Overtraining syndrome",
+          "More than about two months, sometimes much longer",
+          "Slow recovery. Other illness has to be ruled out first",
+          "Medical assessment, then rest guided by a clinician"
+        ]
+      ]
+    },
+    {
+      "id": "rec-ots-diagnosis-of-exclusion",
+      "type": "note",
+      "title": "Overtraining syndrome is diagnosed by ruling other causes out",
+      "topic": "overtraining",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "meeusen-2013",
+        "carrard-2022"
+      ],
+      "take": "No blood test or questionnaire confirms overtraining syndrome. A doctor reaches it only after excluding illness, under-eating and other causes.",
+      "body": "The joint consensus of the European College of Sport Science and the American College of Sports Medicine reports that hormones, performance tests, mood questionnaires and immune markers have all been tried and that none is accepted as a test. The work-up excludes infection and other disease, a calorie deficit, low carbohydrate or protein intake, iron or magnesium deficiency and allergies. A 2022 scoping review of 39 studies still calls it a diagnosis of exclusion. Fatigue, low mood, repeated illness or a slump that lasts weeks without a clear reason needs a doctor, not a guess.",
+      "do": [
+        "See a doctor about unexplained fatigue, low mood or a slump that lasts more than two to three weeks.",
+        "Tell the doctor about your training load, your diet and any recent weight change."
+      ]
+    },
+    {
+      "id": "rec-label-comes-afterwards",
+      "type": "note",
+      "title": "Overreaching and overtraining can only be told apart afterwards",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "meeusen-2013",
+        "halson-2004",
+        "mcdonald-overtraining-1"
+      ],
+      "take": "The two look alike while they are happening. What separates them is how long recovery takes, so the label arrives after the fact.",
+      "body": "The consensus statement says athletes with non-functional overreaching and with overtraining syndrome often show the same clinical and hormonal signs, and that the belief that symptoms are worse in the syndrome has been neither confirmed nor refuted. A 2004 review found nothing beyond anecdote to show that one leads to the other. Lyle McDonald draws the practical conclusion: the name does not change the first response. Volume and intensity come down and stay down until performance is back, and the body sets the timetable.",
+      "do": [
+        "Do not wait for a label. If performance keeps sliding, reduce training now."
+      ]
+    },
+    {
+      "id": "rec-mistake-tired-is-not-overtrained",
+      "type": "mistake",
+      "title": "Calling ordinary tiredness overtraining",
+      "topic": "overtraining",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "halson-2004",
+        "mcdonald-overtraining-3"
+      ],
+      "take": "Feeling flat the day after a hard session is normal training fatigue. Overtraining syndrome means performance stays down for months.",
+      "body": "Minor fatigue and a brief dip in performance are part of normal training, and a 2004 review points out that most research filed under overtraining actually studied short-term overreaching. McDonald's reading is that one brutal session, one hard week or even two cannot produce the syndrome, because studies that overload people for a fortnight mostly leave them fitter once they rest. He places the real risk at an imbalance held for one to three months or longer. That is his judgment, not a measured threshold. Using the word loosely leads people to rest when what they lack is consistency.",
+      "do": [
+        "Judge fatigue by whether it has cleared after one or two easy days."
+      ]
+    },
+    {
+      "id": "rec-ots-rare-in-lifting",
+      "type": "note",
+      "title": "Full overtraining syndrome has barely been documented in lifters",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "grandou-2020",
+        "bell-2020"
+      ],
+      "take": "Reviews of resistance training found short-term overreaching and some longer slumps, but minimal evidence of the full syndrome.",
+      "body": "A 2020 systematic review found 22 studies that tried to overreach or overtrain people with resistance exercise. Ten saw no fall in performance, eight saw a fall and tracked it afterwards, and four saw a fall but did not follow it up. A scoping review of 47 articles in the same year concluded that short blocks of very high volume or intensity can end in a rebound, that chronic high volume or intensity can cause longer slumps, and that there was minimal evidence that true overtraining syndrome had occurred. Both reviews stress how weak the methods were, so this is thin data and not proof of safety.",
+      "do": []
+    },
+    {
+      "id": "rec-num-lifting-overtraining-studies",
+      "type": "number",
+      "title": "Lifting studies that tried to overtrain people and saw no drop",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "grandou-2020"
+      ],
+      "value": "10 of 22",
+      "unit": "studies",
+      "sort": 10,
+      "take": "In a 2020 systematic review, 10 of the 22 studies that set out to overreach or overtrain lifters found no decline in performance."
+    },
+    {
+      "id": "rec-planned-overreach-evidence",
+      "type": "note",
+      "title": "Driving yourself into a performance dip on purpose is not needed",
+      "topic": "overtraining",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "aubry-2014",
+        "bellinger-2020",
+        "mcdonald-overtraining-1"
+      ],
+      "take": "In trained triathletes, those who came through an overload block merely tired gained more than those pushed into overreaching.",
+      "body": "Among 33 trained male triathletes, three weeks of overload left 11 functionally overreached, with lower performance and high fatigue, and 12 tired but still performing. After a four-week taper the tired group peaked higher, by 2.6 percent more than the overreached group. A 2020 review of endurance athletes concluded that a dip in performance is not required for a later rebound and can blunt adaptation, though some overreached athletes did rebound well. McDonald's 2010 article describes coaches using about two hard weeks before a recovery block with advanced athletes, and a later note in it cites that review.",
+      "do": [
+        "Plan hard blocks to finish tired but still performing, then ease off."
+      ]
+    },
+    {
+      "id": "rec-mistake-no-recovery-block",
+      "type": "mistake",
+      "title": "Stretching a hard block and skipping the easy weeks after it",
+      "topic": "overtraining",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "meeusen-2013",
+        "mcdonald-overtraining-1"
+      ],
+      "take": "An overload block pays off only when it is short and followed by planned recovery. Extending it turns a useful push into a slump.",
+      "body": "The consensus statement describes functional overreaching as a short-term drop that becomes an improvement after recovery, and non-functional overreaching as the result when the balance between training and recovery is not respected. McDonald, writing for advanced lifters, caps a deliberate hard block at about two weeks, or three to four at the very most in his own specialisation cycles, and follows it with about two easier weeks. He names the usual error: the hard part runs long and the recovery part is forgotten. Beginners and most intermediates have no need for such blocks.",
+      "do": [
+        "Write the easier weeks into the plan before the hard block begins.",
+        "End the block early if performance falls for more than a few sessions in a row."
+      ]
+    },
+    {
+      "id": "rec-mistake-train-harder-in-slump",
+      "type": "mistake",
+      "title": "Answering a slump by training harder",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "kreher-2012",
+        "mcdonald-overtraining-1",
+        "mcdonald-overtraining-4"
+      ],
+      "take": "When performance falls for no clear reason, extra work deepens the problem. The usual need is less training and more recovery.",
+      "body": "A sports medicine review advises clinicians to ask athletes with unexplained underperformance whether they raised their training to make up for it, because the reaction is so common. McDonald describes the pattern in driven athletes: a bad run is taken as a challenge, sessions are added, recovery shrinks, results fall further and the cycle repeats. He contrasts it with a bout of flu, when the same people accept rest without argument. Most recreational lifters ease off when they feel run down and never get near this. The people at risk are those who never miss a session.",
+      "do": [
+        "If your numbers fall for a week, reduce training first and add work only once they are back."
+      ]
+    },
+    {
+      "id": "rec-mistake-copying-elite-loads",
+      "type": "mistake",
+      "title": "Copying the training load of elite or full-time athletes",
+      "topic": "overtraining",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-1",
+        "mcdonald-overtraining-3"
+      ],
+      "take": "Elite programmes rest on years of gradual build-up and a life arranged around recovery. Taken out of that setting they are too much.",
+      "body": "McDonald's argument has three parts. Tolerance for training grows slowly, and top athletes spent around a decade reaching the loads they are known for. Full-time athletes sleep, nap, eat and get treatment between sessions, while most people fit training around a job. And several famous programmes came out of systems that gave every athlete the same crushing load, kept the few who survived it and often relied on drugs that raise tolerance. A load is only right or wrong for a given person at a given time.",
+      "do": [
+        "Base your load on what you have recovered from lately, not on a champion's programme.",
+        "Change one thing at a time, a set, a session or the load, then watch for two to three weeks."
+      ]
+    },
+    {
+      "id": "rec-err-on-less",
+      "type": "note",
+      "title": "When unsure how much to do, choose the smaller amount",
+      "topic": "overtraining",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-1"
+      ],
+      "take": "A little less than the ideal amount still brings progress. Too much eventually costs weeks, so the two errors are not equal.",
+      "body": "McDonald's rule for setting load is to start with the least work that produces progress and add only when progress stops. He reads the response, not the plan: if you are improving, the load was not too much, and looking worn down in the third week of a new programme means something should be cut early. Slightly too little training slows gains a touch. Too much ends in injury, burnout or a slump whose recovery wipes out more time than the extra work could have earned. This is a coaching judgment. It sits well with the finding elsewhere in this guide that added sets bring shrinking returns.",
+      "do": [
+        "Start a new programme at the low end of its set range.",
+        "Add work only after two or three weeks of stalled progress with good sleep and food."
+      ]
+    },
+    {
+      "id": "rec-num-young-athletes-nfor",
+      "type": "number",
+      "title": "Young athletes who reported a long slump at least once",
+      "topic": "overtraining",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "matos-2011"
+      ],
+      "value": "29%",
+      "unit": "of 376 athletes",
+      "sort": 29,
+      "take": "English athletes of about 15, across 19 sports, who reported non-functional overreaching or overtraining in a survey."
+    },
+    {
+      "id": "rec-not-only-training-load",
+      "type": "note",
+      "title": "Long slumps are not explained by training load alone",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "matos-2011",
+        "kreher-2012",
+        "mcdonald-overtraining-3"
+      ],
+      "take": "In a survey of 376 young athletes, training load did not predict who reported a long slump. Competitive level and sex did, weakly.",
+      "body": "The survey classed 29 percent of athletes as having had non-functional overreaching or overtraining, and reports were more common in individual sports, in girls and at elite level. Training load was not a significant predictor, and the authors conclude that physical and psychosocial factors both contribute. A sports medicine review lists possible triggers beyond load: monotonous training, too many competitions, disturbed sleep, personal and work stress, and a recent illness. McDonald's framing is the same: what matters is total stress against recovery, and an athlete with the will to keep going regardless.",
+      "do": [
+        "When performance slides, review sleep, food, work and home stress as well as the programme."
+      ]
+    },
+    {
+      "id": "rec-mistake-rotating-muscles",
+      "type": "mistake",
+      "title": "Assuming you cannot overdo it as long as you rotate muscle groups",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "smith-2000",
+        "cheng-2020",
+        "mcdonald-overtraining-4"
+      ],
+      "take": "Fatigue is not only local. Every hard session draws on shared recovery, so splitting the body up does not make unlimited training safe.",
+      "body": "An older idea split overtraining into a local kind, in the muscle, and a central kind, in the nervous system, and held that changing muscle groups daily avoided both. McDonald traces failed programmes to that belief. Current models tie the two together. The cytokine hypothesis proposes that heavy training with too little rest strains tissue and raises inflammatory signals that act on the brain, changing mood and behaviour as an illness does. A 2020 review names inflammation and reactive oxygen species as the likeliest mechanisms inside muscle. These remain hypotheses, but they fit the mix of symptoms.",
+      "do": [
+        "Count total hard sessions in a week, not only sets per muscle."
+      ]
+    },
+    {
+      "id": "rec-recovering-from-slump",
+      "type": "note",
+      "title": "Recovery from a long slump is rest, and it cannot be hurried",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "kreher-2012",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "Reviews give rest or relative rest as the treatment for non-functional overreaching and overtraining syndrome. Nothing speeds it up.",
+      "body": "A sports medicine review gives rest as the treatment, with some authors preferring relative rest. McDonald's own plan is about a week with no training beyond walking, then three or four short, light sessions a week: warm-up weights in the gym, low aerobic effort for endurance. He holds that until mood, sleep and morning heart rate are normal, waits a week or two more, then builds up in small steps. His arithmetic: resting at once costs about a month, while training on for two months first costs those months plus a longer recovery. A slump this long should be assessed by a doctor.",
+      "do": [
+        "Stop hard training as soon as a sustained slump is clear. Do not wait to see whether it passes.",
+        "Get a medical check before assuming the cause is training."
+      ]
+    },
+    {
+      "id": "rec-mistake-dieting-while-recovering",
+      "type": "mistake",
+      "title": "Dieting while trying to recover from a training slump",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "meeusen-2013",
+        "stellingwerff-2021",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "A calorie deficit is itself a stress and produces many of the same symptoms. Eat at maintenance or slightly above until performance is back.",
+      "body": "People forced to rest often cut food to avoid gaining fat. McDonald advises the opposite: maintenance calories or a little more, with plenty of carbohydrate and protein, and acceptance of a small fat gain that normal training will later remove. The evidence fits. The consensus statement lists a negative energy balance and low carbohydrate or protein intake among the causes to exclude before overtraining is diagnosed, and a 2021 review found low energy or carbohydrate availability in 18 of 21 overload studies that measured intake. Under-eating can be the whole problem.",
+      "do": [
+        "Hold body weight steady during a recovery period.",
+        "Leave fat loss until training and performance are back to normal."
+      ]
+    },
+    {
+      "id": "rec-mistake-same-load-again",
+      "type": "mistake",
+      "title": "Returning to the exact load that caused the slump",
+      "topic": "overtraining",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-6"
+      ],
+      "take": "If sleep, food and outside stress are unchanged, a load you could not recover from before will fail again.",
+      "body": "McDonald describes athletes who repeat one cycle for years: overdo it, break down, rest a month, resume the same plan. His two instructions after recovery are to rebuild gradually toward a level just under the one that caused the problem, and to work out what went wrong, whether an excess of hard days or volume, or a shortage of sleep or food, and change it. If you know you will overdo things anyway, schedule the rest in advance. He found that he reliably fell apart around week 12 of a block, so he planned five days off just before that point. This is coaching experience, not trial evidence.",
+      "do": [
+        "Write down what your training, sleep, diet and stress looked like before the slump.",
+        "Change at least one of them before building back up."
+      ]
+    },
+    {
+      "id": "rec-sustained-drop-only-marker",
+      "type": "note",
+      "title": "A sustained drop in performance is the only established marker",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "grandou-2020",
+        "meeusen-2013",
+        "mcdonald-overtraining-2"
+      ],
+      "take": "For lifting, no blood value, hormone or heart measure has been shown to flag overtraining reliably. Performance that stays down has.",
+      "body": "The 2020 systematic review of resistance exercise concluded that nothing other than a sustained decrease in performance has been established as a reliable indicator of overtraining. The consensus statement reached the same position across sports: hormonal, biochemical and immune markers are in use, but none meets the criteria for general acceptance. McDonald made the argument in 2010 and added that ratios such as testosterone to cortisol need repeated blood draws that few people can arrange. Your training log is the instrument: the same lifts, logged in the same conditions, over weeks.",
+      "do": [
+        "Log load, reps and an effort rating for a few key lifts at every session.",
+        "Compare weeks, not days."
+      ]
+    },
+    {
+      "id": "rec-mistake-one-bad-session",
+      "type": "mistake",
+      "title": "Reading one bad session as a sign of overtraining",
+      "topic": "monitoring",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-2"
+      ],
+      "take": "Single sessions vary for many reasons. A problem shows up as a run of poor sessions over a week or more with no obvious cause.",
+      "body": "Sleep, food, heat, work and mood all shift performance between days, so one poor session carries almost no information, and neither does one great session. McDonald acts on trends only: several sessions running where the usual numbers are out of reach or take far more effort. For women whose performance swings across the menstrual cycle he compares a given point in one cycle with the same point in the next. Answering every off day with a rest week costs more training than it protects.",
+      "do": [
+        "After one bad session, change nothing and train the next one as planned.",
+        "After a week of bad sessions, take two or three light days and see whether you freshen up."
+      ]
+    },
+    {
+      "id": "rec-effort-climbs-first",
+      "type": "note",
+      "title": "Rising effort for the same work is an early warning",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "kreher-2012",
+        "saw-2016",
+        "mcdonald-overtraining-2"
+      ],
+      "take": "Before the numbers fall, the same weights or paces start to feel harder. A climbing effort rating at a fixed load deserves attention.",
+      "body": "A sports medicine review lists a higher rating of perceived exertion at a given workload among the first signs of overreaching. A systematic review of 56 studies found that self-reported measures such as mood and perceived stress followed training load with better sensitivity and consistency than blood markers or heart rate. In the weight room McDonald points to loads that feel heavy in the warm-up, slower bar speed and technique that loosens on lifts that used to be stable. Rating effort on your main sets lets you see the drift.",
+      "do": [
+        "Record RPE or reps in reserve for your top sets and watch the trend at fixed loads."
+      ]
+    },
+    {
+      "id": "rec-grind-through-risk",
+      "type": "note",
+      "title": "Work you can always grind through hides fatigue longest",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-2",
+        "grandou-2020"
+      ],
+      "take": "Near-maximal lifts fail outright when you are run down. Moderate loads can still be finished, so a slow slide goes unnoticed for longer.",
+      "body": "McDonald argues that maximal strength and power work partly polices itself: once 90 percent feels like 95, the session cannot be done and the lifter goes home. Endurance work and bodybuilding-style training sit well under maximum, so a tired athlete still completes the session at a higher cost and keeps adding to the debt. This is his coaching observation and no trial has tested it. Heavy work is not exempt either: a 2020 systematic review linked overtraining in resistance exercise to frequent high-intensity and monotonous training.",
+      "do": [
+        "If you train mostly with moderate loads, track reps at a fixed load to catch a slow decline."
+      ]
+    },
+    {
+      "id": "rec-overreaching-sleep-illness",
+      "type": "note",
+      "title": "Worse sleep and more colds travel with overreaching",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "hausswirth-2014",
+        "aubry-2014"
+      ],
+      "take": "In two triathlete studies, only the athletes who became overreached slept less, and they reported far more infections.",
+      "body": "Twenty-seven trained male triathletes did three weeks of overload or normal training with nightly wrist actigraphy. Nine of the 18 overloaded athletes became overreached. Only that group lost sleep time, by about 8 percent, along with a little sleep efficiency, and both recovered in the taper. Upper respiratory infections were reported by 67 percent of them, against 22 percent of overloaded athletes who kept performing and 11 percent of controls. In a second study of 33 triathletes, 7 of the 10 infections recorded fell in the overreached group. Both were small studies in men doing endurance sport.",
+      "do": [
+        "Treat shorter, broken sleep plus a cold during a hard block as a reason to ease off."
+      ]
+    },
+    {
+      "id": "rec-num-illness-overreached",
+      "type": "number",
+      "title": "Infections reported by overreached triathletes",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "hausswirth-2014"
+      ],
+      "value": "67%",
+      "unit": "of overreached athletes",
+      "sort": 67,
+      "take": "After 3 weeks of overload, against 22% of athletes who were only tired and 11% of controls, in 27 trained men."
+    },
+    {
+      "id": "rec-symptoms-overlap-low-energy",
+      "type": "note",
+      "title": "Many overtraining symptoms match those of eating too little",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "stellingwerff-2021",
+        "mcdonald-overtraining-4"
+      ],
+      "take": "In a 2021 review, 18 of 21 overload studies that tracked intake showed low energy or carbohydrate availability during the hard period.",
+      "body": "A narrative review set the overtraining literature beside the research on relative energy deficiency in sport and found the symptom lists largely the same. Of 21 training-overload studies that also measured energy or carbohydrate intake, 18 (86 percent) showed a drop or a gap in energy or carbohydrate availability during the overload. The authors argue that many cases labelled overtraining may be under-fuelling that was missed. McDonald's 2010 series treated low muscle glycogen as only one part of the picture and predates this work. Low energy availability has its own entries in the women's area of this guide.",
+      "do": [
+        "When training goes up, check that food went up with it before blaming the programme."
+      ]
+    },
+    {
+      "id": "rec-term-hrv",
+      "type": "term",
+      "title": "Heart rate variability (HRV)",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "bellenger-2016",
+        "manresa-rocamora-2021"
+      ],
+      "take": "The beat-to-beat variation in the time between heartbeats, usually measured on waking and reported as RMSSD. Higher values reflect more parasympathetic (vagal) activity. Read it against your own rolling baseline."
+    },
+    {
+      "id": "rec-hr-measures-ambiguous",
+      "type": "note",
+      "title": "Heart-rate measures move the same way in good adaptation and in overreaching",
+      "topic": "monitoring",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "bellenger-2016",
+        "mcdonald-overtraining-4",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "A 2016 meta-analysis found resting HRV barely changed with overreaching, and other heart-rate measures rose with both fitness and fatigue.",
+      "body": "It pooled 24 studies of endurance athletes. When training improved performance, resting and post-exercise heart rate variability and heart rate recovery went up. When training ended in overreaching, both went up as well, and resting variability was largely unaffected. The authors conclude that other measures are needed to tell the two apart. McDonald's 2010 series treated a falling HRV as a sign of overreaching and described the older sympathetic and parasympathetic types. It predates this analysis, though he gave the same caution: read heart rate with mood and performance.",
+      "do": [
+        "Never rest or push on a heart-rate number alone. Check it against performance and how you feel."
+      ]
+    },
+    {
+      "id": "rec-hrv-guided-endurance",
+      "type": "note",
+      "title": "Letting daily HRV pick the hard days gave endurance athletes a small edge at most",
+      "topic": "monitoring",
+      "level": "advanced",
+      "confidence": "strong",
+      "sources": [
+        "duking-2021",
+        "manresa-rocamora-2021",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "Two 2021 meta-analyses found HRV-guided endurance training beat a fixed plan on performance by a small margin that was not significant.",
+      "body": "One pooled 8 studies with 198 participants. HRV-guided plans mostly contained fewer moderate and hard sessions, gave a significant gain in submaximal measures, and showed small, non-significant effects on performance and peak oxygen uptake, with fewer people failing to respond. The other concluded that if guided training is better for fitness and performance, it is only by a small margin. McDonald's 2010 article reported the early positive trials. The pooled results that came later are more modest, and all of them concern endurance training.",
+      "do": [
+        "If you use HRV for endurance work, let a low reading swap a hard day for an easy one, not cancel training."
+      ]
+    },
+    {
+      "id": "rec-hrv-lifting",
+      "type": "note",
+      "title": "Timing lifting sessions by HRV did not beat a fixed schedule",
+      "topic": "monitoring",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "de-oliveira-2019",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "In 20 young men, waiting for HRV to return to baseline before each session gave no more strength or muscle than lifting every 48 hours.",
+      "body": "The men were randomised to train only when morning RMSSD was back at baseline, waiting another 24 hours when it was not, or to train every 48 hours regardless. One-rep max rose 30 percent in the HRV group and 42 percent in the fixed group, and cross-section of the vastus lateralis, the outer thigh muscle, rose 15.7 and 15.8 percent. Neither difference was significant. McDonald wrote in 2010 that he knew of no HRV studies in strength training and that anecdote suggested it showed little until too late. This one small trial points the same way. For lifters, performance on the bar remains the better guide.",
+      "do": []
+    },
+    {
+      "id": "rec-resting-hr-method",
+      "type": "note",
+      "title": "A morning heart rate helps only if you take it the same way each day",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-6",
+        "saw-2016"
+      ],
+      "take": "Measure after waking and using the toilet, lying still for several minutes, and compare with your own rested baseline, never with one reading.",
+      "body": "McDonald's procedure removes what pushes the number around: take it at the same clock time, lie quietly for about five minutes first, and average a minute or more from a monitor or count a full 30 to 60 seconds at the wrist, since a short count multiplies any miscount. The old coaching rule he passes on is an easy day at about 5 beats above your rested norm and a day off at about 10. He calls it crude. A systematic review of 56 studies found self-reported measures followed training load more consistently than objective ones such as resting heart rate, so treat a high reading as a prompt to check everything else.",
+      "do": [
+        "Build a baseline over two rested weeks before reading anything into a single morning."
+      ]
+    },
+    {
+      "id": "rec-num-resting-hr-rule",
+      "type": "number",
+      "title": "Rise in morning heart rate that old coaching rules act on",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-6"
+      ],
+      "value": "5 and 10",
+      "unit": "beats per minute",
+      "sort": 5,
+      "take": "Rule of thumb passed on by McDonald: an easy day at about 5 above your rested norm, a day off at about 10. Crude and untested."
+    },
+    {
+      "id": "rec-checklist-daily-log",
+      "type": "checklist",
+      "title": "A two-minute daily log for spotting fatigue that is building",
+      "topic": "monitoring",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "saw-2016",
+        "duignan-2020",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "Simple self-ratings follow training load better than lab markers. The log shows trends. It cannot diagnose anything.",
+      "groups": [
+        {
+          "name": "Rate each morning, 1 to 5",
+          "items": [
+            "Sleep: how long and how well",
+            "Energy on getting up",
+            "Mood and willingness to train",
+            "Muscle and joint soreness",
+            "Appetite",
+            "Stress outside training"
+          ]
+        },
+        {
+          "name": "Note at each session",
+          "items": [
+            "Load, reps and effort rating on your first main lift",
+            "How the warm-up felt: speed, coordination, heaviness",
+            "Anything that cut the session short"
+          ]
+        },
+        {
+          "name": "Read it once a week",
+          "items": [
+            "Three or more low days in a row with no clear cause: take two or three easy days",
+            "Effort rising at the same loads for a week: cut volume and review sleep and food",
+            "Fatigue, low mood, repeated illness or falling performance beyond two to three weeks: see a doctor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rec-mood-changes-precede",
+      "type": "note",
+      "title": "Mood, sleep and appetite often shift before performance does",
+      "topic": "monitoring",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "kreher-2012",
+        "saw-2016",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "Loss of drive, poorer sleep and a dulled appetite tend to appear before the numbers fall, which makes them useful early signals.",
+      "body": "McDonald reports that athletes sliding toward a slump usually describe low motivation, broken sleep, less appetite and a constant heavy ache in the muscles they train most while their results are still holding. Research gives this some support. In college swimmers, adjusting training whenever scores on the Profile of Mood States worsened cut burnout from 10 percent to none, according to a sports medicine review, and a systematic review found self-reports more sensitive to load than objective markers. None of these signs is specific. Illness, under-eating and depression produce them too, and those need a doctor.",
+      "do": [
+        "When several of these appear together, take two or three easy days and reassess.",
+        "See a doctor if low mood or poor sleep continues after training has been reduced."
+      ]
+    },
+    {
+      "id": "rec-warm-up-test",
+      "type": "note",
+      "title": "Let the warm-up decide a doubtful session",
+      "topic": "monitoring",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-5"
+      ],
+      "take": "Feeling flat beforehand predicts little. Do the usual warm-up: if you come good, train as planned, and if you still move badly, stop or go light.",
+      "body": "McDonald's rule rests on two facts: how you feel walking in is unreliable, and people talk themselves into or out of sessions. Some of his athletes' best days began with yawning. So he has them do the standard warm-up and judge speed, coordination and bar feel. If it clicks, the session goes ahead. If not, the choice is to leave or to do 30 to 45 minutes of light technical work, because a tired athlete can pile on fatigue without being able to train well enough to gain from it. The warm-up already done counts as active recovery. After several flat days running he skips the test and takes a few easy days.",
+      "do": [
+        "Keep your warm-up identical between sessions so you can compare how it feels.",
+        "If the warm-up is poor, switch to light technique work or go home."
+      ]
+    },
+    {
+      "id": "rec-jump-reaction-tests",
+      "type": "note",
+      "title": "Jump height and reaction time are optional extra checks, not proven tests",
+      "topic": "monitoring",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "claudino-2017",
+        "nederhof-2006",
+        "mcdonald-overtraining-6"
+      ],
+      "take": "Average jump height tracked fatigue better than best jump in pooled studies. Reaction time is a plausible marker that has not been validated.",
+      "body": "A meta-analysis of 151 articles found the average height of several countermovement jumps more sensitive than the single best jump for detecting fatigue and rebound. A 2006 review proposed slowed psychomotor speed as an early marker of overtraining, reasoning from its consistent presence in chronic fatigue syndrome and major depression, and stated that no validated early marker existed. McDonald's skating group timed rapid starts and stops of a stopwatch and saw the times lengthen in heavy weeks. Each check needs a rested baseline, a fixed warm-up and a fixed time of day, and none replaces your training numbers.",
+      "do": [
+        "If you use a jump test, average three jumps after a fixed warm-up and compare with rested values."
+      ]
+    },
+    {
+      "id": "rec-term-supercompensation",
+      "type": "term",
+      "title": "Supercompensation",
+      "topic": "model",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-supercompensation"
+      ],
+      "take": "The idea that training first lowers a capacity, which then rebounds above its starting level before fading again. It fits muscle glycogen well and describes adaptation in general poorly."
+    },
+    {
+      "id": "rec-term-fitness-fatigue",
+      "type": "term",
+      "title": "Fitness-fatigue model",
+      "topic": "model",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "hellard-2006",
+        "mcdonald-supercompensation"
+      ],
+      "take": "A two-factor description of training: each session adds both fitness and fatigue, performance reflects fitness minus fatigue, and fatigue fades faster. It is a curve fitted to data, not a biological mechanism."
+    },
+    {
+      "id": "rec-term-gas",
+      "type": "term",
+      "title": "General adaptation syndrome (GAS)",
+      "topic": "model",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "buckner-2020",
+        "cunanan-2018"
+      ],
+      "take": "Hans Selye's three-stage account of the response to severe stress: alarm, resistance, exhaustion. Coaches borrowed it to justify periodised training, and how well it fits training is disputed."
+    },
+    {
+      "id": "rec-no-full-recovery-needed",
+      "type": "note",
+      "title": "You do not need to be fully recovered, or better, before training again",
+      "topic": "model",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-supercompensation",
+        "kataoka-2022"
+      ],
+      "take": "In the fitness and fatigue view, sessions overlap. Gains appear over weeks, or once fatigue clears, not as a record at every session.",
+      "body": "Supercompensation implies waiting for an overshoot before training again. McDonald calls that unworkable past the beginner stage: an advanced lifter may train 12 to 16 weeks to add 2.5 kg (5 lb) to a lift, so no rebound follows each session. In the two-factor view every session adds fitness and fatigue, the traces overlap, and performance rises as adaptation builds or when a taper lets fatigue fall. Beginners improve session to session because their loads create little fatigue, which clears in about two days. A 2022 review adds that evidence for fatigue accumulating across lifting sessions is equivocal.",
+      "do": [
+        "Judge a programme over a block of weeks, not by whether each session beat the last."
+      ]
+    },
+    {
+      "id": "rec-mistake-break-down-rebuild",
+      "type": "mistake",
+      "title": "Picturing training as breaking muscle down so it rebuilds bigger",
+      "topic": "model",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-supercompensation",
+        "damas-2016-synthesis"
+      ],
+      "take": "Muscle is not smaller after a session and larger after rest. Only glycogen depletes and overshoots, and even that does not stack.",
+      "body": "The deplete-then-overshoot idea came from glycogen research, and glycogen does behave that way after depletion and a high carbohydrate intake. McDonald notes two limits. Repeating the cycle reaches the same ceiling each time, and muscle protein, mitochondria and capillaries are not run down before they rise. They are built up through signalling that drives protein synthesis. A ten-week study in ten young men fits this: muscle protein synthesis was highest in week one, when damage was highest, yet it tracked growth only once the damage had faded. The belief leads people to wreck a muscle weekly and wait.",
+      "do": [
+        "Aim for repeatable sessions that progress, not for maximum disruption."
+      ]
+    },
+    {
+      "id": "rec-gas-loose-analogy",
+      "type": "note",
+      "title": "Selye's stress stages are a loose analogy for training, not a law",
+      "topic": "model",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "buckner-2020",
+        "kiely-2018",
+        "cunanan-2018",
+        "mcdonald-supercompensation"
+      ],
+      "take": "Selye's alarm, resistance and exhaustion stages came from rodents given toxic stressors. Researchers disagree on how far they apply to lifting.",
+      "body": "A 2020 review notes that Selye built the syndrome from rodent studies using toxic stressors, that normal exercise in humans has never been shown to produce it, and that it gives no strong case that periodised training is necessary. A 2018 paper argues stress science has since moved on. Another 2018 review defends the syndrome as a useful framework, since disturbance does drive adaptation. McDonald sides with the critics: in Selye's work exhaustion meant death, nothing like a lifter who is tired or slightly weaker. What holds up is the general stress response, in which stressors add together.",
+      "do": []
+    },
+    {
+      "id": "rec-table-training-models",
+      "type": "table",
+      "title": "Three pictures of how training works, compared",
+      "topic": "model",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-supercompensation",
+        "buckner-2020",
+        "hellard-2006"
+      ],
+      "take": "Each model draws a similar curve but leads to different advice. McDonald argues the two-factor model fits practice best. It is still only a description.",
+      "columns": [
+        "Model",
+        "Core idea",
+        "What it gets right",
+        "Where it misleads"
+      ],
+      "rows": [
+        [
+          "Supercompensation",
+          "Training depletes something, which then overshoots its old level",
+          "Muscle glycogen behaves this way once",
+          "Suggests waiting for a measurable gain before each session; muscle is not depleted and rebuilt"
+        ],
+        [
+          "Fitness-fatigue (two-factor)",
+          "Each session adds fitness and fatigue; fatigue fades faster",
+          "Explains tapers, easy weeks and bests after a short break",
+          "Fitted a season of data from nine swimmers, but with wide uncertainty in its parameters"
+        ],
+        [
+          "General adaptation syndrome",
+          "Stress brings alarm, then resistance, then exhaustion",
+          "All stressors draw on one general stress response",
+          "Built on rodents and toxic stressors; never shown with normal exercise in humans"
+        ]
+      ]
+    },
+    {
+      "id": "rec-one-day-off",
+      "type": "note",
+      "title": "Take at least one day a week completely off",
+      "topic": "rest",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-5",
+        "mcdonald-importance-of-rest",
+        "kreher-2012"
+      ],
+      "take": "McDonald's baseline for everyone from beginner to elite is one day each week with no training, and one or two more that are easy.",
+      "body": "Most athletes already do it, those who never rest tend to pay later, and a week that ends in a free day is easier to face than an unbroken run of sessions. Which day does not matter. Recreational trainees who lift three or four days and do cardio on all the others are the group he sees overdoing it, with sore joints and fading enthusiasm as the signs. A sports medicine review likewise lists adequate sleep and periodised training among preventive measures. A few elite lifters replace the day off with about 30 minutes of light squatting because full rest leaves them flat. If you copy that, keep it truly easy.",
+      "do": [
+        "Mark one day a week as no training. A walk is fine.",
+        "If lifting plus cardio fills seven days, put some cardio after lifting to free a day."
+      ]
+    },
+    {
+      "id": "rec-term-active-recovery",
+      "type": "term",
+      "title": "Active recovery (active rest)",
+      "topic": "rest",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-active-passive-recovery"
+      ],
+      "take": "A short, easy session placed between harder days, with less volume and much lower intensity than normal training. McDonald's test is that you leave feeling fresher than you arrived."
+    },
+    {
+      "id": "rec-term-passive-rest",
+      "type": "term",
+      "title": "Passive rest",
+      "topic": "rest",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-active-passive-recovery"
+      ],
+      "take": "A day with no training at all. Ordinary walking is allowed. It is the safer choice for anyone who cannot keep an easy session easy."
+    },
+    {
+      "id": "rec-active-recovery-evidence",
+      "type": "note",
+      "title": "Easy sessions reduce soreness a little; a performance benefit is unproven",
+      "topic": "rest",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "dupuy-2018",
+        "ortiz-2019",
+        "mcdonald-active-passive-recovery"
+      ],
+      "take": "Pooled trials show active recovery lowers soreness modestly, while the evidence that it improves later performance is weak.",
+      "body": "A meta-analysis of 99 studies found that active recovery, massage, compression garments and water immersion each reduced delayed soreness, with massage the most effective for soreness and perceived fatigue. A systematic review of 26 studies in 471 athletes found weak evidence that active recovery after exercise improves performance, noted positive psychological effects, and judged blood lactate clearance an unreliable recovery marker. McDonald wrote in 2010 that he had seen no research and suspected easy sessions mainly avoid adding stress while recovery runs its course. The later reviews broadly fit that view.",
+      "do": [
+        "Use an easy session if it makes you feel better, not because it is required."
+      ]
+    },
+    {
+      "id": "rec-num-active-recovery-volume",
+      "type": "number",
+      "title": "Size of a recovery session against a normal one",
+      "topic": "rest",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-active-passive-recovery"
+      ],
+      "value": "50-67%",
+      "unit": "of normal volume",
+      "sort": 50,
+      "take": "McDonald's guide: half to two thirds of usual volume, at about 60% of maximum heart rate, or at most 75% of 1RM for easy sets of 3 to 5."
+    },
+    {
+      "id": "rec-mistake-recovery-becomes-workout",
+      "type": "mistake",
+      "title": "Turning a recovery session into a workout",
+      "topic": "rest",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-active-passive-recovery"
+      ],
+      "take": "An easy day that creeps up in load or length adds fatigue, blunts the next hard day and leaves every session at the same middling effort.",
+      "body": "McDonald sees two routes to this. The lifter feels good and starts adding weight, or decides the trip to the gym is not worth 20 easy minutes and does a full session. Either way the easy days get harder, the hard days get worse, and the week flattens into medium effort throughout. His rule is blunt: if you cannot hold an easy session down, take the day off or go for a walk. In his view a recovery session done properly beats a rest day in most cases, and one done badly is worse than rest. The conditioning area of this guide describes the same trap for cardio.",
+      "do": [
+        "Set the load and the number of sets before you arrive, and leave when they are done.",
+        "If you finish more tired than you started, make the next recovery day a rest day."
+      ]
+    },
+    {
+      "id": "rec-recovery-day-technique",
+      "type": "note",
+      "title": "A light day can double as technique practice if you are fresh enough to move well",
+      "topic": "rest",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-active-passive-recovery"
+      ],
+      "take": "Low loads let you rehearse a lift without fatigue. If you are too tired to move well, do something simple that needs no skill.",
+      "body": "For lifts that depend on timing and feel, such as the snatch, McDonald uses light days to keep the movement familiar and to work on one technical point at loads where good repetitions come easily. The condition is that the day before has not left you so tired that form breaks down, because sloppy repetitions rehearse the wrong pattern. In that case he switches to work that needs no skill, such as easy machine exercises or a bike, which still moves blood through the muscles. Runners can use a bike or elliptical to spare their joints. This is coaching practice with no direct trial behind it.",
+      "do": [
+        "Pick one technical cue for a light day and stop when repetitions stop looking clean."
+      ]
+    },
+    {
+      "id": "rec-table-planned-rest",
+      "type": "table",
+      "title": "Planned rest at four time scales",
+      "topic": "rest",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-5",
+        "mcdonald-importance-of-rest",
+        "rogerson-2024"
+      ],
+      "take": "Rest is scheduled weekly, inside each block, between blocks and yearly. The intervals are McDonald's coaching guides and survey habits, not trial results.",
+      "columns": [
+        "Time scale",
+        "What it looks like",
+        "How often",
+        "Purpose"
+      ],
+      "rows": [
+        [
+          "Within the week",
+          "One day with no training, plus one or two easy days",
+          "Every week",
+          "Clears day-to-day fatigue and breaks the week into manageable pieces"
+        ],
+        [
+          "Within a block",
+          "An easier week with less volume, load or frequency (a deload)",
+          "Athletes report about every 5 to 6 weeks",
+          "Lets fatigue fall before the next push"
+        ],
+        [
+          "Between blocks",
+          "About five days with no training at all",
+          "After each 10 to 16 week block, or every 3 to 4 months",
+          "Physical and mental reset before the next block"
+        ],
+        [
+          "Across the year",
+          "Two to four weeks of light or different activity",
+          "Once a year, after the main season or goal",
+          "Start the next year fresh without losing much fitness"
+        ]
+      ]
+    },
+    {
+      "id": "rec-hard-days-limit",
+      "type": "note",
+      "title": "Keep truly hard sessions for the same lift or muscle to one or two a week",
+      "topic": "structure",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-overtraining-5",
+        "mcdonald-hard-easy",
+        "foster-1998"
+      ],
+      "take": "Most athletes manage two or three truly hard days a week. Lifters can train hard more often only because the lifts and muscles rotate.",
+      "body": "McDonald's survey of sports comes out the same nearly everywhere: most work is easy to moderate, two or three days are truly hard, and those days are spread through the week so each can be done fresh. In lifting the count per week can be higher because different lifts or muscles take the hard work on different days, but any one lift or muscle is pushed hard once or twice. Back-to-back hard days are for special cases. Monitoring research gives some support: in 25 experienced athletes, illnesses clustered when training load combined with monotony, meaning days that were all alike, passed a personal threshold.",
+      "do": [
+        "Count the hard sessions each lift or muscle gets in a week, and cap it at two.",
+        "Put at least one easier day between hard sessions for the same lift."
+      ]
+    },
+    {
+      "id": "rec-mistake-same-effort-always",
+      "type": "mistake",
+      "title": "Training at the same effort every day, all year",
+      "topic": "structure",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-hard-easy",
+        "grandou-2020"
+      ],
+      "take": "When easy days are pushed and hard days suffer for it, the week settles at medium effort, and without easier weeks progress stalls.",
+      "body": "McDonald's observation is that most people try to go hard too often and land at a middling effort, too much to recover from and too little to drive progress. The fix works at several scales. Within the week, hard days stay hard because the days between are easy. Across a month, harder weeks are followed by easier ones. Recreational lifters who hold one level all year tend to stagnate. A 2020 systematic review linked overtraining in resistance exercise with frequent high-intensity, monotonous training. The conditioning area covers the cardio version of this error.",
+      "do": [
+        "Mark each session hard, medium or easy in your plan, and check that all three appear.",
+        "Follow two or three hard weeks with an easier one."
+      ]
+    },
+    {
+      "id": "rec-term-hlm",
+      "type": "term",
+      "title": "Heavy-light-medium training",
+      "topic": "structure",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-hlm"
+      ],
+      "take": "A weekly pattern for training the same lifts three times: one heavy day, one light day and one in between. Bill Starr popularised it for lifters who had grown too strong to go heavy at every session."
+    },
+    {
+      "id": "rec-hlm-loads",
+      "type": "note",
+      "title": "Set the light and medium days as a share of the heavy day's weight",
+      "topic": "structure",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-hlm"
+      ],
+      "take": "A common setting is 65 to 75 percent of the heavy day's load on the light day and 75 to 85 percent on the medium day, for the same reps.",
+      "body": "With the heavy day at 120 kg (265 lb) for sets of five, the light day would use 78 to 90 kg (172 to 198 lb) and the medium day 90 to 102 kg (198 to 225 lb). Sets can also be cut on the light day. McDonald's test for the light day matches his test for any recovery session: you should leave feeling better than you arrived, and if you do not, drop toward 65 percent. If you are still tired at the next heavy day, lower the medium day or remove a set from it. The light day earns its place as extra practice of the lift and as easy movement between harder days. The percentages are coaching convention, not trial results.",
+      "do": [
+        "Calculate light and medium loads from this week's heavy-day weight, not from your one-rep max.",
+        "Adjust the medium day first if the heavy day starts to suffer."
+      ]
+    },
+    {
+      "id": "rec-hlm-ways-to-lighten",
+      "type": "note",
+      "title": "A day can be made lighter by load, by reps in reserve or by exercise choice",
+      "topic": "structure",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-hlm"
+      ],
+      "take": "Lower the weight on the same lift, change the rep range while staying short of failure, or swap to a variation that limits the load.",
+      "body": "The simplest version keeps the same lifts and sets and lowers the weight. A second version also changes the reps, with fewer on the heavy day and more on the lighter days, which looks like daily undulating periodisation. A third swaps exercises so the load is lower by nature: a barbell bench press on the heavy day, an incline or dumbbell press on the others. McDonald adds that the heavy work can be staggered so each session has one heavy lift, one light and one medium. That lets a strong lifter give full attention to a single heavy lift and makes room for both squats and deadlifts within one week.",
+      "do": [
+        "Do the day's heavy lift first in the session.",
+        "If you squat and deadlift, put their heavy days as far apart in the week as you can."
+      ]
+    },
+    {
+      "id": "rec-mistake-light-day-to-failure",
+      "type": "mistake",
+      "title": "Taking the light and medium days to failure",
+      "topic": "structure",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-hlm",
+        "moran-navarro-2017"
+      ],
+      "take": "A lighter weight taken to a rep maximum is still a maximal effort. Three such days a week leave no easy day at all.",
+      "body": "When the lighter days use higher reps, it is tempting to push each to its limit: twelve reps at 75 percent is near the limit for most lifters. McDonald warns that this turns a heavy, light and medium week into three maximal days and leads to burnout, and he keeps about two reps in reserve on every day except the heavy one. Recovery data agree. In ten trained men, sets taken to failure caused a larger drop in jump height and bar speed than the same volume done in half-length sets, and recovery was slower for 24 to 48 hours.",
+      "do": [
+        "Leave about two reps in reserve on light and medium days."
+      ]
+    },
+    {
+      "id": "rec-failure-slows-recovery",
+      "type": "note",
+      "title": "Sets taken to failure take a day or two longer to recover from",
+      "topic": "structure",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "moran-navarro-2017"
+      ],
+      "take": "In ten trained men, three sets of ten to failure slowed recovery for 24 to 48 hours compared with the same reps done as six sets of five.",
+      "body": "The men performed bench press and squat in three ways: three sets of five with a ten-rep load, six sets of five with that load, and three sets of ten to failure. Jump height and bar speed fell most after the failure protocol, even against the six-by-five protocol with identical volume, and recovery between 24 and 48 hours was significantly faster after the two protocols that stopped at half the possible reps. Blood markers followed the same pattern. Other entries in this guide show failure is not required for gains. This adds the cost: failure fits best where the same muscles rest the next day.",
+      "do": [
+        "Keep reps in reserve on sets for muscles you will train again within 48 hours."
+      ]
+    },
+    {
+      "id": "rec-term-two-a-day",
+      "type": "term",
+      "title": "Two-a-day training",
+      "topic": "frequency",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-two-a-day-1"
+      ],
+      "take": "Two separate sessions in one day with a real break between them. In this guide it means working the same lifts or muscles in both, as distinct from a split that puts different body parts in the morning and the evening."
+    },
+    {
+      "id": "rec-two-a-day-evidence",
+      "type": "note",
+      "title": "Splitting the same work into two daily sessions has shown little extra benefit so far",
+      "topic": "frequency",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "hartman-2007-twice",
+        "correa-2022",
+        "hansen-2005",
+        "mcdonald-two-a-day-1"
+      ],
+      "take": "In weightlifters and trained men, twice-daily sessions matched once-daily sessions for muscle size, with a strength edge in some measures only.",
+      "body": "Ten national-level male weightlifters trained once or twice a day for three weeks at similar volume. No measure differed significantly, and the authors saw no added benefit. In 23 trained men over eight weeks, training each muscle twice a day raised squat one-rep max by 16.1 percent against 7.8 percent with one daily session, while bench press, muscular endurance and muscle thickness did not differ. McDonald wrote in 2014 that he knew of no lifting studies and cited an endurance one: in seven untrained men, a leg trained twice every second day gained more endurance than the leg trained daily. All three are small.",
+      "do": []
+    },
+    {
+      "id": "rec-two-a-day-reasons",
+      "type": "note",
+      "title": "The case for two sessions a day is quality, practice and scheduling",
+      "topic": "frequency",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-two-a-day-1"
+      ],
+      "take": "Shorter sessions hold intensity better, allow more fresh practice of technical lifts, and can free whole rest days when doubled.",
+      "body": "McDonald gives four practical reasons that do not depend on any special training effect. Intensity falls as a session lengthens, so two short sessions can hold quality that one long session loses. A short second session adds volume without stretching the main one. Technical lifts improve with frequent practice done fresh, which is why weightlifters and swimmers adopted the pattern first. And doubling can increase rest: his skating coach ran eight weekly sessions as four double days, leaving three days completely free. None of this applies to a beginner, who progresses on far less.",
+      "do": [
+        "Consider two sessions only if one session has become too long to keep its quality."
+      ]
+    },
+    {
+      "id": "rec-mistake-two-full-sessions",
+      "type": "mistake",
+      "title": "Doing two full workouts from the first day of twice-daily training",
+      "topic": "frequency",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-two-a-day-1"
+      ],
+      "take": "Doubling the work at once is the usual way this fails. Start by splitting what you already do, at about 40 to 45 minutes a session.",
+      "body": "McDonald's starting options are to divide the current session in two with at most a small rise in volume, so that one hour becomes two sessions of about 40 minutes, or to keep the main session and add a supplementary one of 20 to 30 minutes. Only after two or three training cycles of four to six weeks each does he lengthen one session, by 10 to 15 minutes. The trap is the same as with recovery days: having travelled to the gym, people feel a short session is not worth it and extend it. His advice to anyone who cannot stop on time is not to train this way.",
+      "do": [
+        "Set a timer for the planned length and leave when it sounds.",
+        "Hold total weekly sets steady for the first month of twice-daily training."
+      ]
+    },
+    {
+      "id": "rec-two-a-day-heavy-light",
+      "type": "note",
+      "title": "Make one of the two sessions heavy and the other light",
+      "topic": "frequency",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-two-a-day-1",
+        "mcdonald-two-a-day-2"
+      ],
+      "take": "McDonald's view is that almost nobody benefits from two truly heavy sessions in a day, at the start or later.",
+      "body": "For growth he counts sets of about five to eight as the heavy session and higher-rep work as the light one, and usually puts the heavy session first. For strength, the heavy session is sets of five or fewer at about 85 percent or more, and the light one is repetition or speed work. The order is individual. Lifters with a talent for strength often do best with a light, fast session in the morning that prepares them for heavy work later. He advises against very heavy loading straight after waking unless the warm-up is long, since the body needs an hour or more to be ready. He has people eat after each session.",
+      "do": [
+        "Try both orders for two weeks each and keep the one that gives the better heavy session."
+      ]
+    },
+    {
+      "id": "rec-num-two-a-day-gap",
+      "type": "number",
+      "title": "Break between two sessions on the same day",
+      "topic": "frequency",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-two-a-day-1",
+        "mcdonald-two-a-day-2",
+        "kreher-2012"
+      ],
+      "value": "4-6",
+      "unit": "hours",
+      "sort": 4,
+      "take": "A rule of thumb with no trial behind it: time for a meal or two and a rest. McDonald treats 3.5 to 7 hours as fine. A review lists over 6 hours among preventive measures."
+    },
+    {
+      "id": "rec-six-days-setup",
+      "type": "note",
+      "title": "Six short lifting days work when volume is spread and effort is held back",
+      "topic": "frequency",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "mcdonald-six-days",
+        "colquhoun-2018",
+        "moran-navarro-2017"
+      ],
+      "take": "With weekly volume and load equal, six sessions a week gave trained men the same gains as three, so the choice is about schedule.",
+      "body": "In 28 trained men, six weeks of lifting three or six times a week with volume and intensity equated gave the same gains: squat rose 16.8 kg on three sessions and 16.7 kg on six (about 37 lb each), and fat-free mass did not differ. McDonald's layout for busy people: an upper and lower rotation run three times, about 40 to 45 minutes each, with three or four work sets for large muscles and one to three for small. With frequency high, he stops sets one or two reps short of failure from Monday to Thursday, pushes harder before the day off, and every four to six weeks drops the last two sessions for four days off.",
+      "do": [
+        "Divide your current weekly sets across the six days. Do not add to them.",
+        "Save your hardest sets for the sessions before the rest day."
+      ]
+    },
+    {
+      "id": "rec-mistake-six-day-shoulders",
+      "type": "mistake",
+      "title": "Arranging a six-day split so the shoulders work hard four days a week",
+      "topic": "frequency",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-six-days"
+      ],
+      "take": "Three-way splits run twice a week load the shoulder joint on four days. An upper and lower rotation cuts that to three.",
+      "body": "McDonald's reasoning starts from connective tissue, which adapts more slowly than muscle, so damage can build in tendons and joints even while muscles keep up. A chest and back day, a leg day and a shoulder and arm day, each done twice, works the shoulders hard on four days, and the arm day spoils the chest and back session that follows it. Push, legs and pull is better ordered but still trains the shoulders on four days. An upper and lower rotation trains them on three. He also rules out training the whole body hard on all six days. These are coaching judgments, not trial findings.",
+      "do": [
+        "On a six-day plan, count how many days each joint is loaded, not only each muscle.",
+        "See a clinician about shoulder pain that lasts beyond a week or two of reduced loading."
+      ]
+    },
+    {
+      "id": "rec-term-doms",
+      "type": "term",
+      "title": "Delayed-onset muscle soreness (DOMS)",
+      "topic": "soreness",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "cheung-2003",
+        "mcdonald-doms"
+      ],
+      "take": "Muscle tenderness and stiffness that builds in the day or two after unaccustomed or eccentric-heavy exercise and fades over several days. It is most common early in a programme and after a layoff."
+    },
+    {
+      "id": "rec-term-repeated-bout",
+      "type": "term",
+      "title": "Repeated bout effect",
+      "topic": "soreness",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "mchugh-2003"
+      ],
+      "take": "The protection that one session of unaccustomed eccentric exercise gives against damage and soreness from later sessions. It is why soreness fades within a few sessions even when the work stays the same."
+    },
+    {
+      "id": "rec-soreness-and-frequency",
+      "type": "note",
+      "title": "Training a muscle more often brings less soreness, not less growth",
+      "topic": "soreness",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-doms",
+        "mchugh-2003",
+        "damas-2016-synthesis"
+      ],
+      "take": "In McDonald's experience, lifters who train each muscle two or three times a week report far less soreness than once-a-week trainers and grow at least as well.",
+      "body": "McDonald lists observations that separate soreness from progress. It is worst in the first weeks of a programme, when growth is least. The deltoids rarely get sore and still grow. People who train a muscle once a week report severe soreness and often grow poorly; at two or three times a week they report little. The repeated bout effect explains this: each session protects against the next. A ten-week study in ten men found growth was related to protein synthesis only after damage had subsided. The hypertrophy area of this guide shows frequency matters little for growth at equal weekly sets.",
+      "do": [
+        "Do not lower training frequency just to feel sore again."
+      ]
+    },
+    {
+      "id": "rec-training-while-sore",
+      "type": "note",
+      "title": "Training a sore muscle again did not worsen damage in a controlled trial",
+      "topic": "soreness",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "chen-2006",
+        "cheung-2003"
+      ],
+      "take": "In 51 athletes, repeating hard eccentric arm work three days after the first bout neither added damage nor slowed recovery.",
+      "body": "The athletes did 30 heavy eccentric elbow-flexor actions. Three days later, early in recovery, three groups repeated the bout at 100, 90 or 80 percent of the first load and a control group rested. Strength, range of motion, swelling, soreness and blood markers over nine days did not differ between groups. This was one muscle and one protocol. Soreness still has costs: a review notes reduced range of motion and peak force, and altered movement patterns that could raise injury risk on demanding lifts. Mild soreness is not a reason to skip a session. Soreness that changes how you move is a reason to go lighter.",
+      "do": [
+        "If mildly sore, train as planned after a longer warm-up.",
+        "If soreness limits your range of motion or changes your technique, go lighter or train something else."
+      ]
+    },
+    {
+      "id": "rec-mistake-soreness-as-readiness",
+      "type": "mistake",
+      "title": "Using soreness to decide whether a muscle has recovered",
+      "topic": "soreness",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "nosaka-2002",
+        "chen-2006"
+      ],
+      "take": "Soreness tracks damage and strength loss poorly. No soreness does not prove a muscle is recovered, and soreness does not prove it is not.",
+      "body": "In 110 men doing maximal eccentric arm exercise, soreness correlated poorly with other markers of damage, such as strength loss and swelling, and the authors called it a poor reflector of damage. Doing 12, 24 or 60 contractions produced clearly different amounts of damage but similar soreness when the arm was pressed or flexed. In a separate trial, athletes repeated a hard bout while sore without extra damage. The existing hypertrophy entries make the related point that soreness does not show a session worked. For readiness, use performance: whether your usual loads move for your usual reps.",
+      "do": [
+        "Decide readiness from your first working set, not from how the muscle feels when you press on it."
+      ]
+    },
+    {
+      "id": "rec-severe-soreness-warning",
+      "type": "note",
+      "title": "Extreme pain after a punishing new session can be a medical emergency",
+      "topic": "soreness",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "rawson-2017",
+        "mcdonald-doms"
+      ],
+      "take": "Exertional rhabdomyolysis is rare but can be life-threatening. Dark urine after very hard unaccustomed exercise needs immediate medical care.",
+      "body": "A review of exertional rhabdomyolysis describes it as severe muscle breakdown whose products can damage the kidneys. Its prevalence is low, and cases occur when exercise is improperly prescribed, for example very high repetitions of a new movement or exercise used as punishment. The review names dark, tea- or cola-coloured urine as a cardinal sign that someone should seek immediate treatment. McDonald's point is the same in milder form: some muscle disruption may help adaptation, but soreness that costs you a week of strength is too much, and more damage is not more progress.",
+      "do": [
+        "Introduce new exercises and high-rep work with one or two easy sets.",
+        "Seek urgent medical care for dark urine, severe swelling or pain far beyond normal soreness."
+      ]
+    },
+    {
+      "id": "rec-term-detraining",
+      "type": "term",
+      "title": "Detraining",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "bosquet-2013"
+      ],
+      "take": "The partial or complete loss of training adaptations when training stops or falls too low. Strength, power and muscle size fall at different rates, and the losses grow with the length of the break."
+    },
+    {
+      "id": "rec-term-muscle-memory",
+      "type": "term",
+      "title": "Muscle memory",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "cumming-2024",
+        "rahmati-2022",
+        "mcdonald-training-after-layoff"
+      ],
+      "take": "The observation that lost strength and muscle return faster than they were first built. Proposed explanations are retained nuclei in muscle fibres, lasting epigenetic changes and retained skill. None is settled in humans."
+    },
+    {
+      "id": "rec-short-break-costs-little",
+      "type": "note",
+      "title": "A few days off costs almost nothing, and some lifters come back stronger",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "travis-2022",
+        "hwang-2017",
+        "mcdonald-training-after-layoff",
+        "mcdonald-importance-of-rest"
+      ],
+      "take": "Three to five days without training left lower-body strength intact in trained lifters, and two weeks off did not lower leg press strength in trained men.",
+      "body": "In 19 strength-trained athletes, 3 or 5 days without training preserved lower-body maximal strength, and upper-body strength held for 3 days. In 20 resistance-trained men, leg press strength did not fall after two weeks off in the middle of a ten-week programme. McDonald's coaching experience agrees: after 3 to 5 days away many lifters hit personal bests because fatigue has cleared, a few feel flat for two or three sessions, and very technical lifts such as the snatch lose their feel for a session or so. He schedules five full days off after each long block for this reason.",
+      "do": [
+        "Do not fear a short break for illness, travel or planned rest.",
+        "After a break, give technical lifts one session to settle before judging them."
+      ]
+    },
+    {
+      "id": "rec-detraining-dose",
+      "type": "note",
+      "title": "Strength loss grows with time off and is larger in older and inactive people",
+      "topic": "layoff",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "bosquet-2013",
+        "psilander-2019",
+        "mcdonald-training-after-layoff"
+      ],
+      "take": "A meta-analysis of 103 studies found stopping training lowered submaximal strength most, maximal force next and power least, in step with time off.",
+      "body": "The pooled effects were -0.62 for submaximal strength, -0.46 for maximal force and -0.20 for maximal power, with a dose-response to the duration of the break. Losses were larger in people over 65 and, for maximal force and power, in inactive people compared with recreational athletes. Size and strength do not fall together. In 19 adults who trained one leg for 10 weeks and then stopped for 20, muscle size returned to baseline while strength stayed elevated, which the authors read as lasting motor learning. McDonald's rule of thumb is that performance starts to slip after about a week away.",
+      "do": [
+        "Expect to be weaker after two or more weeks off, and plan lighter first sessions."
+      ]
+    },
+    {
+      "id": "rec-breaks-no-long-term-cost",
+      "type": "note",
+      "title": "Breaks of a few weeks did not reduce long-term gains in beginners",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "ogasawara-2013",
+        "halonen-2024"
+      ],
+      "take": "In two trials, people who stopped for 3 or 10 weeks and then resumed ended with the same strength and muscle size as people who trained straight through.",
+      "body": "Fourteen young men trained the bench press three days a week for 24 weeks, either continuously or in three 6-week blocks separated by 3-week breaks. Overall gains in muscle cross-section and one-rep max were similar. In a 2024 trial that randomised 55 untrained adults, one group trained 10 weeks, stopped for 10 and trained 10 more, and the other trained 20 weeks straight. Strength and size fell during the break and were regained quickly, with faster gains in the first five weeks back, and both groups finished alike. Both studies used beginners and simple programmes, so they say less about advanced lifters.",
+      "do": [
+        "If life forces a few weeks off, come back and rebuild. The year is not lost."
+      ]
+    },
+    {
+      "id": "rec-muscle-memory-evidence",
+      "type": "note",
+      "title": "Regaining is faster than gaining; why is still argued over",
+      "topic": "layoff",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "halonen-2024",
+        "staron-1991",
+        "rahmati-2022",
+        "cumming-2024",
+        "psilander-2019",
+        "mcdonald-training-after-layoff"
+      ],
+      "take": "Retraining restores lost size and strength quickly. Whether retained muscle nuclei explain it is disputed in human studies.",
+      "body": "In a 2024 trial, strength and size lost over a 10-week break were regained rapidly. Six women who stopped for 30 to 32 weeks after a 20-week programme kept strength above their starting level and lost little fibre size. McDonald's 2009 article calls muscle memory very real and cites the retained-nuclei theory, which has since been contested. A 2022 meta-analysis concluded that human muscle nuclei are lost with atrophy. A 2024 study of 12 adults found nuclei kept over 16 weeks off with no clear benefit for regrowth, and one of 19 adults saw no faster retraining in a previously trained leg.",
+      "do": [
+        "Expect lost ground to return quicker than you first gained it, whatever the mechanism."
+      ]
+    },
+    {
+      "id": "rec-num-return-ratio",
+      "type": "number",
+      "title": "Time to get back after one to two weeks off",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-training-after-layoff"
+      ],
+      "value": "2x",
+      "unit": "the time off",
+      "sort": 2,
+      "take": "McDonald's rule of thumb: two weeks off takes about four weeks to regain. It stops applying once the break reaches a month or more."
+    },
+    {
+      "id": "rec-mistake-restart-old-weights",
+      "type": "mistake",
+      "title": "Restarting at your old weights after months away",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-training-after-layoff",
+        "cheung-2003"
+      ],
+      "take": "Loads from before a long layoff are the quickest route to an injury, or to soreness bad enough to stop you coming back.",
+      "body": "McDonald saw the pattern often in commercial gyms: someone returns after years, loads the bar with a remembered number, and is either hurt or too sore to return. A sports medicine review notes that delayed soreness is most common when athletes resume training after a spell of reduced activity, and that the stiffness and altered movement it causes may raise injury risk if hard training is resumed too soon. After a long layoff the old numbers are history. Muscle may cope with more than tendons and joints can, and connective tissue is the slowest to re-adapt.",
+      "do": [
+        "Leave your old numbers out of the first month back.",
+        "Stop a set well short of failure in the first two weeks."
+      ]
+    },
+    {
+      "id": "rec-return-after-long-layoff",
+      "type": "note",
+      "title": "After months off, restart as a beginner and expect to move faster than one",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-training-after-layoff",
+        "mcdonald-returning-from-my-layoff"
+      ],
+      "take": "McDonald's plan: one light set of each exercise, whole body, at half to 60 percent of old loads, adding a little every few sessions.",
+      "body": "He starts returning lifters with one set, two at most, of eight to ten exercises covering the whole body, at 50 to 60 percent of their former best or lighter. Weight goes up a little every couple of sessions if joints and soreness allow, and a set is added each week. Higher reps keep loads honest for anyone inclined to rush. He expects 6 to 12 weeks to near old loads, and two to three months to regain what first took about six. His own return after about five months off began with 15-minute sessions of one light set of 12 to 15 reps on seven movements, twice a week, and reached four sets by the fifth week.",
+      "do": [
+        "Use a full-body session two or three times a week for the first month.",
+        "Add load or one set per week, never both in the same week."
+      ]
+    },
+    {
+      "id": "rec-num-return-starting-load",
+      "type": "number",
+      "title": "Starting load after a long layoff",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-training-after-layoff"
+      ],
+      "value": "50-60%",
+      "unit": "of previous max",
+      "sort": 50,
+      "take": "McDonald's starting point, or lighter, for the first sessions back after months away, for one or two easy sets per exercise."
+    },
+    {
+      "id": "rec-table-return-by-break",
+      "type": "table",
+      "title": "Coming back after a break: what to expect by time away",
+      "topic": "layoff",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "travis-2022",
+        "hwang-2017",
+        "halonen-2024",
+        "bosquet-2013",
+        "mcdonald-training-after-layoff"
+      ],
+      "take": "Losses grow with time away and return faster than they were built. The restart advice is McDonald's; the losses are from trials.",
+      "columns": [
+        "Time away",
+        "What studies saw",
+        "How to restart",
+        "Rough time to get back"
+      ],
+      "rows": [
+        [
+          "3 to 5 days",
+          "Lower-body strength kept in trained athletes; upper body held at 3 days",
+          "Resume the plan as written",
+          "No time lost; technical lifts may need a session"
+        ],
+        [
+          "About 2 weeks",
+          "Leg press strength unchanged in trained men",
+          "Drop loads back a little and build over a few weeks",
+          "About twice the time off, by McDonald's rule"
+        ],
+        [
+          "About 10 weeks",
+          "Strength and size fell in new lifters, then were regained rapidly on retraining",
+          "Start lighter with fewer sets; add weekly",
+          "Several weeks"
+        ],
+        [
+          "Many months or years",
+          "Losses grow with duration, more so in older and inactive people",
+          "Restart as a beginner at 50 to 60% of old loads or less",
+          "Two to three months to approach old loads"
+        ]
+      ]
+    },
+    {
+      "id": "rec-injury-return-rules",
+      "type": "note",
+      "title": "After an injury, wait a week longer than you think and test one exercise at a time",
+      "topic": "layoff",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-training-after-layoff"
+      ],
+      "take": "McDonald's two rules: when it feels healed, give it another week, then bring back one set of one exercise at a time.",
+      "body": "Motivated lifters judge themselves healed too early. His arithmetic shows the cost. An injury that needed three weeks costs three if you wait, and about five if you return after two and hurt it again. In the first session back he allows a single set of a single exercise that loads the injured area. If it is fine the next day, one more exercise or set is added, so that any pain can be traced to its cause. Whether an injury has healed is a clinical question. Anything beyond a minor strain, or pain that returns, belongs with a doctor or physiotherapist, and rehabilitation exercises may be needed first.",
+      "do": [
+        "Reintroduce one exercise per session for the injured area and check how it feels the next day.",
+        "See a clinician if pain persists, returns or limits daily movement."
+      ]
+    },
+    {
+      "id": "rec-maintenance-dose",
+      "type": "note",
+      "title": "When time is short, a small dose holds most of your strength",
+      "topic": "layoff",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "spiering-2021"
+      ],
+      "take": "A review found younger adults kept strength and size for up to 32 weeks on one session a week and one set per exercise, if loads stayed heavy.",
+      "body": "A 2021 narrative review of maintenance studies concluded that intensity, meaning relative load, is the variable to keep, while frequency and volume can fall a long way. In younger people strength and muscle size held for up to 32 weeks on as little as one weekly session with one set per exercise. Older adults may need two sessions a week and two to three sets to keep muscle size. The authors found too little data to give figures for athletes. A reduced schedule is therefore a better answer to a busy month than stopping. The conditioning area of this guide gives the matching figures for endurance.",
+      "do": [
+        "In a busy period, keep one or two short sessions with your usual loads and cut the sets."
+      ]
+    },
+    {
+      "id": "rec-life-stress-slows-gains",
+      "type": "note",
+      "title": "High life stress slowed strength gains and recovery in students",
+      "topic": "stress",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "bartholomew-2008",
+        "stults-kolehmainen-2014",
+        "mcdonald-overtraining-3"
+      ],
+      "take": "In two student studies, people under more life stress gained less strength in 12 weeks and regained force more slowly after a hard leg session.",
+      "body": "Among 135 undergraduates lifting twice a week for 12 weeks, the low-stress half improved bench press and squat significantly more than the high-stress half. In 31 students given a hard leg press session, higher life-event stress and perceived stress went with slower return of maximal force over the following 96 hours, even after adjusting for fitness, workload and training experience. McDonald's 2010 series gives the coaching version: a plan that suits a calm month can be too much during exams, a breakup or a run of night shifts, with no change to the training itself.",
+      "do": [
+        "In a high-stress stretch, hold or trim training volume and do not add to it.",
+        "Leave an extra day between hard sessions for the same muscles when life is rough."
+      ]
+    },
+    {
+      "id": "rec-num-exam-week-injury",
+      "type": "number",
+      "title": "Injury restrictions in exam weeks against ordinary weeks",
+      "topic": "stress",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mann-2016"
+      ],
+      "value": "1.78",
+      "unit": "odds ratio",
+      "sort": 1.78,
+      "take": "Odds of a player having an injury restriction in weeks of high academic stress, in 101 college football players over a season."
+    },
+    {
+      "id": "rec-term-allostatic-load",
+      "type": "term",
+      "title": "Allostatic load",
+      "topic": "stress",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcewen-2000",
+        "mcdonald-overtraining-3"
+      ],
+      "take": "The cumulative cost to the body of adapting to every stressor it meets. Training, work, short sleep, dieting and emotional strain draw on the same stress response, so they add together."
+    },
+    {
+      "id": "rec-term-under-recovery",
+      "type": "term",
+      "title": "Under-recovery",
+      "topic": "stress",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "kreher-2012",
+        "mcdonald-overtraining-3"
+      ],
+      "take": "A name some prefer to overtraining. It places the fault in too little sleep, food or rest to absorb the training, and not in the training itself, which may be what the goal requires."
+    },
+    {
+      "id": "rec-improve-recovery-before-cutting",
+      "type": "note",
+      "title": "When training cannot come down further, raise recovery",
+      "topic": "stress",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-overtraining-3",
+        "stellingwerff-2021"
+      ],
+      "take": "Every goal needs some minimum amount of training. Once you are near that floor, the lever left is recovery: sleep, food and less outside stress.",
+      "body": "McDonald's argument is that load can only be cut so far before it stops producing the result you train for, and a competitive goal sets that floor much higher than simply taking part. So when someone is not coping, the question is also what limits recovery. Some limits are fixed, such as age, and call for less training. Others can be changed: sleep, naps, enough food, fewer late nights. A 2021 review adds that preventing under-recovery has many parts but that much of it rests on energy and carbohydrate availability. If recovery improves and the load was already borderline, he keeps the load where it is.",
+      "do": [
+        "Before cutting a programme you need, fix sleep length and daily food intake for two weeks."
+      ]
+    },
+    {
+      "id": "rec-term-dietary-restraint",
+      "type": "term",
+      "title": "Cognitive dietary restraint",
+      "topic": "stress",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "mclean-2001",
+        "rideout-2006"
+      ],
+      "take": "The ongoing, deliberate effort to limit eating in order to control body weight, measured by questionnaire. It describes a mindset and does not always mean eating less."
+    },
+    {
+      "id": "rec-restraint-cortisol",
+      "type": "note",
+      "title": "Women who restricted eating most strictly excreted more cortisol",
+      "topic": "stress",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "mclean-2001",
+        "rideout-2006",
+        "mcdonald-restraint-cortisol"
+      ],
+      "take": "In two cross-sectional studies, women with high dietary restraint scores had higher 24-hour urinary cortisol than women with low scores.",
+      "body": "In 62 young women with normal cycles, the 24-hour urinary cortisol to creatinine ratio was 42.9 with high restraint and 36.3 with low. The high scorers also exercised more and ate less, but cortisol was unrelated to exercise, intake or body size. In 78 postmenopausal women, high scorers excreted 248 nmol a day against 204, with no difference in energy intake, exercise or perceived stress. The authors suggest restraint itself may be a stress. Both studies are snapshots and cannot show cause. McDonald's reading is that strict, anxious dieters start with a higher stress load, and hard dieting and training add to it.",
+      "do": [
+        "If you diet strictly and train hard, count the dieting as part of your stress load."
+      ]
+    },
+    {
+      "id": "rec-dieting-is-a-stress",
+      "type": "note",
+      "title": "A calorie deficit counts as stress and lowers what you can recover from",
+      "topic": "stress",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "tomiyama-2010",
+        "nakamura-2016",
+        "murphy-2021",
+        "mcdonald-low-calories-exercise"
+      ],
+      "take": "Calorie restriction raised cortisol in controlled studies, mostly with severe restriction and early on, and deficits blunt what training builds.",
+      "body": "In 121 women, three weeks at 1,200 kcal a day raised total cortisol output. A meta-analysis of 13 studies with 357 participants found cortisol rose with calorie restriction overall, very strongly with fasting and not significantly with less severe diets, and that it returned to baseline after several weeks. A separate meta-analysis found an energy deficit impaired lean-mass gains from lifting while strength gains held. McDonald treats dieting and training as loads on the same account. His suggestion that cortisol stays high through a long diet is a hypothesis, and the pooled data point to an early, passing rise.",
+      "do": [
+        "Do not raise training volume in the same weeks that you start a diet.",
+        "Expect to hold strength on a diet, not to set records."
+      ]
+    },
+    {
+      "id": "rec-mistake-deficit-plus-volume",
+      "type": "mistake",
+      "title": "Pairing a steep calorie deficit with large amounts of hard exercise",
+      "topic": "stress",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-low-calories-exercise",
+        "phinney-1988"
+      ],
+      "take": "McDonald's rule is to cut calories hard or do a lot of activity, not both. The pairing often stalls and wears people down.",
+      "body": "He describes very low intakes with hours of often intense cardio, a stalled scale, and a drop in weight once the person eats a little more or trains a little less. One small inpatient study agrees. Twelve overweight women ate about 720 kcal a day for four to five weeks, and six also did 27 hours of moderate cycling over four weeks. Weight loss was the same, 6.9 against 6.5 kg (15.2 and 14.3 lb), and resting oxygen consumption fell a further 17 percent in the exercisers. Physique competitors do pair low calories with much cardio, but get there over months. Other areas of this guide cover low energy availability.",
+      "do": [
+        "With a large deficit, keep lifting and keep cardio modest.",
+        "If you want a high training load, use a small deficit."
+      ]
+    }
+  ],
+  "sources": {
+    "meeusen-2013": {
+      "type": "position",
+      "authors": [
+        "Meeusen R",
+        "Duclos M",
+        "Foster C",
+        "Fry A",
+        "Gleeson M",
+        "Nieman D",
+        "Raglin J",
+        "Rietjens G",
+        "Steinacker J",
+        "Urhausen A"
+      ],
+      "year": 2013,
+      "title": "Prevention, diagnosis and treatment of the overtraining syndrome: Joint consensus statement of the European College of Sport Science (ECSS) and the American College of Sports Medicine (ACSM)",
+      "journal": "European Journal of Sport Science",
+      "volume": "13",
+      "issue": "1",
+      "pages": "1-24",
+      "doi": "10.1080/17461391.2012.730061",
+      "support": "When athletes do not sufficiently respect the balance between training and recovery, nonfunctional overreaching (NFOR) can occur. The distinction between NFOR and overtraining syndrome (OTS) is very difficult and will depend on the clinical outcome and exclusion diagnosis. Currently, several markers (hormones, performance tests, psychological tests, and biochemical and immune markers) are used, but none of them meet all the criteria to make their use generally accepted."
+    },
+    "carrard-2022": {
+      "type": "systematic-review",
+      "authors": [
+        "Carrard J",
+        "Rigort AC",
+        "Appenzeller-Herzog C",
+        "Colledge F",
+        "Königstein K",
+        "Hinrichs T",
+        "Schmidt-Trucksäss A"
+      ],
+      "year": 2022,
+      "title": "Diagnosing Overtraining Syndrome: A Scoping Review",
+      "journal": "Sports Health: A Multidisciplinary Approach",
+      "volume": "14",
+      "issue": "5",
+      "pages": "665-673",
+      "doi": "10.1177/19417381211044739",
+      "pmid": "34496702",
+      "n_studies": 39,
+      "support": "Overtraining syndrome (OTS) is a condition characterized by a long-term performance decrement, which occurs after a persisting imbalance between training-related and nontraining-related load and recovery. Because of the lack of a gold standard diagnostic test, OTS remains a diagnosis of exclusion."
+    },
+    "kreher-2012": {
+      "type": "review",
+      "authors": [
+        "Kreher JB",
+        "Schwartz JB"
+      ],
+      "year": 2012,
+      "title": "Overtraining Syndrome",
+      "journal": "Sports Health: A Multidisciplinary Approach",
+      "volume": "4",
+      "issue": "2",
+      "pages": "128-138",
+      "doi": "10.1177/1941738111434406",
+      "pmid": "23016079",
+      "support": "OTS remains a clinical diagnosis with arbitrary definitions per the European College of Sports Science's position statement. Full text: overreaching requires days to weeks for recovery; nonfunctional overreaching weeks to months; treatment of NFO and OTS is rest."
+    },
+    "halson-2004": {
+      "type": "review",
+      "authors": [
+        "Halson SL",
+        "Jeukendrup AE"
+      ],
+      "year": 2004,
+      "title": "Does Overtraining Exist?",
+      "journal": "Sports Medicine",
+      "volume": "34",
+      "issue": "14",
+      "pages": "967-981",
+      "doi": "10.2165/00007256-200434140-00003",
+      "pmid": "15571428",
+      "support": "Overreaching occurs as a result of intensified training and is often considered a normal outcome for elite athletes due to the relatively short time needed for recovery (approximately 2 weeks). As the time needed to recover from the overtraining syndrome is considered to be much longer (months to years), it may not be appropriate to compare the two states. There is currently no evidence aside from anecdotal information to suggest that overreaching precedes overtraining."
+    },
+    "mcdonald-overtraining-1": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Overtraining, Overreaching and all the Rest Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/guide-to-overtraining-overreaching",
+      "retrieved": "2026-11-15",
+      "support": "Backs the points that the overreaching or overtraining label is only known afterwards, that planned hard blocks must be short with recovery after, that elite loads take years to build, and that less is the safer error."
+    },
+    "mcdonald-overtraining-3": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Overtraining, Overreaching and all the Rest Part 3",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3",
+      "retrieved": "2026-11-15",
+      "support": "Backs the stress-against-recovery framing, the minimum training dose argument, the role of job, exam and relationship stress, and his estimate that the syndrome needs months of imbalance."
+    },
+    "grandou-2020": {
+      "type": "systematic-review",
+      "authors": [
+        "Grandou C",
+        "Wallace L",
+        "Impellizzeri FM",
+        "Allen NG",
+        "Coutts AJ"
+      ],
+      "year": 2020,
+      "title": "Overtraining in Resistance Exercise: An Exploratory Systematic Review and Methodological Appraisal of the Literature",
+      "journal": "Sports Medicine",
+      "volume": "50",
+      "issue": "4",
+      "pages": "815-828",
+      "doi": "10.1007/s40279-019-01242-2",
+      "pmid": "31820373",
+      "n_studies": 22,
+      "support": "A total of 22 studies were selected for review. Among these studies, eight resulted in decrements in performance and measured changes in performance during a follow-up period. A total of 10 studies reported no decline in performance. No marker other than a sustained decrease in performance has been established as a reliable indicator of overtraining in resistance exercise."
+    },
+    "bell-2020": {
+      "type": "review",
+      "authors": [
+        "Bell L",
+        "Ruddock A",
+        "Maden-Wilkinson T",
+        "Rogerson D"
+      ],
+      "year": 2020,
+      "title": "Overreaching and overtraining in strength sports and resistance training: A scoping review",
+      "journal": "Journal of Sports Sciences",
+      "volume": "38",
+      "issue": "16",
+      "pages": "1897-1912",
+      "doi": "10.1080/02640414.2020.1763077",
+      "pmid": "32602418",
+      "n_studies": 47,
+      "support": "Short-term periods of OR achieved with either high-volume or high-intensity RT can elicit functional OR (FOR) but there is also evidence that chronic high-volume and/or intensity RT can lead to non-functional overreaching (NFOR). There is minimal evidence to suggest that true OTS has occurred in strength sports or RT based on the studies entered during this review."
+    },
+    "aubry-2014": {
+      "type": "trial",
+      "authors": [
+        "Aubry A",
+        "Hausswirth C",
+        "Louis J",
+        "Coutts AJ",
+        "Le Meur Y"
+      ],
+      "year": 2014,
+      "title": "Functional Overreaching",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "46",
+      "issue": "9",
+      "pages": "1769-1777",
+      "doi": "10.1249/mss.0000000000000301",
+      "pmid": "25134000",
+      "n_participants": 33,
+      "support": "Eleven of the 23 subjects from the OT group were diagnosed as functionally overreached (F-OR) after the overload period, whereas the 12 other subjects were only acutely fatigued (AF). The AF group demonstrated a small to large greater peak performance supercompensation than the F-OR group (2.6% +/- 1.1%). Ten cases of infection were reported during the study with higher prevalence in F-OR (70%) than that in AF (20%) and CTL (10%)."
+    },
+    "bellinger-2020": {
+      "type": "review",
+      "authors": [
+        "Bellinger P"
+      ],
+      "year": 2020,
+      "title": "Functional Overreaching in Endurance Athletes: A Necessity or Cause for Concern?",
+      "journal": "Sports Medicine",
+      "volume": "50",
+      "issue": "6",
+      "pages": "1059-1073",
+      "doi": "10.1007/s40279-020-01269-w",
+      "pmid": "32064575",
+      "support": "Recent studies have demonstrated dampened training and performance adaptations in FOR athletes compared to non-overreached athletes who completed the same training program or the same relative increase in training load. However, this is not always the case and a number of studies have also demonstrated substantial performance super-compensation in athletes who were classified as being FOR."
+    },
+    "mcdonald-overtraining-4": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Overtraining, Overreaching and all the Rest Part 4",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4",
+      "retrieved": "2026-11-15",
+      "support": "Backs the account of the older sympathetic and parasympathetic typology, the rejection of a clean central and peripheral split, and his reading of the cytokine model of overtraining."
+    },
+    "matos-2011": {
+      "type": "cohort",
+      "authors": [
+        "Matos NF",
+        "Winsley RJ",
+        "Williams CA"
+      ],
+      "year": 2011,
+      "title": "Prevalence of Nonfunctional Overreaching/Overtraining in Young English Athletes",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "43",
+      "issue": "7",
+      "pages": "1287-1294",
+      "doi": "10.1249/mss.0b013e318207f87b",
+      "pmid": "21131861",
+      "n_participants": 376,
+      "support": "One hundred ten athletes (29%) reported having been NFOR/OT at least once. Training load was not a significant predictor of NFOR/OT. OT is not solely a training load-related problem with both physical and psychosocial factors identified as important contributors."
+    },
+    "smith-2000": {
+      "type": "review",
+      "authors": [
+        "Smith LL"
+      ],
+      "year": 2000,
+      "title": "Cytokine hypothesis of overtraining: a physiological adaptation to excessive stress?",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "32",
+      "issue": "2",
+      "pages": "317",
+      "doi": "10.1097/00005768-200002000-00011",
+      "pmid": "10694113",
+      "support": "It is argued that high volume/intensity training, with insufficient rest, will produce muscle and/or skeletal and/or joint trauma. Elevated circulating cytokines then co-ordinate the whole-body response by communicating with the CNS and inducing a set of behaviors referred to as sickness behavior, which involves mood and behavior changes."
+    },
+    "cheng-2020": {
+      "type": "review",
+      "authors": [
+        "Cheng AJ",
+        "Jude B",
+        "Lanner JT"
+      ],
+      "year": 2020,
+      "title": "Intramuscular mechanisms of overtraining",
+      "journal": "Redox Biology",
+      "volume": "35",
+      "pages": "101480",
+      "doi": "10.1016/j.redox.2020.101480",
+      "pmid": "32179050",
+      "support": "Current data implicates reactive oxygen and nitrogen species (ROS) and inflammatory pathways as the most likely mechanisms contributing to OTS in skeletal muscle."
+    },
+    "mcdonald-overtraining-6": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Overtraining, Overeaching and all the Rest Part 6",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6",
+      "retrieved": "2026-11-15",
+      "support": "Backs the morning heart rate method and rule of thumb, his 2010 view of HRV, reaction and jump checks, self-report with a coach's eye, and his plan for resting, eating and rebuilding after a long slump."
+    },
+    "stellingwerff-2021": {
+      "type": "review",
+      "authors": [
+        "Stellingwerff T",
+        "Heikura IA",
+        "Meeusen R",
+        "Bermon S",
+        "Seiler S",
+        "Mountjoy ML",
+        "Burke LM"
+      ],
+      "year": 2021,
+      "title": "Overtraining Syndrome (OTS) and Relative Energy Deficiency in Sport (RED-S): Shared Pathways, Symptoms and Complexities",
+      "journal": "Sports Medicine",
+      "volume": "51",
+      "issue": "11",
+      "pages": "2251-2280",
+      "doi": "10.1007/s40279-021-01491-0",
+      "pmid": "34181189",
+      "support": "Eighteen of the 21 studies (86%) that met our criteria showed indications of an EA decrease or difference between two cohorts within a given study (n = 14 studies) or CHO availability decrease (n = 4 studies) during the training-overload/OTS period, resulting in both training-overload/OTS and RED-S symptom outcomes compared to control conditions."
+    },
+    "mcdonald-overtraining-2": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Overtraining, Overreaching and all the Rest Part 2",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2",
+      "retrieved": "2026-11-15",
+      "support": "Backs judging by a trend in performance and effort and not by one session, the point that lab markers are impractical, and the view that submaximal work can be ground through while maximal work fails outright."
+    },
+    "saw-2016": {
+      "type": "systematic-review",
+      "authors": [
+        "Saw AE",
+        "Main LC",
+        "Gastin PB"
+      ],
+      "year": 2016,
+      "title": "Monitoring the athlete training response: subjective self-reported measures trump commonly used objective measures: a systematic review",
+      "journal": "British Journal of Sports Medicine",
+      "volume": "50",
+      "issue": "5",
+      "pages": "281-291",
+      "doi": "10.1136/bjsports-2015-094758",
+      "pmid": "26423706",
+      "n_studies": 56,
+      "support": "Fifty-six original studies reported concurrent subjective and objective measures of athlete well-being. Subjective measures reflected acute and chronic training loads with superior sensitivity and consistency than objective measures."
+    },
+    "hausswirth-2014": {
+      "type": "rct",
+      "authors": [
+        "Hausswirth C",
+        "Louis J",
+        "Aubry A",
+        "Bonnet G",
+        "Duffield R",
+        "Le Meur Y"
+      ],
+      "year": 2014,
+      "title": "Evidence of Disturbed Sleep and Increased Illness in Overreached Endurance Athletes",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "46",
+      "issue": "5",
+      "pages": "1036-1045",
+      "doi": "10.1249/mss.0000000000000177",
+      "pmid": "24091995",
+      "n_participants": 27,
+      "support": "Only the F-OR group demonstrated a decrease in these three parameters (-7.9% +/- 6.7%, -1.6% +/- 0.7%, and -7.6% +/- 6.6% for SD, SE, and IT, respectively), which was reversed during the subsequent taper phase. Higher prevalence of upper respiratory tract infections were also reported in F-OR (67%, 22%, and 11% incidence rate for F-OR, AF, and CTL, respectively)."
+    },
+    "bellenger-2016": {
+      "type": "meta-analysis",
+      "authors": [
+        "Bellenger CR",
+        "Fuller JT",
+        "Thomson RL",
+        "Davison K",
+        "Robertson EY",
+        "Buckley JD"
+      ],
+      "year": 2016,
+      "title": "Monitoring Athletic Training Status Through Autonomic Heart Rate Regulation: A Systematic Review and Meta-Analysis",
+      "journal": "Sports Medicine",
+      "volume": "46",
+      "issue": "10",
+      "pages": "1461-1486",
+      "doi": "10.1007/s40279-016-0484-2",
+      "pmid": "26888648",
+      "n_studies": 24,
+      "support": "Increases in post-exercise HRV and HRR also occur in response to overreaching, demonstrating that additional measures of training tolerance may be required to determine whether training-induced changes in these parameters are related to positive or negative adaptations. Resting HRV is largely unaffected by overreaching, although this may be the result of methodological issues that warrant further investigation."
+    },
+    "manresa-rocamora-2021": {
+      "type": "meta-analysis",
+      "authors": [
+        "Manresa-Rocamora A",
+        "Sarabia JM",
+        "Javaloyes A",
+        "Flatt AA",
+        "Moya-Ramón M"
+      ],
+      "year": 2021,
+      "title": "Heart Rate Variability-Guided Training for Enhancing Cardiac-Vagal Modulation, Aerobic Fitness, and Endurance Performance: A Methodological Systematic Review with Meta-Analysis",
+      "journal": "International Journal of Environmental Research and Public Health",
+      "volume": "18",
+      "issue": "19",
+      "pages": "10299",
+      "doi": "10.3390/ijerph181910299",
+      "pmid": "34639599",
+      "support": "If HRV-guided training is superior to predefined training for producing group-level improvements in fitness and performance, current data suggest it is only by a small margin."
+    },
+    "duking-2021": {
+      "type": "meta-analysis",
+      "authors": [
+        "Düking P",
+        "Zinner C",
+        "Trabelsi K",
+        "Reed JL",
+        "Holmberg HC",
+        "Kunz P",
+        "Sperlich B"
+      ],
+      "year": 2021,
+      "title": "Monitoring and adapting endurance training on the basis of heart rate variability monitored by wearable technologies: A systematic review with meta-analysis",
+      "journal": "Journal of Science and Medicine in Sport",
+      "volume": "24",
+      "issue": "11",
+      "pages": "1180-1192",
+      "doi": "10.1016/j.jsams.2021.04.012",
+      "pmid": "34489178",
+      "n_studies": 8,
+      "n_participants": 198,
+      "support": "A total of 8 studies (198 participants) were identified. In comparison to predefined training, HRV-guided endurance training had a medium-sized effect on submaximal physiological parameters, but only a small and non-significant influence on performance and VO2peak. There were fewer non-responders regarding performance with HRV-based training."
+    },
+    "de-oliveira-2019": {
+      "type": "rct",
+      "authors": [
+        "De Oliveira RM",
+        "Ugrinowitsch C",
+        "Kingsley JD",
+        "Da Silva DG",
+        "Bittencourt D",
+        "Caruso FR",
+        "Borghi-Silva A",
+        "Libardi CA"
+      ],
+      "year": 2019,
+      "title": "Effect of individualized resistance training prescription with heart rate variability on individual muscle hypertrophy and strength responses",
+      "journal": "European Journal of Sport Science",
+      "volume": "19",
+      "issue": "8",
+      "pages": "1092-1100",
+      "doi": "10.1080/17461391.2019.1572227",
+      "pmid": "30702985",
+      "n_participants": 20,
+      "support": "Twenty young men were randomized in the RT-IND and RT-FIX groups. 1-RM values increased significantly from pre to post-training for both groups (RT-IND: 30% and RT-FIX: 42%), with no significant difference between groups. Muscle CSA increased significantly (RT-IND: 15.7% and RT-FIX: 15.8%), with no significant difference between groups."
+    },
+    "duignan-2020": {
+      "type": "systematic-review",
+      "authors": [
+        "Duignan C",
+        "Doherty C",
+        "Caulfield B",
+        "Blake C"
+      ],
+      "year": 2020,
+      "title": "Single-Item Self-Report Measures of Team-Sport Athlete Wellbeing and Their Relationship With Training Load: A Systematic Review",
+      "journal": "Journal of Athletic Training",
+      "volume": "55",
+      "issue": "9",
+      "pages": "944-953",
+      "doi": "10.4085/1062-6050-0528.19",
+      "pmid": "32991706",
+      "n_studies": 21,
+      "support": "A total of 21 studies were included in the analysis. The measures used most frequently were muscle soreness, fatigue, sleep quality, stress, and mood. All measures presented various relationships with metrics of training load from no association to a very large association."
+    },
+    "mcdonald-overtraining-5": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Overtraining, Overeaching and all the Rest Part 5",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5",
+      "retrieved": "2026-11-15",
+      "support": "Backs the weekly day off, the cap on truly hard days, the planned five-day and yearly breaks, and the rule of using the warm-up to decide a doubtful session."
+    },
+    "claudino-2017": {
+      "type": "meta-analysis",
+      "authors": [
+        "Claudino JG",
+        "Cronin J",
+        "Mezêncio B",
+        "McMaster DT",
+        "McGuigan M",
+        "Tricoli V",
+        "Amadio AC",
+        "Serrão JC"
+      ],
+      "year": 2017,
+      "title": "The countermovement jump to monitor neuromuscular status: A meta-analysis",
+      "journal": "Journal of Science and Medicine in Sport",
+      "volume": "20",
+      "issue": "4",
+      "pages": "397-402",
+      "doi": "10.1016/j.jsams.2016.08.011",
+      "pmid": "27663764",
+      "n_studies": 151,
+      "support": "151 articles were included providing a total of 531 ESs for the meta-analyses. Based on the meta-analysis, average CMJ height was more sensitive than highest CMJ height in detecting CMJ fatigue and supercompensation."
+    },
+    "nederhof-2006": {
+      "type": "review",
+      "authors": [
+        "Nederhof E",
+        "Lemmink KAPM",
+        "Visscher C",
+        "Meeusen R",
+        "Mulder T"
+      ],
+      "year": 2006,
+      "title": "Psychomotor Speed",
+      "journal": "Sports Medicine",
+      "volume": "36",
+      "issue": "10",
+      "pages": "817-828",
+      "doi": "10.2165/00007256-200636100-00001",
+      "pmid": "17004845",
+      "support": "NFO and OTS could be prevented using early markers, which should be objective, not manipulable, applicable in training practice, not too demanding, affordable and should be based on a sound theoretical framework. No such markers exist up to today. It is proposed that psychomotor speed might be such a marker."
+    },
+    "mcdonald-supercompensation": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2019,
+      "title": "The Facts About Supercompensation of Training",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/supercompensation-of-training",
+      "retrieved": "2026-11-15",
+      "support": "Backs the argument that deplete-and-overshoot fits glycogen only, that fitness and fatigue is the better description, and that sessions overlap without full recovery; also his criticism of the general adaptation syndrome."
+    },
+    "hellard-2006": {
+      "type": "cohort",
+      "authors": [
+        "Hellard P",
+        "Avalos M",
+        "Lacoste L",
+        "Barale F",
+        "Chatard JC",
+        "Millet GP"
+      ],
+      "year": 2006,
+      "title": "Assessing the limitations of the Banister model in monitoring training",
+      "journal": "Journal of Sports Sciences",
+      "volume": "24",
+      "issue": "5",
+      "pages": "509-520",
+      "doi": "10.1080/02640410500244697",
+      "pmid": "16608765",
+      "n_participants": 9,
+      "support": "The training loads of nine elite swimmers, measured over one season, were related to performances with the Banister model. Performances were related to training loads for all participants (R2 = 0.79 +/- 0.13). Nevertheless, the range of 95% CI values of the most useful parameters for monitoring training was wide."
+    },
+    "buckner-2020": {
+      "type": "review",
+      "authors": [
+        "Buckner SL",
+        "Jessee MB",
+        "Mouser JG",
+        "Dankel SJ",
+        "Mattocks KT",
+        "Bell ZW",
+        "Abe T",
+        "Loenneke JP"
+      ],
+      "year": 2020,
+      "title": "The Basics of Training for Muscle Size and Strength: A Brief Review on the Theory",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "52",
+      "issue": "3",
+      "pages": "645-653",
+      "doi": "10.1249/mss.0000000000002171",
+      "pmid": "31652235",
+      "support": "Hans Selye conducted a series of rodent studies which used toxic stressors to facilitate the development of the general adaptation syndrome. To our knowledge, normal exercise in humans has never been shown to produce a general adaptation syndrome."
+    },
+    "cunanan-2018": {
+      "type": "review",
+      "authors": [
+        "Cunanan AJ",
+        "DeWeese BH",
+        "Wagle JP",
+        "Carroll KM",
+        "Sausaman R",
+        "Hornsby WG",
+        "Haff GG",
+        "Triplett NT",
+        "Pierce KC",
+        "Stone MH"
+      ],
+      "year": 2018,
+      "title": "The General Adaptation Syndrome: A Foundation for the Concept of Periodization",
+      "journal": "Sports Medicine",
+      "volume": "48",
+      "issue": "4",
+      "pages": "787-797",
+      "doi": "10.1007/s40279-017-0855-3",
+      "pmid": "29307100",
+      "support": "Disturbance to the state of an organism is the driving force for biological adaptation, which is the central thesis of the GAS model and the primary basis for its application to the athlete's training process. Despite its imprecisions, the GAS has proven to be an instructive framework."
+    },
+    "kataoka-2022": {
+      "type": "review",
+      "authors": [
+        "Kataoka R",
+        "Vasenina E",
+        "Hammert WB",
+        "Ibrahim AH",
+        "Dankel SJ",
+        "Buckner SL"
+      ],
+      "year": 2022,
+      "title": "Is there Evidence for the Suggestion that Fatigue Accumulates Following Resistance Exercise?",
+      "journal": "Sports Medicine",
+      "volume": "52",
+      "issue": "1",
+      "pages": "25-36",
+      "doi": "10.1007/s40279-021-01572-0",
+      "pmid": "34613589",
+      "support": "Overall, evidence for the presence of fatigue accumulation with resistance training is equivocal, making it difficult to draw the conclusion that fatigue accumulates."
+    },
+    "damas-2016-synthesis": {
+      "type": "trial",
+      "authors": [
+        "Damas F",
+        "Phillips SM",
+        "Libardi CA",
+        "Vechin FC",
+        "Lixandrão ME",
+        "Jannig PR",
+        "Costa LAR",
+        "Bacurau AV",
+        "Snijders T",
+        "Parise G",
+        "Tricoli V",
+        "Roschel H",
+        "Ugrinowitsch C"
+      ],
+      "year": 2016,
+      "title": "Resistance training-induced changes in integrated myofibrillar protein synthesis are related to hypertrophy only after attenuation of muscle damage",
+      "journal": "The Journal of Physiology",
+      "volume": "594",
+      "issue": "18",
+      "pages": "5209-5222",
+      "doi": "10.1113/jp272472",
+      "pmid": "27219125",
+      "n_participants": 10,
+      "support": "Muscle damage (Z-band streaming) was the highest during post-RE recovery at T1, lower at T2 and minimal at T3. When muscle damage was the highest, so was the integrated MyoPS (at T1), but neither were related to hypertrophy; however, integrated MyoPS at T2 and T3 were correlated with hypertrophy."
+    },
+    "kiely-2018": {
+      "type": "review",
+      "authors": [
+        "Kiely J"
+      ],
+      "year": 2018,
+      "title": "Periodization Theory: Confronting an Inconvenient Truth",
+      "journal": "Sports Medicine",
+      "volume": "48",
+      "issue": "4",
+      "pages": "753-764",
+      "doi": "10.1007/s40279-017-0823-y",
+      "pmid": "29189930",
+      "support": "If the original scientific platform upon which periodization theory was founded has disintegrated, should we critically re-evaluate conventional perspectives through an updated conceptual lens?"
+    },
+    "mcdonald-importance-of-rest": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2007,
+      "title": "The Importance of Rest",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/the-importance-of-rest",
+      "retrieved": "2026-11-15",
+      "support": "Backs one full rest day a week for everyone, three to four training days for most recreational lifters, and breaks of five days or more after long training blocks."
+    },
+    "mcdonald-active-passive-recovery": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Active Versus Passive Recovery",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/active-rest-vs-passive-rest",
+      "retrieved": "2026-11-15",
+      "support": "Backs the definitions of active and passive rest, his volume and intensity guide for an easy session, its use for technique, and the warning that easy days drift into workouts."
+    },
+    "dupuy-2018": {
+      "type": "meta-analysis",
+      "authors": [
+        "Dupuy O",
+        "Douzi W",
+        "Theurot D",
+        "Bosquet L",
+        "Dugué B"
+      ],
+      "year": 2018,
+      "title": "An Evidence-Based Approach for Choosing Post-exercise Recovery Techniques to Reduce Markers of Muscle Damage, Soreness, Fatigue, and Inflammation: A Systematic Review With Meta-Analysis",
+      "journal": "Frontiers in Physiology",
+      "volume": "9",
+      "doi": "10.3389/fphys.2018.00403",
+      "pmid": "29755363",
+      "n_studies": 99,
+      "support": "Overall, 99 studies were included. Active recovery, massage, compression garments, immersion, contrast water therapy, and cryotherapy induced a small to large decrease (-2.26 < g < -0.40) in the magnitude of DOMS, while there was no change for the other methods. Massage was found to be the most powerful technique for recovering from DOMS and fatigue."
+    },
+    "ortiz-2019": {
+      "type": "systematic-review",
+      "authors": [
+        "Ortiz RO",
+        "Sinclair Elder AJ",
+        "Elder CL",
+        "Dawes JJ"
+      ],
+      "year": 2019,
+      "title": "A Systematic Review on the Effectiveness of Active Recovery Interventions on Athletic Performance of Professional-, Collegiate-, and Competitive-Level Adult Athletes",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "33",
+      "issue": "8",
+      "pages": "2275-2287",
+      "doi": "10.1519/jsc.0000000000002589",
+      "pmid": "29742750",
+      "n_studies": 26,
+      "n_participants": 471,
+      "support": "Twenty-six articles involving 471 subjects remained after full analysis. The review suggests that there are positive psychological outcomes from AR sessions, a need to determine if AR should be individualized in its application, and weak evidence regarding the efficacy of postexercise AR, particularly relating to performance."
+    },
+    "rogerson-2024": {
+      "type": "other",
+      "authors": [
+        "Rogerson D",
+        "Nolan D",
+        "Korakakis PA",
+        "Immonen V",
+        "Wolf M",
+        "Bell L"
+      ],
+      "year": 2024,
+      "title": "Deloading Practices in Strength and Physique Sports: A Cross-sectional Survey",
+      "journal": "Sports Medicine - Open",
+      "volume": "10",
+      "issue": "1",
+      "pages": "26",
+      "doi": "10.1186/s40798-024-00691-y",
+      "pmid": "38499934",
+      "n_participants": 246,
+      "support": "The typical duration of a deload was 6.4 ± 1.7 days, integrated into the training programme every 5.6 ± 2.3 weeks."
+    },
+    "mcdonald-hard-easy": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Keep the Hard Days Hard and the Easy Days Easy: Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy",
+      "retrieved": "2026-11-15",
+      "support": "Backs the argument that easy days done too hard pull the whole week toward medium effort, and that hard and easy periods alternate over days, weeks and blocks."
+    },
+    "foster-1998": {
+      "type": "cohort",
+      "authors": [
+        "Foster C"
+      ],
+      "year": 1998,
+      "title": "Monitoring training in athletes with reference to overtraining syndrome",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "30",
+      "issue": "7",
+      "pages": "1164-1168",
+      "doi": "10.1097/00005768-199807000-00023",
+      "pmid": "9662690",
+      "n_participants": 25,
+      "support": "Studies in animal models have suggested that unremittingly heavy training (monotonous training) may increase the likelihood of developing overtraining syndrome. It was observed that a high percentage of illnesses could be accounted for when individual athletes exceeded individually identifiable training thresholds, mostly related to the strain of training."
+    },
+    "mcdonald-hlm": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Heavy Light Medium Training",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/heavy-light-medium-training",
+      "retrieved": "2026-11-15",
+      "support": "Backs the description of heavy, light and medium days, the load ranges for the lighter days, the ways to lighten a day, and the options for ordering and staggering the heavy work."
+    },
+    "moran-navarro-2017": {
+      "type": "trial",
+      "authors": [
+        "Morán-Navarro R",
+        "Pérez CE",
+        "Mora-Rodríguez R",
+        "de la Cruz-Sánchez E",
+        "González-Badillo JJ",
+        "Sánchez-Medina L",
+        "Pallarés JG"
+      ],
+      "year": 2017,
+      "title": "Time course of recovery following resistance training leading or not to failure",
+      "journal": "European Journal of Applied Physiology",
+      "volume": "117",
+      "issue": "12",
+      "pages": "2387-2399",
+      "doi": "10.1007/s00421-017-3725-7",
+      "pmid": "28965198",
+      "n_participants": 10,
+      "support": "Ten resistance-trained men undertook three RT protocols. Recovery from the 3 x 5(10) and 6 x 5(10) protocols was significantly faster between 24 and 48 h post-exercise compared to 3 x 10(10). Training to failure slows down recovery up to 24-48 h post-exercise."
+    },
+    "mcdonald-two-a-day-1": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2014,
+      "title": "Two a Day Training in the Weight Room Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/two-a-day-training-weight-room",
+      "retrieved": "2026-11-15",
+      "support": "Backs his reasons for training the same muscles twice in a day, the four to six hour gap, the short starting sessions and the rule that one session is heavy and the other light."
+    },
+    "hartman-2007-twice": {
+      "type": "rct",
+      "authors": [
+        "Hartman MJ",
+        "Clark B",
+        "Bemben DA",
+        "Kilgore JL",
+        "Bemben MG"
+      ],
+      "year": 2007,
+      "title": "Comparisons Between Twice-Daily and Once-Daily Training Sessions in Male Weight Lifters",
+      "journal": "International Journal of Sports Physiology and Performance",
+      "volume": "2",
+      "issue": "2",
+      "pages": "159-169",
+      "doi": "10.1123/ijspp.2.2.159",
+      "pmid": "19124903",
+      "n_participants": 10,
+      "support": "Ten nationally competitive male weightlifters were randomly assigned to train either once or twice daily for 3 wk. There were no additional benefits from increased daily training frequency in national-level male weightlifters, but the increase in ISO and EMG activity for the twice-daily group might provide some rationale for dividing training load."
+    },
+    "correa-2022": {
+      "type": "rct",
+      "authors": [
+        "Corrêa DA",
+        "Brigatto FA",
+        "Braz TV",
+        "De Carmargo JB",
+        "Aoki MS",
+        "Marchetti PH",
+        "Lopes CR"
+      ],
+      "year": 2022,
+      "title": "Twice-daily sessions result in a greater muscle strength and a similar muscle hypertrophy compared to once-daily session in resistance-trained men",
+      "journal": "The Journal of Sports Medicine and Physical Fitness",
+      "volume": "62",
+      "issue": "3",
+      "doi": "10.23736/s0022-4707.21.12118-8",
+      "pmid": "33634677",
+      "n_participants": 23,
+      "support": "The increase in 1RM back squat was significantly greater in 2S (16.1%) compared to 1S (7.8%). Both groups significantly increased bench press 1RM, back squat 60% 1RM, bench press 60% 1RM and all MT outcomes, with no differences between experimental groups."
+    },
+    "hansen-2005": {
+      "type": "trial",
+      "authors": [
+        "Hansen AK",
+        "Fischer CP",
+        "Plomgaard P",
+        "Andersen JL",
+        "Saltin B",
+        "Pedersen BK"
+      ],
+      "year": 2005,
+      "title": "Skeletal muscle adaptation: training twice every second day vs. training once daily",
+      "journal": "Journal of Applied Physiology",
+      "volume": "98",
+      "issue": "1",
+      "pages": "93-99",
+      "doi": "10.1152/japplphysiol.00163.2004",
+      "pmid": "15361516",
+      "n_participants": 7,
+      "support": "Seven healthy untrained men performed knee extensor exercise with one leg trained in a low-glycogen (Low) protocol and the other leg trained at a high-glycogen (High) protocol. Time until exhaustion at 90% was markedly more increased in the Low leg compared with the High leg. The present study suggests that training twice every second day may be superior to daily training."
+    },
+    "mcdonald-two-a-day-2": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2014,
+      "title": "Two a Day Training in the Weight Room Part 2",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/two-a-day-training-weight-room-2",
+      "retrieved": "2026-11-15",
+      "support": "Backs the points that the gap between sessions is flexible and that which session is heavy depends on the lifter and the time of day."
+    },
+    "mcdonald-six-days": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Lifting 6 Days Per Week for Mass Gains",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week",
+      "retrieved": "2026-11-15",
+      "support": "Backs the six-day layout: an upper and lower rotation, a few work sets per session, reps kept in reserve early in the week, and a periodic unloading."
+    },
+    "colquhoun-2018": {
+      "type": "rct",
+      "authors": [
+        "Colquhoun RJ",
+        "Gai CM",
+        "Aguilar D",
+        "Bove D",
+        "Dolan J",
+        "Vargas A",
+        "Couvillion K",
+        "Jenkins NDM",
+        "Campbell BI"
+      ],
+      "year": 2018,
+      "title": "Training Volume, Not Frequency, Indicative of Maximal Strength Adaptations to Resistance Training",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "32",
+      "issue": "5",
+      "pages": "1207-1213",
+      "doi": "10.1519/jsc.0000000000002414",
+      "pmid": "29324578",
+      "n_participants": 28,
+      "support": "Twenty-eight young, healthy resistance-trained men were randomly assigned to either 3x per week or 6x per week. It seems that increased training frequency does not lead to additional strength improvements when volume and intensity are equated."
+    },
+    "cheung-2003": {
+      "type": "review",
+      "authors": [
+        "Cheung K",
+        "Hume PA",
+        "Maxwell L"
+      ],
+      "year": 2003,
+      "title": "Delayed Onset Muscle Soreness",
+      "journal": "Sports Medicine",
+      "volume": "33",
+      "issue": "2",
+      "pages": "145-164",
+      "doi": "10.2165/00007256-200333020-00005",
+      "pmid": "12617692",
+      "support": "DOMS is most prevalent at the beginning of the sporting season when athletes are returning to training following a period of reduced activity. DOMS can affect athletic performance by causing a reduction in joint range of motion, shock attenuation and peak torque."
+    },
+    "mcdonald-doms": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "DOMS and Muscle Growth",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/doms-muscle-growth",
+      "retrieved": "2026-11-15",
+      "support": "Backs his observations that soreness is worst when growth is least, that muscles trained more often get less sore yet grow, and that damage beyond a moderate amount works against progress."
+    },
+    "mchugh-2003": {
+      "type": "review",
+      "authors": [
+        "McHugh MP"
+      ],
+      "year": 2003,
+      "title": "Recent advances in the understanding of the repeated bout effect: the protective effect against muscle damage from a single bout of eccentric exercise",
+      "journal": "Scandinavian Journal of Medicine & Science in Sports",
+      "volume": "13",
+      "issue": "2",
+      "pages": "88-97",
+      "doi": "10.1034/j.1600-0838.2003.02477.x",
+      "pmid": "12641640",
+      "support": "The repeated bout effect refers to the adaptation whereby a single bout of eccentric exercise protects against muscle damage from subsequent eccentric bouts."
+    },
+    "chen-2006": {
+      "type": "rct",
+      "authors": [
+        "Chen TC",
+        "Nosaka K"
+      ],
+      "year": 2006,
+      "title": "Responses of Elbow Flexors to Two Strenuous Eccentric Exercise Bouts Separated by Three Days",
+      "journal": "The Journal of Strength and Conditioning Research",
+      "volume": "20",
+      "issue": "1",
+      "pages": "108",
+      "doi": "10.1519/r-16634.1",
+      "pmid": "16503669",
+      "n_participants": 51,
+      "support": "Fifty-one athletes performed 30 eccentric actions of the elbow flexors. No significant differences between the control group and other groups indicate that the second eccentric exercise performed 3 days after the initial bout does not exacerbate muscle damage and retard the recovery regardless of the intensity of the second bout."
+    },
+    "nosaka-2002": {
+      "type": "trial",
+      "authors": [
+        "Nosaka K",
+        "Newton M",
+        "Sacco P"
+      ],
+      "year": 2002,
+      "title": "Delayed‐onset muscle soreness does not reflect the magnitude of eccentric exercise‐induced muscle damage",
+      "journal": "Scandinavian Journal of Medicine & Science in Sports",
+      "volume": "12",
+      "issue": "6",
+      "pages": "337-346",
+      "doi": "10.1034/j.1600-0838.2002.10178.x",
+      "pmid": "12453160",
+      "n_participants": 110,
+      "support": "Male students (n = 110) performed 12 (12ECC), 24 (24ECC), or 60 maximal eccentric actions of the elbow flexors (60ECC). Because of generally poor correlations between DOMS and other indicators, we conclude that use of DOMS is a poor reflector of eccentric exercise-induced muscle damage and inflammation, and changes in indirect markers of muscle damage and inflammation are not necessarily accompanied with DOMS."
+    },
+    "rawson-2017": {
+      "type": "review",
+      "authors": [
+        "Rawson ES",
+        "Clarkson PM",
+        "Tarnopolsky MA"
+      ],
+      "year": 2017,
+      "title": "Perspectives on Exertional Rhabdomyolysis",
+      "journal": "Sports Medicine",
+      "volume": "47",
+      "issue": "S1",
+      "pages": "33-49",
+      "doi": "10.1007/s40279-017-0689-z",
+      "pmid": "28332112",
+      "support": "Exertional (exercise-induced) rhabdomyolysis is a potentially life threatening condition. Although the prevalence of rhabdomyolysis is low, instances still occur where exercise is improperly prescribed or used as punishment. Full text: a cardinal sign that an individual should seek immediate treatment is dark-colored urine."
+    },
+    "bosquet-2013": {
+      "type": "meta-analysis",
+      "authors": [
+        "Bosquet L",
+        "Berryman N",
+        "Dupuy O",
+        "Mekary S",
+        "Arvisais D",
+        "Bherer L",
+        "Mujika I"
+      ],
+      "year": 2013,
+      "title": "Effect of training cessation on muscular performance: A meta-analysis",
+      "journal": "Scandinavian Journal of Medicine & Science in Sports",
+      "volume": "23",
+      "issue": "3",
+      "doi": "10.1111/sms.12047",
+      "pmid": "23347054",
+      "n_studies": 103,
+      "support": "Seven databases were searched from which 103 of 284 potential studies met inclusion criteria. A dose-response relationship between the amplitude of SMD and the duration of training cessation was identified. The effect of resistance training cessation was found to be larger in older people (> 65 years old). The effect was also larger in inactive people for maximal force and maximal power when compared with recreational athletes."
+    },
+    "cumming-2024": {
+      "type": "trial",
+      "authors": [
+        "Cumming KT",
+        "Reitzner SM",
+        "Hanslien M",
+        "Skilnand K",
+        "Seynnes OR",
+        "Horwath O",
+        "Psilander N",
+        "Sundberg CJ",
+        "Raastad T"
+      ],
+      "year": 2024,
+      "title": "Muscle memory in humans: evidence for myonuclear permanence and long-term transcriptional regulation after strength training",
+      "journal": "The Journal of Physiology",
+      "volume": "602",
+      "issue": "17",
+      "pages": "4171-4193",
+      "doi": "10.1113/jp285675",
+      "pmid": "39159314",
+      "n_participants": 12,
+      "support": "Twelve untrained men and women performed 10 weeks of unilateral elbow-flexor strength training followed by 16 weeks of de-training. The sustained higher number of myonuclei in the previously trained muscle confirms myonuclear accretion and permanence in humans. Nevertheless, because of the unclear effect on the subsequent hypertrophy with re-training, the physiological benefit remains to be determined."
+    },
+    "rahmati-2022": {
+      "type": "meta-analysis",
+      "authors": [
+        "Rahmati M",
+        "McCarthy JJ",
+        "Malakoutinia F"
+      ],
+      "year": 2022,
+      "title": "Myonuclear permanence in skeletal muscle memory: a systematic review and meta-analysis of human and animal studies",
+      "journal": "Journal of Cachexia, Sarcopenia and Muscle",
+      "volume": "13",
+      "issue": "5",
+      "pages": "2276-2297",
+      "doi": "10.1002/jcsm.13043",
+      "pmid": "35961635",
+      "n_studies": 147,
+      "support": "The major finding from the present meta-analysis is that myonuclei are not permanent but are lost during periods of atrophy and with ageing. These findings do not support the concept of skeletal muscle memory based on the permanence of myonuclei."
+    },
+    "mcdonald-training-after-layoff": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Returning to Training After a Layoff",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/training-after-a-layoff",
+      "retrieved": "2026-11-15",
+      "support": "Backs his rules by length of break: nothing lost in a few days, roughly twice the break length to regain form after one to two weeks, restart as a beginner after months, and the injury rules of an extra week and one exercise at a time."
+    },
+    "travis-2022": {
+      "type": "trial",
+      "authors": [
+        "Travis SK",
+        "Mujika I",
+        "Zwetsloot KA",
+        "Gentles JA",
+        "Stone MH",
+        "Bazyler CD"
+      ],
+      "year": 2022,
+      "title": "The Effects of 3 vs. 5 Days of Training Cessation on Maximal Strength",
+      "journal": "Journal of Strength & Conditioning Research",
+      "doi": "10.1519/JSC.0000000000004183",
+      "volume": "36",
+      "issue": "3",
+      "pages": "633-640",
+      "pmid": "35180185",
+      "support": "Nineteen strength-trained athletes ... maximal lower-body strength can be preserved during 3 and 5 days of training cessation, but maximal upper-body strength is only preserved for 3 days after 4 weeks of strength training in athletes."
+    },
+    "hwang-2017": {
+      "type": "rct",
+      "authors": [
+        "Hwang PS",
+        "Andre TL",
+        "McKinley-Barnard SK",
+        "Morales Marroquín FE",
+        "Gann JJ",
+        "Song JJ",
+        "Willoughby DS"
+      ],
+      "year": 2017,
+      "title": "Resistance Training-Induced Elevations in Muscular Strength in Trained Men Are Maintained After 2 Weeks of Detraining and Not Differentially Affected by Whey Protein Supplementation",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "31",
+      "issue": "4",
+      "pages": "869-881",
+      "doi": "10.1519/jsc.0000000000001807",
+      "pmid": "28328712",
+      "n_participants": 20,
+      "support": "Twenty resistance-trained men were randomized. LPS was elevated throughout the 10-week training study with no decrease in LPS after DT in both groups. A 2-week period of DT appeared to retain muscular strength in resistance-trained men."
+    },
+    "psilander-2019": {
+      "type": "trial",
+      "authors": [
+        "Psilander N",
+        "Eftestøl E",
+        "Cumming KT",
+        "Juvkam I",
+        "Ekblom MM",
+        "Sunding K",
+        "Wernbom M",
+        "Holmberg HC",
+        "Ekblom B",
+        "Bruusgaard JC",
+        "Raastad T",
+        "Gundersen K"
+      ],
+      "year": 2019,
+      "title": "Effects of training, detraining, and retraining on strength, hypertrophy, and myonuclear number in human skeletal muscle",
+      "journal": "Journal of Applied Physiology",
+      "volume": "126",
+      "issue": "6",
+      "pages": "1636-1645",
+      "doi": "10.1152/japplphysiol.00917.2018",
+      "pmid": "30991013",
+      "n_participants": 19,
+      "support": "Nine men and 10 women performed unilateral strength training (T1) for 10 wk, followed by 20 wk of detraining (DT) and a 5-wk bilateral retraining period (T2). MT and CSA returned to baseline values during DT, but strength remained elevated. In conclusion, training response during T2 did not differ between the mem-leg and con-leg."
+    },
+    "ogasawara-2013": {
+      "type": "rct",
+      "authors": [
+        "Ogasawara R",
+        "Yasuda T",
+        "Ishii N",
+        "Abe T"
+      ],
+      "year": 2013,
+      "title": "Comparison of muscle hypertrophy following 6-month of continuous and periodic strength training",
+      "journal": "European Journal of Applied Physiology",
+      "volume": "113",
+      "issue": "4",
+      "pages": "975-985",
+      "doi": "10.1007/s00421-012-2511-9",
+      "pmid": "23053130",
+      "n_participants": 14,
+      "support": "14 young men were randomly divided into a CTR group and a PTR group. The results indicate that 3-week detraining/6-week retraining cycles result in muscle hypertrophy similar to that occurring with continuous resistance training after 24 weeks."
+    },
+    "halonen-2024": {
+      "type": "rct",
+      "authors": [
+        "Halonen EJ",
+        "Gabriel I",
+        "Kelahaara MM",
+        "Ahtiainen JP",
+        "Hulmi JJ"
+      ],
+      "year": 2024,
+      "title": "Does Taking a Break Matter: Adaptations in Muscle Strength and Size Between Continuous and Periodic Resistance Training",
+      "journal": "Scandinavian Journal of Medicine & Science in Sports",
+      "volume": "34",
+      "issue": "10",
+      "doi": "10.1111/sms.14739",
+      "pmid": "39364857",
+      "n_participants": 55,
+      "support": "PRT completed a 10-week RT, a 10-week detraining, and a second identical 10-week RT. PRT and CTR ended up in similar postintervention adaptations, as decreased muscle strength and size during detraining in PRT regained rapidly during retraining."
+    },
+    "staron-1991": {
+      "type": "trial",
+      "authors": [
+        "Staron RS",
+        "Leonardi MJ",
+        "Karapondo DL",
+        "Malicky ES",
+        "Falkel JE",
+        "Hagerman FC",
+        "Hikida RS"
+      ],
+      "year": 1991,
+      "title": "Strength and skeletal muscle adaptations in heavy-resistance-trained women after detraining and retraining",
+      "journal": "Journal of Applied Physiology",
+      "volume": "70",
+      "issue": "2",
+      "pages": "631-640",
+      "doi": "10.1152/jappl.1991.70.2.631",
+      "pmid": "1827108",
+      "n_participants": 13,
+      "support": "Six women who had participated in a previous 20-wk strength training study for the lower limb detrained for 30-32 wk and subsequently retrained for 6 wk. Detraining had relatively little effect on fiber cross-sectional area. Maximal dynamic strength decreased but not to pretraining levels."
+    },
+    "mcdonald-returning-from-my-layoff": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Returning From My Layoff",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/returning-from-my-layoff",
+      "retrieved": "2026-11-15",
+      "support": "Backs the worked example of restarting after about five months off: very short sessions of one light high-rep set, with sets, load and then lower reps added over several weeks."
+    },
+    "spiering-2021": {
+      "type": "review",
+      "authors": [
+        "Spiering BA",
+        "Mujika I",
+        "Sharp MA",
+        "Foulis SA"
+      ],
+      "year": 2021,
+      "title": "Maintaining Physical Performance: The Minimal Dose of Exercise Needed to Preserve Endurance and Strength Over Time",
+      "journal": "Journal of Strength & Conditioning Research",
+      "volume": "35",
+      "issue": "5",
+      "pages": "1449-1458",
+      "doi": "10.1519/jsc.0000000000003964",
+      "pmid": "33629972",
+      "support": "Endurance performance can be maintained for up to 15 weeks when training frequency is reduced to as little as 2 sessions per week or when exercise volume is reduced by 33-66%, as long as exercise intensity is maintained. Strength and muscle size (at least in younger populations) can be maintained for up to 32 weeks with as little as 1 session of strength training per week and 1 set per exercise, as long as exercise intensity (relative load) is maintained."
+    },
+    "bartholomew-2008": {
+      "type": "cohort",
+      "authors": [
+        "Bartholomew JB",
+        "Stults-Kolehmainen MA",
+        "Elrod CC",
+        "Todd JS"
+      ],
+      "year": 2008,
+      "title": "Strength Gains after Resistance Training: The Effect of Stressful, Negative Life Events",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "22",
+      "issue": "4",
+      "pages": "1215-1221",
+      "doi": "10.1519/jsc.0b013e318173d0bf",
+      "pmid": "18545186",
+      "n_participants": 135,
+      "support": "Participants were 135 undergraduates enrolled in weight training classes that met for 1.5 hours, two times per week. Results indicated that the low stress participants experienced a significantly greater increase in bench press and squat than their high stress counterparts."
+    },
+    "stults-kolehmainen-2014": {
+      "type": "trial",
+      "authors": [
+        "Stults-Kolehmainen MA",
+        "Bartholomew JB",
+        "Sinha R"
+      ],
+      "year": 2014,
+      "title": "Chronic Psychological Stress Impairs Recovery of Muscular Function and Somatic Sensations Over a 96-Hour Period",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "28",
+      "issue": "7",
+      "pages": "2007-2017",
+      "doi": "10.1519/jsc.0000000000000335",
+      "pmid": "24343323",
+      "n_participants": 31,
+      "support": "Stress, whether assessed as life event stress or perceived stress, moderated the recovery trajectories of muscular function and somatic sensations in a 96-hour period after strenuous resistance exercise. In all analyses, higher stress was associated with worse recovery."
+    },
+    "mann-2016": {
+      "type": "cohort",
+      "authors": [
+        "Mann JB",
+        "Bryant KR",
+        "Johnstone B",
+        "Ivey PA",
+        "Sayers SP"
+      ],
+      "year": 2016,
+      "title": "Effect of Physical and Academic Stress on Illness and Injury in Division 1 College Football Players",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "30",
+      "issue": "1",
+      "pages": "20-25",
+      "doi": "10.1519/jsc.0000000000001055",
+      "pmid": "26049791",
+      "n_participants": 101,
+      "support": "The odds of an injury restriction during weeks of HAS were nearly twice as high as during weeks of LAS (OR = 1.78, p = 0.0088)."
+    },
+    "mcewen-2000": {
+      "type": "review",
+      "authors": [
+        "McEwen B"
+      ],
+      "year": 2000,
+      "title": "Allostasis and Allostatic Load Implications for Neuropsychopharmacology",
+      "journal": "Neuropsychopharmacology",
+      "volume": "22",
+      "issue": "2",
+      "pages": "108-124",
+      "doi": "10.1016/s0893-133x(99)00129-3",
+      "pmid": "10649824",
+      "support": "The primary hormonal mediators of the stress response, glucocorticoids and catecholamines, have both protective and damaging effects on the body. In the short run, they are essential for adaptation, maintenance of homeostasis, and survival (allostasis). Yet, over longer time intervals, they exact a cost (allostatic load) that can accelerate disease processes."
+    },
+    "mclean-2001": {
+      "type": "cohort",
+      "authors": [
+        "McLean JA",
+        "Barr SI",
+        "Prior JC"
+      ],
+      "year": 2001,
+      "title": "Cognitive dietary restraint is associated with higher urinary cortisol excretion in healthy premenopausal women",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "73",
+      "issue": "1",
+      "pages": "7-12",
+      "doi": "10.1093/ajcn/73.1.7",
+      "pmid": "11124742",
+      "n_participants": 62,
+      "support": "Ratios of urinary cortisol (nmol) to creatinine (mmol) were higher in the high-restraint than in the low-restraint group (42.9+/-12.9 compared with 36.3+/-8.9; P<0.05). Urinary cortisol was not associated with exercise, nutrient intakes, or anthropometric measurements."
+    },
+    "rideout-2006": {
+      "type": "cohort",
+      "authors": [
+        "Rideout CA",
+        "Linden W",
+        "Barr SI"
+      ],
+      "year": 2006,
+      "title": "High Cognitive Dietary Restraint Is Associated With Increased Cortisol Excretion in Postmenopausal Women",
+      "journal": "The Journals of Gerontology Series A: Biological Sciences and Medical Sciences",
+      "volume": "61",
+      "issue": "6",
+      "pages": "628-633",
+      "doi": "10.1093/gerona/61.6.628",
+      "pmid": "16799147",
+      "n_participants": 78,
+      "support": "Urinary cortisol excretion was higher in the high restraint group (248.2 +/- 61.7 nmol/d vs 204.3 +/- 66.1 nmol/d; p =.01). Women with high or low dietary restraint did not differ in age, body mass index, waist-to-hip ratio, energy intake, perceived stress, current exercise, or measures of body composition."
+    },
+    "mcdonald-restraint-cortisol": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Dietary Restraint and Cortisol Levels - Research Review",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/research/dietary-restraint-cortisol-levels",
+      "retrieved": "2026-11-15",
+      "support": "Backs his reading of the restraint and cortisol study and his advice that strict dieters who stall should ease off instead of dieting harder."
+    },
+    "tomiyama-2010": {
+      "type": "rct",
+      "authors": [
+        "Tomiyama AJ",
+        "Mann T",
+        "Vinas D",
+        "Hunger JM",
+        "DeJager J",
+        "Taylor SE"
+      ],
+      "year": 2010,
+      "title": "Low Calorie Dieting Increases Cortisol",
+      "journal": "Psychosomatic Medicine",
+      "volume": "72",
+      "issue": "4",
+      "pages": "357-364",
+      "doi": "10.1097/psy.0b013e3181d9523c",
+      "pmid": "20368473",
+      "n_participants": 121,
+      "support": "121 female participants were assigned randomly to one of four dietary interventions for 3 weeks. Restricting calories (1200 kcal/day) increased the total output of cortisol."
+    },
+    "nakamura-2016": {
+      "type": "meta-analysis",
+      "authors": [
+        "Nakamura Y",
+        "Walker BR",
+        "Ikuta T"
+      ],
+      "year": 2016,
+      "title": "Systematic review and meta-analysis reveals acutely elevated plasma cortisol following fasting but not less severe calorie restriction",
+      "journal": "Stress",
+      "volume": "19",
+      "issue": "2",
+      "pages": "151-157",
+      "doi": "10.3109/10253890.2015.1121984",
+      "pmid": "26586092",
+      "n_studies": 13,
+      "n_participants": 357,
+      "support": "Overall, caloric restriction significantly increased serum cortisol level in 13 studies (357 total participants). Fasting showed a very strong effect in increasing serum cortisol, while VLCD and LCD did not show significant increases. Serum cortisol is increased in the initial period of caloric restriction but decreased to the baseline level after several weeks."
+    },
+    "murphy-2021": {
+      "type": "meta-analysis",
+      "authors": [
+        "Murphy C",
+        "Koehler K"
+      ],
+      "year": 2022,
+      "title": "Energy deficiency impairs resistance training gains in lean mass but not strength: A meta‐analysis and meta‐regression",
+      "journal": "Scandinavian Journal of Medicine & Science in Sports",
+      "doi": "10.1111/sms.14075",
+      "volume": "32",
+      "issue": "1",
+      "pages": "125-137",
+      "pmid": "34623696",
+      "support": "Meta-regression: an energy deficit of ~500 kcal/day prevented gains in lean mass; strength gains were comparable between conditions."
+    },
+    "mcdonald-low-calories-exercise": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Big Caloric Deficits, Lots of Activity and Fat Loss",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/low-calories-and-too-much-exercise",
+      "retrieved": "2026-11-15",
+      "support": "Backs his rule that a steep deficit and a large exercise load should not be combined, and his hypothesis that the combined stress is the reason."
+    },
+    "phinney-1988": {
+      "type": "trial",
+      "authors": [
+        "Phinney SD",
+        "LaGrange BM",
+        "O'Connell M",
+        "Danforth E"
+      ],
+      "year": 1988,
+      "title": "Effects of aerobic exercise on energy expenditure and nitrogen balance during very low calorie dieting",
+      "journal": "Metabolism",
+      "volume": "37",
+      "issue": "8",
+      "pages": "758-765",
+      "doi": "10.1016/0026-0495(88)90011-x",
+      "pmid": "3405093",
+      "n_participants": 12,
+      "support": "The resting oxygen consumption (rVO2) of both groups declined 10% in the first seven days of dieting. Thereafter the rVO2 in group 1 remained stable, but a further 17% reduction occurred in group 2 by the third week of exercise. Weight loss over 4 weeks in the two groups did not differ."
+    }
+  }
+}
