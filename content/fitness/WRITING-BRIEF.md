@@ -50,7 +50,11 @@ fifty-year-old beginner should both follow it.
 
 ## The file
 One file per area in this folder: `hypertrophy.json`, `powerlifting.json`, `meet.json`,
-`nutrition.json`, `diet.json`, `health.json`, plus `claims.json`.
+`nutrition.json`, `diet.json`, `health.json`, plus `claims.json`. Six more areas are being
+written and are accepted by the validator: `basics.json` (training basics), `technique.json`,
+`conditioning.json`, `recovery.json`, `bodycomp.json` (body composition) and `women.json`.
+The build does not read a new area until it is added to `DOMAINS` in `scripts/build_fitness.py`
+and given a page in `routes.json`.
 
 ```json
 {
@@ -64,7 +68,8 @@ One file per area in this folder: `hypertrophy.json`, `powerlifting.json`, `meet
 
 ### Entry types
 Every entry has: `id` (lowercase-hyphenated, starting with your domain prefix:
-`hyp-`, `pl-`, `meet-`, `nut-`, `diet-`, `hlth-`, `claim-`), `type`, `title`
+`hyp-`, `pl-`, `meet-`, `nut-`, `diet-`, `hlth-`, `claim-`; for the new areas `base-`,
+`tech-`, `cond-`, `rec-`, `comp-`, `wom-`), `type`, `title`
 (6-90 chars, sentence case, says the point, not just the subject), `topic`
 (one of your topic ids), `level`, `confidence`, `sources` (list of source keys).
 
@@ -127,6 +132,12 @@ systematic-review | rct | review | cohort | position | guideline | rulebook |
 book | trial | other. A rulebook or guideline uses `url` (and `edition` or
 `retrieved`: "2026-11-13") instead of `doi`. `n_studies` / `n_participants` only
 if stated in the abstract. `support` is for the reviewer and is not published.
+A web article you are crediting for a position or an analysis uses `"type": "article"`,
+with `authors`, `year`, `title`, `journal` (the site's name), `url` and `retrieved`. Its
+`support` is a pointer in your own words, 240 characters at most, never the article's
+sentences. Cite the primary studies next to it wherever they exist; an entry that rests on
+an article alone is `practice`, or `limited` if the article leans on a small study you
+verified.
 Prefer recent meta-analyses, systematic reviews, position stands and official
 guidelines; then well-run trials. Reuse a source across entries rather than
 citing a weaker second one.
