@@ -194,7 +194,7 @@ Sleep and protein · Beginner · Some support · Sources: [Kredlow 2015](https:/
 
 The PROT-AGE and ESPEN groups both advise 1.0 to 1.2 g/kg/day for healthy older people. PROT-AGE advises 1.2 g/kg or more for those exercising and 1.2 to 1.5 g/kg for many with illness. ESPEN gives 1.2 to 1.5 g/kg for those at risk of malnutrition. People with severe kidney disease may need to limit protein, so check with a clinician.
 
-- Spread protein through the day and ask a clinician if you have kidney disease.
+- Reach the daily total in the meal pattern that suits you, and ask a clinician if you have kidney disease.
 
 Sleep and protein · Intermediate · Well supported · Sources: [Bauer 2013](https://doi.org/10.1016/j.jamda.2013.05.021), [Deutz 2014](https://doi.org/10.1016/j.clnu.2014.04.007)
 
@@ -391,4 +391,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness#health  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.

@@ -28,7 +28,7 @@ Platform and lights · Beginner · Rulebook · Sources: [IPF 2026b](https://www.
 
 **You submit each next weight within one minute of the lights; after that, changes are tightly limited.**
 
-IPF: one change on the first attempt of each lift, higher or lower, up to three minutes before the first round starts for the first group. Second attempts and third attempts in squat and bench cannot be changed. In the third deadlift round you may change twice unless the bar has been called loaded. Weights are multiples of 2.5 kg (5.5 lb) with at least 2.5 kg between attempts. If you miss, you do not follow yourself; the next attempt comes in the next round. USA Powerlifting uses the same structure.
+IPF: one change on the first attempt of each lift, higher or lower, up to three minutes before the first round starts for the first group. Second attempts and third attempts in squat and bench cannot be changed. In the third deadlift round you may change twice unless the bar has been called loaded. Weights are multiples of 2.5 kg (5.5 lb) and rise by at least 2.5 kg. If you miss, you may take that weight again, but only in the next round. USA Powerlifting uses the same structure.
 
 - Give your coach the written plan, the minimum increment, and who submits the card.
 
@@ -145,21 +145,21 @@ Weeks out · Beginner · Rulebook · Sources: [IPF 2026b](https://www.powerlifti
 
 **Plan an opener you could lift easily on any day, a realistic second, and a hard but makeable third.**
 
-Elite classic lifters at IPF World Championships opened near 91% of their expected third attempt, then added about 5% for the second and about 3% for the third. Base your plan on your best recent single, not on a hope. Write all nine weights down with a lighter plan B for each lift, and round to 2.5 kg (5.5 lb) steps.
+Elite classic lifters at IPF World Championships opened near 91% of their expected third attempt, then added about 5% for the second and about 3% for the third. Across 10,672 raw entries in Australian meets, squat openers averaged 92% of the lifter's best squat that day. Base your plan on your best recent single, not on a hope. Write all nine weights down with a lighter plan B for each lift, and round to 2.5 kg (5.5 lb) steps.
 
 - Use the attempt table below, and your best recent single, to fill in all nine weights.
 
-Weeks out · Beginner · Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608)
+Weeks out · Beginner · Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ### Taper over the last week or two: less volume, a few heavy singles
 
 **Survey data show a step taper with 41-50% less volume, the last heavy squat and deadlift 7-10 days out, and rest in the last days.**
 
-In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical. The last heavy squat and deadlift came 7 to 10 days out, the last heavy bench under 7 days out, and full rest about 2.8 days before the meet. In a small trial of 19 athletes, 3 days off kept upper- and lower-body strength; 5 days off cost upper-body strength.
+In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical. The last heavy squat and deadlift came 7 to 10 days out, the last heavy bench under 7 days out, and full rest about 2.8 days before the meet. In a small trial of 19 athletes, 3 days off kept upper- and lower-body strength; 5 days off cost upper-body strength. A review found limited evidence that a short, heavy, low-volume session within 48 hours of competition can help.
 
 - Keep the lifts, cut the sets, and stop hard training about 3 days out.
 
-The week before · Intermediate · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183)
+The week before · Intermediate · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Harrison 2019](https://doi.org/10.1007/s40279-019-01136-3)
 
 ### Confirm the schedule, travel and food for the meet
 
@@ -287,7 +287,7 @@ Afterwards · Beginner · Coaching practice
 | 2 hours before lifting | Weigh-in start before lifting: IPF: no earlier than two hours before the category starts. USA Powerlifting: weigh-in starts two hours before lifting. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
 | 90 minutes | Length of the weigh-in period: IPF: one and a half hours. USA Powerlifting: 90 minutes, ending 30 minutes before lifting. USPA: at least 90 minutes. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf) |
 | 1 minute | Time to start an attempt after being called: IPF: one minute from the speaker's call to the start of the attempt; USPA also gives one minute. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf) |
-| 2.5 kg (5.5 lb) | Minimum step between attempts: IPF weights are multiples of 2.5 kg, with at least 2.5 kg between attempts. USA Powerlifting uses 2.5 kg increments. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
+| 2.5 kg (5.5 lb) | Minimum step between attempts: IPF weights are multiples of 2.5 kg, rising at least 2.5 kg between attempts; a missed weight can be repeated. USA Powerlifting uses 2.5 kg increments. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
 | 30 seconds | Time to leave the platform after an attempt: IPF and USA Powerlifting: leave the platform within 30 seconds of the end of an attempt. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
 
 ## IPF weight classes for men and women, in kg and lb
@@ -321,9 +321,9 @@ Commands as given by the chief referee in IPF, USA Powerlifting and USPA rules; 
 
 Rulebook · Sources: [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf)
 
-## Attempt selection ranges for a first meet
+## Attempt selection ranges from competition data
 
-Typical ranges as a share of a current best single, with an example for a lifter whose best single is 200 kg (441 lb).
+Typical ranges as a share of a current best single, with an example at 200 kg (441 lb). They follow elite and national meet data; no study covers first meets.
 
 | Attempt | % of current best single | Example at 200 kg (441 lb) | Aim |
 |---|---|---|---|
@@ -331,7 +331,7 @@ Typical ranges as a share of a current best single, with an example for a lifter
 | Second | 94-97.5% | 188-195 kg (414-430 lb) | A solid, realistic lift |
 | Third | 98-102.5% | 196-205 kg (432-452 lb) | A hard but makeable attempt |
 
-Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608)
+Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ## Meet bag checklist
 
@@ -401,4 +401,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness#meet  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.

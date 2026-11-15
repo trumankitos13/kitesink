@@ -120,12 +120,12 @@ Periodisation and peaking · Intermediate · Some support · Sources: [Harries 2
 
 **Surveys report a short step taper: volume down about 40-50%, intensity kept high, last heavy squat and deadlift 7-10 days out.**
 
-These are self-reports, not trials proving a taper works. In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical, with full rest about 2.8 days before the meet. A small trial of 19 athletes found 3 or 5 days of full rest kept lower-body strength; upper-body strength held at 3 days but not 5.
+These are self-reports, not trials proving a taper works. In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical, with full rest about 2.8 days before the meet. A small trial of 19 athletes found 3 or 5 days of full rest kept lower-body strength; upper-body strength held at 3 days but not 5. A review found limited evidence that a short, heavy, low-volume session in the 48 hours before competition can help performance.
 
 - Cut volume sharply but keep the competition lifts and a few heavy singles.
 - Rest fully for the last 2 to 3 days before the meet.
 
-Periodisation and peaking · Advanced · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Winwood 2026](https://doi.org/10.1007/s40279-026-02500-w), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183)
+Periodisation and peaking · Advanced · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Winwood 2026](https://doi.org/10.1007/s40279-026-02500-w), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Harrison 2019](https://doi.org/10.1007/s40279-019-01136-3)
 
 ### Most strength athletes deload for about a week every 5 to 6 weeks
 
@@ -153,9 +153,9 @@ Technique and leverages · Intermediate · Some support · Sources: [Glassbrook 
 
 This is coaching convention. Keep head, shoulders and buttocks on the bench and feet flat on the floor. Pull the shoulder blades together and down, grip with the thumbs around the bar, and lower under control to the lower chest. Pause until the press command, then press back over the shoulders. Wider grips shorten the range, but federations cap grip width, so check the rulebook.
 
-- Pause every training rep on the chest for the same count as the meet.
+- Pause every training rep until the bar is still, and sometimes hold longer: the referee decides when to call 'Press'.
 
-Technique and leverages · Beginner · Coaching practice
+Technique and leverages · Beginner · Coaching practice · Sources: [IPF 2026a](https://www.powerlifting.sport/rules/codes/info/technical-rules)
 
 ### Sumo and conventional deadlifts load the joints differently
 
@@ -314,10 +314,10 @@ Common coaching zones with typical reps per set and their purpose; reps at a giv
 | Light | 50-65% | 8-12 or more | Warm-ups, skill work, easy days |
 | Moderate | 65-75% | 5-8 | Volume work and technique practice |
 | Working | 75-85% | 3-6 | Main strength work |
-| Heavy | 85-92% | 1-3 | Heavy strength work, peaking blocks |
-| Near-max | 92-100% | 1 | Singles, openers, tests, attempts |
+| Heavy | 85-92% | 1-3 | Heavy strength work, peaking blocks, openers |
+| Near-max | 92-100% | 1 | Singles, tests, second and third attempts |
 
-Coaching practice · Sources: [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7)
+Coaching practice · Sources: [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7), [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ## RPE to reps in reserve chart
 
@@ -375,4 +375,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness#powerlifting  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.

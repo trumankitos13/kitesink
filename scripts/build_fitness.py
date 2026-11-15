@@ -28,6 +28,7 @@ JavaScript. /fitness.js and /fitness-ref.js only filter, sort and remember. To a
 entry, add it to the right JSON file and run this script. scripts/check_site.py runs the
 --check form, so a stale page fails the audit.
 """
+import hashlib
 import html
 import json
 import os
@@ -104,7 +105,10 @@ def family(author):
 class Library:
     """Every source from every file, merged by DOI or URL, with short labels."""
 
-    def __init__(self, labels):
+    def __init__(self, labels, pins=None):
+        # pins: source address (DOI or URL) -> the key it must keep. A source's key is its id on
+        # the page (src-<key>), so once published it should not move.
+        self.pins = {k.lower().rstrip("/"): v for k, v in (pins or {}).items()}
         self.by_id = OrderedDict()   # canonical key -> source
         self.alias = {}              # (file, key) -> canonical key
         self.uses = Counter()
@@ -116,7 +120,14 @@ class Library:
             if (s.get("doi") or s.get("url") or k).lower().rstrip("/") == ident:
                 self.alias[(file, key)] = k
                 return
-        canon = key if key not in self.by_id else f"{key}-{len(self.by_id)}"
+        canon = self.pins.get(ident)
+        if canon is None:
+            # Two different sources filed under one key: the second gets a suffix made from its
+            # own address, so it stays the same whatever else is added later. (It used to be a
+            # running count, which renumbered the id whenever a source was added.)
+            canon = key if key not in self.by_id else f"{key}-{hashlib.sha1(ident.encode('utf-8')).hexdigest()[:6]}"
+        elif canon in self.by_id:
+            raise SystemExit(f"content/fitness/meta.json pins two different sources to the key {canon!r}")
         self.by_id[canon] = src
         self.alias[(file, key)] = canon
 
@@ -193,7 +204,7 @@ class Library:
 
 def load():
     meta = json.loads((SRC / "meta.json").read_text(encoding="utf-8"))
-    lib = Library(meta.get("labels"))
+    lib = Library(meta.get("labels"), meta.get("source_keys"))
     data = OrderedDict()
     for name in ["tools"] + list(DOMAINS) + ["claims"]:
         f = SRC / f"{name}.json"
@@ -942,6 +953,9 @@ def correction_href(r, pages, here):
     return pages.href(r["entry"], here) if r.get("entry") else r.get("href", "")
 
 
+LOG_SHOWN = 6   # corrections shown before the fold on /fitness/sources
+
+
 def page_sources(lib, pages, route, corrections):
     """How entries are graded, the corrections log, and every source. Call inside lib.counting()
     with the citations of every page added up, so each source shows how often it is cited."""
@@ -964,7 +978,13 @@ def page_sources(lib, pages, route, corrections):
                  "Every entry carries one of these five labels. It says how much stands behind the point.", legend_html()))]
     if log:
         aside = "What changed after an entry was published, and when. Newest first."
-        sections.append(("corrections", "Corrections", len(log), band("corrections", "Corrections", "What has <em>been corrected.</em>", aside, '<ul class="fr-log">' + "\n".join(log) + "</ul>")))
+        # the newest few stay in view; the rest fold away, still in the HTML
+        shown, rest = log[:LOG_SHOWN], log[LOG_SHOWN:]
+        body = '<ul class="fr-log">' + "\n".join(shown) + "</ul>"
+        if rest:
+            body += (f'<details class="fr-log-more"><summary>All {len(log)} corrections</summary>'
+                     '<ul class="fr-log">' + "\n".join(rest) + "</ul></details>")
+        sections.append(("corrections", "Corrections", len(log), band("corrections", "Corrections", "What has <em>been corrected.</em>", aside, body)))
     aside = "Each one was checked against its record. Search by author, year, title or journal."
     sections.append(("sources", "All sources", len(keys), band("sources", "Sources", f"All {len(keys)} sources, <em>A to Z.</em>", aside, listing)))
     return sections

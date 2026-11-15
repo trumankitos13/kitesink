@@ -2,8 +2,9 @@
 """Validate one fitness content file (or several). Usage:
      python3 scripts/validate_fitness.py content/fitness/FILE.json [...] [--offline]
 Checks the schema, the writing limits, that every source resolves on Crossref
-(or its URL answers), that the metadata matches, and that nobody named
-Schoenfeld is an author of any source or mentioned anywhere. Exit 1 on any error."""
+(or its URL answers), that the metadata matches, and that sources with Schoenfeld among
+the authors are used sparingly (the owner's rule: allowed, but no more than
+SPARING_LIMIT in one file). Exit 1 on any error."""
 import hashlib, json, os, re, sys, tempfile, time, urllib.request, urllib.parse, difflib, unicodedata
 from pathlib import Path
 
@@ -19,7 +20,8 @@ EVIDENCE = {"meta-analysis", "rct", "review", "cohort", "position", "guideline",
 SRC_TYPES = {"meta-analysis", "systematic-review", "rct", "review", "cohort", "position", "guideline", "rulebook", "book", "trial", "other"}
 CLAIM_TAGS = {"protein", "calories", "timing", "training", "cardio", "supplements", "weight-loss", "muscle-gain", "recovery", "health", "myths", "strength", "competition", "tracking"}
 WHEN = {"months-out", "weeks-out", "week-before", "day-before", "weigh-in", "warm-up", "platform", "between-lifts", "after"}
-BANNED = re.compile(r"schoenfeld", re.I)
+SPARING = re.compile(r"schoenfeld", re.I)   # sources by this author: allowed, sparingly
+SPARING_LIMIT = 5
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 PREFIX = {"hypertrophy": "hyp-", "powerlifting": "pl-", "meet": "meet-", "nutrition": "nut-", "diet": "diet-", "health": "hlth-", "claims": "claim-"}
 
@@ -72,8 +74,7 @@ def text_len(label, s, lo, hi, where):
 
 def check_file(path, offline):
     raw = Path(path).read_text(encoding="utf-8")
-    if BANNED.search(raw):
-        err(f"{path}: the name Schoenfeld appears in the file; no source or text may use it")
+    sparing = set()   # source keys with the sparingly-used author among the authors
     try:
         data = json.loads(raw)
     except Exception as e:
@@ -167,7 +168,7 @@ def check_file(path, offline):
         authors = s.get("authors") or []
         if not isinstance(authors, list) or not all(isinstance(a, str) for a in authors):
             err(f"{w}: authors is the FULL author list as strings like 'Morton RW' (or the organisation)"); authors = []
-        if any(BANNED.search(a) for a in authors): err(f"{w}: Schoenfeld is an author; this source cannot be used")
+        if any(SPARING.search(a) for a in authors): sparing.add(key)
         doi, url = s.get("doi"), s.get("url")
         if not doi and not url: err(f"{w}: needs a doi, or a url for rulebooks/guidelines/organisation pages")
         if doi and not offline:
@@ -176,7 +177,7 @@ def check_file(path, offline):
             elif m == "unreachable": warn(f"{w}: Crossref unreachable for {doi}; re-run")
             else:
                 fam = [a.get("family", a.get("name", "")) for a in m.get("author", [])]
-                if any(BANNED.search(x or "") for x in fam): err(f"{w}: Crossref lists Schoenfeld among the authors of {doi}; this source cannot be used")
+                if any(SPARING.search(x or "") for x in fam): sparing.add(key)
                 title = (m.get("title") or [""])[0]
                 ratio = difflib.SequenceMatcher(None, norm(title), norm(s.get("title", ""))).ratio()
                 if ratio < 0.72: err(f"{w}: title does not match Crossref ({ratio:.2f}). Crossref: {title[:110]!r}")
@@ -194,6 +195,10 @@ def check_file(path, offline):
         if url and not doi and not offline:
             st = url_ok(url)
             if st != 200: warn(f"{w}: URL answered {st}: {url}")
+    if len(sparing) > SPARING_LIMIT:
+        err(f"{path}: {len(sparing)} sources have Schoenfeld among the authors ({', '.join(sorted(sparing))}); use them sparingly, at most {SPARING_LIMIT} in a file")
+    elif sparing:
+        print(f"note  {path}: {len(sparing)} source(s) with Schoenfeld among the authors ({', '.join(sorted(sparing))}); allowed, sparingly")
     return data
 
 def main():

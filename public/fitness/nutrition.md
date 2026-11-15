@@ -48,14 +48,14 @@ Protein · Beginner · Well supported · Sources: [Devries 2018](https://doi.org
 
 ### Spread protein over several meals, but the split matters less than the total
 
-**About 0.25 g per kg or 20 to 40 g per meal is a sound target, and the daily total is what matters most.**
+**About 0.25 to 0.55 g per kg per meal is a sound target (20 to 40 g for most people), and the daily total is what matters most.**
 
-The ISSN stand suggests 0.25 g/kg or 20 to 40 g per serving, spread across the day. Muscle protein synthesis levelled off at about 0.24 g/kg in younger men and 0.40 g/kg in older men. In eight adults, even meals raised 24-hour synthesis 25 percent more than a skewed pattern. A review calls the distribution evidence limited and inconsistent, and a tracer study found 100 g produced a larger, longer response than 25 g, so there is no hard cap per meal.
+The ISSN stand suggests 0.25 g/kg or 20 to 40 g per serving, spread across the day. A bodybuilding review pairs 1.6 to 2.2 g/kg a day with 0.40 to 0.55 g/kg per meal over 3 to 6 meals. Muscle protein synthesis levelled off at about 0.24 g/kg in younger men and 0.40 g/kg in older men. In eight adults, even meals raised 24-hour synthesis 25 percent more than a skewed pattern. A review calls the distribution evidence limited and inconsistent, and a tracer study found 100 g produced a larger, longer response than 25 g, so there is no hard cap per meal.
 
 - Aim for three to five protein-containing meals.
 - Do not worry about one bigger protein meal.
 
-Protein · Intermediate · Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Moore 2015](https://doi.org/10.1093/gerona/glu103), [Mamerow 2014](https://doi.org/10.3945/jn.113.185280), [Hudson 2020](https://doi.org/10.3390/nu12051441), [Trommelen 2023](https://doi.org/10.1016/j.xcrm.2023.101324)
+Protein · Intermediate · Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Moore 2015](https://doi.org/10.1093/gerona/glu103), [Mamerow 2014](https://doi.org/10.3945/jn.113.185280), [Hudson 2020](https://doi.org/10.3390/nu12051441), [Trommelen 2023](https://doi.org/10.1016/j.xcrm.2023.101324), [Iraki 2019](https://doi.org/10.3390/sports7070154)
 
 ### Protein timing around training matters little next to the daily total
 
@@ -153,27 +153,27 @@ Timing, fluids and alcohol · Beginner · Well supported · Sources: [Kwok 2019]
 
 **Taking 3 to 5 g of creatine monohydrate a day adds lean mass when combined with training, and it is safe for healthy people.**
 
-A meta-analysis of 35 trials with 1,192 participants found creatine added 1.10 kg of lean mass when combined with resistance training. Men gained 1.46 kg, and women a non-significant 0.29 kg, though women were fewer in the data. The ISSN position stand finds supplementation up to 30 g a day for 5 years safe in healthy people. The 3 to 5 g daily dose comes from a physique-athlete review.
+A meta-analysis of 35 trials with 1,192 participants found creatine added 1.10 kg of lean mass when combined with resistance training. Men gained 1.46 kg, and women a non-significant 0.29 kg, though women were fewer in the data. The ISSN position stand finds supplementation up to 30 g a day for 5 years safe in healthy people. The 3 to 5 g daily dose comes from a physique-athlete review. In 31 men, 3 g a day raised muscle creatine over 28 days by about as much as 20 g a day did in 6 days.
 
 - Take 3 to 5 g of creatine monohydrate every day.
 
-Supplements · Beginner · Well supported · Sources: [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+Supplements · Beginner · Well supported · Sources: [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Iraki 2019](https://doi.org/10.3390/sports7070154), [Hultman 1996](https://doi.org/10.1152/jappl.1996.81.1.232)
 
 ### Caffeine gives a small, real boost to strength and power
 
 **In a meta-analysis, caffeine raised maximal strength and power slightly, mostly in the upper body.**
 
-A meta-analysis of 10 studies on strength and 10 on power found caffeine improved both (standardised differences 0.20 and 0.17). The effect was significant for upper-body strength, and not for lower-body. The review also notes poor blinding and little data for women. A narrative review for bodybuilders lists about 5 to 6 mg/kg as the studied dose.
+A meta-analysis of 10 studies on strength and 10 on power found caffeine improved both (standardised differences 0.20 and 0.17). The effect was significant for upper-body strength, and not for lower-body. The review also notes poor blinding and little data for women. The ISSN's 2010 stand found about 3 to 6 mg/kg effective, with no further gain at 9 mg/kg or more; a bodybuilding review lists 5 to 6 mg/kg.
 
 - Test your dose in training before a key session.
 
-Supplements · Beginner · Well supported · Sources: [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+Supplements · Beginner · Well supported · Sources: [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Iraki 2019](https://doi.org/10.3390/sports7070154), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5)
 
 ### Beta-alanine and citrulline help in specific cases, with modest effects
 
 **Beta-alanine helps efforts of one to four minutes, and citrulline malate added about three reps per exercise.**
 
-The ISSN stand says 4 to 6 g of beta-alanine daily for two to four weeks improves exercise performance, most clearly in tasks lasting 1 to 4 minutes, and tingling is the main side effect. A meta-analysis of eight studies (137 participants) found 6 to 8 g of citrulline malate taken 40 to 60 minutes before lifting added about 3 repetitions (6.4 percent). Both effects are small next to training and sleep.
+The ISSN stand says 4 to 6 g of beta-alanine daily for two to four weeks improves exercise performance, most clearly in tasks lasting 1 to 4 minutes, and tingling, the main side effect, is reduced by splitting the dose into amounts of about 1.6 g. A meta-analysis of eight studies (137 participants) found 6 to 8 g of citrulline malate taken 40 to 60 minutes before lifting added about 3 repetitions (6.4 percent). Both effects are small next to training and sleep.
 
 - Consider these only after protein, creatine and training are in place.
 
@@ -331,14 +331,14 @@ Tracking food · Intermediate · Thin evidence · Sources: [O’Driscoll 2020](h
 | Number | What it is | Support | Sources |
 |---|---|---|---|
 | 1.6-2.2 g per kg per day | Daily protein for lifters: The common target for building muscle: 0.7 to 1.0 g per lb a day. | Well supported | [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Nunes 2022b](https://doi.org/10.1002/jcsm.12922), [Iraki 2019](https://doi.org/10.3390/sports7070154) |
-| 0.25 g per kg per meal | Protein per serving: ISSN guide for one serving: 20 to 40 g in absolute terms. | Some support | [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8) |
+| 0.25-0.55 g per kg per meal | Protein per serving: ISSN guide: 0.25 g per kg, or 20 to 40 g, a serving. A bodybuilding review suggests 0.40 to 0.55 g per kg per meal. | Some support | [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Iraki 2019](https://doi.org/10.3390/sports7070154) |
 | 4 · 4 · 9 · 7 kcal per g | Energy per gram of food: Protein 4, carbohydrate 4, fat 9 and alcohol 7 kcal per gram on food labels. | Rulebook | [FAO 2003](https://www.fao.org/4/y5022e/y5022e04.htm) |
 | 10 % error band | Accuracy of the best equation: Mifflin-St Jeor was within 10 percent of measured resting rate for the most people. | Well supported | [Frankenfield 2005](https://doi.org/10.1016/j.jada.2005.02.005) |
 | 1.40-2.40 times resting rate | Activity multiplier range: Long-term sustainable activity levels for free-living adults, per FAO/WHO/UNU. | Rulebook | [FAO/WHO/UNU 2004](https://www.fao.org/4/y5686e/y5686e07.htm) |
 | +20 % over the label | US label tolerance: A food is misbranded only above this; a typical snack runs a few percent over. | Rulebook | [UFDA 2023](https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-9.xml), [Jumpertz 2013](https://doi.org/10.1002/oby.20185) |
 | 19 % of true intake | Under-reporting in athletes: Self-reported energy intake was this much lower than measured expenditure. | Well supported | [Capling 2017](https://doi.org/10.3390/nu9121313) |
 | 3-5 g per day | Creatine monohydrate dose: Daily dose from a physique-athlete review; lean-mass gain was about 1.1 kg with training. | Well supported | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791) |
-| 5-6 mg per kg | Caffeine dose often studied: Dose a narrative review gives for physique athletes; 5 mg/kg is 2.3 mg per lb. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0) |
+| 3-6 mg per kg | Caffeine dose often studied: ISSN's 2010 stand: effective at about 3 to 6 mg per kg, no further gain at 9 or more. 5 mg/kg is 2.3 mg per lb. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5) |
 | 25-29 g per day | Fibre target: Intake at which health benefits were greatest in pooled studies. | Well supported | [Reynolds 2019](https://doi.org/10.1016/S0140-6736(18)31809-9) |
 
 ## Protein targets by goal and body weight
@@ -352,6 +352,7 @@ Daily protein in g per kg and per lb, with worked examples for 70 kg (154 lb) an
 | Physique athlete in contest prep | 1.8-2.7 | 0.82-1.22 | 126-189 g | 162-243 g |
 | Lean lifter in a calorie deficit | 2.3-3.1 | 1.04-1.41 | 161-217 g | 207-279 g |
 | One serving (ISSN guide) | 0.25 | 0.11 | about 18 g | about 23 g |
+| One serving (off-season review) | 0.40-0.55 | 0.18-0.25 | 28-39 g | 36-50 g |
 
 Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096), [Iraki 2019](https://doi.org/10.3390/sports7070154)
 
@@ -376,14 +377,14 @@ How the common supplements rate for people who lift, from strongest to weakest e
 | Supplement | Evidence | What it does | Typical dose |
 |---|---|---|---|
 | Creatine monohydrate | Strong | Adds lean mass and strength with training | 3-5 g a day |
-| Caffeine | Strong | Small gain in strength and power | About 5-6 mg/kg (limited data) |
+| Caffeine | Strong | Small gain in strength and power | About 3-6 mg/kg |
 | Protein powder | Strong as a convenience | Helps meet daily protein, no special magic | 20-40 g per serving |
-| Beta-alanine | Moderate | Helps efforts lasting 1 to 4 minutes | 4-6 g a day for 2+ weeks |
+| Beta-alanine | Moderate | Helps efforts lasting 1 to 4 minutes | 4-6 g a day for 2+ weeks, in split doses |
 | Citrulline malate | Limited | About 3 extra reps per exercise in trials | 6-8 g, 40-60 min before |
 | BCAA pills | Weak | No human data on oral BCAA alone for muscle | Not needed with enough protein |
 | Testosterone boosters | Poor | No testosterone data for most ingredients | Avoid |
 
-Some support · Sources: [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Trexler 2015](https://doi.org/10.1186/s12970-015-0090-y), [Vårvik 2021](https://doi.org/10.1123/ijsnem.2020-0295), [Wolfe 2017](https://doi.org/10.1186/s12970-017-0184-9), [Clemesha 2020](https://doi.org/10.5534/wjmh.190043), [Maughan 2018](https://doi.org/10.1136/bjsports-2018-099027)
+Some support · Sources: [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Trexler 2015](https://doi.org/10.1186/s12970-015-0090-y), [Vårvik 2021](https://doi.org/10.1123/ijsnem.2020-0295), [Wolfe 2017](https://doi.org/10.1186/s12970-017-0184-9), [Clemesha 2020](https://doi.org/10.5534/wjmh.190043), [Maughan 2018](https://doi.org/10.1136/bjsports-2018-099027), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5)
 
 ## Terms
 
@@ -410,4 +411,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness#nutrition  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.

@@ -35,14 +35,14 @@ An index of the 58 key numbers and 18 reference tables in the KiteSink fitness f
 | [Minimum step between attempts](https://kitesink.com/fitness/meet#meet-num-increment) | 2.5 | kg (5.5 lb) | Meet day |
 | [Time to leave the platform after an attempt](https://kitesink.com/fitness/meet#meet-num-leave-platform) | 30 | seconds | Meet day |
 | [Daily protein for lifters](https://kitesink.com/fitness/nutrition#nut-num-protein-range) | 1.6-2.2 | g per kg per day | Nutrition |
-| [Protein per serving](https://kitesink.com/fitness/nutrition#nut-num-protein-meal) | 0.25 | g per kg per meal | Nutrition |
+| [Protein per serving](https://kitesink.com/fitness/nutrition#nut-num-protein-meal) | 0.25-0.55 | g per kg per meal | Nutrition |
 | [Energy per gram of food](https://kitesink.com/fitness/nutrition#nut-num-atwater) | 4 · 4 · 9 · 7 | kcal per g | Nutrition |
 | [Accuracy of the best equation](https://kitesink.com/fitness/nutrition#nut-num-equation-error) | 10 | % error band | Nutrition |
 | [Activity multiplier range](https://kitesink.com/fitness/nutrition#nut-num-activity-range) | 1.40-2.40 | times resting rate | Nutrition |
 | [US label tolerance](https://kitesink.com/fitness/nutrition#nut-num-label-slack) | +20 | % over the label | Nutrition |
 | [Under-reporting in athletes](https://kitesink.com/fitness/nutrition#nut-num-underreport) | 19 | % of true intake | Nutrition |
 | [Creatine monohydrate dose](https://kitesink.com/fitness/nutrition#nut-num-creatine) | 3-5 | g per day | Nutrition |
-| [Caffeine dose often studied](https://kitesink.com/fitness/nutrition#nut-num-caffeine) | 5-6 | mg per kg | Nutrition |
+| [Caffeine dose often studied](https://kitesink.com/fitness/nutrition#nut-num-caffeine) | 3-6 | mg per kg | Nutrition |
 | [Fibre target](https://kitesink.com/fitness/nutrition#nut-num-fibre) | 25-29 | g per day | Nutrition |
 | [Rate of loss](https://kitesink.com/fitness/diet#diet-num-rate) | 0.5-1 | % body weight per week | Diet |
 | [Deficit that stopped lean-mass gains](https://kitesink.com/fitness/diet#diet-num-deficit-limit) | 500 | kcal per day | Diet |
@@ -75,7 +75,7 @@ An index of the 58 key numbers and 18 reference tables in the KiteSink fitness f
 - [A 12-week cycle outline](https://kitesink.com/fitness/powerlifting#pl-table-12-week) (Powerlifting)
 - [IPF weight classes for men and women, in kg and lb](https://kitesink.com/fitness/meet#meet-table-ipf-classes) (Meet day)
 - [Platform commands for each lift](https://kitesink.com/fitness/meet#meet-table-commands) (Meet day)
-- [Attempt selection ranges for a first meet](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
+- [Attempt selection ranges from competition data](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
 - [Protein targets by goal and body weight](https://kitesink.com/fitness/nutrition#nut-table-protein-targets) (Nutrition)
 - [Hand-portion guide](https://kitesink.com/fitness/nutrition#nut-table-hand-portions) (Nutrition)
 - [Supplement evidence at a glance](https://kitesink.com/fitness/nutrition#nut-table-supplements) (Nutrition)
@@ -109,4 +109,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness/reference  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.

@@ -39,7 +39,7 @@ The 54 terms the KiteSink fitness field guide uses, in plain words, A to Z. Each
 - **Rack height sheet** (Meet day): The form where you record squat and bench rack and foot-block settings at weigh-in, so loaders set them before your attempt.
 - **Rate of perceived exertion (RPE)** (Hypertrophy): A 1-10 effort scale. On the RIR-based version, RPE 10 means 0 RIR, RPE 9 means 1 RIR, and so on. Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
 - **Rating of perceived exertion (RPE)** (Powerlifting): A 1 to 10 rating of how hard a set was; in strength training it is tied to how many repetitions were left.
-- **Recomposition** (Diet): Gaining muscle and losing fat at the same time, so body weight changes little while the body changes shape.
+- **Recomposition** (Diet): Gaining muscle and losing fat over the same period. Body weight may hold steady or fall while the body changes shape.
 - **Repetitions in reserve (RIR)** (Hypertrophy): The number of reps you could still have done when the set ended. 0 RIR means failure. 2 RIR means two more reps were possible. Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
 - **Repetitions in reserve (RIR)** (Powerlifting): How many more clean repetitions you could have done when the set ended; 2 RIR means two more were possible.
 - **Resting metabolic rate (RMR)** (Nutrition): The energy your body uses at rest to keep you alive, usually 60 to 70 percent of a day for inactive people, estimated by equations or measured.
@@ -80,4 +80,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness/glossary  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
