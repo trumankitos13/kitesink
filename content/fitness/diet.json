@@ -65,7 +65,7 @@
         "roberts-2020"
       ],
       "take": "A pace of 0.5 to 1 percent of body weight a week is the usual advice for keeping muscle while getting leaner.",
-      "body": "A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the 1.4 percent group kept lean mass unchanged and lost 21 percent of fat mass. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).",
+      "body": "A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the group set 1.4 percent (1.0 percent achieved) kept lean mass unchanged and lost 21 percent of fat mass. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).",
       "do": [
         "Pick a weekly percentage, convert it to kg or lb, and check against your four-week trend."
       ]
@@ -78,10 +78,11 @@
       "level": "intermediate",
       "confidence": "strong",
       "sources": [
-        "murphy-2021"
+        "murphy-2021",
+        "longland-2016"
       ],
       "take": "In a meta-regression, a deficit of about 500 kcal a day stopped lean-mass gains from training, while strength held up.",
-      "body": "A systematic review and meta-analysis of resistance training in an energy deficit found lean-mass gains were impaired against training without a deficit (effect size -0.57), but strength gains were comparable. The meta-regression put the point where gains were prevented at roughly 500 kcal a day. For people trying to preserve lean mass rather than add it, the authors advise avoiding deficits above that size.",
+      "body": "A systematic review and meta-analysis of resistance training in an energy deficit found lean-mass gains were impaired against training without a deficit (effect size -0.57), but strength gains were comparable. The meta-regression put the point where gains were prevented at roughly 500 kcal a day. For people trying to preserve lean mass rather than add it, the authors advise avoiding deficits above that size. Short trials can differ: 40 young men on a 40 percent deficit with intense training gained 1.2 kg of lean mass on 2.4 g/kg of protein in 4 weeks.",
       "do": [
         "Keep deficits at or below about 500 kcal a day if gaining or keeping muscle is the priority."
       ]
@@ -97,8 +98,8 @@
         "garthe-2011",
         "helms-2014-prep"
       ],
-      "take": "Faster loss retained less lean mass in athletes, and the speed is hard to keep up.",
-      "body": "In 24 athletes, a 1.4 percent weekly loss kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. Reviews recommend 0.5 to 1 percent a week.",
+      "take": "Faster loss gave up the lean-mass gain seen with slower loss in athletes, and the speed is hard to keep up.",
+      "body": "In 24 athletes lifting four times a week, a group set to lose 1.4 percent a week (1.0 percent achieved) kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. Reviews recommend 0.5 to 1 percent a week.",
       "do": [
         "Slow the deficit to 0.5 to 1 percent of body weight a week."
       ]
@@ -132,7 +133,7 @@
       "value": "500",
       "unit": "kcal per day",
       "sort": 500,
-      "take": "In a meta-regression, deficits around this size prevented gains in lean mass in trained lifters."
+      "take": "In a meta-regression, deficits around this size prevented gains in lean mass in people doing resistance training."
     },
     {
       "id": "diet-num-3500",
@@ -172,7 +173,7 @@
         "murphy-2021",
         "garthe-2011"
       ],
-      "take": "Approximate weekly loss for a daily deficit at 7,700 kcal per kg (3,500 per lb), for an 80 kg (176 lb) person. It overstates loss for lean people.",
+      "take": "Approximate weekly loss for a daily deficit at 7,700 kcal per kg (3,500 per lb), for an 80 kg (176 lb) person. Leaner people tend to lose more weight than this.",
       "columns": [
         "Daily deficit",
         "Weekly total",
@@ -207,7 +208,7 @@
           "7,000 kcal",
           "0.91 kg (2.0 lb)",
           "1.1%",
-          "Above 1%; more lean loss in athletes"
+          "Above 1%; faster than the athlete trial achieved"
         ]
       ]
     },
@@ -397,7 +398,8 @@
       "take": "Two-week changes of 1 to 3 kg were largely fat-free mass and water, not fat, in free-living adults.",
       "body": "In 46 adults, a unit of two-week weight change was 84 percent fat-free mass, and the energy density of 1 to 3 kg changes was about 2,380 kcal per kg, well below that of fat. Glycogen is stored with three to four parts water. Weight runs higher on Sunday and Monday in 80 adults, and fluid retention peaks at the start of menstrual flow in 62 women. None of these is fat gain.",
       "do": [
-        "Weigh at the same time under the same conditions, and judge the weekly average."
+        "Weigh at the same time under the same conditions, and judge the weekly average.",
+        "If you menstruate, compare the same week of one cycle with the same week of the next."
       ]
     },
     {
@@ -504,7 +506,7 @@
         ],
         [
           "Fat change",
-          "Slow; about 0.5-1% of body weight a week at best",
+          "Slow; reviews advise about 0.5-1% of body weight a week",
           "Weeks to months"
         ]
       ]
@@ -553,7 +555,7 @@
       "take": "Planned weeks at maintenance did not improve fat loss in lifters, and they lowered hunger.",
       "body": "In 61 resistance-trained adults over 12 weeks, alternating three weeks of restriction with one week at maintenance gave the same fat and lean mass as continuous dieting, with lower hunger. A meta-analysis of 12 trials (881 participants) found the same body composition and a smaller drop in resting rate. A small 7-week trial found a weekly two-day carb refeed kept more lean mass (-0.4 vs -1.3 kg). Results in men with obesity favoured breaks.",
       "do": [
-        "Try a one-week break at maintenance if hunger or training quality is slipping."
+        "Try a one- to two-week break at maintenance if hunger or training quality is slipping."
       ]
     },
     {
@@ -695,7 +697,7 @@
         "mountjoy-2023",
         "helms-2019"
       ],
-      "take": "Prolonged energy availability under about 25 kcal per kg of lean mass led to muscle loss and hormonal and mood problems.",
+      "take": "Prolonged energy availability under about 25 kcal per kg of lean mass in men led to muscle loss and hormonal and mood problems; in women, hormones were disrupted below 30.",
       "body": "Reviews of lean athletes link a long period at low energy availability to muscle loss, hormone disruption and psychological problems. A case study of one natural bodybuilder saw body fat fall from 14.8 to 4.5 percent and testosterone from 9.22 to 2.27 ng/mL, recovering after the contest. In 27 women dieting for a fitness show, sex hormones fell and menstrual irregularities rose, and most recovered within three to four months. Involve a coach and clinician.",
       "do": [
         "Treat contest-level leanness as a short, supervised project, not a lifestyle.",
@@ -833,7 +835,7 @@
       "level": "beginner",
       "confidence": "practice",
       "sources": [],
-      "take": "Gaining muscle and losing fat at the same time, so body weight changes little while the body changes shape."
+      "take": "Gaining muscle and losing fat over the same period. Body weight may hold steady or fall while the body changes shape."
     },
     {
       "id": "diet-table-gain-rate",

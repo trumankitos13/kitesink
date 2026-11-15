@@ -58,12 +58,12 @@ Effort · Intermediate · Well supported · Sources: [Refalo 2023](https://doi.o
 
 **RIR tracks how hard a set was, but people tend to underpredict how many reps they have left, by about one rep on average.**
 
-In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scoping review and meta-analysis of 12 studies and 414 people found lifters underpredicted reps to failure by 0.95 reps on average, with wide variation. Guesses were better close to the end of a set and on sets of 12 reps or fewer.
+In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scoping review and meta-analysis of 12 studies and 414 people found lifters underpredicted reps to failure by 0.95 reps on average, with wide variation. Guesses were better close to the end of a set and on sets of 12 reps or fewer. Training experience did not clearly change accuracy in the pooled data, though one study of 141 people saw a tendency to improve with experience.
 
 - Rate RIR on sets of about 12 reps or fewer.
 - Occasionally check yourself with one set to failure on a safe exercise.
 
-Effort · Intermediate · Some support · Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049), [Halperin 2022](https://doi.org/10.1007/s40279-021-01559-x), [Pelland 2022](https://doi.org/10.1007/s40279-022-01667-2)
+Effort · Intermediate · Some support · Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049), [Halperin 2022](https://doi.org/10.1007/s40279-021-01559-x), [Pelland 2022](https://doi.org/10.1007/s40279-022-01667-2), [Steele 2017](https://doi.org/10.7717/peerj.4105)
 
 ### The effective-reps idea is a useful rule of thumb, not a measured law
 
@@ -242,7 +242,7 @@ Programming · Beginner · Some support · Sources: [Fradkin 2010](https://doi.o
 
 A deload is a period of reduced training stress, defined by consensus among 21 coaches who finished a Delphi study. In 246 strength and physique athletes, deloads came about every 5.6 weeks and lasted about 6.4 days. In 19 untrained men, deload weeks did not change muscle growth over 8 weeks. Experienced lifters were not tested.
 
-- Take a lighter week when performance drops for several sessions or joints ache, rather than on a fixed date.
+- Plan a lighter week about every five or six weeks, or sooner when performance drops for several sessions or joints ache.
 
 Programming · Intermediate · Thin evidence · Sources: [Bell 2023](https://doi.org/10.1186/s40798-023-00633-0), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y), [Pancar 2026](https://doi.org/10.1038/s41598-026-40612-5)
 
@@ -434,4 +434,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/fitness#hypertrophy  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.

@@ -9,12 +9,18 @@ Every word is written for this site: never copy or closely paraphrase another si
 sentences, numbering or named frameworks.
 
 ## Absolute rules
-1. NO SOURCE MAY HAVE SCHOENFELD AS AN AUTHOR, in any author position, and the
-   name must not appear anywhere in your file. Many well-known hypertrophy and
-   protein papers include him as a co-author (for example Morton 2018 in BJSM,
-   Coleman 2024 on deloads, several ISSN papers). Check the FULL author list of
-   every paper on Crossref before using it. Find another source or drop the
-   point.
+1. USE SOURCES WITH SCHOENFELD AMONG THE AUTHORS SPARINGLY. They are allowed (the
+   owner lifted the earlier ban on 15 November 2026), but prefer another source
+   where one says the same thing as well, and keep to at most five in a file; the
+   validator enforces that number. Many well-known hypertrophy and protein papers
+   include him as a co-author (for example Morton 2018 in BJSM, Coleman 2024 on
+   deloads, several ISSN papers), so check the FULL author list of every paper on
+   Crossref.
+   WHEN SOURCES DISAGREE, prefer the newest good evidence. Where this guide and
+   Lyle McDonald's bodyrecomposition.com disagree, defer to his position over the
+   wording already here, unless newer primary evidence says otherwise. Write it in
+   your own words, never his, and name him and link the article where his work
+   shaped the point.
 2. Never invent a study, a DOI, an author list, a sample size, an effect size or
    a quote. Look every paper up:
    `curl -s "https://api.crossref.org/works/<DOI>" -H "User-Agent: site-source-checker/1.0"`
@@ -128,6 +134,6 @@ citing a weaker second one.
 ## Validate before you report
 `python3 scripts/validate_fitness.py content/fitness/<file>.json`, then `python3 scripts/build_fitness.py`
 It checks the schema, text lengths, that every DOI exists on Crossref with a
-matching title, year, first author and author count, and that Schoenfeld is not
-among any paper's authors. Fix everything it reports as ERROR. Read the warnings.
+matching title, year, first author and author count, and that no more than five
+sources in the file have Schoenfeld among the authors. Fix everything it reports as ERROR. Read the warnings.
 Work in passes: write a batch of entries, validate, fix, continue.

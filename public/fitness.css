@@ -422,6 +422,13 @@ details.more > div { display: grid; gap: 14px; margin-top: 14px; }
 .fr-log-t a { display: inline-block; padding-block: 12px; color: inherit; text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 3px; }
 .fr-log-t a:hover { color: var(--k-green); text-decoration-color: currentColor; }
 .fr-log p + p { max-width: 68ch; font-size: 15px; line-height: 1.6; color: var(--k-copy); }
+.fr-log-more > summary { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; margin: 18px 0 6px;
+  border: 1px solid var(--k-rule-strong); border-radius: 999px; font: 600 14px/1 var(--k-sans); color: var(--k-ink); cursor: pointer; list-style: none; }
+.fr-log-more > summary::-webkit-details-marker { display: none; }
+.fr-log-more > summary::after { content: "+"; font: 500 18px/1 var(--k-mono); color: var(--k-green); }
+.fr-log-more[open] > summary::after { content: "\2212"; }
+.fr-log-more > summary:hover { border-color: var(--k-green); color: var(--k-green); }
+.fr-log-more[open] > .fr-log { border-top: 0; }
 
 /* An open entry turns its + into a ×. Keep that glyph a small box: stretched down the whole
    summary and then rotated, it reached past the edge of a phone screen and widened the page. */

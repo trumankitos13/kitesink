@@ -85,7 +85,7 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
 - **Change the nav / sections:** `SECTIONS` at the top of `public/ks.js`. The blog
   post template carries its own small KiteSink nav — search for `/consulting` in that file.
   Every other page mounts the shared header or slim bar.
-- **Change `ks.css`, `ks.js`, `site-index.js`, `fitness.js`, `fitness.css` or `fitness-ref.js`:** bump the `?v=2027.8` on the
+- **Change `ks.css`, `ks.js`, `site-index.js`, `fitness.js`, `fitness.css` or `fitness-ref.js`:** bump the `?v=2027.9` on the
   `<link>`/`<script>` tags in every page (find-and-replace) and `ASSET_V` at the top of `ks.js`. Those files are cached for an hour or more, and a new page with an
   old cached stylesheet looks broken. The audit checks every page uses the same version.
   The fitness pages are generated, so change the number in `content/fitness/page.html` and
@@ -104,6 +104,14 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
     `/fitness/claims`, everything else on its area's page. The build puts it there and makes
     every other page link to it; nothing is written twice. Once an entry is published, do not
     change its `id`: links to it use that id.
+  - **Sources:** papers with Schoenfeld among the authors may be used, sparingly; the validator
+    allows at most five in a file. When sources disagree, prefer the newest good evidence, and
+    where this guide and bodyrecomposition.com disagree, defer to that site's position over the
+    wording already here unless newer primary evidence says otherwise. Always in your own words,
+    with the author named and linked. The full rules are in `content/fitness/WRITING-BRIEF.md`.
+  - **A source's id on the page is its key** (`src-<key>`). If two different sources share a key,
+    the second gets a suffix made from its own address. `source_keys` in
+    `content/fitness/meta.json` pins a published id so it never moves.
   - **If a published entry changes what it says,** add a dated row to
     `content/fitness/corrections.json`. It shows on `/fitness/sources`.
   - **A page's title, description, heading and lead** are in `content/fitness/routes.json`;

@@ -128,10 +128,11 @@
    "sources": [
     "zourdos-2016",
     "halperin-2022",
-    "pelland-2022"
+    "pelland-2022",
+    "steele-2017"
    ],
    "take": "RIR tracks how hard a set was, but people tend to underpredict how many reps they have left, by about one rep on average.",
-   "body": "In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scoping review and meta-analysis of 12 studies and 414 people found lifters underpredicted reps to failure by 0.95 reps on average, with wide variation. Guesses were better close to the end of a set and on sets of 12 reps or fewer.",
+   "body": "In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scoping review and meta-analysis of 12 studies and 414 people found lifters underpredicted reps to failure by 0.95 reps on average, with wide variation. Guesses were better close to the end of a set and on sets of 12 reps or fewer. Training experience did not clearly change accuracy in the pooled data, though one study of 141 people saw a tendency to improve with experience.",
    "do": [
     "Rate RIR on sets of about 12 reps or fewer.",
     "Occasionally check yourself with one set to failure on a safe exercise."
@@ -452,7 +453,7 @@
    "take": "Coaches use deloads regularly. The one small trial in beginners found cutting volume in weeks 4 and 8 neither helped nor hurt.",
    "body": "A deload is a period of reduced training stress, defined by consensus among 21 coaches who finished a Delphi study. In 246 strength and physique athletes, deloads came about every 5.6 weeks and lasted about 6.4 days. In 19 untrained men, deload weeks did not change muscle growth over 8 weeks. Experienced lifters were not tested.",
    "do": [
-    "Take a lighter week when performance drops for several sessions or joints ache, rather than on a fixed date."
+    "Plan a lighter week about every five or six weeks, or sooner when performance drops for several sessions or joints ache."
    ]
   },
   {
@@ -2279,6 +2280,25 @@
    "pmid": "32108724",
    "n_participants": 16,
    "support": "Changes in the vastus lateralis CSA (difference from Pre to Post) were significantly higher for the IND protocol (p = 0.042; mean difference: 1.08 cm2; confidence interval [CI]: 0.04-2.11)."
+  },
+  "steele-2017": {
+   "type": "trial",
+   "authors": [
+    "Steele J",
+    "Endres A",
+    "Fisher J",
+    "Gentil P",
+    "Giessing J"
+   ],
+   "year": 2017,
+   "title": "Ability to predict repetitions to momentary failure is not perfectly accurate, though improves with resistance training experience",
+   "journal": "PeerJ",
+   "volume": "5",
+   "pages": "e4105",
+   "doi": "10.7717/peerj.4105",
+   "pmid": "29204323",
+   "n_participants": 141,
+   "support": "One hundred and forty-one participants underwent a full body RT session involving single sets to MF and were asked to predict the number of repetitions they could complete before reaching MF on each exercise. ... There was a tendency towards improved accuracy with greater experience."
   }
  }
 }

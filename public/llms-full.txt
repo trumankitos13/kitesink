@@ -184,7 +184,7 @@ Vantix is a periodization app for lifters. Its free core (v1.0) is in progress, 
 
 Source page: https://kitesink.com/fitness  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/claims.md
@@ -214,13 +214,13 @@ Evidence: Meta-analysis · Well supported · Sources: [Refalo 2023](https://doi.
 
 **Verdict: Overstated.** Research on closeness to failure shows a gradual trend, not a cut-off at five reps.
 
-The 'effective reps' idea says only the final reps before failure build muscle. The meta-analyses cited here did not test a five-rep cut-off. They found that growth tended to rise as sets ended closer to failure, and one concluded the relationship may not be a straight line. Both rely on rough estimates of reps in reserve, so the true shape is unknown.
+The 'effective reps' idea says only the final reps before failure build muscle. It draws on muscle-activation work: in 15 untrained women doing lateral raises, activity in a set of about 15 reps climbed and then levelled off over the last 3 to 5 reps before failure. That was activation in one session, not growth. The meta-analyses cited here did not test a five-rep cut-off. They found growth tended to rise as sets ended closer to failure, and one concluded the relationship may not be a straight line. Both rely on rough estimates of reps in reserve.
 
-Who was studied: Refalo 2023: 15 studies in healthy adults. Robinson 2024: exploratory meta-regressions of training trials. Neither tested a five-rep rule.
+Who was studied: Refalo 2023: 15 studies in healthy adults. Robinson 2024: exploratory meta-regressions of training trials. Neither tested a five-rep rule. Sundstrup 2012: 15 untrained women, one exercise, EMG only.
 
 - Take working sets close to failure instead of counting a fixed number of final reps.
 
-Evidence: Meta-analysis · Thin evidence · Sources: [Robinson 2024](https://doi.org/10.1007/s40279-024-02069-2), [Refalo 2023](https://doi.org/10.1007/s40279-022-01784-y)
+Evidence: Meta-analysis · Thin evidence · Sources: [Robinson 2024](https://doi.org/10.1007/s40279-024-02069-2), [Refalo 2023](https://doi.org/10.1007/s40279-022-01784-y), [Sundstrup 2012](https://doi.org/10.1519/JSC.0b013e318239c38e)
 
 ### Do light weights build as much muscle as heavy ones?
 
@@ -265,7 +265,7 @@ Evidence: Mixed · Some support · Sources: [Nosaka 2002](https://doi.org/10.103
 
 **Verdict: Overstated.** Adding cardio did not reduce overall muscle growth in a 43-study review, though a small effect showed at fibre level, mainly with running.
 
-A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength. Explosive strength was reduced, more so when both were done in the same session. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.
+A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength was reduced, more so when both were done in the same session. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.
 
 Who was studied: Schumann 2022: 43 studies in healthy adults, at least 4 weeks of supervised concurrent training. Lundberg 2022: 15 studies on muscle fibre size, same design.
 
@@ -289,14 +289,14 @@ Evidence: Randomised trial · Thin evidence · Sources: [Fonseca 2014](https://d
 
 **Verdict: Depends.** Deloads are common coaching practice, but outcome trials are few; one found reduced-volume weeks did not cost muscle gain in beginners.
 
-A Delphi panel of expert coaches (34 in round one, 21 in round three) agreed a definition: a period of reduced training stress meant to lower fatigue and prepare for later training. That is expert opinion, not an outcome trial. In one trial, 19 untrained young men trained with or without reduced weeks at weeks 4 and 8; muscle thickness and strength-endurance rose similarly in both. No study here tests a fixed fourth-week rule in trained lifters.
+A Delphi panel of expert coaches (34 in round one, 21 in round three) agreed a definition: a period of reduced training stress meant to lower fatigue and prepare for later training. In a survey of 246 competitive strength and physique athletes, all deloaded, on average every 5.6 weeks for about 6 days, mostly planned in advance. Both are opinion and practice, not outcome trials. In one trial, 19 untrained young men trained with or without reduced weeks at weeks 4 and 8; muscle thickness and strength-endurance rose similarly. No study here tests a fixed fourth-week rule in trained lifters.
 
-Who was studied: Bell 2023: 34 expert coaches in round one, 21 in round three. Pancar 2026: 19 untrained young men, 8 weeks, reduced weeks at 4 and 8, arms and legs compared.
+Who was studied: Bell 2023: 34 expert coaches in round one, 21 in round three. Rogerson 2024: survey of 246 competitive athletes. Pancar 2026: 19 untrained young men, 8 weeks, reduced weeks at 4 and 8.
 
-- Plan a lighter week when fatigue, sleep or motivation drop, rather than on a fixed calendar.
+- Plan a lighter week about every five or six weeks, and bring it forward if fatigue, sleep or motivation drop.
 - In a deload, cut sets and sessions but keep the same exercises.
 
-Evidence: Mixed · Thin evidence · Sources: [Bell 2023](https://doi.org/10.1186/s40798-023-00633-0), [Pancar 2026](https://doi.org/10.1038/s41598-026-40612-5)
+Evidence: Mixed · Thin evidence · Sources: [Bell 2023](https://doi.org/10.1186/s40798-023-00633-0), [Pancar 2026](https://doi.org/10.1038/s41598-026-40612-5), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y)
 
 ## Powerlifting
 
@@ -462,7 +462,7 @@ Evidence: Mixed · Some support · Sources: [Craven 2022](https://doi.org/10.100
 
 **Verdict: Overstated.** No beneficial effect of a specific protein timing showed up on lean mass or strength, so total daily protein matters more.
 
-A systematic review of 65 trials (2,907 participants) found protein supplementation raised lean mass by 0.62 kg (1.4 lb) in adults, independent of when it was taken, with no beneficial effect of a specific timing on lean mass, handgrip or leg-press strength. The ISSN position stand says the best time is likely a matter of individual tolerance, and that the anabolic effect of exercise lasts at least 24 hours.
+A systematic review of 65 trials (2,907 participants) found protein supplementation raised lean mass by 0.62 kg (1.4 lb) in adults, independent of when it was taken, with no beneficial effect of a specific timing on lean mass, handgrip or leg-press strength. The ISSN position stand says the best time is likely a matter of individual tolerance, and that the anabolic effect of exercise lasts at least 24 hours but likely diminishes as time passes after training.
 
 Who was studied: Wirth 2020: 65 trials with 2,907 healthy adults. Jager 2017: ISSN position stand reviewing the protein and exercise literature.
 
@@ -573,16 +573,17 @@ Evidence: Review · Well supported · Sources: [Frankenfield 2005](https://doi.o
 
 ### How much protein do you need to build muscle?
 
-**Verdict: Mostly holds.** About 1.6 g per kg a day covers most lifters, and returns shrink as intake rises above that.
+**Verdict: Mostly holds.** About 1.6 g per kg a day covers most lifters, returns shrink above that, and needs may be higher while dieting.
 
-The ISSN position stand calls 1.4 to 2.0 g per kg a day sufficient for most exercising people. A meta-analysis of 74 trials found added protein helped lean mass in adults under 65 who ate 1.6 g per kg or more. A dose-response review of 105 articles (5,402 participants) found each extra 0.1 g per kg added 0.39 kg of lean mass below 1.3 g per kg a day and 0.12 kg above it.
+The ISSN position stand calls 1.4 to 2.0 g per kg a day sufficient for most exercising people, and says 2.3 to 3.1 g per kg may be needed to keep lean mass when resistance-trained people cut calories. A meta-analysis of 74 trials found added protein helped lean mass in adults under 65 who ate 1.6 g per kg or more. A dose-response review of 105 articles (5,402 participants) found each extra 0.1 g per kg added 0.39 kg of lean mass below 1.3 g per kg a day and 0.12 kg above it.
 
 Who was studied: Nunes: 74 trials of added protein with resistance exercise. Tagawa: 105 articles, 5,402 participants. Jager: the ISSN position stand.
 
 - Aim for about 1.6 to 2.2 g per kg a day: 128 to 176 g at 80 kg (176 lb).
 - Hit the daily total before you worry about timing or splits.
+- During a calorie deficit, aim for the top of that range or above it.
 
-Evidence: Meta-analysis · Well supported · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Nunes 2022b](https://doi.org/10.1002/jcsm.12922), [Tagawa 2021](https://doi.org/10.1093/nutrit/nuaa104)
+Evidence: Meta-analysis · Well supported · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Nunes 2022b](https://doi.org/10.1002/jcsm.12922), [Tagawa 2021](https://doi.org/10.1093/nutrit/nuaa104), [Iraki 2019](https://doi.org/10.3390/sports7070154)
 
 ### Will drinking alcohol ruin your gains?
 
@@ -600,16 +601,16 @@ Evidence: Mixed · Thin evidence · Sources: [Parr 2014](https://doi.org/10.1371
 
 ### Can plant protein build as much muscle as animal protein?
 
-**Verdict: Mostly holds.** When total protein is enough, strength gains match, and soy matched milk protein for muscle. Some other plant proteins fell behind.
+**Verdict: Mostly holds.** When total protein is enough, strength gains match, and soy matched milk protein for muscle in pooled trials. Some other plant proteins fell behind.
 
-A meta-analysis of 18 studies found protein source did not change absolute lean mass or strength, though younger adults gained 0.41 kg more lean mass on animal protein. A 2025 meta-analysis of 30 trials found a small animal advantage for muscle mass, with no difference between soy and milk across 17 trials, and no difference in strength. In a 12-week trial, 19 vegans and 19 omnivores on about 1.6 g per kg gained alike.
+A meta-analysis of 18 studies found protein source did not change absolute lean mass or strength, though younger adults gained 0.41 kg more lean mass on animal protein. A 2025 meta-analysis of 30 trials found a small animal advantage for muscle mass, with no difference between soy and milk across 17 trials, and no difference in strength. In a 12-week trial, 19 vegans and 19 omnivores on about 1.6 g per kg gained alike. One trial differed: in 56 novice men training for 12 weeks, milk after sessions built more lean mass than a matched soy drink, with equal strength gains.
 
-Who was studied: Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by age and protein source. Hevia: 19 vegans and 19 omnivores for 12 weeks.
+Who was studied: Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by age and protein source. Hevia: 19 vegans and 19 omnivores for 12 weeks. Hartman: 56 young novice men, 12 weeks.
 
 - If you eat no animal foods, aim for the upper half of the protein range.
 - Lean on soy and mix legumes and grains across the day.
 
-Evidence: Meta-analysis · Well supported · Sources: [Lim 2021](https://doi.org/10.3390/nu13020661), [Hevia-Larraín 2021](https://doi.org/10.1007/s40279-021-01434-9), [Reid-McCann 2025](https://doi.org/10.1093/nutrit/nuae200)
+Evidence: Meta-analysis · Well supported · Sources: [Lim 2021](https://doi.org/10.3390/nu13020661), [Hevia-Larraín 2021](https://doi.org/10.1007/s40279-021-01434-9), [Reid-McCann 2025](https://doi.org/10.1093/nutrit/nuae200), [Hartman 2007](https://doi.org/10.1093/ajcn/86.2.373)
 
 ## Diet
 
@@ -654,9 +655,9 @@ Evidence: Meta-analysis · Well supported · Sources: [Schwingshackl 2020](https
 
 **Verdict: Overstated.** Fasted exercise burns slightly more fat during the session, but body-mass and body-fat changes were similar in the small review that tracked them.
 
-A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) compared fasted and fed exercise on weight and body composition and found trivial differences between groups, while warning that the data were limited.
+A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) compared fasted and fed exercise on weight and body composition and found trivial differences between groups, while warning that the data were limited. Its body-fat and lean-mass results came from women only.
 
-Who was studied: Hackett 2017: 5 studies, 96 healthy adults. Vieira 2016: 27 studies, 273 adults, exercise of 120 minutes or less.
+Who was studied: Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults, exercise of 120 minutes or less.
 
 - Train at the time of day you will stick to, since the evidence shows no clear fat-loss edge from fasting.
 
@@ -689,15 +690,15 @@ Evidence: Mixed · Thin evidence · Sources: [Lichtman 1992](https://doi.org/10.
 
 ### Does starvation mode stop weight loss?
 
-**Verdict: Overstated.** Energy expenditure does fall during a diet, but measured extra drops were tens to about a hundred kcal a day, not a stop to weight loss.
+**Verdict: Overstated.** Energy expenditure does fall during a diet, at rest and in non-resting activity. That slows weight loss, but no study here shows it stopping loss.
 
-In 171 overweight women who lost an average of 12 kg, metabolic adaptation was about 54 kcal a day after weight loss and was not present at 1 or 2 years in a subset. In 32 men on a half-calorie diet for 3 weeks, resting energy expenditure fell 266 kcal a day, of which 108 kcal was adaptive thermogenesis (72 kcal after accounting for lean mass). A review notes restriction brings changes that attenuate weight loss and promote regain.
+In 171 overweight women who lost an average of 12 kg, metabolic adaptation was about 54 kcal a day after weight loss and was not present at 1 or 2 years in a subset. In 32 men on a half-calorie diet for 3 weeks, resting energy expenditure fell 266 kcal a day, of which 108 kcal was adaptive thermogenesis (72 kcal after accounting for lean mass). Resting figures miss part of it: in 41 adults held 10 percent or more below their usual weight, total expenditure fell 6 to 8 kcal per kg of fat-free mass a day, about half of it non-resting.
 
-Who was studied: Martins 2020: 171 overweight women, 2 years. Muller 2015: 32 non-obese men through overfeeding, 3 weeks at half energy needs, and refeeding. Trexler 2014: review.
+Who was studied: Martins 2020: 171 overweight women, 2 years. Muller 2015: 32 non-obese men, 3 weeks at half energy needs. Leibel 1995: 18 obese and 23 never-obese adults. Trexler 2014: review.
 
 - Keep your deficit moderate, and recheck your intake and weight trend over 2 to 4 weeks before changing anything.
 
-Evidence: Mixed · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Müller 2015](https://doi.org/10.3945/ajcn.115.109173), [Trexler 2014](https://doi.org/10.1186/1550-2783-11-7)
+Evidence: Mixed · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Müller 2015](https://doi.org/10.3945/ajcn.115.109173), [Trexler 2014](https://doi.org/10.1186/1550-2783-11-7), [Leibel 1995](https://doi.org/10.1056/NEJM199503093321001)
 
 ### Does spot reduction work?
 
@@ -739,26 +740,27 @@ Evidence: Randomised trial · Thin evidence · Sources: [Vujović 2022](https://
 
 **Verdict: Overstated.** In pooled trials, exercise alone produced modest weight loss, so it is a weak tool for offsetting a poor diet.
 
-An overview of 12 systematic reviews (149 studies) in adults with overweight or obesity found exercise training led to weight loss of 1.5 to 3.5 kg (3.3 to 7.7 lb) and fat loss of 1.3 to 2.6 kg. Resistance training reduced lean mass loss during weight loss. In the one review that looked at it, exercise had no significant effect on weight maintenance. The overview did not test diet quality directly, but it shows exercise helps body composition even though it moves weight modestly.
+An overview of 12 systematic reviews (149 studies) in adults with overweight or obesity found exercise training led to weight loss of 1.5 to 3.5 kg (3.3 to 7.7 lb) and fat loss of 1.3 to 2.6 kg. Resistance training reduced lean mass loss during weight loss. For keeping weight off the evidence is split: the one review of trials found no significant effect, while an ACSM position stand says observational studies link more than 250 minutes a week to better maintenance and that well-designed trials are lacking. The overview did not test diet quality directly.
 
-Who was studied: Bellicha 2021: overview of 12 systematic reviews and meta-analyses covering 149 studies in adults with overweight or obesity.
+Who was studied: Bellicha 2021: overview of 12 systematic reviews covering 149 studies in adults with overweight or obesity. Donnelly 2009: ACSM position stand. Wing 2005: weight-loss registry review.
 
 - Use food to set your calorie deficit and training to protect muscle and fitness.
+- After a diet, keep activity high: people who keep weight off long term report about an hour a day.
 
-Evidence: Review · Some support · Sources: [Bellicha 2021](https://doi.org/10.1111/obr.13256)
+Evidence: Review · Some support · Sources: [Bellicha 2021](https://doi.org/10.1111/obr.13256), [DONNELLY 2009](https://doi.org/10.1249/MSS.0b013e3181949333), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S)
 
 ### Can you lose weight fast without losing muscle?
 
-**Verdict: Depends.** Slower is safer for muscle: about 0.5 to 1 percent of body weight a week, and the low end did better in the one trial that tested it.
+**Verdict: Depends.** Slower is safer for muscle: about 0.5 to 1 percent of body weight a week. With hard lifting, lean mass also held in short trials of faster loss or a steep deficit.
 
-A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less to limit fat-free mass loss. In 24 athletes, the group losing 0.7 percent a week gained 2.1 percent lean mass, while the group losing 1.4 percent a week kept lean mass unchanged. That is one small trial. Leaner people have less to spare, so the safe pace is likely slower for them.
+A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less to limit fat-free mass loss. In 24 athletes lifting four times a week, the group losing 0.7 percent a week gained 2.1 percent lean mass, while the faster group, set 1.4 percent and achieving 1.0, kept lean mass unchanged. In 40 young men on a 40 percent deficit with intense training for 4 weeks, lean mass rose 1.2 kg on 2.4 g of protein per kg. These are small, short trials. Leaner people have less to spare, so the safe pace is likely slower for them.
 
-Who was studied: Garthe: 24 athletes in a controlled weight-loss trial. Helms and Roberts: reviews written for lean physique athletes and lifters.
+Who was studied: Garthe: 24 athletes in a controlled weight-loss trial. Longland: 40 young men, 4 weeks. Helms and Roberts: reviews written for lean physique athletes and lifters.
 
 - Pick a weekly percentage, convert it to kg or lb, and check it against your four-week trend.
 - Keep lifting and keep protein high while you diet.
 
-Evidence: Mixed · Thin evidence · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096)
+Evidence: Mixed · Thin evidence · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096), [Longland 2016](https://doi.org/10.3945/ajcn.115.119339)
 
 ### Do you just have to put up with hunger when you diet?
 
@@ -910,7 +912,7 @@ Evidence: Mixed · Some support · Sources: [Ode 2007](https://doi.org/10.1249/0
 
 Source page: https://kitesink.com/fitness#claims  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/hypertrophy.md
@@ -976,12 +978,12 @@ Effort · Intermediate · Well supported · Sources: [Refalo 2023](https://doi.o
 
 **RIR tracks how hard a set was, but people tend to underpredict how many reps they have left, by about one rep on average.**
 
-In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scoping review and meta-analysis of 12 studies and 414 people found lifters underpredicted reps to failure by 0.95 reps on average, with wide variation. Guesses were better close to the end of a set and on sets of 12 reps or fewer.
+In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scoping review and meta-analysis of 12 studies and 414 people found lifters underpredicted reps to failure by 0.95 reps on average, with wide variation. Guesses were better close to the end of a set and on sets of 12 reps or fewer. Training experience did not clearly change accuracy in the pooled data, though one study of 141 people saw a tendency to improve with experience.
 
 - Rate RIR on sets of about 12 reps or fewer.
 - Occasionally check yourself with one set to failure on a safe exercise.
 
-Effort · Intermediate · Some support · Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049), [Halperin 2022](https://doi.org/10.1007/s40279-021-01559-x), [Pelland 2022](https://doi.org/10.1007/s40279-022-01667-2)
+Effort · Intermediate · Some support · Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049), [Halperin 2022](https://doi.org/10.1007/s40279-021-01559-x), [Pelland 2022](https://doi.org/10.1007/s40279-022-01667-2), [Steele 2017](https://doi.org/10.7717/peerj.4105)
 
 ### The effective-reps idea is a useful rule of thumb, not a measured law
 
@@ -1160,7 +1162,7 @@ Programming · Beginner · Some support · Sources: [Fradkin 2010](https://doi.o
 
 A deload is a period of reduced training stress, defined by consensus among 21 coaches who finished a Delphi study. In 246 strength and physique athletes, deloads came about every 5.6 weeks and lasted about 6.4 days. In 19 untrained men, deload weeks did not change muscle growth over 8 weeks. Experienced lifters were not tested.
 
-- Take a lighter week when performance drops for several sessions or joints ache, rather than on a fixed date.
+- Plan a lighter week about every five or six weeks, or sooner when performance drops for several sessions or joints ache.
 
 Programming · Intermediate · Thin evidence · Sources: [Bell 2023](https://doi.org/10.1186/s40798-023-00633-0), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y), [Pancar 2026](https://doi.org/10.1038/s41598-026-40612-5)
 
@@ -1342,7 +1344,7 @@ Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.00000000000011
 
 Source page: https://kitesink.com/fitness#hypertrophy  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/powerlifting.md
@@ -1470,12 +1472,12 @@ Periodisation and peaking · Intermediate · Some support · Sources: [Harries 2
 
 **Surveys report a short step taper: volume down about 40-50%, intensity kept high, last heavy squat and deadlift 7-10 days out.**
 
-These are self-reports, not trials proving a taper works. In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical, with full rest about 2.8 days before the meet. A small trial of 19 athletes found 3 or 5 days of full rest kept lower-body strength; upper-body strength held at 3 days but not 5.
+These are self-reports, not trials proving a taper works. In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical, with full rest about 2.8 days before the meet. A small trial of 19 athletes found 3 or 5 days of full rest kept lower-body strength; upper-body strength held at 3 days but not 5. A review found limited evidence that a short, heavy, low-volume session in the 48 hours before competition can help performance.
 
 - Cut volume sharply but keep the competition lifts and a few heavy singles.
 - Rest fully for the last 2 to 3 days before the meet.
 
-Periodisation and peaking · Advanced · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Winwood 2026](https://doi.org/10.1007/s40279-026-02500-w), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183)
+Periodisation and peaking · Advanced · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Winwood 2026](https://doi.org/10.1007/s40279-026-02500-w), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Harrison 2019](https://doi.org/10.1007/s40279-019-01136-3)
 
 ### Most strength athletes deload for about a week every 5 to 6 weeks
 
@@ -1503,9 +1505,9 @@ Technique and leverages · Intermediate · Some support · Sources: [Glassbrook 
 
 This is coaching convention. Keep head, shoulders and buttocks on the bench and feet flat on the floor. Pull the shoulder blades together and down, grip with the thumbs around the bar, and lower under control to the lower chest. Pause until the press command, then press back over the shoulders. Wider grips shorten the range, but federations cap grip width, so check the rulebook.
 
-- Pause every training rep on the chest for the same count as the meet.
+- Pause every training rep until the bar is still, and sometimes hold longer: the referee decides when to call 'Press'.
 
-Technique and leverages · Beginner · Coaching practice
+Technique and leverages · Beginner · Coaching practice · Sources: [IPF 2026a](https://www.powerlifting.sport/rules/codes/info/technical-rules)
 
 ### Sumo and conventional deadlifts load the joints differently
 
@@ -1664,10 +1666,10 @@ Common coaching zones with typical reps per set and their purpose; reps at a giv
 | Light | 50-65% | 8-12 or more | Warm-ups, skill work, easy days |
 | Moderate | 65-75% | 5-8 | Volume work and technique practice |
 | Working | 75-85% | 3-6 | Main strength work |
-| Heavy | 85-92% | 1-3 | Heavy strength work, peaking blocks |
-| Near-max | 92-100% | 1 | Singles, openers, tests, attempts |
+| Heavy | 85-92% | 1-3 | Heavy strength work, peaking blocks, openers |
+| Near-max | 92-100% | 1 | Singles, tests, second and third attempts |
 
-Coaching practice · Sources: [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7)
+Coaching practice · Sources: [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7), [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ## RPE to reps in reserve chart
 
@@ -1715,7 +1717,7 @@ Coaching practice
 
 Source page: https://kitesink.com/fitness#powerlifting  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/meet.md
@@ -1751,7 +1753,7 @@ Platform and lights · Beginner · Rulebook · Sources: [IPF 2026b](https://www.
 
 **You submit each next weight within one minute of the lights; after that, changes are tightly limited.**
 
-IPF: one change on the first attempt of each lift, higher or lower, up to three minutes before the first round starts for the first group. Second attempts and third attempts in squat and bench cannot be changed. In the third deadlift round you may change twice unless the bar has been called loaded. Weights are multiples of 2.5 kg (5.5 lb) with at least 2.5 kg between attempts. If you miss, you do not follow yourself; the next attempt comes in the next round. USA Powerlifting uses the same structure.
+IPF: one change on the first attempt of each lift, higher or lower, up to three minutes before the first round starts for the first group. Second attempts and third attempts in squat and bench cannot be changed. In the third deadlift round you may change twice unless the bar has been called loaded. Weights are multiples of 2.5 kg (5.5 lb) and rise by at least 2.5 kg. If you miss, you may take that weight again, but only in the next round. USA Powerlifting uses the same structure.
 
 - Give your coach the written plan, the minimum increment, and who submits the card.
 
@@ -1868,21 +1870,21 @@ Weeks out · Beginner · Rulebook · Sources: [IPF 2026b](https://www.powerlifti
 
 **Plan an opener you could lift easily on any day, a realistic second, and a hard but makeable third.**
 
-Elite classic lifters at IPF World Championships opened near 91% of their expected third attempt, then added about 5% for the second and about 3% for the third. Base your plan on your best recent single, not on a hope. Write all nine weights down with a lighter plan B for each lift, and round to 2.5 kg (5.5 lb) steps.
+Elite classic lifters at IPF World Championships opened near 91% of their expected third attempt, then added about 5% for the second and about 3% for the third. Across 10,672 raw entries in Australian meets, squat openers averaged 92% of the lifter's best squat that day. Base your plan on your best recent single, not on a hope. Write all nine weights down with a lighter plan B for each lift, and round to 2.5 kg (5.5 lb) steps.
 
 - Use the attempt table below, and your best recent single, to fill in all nine weights.
 
-Weeks out · Beginner · Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608)
+Weeks out · Beginner · Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ### Taper over the last week or two: less volume, a few heavy singles
 
 **Survey data show a step taper with 41-50% less volume, the last heavy squat and deadlift 7-10 days out, and rest in the last days.**
 
-In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical. The last heavy squat and deadlift came 7 to 10 days out, the last heavy bench under 7 days out, and full rest about 2.8 days before the meet. In a small trial of 19 athletes, 3 days off kept upper- and lower-body strength; 5 days off cost upper-body strength.
+In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical. The last heavy squat and deadlift came 7 to 10 days out, the last heavy bench under 7 days out, and full rest about 2.8 days before the meet. In a small trial of 19 athletes, 3 days off kept upper- and lower-body strength; 5 days off cost upper-body strength. A review found limited evidence that a short, heavy, low-volume session within 48 hours of competition can help.
 
 - Keep the lifts, cut the sets, and stop hard training about 3 days out.
 
-The week before · Intermediate · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183)
+The week before · Intermediate · Thin evidence · Sources: [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Harrison 2019](https://doi.org/10.1007/s40279-019-01136-3)
 
 ### Confirm the schedule, travel and food for the meet
 
@@ -2010,7 +2012,7 @@ Afterwards · Beginner · Coaching practice
 | 2 hours before lifting | Weigh-in start before lifting: IPF: no earlier than two hours before the category starts. USA Powerlifting: weigh-in starts two hours before lifting. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
 | 90 minutes | Length of the weigh-in period: IPF: one and a half hours. USA Powerlifting: 90 minutes, ending 30 minutes before lifting. USPA: at least 90 minutes. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf) |
 | 1 minute | Time to start an attempt after being called: IPF: one minute from the speaker's call to the start of the attempt; USPA also gives one minute. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf) |
-| 2.5 kg (5.5 lb) | Minimum step between attempts: IPF weights are multiples of 2.5 kg, with at least 2.5 kg between attempts. USA Powerlifting uses 2.5 kg increments. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
+| 2.5 kg (5.5 lb) | Minimum step between attempts: IPF weights are multiples of 2.5 kg, rising at least 2.5 kg between attempts; a missed weight can be repeated. USA Powerlifting uses 2.5 kg increments. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
 | 30 seconds | Time to leave the platform after an attempt: IPF and USA Powerlifting: leave the platform within 30 seconds of the end of an attempt. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
 
 ## IPF weight classes for men and women, in kg and lb
@@ -2044,9 +2046,9 @@ Commands as given by the chief referee in IPF, USA Powerlifting and USPA rules; 
 
 Rulebook · Sources: [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf)
 
-## Attempt selection ranges for a first meet
+## Attempt selection ranges from competition data
 
-Typical ranges as a share of a current best single, with an example for a lifter whose best single is 200 kg (441 lb).
+Typical ranges as a share of a current best single, with an example at 200 kg (441 lb). They follow elite and national meet data; no study covers first meets.
 
 | Attempt | % of current best single | Example at 200 kg (441 lb) | Aim |
 |---|---|---|---|
@@ -2054,7 +2056,7 @@ Typical ranges as a share of a current best single, with an example for a lifter
 | Second | 94-97.5% | 188-195 kg (414-430 lb) | A solid, realistic lift |
 | Third | 98-102.5% | 196-205 kg (432-452 lb) | A hard but makeable attempt |
 
-Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608)
+Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ## Meet bag checklist
 
@@ -2114,7 +2116,7 @@ Pack in the days before the meet, and check the rules of your federation for eac
 
 Source page: https://kitesink.com/fitness#meet  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/nutrition.md
@@ -2170,14 +2172,14 @@ Protein · Beginner · Well supported · Sources: [Devries 2018](https://doi.org
 
 ### Spread protein over several meals, but the split matters less than the total
 
-**About 0.25 g per kg or 20 to 40 g per meal is a sound target, and the daily total is what matters most.**
+**About 0.25 to 0.55 g per kg per meal is a sound target (20 to 40 g for most people), and the daily total is what matters most.**
 
-The ISSN stand suggests 0.25 g/kg or 20 to 40 g per serving, spread across the day. Muscle protein synthesis levelled off at about 0.24 g/kg in younger men and 0.40 g/kg in older men. In eight adults, even meals raised 24-hour synthesis 25 percent more than a skewed pattern. A review calls the distribution evidence limited and inconsistent, and a tracer study found 100 g produced a larger, longer response than 25 g, so there is no hard cap per meal.
+The ISSN stand suggests 0.25 g/kg or 20 to 40 g per serving, spread across the day. A bodybuilding review pairs 1.6 to 2.2 g/kg a day with 0.40 to 0.55 g/kg per meal over 3 to 6 meals. Muscle protein synthesis levelled off at about 0.24 g/kg in younger men and 0.40 g/kg in older men. In eight adults, even meals raised 24-hour synthesis 25 percent more than a skewed pattern. A review calls the distribution evidence limited and inconsistent, and a tracer study found 100 g produced a larger, longer response than 25 g, so there is no hard cap per meal.
 
 - Aim for three to five protein-containing meals.
 - Do not worry about one bigger protein meal.
 
-Protein · Intermediate · Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Moore 2015](https://doi.org/10.1093/gerona/glu103), [Mamerow 2014](https://doi.org/10.3945/jn.113.185280), [Hudson 2020](https://doi.org/10.3390/nu12051441), [Trommelen 2023](https://doi.org/10.1016/j.xcrm.2023.101324)
+Protein · Intermediate · Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Moore 2015](https://doi.org/10.1093/gerona/glu103), [Mamerow 2014](https://doi.org/10.3945/jn.113.185280), [Hudson 2020](https://doi.org/10.3390/nu12051441), [Trommelen 2023](https://doi.org/10.1016/j.xcrm.2023.101324), [Iraki 2019](https://doi.org/10.3390/sports7070154)
 
 ### Protein timing around training matters little next to the daily total
 
@@ -2275,27 +2277,27 @@ Timing, fluids and alcohol · Beginner · Well supported · Sources: [Kwok 2019]
 
 **Taking 3 to 5 g of creatine monohydrate a day adds lean mass when combined with training, and it is safe for healthy people.**
 
-A meta-analysis of 35 trials with 1,192 participants found creatine added 1.10 kg of lean mass when combined with resistance training. Men gained 1.46 kg, and women a non-significant 0.29 kg, though women were fewer in the data. The ISSN position stand finds supplementation up to 30 g a day for 5 years safe in healthy people. The 3 to 5 g daily dose comes from a physique-athlete review.
+A meta-analysis of 35 trials with 1,192 participants found creatine added 1.10 kg of lean mass when combined with resistance training. Men gained 1.46 kg, and women a non-significant 0.29 kg, though women were fewer in the data. The ISSN position stand finds supplementation up to 30 g a day for 5 years safe in healthy people. The 3 to 5 g daily dose comes from a physique-athlete review. In 31 men, 3 g a day raised muscle creatine over 28 days by about as much as 20 g a day did in 6 days.
 
 - Take 3 to 5 g of creatine monohydrate every day.
 
-Supplements · Beginner · Well supported · Sources: [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+Supplements · Beginner · Well supported · Sources: [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Iraki 2019](https://doi.org/10.3390/sports7070154), [Hultman 1996](https://doi.org/10.1152/jappl.1996.81.1.232)
 
 ### Caffeine gives a small, real boost to strength and power
 
 **In a meta-analysis, caffeine raised maximal strength and power slightly, mostly in the upper body.**
 
-A meta-analysis of 10 studies on strength and 10 on power found caffeine improved both (standardised differences 0.20 and 0.17). The effect was significant for upper-body strength, and not for lower-body. The review also notes poor blinding and little data for women. A narrative review for bodybuilders lists about 5 to 6 mg/kg as the studied dose.
+A meta-analysis of 10 studies on strength and 10 on power found caffeine improved both (standardised differences 0.20 and 0.17). The effect was significant for upper-body strength, and not for lower-body. The review also notes poor blinding and little data for women. The ISSN's 2010 stand found about 3 to 6 mg/kg effective, with no further gain at 9 mg/kg or more; a bodybuilding review lists 5 to 6 mg/kg.
 
 - Test your dose in training before a key session.
 
-Supplements · Beginner · Well supported · Sources: [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+Supplements · Beginner · Well supported · Sources: [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Iraki 2019](https://doi.org/10.3390/sports7070154), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5)
 
 ### Beta-alanine and citrulline help in specific cases, with modest effects
 
 **Beta-alanine helps efforts of one to four minutes, and citrulline malate added about three reps per exercise.**
 
-The ISSN stand says 4 to 6 g of beta-alanine daily for two to four weeks improves exercise performance, most clearly in tasks lasting 1 to 4 minutes, and tingling is the main side effect. A meta-analysis of eight studies (137 participants) found 6 to 8 g of citrulline malate taken 40 to 60 minutes before lifting added about 3 repetitions (6.4 percent). Both effects are small next to training and sleep.
+The ISSN stand says 4 to 6 g of beta-alanine daily for two to four weeks improves exercise performance, most clearly in tasks lasting 1 to 4 minutes, and tingling, the main side effect, is reduced by splitting the dose into amounts of about 1.6 g. A meta-analysis of eight studies (137 participants) found 6 to 8 g of citrulline malate taken 40 to 60 minutes before lifting added about 3 repetitions (6.4 percent). Both effects are small next to training and sleep.
 
 - Consider these only after protein, creatine and training are in place.
 
@@ -2453,14 +2455,14 @@ Tracking food · Intermediate · Thin evidence · Sources: [O’Driscoll 2020](h
 | Number | What it is | Support | Sources |
 |---|---|---|---|
 | 1.6-2.2 g per kg per day | Daily protein for lifters: The common target for building muscle: 0.7 to 1.0 g per lb a day. | Well supported | [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Nunes 2022b](https://doi.org/10.1002/jcsm.12922), [Iraki 2019](https://doi.org/10.3390/sports7070154) |
-| 0.25 g per kg per meal | Protein per serving: ISSN guide for one serving: 20 to 40 g in absolute terms. | Some support | [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8) |
+| 0.25-0.55 g per kg per meal | Protein per serving: ISSN guide: 0.25 g per kg, or 20 to 40 g, a serving. A bodybuilding review suggests 0.40 to 0.55 g per kg per meal. | Some support | [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Iraki 2019](https://doi.org/10.3390/sports7070154) |
 | 4 · 4 · 9 · 7 kcal per g | Energy per gram of food: Protein 4, carbohydrate 4, fat 9 and alcohol 7 kcal per gram on food labels. | Rulebook | [FAO 2003](https://www.fao.org/4/y5022e/y5022e04.htm) |
 | 10 % error band | Accuracy of the best equation: Mifflin-St Jeor was within 10 percent of measured resting rate for the most people. | Well supported | [Frankenfield 2005](https://doi.org/10.1016/j.jada.2005.02.005) |
 | 1.40-2.40 times resting rate | Activity multiplier range: Long-term sustainable activity levels for free-living adults, per FAO/WHO/UNU. | Rulebook | [FAO/WHO/UNU 2004](https://www.fao.org/4/y5686e/y5686e07.htm) |
 | +20 % over the label | US label tolerance: A food is misbranded only above this; a typical snack runs a few percent over. | Rulebook | [UFDA 2023](https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-9.xml), [Jumpertz 2013](https://doi.org/10.1002/oby.20185) |
 | 19 % of true intake | Under-reporting in athletes: Self-reported energy intake was this much lower than measured expenditure. | Well supported | [Capling 2017](https://doi.org/10.3390/nu9121313) |
 | 3-5 g per day | Creatine monohydrate dose: Daily dose from a physique-athlete review; lean-mass gain was about 1.1 kg with training. | Well supported | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791) |
-| 5-6 mg per kg | Caffeine dose often studied: Dose a narrative review gives for physique athletes; 5 mg/kg is 2.3 mg per lb. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0) |
+| 3-6 mg per kg | Caffeine dose often studied: ISSN's 2010 stand: effective at about 3 to 6 mg per kg, no further gain at 9 or more. 5 mg/kg is 2.3 mg per lb. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5) |
 | 25-29 g per day | Fibre target: Intake at which health benefits were greatest in pooled studies. | Well supported | [Reynolds 2019](https://doi.org/10.1016/S0140-6736(18)31809-9) |
 
 ## Protein targets by goal and body weight
@@ -2474,6 +2476,7 @@ Daily protein in g per kg and per lb, with worked examples for 70 kg (154 lb) an
 | Physique athlete in contest prep | 1.8-2.7 | 0.82-1.22 | 126-189 g | 162-243 g |
 | Lean lifter in a calorie deficit | 2.3-3.1 | 1.04-1.41 | 161-217 g | 207-279 g |
 | One serving (ISSN guide) | 0.25 | 0.11 | about 18 g | about 23 g |
+| One serving (off-season review) | 0.40-0.55 | 0.18-0.25 | 28-39 g | 36-50 g |
 
 Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096), [Iraki 2019](https://doi.org/10.3390/sports7070154)
 
@@ -2498,14 +2501,14 @@ How the common supplements rate for people who lift, from strongest to weakest e
 | Supplement | Evidence | What it does | Typical dose |
 |---|---|---|---|
 | Creatine monohydrate | Strong | Adds lean mass and strength with training | 3-5 g a day |
-| Caffeine | Strong | Small gain in strength and power | About 5-6 mg/kg (limited data) |
+| Caffeine | Strong | Small gain in strength and power | About 3-6 mg/kg |
 | Protein powder | Strong as a convenience | Helps meet daily protein, no special magic | 20-40 g per serving |
-| Beta-alanine | Moderate | Helps efforts lasting 1 to 4 minutes | 4-6 g a day for 2+ weeks |
+| Beta-alanine | Moderate | Helps efforts lasting 1 to 4 minutes | 4-6 g a day for 2+ weeks, in split doses |
 | Citrulline malate | Limited | About 3 extra reps per exercise in trials | 6-8 g, 40-60 min before |
 | BCAA pills | Weak | No human data on oral BCAA alone for muscle | Not needed with enough protein |
 | Testosterone boosters | Poor | No testosterone data for most ingredients | Avoid |
 
-Some support · Sources: [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Trexler 2015](https://doi.org/10.1186/s12970-015-0090-y), [Vårvik 2021](https://doi.org/10.1123/ijsnem.2020-0295), [Wolfe 2017](https://doi.org/10.1186/s12970-017-0184-9), [Clemesha 2020](https://doi.org/10.5534/wjmh.190043), [Maughan 2018](https://doi.org/10.1136/bjsports-2018-099027)
+Some support · Sources: [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Trexler 2015](https://doi.org/10.1186/s12970-015-0090-y), [Vårvik 2021](https://doi.org/10.1123/ijsnem.2020-0295), [Wolfe 2017](https://doi.org/10.1186/s12970-017-0184-9), [Clemesha 2020](https://doi.org/10.5534/wjmh.190043), [Maughan 2018](https://doi.org/10.1136/bjsports-2018-099027), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5)
 
 ## Terms
 
@@ -2522,7 +2525,7 @@ Some support · Sources: [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-
 
 Source page: https://kitesink.com/fitness#nutrition  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/diet.md
@@ -2548,7 +2551,7 @@ Deficit and rate of loss · Beginner · Some support · Sources: [Hall 2008](htt
 
 **A pace of 0.5 to 1 percent of body weight a week is the usual advice for keeping muscle while getting leaner.**
 
-A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the 1.4 percent group kept lean mass unchanged and lost 21 percent of fat mass. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).
+A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the group set 1.4 percent (1.0 percent achieved) kept lean mass unchanged and lost 21 percent of fat mass. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).
 
 - Pick a weekly percentage, convert it to kg or lb, and check against your four-week trend.
 
@@ -2558,11 +2561,11 @@ Deficit and rate of loss · Intermediate · Some support · Sources: [Helms 2014
 
 **In a meta-regression, a deficit of about 500 kcal a day stopped lean-mass gains from training, while strength held up.**
 
-A systematic review and meta-analysis of resistance training in an energy deficit found lean-mass gains were impaired against training without a deficit (effect size -0.57), but strength gains were comparable. The meta-regression put the point where gains were prevented at roughly 500 kcal a day. For people trying to preserve lean mass rather than add it, the authors advise avoiding deficits above that size.
+A systematic review and meta-analysis of resistance training in an energy deficit found lean-mass gains were impaired against training without a deficit (effect size -0.57), but strength gains were comparable. The meta-regression put the point where gains were prevented at roughly 500 kcal a day. For people trying to preserve lean mass rather than add it, the authors advise avoiding deficits above that size. Short trials can differ: 40 young men on a 40 percent deficit with intense training gained 1.2 kg of lean mass on 2.4 g/kg of protein in 4 weeks.
 
 - Keep deficits at or below about 500 kcal a day if gaining or keeping muscle is the priority.
 
-Deficit and rate of loss · Intermediate · Well supported · Sources: [Murphy 2022](https://doi.org/10.1111/sms.14075)
+Deficit and rate of loss · Intermediate · Well supported · Sources: [Murphy 2022](https://doi.org/10.1111/sms.14075), [Longland 2016](https://doi.org/10.3945/ajcn.115.119339)
 
 ### Eat more protein when you diet: about 2.3 to 3.1 g per kg of lean mass
 
@@ -2641,6 +2644,7 @@ Scale, plateaus and metabolism · Intermediate · Some support · Sources: [Nune
 In 46 adults, a unit of two-week weight change was 84 percent fat-free mass, and the energy density of 1 to 3 kg changes was about 2,380 kcal per kg, well below that of fat. Glycogen is stored with three to four parts water. Weight runs higher on Sunday and Monday in 80 adults, and fluid retention peaks at the start of menstrual flow in 62 women. None of these is fat gain.
 
 - Weigh at the same time under the same conditions, and judge the weekly average.
+- If you menstruate, compare the same week of one cycle with the same week of the next.
 
 Scale, plateaus and metabolism · Beginner · Some support · Sources: [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Orsama 2014](https://doi.org/10.1159/000356147), [White 2011](https://doi.org/10.1155/2011/138451)
 
@@ -2670,7 +2674,7 @@ Scale, plateaus and metabolism · Beginner · Some support · Sources: [Madigan 
 
 In 61 resistance-trained adults over 12 weeks, alternating three weeks of restriction with one week at maintenance gave the same fat and lean mass as continuous dieting, with lower hunger. A meta-analysis of 12 trials (881 participants) found the same body composition and a smaller drop in resting rate. A small 7-week trial found a weekly two-day carb refeed kept more lean mass (-0.4 vs -1.3 kg). Results in men with obesity favoured breaks.
 
-- Try a one-week break at maintenance if hunger or training quality is slipping.
+- Try a one- to two-week break at maintenance if hunger or training quality is slipping.
 
 Diet type and meal pattern · Intermediate · Some support · Sources: [PEOS 2021](https://doi.org/10.1249/MSS.0000000000002636), [Poon 2025](https://doi.org/10.1093/nutrit/nuad168), [Campbell 2020](https://doi.org/10.3390/jfmk5010019), [Byrne 2018](https://doi.org/10.1038/ijo.2017.206)
 
@@ -2726,7 +2730,7 @@ Cardio and daily movement · Beginner · Some support · Sources: [Bellicha 2021
 
 ### Getting very lean costs hormones, mood and training quality, so go carefully
 
-**Prolonged energy availability under about 25 kcal per kg of lean mass led to muscle loss and hormonal and mood problems.**
+**Prolonged energy availability under about 25 kcal per kg of lean mass in men led to muscle loss and hormonal and mood problems; in women, hormones were disrupted below 30.**
 
 Reviews of lean athletes link a long period at low energy availability to muscle loss, hormone disruption and psychological problems. A case study of one natural bodybuilder saw body fat fall from 14.8 to 4.5 percent and testosterone from 9.22 to 2.27 ng/mL, recovering after the contest. In 27 women dieting for a fitness show, sex hormones fell and menstrual irregularities rose, and most recovered within three to four months. Involve a coach and clinician.
 
@@ -2770,9 +2774,9 @@ Gaining phases · Intermediate · Thin evidence · Sources: [Longland 2016](http
 
 ### Dieting faster than 1 percent of body weight a week
 
-**Faster loss retained less lean mass in athletes, and the speed is hard to keep up.**
+**Faster loss gave up the lean-mass gain seen with slower loss in athletes, and the speed is hard to keep up.**
 
-In 24 athletes, a 1.4 percent weekly loss kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. Reviews recommend 0.5 to 1 percent a week.
+In 24 athletes lifting four times a week, a group set to lose 1.4 percent a week (1.0 percent achieved) kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. Reviews recommend 0.5 to 1 percent a week.
 
 - Slow the deficit to 0.5 to 1 percent of body weight a week.
 
@@ -2824,7 +2828,7 @@ Gaining phases · Intermediate · Thin evidence · Sources: [Helms 2023](https:/
 | Number | What it is | Support | Sources |
 |---|---|---|---|
 | 0.5-1 % body weight per week | Rate of loss: Usual pace for keeping muscle; at 80 kg (176 lb) that is 0.4 to 0.8 kg a week. | Some support | [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97) |
-| 500 kcal per day | Deficit that stopped lean-mass gains: In a meta-regression, deficits around this size prevented gains in lean mass in trained lifters. | Well supported | [Murphy 2022](https://doi.org/10.1111/sms.14075) |
+| 500 kcal per day | Deficit that stopped lean-mass gains: In a meta-regression, deficits around this size prevented gains in lean mass in people doing resistance training. | Well supported | [Murphy 2022](https://doi.org/10.1111/sms.14075) |
 | 3,500 kcal per lb | Energy per pound of weight lost: The classic rule of thumb, which equals about 7,700 kcal per kg and varies with body fat. | Some support | [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720) |
 | 2.3-3.1 g per kg lean mass | Protein in a deficit: ISSN and review ranges for lean lifters dieting; raise it as the deficit and leanness grow. | Well supported | [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8) |
 | 100 kcal per day per kg | Appetite rise per kg of weight lost: In one trial, eating drifted above baseline by about this much for each kilogram lost. | Thin evidence | [Polidori 2016](https://doi.org/10.1002/oby.21653) |
@@ -2834,14 +2838,14 @@ Gaining phases · Intermediate · Thin evidence · Sources: [Helms 2023](https:/
 
 ## Deficit size versus expected weekly loss
 
-Approximate weekly loss for a daily deficit at 7,700 kcal per kg (3,500 per lb), for an 80 kg (176 lb) person. It overstates loss for lean people.
+Approximate weekly loss for a daily deficit at 7,700 kcal per kg (3,500 per lb), for an 80 kg (176 lb) person. Leaner people tend to lose more weight than this.
 
 | Daily deficit | Weekly total | Loss per week | Share of 80 kg (176 lb) | Comment |
 |---|---|---|---|---|
 | 250 kcal | 1,750 kcal | 0.23 kg (0.5 lb) | 0.3% | Slow; below the usual range |
 | 500 kcal | 3,500 kcal | 0.45 kg (1.0 lb) | 0.6% | In range; near the limit seen for lean-mass trials |
 | 750 kcal | 5,250 kcal | 0.68 kg (1.5 lb) | 0.85% | In range; hold protein and training high |
-| 1,000 kcal | 7,000 kcal | 0.91 kg (2.0 lb) | 1.1% | Above 1%; more lean loss in athletes |
+| 1,000 kcal | 7,000 kcal | 0.91 kg (2.0 lb) | 1.1% | Above 1%; faster than the athlete trial achieved |
 
 Some support · Sources: [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Murphy 2022](https://doi.org/10.1111/sms.14075), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97)
 
@@ -2855,7 +2859,7 @@ Short-term causes of scale changes that are not fat gain or loss.
 | Weekly rhythm | Weight is higher on Sunday and Monday, then falls | Weekly |
 | Menstrual cycle | Fluid retention scores peak on the first day of flow | Monthly |
 | Short-term free-living change | 1-3 kg over two weeks is about 84% fat-free mass and water | Two weeks |
-| Fat change | Slow; about 0.5-1% of body weight a week at best | Weeks to months |
+| Fat change | Slow; reviews advise about 0.5-1% of body weight a week | Weeks to months |
 
 Some support · Sources: [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Orsama 2014](https://doi.org/10.1159/000356147), [White 2011](https://doi.org/10.1155/2011/138451), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20)
 
@@ -2877,7 +2881,7 @@ Thin evidence · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [
 - **Diet break and refeed**: A diet break is a planned stretch, often one to two weeks, at maintenance calories. A refeed is shorter, usually one or two days of higher carbohydrate.
 - **Energy deficit**: Eating less energy than you use. It is the one requirement for losing body fat. A daily deficit of 500 kcal is about 3,500 kcal a week.
 - **NEAT (non-exercise activity)**: Non-exercise activity thermogenesis: energy spent on walking, standing, fidgeting and chores. It can fall during a diet without you noticing.
-- **Recomposition**: Gaining muscle and losing fat at the same time, so body weight changes little while the body changes shape.
+- **Recomposition**: Gaining muscle and losing fat over the same period. Body weight may hold steady or fall while the body changes shape.
 - **Set point and settling point**: Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete.
 - **Time-restricted eating**: Eating all meals within a set daily window, such as eight hours, and fasting for the rest. It is one form of intermittent fasting.
 
@@ -2885,7 +2889,7 @@ Thin evidence · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [
 
 Source page: https://kitesink.com/fitness#diet  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/health.md
@@ -3087,7 +3091,7 @@ Sleep and protein · Beginner · Some support · Sources: [Kredlow 2015](https:/
 
 The PROT-AGE and ESPEN groups both advise 1.0 to 1.2 g/kg/day for healthy older people. PROT-AGE advises 1.2 g/kg or more for those exercising and 1.2 to 1.5 g/kg for many with illness. ESPEN gives 1.2 to 1.5 g/kg for those at risk of malnutrition. People with severe kidney disease may need to limit protein, so check with a clinician.
 
-- Spread protein through the day and ask a clinician if you have kidney disease.
+- Reach the daily total in the meal pattern that suits you, and ask a clinician if you have kidney disease.
 
 Sleep and protein · Intermediate · Well supported · Sources: [Bauer 2013](https://doi.org/10.1016/j.jamda.2013.05.021), [Deutz 2014](https://doi.org/10.1016/j.clnu.2014.04.007)
 
@@ -3274,7 +3278,7 @@ Coaching practice · Sources: [Reed 2014](https://doi.org/10.1097/hco.0000000000
 
 Source page: https://kitesink.com/fitness#health  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/glossary.md
@@ -3321,7 +3325,7 @@ The 54 terms the KiteSink fitness field guide uses, in plain words, A to Z. Each
 - **Rack height sheet** (Meet day): The form where you record squat and bench rack and foot-block settings at weigh-in, so loaders set them before your attempt.
 - **Rate of perceived exertion (RPE)** (Hypertrophy): A 1-10 effort scale. On the RIR-based version, RPE 10 means 0 RIR, RPE 9 means 1 RIR, and so on. Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
 - **Rating of perceived exertion (RPE)** (Powerlifting): A 1 to 10 rating of how hard a set was; in strength training it is tied to how many repetitions were left.
-- **Recomposition** (Diet): Gaining muscle and losing fat at the same time, so body weight changes little while the body changes shape.
+- **Recomposition** (Diet): Gaining muscle and losing fat over the same period. Body weight may hold steady or fall while the body changes shape.
 - **Repetitions in reserve (RIR)** (Hypertrophy): The number of reps you could still have done when the set ended. 0 RIR means failure. 2 RIR means two more reps were possible. Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
 - **Repetitions in reserve (RIR)** (Powerlifting): How many more clean repetitions you could have done when the set ended; 2 RIR means two more were possible.
 - **Resting metabolic rate (RMR)** (Nutrition): The energy your body uses at rest to keep you alive, usually 60 to 70 percent of a day for inactive people, estimated by equations or measured.
@@ -3352,7 +3356,7 @@ The 54 terms the KiteSink fitness field guide uses, in plain words, A to Z. Each
 
 Source page: https://kitesink.com/fitness/glossary  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/reference.md
@@ -3395,14 +3399,14 @@ An index of the 58 key numbers and 18 reference tables in the KiteSink fitness f
 | [Minimum step between attempts](https://kitesink.com/fitness/meet#meet-num-increment) | 2.5 | kg (5.5 lb) | Meet day |
 | [Time to leave the platform after an attempt](https://kitesink.com/fitness/meet#meet-num-leave-platform) | 30 | seconds | Meet day |
 | [Daily protein for lifters](https://kitesink.com/fitness/nutrition#nut-num-protein-range) | 1.6-2.2 | g per kg per day | Nutrition |
-| [Protein per serving](https://kitesink.com/fitness/nutrition#nut-num-protein-meal) | 0.25 | g per kg per meal | Nutrition |
+| [Protein per serving](https://kitesink.com/fitness/nutrition#nut-num-protein-meal) | 0.25-0.55 | g per kg per meal | Nutrition |
 | [Energy per gram of food](https://kitesink.com/fitness/nutrition#nut-num-atwater) | 4 · 4 · 9 · 7 | kcal per g | Nutrition |
 | [Accuracy of the best equation](https://kitesink.com/fitness/nutrition#nut-num-equation-error) | 10 | % error band | Nutrition |
 | [Activity multiplier range](https://kitesink.com/fitness/nutrition#nut-num-activity-range) | 1.40-2.40 | times resting rate | Nutrition |
 | [US label tolerance](https://kitesink.com/fitness/nutrition#nut-num-label-slack) | +20 | % over the label | Nutrition |
 | [Under-reporting in athletes](https://kitesink.com/fitness/nutrition#nut-num-underreport) | 19 | % of true intake | Nutrition |
 | [Creatine monohydrate dose](https://kitesink.com/fitness/nutrition#nut-num-creatine) | 3-5 | g per day | Nutrition |
-| [Caffeine dose often studied](https://kitesink.com/fitness/nutrition#nut-num-caffeine) | 5-6 | mg per kg | Nutrition |
+| [Caffeine dose often studied](https://kitesink.com/fitness/nutrition#nut-num-caffeine) | 3-6 | mg per kg | Nutrition |
 | [Fibre target](https://kitesink.com/fitness/nutrition#nut-num-fibre) | 25-29 | g per day | Nutrition |
 | [Rate of loss](https://kitesink.com/fitness/diet#diet-num-rate) | 0.5-1 | % body weight per week | Diet |
 | [Deficit that stopped lean-mass gains](https://kitesink.com/fitness/diet#diet-num-deficit-limit) | 500 | kcal per day | Diet |
@@ -3435,7 +3439,7 @@ An index of the 58 key numbers and 18 reference tables in the KiteSink fitness f
 - [A 12-week cycle outline](https://kitesink.com/fitness/powerlifting#pl-table-12-week) (Powerlifting)
 - [IPF weight classes for men and women, in kg and lb](https://kitesink.com/fitness/meet#meet-table-ipf-classes) (Meet day)
 - [Platform commands for each lift](https://kitesink.com/fitness/meet#meet-table-commands) (Meet day)
-- [Attempt selection ranges for a first meet](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
+- [Attempt selection ranges from competition data](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
 - [Protein targets by goal and body weight](https://kitesink.com/fitness/nutrition#nut-table-protein-targets) (Nutrition)
 - [Hand-portion guide](https://kitesink.com/fitness/nutrition#nut-table-hand-portions) (Nutrition)
 - [Supplement evidence at a glance](https://kitesink.com/fitness/nutrition#nut-table-supplements) (Nutrition)
@@ -3459,7 +3463,7 @@ An index of the 58 key numbers and 18 reference tables in the KiteSink fitness f
 
 Source page: https://kitesink.com/fitness/reference  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/fitness/sources.md
@@ -3467,7 +3471,7 @@ FILE: https://kitesink.com/fitness/sources.md
 
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 299 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 307 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -3481,11 +3485,50 @@ Where the KiteSink fitness field guide comes from: how entries are graded, what 
 
 What changed after an entry was published, newest first.
 
+- **2026-11-15 · Dieting faster than 1 percent of body weight a week**: Corrected: the faster group kept its lean mass and missed the gain the slower group made. The entry had said it retained less. (https://kitesink.com/fitness/diet#diet-mistake-too-fast)
+- **2026-11-15 · Aim to lose about 0.5 to 1 percent of body weight a week**: Corrected a figure: the faster group in the athlete trial was set to lose 1.4 percent of body weight a week and achieved 1.0. (https://kitesink.com/fitness/diet#diet-deficit-rate)
+- **2026-11-15 · Deficit size versus expected weekly loss**: Corrected a reversed statement: leaner people tend to lose more weight than the rule of thumb predicts, not less. The 1,000 kcal row no longer says athletes lost lean mass. (https://kitesink.com/fitness/diet#diet-table-deficit-rate)
+- **2026-11-15 · Do only the last five reps of a set count?**: Revised the explanation and who was studied after an audit against a second set of sources. Added Sundstrup 2012 as a source. The verdict did not change. (https://kitesink.com/fitness/claims#claim-effective-reps)
+- **2026-11-15 · Does cardio kill your muscle gains?**: Revised the explanation after an audit against a second set of sources. The verdict did not change. (https://kitesink.com/fitness/claims#claim-cardio-kills-gains)
+- **2026-11-15 · Do you need a deload every fourth week?**: Revised the explanation, what to do and who was studied after an audit against a second set of sources. Added Rogerson 2024 as a source. The verdict did not change. (https://kitesink.com/fitness/claims#claim-deload-fourth-week)
+- **2026-11-15 · Do you have to eat protein within an hour of training?**: Revised the explanation after an audit against a second set of sources. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-timing)
+- **2026-11-15 · How much protein do you need to build muscle?**: Revised the summary, the explanation and what to do after an audit against a second set of sources. Added Iraki 2019 as a source. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-amount)
+- **2026-11-15 · Can plant protein build as much muscle as animal protein?**: Revised the summary, the explanation and who was studied after an audit against a second set of sources. Added Hartman 2007 as a source. The verdict did not change. (https://kitesink.com/fitness/claims#claim-plant-vs-animal)
+- **2026-11-15 · Is fasted cardio better for fat loss?**: Revised the explanation and who was studied after an audit against a second set of sources. The verdict did not change. (https://kitesink.com/fitness/claims#claim-fasted-cardio)
+- **2026-11-15 · Does starvation mode stop weight loss?**: Revised the summary, the explanation and who was studied after an audit against a second set of sources. Added Leibel 1995 as a source. The verdict did not change. (https://kitesink.com/fitness/claims#claim-starvation-mode)
+- **2026-11-15 · Can you out-train a bad diet?**: Revised the explanation, what to do and who was studied after an audit against a second set of sources. Added DONNELLY 2009 and Wing 2005 as a source. The verdict did not change. (https://kitesink.com/fitness/claims#claim-out-train-bad-diet)
+- **2026-11-15 · Can you lose weight fast without losing muscle?**: Revised the summary, the explanation and who was studied after an audit against a second set of sources. Added Longland 2016 as a source. The verdict did not change. (https://kitesink.com/fitness/claims#claim-loss-rate-muscle)
+- **2026-11-15 · Deficits much beyond 500 kcal a day cost lean mass in lifters**: Revised the explanation after an audit against a second set of sources. Added Longland 2016 as a source. The grade did not change. (https://kitesink.com/fitness/diet#diet-deficit-muscle-cost)
+- **2026-11-15 · Deficit that stopped lean-mass gains**: Revised the summary after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/diet#diet-num-deficit-limit)
+- **2026-11-15 · Day-to-day weight changes are mostly water, so read the trend**: Revised what to do after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/diet#diet-scale-noise)
+- **2026-11-15 · What moves scale weight day to day**: Revised a table row after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/diet#diet-table-scale-moves)
+- **2026-11-15 · Diet breaks and refeeds give mixed fat-loss results and may ease hunger**: Revised what to do after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/diet#diet-diet-breaks)
+- **2026-11-15 · Getting very lean costs hormones, mood and training quality, so go carefully**: Revised the summary after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/diet#diet-very-lean-costs)
+- **2026-11-15 · Recomposition**: Revised the summary after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/glossary#diet-term-recomposition)
+- **2026-11-15 · Reps in reserve is a useful guide, but most lifters misjudge it**: Revised the explanation after an audit against a second set of sources. Added Steele 2017 as a source. The grade did not change. (https://kitesink.com/fitness/hypertrophy#hyp-effort-rir-accuracy)
+- **2026-11-15 · Deloads are common practice, but trials do not yet show they are needed**: Revised what to do after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/hypertrophy#hyp-prog-deload-evidence)
+- **2026-11-15 · Spread protein over several meals, but the split matters less than the total**: Revised the summary and the explanation after an audit against a second set of sources. Added Iraki 2019 as a source. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-protein-per-meal)
+- **2026-11-15 · Protein per serving**: Revised the figure and the summary after an audit against a second set of sources. Added Iraki 2019 as a source. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-num-protein-meal)
+- **2026-11-15 · Protein targets by goal and body weight**: Revised a new table row after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-table-protein-targets)
+- **2026-11-15 · Creatine monohydrate is the best-supported lifting supplement**: Revised the explanation after an audit against a second set of sources. Added Hultman 1996 as a source. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-creatine)
+- **2026-11-15 · Caffeine gives a small, real boost to strength and power**: Revised the explanation after an audit against a second set of sources. Added Goldstein 2010 as a source. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-caffeine)
+- **2026-11-15 · Caffeine dose often studied**: Revised the figure and the summary after an audit against a second set of sources. Added Goldstein 2010 as a source. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-num-caffeine)
+- **2026-11-15 · Beta-alanine and citrulline help in specific cases, with modest effects**: Revised the explanation after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-beta-alanine-citrulline)
+- **2026-11-15 · Supplement evidence at a glance**: Revised a table row after an audit against a second set of sources. Added Goldstein 2010 as a source. The grade did not change. (https://kitesink.com/fitness/nutrition#nut-table-supplements)
+- **2026-11-15 · Build the bench from the setup: tight back, planted feet, paused bar**: Revised what to do after an audit against a second set of sources. Added International Powerlifting Federation 2026 as a source. The grade did not change. (https://kitesink.com/fitness/powerlifting#pl-bench-technique)
+- **2026-11-15 · Intensity zones as a percent of 1RM**: Revised a table row after an audit against a second set of sources. Added Travis 2021 and Howells 2022 as a source. The grade did not change. (https://kitesink.com/fitness/powerlifting#pl-table-intensity-zones)
+- **2026-11-15 · Lifters taper for 5 to 10 days by cutting volume and keeping heavy singles**: Revised the explanation after an audit against a second set of sources. Added Harrison 2019 as a source. The grade did not change. (https://kitesink.com/fitness/powerlifting#pl-taper)
+- **2026-11-15 · Older adults are advised at least 1.0 to 1.2 g of protein per kg a day**: Revised what to do after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/health#hlth-protein-older-adults)
+- **2026-11-15 · You can change an opener once; second attempts and bench or squat thirds are locked**: Revised the explanation after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/meet#meet-changing-attempts)
+- **2026-11-15 · Minimum step between attempts**: Revised the summary after an audit against a second set of sources. The grade did not change. (https://kitesink.com/fitness/meet#meet-num-increment)
+- **2026-11-15 · Plan nine attempts with your coach or a trusted friend**: Revised the explanation after an audit against a second set of sources. Added Howells 2022 as a source. The grade did not change. (https://kitesink.com/fitness/meet#meet-step-plan-attempts)
+- **2026-11-15 · Attempt selection ranges from competition data**: Revised the title and the summary after an audit against a second set of sources. Added Howells 2022 as a source. The grade did not change. (https://kitesink.com/fitness/meet#meet-table-attempts)
+- **2026-11-15 · Taper over the last week or two: less volume, a few heavy singles**: Revised the explanation after an audit against a second set of sources. Added Harrison 2019 as a source. The grade did not change. (https://kitesink.com/fitness/meet#meet-step-taper)
 - **2026-11-14 · Does spot reduction work?**: Reworded after reading the trial's full text: abdominal work replaced part of the running, and the two programmes were designed to use the same energy. The verdict did not change. (https://kitesink.com/fitness/claims#claim-spot-reduction)
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 299 sources, A to Z
+## All 307 sources, A to Z
 
 - Aasa U, Svartholm I, Andersson F et al. (2017). Injuries among weightlifters and powerlifters: a systematic review. *British Journal of Sports Medicine* 51(4):211-219. https://doi.org/10.1136/bjsports-2016-096037 (systematic review, cited 2×)
 - Abdelhamid AS, Brown TJ, Brainard JS et al. (2020). Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease. *Cochrane Database of Systematic Reviews* 2020(3). https://doi.org/10.1002/14651858.cd003177.pub5 (systematic review, cited 1×)
@@ -3542,7 +3585,7 @@ What changed after an entry was published, newest first.
 - Deutz NEP, Bauer JM, Barazzoni R et al. (2014). Protein intake and exercise for optimal muscle function with aging: Recommendations from the ESPEN Expert Group. *Clinical Nutrition* 33(6):929-936. https://doi.org/10.1016/j.clnu.2014.04.007 (position stand, cited 2×)
 - Devries MC, Sithamparapillai A, Brimble KS et al. (2018). 'Changes in Kidney Function Do Not Differ between Healthy Adults Consuming Higher- Compared with Lower- or Normal-Protein Diets: A Systematic Review and Meta-Analysis. *The Journal of Nutrition* 148(11):1760-1775. https://doi.org/10.1093/jn/nxy197 (meta-analysis, cited 2×)
 - Ding D, Nguyen B, Nau T et al. (2025). Daily steps and health outcomes in adults: a systematic review and dose-response meta-analysis. *The Lancet Public Health* 10(8):e668-e681. https://doi.org/10.1016/s2468-2667(25)00164-1 (meta-analysis, cited 4×)
-- DONNELLY JE, BLAIR SN, JAKICIC JM et al. (2009). Appropriate Physical Activity Intervention Strategies for Weight Loss and Prevention of Weight Regain for Adults. *Medicine & Science in Sports & Exercise* 41(2):459-471. https://doi.org/10.1249/MSS.0b013e3181949333 (position stand, cited 1×)
+- DONNELLY JE, BLAIR SN, JAKICIC JM et al. (2009). Appropriate Physical Activity Intervention Strategies for Weight Loss and Prevention of Weight Regain for Adults. *Medicine & Science in Sports & Exercise* 41(2):459-471. https://doi.org/10.1249/MSS.0b013e3181949333 (position stand, cited 2×)
 - Ekelund U, Steene-Johannessen J, Brown WJ et al. (2016). Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? A harmonised meta-analysis of data from more than 1 million men and women. *The Lancet* 388(10051):1302-1310. https://doi.org/10.1016/s0140-6736(16)30370-1 (meta-analysis, cited 1×)
 - Ello-Martin JA, Roe LS, Ledikwe JH et al. (2007). Dietary energy density in the treatment of obesity: a year-long trial comparing 2 weight-loss diets. *The American Journal of Clinical Nutrition* 85(6):1465-1477. https://doi.org/10.1093/ajcn/85.6.1465 (randomised trial, cited 2×)
 - Escamilla RF, Francisco AC, Fleisig GS et al. (2000). A three-dimensional biomechanical analysis of sumo and conventional style deadlifts. *Medicine & Science in Sports & Exercise* 32(7):1265-1275. https://doi.org/10.1097/00005768-200007000-00013 (reference, cited 1×)
@@ -3565,6 +3608,7 @@ What changed after an entry was published, newest first.
 - Ge L, Sadeghirad B, Ball GDC et al. (2020). Comparison of dietary macronutrient patterns of 14 popular named dietary programmes for weight and cardiovascular risk factor reduction in adults: systematic review and network meta-analysis of randomised trials. *BMJ*:m696. https://doi.org/10.1136/bmj.m696 (meta-analysis, cited 2×)
 - Gibson AA, Hsu MSH, Rangan AM et al. (2016). Accuracy of handsv. household measures as portion size estimation aids. *Journal of Nutritional Science* 5:e29. https://doi.org/10.1017/jns.2016.22 (reference, cited 3×)
 - Glassbrook DJ, Helms ER, Brown SR et al. (2017). A Review of the Biomechanical Differences Between the High-Bar and Low-Bar Back-Squat. *Journal of Strength and Conditioning Research* 31(9):2618-2634. https://doi.org/10.1519/JSC.0000000000002007 (review, cited 1×)
+- Goldstein ER, Ziegenfuss T, Kalman D et al. (2010). International society of sports nutrition position stand: caffeine and performance. *Journal of the International Society of Sports Nutrition* 7(1):5. https://doi.org/10.1186/1550-2783-7-5 (position stand, cited 3×)
 - Grgic J, Mikulic P (2017). Tapering Practices of Croatian Open-Class Powerlifting Champions. *Journal of Strength and Conditioning Research* 31(9):2371-2378. https://doi.org/10.1519/JSC.0000000000001699 (reference, cited 2×)
 - Grgic J, Trexler ET, Lazinica B et al. (2018). Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis. *Journal of the International Society of Sports Nutrition* 15(1). https://doi.org/10.1186/s12970-018-0216-0 (meta-analysis, cited 6×)
 - Griffiths C, Harnack L, Pereira MA (2018). Assessment of the accuracy of nutrient calculations of five popular nutrition tracking applications. *Public Health Nutrition* 21(8):1495-1502. https://doi.org/10.1017/S1368980018000393 (reference, cited 1×)
@@ -3579,6 +3623,8 @@ What changed after an entry was published, newest first.
 - Halperin I, Malleron T, Har-Nir I et al. (2022). Accuracy in Predicting Repetitions to Task Failure in Resistance Exercise: A Scoping Review and Exploratory Meta-analysis. *Sports Medicine* 52(2):377-390. https://doi.org/10.1007/s40279-021-01559-x (systematic review, cited 5×)
 - Hamarsland H, Moen H, Skaar OJ et al. (2022). Equal-Volume Strength Training With Different Training Frequencies Induces Similar Muscle Hypertrophy and Strength Improvement in Trained Participants. *Frontiers in Physiology* 12:789403. https://doi.org/10.3389/fphys.2021.789403 (randomised trial, cited 2×)
 - Harries SK, Lubans DR, Callister R (2015). Systematic Review and Meta-analysis of Linear and Undulating Periodized Resistance Training Programs on Muscular Strength. *Journal of Strength and Conditioning Research* 29(4):1113-1125. https://doi.org/10.1519/JSC.0000000000000712 (meta-analysis, cited 1×)
+- Harrison PW, James LP, McGuigan MR et al. (2019). Resistance Priming to Enhance Neuromuscular Performance in Sport: Evidence, Potential Mechanisms and Directions for Future Research. *Sports Medicine* 49(10):1499-1514. https://doi.org/10.1007/s40279-019-01136-3 (review, cited 2×)
+- Hartman JW, Tang JE, Wilkinson SB et al. (2007). Consumption of fat-free fluid milk after resistance exercise promotes greater lean mass accretion than does consumption of soy or carbohydrate in young, novice, male weightlifters. *The American Journal of Clinical Nutrition* 86(2):373-381. https://doi.org/10.1093/ajcn/86.2.373 (randomised trial, cited 1×)
 - Hartmann H, Wirth K, Klusemann M (2013). Analysis of the Load on the Knee Joint and Vertebral Column with Changes in Squatting Depth and Weight Load. *Sports Medicine* 43(10):993-1008. https://doi.org/10.1007/s40279-013-0073-6 (review, cited 1×)
 - Harvey J, Krukowski R, Priest J et al. (2019). Log Often, Lose More: Electronic Dietary Self‐Monitoring for Weight Loss. *Obesity* 27(3):380-384. https://doi.org/10.1002/oby.22382 (reference, cited 2×)
 - Havers T, Wagner N, Held S et al. (2025). Partial Range, Full Gains? The Effect of 8 Weeks of Partial Range of Motion Training at Long Muscle Lengths on Elbow Flexor Hypertrophy and Strength in Trained Individuals. *European Journal of Sport Science* 25(12):e70087. https://doi.org/10.1002/ejsc.70087 (randomised trial, cited 1×)
@@ -3593,11 +3639,13 @@ What changed after an entry was published, newest first.
 - Hevia-Larraín V, Gualano B, Longobardi I et al. (2021). High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet to Support Resistance Training Adaptations: A Comparison Between Habitual Vegans and Omnivores. *Sports Medicine* 51(6):1317-1330. https://doi.org/10.1007/s40279-021-01434-9 (randomised trial, cited 2×)
 - Hickmott LM, Chilibeck PD, Shaw KA et al. (2022). The Effect of Load and Volume Autoregulation on Muscular Strength and Hypertrophy: A Systematic Review and Meta-Analysis. *Sports Medicine - Open* 8(1). https://doi.org/10.1186/s40798-021-00404-9 (meta-analysis, cited 2×)
 - Hirshkowitz M, Whiton K, Albert SM et al. (2015). National Sleep Foundation’s sleep time duration recommendations: methodology and results summary. *Sleep Health* 1(1):40-43. https://doi.org/10.1016/j.sleh.2014.12.010 (position stand, cited 1×)
+- Howells RJ, Spathis JG, Pearson J et al. (2022). Impacts of squat attempt weight selection and success on powerlifting performance. *The Journal of Sports Medicine and Physical Fitness* 62(4):476-484. https://doi.org/10.23736/S0022-4707.21.12140-1 (cohort study, cited 3×)
 - Hudson J, Bergia R, Campbell W (2020). Protein Distribution and Muscle-Related Outcomes: Does the Evidence Support the Concept?. *Nutrients* 12(5):1441. https://doi.org/10.3390/nu12051441 (review, cited 1×)
 - Hulmi JJ, Isola V, Suonpää M et al. (2017). The Effects of Intensive Weight Reduction on Body Composition and Serum Hormones in Female Fitness Competitors. *Frontiers in Physiology* 7. https://doi.org/10.3389/fphys.2016.00689 (cohort study, cited 1×)
-- International Powerlifting Federation (2026). IPF Technical Rules Book. Effective 01 March 2026 (v3), file 2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf. https://www.powerlifting.sport/rules/codes/info/technical-rules (rulebook, cited 5×)
+- Hultman E, Soderlund K, Timmons JA et al. (1996). Muscle creatine loading in men. *Journal of Applied Physiology* 81(1):232-237. https://doi.org/10.1152/jappl.1996.81.1.232 (trial, cited 1×)
+- International Powerlifting Federation (2026). IPF Technical Rules Book. Effective 01 March 2026 (v3), file 2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf. https://www.powerlifting.sport/rules/codes/info/technical-rules (rulebook, cited 6×)
 - International Powerlifting Federation (2026). IPF Technical Rules Book 2026 (effective 1 March 2026, v3). Effective 1 March 2026 (v3); listed at https://www.powerlifting.sport/rules/codes/info/technical-rules. https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf (rulebook, cited 21×)
-- Iraki J, Fitschen P, Espinar S et al. (2019). Nutrition Recommendations for Bodybuilders in the Off-Season: A Narrative Review. *Sports* 7(7):154. https://doi.org/10.3390/sports7070154 (review, cited 14×)
+- Iraki J, Fitschen P, Espinar S et al. (2019). Nutrition Recommendations for Bodybuilders in the Off-Season: A Narrative Review. *Sports* 7(7):154. https://doi.org/10.3390/sports7070154 (review, cited 17×)
 - Jamnick NA, Pettitt RW, Granata C et al. (2020). An Examination and Critique of Current Methods to Determine Exercise Intensity. *Sports Medicine* 50(10):1729-1756. https://doi.org/10.1007/s40279-020-01322-8 (review, cited 1×)
 - Johnston BC, Kanters S, Bandayrel K et al. (2014). Comparison of Weight Loss Among Named Diet Programs in Overweight and Obese Adults. *JAMA* 312(9):923. https://doi.org/10.1001/jama.2014.10397 (meta-analysis, cited 4×)
 - Jukic I, Van Hooren B, Ramos AG et al. (2021). The Effects of Set Structure Manipulation on Chronic Adaptations to Resistance Training: A Systematic Review and Meta-Analysis. *Sports Medicine* 51(5):1061-1086. https://doi.org/10.1007/s40279-020-01423-4 (meta-analysis, cited 1×)
@@ -3624,6 +3672,7 @@ What changed after an entry was published, newest first.
 - Lang JJ, Prince SA, Merucci K et al. (2024). Cardiorespiratory fitness is a strong and consistent predictor of morbidity and mortality among adults: an overview of meta-analyses representing over 20.9 million observations from 199 unique cohort studies. *British Journal of Sports Medicine* 58(10):556-566. https://doi.org/10.1136/bjsports-2023-107849 (systematic review, cited 4×)
 - Larsen S, Kristiansen E, van den Tillaar R (2021). Effects of subjective and objective autoregulation methods for intensity and volume on enhancing maximal strength during resistance-training interventions: a systematic review. *PeerJ* 9:e10663. https://doi.org/10.7717/peerj.10663 (systematic review, cited 1×)
 - Lee DH, Rezende LFM, Joh HK et al. (2022). Long-Term Leisure-Time Physical Activity Intensity and All-Cause and Cause-Specific Mortality: A Prospective Cohort of US Adults. *Circulation* 146(7):523-534. https://doi.org/10.1161/circulationaha.121.058162 (cohort study, cited 1×)
+- Leibel RL, Rosenbaum M, Hirsch J (1995). Changes in Energy Expenditure Resulting from Altered Body Weight. *New England Journal of Medicine* 332(10):621-628. https://doi.org/10.1056/NEJM199503093321001 (trial, cited 1×)
 - Leong DP, Teo KK, Rangarajan S et al. (2015). Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study. *The Lancet* 386(9990):266-273. https://doi.org/10.1016/s0140-6736(14)62000-6 (cohort study, cited 2×)
 - LeSuer DA, McCormick JH, Mayhew JL et al. (1997). The Accuracy of Prediction Equations for Estimating 1-RM Performance in the Bench Press, Squat, and Deadlift. *Journal of Strength and Conditioning Research* 11(4):211-213. https://doi.org/10.1519/00124278-199711000-00001 (trial, cited 1×)
 - Levine JA, Eberhardt NL, Jensen MD (1999). Role of Nonexercise Activity Thermogenesis in Resistance to Fat Gain in Humans. *Science* 283(5399):212-214. https://doi.org/10.1126/science.283.5399.212 (trial, cited 1×)
@@ -3635,7 +3684,7 @@ What changed after an entry was published, newest first.
 - Liu D, Huang Y, Huang C et al. (2022). Calorie Restriction with or without Time-Restricted Eating in Weight Loss. *New England Journal of Medicine* 386(16):1495-1504. https://doi.org/10.1056/NEJMoa2114833 (randomised trial, cited 2×)
 - Liu Cj, Latham NK (2009). Progressive resistance strength training for improving physical function in older adults. *Cochrane Database of Systematic Reviews*. https://doi.org/10.1002/14651858.cd002759.pub2 (systematic review, cited 2×)
 - Lixandrão ME, Ugrinowitsch C, Berton R et al. (2018). Magnitude of Muscle Strength and Mass Adaptations Between High-Load Resistance Training Versus Low-Load Resistance Training Associated with Blood-Flow Restriction: A Systematic Review and Meta-Analysis. *Sports Medicine* 48(2):361-378. https://doi.org/10.1007/s40279-017-0795-y (meta-analysis, cited 1×)
-- Longland TM, Oikawa SY, Mitchell CJ et al. (2016). Higher compared with lower dietary protein during an energy deficit combined with intense exercise promotes greater lean mass gain and fat mass loss: a randomized trial. *The American Journal of Clinical Nutrition* 103(3):738-746. https://doi.org/10.3945/ajcn.115.119339 (randomised trial, cited 3×)
+- Longland TM, Oikawa SY, Mitchell CJ et al. (2016). Higher compared with lower dietary protein during an energy deficit combined with intense exercise promotes greater lean mass gain and fat mass loss: a randomized trial. *The American Journal of Clinical Nutrition* 103(3):738-746. https://doi.org/10.3945/ajcn.115.119339 (randomised trial, cited 5×)
 - Lopez P, Radaelli R, Taaffe DR et al. (2021). Resistance Training Load Effects on Muscle Hypertrophy and Strength Gain: Systematic Review and Network Meta-analysis. *Medicine & Science in Sports & Exercise* 53(6):1206-1216. https://doi.org/10.1249/mss.0000000000002585 (meta-analysis, cited 5×)
 - Loucks AB, Thuma JR (2003). Luteinizing Hormone Pulsatility Is Disrupted at a Threshold of Energy Availability in Regularly Menstruating Women. *The Journal of Clinical Endocrinology & Metabolism* 88(1):297-311. https://doi.org/10.1210/jc.2002-020369 (trial, cited 1×)
 - Lowe DA, Wu N, Rohdin-Bibby L et al. (2020). Effects of Time-Restricted Eating on Weight Loss and Other Metabolic Parameters in Women and Men With Overweight and Obesity. *JAMA Internal Medicine* 180(11):1491. https://doi.org/10.1001/jamainternmed.2020.4153 (randomised trial, cited 2×)
@@ -3712,7 +3761,7 @@ What changed after an entry was published, newest first.
 - Reynolds A, Mann J, Cummings J et al. (2019). Carbohydrate quality and human health: a series of systematic reviews and meta-analyses. *The Lancet* 393(10170):434-445. https://doi.org/10.1016/S0140-6736(18)31809-9 (meta-analysis, cited 2×)
 - Roberts BM, Helms ER, Trexler ET et al. (2020). Nutritional Recommendations for Physique Athletes. *Journal of Human Kinetics* 71(1):79-108. https://doi.org/10.2478/hukin-2019-0096 (review, cited 4×)
 - Robinson ZP, Pelland JC, Remmert JF et al. (2024). Exploring the Dose–Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions. *Sports Medicine* 54(9):2209-2231. https://doi.org/10.1007/s40279-024-02069-2 (meta-analysis, cited 8×)
-- Rogerson D, Nolan D, Korakakis PA et al. (2024). Deloading Practices in Strength and Physique Sports: A Cross-sectional Survey. *Sports Medicine - Open* 10(1):26. https://doi.org/10.1186/s40798-024-00691-y (reference, cited 5×)
+- Rogerson D, Nolan D, Korakakis PA et al. (2024). Deloading Practices in Strength and Physique Sports: A Cross-sectional Survey. *Sports Medicine - Open* 10(1):26. https://doi.org/10.1186/s40798-024-00691-y (reference, cited 6×)
 - Rosenbaum M, Leibel RL (2010). Adaptive thermogenesis in humans. *International Journal of Obesity* 34(S1):S47-S55. https://doi.org/10.1038/ijo.2010.184 (review, cited 1×)
 - Rossow LM, Fukuda DH, Fahs CA et al. (2013). Natural Bodybuilding Competition Preparation and Recovery: A 12-Month Case Study. *International Journal of Sports Physiology and Performance* 8(5):582-592. https://doi.org/10.1123/ijspp.8.5.582 (reference, cited 1×)
 - Ruddick-Collins LC, Morgan PJ, Fyfe CL et al. (2022). Timing of daily calorie loading affects appetite and hunger responses without changes in energy metabolism in healthy subjects with obesity. *Cell Metabolism* 34(10):1472-1485.e6. https://doi.org/10.1016/j.cmet.2022.08.001 (randomised trial, cited 1×)
@@ -3737,10 +3786,12 @@ What changed after an entry was published, newest first.
 - Solberg PA, Hopkins WG, Paulsen G et al. (2019). Peak Age and Performance Progression in World-Class Weightlifting and Powerlifting Athletes. *International Journal of Sports Physiology and Performance* 14(10):1357-1363. https://doi.org/10.1123/ijspp.2019-0093 (cohort study, cited 1×)
 - Souza D, Silva AG, Vale A et al. (2024). Effect of warm-up protocols using lower and higher loads on multiple-set back squat volume-load. *PeerJ* 12:e17347. https://doi.org/10.7717/peerj.17347 (randomised trial, cited 1×)
 - Speakman JR, Levitsky DA, Allison DB et al. (2011). Set points, settling points and some alternative models: theoretical options to understand how genes and environments combine to regulate body adiposity. *Disease Models & Mechanisms* 4(6):733-745. https://doi.org/10.1242/dmm.008698 (review, cited 2×)
+- Steele J, Endres A, Fisher J et al. (2017). Ability to predict repetitions to momentary failure is not perfectly accurate, though improves with resistance training experience. *PeerJ* 5:e4105. https://doi.org/10.7717/peerj.4105 (trial, cited 1×)
 - Steele J, Malleron T, Har-Nir I et al. (2022). Are Trainees Lifting Heavy Enough? Self-Selected Loads in Resistance Exercise: A Scoping Review and Exploratory Meta-analysis. *Sports Medicine* 52(12):2909-2923. https://doi.org/10.1007/s40279-022-01717-9 (systematic review, cited 2×)
 - Storoschuk KL, Moran-MacDonald A, Gibala MJ et al. (2025). Much Ado About Zone 2: A Narrative Review Assessing the Efficacy of Zone 2 Training for Improving Mitochondrial Capacity and Cardiorespiratory Fitness in the General Population. *Sports Medicine* 55(7):1611-1624. https://doi.org/10.1007/s40279-025-02261-y (review, cited 2×)
 - Stricker PR, Faigenbaum AD, McCambridge TM et al. (2020). Resistance Training for Children and Adolescents. *Pediatrics* 145(6):e20201011. https://doi.org/10.1542/peds.2020-1011 (position stand, cited 1×)
 - Strömbäck E, Aasa U, Gilenstam K et al. (2018). Prevalence and Consequences of Injuries in Powerlifting: A Cross-sectional Study. *Orthopaedic Journal of Sports Medicine* 6(5). https://doi.org/10.1177/2325967118771016 (reference, cited 1×)
+- Sundstrup E, Jakobsen MD, Andersen CH et al. (2012). Muscle Activation Strategies During Strength Training With Heavy Loading vs. Repetitions to Failure. *Journal of Strength and Conditioning Research* 26(7):1897-1903. https://doi.org/10.1519/JSC.0b013e318239c38e (trial, cited 1×)
 - Swinton PA, Lloyd R, Agouris I et al. (2009). Contemporary Training Practices in Elite British Powerlifters: Survey Results From an International Competition. *Journal of Strength and Conditioning Research* 23(2):380-384. https://doi.org/10.1519/JSC.0b013e31819424bd (reference, cited 1×)
 - Sødal LK, Kristiansen E, Larsen S et al. (2023). Effects of Drop Sets on Skeletal Muscle Hypertrophy: A Systematic Review and Meta-analysis. *Sports Medicine - Open* 9(1):66. https://doi.org/10.1186/s40798-023-00620-5 (meta-analysis, cited 1×)
 - Tagawa R, Watanabe D, Ito K et al. (2021). Dose–response relationship between protein intake and muscle mass increase: a systematic review and meta-analysis of randomized controlled trials. *Nutrition Reviews* 79(1):66-75. https://doi.org/10.1093/nutrit/nuaa104 (systematic review, cited 2×)
@@ -3748,7 +3799,7 @@ What changed after an entry was published, newest first.
 - Thomas JG, Bond DS, Phelan S et al. (2014). Weight-Loss Maintenance for 10 Years in the National Weight Control Registry. *American Journal of Preventive Medicine* 46(1):17-23. https://doi.org/10.1016/j.amepre.2013.08.019 (cohort study, cited 2×)
 - Thomas DT, Erdman KA, Burke LM (2016). Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance. *Journal of the Academy of Nutrition and Dietetics* 116(3):501-528. https://doi.org/10.1016/j.jand.2015.12.006 (position stand, cited 1×)
 - Travis SK, Pritchard HJ, Mujika I et al. (2021). Characterizing the Tapering Practices of United States and Canadian Raw Powerlifters. *Journal of Strength and Conditioning Research* 35(12S):S26-S35. https://doi.org/10.1519/JSC.0000000000004177 (reference, cited 4×)
-- Travis SK, Zourdos MC, Bazyler CD (2021). Weight Selection Attempts of Elite Classic Powerlifters. *Perceptual and Motor Skills* 128(1):507-521. https://doi.org/10.1177/0031512520967608 (cohort study, cited 6×)
+- Travis SK, Zourdos MC, Bazyler CD (2021). Weight Selection Attempts of Elite Classic Powerlifters. *Perceptual and Motor Skills* 128(1):507-521. https://doi.org/10.1177/0031512520967608 (cohort study, cited 7×)
 - Travis SK, Mujika I, Zwetsloot KA et al. (2022). The Effects of 3 vs. 5 Days of Training Cessation on Maximal Strength. *Journal of Strength & Conditioning Research* 36(3):633-640. https://doi.org/10.1519/JSC.0000000000004183 (trial, cited 2×)
 - Trexler ET, Smith-Ryan AE, Norton LE (2014). Metabolic adaptation to weight loss: implications for the athlete. *Journal of the International Society of Sports Nutrition* 11(1):7. https://doi.org/10.1186/1550-2783-11-7 (review, cited 1×)
 - Trexler ET, Smith-Ryan AE, Stout JR et al. (2015). International society of sports nutrition position stand: Beta-Alanine. *Journal of the International Society of Sports Nutrition* 12(1):30. https://doi.org/10.1186/s12970-015-0090-y (position stand, cited 2×)
@@ -3776,7 +3827,7 @@ What changed after an entry was published, newest first.
 - Whittaker J, Wu K (2021). Low-fat diets and testosterone in men: Systematic review and meta-analysis of intervention studies. *The Journal of Steroid Biochemistry and Molecular Biology* 210:105878. https://doi.org/10.1016/j.jsbmb.2021.105878 (meta-analysis, cited 1×)
 - Wilk M, Zajac A, Tufano JJ (2021). The Influence of Movement Tempo During Resistance Training on Muscular Strength and Hypertrophy Responses: A Review. *Sports Medicine* 51(8):1629-1650. https://doi.org/10.1007/s40279-021-01465-2 (review, cited 1×)
 - Williams TD, Tolusso DV, Fedewa MV et al. (2017). Comparison of Periodized and Non-Periodized Resistance Training on Maximal Strength: A Meta-Analysis. *Sports Medicine* 47(10):2083-2100. https://doi.org/10.1007/s40279-017-0734-y (meta-analysis, cited 2×)
-- Wing RR, Phelan S (2005). Long-term weight loss maintenance. *The American Journal of Clinical Nutrition* 82(1):222S-225S. https://doi.org/10.1093/ajcn/82.1.222S (review, cited 3×)
+- Wing RR, Phelan S (2005). Long-term weight loss maintenance. *The American Journal of Clinical Nutrition* 82(1):222S-225S. https://doi.org/10.1093/ajcn/82.1.222S (review, cited 4×)
 - Winwood PW, Travis SK, Barnes MJ et al. (2026). Tapering and Peaking in the Weight Lifting Sports: A Systematic Review of Athletes’ Self-Reported Strategies. *Sports Medicine* 56(12):3099-3123. https://doi.org/10.1007/s40279-026-02500-w (systematic review, cited 2×)
 - Wirth J, Hillesheim E, Brennan L (2020). The Role of Protein Intake and its Timing on Body Composition and Muscle Function in Healthy Adults: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. *The Journal of Nutrition* 150(6):1443-1460. https://doi.org/10.1093/jn/nxaa049 (systematic review, cited 2×)
 - Wolfe RR (2017). Branched-chain amino acids and muscle protein synthesis in humans: myth or reality?. *Journal of the International Society of Sports Nutrition* 14(1):30. https://doi.org/10.1186/s12970-017-0184-9 (review, cited 2×)
@@ -3791,7 +3842,7 @@ What changed after an entry was published, newest first.
 
 Source page: https://kitesink.com/fitness/sources  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-14.
+General information, not medical advice. Last updated 2026-11-15.
 
 ================================================================
 FILE: https://kitesink.com/vantix.md

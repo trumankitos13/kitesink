@@ -37,17 +37,18 @@
       ],
       "verdict": "overstated",
       "take": "Research on closeness to failure shows a gradual trend, not a cut-off at five reps.",
-      "body": "The 'effective reps' idea says only the final reps before failure build muscle. The meta-analyses cited here did not test a five-rep cut-off. They found that growth tended to rise as sets ended closer to failure, and one concluded the relationship may not be a straight line. Both rely on rough estimates of reps in reserve, so the true shape is unknown.",
+      "body": "The 'effective reps' idea says only the final reps before failure build muscle. It draws on muscle-activation work: in 15 untrained women doing lateral raises, activity in a set of about 15 reps climbed and then levelled off over the last 3 to 5 reps before failure. That was activation in one session, not growth. The meta-analyses cited here did not test a five-rep cut-off. They found growth tended to rise as sets ended closer to failure, and one concluded the relationship may not be a straight line. Both rely on rough estimates of reps in reserve.",
       "do": [
         "Take working sets close to failure instead of counting a fixed number of final reps."
       ],
-      "studied": "Refalo 2023: 15 studies in healthy adults. Robinson 2024: exploratory meta-regressions of training trials. Neither tested a five-rep rule.",
+      "studied": "Refalo 2023: 15 studies in healthy adults. Robinson 2024: exploratory meta-regressions of training trials. Neither tested a five-rep rule. Sundstrup 2012: 15 untrained women, one exercise, EMG only.",
       "evidence": "meta-analysis",
       "level": "intermediate",
       "confidence": "limited",
       "sources": [
         "robinson-2024",
-        "refalo-2023"
+        "refalo-2023",
+        "sundstrup-2012"
       ]
     },
     {
@@ -141,7 +142,7 @@
       ],
       "verdict": "overstated",
       "take": "Adding cardio did not reduce overall muscle growth in a 43-study review, though a small effect showed at fibre level, mainly with running.",
-      "body": "A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength. Explosive strength was reduced, more so when both were done in the same session. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.",
+      "body": "A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength was reduced, more so when both were done in the same session. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.",
       "do": [
         "Keep your lifting volume the same when you add cardio and, if you can, leave 3 hours or more between the sessions."
       ],
@@ -190,18 +191,19 @@
       ],
       "verdict": "depends",
       "take": "Deloads are common coaching practice, but outcome trials are few; one found reduced-volume weeks did not cost muscle gain in beginners.",
-      "body": "A Delphi panel of expert coaches (34 in round one, 21 in round three) agreed a definition: a period of reduced training stress meant to lower fatigue and prepare for later training. That is expert opinion, not an outcome trial. In one trial, 19 untrained young men trained with or without reduced weeks at weeks 4 and 8; muscle thickness and strength-endurance rose similarly in both. No study here tests a fixed fourth-week rule in trained lifters.",
+      "body": "A Delphi panel of expert coaches (34 in round one, 21 in round three) agreed a definition: a period of reduced training stress meant to lower fatigue and prepare for later training. In a survey of 246 competitive strength and physique athletes, all deloaded, on average every 5.6 weeks for about 6 days, mostly planned in advance. Both are opinion and practice, not outcome trials. In one trial, 19 untrained young men trained with or without reduced weeks at weeks 4 and 8; muscle thickness and strength-endurance rose similarly. No study here tests a fixed fourth-week rule in trained lifters.",
       "do": [
-        "Plan a lighter week when fatigue, sleep or motivation drop, rather than on a fixed calendar.",
+        "Plan a lighter week about every five or six weeks, and bring it forward if fatigue, sleep or motivation drop.",
         "In a deload, cut sets and sessions but keep the same exercises."
       ],
-      "studied": "Bell 2023: 34 expert coaches in round one, 21 in round three. Pancar 2026: 19 untrained young men, 8 weeks, reduced weeks at 4 and 8, arms and legs compared.",
+      "studied": "Bell 2023: 34 expert coaches in round one, 21 in round three. Rogerson 2024: survey of 246 competitive athletes. Pancar 2026: 19 untrained young men, 8 weeks, reduced weeks at 4 and 8.",
       "evidence": "mixed",
       "level": "intermediate",
       "confidence": "limited",
       "sources": [
         "bell-2023",
-        "pancar-2026"
+        "pancar-2026",
+        "rogerson-2024"
       ]
     },
     {
@@ -510,7 +512,7 @@
       ],
       "verdict": "overstated",
       "take": "No beneficial effect of a specific protein timing showed up on lean mass or strength, so total daily protein matters more.",
-      "body": "A systematic review of 65 trials (2,907 participants) found protein supplementation raised lean mass by 0.62 kg (1.4 lb) in adults, independent of when it was taken, with no beneficial effect of a specific timing on lean mass, handgrip or leg-press strength. The ISSN position stand says the best time is likely a matter of individual tolerance, and that the anabolic effect of exercise lasts at least 24 hours.",
+      "body": "A systematic review of 65 trials (2,907 participants) found protein supplementation raised lean mass by 0.62 kg (1.4 lb) in adults, independent of when it was taken, with no beneficial effect of a specific timing on lean mass, handgrip or leg-press strength. The ISSN position stand says the best time is likely a matter of individual tolerance, and that the anabolic effect of exercise lasts at least 24 hours but likely diminishes as time passes after training.",
       "do": [
         "Hit your daily protein target first.",
         "Eat a protein-rich meal before or after training whenever it suits you."
@@ -731,11 +733,12 @@
         "muscle-gain"
       ],
       "verdict": "mostly",
-      "take": "About 1.6 g per kg a day covers most lifters, and returns shrink as intake rises above that.",
-      "body": "The ISSN position stand calls 1.4 to 2.0 g per kg a day sufficient for most exercising people. A meta-analysis of 74 trials found added protein helped lean mass in adults under 65 who ate 1.6 g per kg or more. A dose-response review of 105 articles (5,402 participants) found each extra 0.1 g per kg added 0.39 kg of lean mass below 1.3 g per kg a day and 0.12 kg above it.",
+      "take": "About 1.6 g per kg a day covers most lifters, returns shrink above that, and needs may be higher while dieting.",
+      "body": "The ISSN position stand calls 1.4 to 2.0 g per kg a day sufficient for most exercising people, and says 2.3 to 3.1 g per kg may be needed to keep lean mass when resistance-trained people cut calories. A meta-analysis of 74 trials found added protein helped lean mass in adults under 65 who ate 1.6 g per kg or more. A dose-response review of 105 articles (5,402 participants) found each extra 0.1 g per kg added 0.39 kg of lean mass below 1.3 g per kg a day and 0.12 kg above it.",
       "do": [
         "Aim for about 1.6 to 2.2 g per kg a day: 128 to 176 g at 80 kg (176 lb).",
-        "Hit the daily total before you worry about timing or splits."
+        "Hit the daily total before you worry about timing or splits.",
+        "During a calorie deficit, aim for the top of that range or above it."
       ],
       "studied": "Nunes: 74 trials of added protein with resistance exercise. Tagawa: 105 articles, 5,402 participants. Jager: the ISSN position stand.",
       "evidence": "meta-analysis",
@@ -744,7 +747,8 @@
       "sources": [
         "jager-2017",
         "nunes-2022",
-        "tagawa-2021"
+        "tagawa-2021",
+        "iraki-2019"
       ]
     },
     {
@@ -783,20 +787,21 @@
         "muscle-gain"
       ],
       "verdict": "mostly",
-      "take": "When total protein is enough, strength gains match, and soy matched milk protein for muscle. Some other plant proteins fell behind.",
-      "body": "A meta-analysis of 18 studies found protein source did not change absolute lean mass or strength, though younger adults gained 0.41 kg more lean mass on animal protein. A 2025 meta-analysis of 30 trials found a small animal advantage for muscle mass, with no difference between soy and milk across 17 trials, and no difference in strength. In a 12-week trial, 19 vegans and 19 omnivores on about 1.6 g per kg gained alike.",
+      "take": "When total protein is enough, strength gains match, and soy matched milk protein for muscle in pooled trials. Some other plant proteins fell behind.",
+      "body": "A meta-analysis of 18 studies found protein source did not change absolute lean mass or strength, though younger adults gained 0.41 kg more lean mass on animal protein. A 2025 meta-analysis of 30 trials found a small animal advantage for muscle mass, with no difference between soy and milk across 17 trials, and no difference in strength. In a 12-week trial, 19 vegans and 19 omnivores on about 1.6 g per kg gained alike. One trial differed: in 56 novice men training for 12 weeks, milk after sessions built more lean mass than a matched soy drink, with equal strength gains.",
       "do": [
         "If you eat no animal foods, aim for the upper half of the protein range.",
         "Lean on soy and mix legumes and grains across the day."
       ],
-      "studied": "Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by age and protein source. Hevia: 19 vegans and 19 omnivores for 12 weeks.",
+      "studied": "Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by age and protein source. Hevia: 19 vegans and 19 omnivores for 12 weeks. Hartman: 56 young novice men, 12 weeks.",
       "evidence": "meta-analysis",
       "level": "beginner",
       "confidence": "strong",
       "sources": [
         "lim-2021",
         "hevia-2021",
-        "reid-mccann-2025"
+        "reid-mccann-2025",
+        "hartman-2007"
       ]
     },
     {
@@ -888,11 +893,11 @@
       ],
       "verdict": "overstated",
       "take": "Fasted exercise burns slightly more fat during the session, but body-mass and body-fat changes were similar in the small review that tracked them.",
-      "body": "A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) compared fasted and fed exercise on weight and body composition and found trivial differences between groups, while warning that the data were limited.",
+      "body": "A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) compared fasted and fed exercise on weight and body composition and found trivial differences between groups, while warning that the data were limited. Its body-fat and lean-mass results came from women only.",
       "do": [
         "Train at the time of day you will stick to, since the evidence shows no clear fat-loss edge from fasting."
       ],
-      "studied": "Hackett 2017: 5 studies, 96 healthy adults. Vieira 2016: 27 studies, 273 adults, exercise of 120 minutes or less.",
+      "studied": "Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults, exercise of 120 minutes or less.",
       "evidence": "meta-analysis",
       "level": "beginner",
       "confidence": "moderate",
@@ -963,19 +968,20 @@
         "myths"
       ],
       "verdict": "overstated",
-      "take": "Energy expenditure does fall during a diet, but measured extra drops were tens to about a hundred kcal a day, not a stop to weight loss.",
-      "body": "In 171 overweight women who lost an average of 12 kg, metabolic adaptation was about 54 kcal a day after weight loss and was not present at 1 or 2 years in a subset. In 32 men on a half-calorie diet for 3 weeks, resting energy expenditure fell 266 kcal a day, of which 108 kcal was adaptive thermogenesis (72 kcal after accounting for lean mass). A review notes restriction brings changes that attenuate weight loss and promote regain.",
+      "take": "Energy expenditure does fall during a diet, at rest and in non-resting activity. That slows weight loss, but no study here shows it stopping loss.",
+      "body": "In 171 overweight women who lost an average of 12 kg, metabolic adaptation was about 54 kcal a day after weight loss and was not present at 1 or 2 years in a subset. In 32 men on a half-calorie diet for 3 weeks, resting energy expenditure fell 266 kcal a day, of which 108 kcal was adaptive thermogenesis (72 kcal after accounting for lean mass). Resting figures miss part of it: in 41 adults held 10 percent or more below their usual weight, total expenditure fell 6 to 8 kcal per kg of fat-free mass a day, about half of it non-resting.",
       "do": [
         "Keep your deficit moderate, and recheck your intake and weight trend over 2 to 4 weeks before changing anything."
       ],
-      "studied": "Martins 2020: 171 overweight women, 2 years. Muller 2015: 32 non-obese men through overfeeding, 3 weeks at half energy needs, and refeeding. Trexler 2014: review.",
+      "studied": "Martins 2020: 171 overweight women, 2 years. Muller 2015: 32 non-obese men, 3 weeks at half energy needs. Leibel 1995: 18 obese and 23 never-obese adults. Trexler 2014: review.",
       "evidence": "mixed",
       "level": "intermediate",
       "confidence": "moderate",
       "sources": [
         "martins-2020",
         "muller-2015",
-        "trexler-2014"
+        "trexler-2014",
+        "leibel-1995"
       ]
     },
     {
@@ -1065,16 +1071,19 @@
       ],
       "verdict": "overstated",
       "take": "In pooled trials, exercise alone produced modest weight loss, so it is a weak tool for offsetting a poor diet.",
-      "body": "An overview of 12 systematic reviews (149 studies) in adults with overweight or obesity found exercise training led to weight loss of 1.5 to 3.5 kg (3.3 to 7.7 lb) and fat loss of 1.3 to 2.6 kg. Resistance training reduced lean mass loss during weight loss. In the one review that looked at it, exercise had no significant effect on weight maintenance. The overview did not test diet quality directly, but it shows exercise helps body composition even though it moves weight modestly.",
+      "body": "An overview of 12 systematic reviews (149 studies) in adults with overweight or obesity found exercise training led to weight loss of 1.5 to 3.5 kg (3.3 to 7.7 lb) and fat loss of 1.3 to 2.6 kg. Resistance training reduced lean mass loss during weight loss. For keeping weight off the evidence is split: the one review of trials found no significant effect, while an ACSM position stand says observational studies link more than 250 minutes a week to better maintenance and that well-designed trials are lacking. The overview did not test diet quality directly.",
       "do": [
-        "Use food to set your calorie deficit and training to protect muscle and fitness."
+        "Use food to set your calorie deficit and training to protect muscle and fitness.",
+        "After a diet, keep activity high: people who keep weight off long term report about an hour a day."
       ],
-      "studied": "Bellicha 2021: overview of 12 systematic reviews and meta-analyses covering 149 studies in adults with overweight or obesity.",
+      "studied": "Bellicha 2021: overview of 12 systematic reviews covering 149 studies in adults with overweight or obesity. Donnelly 2009: ACSM position stand. Wing 2005: weight-loss registry review.",
       "evidence": "review",
       "level": "beginner",
       "confidence": "moderate",
       "sources": [
-        "bellicha-2021"
+        "bellicha-2021",
+        "donnelly-2009",
+        "wing-2005"
       ]
     },
     {
@@ -1087,20 +1096,21 @@
         "muscle-gain"
       ],
       "verdict": "depends",
-      "take": "Slower is safer for muscle: about 0.5 to 1 percent of body weight a week, and the low end did better in the one trial that tested it.",
-      "body": "A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less to limit fat-free mass loss. In 24 athletes, the group losing 0.7 percent a week gained 2.1 percent lean mass, while the group losing 1.4 percent a week kept lean mass unchanged. That is one small trial. Leaner people have less to spare, so the safe pace is likely slower for them.",
+      "take": "Slower is safer for muscle: about 0.5 to 1 percent of body weight a week. With hard lifting, lean mass also held in short trials of faster loss or a steep deficit.",
+      "body": "A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less to limit fat-free mass loss. In 24 athletes lifting four times a week, the group losing 0.7 percent a week gained 2.1 percent lean mass, while the faster group, set 1.4 percent and achieving 1.0, kept lean mass unchanged. In 40 young men on a 40 percent deficit with intense training for 4 weeks, lean mass rose 1.2 kg on 2.4 g of protein per kg. These are small, short trials. Leaner people have less to spare, so the safe pace is likely slower for them.",
       "do": [
         "Pick a weekly percentage, convert it to kg or lb, and check it against your four-week trend.",
         "Keep lifting and keep protein high while you diet."
       ],
-      "studied": "Garthe: 24 athletes in a controlled weight-loss trial. Helms and Roberts: reviews written for lean physique athletes and lifters.",
+      "studied": "Garthe: 24 athletes in a controlled weight-loss trial. Longland: 40 young men, 4 weeks. Helms and Roberts: reviews written for lean physique athletes and lifters.",
       "evidence": "mixed",
       "level": "intermediate",
       "confidence": "limited",
       "sources": [
         "garthe-2011",
         "helms-2014-prep",
-        "roberts-2020"
+        "roberts-2020",
+        "longland-2016"
       ]
     },
     {
@@ -3843,6 +3853,126 @@
       "pages": "222S-225S",
       "pmid": "16002825",
       "support": "Members have lost an average of 33 kg and maintained the loss for more than 5 y, with about 1 h/d of physical activity, self-monitoring of weight and a consistent eating pattern across weekdays and weekends."
+    },
+    "sundstrup-2012": {
+      "type": "trial",
+      "authors": [
+        "Sundstrup E",
+        "Jakobsen MD",
+        "Andersen CH",
+        "Zebis MK",
+        "Mortensen OS",
+        "Andersen LL"
+      ],
+      "year": 2012,
+      "title": "Muscle Activation Strategies During Strength Training With Heavy Loading vs. Repetitions to Failure",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "26",
+      "issue": "7",
+      "pages": "1897-1903",
+      "doi": "10.1519/JSC.0b013e318239c38e",
+      "pmid": "21986694",
+      "n_participants": 15,
+      "support": "Fifteen healthy untrained women performed a set with heavy loading (3 repetition maximum [RM]) and a set of repetitions to failure with lower resistance (~15 RM) during lateral raise with elastic tubing. ... muscle activity reached a plateau 3-5 repetitions from failure with an elastic resistance of approximately 15 RM."
+    },
+    "rogerson-2024": {
+      "type": "other",
+      "authors": [
+        "Rogerson D",
+        "Nolan D",
+        "Korakakis PA",
+        "Immonen V",
+        "Wolf M",
+        "Bell L"
+      ],
+      "year": 2024,
+      "title": "Deloading Practices in Strength and Physique Sports: A Cross-sectional Survey",
+      "journal": "Sports Medicine - Open",
+      "volume": "10",
+      "issue": "1",
+      "pages": "26",
+      "doi": "10.1186/s40798-024-00691-y",
+      "pmid": "38499934",
+      "n_participants": 246,
+      "support": "The typical duration of a deload was 6.4 ± 1.7 days, integrated into the training programme every 5.6 ± 2.3 weeks."
+    },
+    "iraki-2019": {
+      "type": "review",
+      "authors": [
+        "Iraki J",
+        "Fitschen P",
+        "Espinar S",
+        "Helms E"
+      ],
+      "year": 2019,
+      "title": "Nutrition Recommendations for Bodybuilders in the Off-Season: A Narrative Review",
+      "journal": "Sports",
+      "doi": "10.3390/sports7070154",
+      "volume": "7",
+      "issue": "7",
+      "pages": "154",
+      "pmid": "31247944",
+      "support": "A hyper-energetic diet (~10-20%) with a target weight gain of ~0.25-0.5% of body weight per week for novice/intermediate bodybuilders; advanced bodybuilders should be more conservative."
+    },
+    "hartman-2007": {
+      "type": "rct",
+      "authors": [
+        "Hartman JW",
+        "Tang JE",
+        "Wilkinson SB",
+        "Tarnopolsky MA",
+        "Lawrence RL",
+        "Fullerton AV",
+        "Phillips SM"
+      ],
+      "year": 2007,
+      "title": "Consumption of fat-free fluid milk after resistance exercise promotes greater lean mass accretion than does consumption of soy or carbohydrate in young, novice, male weightlifters",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "86",
+      "issue": "2",
+      "pages": "373-381",
+      "doi": "10.1093/ajcn/86.2.373",
+      "pmid": "17684208",
+      "n_participants": 56,
+      "support": "We recruited 56 healthy young men who trained 5 d/wk for 12 wk ... No between-group differences were seen in strength. ... DXA-measured fat- and bone-free mass increased in all groups, with a greater increase in the Milk group than in both the Soy and control groups (P < 0.05)."
+    },
+    "leibel-1995": {
+      "type": "trial",
+      "authors": [
+        "Leibel RL",
+        "Rosenbaum M",
+        "Hirsch J"
+      ],
+      "year": 1995,
+      "title": "Changes in Energy Expenditure Resulting from Altered Body Weight",
+      "journal": "New England Journal of Medicine",
+      "volume": "332",
+      "issue": "10",
+      "pages": "621-628",
+      "doi": "10.1056/NEJM199503093321001",
+      "pmid": "7632212",
+      "n_participants": 41,
+      "support": "Maintenance of a body weight at a level 10 percent or more below the initial weight was associated with a mean (+/- SD) reduction in total energy expenditure of 6 +/- 3 kcal per kilogram of fat-free mass per day in the subjects who had never been obese (P < 0.001) and 8 +/- 5 kcal per kilogram per day in the obese subjects (P < 0.001). Resting energy expenditure and nonresting energy expenditure each decreased 3 to 4 kcal per kilogram of fat-free mass per day in both groups of subjects."
+    },
+    "donnelly-2009": {
+      "type": "position",
+      "authors": [
+        "DONNELLY JE",
+        "BLAIR SN",
+        "JAKICIC JM",
+        "MANORE MM",
+        "RANKIN JW",
+        "SMITH BK"
+      ],
+      "year": 2009,
+      "title": "Appropriate Physical Activity Intervention Strategies for Weight Loss and Prevention of Weight Regain for Adults",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "doi": "10.1249/MSS.0b013e3181949333",
+      "volume": "41",
+      "issue": "2",
+      "pages": "459-471",
+      "pmid": "19127177",
+      "support": "A minimum of 150 min/wk of moderate-intensity physical activity for overweight adults; 200-300 min/wk recommended for long-term weight loss."
     }
   }
 }

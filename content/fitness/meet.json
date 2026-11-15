@@ -98,11 +98,12 @@
    "level": "beginner",
    "confidence": "practice",
    "sources": [
-    "travis-attempts-2021"
+    "travis-attempts-2021",
+    "howells-2022"
    ],
    "when": "weeks-out",
    "take": "Plan an opener you could lift easily on any day, a realistic second, and a hard but makeable third.",
-   "body": "Elite classic lifters at IPF World Championships opened near 91% of their expected third attempt, then added about 5% for the second and about 3% for the third. Base your plan on your best recent single, not on a hope. Write all nine weights down with a lighter plan B for each lift, and round to 2.5 kg (5.5 lb) steps.",
+   "body": "Elite classic lifters at IPF World Championships opened near 91% of their expected third attempt, then added about 5% for the second and about 3% for the third. Across 10,672 raw entries in Australian meets, squat openers averaged 92% of the lifter's best squat that day. Base your plan on your best recent single, not on a hope. Write all nine weights down with a lighter plan B for each lift, and round to 2.5 kg (5.5 lb) steps.",
    "do": [
     "Use the attempt table below, and your best recent single, to fill in all nine weights."
    ]
@@ -116,11 +117,12 @@
    "confidence": "limited",
    "sources": [
     "travis-2021",
-    "travis-2022"
+    "travis-2022",
+    "harrison-2019"
    ],
    "when": "week-before",
    "take": "Survey data show a step taper with 41-50% less volume, the last heavy squat and deadlift 7-10 days out, and rest in the last days.",
-   "body": "In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical. The last heavy squat and deadlift came 7 to 10 days out, the last heavy bench under 7 days out, and full rest about 2.8 days before the meet. In a small trial of 19 athletes, 3 days off kept upper- and lower-body strength; 5 days off cost upper-body strength.",
+   "body": "In 364 North American raw powerlifters, a step taper over 7 to 10 days with 41-50% less volume was typical. The last heavy squat and deadlift came 7 to 10 days out, the last heavy bench under 7 days out, and full rest about 2.8 days before the meet. In a small trial of 19 athletes, 3 days off kept upper- and lower-body strength; 5 days off cost upper-body strength. A review found limited evidence that a short, heavy, low-volume session within 48 hours of competition can help.",
    "do": [
     "Keep the lifts, cut the sets, and stop hard training about 3 days out."
    ]
@@ -370,7 +372,7 @@
     "usapl-2026"
    ],
    "take": "You submit each next weight within one minute of the lights; after that, changes are tightly limited.",
-   "body": "IPF: one change on the first attempt of each lift, higher or lower, up to three minutes before the first round starts for the first group. Second attempts and third attempts in squat and bench cannot be changed. In the third deadlift round you may change twice unless the bar has been called loaded. Weights are multiples of 2.5 kg (5.5 lb) with at least 2.5 kg between attempts. If you miss, you do not follow yourself; the next attempt comes in the next round. USA Powerlifting uses the same structure.",
+   "body": "IPF: one change on the first attempt of each lift, higher or lower, up to three minutes before the first round starts for the first group. Second attempts and third attempts in squat and bench cannot be changed. In the third deadlift round you may change twice unless the bar has been called loaded. Weights are multiples of 2.5 kg (5.5 lb) and rise by at least 2.5 kg. If you miss, you may take that weight again, but only in the next round. USA Powerlifting uses the same structure.",
    "do": [
     "Give your coach the written plan, the minimum increment, and who submits the card."
    ]
@@ -596,7 +598,7 @@
    "value": "2.5",
    "unit": "kg (5.5 lb)",
    "sort": 2.5,
-   "take": "IPF weights are multiples of 2.5 kg, with at least 2.5 kg between attempts. USA Powerlifting uses 2.5 kg increments."
+   "take": "IPF weights are multiples of 2.5 kg, rising at least 2.5 kg between attempts; a missed weight can be repeated. USA Powerlifting uses 2.5 kg increments."
   },
   {
    "id": "meet-num-leave-platform",
@@ -817,14 +819,15 @@
   {
    "id": "meet-table-attempts",
    "type": "table",
-   "title": "Attempt selection ranges for a first meet",
+   "title": "Attempt selection ranges from competition data",
    "topic": "attempts",
    "level": "beginner",
    "confidence": "practice",
    "sources": [
-    "travis-attempts-2021"
+    "travis-attempts-2021",
+    "howells-2022"
    ],
-   "take": "Typical ranges as a share of a current best single, with an example for a lifter whose best single is 200 kg (441 lb).",
+   "take": "Typical ranges as a share of a current best single, with an example at 200 kg (441 lb). They follow elite and national meet data; no study covers first meets.",
    "columns": [
     "Attempt",
     "% of current best single",
@@ -1082,6 +1085,47 @@
    "pmid": "29422383",
    "n_studies": 17,
    "support": "Seventeen studies met the inclusion criteria ... Sleep deprivation had little effect on muscle strength during resistance exercise. In contrast, consecutive nights of sleep restriction could reduce the force output of multi-joint, but not single-joint movements."
+  },
+  "howells-2022": {
+   "type": "cohort",
+   "authors": [
+    "Howells RJ",
+    "Spathis JG",
+    "Pearson J",
+    "Latella C",
+    "Garrett JM",
+    "Owen PJ",
+    "van den Hoek DJ"
+   ],
+   "year": 2022,
+   "title": "Impacts of squat attempt weight selection and success on powerlifting performance",
+   "journal": "The Journal of Sports Medicine and Physical Fitness",
+   "volume": "62",
+   "issue": "4",
+   "pages": "476-484",
+   "doi": "10.23736/S0022-4707.21.12140-1",
+   "pmid": "33721983",
+   "n_participants": 10672,
+   "support": "The analysis from 'raw' Powerlifting Australia sanctioned competitions held between 2008 and 2019 included 10,672 individual competition entries ... athletes selected opening attempts which were an average of 92% of their achieved maximum on the day with 93.5% of competitors improving on this weight in subsequent attempts."
+  },
+  "harrison-2019": {
+   "type": "review",
+   "authors": [
+    "Harrison PW",
+    "James LP",
+    "McGuigan MR",
+    "Jenkins DG",
+    "Kelly VG"
+   ],
+   "year": 2019,
+   "title": "Resistance Priming to Enhance Neuromuscular Performance in Sport: Evidence, Potential Mechanisms and Directions for Future Research",
+   "journal": "Sports Medicine",
+   "volume": "49",
+   "issue": "10",
+   "pages": "1499-1514",
+   "doi": "10.1007/s40279-019-01136-3",
+   "pmid": "31203499",
+   "support": "Though research evidence relating to this strategy is presently limited, it has been shown to be effective in improving various measures of neuromuscular performance within 48 h. ... high-intensity resistance exercise through high loading (>= 85% 1 repetition maximum) or ballistic exercise at lower loads appears to be an effective stimulus for this strategy."
   }
  }
 }

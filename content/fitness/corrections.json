@@ -2,6 +2,240 @@
   "note": "The corrections log on /fitness/sources and in sources.md, shown newest first. Add a row whenever a published entry or calculator changes what it says. date is YYYY-MM-DD. entry is the id of the entry that changed (the build links it to its home page); for anything else, give href instead.",
   "corrections": [
     {
+      "date": "2026-11-15",
+      "title": "Dieting faster than 1 percent of body weight a week",
+      "entry": "diet-mistake-too-fast",
+      "note": "Corrected: the faster group kept its lean mass and missed the gain the slower group made. The entry had said it retained less."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Aim to lose about 0.5 to 1 percent of body weight a week",
+      "entry": "diet-deficit-rate",
+      "note": "Corrected a figure: the faster group in the athlete trial was set to lose 1.4 percent of body weight a week and achieved 1.0."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Deficit size versus expected weekly loss",
+      "entry": "diet-table-deficit-rate",
+      "note": "Corrected a reversed statement: leaner people tend to lose more weight than the rule of thumb predicts, not less. The 1,000 kcal row no longer says athletes lost lean mass."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Do only the last five reps of a set count?",
+      "entry": "claim-effective-reps",
+      "note": "Revised the explanation and who was studied after an audit against a second set of sources. Added Sundstrup 2012 as a source. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Does cardio kill your muscle gains?",
+      "entry": "claim-cardio-kills-gains",
+      "note": "Revised the explanation after an audit against a second set of sources. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Do you need a deload every fourth week?",
+      "entry": "claim-deload-fourth-week",
+      "note": "Revised the explanation, what to do and who was studied after an audit against a second set of sources. Added Rogerson 2024 as a source. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Do you have to eat protein within an hour of training?",
+      "entry": "claim-protein-timing",
+      "note": "Revised the explanation after an audit against a second set of sources. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "How much protein do you need to build muscle?",
+      "entry": "claim-protein-amount",
+      "note": "Revised the summary, the explanation and what to do after an audit against a second set of sources. Added Iraki 2019 as a source. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Can plant protein build as much muscle as animal protein?",
+      "entry": "claim-plant-vs-animal",
+      "note": "Revised the summary, the explanation and who was studied after an audit against a second set of sources. Added Hartman 2007 as a source. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Is fasted cardio better for fat loss?",
+      "entry": "claim-fasted-cardio",
+      "note": "Revised the explanation and who was studied after an audit against a second set of sources. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Does starvation mode stop weight loss?",
+      "entry": "claim-starvation-mode",
+      "note": "Revised the summary, the explanation and who was studied after an audit against a second set of sources. Added Leibel 1995 as a source. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Can you out-train a bad diet?",
+      "entry": "claim-out-train-bad-diet",
+      "note": "Revised the explanation, what to do and who was studied after an audit against a second set of sources. Added DONNELLY 2009 and Wing 2005 as a source. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Can you lose weight fast without losing muscle?",
+      "entry": "claim-loss-rate-muscle",
+      "note": "Revised the summary, the explanation and who was studied after an audit against a second set of sources. Added Longland 2016 as a source. The verdict did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Deficits much beyond 500 kcal a day cost lean mass in lifters",
+      "entry": "diet-deficit-muscle-cost",
+      "note": "Revised the explanation after an audit against a second set of sources. Added Longland 2016 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Deficit that stopped lean-mass gains",
+      "entry": "diet-num-deficit-limit",
+      "note": "Revised the summary after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Day-to-day weight changes are mostly water, so read the trend",
+      "entry": "diet-scale-noise",
+      "note": "Revised what to do after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "What moves scale weight day to day",
+      "entry": "diet-table-scale-moves",
+      "note": "Revised a table row after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Diet breaks and refeeds give mixed fat-loss results and may ease hunger",
+      "entry": "diet-diet-breaks",
+      "note": "Revised what to do after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Getting very lean costs hormones, mood and training quality, so go carefully",
+      "entry": "diet-very-lean-costs",
+      "note": "Revised the summary after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Recomposition",
+      "entry": "diet-term-recomposition",
+      "note": "Revised the summary after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Reps in reserve is a useful guide, but most lifters misjudge it",
+      "entry": "hyp-effort-rir-accuracy",
+      "note": "Revised the explanation after an audit against a second set of sources. Added Steele 2017 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Deloads are common practice, but trials do not yet show they are needed",
+      "entry": "hyp-prog-deload-evidence",
+      "note": "Revised what to do after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Spread protein over several meals, but the split matters less than the total",
+      "entry": "nut-protein-per-meal",
+      "note": "Revised the summary and the explanation after an audit against a second set of sources. Added Iraki 2019 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Protein per serving",
+      "entry": "nut-num-protein-meal",
+      "note": "Revised the figure and the summary after an audit against a second set of sources. Added Iraki 2019 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Protein targets by goal and body weight",
+      "entry": "nut-table-protein-targets",
+      "note": "Revised a new table row after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Creatine monohydrate is the best-supported lifting supplement",
+      "entry": "nut-creatine",
+      "note": "Revised the explanation after an audit against a second set of sources. Added Hultman 1996 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Caffeine gives a small, real boost to strength and power",
+      "entry": "nut-caffeine",
+      "note": "Revised the explanation after an audit against a second set of sources. Added Goldstein 2010 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Caffeine dose often studied",
+      "entry": "nut-num-caffeine",
+      "note": "Revised the figure and the summary after an audit against a second set of sources. Added Goldstein 2010 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Beta-alanine and citrulline help in specific cases, with modest effects",
+      "entry": "nut-beta-alanine-citrulline",
+      "note": "Revised the explanation after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Supplement evidence at a glance",
+      "entry": "nut-table-supplements",
+      "note": "Revised a table row after an audit against a second set of sources. Added Goldstein 2010 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Build the bench from the setup: tight back, planted feet, paused bar",
+      "entry": "pl-bench-technique",
+      "note": "Revised what to do after an audit against a second set of sources. Added International Powerlifting Federation 2026 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Intensity zones as a percent of 1RM",
+      "entry": "pl-table-intensity-zones",
+      "note": "Revised a table row after an audit against a second set of sources. Added Travis 2021 and Howells 2022 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Lifters taper for 5 to 10 days by cutting volume and keeping heavy singles",
+      "entry": "pl-taper",
+      "note": "Revised the explanation after an audit against a second set of sources. Added Harrison 2019 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Older adults are advised at least 1.0 to 1.2 g of protein per kg a day",
+      "entry": "hlth-protein-older-adults",
+      "note": "Revised what to do after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "You can change an opener once; second attempts and bench or squat thirds are locked",
+      "entry": "meet-changing-attempts",
+      "note": "Revised the explanation after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Minimum step between attempts",
+      "entry": "meet-num-increment",
+      "note": "Revised the summary after an audit against a second set of sources. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Plan nine attempts with your coach or a trusted friend",
+      "entry": "meet-step-plan-attempts",
+      "note": "Revised the explanation after an audit against a second set of sources. Added Howells 2022 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Attempt selection ranges from competition data",
+      "entry": "meet-table-attempts",
+      "note": "Revised the title and the summary after an audit against a second set of sources. Added Howells 2022 as a source. The grade did not change."
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Taper over the last week or two: less volume, a few heavy singles",
+      "entry": "meet-step-taper",
+      "note": "Revised the explanation after an audit against a second set of sources. Added Harrison 2019 as a source. The grade did not change."
+    },
+    {
       "date": "2026-11-14",
       "title": "Does spot reduction work?",
       "entry": "claim-spot-reduction",
