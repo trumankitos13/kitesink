@@ -1,0 +1,91 @@
+{
+  "note": "One row per page under /fitness/. scripts/build_fitness.py loops over these and writes public/fitness/<slug>.html from templates/sub.html. kind is area, claims, glossary, reference or sources; an area row names its area, and its label and blurb come from DOMAINS in the build script. h1 may contain <em>; every other field is plain text. {{n:steps}}, {{n:claims}}, {{n:terms}}, {{n:numbers}}, {{n:tables}}, {{n:sources}} and {{updated}} are filled in by the build.",
+  "routes": [
+    {
+      "slug": "hypertrophy",
+      "kind": "area",
+      "area": "hypertrophy",
+      "title": "Hypertrophy: training for muscle size · KiteSink Fitness",
+      "description": "Sourced guidance on training for muscle size: volume, effort, load, frequency and recovery, the common mistakes, key numbers and reference tables. Each entry says how well supported it is.",
+      "h1": "Hypertrophy: training for <em>muscle size.</em>",
+      "lead": "Volume, effort, load, frequency and recovery: what the research supports, the common mistakes, and the numbers worth remembering."
+    },
+    {
+      "slug": "powerlifting",
+      "kind": "area",
+      "area": "powerlifting",
+      "title": "Powerlifting: a bigger squat, bench press and deadlift · KiteSink Fitness",
+      "description": "Sourced guidance on getting stronger in the squat, bench press and deadlift: programming, effort, technique, accessories and recovery, with key numbers and reference tables.",
+      "h1": "Powerlifting: a bigger squat, <em>bench press and deadlift.</em>",
+      "lead": "Programming, effort, technique, accessories and recovery for the three competition lifts, with the numbers and tables to plan around."
+    },
+    {
+      "slug": "meet",
+      "kind": "area",
+      "area": "meet",
+      "title": "Meet day: your first powerlifting meet, in order · KiteSink Fitness",
+      "description": "A first powerlifting meet in order, from signing up to the drive home: a timeline, a bag checklist, the rules that catch people out, key numbers and reference tables.",
+      "h1": "Meet day: your first competition, <em>in order.</em>",
+      "lead": "A timeline from signing up to the drive home and a bag list that remembers your ticks, then the guidance, numbers and tables behind them. Rules differ between federations: check yours."
+    },
+    {
+      "slug": "nutrition",
+      "kind": "area",
+      "area": "nutrition",
+      "title": "Nutrition: eating to support training · KiteSink Fitness",
+      "description": "Sourced guidance on eating to support training: energy, protein, macros, timing, supplements and tracking, the common mistakes, key numbers and reference tables.",
+      "h1": "Nutrition: eating to <em>support training.</em>",
+      "lead": "Energy, protein, macros, timing, supplements and tracking: what to eat to support training, and how to track it honestly."
+    },
+    {
+      "slug": "diet",
+      "kind": "area",
+      "area": "diet",
+      "title": "Diet: losing or gaining weight on purpose · KiteSink Fitness",
+      "description": "Sourced guidance on losing or gaining weight on purpose: setting a deficit or a surplus, keeping muscle, hunger, plateaus and pace, with key numbers and reference tables.",
+      "h1": "Diet: losing or gaining weight <em>on purpose.</em>",
+      "lead": "Setting a deficit or a surplus, keeping muscle, handling hunger and plateaus, and how fast to go."
+    },
+    {
+      "slug": "health",
+      "kind": "area",
+      "area": "health",
+      "title": "Health: training for a long working life · KiteSink Fitness",
+      "description": "Sourced guidance on training for health: activity guidelines, aerobic fitness, strength, bones, sleep and the markers worth knowing, with key numbers and reference tables.",
+      "h1": "Health: training for <em>a long working life.</em>",
+      "lead": "Activity guidelines, aerobic fitness, strength, bones, sleep and the markers worth knowing."
+    },
+    {
+      "slug": "claims",
+      "kind": "claims",
+      "title": "Fitness claims, checked against the research · KiteSink",
+      "description": "{{n:claims}} common claims about training, eating and health, each with a verdict, the reason, who was studied and the source. Filter by area, verdict, topic or evidence.",
+      "h1": "{{n:claims}} things <em>people say.</em>",
+      "lead": "Common claims about training, eating and health. Each has a verdict, the reason, who was studied, and the paper. Open one to read it."
+    },
+    {
+      "slug": "glossary",
+      "kind": "glossary",
+      "title": "Fitness glossary: training and nutrition terms in plain words · KiteSink",
+      "description": "{{n:terms}} training, nutrition and health terms defined in plain words, from RIR and taper to TDEE and ApoB. Search, or narrow by area.",
+      "h1": "{{n:terms}} terms, <em>in plain words.</em>",
+      "lead": "Every term the field guide uses, defined once. Search, or narrow by area."
+    },
+    {
+      "slug": "reference",
+      "kind": "reference",
+      "title": "Fitness key numbers and reference tables, indexed · KiteSink",
+      "description": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables in the KiteSink fitness field guide. Each links to the page that holds it, with its reasoning and sources.",
+      "h1": "Numbers and tables, <em>indexed.</em>",
+      "lead": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables. Each links to the area page that holds it, with its reasoning and sources."
+    },
+    {
+      "slug": "sources",
+      "kind": "sources",
+      "title": "Fitness sources, grading and corrections · KiteSink",
+      "description": "How the KiteSink fitness field guide grades its entries, all {{n:sources}} sources it cites, and a dated log of corrections.",
+      "h1": "Where this <em>comes from.</em>",
+      "lead": "How entries are graded, what has been corrected, and all {{n:sources}} sources, each checked against its record. Last updated {{updated}}."
+    }
+  ]
+}

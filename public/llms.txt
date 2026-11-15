@@ -21,6 +21,9 @@
 - [Nutrition](https://kitesink.com/fitness/nutrition.md)
 - [Diet](https://kitesink.com/fitness/diet.md): losing or gaining weight on purpose
 - [Health](https://kitesink.com/fitness/health.md)
+- [Glossary](https://kitesink.com/fitness/glossary.md): every term the field guide uses, in plain words
+- [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): each key number and reference table, with a link to the page that holds it
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and every source
 - [Vantix](https://kitesink.com/vantix.md): the periodization app, its tiers and status
 
 ## Music

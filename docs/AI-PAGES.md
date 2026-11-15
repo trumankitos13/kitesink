@@ -10,16 +10,23 @@ engines are told not to index them. Anyone with the address can read them.
 |---|---|
 | `/` | `/index.md` |
 | `/consulting` | `/consulting.md` |
-| `/fitness` | `/fitness.md`, plus `/fitness/claims.md` and one file per area in `/fitness/` |
+| `/fitness` | `/fitness.md` |
+| `/fitness/hypertrophy`, `powerlifting`, `meet`, `nutrition`, `diet`, `health` | `/fitness/<area>.md`, one file per area |
+| `/fitness/claims`, `glossary`, `reference`, `sources` | `/fitness/claims.md`, `glossary.md`, `reference.md`, `sources.md` |
 | `/vantix` | `/vantix.md` |
 | `/music` | `/music.md` |
 | `/listening-club` | `/listening-club.md` |
 | `/about` | `/about.md` |
 
 `/llms.txt` lists them all. The fitness twins are generated from the same data as the
-page (`python3 scripts/build_fitness.py`). The others are hand-written files in
+pages (`python3 scripts/build_fitness.py`). The others are hand-written files in
 `public/`: when a fact on a page changes, change its twin too. `scripts/check_site.py`
 checks that every twin exists, is linked from its page and has no broken links.
+
+The ten pages under `/fitness/` are built but unlisted for now (`noindex`, out of the nav,
+the Library and the sitemap). Each announces its twin in its `<head>`, and `/llms.txt`
+lists all ten twins. The optional worker below does not answer for them until they are
+listed: `run_worker_first` holds only the seven listed pages, and the audit checks that.
 
 `/llms-full.txt` is every twin in one file, for readers that want the whole site in one
 request. `python3 scripts/build_llms_full.py` writes it; run it after the fitness build
@@ -57,8 +64,8 @@ To turn the second one on, deploy with the alternative config:
 npx wrangler deploy -c wrangler.ai-twins.jsonc
 ```
 
-That deploys the same site with the worker in front of the seven pages that have a
-twin; every other request is served as before. To make it permanent, copy the `main`,
+That deploys the same site with the worker in front of the seven listed pages that have
+a twin; every other request is served as before. To make it permanent, copy the `main`,
 `vars` and `assets` settings from `wrangler.ai-twins.jsonc` into `wrangler.jsonc`. To go
 back, deploy with the normal `wrangler.jsonc`. Set `AI_TWINS` to `accept` to answer only
 requests that ask for markdown, or `off` to disable it without removing the worker.
