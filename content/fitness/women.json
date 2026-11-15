@@ -1,0 +1,3340 @@
+{
+  "domain": "women",
+  "topics": [
+    {
+      "id": "physiology",
+      "label": "How women and men differ"
+    },
+    {
+      "id": "training",
+      "label": "Strength and muscle gain"
+    },
+    {
+      "id": "potential",
+      "label": "Muscular potential"
+    },
+    {
+      "id": "cycle",
+      "label": "Menstrual cycle and contraception"
+    },
+    {
+      "id": "energy",
+      "label": "Energy availability and periods"
+    },
+    {
+      "id": "diets",
+      "label": "Diets in trials"
+    },
+    {
+      "id": "supplements",
+      "label": "Supplements studied in women"
+    },
+    {
+      "id": "research",
+      "label": "Reading the research"
+    }
+  ],
+  "entries": [
+    {
+      "id": "wom-testosterone-gap",
+      "type": "note",
+      "title": "Adult men carry at least 15 times the testosterone of adult women",
+      "topic": "physiology",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "handelsman-2018",
+        "hunter-2023",
+        "mcdonald-female-vs-male-physiology"
+      ],
+      "take": "After puberty men's blood testosterone runs more than 15-fold above women's, and the two ranges do not overlap in healthy adults.",
+      "body": "Before puberty there is no sex difference in testosterone or in athletic performance. At puberty the testes raise output about 30-fold. A 2018 endocrine review ties the gap to men's larger muscle mass, greater strength and higher haemoglobin, and to a performance edge of at least 8 to 12 percent. An American College of Sports Medicine consensus puts the edge at 10 to 30 percent depending on the event. Lyle McDonald's summary is that women have a tenth to a thirtieth of men's level. The gap explains differences in absolute numbers. It does not predict how well a woman responds to training.",
+      "do": [
+        "Compare your lifts with women's standards or with your own past numbers.",
+        "Do not read a smaller absolute number as a poorer response to training."
+      ]
+    },
+    {
+      "id": "wom-num-testosterone-gap",
+      "type": "number",
+      "title": "Men's circulating testosterone relative to women's",
+      "topic": "physiology",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "handelsman-2018",
+        "hunter-2023"
+      ],
+      "value": "over 15x",
+      "unit": "women's level",
+      "sort": 15,
+      "take": "How far adult men's blood testosterone exceeds women's at any age, from a 2018 endocrine review. The two ranges do not overlap."
+    },
+    {
+      "id": "wom-strength-gap-upper-body",
+      "type": "note",
+      "title": "The strength gap between the sexes is widest in the upper body",
+      "topic": "physiology",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "miller-1993",
+        "nuzzo-2023"
+      ],
+      "take": "Women's upper-body strength sits further below men's than their lower-body strength, mainly because less of their muscle is carried there.",
+      "body": "In a lab comparison of eight men and eight women, the women were about 52 percent as strong in the upper body and 66 percent as strong in the lower body. Their biceps were 45 percent smaller in cross-section and their thigh muscles 25 to 30 percent smaller. A 2023 review of the wider literature reaches the same conclusion: the gap is larger in upper-body muscles, and it comes from muscle mass and fast-fibre size, not from a weaker ability to switch muscle on. Pressing and pulling lifts therefore start further behind than squats and deadlifts do.",
+      "do": [
+        "Expect presses and pull-ups to start further behind than your leg lifts."
+      ]
+    },
+    {
+      "id": "wom-num-strength-share",
+      "type": "number",
+      "title": "Women's strength as a share of men's in one lab comparison",
+      "topic": "physiology",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "miller-1993"
+      ],
+      "value": "52 and 66",
+      "unit": "% (upper, lower body)",
+      "sort": 52,
+      "take": "Upper- and lower-body strength of eight women against eight men. Strength per unit of muscle area did not differ between them."
+    },
+    {
+      "id": "wom-muscle-force-per-area",
+      "type": "note",
+      "title": "A given amount of muscle produces the same force in women and men",
+      "topic": "physiology",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "miller-1993",
+        "nuzzo-2023",
+        "mcdonald-female-vs-male-physiology"
+      ],
+      "take": "Strength per unit of muscle cross-section did not differ by sex, so the gap in strength is a gap in muscle size.",
+      "body": "The 1993 comparison of eight men and eight women found no significant sex difference in strength relative to muscle cross-sectional area at the elbow or the knee, in the number of biceps fibres, or in any motor unit measure. The men's fibres were larger. A 2023 review also found that men's greater strength does not come from higher voluntary activation. McDonald makes the same point from the tissue side: male and female muscle is close to identical, with small differences such as slightly more fat within women's muscle. Added muscle should therefore carry the same strength value for either sex.",
+      "do": []
+    },
+    {
+      "id": "wom-fibre-type-share",
+      "type": "note",
+      "title": "Women's muscle has a larger share of slow-twitch fibre area",
+      "topic": "physiology",
+      "level": "advanced",
+      "confidence": "strong",
+      "sources": [
+        "nuzzo-2024-fibre",
+        "refalo-2025"
+      ],
+      "take": "Pooled biopsies from over 5,000 people show men with bigger fibres of every type and women with more of their muscle area as type I fibre.",
+      "body": "A 2024 meta-analysis pooled 110 biopsy studies covering 2,875 men and 2,452 women, most from the outer thigh muscle of healthy adults aged 18 to 59. Men had larger cross-sectional areas for all fibre types and a greater share of type II (fast-twitch) fibre. Women had a greater share of type I (slow-twitch) fibre, by count and by area. The author suggests this helps explain sex differences in strength and in muscle endurance. It is a difference of degree. Both sexes have both fibre types, and a separate meta-analysis found type II fibres grew similarly in women and men after training.",
+      "do": []
+    },
+    {
+      "id": "wom-fuel-mix",
+      "type": "note",
+      "title": "Women burn relatively more fat and less carbohydrate in steady exercise",
+      "topic": "physiology",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "hamadeh-2005",
+        "mcdonald-female-vs-male-physiology"
+      ],
+      "take": "At the same relative effort women draw more on fat and less on carbohydrate and amino acids than men, and estrogen appears to drive it.",
+      "body": "Compared with women, active men oxidise more carbohydrate and more of the amino acid leucine, and less fat, at rest and during moderate endurance exercise. In a double-blind crossover trial, 12 men took estradiol or placebo for 8 days and then cycled for 90 minutes at 65 percent of maximum. On estradiol, carbohydrate oxidation fell 5 to 16 percent, leucine oxidation fell 16 percent and fat oxidation rose 22 to 44 percent. This was a laboratory experiment to isolate the hormone's effect, not a treatment. Fuel mix during a session is also not the same as fat lost over weeks, which depends on energy balance.",
+      "do": [
+        "Do not expect a different fuel mix to change how fast you lose fat."
+      ]
+    },
+    {
+      "id": "wom-cycle-defines-physiology",
+      "type": "note",
+      "title": "The monthly cycle, not only lower testosterone, sets female physiology apart",
+      "topic": "physiology",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-female-vs-male-physiology",
+        "elliott-sale-2021"
+      ],
+      "take": "A man's hormones stay nearly flat from day to day. A cycling woman's estrogen and progesterone swing widely every month.",
+      "body": "McDonald's argument is that a man with low testosterone does not have a woman's physiology, because the defining feature is the repeating rise and fall of estrogen and progesterone across a cycle of roughly four weeks. He lists appetite, mood, fuel use and recovery among the things reported to shift with it. Researchers make a related point: a working guide for sport science notes that most high-quality data come from men, which limits how well they transfer given the differences in reproductive hormones. How much the swings matter for performance is a separate question, covered under the cycle topic.",
+      "do": []
+    },
+    {
+      "id": "wom-relative-gains-similar",
+      "type": "note",
+      "title": "Women gain muscle at the same relative rate as men on the same programme",
+      "topic": "training",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "refalo-2025",
+        "roberts-2020-sex",
+        "mcdonald-strength-muscle-mass-women"
+      ],
+      "take": "Across 29 studies, relative muscle growth differed by under 1 percent between the sexes. Men gained slightly more in absolute terms.",
+      "body": "A 2025 meta-analysis pooled 29 studies in which healthy men and women aged 18 to 45 followed the same resistance training. Absolute growth slightly favoured men (standardised difference 0.19). Relative growth, measured against each person's starting size, differed by 0.69 percent, with an interval from -1.50 to 2.88 that includes zero. Training experience did not change the result. An earlier meta-analysis of 10 studies also found no significant sex difference in hypertrophy. McDonald wrote the same of beginners in 2016: equal percentage gains, and smaller absolute ones because the starting point is smaller.",
+      "do": [
+        "Use the same training principles the rest of this guide gives.",
+        "Track growth as a percentage of where you started."
+      ]
+    },
+    {
+      "id": "wom-num-relative-growth-gap",
+      "type": "number",
+      "title": "Gap in relative muscle growth between men and women",
+      "topic": "training",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "refalo-2025"
+      ],
+      "value": "0.69",
+      "unit": "% (95% interval -1.5 to 2.9)",
+      "sort": 0.69,
+      "take": "Difference in growth relative to starting size across 29 studies that used the same training for both sexes. The interval includes zero."
+    },
+    {
+      "id": "wom-upper-body-strength-response",
+      "type": "note",
+      "title": "Women's upper-body strength rose faster than men's in relative terms",
+      "topic": "training",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "roberts-2020-sex",
+        "nuzzo-2023"
+      ],
+      "take": "In 17 studies of the same programme for both sexes, women's relative upper-body strength gains were larger. Lower-body gains were similar.",
+      "body": "A 2020 meta-analysis of young to middle-aged adults found a moderate effect favouring women for relative upper-body strength (effect size -0.60 across 17 studies) and no significant difference for lower-body strength across 23 studies. The authors offer two readings: untrained women may have more room to improve in the upper body, or the result may be an artefact of short studies. A 2023 review likewise reports greater relative strength gains in women depending on age and muscle group. Starting further behind in the upper body can mean quick early progress there.",
+      "do": [
+        "Train the upper body as seriously as the lower body."
+      ]
+    },
+    {
+      "id": "wom-older-adults-pattern",
+      "type": "note",
+      "title": "After 50, men gain more in absolute terms and women as much or more in relative terms",
+      "topic": "training",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "jones-2021"
+      ],
+      "take": "In 30 studies of adults over 50, men added more absolute strength and size. Relative size gains matched, and women gained more relative leg strength.",
+      "body": "The meta-analysis covered 1,410 participants, 651 men and 759 women, who did identical resistance training. Men gained more absolute upper-body strength, lower-body strength and muscle size. Relative muscle growth did not differ, relative upper-body strength did not differ, and women gained more relative lower-body strength. Average study quality was moderate. The authors stress that which sex appears to respond better depends on whether results are shown as absolute or relative change. Both sexes improved. Anyone with a medical condition should clear a new programme with a doctor.",
+      "do": []
+    },
+    {
+      "id": "wom-term-absolute-relative",
+      "type": "term",
+      "title": "Absolute and relative gains",
+      "topic": "training",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "jones-2021"
+      ],
+      "take": "An absolute gain is the raw change, such as 2 kg of muscle or 20 kg on a lift. A relative gain is that change as a percentage of the starting value. Sex comparisons often flip depending on which one a study reports."
+    },
+    {
+      "id": "wom-mistake-fear-of-bulk",
+      "type": "mistake",
+      "title": "Avoiding heavy weights for fear of sudden bulk",
+      "topic": "training",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "hagstrom-2020",
+        "refalo-2025",
+        "mcdonald-strength-muscle-mass-women"
+      ],
+      "take": "In women-only trials strength rose a lot and muscle size moderately, and the size change builds over months, not sessions.",
+      "body": "A meta-analysis of 24 studies in women found large effects of resistance training on upper- and lower-body strength and a medium effect on muscle size. After correcting for publication bias the upper-body strength effect stayed large and the lower-body effect was medium. Absolute growth in women is slightly smaller than in men on the same programme. McDonald's coaching observation is that the size change a woman sees is always modest and tends to trail strength, and that many women who start out wary of size become keen on getting stronger once daily tasks feel easier.",
+      "do": [
+        "Use loads that make the planned reps hard.",
+        "Judge size over months with a tape or photos, and change the plan then if you wish."
+      ]
+    },
+    {
+      "id": "wom-mistake-separate-method",
+      "type": "mistake",
+      "title": "Treating training for women as a separate method",
+      "topic": "training",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "roberts-2020-sex",
+        "refalo-2025",
+        "hagstrom-2020",
+        "nuzzo-2023"
+      ],
+      "take": "When both sexes followed the same programme, relative gains in size and lower-body strength matched, so the same principles apply.",
+      "body": "A common assumption is that women should train with light weights and high reps for tone, a motive a 2023 review found more often in women. The trials do not support a split by sex. Two meta-analyses of studies that gave men and women identical training found similar relative muscle growth, and one found similar relative lower-body strength gains with larger relative upper-body gains in women. In the women-only analysis, training frequency and volume influenced strength, and no training variable changed the size outcome. Load, volume and effort should follow the goal and training age.",
+      "do": [
+        "Follow the guide's general advice on load, volume and effort.",
+        "Adjust for your own recovery and schedule."
+      ]
+    },
+    {
+      "id": "wom-strength-before-size",
+      "type": "note",
+      "title": "Expect strength to climb well before visible size",
+      "topic": "training",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "cureton-1988",
+        "mcdonald-strength-muscle-mass-women"
+      ],
+      "take": "In a 16-week trial women's strength rose 24 to 59 percent across four tests while thigh muscle area did not change measurably.",
+      "body": "Eight women and seven men trained three days a week for 16 weeks. The women's strength rose 59 percent in elbow flexion, 42 percent in elbow extension, 24 percent in knee flexion and 34 percent in knee extension. Percentage changes did not differ from the men's. Upper-arm muscle area on CT grew 23 percent in the women and 16 percent in the men, while thigh muscle area rose a non-significant 2.9 percent in both. McDonald reads results like this as the nervous system learning first, with visible growth following later.",
+      "do": [
+        "Use strength records, not the mirror, to judge your first months."
+      ]
+    },
+    {
+      "id": "wom-ffmi-female-athletes",
+      "type": "note",
+      "title": "Few female college athletes exceed an FFMI of about 24",
+      "topic": "potential",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "harty-2019",
+        "blue-2019"
+      ],
+      "take": "Among 372 female collegiate athletes measured by DXA, mean fat-free mass index was 18.8 and the 97.5th percentile was 23.9.",
+      "body": "Fat-free mass index (FFMI) is fat-free mass in kg divided by height in metres squared. In the 372 athletes, sport averages ran from 16.6 in cross country to 19.7 in Olympic weightlifting and 20.1 in rugby. A second DXA sample of 266 athletes averaged 16.9, with individual values from 13.3 to 25.5. The larger sample averaged 24 percent body fat. Fat-free mass climbs as fat is gained, so the top values are not all muscle. Neither abstract reports drug testing. For men, the body composition area of this guide gives 25 as the figure where drug-free athletes topped out in the original study.",
+      "do": [
+        "Use these figures as landmarks for trained women, not as targets."
+      ]
+    },
+    {
+      "id": "wom-num-ffmi-upper",
+      "type": "number",
+      "title": "Upper FFMI threshold in female college athletes",
+      "topic": "potential",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "harty-2019"
+      ],
+      "value": "23.9",
+      "unit": "kg/m2",
+      "sort": 23.9,
+      "take": "The 97.5th percentile among 372 female collegiate athletes measured by DXA. The group mean was 18.8."
+    },
+    {
+      "id": "wom-lean-mass-per-height",
+      "type": "note",
+      "title": "The proposed upper limit for women's lean mass rests on one very large athlete",
+      "topic": "potential",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "abe-1998",
+        "mcdonald-womens-muscular-potential"
+      ],
+      "take": "A 1998 study put women's ceiling above 0.44 kg of fat-free mass per cm of height. McDonald treats that as an outlier and works from about 0.33.",
+      "body": "The study measured 29 strength-trained female college athletes. Six carried more than 60 kg (132 lb) of fat-free mass and the largest carried 82.1 kg (181 lb), which led the authors to set the theoretical limit above 80 kg and 0.44 kg per cm. McDonald's reading is that one exceptional athlete should not define a goal for others. From the ordinary range in such samples he takes about 0.33 kg per cm (1.84 lb per inch) as the realistic top for most women, and says some will not reach it. At 165 cm (5 ft 5 in) that is about 54 kg (120 lb) of lean mass, which includes water, glycogen and bone.",
+      "do": [
+        "Estimate your own ceiling from height, then treat it as a rough upper bound."
+      ]
+    },
+    {
+      "id": "wom-num-lean-per-cm",
+      "type": "number",
+      "title": "McDonald's working ceiling for women's lean mass by height",
+      "topic": "potential",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-womens-muscular-potential"
+      ],
+      "value": "0.33",
+      "unit": "kg per cm (1.84 lb/in)",
+      "sort": 0.33,
+      "take": "His judgment of the realistic upper figure for most women, drawn from athlete samples. A coaching estimate, not a measured limit."
+    },
+    {
+      "id": "wom-near-limit-years",
+      "type": "note",
+      "title": "Most women are near their muscular limit after three to four years of good training",
+      "topic": "potential",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-womens-muscular-potential"
+      ],
+      "take": "McDonald's estimate is that three to four years of proper training brings most women close to their ceiling, after which gains become very slow.",
+      "body": "This is his coaching judgment, not a study result. He pairs it with a planning rule: the nearer you are to your likely ceiling, the smaller the monthly gain worth chasing and the smaller the calorie surplus that makes sense. For a woman with only about 2 kg (5 lb) of potential left, he suggests aiming for as little as 0.25 kg (0.5 lb) of lean mass a month. He also notes that taller and heavier women can carry more lean mass, so height belongs in any estimate. He specifies proper training, so years of casual gym use count for less.",
+      "do": [
+        "Count only your years of structured, progressive training.",
+        "Shrink the surplus as the monthly gain you can expect shrinks."
+      ]
+    },
+    {
+      "id": "wom-table-ffm-samples",
+      "type": "table",
+      "title": "Fat-free mass measured in groups of trained women",
+      "topic": "potential",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "johnson-1990",
+        "abe-1998",
+        "vanderploeg-2001",
+        "blue-2019",
+        "harty-2019",
+        "mcdonald-womens-muscular-potential"
+      ],
+      "take": "Published samples of trained women, oldest to newest. Methods differ, so compare the rows loosely.",
+      "columns": [
+        "Group",
+        "Body weight and fat",
+        "Fat-free mass or FFMI",
+        "Method"
+      ],
+      "rows": [
+        [
+          "10 bodybuilders, 1990",
+          "56.5 kg (124 lb), 13.5%",
+          "About 49 kg (108 lb), calculated from weight and fat",
+          "Underwater weighing and skinfolds"
+        ],
+        [
+          "10 powerlifters, 1990",
+          "68.6 kg (151 lb), 21.5%",
+          "About 54 kg (119 lb), calculated; not significantly above the bodybuilders",
+          "Underwater weighing and skinfolds"
+        ],
+        [
+          "29 strength-trained college athletes, 1998",
+          "Not given in the abstract",
+          "Six above 60 kg (132 lb); largest 82.1 kg (181 lb)",
+          "Not given in the abstract"
+        ],
+        [
+          "5 bodybuilders, 12 weeks before a contest, 2001",
+          "66.4 kg (146 lb), 18.3%",
+          "About 54 kg (120 lb), calculated",
+          "Four-compartment model"
+        ],
+        [
+          "5 athletic women, 2001",
+          "55.9 kg (123 lb), 19.1%",
+          "About 45 kg (100 lb), calculated",
+          "Four-compartment model"
+        ],
+        [
+          "266 college athletes, 2019",
+          "63.2 kg (139 lb) on average",
+          "FFMI mean 16.9, range 13.3 to 25.5",
+          "DXA"
+        ],
+        [
+          "372 college athletes, 2019",
+          "69.5 kg (153 lb), 24.2%",
+          "FFMI mean 18.8, 97.5th percentile 23.9",
+          "DXA"
+        ]
+      ]
+    },
+    {
+      "id": "wom-androgens-elite",
+      "type": "note",
+      "title": "Higher natural androgen levels are more common among elite sportswomen",
+      "topic": "potential",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "handelsman-2018",
+        "hagmar-2009",
+        "rickenlund-2003",
+        "mcdonald-womens-muscular-potential"
+      ],
+      "take": "Polycystic ovary syndrome is over-represented in elite sport, which is one reason elite samples overstate what most women can expect.",
+      "body": "A 2018 endocrine review states that women with polycystic ovary syndrome (PCOS), a condition that often raises androgens, are over-represented in elite athletics. Among 90 Swedish Olympic sportswomen, PCOS was the most common diagnosis behind menstrual dysfunction. In a clinic study of endurance athletes, 8 of 25 with disturbed cycles had higher testosterone and a more anabolic body composition than the rest. McDonald's inference is that women with higher testosterone are more likely to sit at the top of the lean-mass range for their height. Only a doctor can diagnose PCOS.",
+      "do": [
+        "Set expectations from ordinary trained women, not from the most muscular elite athletes."
+      ]
+    },
+    {
+      "id": "wom-term-energy-availability",
+      "type": "term",
+      "title": "Energy availability (EA)",
+      "topic": "energy",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "burke-2018"
+      ],
+      "take": "Energy eaten minus the energy spent in exercise, divided by fat-free mass. It is the kcal per kg of fat-free mass left each day for every other body function, including the reproductive system."
+    },
+    {
+      "id": "wom-ea-not-body-fat",
+      "type": "note",
+      "title": "Low energy availability, not a body fat figure, shuts down the cycle",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "loucks-2003",
+        "desouza-2026",
+        "mountjoy-2023",
+        "mcdonald-body-fat-ea-hormones"
+      ],
+      "take": "Athletes at the same low body fat can have normal or absent cycles. The difference lies in the energy left over after training.",
+      "body": "The first explanation for lost periods in athletes was a critical level of body fat. McDonald traces how that idea gave way: women at similar leanness did and did not keep their cycles, and getting very lean requires long restriction and heavy training, so leanness and under-fuelling arrive together. In a controlled study of 29 women of normal body composition, five days at an energy availability under 30 kcal per kg of lean mass disrupted the pulses of luteinising hormone that drive the cycle, far too quickly for body fat to have changed. Current consensus statements name energy deficiency as the cause.",
+      "do": [
+        "Do not use a body fat reading to judge whether your intake is adequate.",
+        "See a doctor about any change in your cycle during a diet or a heavy training block."
+      ]
+    },
+    {
+      "id": "wom-ea-no-threshold",
+      "type": "note",
+      "title": "The 30 kcal per kg figure marks rising risk, not a switch",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "lieberman-2018",
+        "desouza-2026",
+        "williams-2026",
+        "loucks-2003",
+        "mcdonald-body-fat-ea-hormones"
+      ],
+      "take": "Newer trials found no single energy availability below which cycles fail. Risk climbs steadily as energy availability falls.",
+      "body": "The figure came from five-day laboratory studies of hormone pulses, and McDonald's 2015 article cites a threshold of 20 to 30 kcal per kg of lean mass. A later trial followed 35 women through three cycles of diet and exercise. The odds of a menstrual disturbance fell 9 percent for each 1 kcal per kg of fat-free mass that energy availability rose, and no cut-off appeared. Some women kept ovulating below 30 and some were disturbed above it. The 2025 Female Athlete Triad update therefore moves away from a threshold and links about 45 kcal per kg of fat-free mass a day with the healthy end of the range.",
+      "do": [
+        "Treat 30 as a warning zone, not as a safe floor to diet down to."
+      ]
+    },
+    {
+      "id": "wom-num-ea-45",
+      "type": "number",
+      "title": "Energy availability linked with normal cycles and bone",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "desouza-2026",
+        "burke-2018"
+      ],
+      "value": "about 45",
+      "unit": "kcal per kg FFM per day",
+      "sort": 45,
+      "take": "The level the 2025 Female Athlete Triad update associates with being energy replete, with ovulatory cycles and normal bone density."
+    },
+    {
+      "id": "wom-num-ea-odds",
+      "type": "number",
+      "title": "Change in odds of a disturbed cycle per unit of energy availability",
+      "topic": "energy",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "lieberman-2018"
+      ],
+      "value": "9% lower",
+      "unit": "per 1 kcal/kg FFM higher",
+      "sort": 9,
+      "take": "From 35 women followed over three cycles of diet and exercise. No threshold value emerged."
+    },
+    {
+      "id": "wom-mistake-ea-arithmetic",
+      "type": "mistake",
+      "title": "Trusting a calculated energy availability to the last kcal",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "burke-2018"
+      ],
+      "take": "Each part of the sum carries error: logged intake, the energy cost of exercise and the estimate of fat-free mass.",
+      "body": "The sum looks simple. Someone eating 2,100 kcal who spends 400 kcal in training and has 50 kg (110 lb) of fat-free mass has (2,100 - 400) / 50 = 34 kcal per kg. A review of the method lists the problems: there is no universal protocol, each component takes resources to measure well, the errors add up, and there is no agreed value that counts as low. The number is useful for spotting a plan that is clearly too lean on paper. It cannot clear someone who has symptoms, and symptoms need a doctor whatever the sum says.",
+      "do": [
+        "Use the sum to sanity-check a diet plan before you start it.",
+        "Let symptoms, not the arithmetic, decide when to seek medical advice."
+      ]
+    },
+    {
+      "id": "wom-term-eumenorrhea",
+      "type": "term",
+      "title": "Eumenorrhea",
+      "topic": "energy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "elliott-sale-2021"
+      ],
+      "take": "Regular menstrual cycles. A research guide defines it as cycle lengths of 21 to 35 days with nine or more periods in a row over a year, and asks for hormone checks before a study calls a participant eumenorrheic."
+    },
+    {
+      "id": "wom-term-amenorrhea",
+      "type": "term",
+      "title": "Amenorrhea (primary and secondary)",
+      "topic": "energy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "elliott-sale-2021"
+      ],
+      "take": "Absence of menstrual periods. Primary: periods have not begun by about age 15. Secondary: three or more periods in a row missed by a woman who has menstruated before and is not pregnant. Both need a doctor's assessment."
+    },
+    {
+      "id": "wom-term-oligomenorrhea",
+      "type": "term",
+      "title": "Oligomenorrhea",
+      "topic": "energy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "elliott-sale-2021",
+        "hagmar-2009"
+      ],
+      "take": "Infrequent periods, defined in research as cycles longer than 35 days. Causes range from energy deficiency to polycystic ovary syndrome, so the pattern needs a doctor's assessment, not a guess."
+    },
+    {
+      "id": "wom-term-fha",
+      "type": "term",
+      "title": "Functional hypothalamic amenorrhea (FHA)",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "gordon-2017"
+      ],
+      "take": "Loss of ovulation and periods with no identifiable disease behind it, often linked to stress, weight loss, heavy exercise or a mix of these. Doctors diagnose it only after excluding other causes."
+    },
+    {
+      "id": "wom-term-reds",
+      "type": "term",
+      "title": "Relative energy deficiency in sport (REDs)",
+      "topic": "energy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mountjoy-2023"
+      ],
+      "take": "The International Olympic Committee's name for the health and performance problems that follow exposure to low energy availability. It applies to women and men, and diagnosis is clinical."
+    },
+    {
+      "id": "wom-term-triad",
+      "type": "term",
+      "title": "Female athlete triad",
+      "topic": "energy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "desouza-2026"
+      ],
+      "take": "Three linked components in active women: energy status, reproductive function and bone health. Each runs on a spectrum from healthy to clinical, and energy deficiency starts the chain."
+    },
+    {
+      "id": "wom-mistake-missed-period",
+      "type": "mistake",
+      "title": "Treating a missed period as a normal sign of hard training",
+      "topic": "energy",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "gordon-2017",
+        "hagmar-2009",
+        "williams-2026",
+        "elliott-sale-2021"
+      ],
+      "take": "A lost or irregular cycle is a medical sign with several possible causes, and it is linked to bone loss when energy deficiency is behind it.",
+      "body": "The Endocrine Society guideline describes functional hypothalamic amenorrhea as a diagnosis of exclusion: doctors must rule out other hormonal and systemic causes first, and it lists bone loss and infertility among the complications. The cause cannot be guessed from training load. Among 90 Olympic sportswomen, the most common diagnosis behind menstrual dysfunction was polycystic ovary syndrome, not energy deficiency. The updated Triad consensus adds bone stress injuries to the picture. Three missed periods in a row, or cycles longer than 35 days, meet the research definitions of amenorrhea and oligomenorrhea.",
+      "do": [
+        "See a doctor if your periods stop or become irregular; do not wait for a diet to end.",
+        "Tell the doctor about your training, diet and any weight change."
+      ]
+    },
+    {
+      "id": "wom-refuel-recovery",
+      "type": "note",
+      "title": "A modest rise in intake restored periods in a year-long trial",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "desouza-2021",
+        "williams-2026"
+      ],
+      "take": "In 76 exercising women with absent or infrequent periods, eating about 330 kcal more a day made the return of menses about twice as likely.",
+      "body": "The REFUEL trial randomised the women to raise intake by 20 to 40 percent above baseline needs or to carry on as before, for 12 months. The achieved increase averaged 330 kcal a day, about 18 percent. The higher-intake group was more likely to menstruate during the trial (hazard ratio 1.91) and gained weight, body fat and thyroid hormone T3. The 2025 Triad update concludes that 300 to 600 kcal more a day will likely start recovery, and warns that a returning bleed is not full recovery: ovulation and hormone levels lag until several normal-length cycles in a row. Treatment belongs with a doctor and a dietitian.",
+      "do": [
+        "Work with a doctor and a sports dietitian; do not self-treat a lost cycle.",
+        "Expect recovery to take months and to need several normal cycles to confirm."
+      ]
+    },
+    {
+      "id": "wom-num-refuel",
+      "type": "number",
+      "title": "Extra intake that restored menses in the REFUEL trial",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "desouza-2021",
+        "williams-2026"
+      ],
+      "value": "330",
+      "unit": "kcal per day (about 18%)",
+      "sort": 330,
+      "take": "Average increase achieved over 12 months by exercising women with absent or infrequent periods. The 2025 Triad update gives 300 to 600."
+    },
+    {
+      "id": "wom-pill-bleed",
+      "type": "note",
+      "title": "A bleed on the pill is not a period and says nothing about energy status",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "elliott-sale-2021",
+        "williams-2026"
+      ],
+      "take": "The monthly bleed on combined oral contraception is a withdrawal bleed, so it cannot show that the natural cycle is intact.",
+      "body": "A research guide for studies in women tells scientists to call the bleed that oral contraceptive users have a withdrawal bleed, so that users are not wrongly classed as having regular natural cycles. The 2025 Triad update makes the clinical version of the point: combined oral contraceptive pills may mask the return of natural menstruation, and bone loss may continue on them while an energy deficit persists. This is information, not a reason to change contraception. Any such change is a decision to make with a doctor.",
+      "do": [
+        "If you use hormonal contraception, do not rely on bleeding to judge whether you eat enough.",
+        "Raise any concern about under-fuelling with your doctor."
+      ]
+    },
+    {
+      "id": "wom-hormonal-status",
+      "type": "note",
+      "title": "Hormonal status differs between women, and a study should say who it tested",
+      "topic": "research",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-female-vs-male-physiology",
+        "elliott-sale-2021"
+      ],
+      "take": "Natural cycles, hormonal contraception, cycle disturbances, raised androgens and menopause are different hormonal states.",
+      "body": "McDonald groups the things that alter a woman's hormonal picture under one heading: contraception, raised androgens as in polycystic ovary syndrome, a disturbed or absent cycle, and menopause. The 2021 research guide asks the same of scientists. It says study designs should account for the menstrual cycle, hormonal contraceptive use, pregnancy and menopause, and should define each group. A finding in women with natural cycles may not hold for women in another state, and a study that does not report status is harder to apply. None of this is a reason to change a medication. That decision belongs with a doctor.",
+      "do": [
+        "Check whether a study says its participants had natural cycles, used contraception or were postmenopausal."
+      ]
+    },
+    {
+      "id": "wom-term-follicular-phase",
+      "type": "term",
+      "title": "Follicular phase",
+      "topic": "cycle",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "elliott-sale-2021"
+      ],
+      "take": "The first half of the menstrual cycle, from the first day of bleeding to ovulation. Estrogen and progesterone are both low at the start. Estrogen then climbs to its peak just before ovulation while progesterone stays low."
+    },
+    {
+      "id": "wom-term-luteal-phase",
+      "type": "term",
+      "title": "Luteal phase",
+      "topic": "cycle",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "elliott-sale-2021",
+        "mcdonald-menstrual-cycle-energy-balance"
+      ],
+      "take": "The part of the cycle that runs from ovulation to the next bleed. Progesterone reaches its highest level and estrogen stays fairly high, then both fall before the period. Body temperature runs slightly higher in this phase."
+    },
+    {
+      "id": "wom-table-cycle-phases",
+      "type": "table",
+      "title": "What studies found in each part of the cycle",
+      "topic": "cycle",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "elliott-sale-2021",
+        "tucker-2025",
+        "benton-2020",
+        "mcnulty-2020",
+        "niering-2024",
+        "davidsen-2007",
+        "white-2011"
+      ],
+      "take": "Average findings in women with regular natural cycles. Individual women can differ from every row.",
+      "columns": [
+        "Part of the cycle",
+        "Hormones",
+        "Appetite, energy and weight",
+        "Performance"
+      ],
+      "rows": [
+        [
+          "Early follicular: bleeding, to about day 5",
+          "Estrogen and progesterone both low",
+          "Intake lower than in the luteal phase; fluid retention peaks on day 1 of flow",
+          "Possibly lower by a trivial margin"
+        ],
+        [
+          "Late follicular: up to ovulation",
+          "Estrogen rises to its peak; progesterone low",
+          "Intake lower than in the luteal phase; fluid retention at its lowest mid-phase",
+          "No clear difference; one analysis slightly favoured it for strength"
+        ],
+        [
+          "Ovulation: about a day",
+          "Estrogen past its peak; progesterone still low",
+          "Not reported separately in the pooled analyses",
+          "No clear difference"
+        ],
+        [
+          "Luteal: ovulation to the next bleed",
+          "Progesterone highest; estrogen fairly high",
+          "Intake about 168 kcal a day higher; resting metabolism slightly higher at most; more cravings",
+          "No clear difference"
+        ]
+      ]
+    },
+    {
+      "id": "wom-cycle-performance",
+      "type": "note",
+      "title": "Cycle phase changes performance by a trivial amount on average",
+      "topic": "cycle",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "mcnulty-2020",
+        "blagrove-2020",
+        "niering-2024",
+        "colenso-semple-2023"
+      ],
+      "take": "Pooled across 51 studies, performance in the early follicular phase was lower by a trivial margin, and the evidence was rated low quality.",
+      "body": "A 2020 meta-analysis of women with regular natural cycles found a pooled effect of -0.06 for the first days of the cycle against all other phases, with an interval that spans zero. The largest contrast, early against late follicular, was -0.14. A separate analysis of 21 strength studies found trivial to small, non-significant differences between phases. A 2024 analysis of 22 studies rated the early follicular phase least favourable for maximal strength, with a small effect of 0.14 for dynamic strength. A 2023 umbrella review judged it premature to conclude that phase appreciably affects strength performance.",
+      "do": [
+        "Train as planned through the cycle unless your own log shows a pattern that repeats."
+      ]
+    },
+    {
+      "id": "wom-mistake-cycle-syncing",
+      "type": "mistake",
+      "title": "Rebuilding a training plan around cycle phases",
+      "topic": "cycle",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "colenso-semple-2023",
+        "mcnulty-2020",
+        "mcdonald-research-on-women"
+      ],
+      "take": "Reviews of the evidence do not support fixed phase-based training rules. They recommend adjusting to the individual.",
+      "body": "Phase-based programmes put the heaviest work in the follicular phase and lighter work in the luteal phase. A 2023 umbrella review of meta-analyses and systematic reviews found highly variable results and poor, inconsistent methods for confirming cycle phase, and concluded it is premature to say that short-term hormone swings appreciably influence strength or hypertrophy adaptations. The 2020 performance meta-analysis took a similar position: general guidelines cannot be formed, and a personalised approach is advised. Cycle length also varies from month to month, which makes a fixed calendar hard to follow.",
+      "do": [
+        "Keep a consistent programme and adjust single sessions by how you feel on the day.",
+        "Log symptoms for a few cycles before changing anything permanent."
+      ]
+    },
+    {
+      "id": "wom-checklist-cycle-log",
+      "type": "checklist",
+      "title": "What to log for two or three cycles before changing your plan",
+      "topic": "cycle",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-menstrual-cycle-energy-balance",
+        "mcnulty-2020",
+        "white-2011",
+        "elliott-sale-2021"
+      ],
+      "take": "A short daily record shows whether your own appetite, weight and training follow the cycle, which study averages cannot tell you.",
+      "groups": [
+        {
+          "name": "Each day",
+          "items": [
+            "Cycle day, counting the first day of bleeding as day 1",
+            "Morning body weight",
+            "Hunger and any cravings, rated 1 to 5",
+            "How the training session felt against the plan",
+            "Sleep, and symptoms such as cramps or low mood"
+          ]
+        },
+        {
+          "name": "After two or three cycles",
+          "items": [
+            "Look for patterns that repeat in the same part of each cycle",
+            "Compare body weight with the same week of the previous cycle",
+            "Plan diet flexibility for the days when hunger reliably peaks",
+            "Leave the plan alone where no pattern repeats"
+          ]
+        },
+        {
+          "name": "Take to a doctor",
+          "items": [
+            "Periods that stop, or cycles longer than 35 days",
+            "Pain, bleeding or mood symptoms that disrupt daily life",
+            "Any question about contraception or other medication"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wom-luteal-intake",
+      "type": "note",
+      "title": "Women eat more in the luteal phase, by about 170 kcal a day on average",
+      "topic": "cycle",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "tucker-2025",
+        "davidsen-2007",
+        "mcdonald-menstrual-cycle-energy-balance"
+      ],
+      "take": "A meta-analysis of 15 datasets found energy intake about 168 kcal a day higher in the luteal phase than in the follicular phase.",
+      "body": "The analysis covered 330 women of healthy weight, average age 26, with no history of disordered eating. The standardised difference was 0.69 and statistically significant. The authors caution that studies measured intake and identified cycle phase in inconsistent ways. An earlier review, the one McDonald's 2015 article works through, pointed the same way and also reported more frequent cravings for foods high in carbohydrate and fat in the luteal phase. His article quotes single-study increases from 90 to 500 kcal a day, which shows how much women differ. Which hormone drives the change is not settled.",
+      "do": [
+        "Expect more hunger in the two weeks before a period and plan meals for it.",
+        "Check your own log, since the size of the effect varies between women."
+      ]
+    },
+    {
+      "id": "wom-num-luteal-intake",
+      "type": "number",
+      "title": "Extra energy intake in the luteal phase",
+      "topic": "cycle",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "tucker-2025"
+      ],
+      "value": "168",
+      "unit": "kcal per day",
+      "sort": 168,
+      "take": "Average difference from the follicular phase across 15 datasets and 330 women of healthy weight. Study methods were inconsistent."
+    },
+    {
+      "id": "wom-mistake-luteal-metabolism",
+      "type": "mistake",
+      "title": "Counting on a faster metabolism before a period to cover extra eating",
+      "topic": "cycle",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "benton-2020",
+        "tucker-2025",
+        "mcdonald-menstrual-cycle-energy-balance"
+      ],
+      "take": "Resting metabolism rises only slightly in the luteal phase, and in studies since 2000 the rise was not statistically significant.",
+      "body": "A meta-analysis of 26 studies in 318 women found a small effect toward higher resting metabolic rate in the luteal phase (effect size 0.33). In studies published since 2000 the effect shrank to 0.23 and lost significance, and the authors note small samples and weak control of confounders. McDonald's 2015 article cites older reports of a 2.5 to 11.5 percent rise, about 90 to 280 kcal a day, and makes the practical point that the rise in appetite can outrun it. The newer pooled data make that point more strongly: intake rises by about 168 kcal a day on average, while the metabolic rise is small and uncertain.",
+      "do": [
+        "Do not add calories in the luteal phase on the strength of a metabolic boost.",
+        "If hunger is the problem, move calories within the week and keep the weekly total."
+      ]
+    },
+    {
+      "id": "wom-cycle-tailored-diet",
+      "type": "note",
+      "title": "A diet tailored to the cycle did not beat plain restriction in its one trial",
+      "topic": "cycle",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "geiker-2016",
+        "davidsen-2007",
+        "mcdonald-menstrual-cycle-energy-balance"
+      ],
+      "take": "In 60 overweight women over six months, a cycle-tailored programme showed no significant advantage in the main analysis. Half the women dropped out.",
+      "body": "Both groups were prescribed 1,600 kcal a day. One followed a diet and exercise plan adjusted to cycle phase, the other simple restriction. Thirty-one finished. The intention-to-treat analysis found no clinically significant difference. Women who stuck to the tailored plan lost 4.3 kg (9.5 lb) more than controls, which describes adherent women, not everyone assigned to the plan. McDonald relays the earlier review's suggestion to begin a diet after a period, not just before one. His own is to put a diet break or other flexibility in the days before a period, when appetite peaks. These are coaching judgments.",
+      "do": [
+        "Start a diet in the week after your period if the timing is yours to choose.",
+        "Put planned flexibility where your own hunger peaks."
+      ]
+    },
+    {
+      "id": "wom-ocp-performance",
+      "type": "note",
+      "title": "Oral contraceptives make little or no difference to performance or training gains",
+      "topic": "cycle",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "elliott-sale-2020",
+        "nolan-2024"
+      ],
+      "take": "Pooled data show at most a trivial average performance difference against women with natural cycles, and no effect on strength or muscle gain.",
+      "body": "A meta-analysis of 42 studies and 590 participants concluded that oral contraceptive use might result in slightly inferior performance on average, with any group-level effect most likely trivial, and that performance was consistent across the pill cycle. Most studies were rated moderate to very low quality. A second meta-analysis of 8 training studies with 325 participants found no significant effect of the pill on hypertrophy, power or strength. Both author groups say the evidence supports no general guidance for or against use. Whether to use, change or stop contraception is a decision for you and your doctor.",
+      "do": [
+        "Do not choose or change contraception for training reasons on this evidence.",
+        "Discuss side effects or concerns with your doctor."
+      ]
+    },
+    {
+      "id": "wom-contraception-weight",
+      "type": "note",
+      "title": "Trials found no large effect of hormonal contraception on body weight",
+      "topic": "cycle",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "gallo-2014",
+        "lopez-2016",
+        "mcdonald-menstrual-cycle-energy-balance"
+      ],
+      "take": "Cochrane reviews found no evidence of a large weight effect from combined methods, and under 2 kg average gain in most studies of progestin-only methods.",
+      "body": "The review of combined pills and patches covered 49 trials. The four with a placebo or no-treatment group found no evidence of a causal link with weight change, and the authors concluded that the evidence was insufficient to settle the question but that no large effect was evident. The review of progestin-only methods covered 22 studies and 11,450 women, rated the evidence low quality, and found mean gain under 2 kg (4.4 lb) at 6 or 12 months in most studies. McDonald stresses that methods differ and that individual responses vary widely. Concerns about a method belong with a doctor or pharmacist.",
+      "do": [
+        "Judge weight change on a multi-week trend, not on the first weeks of a new method.",
+        "Take any concern about a method to your doctor; do not stop it on your own."
+      ]
+    },
+    {
+      "id": "wom-mistake-training-stops-periods",
+      "type": "mistake",
+      "title": "Blaming hard training itself for a lost cycle",
+      "topic": "energy",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "loucks-1998",
+        "williams-2026",
+        "mcdonald-history-women-sport-2"
+      ],
+      "take": "When energy intake kept pace with exercise, hard training did not disrupt reproductive hormone pulses. Under-fuelling did.",
+      "body": "Nine regularly menstruating women did four days of intense exercise in two trials. With energy availability held at 45 kcal per kg of lean mass, the exercise did not reduce luteinising hormone pulse frequency. With it cut to 10, pulse frequency fell. The authors concluded that the rhythm depends on energy availability, not exercise stress. McDonald draws the lesson in his history of women's sport: athletes who match food intake to activity generally keep their cycles, and the old belief that sport itself damages fertility had the cause wrong. A lost cycle still needs a doctor, because other causes exist.",
+      "do": [
+        "Raise intake along with training load in heavy blocks.",
+        "See a doctor about a lost or irregular cycle; do not assume the cause."
+      ]
+    },
+    {
+      "id": "wom-pelvic-floor",
+      "type": "note",
+      "title": "Leaking urine under heavy lifts is common in women lifters and worth getting assessed",
+      "topic": "training",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "teixeira-2018",
+        "wikander-2021",
+        "mcdonald-history-women-sport-2"
+      ],
+      "take": "In a survey of 480 competitive women powerlifters, 44 percent had leaked urine in the previous three months, most often on the deadlift.",
+      "body": "A meta-analysis of eight studies put the prevalence of urinary incontinence in female athletes across sports at 36 percent, with a risk 177 percent higher than in sedentary women. In the powerlifting survey, severity rose with number of births, age, competition total and body mass index, and was unrelated to years of training. Women who had had a pelvic floor examination, or who were confident they could do pelvic floor exercises correctly, reported less severe leakage. A survey cannot show cause. It does show that the problem is common and that assessment goes with milder symptoms.",
+      "do": [
+        "Raise it with a doctor or a pelvic health physiotherapist; do not just train around it."
+      ]
+    },
+    {
+      "id": "wom-research-gap",
+      "type": "note",
+      "title": "About a third of participants in sport science studies are women",
+      "topic": "research",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "cowley-2021",
+        "costello-2014",
+        "ose-2025"
+      ],
+      "take": "Across 5,261 papers from 2014 to 2020, 34 percent of participants were female, and 6 percent of studies were women-only against 31 percent men-only.",
+      "body": "The count covered six sport and exercise journals and 12.5 million participants. An earlier audit of three journals over three years found 39 percent female participants. A repeat for 2021 to 2023 found 44 percent, with 7 percent of studies enrolling only women and 19 percent only men. In that newest audit just 5.6 percent of studies took menstrual status into account in their design. The gap is narrowing, slowly. For a reader it means that many training and nutrition findings were established in men first, and some have never been checked in women.",
+      "do": [
+        "Read the participants line of a study before applying its result."
+      ]
+    },
+    {
+      "id": "wom-num-female-participants",
+      "type": "number",
+      "title": "Female share of participants in sport and exercise science",
+      "topic": "research",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "cowley-2021"
+      ],
+      "value": "34%",
+      "unit": "of participants",
+      "sort": 34,
+      "take": "From 5,261 papers in six journals, 2014 to 2020. Six percent of the studies enrolled only women and 31 percent only men."
+    },
+    {
+      "id": "wom-why-thin",
+      "type": "note",
+      "title": "Why the research base on women is thin",
+      "topic": "research",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-research-on-women",
+        "mcdonald-history-women-sport-2",
+        "elliott-sale-2021"
+      ],
+      "take": "Organised sport admitted women late, and the menstrual cycle makes a well-controlled study slower and more expensive to run.",
+      "body": "McDonald gives two main reasons. First, there were few sportswomen to study for most of the last century. In his history, women's weightlifting had no world championship until 1987 and no Olympic event until 2000, so athletes and coaching methods alike came from men. Second, a man's hormones are flat from day to day, while a woman's must be measured at a known point in a cycle whose length varies. The only certain marker is the first day of bleeding, confirming ovulation takes hormone tests, and a missed window means waiting a month. A 2021 research guide adds a shortage of specialist knowledge.",
+      "do": []
+    },
+    {
+      "id": "wom-table-reading-by-sample",
+      "type": "table",
+      "title": "How far a study's result carries, by who was in it",
+      "topic": "research",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "elliott-sale-2021",
+        "colenso-semple-2023",
+        "nolan-2024",
+        "mcdonald-research-on-women"
+      ],
+      "take": "A quick way to weigh a training or diet study for a woman, from who took part and what was recorded about them.",
+      "columns": [
+        "Who was studied",
+        "What it tells a woman",
+        "What to check"
+      ],
+      "rows": [
+        [
+          "Men only",
+          "The direction of an effect usually carries over; the size and the dose may not",
+          "Whether amounts were set per kg of body weight"
+        ],
+        [
+          "Men and women, pooled",
+          "Applies on average; a sex difference could be hidden",
+          "Whether results were also reported by sex"
+        ],
+        [
+          "Women, hormonal status not reported",
+          "Useful, but natural cycles, pill use and menopause are mixed together",
+          "Age range and any mention of contraception"
+        ],
+        [
+          "Women with natural cycles, phase confirmed",
+          "The strongest basis for any claim about cycle phases",
+          "How phase was confirmed: hormone tests beat calendar counting"
+        ],
+        [
+          "Women using oral contraceptives",
+          "Applies to pill users; other hormonal methods are barely studied",
+          "Which type of pill, if stated"
+        ],
+        [
+          "Postmenopausal women",
+          "Applies after menopause; may not match younger women",
+          "Whether hormone therapy use was recorded"
+        ]
+      ]
+    },
+    {
+      "id": "wom-percent-vs-absolute",
+      "type": "note",
+      "title": "A diet rule given as a percentage can fail a smaller person",
+      "topic": "research",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "tarnopolsky-1995",
+        "tarnopolsky-2001",
+        "mcdonald-research-on-women"
+      ],
+      "take": "Women did not load muscle glycogen on a 75 percent carbohydrate diet until total energy was raised too, because their absolute intake was too low.",
+      "body": "In 1995, four days at 75 percent carbohydrate raised muscle glycogen 41 percent in seven male endurance athletes and not at all in eight female athletes. It looked like a sex difference in storage. A 2001 follow-up with six men and six women tested the same percentage with and without about 34 percent extra energy. The men loaded on both diets. The women loaded only with the extra energy, and enzyme activity did not differ by sex. The authors concluded that low energy intake explained the earlier result. McDonald uses the case to show that an apparent sex difference can be a body-size effect.",
+      "do": [
+        "Convert percentage-based advice into grams per kg of your body weight.",
+        "Check that the absolute amount matches what the study participants ate."
+      ]
+    },
+    {
+      "id": "wom-small-calorie-budget",
+      "type": "note",
+      "title": "A smaller body leaves less room in the diet for extras",
+      "topic": "research",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-research-on-women"
+      ],
+      "take": "Smaller women burn less energy, so tactics sized for a large man can take up most of a day's calories.",
+      "body": "This is McDonald's practical point, not a trial finding. A lighter person with less lean mass has a lower daily energy expenditure, and during a diet the gap between what she eats and her minimum needs for protein and fat is narrow. A high-carbohydrate day, a generous free meal or a snack allowance that fits easily into a 2,800 kcal budget may not fit into one of 1,700. He argues this is one reason diet advice written around men often needs resizing for women, and why separate phases for fat loss and for performance can work better than trying to do both at once.",
+      "do": [
+        "Scale any fixed-size diet tactic to your own maintenance calories.",
+        "Set protein first, then see what room is left."
+      ]
+    },
+    {
+      "id": "wom-diet-trials-mostly-women",
+      "type": "note",
+      "title": "Weight-loss trials are the exception: most participants are women",
+      "topic": "research",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "pagoto-2012",
+        "mcdonald-research-on-women"
+      ],
+      "take": "In 244 lifestyle weight-loss trials, samples averaged 73 percent women, and 32 percent of trials enrolled women only.",
+      "body": "The review covered trials published from 1999 to 2009 with 95,207 participants. Only 5 percent of trials enrolled men alone. McDonald points to this as the reverse of the sports science problem: much of what is known about dieting and weight maintenance was learned largely in women, and researchers have asked whether it transfers fully to men. For a woman reading diet research the practical meaning is favourable. Findings on adherence, hunger and regain are more likely to describe people like her than findings from a lifting study are. Most of these trials enrolled people with overweight, not lean athletes.",
+      "do": []
+    },
+    {
+      "id": "wom-mistake-old-warnings",
+      "type": "mistake",
+      "title": "Treating old warnings about women and lifting as medical findings",
+      "topic": "research",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "mcdonald-history-women-sport",
+        "mcdonald-history-women-sport-2",
+        "loucks-1998",
+        "handelsman-2018",
+        "hagstrom-2020"
+      ],
+      "take": "Claims that sport masculinises women or harms fertility began as untested assertion. The sex-specific problems found since have other causes.",
+      "body": "McDonald's history traces these claims to early twentieth-century doctors who reasoned from assumption, and notes that examinations of sportswomen at the time found none of the predicted harm. Problems that did appear once many women trained hard have specific causes. Lost cycles follow from too little energy intake, as controlled experiments show. Men's testosterone sits more than 15-fold above women's with no overlap, and muscle gain in women-only trials is moderate. In his reading, the muscular build of some elite athletes reflects who is drawn to a sport and succeeds in it, not what the sport did to them.",
+      "do": [
+        "Weigh a warning by whether a study stands behind it.",
+        "Take real symptoms, such as a lost cycle or leaking urine, to a doctor."
+      ]
+    },
+    {
+      "id": "wom-atoz-result",
+      "type": "note",
+      "title": "In the A TO Z trial the lowest-carb diet lost most, and every group lost little",
+      "topic": "diets",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "gardner-2007",
+        "mcdonald-comparison-of-diets"
+      ],
+      "take": "Among 311 premenopausal women, 12-month loss averaged 4.7 kg on Atkins and 1.6 to 2.6 kg on the three other diets.",
+      "body": "The women had a body mass index of 27 to 40 and each was allocated at random to one of four popular diet books spanning very low to very high carbohydrate: Atkins, Zone, LEARN and Ornish. They had weekly classes for two months and were then left to continue for ten more. Atkins beat Zone significantly. The differences among Zone, LEARN and Ornish were not significant, and metabolic markers on Atkins were comparable or better. Lyle McDonald's first comment on the result is about its size: 4.7 kg (10.4 lb) in a year is under half a kilo a month, and the other groups managed about half of that or less.",
+      "do": [
+        "Read a diet trial's absolute losses before its ranking of diets."
+      ]
+    },
+    {
+      "id": "wom-table-atoz",
+      "type": "table",
+      "title": "A TO Z trial: weight change at 12 months by assigned diet",
+      "topic": "diets",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "gardner-2007",
+        "mcdonald-comparison-of-diets"
+      ],
+      "take": "Mean change in 311 overweight premenopausal women, with 95 percent confidence intervals. Only Atkins against Zone differed significantly.",
+      "columns": [
+        "Assigned diet",
+        "Design, in brief",
+        "Women assigned",
+        "Mean change at 12 months"
+      ],
+      "rows": [
+        [
+          "Atkins",
+          "Very low carbohydrate",
+          "77",
+          "-4.7 kg (-10.4 lb); interval -6.3 to -3.1 kg"
+        ],
+        [
+          "Zone",
+          "Moderate carbohydrate",
+          "79",
+          "-1.6 kg (-3.5 lb); interval -2.8 to -0.4 kg"
+        ],
+        [
+          "LEARN",
+          "High carbohydrate, low saturated fat",
+          "79",
+          "-2.6 kg (-5.7 lb); interval -3.8 to -1.3 kg"
+        ],
+        [
+          "Ornish",
+          "Very high carbohydrate, very low fat",
+          "76",
+          "-2.2 kg (-4.9 lb); interval -3.6 to -0.8 kg"
+        ]
+      ]
+    },
+    {
+      "id": "wom-mistake-atoz-metabolic-advantage",
+      "type": "mistake",
+      "title": "Reading the A TO Z result as proof that low-carb burns more fat",
+      "topic": "diets",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "gardner-2007",
+        "hall-2017",
+        "gardner-2018",
+        "mcdonald-comparison-of-diets"
+      ],
+      "take": "Intake was self-reported, adherence drifted and the gap was small, so the trial cannot show a metabolic advantage.",
+      "body": "The Atkins group reported eating similar calories to the others, which some read as more loss at equal intake. McDonald's objections: intake came from recalled food records, which under-report; a gap of a few kilos over a year needs only about 50 kcal a day, too little for recall to detect; and in his reading of the weight table most of the lead was there at two months, when cutting carbohydrate sheds water. A meta-analysis of 32 controlled feeding studies found no fat-loss advantage for lower carbohydrate at equal calories, and a later 12-month trial in 609 adults found a non-significant 0.7 kg gap.",
+      "do": [
+        "Choose between low-carb and higher-carb by which you can keep to.",
+        "Discount the first weeks of loss on any low-carb diet as partly water."
+      ]
+    },
+    {
+      "id": "wom-atoz-pattern",
+      "type": "note",
+      "title": "Most of the loss came in the first two months, while the weekly classes ran",
+      "topic": "diets",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "gardner-2007",
+        "alhassan-2008",
+        "mcdonald-comparison-of-diets"
+      ],
+      "take": "McDonald's reading of the A TO Z weight curves: three groups lost during the class period and then stalled for ten months.",
+      "body": "The trial weighed the women at 2, 6 and 12 months. In McDonald's reading of those data, the Zone, LEARN and Ornish groups did all their losing during the eight weeks of dietitian-led classes and lost nothing further in the ten months that followed, while the Atkins group peaked at six months and regained part of the loss by twelve. He draws two lessons. The book mattered less than the structure and contact around it, and unsupervised dieting on a named plan produces small results on average. Both fit the trial's own adherence analysis, in which sticking to the assigned diet predicted loss in every arm.",
+      "do": [
+        "Plan for support after the first weeks: check-ins, a coach or a group.",
+        "Expect the hard part of a diet to begin when the novelty ends."
+      ]
+    },
+    {
+      "id": "wom-atoz-adherence",
+      "type": "note",
+      "title": "Within each A TO Z diet, the women who stuck closest lost the most",
+      "topic": "diets",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "alhassan-2008"
+      ],
+      "take": "The most adherent third lost 3.7 to 8.3 kg over the year, against 0.4 to 1.9 kg in the least adherent third, whatever the diet.",
+      "body": "A secondary analysis used 181 women from the Atkins, Zone and Ornish arms and scored adherence as the distance between each woman's reported intake and her diet's macronutrient targets. Adherence correlated with 12-month weight change in every arm (0.34 to 0.42). The most against the least adherent thirds lost 8.3 against 1.9 kg on Atkins, 3.7 against 0.4 kg on Zone and 6.5 against 1.7 kg on Ornish. Only the Atkins contrast was clearly significant. The authors concluded that raising adherence may deserve more emphasis than macronutrient composition. Adherence was scored from self-reported intake.",
+      "do": [
+        "Pick the diet structure you can follow for a year."
+      ]
+    },
+    {
+      "id": "wom-num-atoz-adherent",
+      "type": "number",
+      "title": "Weight lost by the most and least adherent women on Atkins",
+      "topic": "diets",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "alhassan-2008"
+      ],
+      "value": "8.3 vs 1.9",
+      "unit": "kg in 12 months",
+      "sort": 8.3,
+      "take": "Most against least adherent thirds in the A TO Z trial. The same direction held on Zone (3.7 vs 0.4) and Ornish (6.5 vs 1.7)."
+    },
+    {
+      "id": "wom-insulin-resistance-diet-choice",
+      "type": "note",
+      "title": "Insulin resistance as a guide to diet choice has mixed support",
+      "topic": "diets",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "mcclain-2013",
+        "gardner-2018",
+        "mcdonald-comparison-of-diets"
+      ],
+      "take": "In 81 women the insulin resistant adhered and lost less on a low-fat diet, but a larger trial found no interaction between insulin secretion and diet.",
+      "body": "McDonald's position is that low-carbohydrate diets have no metabolic advantage but make sense for people who are insulin resistant, who often find them easier to keep to. A secondary analysis of 81 overweight women supports the adherence part: insulin-resistant women were less likely to adhere and to lose weight on a low-fat diet than insulin-sensitive women, with no such difference on a low-carbohydrate diet. A later 12-month trial of 609 adults found no significant interaction between diet and insulin secretion. Insulin resistance is a clinical finding. Testing and treatment belong with a doctor.",
+      "do": [
+        "If a doctor has told you that you are insulin resistant, ask which eating pattern they advise."
+      ]
+    },
+    {
+      "id": "wom-term-thermogenic",
+      "type": "term",
+      "title": "Thermogenic",
+      "topic": "supplements",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "A compound or product that raises the body's energy expenditure, often felt as warmth. Most are stimulants. McDonald puts the effect at 5 to 10 percent of energy expenditure at most, which matters little without a diet."
+    },
+    {
+      "id": "wom-fat-loss-supplements-small",
+      "type": "note",
+      "title": "No fat-loss supplement is required, and the proven ones add little",
+      "topic": "supplements",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "zsiboras-2018",
+        "jurgens-2012",
+        "tabrizi-2019",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "The few compounds with real evidence shift energy expenditure or weight by small amounts, and only alongside a diet.",
+      "body": "McDonald's view is that most fat-loss products do nothing, a handful have a measurable effect, and none replaces a diet and training plan. The pooled data agree on the size. Capsaicin from hot peppers raised energy expenditure by about 59 kcal a day across nine trials, with no effect in studies of people under a body mass index of 25. A Cochrane review found green tea preparations produced a small, non-significant weight loss that is unlikely to matter clinically. Caffeine showed a dose-related association with weight and fat loss across 13 trials with 606 participants, with high variation between studies.",
+      "do": [
+        "Set the diet and training first; treat any supplement as optional.",
+        "Ask a pharmacist or doctor about interactions with medication or contraception."
+      ]
+    },
+    {
+      "id": "wom-green-tea-women",
+      "type": "note",
+      "title": "Green tea extract did not reduce body fat in trials in women",
+      "topic": "supplements",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "mielgo-ayuso-2014",
+        "dostal-2016",
+        "yu-2017",
+        "jurgens-2012",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "Two placebo-controlled trials in women found no effect on weight or fat, and a high-dose trial saw liver function abnormalities in about 5 percent.",
+      "body": "In 83 obese premenopausal women on a diet, 300 mg a day of the catechin EGCG for 12 weeks changed neither weight nor fat mass against placebo. In 121 overweight postmenopausal women, a decaffeinated extract supplying 843 mg of EGCG a day for 12 months changed neither fat mass nor body fat percentage. In that study's parent trial, 5.1 percent of women on the extract developed moderate or worse liver function abnormalities, seven times the odds on placebo, and enzymes fell when it was stopped. McDonald's 2015 article rated green tea with caffeine as a mild aid.",
+      "do": [
+        "Do not expect fat loss from green tea extract.",
+        "Ask a doctor or pharmacist before taking a concentrated extract."
+      ]
+    },
+    {
+      "id": "wom-caffeine-clearance",
+      "type": "note",
+      "title": "Caffeine lasts longer in the body on oral contraceptives",
+      "topic": "supplements",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "abernethy-1985",
+        "lane-1992",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "Women on low-dose oral contraceptives cleared caffeine more slowly, with a half-life near 7.9 hours against 5.4 in non-users.",
+      "body": "The study compared long-term users of low-dose estrogen-containing pills with 9 matched women after a single 162 mg dose of caffeine. Plasma clearance was markedly lower in the pill users, and the authors predicted higher steady caffeine levels with regular intake. A separate study of 10 women with natural cycles found slower clearance late in the luteal phase with no change in half-life, an effect the authors thought too small to matter for most women. McDonald's practical point concerns sleep: the same afternoon coffee may linger longer. This is a reason to watch caffeine timing, not to alter contraception.",
+      "do": [
+        "If you use the pill and sleep poorly, try moving your last caffeine earlier in the day.",
+        "Ask a pharmacist how caffeine fits with any medicine you take."
+      ]
+    },
+    {
+      "id": "wom-num-caffeine-half-life",
+      "type": "number",
+      "title": "Caffeine half-life with and without oral contraceptives",
+      "topic": "supplements",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "abernethy-1985"
+      ],
+      "value": "7.9 vs 5.4",
+      "unit": "hours",
+      "sort": 7.9,
+      "take": "Elimination half-life after a single 162 mg dose in long-term users of low-dose pills against 9 matched non-users."
+    },
+    {
+      "id": "wom-caffeine-pms",
+      "type": "note",
+      "title": "Caffeine intake was not linked to developing premenstrual syndrome",
+      "topic": "supplements",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "purdue-smithe-2016",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "In a large cohort, women with the highest caffeine intake were no more likely to develop PMS than those with the lowest.",
+      "body": "Women with premenstrual symptoms are often told to cut caffeine, and McDonald's 2015 article mentions some indication that caffeine worsens symptoms. A case-control study nested in the Nurses' Health Study II later compared 1,234 women who developed clinician-diagnosed PMS with 2,426 controls. After adjustment, total caffeine intake was not associated with PMS: the odds ratio for the highest against the lowest fifth of intake (medians 543 and 18 mg a day) was 0.79, with an interval from 0.61 to 1.04. The study is observational and concerns who develops PMS, not day-to-day symptoms in someone who already has it.",
+      "do": [
+        "Judge caffeine by your own symptoms and sleep."
+      ]
+    },
+    {
+      "id": "wom-ephedrine-trials",
+      "type": "note",
+      "title": "Ephedrine produced modest extra weight loss in trials, with clear side effects",
+      "topic": "supplements",
+      "level": "advanced",
+      "confidence": "strong",
+      "sources": [
+        "shekelle-2003",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "A meta-analysis found about 0.9 kg a month more loss than placebo for up to six months, and two to three and a half times the odds of adverse symptoms.",
+      "body": "Ephedrine is a medicine, and the herb ephedra contains it. A 2003 meta-analysis pooled controlled trials lasting at least eight weeks. Ephedrine with caffeine gave about 1.0 kg a month more weight loss than placebo, and ephedrine alone 0.6 kg. No trial ran longer than six months. Safety data from 50 trials showed 2.2- to 3.6-fold higher odds of psychiatric, autonomic or gastrointestinal symptoms and of heart palpitations. McDonald regards it as the most potent of the stimulant aids and attributes the reported deaths to misuse. This guide gives no dosing. Use of any such medicine is a matter for a doctor.",
+      "do": [
+        "Do not take ephedrine or ephedra products for fat loss without medical advice."
+      ]
+    },
+    {
+      "id": "wom-yohimbine",
+      "type": "note",
+      "title": "Yohimbine has one small trial in women behind it and a known anxiety risk",
+      "topic": "supplements",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "kucio-1991",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "Twenty obese women on 1,000 kcal a day lost 3.6 kg with yohimbine against 2.2 kg with placebo over three weeks. The trial was short and tiny.",
+      "body": "Yohimbine blocks alpha-2 receptors, which normally hold back the release of fat from fat cells. The 1991 trial was double-blind and lasted three weeks, and it found no measurable effect on fat release itself. McDonald's view is that it has a use only for already lean dieters working on lower-body fat, and that nobody else should consider it. He also warns that it raises heart rate during exercise, can cause water retention, and is used at high doses in research to provoke anxiety attacks, so anyone prone to anxiety should avoid it. Ask a doctor or pharmacist about interactions before considering it.",
+      "do": [
+        "Avoid yohimbine if you are prone to anxiety or have a heart or blood pressure condition.",
+        "Ask a doctor or pharmacist before considering it."
+      ]
+    },
+    {
+      "id": "wom-mistake-more-stimulant",
+      "type": "mistake",
+      "title": "Taking more of a stimulant product than the label says to speed fat loss",
+      "topic": "supplements",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "shekelle-2003",
+        "abernethy-1985",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "The serious harms linked to stimulant fat burners came with overdosing or combining them, and extra dose adds risk without adding much loss.",
+      "body": "McDonald is blunt on this point: the deaths attributed to ephedrine products involved people taking several times the recommended amount or combining it with alcohol or recreational drugs, and the belief that more is better is the real hazard. Even at trial doses, a meta-analysis found two to three and a half times the odds of palpitations and of psychiatric, autonomic or gastrointestinal symptoms. Stimulants raise heart rate and blood pressure and disturb sleep, and women on oral contraceptives clear caffeine more slowly. The possible gain is small: about 0.9 kg a month in trials of the strongest agent.",
+      "do": [
+        "Never exceed a labelled dose or combine stimulant products.",
+        "Stop and seek medical advice if you get palpitations, chest pain or severe anxiety.",
+        "Check with a pharmacist if you take any medication."
+      ]
+    },
+    {
+      "id": "wom-table-fat-loss-ingredients",
+      "type": "table",
+      "title": "Fat-loss supplement ingredients: what controlled research found",
+      "topic": "supplements",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "tabrizi-2019",
+        "zsiboras-2018",
+        "jurgens-2012",
+        "mielgo-ayuso-2014",
+        "dostal-2016",
+        "yu-2017",
+        "shekelle-2003",
+        "kucio-1991",
+        "abernethy-1985",
+        "mcdonald-fat-loss-supplements"
+      ],
+      "take": "Pooled or trial results for the ingredients McDonald discusses. None is needed. Ask a pharmacist or doctor about interactions before using any.",
+      "columns": [
+        "Ingredient",
+        "What trials found",
+        "Cautions"
+      ],
+      "rows": [
+        [
+          "Caffeine",
+          "Dose-related association with weight and fat loss across 13 trials; results varied widely",
+          "Sleep; cleared more slowly on oral contraceptives"
+        ],
+        [
+          "Capsaicin (hot pepper)",
+          "About 59 kcal a day more energy expenditure in 9 trials; no effect below a BMI of 25",
+          "Not a stimulant; the effect is small"
+        ],
+        [
+          "Green tea catechins",
+          "Small, non-significant weight loss overall; no fat loss in two trials in women",
+          "High-dose extract raised liver enzymes in a 12-month trial"
+        ],
+        [
+          "Ephedrine (a medicine)",
+          "About 0.9 kg a month more loss than placebo, for up to 6 months",
+          "2.2 to 3.6 times the odds of adverse symptoms; needs medical advice"
+        ],
+        [
+          "Yohimbine",
+          "About 1.3 kg more loss than placebo in 20 obese women over 3 weeks",
+          "Raises heart rate; can provoke anxiety"
+        ],
+        [
+          "Garcinia, raspberry ketone and most others",
+          "McDonald's judgment: no worthwhile effect",
+          "Cost with no return"
+        ]
+      ]
+    },
+    {
+      "id": "wom-term-melatonin",
+      "type": "term",
+      "title": "Melatonin",
+      "topic": "supplements",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-melatonin"
+      ],
+      "take": "A hormone released by the pineal gland in the brain at night. It helps set the timing of sleep, and light reaching the eyes in the evening suppresses it. It also interacts with the hormones that run the reproductive cycle."
+    },
+    {
+      "id": "wom-melatonin-body-composition",
+      "type": "note",
+      "title": "A year of melatonin trimmed fat mass slightly in one trial of postmenopausal women",
+      "topic": "supplements",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "amstrup-2016",
+        "mcdonald-melatonin"
+      ],
+      "take": "In 81 postmenopausal women, nightly melatonin for a year lowered fat mass by 6.9 percent against placebo. Body weight did not change.",
+      "body": "The double-blind trial gave 1 or 3 mg nightly or placebo and measured body composition by DXA. Fat mass fell 6.9 percent relative to placebo. Lean mass rose 5.2 percent relative to placebo, a borderline result that became a significant 2.6 percent after adjusting for body mass index. Weight, leptin, insulin and glucose markers did not differ. McDonald's criticism stands: the paper reports percentages without the kilograms behind them, and a large percentage can be a small real change. It is one trial in one population. Ask a doctor or pharmacist about interactions before taking melatonin.",
+      "do": [
+        "Do not take melatonin for fat loss on the strength of one trial."
+      ]
+    },
+    {
+      "id": "wom-melatonin-bone",
+      "type": "note",
+      "title": "Melatonin raised bone density a little in two trials of postmenopausal women",
+      "topic": "supplements",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "amstrup-2015",
+        "maria-2017",
+        "mcdonald-melatonin"
+      ],
+      "take": "A year of nightly melatonin raised femoral neck bone density by 1.4 percent against placebo, more at 3 mg than at 1 mg.",
+      "body": "The trial randomised 81 postmenopausal women with osteopenia to 1 mg, 3 mg or placebo. Femoral neck density rose 0.5 percent on 1 mg, which was not significant, and 2.3 percent on 3 mg. A second one-year trial combined 5 mg of melatonin with strontium citrate, vitamin D3 and vitamin K2 and reported gains of 4.3 percent at the lumbar spine and 2.2 percent at the femoral neck, so melatonin's own share cannot be separated. Neither trial measured fractures. Low bone density is a medical condition, and any supplement should be cleared with the doctor managing it.",
+      "do": [
+        "See the health area of this guide for supervised heavy lifting and bone density."
+      ]
+    },
+    {
+      "id": "wom-table-melatonin-trials",
+      "type": "table",
+      "title": "Melatonin trials in women at a glance",
+      "topic": "supplements",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "amstrup-2016",
+        "amstrup-2015",
+        "maria-2017",
+        "treister-goltzman-2021",
+        "ziaei-2024",
+        "jamilian-2019",
+        "mcdonald-melatonin"
+      ],
+      "take": "Controlled evidence in three groups of women, with doses as the studies report them. Not a recommendation. Ask a doctor or pharmacist first.",
+      "columns": [
+        "Group studied",
+        "Dose and length in the studies",
+        "What was found"
+      ],
+      "rows": [
+        [
+          "Postmenopausal, low bone mass, 81 women",
+          "1 or 3 mg nightly for 1 year",
+          "Fat mass down 6.9% against placebo; body weight unchanged"
+        ],
+        [
+          "Postmenopausal, low bone mass, same trial",
+          "1 or 3 mg nightly for 1 year",
+          "Femoral neck bone density up 1.4%; 2.3% at 3 mg"
+        ],
+        [
+          "Postmenopausal, low bone mass",
+          "5 mg with strontium, vitamins D3 and K2 for 1 year",
+          "Spine density up 4.3%, femoral neck 2.2%; the mix cannot be separated"
+        ],
+        [
+          "Menopausal women, review of 24 studies",
+          "3 mg or more for symptom effects",
+          "Better sleep where sleep was already poor; some symptom relief; triglycerides may rise"
+        ],
+        [
+          "Polycystic ovary syndrome, 6 trials pooled",
+          "Varied; one trial used 5 mg twice a day for 12 weeks",
+          "Antioxidant capacity up; no pooled effect on testosterone, insulin or lipids"
+        ],
+        [
+          "Premenstrual symptoms",
+          "No supplementation trial",
+          "Untested; McDonald calls his own suggestion speculative"
+        ]
+      ]
+    },
+    {
+      "id": "wom-mistake-melatonin-proven",
+      "type": "mistake",
+      "title": "Treating melatonin as a proven aid for PCOS or premenstrual symptoms",
+      "topic": "supplements",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "ziaei-2024",
+        "jamilian-2019",
+        "mcdonald-melatonin"
+      ],
+      "take": "Pooled trials in polycystic ovary syndrome found no effect on hormones or metabolic markers, and no trial has tested it for premenstrual symptoms.",
+      "body": "McDonald's 2020 article was optimistic about polycystic ovary syndrome on the strength of small trials. One, in 56 women taking 5 mg twice a day for 12 weeks, reported lower testosterone and less excess hair growth. A 2024 meta-analysis of six randomised trials found only a rise in antioxidant capacity, with no pooled effect on testosterone, hair growth score, insulin, lipids or pregnancy rate. His article predates it. For premenstrual symptoms he states plainly that nobody had tested melatonin and that his suggestion was speculation. Both conditions are diagnosed and treated by doctors.",
+      "do": [
+        "Discuss PCOS or severe premenstrual symptoms with a doctor before trying any supplement."
+      ]
+    },
+    {
+      "id": "wom-melatonin-menopause-sleep",
+      "type": "note",
+      "title": "In menopausal women melatonin helped sleep mainly where sleep was already poor",
+      "topic": "supplements",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "treister-goltzman-2021",
+        "mcdonald-melatonin"
+      ],
+      "take": "A systematic review of 24 studies found better sleep quality in postmenopausal women with existing sleep problems, and symptom relief at 3 mg or more.",
+      "body": "The review covered 1,173 participants. It found a fair amount of evidence for favourable effects on bone density and body mass index, improved sleep recordings and subjective sleep quality in postmenopausal women whose sleep was already impaired, and improvement in one or more areas of menopausal symptoms at doses of 3 mg and above. It found no independent effect on blood pressure or glucose markers, and some evidence that triglycerides rise. Menopausal symptoms and sleep problems have several causes and several treatments. A doctor or pharmacist should be asked first, including about interactions.",
+      "do": [
+        "Raise menopausal sleep problems with a doctor; ask about melatonin there if you wish."
+      ]
+    },
+    {
+      "id": "wom-iron-deficiency",
+      "type": "note",
+      "title": "Iron deficiency is common in female athletes and is found by a blood test",
+      "topic": "supplements",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "pengelly-2025"
+      ],
+      "take": "A systematic review reports that up to 60 percent of female athletes experience iron deficiency, which lowered endurance performance by 3 to 4 percent.",
+      "body": "The review covered 23 studies and 669 high-level female athletes, and defined deficiency as serum ferritin under 40 micrograms per litre. Endurance performance and aerobic capacity improved when deficient athletes were treated with iron. Effects on strength and anaerobic power were inconsistent, and most studies had 20 or fewer athletes per group. Fatigue has many causes, and iron status cannot be judged from symptoms. Iron is a treatment for a measured deficiency, so the dose and form are for a doctor to set after a blood test.",
+      "do": [
+        "Ask a doctor for a blood test if you have persistent, unexplained fatigue.",
+        "Do not start iron tablets on a guess."
+      ]
+    }
+  ],
+  "sources": {
+    "handelsman-2018": {
+      "type": "review",
+      "authors": [
+        "Handelsman DJ",
+        "Hirschberg AL",
+        "Bermon S"
+      ],
+      "year": 2018,
+      "title": "Circulating Testosterone as the Hormonal Basis of Sex Differences in Athletic Performance",
+      "journal": "Endocrine Reviews",
+      "volume": "39",
+      "issue": "5",
+      "pages": "803-829",
+      "doi": "10.1210/er.2018-00020",
+      "pmid": "30010735",
+      "support": "From puberty onward a clear sex difference in athletic performance emerges as circulating testosterone concentrations rise in men because testes produce 30 times more testosterone than before puberty with circulating testosterone exceeding 15-fold that of women at any age. These dichotomies largely account for the sex differences in muscle mass and strength and circulating hemoglobin levels that result in at least an 8% to 12% ergogenic advantage in men. Women with polycystic ovary syndrome are overrepresented in elite athletics."
+    },
+    "hunter-2023": {
+      "type": "position",
+      "authors": [
+        "Hunter SK",
+        "S. Angadi S",
+        "Bhargava A",
+        "Harper J",
+        "Hirschberg AL",
+        "D. Levine B",
+        "L. Moreau K",
+        "J. Nokoff N",
+        "Stachenfeld NS",
+        "Bermon S"
+      ],
+      "year": 2023,
+      "title": "The Biological Basis of Sex Differences in Athletic Performance: Consensus Statement for the American College of Sports Medicine",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "55",
+      "issue": "12",
+      "pages": "2328-2360",
+      "doi": "10.1249/mss.0000000000003300",
+      "pmid": "37772882",
+      "support": "For athletic events and sports relying on endurance, muscle strength, speed, and power, males typically outperform females by 10%-30% depending on the requirements of the event. These sex differences in performance emerge with the onset of puberty and coincide with the increase in endogenous sex steroid hormones, in particular testosterone in males, which increases 30-fold by adulthood, but remains low in females."
+    },
+    "mcdonald-female-vs-male-physiology": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Female vs Male Physiology",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/women/female-vs-male-physiology",
+      "retrieved": "2026-11-15",
+      "support": "Backs the points that hormone levels differ widely between the sexes, that the monthly cycle is what sets female physiology apart, and his list of things that alter a woman's hormonal picture."
+    },
+    "miller-1993": {
+      "type": "trial",
+      "authors": [
+        "Miller AEJ",
+        "MacDougall JD",
+        "Tarnopolsky MA",
+        "Sale DG"
+      ],
+      "year": 1993,
+      "title": "Gender differences in strength and muscle fiber characteristics",
+      "journal": "European Journal of Applied Physiology and Occupational Physiology",
+      "volume": "66",
+      "issue": "3",
+      "pages": "254-262",
+      "doi": "10.1007/bf00235103",
+      "pmid": "8477683",
+      "n_participants": 16,
+      "support": "Eight men and eight women. The women were approximately 52% and 66% as strong as the men in the upper and lower body respectively. The women had 45, 41, 30 and 25% smaller muscle CSAs for the biceps brachii, total elbow flexors, vastus lateralis and total knee extensors respectively. No significant gender difference was found in the strength to CSA ratio for elbow flexion or knee extension."
+    },
+    "nuzzo-2023": {
+      "type": "review",
+      "authors": [
+        "Nuzzo JL"
+      ],
+      "year": 2023,
+      "title": "Narrative Review of Sex Differences in Muscle Strength, Endurance, Activation, Size, Fiber Type, and Strength Training Participation Rates, Preferences, Motivations, Injuries, and Neuromuscular Adaptations",
+      "journal": "Journal of Strength & Conditioning Research",
+      "volume": "37",
+      "issue": "2",
+      "pages": "494-536",
+      "doi": "10.1519/jsc.0000000000004329",
+      "pmid": "36696264",
+      "support": "In adults, sex differences in strength are more pronounced in upper-body than lower-body muscles and in concentric than eccentric contractions. Greater male than female strength is not because of higher voluntary activation but to greater muscle mass and type II fiber areas. Men and women increase muscle size and strength after weeks of strength training, but women experience greater relative strength improvements depending on age and muscle group."
+    },
+    "nuzzo-2024-fibre": {
+      "type": "meta-analysis",
+      "authors": [
+        "Nuzzo JL"
+      ],
+      "year": 2024,
+      "title": "Sex differences in skeletal muscle fiber types: A meta-analysis",
+      "journal": "Clinical Anatomy",
+      "volume": "37",
+      "issue": "1",
+      "pages": "81-91",
+      "doi": "10.1002/ca.24091",
+      "pmid": "37424380",
+      "n_studies": 110,
+      "n_participants": 5327,
+      "support": "Data from 2875 men and 2452 women, who participated in 110 studies, were analyzed. Men exhibited greater cross-sectional areas for all fiber types (g = 0.40-1.68). Women exhibited greater Type I and MHC I distribution percentages (g = -0.13, -0.44); greater Type I and MHC I area percentages (g = -0.53, -0.69)."
+    },
+    "refalo-2025": {
+      "type": "meta-analysis",
+      "authors": [
+        "Refalo MC",
+        "Nuckols G",
+        "Galpin AJ",
+        "Gallagher IJ",
+        "Hamilton DL",
+        "Fyfe JJ"
+      ],
+      "year": 2025,
+      "title": "Sex differences in absolute and relative changes in muscle size following resistance training in healthy adults: a systematic review with Bayesian meta-analysis",
+      "journal": "PeerJ",
+      "volume": "13",
+      "pages": "e19042",
+      "doi": "10.7717/peerj.19042",
+      "pmid": "40028215",
+      "n_studies": 29,
+      "support": "29 studies were included in the statistical analysis. Absolute increases in muscle size slightly favoured males compared to females (SMD = 0.19 (95% HDI: 0.11 to 0.28)), however, relative increases in muscle size were similar between sexes (Exp. % Change of lnRR = 0.69% (95% HDI: -1.50% to 2.88%)). Outcomes were not influenced by RT experience of participants. Absolute hypertrophy of upper-body but not lower-body regions was favoured in males."
+    },
+    "hamadeh-2005": {
+      "type": "rct",
+      "authors": [
+        "Hamadeh MJ",
+        "Devries MC",
+        "Tarnopolsky MA"
+      ],
+      "year": 2005,
+      "title": "Estrogen Supplementation Reduces Whole Body Leucine and Carbohydrate Oxidation and Increases Lipid Oxidation in Men during Endurance Exercise",
+      "journal": "The Journal of Clinical Endocrinology & Metabolism",
+      "volume": "90",
+      "issue": "6",
+      "pages": "3592-3599",
+      "doi": "10.1210/jc.2004-1743",
+      "pmid": "15755861",
+      "n_participants": 12,
+      "support": "Healthy active men exhibit higher rates of carbohydrate (CHO) and leucine oxidation and lower rates of lipid oxidation compared with their female counterparts both at rest and during moderate intensity endurance exercise. In 12 recreationally active men, estrogen supplementation significantly decreased CHO oxidation by 5-16% and leucine oxidation by 16%, whereas it significantly increased lipid oxidation by 22-44% at rest and during exercise."
+    },
+    "elliott-sale-2021": {
+      "type": "review",
+      "authors": [
+        "Elliott-Sale KJ",
+        "Minahan CL",
+        "de Jonge XAKJ",
+        "Ackerman KE",
+        "Sipilä S",
+        "Constantini NW",
+        "Lebrun CM",
+        "Hackney AC"
+      ],
+      "year": 2021,
+      "title": "Methodological Considerations for Studies in Sport and Exercise Science with Women as Participants: A Working Guide for Standards of Practice for Research on Women",
+      "journal": "Sports Medicine",
+      "volume": "51",
+      "issue": "5",
+      "pages": "843-861",
+      "doi": "10.1007/s40279-021-01435-8",
+      "pmid": "33725341",
+      "support": "The vast majority of high-quality sport and exercise science data have been derived from studies with men as participants. Full text: define eumenorrhea as menstrual cycle lengths of 21 to 35 days resulting in 9 or more consecutive periods per year; oligomenorrhea as cycle length over 35 days; secondary amenorrhea as the absence of 3 or more consecutive periods in non-pregnant women with past menses; use the term withdrawal bleed rather than period for the bleed experienced by OCP users."
+    },
+    "roberts-2020-sex": {
+      "type": "meta-analysis",
+      "authors": [
+        "Roberts BM",
+        "Nuckols G",
+        "Krieger JW"
+      ],
+      "year": 2020,
+      "title": "Sex Differences in Resistance Training: A Systematic Review and Meta-Analysis",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "34",
+      "issue": "5",
+      "pages": "1448-1460",
+      "doi": "10.1519/jsc.0000000000003521",
+      "pmid": "32218059",
+      "support": "The analysis of hypertrophy comprised 12 outcomes from 10 studies with no significant difference between males and females (ES = 0.07; P = 0.31). The analysis of upper-body strength comprised 19 outcomes from 17 studies with a significant effect favoring females (ES = -0.60; P = 0.002). The analysis of lower-body strength comprised 23 outcomes from 23 studies with no significant difference between sexes (ES = -0.21; P = 0.20)."
+    },
+    "mcdonald-strength-muscle-mass-women": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2016,
+      "title": "Strength and Muscle Mass Increases in Young Women",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/research/strength-muscle-mass-women",
+      "retrieved": "2026-11-15",
+      "support": "Backs his view that beginners of both sexes gain similar percentages, that visible size change in women is small and follows strength, and that fear of size fades once strength rises."
+    },
+    "jones-2021": {
+      "type": "meta-analysis",
+      "authors": [
+        "Jones MD",
+        "Wewege MA",
+        "Hackett DA",
+        "Keogh JWL",
+        "Hagstrom AD"
+      ],
+      "year": 2021,
+      "title": "Sex Differences in Adaptations in Muscle Strength and Size Following Resistance Training in Older Adults: A Systematic Review and Meta-analysis",
+      "journal": "Sports Medicine",
+      "volume": "51",
+      "issue": "3",
+      "pages": "503-517",
+      "doi": "10.1007/s40279-020-01388-4",
+      "pmid": "33332016",
+      "n_studies": 30,
+      "n_participants": 1410,
+      "support": "30 studies were included (1410 participants; 651 males, 759 females). Females gained more relative lower-body strength than males (g = -0.21) but there were no differences in relative change for upper-body strength or relative muscle size. Males gained more absolute upper-body strength (g = 0.48), absolute lower-body strength (g = 0.33), and absolute muscle size (g = 0.45). The interpretation of sex-dependent adaptations is heavily influenced by the presentation of the results in either an absolute or relative context."
+    },
+    "hagstrom-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Hagstrom AD",
+        "Marshall PW",
+        "Halaki M",
+        "Hackett DA"
+      ],
+      "year": 2020,
+      "title": "The Effect of Resistance Training in Women on Dynamic Strength and Muscular Hypertrophy: A Systematic Review with Meta-analysis",
+      "journal": "Sports Medicine",
+      "volume": "50",
+      "issue": "6",
+      "pages": "1075-1093",
+      "doi": "10.1007/s40279-019-01247-x",
+      "pmid": "31820374",
+      "n_studies": 24,
+      "support": "A total of 24 studies met the inclusion criteria. Large-effect sizes were found for upper body strength (Hedges' g = 1.70) and lower body strength (Hedges' g = 1.40). Following use of the Trim and Fill method, a large effect still remained for upper body strength (g = 1.07), although a medium effect was found for lower body strength (g = 0.52). A medium effect was found for muscular hypertrophy (g = 0.52, p = 0.002)."
+    },
+    "cureton-1988": {
+      "type": "trial",
+      "authors": [
+        "Cureton KJ",
+        "Collins MA",
+        "Hill DW",
+        "Mcelhannon FM"
+      ],
+      "year": 1988,
+      "title": "Muscle hypertrophy in men and women",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "20",
+      "issue": "4",
+      "pages": "338-344",
+      "doi": "10.1249/00005768-198808000-00003",
+      "pmid": "3173042",
+      "n_participants": 22,
+      "support": "Seven male experimental, 8 female experimental, and 7 control subjects were studied before and after a 16-wk weight training program. Strength increased significantly in ME and FE, respectively, on elbow flexion (36.2 and 59.2%), elbow extension (32.6 and 41.7%), knee flexion (12.8 and 24.4%), and knee extension (28.8 and 33.9%) tests. Percentage changes were not significantly different. Muscle CSA determined from computed tomography scanning of the upper arm rose 15.9 and 22.8%; no muscle hypertrophy occurred in the thigh of either group (2.9 and 2.9%)."
+    },
+    "harty-2019": {
+      "type": "cohort",
+      "authors": [
+        "Harty PS",
+        "Zabriskie HA",
+        "Stecker RA",
+        "Currier BS",
+        "Moon JM",
+        "Jagim AR",
+        "Kerksick CM"
+      ],
+      "year": 2019,
+      "title": "Upper and lower thresholds of fat-free mass index in a large cohort of female collegiate athletes",
+      "journal": "Journal of Sports Sciences",
+      "volume": "37",
+      "issue": "20",
+      "pages": "2381-2388",
+      "doi": "10.1080/02640414.2019.1634964",
+      "pmid": "31238804",
+      "n_participants": 372,
+      "support": "372 female collegiate athletes underwent body composition assessment via dual-energy x-ray absorptiometry. Average FFMI was 18.82±2.08 kg/m2. FFMI in rugby athletes was 20.09, cross country 16.56, Olympic weightlifting 19.69. The upper threshold for FFMI in female athletes (97.5th percentile) was 23.90 kg/m2."
+    },
+    "blue-2019": {
+      "type": "cohort",
+      "authors": [
+        "Blue MNM",
+        "Hirsch KR",
+        "Pihoker AA",
+        "Trexler ET",
+        "Smith-Ryan AE"
+      ],
+      "year": 2019,
+      "title": "Normative fat-free mass index values for a diverse sample of collegiate female athletes",
+      "journal": "Journal of Sports Sciences",
+      "volume": "37",
+      "issue": "15",
+      "pages": "1741-1745",
+      "doi": "10.1080/02640414.2019.1591575",
+      "pmid": "30893018",
+      "n_participants": 266,
+      "support": "A sample of 266 female athletes were included in analyses. For all females, mean FFMI was 16.9 ± 1.7 kg/m2, FFMI values ranged from 13.3 to 25.5 kg/m2. The XC athletes had the lowest FFMI (15.3 ± 0.96 kg/m2)."
+    },
+    "abe-1998": {
+      "type": "cohort",
+      "authors": [
+        "Abe T",
+        "Brechue WF",
+        "Fujita S",
+        "Brown JB"
+      ],
+      "year": 1998,
+      "title": "Gender differences in FFM accumulation and architectural characteristics of muscle",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "30",
+      "issue": "7",
+      "pages": "1066-1070",
+      "doi": "10.1097/00005768-199807000-00007",
+      "pmid": "9662674",
+      "n_participants": 51,
+      "support": "Skeletal muscle architectural characteristics and FFM were studied in 29 strength-trained female and 22 age- and height-matched male college athletes. Six female athletes had more than 60 kg of FFM, with the largest being 82.1 kg. We conclude that the theoretical upper limit of FFM accumulation and FFM-to-height ratio in women is greater than 80 kg and 0.44 kg.cm-1, respectively."
+    },
+    "mcdonald-womens-muscular-potential": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2017,
+      "title": "Women's Muscular Potential",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/women/womens-maximum-muscular-potential",
+      "retrieved": "2026-11-15",
+      "support": "Source of his working lean-mass-per-height figure for women, his reading of the 1998 outlier, the three-to-four-year estimate and the small monthly targets near the limit."
+    },
+    "johnson-1990": {
+      "type": "cohort",
+      "authors": [
+        "Johnson GO",
+        "Housh TJ",
+        "Powell DR",
+        "Ansorge CJ"
+      ],
+      "year": 1990,
+      "title": "A physiological comparison of female body builders and power lifters",
+      "journal": "The Journal of Sports Medicine and Physical Fitness",
+      "volume": "30",
+      "issue": "4",
+      "pages": "361-364",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2079841/",
+      "pmid": "2079841",
+      "n_participants": 20,
+      "support": "Ten female body builders and ten female power lifters, all training a minimum of two years. FPL had significantly greater body weight (68.60 vs 56.47 kg) and relative fat (21.47 vs 13.51%). No significant differences were found for fat-free weight, strength or anaerobic power and capacity."
+    },
+    "vanderploeg-2001": {
+      "type": "cohort",
+      "authors": [
+        "van der Ploeg G",
+        "Brooks A",
+        "Withers R",
+        "Dollman J",
+        "Leaney F",
+        "Chatterton B"
+      ],
+      "year": 2001,
+      "title": "Body composition changes in female bodybuilders during preparation for competition",
+      "journal": "European Journal of Clinical Nutrition",
+      "volume": "55",
+      "issue": "4",
+      "pages": "268-277",
+      "doi": "10.1038/sj.ejcn.1601154",
+      "pmid": "11360131",
+      "n_participants": 10,
+      "support": "Five competitive bodybuilders (167.3 cm; 66.38 kg; 18.3 %BF) and five athletic females (166.9 cm; 55.94 kg; 19.1 %BF). A combination of underwater weighing, deuterium dilution and DXA bone mineral enabled %BF to be determined by a four compartment model. A 5.80 kg body mass loss by the bodybuilders as they prepared for competition was primarily due to a reduction in fat mass (-4.42 kg) as opposed to fat-free mass (-1.38 kg)."
+    },
+    "hagmar-2009": {
+      "type": "cohort",
+      "authors": [
+        "Hagmar M",
+        "Berglund B",
+        "Brismar K",
+        "Hirschberg AL"
+      ],
+      "year": 2009,
+      "title": "Hyperandrogenism May Explain Reproductive Dysfunction in Olympic Athletes",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "41",
+      "issue": "6",
+      "pages": "1241-1248",
+      "doi": "10.1249/mss.0b013e318195a21a",
+      "pmid": "19461542",
+      "n_participants": 90,
+      "support": "Ninety Swedish female Olympic athletes. Of all the athletes, 47% were using hormonal contraception. Menstrual dysfunction was common (27%) among those not using HC and, particularly, in endurance athletes. The most common diagnosis associated with MD was polycystic ovary syndrome (PCOS) and not hypothalamic inhibition because of energy deficiency."
+    },
+    "rickenlund-2003": {
+      "type": "cohort",
+      "authors": [
+        "Rickenlund A",
+        "Carlström K",
+        "Ekblom BJ",
+        "Brismar TB",
+        "von Schoultz BO",
+        "Lindén Hirschberg A"
+      ],
+      "year": 2003,
+      "title": "Hyperandrogenicity is an alternative mechanism underlying oligomenorrhea or amenorrhea in female athletes and may improve physical performance",
+      "journal": "Fertility and Sterility",
+      "volume": "79",
+      "issue": "4",
+      "pages": "947-955",
+      "doi": "10.1016/s0015-0282(02)04850-1",
+      "pmid": "12749436",
+      "support": "A subgroup of 8 of 25 athletes with menstrual disturbances had significantly higher serum levels of free and total testosterone. The hyperandrogenic subgroup showed a more anabolic body composition, with higher total bone mineral density. We suggest that essential hyperandrogenism is an alternative mechanism underlying oligomenorrhea or amenorrhea in some female athletes."
+    },
+    "burke-2018": {
+      "type": "review",
+      "authors": [
+        "Burke LM",
+        "Lundy B",
+        "Fahrenholtz IL",
+        "Melin AK"
+      ],
+      "year": 2018,
+      "title": "Pitfalls of Conducting and Interpreting Estimates of Energy Availability in Free-Living Athletes",
+      "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "volume": "28",
+      "issue": "4",
+      "pages": "350-363",
+      "doi": "10.1123/ijsnem.2018-0142",
+      "pmid": "30029584",
+      "support": "Energy availability (EA) is defined as the energy available to support these basic physiological functions and good health once the energy cost of exercise is deducted from energy intake (EI), relative to an athlete's fat-free mass (FFM). Problems include the lack of a universal protocol for the calculation of EA, the resources needed to achieve estimates of each of the components of the equation, and the residual errors in these estimates. The lack of a clear definition of the value for EA that is considered low reflects problems around its measurement."
+    },
+    "loucks-2003": {
+      "type": "trial",
+      "authors": [
+        "Loucks AB",
+        "Thuma JR"
+      ],
+      "year": 2003,
+      "title": "Luteinizing Hormone Pulsatility Is Disrupted at a Threshold of Energy Availability in Regularly Menstruating Women",
+      "journal": "The Journal of Clinical Endocrinology & Metabolism",
+      "doi": "10.1210/jc.2002-020369",
+      "volume": "88",
+      "issue": "1",
+      "pages": "297-311",
+      "pmid": "12519869",
+      "n_participants": 29,
+      "support": "29 young women; luteinizing hormone pulsatility was unaffected at 30 kcal/kg LBM/day of energy availability, and disrupted below this threshold."
+    },
+    "desouza-2026": {
+      "type": "position",
+      "authors": [
+        "De Souza MJ",
+        "Williams NI",
+        "Misra M",
+        "Nattiv A",
+        "Joy E",
+        "Barrack M",
+        "Ricker EA",
+        "Gorrell S",
+        "Koltun KJ",
+        "O’Donnell E",
+        "Mallinson RJ",
+        "Salamunes ACC",
+        "Woodruff K",
+        "Fredericson M",
+        "Plessow F"
+      ],
+      "year": 2026,
+      "title": "2025 Update to the Female Athlete Triad Coalition Consensus Statement Part 1: State of the Science and Introduction of a New Adolescent Model",
+      "journal": "Sports Medicine",
+      "volume": "56",
+      "issue": "2",
+      "pages": "327-373",
+      "doi": "10.1007/s40279-025-02333-z",
+      "pmid": "41474493",
+      "support": "The Triad is defined as three inter-related components including energy status, reproductive function, and bone health. Full text: an EA of approximately 45 kcal/kg FFM/day has been associated with the healthy end of the Triad continuum; in this revised Consensus Statement, the utility of an EA threshold is less supported than in previous position stands; many women with ovulatory cycles had EA levels below 30 kcal/kg FFM/day, and women with menstrual disturbances had EA levels above 30."
+    },
+    "mountjoy-2023": {
+      "type": "position",
+      "authors": [
+        "Mountjoy M",
+        "Ackerman KE",
+        "Bailey DM",
+        "Burke LM",
+        "Constantini N",
+        "Hackney AC",
+        "Heikura IA",
+        "Melin A",
+        "Pensgaard AM",
+        "Stellingwerff T",
+        "Sundgot-Borgen JK",
+        "Torstveit MK",
+        "Jacobsen AU",
+        "Verhagen E",
+        "Budgett R",
+        "Engebretsen L",
+        "Erdener U"
+      ],
+      "year": 2023,
+      "title": "2023 International Olympic Committee’s (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs)",
+      "journal": "British Journal of Sports Medicine",
+      "doi": "10.1136/bjsports-2023-106994",
+      "volume": "57",
+      "issue": "17",
+      "pages": "1073-1098",
+      "pmid": "37752011",
+      "support": "2023 IOC consensus statement on Relative Energy Deficiency in Sport; health and performance outcomes of low energy availability in female and male athletes."
+    },
+    "mcdonald-body-fat-ea-hormones": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Body Fat Energy Availability or Hormones",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/women/body-fat-ea-hormones",
+      "retrieved": "2026-11-15",
+      "support": "Backs the account that a critical body fat level was first blamed for lost cycles and that energy availability turned out to be the cause; his threshold figures predate newer trials."
+    },
+    "lieberman-2018": {
+      "type": "rct",
+      "authors": [
+        "Lieberman JL",
+        "De Souza MJ",
+        "Wagstaff DA",
+        "Williams NI"
+      ],
+      "year": 2018,
+      "title": "Menstrual Disruption with Exercise Is Not Linked to an Energy Availability Threshold",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "50",
+      "issue": "3",
+      "pages": "551-561",
+      "doi": "10.1249/mss.0000000000001451",
+      "pmid": "29023359",
+      "n_participants": 35,
+      "support": "Thirty-five sedentary, ovulatory women age 18 to 24 yr completed a diet and exercise intervention over three menstrual cycles. The likelihood of a MD decreased by 9% for each unit increase in EA (odds ratio, 0.91; 95% confidence interval, 0.84-0.98). No specific value of EA emerged as a threshold below which MD were induced."
+    },
+    "williams-2026": {
+      "type": "position",
+      "authors": [
+        "Williams NI",
+        "De Souza MJ",
+        "Misra M",
+        "Nattiv A",
+        "Joy E",
+        "Barrack M",
+        "Ricker EA",
+        "Gorrell S",
+        "Koltun KJ",
+        "O’Donnell E",
+        "Mallinson RJ",
+        "Salamunes ACC",
+        "Woodruff K",
+        "Fredericson M",
+        "Plessow F"
+      ],
+      "year": 2026,
+      "title": "2025 Update to the Female Athlete Triad Coalition Consensus Statement Part 2: Clinical Guidelines for Screening, Diagnosis, Treatment, and Return to Play for Adolescents and Adults",
+      "journal": "Sports Medicine",
+      "volume": "56",
+      "issue": "2",
+      "pages": "375-427",
+      "doi": "10.1007/s40279-025-02332-0",
+      "pmid": "41474492",
+      "support": "Recent research supports the adoption of revised criteria for defining and treating energy deficiency, moving away from the concept of an energy-availability threshold. Energy deficiency-induced menstrual disturbances can be reversed with a moderate increase in food intake and modest weight gain, but restoration of menses alone is not associated with high rates of ovulation or increased ovarian steroid levels until multiple consecutive normal length menstrual cycles are achieved. Full text: an increase in energy intake between 300 and 600 kcal/day will likely initiate reproductive recovery; combined oral contraceptive pills may mask spontaneous menstrual resumption."
+    },
+    "gordon-2017": {
+      "type": "guideline",
+      "authors": [
+        "Gordon CM",
+        "Ackerman KE",
+        "Berga SL",
+        "Kaplan JR",
+        "Mastorakos G",
+        "Misra M",
+        "Murad MH",
+        "Santoro NF",
+        "Warren MP"
+      ],
+      "year": 2017,
+      "title": "Functional Hypothalamic Amenorrhea: An Endocrine Society Clinical Practice Guideline",
+      "journal": "The Journal of Clinical Endocrinology & Metabolism",
+      "volume": "102",
+      "issue": "5",
+      "pages": "1413-1439",
+      "doi": "10.1210/jc.2017-00131",
+      "pmid": "28368518",
+      "support": "FHA is a form of chronic anovulation, not due to identifiable organic causes, but often associated with stress, weight loss, excessive exercise, or a combination thereof. Investigations should include assessment of systemic and endocrinologic etiologies, as FHA is a diagnosis of exclusion. A multidisciplinary treatment approach is necessary, including medical, dietary, and mental health support."
+    },
+    "desouza-2021": {
+      "type": "rct",
+      "authors": [
+        "De Souza MJ",
+        "Mallinson RJ",
+        "Strock NCA",
+        "Koltun KJ",
+        "Olmsted MP",
+        "Ricker EA",
+        "Scheid JL",
+        "Allaway HC",
+        "Mallinson DJ",
+        "Kuruppumullage Don P",
+        "Williams NI"
+      ],
+      "year": 2021,
+      "title": "Randomised controlled trial of the effects of increased energy intake on menstrual recovery in exercising women with menstrual disturbances: the ‘REFUEL’ study",
+      "journal": "Human Reproduction",
+      "volume": "36",
+      "issue": "8",
+      "pages": "2285-2297",
+      "doi": "10.1093/humrep/deab149",
+      "pmid": "34164675",
+      "n_participants": 76,
+      "support": "A modest increase in daily energy intake (330 ± 65 kcal/day; 18 ± 4%) is sufficient to induce menstrual recovery in exercising women with Oligo/Amen. 12 months of increased energy intake in 76 exercising women with menstrual disturbances. The Oligo/Amen + Cal group was more likely to experience menses during the intervention than the control group (hazard ratio = 1.91 [1.27, 2.89])."
+    },
+    "mcdonald-menstrual-cycle-energy-balance": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "The Menstrual Cycle and Determinants of Energy Intake",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/research/menstrual-cycle-energy-balance",
+      "retrieved": "2026-11-15",
+      "support": "His walk through a 2007 review of appetite and expenditure across the cycle; source of the older single-study ranges, his advice to log your own cycle and to place diet flexibility late in the luteal phase."
+    },
+    "tucker-2025": {
+      "type": "meta-analysis",
+      "authors": [
+        "Tucker JAL",
+        "McCarthy SF",
+        "Bornath DPD",
+        "Khoja JS",
+        "Hazell TJ"
+      ],
+      "year": 2025,
+      "title": "The Effect of the Menstrual Cycle on Energy Intake: A Systematic Review and Meta-analysis",
+      "journal": "Nutrition Reviews",
+      "volume": "83",
+      "issue": "3",
+      "pages": "e866-e876",
+      "doi": "10.1093/nutrit/nuae093",
+      "pmid": "39008822",
+      "n_participants": 330,
+      "support": "Fifteen datasets were included consisting of 330 female participants with a mean age of 26 ± 4 years and mean BMI of 22.4 ± 2.3 kg/m2. Overall, there was a statistically significant difference (standardized mean difference = 0.69; P = .039) with increased energy intake in the LP compared with the FP (crude 168 kcal/d average difference between phases). However, there were repeated methodological inconsistencies."
+    },
+    "benton-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Benton MJ",
+        "Hutchins AM",
+        "Dawes JJ"
+      ],
+      "year": 2020,
+      "title": "Effect of menstrual cycle on resting metabolism: A systematic review and meta-analysis",
+      "journal": "PLOS ONE",
+      "volume": "15",
+      "issue": "7",
+      "pages": "e0236025",
+      "doi": "10.1371/journal.pone.0236025",
+      "pmid": "32658929",
+      "n_studies": 26,
+      "n_participants": 318,
+      "support": "26 studies involving 318 women were included in the meta-analysis. Overall, there was a small but significant effect favoring increased RMR in the luteal phase (ES = 0.33; 95% CI = 0.17, 0.49). In more recent studies published since 2000, the effect of menstrual phase was reduced and not statistically significant (ES = 0.23; 95% CI = -0.00, 0.47; p = 0.055). Sample sizes were small and studies did not report control of potential confounders."
+    },
+    "mcnulty-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "McNulty KL",
+        "Elliott-Sale KJ",
+        "Dolan E",
+        "Swinton PA",
+        "Ansdell P",
+        "Goodall S",
+        "Thomas K",
+        "Hicks KM"
+      ],
+      "year": 2020,
+      "title": "The Effects of Menstrual Cycle Phase on Exercise Performance in Eumenorrheic Women: A Systematic Review and Meta-Analysis",
+      "journal": "Sports Medicine",
+      "volume": "50",
+      "issue": "10",
+      "pages": "1813-1827",
+      "doi": "10.1007/s40279-020-01319-3",
+      "pmid": "32661839",
+      "n_studies": 78,
+      "support": "Of the 78 included studies, data from 51 studies were eligible for the initial pairwise meta-analysis. The model indicated a trivial effect for both endurance- and strength-based outcomes, with reduced exercise performance observed in the early follicular phase (ES0.5 = -0.06 [95% CrI: -0.16 to 0.04]). The largest effect was identified between the early follicular and the late follicular phases (ES0.5 = -0.14). The quality of evidence was classified as low. General guidelines on exercise performance across the MC cannot be formed; rather, a personalised approach should be taken."
+    },
+    "niering-2024": {
+      "type": "meta-analysis",
+      "authors": [
+        "Niering M",
+        "Wolf-Belala N",
+        "Seifert J",
+        "Tovar O",
+        "Coldewey J",
+        "Kuranda J",
+        "Muehlbauer T"
+      ],
+      "year": 2024,
+      "title": "The Influence of Menstrual Cycle Phases on Maximal Strength Performance in Healthy Female Adults: A Systematic Review with Meta-Analysis",
+      "journal": "Sports",
+      "volume": "12",
+      "issue": "1",
+      "pages": "31",
+      "doi": "10.3390/sports12010031",
+      "pmid": "38251305",
+      "n_studies": 22,
+      "n_participants": 433,
+      "support": "22 studies met the selection criteria, with a total of 433 subjects. Medium effects (SMD = 0.60; seven studies) for isometric maximal strength in favor of the late follicular phase, small effects (SMD = 0.39; five studies) for isokinetic maximal strength in favor of the ovulation phase, and small effects (SMD = 0.14; three studies) for dynamic maximal strength in favor of the late follicular phase. The results indicate that the early follicular phase is unfavorable for all strength classes."
+    },
+    "davidsen-2007": {
+      "type": "review",
+      "authors": [
+        "Davidsen L",
+        "Vistisen B",
+        "Astrup A"
+      ],
+      "year": 2007,
+      "title": "Impact of the menstrual cycle on determinants of energy balance: a putative role in weight loss attempts",
+      "journal": "International Journal of Obesity",
+      "volume": "31",
+      "issue": "12",
+      "pages": "1777-1785",
+      "doi": "10.1038/sj.ijo.0803699",
+      "pmid": "17684511",
+      "support": "In the luteal phase of the menstrual cycle it appears that women's energy intake and energy expenditure are increased and they experience more frequent cravings for foods, particularly those high in carbohydrate and fat, than during the follicular phase. Studies are needed to assess the weight loss outcome of tailoring dietary recommendations and the degree of energy restriction to each menstrual phase."
+    },
+    "white-2011": {
+      "type": "cohort",
+      "authors": [
+        "White CP",
+        "Hitchcock CL",
+        "Vigna YM",
+        "Prior JC"
+      ],
+      "year": 2011,
+      "title": "Fluid Retention over the Menstrual Cycle: 1-Year Data from the Prospective Ovulation Cohort",
+      "journal": "Obstetrics and Gynecology International",
+      "doi": "10.1155/2011/138451",
+      "volume": "2011",
+      "pages": "1-7",
+      "pmid": "21845193",
+      "n_participants": 62,
+      "support": "765 menstrual cycles in 62 healthy women; fluid retention scores peaked on the first day of menstrual flow and were lowest in the mid-follicular period."
+    },
+    "blagrove-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Blagrove RC",
+        "Bruinvels G",
+        "Pedlar CR"
+      ],
+      "year": 2020,
+      "title": "Variations in strength-related measures during the menstrual cycle in eumenorrheic women: A systematic review and meta-analysis",
+      "journal": "Journal of Science and Medicine in Sport",
+      "volume": "23",
+      "issue": "12",
+      "pages": "1220-1227",
+      "doi": "10.1016/j.jsams.2020.04.022",
+      "pmid": "32456980",
+      "n_studies": 21,
+      "support": "21 studies met the criteria for inclusion. Non-significant and small or trivial effect sizes (p≥0.26, Hedges g≤0.35) were identified for all strength-related variables in each comparison between phases. Strength-related measures appear to be minimally altered by the fluctuations in ovarian sex hormones that occur during the menstrual cycle. This finding should be interpreted with caution due to the methodological shortcomings identified by the quality assessment."
+    },
+    "colenso-semple-2023": {
+      "type": "systematic-review",
+      "authors": [
+        "Colenso-Semple LM",
+        "D'Souza AC",
+        "Elliott-Sale KJ",
+        "Phillips SM"
+      ],
+      "year": 2023,
+      "title": "Current evidence shows no influence of women's menstrual cycle phase on acute strength performance or adaptations to resistance exercise training",
+      "journal": "Frontiers in Sports and Active Living",
+      "volume": "5",
+      "doi": "10.3389/fspor.2023.1054542",
+      "pmid": "37033884",
+      "support": "Umbrella review of meta-analyses and systematic reviews. We observed highly variable findings among the published reviews. We noted a pattern of poor and inconsistent methodological practices in the literature. In our opinion, it is premature to conclude that short-term fluctuations in reproductive hormones appreciably influence acute exercise performance or longer-term strength or hypertrophic adaptations to RET."
+    },
+    "mcdonald-research-on-women": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2016,
+      "title": "Research on Women - Why Isn't There More?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women",
+      "retrieved": "2026-11-15",
+      "support": "Backs the reasons he gives for the thin research base, the carbohydrate-loading case as a body-size effect, the smaller calorie budget point and the note that diet research mostly enrols women."
+    },
+    "geiker-2016": {
+      "type": "rct",
+      "authors": [
+        "Geiker NR",
+        "Ritz C",
+        "Pedersen SD",
+        "Larsen TM",
+        "Hill JO",
+        "Astrup A"
+      ],
+      "year": 2016,
+      "title": "A weight-loss program adapted to the menstrual cycle increases weight loss in healthy, overweight, premenopausal women: a 6-mo randomized controlled trial",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "104",
+      "issue": "1",
+      "pages": "15-20",
+      "doi": "10.3945/ajcn.115.126565",
+      "pmid": "27281304",
+      "n_participants": 60,
+      "support": "A total of 60 healthy, overweight, premenopausal women were included in a 6-mo weight-loss program in which each subject consumed a diet of 1600 kcal/d. Thirty-one women (19 Menstralean and 12 control women) completed the study. In an intention-to-treat analysis, the Menstralean group did not achieve a clinically significant weight loss compared with that of the control group (P = 0.61). In per-protocol analyses, a more-pronounced weight loss of 4.3 ± 1.4 kg was shown in adherent Menstralean subjects than in the control group."
+    },
+    "elliott-sale-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Elliott-Sale KJ",
+        "McNulty KL",
+        "Ansdell P",
+        "Goodall S",
+        "Hicks KM",
+        "Thomas K",
+        "Swinton PA",
+        "Dolan E"
+      ],
+      "year": 2020,
+      "title": "The Effects of Oral Contraceptives on Exercise Performance in Women: A Systematic Review and Meta-analysis",
+      "journal": "Sports Medicine",
+      "volume": "50",
+      "issue": "10",
+      "pages": "1785-1812",
+      "doi": "10.1007/s40279-020-01317-5",
+      "pmid": "32666247",
+      "n_studies": 42,
+      "n_participants": 590,
+      "support": "42 studies and 590 participants were included. Most studies (83%) were graded as moderate, low or very low quality. OCP use might result in slightly inferior exercise performance on average when compared to naturally menstruating women, although any group-level effect is most likely to be trivial. The current evidence does not warrant general guidance on OCP use compared with non-use. Exercise performance was consistent across the OCP cycle."
+    },
+    "nolan-2024": {
+      "type": "meta-analysis",
+      "authors": [
+        "Nolan D",
+        "McNulty KL",
+        "Manninen M",
+        "Egan B"
+      ],
+      "year": 2024,
+      "title": "The Effect of Hormonal Contraceptive Use on Skeletal Muscle Hypertrophy, Power and Strength Adaptations to Resistance Exercise Training: A Systematic Review and Multilevel Meta-analysis",
+      "journal": "Sports Medicine",
+      "volume": "54",
+      "issue": "1",
+      "pages": "105-125",
+      "doi": "10.1007/s40279-023-01911-3",
+      "pmid": "37755666",
+      "n_studies": 8,
+      "n_participants": 325,
+      "support": "8 articles (54 effects and 325 participants) met the inclusion criteria. All included studies investigated oral contraceptive pills, with no study including participants using other forms of HC. OCP use does not have a significant effect on hypertrophy (0.01, 95% CI [-0.11, 0.13]), power (-0.04) or strength (0.10, 95% CI [-0.08, 0.28]). There is no evidence-based rationale to advocate for or against the use of OCPs in females partaking in resistance exercise training."
+    },
+    "gallo-2014": {
+      "type": "systematic-review",
+      "authors": [
+        "Gallo MF",
+        "Lopez LM",
+        "Grimes DA",
+        "Carayon F",
+        "Schulz KF",
+        "Helmerhorst FM"
+      ],
+      "year": 2014,
+      "title": "Combination contraceptives: effects on weight",
+      "journal": "Cochrane Database of Systematic Reviews",
+      "volume": "2014",
+      "issue": "1",
+      "doi": "10.1002/14651858.cd003987.pub5",
+      "pmid": "24477630",
+      "n_studies": 49,
+      "support": "We found 49 trials that met our inclusion criteria. The four trials with a placebo or no intervention group did not find evidence supporting a causal association between combination oral contraceptives or a combination skin patch and weight change. Available evidence was insufficient to determine the effect of combination contraceptives on weight, but no large effect was evident."
+    },
+    "lopez-2016": {
+      "type": "systematic-review",
+      "authors": [
+        "Lopez LM",
+        "Ramesh S",
+        "Chen M",
+        "Edelman A",
+        "Otterness C",
+        "Trussell J",
+        "Helmerhorst FM"
+      ],
+      "year": 2016,
+      "title": "Progestin-only contraceptives: effects on weight",
+      "journal": "Cochrane Database of Systematic Reviews",
+      "volume": "2016",
+      "issue": "8",
+      "doi": "10.1002/14651858.cd008815.pub4",
+      "pmid": "27567593",
+      "n_studies": 22,
+      "n_participants": 11450,
+      "support": "We found 22 eligible studies that included a total of 11,450 women. We considered the overall quality of evidence to be low. These 22 studies showed limited evidence of change in weight or body composition with use of POCs. Mean weight gain at 6 or 12 months was less than 2 kg (4.4 lb) for most studies."
+    },
+    "loucks-1998": {
+      "type": "trial",
+      "authors": [
+        "Loucks AB",
+        "Verdun M",
+        "Heath EM",
+        "Law T Sr, Thuma JR (technical assistance)"
+      ],
+      "year": 1998,
+      "title": "Low energy availability, not stress of exercise, alters LH pulsatility in exercising women",
+      "journal": "Journal of Applied Physiology",
+      "volume": "84",
+      "issue": "1",
+      "pages": "37-46",
+      "doi": "10.1152/jappl.1998.84.1.37",
+      "pmid": "9451615",
+      "n_participants": 9,
+      "support": "Nine young, habitually sedentary, regularly menstruating women after 4 days of intense exercise, with energy availabilities set at 45 and 10 kcal/kg LBM/day. In the exercising women, low energy availability reduced LH pulse frequency by 10%. The stress of exercise neither reduced LH pulse frequency nor increased LH pulse amplitude (all P > 0.4). These results contradict the hypothesis that LH pulsatility is disrupted by exercise stress and suggest that LH pulsatility in women depends on energy availability."
+    },
+    "mcdonald-history-women-sport-2": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2018,
+      "title": "A History of Women in Sport: Part 2",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/women/history-women-sport-2",
+      "retrieved": "2026-11-15",
+      "support": "His account of how late strength sports opened to women, that under-eating and not training explains lost cycles, and that muscular elite athletes reflect selection, not an effect of sport."
+    },
+    "teixeira-2018": {
+      "type": "meta-analysis",
+      "authors": [
+        "Teixeira RV",
+        "Colla C",
+        "Sbruzzi G",
+        "Mallmann A",
+        "Paiva LL"
+      ],
+      "year": 2018,
+      "title": "Prevalence of urinary incontinence in female athletes: a systematic review with meta-analysis",
+      "journal": "International Urogynecology Journal",
+      "volume": "29",
+      "issue": "12",
+      "pages": "1717-1725",
+      "doi": "10.1007/s00192-018-3651-1",
+      "pmid": "29654349",
+      "n_studies": 8,
+      "support": "Eight studies met the eligibility criteria. Meta-analysis showed a 36% prevalence of UI in female athletes in different sports, and compared with sedentary women, the athletes had a 177% higher risk of presenting with UI."
+    },
+    "wikander-2021": {
+      "type": "cohort",
+      "authors": [
+        "Wikander L",
+        "Kirshbaum MN",
+        "Waheed N",
+        "Gahreman DE"
+      ],
+      "year": 2021,
+      "title": "Urinary Incontinence in Competitive Women Powerlifters: A Cross-Sectional Survey",
+      "journal": "Sports Medicine - Open",
+      "volume": "7",
+      "issue": "1",
+      "doi": "10.1186/s40798-021-00387-7",
+      "pmid": "34874496",
+      "n_participants": 480,
+      "support": "Online survey completed by 480 competitive women powerlifters aged between 20 and 71 years. 43.9% of women had experienced UI within the three months prior. The deadlift was the most likely, and the bench-press the least likely exercise to provoke UI. ISI scores were positively correlated with parity, age, competition total and body mass index. There was no significant correlation between ISI and years strength training. Women who had undergone a pelvic floor examination or were confident in correctly performing pelvic floor exercises experienced less severe UI."
+    },
+    "cowley-2021": {
+      "type": "other",
+      "authors": [
+        "Cowley ES",
+        "Olenick AA",
+        "McNulty KL",
+        "Ross EZ"
+      ],
+      "year": 2021,
+      "title": "“Invisible Sportswomen”: The Sex Data Gap in Sport and Exercise Science Research",
+      "journal": "Women in Sport and Physical Activity Journal",
+      "volume": "29",
+      "issue": "2",
+      "pages": "146-151",
+      "doi": "10.1123/wspaj.2021-0028",
+      "support": "About 5,261 publications and 12,511,386 participants were included in the analyses. Sixty-three percentage of publications included both males and females, 31% included males only, and 6% included females only. A total of 8,253,236 (66%) were male and 4,254,445 (34%) were female. Females remain significantly underrepresented within sport and exercise science research."
+    },
+    "costello-2014": {
+      "type": "other",
+      "authors": [
+        "Costello JT",
+        "Bieuzen F",
+        "Bleakley CM"
+      ],
+      "year": 2014,
+      "title": "Where are all the female participants in Sports and Exercise Medicine research?",
+      "journal": "European Journal of Sport Science",
+      "volume": "14",
+      "issue": "8",
+      "pages": "847-851",
+      "doi": "10.1080/17461391.2014.911354",
+      "pmid": "24766579",
+      "support": "Data were extracted from 1382 articles involving a total of 6,076,580 participants. A total of 2,366,968 (39%) participants were female and 3,709,612 (61%) were male. The average percentage of female participants per article across the journals ranged from 35% to 37%."
+    },
+    "ose-2025": {
+      "type": "systematic-review",
+      "authors": [
+        "Ose BM",
+        "Eisenhauer J",
+        "Roepe I",
+        "Herda AA",
+        "Vopat BG",
+        "Vopat LM"
+      ],
+      "year": 2025,
+      "title": "Where Are All the Female Participants in Sports and Exercise Medicine Research? A Decade Later",
+      "journal": "The American Journal of Sports Medicine",
+      "volume": "53",
+      "issue": "8",
+      "pages": "2022-2028",
+      "doi": "10.1177/03635465241278350",
+      "pmid": "39780766",
+      "n_studies": 1441,
+      "support": "A total of 1441 studies and 40,152,860 participants were included, 17,648,509 (43.95%) female. 103 (7.15%) studies included only female participants compared with 268 (18.6%) male-only studies. A total of 66 (5.6%) studies included menstrual-status considerations in their study design."
+    },
+    "tarnopolsky-1995": {
+      "type": "trial",
+      "authors": [
+        "Tarnopolsky MA",
+        "Atkinson SA",
+        "Phillips SM",
+        "MacDougall JD"
+      ],
+      "year": 1995,
+      "title": "Carbohydrate loading and metabolism during exercise in men and women",
+      "journal": "Journal of Applied Physiology",
+      "volume": "78",
+      "issue": "4",
+      "pages": "1360-1368",
+      "doi": "10.1152/jappl.1995.78.4.1360",
+      "pmid": "7615443",
+      "n_participants": 15,
+      "support": "Similarly trained male (n = 7) and female (n = 8) endurance athletes; dietary carbohydrate raised from 55-60 to 75% of energy intake for 4 days. The men increased muscle glycogen concentration by 41% and had a corresponding increase in performance time (45%), whereas the women did not increase glycogen concentration (0%) or performance time (5%)."
+    },
+    "tarnopolsky-2001": {
+      "type": "trial",
+      "authors": [
+        "Tarnopolsky MA",
+        "Zawada C",
+        "Richmond LB",
+        "Carter S",
+        "Shearer J",
+        "Graham T",
+        "Phillips SM"
+      ],
+      "year": 2001,
+      "title": "Gender differences in carbohydrate loading are related to energy intake",
+      "journal": "Journal of Applied Physiology",
+      "volume": "91",
+      "issue": "1",
+      "pages": "225-230",
+      "doi": "10.1152/jappl.2001.91.1.225",
+      "pmid": "11408434",
+      "n_participants": 12,
+      "support": "Well-trained men (n = 6) and women (n = 6) on three diets: habitual; high carbohydrate (75%); and extra energy + CHO (about 34% more). Total glycogen concentration was higher for the men on the CHO and CHO + E trials compared with Hab, whereas women increased only on the CHO + E trial. There were no gender differences in hexokinase activity. A low energy intake may explain the previously reported lower capacity for women to glycogen load compared with men."
+    },
+    "pagoto-2012": {
+      "type": "systematic-review",
+      "authors": [
+        "Pagoto SL",
+        "Schneider KL",
+        "Oleski JL",
+        "Luciani JM",
+        "Bodenlos JS",
+        "Whited MC"
+      ],
+      "year": 2012,
+      "title": "Male Inclusion in Randomized Controlled Trials of Lifestyle Weight Loss Interventions",
+      "journal": "Obesity",
+      "volume": "20",
+      "issue": "6",
+      "pages": "1234-1239",
+      "doi": "10.1038/oby.2011.140",
+      "pmid": "21633403",
+      "n_studies": 244,
+      "n_participants": 95207,
+      "support": "Randomized controlled trials of lifestyle weight loss interventions (N = 244 studies with a total of 95,207 participants) published 1999-2009. Samples were on average 27% male vs. 73% female. About 32% of trials used exclusively female samples, whereas only 5% used exclusively male samples."
+    },
+    "mcdonald-history-women-sport": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2018,
+      "title": "A History of Women in Sport",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/women/a-history-of-women-in-sport",
+      "retrieved": "2026-11-15",
+      "support": "His account that early medical objections to women's sport were assertions never tested, and that examinations of sportswomen at the time found no harm."
+    },
+    "gardner-2007": {
+      "type": "rct",
+      "authors": [
+        "Gardner CD",
+        "Kiazand A",
+        "Alhassan S",
+        "Kim S",
+        "Stafford RS",
+        "Balise RR",
+        "Kraemer HC",
+        "King AC"
+      ],
+      "year": 2007,
+      "title": "Comparison of the Atkins, Zone, Ornish, and LEARN Diets for Change in Weight and Related Risk Factors Among Overweight Premenopausal Women",
+      "journal": "JAMA",
+      "volume": "297",
+      "issue": "9",
+      "pages": "969",
+      "doi": "10.1001/jama.297.9.969",
+      "pmid": "17341711",
+      "n_participants": 311,
+      "support": "Twelve-month randomized trial among 311 free-living, overweight/obese (body mass index, 27-40) nondiabetic, premenopausal women assigned to Atkins (n = 77), Zone (n = 79), LEARN (n = 79), or Ornish (n = 76) diets, with weekly instruction for 2 months, then 10-month follow-up. Mean 12-month weight loss: Atkins, -4.7 kg (95% CI, -6.3 to -3.1 kg), Zone, -1.6 kg (-2.8 to -0.4 kg), LEARN, -2.6 kg (-3.8 to -1.3 kg), and Ornish, -2.2 kg (-3.6 to -0.8 kg). Weight loss was not statistically different among the Zone, LEARN, and Ornish groups. Erratum (JAMA 298:178) checked: corrected LEARN and Ornish values match these."
+    },
+    "mcdonald-comparison-of-diets": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Comparison of the Atkins, Zone, Ornish and LEARN Diets",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women",
+      "retrieved": "2026-11-15",
+      "support": "His critique of reading the A TO Z trial as a metabolic advantage: self-reported intake, early water loss, the stall after the class period, small absolute losses, and low-carb as a fit for insulin resistance."
+    },
+    "hall-2017": {
+      "type": "meta-analysis",
+      "authors": [
+        "Hall KD",
+        "Guo J"
+      ],
+      "year": 2017,
+      "title": "Obesity Energetics: Body Weight Regulation and the Effects of Diet Composition",
+      "journal": "Gastroenterology",
+      "volume": "152",
+      "issue": "7",
+      "pages": "1718-1727.e3",
+      "doi": "10.1053/j.gastro.2017.01.052",
+      "pmid": "28193517",
+      "n_studies": 32,
+      "support": "While low-carbohydrate diets have been suggested to partially subvert these processes by increasing energy expenditure and promoting fat loss, our meta-analysis of 32 controlled feeding studies with isocaloric substitution of carbohydrate for fat found that both energy expenditure (26 kcal/d; P <.0001) and fat loss (16 g/d; P <.0001) were greater with lower fat diets."
+    },
+    "gardner-2018": {
+      "type": "rct",
+      "authors": [
+        "Gardner CD",
+        "Trepanowski JF",
+        "Del Gobbo LC",
+        "Hauser ME",
+        "Rigdon J",
+        "Ioannidis JPA",
+        "Desai M",
+        "King AC"
+      ],
+      "year": 2018,
+      "title": "Effect of Low-Fat vs Low-Carbohydrate Diet on 12-Month Weight Loss in Overweight Adults and the Association With Genotype Pattern or Insulin Secretion",
+      "journal": "JAMA",
+      "doi": "10.1001/jama.2018.0245",
+      "volume": "319",
+      "issue": "7",
+      "pages": "667",
+      "pmid": "29466592",
+      "n_participants": 609,
+      "support": "609 adults; weight change at 12 months was -5.3 kg for low-fat vs -6.0 kg for low-carbohydrate (difference 0.7 kg, 95% CI -0.2 to 1.6)."
+    },
+    "alhassan-2008": {
+      "type": "trial",
+      "authors": [
+        "Alhassan S",
+        "Kim S",
+        "Bersamin A",
+        "King AC",
+        "Gardner CD"
+      ],
+      "year": 2008,
+      "title": "Dietary adherence and weight loss success among overweight women: results from the A TO Z weight loss study",
+      "journal": "International Journal of Obesity",
+      "volume": "32",
+      "issue": "6",
+      "pages": "985-991",
+      "doi": "10.1038/ijo.2008.8",
+      "pmid": "18268511",
+      "n_participants": 181,
+      "support": "Secondary analysis using data from 181 free-living overweight/obese women in the A TO Z study (Atkins, Zone and Ornish). Within each diet group, adherence score was significantly correlated with 12-month weight change (r = 0.42, 0.34 and 0.38). Twelve-month weight change in the most vs least adherent tertiles was -8.3 vs -1.9 kg (Atkins); -3.7 vs -0.4 kg (Zone) and -6.5 vs -1.7 kg (Ornish). Strategies to increase adherence may deserve more emphasis than the specific macronutrient composition of the weight loss diet itself."
+    },
+    "mcclain-2013": {
+      "type": "trial",
+      "authors": [
+        "McClain AD",
+        "Otten JJ",
+        "Hekler EB",
+        "Gardner CD"
+      ],
+      "year": 2013,
+      "title": "Adherence to a low-fat vs. low-carbohydrate diet differs by insulin resistance status",
+      "journal": "Diabetes, Obesity and Metabolism",
+      "volume": "15",
+      "issue": "1",
+      "pages": "87-90",
+      "doi": "10.1111/j.1463-1326.2012.01668.x",
+      "pmid": "22831182",
+      "n_participants": 81,
+      "support": "Secondary analyses among 81 free-living, overweight/obese women. IR participants were less likely to adhere and lose weight on a LF-diet compared to insulin-sensitive participants assigned to the same diet. There were no significant differences between IR and IS participants assigned to LC-diet in relative adherence or weight loss."
+    },
+    "mcdonald-fat-loss-supplements": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Do Fat Loss Supplements Work?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women",
+      "retrieved": "2026-11-15",
+      "support": "His view that few fat-loss compounds work, that effects are small and none is required, his warnings on stimulant misuse and yohimbine, and the note on slower caffeine clearance in women on the pill."
+    },
+    "zsiboras-2018": {
+      "type": "meta-analysis",
+      "authors": [
+        "Zsiborás C",
+        "Mátics R",
+        "Hegyi P",
+        "Balaskó M",
+        "Pétervári E",
+        "Szabó I",
+        "Sarlós P",
+        "Mikó A",
+        "Tenk J",
+        "Rostás I",
+        "Pécsi D",
+        "Garami A",
+        "Rumbus Z",
+        "Huszár O",
+        "Solymár M"
+      ],
+      "year": 2018,
+      "title": "Capsaicin and capsiate could be appropriate agents for treatment of obesity: A meta-analysis of human studies",
+      "journal": "Critical Reviews in Food Science and Nutrition",
+      "volume": "58",
+      "issue": "9",
+      "pages": "1419-1427",
+      "doi": "10.1080/10408398.2016.1262324",
+      "pmid": "28001433",
+      "n_studies": 9,
+      "support": "Of the 627 trials identified, 9 provided results suitable to be included in analysis. After ingestion of capsaicin or capsinoids the energy expenditure increased (245 kJ/day, 58.56 kcal/day, p = 0.030). Studies with mean BMI of the participants below 25 kg/m2 failed to report any effect on the energy expenditure."
+    },
+    "jurgens-2012": {
+      "type": "systematic-review",
+      "authors": [
+        "Jurgens TM",
+        "Whelan AM",
+        "Killian L",
+        "Doucette S",
+        "Kirk S",
+        "Foy E"
+      ],
+      "year": 2012,
+      "title": "Green tea for weight loss and weight maintenance in overweight or obese adults",
+      "journal": "Cochrane Database of Systematic Reviews",
+      "volume": "2012",
+      "issue": "12",
+      "doi": "10.1002/14651858.cd008650.pub2",
+      "pmid": "23235664",
+      "support": "Green tea preparations appear to induce a small, statistically non-significant weight loss in overweight or obese adults. Because the amount of weight loss is small, it is not likely to be clinically important. Green tea had no significant effect on the maintenance of weight loss."
+    },
+    "tabrizi-2019": {
+      "type": "meta-analysis",
+      "authors": [
+        "Tabrizi R",
+        "Saneei P",
+        "Lankarani KB",
+        "Akbari M",
+        "Kolahdooz F",
+        "Esmaillzadeh A",
+        "Nadi-Ravandi S",
+        "Mazoochi M",
+        "Asemi Z"
+      ],
+      "year": 2019,
+      "title": "The effects of caffeine intake on weight loss: a systematic review and dos-response meta-analysis of randomized controlled trials",
+      "journal": "Critical Reviews in Food Science and Nutrition",
+      "volume": "59",
+      "issue": "16",
+      "pages": "2688-2696",
+      "doi": "10.1080/10408398.2018.1507996",
+      "pmid": "30335479",
+      "n_studies": 13,
+      "n_participants": 606,
+      "support": "Thirteen RCTs with 606 participants were included in the meta-analyses. For every doubling in caffeine intake, the mean reduction in weight, BMI, and fat mass increased, corresponding to 22, 17, and 28 percent, respectively (I2 above 90%). Caffeine intake might promote weight, BMI and body fat reduction."
+    },
+    "mielgo-ayuso-2014": {
+      "type": "rct",
+      "authors": [
+        "Mielgo-Ayuso J",
+        "Barrenechea L",
+        "Alcorta P",
+        "Larrarte E",
+        "Margareto J",
+        "Labayen I"
+      ],
+      "year": 2014,
+      "title": "Effects of dietary supplementation with epigallocatechin-3-gallate on weight loss, energy homeostasis, cardiometabolic risk factors and liver function in obese women: randomised, double-blind, placebo-controlled clinical trial",
+      "journal": "British Journal of Nutrition",
+      "volume": "111",
+      "issue": "7",
+      "pages": "1263-1271",
+      "doi": "10.1017/s0007114513003784",
+      "pmid": "24299662",
+      "n_participants": 83,
+      "support": "Eighty-three obese pre-menopausal women consumed 300 mg/d of EGCG or placebo. We did not find any significant difference in the changes in body weight (-0.3 kg, 95% CI -5.0, 4.3), fat mass (-0.7 kg, 95% CI -3.5, 2.1). Dietary supplementation with 300 mg/d of EGCG for 12 weeks did not enhance energy-restricted diet-induced adiposity reductions."
+    },
+    "dostal-2016": {
+      "type": "rct",
+      "authors": [
+        "Dostal AM",
+        "Arikawa A",
+        "Espejo L",
+        "Kurzer MS"
+      ],
+      "year": 2016,
+      "title": "Long-Term Supplementation of Green Tea Extract Does Not Modify Adiposity or Bone Mineral Density in a Randomized Trial of Overweight and Obese Postmenopausal Women",
+      "journal": "The Journal of Nutrition",
+      "volume": "146",
+      "issue": "2",
+      "pages": "256-264",
+      "doi": "10.3945/jn.115.219238",
+      "pmid": "26701796",
+      "n_participants": 121,
+      "support": "12-mo randomized, double-blind, placebo-controlled trial in 937 postmenopausal women assigned to GTE containing 843 mg EGCG or placebo; this substudy was conducted in 121 overweight/obese participants. There were no differences in changes in BMI, total fat mass (-0.30 compared with -0.12 kg; P = 0.40), percentage of body fat (P = 0.99), or BMD over 12 mo."
+    },
+    "yu-2017": {
+      "type": "rct",
+      "authors": [
+        "Yu Z",
+        "Samavat H",
+        "Dostal AM",
+        "Wang R",
+        "Torkelson CJ",
+        "Yang CS",
+        "Butler LM",
+        "Kensler TW",
+        "Wu AH",
+        "Kurzer MS",
+        "Yuan JM"
+      ],
+      "year": 2017,
+      "title": "Effect of Green Tea Supplements on Liver Enzyme Elevation: Results from a Randomized Intervention Study in the United States",
+      "journal": "Cancer Prevention Research",
+      "volume": "10",
+      "issue": "10",
+      "pages": "571-579",
+      "doi": "10.1158/1940-6207.capr-17-0160",
+      "pmid": "28765194",
+      "n_participants": 1021,
+      "support": "1,021 participants (513 in GTE and 508 in placebo arm) with normal baseline levels of liver enzymes. Overall, 26 (5.1%) women in GTE developed moderate or more severe abnormalities in any liver function measure during the intervention period, yielding an OR of 7.0 (95% CI, 2.4-20.3). ALT returned to normal after dechallenge and increased again after one or more rechallenges with GTE."
+    },
+    "abernethy-1985": {
+      "type": "trial",
+      "authors": [
+        "Abernethy DR",
+        "Todd EL"
+      ],
+      "year": 1985,
+      "title": "Impairment of caffeine clearance by chronic use of low-dose oestrogen-containing oral contraceptives",
+      "journal": "European Journal of Clinical Pharmacology",
+      "volume": "28",
+      "issue": "4",
+      "pages": "425-428",
+      "doi": "10.1007/bf00544361",
+      "pmid": "4029248",
+      "support": "Treated females matched with 9 non-smoking, drug-free, healthy control females. Each subject received 162 mg caffeine base orally. OCS subjects had a prolonged elimination half-life of caffeine (mean 7.88 h vs 5.37 h in the controls), the result of marked impairment of the plasma clearance of caffeine. With chronic caffeine consumption, OCS users are predicted to have an increased steady-state plasma caffeine concentration."
+    },
+    "lane-1992": {
+      "type": "trial",
+      "authors": [
+        "Lane JD",
+        "Steege JF",
+        "Rupp SL",
+        "Kuhn CM"
+      ],
+      "year": 1992,
+      "title": "Menstrual cycle effects on caffeine elimination in the human female",
+      "journal": "European Journal of Clinical Pharmacology",
+      "volume": "43",
+      "issue": "5",
+      "pages": "543-546",
+      "doi": "10.1007/bf02285099",
+      "pmid": "1483492",
+      "n_participants": 10,
+      "support": "Repeated 24-hour caffeine elimination studies during the follicular and luteal phases in 10 healthy women. Systemic clearance of caffeine was slower in the luteal phase, although the t1/2 did not differ. The effect may be too small to be of clinical significance in the majority of women."
+    },
+    "purdue-smithe-2016": {
+      "type": "cohort",
+      "authors": [
+        "Purdue-Smithe AC",
+        "Manson JE",
+        "Hankinson SE",
+        "Bertone-Johnson ER"
+      ],
+      "year": 2016,
+      "title": "A prospective study of caffeine and coffee intake and premenstrual syndrome",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "104",
+      "issue": "2",
+      "pages": "499-507",
+      "doi": "10.3945/ajcn.115.127027",
+      "pmid": "27385613",
+      "n_participants": 3660,
+      "support": "Case-control study nested within the prospective Nurses' Health Study II; PMS cases (n = 1234), controls (n = 2426). After adjustment, total caffeine intake was not associated with PMS. The OR comparing women with the highest (quintile median = 543 mg/d) to the lowest (quintile median = 18 mg/d) caffeine intake was 0.79 (95% CI: 0.61, 1.04)."
+    },
+    "shekelle-2003": {
+      "type": "meta-analysis",
+      "authors": [
+        "Shekelle PG",
+        "Hardy ML",
+        "Morton SC",
+        "Maglione M",
+        "Mojica WA",
+        "Suttorp MJ",
+        "Rhodes SL",
+        "Jungvig L",
+        "Gagné J"
+      ],
+      "year": 2003,
+      "title": "Efficacy and Safety of Ephedra and Ephedrine for Weight Loss and Athletic Performance",
+      "journal": "JAMA",
+      "volume": "289",
+      "issue": "12",
+      "pages": "1537",
+      "doi": "10.1001/jama.289.12.1537",
+      "pmid": "12672771",
+      "support": "No weight loss trials assessed duration of treatment greater than 6 months. Pooled results for placebo comparisons with ephedrine (n = 5), ephedrine and caffeine (n = 12) yielded estimates of weight loss (more than placebo) of 0.6 and 1.0 kg/mo. Safety data from 50 trials yielded estimates of 2.2- to 3.6-fold increases in odds of psychiatric, autonomic, or gastrointestinal symptoms, and heart palpitations. Ephedrine and ephedra promote modest short-term weight loss (approximately 0.9 kg/mo more than placebo)."
+    },
+    "kucio-1991": {
+      "type": "rct",
+      "authors": [
+        "Kucio C",
+        "Jonderko K",
+        "Piskorska D"
+      ],
+      "year": 1991,
+      "title": "Does yohimbine act as a slimming drug?",
+      "journal": "Israel Journal of Medical Sciences",
+      "volume": "27",
+      "issue": "10",
+      "pages": "550-556",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1955308/",
+      "pmid": "1955308",
+      "n_participants": 20,
+      "support": "Twenty female obese outpatients on a low-energy diet (1,000 kcal/day): 10 received 5 mg yohimbine per os 4 times a day and 10 a placebo for 3 weeks. Mean weight loss 3.55 kg (yohimbine) vs. 2.21 kg (placebo), P less than 0.005. No significant effect of yohimbine on lipolysis was observed."
+    },
+    "mcdonald-melatonin": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2020,
+      "title": "3 Less Well Known Benefits of Melatonin for Women",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/women/benefits-of-melatonin-for-women",
+      "retrieved": "2026-11-15",
+      "support": "His survey of melatonin trials in postmenopausal women and in polycystic ovary syndrome, his criticism of percentage-only reporting, and his statement that use for premenstrual symptoms is untested."
+    },
+    "amstrup-2016": {
+      "type": "rct",
+      "authors": [
+        "Amstrup AK",
+        "Sikjaer T",
+        "Pedersen SB",
+        "Heickendorff L",
+        "Mosekilde L",
+        "Rejnmark L"
+      ],
+      "year": 2016,
+      "title": "Reduced fat mass and increased lean mass in response to 1 year of melatonin treatment in postmenopausal women: A randomized placebo-controlled trial",
+      "journal": "Clinical Endocrinology",
+      "volume": "84",
+      "issue": "3",
+      "pages": "342-347",
+      "doi": "10.1111/cen.12942",
+      "pmid": "26352863",
+      "n_participants": 81,
+      "support": "We randomized 81 postmenopausal women to 1 year of treatment with melatonin (1 or 3 mg nightly) or placebo. Fat mass decreased in the melatonin group by 6.9% (95% CI: 1.4%; 12.4%, P = 0.02) compared to placebo. A borderline significant increase in lean mass of 5.2% was found (P = 0.08). After adjusting for BMI, lean mass increased by 2.6% (P = 0.04). Changes in body weight and BMI did not differ between groups."
+    },
+    "amstrup-2015": {
+      "type": "rct",
+      "authors": [
+        "Amstrup AK",
+        "Sikjaer T",
+        "Heickendorff L",
+        "Mosekilde L",
+        "Rejnmark L"
+      ],
+      "year": 2015,
+      "title": "Melatonin improves bone mineral density at the femoral neck in postmenopausal women with osteopenia: a randomized controlled trial",
+      "journal": "Journal of Pineal Research",
+      "volume": "59",
+      "issue": "2",
+      "pages": "221-229",
+      "doi": "10.1111/jpi.12252",
+      "pmid": "26036434",
+      "n_participants": 81,
+      "support": "We randomized 81 postmenopausal osteopenic women to 1-yr nightly treatment with melatonin 1 mg (N = 20), 3 mg (N = 20), or placebo (N = 41). Compared to placebo, femoral neck BMD increased by 1.4% in response to melatonin (P < 0.05) in a dose-dependent manner, as BMD increased by 0.5% in the 1 mg/day group (P = 0.55) and by 2.3% (P < 0.01) in the 3 mg/day group. Treatment did not significantly affect BMD at other sites."
+    },
+    "maria-2017": {
+      "type": "rct",
+      "authors": [
+        "Maria S",
+        "Swanson MH",
+        "Enderby LT",
+        "D’Amico F",
+        "Enderby B",
+        "Samsonraj RM",
+        "Dudakovic A",
+        "van Wijnen AJ",
+        "Witt-Enderby PA"
+      ],
+      "year": 2017,
+      "title": "Melatonin-micronutrients Osteopenia Treatment Study (MOTS): a translational study assessing melatonin, strontium (citrate), vitamin D3 and vitamin K2 (MK7) on bone density, bone marker turnover and health related quality of life in postmenopausal osteopenic women following a one-year double-blind RCT and on osteoblast-osteoclast co-cultures",
+      "journal": "Aging",
+      "volume": "9",
+      "issue": "1",
+      "pages": "256-285",
+      "doi": "10.18632/aging.101158",
+      "pmid": "28130552",
+      "support": "One-year double blind randomized control trial of nightly melatonin, strontium (citrate), vitamin D3 and vitamin K2 (MSDK) in postmenopausal osteopenic women (ages 49-75). Compared to placebo, MSDK treatment increased BMD in lumbar spine (4.3%) and left femoral neck (2.2%). Mood and sleep quality improved for the MSDK group."
+    },
+    "treister-goltzman-2021": {
+      "type": "systematic-review",
+      "authors": [
+        "Treister‐Goltzman Y",
+        "Peleg R"
+      ],
+      "year": 2021,
+      "title": "Melatonin and the health of menopausal women: A systematic review",
+      "journal": "Journal of Pineal Research",
+      "volume": "71",
+      "issue": "2",
+      "doi": "10.1111/jpi.12743",
+      "pmid": "33969545",
+      "n_studies": 24,
+      "n_participants": 1173,
+      "support": "Twenty-four studies were included, with 1,173 participants. There is some evidence that very low-density lipoprotein and triglycerides levels increase during melatonin administration. There is a fair amount of evidence that melatonin treatment has a favorable effect on bone density and BMI. Melatonin treatment improves EEG patterns and subjective sleep quality in postmenopausal women with preexisting sleep impairment. In a dose of 3 mg and above, melatonin improves climacteric symptoms in one or more domains."
+    },
+    "ziaei-2024": {
+      "type": "meta-analysis",
+      "authors": [
+        "Ziaei S",
+        "Hasani M",
+        "Malekahmadi M",
+        "Daneshzad E",
+        "Kadkhodazadeh K",
+        "Heshmati J"
+      ],
+      "year": 2024,
+      "title": "Effect of melatonin supplementation on cardiometabolic risk factors, oxidative stress and hormonal profile in PCOS patients: a systematic review and meta-analysis of randomized clinical trials",
+      "journal": "Journal of Ovarian Research",
+      "volume": "17",
+      "issue": "1",
+      "doi": "10.1186/s13048-024-01450-z",
+      "pmid": "38965577",
+      "n_studies": 6,
+      "support": "Six studies met the inclusion criteria. Melatonin intake significantly increased TAC levels and has no effect on FBS, insulin, HOMA-IR, TC, TG, HDL, LDL, MDA, hs-CRP, mFG, SHBG, total testosterone, and pregnancy rate in patients with PCOS compared to controls. The clear effect of melatonin supplementation needs to be evaluated further in large populations and long-term RCTs."
+    },
+    "jamilian-2019": {
+      "type": "rct",
+      "authors": [
+        "Jamilian M",
+        "Foroozanfard F",
+        "Mirhosseini N",
+        "Kavossian E",
+        "Aghadavod E",
+        "Bahmani F",
+        "Ostadmohammadi V",
+        "Kia M",
+        "Eftekhar T",
+        "Ayati E",
+        "Mahdavinia M",
+        "Asemi Z"
+      ],
+      "year": 2019,
+      "title": "Effects of Melatonin Supplementation on Hormonal, Inflammatory, Genetic, and Oxidative Stress Parameters in Women With Polycystic Ovary Syndrome",
+      "journal": "Frontiers in Endocrinology",
+      "volume": "10",
+      "doi": "10.3389/fendo.2019.00273",
+      "pmid": "31139144",
+      "n_participants": 56,
+      "support": "Randomized, double-blinded, placebo-controlled trial among 56 patients with PCOS, aged 18-40: 5 mg melatonin supplements (n = 28) or placebo (n = 28) twice a day for 12 weeks. Melatonin administration significantly reduced hirsutism, serum total testosterone and hs-CRP compared with the placebo."
+    },
+    "pengelly-2025": {
+      "type": "systematic-review",
+      "authors": [
+        "Pengelly M",
+        "Pumpa K",
+        "Pyne DB",
+        "Etxebarria N"
+      ],
+      "year": 2025,
+      "title": "Iron deficiency, supplementation, and sports performance in female athletes: A systematic review",
+      "journal": "Journal of Sport and Health Science",
+      "volume": "14",
+      "pages": "101009",
+      "doi": "10.1016/j.jshs.2024.101009",
+      "pmid": "39536912",
+      "n_studies": 23,
+      "n_participants": 669,
+      "support": "Up to 60% of female athletes experience iron deficiency. A total of 23 studies comprising 669 athletes across 16 sports were included; iron deficient defined as serum ferritin < 40 µg/L. Iron deficiency negatively affects endurance performance by 3%-4%. Isokinetic strength and anaerobic power performance may be impeded among ID athletes, but the effect of FeSup on anaerobic power varied markedly. Most studies (n = 18) contained group sizes of 20 athletes or fewer."
+    }
+  }
+}
