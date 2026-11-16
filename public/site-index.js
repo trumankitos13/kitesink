@@ -36,7 +36,7 @@ window.KS_INDEX = [
   { t: "Consulting", h: "/consulting", s: "consulting", k: "Section", shelf: "current", now: true,
     d: "Workflow automation, operations and practical AI for music teams.", w: "hire services kitesink consulting business" },
   { t: "Fitness", h: "/fitness", s: "fitness", k: "Section", shelf: "current", now: true,
-    d: "Vantix, five free calculators, and a sourced field guide to search or read by area.", w: "training nutrition lifting gym health powerlifting hypertrophy diet" },
+    d: "Vantix, six free calculators, and a sourced field guide to search or read by area.", w: "training nutrition lifting gym health powerlifting hypertrophy diet" },
   { t: "Music", h: "/music", s: "music", k: "Section", shelf: "current", now: true,
     d: "Song of the Day, Stage First and the Album Listening Club.", w: "songs albums musicians" },
   { t: "Library", h: "/library", s: "library", k: "Section", shelf: "workshop",
@@ -67,6 +67,8 @@ window.KS_INDEX = [
     d: "Pick the kit you have and the minutes you've got; get a session.", w: "hotel bodyweight dumbbell kettlebell emom amrap circuit generator home" },
   { t: "Meet attempt planner", h: "/fitness#attempts", s: "fitness", k: "Tool", shelf: "tools", now: true,
     d: "Openers, seconds and thirds for a powerlifting meet, with a warm-up ladder.", w: "powerlifting competition opener attempts squat bench deadlift total" },
+  { t: "Diet planner", h: "/fitness#plan", s: "fitness", k: "Tool", shelf: "tools", now: true,
+    d: "Your weekly deficit: choose how many days a week you diet, and see each day and what it must cover.", w: "diet plan weekly deficit calories diet days surplus cut bulk week intermittent fasting maintenance protein fibre" },
   { t: "Fitness field guide", h: "/fitness#guide", s: "fitness", k: "Notes", shelf: "tools", now: true,
     d: "Sourced entries by area. Search them all, or pick an area to read.", w: "training nutrition guide evidence reference notes search areas" },
   /* the pages under /fitness/, in the order of the hub: one line each */

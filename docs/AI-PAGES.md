@@ -119,15 +119,16 @@ It does not use these hand-written twins, and it is not available on the Free pl
 What isitagentready.com looks for, and what the site publishes for it. The scan of
 16 November 2026 scored level 1 of 5. After PR 31 merged, the rescan the same day scored
 **level 2 (Bot-Aware)**: Link headers, Content Signals and the skills index pass. The one
-requirement left for level 3 is markdown negotiation. On 17 November the worker moved into
-`wrangler.jsonc`, to merge once the zone's daily requests are confirmed far below the Workers
-Free plan's 100,000 a day.
+requirement left for level 3 was markdown negotiation. PR 33 moved the worker into
+`wrangler.jsonc`, and the rescan after it merged scored **level 4 (Agent-Integrated)**. DNS-AID
+and the checks below marked not applicable still fail, by design. Keep an eye on the zone's
+daily requests: the Workers Free plan allows 100,000 a day on the worker's routes.
 
 | Check | State | Where |
 |---|---|---|
 | `Link` headers (RFC 8288) | Done | Every page with a twin sends `Link: </<twin>.md>; rel="alternate"; type="text/markdown"`; the home page adds `</llms.txt>; rel="describedby"`. Generated into `public/_headers` |
 | Content Signals | Done | `Content-Signal: search=yes, ai-input=yes, ai-train=yes` in `public/robots.txt`, the owner's choice. It matches the Cloudflare setting that lets AI crawlers in |
-| Markdown negotiation | In `wrangler.jsonc`; live once that change is merged | `worker/ai-twins.js`, above |
+| Markdown negotiation | Done | `worker/ai-twins.js` through `wrangler.jsonc`, above |
 | Agent skills index | Done | `/.well-known/agent-skills/index.json` lists one skill, `kitesink-fitness-reference`: how to find, read and cite an entry using `search.json` and the twins |
 | WebMCP, ARD manifest | Not done, by choice | WebMCP is an experimental browser API; ARD would only re-list the skills index. Neither changes the level |
 | MCP Server Card, A2A Agent Card, API catalog, OAuth discovery and protected resource, auth.md, DNS-AID | Not applicable | The site has no MCP server, agent, API or sign-in. Publishing descriptors for them would be untrue |

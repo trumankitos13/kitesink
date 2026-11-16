@@ -148,7 +148,7 @@ FILE: https://kitesink.com/fitness.md
 
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 948 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and five calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 948 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -178,7 +178,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 55 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 154 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 121 key numbers and 59 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 746 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 751 sources.
 
 ## Calculators (on the page, no sign-up)
 
@@ -187,6 +187,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - 1RM and load calculator: https://kitesink.com/fitness#loads
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
+- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): https://kitesink.com/fitness#plan
 
 ## Vantix
 
@@ -8787,7 +8788,7 @@ FILE: https://kitesink.com/fitness/sources.md
 
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 746 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 751 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -8849,7 +8850,7 @@ What changed after an entry was published, newest first.
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 746 sources, A to Z
+## All 751 sources, A to Z
 
 - Aasa U, Svartholm I, Andersson F et al. (2017). Injuries among weightlifters and powerlifters: a systematic review. *British Journal of Sports Medicine* 51(4):211-219. https://doi.org/10.1136/bjsports-2016-096037 (Systematic review, cited 2×)
 - Abad CC, Prado ML, Ugrinowitsch C et al. (2011). Combination of General and Specific Warm-Ups Improves Leg-Press One Repetition Maximum Compared With Specific Warm-Up in Trained Individuals. *Journal of Strength and Conditioning Research* 25(8):2242-2245. https://doi.org/10.1519/jsc.0b013e3181e8611b (Trial, cited 1×)
@@ -8952,7 +8953,7 @@ What changed after an entry was published, newest first.
 - Cruz-Jentoft AJ, Bahat G, Bauer J et al. (2018). Sarcopenia: revised European consensus on definition and diagnosis. *Age and Ageing* 48(1):16-31. https://doi.org/10.1093/ageing/afy169 (Position stand, cited 2×)
 - Cumming KT, Reitzner SM, Hanslien M et al. (2024). Muscle memory in humans: evidence for myonuclear permanence and long-term transcriptional regulation after strength training. *The Journal of Physiology* 602(17):4171-4193. https://doi.org/10.1113/jp285675 (Trial, cited 2×)
 - Cunanan AJ, DeWeese BH, Wagle JP et al. (2018). The General Adaptation Syndrome: A Foundation for the Concept of Periodization. *Sports Medicine* 48(4):787-797. https://doi.org/10.1007/s40279-017-0855-3 (Review, cited 2×)
-- Cunningham J (1991). Body composition as a determinant of energy expenditure: a synthetic review and a proposed general prediction equation. *The American Journal of Clinical Nutrition* 54(6):963-969. https://doi.org/10.1093/ajcn/54.6.963 (Review, cited 1×)
+- Cunningham J (1991). Body composition as a determinant of energy expenditure: a synthetic review and a proposed general prediction equation. *The American Journal of Clinical Nutrition* 54(6):963-969. https://doi.org/10.1093/ajcn/54.6.963 (Review, cited 2×)
 - Cureton KJ, Collins MA, Hill DW et al. (1988). Muscle hypertrophy in men and women. *Medicine & Science in Sports & Exercise* 20(4):338-344. https://doi.org/10.1249/00005768-198808000-00003 (Trial, cited 1×)
 - Currier BS, Mcleod JC, Banfield L et al. (2023). Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis. *British Journal of Sports Medicine* 57(18):1211-1220. https://doi.org/10.1136/bjsports-2023-106807 (Meta-analysis, cited 6×)
 - Currier BS, D’Souza AC, Singh MAF et al. (2026). American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews. *Medicine & Science in Sports & Exercise* 58(4):851-872. https://doi.org/10.1249/mss.0000000000003897 (Position stand, cited 16×)
@@ -8995,7 +8996,8 @@ What changed after an entry was published, newest first.
 - Evenepoel C, Clevers E, Deroover L et al. (2020). Accuracy of Nutrient Calculations Using the Consumer-Focused Online App MyFitnessPal: Validation Study. *Journal of Medical Internet Research* 22(10):e18237. https://doi.org/10.2196/18237 (Reference, cited 1×)
 - Fagerberg P (2018). Negative Consequences of Low Energy Availability in Natural Male Bodybuilding: A Review. *International Journal of Sport Nutrition and Exercise Metabolism* 28(4):385-402. https://doi.org/10.1123/ijsnem.2016-0332 (Review, cited 1×)
 - FAO (2003). Food energy: methods of analysis and conversion factors (Chapter 3: Calculation of the energy content of foods). https://www.fao.org/4/y5022e/y5022e04.htm (Guideline, cited 3×)
-- FAO/WHO/UNU (2004). Human energy requirements: report of a joint expert consultation, Rome, 17–24 October 2001. *FAO Food and Nutrition Technical Report Series 1, table 5.3*. https://www.fao.org/4/y5686e/y5686e07.htm (Guideline, cited 4×)
+- FAO (2010). Fats and fatty acids in human nutrition: report of an expert consultation. *FAO Food and Nutrition Paper 91*. https://www.fao.org/4/i1953e/i1953e00.pdf (Guideline, cited 1×)
+- FAO/WHO/UNU (2004). Human energy requirements: report of a joint expert consultation, Rome, 17–24 October 2001. *FAO Food and Nutrition Technical Report Series 1, table 5.3*. https://www.fao.org/4/y5686e/y5686e07.htm (Guideline, cited 5×)
 - Fenwick CMJ, Brown SHM, McGill SM (2009). Comparison of Different Rowing Exercises: Trunk Muscle Activation and Lumbar Spine Motion, Load, and Stiffness. *Journal of Strength and Conditioning Research* 23(2):350-358. https://doi.org/10.1519/jsc.0b013e3181942019 (Trial, cited 1×)
 - Ferland PM, Comtois AS (2019). Classic Powerlifting Performance: A Systematic Review. *Journal of Strength and Conditioning Research* 33(1):S194-S201. https://doi.org/10.1519/JSC.0000000000003099 (Systematic review, cited 1×)
 - Fernandes-Alves D, Teixeira GP, Guimarães KC et al. (2026). Systematic Review and Meta-analysis of Randomized Clinical Trials Comparing Time-Restricted Eating With and Without Caloric Restriction for Weight Loss. *Nutrition Reviews* 84(3):463-486. https://doi.org/10.1093/nutrit/nuaf053 (Meta-analysis, cited 2×)
@@ -9040,7 +9042,7 @@ What changed after an entry was published, newest first.
 - Hagmar M, Berglund B, Brismar K et al. (2009). Hyperandrogenism May Explain Reproductive Dysfunction in Olympic Athletes. *Medicine & Science in Sports & Exercise* 41(6):1241-1248. https://doi.org/10.1249/mss.0b013e318195a21a (Cohort study, cited 3×)
 - Hagstrom AD, Marshall PW, Halaki M et al. (2020). The Effect of Resistance Training in Women on Dynamic Strength and Muscular Hypertrophy: A Systematic Review with Meta-analysis. *Sports Medicine* 50(6):1075-1093. https://doi.org/10.1007/s40279-019-01247-x (Meta-analysis, cited 3×)
 - Hall KD (2007). Body fat and fat-free mass inter-relationships: Forbes's theory revisited. *British Journal of Nutrition* 97(6):1059-1063. https://doi.org/10.1017/s0007114507691946 (Reference, cited 2×)
-- Hall KD (2008). What is the required energy deficit per unit weight loss?. *International Journal of Obesity* 32(3):573-576. https://doi.org/10.1038/sj.ijo.0803720 (Reference, cited 4×)
+- Hall KD (2008). What is the required energy deficit per unit weight loss?. *International Journal of Obesity* 32(3):573-576. https://doi.org/10.1038/sj.ijo.0803720 (Reference, cited 5×)
 - Hall KD, Sacks G, Chandramohan D et al. (2011). Quantification of the effect of energy imbalance on bodyweight. *The Lancet* 378(9793):826-837. https://doi.org/10.1016/S0140-6736(11)60812-X (Reference, cited 2×)
 - Hall KD, Guo J (2017). Obesity Energetics: Body Weight Regulation and the Effects of Diet Composition. *Gastroenterology* 152(7):1718-1727.e3. https://doi.org/10.1053/j.gastro.2017.01.052 (Meta-analysis, cited 2×)
 - Hall KD, Kahan S (2018). Maintenance of Lost Weight and Long-Term Management of Obesity. *Medical Clinics of North America* 102(1):183-197. https://doi.org/10.1016/j.mcna.2017.08.012 (Review, cited 1×)
@@ -9060,18 +9062,19 @@ What changed after an entry was published, newest first.
 - Hartmann H, Wirth K, Klusemann M (2013). Analysis of the Load on the Knee Joint and Vertebral Column with Changes in Squatting Depth and Weight Load. *Sports Medicine* 43(10):993-1008. https://doi.org/10.1007/s40279-013-0073-6 (Review, cited 1×)
 - Harty PS, Zabriskie HA, Stecker RA et al. (2019). Upper and lower thresholds of fat-free mass index in a large cohort of female collegiate athletes. *Journal of Sports Sciences* 37(20):2381-2388. https://doi.org/10.1080/02640414.2019.1634964 (Cohort study, cited 3×)
 - Harvey J, Krukowski R, Priest J et al. (2019). Log Often, Lose More: Electronic Dietary Self‐Monitoring for Weight Loss. *Obesity* 27(3):380-384. https://doi.org/10.1002/oby.22382 (Reference, cited 2×)
+- Harvie MN, Pegington M, Mattson MP et al. (2011). The effects of intermittent or continuous energy restriction on weight loss and metabolic disease risk markers: a randomized trial in young overweight women. *International Journal of Obesity* 35(5):714-727. https://doi.org/10.1038/ijo.2010.171 (Randomised trial, cited 1×)
 - Haugen T, Seiler S, Sandbakk Ø et al. (2019). The Training and Development of Elite Sprint Performance: an Integration of Scientific and Best Practice Literature. *Sports Medicine - Open* 5(1):44. https://doi.org/10.1186/s40798-019-0221-0 (Review, cited 2×)
 - Haugen ME, Vårvik FT, Larsen S et al. (2023). Effect of free-weight vs. machine-based strength training on maximal strength, hypertrophy and jump performance – a systematic review and meta-analysis. *BMC Sports Science, Medicine and Rehabilitation* 15(1). https://doi.org/10.1186/s13102-023-00713-4 (Meta-analysis, cited 2×)
 - Hausswirth C, Louis J, Aubry A et al. (2014). Evidence of Disturbed Sleep and Increased Illness in Overreached Endurance Athletes. *Medicine & Science in Sports & Exercise* 46(5):1036-1045. https://doi.org/10.1249/mss.0000000000000177 (Randomised trial, cited 2×)
 - Havers T, Wagner N, Held S et al. (2025). Partial Range, Full Gains? The Effect of 8 Weeks of Partial Range of Motion Training at Long Muscle Lengths on Elbow Flexor Hypertrophy and Strength in Trained Individuals. *European Journal of Sport Science* 25(12):e70087. https://doi.org/10.1002/ejsc.70087 (Randomised trial, cited 1×)
 - Hellard P, Avalos M, Lacoste L et al. (2006). Assessing the limitations of the Banister model in monitoring training. *Journal of Sports Sciences* 24(5):509-520. https://doi.org/10.1080/02640410500244697 (Cohort study, cited 2×)
-- Helms ER, Zinn C, Rowlands DS et al. (2014). A Systematic Review of Dietary Protein During Caloric Restriction in Resistance Trained Lean Athletes: A Case for Higher Intakes. *International Journal of Sport Nutrition and Exercise Metabolism* 24(2):127-138. https://doi.org/10.1123/ijsnem.2013-0054 (Systematic review, cited 5×)
+- Helms ER, Zinn C, Rowlands DS et al. (2014). A Systematic Review of Dietary Protein During Caloric Restriction in Resistance Trained Lean Athletes: A Case for Higher Intakes. *International Journal of Sport Nutrition and Exercise Metabolism* 24(2):127-138. https://doi.org/10.1123/ijsnem.2013-0054 (Systematic review, cited 6×)
 - Helms ER, Aragon AA, Fitschen PJ (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. *Journal of the International Society of Sports Nutrition* 11(1):20. https://doi.org/10.1186/1550-2783-11-20 (Review, cited 8×)
 - Helms ER, Cronin J, Storey A et al. (2016). Application of the Repetitions in Reserve-Based Rating of Perceived Exertion Scale for Resistance Training. *Strength & Conditioning Journal* 38(4):42-49. https://doi.org/10.1519/SSC.0000000000000218 (Review, cited 2×)
 - Helms ER, Storey A, Cross MR et al. (2017). RPE and Velocity Relationships for the Back Squat, Bench Press, and Deadlift in Powerlifters. *Journal of Strength and Conditioning Research* 31(2):292-297. https://doi.org/10.1519/JSC.0000000000001517 (Trial, cited 2×)
 - Helms ER, Byrnes RK, Cooke DM et al. (2018). RPE vs. Percentage 1RM Loading in Periodized Programs Matched for Sets and Repetitions. *Frontiers in Physiology* 9. https://doi.org/10.3389/fphys.2018.00247 (Randomised trial, cited 1×)
 - Helms ER, Prnjak K, Linardon J (2019). Towards a Sustainable Nutrition Paradigm in Physique Sport: A Narrative Review. *Sports* 7(7):172. https://doi.org/10.3390/sports7070172 (Review, cited 2×)
-- Helms ER, Spence AJ, Sousa C et al. (2023). Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals: A Parallel Groups Design. *Sports Medicine - Open* 9(1):102. https://doi.org/10.1186/s40798-023-00651-y (Randomised trial, cited 4×)
+- Helms ER, Spence AJ, Sousa C et al. (2023). Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals: A Parallel Groups Design. *Sports Medicine - Open* 9(1):102. https://doi.org/10.1186/s40798-023-00651-y (Randomised trial, cited 5×)
 - Henselmans M, Bjørnsen T, Hedderman R et al. (2022). The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review. *Nutrients* 14(4):856. https://doi.org/10.3390/nu14040856 (Systematic review, cited 4×)
 - Hevia-Larraín V, Gualano B, Longobardi I et al. (2021). High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet to Support Resistance Training Adaptations: A Comparison Between Habitual Vegans and Omnivores. *Sports Medicine* 51(6):1317-1330. https://doi.org/10.1007/s40279-021-01434-9 (Randomised trial, cited 2×)
 - Heymsfield SB, Greenberg AS, Fujioka K et al. (1999). Recombinant Leptin for Weight Loss in Obese and Lean Adults. *JAMA* 282(16):1568. https://doi.org/10.1001/jama.282.16.1568 (Randomised trial, cited 1×)
@@ -9109,7 +9112,7 @@ What changed after an entry was published, newest first.
 - Jukic I, Castilla AP, Ramos AG et al. (2023). The Acute and Chronic Effects of Implementing Velocity Loss Thresholds During Resistance Training: A Systematic Review, Meta-Analysis, and Critical Evaluation of the Literature. *Sports Medicine* 53(1):177-214. https://doi.org/10.1007/s40279-022-01754-4 (Meta-analysis, cited 1×)
 - Jumpertz R, Venti CA, Le DS et al. (2013). Food label accuracy of common snack foods. *Obesity* 21(1):164-169. https://doi.org/10.1002/oby.20185 (Reference, cited 2×)
 - Jurgens TM, Whelan AM, Killian L et al. (2012). Green tea for weight loss and weight maintenance in overweight or obese adults. *Cochrane Database of Systematic Reviews* 2012(12). https://doi.org/10.1002/14651858.cd008650.pub2 (Systematic review, cited 3×)
-- Jäger R, Kerksick CM, Campbell BI et al. (2017). International Society of Sports Nutrition Position Stand: protein and exercise. *Journal of the International Society of Sports Nutrition* 14(1):20. https://doi.org/10.1186/s12970-017-0177-8 (Position stand, cited 12×)
+- Jäger R, Kerksick CM, Campbell BI et al. (2017). International Society of Sports Nutrition Position Stand: protein and exercise. *Journal of the International Society of Sports Nutrition* 14(1):20. https://doi.org/10.1186/s12970-017-0177-8 (Position stand, cited 13×)
 - Kanehisa H, Kondo M, Ikegawa S et al. (1998). Body composition and isokinetic strength of professional Sumo wrestlers. *European Journal of Applied Physiology* 77(4):352-359. https://doi.org/10.1007/s004210050344 (Cohort study, cited 1×)
 - Kapicioglu M, Bilgin E, Guven N et al. (2021). The Role of Deadlifts in Distal Biceps Brachii Tendon Ruptures: An Alternative Mechanism Described With YouTube Videos. *Orthopaedic Journal of Sports Medicine* 9(3). https://doi.org/10.1177/2325967121991811 (Reference, cited 3×)
 - Karpe F, Pinnick KE (2015). Biology of upper-body and lower-body adipose tissue—link to whole-body phenotypes. *Nature Reviews Endocrinology* 11(2):90-100. https://doi.org/10.1038/nrendo.2014.185 (Review, cited 5×)
@@ -9162,7 +9165,7 @@ What changed after an entry was published, newest first.
 - Levitsky DA, Garay J, Nausbaum M et al. (2006). Monitoring weight daily blocks the freshman weight gain: a model for combating the epidemic of obesity. *International Journal of Obesity* 30(6):1003-1010. https://doi.org/10.1038/sj.ijo.0803221 (Trial, cited 1×)
 - Lichtman SW, Pisarska K, Berman ER et al. (1992). Discrepancy between Self-Reported and Actual Caloric Intake and Exercise in Obese Subjects. *New England Journal of Medicine* 327(27):1893-1898. https://doi.org/10.1056/NEJM199212313272701 (Reference, cited 4×)
 - Lichtwark GA, Wilson AM (2005). In vivo mechanical properties of the human Achilles tendon during one-legged hopping. *Journal of Experimental Biology* 208(24):4715-4725. https://doi.org/10.1242/jeb.01950 (Reference, cited 2×)
-- Lieberman JL, De Souza MJ, Wagstaff DA et al. (2018). Menstrual Disruption with Exercise Is Not Linked to an Energy Availability Threshold. *Medicine & Science in Sports & Exercise* 50(3):551-561. https://doi.org/10.1249/mss.0000000000001451 (Randomised trial, cited 2×)
+- Lieberman JL, De Souza MJ, Wagstaff DA et al. (2018). Menstrual Disruption with Exercise Is Not Linked to an Energy Availability Threshold. *Medicine & Science in Sports & Exercise* 50(3):551-561. https://doi.org/10.1249/mss.0000000000001451 (Randomised trial, cited 3×)
 - Lim MT, Pan BJ, Toh DWK et al. (2021). Animal Protein versus Plant Protein in Supporting Lean Mass and Muscle Strength: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. *Nutrients* 13(2):661. https://doi.org/10.3390/nu13020661 (Meta-analysis, cited 2×)
 - Lin Y, Xu Y, Hong F et al. (2022). Effects of Variable-Resistance Training Versus Constant-Resistance Training on Maximum Strength: A Systematic Review and Meta-Analysis. *International Journal of Environmental Research and Public Health* 19(14):8559. https://doi.org/10.3390/ijerph19148559 (Meta-analysis, cited 1×)
 - Linardon J, Messer M (2019). My fitness pal usage in men: Associations with eating disorder symptoms and psychosocial impairment. *Eating Behaviors* 33:13-17. https://doi.org/10.1016/j.eatbeh.2019.02.003 (Cohort study, cited 1×)
@@ -9363,7 +9366,7 @@ What changed after an entry was published, newest first.
 - Melanson EL, Sharp TA, Seagle HM et al. (2002). Effect of exercise intensity on 24-h energy expenditure and nutrient oxidation. *Journal of Applied Physiology* 92(3):1045-1052. https://doi.org/10.1152/japplphysiol.00706.2001 (Trial, cited 1×)
 - Messina M, Lynch H, Dickinson JM et al. (2018). No Difference Between the Effects of Supplementing With Soy Protein Versus Animal Protein on Gains in Muscle Mass and Strength in Response to Resistance Exercise. *International Journal of Sport Nutrition and Exercise Metabolism* 28(6):674-685. https://doi.org/10.1123/ijsnem.2018-0071 (Meta-analysis, cited 1×)
 - Mielgo-Ayuso J, Barrenechea L, Alcorta P et al. (2014). Effects of dietary supplementation with epigallocatechin-3-gallate on weight loss, energy homeostasis, cardiometabolic risk factors and liver function in obese women: randomised, double-blind, placebo-controlled clinical trial. *British Journal of Nutrition* 111(7):1263-1271. https://doi.org/10.1017/s0007114513003784 (Randomised trial, cited 2×)
-- Mifflin M, St Jeor S, Hill L et al. (1990). A new predictive equation for resting energy expenditure in healthy individuals. *The American Journal of Clinical Nutrition* 51(2):241-247. https://doi.org/10.1093/ajcn/51.2.241 (Trial, cited 1×)
+- Mifflin M, St Jeor S, Hill L et al. (1990). A new predictive equation for resting energy expenditure in healthy individuals. *The American Journal of Clinical Nutrition* 51(2):241-247. https://doi.org/10.1093/ajcn/51.2.241 (Trial, cited 2×)
 - Milanović Z, Sporiš G, Weston M (2015). Effectiveness of High-Intensity Interval Training (HIT) and Continuous Endurance Training for VO2max Improvements: A Systematic Review and Meta-Analysis of Controlled Trials. *Sports Medicine* 45(10):1469-1481. https://doi.org/10.1007/s40279-015-0365-0 (Meta-analysis, cited 2×)
 - Miller AEJ, MacDougall JD, Tarnopolsky MA et al. (1993). Gender differences in strength and muscle fiber characteristics. *European Journal of Applied Physiology and Occupational Physiology* 66(3):254-262. https://doi.org/10.1007/bf00235103 (Trial, cited 3×)
 - Mitchell WK, Williams J, Atherton P et al. (2012). Sarcopenia, Dynapenia, and the Impact of Advancing Age on Human Skeletal Muscle Size and Strength; a Quantitative Review. *Frontiers in Physiology* 3. https://doi.org/10.3389/fphys.2012.00260 (Review, cited 2×)
@@ -9386,6 +9389,7 @@ What changed after an entry was published, newest first.
 - Nederhof E, Lemmink KAPM, Visscher C et al. (2006). Psychomotor Speed. *Sports Medicine* 36(10):817-828. https://doi.org/10.2165/00007256-200636100-00001 (Review, cited 1×)
 - Neeland IJ, Ross R, Després JP et al. (2019). Visceral and ectopic fat, atherosclerosis, and cardiometabolic disease: a position statement. *The Lancet Diabetes & Endocrinology* 7(9):715-725. https://doi.org/10.1016/s2213-8587(19)30084-1 (Position stand, cited 1×)
 - Neves RP, Vechin FC, Teixeira EL et al. (2022). Effect of different training frequencies on maximal strength performance and muscle hypertrophy in trained individuals—a within-subject design. *PLOS ONE* 17(10):e0276154. https://doi.org/10.1371/journal.pone.0276154 (Randomised trial, cited 1×)
+- National Institute for Health and Care Excellence (2025). Overweight and obesity management (NG246): physical activity and diet. *NICE guideline NG246, recommendations 1.16.8 to 1.16.11*. https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet (Guideline, cited 1×)
 - Niering M, Wolf-Belala N, Seifert J et al. (2024). The Influence of Menstrual Cycle Phases on Maximal Strength Performance in Healthy Female Adults: A Systematic Review with Meta-Analysis. *Sports* 12(1):31. https://doi.org/10.3390/sports12010031 (Meta-analysis, cited 2×)
 - National Institute for Health and Care Excellence (2025). Overweight and obesity management (NG246). *NICE*. NG246, published 14 January 2025, last updated 8 January 2026. https://www.nice.org.uk/guidance/ng246 (Guideline, cited 3×)
 - Nolan D, Lynch AE, Egan B (2022). Self-Reported Prevalence, Magnitude, and Methods of Rapid Weight Loss in Male and Female Competitive Powerlifters. *Journal of Strength & Conditioning Research* 36(2):405-410. https://doi.org/10.1519/JSC.0000000000003488 (Reference, cited 1×)
@@ -9394,7 +9398,7 @@ What changed after an entry was published, newest first.
 - Nosaka K, Newton M, Sacco P (2002). Delayed‐onset muscle soreness does not reflect the magnitude of eccentric exercise‐induced muscle damage. *Scandinavian Journal of Medicine & Science in Sports* 12(6):337-346. https://doi.org/10.1034/j.1600-0838.2002.10178.x (Trial, cited 2×)
 - Nuckols G (2019). The Evidence is Lacking for “Effective Reps”. *Stronger By Science (article, not peer-reviewed)*. https://www.strongerbyscience.com/effective-reps/ (Reference, cited 1×)
 - Nunes CL, Casanova N, Francisco R et al. (2022). Does adaptive thermogenesis occur after weight loss in adults? A systematic review. *British Journal of Nutrition* 127(3):451-469. https://doi.org/10.1017/S0007114521001094 (Systematic review, cited 1×)
-- Nunes EA, Colenso‐Semple L, McKellar SR et al. (2022). Systematic review and meta‐analysis of protein intake to support muscle mass and function in healthy adults. *Journal of Cachexia, Sarcopenia and Muscle* 13(2):795-810. https://doi.org/10.1002/jcsm.12922 (Meta-analysis, cited 3×)
+- Nunes EA, Colenso‐Semple L, McKellar SR et al. (2022). Systematic review and meta‐analysis of protein intake to support muscle mass and function in healthy adults. *Journal of Cachexia, Sarcopenia and Muscle* 13(2):795-810. https://doi.org/10.1002/jcsm.12922 (Meta-analysis, cited 4×)
 - Nuzzo JL (2023). Narrative Review of Sex Differences in Muscle Strength, Endurance, Activation, Size, Fiber Type, and Strength Training Participation Rates, Preferences, Motivations, Injuries, and Neuromuscular Adaptations. *Journal of Strength & Conditioning Research* 37(2):494-536. https://doi.org/10.1519/jsc.0000000000004329 (Review, cited 4×)
 - Nuzzo JL, Pinto MD, Nosaka K et al. (2024). Maximal Number of Repetitions at Percentages of the One Repetition Maximum: A Meta-Regression and Moderator Analysis of Sex, Age, Training Status, and Exercise. *Sports Medicine* 54(2):303-321. https://doi.org/10.1007/s40279-023-01937-7 (Meta-analysis, cited 5×)
 - Nuzzo JL (2024). Sex differences in skeletal muscle fiber types: A meta-analysis. *Clinical Anatomy* 37(1):81-91. https://doi.org/10.1002/ca.24091 (Meta-analysis, cited 1×)
@@ -9538,6 +9542,7 @@ What changed after an entry was published, newest first.
 - Travis SK, Mujika I, Zwetsloot KA et al. (2022). The Effects of 3 vs. 5 Days of Training Cessation on Maximal Strength. *Journal of Strength & Conditioning Research* 36(3):633-640. https://doi.org/10.1519/JSC.0000000000004183 (Trial, cited 4×)
 - Treister‐Goltzman Y, Peleg R (2021). Melatonin and the health of menopausal women: A systematic review. *Journal of Pineal Research* 71(2). https://doi.org/10.1111/jpi.12743 (Systematic review, cited 2×)
 - Tremblay A, Simoneau JA, Bouchard C (1994). Impact of exercise intensity on body fatness and skeletal muscle metabolism. *Metabolism* 43(7):814-818. https://doi.org/10.1016/0026-0495(94)90259-3 (Trial, cited 1×)
+- Trepanowski JF, Kroeger CM, Barnosky A et al. (2017). Effect of Alternate-Day Fasting on Weight Loss, Weight Maintenance, and Cardioprotection Among Metabolically Healthy Obese Adults: A Randomized Clinical Trial. *JAMA Internal Medicine* 177(7):930-938. https://doi.org/10.1001/jamainternmed.2017.0936 (Randomised trial, cited 1×)
 - Trexler ET, Smith-Ryan AE, Norton LE (2014). Metabolic adaptation to weight loss: implications for the athlete. *Journal of the International Society of Sports Nutrition* 11(1):7. https://doi.org/10.1186/1550-2783-11-7 (Review, cited 1×)
 - Trexler ET, Smith-Ryan AE, Stout JR et al. (2015). International society of sports nutrition position stand: Beta-Alanine. *Journal of the International Society of Sports Nutrition* 12(1):30. https://doi.org/10.1186/s12970-015-0090-y (Position stand, cited 2×)
 - Trommelen J, van Lieshout GAA, Nyakayiru J et al. (2023). The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration in vivo in humans. *Cell Reports Medicine* 4(12):101324. https://doi.org/10.1016/j.xcrm.2023.101324 (Trial, cited 2×)
@@ -9576,6 +9581,7 @@ What changed after an entry was published, newest first.
 - Weyer C, Vozarova B, Ravussin E et al. (2001). Changes in energy metabolism in response to 48 h of overfeeding and fasting in Caucasians and Pima Indians. *International Journal of Obesity* 25(5):593-600. https://doi.org/10.1038/sj.ijo.0801610 (Trial, cited 1×)
 - White CP, Hitchcock CL, Vigna YM et al. (2011). Fluid Retention over the Menstrual Cycle: 1-Year Data from the Prospective Ovulation Cohort. *Obstetrics and Gynecology International* 2011:1-7. https://doi.org/10.1155/2011/138451 (Cohort study, cited 7×)
 - Whittaker J, Wu K (2021). Low-fat diets and testosterone in men: Systematic review and meta-analysis of intervention studies. *The Journal of Steroid Biochemistry and Molecular Biology* 210:105878. https://doi.org/10.1016/j.jsbmb.2021.105878 (Meta-analysis, cited 1×)
+- WHO/FAO (2003). Diet, nutrition and the prevention of chronic diseases: report of a joint WHO/FAO expert consultation. *WHO Technical Report Series 916*. https://www.fao.org/4/ac911e/ac911e07.htm (Guideline, cited 1×)
 - Wiewelhove T, Döweling A, Schneider C et al. (2019). A Meta-Analysis of the Effects of Foam Rolling on Performance and Recovery. *Frontiers in Physiology* 10. https://doi.org/10.3389/fphys.2019.00376 (Meta-analysis, cited 1×)
 - Wikander L, Kirshbaum MN, Waheed N et al. (2021). Urinary Incontinence in Competitive Women Powerlifters: A Cross-Sectional Survey. *Sports Medicine - Open* 7(1). https://doi.org/10.1186/s40798-021-00387-7 (Cohort study, cited 1×)
 - Wilk M, Zajac A, Tufano JJ (2021). The Influence of Movement Tempo During Resistance Training on Muscular Strength and Hypertrophy Responses: A Review. *Sports Medicine* 51(8):1629-1650. https://doi.org/10.1007/s40279-021-01465-2 (Review, cited 1×)

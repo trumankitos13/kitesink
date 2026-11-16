@@ -174,6 +174,242 @@
       "journal": "FAO Food and Nutrition Technical Report Series 1, table 5.3",
       "url": "https://www.fao.org/4/y5686e/y5686e07.htm",
       "label": "FAO/WHO/UNU 2004"
+    },
+    "helms-2014-protein": {
+      "type": "systematic-review",
+      "authors": [
+        "Helms ER",
+        "Zinn C",
+        "Rowlands DS",
+        "Brown SR"
+      ],
+      "year": 2014,
+      "title": "A Systematic Review of Dietary Protein During Caloric Restriction in Resistance Trained Lean Athletes: A Case for Higher Intakes",
+      "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "doi": "10.1123/ijsnem.2013-0054",
+      "volume": "24",
+      "issue": "2",
+      "pages": "127-138",
+      "pmid": "24092765",
+      "n_studies": 6,
+      "support": "Six studies; protein needs for energy-restricted resistance-trained athletes are likely 2.3-3.1 g/kg of FFM scaled upwards with severity of caloric restriction and leanness."
+    },
+    "hall-2007": {
+      "type": "other",
+      "authors": [
+        "Hall KD"
+      ],
+      "year": 2008,
+      "title": "What is the required energy deficit per unit weight loss?",
+      "journal": "International Journal of Obesity",
+      "doi": "10.1038/sj.ijo.0803720",
+      "volume": "32",
+      "issue": "3",
+      "pages": "573-576",
+      "pmid": "17848938",
+      "support": "The rule of thumb approximately matches the predicted energy density of lost weight in obese subjects with an initial body fat above 30 kg but overestimates the cumulative energy deficit required per unit weight loss for people with lower initial body fat."
+    },
+    "jager-2017": {
+      "type": "position",
+      "authors": [
+        "Jäger R",
+        "Kerksick CM",
+        "Campbell BI",
+        "Cribb PJ",
+        "Wells SD",
+        "Skwiat TM",
+        "Purpura M",
+        "Ziegenfuss TN",
+        "Ferrando AA",
+        "Arent SM",
+        "Smith-Ryan AE",
+        "Stout JR",
+        "Arciero PJ",
+        "Ormsbee MJ",
+        "Taylor LW",
+        "Wilborn CD",
+        "Kalman DS",
+        "Kreider RB",
+        "Willoughby DS",
+        "Hoffman JR",
+        "Krzykowski JL",
+        "Antonio J"
+      ],
+      "year": 2017,
+      "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+      "journal": "Journal of the International Society of Sports Nutrition",
+      "doi": "10.1186/s12970-017-0177-8",
+      "volume": "14",
+      "issue": "1",
+      "pages": "20",
+      "pmid": "28642676",
+      "support": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods."
+    },
+    "lieberman-2018": {
+      "type": "rct",
+      "authors": [
+        "Lieberman JL",
+        "De Souza MJ",
+        "Wagstaff DA",
+        "Williams NI"
+      ],
+      "year": 2018,
+      "title": "Menstrual Disruption with Exercise Is Not Linked to an Energy Availability Threshold",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "50",
+      "issue": "3",
+      "pages": "551-561",
+      "doi": "10.1249/mss.0000000000001451",
+      "pmid": "29023359",
+      "n_participants": 35,
+      "support": "Thirty-five sedentary, ovulatory women age 18 to 24 yr completed a diet and exercise intervention over three menstrual cycles. The likelihood of a MD decreased by 9% for each unit increase in EA (odds ratio, 0.91; 95% confidence interval, 0.84-0.98). No specific value of EA emerged as a threshold below which MD were induced."
+    },
+    "harvie-2011": {
+      "type": "rct",
+      "authors": [
+        "Harvie MN",
+        "Pegington M",
+        "Mattson MP",
+        "Frystyk J",
+        "Dillon B",
+        "Evans G",
+        "Cuzick J",
+        "Jebb SA",
+        "Martin B",
+        "Cutler RG",
+        "Son TG",
+        "Maudsley S",
+        "Carlson OD",
+        "Egan JM",
+        "Flyvbjerg A",
+        "Howell A"
+      ],
+      "year": 2011,
+      "title": "The effects of intermittent or continuous energy restriction on weight loss and metabolic disease risk markers: a randomized trial in young overweight women",
+      "journal": "International Journal of Obesity",
+      "volume": "35",
+      "issue": "5",
+      "pages": "714-727",
+      "doi": "10.1038/ijo.2010.171",
+      "pmid": "20921964",
+      "n_participants": 107,
+      "support": "107 overweight or obese premenopausal women over 6 months: about 2,710 kJ a day on 2 days a week lost as much weight as a daily 25% restriction."
+    },
+    "trepanowski-2017": {
+      "type": "rct",
+      "authors": [
+        "Trepanowski JF",
+        "Kroeger CM",
+        "Barnosky A",
+        "Klempel MC",
+        "Bhutani S",
+        "Hoddy KK",
+        "Gabel K",
+        "Freels S",
+        "Rigdon J",
+        "Rood J",
+        "Ravussin E",
+        "Varady KA"
+      ],
+      "year": 2017,
+      "title": "Effect of Alternate-Day Fasting on Weight Loss, Weight Maintenance, and Cardioprotection Among Metabolically Healthy Obese Adults: A Randomized Clinical Trial",
+      "journal": "JAMA Internal Medicine",
+      "volume": "177",
+      "issue": "7",
+      "pages": "930-938",
+      "doi": "10.1001/jamainternmed.2017.0936",
+      "pmid": "28459931",
+      "n_participants": 100,
+      "support": "Fast days at 25% of energy needs alternating with feast days lost no more weight than a daily 25% restriction over a year, and more people dropped out."
+    },
+    "nice-2025": {
+      "type": "guideline",
+      "authors": [
+        "National Institute for Health and Care Excellence"
+      ],
+      "year": 2025,
+      "title": "Overweight and obesity management (NG246): physical activity and diet",
+      "journal": "NICE guideline NG246, recommendations 1.16.8 to 1.16.11",
+      "url": "https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet",
+      "label": "NICE 2025",
+      "support": "Low-energy diets (800 to 1,200 kcal a day) and very-low-energy diets (under 800) only within specialist services, for no more than 12 weeks."
+    },
+    "helms-2023": {
+      "type": "rct",
+      "authors": [
+        "Helms ER",
+        "Spence AJ",
+        "Sousa C",
+        "Kreiger J",
+        "Taylor S",
+        "Oranchuk DJ",
+        "Dieter BP",
+        "Watkins CM"
+      ],
+      "year": 2023,
+      "title": "Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals: A Parallel Groups Design",
+      "journal": "Sports Medicine - Open",
+      "doi": "10.1186/s40798-023-00651-y",
+      "volume": "9",
+      "issue": "1",
+      "pages": "102",
+      "pmid": "37914977",
+      "n_participants": 17,
+      "support": "21 trained lifters randomized, 17 completers over 8 weeks; maintenance vs 5% vs 15% energy surplus; faster rates of body mass gain primarily increase rates of fat gain rather than augmenting strength or muscle thickness."
+    },
+    "nunes-2022": {
+      "type": "meta-analysis",
+      "authors": [
+        "Nunes EA",
+        "Colenso‐Semple L",
+        "McKellar SR",
+        "Yau T",
+        "Ali MU",
+        "Fitzpatrick‐Lewis D",
+        "Sherifali D",
+        "Gaudichon C",
+        "Tomé D",
+        "Atherton PJ",
+        "Robles MC",
+        "Naranjo‐Modad S",
+        "Braun M",
+        "Landi F",
+        "Phillips SM"
+      ],
+      "year": 2022,
+      "title": "Systematic review and meta‐analysis of protein intake to support muscle mass and function in healthy adults",
+      "journal": "Journal of Cachexia, Sarcopenia and Muscle",
+      "doi": "10.1002/jcsm.12922",
+      "volume": "13",
+      "issue": "2",
+      "pages": "795-810",
+      "pmid": "35187864",
+      "n_studies": 74,
+      "support": "Increasing daily protein ingestion may enhance gains in LBM in studies enrolling subjects in RE; significant for younger subjects (<65 years old) ingesting >=1.6 g of protein/kg/day."
+    },
+    "fao2010": {
+      "type": "guideline",
+      "authors": [
+        "FAO"
+      ],
+      "year": 2010,
+      "title": "Fats and fatty acids in human nutrition: report of an expert consultation",
+      "journal": "FAO Food and Nutrition Paper 91",
+      "url": "https://www.fao.org/4/i1953e/i1953e00.pdf",
+      "label": "FAO/WHO 2010",
+      "support": "Minimum to prevent essential fatty acid deficiency: 2.5% of energy as linoleic acid plus 0.5% as alpha-linolenic acid. Minimum total fat for adults 15% of energy; maximum 30-35% for most."
+    },
+    "who2003": {
+      "type": "guideline",
+      "authors": [
+        "WHO/FAO"
+      ],
+      "year": 2003,
+      "title": "Diet, nutrition and the prevention of chronic diseases: report of a joint WHO/FAO expert consultation",
+      "journal": "WHO Technical Report Series 916",
+      "url": "https://www.fao.org/4/ac911e/ac911e07.htm",
+      "label": "WHO/FAO 2003",
+      "support": "Fruits and vegetables and wholegrain foods are likely to provide more than 25 g a day of total dietary fibre; at least 400 g a day of fruits and vegetables."
     }
   }
 }

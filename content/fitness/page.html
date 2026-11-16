@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fitness — Vantix, free calculators &amp; a sourced field guide · KiteSink</title>
-<meta name="description" content="Vantix, the periodization OS, plus five free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
+<meta name="description" content="Vantix, the periodization OS, plus six free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
 <link rel="canonical" href="https://kitesink.com/fitness">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/fitness.md" title="Plain-text version">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
-<meta property="og:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta property="og:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta property="og:url" content="https://kitesink.com/fitness">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
-<meta name="twitter:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta name="twitter:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -53,7 +53,7 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.12">
+<link rel="stylesheet" href="/ks.css?v=2027.13">
 <style>
   .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
@@ -170,6 +170,56 @@
   .ltable thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
   .ltable tbody th { color: #d8b07a; font-weight: 600; }
 
+  /* diet planner */
+  .d-who { max-width: 72ch; margin: 0 0 18px; padding: 12px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
+  .d-who b { color: var(--k-ink); }
+  .d-train { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+  .d-train button { min-height: 44px; padding: 0; border-radius: 10px; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-copy); font: 600 12px/1 var(--k-mono); cursor: pointer; }
+  .d-train button[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); }
+  .d-lose { display: grid; gap: 14px; }
+  .d-lose[hidden] { display: none; }
+  .d-step { display: inline-flex; align-items: center; gap: 8px; }
+  .d-step button { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-ink); font: 600 20px/1 var(--k-mono); cursor: pointer; }
+  .d-step button:hover:not(:disabled) { border-color: var(--k-green); color: var(--k-green); }
+  .d-step button:disabled { opacity: .35; cursor: default; }
+  .d-step output { min-width: 3.2ch; text-align: center; font: 800 28px/1 var(--k-sans); letter-spacing: -.03em; color: var(--k-ink); font-variant-numeric: tabular-nums; }
+  .d-delta { display: inline-block; margin: 6px 0 0; padding: 3px 10px; border-radius: 30px; background: rgba(216,176,122,.22); color: #f3e3c4; font: 600 12px/1.5 var(--k-mono); }
+  .d-delta[hidden] { display: none; }
+  .d-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+  .d-key { margin-left: 10px; text-transform: none; letter-spacing: 0; }
+  .d-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #d8b07a; vertical-align: 1px; }
+  .tool-out .d-reset { background: transparent; color: #f0e8d6; border: 1px solid rgba(240,232,214,.45); }
+  .tool-out .d-reset:hover { border-color: #d8b07a; color: #d8b07a; }
+  .d-tab { width: 100%; border-collapse: separate; border-spacing: 4px; margin: 8px -4px 0; table-layout: fixed; }
+  .d-tab th { font: 600 11px/1.2 var(--k-mono); color: #a9b9a3; text-align: center; padding: 2px 0; }
+  .d-tab th[scope="row"] { text-align: left; width: 4.2em; }
+  .d-tab td { padding: 0; }
+  .d-c { position: relative; width: 100%; min-height: 48px; border-radius: 10px; border: 1.5px solid rgba(240,232,214,.35); background: transparent; color: #f0e8d6; font: 600 11.5px/1.2 var(--k-mono); cursor: pointer; transition: background .2s, box-shadow .2s; }
+  .d-c[aria-pressed="true"] { background: #d8b07a; border-color: #d8b07a; color: #1f3024; }
+  .d-c .d-dot { position: absolute; top: 6px; right: 6px; }
+  .d-c[aria-pressed="true"] .d-dot { background: #1f3024; }
+  .d-c.is-new { box-shadow: 0 0 0 3px #f3e3c4; }
+  .d-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+  .d-card { padding: 12px 14px; border-radius: 12px; background: rgba(240,232,214,.07); border-top: 3px solid rgba(240,232,214,.35); }
+  .d-card.is-diet { border-top-color: #d8b07a; }
+  .d-card .d-card-h { margin: 0 0 4px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
+  .d-card b { display: block; font: 800 24px/1.1 var(--k-sans); letter-spacing: -.03em; color: #f0e8d6; font-variant-numeric: tabular-nums; }
+  .d-card p { margin: 4px 0 0; font: 500 12.5px/1.45 var(--k-mono); color: #c2ceb9; font-variant-numeric: tabular-nums; }
+  .d-warns { display: grid; gap: 8px; }
+  .d-warns[hidden] { display: none; }
+  .d-req { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 8px; }
+  .d-req li { padding-left: 14px; border-left: 2px solid rgba(240,232,214,.25); font-size: 13.5px; line-height: 1.5; color: #e2d8c2; }
+  .d-req li b { color: #f0e8d6; }
+  .d-req-k { display: block; font: 600 10.5px/1.6 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
+  .tool-out.d-out { position: static; }
+  .d-req li.is-watch { border-left-color: #d8b07a; }
+  .d-credit { font-size: 12px !important; opacity: .85; }
+  .d-vx { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px; margin-top: 18px; padding: clamp(18px, 3vw, 28px); border-radius: 16px; border: 1.5px solid var(--k-green); background: color-mix(in srgb, var(--k-green) 8%, transparent); }
+  .d-vx > div { max-width: 60ch; }
+  .d-vx h3 { margin: 4px 0 6px; font: 800 clamp(22px, 3vw, 28px)/1.1 var(--k-sans); letter-spacing: -.03em; color: var(--k-ink); }
+  .d-vx p { margin: 0; color: var(--k-copy); font-size: 15px; line-height: 1.55; }
+  @media (max-width: 479px) { .d-tab th[scope="row"] { width: auto; } }
+
   /* travel */
   .wk { padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
   .wk h3 { margin: 0 0 8px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: #d8b07a; }
@@ -248,7 +298,7 @@
   <section class="k-hero k-wrap" aria-labelledby="page-title">
     <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
     <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, five free calculators and a field guide cover the ground: {{n:total}} sourced entries in {{n:areas}} areas, from training basics to health. Everything runs in your browser.</p>
+    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, six free calculators and a field guide cover the ground: {{n:total}} sourced entries in {{n:areas}} areas, from training basics to health. Everything runs in your browser.</p>
     <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
     <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
       <label class="k-label" for="f-q">Search every entry</label>
@@ -340,8 +390,8 @@
   <section id="tools" class="k-band" aria-labelledby="h-tools">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Five calculators. <em>No sign-up.</em></h2></div>
-        <p class="k-small" style="max-width:34ch">Your inputs are remembered in this browser and go nowhere else.</p>
+        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Six calculators. <em>No sign-up.</em></h2></div>
+        <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps nothing.</p>
       </header>
 
       <div class="k-seg k-seg--scroll" role="tablist" aria-label="Tools">
@@ -350,6 +400,7 @@
         <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
         <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
         <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+        <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
       </div>
 
       <!-- ---------- 1. energy & macros ---------- -->
@@ -531,6 +582,65 @@
           </div>
         </div>
       </div>
+
+      <!-- ---------- 6. diet planner ---------- -->
+      <div class="tool" id="plan" role="tabpanel" aria-labelledby="tab-plan">
+        <p class="k-copy tool-intro">See your weekly deficit, not just a daily number. Pick how many days a week you diet and how hard; the other days stay at maintenance. The planner works out the week, the protein that deficit calls for, and what each kind of day looks like.</p>
+        <p class="d-who"><b>Talk to a doctor before using this</b> if you are under 18, pregnant or breastfeeding, have had an eating disorder, have diabetes or take medication that food intake affects, or have kidney, liver or heart disease. General information, not medical advice. This planner saves nothing.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="d-units-l">Units</span><div class="k-seg" id="d-units" role="group" aria-labelledby="d-units-l"><button type="button" value="metric">Metric</button><button type="button" value="imperial">Imperial</button></div></div>
+              <div class="k-field"><span class="k-label" id="d-sex-l">Sex (for the equation)</span><div class="k-seg" id="d-sex" role="group" aria-labelledby="d-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
+            </div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="d-age" type="number" inputmode="numeric" min="18" max="95" value="30"><span>yr</span></span></label>
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="d-h" type="number" inputmode="decimal" min="48" max="230" value="175"><span id="d-h-unit">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="d-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="d-w-unit">kg</span></span></label>
+            </div>
+            <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional, sharpens protein</span></span><span class="with-unit"><input class="k-input" id="d-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
+            <label class="k-field"><span class="k-label">Activity, training included</span>
+              <select class="k-select" id="d-act">
+                <option value="1.4">Sedentary · mostly sitting</option>
+                <option value="1.6" selected>Light · desk job, regular training</option>
+                <option value="1.8">Active · on your feet or training hard</option>
+                <option value="2.0">Vigorous · physical job + hard training</option>
+              </select></label>
+            <label class="k-field"><span class="k-label">Your maintenance <span style="text-transform:none;letter-spacing:0">optional, from your own tracking</span></span><span class="with-unit"><input class="k-input" id="d-own" type="number" inputmode="numeric" min="1000" max="6000" step="10" placeholder="use the estimate"><span>kcal</span></span></label>
+            <div class="k-field"><span class="k-label" id="d-phase-l">Phase</span><div class="k-seg" id="d-phase" role="group" aria-labelledby="d-phase-l"><button type="button" value="lose">Lose fat</button><button type="button" value="hold">Maintain</button><button type="button" value="gain">Gain</button></div></div>
+            <div class="k-field" id="d-train-wrap"><span class="k-label" id="d-train-l">Which days do you train?</span><div class="d-train" id="d-train" role="group" aria-labelledby="d-train-l"></div></div>
+            <div class="d-lose" id="d-lose">
+              <div class="k-field"><span class="k-label" id="d-days-l">Diet days a week</span>
+                <div class="d-step"><button type="button" id="d-days-dn" aria-label="One half day fewer">&minus;</button><output id="d-days" aria-labelledby="d-days-l">3.5</output><button type="button" id="d-days-up" aria-label="One half day more">+</button></div>
+                <p class="k-small">The other days stay at maintenance. Seven is the usual small-deficit-every-day approach; a half step plans two weeks at a time.</p></div>
+              <label class="k-field"><span class="k-label">Diet-day size<span id="d-size-read" style="text-transform:none;letter-spacing:0"></span></span><input class="k-range" id="d-size" type="range" min="10" max="60" step="1" value="35"></label>
+              <p class="k-small" id="d-size-note"></p>
+            </div>
+            <div class="k-field" id="d-gain" hidden><span class="k-label" id="d-gain-l">Surplus</span><div class="k-seg" id="d-gainseg" role="group" aria-labelledby="d-gain-l"><button type="button" value="5">+5%</button><button type="button" value="10">+10%</button><button type="button" value="15">+15%</button></div>
+              <p class="k-small" id="d-gain-note"></p></div>
+          </div>
+
+          <div class="k-card tool-out d-out" id="d-out">
+            <p class="k-vh" id="d-say" role="status"></p>
+            <div><p class="k-label" id="d-head-l">Weekly deficit</p><p class="k-stat"><span id="d-head">—</span><small id="d-head-u">kcal a week</small></p><p class="k-small" id="d-sub"></p><p class="d-delta" id="d-delta" hidden></p></div>
+            <div class="hide-empty" id="d-week-wrap">
+              <div class="d-head"><p class="k-label">Your week <span class="d-key"><i class="d-dot"></i> training day</span></p><button class="k-btn k-btn--sm d-reset" id="d-reset" type="button" hidden>Reset to suggested days</button></div>
+              <p class="k-small">Tap a day to switch it between a diet day and a maintenance day.</p>
+              <div id="d-week"></div>
+            </div>
+            <div class="d-cards hide-empty" id="d-cards"></div>
+            <div id="d-warn" class="d-warns" hidden></div>
+            <div class="hide-empty"><p class="k-label">What the plan has to cover</p><ul class="d-req" id="d-req"></ul></div>
+            <p class="k-small hide-empty" id="d-maint"></p>
+            <p class="k-small">An estimate to start from. Loss is not linear: the first week or two moves more, mostly water and stored carbohydrate, and the 7,700 kcal per kg rule overstates loss over months. Watch the trend for two or three weeks and adjust maintenance to match. At the same weekly deficit, a few big diet days lost about as much as a small deficit every day in trials, though more people dropped out of alternate-day fasting. How protein climbs between its two ends is a KiteSink convention. {{c:mifflin1990,cunningham1991,fao2004,trepanowski-2017,harvie-2011,nice-2025,hall-2007,helms-2014-protein,jager-2017,nunes-2022,helms-2023,fao2010,who2003,lieberman-2018}}</p>
+            <p class="k-small d-credit">Planning by diet day owes a debt to Lyle McDonald, whose <a href="https://bodyrecomposition.com/">books</a> set out the full methods.</p>
+          </div>
+        </div>
+        <aside class="d-vx" aria-labelledby="d-vx-h">
+          <div><p class="k-num">Like this?</p><h3 id="d-vx-h">Vantix goes further.</h3><p>This planner shows one week at a time with one maintenance figure. Vantix, the training app this site is building, plans the whole block: training and eating together, adjusted week by week.</p></div>
+          <a class="k-btn" href="/vantix">See Vantix</a>
+        </aside>
+      </div>
     </div>
   </section>
 
@@ -560,7 +670,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.12"></script>
-<script src="/fitness.js?v=2027.12"></script>
+<script src="/ks.js?v=2027.13"></script>
+<script src="/fitness.js?v=2027.13"></script>
 </body>
 </html>
