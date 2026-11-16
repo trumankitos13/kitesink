@@ -1424,7 +1424,7 @@
     "mcdonald-sarcoplasmic"
    ],
    "take": "In single thigh fibres, bodybuilders' were far bigger than power athletes', yet produced less force per unit of area than either power athletes' or control subjects'.",
-   "body": "Fibres from the vastus lateralis of 12 bodybuilders (high volume, low to moderate loads), 6 power athletes and 14 controls were tested one by one. Bodybuilders' fibre area was 67% above the power athletes' and 88% above the controls'. They produced 32% more absolute force than the controls' fibres, but force per unit of area was 62% and 41% lower; the authors suggest less densely packed contractile protein. This compares different people at one time, so it cannot show that the training caused it. McDonald's article adds that most of them, 9 of 12, said they used anabolic steroids."
+   "body": "Thigh fibres from 12 bodybuilders (high volume, low to moderate loads), 6 power athletes and 14 controls were tested one by one. Bodybuilders' fibre area was 67% above the power athletes' and 88% above the controls'. Their fibres made 32% more absolute force than the controls', but force per unit of area was 62% below the power athletes' and 41% below the controls'. The authors' guess is less densely packed contractile protein, altered proteins, or both. Comparing different people at one time cannot show the training caused it. McDonald's article adds that 9 of the 12 said they used anabolic steroids."
   },
   {
    "id": "hyp-responders-fibre-size",
@@ -1451,7 +1451,7 @@
     "haun-2019-predictors"
    ],
    "value": "+10.7 and -2.1",
-   "unit": "% change, thigh size score",
+   "unit": "% change, 4 thigh measures",
    "sort": 10.7,
    "take": "The 10 best and 10 worst of 30 trained young men on identical high-volume training: one group grew clearly, the other lost a little."
   },
@@ -1465,7 +1465,7 @@
    "sources": [
     "kadi-2004"
    ],
-   "take": "Stem cells that sit against the outside of each muscle fibre. Once activated they can divide and donate nuclei. In 15 young men their count rose 31% over 90 days of heavy training and was still raised 60 days after stopping."
+   "take": "Stem cells that sit against the outside of each muscle fibre. Once activated they can divide and donate nuclei. In 15 young men their count rose 31% over 90 days of heavy training and was still raised 60 days after stopping, but not at 90."
   },
   {
    "id": "hyp-term-myonuclear-domain",
@@ -1482,7 +1482,7 @@
   {
    "id": "hyp-fibre-number-steroid-users",
    "type": "note",
-   "title": "Signs of new muscle fibres in lifters turned up mainly in steroid users",
+   "title": "Signs of new muscle fibres were commoner in steroid-using powerlifters than drug-free ones",
    "topic": "signals",
    "level": "advanced",
    "confidence": "limited",
@@ -1490,8 +1490,8 @@
     "kadi-1999",
     "mcdonald-hyperplasia"
    ],
-   "take": "Trapezius biopsies from elite powerlifters showed more markers of fibre formation in long-term steroid users than in drug-free lifters of the same level.",
-   "body": "The users had larger fibres of every type, more nuclei, more centrally placed nuclei and more fibres carrying early developmental forms of protein, which the authors read as new fibres forming. Fibre-type mix did not differ. The groups were compared at one point in time, and the authors say genetic differences cannot be excluded. This is a research finding, not guidance on drug use. Animal models that add fibres rely on methods such as round-the-clock stretch of a bird's wing, which McDonald thinks tell us little about lifting. See the basics term on hypertrophy and hyperplasia."
+   "take": "Trapezius biopsies from high-level powerlifters showed more markers of fibre formation in those who reported years of steroid use than in those who had never used.",
+   "body": "The reported users had larger fibres, more nuclei, more centrally placed nuclei and more fibres carrying early developmental forms of protein, which the authors read as new fibres forming. Fibre-type mix did not differ. The groups were compared at one point in time, use was self-reported, and the authors say genetic differences cannot be excluded. McDonald's view is that animal models, such as round-the-clock stretch of a bird's wing, say little about lifting. Anabolic steroids are prescription-only drugs with real health risks; this is a research finding, not guidance on use. See the basics hyperplasia term."
   },
   {
    "id": "hyp-hormones-arm-trials",
@@ -1506,8 +1506,8 @@
     "west-2012",
     "mcdonald-hormones-squats"
    ],
-   "take": "Heavy leg work raised blood hormones around arm training. One trial found no extra arm growth; a smaller one, with legs trained first, found some.",
-   "body": "In 12 young men over 15 weeks, one arm trained alone and the other followed by heavy leg work. Growth hormone, IGF-1 and testosterone rose only with the legs, yet arm area grew 12% and 10%, with no difference. In 9 subjects over 11 weeks, legs trained before one arm; both arms gained strength and muscle volume, but only that arm grew at its widest point, and its curl 1RM rose more. In 56 young men, hormone rises were at most weakly linked with gains and not with strength. McDonald's view is that growth is driven in the muscle itself."
+   "take": "A hard leg session raised blood hormones around arm training. One trial found no extra arm growth; a smaller one, with legs trained first, found some.",
+   "body": "In 12 young men over 15 weeks, one arm trained alone and the other before a high volume of leg work. Growth hormone, IGF-1 and testosterone rose only with the legs, yet arm area grew 12% and 10%, no different. In 9 subjects over 11 weeks, legs trained before one arm; both arms gained strength and volume, but only that arm grew at its widest point, and its curl 1RM rose more. In 56 young men, growth hormone and cortisol rises were weakly linked with fibre growth, and no hormone rise with strength. McDonald's view is that growth is driven within the muscle. See the basics entry on the post-session hormone rise."
   },
   {
    "id": "hyp-num-testosterone-window",
@@ -1534,10 +1534,11 @@
    "sources": [
     "mcdonald-hormones-squats",
     "west-2010",
+    "ronnestad-2011",
     "dandrea-2020"
    ],
    "take": "The testosterone rise after hard exercise is brief. McDonald's view is that chest and arms grow from the work they do themselves; the trials are mixed.",
-   "body": "Heavy squatters are often big all over. McDonald's explanation is that people who train legs that hard tend to train everything hard, and that squats and deadlifts also work the back, and the arms that steady the bar. In his view only lifters who compete in the squat must do it; others can pick leg exercises that suit their build. One small trial did find extra arm growth when legs were trained first; see the entry on hormone-raising leg sessions and arm growth, and the testosterone time-window figure.",
+   "body": "Heavy squatters are often said to be big all over. McDonald's explanation is that people who train legs that hard tend to train everything hard, and that squats and deadlifts also work the back, and the arms that steady the bar. In his view only lifters who compete in the squat must do it; others can pick leg exercises that suit their build. One small trial did find extra arm growth when legs were trained first; see the entry on hormone-raising leg sessions and arm growth, the testosterone time-window figure, and the basics entry on the hormone rise after a session.",
    "do": [
     "Train your legs for your legs and your sport, not to raise hormones for the upper body (McDonald's view)."
    ]
@@ -1545,7 +1546,7 @@
   {
    "id": "hyp-growth-hormone-strength",
    "type": "note",
-   "title": "Growth hormone raised lean mass but not strength in fit young adults",
+   "title": "Growth hormone raised lean mass but not strength in fit young people",
    "topic": "signals",
    "level": "intermediate",
    "confidence": "moderate",
@@ -1555,7 +1556,7 @@
     "mcdonald-hormones-squats"
    ],
    "take": "In a systematic review of controlled trials, healthy young people given growth hormone gained lean mass, but strength and exercise capacity did not seem to improve.",
-   "body": "The review pooled 27 study samples of fit people aged 13 to 45. Lean mass rose 2.1 kg against no treatment, but recipients more often had soft-tissue swelling and fatigue, and few studies measured performance. An older review found exercising young adults gained similar muscle size and strength with growth hormone or placebo. McDonald recounts older studies in which short-rest sessions raised growth hormone more, and argues that rise matters little for growth. This is not guidance on use; hormone treatment belongs with a doctor."
+   "body": "The review pooled 27 study samples of fit people aged 13 to 45, mostly from short trials. Lean mass rose 2.1 kg against no treatment, but recipients more often had soft-tissue swelling and fatigue, few studies measured performance, and the authors say exercise capacity may worsen. An older review found exercising young adults gained similar muscle size and strength on it or placebo. McDonald argues the rise in growth hormone after short-rest sessions matters little for growth. Growth hormone is a prescription-only medicine with real side effects. This is not guidance on use; such treatment belongs with a doctor."
   },
   {
    "id": "hyp-heavy-low-volume-proteins",
@@ -1569,7 +1570,7 @@
     "mcdonald-sarcoplasmic"
    ],
    "take": "Ten weeks of heavy, low-volume lifting grew type II fibres in 15 trained men without the rise in energy-system proteins this lab saw after very high volume.",
-   "body": "The men trained the whole body at 68 to 90% of 1RM. Type II fibre area and squat strength rose; sarcoplasmic protein concentration and muscle fluid did not change, and in the 10 men given protein profiling, metabolic proteins were unaffected. Actin abundance fell 3.2%, myosin trended down and whole-body fat-free mass fell. McDonald cites the trial as support for heavy loads favouring contractile protein, but its abstract does not show that. The high-volume study from the same lab is in the extreme-volume fluid entry."
+   "body": "The men trained the whole body at 68 to 90% of 1RM, with no comparison group. Type II fibre area and squat strength rose; sarcoplasmic protein concentration and muscle fluid did not change, and in the 10 men given protein profiling, metabolic proteins were unaffected. Actin abundance fell 3.2%, myosin trended down and whole-body fat-free mass fell. McDonald cites the trial as support for heavy loads favouring contractile protein, but its abstract does not show that. The contrast with high volume is between two separate studies; the high-volume one is in the extreme-volume fluid entry."
   },
   {
    "id": "hyp-prog-heavy-then-light",
@@ -1584,7 +1585,7 @@
     "lopez-2021"
    ],
    "take": "His hypertrophy plans open each muscle with a few heavier sets, then add higher-rep sets on short rests. It is his practice, not a tested rule.",
-   "body": "McDonald's view is that the heavy sets supply tension, which he links to contractile protein, and the light work supplies fatigue, which he links to fluid, stored fuel and other non-contractile parts of the fibre. Older powerbuilding plans had the same shape. His articles predate pooled trials showing light and heavy loads build similar muscle when sets are hard (see that entry). No trial cited here tests the pairing against either alone. It does cover strength, which needs heavier work.",
+   "body": "McDonald's view is that the heavy sets supply tension, which he links to contractile protein, and the light work supplies fatigue, which he links to fluid, stored fuel and other non-contractile parts of the fibre. He says older powerbuilding plans had the same shape. Pooled trials of sets taken to failure found no difference in growth between light, moderate and heavy loads (see the light-and-heavy-loads entry). No trial cited here tests the pairing against either alone. Those pooled trials did find more strength with heavier loads, which the heavy sets cover.",
    "do": [
     "If you want a stronger 1RM as well as size, start each muscle with a few heavier sets (McDonald's practice)."
    ]
@@ -1599,7 +1600,7 @@
    "sources": [
     "mcdonald-periodization-1"
    ],
-   "take": "Training several qualities, such as speed, maximal strength and size, every week with a changing emphasis. Popularly called conjugate training; McDonald says the original Russian term meant something else."
+   "take": "Training several qualities, such as speed, maximal strength and size, every week, shifting which one leads. Often called conjugate periodisation, which McDonald says is not what that term first meant."
   },
   {
    "id": "hyp-prog-strength-block",
@@ -1613,7 +1614,7 @@
     "mcdonald-periodization-3",
     "currier-2023"
    ],
-   "take": "McDonald's view is that a few weeks of heavy sets of five or fewer build strength that lets you use more weight in later higher-rep work.",
+   "take": "McDonald's view is that a phase of heavy sets of five or fewer builds strength that lets you use more weight in later higher-rep work.",
    "body": "Loads above 80% of 1RM gave the largest strength gains in a network meta-analysis (see the heavier-loads entry). McDonald argues that much of that strength is neural, and that a stronger lifter then puts more tension through the muscle in later hypertrophy blocks. He describes his own scheme of four training zones and how to rotate them in his 2007 series. No trial cited here tests this sequence, and periodised plans helped strength, not size, in pooled trials (see the periodisation entry).",
    "do": [
     "Before your first block of sets under five reps, spend at least six weeks on sets of about four to six (McDonald's practice)."
@@ -1622,15 +1623,15 @@
   {
    "id": "hyp-split-legs-before-pull",
    "type": "note",
-   "title": "Avoid a hard back day right before squats or deadlifts",
+   "title": "McDonald keeps hard back work off the day before squats or deadlifts",
    "topic": "frequency",
    "level": "intermediate",
    "confidence": "practice",
    "sources": [
     "mcdonald-split-sequencing"
    ],
-   "take": "A tired upper back limits squats, deadlifts and Romanian deadlifts before the legs are done. McDonald orders a split so heavy pulling does not fall the day before them.",
-   "body": "In his view, upper-back and shoulder-girdle fatigue makes the bar harder to hold in position and lets form slip on hinge and squat patterns. Leg presses and leg curls need little upper-back support and suffer less. On an upper and lower split run on back-to-back days, he puts the lower day first, since general tiredness from legs costs the upper day less. A pull day placed before legs raises the same problem. These are coaching judgments, not trial results.",
+   "take": "His view is that a tired upper back limits squats, deadlifts and Romanian deadlifts, so he orders a split to keep heavy pulling off the day before them.",
+   "body": "In his view, upper-back and shoulder-girdle fatigue makes the bar harder to hold in position and lets form slip on hinge and squat patterns, while leg presses and leg curls need little upper-back support and suffer less. On an upper and lower split run on back-to-back days, he puts the lower day first, since general tiredness from legs costs the upper day less. A pull day placed before legs raises the same problem. These are coaching judgments, not trial results.",
    "do": [
     "On consecutive training days, put the lower-body day before the upper-body day (McDonald's practice)."
    ]
@@ -1645,8 +1646,8 @@
    "sources": [
     "mcdonald-split-sequencing"
    ],
-   "take": "It crosses the shoulder and helps draw the arm down and back. McDonald's view is that rows and pulldowns therefore tire it as well as presses.",
-   "body": "McDonald raises this for lifters whose triceps give out first when pressing. A pull day the day before a push day can cost pressing performance, and the reverse can happen too. For a push, pull and legs plan run once a week, he places the legs day between the two upper-body days. See the recovery entry on six-day splits for shoulder loading across the week."
+   "take": "It crosses the shoulder and helps draw the arm down and back. McDonald's view is that rows and pulldowns therefore work it too, though less directly than presses.",
+   "body": "McDonald raises this as a fine point, mainly for lifters whose triceps give out first when pressing. He suggests push and pull days placed back to back could each cost the other some performance. For a push, pull and legs plan run once a week, he places the legs day between the two upper-body days. This is coaching reasoning, not a trial result. See the recovery entry on six-day splits for shoulder loading across the week."
   },
   {
    "id": "hyp-split-rotating-calendar",
@@ -1659,7 +1660,7 @@
     "mcdonald-split-sequencing"
    ],
    "take": "Three workouts rotated over four training days land on different weekdays each week, so a poor pairing may only show up every other week.",
-   "body": "On that rotation each muscle comes round about every fifth day, but the order of neighbouring sessions keeps changing. McDonald's advice is to draw the calendar for two weeks and look for any session followed the next day by one that needs the muscles it has just tired. Plans that train each muscle once a week avoid most of these clashes. The recovery entry on six-day splits covers the arm day that spoils a following chest and back day.",
+   "body": "On that rotation each muscle comes round about every fifth day, but the order of neighbouring sessions keeps changing. McDonald's advice is to draw the calendar for two weeks and look for any session followed the next day by one that needs the muscles it has just tired. He says plans that train each muscle once a week avoid most of these clashes. The recovery entry on six-day splits covers the arm day that spoils a following chest and back day.",
    "do": [
     "Before you commit to a split, mark each day's main muscles on a two-week calendar (McDonald's practice)."
    ]
@@ -1676,9 +1677,9 @@
     "currier-2023"
    ],
    "take": "McDonald's view is that well-known hypertrophy plans differ mainly in which of the three they push, and end up in a similar place over a couple of years.",
-   "body": "One popular plan trains each muscle often with mostly submaximal sets; another trains each muscle every fifth day or so with sets driven past failure; his own sits between them on frequency and effort, with slightly more work per session than either. He judges that any of them, run for two years with steady load progression and enough food, would give similar results. A network meta-analysis of 119 trials likewise found all 12 prescriptions built muscle comparably (see that entry). He chooses between plans by temperament, recovery and equipment.",
+   "body": "One popular plan trains each muscle often with mostly submaximal sets; another trains each muscle every fifth day or so with sets driven past failure; his own sits between them on frequency and effort, with slightly more work per session than either. He judges that any of them, run for two years with steady load progression and enough food, would give similar results. In a network meta-analysis, 12 prescriptions built muscle comparably, but they varied load, sets and frequency, not effort, and multi-set plans ranked highest (see the any-programme entry). He chooses between plans by temperament and recovery.",
    "do": [
-    "Pick a plan by how much effort per set, gym time and frequency you can sustain for months."
+    "Pick a plan whose effort per set, session length and frequency you will keep up for months (McDonald's view)."
    ]
   },
   {
@@ -1692,12 +1693,12 @@
     "mcdonald-popular-programs",
     "ogasawara-2013"
    ],
-   "take": "A planned week or so off, used in one popular plan to undo the repeated bout effect so muscle responds afresh. McDonald's view is that it fails. In an indirect test, three-week breaks in 14 young men matched continuous training, no better."
+   "take": "A planned week or so off, used in one popular plan to undo the repeated bout effect so muscle responds afresh. McDonald's view is that it fails. In an indirect test, 14 young men taking three-week breaks grew as much as continuous trainers."
   },
   {
    "id": "hyp-effort-bar-speed-slows",
    "type": "note",
-   "title": "Rep speed drops as a set nears failure, so a set that never slowed was probably not close",
+   "title": "Rep speed drops well before the end of a bench or squat set taken to failure",
    "topic": "effort",
    "level": "intermediate",
    "confidence": "limited",
@@ -1706,10 +1707,10 @@
     "mcdonald-failure-weight-room-3",
     "mcdonald-failing-to-fail"
    ],
-   "take": "In sets to failure, bar speed fell well before the last rep. McDonald's view is that when every rep moved at the same speed, the set most likely ended short of failure.",
-   "body": "Thirty-six physically active men lifted as fast as they could in bench press and parallel squat sets to failure at 60 to 75% of 1RM. Average rep speed fell significantly after 34 to 40% of the reps on the bench and 48 to 69% on the squat, in the same pattern at every load. In McDonald's timings of filmed sets to true failure, the final rep lasted several times longer than the opening one. He also saw some pulling and shoulder exercises fail with little slowing, so speed is a guide, not a rule. Ending a set once reps slow past a set tempo stops it short of failure.",
+   "take": "In bench and squat sets to failure, bar speed fell well before the last rep. McDonald's view is that when every rep moved at the same speed, the set most likely ended short of failure.",
+   "body": "Thirty-six physically active men lifted as fast as they could in bench press and parallel squat sets to failure at 60 to 75% of 1RM. Average rep speed fell significantly after 34 to 40% of the reps on the bench and 48 to 69% on the squat, in the same pattern at every load. In McDonald's timings of filmed sets to true failure, the final rep lasted several times longer than the opening one. He also saw some pulling and shoulder exercises fail with little slowing, so speed is a guide, not a rule. He argues that ending a set once reps slow past a set tempo stops it short of failure.",
    "do": [
-    "Film or watch your last reps; if they moved as fast as the first, treat the set as probably short of failure."
+    "On presses and squats, film your last reps; if they moved as fast as the first, the set probably stopped short of failure (McDonald's view)."
    ]
   },
   {
@@ -3456,7 +3457,7 @@
    "support": "His reading of the failure-versus-percentage trial, with details he reports from the paper (last set to failure, matched sets, sprints on off days, the authors' recovery remark): recovery, not stimulus, was the likely limit."
   },
   "meijer-2015": {
-   "type": "trial",
+   "type": "cohort",
    "authors": [
     "Meijer JP",
     "Jaspers RT",
@@ -3809,13 +3810,13 @@
    "type": "trial",
    "authors": [
     "Izquierdo M",
-    "González-Badillo JJ",
+    "González-Badillo J",
     "Häkkinen K",
     "Ibáñez J",
-    "Kraemer WJ",
+    "Kraemer W",
     "Altadill A",
     "Eslava J",
-    "Gorostiaga EM"
+    "Gorostiaga E"
    ],
    "year": 2006,
    "title": "Effect of Loading on Unintentional Lifting Velocity Declines During Single Sets of Repetitions to Failure During Upper and Lower Extremity Muscle Actions",

@@ -39,7 +39,7 @@ An index of the 128 key numbers and 62 reference tables in the KiteSink fitness 
 | [Thigh muscle area gain in 8 weeks, sedentary men](https://kitesink.com/fitness/hypertrophy#hyp-num-early-thigh-gain) | 9.6 | % over 8 weeks | Hypertrophy |
 | [Force up to which the biceps kept adding motor units](https://kitesink.com/fitness/hypertrophy#hyp-num-biceps-recruitment) | 88 | % of maximal isometric force | Hypertrophy |
 | [Tonnage of heavy sets against light sets to failure](https://kitesink.com/fitness/hypertrophy#hyp-num-light-load-tonnage) | 62 | % of light-set tonnage | Hypertrophy |
-| [Change in size for the top and bottom responders to one six-week plan](https://kitesink.com/fitness/hypertrophy#hyp-num-responder-spread) | +10.7 and -2.1 | % change, thigh size score | Hypertrophy |
+| [Change in size for the top and bottom responders to one six-week plan](https://kitesink.com/fitness/hypertrophy#hyp-num-responder-spread) | +10.7 and -2.1 | % change, 4 thigh measures | Hypertrophy |
 | [How long testosterone stayed raised after exercise](https://kitesink.com/fitness/hypertrophy#hyp-num-testosterone-window) | 30 | minutes or less | Hypertrophy |
 | [Repetitions possible at 90% of 1RM](https://kitesink.com/fitness/powerlifting#pl-num-reps-90) | ~5 | reps (most lifts) | Powerlifting |
 | [Repetitions possible at 70% of 1RM on the bench](https://kitesink.com/fitness/powerlifting#pl-num-reps-70-bench) | ~14 | reps (bench press) | Powerlifting |
