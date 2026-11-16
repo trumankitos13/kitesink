@@ -1,6 +1,6 @@
 # Fitness key numbers and reference tables, indexed: KiteSink
 
-An index of the 128 key numbers and 62 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
+An index of the 129 key numbers and 63 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
 
 ## Key numbers
 
@@ -86,6 +86,7 @@ An index of the 128 key numbers and 62 reference tables in the KiteSink fitness 
 | [Creatine monohydrate dose](https://kitesink.com/fitness/nutrition#nut-num-creatine) | 3-5 | g per day | Nutrition |
 | [Caffeine dose often studied](https://kitesink.com/fitness/nutrition#nut-num-caffeine) | 3-6 | mg per kg | Nutrition |
 | [Fibre target](https://kitesink.com/fitness/nutrition#nut-num-fibre) | 25-29 | g per day | Nutrition |
+| [Energy from dietary fibre](https://kitesink.com/fitness/nutrition#nut-num-fibre-energy) | 2 | kcal per g (8 kJ) | Nutrition |
 | [Rate of loss](https://kitesink.com/fitness/diet#diet-num-rate) | 0.5-1 | % body weight per week | Diet |
 | [Deficit that stopped lean-mass gains](https://kitesink.com/fitness/diet#diet-num-deficit-limit) | 500 | kcal per day | Diet |
 | [Energy per pound of weight lost](https://kitesink.com/fitness/diet#diet-num-3500) | 3,500 | kcal per lb | Diet |
@@ -177,6 +178,7 @@ An index of the 128 key numbers and 62 reference tables in the KiteSink fitness 
 - [Protein targets by goal and body weight](https://kitesink.com/fitness/nutrition#nut-table-protein-targets) (Nutrition)
 - [Hand-portion guide](https://kitesink.com/fitness/nutrition#nut-table-hand-portions) (Nutrition)
 - [Supplement evidence at a glance](https://kitesink.com/fitness/nutrition#nut-table-supplements) (Nutrition)
+- [Essential amino acids and leucine in common protein powders](https://kitesink.com/fitness/nutrition#nut-table-amino-acids) (Nutrition)
 - [Deficit size versus expected weekly loss](https://kitesink.com/fitness/diet#diet-table-deficit-rate) (Diet)
 - [What moves scale weight day to day](https://kitesink.com/fitness/diet#diet-table-scale-moves) (Diet)
 - [Rate of gain by training age](https://kitesink.com/fitness/diet#diet-table-gain-rate) (Diet)

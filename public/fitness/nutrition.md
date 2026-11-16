@@ -239,6 +239,135 @@ In 67 adults who estimated 42 pre-weighed foods, a finger-width method put 80 pe
 
 Tracking food · Beginner · Thin evidence · Sources: [Gibson 2016](https://doi.org/10.1017/jns.2016.22), [Helms 2019](https://doi.org/10.3390/sports7070172)
 
+### Plant omega-3 (ALA) converted poorly to DHA in tracer studies, least in men
+
+**In tracer studies, young men made some EPA from ALA but no measurable DHA, while young women converted about 21 percent to EPA and 9 percent to DHA.**
+
+Six young men on their usual diet swallowed labelled ALA with a meal. EPA and DPA appeared in the blood, but no labelled DHA showed up over 21 days, and the authors judged that men may depend on DHA eaten ready-made. A matching study in young women estimated net conversion of 21 percent to EPA, 6 percent to DPA and 9 percent to DHA, which the authors linked to the needs of pregnancy. Both studies were small. McDonald's view is that flax and other ALA oils are a poor stand-in for fish. For what omega-3 does for the heart, see the omega-3 entry.
+
+- Do not count flax or other ALA sources as your EPA and DHA intake.
+- If you want EPA and DHA, eat fatty fish or another ready-made source.
+
+Carbs, fat and fibre · Intermediate · Thin evidence · Sources: [Burdge 2002b](https://doi.org/10.1079/BJN2002662), [Burdge 2002a](https://doi.org/10.1079/BJN2002689), [McDonald 2020f](https://bodyrecomposition.com/nutrition/the-real-essential-fatty-acids)
+
+### McDonald argues arachidonic acid and DHA may be the real essential fats
+
+**LA and ALA are the textbook essential fats, but much of what they do runs through their products. McDonald's reading is that arachidonic acid (AA) and DHA are the ones the body truly needs.**
+
+A 1999 review held that the need for AA is the main reason omega-6 fats are essential, and that DHA, needed for vision and nerve development, is the more likely essential omega-3. A hospital team saw no fatty acid deficiency in patients fed by drip on a fish-oil emulsion with AA and DHA but almost no LA or ALA, and in mice AA and DHA alone prevented it. In a tracer study of nine adults, only 0.3 to 0.6 percent of LA became AA. The evidence is thin and mostly not from healthy adults, so treat this as an open question.
+
+Carbs, fat and fibre · Advanced · Thin evidence · Sources: [Spector 1999](https://doi.org/10.1007/BF02562220), [Le 2009](https://doi.org/10.1016/j.plefa.2009.05.020), [Demmelmair 1999](https://doi.org/10.1046/j.1365-2362.1999.00477.x), [McDonald 2020f](https://bodyrecomposition.com/nutrition/the-real-essential-fatty-acids)
+
+### Keep industrial trans fat as close to zero as you can
+
+**Trans fat from partially hydrogenated oils harms blood lipids, and intakes of about 2 percent of energy went with a markedly higher rate of heart disease.**
+
+A 2009 review names partially hydrogenated vegetable oils as the main source in most countries. Trans fat worsened blood lipids and raised markers of inflammation and poor blood vessel function, and some studies linked it to visceral fat and insulin resistance. In observational data, even about 2 percent of energy from trans fat went with markedly more coronary heart disease. Links with diabetes were less consistent. McDonald treats this as the rare fat question with no real debate.
+
+- Check ingredient lists for partially hydrogenated oil and choose another product.
+
+Carbs, fat and fibre · Beginner · Some support · Sources: [Micha 2009](https://doi.org/10.1038/nrendo.2009.79), [McDonald 2009c](https://bodyrecomposition.com/nutrition/a-guide-to-dietary-fats)
+
+### Most people with lactose intolerance can handle about a cup of milk
+
+**In a systematic review, 12 to 15 g of lactose, roughly one cup of milk, was well tolerated by most adults with lactose intolerance or malabsorption.**
+
+Lactose, the sugar in milk, is split by the enzyme lactase. Without enough lactase it reaches the colon and ferments, causing gas and loose stools. The review of 36 trials rated the cup-of-milk finding moderate quality, but most trials studied malabsorption rather than symptoms, and evidence for lactose-reduced milk, probiotics or gradual adaptation was too thin to judge. Milk allergy is a different, immune reaction to milk protein, and this figure does not apply to it. See also the dairy entry in the diet section.
+
+- If dairy upsets your stomach, have it assessed by a clinician before cutting it out.
+- With a milk allergy, follow your allergist's advice, not the tolerance figure.
+
+Carbs, fat and fibre · Beginner · Some support · Sources: [Shaukat 2010](https://doi.org/10.7326/0003-4819-152-12-201006150-00241), [McDonald 2010a](https://bodyrecomposition.com/nutrition/a-guide-to-dietary-carbohydrates)
+
+### Protein gives the body less usable energy than its label value
+
+**Labels count protein at 4 kcal (17 kJ) per gram. On the FAO's net metabolisable energy scale it is worth 3.2 kcal (13 kJ).**
+
+Label factors (see the Atwater entry) count energy the body absorbs and does not lose in urine. The FAO also describes a net scale that subtracts energy spent as heat in handling each nutrient, the thermic effect (see the TEF entry). On it, protein drops from 17 to 13 kJ a gram, which the FAO counts as a 24 percent cut, fibre from 2.0 to 1.4 kcal, and fat stays at 9. The net scale is a proposal: requirements and labels still use the older figures. McDonald mentions the lower protein value as an open debate.
+
+- Keep logging with label values, since targets and databases are built on them.
+
+Energy and maintenance · Advanced · Some support · Sources: [FAO 2003](https://www.fao.org/4/y5022e/y5022e04.htm), [McDonald 2009d](https://bodyrecomposition.com/nutrition/a-guide-to-basic-nutrition)
+
+### McDonald argues per-meal protein caps ignore breakdown and non-muscle tissue
+
+**In young adults, a meal with about 70 g of protein gave better whole-body protein balance than one with 40 g, mostly by cutting protein breakdown.**
+
+Per-meal caps come from studies that measure muscle protein synthesis after a single dose of protein, often whey or egg. McDonald argues this ignores breakdown and the large share of lean mass that is not muscle. In 23 young adults, net whole-body protein balance was greater after about 70 g than after 40 g, mainly through less breakdown, with or without prior lifting. That is whole-body data, not muscle. A 2023 tracer study, which postdates his article, also found 100 g gave a larger and longer muscle response than 25 g (see the per-meal entry).
+
+- Do not treat 20 to 40 g a meal as a ceiling.
+
+Protein · Advanced · Thin evidence · Sources: [Kim 2016](https://doi.org/10.1152/ajpendo.00365.2015), [Trommelen 2023](https://doi.org/10.1016/j.xcrm.2023.101324), [McDonald 2019l](https://bodyrecomposition.com/nutrition/protein-requirements-growth), [McDonald 2020d](https://bodyrecomposition.com/nutrition/protein-requirements-athletes)
+
+### Tendon, ligament and cartilage renew their protein at rates near muscle's
+
+**In six patients having knee replacement, resting protein synthesis in tendon, ligament, cartilage and menisci did not differ from muscle.**
+
+During surgery, a labelled amino acid was infused and tissue samples taken. Rates ran from 0.02 to 0.13 percent an hour across tissues: tendon about 0.06, cruciate ligaments 0.04 to 0.07, cartilage and menisci 0.04, against 0.04 for muscle. Only synovium ran higher, and bone from the knee notch lower. The six were in their sixties and resting, so this says nothing yet about training. McDonald reads it as support for his view that protein needs are not set by muscle alone.
+
+Protein · Advanced · Thin evidence · Sources: [Smeets 2019](https://doi.org/10.1371/journal.pone.0224745), [McDonald 2020d](https://bodyrecomposition.com/nutrition/protein-requirements-athletes)
+
+### McDonald sets lifters at 2.2 g per kg of protein, and high-level athletes higher
+
+**McDonald's practice: about 2.2 g per kg (1 g per lb) for recreational lifters outside a diet, and 2.5 to 3.0 g per kg (1.1 to 1.4 g per lb) for high-level strength athletes.**
+
+His reasons are practical. People who aim at 1 g per lb tend to land below it, and he sees no harm in high intakes as long as carbohydrate and fat still fit. The evidence is less firm than the target. A 2004 review found few outcome data showing 2 to 3 g per kg is needed, and pooled trials show returns shrinking as intake rises (see the protein range entry). His figures are for young men with healthy kidneys; with kidney disease, set protein with a clinician (see the kidney entry).
+
+- McDonald's practice: aim at 1 g per lb, since most people land below their target.
+
+Protein · Intermediate · Coaching practice · Sources: [McDonald 2019l](https://bodyrecomposition.com/nutrition/protein-requirements-growth), [Tipton 2004](https://doi.org/10.1080/0264041031000140554)
+
+### Higher protein did not harm bone, and may help the spine slightly
+
+**A meta-analysis of 16 trials and 20 cohort studies found no harm to bone from higher protein, and a small gain in lumbar spine density.**
+
+In McDonald's account, the worry began with old studies feeding purified protein, which raised calcium loss in urine. The pooled analysis found lumbar spine density 0.52 percent higher with more protein, and no effect at the hip, femoral neck or whole body. Limited evidence did not support an extra benefit from protein combined with calcium and vitamin D, the pairing his 2007 article leans on; the analysis came later. Studies varied, and confounding could not be ruled out.
+
+- McDonald's practice: pair a high protein intake with enough calcium and plenty of fruit and vegetables.
+
+Protein · Intermediate · Some support · Sources: [Shams-White 2017](https://doi.org/10.3945/ajcn.116.145110), [McDonald 2007k](https://bodyrecomposition.com/nutrition/examining-protein-controversies)
+
+### Whey and casein differ most when eaten alone, less in a mixed meal
+
+**In a single-protein meal, casein left more protein in the body over 7 hours than whey did. Early results in young men suggest added carbohydrate and fat narrow the gap.**
+
+In the first study, whey raised whole-body protein synthesis by 68 percent and burned more amino acids, while casein cut protein breakdown by 34 percent; net leucine balance over 7 hours favoured casein. That was whole-body data in rested adults, not muscle after training, and McDonald's article adds that the protein was taken alone after an overnight fast. The same group's preliminary results in young men found added fat and carbohydrate blunted the differences, and they suggest a fast protein may suit older people better.
+
+- McDonald's practice: before or during training, pick quick-digesting whey, since solid food sits heavy.
+
+Protein · Advanced · Thin evidence · Sources: [Boirie 1997](https://doi.org/10.1073/pnas.94.26.14930), [Dangin 2002](https://doi.org/10.1093/jn/131.10.3228S), [McDonald 2008ag](https://bodyrecomposition.com/nutrition/protein-sources-speed-of-digestion)
+
+### After whole-body training, 40 g of whey beat 20 g for muscle protein synthesis
+
+**In 30 resistance-trained young men, 40 g of whey after a whole-body session raised muscle protein synthesis about 20 percent more than 20 g, whatever their lean mass.**
+
+The accepted ceiling was 20 to 25 g, and McDonald's article says that figure came from leg-only training. Here men with lean mass of 65 kg (143 lb) or less and 70 kg (154 lb) or more did a whole-body session, then took 20 or 40 g of whey. Synthesis rose from 0.049 to 0.059 percent an hour with the larger dose, and lean mass made no difference. McDonald's view is that doubling the dose bought a modest gain, but his article notes only the thigh was sampled, so the other trained muscles may have gained too. See the per-meal entry.
+
+- After a full-body session, consider nearer 40 g than 20 g; the evidence is one short study.
+
+Protein · Intermediate · Thin evidence · Sources: [Macnaughton 2016](https://doi.org/10.14814/phy2.12893), [McDonald 2016j](https://bodyrecomposition.com/research/protein-intake-protein-synthesis)
+
+### Without animal foods, plan for vitamin B12, and expect less iron to be absorbed
+
+**B12 depletion was common among vegetarians, more so vegans. In people with no iron stores, about 5 to 12 percent of iron is absorbed from vegetarian diets, 14 to 18 from mixed.**
+
+A review of 18 studies found deficiency rates of 11 to 90 percent across age groups of vegetarians, and its authors advise regular B12 supplements. The iron figures are estimates. Meat raises iron absorption, while phytate, polyphenols and calcium lower it, though a person's iron status matters more than the diet. McDonald's view is that lean red meat is a strong source of iron and zinc, and that athletes who drop it, women especially, run short. See the iron entry in the women section.
+
+- If you eat no animal foods, ask a clinician or dietitian about a B12 source and testing.
+- McDonald's caution: do not take iron pills without a blood test and a clinician's advice.
+
+Protein · Intermediate · Some support · Sources: [Pawlak 2013](https://doi.org/10.1111/nure.12001), [Hurrell 2010](https://doi.org/10.3945/ajcn.2010.28674F), [McDonald 2008ae](https://bodyrecomposition.com/nutrition/protein-sources-other-factors)
+
+### McDonald warns that very high fibre can work against big eaters
+
+**More fibre lowered how much fat and protein the gut absorbed in a feeding study. McDonald's view is that this and the fullness help dieters and hinder big eaters.**
+
+In 17 adults on controlled diets, each eaten for two weeks, raising fibre lowered fat and protein digestibility and the usable energy of the diet. McDonald's estimate is that going from about 18 to 36 g of fibre a day costs around 100 kcal absorbed. His general starting point for anyone is 5 to 10 g of fibre a meal. For lifters trying to gain or athletes who burn a great deal, his concern is that bulk and lost absorption make eating enough harder.
+
+- McDonald's practice: if you struggle to eat enough, eat the salad or vegetables last.
+
+Carbs, fat and fibre · Intermediate · Thin evidence · Sources: [Baer 1997](https://doi.org/10.1093/jn/127.4.579), [McDonald 2009m](https://bodyrecomposition.com/nutrition/dietary-fiber-natures-broom)
+
 ## Common mistakes
 
 ### Weighing cooked food but logging the raw entry
@@ -326,6 +455,37 @@ Labels, databases, restaurant meals, wearables and your own memory all carry err
 
 Tracking food · Intermediate · Thin evidence · Sources: [O’Driscoll 2020](https://doi.org/10.1136/bjsports-2018-099643), [Harvey 2019](https://doi.org/10.1002/oby.22382)
 
+### Cutting vegetable oils for fear that omega-6 fat inflames the body
+
+**In 15 randomised trials of healthy people, adding linoleic acid, the main omega-6 fat, did not raise blood markers of inflammation.**
+
+The worry is that linoleic acid becomes arachidonic acid, a raw material for signals that drive inflammation. A systematic review of 15 trials (8 parallel, 7 crossover) in healthy, non-infant groups found no significant change in C-reactive protein, fibrinogen, cytokines, TNF-alpha or adhesion molecules with more linoleic acid. Two trials did see shifts in urinary eicosanoid products, which their authors did not read as more inflammation. The review covered markers, not disease. McDonald's view is that the larger gap in most modern diets is too little omega-3 rather than too much omega-6.
+
+- McDonald's practice: put effort into omega-3 sources rather than purging omega-6.
+
+Carbs, fat and fibre · Intermediate · Some support · Sources: [Johnson 2012](https://doi.org/10.1016/j.jand.2012.03.029), [McDonald 2009c](https://bodyrecomposition.com/nutrition/a-guide-to-dietary-fats)
+
+### Ranking protein sources by quality score when you already eat plenty
+
+**Quality scores were built to judge diets short of protein. McDonald's view is that at a lifter's intake from mixed sources, gaps between good proteins matter little.**
+
+The authors of one scoring study say the gap between methods matters most where protein intake is marginal. In pig and rat work, the older method rated soy, pea and wheat higher than the newer one did, so plant scores need care when one plant source carries a low intake. McDonald's view is that quality scores tell lifters little once total protein is high and comes from several foods. For plant and animal protein over months, see the plant protein entry.
+
+- Hit your daily protein total first, then worry about the source.
+- On a low or single-source plant intake, mix sources and aim higher.
+
+Protein · Intermediate · Thin evidence · Sources: [Rutherfurd 2015](https://doi.org/10.3945/jn.114.195438), [Mathai 2017](https://doi.org/10.1017/S0007114517000125), [McDonald 2008af](https://bodyrecomposition.com/nutrition/protein-sources-quality-part-1)
+
+### Eating eggs raw for their protein
+
+**In five people with an ileostomy, about 51 percent of raw egg protein was absorbed by the end of the small intestine, against 91 percent when cooked.**
+
+Digestibility is the share of eaten protein the gut takes in. Each person ate 25 g of labelled egg protein once cooked and once raw, and heating raised digestibility sharply. The study was tiny and used a measurement taken at the end of the small intestine, but the gap was large. McDonald also warns of the food safety risk of raw eggs.
+
+- Cook eggs before you eat them.
+
+Protein · Beginner · Thin evidence · Sources: [Evenepoel 1998](https://doi.org/10.1093/jn/128.10.1716), [McDonald 2008ad](https://bodyrecomposition.com/nutrition/complete-guide-dietary-protein), [McDonald 2008ae](https://bodyrecomposition.com/nutrition/protein-sources-other-factors)
+
 ## Key numbers
 
 | Number | What it is | Support | Sources |
@@ -340,6 +500,7 @@ Tracking food · Intermediate · Thin evidence · Sources: [O’Driscoll 2020](h
 | 3-5 g per day | Creatine monohydrate dose: Daily dose from a physique-athlete review; lean-mass gain was about 1.1 kg with training. | Well supported | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791) |
 | 3-6 mg per kg | Caffeine dose often studied: ISSN 2010: about 3 to 6 mg per kg works, 9 or more adds nothing; 5 mg/kg is 2.3 mg per lb. Half-life was 7.9 h on low-dose oral contraceptives, 5.4 h without. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5), [Abernethy 1985](https://doi.org/10.1007/bf00544361) |
 | 25-29 g per day | Fibre target: Intake at which health benefits were greatest in pooled studies. | Well supported | [Reynolds 2019](https://doi.org/10.1016/S0140-6736(18)31809-9) |
+| 2 kcal per g (8 kJ) | Energy from dietary fibre: FAO factor for fibre in ordinary foods, from gut bacteria fermenting part of it. Fibre they cannot ferment gives none. | Rulebook | [FAO 2003](https://www.fao.org/4/y5022e/y5022e04.htm), [McDonald 2009d](https://bodyrecomposition.com/nutrition/a-guide-to-basic-nutrition) |
 
 ## Protein targets by goal and body weight
 
@@ -386,15 +547,40 @@ How the common supplements rate for people who lift, from strongest to weakest e
 
 Some support · Sources: [Kreider 2017](https://doi.org/10.1186/s12970-017-0173-z), [Delpino 2022](https://doi.org/10.1016/j.nut.2022.111791), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Trexler 2015](https://doi.org/10.1186/s12970-015-0090-y), [Vårvik 2021](https://doi.org/10.1123/ijsnem.2020-0295), [Wolfe 2017](https://doi.org/10.1186/s12970-017-0184-9), [Clemesha 2020](https://doi.org/10.5534/wjmh.190043), [Maughan 2018](https://doi.org/10.1136/bjsports-2018-099027), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5)
 
+## Essential amino acids and leucine in common protein powders
+
+Share of the protein in commercial isolates, measured in one lab. A dash means the figure was not reported in the summary. Plant isolates vary widely.
+
+| Protein | Essential amino acids (% of protein) | Leucine (% of protein) |
+|---|---|---|
+| Whey | 43 | – |
+| Milk | 39 | 9.0 |
+| Casein | 34 | – |
+| Egg | 32 | 7.0 |
+| Human muscle (reference) | 38 | 7.6 |
+| Wheat | 22 | – |
+| Oat | 21 | – |
+| Lupin | 21 | – |
+| Corn | – | 13.5 (highest of the plant isolates) |
+| Hemp | – | 5.1 (lowest of the plant isolates) |
+
+Thin evidence · Sources: [Gorissen 2018](https://doi.org/10.1007/s00726-018-2640-5), [McDonald 2008p](https://bodyrecomposition.com/nutrition/protein-sources-quality-part-2)
+
 ## Terms
 
 - **Atwater factors**: Standard energy values per gram that food labels use: 4 kcal for protein and carbohydrate, 9 for fat, 7 for alcohol. They are averages, not measurements of your food.
+- **DIAAS (digestible indispensable amino acid score)**: The score FAO has recommended in place of PDCAAS. It uses the digestibility of each essential amino acid at the end of the small intestine and is not capped. In rats it ran from 0.01 for a corn cereal to 1.18 for milk protein concentrate.
 - **Ergogenic aid**: Something taken to improve exercise performance or training results. Creatine and caffeine are the best-supported examples.
+- **Essential fatty acids (EFAs)**: Fats the body needs but cannot build. Textbooks name linoleic acid (LA, an omega-6) and alpha-linolenic acid (ALA, an omega-3). The amount needed is a small share of energy, shown as the essential fats line in the diet planner.
+- **Essential, nonessential and conditionally essential nutrients**: Essential: needed and not made in enough amount, so food must supply it. Nonessential: needed, but the body builds its own. Conditionally essential: supply falls short only in some states; McDonald puts carbohydrate there for hard training.
+- **Fast and slow proteins**: Proteins whose amino acids reach the blood at different speeds. Whey gives a sharp, short rise in blood amino acids; casein, which leaves the stomach slowly, gives a lower rise that lasts for hours.
 - **Kilojoule (kJ) and kilocalorie (kcal)**: Two units of food energy. One kcal, the calorie on most labels, equals 4.184 kJ. Many countries print kJ.
 - **Leucine**: An essential amino acid that acts as a trigger for muscle protein synthesis. Animal proteins contain more than most plant proteins, per gram of protein.
 - **Macronutrients (macros)**: The three nutrients that provide most energy: protein, carbohydrate and fat. Alcohol is sometimes counted as a fourth source of energy.
 - **Maintenance calories**: The daily energy intake at which your body weight stays steady over weeks. Also called total daily energy expenditure.
+- **PDCAAS (protein digestibility-corrected amino acid score)**: A protein quality score adopted by FAO/WHO in 1991. It compares a protein's essential amino acids with a reference pattern for young children, corrects for digestibility over the whole gut, and is capped at 1.0, so top proteins tie.
 - **Resting metabolic rate (RMR)**: The energy your body uses at rest to keep you alive, usually 60 to 70 percent of a day for inactive people, estimated by equations or measured.
+- **Soluble, insoluble and fermentable fibre**: Soluble (viscous) fibre forms a gel in water and slows stomach emptying. Insoluble fibre does not dissolve and adds bulk. Fermentable fibre is broken down by gut bacteria into gases and short-chain fatty acids, which supply some energy.
 - **Thermic effect of food (TEF)**: The energy used to digest, absorb and store food, about 5 to 15 percent of daily energy expenditure on a mixed diet, and higher with protein and alcohol.
 
 ## Offers for people who arrive through an AI assistant

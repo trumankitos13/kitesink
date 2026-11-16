@@ -346,7 +346,7 @@ The review took 14 randomised trials of at least 6 weeks in people aged 18 to 35
 
 - When you total weekly volume, count only sets taken close to failure.
 
-Volume · Intermediate · Some support · Sources: [Baz-Valle 2021](https://doi.org/10.1519/JSC.0000000000002776), [McDonald 2020e](https://bodyrecomposition.com/training/what-is-training-volume)
+Volume · Intermediate · Some support · Sources: [Baz-Valle 2021](https://doi.org/10.1519/JSC.0000000000002776), [McDonald 2020g](https://bodyrecomposition.com/training/what-is-training-volume)
 
 ### In two small studies, the biceps was driven almost fully and the quadriceps a little less
 
@@ -354,7 +354,7 @@ Volume · Intermediate · Some support · Sources: [Baz-Valle 2021](https://doi.
 
 Voluntary activation is tested by adding an electrical pulse to the nerve or muscle during a maximal effort; any extra force shows drive the person did not supply. In 11 subjects the elbow flexors reached a median 99.4% in fast lifting efforts and 98.0% when held still. In 8 men the quadriceps reached 95.2% held still, 89.7% when shortening and 88.3% when lengthening, slowly. The studies came from different labs and methods, and held still the gap was only 98.0% against 95.2%. McDonald speculates that the gap may be why legs seem to need more volume; he offers no test of it.
 
-Growth signals · Advanced · Thin evidence · Sources: [Gandevia 1998](https://doi.org/10.1111/j.1469-7793.1998.595be.x), [Babault 2001](https://doi.org/10.1152/jappl.2001.91.6.2628), [McDonald 2009z](https://bodyrecomposition.com/muscle-gain/reps-per-set-for-muscle-growth), [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth)
+Growth signals · Advanced · Thin evidence · Sources: [Gandevia 1998](https://doi.org/10.1111/j.1469-7793.1998.595be.x), [Babault 2001](https://doi.org/10.1152/jappl.2001.91.6.2628), [McDonald 2009ac](https://bodyrecomposition.com/muscle-gain/reps-per-set-for-muscle-growth), [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth)
 
 ### Half-load sets to failure took three times as long and felt worse in one trial
 
@@ -406,7 +406,7 @@ Growth signals · Advanced · Thin evidence · Sources: [Kadi 1999](https://doi.
 
 In 12 young men over 15 weeks, one arm trained alone and the other before a high volume of leg work. Growth hormone, IGF-1 and testosterone rose only with the legs, yet arm area grew 12% and 10%, no different. In 9 subjects over 11 weeks, legs trained before one arm; both arms gained strength and volume, but only that arm grew at its widest point, and its curl 1RM rose more. In 56 young men, growth hormone and cortisol rises were weakly linked with fibre growth, and no hormone rise with strength. McDonald's view is that growth is driven within the muscle. See the basics entry on the post-session hormone rise.
 
-Growth signals · Intermediate · Thin evidence · Sources: [West 2010](https://doi.org/10.1152/japplphysiol.01147.2009), [Rønnestad 2011](https://doi.org/10.1007/s00421-011-1860-0), [West 2012](https://doi.org/10.1007/s00421-011-2246-z), [McDonald 2020d](https://bodyrecomposition.com/training/hormonal-response-squats-growth)
+Growth signals · Intermediate · Thin evidence · Sources: [West 2010](https://doi.org/10.1152/japplphysiol.01147.2009), [Rønnestad 2011](https://doi.org/10.1007/s00421-011-1860-0), [West 2012](https://doi.org/10.1007/s00421-011-2246-z), [McDonald 2020e](https://bodyrecomposition.com/training/hormonal-response-squats-growth)
 
 ### Growth hormone raised lean mass but not strength in fit young people
 
@@ -414,7 +414,7 @@ Growth signals · Intermediate · Thin evidence · Sources: [West 2010](https://
 
 The review pooled 27 study samples of fit people aged 13 to 45, mostly from short trials. Lean mass rose 2.1 kg against no treatment, but recipients more often had soft-tissue swelling and fatigue, few studies measured performance, and the authors say exercise capacity may worsen. An older review found exercising young adults gained similar muscle size and strength on it or placebo. McDonald argues the rise in growth hormone after short-rest sessions matters little for growth. Growth hormone is a prescription-only medicine with real side effects. This is not guidance on use; such treatment belongs with a doctor.
 
-Growth signals · Intermediate · Some support · Sources: [Liu 2008](https://doi.org/10.7326/0003-4819-148-10-200805200-00215), [Yarasheski 1994](https://doi.org/10.1249/00003677-199401000-00013), [McDonald 2020d](https://bodyrecomposition.com/training/hormonal-response-squats-growth)
+Growth signals · Intermediate · Some support · Sources: [Liu 2008](https://doi.org/10.7326/0003-4819-148-10-200805200-00215), [Yarasheski 1994](https://doi.org/10.1249/00003677-199401000-00013), [McDonald 2020e](https://bodyrecomposition.com/training/hormonal-response-squats-growth)
 
 ### Heavy low-volume training did not raise muscle energy proteins in one small trial
 
@@ -480,7 +480,7 @@ Thirty-six physically active men lifted as fast as they could in bench press and
 
 - On presses and squats, film your last reps; if they moved as fast as the first, the set probably stopped short of failure (McDonald's view).
 
-Effort · Intermediate · Thin evidence · Sources: [Izquierdo 2006](https://doi.org/10.1055/s-2005-872825), [McDonald 2020i](https://bodyrecomposition.com/training/what-is-muscular-failure-the-weight-room-part-3), [McDonald 2020g](https://bodyrecomposition.com/training/what-is-muscular-failure-failing-to-fail)
+Effort · Intermediate · Thin evidence · Sources: [Izquierdo 2006](https://doi.org/10.1055/s-2005-872825), [McDonald 2020k](https://bodyrecomposition.com/training/what-is-muscular-failure-the-weight-room-part-3), [McDonald 2020i](https://bodyrecomposition.com/training/what-is-muscular-failure-failing-to-fail)
 
 ## Common mistakes
 
@@ -572,7 +572,7 @@ Heavy squatters are often said to be big all over. McDonald's explanation is tha
 
 - Train your legs for your legs and your sport, not to raise hormones for the upper body (McDonald's view).
 
-Growth signals · Beginner · Thin evidence · Sources: [McDonald 2020d](https://bodyrecomposition.com/training/hormonal-response-squats-growth), [West 2010](https://doi.org/10.1152/japplphysiol.01147.2009), [Rønnestad 2011](https://doi.org/10.1007/s00421-011-1860-0), [D’Andrea 2020](https://doi.org/10.1007/s40618-020-01251-3)
+Growth signals · Beginner · Thin evidence · Sources: [McDonald 2020e](https://bodyrecomposition.com/training/hormonal-response-squats-growth), [West 2010](https://doi.org/10.1152/japplphysiol.01147.2009), [Rønnestad 2011](https://doi.org/10.1007/s00421-011-1860-0), [D’Andrea 2020](https://doi.org/10.1007/s40618-020-01251-3)
 
 ### Starting a rotating split without checking how sessions fall over two weeks
 
@@ -599,7 +599,7 @@ Frequency and splits · Intermediate · Coaching practice · Sources: [McDonald 
 | -7.6 % performance change | Average performance change after short sleep: Pooled across 69 publications where sleep was 6 hours or less in 24 hours. | Some support | [Craven 2022](https://doi.org/10.1007/s40279-022-01706-y) |
 | 9.6 % over 8 weeks | Thigh muscle area gain in 8 weeks, sedentary men: Includes swelling in the first weeks. Typical for new lifters, not for trained ones. | Thin evidence | [DeFreitas 2011](https://doi.org/10.1007/s00421-011-1905-4) |
 | 88 % of maximal isometric force | Force up to which the biceps kept adding motor units: Single-unit recordings found new biceps units joining up to this force. In a small thumb muscle, none joined above 50%. | Thin evidence | [Kukulka 1981](https://doi.org/10.1016/0006-8993(81)90266-3), [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth) |
-| 62 % of light-set tonnage | Tonnage of heavy sets against light sets to failure: On the tonnage McDonald quotes for a trial in 49 trained men, heavy sets (75-90% of 1RM, 8-12 reps) moved this share of what light sets of 20-25 did. Growth was similar. | Thin evidence | [Morton 2016](https://doi.org/10.1152/japplphysiol.00154.2016), [McDonald 2020e](https://bodyrecomposition.com/training/what-is-training-volume) |
+| 62 % of light-set tonnage | Tonnage of heavy sets against light sets to failure: On the tonnage McDonald quotes for a trial in 49 trained men, heavy sets (75-90% of 1RM, 8-12 reps) moved this share of what light sets of 20-25 did. Growth was similar. | Thin evidence | [Morton 2016](https://doi.org/10.1152/japplphysiol.00154.2016), [McDonald 2020g](https://bodyrecomposition.com/training/what-is-training-volume) |
 | +10.7 and -2.1 % change, 4 thigh measures | Change in size for the top and bottom responders to one six-week plan: The 10 best and 10 worst of 30 trained young men on identical high-volume training: one group grew clearly, the other lost a little. | Thin evidence | [Haun 2019b](https://doi.org/10.3389/fphys.2019.00297) |
 | 30 minutes or less | How long testosterone stayed raised after exercise: Across 48 studies in men, testosterone rose after moderate or hard exercise when measured within 30 minutes, not later. Light activity did not raise it. | Some support | [D’Andrea 2020](https://doi.org/10.1007/s40618-020-01251-3) |
 
