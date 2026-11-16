@@ -127,7 +127,7 @@
     },
     {
       "slug": "reference",
-      "kind": "reference",
+      "kind": "reference", "label": "Numbers and tables",
       "title": "Fitness key numbers and reference tables, indexed · KiteSink",
       "description": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables in the KiteSink fitness field guide. Each links to the page that holds it, with its reasoning and sources.",
       "h1": "Numbers and tables, <em>indexed.</em>",
