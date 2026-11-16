@@ -144,6 +144,68 @@ async function visit(hash, opts = {}) {
   seen.hidden = classes.has('fwd');
   return seen;
 }
+
+// ---------- diet planner ----------
+{
+  const P = F.PLAN, base = { sex: 'm', kg: 80, cm: 180, age: 30, life: 'walk', rate: 0.5, surplus: 10, protein: 2, fatPct: 25 };
+  const wk = [{ s: 'liftHard', min: 60 }, { s: 'rest' }, { s: 'liftHard', min: 60 }, { s: 'walk', min: 45 }, { s: 'liftHard', min: 60 }, { s: 'rest' }, { s: 'steady', min: 40 }];
+  const plan = o => F.plan(Object.assign({}, base, { week: wk }, o));
+  // a day's needs, by hand: Mifflin 1780 × 1.53 = 2723.4; heavy lifting adds (6.0 − 1) × 80 × 1 h = 400
+  let p = plan({ phase: 'hold', template: 'steady', len: 7 });
+  eq('planner: rest-day needs', p.days[1].maint, 1780 * 1.53, 0.01);
+  eq('planner: lifting-day needs', p.days[0].maint, 1780 * 1.53 + 400, 0.01);
+  eq('planner: brisk walk, 45 min', p.days[3].exKcal, 3.8 * 80 * 0.75, 0.01);
+  // every template that takes a rate hits it exactly: 0.5% of 80 kg a week = 0.4 kg = 3,080 kcal
+  for (const [ph, t, len] of [['lose', 'steady', 7], ['lose', 'train', 7], ['lose', 'steady', 14], ['lose', 'train', 14]]) {
+    p = plan({ phase: ph, template: t, len });
+    eq(`planner: ${t} ${len}-day week hits the rate`, p.weekBalance, -3080, 0.01);
+    ok(`planner: ${t} ${len}-day protein holds every day`, p.days.every(d => Math.abs(d.protein - 160) < 1e-9));
+    ok(`planner: ${t} ${len}-day macros add up`, p.days.every(d => Math.abs(d.protein * 4 + d.carbs * 4 + d.fat * 9 - d.kcal) < 1e-6));
+  }
+  p = plan({ phase: 'lose', template: 'train', len: 7 });
+  ok('planner: training days at maintenance', p.days.filter(d => d.hard).every(d => d.type === 'maint'));
+  p = plan({ phase: 'hold', template: 'train', len: 7 });
+  eq('planner: maintenance with higher training days nets to zero', p.weekBalance, 0, 1e-6);
+  ok('planner: and training days are the surplus days', p.days.filter(d => d.hard).every(d => d.type === 'surplus'));
+  p = plan({ phase: 'gain', template: 'steady', len: 7 });
+  eq('planner: gaining at +10% of maintenance', p.weekBalance, p.avgMaint * 7 * 0.1, 0.01);
+  // two very low days: fixed composition, so the template sets its own rate
+  p = plan({ phase: 'lose', template: 'two', len: 7 });
+  ok('planner: two very low days in a week', p.days.filter(d => d.kind === 'vlow').length === 2 && p.setsOwnRate);
+  ok('planner: on rest days, not in a row', p.days.filter(d => d.kind === 'vlow').every(d => d.load === 0) && !p.adjacent);
+  eq('planner: a very low day is 25% of needs or protein + 10%, whichever is more', p.days[1].kcal, Math.max(0.25 * 1780 * 1.53, 160 * 4 * 1.1), 0.01);
+  p = plan({ phase: 'lose', template: 'two', len: 14 });
+  ok('planner: four very low days in 14', p.days.filter(d => d.kind === 'vlow').length === 4 && !p.adjacent);
+  // alternate days over 14: 7 very low, 7 maintenance, never two very low in a row
+  p = plan({ phase: 'lose', template: 'alternate', len: 14 });
+  ok('planner: alternate days, 7 and 7', p.days.filter(d => d.kind === 'vlow').length === 7 && !p.adjacent);
+  ok('planner: with four hard days a week some very low days land on them, and it says so', p.vlowOnHard);
+  // placement: the best set when the rules can be kept, a flag when they cannot
+  let pl = F.placeVlow([2, 0, 2, 1, 2, 0, 2], 2);
+  ok('placement: rest days first', pl.days.join() === '1,5' && !pl.adjacent && !pl.onHard);
+  pl = F.placeVlow([2, 2, 2, 0, 2, 2, 0], 4);
+  ok('placement: four very low days against five hard days flags a clash', pl.days.length === 4 && (pl.adjacent || pl.onHard));
+  pl = F.placeVlow([0, 0, 0, 0, 0, 0, 0], 4);
+  ok('placement: four in seven cannot avoid a pair', pl.adjacent);
+  // arranged by hand: the plan follows the order given and checks it
+  p = plan({ phase: 'lose', template: 'two', len: 7, kinds: ['vlow', 'vlow', 'maint', 'maint', 'maint', 'maint', 'maint'] });
+  ok('by hand: two very low days in a row are flagged', p.adjacent);
+  ok('by hand: a very low day on a hard day is flagged', p.vlowOnHard);
+  // limits
+  const small = { sex: 'f', kg: 50, cm: 155, age: 60, life: 'desk' };
+  p = plan(Object.assign({}, small, { phase: 'lose', template: 'steady', len: 7, rate: 1 }));
+  ok('floor: a small person losing 1% a week falls under 1,200 a day', p.belowFloor, Math.round(p.avgKcal));
+  const max = F.planMaxRate(Object.assign({}, base, small, { week: wk, phase: 'lose', template: 'steady', len: 7 }));
+  ok('floor: the nearest plan it will give is under the floor no more', max > 0 && !plan(Object.assign({}, small, { phase: 'lose', template: 'steady', len: 7, rate: max })).belowFloor, max);
+  p = plan({ phase: 'lose', template: 'alternate', len: 14 });
+  ok('a big deficit is flagged', p.deficitPct > P.BIG_DEFICIT, p.deficitPct.toFixed(1));
+  p = plan({ phase: 'lose', template: 'steady', len: 7, bf: 20 });
+  eq('energy availability: (intake − training) ÷ fat-free mass', p.ea, (p.avgKcal - p.days.reduce((s, d) => s + d.exKcal, 0) / 7) / 64, 1e-6);
+  const weeks = F.planWeeks(12, -0.4, true);
+  ok('breaks: weeks 4, 8 and 12 at maintenance', weeks.weeks.map((w, i) => w === 'break' ? i + 1 : 0).filter(Boolean).join() === '4,8,12');
+  eq('breaks: 9 diet weeks at 0.4 kg', weeks.kg, -3.6, 1e-9);
+}
+
 (async () => {
   const entry = index.rows.find(x => index.kinds[x[2]] === 'Guidance')[0], term = index.rows.find(x => index.kinds[x[2]] === 'Term')[0];
   const source = Object.keys(map.ids).find(k => k.startsWith('src-') && homeOf(k) === 'sources');

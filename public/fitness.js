@@ -315,6 +315,166 @@
     });
     return { total: scored.length, hits: hits };
   };
+  /* ---------- diet planner: a 7- or 14-day plan of day types ----------
+     Each day's maintenance = resting energy × a daily-life factor (no training) + that day's
+     session. Day types: "vlow" (very low), "maint" (maintenance), "surplus", and "flex" days,
+     which absorb whatever is left of the plan's target balance and show as low or surplus.
+     Sources (content/fitness/tools.json): FAO/WHO/UNU 2004 table 5.3 for the daily-life bands,
+     Tudor-Locke 2004 for the step counts, the 2024 Adult Compendium for session METs,
+     Trepanowski 2017 for a very low day at 25% of needs, NICE NG246 for the 1,200 kcal floor,
+     Hall 2008 for 7,700 kcal per kg. */
+  var PLAN = {
+    // Daily life, not counting training sessions. 1.40, 1.70 and 2.00 are the floors of the FAO
+    // bands; 1.53 is FAO's worked example of an office job with an hour of walking.
+    LIFE: { desk: 1.4, walk: 1.53, feet: 1.7, labour: 2.0 },
+    // m: METs from the 2024 Adult Compendium (code in c); hard: counts as a hard session when
+    // the planner places day types (a KiteSink convention, not a study result)
+    SESSIONS: {
+      rest: { m: 1, hard: false },
+      liftHard: { m: 6.0, hard: true, c: "02050" },
+      liftLight: { m: 3.5, hard: false, c: "02054" },
+      walk: { m: 4.8, hard: false, c: "17200" },
+      steady: { m: 7.5, hard: true, c: "12020" },
+      hardCardio: { m: 10.0, hard: true, c: "01040" },
+      intervals: { m: 8.8, hard: true, c: "01305" },
+      circuits: { m: 7.5, hard: true, c: "02040" },
+      mobility: { m: 2.3, hard: false, c: "02101" }
+    },
+    VLOW_SHARE: 0.25,   // a very low day eats 25% of that day's needs (Trepanowski 2017)
+    FLOOR: 1200,        // average kcal a day; below it NICE NG246 sends people to specialist care
+    BIG_DEFICIT: 25,    // % of maintenance; the macro tool warns at the same point
+    EA_WARN: 30         // kcal per kg fat-free mass a day: a risk marker, not a safe floor
+  };
+  // Which day types each template asks for. "hard" days are the ones with a hard session.
+  PLAN.TEMPLATES = {
+    lose: {
+      steady: function () { return { fixed: {}, hardKind: "flex", restKind: "flex" }; },
+      train: function () { return { fixed: {}, hardKind: "maint", restKind: "flex" }; },
+      two: function (len) { return { fixed: { vlow: 2 * len / 7 }, restKind: "maint" }; },
+      alternate: function (len) { return { fixed: { vlow: Math.floor(len / 2) }, restKind: "maint" }; }
+    },
+    hold: {
+      steady: function () { return { fixed: {}, hardKind: "maint", restKind: "maint" }; },
+      train: function () { return { fixed: {}, hardKind: "surplus", restKind: "flex" }; }
+    },
+    gain: {
+      steady: function () { return { fixed: {}, hardKind: "flex", restKind: "flex" }; },
+      train: function () { return { fixed: {}, hardKind: "flex", restKind: "maint" }; }
+    }
+  };
+
+  // Where very low days go: n of the `loads` (0 rest, 1 light, 2 hard), never two in a row
+  // (the cycle wraps), never on a hard day, lightest days first. Every set of positions is
+  // tried (at most 14 choose 7 = 3,432), so the answer is the best there is. clash = the
+  // rules could not all be kept.
+  F.placeVlow = function (loads, n) {
+    var L = loads.length, best = null, bestScore = Infinity, pick = [];
+    function score(set) {
+      var s = 0;
+      for (var i = 0; i < set.length; i++) {
+        s += loads[set[i]] === 2 ? 1000 : loads[set[i]] * 10;
+        if (set.indexOf((set[i] + 1) % L) >= 0) s += 100000;
+        s += set[i] * 0.001; // earlier days first when all else is equal
+      }
+      return s;
+    }
+    (function walk(start) {
+      if (pick.length === n) { var sc = score(pick); if (sc < bestScore) { bestScore = sc; best = pick.slice(); } return; }
+      for (var i = start; i <= L - (n - pick.length); i++) { pick.push(i); walk(i + 1); pick.pop(); }
+    })(0);
+    return { days: best || [], adjacent: bestScore >= 100000, onHard: bestScore % 100000 >= 1000 };
+  };
+
+  /* plan(o) → the whole plan.
+     o: sex, kg, cm, age, bf (optional), life (key of PLAN.LIFE), phase 'lose'|'hold'|'gain',
+        template (key of PLAN.TEMPLATES[phase]), len 7|14, rate (lose: % body weight a week),
+        surplus (% over maintenance), protein (g/kg), fatPct, week: [{ s: session key, min }] × 7,
+        kinds (optional): a day-type list the person arranged by hand, used instead of placing */
+  F.plan = function (o) {
+    var useBf = o.bf > 0 && o.bf < 60;
+    var rmr = useBf ? F.cunningham(o.kg, o.bf) : F.mifflin(o.sex, o.kg, o.cm, o.age);
+    var life = PLAN.LIFE[o.life] || PLAN.LIFE.walk, L = o.len === 14 ? 14 : 7;
+    var tplFn = (PLAN.TEMPLATES[o.phase] || PLAN.TEMPLATES.lose)[o.template] || PLAN.TEMPLATES[o.phase].steady;
+    var tpl = tplFn(L), protG = o.protein * o.kg, protKcal = protG * 4;
+    var days = [];
+    for (var i = 0; i < L; i++) {
+      var w = (o.week && o.week[i % 7]) || { s: "rest", min: 0 }, ses = PLAN.SESSIONS[w.s] || PLAN.SESSIONS.rest;
+      var min = w.s === "rest" ? 0 : Math.max(0, +w.min || 0);
+      var exKcal = (ses.m - 1) * o.kg * min / 60;   // net of the resting share already counted
+      days.push({ i: i, session: w.s, min: min, hard: ses.hard && min > 0, load: ses.hard && min > 0 ? 2 : min > 0 ? 1 : 0,
+                  exKcal: exKcal, maint: rmr * life + exKcal });
+    }
+    // day types: by hand, or placed
+    var kinds, placed = { adjacent: false, onHard: false };
+    if (o.kinds && o.kinds.length === L) kinds = o.kinds.slice();
+    else {
+      kinds = days.map(function (d) { return d.hard ? (tpl.hardKind || tpl.restKind) : tpl.restKind; });
+      var nv = Math.round(tpl.fixed.vlow || 0);
+      if (nv) { placed = F.placeVlow(days.map(function (d) { return d.load; }), nv); placed.days.forEach(function (j) { kinds[j] = "vlow"; }); }
+    }
+    // a training-days template with no days left to take up the target: every day takes a share
+    if (!o.kinds && !tpl.fixed.vlow && kinds.indexOf("flex") < 0 && o.phase !== "hold") kinds = kinds.map(function () { return "flex"; });
+    for (var a = 0; a < L; a++) {
+      if (kinds[a] === "vlow" && kinds[(a + 1) % L] === "vlow") placed.adjacent = true;
+      if (kinds[a] === "vlow" && days[a].hard) placed.onHard = true;
+    }
+    // the target balance over the cycle, then each day
+    var totMaint = days.reduce(function (s, d) { return s + d.maint; }, 0);
+    var target = o.phase === "lose" ? -(o.rate / 100) * o.kg * KCAL_PER_KG * L / 7 : o.phase === "gain" ? (o.surplus / 100) * totMaint : 0;
+    var fixedBal = 0, flexMaint = 0;
+    days.forEach(function (d, j) {
+      d.kind = kinds[j];
+      if (d.kind === "vlow") d.kcal = Math.max(PLAN.VLOW_SHARE * d.maint, protKcal * 1.1);
+      else if (d.kind === "surplus") d.kcal = d.maint * (1 + o.surplus / 100);
+      else if (d.kind === "maint") d.kcal = d.maint;
+      if (d.kind !== "flex") fixedBal += d.kcal - d.maint; else flexMaint += d.maint;
+    });
+    var rest = target - fixedBal, clamped = false;
+    days.forEach(function (d) {
+      if (d.kind !== "flex") return;
+      d.kcal = d.maint + rest * d.maint / flexMaint;
+      var low = Math.max(PLAN.VLOW_SHARE * d.maint, protKcal * 1.1);
+      if (d.kcal < low) { d.kcal = low; clamped = true; }
+    });
+    var totKcal = 0, totEx = 0;
+    days.forEach(function (d) {
+      var r = d.kcal / d.maint;
+      d.type = d.kind === "vlow" ? "vlow" : r < 0.97 ? "low" : r > 1.03 ? "surplus" : "maint";
+      d.protein = protG;
+      d.fat = Math.max(0, Math.min(d.kcal * o.fatPct / 100, d.kcal - protKcal) / 9);
+      d.carbs = Math.max(0, (d.kcal - protKcal - d.fat * 9) / 4);
+      totKcal += d.kcal; totEx += d.exKcal;
+    });
+    var avgKcal = totKcal / L, avgMaint = totMaint / L, weekBal = (totKcal - totMaint) * 7 / L;
+    var ffm = useBf ? o.kg * (1 - o.bf / 100) : NaN;
+    return {
+      days: days, len: L, rmr: rmr, life: life, equation: useBf ? "Cunningham" : "Mifflin-St Jeor",
+      avgKcal: avgKcal, avgMaint: avgMaint, weekBalance: weekBal, weekKg: weekBal / KCAL_PER_KG,
+      setsOwnRate: flexMaint === 0, clamped: clamped,
+      adjacent: placed.adjacent, vlowOnHard: placed.onHard,
+      belowFloor: avgKcal < PLAN.FLOOR, belowRmr: avgKcal < rmr,
+      deficitPct: weekBal < 0 ? -weekBal / (avgMaint * 7) * 100 : 0,
+      ea: useBf ? (avgKcal - totEx / L) / ffm : NaN
+    };
+  };
+  // The fastest rate (% body weight a week, in steps of 0.05) a template can run without the
+  // average falling under the floor, or 0 when none can.
+  F.planMaxRate = function (o) {
+    for (var r = 1; r >= 0.25 - 1e-9; r -= 0.05) {
+      var p = F.plan(Object.assign({}, o, { rate: Math.round(r * 100) / 100 }));
+      if (!p.belowFloor) return Math.round(r * 100) / 100;
+    }
+    return 0;
+  };
+  // A long fat-loss plan with a week at maintenance after every three (the ICECAP trial's
+  // pattern, Peos 2021): which weeks are breaks, and the projected change over the plan.
+  F.planWeeks = function (weeks, weekKg, breaks) {
+    var out = [], kg = 0;
+    for (var w = 1; w <= weeks; w++) { var br = breaks && w % 4 === 0; out.push(br ? "break" : "diet"); if (!br) kg += weekKg; }
+    return { weeks: out, kg: kg, dietWeeks: out.filter(function (x) { return x === "diet"; }).length };
+  };
+  F.PLAN = PLAN;
+
   window.KSFit = F;
 
   /* =====================================================================
