@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="Stage First — the business side of a live show">
 <meta name="twitter:description" content="From staffing the stage to closing out the night. The staffing app (Backline) is a prototype in a staging beta; the closeout side is at the design stage.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
-<link rel="stylesheet" href="/ks.css?v=2027.9">
+<link rel="stylesheet" href="/ks.css?v=2027.11">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -125,7 +125,7 @@ svg { display: block; flex: none; }
 
 /* ---------- 3. KiteSink chrome on a dark page ---------- */
 .ks-bar, .ks-bottombar { padding-inline: max(var(--gutter), calc((100% - var(--frame)) / 2)); }   /* line up with the page frame */
-.ks-bar { position: static; height: 44px; background: var(--k-paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.ks-bar { position: static; height: 44px; }
 [data-ks="bar"]:empty { height: 44px; background: var(--k-paper); }
 .ks-bar .ks-brand { min-height: 44px; }
 .ks-barnav a { padding: 16px 0; }
@@ -134,7 +134,7 @@ svg { display: block; flex: none; }
 .ks-bottombar a { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* ---------- 4. page nav: identity, sections, the one action ---------- */
-.sf-head { position: sticky; top: 0; z-index: 40; background: rgba(11,12,15,.92); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair-sub); }
+.sf-head { position: sticky; top: 0; z-index: 40; background: rgb(11,12,15); border-bottom: 1px solid var(--hair-sub); }   /* solid, no backdrop-filter: iOS 26 Safari then colours the status bar strip to match */
 .sf-head-in { display: flex; align-items: stretch; height: var(--nav-h); }
 .sf-brand { display: flex; align-items: center; gap: 10px; padding-right: 22px; color: var(--hi); text-decoration: none; font: 700 19px/1 var(--sans); letter-spacing: -.035em; white-space: nowrap; }
 .sf-mark { display: flex; gap: 3px; align-items: flex-end; width: 21px; height: 19px; transform: skew(-12deg); }
@@ -1537,6 +1537,6 @@ html:not(.js) .night-panel { grid-row: span 2; grid-template-rows: subgrid; }
   }
 })();
 </script>
-<script src="/ks.js?v=2027.9"></script>
+<script src="/ks.js?v=2027.11"></script>
 </body>
 </html>

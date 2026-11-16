@@ -15,3 +15,4 @@ docs/handover/
 docs/*.jpg
 docs/*.png
 docs/*.heic
+__pycache__/

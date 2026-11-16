@@ -11,19 +11,21 @@ from pathlib import Path
 # Crossref answers are kept between runs, outside the repository.
 CACHE = Path(os.environ.get("KS_CROSSREF_CACHE") or Path(tempfile.gettempdir()) / "kitesink-crossref-cache")
 CACHE.mkdir(parents=True, exist_ok=True)
-DOMAINS = {"hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health"}
+DOMAINS = {"hypertrophy", "powerlifting", "meet", "basics", "technique", "conditioning", "recovery",
+           "nutrition", "diet", "bodycomp", "women", "health"}
 TYPES = {"note", "mistake", "number", "term", "table", "checklist", "step", "claim"}
 LEVELS = {"beginner", "intermediate", "advanced"}
 CONF = {"strong", "moderate", "limited", "rule", "practice"}
 VERDICTS = {"true", "mostly", "depends", "overstated", "false"}
 EVIDENCE = {"meta-analysis", "rct", "review", "cohort", "position", "guideline", "rulebook", "mixed"}
-SRC_TYPES = {"meta-analysis", "systematic-review", "rct", "review", "cohort", "position", "guideline", "rulebook", "book", "trial", "other"}
+SRC_TYPES = {"meta-analysis", "systematic-review", "rct", "review", "cohort", "position", "guideline", "rulebook", "book", "trial", "article", "other"}
 CLAIM_TAGS = {"protein", "calories", "timing", "training", "cardio", "supplements", "weight-loss", "muscle-gain", "recovery", "health", "myths", "strength", "competition", "tracking"}
 WHEN = {"months-out", "weeks-out", "week-before", "day-before", "weigh-in", "warm-up", "platform", "between-lifts", "after"}
 SPARING = re.compile(r"schoenfeld", re.I)   # sources by this author: allowed, sparingly
 SPARING_LIMIT = 5
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-PREFIX = {"hypertrophy": "hyp-", "powerlifting": "pl-", "meet": "meet-", "nutrition": "nut-", "diet": "diet-", "health": "hlth-", "claims": "claim-"}
+PREFIX = {"hypertrophy": "hyp-", "powerlifting": "pl-", "meet": "meet-", "nutrition": "nut-", "diet": "diet-", "health": "hlth-", "claims": "claim-",
+          "basics": "base-", "technique": "tech-", "conditioning": "cond-", "recovery": "rec-", "bodycomp": "comp-", "women": "wom-"}
 
 errors, warns = [], []
 def err(m): errors.append(m)
@@ -104,7 +106,7 @@ def check_file(path, offline):
         if dom != "claims" and t == "claim": err(f"{w}: claims go in the claims file")
         text_len("title", e.get("title"), 6, 90, w)
         if t == "claim":
-            if e.get("domain") not in DOMAINS: err(f"{w}: claim needs domain (one of the six)")
+            if e.get("domain") not in DOMAINS: err(f"{w}: claim needs domain, one of {sorted(DOMAINS)}")
             if e.get("verdict") not in VERDICTS: err(f"{w}: verdict must be one of {sorted(VERDICTS)}")
             if e.get("evidence") not in EVIDENCE: err(f"{w}: evidence must be one of {sorted(EVIDENCE)}")
             tags = e.get("tags", [])
@@ -171,6 +173,10 @@ def check_file(path, offline):
         if any(SPARING.search(a) for a in authors): sparing.add(key)
         doi, url = s.get("doi"), s.get("url")
         if not doi and not url: err(f"{w}: needs a doi, or a url for rulebooks/guidelines/organisation pages")
+        if s.get("type") == "article":     # a web article credited for a position or an analysis
+            if not url: err(f"{w}: an article needs its url")
+            if not s.get("retrieved"): err(f"{w}: an article needs retrieved, the date you read it (YYYY-MM-DD)")
+            if len(s.get("support", "")) > 240: err(f"{w}: support for an article is a pointer in your own words, 240 characters at most; never the article's sentences")
         if doi and not offline:
             m = crossref(doi)
             if m is None: err(f"{w}: DOI {doi} does not exist on Crossref")
@@ -192,7 +198,7 @@ def check_file(path, offline):
                     short = (m.get("short-container-title") or [""])[0]
                     if not short or difflib.SequenceMatcher(None, norm(short), norm(s["journal"])).ratio() < 0.5:
                         warn(f"{w}: journal {s['journal']!r} vs Crossref {jr!r}")
-        if url and not doi and not offline:
+        if url and not doi and not offline and s.get("type") != "article":   # article links are checked once, by hand, not on every run
             st = url_ok(url)
             if st != 200: warn(f"{w}: URL answered {st}: {url}")
     if len(sparing) > SPARING_LIMIT:

@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fitness — Vantix, free calculators &amp; a sourced field guide · KiteSink</title>
-<meta name="description" content="Vantix, the periodization OS, plus five free calculators and a field guide to hypertrophy, powerlifting, meet day, nutrition, diet and health: sourced entries, common claims checked, key numbers and reference tables you can filter and sort.">
+<meta name="description" content="Vantix, the periodization OS, plus five free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
 <link rel="canonical" href="https://kitesink.com/fitness">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/fitness.md" title="Plain-text version">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
-<meta property="og:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health that you can filter and sort.">
+<meta property="og:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta property="og:url" content="https://kitesink.com/fitness">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
-<meta name="twitter:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health that you can filter and sort.">
+<meta name="twitter:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -26,7 +26,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.9">
+<script id="fit-forward">
+/* Old links look like /fitness#<id>. The entries, the sources and most sections now live on the
+   pages under /fitness/. When the fragment is one of their ids, look it up in /fitness/ids.json
+   (scripts/build_fitness.py writes it) and go to the page that holds it, keeping the fragment.
+   location.replace keeps this stop out of the history, so Back does not loop. The build writes
+   the test below: it is false for every id on this page, so #tools and #macros never wait. */
+(function () {
+  var MOVED = /{{fwd:test}}/, root = document.documentElement, timer;
+  function stay() { clearTimeout(timer); root.classList.remove("fwd"); }
+  function look() {
+    var hash = location.hash, id = hash.slice(1);
+    try { id = decodeURIComponent(id); } catch (e) {}
+    if (!id || !MOVED.test(id) || !window.fetch) return;
+    root.classList.add("fwd");                             // show nothing while the map loads,
+    clearTimeout(timer); timer = setTimeout(stay, 2500);   // and never for long
+    window.fetch("/fitness/ids.json").then(function (r) { return r.ok ? r.json() : null; }).then(function (map) {
+      var page = map && Object.prototype.hasOwnProperty.call(map.ids, id) ? map.pages[map.ids[id]] : null;
+      if (page) location.replace("/fitness/" + page + hash); else stay();   // an id no page has stays here
+    }, stay);
+  }
+  look();
+  window.addEventListener("hashchange", look);
+  // ks.css gives every move between pages a short cross-fade. A page that leaves before it has
+  // been shown has nothing to fade from, and the browser logs an error for the attempt: skip it.
+  window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
+})();
+</script>
+<link rel="stylesheet" href="/ks.css?v=2027.11">
 <style>
   .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
@@ -145,14 +172,6 @@
 
   /* travel */
   .wk { padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
-  /* the source list: open in the HTML so it reads without scripts; the page script folds it
-     and opens it again whenever a source link or #sources is followed */
-  .src-wrap > summary { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; margin: 18px 0 6px;
-    border: 1px solid var(--k-rule-strong); border-radius: 999px; font: 600 14px/1 var(--k-sans); color: var(--k-ink); cursor: pointer; list-style: none; }
-  .src-wrap > summary::-webkit-details-marker { display: none; }
-  .src-wrap > summary::after { content: "+"; font: 500 18px/1 var(--k-mono); color: var(--k-green); }
-  .src-wrap[open] > summary::after { content: "\2212"; }
-  .src-wrap > summary:hover { border-color: var(--k-green); color: var(--k-green); }
   .wk h3 { margin: 0 0 8px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: #d8b07a; }
   .wk .rule { font-size: 14.5px; line-height: 1.5; color: #f0e8d6; margin-bottom: 8px; }
   .wk .blk { margin-top: 12px; font: 600 12px/1.4 var(--k-mono); color: #c2ceb9; }
@@ -174,180 +193,40 @@
   .feat { position: absolute; top: -13px; left: clamp(22px, 4vw, 44px); z-index: 2; display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 30px;
     background: #92a6cc; color: #1e222a; font: 700 11px/1 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; box-shadow: 0 6px 14px rgba(30,34,42,.28); }
 
-  /* ---------- the reference: one area lens, then facets, search and sort per list ---------- */
-  .lens { margin-bottom: 20px; }
-  .lens button b, .fx b { margin-left: 4px; font: 500 11px/1 var(--k-mono); color: var(--k-mute); font-variant-numeric: tabular-nums; }
-  .lens button[aria-pressed="true"] b { color: var(--k-copy); }
-  .fx-group { display: grid; gap: 8px; min-width: 0; }
-  .fx-group[hidden] { display: none; }
-  .fx-label { font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-mute); }
-  .fx-row { display: flex; flex-wrap: wrap; gap: 6px; }
-  .fx { display: inline-flex; align-items: center; min-height: 38px; padding: 6px 13px; border-radius: 30px; border: 1px solid var(--k-rule-strong); background: transparent;
-    color: var(--k-copy); font: 500 13.5px/1.2 var(--k-sans); cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
-  .fx[hidden] { display: none; }
-  @media (pointer: coarse) { .fx { min-height: 44px; padding-inline: 15px; } }
-  .fx:hover { border-color: var(--k-green); color: var(--k-green); }
-  .fx[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); }
-  .fx[aria-pressed="true"] b { color: inherit; opacity: .85; }
-  .fx.is-zero:not([aria-pressed="true"]) { opacity: .5; }
+  /* ---------- an old link is being looked up (the first script in the head): show nothing meanwhile ---------- */
+  html.fwd body { visibility: hidden; }
 
-  .gx { display: grid; gap: 14px 40px; }
-  .gx-main { min-width: 0; }
-  .gx-filters > summary { list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px; border-radius: 30px; cursor: pointer;
-    border: 1px solid var(--k-rule-strong); font: 600 13.5px/1 var(--k-sans); color: var(--k-ink); }
-  .gx-filters > summary::-webkit-details-marker { display: none; }
-  .gx-filters > summary::after { content: "+"; font: 400 18px/1 var(--k-mono); color: var(--k-mute); }
-  .gx-filters[open] > summary::after { content: "−"; }
-  .gx-filters > summary span { font: 500 12px/1 var(--k-mono); color: var(--k-brass); }
-  .gx-rail { display: grid; gap: 18px; padding-top: 16px; }
-  @media (min-width: 1000px) {
-    .gx { grid-template-columns: 236px minmax(0, 1fr); align-items: start; }
-    .gx-filters { position: sticky; top: 124px; max-height: calc(100vh - 148px); overflow-y: auto; padding-right: 6px; scrollbar-width: thin; }
-    .gx-filters > summary { display: none; }
-    .gx-rail { padding-top: 0; }
-  }
-  .gx-bar { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; margin-bottom: 10px; }
-  .gx-q { flex: 1 1 240px; min-height: 46px; border-radius: 30px; padding-inline: 18px; background: var(--k-raised); }
-  .gx-sort { display: grid; gap: 5px; flex: 0 1 220px; }
-  .gx-sort .k-select { min-height: 46px; background-color: var(--k-raised); }
-  .gx-count { min-height: 20px; margin-bottom: 4px; font: 500 12.5px/1.6 var(--k-mono); color: var(--k-mute); }
-  .gx-count .gx-count { display: inline; }
-  .gx-empty { padding: 28px 0; color: var(--k-copy); }
-  .k-linkbtn { background: none; border: 0; padding: 10px 0; margin: -10px 0; font: inherit; color: var(--k-green); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
-  .qx-controls { display: grid; gap: 14px; margin-bottom: 8px; }
+  /* ---------- search: every entry, from an index loaded when the box is first used ---------- */
+  .hub-find { margin-top: clamp(20px, 3vw, 30px); max-width: 760px; }
+  .hub-find .k-label { display: block; margin-bottom: 8px; }
+  .hub-find-row { display: flex; gap: 8px; }
+  .hub-find-row .k-input { flex: 1; min-width: 0; min-height: 52px; font-size: 17px; }
+  .hub-find-row .k-btn { min-height: 52px; }
+  #f-q::-webkit-search-cancel-button { display: none; }   /* the Clear button next to it does this, with a name */
+  .hub-find .k-small { margin-top: 8px; }
+  .hub-find-count { margin-top: 16px; font: 500 12.5px/1.5 var(--k-mono); color: var(--k-copy); }
+  .hub-find-count:empty { display: none; }
+  .hub-hits { list-style: none; margin: 10px 0 0; padding: 0; border-top: 2px solid var(--k-ink); }
+  .hub-hits a { display: grid; gap: 3px; min-height: 44px; padding: 13px 2px 14px; border-bottom: 1px solid var(--k-rule); text-decoration: none; }
+  .hub-hit-m { font: 600 10.5px/1.5 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-mute); }
+  .hub-hit-t { font: 650 17px/1.3 var(--k-sans); letter-spacing: -.015em; color: var(--k-ink); text-wrap: balance; }
+  .hub-hit-s { font-size: 14.5px; line-height: 1.5; color: var(--k-copy); }
+  .hub-hits a:hover .hub-hit-t { color: var(--k-green); }
+  .hub-find #f-more { margin-top: 14px; }
 
-  .g-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 38px 0 0; padding-bottom: 10px; border-bottom: 2px solid var(--k-ink); scroll-margin-top: 130px; }
-  .g-head[hidden] { display: none; }
-  .g-list > .g-head:first-child { margin-top: 8px; }
-  .g-head span { font: 800 clamp(22px, 3vw, 28px)/1.1 var(--k-sans); letter-spacing: -.035em; color: var(--k-ink); }
-  .g-head small { font: 400 14px/1.4 var(--k-sans); color: var(--k-copy); }
-  .g, .rt { border-bottom: 1px solid var(--k-rule); scroll-margin-top: 130px; }
-  :is(.g, .rt) > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) 22px; gap: 3px 12px; padding: 15px 2px; }
-  :is(.g, .rt) > summary::-webkit-details-marker { display: none; }
-  :is(.g, .rt) > summary::after { content: "+"; grid-column: 2; grid-row: 1 / span 4; justify-self: end; align-self: start;   /* a small box: stretched and then rotated, it reached past a phone's edge */ font: 400 20px/1.25 var(--k-mono); color: var(--k-mute); transition: rotate .25s var(--k-ease); }
-  :is(.g, .rt)[open] > summary::after { rotate: 45deg; }
-  .g-meta { grid-column: 1; font: 500 11px/1.5 var(--k-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--k-mute); }
-  .g-title { grid-column: 1; font: 650 16.5px/1.3 var(--k-sans); letter-spacing: -.015em; color: var(--k-ink); text-wrap: pretty; }
-  :is(.g, .rt) > summary:hover .g-title { color: var(--k-green); }
-  .g-take { grid-column: 1; font-size: 14.5px; line-height: 1.5; color: var(--k-copy); text-wrap: pretty; }
-  .g-tags { grid-column: 1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
-  .g-body { display: grid; gap: 11px; padding: 0 2px 22px; max-width: 68ch; font-size: 15px; line-height: 1.6; color: var(--k-copy); }
-  @media (min-width: 760px) {
-    .g-list .g > summary { grid-template-columns: 150px minmax(0, 1fr) auto 22px; column-gap: 18px; }
-    .g-list .g-meta { grid-row: 1 / span 2; padding-top: 3px; }
-    .g-list .g-title, .g-list .g-take { grid-column: 2; }
-    .g-list .g-tags { grid-column: 3; grid-row: 1 / span 2; margin-top: 2px; justify-content: flex-end; align-content: start; max-width: 176px; }
-    .g-list .g > summary::after { grid-column: 4; }
-    .g-list .g-body { margin-left: 168px; }
-  }
-  .g-do { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
-  .g-do li { position: relative; padding-left: 24px; color: var(--k-ink); }
-  .g-do li::before { content: "→"; position: absolute; left: 0; font-family: var(--k-mono); color: var(--k-green); }
-  .tg { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 30px; border: 1px solid var(--k-rule-strong); font: 600 10.5px/1.45 var(--k-mono); letter-spacing: .04em; white-space: nowrap; color: var(--k-copy); }
-  .tg-strong { border-color: transparent; color: var(--k-green); background: color-mix(in srgb, var(--k-green) 14%, transparent); }
-  .tg-rule { border-color: var(--k-ink); color: var(--k-ink); }
-  .tg-moderate { border-color: transparent; color: var(--k-brass); background: color-mix(in srgb, var(--k-brass-fill) 15%, transparent); }
-  .tg-limited { border-style: dashed; }
-  .tg-practice { border-color: transparent; background: var(--k-tint); }
-  .tg-k { border-color: var(--k-brass-fill); color: var(--k-brass); }
-  :is(.g, .rt, .gl-item, .q):target, .nx tr:target { background: color-mix(in srgb, var(--k-brass-fill) 12%, transparent); }
-
-  /* claims */
-  .verdict { display: inline-block; padding: 4px 10px; border-radius: 30px; font: 600 10.5px/1.3 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
-  .v-yes { background: color-mix(in srgb, var(--k-green) 16%, transparent); color: var(--k-green); }
-  .v-mixed { background: color-mix(in srgb, var(--k-brass-fill) 15%, transparent); color: var(--k-brass); }
-  .v-no { background: var(--k-tint); color: var(--k-copy); box-shadow: inset 0 0 0 1px var(--k-rule-strong); }
-  .k-qa.q { scroll-margin-top: 130px; }
-  .k-qa.q > summary { grid-template-columns: minmax(0, 1fr) auto auto; }
-  @media (max-width: 560px) { .k-qa.q > summary { grid-template-columns: minmax(0, 1fr) auto; } .k-qa.q > summary .verdict { grid-row: 2; grid-column: 1; justify-self: start; } }
-  .q-take { color: var(--k-ink); font-weight: 600; }
-  .q-who { font-size: 14px; line-height: 1.55; }
-  .q-who b { color: var(--k-ink); font-weight: 600; }
-  .q-meta { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); }
-  .q-rel { font-size: 13.5px; line-height: 1.6; }
-  .q-rel a { color: var(--k-green); text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 2px; }
-  .q-rel a:hover { text-decoration-color: currentColor; }
-
-  /* meet day: a timeline, then the bag list */
-  .tl { list-style: none; margin: 0; padding: 0; }
-  .tl-phase { display: grid; gap: 2px 30px; padding: 18px 0 8px; border-top: 2px solid var(--k-ink); }
-  .tl-when { margin: 0; font: 800 clamp(19px, 2.4vw, 23px)/1.15 var(--k-sans); letter-spacing: -.03em; color: var(--k-green); }
-  .tl-steps { min-width: 0; }
-  .tl-steps .g:last-child { border-bottom: 0; }
-  .tl-steps .g-meta { display: none; }
-  @media (min-width: 860px) { .tl-phase { grid-template-columns: 200px minmax(0, 1fr); } .tl-when { position: sticky; top: 132px; align-self: start; padding-top: 14px; } }
-  .ck { margin-top: 36px; padding: clamp(18px, 3vw, 30px); border: 1px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); scroll-margin-top: 130px; }
-  .ck-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 10px 26px; margin-bottom: 16px; }
-  .ck-top .k-small { margin-top: 6px; max-width: 56ch; }
-  .ck-count { font: 500 13px/1.6 var(--k-mono); color: var(--k-copy); }
-  .ck-count b { color: var(--k-ink); }
-  .ck-groups { display: grid; gap: 20px 30px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-  .ck fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
-  .ck legend { padding: 0; margin-bottom: 4px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-brass); }
-  .ck-item { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: start; min-height: 44px; padding: 11px 0; border-top: 1px solid var(--k-rule); cursor: pointer; font-size: 15px; line-height: 1.4; color: var(--k-ink); }
-  .ck-item input { width: 20px; height: 20px; margin: 0; accent-color: var(--k-green-fill); }
-  .ck-item:has(input:checked) span { color: var(--k-mute); text-decoration: line-through; }
-  .ck .cite { display: block; margin-top: 14px; }
-
-  /* key numbers: a sortable table that stacks on a phone */
-  .nx { width: 100%; border-collapse: collapse; }
-  .nx thead th { padding: 0 14px 4px 0; text-align: left; border-bottom: 2px solid var(--k-ink); white-space: nowrap; }
-  .nx thead button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; background: none; cursor: pointer;
-    font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-mute); }
-  .nx thead button::after { content: "↕"; font-size: 12px; opacity: .6; }
-  .nx th[aria-sort="ascending"] button, .nx th[aria-sort="descending"] button { color: var(--k-ink); }
-  .nx th[aria-sort="ascending"] button::after { content: "↑"; opacity: 1; }
-  .nx th[aria-sort="descending"] button::after { content: "↓"; opacity: 1; }
-  .nx tbody tr { scroll-margin-top: 130px; }
-  .nx tbody th, .nx tbody td { padding: 15px 14px 15px 0; border-bottom: 1px solid var(--k-rule); vertical-align: top; text-align: left; }
-  .nx tbody th { width: 190px; font-weight: 400; }
-  .nx-v { display: block; font: 800 clamp(22px, 3vw, 28px)/1.05 var(--k-sans); letter-spacing: -.035em; color: var(--k-green); font-variant-numeric: tabular-nums; }
-  .nx-u { display: block; margin-top: 4px; font: 500 11.5px/1.4 var(--k-mono); color: var(--k-mute); }
-  .nx td > b { display: block; font: 650 15.5px/1.3 var(--k-sans); color: var(--k-ink); }
-  .nx td > span { display: block; margin-top: 3px; max-width: 62ch; font-size: 14px; line-height: 1.5; color: var(--k-copy); }
-  .nx td > .tg { display: inline-flex; margin-top: 0; }
-  .nx td .cite { display: block; margin-top: 6px; }
-  .nx-d { font: 500 12px/1.6 var(--k-mono); color: var(--k-copy); white-space: nowrap; }
-  @media (max-width: 760px) {
-    .nx, .nx tbody, .nx tr, .nx tbody th, .nx td { display: block; width: auto; }
-    .nx thead { display: block; } .nx thead tr { display: flex; flex-wrap: wrap; gap: 0 18px; border-bottom: 2px solid var(--k-ink); } .nx thead th { border: 0; padding: 0; }
-    .nx tbody tr { padding: 16px 0; border-bottom: 1px solid var(--k-rule); }
-    .nx tbody th, .nx tbody td { padding: 0; border: 0; }
-    .nx tbody td { margin-top: 8px; }
-    .nx tbody td.nx-d, .nx tbody td.nx-c { display: inline-block; margin-right: 10px; }
-  }
-
-  /* reference tables */
-  .rt-scroll { overflow-x: auto; margin: 2px 0 12px; border: 1px solid var(--k-rule-strong); border-radius: 12px; background: var(--k-raised); }
-  .rt table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
-  .rt th, .rt td { padding: 10px 14px; text-align: left; vertical-align: top; border-top: 1px solid var(--k-rule); }
-  .rt thead th { border-top: 0; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-mute); }
-  .rt tbody th { font-weight: 650; color: var(--k-ink); }
-  .rt td { color: var(--k-copy); }
-  .rt > .tg { margin-bottom: 8px; }
-  .rt > .cite { display: block; margin-bottom: 18px; }
-
-  /* glossary */
-  .gl { margin: 0; columns: 1; column-gap: 44px; }
-  @media (min-width: 700px) { .gl { columns: 2; } }
-  @media (min-width: 1100px) { .gl { columns: 3; } }
-  .gl-item { break-inside: avoid; padding: 12px 0; border-top: 1px solid var(--k-rule); scroll-margin-top: 130px; }
-  .gl-item[hidden] { display: none; }
-  .gl dt { font: 650 15.5px/1.3 var(--k-sans); color: var(--k-ink); }
-  .gl dd { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: var(--k-copy); }
-  .gl-d { margin-left: 4px; font: 500 10.5px/1.4 var(--k-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--k-mute); white-space: nowrap; }
-
-  /* sources */
-  .lg { display: grid; gap: 10px 28px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin: 0 0 30px; }
-  .lg div { display: grid; gap: 6px; align-content: start; }
-  .lg dt { margin: 0; } .lg dd { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--k-copy); }
-  .sources { columns: 1; margin: 0; padding-left: 0; list-style: none; font-size: 13.5px; line-height: 1.5; color: var(--k-copy); }
-  @media (min-width: 900px) { .sources { columns: 2; column-gap: 40px; } }
-  .sources li { break-inside: avoid; padding: 9px 10px; margin: 0 -10px; border-radius: 8px; scroll-margin-top: 130px; overflow-wrap: anywhere; }
-  .sources li:target { background: color-mix(in srgb, var(--k-brass-fill) 18%, transparent); }
-  .sources b { color: var(--k-ink); font-weight: 600; }
-  .sources .as { font: 500 11px/1.5 var(--k-mono); color: var(--k-mute); }
-  .sources a { color: var(--k-green); word-break: break-word; }
+  /* ---------- the cards: one per page under /fitness/ ---------- */
+  .hub-group + .hub-group { margin-top: clamp(30px, 4vw, 46px); }
+  .hub-gh { padding-bottom: 10px; border-bottom: 2px solid var(--k-ink); font: 600 11.5px/1.5 var(--k-mono); letter-spacing: .15em; text-transform: uppercase; color: var(--k-green); }
+  .hub-cards { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
+  .hub-cards--ref { margin-top: 0; }
+  .hub-card { display: flex; flex-direction: column; gap: 6px; height: 100%; min-height: 44px; padding: 18px 18px 15px; border: 1px solid var(--k-rule); border-radius: var(--k-r);
+    background: var(--k-raised); color: var(--k-ink); text-decoration: none; transition: translate .25s var(--k-ease), box-shadow .25s, border-color .25s; }
+  .hub-card:hover { translate: 0 -3px; box-shadow: var(--k-shadow-lift); border-color: var(--k-rule-strong); }
+  .hub-t { font: 700 19px/1.2 var(--k-sans); letter-spacing: -.025em; transition: color .2s; }
+  .hub-card:hover .hub-t { color: var(--k-green); }
+  .hub-b { font-size: 14.5px; line-height: 1.5; color: var(--k-copy); text-wrap: pretty; }
+  .hub-n { margin-top: auto; padding-top: 10px; font: 500 12px/1.4 var(--k-mono); color: var(--k-mute); }
+  .hub-n::after { content: " \2192"; color: var(--k-green); }
 
   /* meet attempt planner */
   .att { width: 100%; border-collapse: collapse; font: 500 14px/1.3 var(--k-mono); font-variant-numeric: tabular-nums; }
@@ -369,18 +248,32 @@
   <section class="k-hero k-wrap" aria-labelledby="page-title">
     <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
     <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, five free calculators and a field guide cover the ground: {{n:total}} entries on hypertrophy, powerlifting, meet day, nutrition, diet and health. Everything runs in your browser.</p>
+    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, five free calculators and a field guide cover the ground: {{n:total}} sourced entries in {{n:areas}} areas, from training basics to health. Everything runs in your browser.</p>
+    <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
+    <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
+      <label class="k-label" for="f-q">Search every entry</label>
+      <div class="hub-find-row">
+        <input class="k-input" id="f-q" type="search" placeholder="Protein, deload, zone 2, RIR…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="f-hint">
+        <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-clear" hidden>Clear</button>
+      </div>
+      <p class="k-small" id="f-hint">Looks in the title, the short answer and the glossary terms of all {{n:total}} entries. A result opens on its own page.</p>
+      <p class="hub-find-count" id="f-count"></p>
+      <p class="k-vh" id="f-say" role="status" aria-live="polite"></p>
+      <ol class="hub-hits" id="f-list" aria-label="Search results" hidden></ol>
+      <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-more" hidden>Show every result</button>
+    </div>
     <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains. Each one names its source and says how well supported it is. They’re general information, not medical advice.</p>
   </section>
 
   <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
-    <a href="#vantix">Vantix</a><a href="#tools">Tools</a><a href="#guide">Field guide</a><a href="#claims">Claims, checked</a><a href="#meet-day">Meet day</a><a href="#numbers">Numbers</a><a href="#tables">Tables</a><a href="#glossary">Glossary</a><a href="#sources">Sources</a>
+    <a href="#vantix">Vantix</a><a href="#tools">Tools</a><a href="#guide">Field guide</a><a href="#reference">Reference</a>
   </div></nav>
 
   <!-- ===================== VANTIX ===================== -->
   <section id="vantix" class="k-band" aria-labelledby="h-vantix">
     <div class="k-wrap">
-      <article class="k-pc k-pc--vantix k-reveal vx-card" style="padding:clamp(30px,4vw,48px) clamp(22px,4vw,44px) clamp(22px,4vw,44px)">
+      <!-- No scroll reveal (.k-reveal) on this card: it sits on the fold, where a half-faded card reads as low contrast. -->
+      <article class="k-pc k-pc--vantix vx-card" style="padding:clamp(30px,4vw,48px) clamp(22px,4vw,44px) clamp(22px,4vw,44px)">
         <span class="feat"><span aria-hidden="true">✱</span> Featured project</span>
         <div class="vx">
           <div class="vx-copy">
@@ -641,91 +534,25 @@
     </div>
   </section>
 
-  <!-- ===================== FIELD GUIDE (generated by scripts/build_fitness.py from content/fitness/*.json) ===================== -->
+  <!-- ===================== FIELD GUIDE: a card per area (scripts/build_fitness.py writes them from DOMAINS and GROUPS) ===================== -->
   <section id="guide" class="k-band" aria-labelledby="h-guide">
     <div class="k-wrap">
-      <span id="training"></span>
       <header class="k-shead">
-        <div><span class="k-num">Field guide</span> <h2 class="k-h2" id="h-guide">Six areas, <em>one index.</em></h2></div>
-        <p class="k-small" style="max-width:40ch">{{n:guide}} entries. Pick an area, narrow by level or by how well supported a point is, then open one.</p>
+        <div><span class="k-num">Field guide</span> <h2 class="k-h2" id="h-guide">The field guide, <em>by area.</em></h2></div>
+        <p class="k-small" style="max-width:40ch">{{n:total}} entries in {{n:areas}} areas. Each one names its source and says how well supported it is.</p>
       </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:guide}}</div>
-      {{guide}}
+      {{hub:areas}}
     </div>
   </section>
 
-  <!-- ===================== CLAIMS ===================== -->
-  <section id="claims" class="k-band" aria-labelledby="h-claims">
+  <!-- ===================== REFERENCE: the four pages that cut across the areas ===================== -->
+  <section id="reference" class="k-band" aria-labelledby="h-reference">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Claims, checked</span> <h2 class="k-h2" id="h-claims">{{n:claims}} things <em>people say.</em></h2></div>
-        <p class="k-small" style="max-width:38ch">A verdict, the reason, who was studied, and the paper. Open one to read it.</p>
+        <div><span class="k-num">Reference</span> <h2 class="k-h2" id="h-reference">Check a claim, <em>look something up.</em></h2></div>
+        <p class="k-small" style="max-width:40ch">These pages cut across every area. Last updated {{updated}}.</p>
       </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:claims}}</div>
-      {{claims}}
-    </div>
-  </section>
-
-  <!-- ===================== MEET DAY ===================== -->
-  <section id="meet-day" class="k-band" aria-labelledby="h-meet">
-    <div class="k-wrap">
-      <header class="k-shead">
-        <div><span class="k-num">Meet day</span> <h2 class="k-h2" id="h-meet">Your first meet, <em>in order.</em></h2></div>
-        <p class="k-small" style="max-width:40ch">{{n:steps}} steps from signing up to the drive home, then a bag list that remembers your ticks. Rules differ between federations: check yours.</p>
-      </header>
-      {{meet}}
-    </div>
-  </section>
-
-  <!-- ===================== KEY NUMBERS ===================== -->
-  <section id="numbers" class="k-band" aria-labelledby="h-numbers">
-    <div class="k-wrap">
-      <header class="k-shead">
-        <div><span class="k-num">Key numbers</span> <h2 class="k-h2" id="h-numbers">The figures <em>worth knowing.</em></h2></div>
-        <p class="k-small" style="max-width:38ch">{{n:numbers}} numbers. Choose a column heading to sort by it.</p>
-      </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:numbers}}</div>
-      {{numbers}}
-    </div>
-  </section>
-
-  <!-- ===================== REFERENCE TABLES ===================== -->
-  <section id="tables" class="k-band" aria-labelledby="h-tables">
-    <div class="k-wrap">
-      <header class="k-shead">
-        <div><span class="k-num">Reference</span> <h2 class="k-h2" id="h-tables">Tables to <em>look things up.</em></h2></div>
-        <p class="k-small" style="max-width:38ch">{{n:tables}} tables. Open one; wide ones scroll sideways.</p>
-      </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:tables}}</div>
-      <div id="t-list">
-      {{tables}}
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== GLOSSARY ===================== -->
-  <section id="glossary" class="k-band" aria-labelledby="h-glossary">
-    <div class="k-wrap">
-      <header class="k-shead">
-        <div><span class="k-num">Glossary</span> <h2 class="k-h2" id="h-glossary">{{n:terms}} terms, <em>in plain words.</em></h2></div>
-      </header>
-      <div class="k-seg k-seg--scroll lens" role="group" aria-label="Area">{{domains:glossary}}</div>
-      {{glossary}}
-    </div>
-  </section>
-
-  <!-- ===================== SOURCES ===================== -->
-  <section id="sources" class="k-band" aria-labelledby="h-sources">
-    <div class="k-wrap">
-      <header class="k-shead">
-        <div><span class="k-num">Sources</span> <h2 class="k-h2" id="h-sources">Where this <em>comes from.</em></h2></div>
-        <p class="k-small" style="max-width:40ch">{{n:sources}} sources, each checked against its record. Last updated {{updated}}.</p>
-      </header>
-      {{legend}}
-      <details class="src-wrap" id="src-wrap" open>
-        <summary>All {{n:sources}} sources, A to Z</summary>
-        {{sources}}
-      </details>
+      {{hub:reference}}
     </div>
   </section>
 
@@ -733,7 +560,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.9"></script>
-<script src="/fitness.js?v=2027.9"></script>
+<script src="/ks.js?v=2027.11"></script>
+<script src="/fitness.js?v=2027.11"></script>
 </body>
 </html>

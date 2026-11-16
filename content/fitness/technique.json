@@ -1,0 +1,3354 @@
+{
+  "domain": "technique",
+  "topics": [
+    {
+      "id": "press",
+      "label": "Bench press and shoulders"
+    },
+    {
+      "id": "pull",
+      "label": "Rows and pulldowns"
+    },
+    {
+      "id": "hinge",
+      "label": "Deadlifts and back extensions"
+    },
+    {
+      "id": "squat",
+      "label": "Squats, leg press and split squats"
+    },
+    {
+      "id": "isolation",
+      "label": "Calves and leg extensions"
+    },
+    {
+      "id": "bracing",
+      "label": "Breathing, grip and straps"
+    },
+    {
+      "id": "learning",
+      "label": "Learning and changing technique"
+    },
+    {
+      "id": "evidence",
+      "label": "Exercise choice and EMG"
+    }
+  ],
+  "entries": [
+    {
+      "id": "tech-bench-general-style",
+      "type": "note",
+      "title": "For general training, bench with a part-tucked elbow and pinned shoulder blades",
+      "topic": "press",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-bench-technique",
+        "mcdonald-bench-variations"
+      ],
+      "take": "A slight arch, shoulder blades held back and elbows midway between flared and tucked is a sound default for lifters who do not compete.",
+      "body": "This is a coaching convention, not a trial result. Lyle McDonald teaches most non-competing lifters a raw powerlifting-style press with less arch than a competitor uses. His reasons: it is kinder to the shoulders than pressing with the elbows level with them, it allows more load, and it trains chest, shoulders and triceps together. Feet stay flat, the chest stays lifted and the shoulder blades stay back for the whole set. Lifters with a history of back trouble can flatten the lower back and keep the same chest and shoulder position.",
+      "do": [
+        "Set the shoulder blades back before you unrack and hold them there until the bar is racked.",
+        "Film a set from the side and from behind the head to check your elbow angle."
+      ]
+    },
+    {
+      "id": "tech-bench-bar-path",
+      "type": "note",
+      "title": "Start and finish each bench rep with the bar stacked over the shoulders",
+      "topic": "press",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-bench-technique"
+      ],
+      "take": "With the arms vertical the skeleton holds the bar. Lower it in a shallow arc to the lower chest and press back along the same arc.",
+      "body": "A coaching cue with no trial behind it. When the bar sits straight above the shoulder joint with the elbows locked, holding it takes little effort. Held over the face or over the belly, the shoulder muscles have to work just to keep it there. McDonald teaches a gentle curve: the bar travels down and a little toward the feet, touches around the lower chest, then goes up and back to where it started. He finds that pressing it all the way back over the face is usually too much.",
+      "do": [
+        "Check from the side that every rep ends with the bar above the shoulder joint."
+      ]
+    },
+    {
+      "id": "tech-bench-forearms-vertical",
+      "type": "note",
+      "title": "Pick a bench grip that puts the forearms vertical at the bottom",
+      "topic": "press",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-bench-technique",
+        "green-2007",
+        "larsen-2021-grip"
+      ],
+      "take": "Elbows stacked under the bar at the chest send force straight into it. Very wide grips add little load and may add shoulder risk.",
+      "body": "McDonald sets grip width from the bottom position: the forearms stand upright and the elbows sit under the bar, seen from the side and the foot end. Elbows behind the bar push it toward the feet, and elbows ahead of it let the bar fold back toward the face. A review reported that grips wider than 1.5 times biacromial width, the distance between the bony tips of the shoulders, may raise the risk of shoulder injury, and that narrowing to 1.5 or less changed the one-rep max by only about 5 percent. In 14 trained men, wide and medium grips gave similar shoulder and elbow moments at the slowest point of a max lift.",
+      "do": [
+        "Ask someone to look at your forearms from the foot end of the bench at the bottom of a rep.",
+        "If your grip is wider than 1.5 times shoulder width, try moving each hand in a little."
+      ]
+    },
+    {
+      "id": "tech-num-bench-grip",
+      "type": "number",
+      "title": "Bench grip width a review linked to lower shoulder risk",
+      "topic": "press",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "green-2007"
+      ],
+      "value": "1.5 or less",
+      "unit": "x biacromial width",
+      "sort": 1.5,
+      "take": "A review found wider grips may raise shoulder injury risk, while narrowing to this width changed the one-rep max by about 5%."
+    },
+    {
+      "id": "tech-num-bench-elbow-angle",
+      "type": "number",
+      "title": "Upper-arm angle at the bottom of a general-purpose bench press",
+      "topic": "press",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-bench-variations"
+      ],
+      "value": "45-60",
+      "unit": "degrees from the torso",
+      "sort": 45,
+      "take": "McDonald's coaching range: arms neither level with the shoulders nor pinned to the ribs. A convention, not a measured optimum."
+    },
+    {
+      "id": "tech-mistake-bench-flared",
+      "type": "mistake",
+      "title": "Benching to the collarbone with the elbows level with the shoulders",
+      "topic": "press",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-bench-variations",
+        "kolber-2010"
+      ],
+      "take": "Flaring the elbows fully to isolate the chest puts the shoulder in a position McDonald considers poor value with a heavy bar.",
+      "body": "The bodybuilding-style press uses a wide grip, elbows out in line with the shoulders and a touch point high on the chest. McDonald's view is that this buys a little chest emphasis at a cost to the rotator cuff, the small muscles that hold the ball of the shoulder in its socket, and that dumbbells are the better tool for that arm path. A review of resistance-training injuries found that up to 36 percent of documented injuries and disorders involve the shoulder and listed poor attention to technique among the risk factors. Shoulder pain that persists should be assessed by a physiotherapist or doctor.",
+      "do": [
+        "Touch the bar at the lower chest with the elbows tucked part-way.",
+        "Use dumbbells if you want a wider arm path."
+      ]
+    },
+    {
+      "id": "tech-bench-feel-chest",
+      "type": "note",
+      "title": "To feel the chest in a press, think of bringing the upper arms together",
+      "topic": "press",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-benching-with-pecs",
+        "snyder-2012",
+        "calatayud-2016"
+      ],
+      "take": "Focusing on the chest raised chest muscle activity in two lab studies at light and moderate loads, and less reliably at 80% of max.",
+      "body": "The chest muscle's main job is drawing the upper arm inward across the chest. McDonald's cue is to think about squeezing the upper arms toward each other while the elbows straighten, with the shoulder blades held back, and to learn it with a lighter bar. Lab work fits the idea. In 11 trained football players, an instruction to use the chest raised chest activity by 22 percent at 50 percent of max. In 18 trained men, focusing on a muscle raised its activity at 20 to 60 percent of max and not at 80 percent. Both studies measured muscle activity in one session, not growth over time.",
+      "do": [
+        "Before benching, press one empty hand forward with the other hand resting on that side of the chest.",
+        "Take some weight off for a few sessions while the cue becomes automatic."
+      ]
+    },
+    {
+      "id": "tech-term-horizontal-adduction",
+      "type": "term",
+      "title": "Horizontal adduction",
+      "topic": "press",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "Moving the upper arm across the front of the body toward the midline, as in a dumbbell fly. It is the main action of the chest muscle in every press."
+    },
+    {
+      "id": "tech-upright-row-height",
+      "type": "note",
+      "title": "Stop upright rows when the elbows reach shoulder height",
+      "topic": "press",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-upright-rows",
+        "kolber-2014",
+        "mcallister-2013"
+      ],
+      "take": "Pulling no higher than shoulder level still works the side of the shoulder and avoids the arm position linked to impingement signs.",
+      "body": "McDonald's view is that the risk sits in the classic version, a narrow grip pulled to the chin with the elbows near the ears, and that stopping with the elbows level with the shoulders keeps most of the benefit. In 77 men, 46 of them lifters, clinical signs of shoulder impingement were associated with upright rows and lateral raises taken above 90 degrees. In 16 trained men, a wider grip raised deltoid and trapezius activity and lowered biceps activity. A shoulder with an old injury may still not tolerate the lift, and pain that persists should be assessed by a physiotherapist or doctor.",
+      "do": [
+        "End each rep with the hands around lower-chest height.",
+        "Use a grip at least shoulder width, or switch to dumbbells or a rope."
+      ]
+    },
+    {
+      "id": "tech-num-upright-row-angle",
+      "type": "number",
+      "title": "Arm angle above which upright rows were linked to impingement signs",
+      "topic": "press",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "kolber-2014"
+      ],
+      "value": "90",
+      "unit": "degrees",
+      "sort": 90,
+      "take": "In a case-control study of 77 men, upright rows and lateral raises above this angle were associated with clinical signs of shoulder impingement."
+    },
+    {
+      "id": "tech-term-impingement",
+      "type": "term",
+      "title": "Subacromial impingement",
+      "topic": "press",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "kolber-2014"
+      ],
+      "take": "Pinching of tendons and other soft tissue between the top of the upper arm bone and the bony roof of the shoulder as the arm is raised. A clinician makes the diagnosis."
+    },
+    {
+      "id": "tech-row-finish",
+      "type": "note",
+      "title": "Finish every row with the shoulder blades together and the chest up",
+      "topic": "pull",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-cable-row"
+      ],
+      "take": "The mid-back only does its share if the shoulder blades squeeze back as the pull finishes. A one to two second hold keeps that honest.",
+      "body": "Coaching practice. In McDonald's teaching, a seated row starts with a small forward lean and a straight back. It ends with the elbows just behind the body, the shoulders drawn back and down and the chest lifted, with the forearms in line with the cable. He likes a pause of one to two seconds in that squeezed position, which usually means taking weight off at first. The same finish applies to barbell, dumbbell, machine and inverted rows.",
+      "do": [
+        "Hold the handle against the body for a slow count of one or two on each rep.",
+        "Reduce the load until the shoulder blades meet on every rep."
+      ]
+    },
+    {
+      "id": "tech-mistake-row-too-heavy",
+      "type": "mistake",
+      "title": "Rowing so heavy that the chest drops and the body swings back",
+      "topic": "pull",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-cable-row"
+      ],
+      "take": "When the shoulders stay rounded or the torso leans far back, the arms and lower back take over from the mid-back.",
+      "body": "Three faults tend to appear together when a row is overloaded. The chest sinks and the shoulders never get drawn back. The torso swings backward as if doing a back extension. The shoulders shrug toward the ears. McDonald notes that lifters who row this way often report feeling only their arms. Tight chest muscles can produce the same rounded finish at any load, and he ties the shrug to stiff upper trapezius muscles paired with weak lower ones. These are coaching observations, not study findings.",
+      "do": [
+        "Lower the weight and keep the torso almost still.",
+        "Think 'shoulders down and back' as the handle arrives."
+      ]
+    },
+    {
+      "id": "tech-table-row-variations",
+      "type": "table",
+      "title": "How grip and elbow path change a row",
+      "topic": "pull",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-cable-row"
+      ],
+      "take": "A coaching guide to what each row tends to emphasise. The mid-back works in all of them when the shoulder blades squeeze together.",
+      "columns": [
+        "Elbow path",
+        "Typical set-up",
+        "Handle arrives at",
+        "Tends to emphasise"
+      ],
+      "rows": [
+        [
+          "High and flared",
+          "Wide overhand bar, or a dumbbell row with the elbow out",
+          "Lower chest",
+          "Mid-back and rear shoulders, little lat; needs the most shoulder control"
+        ],
+        [
+          "Part-way out",
+          "Medium overhand or neutral bar",
+          "Just under the chest",
+          "A blend of mid-back and lats"
+        ],
+        [
+          "Low, close to the ribs",
+          "Close neutral handle",
+          "Mid-stomach",
+          "Lats and mid-back, plus the brachialis under the biceps"
+        ],
+        [
+          "Low, close to the ribs",
+          "Shoulder-width underhand bar",
+          "Navel",
+          "Lats, mid-back and the most biceps; easiest for keeping the shoulders down"
+        ]
+      ]
+    },
+    {
+      "id": "tech-row-spine-load",
+      "type": "note",
+      "title": "Inverted rows load the spine least; bent-over rows work the whole back hardest",
+      "topic": "pull",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "fenwick-2009"
+      ],
+      "take": "In a lab comparison of three rows, the inverted row gave the lowest spine load and the bent-over row the largest back muscle activity.",
+      "body": "Seven healthy men performed an inverted row, a standing bent-over row and a standing one-armed cable row while researchers recorded trunk and hip muscle activity and estimated spine load. The inverted row produced the lowest spine load, so the authors suggest it for people who want to spare the lower back. The bent-over row drew large, even activity from the upper to the lower back, with larger spine loads and the highest spine stiffness. The one-armed cable row challenged the trunk's resistance to twisting. This was a single session in seven people.",
+      "do": [
+        "Use inverted rows when you want back work with little lower-back load.",
+        "Treat bent-over rows as lower-back work too when you plan a session."
+      ]
+    },
+    {
+      "id": "tech-pulldown-shoulder-blades",
+      "type": "note",
+      "title": "In pulldowns and chin-ups, let the shoulders rise, then pull them down",
+      "topic": "pull",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-lat-pulldown",
+        "snyder-2009"
+      ],
+      "take": "Letting the shoulders lift at the top and drawing them down during the pull turns an arm exercise into a lat exercise.",
+      "body": "McDonald's teaching points, which apply equally to chin-ups and pull-ups: let the shoulders rise at the top, pull them down as the bar comes down, think of driving the elbows toward the floor, and lift the chest to meet the bar at the upper chest. A slumped finish works the abdomen more than the back. Instruction can change which muscle works. Eight untrained women raised lat activity after technique coaching, at 30 percent of max, while biceps activity did not change. That was one session at a light load.",
+      "do": [
+        "Begin each rep by drawing the shoulders away from the ears.",
+        "Stop the bar at the upper chest; do not push it down toward the lap."
+      ]
+    },
+    {
+      "id": "tech-pulldown-grip-width",
+      "type": "note",
+      "title": "Pulldown grip width matters less than gym lore suggests",
+      "topic": "pull",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "andersen-2014",
+        "lusk-2010",
+        "mcdonald-lat-pulldown"
+      ],
+      "take": "Lat activity was similar across narrow, medium and wide overhand grips, and the widest grip allowed the least load.",
+      "body": "Fifteen men lifted a six-rep max of about 80 kg (176 lb) with narrow and medium overhand grips and 77 kg (170 lb) with a wide one, and lat activity was similar across the three. In 12 men, an overhand grip produced more lat activity than an underhand grip, and width again made no difference. McDonald prefers a medium overhand grip or an underhand grip with the forearms square to the bar. He notes that the underhand grip lets the biceps help most and so allows the most weight. One-session muscle activity is a weak guide to growth, so comfort at the wrists and elbows is a fair tiebreaker.",
+      "do": [
+        "Use a grip between one and two times shoulder width.",
+        "Pick the hand position your wrists and elbows tolerate best."
+      ]
+    },
+    {
+      "id": "tech-mistake-wide-grip-wide-lats",
+      "type": "mistake",
+      "title": "Using a very wide grip to build wider lats",
+      "topic": "pull",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "andersen-2014",
+        "mcdonald-lat-pulldown"
+      ],
+      "take": "A grip at twice shoulder width did not raise lat activity over the whole rep and reduced the load lifted.",
+      "body": "The idea that a wide grip builds a wide back is old gym lore. In 15 men, lat activity over the whole movement was similar with grips of 1, 1.5 and 2 times biacromial (shoulder) width, and the six-rep max was lower with the widest grip. The authors concluded that lifters can expect similar muscle activation anywhere in that span, with a small edge to the medium grip. McDonald adds that hands at the very ends of the bar shorten the distance the bar can travel. The study measured one session, not months of training.",
+      "do": [
+        "Bring the hands in until the forearms are vertical at the bottom of the pull."
+      ]
+    },
+    {
+      "id": "tech-pulldown-behind-neck",
+      "type": "note",
+      "title": "Behind-the-neck pulldowns add nothing for the lats",
+      "topic": "pull",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "sperandei-2009",
+        "mcdonald-lat-pulldown"
+      ],
+      "take": "Lat activity was the same in front, behind-the-neck and V-bar pulldowns, and the study's authors advised against the behind-the-neck version.",
+      "body": "Twenty-four trained men did front, behind-the-neck and V-bar pulldowns at 80 percent of max. Lat activity did not differ between the three. The authors judged the front version the best choice and the V-bar a fair alternative. McDonald's view is that the behind-the-neck pull mostly goes wrong when stiff shoulders push the head forward and drop the chest, and that few lifters have the shoulder mobility to do it well. Since it offers no extra lat work, most people lose nothing by pulling to the front.",
+      "do": [
+        "Pull to the upper chest with the chest lifted."
+      ]
+    },
+    {
+      "id": "tech-term-scapular-retraction",
+      "type": "term",
+      "title": "Scapular retraction and depression",
+      "topic": "pull",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "Retraction is drawing the shoulder blades back toward the spine. Depression is drawing them down, away from the ears. Rows finish with the first and pulldowns with the second."
+    },
+    {
+      "id": "tech-checklist-deadlift",
+      "type": "checklist",
+      "title": "Conventional deadlift: set-up and pull",
+      "topic": "hinge",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-clean-style-deadlift"
+      ],
+      "take": "The flat-backed, hip-width deadlift Lyle McDonald teaches general trainees, as coaching checkpoints. No trial compares these cues.",
+      "groups": [
+        {
+          "name": "Before the bar moves",
+          "items": [
+            "Feet about hip width, toes turned out a little",
+            "Bar above the middle of the foot",
+            "Hands just outside the legs so the arms hang straight down",
+            "Shoulders above the bar or a touch in front of it, knees ahead of the bar",
+            "Back flat and tight from hips to neck, chest lifted",
+            "Pressure spread over the whole foot, never forward on the toes"
+          ]
+        },
+        {
+          "name": "Floor to knee",
+          "items": [
+            "Hips and shoulders rise at the same rate, so the back angle holds",
+            "Knees move back to clear a path for the bar",
+            "Bar stays against, or very near, the shins"
+          ]
+        },
+        {
+          "name": "Knee to lockout",
+          "items": [
+            "Drive the hips forward and bring the shoulders back",
+            "Finish standing tall, without leaning back"
+          ]
+        },
+        {
+          "name": "Lowering",
+          "items": [
+            "Push the hips back until the bar passes the knees, then bend the knees",
+            "Rebuild your position before the next rep if it slipped"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tech-deadlift-bar-height",
+      "type": "note",
+      "title": "A deadlift bar loaded with small plates starts too low",
+      "topic": "hinge",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-clean-style-deadlift"
+      ],
+      "take": "The usual start height comes from full-size plates, so lighter lifters need full-diameter light plates or blocks.",
+      "body": "Most lifts can be learned with an empty bar. The deadlift cannot, because the bar's height off the floor is set by the plate diameter. In many gyms the only full-size iron plates weigh 20 kg or 45 lb, which makes the lightest full-height bar about 60 kg (135 lb). McDonald points out that not every beginner can lift that in a good position. The fixes are light plates made to full diameter, such as bumper or technique plates, or resting the bar on blocks or rack pins at the same height and adding weight over time. This is practical coaching advice with no study behind it.",
+      "do": [
+        "Raise a lightly loaded bar on blocks or pins to normal plate height.",
+        "Move to the floor once you can lift a bar with full-size plates in good position."
+      ]
+    },
+    {
+      "id": "tech-mistake-hips-shoot",
+      "type": "mistake",
+      "title": "Hips rising first in a deadlift",
+      "topic": "hinge",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-clean-style-deadlift",
+        "mcdonald-changing-technique-1"
+      ],
+      "take": "If the hips rise before the bar has moved, the legs have straightened without lifting anything and the back must finish the job.",
+      "body": "In a sound pull the hips and shoulders rise together until the bar passes the knees. When the hips come up first, the back tips toward horizontal and the lift turns into a stiff-legged pull from the floor. McDonald lists the usual causes: snatching at the bar, thinking only about pushing with the legs and forgetting to bring the chest up, and thighs or glutes too weak for the load. He uses the same cue in the squat, where a lifter who thinks only of the legs leaves the upper body behind. These are coaching observations.",
+      "do": [
+        "Squeeze the bar off the floor; do not jerk it.",
+        "Think 'chest up' as the bar breaks from the floor.",
+        "Film from the side and compare your back angle at the floor and at the knee."
+      ]
+    },
+    {
+      "id": "tech-table-deadlift-between-reps",
+      "type": "table",
+      "title": "Three ways to string deadlift reps together",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-clean-style-deadlift"
+      ],
+      "take": "How you treat the floor between reps changes what a set trains. The 'suits' column is McDonald's coaching view.",
+      "columns": [
+        "Between reps",
+        "What it does",
+        "Suits"
+      ],
+      "rows": [
+        [
+          "Touch and go, or a bounce",
+          "Plates rebound, and back position is easily lost",
+          "Experienced lifters only"
+        ],
+        [
+          "Controlled lowering, a short pause on the floor, body kept tight",
+          "Muscles stay loaded from rep to rep",
+          "Sets done for muscle size"
+        ],
+        [
+          "Full reset, then pull again",
+          "Every rep starts from a true dead stop, like a single",
+          "Strength work and powerlifters"
+        ]
+      ]
+    },
+    {
+      "id": "tech-table-deadlift-grips",
+      "type": "table",
+      "title": "Deadlift grips compared",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-clean-style-deadlift",
+        "kapicioglu-2021"
+      ],
+      "take": "Holding strength and trade-offs of the common grips. The ranking is coaching experience; the biceps note comes from an injury video review.",
+      "columns": [
+        "Grip",
+        "How",
+        "Holding strength",
+        "Watch for"
+      ],
+      "rows": [
+        [
+          "Double overhand",
+          "Both palms face you, thumbs wrapped over the fingers",
+          "Weakest",
+          "Grip gives out first on heavy sets"
+        ],
+        [
+          "Hook",
+          "Both palms face you, thumbs trapped under the first fingers",
+          "Stronger than plain overhand",
+          "Sore thumbs while you adapt"
+        ],
+        [
+          "Mixed",
+          "One palm faces you, one faces away",
+          "Usually the strongest",
+          "Uneven pull through the trunk; biceps tendon of the underhand arm"
+        ],
+        [
+          "Overhand with straps",
+          "Straps wound round the bar",
+          "Grip stops being the limit",
+          "Trains the grip less"
+        ]
+      ]
+    },
+    {
+      "id": "tech-mixed-grip-care",
+      "type": "note",
+      "title": "With a mixed grip, keep the underhand elbow straight and swap hands between sets",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "kapicioglu-2021",
+        "mcdonald-clean-style-deadlift"
+      ],
+      "take": "The mixed grip holds the most weight, and it exposes the biceps tendon of the palm-forward arm.",
+      "body": "Most heavy deadlifts are pulled with a mixed grip because it holds more than an overhand one. It has two costs. The pull is slightly uneven from side to side, and the underhand arm's biceps tendon is exposed. Surgeons reviewed 35 biceps tendon ruptures caught on video. Twenty-five happened in the deadlift, 24 of those with a mixed grip, and every one of the 24 was in the underhand arm. The authors suggest that gripping with both palms facing the body may lower the risk. McDonald's advice is to keep the arms straight and to alternate which hand goes under from set to set.",
+      "do": [
+        "Never bend the elbows to help a deadlift off the floor.",
+        "Alternate the underhand side each set, or use a hook grip or straps."
+      ]
+    },
+    {
+      "id": "tech-num-mixed-grip-biceps",
+      "type": "number",
+      "title": "Mixed-grip deadlift biceps ruptures that were in the underhand arm",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "kapicioglu-2021"
+      ],
+      "value": "24 of 24",
+      "unit": "ruptures on video",
+      "sort": 24,
+      "take": "In a review of injury videos, every biceps tendon rupture during a mixed-grip deadlift was in the palm-forward arm. All lifters were men."
+    },
+    {
+      "id": "tech-trap-bar",
+      "type": "note",
+      "title": "A trap bar deadlift shifts load from the lower back toward the knees",
+      "topic": "hinge",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "swinton-2011",
+        "mcdonald-you-must-squat"
+      ],
+      "take": "Standing inside a hexagonal bar lowered peak moments at the spine and hip and raised them at the knee in trained lifters.",
+      "body": "Nineteen male powerlifters deadlifted with a straight bar and a hexagonal (trap) bar at loads from 10 to 80 percent of max. The hexagonal bar lowered the peak moments, or turning forces, at the lumbar spine, hip and ankle and raised the peak moment at the knee. Peak force, velocity and power were higher with it too. McDonald's view is that for most people who do not compete the trap bar is the better pull: the torso stays more upright, the thighs share more of the work and the bar does not have to pass round the knees. The study used submaximal loads moved as fast as possible.",
+      "do": [
+        "If your gym has a trap bar and you do not compete, consider it as your main deadlift."
+      ]
+    },
+    {
+      "id": "tech-table-rdl-sldl",
+      "type": "table",
+      "title": "Romanian deadlift and stiff-legged deadlift compared",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-rdl-vs-sldl"
+      ],
+      "take": "Two lifts that often share a name. Descriptions follow Lyle McDonald's usage; some coaches define the stiff-legged lift with a flat back.",
+      "columns": [
+        "Feature",
+        "Romanian deadlift",
+        "Stiff-legged deadlift, as often done"
+      ],
+      "rows": [
+        [
+          "Knees",
+          "Unlocked, bent a little and held there",
+          "Locked or nearly locked"
+        ],
+        [
+          "Hips",
+          "Travel backward as the bar descends",
+          "Stay over the feet"
+        ],
+        [
+          "Bar path",
+          "Slides down the thighs, close to the legs",
+          "Drifts forward of the legs"
+        ],
+        [
+          "Lower back",
+          "Stays flat throughout",
+          "Rounds near the bottom"
+        ],
+        [
+          "Depth",
+          "Ends where the hips run out of motion, often just below the knee",
+          "Often to the feet, standing on a block"
+        ],
+        [
+          "Spinal muscles",
+          "Hold still under load",
+          "Lengthen and shorten under load"
+        ]
+      ]
+    },
+    {
+      "id": "tech-rdl-depth",
+      "type": "note",
+      "title": "A Romanian deadlift ends where the hips stop moving",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-rdl-vs-sldl"
+      ],
+      "take": "Any depth gained after the hips stop comes from rounding the lower back, which takes the load off the hamstrings.",
+      "body": "Coaching practice. In a Romanian deadlift the knees stay slightly bent, about 10 to 20 degrees, the hips push back and the bar slides down the thighs with the back flat. McDonald's rule is to lower only as far as the hips can hinge. For most people that puts the bar a little below the kneecap; long arms or loose hamstrings allow more. Signs of going past it: the pull leaves the hamstrings and moves into the lower back, the knees bend further, or you can no longer see yourself in a mirror because the head has dropped. Stiff lifters can stop higher and let the range grow over the weeks.",
+      "do": [
+        "Keep the lats tight and the bar touching the legs all the way.",
+        "End the rep when the hips stop travelling back."
+      ]
+    },
+    {
+      "id": "tech-rdl-programming",
+      "type": "note",
+      "title": "Use Romanian deadlifts for moderate reps and build up slowly",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-rdl-vs-sldl"
+      ],
+      "take": "Sets of five to eight after the main lift suit most people. Do not test a one-rep max, and expect sore hamstrings at first.",
+      "body": "McDonald's programming advice, from coaching and not from trials. Use the Romanian deadlift as a second lower-body exercise after squats or deadlifts, mostly for five to eight reps or more. He sees no reason to go under three reps and would not test a max, because position is hard to hold with near-maximal loads. The lower back works hard to stay still, so after heavy deadlifts or low-bar squats it may give out first. In that case go lighter or move the lift to another day. The loaded stretch makes the hamstrings very sore in new or returning lifters.",
+      "do": [
+        "Begin with a load you could lift for several more reps and add weight over two to three weeks."
+      ]
+    },
+    {
+      "id": "tech-term-rdl",
+      "type": "term",
+      "title": "Romanian deadlift (RDL)",
+      "topic": "hinge",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-rdl-vs-sldl"
+      ],
+      "take": "A hip hinge started from standing: knees slightly bent, hips pushed back, back flat, bar lowered along the thighs. The name is credited to Romanian weightlifter Nicu Vlad."
+    },
+    {
+      "id": "tech-term-flexion-relaxation",
+      "type": "term",
+      "title": "Flexion-relaxation",
+      "topic": "hinge",
+      "level": "advanced",
+      "confidence": "moderate",
+      "sources": [
+        "colloca-2005"
+      ],
+      "take": "The spinal muscles going electrically quiet near a full forward bend, so that ligaments and discs carry more of the load. A review links it to load sharing by passive tissues."
+    },
+    {
+      "id": "tech-round-back-two-cases",
+      "type": "note",
+      "title": "A back that rounds mid-lift is a fault; a set, held upper-back curve is a style",
+      "topic": "hinge",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-round-backed-deadlifts",
+        "cholewicki-1992"
+      ],
+      "take": "Arguments over round-back deadlifts mix up losing a flat back under load with choosing a fixed upper-back curve before the pull.",
+      "body": "McDonald separates two things. In one, a lifter means to stay flat and the whole spine, lower back included, bends once the bar moves. He treats that as a loss of position that shifts load from muscle to ligaments and discs. In the other, a skilled powerlifter sets a rounded upper back before pulling, keeps the lower back flat and holds that shape to lockout. He treats that as a trained style for advanced lifters. X-ray video of four national-class powerlifters lifting 184 to 211 kg (405 to 465 lb) found that, in all but one trial, the lumbar spine stayed 1.5 to 13 degrees short of full flexion.",
+      "do": [
+        "If your back changes shape during a rep, lower the load and rebuild the position.",
+        "Learn the flat-backed pull before experimenting with anything else."
+      ]
+    },
+    {
+      "id": "tech-lumbar-flexion-evidence",
+      "type": "note",
+      "title": "Evidence on lifting with a rounded lower back is mixed and mostly indirect",
+      "topic": "hinge",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "callaghan-2001",
+        "saraceni-2020",
+        "colloca-2005",
+        "mcdonald-rdl-vs-sldl"
+      ],
+      "take": "Tissue studies link repeated loaded bending to disc injury, while a review of people lifting found no clear link between lumbar flexion and back pain.",
+      "body": "McDonald advises against heavy stiff-legged deadlifts with a rounded back, citing spine research. The lab basis exists: pig spine segments put through highly repetitive bending and straightening under modest compression developed disc herniations, more often and more severely as compression rose. Near a full bend the back muscles also go quiet and passive tissues take more load. Human data are less clear. A 2020 review of 11 studies found low-quality evidence that greater lumbar flexion during lifting was not a risk factor for low back pain. His articles predate that review.",
+      "do": [
+        "Treat a flat lower back as the default for heavy hinging.",
+        "See a physiotherapist or doctor about back pain that persists."
+      ]
+    },
+    {
+      "id": "tech-back-extension-pad",
+      "type": "note",
+      "title": "Pad height decides whether a back extension trains the hips or the spinal muscles",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-back-extension",
+        "steele-2013"
+      ],
+      "take": "With the pad below the hip crease the hips do the moving. With the pelvis pinned on the pad, the spinal muscles must.",
+      "body": "On a back extension bench, where the pad meets the pelvis sets what can move. If the pad is low enough for the pelvis to tip over its edge, the glutes and hamstrings extend the hips; keep the back flat and the spinal muscles only hold, like a machine Romanian deadlift. If the pelvis rests on the pad, the hips are blocked and the only way to move is to curl and uncurl the spine, which takes the spinal muscles through a range. McDonald uses the second set-up when the hamstrings have already been trained. A review of lumbar extensor exercise agrees that restraining the pelvis matters for targeting those muscles.",
+      "do": [
+        "Decide which you want to train before you set the pad.",
+        "Pin the pelvis on the pad when you want the lower back muscles to do the moving."
+      ]
+    },
+    {
+      "id": "tech-mistake-back-extension-overarch",
+      "type": "mistake",
+      "title": "Arching past straight at the top of a back extension",
+      "topic": "hinge",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-back-extension",
+        "callaghan-1998"
+      ],
+      "take": "Coming up beyond a straight line adds spine load without adding useful muscle work. Stop when the body is straight.",
+      "body": "The exercise is often called a hyperextension, and many people treat the name as an instruction. McDonald's advice is to rise only until the trunk is in line with the legs. For the same reason he has stopped using face-down chest and leg lifts from the floor, which force the spine into an arch. In a lab study of 13 men, the extensor exercises that involved actively extending the trunk produced the highest spine joint forces and muscle activity, while single-leg lifts with the spine held still gave a low spine load. Back pain during or after these exercises that persists should be assessed by a clinician.",
+      "do": [
+        "Stop each rep when shoulders, hips and ankles line up.",
+        "Hold the top for a second or two; do not swing up."
+      ]
+    },
+    {
+      "id": "tech-back-extension-progression",
+      "type": "note",
+      "title": "Start back extensions with one easy set and progress in small steps",
+      "topic": "hinge",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-back-extension"
+      ],
+      "take": "McDonald starts beginners on a single set of five to eight reps and keeps direct lower-back work well short of failure.",
+      "body": "Coaching practice with no trial behind it. The lower back is often weak in new lifters, so McDonald begins with one set of five to eight reps even if more feels possible, checks for back soreness the next day and adds a couple of reps per session. At twelve easy reps he makes the lift harder or adds a second set. Hand position sets the difficulty without any weight: arms by the sides is easiest, then crossed on the chest, then by the head, then reaching overhead. After that, hold a dumbbell at the chest. He places the exercise late in a session and leaves several reps in reserve.",
+      "do": [
+        "First session: one set of five to eight reps with the hands by your sides or on the chest.",
+        "Add load only once twelve reps feel easy."
+      ]
+    },
+    {
+      "id": "tech-back-endurance",
+      "type": "note",
+      "title": "Back muscle endurance was linked to fewer first-time back problems in men",
+      "topic": "hinge",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "biering-sorensen-1984",
+        "mcdonald-back-extension"
+      ],
+      "take": "In a Danish population study, men with good isometric back endurance were less likely to report low-back trouble for the first time.",
+      "body": "A health survey examined 449 men and 479 women aged 30, 40, 50 or 60 and followed them for a year. Good isometric endurance of the back muscles appeared to protect men against a first episode of low-back trouble, and men with very mobile backs were more likely to have one. Among people with earlier back trouble, the main predictor of more was how recent the last episode had been. McDonald draws on this line of research when he programs higher-rep back extensions with a hold of two to six seconds at the top. The study was observational, so it cannot show that building endurance prevents back pain.",
+      "do": [
+        "Include some higher-rep sets with a short hold at the top.",
+        "Keep those sets several reps short of failure."
+      ]
+    },
+    {
+      "id": "tech-squat-style-choice",
+      "type": "note",
+      "title": "Choose a squat style from your goal and your build",
+      "topic": "squat",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-proper-way-to-squat",
+        "glassbrook-2017"
+      ],
+      "take": "A higher bar and upright trunk bias the thighs. A lower bar with more sit-back spreads the work to hips and back and allows more load.",
+      "body": "McDonald's answer to which squat is best is that it depends on the lifter. For a general trainee he leans toward a moderate low-bar squat, taken just below parallel with a stance around shoulder width, because it balances the muscle trained against the load lifted. A high-bar squat with a narrower stance, an upright trunk and full depth suits weightlifters and people chasing thigh size, and works best in heeled shoes. A biomechanics review supports the basic contrast between the two bar positions. Competition detail sits in the powerlifting section.",
+      "do": [
+        "Try each bar position for a few weeks and keep the one you can load steadily and feel in the target muscles."
+      ]
+    },
+    {
+      "id": "tech-heeled-shoes",
+      "type": "note",
+      "title": "A raised heel lets the knees travel forward and the trunk stay more upright",
+      "topic": "squat",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "sato-2012",
+        "legg-2017",
+        "mcdonald-proper-way-to-squat"
+      ],
+      "take": "In two lab studies, weightlifting shoes reduced forward lean or increased knee bend compared with ordinary trainers.",
+      "body": "Twenty-five people squatting 60 percent of max leaned forward less in weightlifting shoes than in running shoes, though the thighs did not get closer to horizontal. In 32 people, weightlifting shoes reduced the ankle bend needed and increased knee bend, with a more upright trunk in the unloaded squat, and experienced squatters gained more from them than novices. McDonald suggests a heeled shoe for high-bar squats and for long-thighed lifters who fold forward, even in a low-bar squat. Both studies measured positions in one session, not strength or injury.",
+      "do": [
+        "If you tip forward in flat shoes, test a heeled lifting shoe before changing anything else."
+      ]
+    },
+    {
+      "id": "tech-squat-build",
+      "type": "note",
+      "title": "Some lifters squat upright and some fold forward",
+      "topic": "squat",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-squat-vs-leg-press",
+        "fuglsang-2017"
+      ],
+      "take": "Lifters who lean far forward tend to tire in the lower back before the thighs. Ankle mobility is one measured cause; proportions are a likely one.",
+      "body": "McDonald's observation is that lifters with short thighs and a long torso stay upright and get strong thigh work from squats, while long-thighed lifters tip forward until the squat resembles a good morning and the lower back gives out first. The geometry is sound, but direct evidence is thin. In 11 men squatting to parallel at about 75 percent of max, greater ankle mobility went with a more upright trunk, while the ratios between trunk, thigh and shin lengths showed no significant link with trunk angle. Eleven people is a small sample for a question about body proportions.",
+      "do": [
+        "Film a squat from the side and note what fails first: thighs or lower back.",
+        "Try a raised heel and a slightly wider stance before deciding the squat does not suit you."
+      ]
+    },
+    {
+      "id": "tech-squat-depth-growth",
+      "type": "note",
+      "title": "Full squats grew glutes and inner thighs more than half squats; quadriceps grew the same",
+      "topic": "squat",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "kubo-2019"
+      ],
+      "take": "Over 10 weeks, deeper squats gave two to three times the glute and adductor growth, with no extra growth at the front of the thigh.",
+      "body": "Seventeen men trained full squats or half squats twice a week for 10 weeks, with muscle volume measured by MRI. The knee extensors, the quadriceps group, grew 4.9 percent with full squats and 4.6 percent with half squats. Glute volume rose 6.7 percent against 2.2 percent and adductor volume 6.2 against 2.7 percent, both significantly more with full squats. The rectus femoris, the one quadriceps muscle that also crosses the hip, and the hamstrings did not grow in either group. On this evidence a squat trains the thighs, glutes and inner thighs, and the hamstrings need another lift.",
+      "do": [
+        "Squat as deep as you can hold position if glute size is a goal.",
+        "Add a leg curl or a hip hinge for the hamstrings."
+      ]
+    },
+    {
+      "id": "tech-num-squat-depth-glutes",
+      "type": "number",
+      "title": "Glute growth from full squats against half squats",
+      "topic": "squat",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "kubo-2019"
+      ],
+      "value": "6.7 vs 2.2",
+      "unit": "% volume in 10 weeks",
+      "sort": 6.7,
+      "take": "MRI change in glute volume in 17 men training twice a week. Quadriceps growth was similar, at 4.9% and 4.6%."
+    },
+    {
+      "id": "tech-squat-vs-leg-press",
+      "type": "note",
+      "title": "Squats carried over to jumping better than leg presses",
+      "topic": "squat",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "wirth-2016",
+        "escamilla-2001",
+        "mcdonald-squat-vs-leg-press"
+      ],
+      "take": "Eight weeks of squats raised jump height about 12 percent, against 0.5 to 3.5 percent for the leg press. For thigh size the leg press is a fair substitute.",
+      "body": "Seventy-eight students were split between training and control groups. Those who trained the parallel squat for eight weeks improved squat-jump height by 12.4 percent and countermovement-jump height by 12.0 percent. Those on a leg press improved by 3.5 and 0.5 percent, changes that were not significant. In 10 experienced lifters, the squat produced more quadriceps and hamstring activity and higher knee forces than the leg press. McDonald's case for the leg press concerns muscle size: it removes the lower back as the weak link, so the thighs can be taken close to failure. Neither study compared thigh growth.",
+      "do": [
+        "Squat if jumping or squat strength is the goal.",
+        "Use the leg press as the main thigh lift if your back fails first in squats, or straight after squats."
+      ]
+    },
+    {
+      "id": "tech-leg-press-depth",
+      "type": "note",
+      "title": "On the leg press, go deep but stop before the pelvis rolls off the pad",
+      "topic": "squat",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-squat-vs-leg-press"
+      ],
+      "take": "Bend the knees to a right angle or more, and treat the point where the lower back starts to round as the bottom.",
+      "body": "McDonald's coaching points. Loading every plate and moving the sled a short distance puts little tension on the thighs. He wants the knees bent to a right angle or more, which for many people means taking off about half the weight, and a short stop at the bottom to remove the bounce. The leg press does not protect the back by default. If the sled comes deeper than your hips allow, the pelvis tucks under and the lower back rounds against a heavy load. He dislikes vertical leg presses for this reason and notes that single-leg pressing, the free foot resting on the floor, makes rounding hard to do.",
+      "do": [
+        "Set the safety stops just above the depth where your hips begin to tuck.",
+        "Try single-leg presses if your lower back rounds when you use both legs."
+      ]
+    },
+    {
+      "id": "tech-mistake-everyone-full-squat",
+      "type": "mistake",
+      "title": "Expecting every adult to reach a full-depth barbell squat",
+      "topic": "squat",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-you-must-squat"
+      ],
+      "take": "Toddlers and people resting in a deep squat are poor guides to what a loaded adult skeleton can do.",
+      "body": "Two arguments are often used to claim that everyone can squat to full depth with a bar. One points to toddlers, who squat easily. McDonald answers that small children share nearly the same proportions, with a large head and short limbs, and that proportions diverge widely after puberty. The other points to cultures where people rest in a deep squat. That position is unloaded, with a rounded back and the arms forward as a counterweight, whereas a barbell has to stay balanced over the foot. Hip joint shape also varies between people. This is his reasoning and not a study result.",
+      "do": [
+        "Squat to the depth you can reach with a flat back and the bar over mid-foot.",
+        "Ask a physiotherapist if a pinch at the front of the hip limits your depth."
+      ]
+    },
+    {
+      "id": "tech-split-squat-setup",
+      "type": "note",
+      "title": "Set a split squat long enough and wide enough",
+      "topic": "squat",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-split-squat"
+      ],
+      "take": "Both knees should be near a right angle in the low position, with the feet about hip width apart and not on one line.",
+      "body": "Coaching practice, and it applies to lunges too. Take a stride long enough that both knees bend to roughly a right angle at the bottom, with the back knee just short of the floor. A back foot placed too close folds that knee sharply. Seen from behind, keep the feet about hip width apart. Feet on one line, as if on a tightrope, make balance hard, and a back leg angled out to the side strains its knee. Keep the chest up. McDonald finds very low reps work poorly in this lift and uses sets of five or more.",
+      "do": [
+        "Mark your foot positions on the floor once you find a stride that works.",
+        "Lower until the back knee almost touches, then stand."
+      ]
+    },
+    {
+      "id": "tech-split-squat-emphasis",
+      "type": "note",
+      "title": "Front shin angle steers a split squat toward the thighs or the glutes",
+      "topic": "squat",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-split-squat",
+        "schutz-2014"
+      ],
+      "take": "Letting the front knee travel forward biases the thigh. A vertical shin with the weight on the heel biases the glutes.",
+      "body": "McDonald describes three versions set by the front foot. Knee well forward with pressure on the ball of the foot is thigh-dominant. Shin upright with the hips sitting back and pressure on the heel is glute-dominant. Pressure at mid-foot sits between the two. A motion-capture study of 11 people carrying 25 percent of body weight found that changing the front shin angle and the step length altered the range of motion and the moments at both knees and hips, while the share of load between the legs shifted by less than 25 percent. Holding the bar on the front of the shoulders adds thigh work.",
+      "do": [
+        "Pick the version that matches the muscle you want and keep the foot pressure the same on every rep."
+      ]
+    },
+    {
+      "id": "tech-split-squat-vs-squat",
+      "type": "note",
+      "title": "Rear-foot-elevated split squats matched back squats over five weeks in young rugby players",
+      "topic": "squat",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "speirs-2016",
+        "mcdonald-split-squat"
+      ],
+      "take": "Strength, 40 m sprint and agility improved equally whether the players trained only split squats or only back squats.",
+      "body": "Eighteen academy rugby players were randomly assigned to train either the rear-foot-elevated split squat or the back squat for five weeks. Both groups improved back squat max, split squat max, 40 m sprint time and a change-of-direction test, with no significant difference between them; 10 m sprint time did not change. McDonald uses split squats when the lower back limits the squat, after deadlifts, when only light weights are to hand, or to even out a weaker leg. He warns that the lift is not always light: the range is shorter than a deep squat, and some lifters handle loads close to their back squat.",
+      "do": [
+        "Use split squats as a main leg lift when your lower back needs a rest from heavy squats."
+      ]
+    },
+    {
+      "id": "tech-single-leg-order",
+      "type": "note",
+      "title": "In single-leg work, start with the weaker side and rest before switching",
+      "topic": "squat",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-split-squat"
+      ],
+      "take": "Let the weaker leg set the reps for both, and take about a minute between legs so the second one is not short-changed.",
+      "body": "Coaching practice. Switching legs without a break leaves the second leg working while you are still out of breath, so McDonald rests about a minute after each leg and alternates until every set is done. Where one side is weaker, he starts with it and stops the stronger side at the same number of reps, even if more are possible. Another option is one or two extra sets for the weak side only. The price of single-leg training is time, since the same number of sets takes about twice as long.",
+      "do": [
+        "Count the reps your weaker leg manages and match them on the other side."
+      ]
+    },
+    {
+      "id": "tech-calf-pause",
+      "type": "note",
+      "title": "Pause at the bottom of calf raises so the muscle does the lifting",
+      "topic": "isolation",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-training-calves",
+        "lichtwark-2005"
+      ],
+      "take": "The Achilles tendon hands back stored energy when a rep is bounced. A two-second pause in the stretch removes most of that help.",
+      "body": "Tendons behave like springs: stretched quickly, they give energy back. In 10 men hopping on one leg, recoil of the Achilles tendon returned an average of 38 joules, 16 percent of the mechanical work of each hop. McDonald's explanation for thin calves that move huge loads is that fast, bouncing reps let the tendon do part of the work. His fix is a pause of about two seconds at the bottom, a short squeeze at the top and a controlled lowering. He warns against forcing the heel as low as it will go, and advises starting well below your usual load because paused calf work causes marked soreness.",
+      "do": [
+        "Count two seconds in the stretched position on every rep.",
+        "Start with much less than your usual load the first time you try paused reps."
+      ]
+    },
+    {
+      "id": "tech-mistake-calf-bounce",
+      "type": "mistake",
+      "title": "Bouncing calf raises through a short range",
+      "topic": "isolation",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-training-calves",
+        "lichtwark-2005",
+        "kassiano-2023"
+      ],
+      "take": "Fast, springy reps let the Achilles tendon carry part of each lift, so the muscle does less than the load suggests.",
+      "body": "The pattern is common: a heavy stack, quick shallow reps and no time spent at the bottom or the top. McDonald argues this is how very high rep counts became the tradition for calves, since each bounced rep asks so little of the muscle. The spring effect is measurable in hopping, where tendon recoil supplied about a sixth of the work per hop in 10 men. No study has compared paused and bounced calf raises for growth, so treat the pause as a reasoned coaching cue. A trial in 42 young women found that calf raises done in the stretched part of the range grew the inner calf more than full-range or top-half reps.",
+      "do": [
+        "Slow the lowering and come to a dead stop at the bottom before each lift."
+      ]
+    },
+    {
+      "id": "tech-calf-standing-vs-seated",
+      "type": "note",
+      "title": "Standing calf raises grew the calf far more than seated ones",
+      "topic": "isolation",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "kinoshita-2023",
+        "mcdonald-training-calves"
+      ],
+      "take": "With the knee straight both calf muscles grew. With the knee bent only the soleus did, and no more than it did standing.",
+      "body": "The gastrocnemius crosses the knee, so bending the knee slackens it and leaves most of the work to the deeper soleus. That anatomy is why McDonald's 2009 calf routine pairs heavy, paused straight-knee raises with higher-rep bent-knee raises, twice a week. A later trial tested it. Fourteen untrained adults trained one leg standing and the other seated for 12 weeks. Standing raises grew the lateral gastrocnemius 12.4 percent against 1.7 percent seated, and the medial 9.2 against 0.6 percent. The soleus grew about the same either way, 2.1 and 2.9 percent. On this evidence the standing raise covers both muscles.",
+      "do": [
+        "Make a straight-knee calf raise your main calf exercise.",
+        "Treat seated raises as optional extra work for the soleus."
+      ]
+    },
+    {
+      "id": "tech-num-calf-standing",
+      "type": "number",
+      "title": "Outer calf growth from standing against seated raises",
+      "topic": "isolation",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "kinoshita-2023"
+      ],
+      "value": "12.4 vs 1.7",
+      "unit": "% volume in 12 weeks",
+      "sort": 12.4,
+      "take": "Lateral gastrocnemius growth in 14 untrained adults who trained one leg standing and one seated. Soleus growth was 2.1% and 2.9%."
+    },
+    {
+      "id": "tech-term-gastrocnemius-soleus",
+      "type": "term",
+      "title": "Gastrocnemius and soleus",
+      "topic": "isolation",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [],
+      "take": "The two main calf muscles. The gastrocnemius is the visible one and crosses both knee and ankle. The soleus lies under it and crosses only the ankle, so it does most of the work when the knee is bent."
+    },
+    {
+      "id": "tech-leg-extension-burn",
+      "type": "note",
+      "title": "Why high-rep leg extensions burn so much is not established",
+      "topic": "isolation",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-leg-extensions",
+        "foster-1999"
+      ],
+      "take": "McDonald's guess is that the seated, hip-bent position limits blood flow through the thigh for the whole set. Nobody has tested it.",
+      "body": "High-rep leg extensions cause more local burning than most lifts at the same effort. McDonald offers a hypothesis and labels it as one: the hip stays bent throughout, so circulation through the thigh may be partly restricted and the by-products of hard work build up. He draws on speed skating, where a study of 10 skaters found signs of restricted muscle blood flow in the low skating position. Its authors put that down to high forces inside the muscle and long contraction times. Nothing has measured this on a leg extension machine. Pain in the knee joint is a separate matter.",
+      "do": [
+        "If the burn ends sets early, try reclining the seat back a little.",
+        "Or accept it and use the lift for lighter, higher-rep work."
+      ]
+    },
+    {
+      "id": "tech-leg-extension-knee-stress",
+      "type": "note",
+      "title": "Leg extensions stress the kneecap joint most near straight; squats stress it most deep",
+      "topic": "isolation",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "powers-2014"
+      ],
+      "take": "A modelling study found opposite patterns: knee extensions loaded the joint behind the kneecap more from 0 to 30 degrees, squats more from 60 to 90.",
+      "body": "Ten healthy people did a squat and two seated knee extension exercises while researchers estimated stress on the patellofemoral joint, where the kneecap meets the thigh bone. The squat produced higher stress at 60, 75 and 90 degrees of knee bend. The knee extensions produced higher stress at 0, 15 and 30 degrees, close to straight. The authors suggest that people trying to limit this stress use the squat from 45 degrees to straight and the knee extension from 90 to 45 degrees. This was a model in people without knee pain. Knee pain that persists with either lift should be assessed by a physiotherapist or doctor.",
+      "do": [
+        "If the front of the knee is sore near lockout on leg extensions, try the bent half of the range and have it checked."
+      ]
+    },
+    {
+      "id": "tech-leg-extension-recline",
+      "type": "note",
+      "title": "Leaning back on the leg extension grew the rectus femoris more",
+      "topic": "isolation",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "larsen-2025",
+        "mcdonald-leg-extensions"
+      ],
+      "take": "With the hips opened to 40 degrees of bend, the thigh muscle that crosses the hip grew more than at 90 degrees. The outer thigh grew the same.",
+      "body": "Twenty-two untrained men trained leg extensions twice a week for 10 weeks, one leg with the hip bent 90 degrees, as when sitting upright, and the other at 40 degrees, leaning well back. Ultrasound showed more growth of the rectus femoris in the leaned-back leg, and no difference for the vastus lateralis on the outer thigh. The rectus femoris crosses the hip, so leaning back lengthens it. McDonald had floated a reclined leg extension in 2018 for another reason: he guessed it would ease the burn. The trial supports reclining for growth of this one muscle and did not test the burn.",
+      "do": [
+        "Set the back pad as far back as the machine allows, or lean back and hold the handles."
+      ]
+    },
+    {
+      "id": "tech-term-patellofemoral",
+      "type": "term",
+      "title": "Patellofemoral joint",
+      "topic": "isolation",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "powers-2014"
+      ],
+      "take": "The joint between the kneecap (patella) and the groove at the end of the thigh bone. How hard it is loaded changes with knee angle and differs between squats and leg extensions."
+    },
+    {
+      "id": "tech-model-vs-style",
+      "type": "note",
+      "title": "Good technique is a shared model with room for personal style",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-1"
+      ],
+      "take": "Skilled lifters look broadly alike in a given lift and differ in details that follow from their build.",
+      "body": "McDonald describes two camps, using terms he credits to weightlifting author Arthur Drechsler. Absolutists hold that one exact technique is correct. Relativists hold that the body will find its own way. He rejects both. Every lift has a general model that most good performers share, and inside it stance, toe angle, trunk lean and head position vary with limb lengths and hip structure. His practical advice is to copy lifters who are built like you. A champion's odd habit shows only that one person, often after years of adapting from childhood, got away with it. The lifters it injured never reached the podium.",
+      "do": [
+        "When you study someone's technique, choose a lifter with proportions close to yours."
+      ]
+    },
+    {
+      "id": "tech-term-technique-fault",
+      "type": "term",
+      "title": "Technique fault",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-1"
+      ],
+      "take": "A departure from a lift's general model that build or style does not explain and that limits performance or progress, or raises injury risk. McDonald's working definition; faults come in degrees."
+    },
+    {
+      "id": "tech-table-fault-sources",
+      "type": "table",
+      "title": "Three sources of a technique fault and where to start",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-1"
+      ],
+      "take": "A coaching framework drawn from Lyle McDonald's writing on changing technique. A long-standing fault usually involves the third row as well.",
+      "columns": [
+        "Source",
+        "Example",
+        "First step"
+      ],
+      "rows": [
+        [
+          "A weak link",
+          "The upper back rounds in a deadlift because those muscles cannot hold the load",
+          "Extra work for the weak muscles, alongside the lift"
+        ],
+        [
+          "A wrong picture of the lift",
+          "Thinking only 'push with the legs', so the hips rise and the chest is left behind",
+          "A new cue, such as leading with the chest"
+        ],
+        [
+          "Habit from repetition",
+          "A pattern copied from other gym users and repeated for years",
+          "Slow, deliberate practice of the new pattern at easy loads"
+        ]
+      ]
+    },
+    {
+      "id": "tech-external-focus",
+      "type": "note",
+      "title": "Cues about the bar or the floor beat cues about body parts for learning a movement",
+      "topic": "learning",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "chua-2021",
+        "wulf-2013"
+      ],
+      "take": "Across dozens of studies, attending to the effect of a movement improved performance and learning more than attending to the limbs.",
+      "body": "An external focus means thinking about what the movement does to something outside the body, such as 'push the floor away' or 'drive the bar to the ceiling'. An internal focus means thinking about a body part, such as 'straighten the knees'. A meta-analysis pooled 73 studies with 1,824 participants for performance and 40 studies with 1,274 participants for learning. External focus came out ahead on both, with a small effect on immediate performance (g = 0.26) and a moderate one on retention (g = 0.58), whatever the age or skill level. Internal cues keep a use when the aim is to bias one muscle at lighter loads.",
+      "do": [
+        "Phrase cues as actions on the bar, the floor or the bench.",
+        "Use one cue per set."
+      ]
+    },
+    {
+      "id": "tech-term-external-focus",
+      "type": "term",
+      "title": "External and internal focus",
+      "topic": "learning",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "chua-2021"
+      ],
+      "take": "External focus is attention on the effect of a movement, such as the bar's path. Internal focus is attention on body parts, such as squeezing a muscle. Motor-learning research favours external focus for skill."
+    },
+    {
+      "id": "tech-num-external-focus",
+      "type": "number",
+      "title": "Advantage of external over internal focus for retaining a skill",
+      "topic": "learning",
+      "level": "beginner",
+      "confidence": "strong",
+      "sources": [
+        "chua-2021"
+      ],
+      "value": "0.58",
+      "unit": "Hedges' g",
+      "sort": 0.58,
+      "take": "A moderate effect pooled from 40 studies with 1,274 participants. The effect on immediate performance was smaller, 0.26 across 73 studies."
+    },
+    {
+      "id": "tech-old-habit-returns",
+      "type": "note",
+      "title": "An old movement habit is overwritten, not erased, and returns under fatigue or pressure",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-changing-technique-1",
+        "bouton-2002",
+        "carson-2011"
+      ],
+      "take": "Expect a corrected fault to reappear with heavy loads, late in sets or in competition until the new pattern has been drilled in those conditions.",
+      "body": "McDonald's account is that a new technique is laid over the old one, and the old one comes back when the lifter is tired, the load is near maximal or the setting is stressful. The new pattern therefore has to be practised first at easy loads and then under steadily harder conditions. Learning research on other behaviours points the same way: a review of extinction studies concluded that the original learning is not destroyed, and that new learning is stored alongside it and depends on context. A sport-science review noted how little research exists on changing technique in skilled performers.",
+      "do": [
+        "Raise the load only while the new pattern holds.",
+        "End a set when the old pattern shows."
+      ]
+    },
+    {
+      "id": "tech-mistake-load-before-technique",
+      "type": "mistake",
+      "title": "Adding weight before the movement is stable",
+      "topic": "learning",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-1"
+      ],
+      "take": "Reps done wrong still count as practice. The more often a faulty pattern is repeated, the more automatic and the harder to change it becomes.",
+      "body": "Learning a movement runs from having to think about every part to doing it without thought, and repetition gets you there. That holds for bad reps too, hence the coaching line that practice makes permanent. McDonald's advice for beginners learning complex lifts is to make the movement steady at loads well below maximum before chasing weight. He passes on two coaching rules of thumb, about 10,000 good reps to make a pattern automatic and three corrective reps for each wrong one, and says neither has research behind it. At about 150 good reps a week, the first figure takes over a year.",
+      "do": [
+        "Hold the load steady for a few sessions while a new lift still looks different from rep to rep.",
+        "Film a set every week or two."
+      ]
+    },
+    {
+      "id": "tech-no-required-exercise",
+      "type": "note",
+      "title": "No gym exercise is compulsory unless your sport tests it",
+      "topic": "evidence",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-you-must-squat",
+        "mcdonald-squat-vs-leg-press"
+      ],
+      "take": "Powerlifters, weightlifters and some strongman competitors must squat. For everyone else a lift only has to be safe, load the target and allow progress.",
+      "body": "McDonald argues that the barbell squat, bench press and deadlift became fixtures partly because early lifters had little else to use. A powerlifter has to practise the three contested lifts, a weightlifter needs at least the front squat, and strongman events often include a squat or deadlift. Outside those sports his test for any exercise has three parts: you can do it safely, it loads the muscles you mean to train, and you can add load or reps over time. Which lift passes differs between people. He still suggests that most lifters learn the squat, then drop it if a fair attempt shows it does not suit them.",
+      "do": [
+        "Judge each lift in your plan against the three tests.",
+        "Keep a lift you enjoy and progress on; replace one that only wears you down."
+      ]
+    },
+    {
+      "id": "tech-mistake-safe-unsafe-labels",
+      "type": "mistake",
+      "title": "Labelling an exercise simply safe or unsafe",
+      "topic": "evidence",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-upright-rows"
+      ],
+      "take": "Risk depends on how a lift is done and who is doing it, so weigh the likely benefit against the likely cost for that person.",
+      "body": "McDonald's argument, made about upright rows, applies widely. The same movement can be low risk in one form and high risk in another, and a version that suits a healthy shoulder may not suit one with an old injury. He suggests judging each exercise by what it offers a given person against what it could cost them, in their circumstances. This is a way of thinking and not a research finding. It does not replace an assessment by a physiotherapist or doctor when something hurts.",
+      "do": [
+        "Ask what the exercise gives you that a lower-risk option does not.",
+        "Change the range, grip or tool before you drop an exercise altogether."
+      ]
+    },
+    {
+      "id": "tech-breathing-basic",
+      "type": "note",
+      "title": "New lifters should keep breathing and leave bracing for later",
+      "topic": "bracing",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-breathing"
+      ],
+      "take": "For light, general training, breathe in as you lower and out as you lift. The first job is simply not to hold your breath through a set.",
+      "body": "McDonald's coaching point is that beginners already have position, tempo and balance to think about, and adding a breathing drill tends to end with them holding their breath and gasping half-way through a set. So at first he cues only that they breathe. After a few sessions he teaches the plain pattern: inhale during the lowering phase and exhale during the lifting phase. He considers this enough for recreational training with moderate loads, and the gentlest pattern for blood pressure. Bracing with a held breath comes in when loads on the spine get heavy.",
+      "do": [
+        "In your first weeks, check only that you are breathing on every rep.",
+        "Then settle into in on the way down, out on the way up."
+      ]
+    },
+    {
+      "id": "tech-valsalva-brace",
+      "type": "note",
+      "title": "A held breath stiffens the trunk for heavy squats and deadlifts",
+      "topic": "bracing",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "mcdonald-breathing",
+        "hagins-2004",
+        "hackett-2013",
+        "harman-1989"
+      ],
+      "take": "Breathing in and bearing down against a closed throat raises pressure inside the abdomen, which helps keep the spine rigid under heavy loads.",
+      "body": "For heavy lifts that load the spine, McDonald teaches a partial Valsalva: breathe into the belly, push as if exhaling while the throat stays closed, and hold at least through the hardest part of the rep. In 11 healthy people, lifting after an inhale and hold produced higher peak intra-abdominal pressure than natural breathing or exhaling. A review found the manoeuvre raises that pressure during resistance exercise and that a brief one is unavoidable above about 80 percent of maximum effort. In nine lifters deadlifting 90 percent of max, a belt raised the pressure further. The cost is a spike in blood pressure.",
+      "do": [
+        "Take the breath and brace while standing, before each heavy rep starts.",
+        "Learn the brace with moderate loads first."
+      ]
+    },
+    {
+      "id": "tech-valsalva-blood-pressure",
+      "type": "note",
+      "title": "Blood pressure climbs very high in heavy lifts, and higher with a held breath",
+      "topic": "bracing",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "macdougall-1985",
+        "narloch-1995",
+        "hackett-2013",
+        "mcdonald-breathing"
+      ],
+      "take": "Direct measurements show pressures above 300/250 mm Hg on maximal leg presses. Exhaling slowly during the lift cut the pressure by over a third.",
+      "body": "In five experienced bodybuilders with a catheter in an arm artery, pressure peaked during the lifting phase and averaged 320/250 mm Hg on double-leg presses taken to failure. In 10 male athletes pressing 100 percent of max, mean pressure was 311/284 with a closed-throat Valsalva and 198/175 with a slow exhale. A later review judged that the health risks of the manoeuvre in resistance exercise remain unconfirmed. McDonald's advice is that people with heart or blood pressure conditions keep breathing continuously. That decision belongs with their doctor, who should clear heavy lifting and any breath-holding first.",
+      "do": [
+        "If you have high blood pressure or a heart condition, ask your doctor before heavy lifting or breath-holding.",
+        "Use the exhale-on-effort pattern for lighter and higher-rep work."
+      ]
+    },
+    {
+      "id": "tech-num-leg-press-bp",
+      "type": "number",
+      "title": "Mean peak blood pressure on heavy double-leg presses",
+      "topic": "bracing",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "macdougall-1985"
+      ],
+      "value": "320/250",
+      "unit": "mm Hg",
+      "sort": 320,
+      "take": "Measured inside the artery in five experienced bodybuilders lifting to failure at 80 to 100% of max. One subject exceeded 480/350."
+    },
+    {
+      "id": "tech-term-valsalva",
+      "type": "term",
+      "title": "Valsalva manoeuvre",
+      "topic": "bracing",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "hackett-2013"
+      ],
+      "take": "Trying to breathe out against a closed throat. It raises pressure in the chest and abdomen, which stiffens the trunk and also raises blood pressure. Lifters use a brief, partial version on heavy reps."
+    },
+    {
+      "id": "tech-term-iap",
+      "type": "term",
+      "title": "Intra-abdominal pressure (IAP)",
+      "topic": "bracing",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "hagins-2004",
+        "harman-1989"
+      ],
+      "take": "Pressure inside the abdominal cavity. It rises when you hold a breath and tighten the trunk, and a lifting belt raised it further in a deadlift study. It is thought to help support the spine."
+    },
+    {
+      "id": "tech-table-breathing-patterns",
+      "type": "table",
+      "title": "Breathing patterns for a rep, from light to heavy work",
+      "topic": "bracing",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-breathing"
+      ],
+      "take": "Options coaches use, with McDonald's view of where each fits. More held breath means more trunk stiffness and a bigger rise in blood pressure.",
+      "columns": [
+        "Pattern",
+        "How",
+        "Fits"
+      ],
+      "rows": [
+        [
+          "Continuous",
+          "In while lowering, out while lifting",
+          "Beginners, light and higher-rep work, anyone told to avoid breath-holding"
+        ],
+        [
+          "Hold, then hiss",
+          "Brace, hold through the hardest part, then leak air slowly through the teeth",
+          "A middle path: some exhale without losing tightness"
+        ],
+        [
+          "Hold, then sharp exhale",
+          "Brace, hold through the hardest part, then breathe out forcefully",
+          "Heavy reps; McDonald's usual cue"
+        ],
+        [
+          "Hold to the top",
+          "Brace and keep the breath until the rep is finished",
+          "Short, heavy reps; slow reps may leave you short of air"
+        ]
+      ]
+    },
+    {
+      "id": "tech-brace-each-rep",
+      "type": "note",
+      "title": "On heavy sets, breathe and brace again before every rep",
+      "topic": "bracing",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-breathing"
+      ],
+      "take": "Treating a set of five as five singles keeps the brace and the set-up from getting sloppy as the set gets hard.",
+      "body": "Coaching practice. McDonald has newer lifters stand at the top of each rep, take a fresh breath into the belly, tighten up and only then start the next descent. The pause stops the rushing that creeps in as a set gets heavy, and leaves a moment to recall one cue. With experience, lifters learn to take the breath and brace as the descent begins and need less time between reps. He holds that back until the brace has become automatic.",
+      "do": [
+        "On squats and deadlifts, take one full breath at the top between reps."
+      ]
+    },
+    {
+      "id": "tech-straps-when",
+      "type": "note",
+      "title": "Lift without straps until grip limits you, then strap up",
+      "topic": "bracing",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-lifting-straps",
+        "jukic-2021-straps",
+        "coswig-2015"
+      ],
+      "take": "This middle path trains the grip early in the session and stops it from capping the back work that follows.",
+      "body": "McDonald rejects both 'always' and 'never'. His method is to start pulling work bare-handed and, when the bar begins to slip late in a set, to use straps for whatever back work is left. Powerlifters and weightlifters need grip for their sport and still strap for assistance and higher-rep work. Lab studies fit the logic. In 16 men doing four sets of four deadlifts at 80 percent of max, straps reduced grip fatigue and perceived effort. In 11 trained lifters doing three sets to failure at 90 percent, straps increased the work done by the target muscles. Chalk helps the bare-handed sets.",
+      "do": [
+        "Do your first heavy pulling sets without straps.",
+        "Put straps on when grip, not the back, is about to end a set."
+      ]
+    },
+    {
+      "id": "tech-mistake-grip-limits-back",
+      "type": "mistake",
+      "title": "Letting grip end sets that are meant to train the back",
+      "topic": "bracing",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-lifting-straps"
+      ],
+      "take": "If the hands give out before the back or hamstrings, those muscles finish the set under-trained.",
+      "body": "Refusing straps is usually defended as a way to build grip. McDonald's reply is that a muscle you are not trying to train should not decide when a set for another muscle ends, and that a long pulling session will outlast almost anyone's hands. He adds that more strapless deadlifts or rows are a tiring and unreliable way to build grip, and that lifters with small hands may never hold what their backs can pull. If grip itself matters to you, he suggests training it directly after the main work with heavy holds, a couple of times a week. This is coaching opinion.",
+      "do": [
+        "Use straps for back and hamstring work once grip becomes the limit.",
+        "Add timed heavy bar holds after pulling work if you want a stronger grip."
+      ]
+    },
+    {
+      "id": "tech-table-grip-aids",
+      "type": "table",
+      "title": "Grip aids compared",
+      "topic": "bracing",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-lifting-straps"
+      ],
+      "take": "Common grip aids and where each fits. Closed-loop straps should not be used for cleans, because the bar cannot be released quickly.",
+      "columns": [
+        "Aid",
+        "What it is",
+        "Fits",
+        "Caution"
+      ],
+      "rows": [
+        [
+          "Loop straps",
+          "A long strap threaded through its own loop and wound round the bar",
+          "Deadlifts, rows, pulldowns, Romanian deadlifts",
+          "Slow to release; not for cleans"
+        ],
+        [
+          "Weightlifting straps",
+          "Short straps that let go when the hand opens",
+          "Snatches and pulls in weightlifting training",
+          "Less support; you still have to grip hard"
+        ],
+        [
+          "Hooks",
+          "A wrist cuff with a metal hook that sits under the bar",
+          "Taking grip out of a lift entirely",
+          "No grip training at all"
+        ],
+        [
+          "Wrap-style grips",
+          "A wrist cuff with a flap folded round the bar",
+          "Lifters who struggle to wind loop straps",
+          "Sizes differ, so pick one that fits your hand"
+        ],
+        [
+          "Chalk",
+          "Magnesium carbonate dusted on the hands",
+          "A dry grip on any bar, with or without straps",
+          "Some gyms ban it; clean up after use"
+        ]
+      ]
+    },
+    {
+      "id": "tech-rituals-belief",
+      "type": "note",
+      "title": "A harmless pre-lift ritual can help, because belief moves performance a little",
+      "topic": "learning",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "hurst-2020",
+        "mcdonald-power-inside-bar"
+      ],
+      "take": "Placebo effects on sports performance are small to moderate in pooled studies, so a routine you trust is worth keeping if it costs nothing.",
+      "body": "Athletes collect habits they swear by: the same socks, the same warm-up order, the same meal. McDonald wrote a light-hearted article about a gym superstition of his own, and its serious point is that a ritual you believe in can make you perform better or more consistently, which is reason enough to keep it. Research supports a modest effect. A systematic review of 32 studies with 1,513 participants found small to moderate placebo effects on sports performance (d = 0.36), and nocebo effects of similar size (d = 0.37), where expecting harm made performance worse. A ritual should stay cheap, safe and quick.",
+      "do": [
+        "Keep a set-up routine you trust, and keep it short.",
+        "Do not let a missing lucky item convince you a session is lost."
+      ]
+    },
+    {
+      "id": "tech-jump-hip-extension",
+      "type": "note",
+      "title": "A jump is driven by straightening hips, knees and ankles",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-learning-to-jump"
+      ],
+      "take": "The hamstrings work at two joints: they bend the knee and they straighten the hip. In jumping, squatting and weightlifting they need to do the second job.",
+      "body": "McDonald describes a fault he met in coaching: a lifter who left the ground by bending the knees and flicking the feet up behind, without pushing through the floor. The hamstrings were acting as knee benders at the moment they should have been extending the hip, which set them against the thigh muscles. He linked it to squats that stalled half-way up and to feet kicking back in the Olympic lifts, and it only became visible when the lifter skipped rope. This is one coach's case, not a study, but the check is simple: in a good jump the body reaches full length before the knees bend again.",
+      "do": [
+        "Film a few vertical jumps or rope skips from the side.",
+        "Look for hips, knees and ankles straight at take-off, before the feet tuck."
+      ]
+    },
+    {
+      "id": "tech-jump-drills",
+      "type": "note",
+      "title": "Drills that teach a full, fast hip extension",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-learning-to-jump"
+      ],
+      "take": "Rope skipping, kettlebell swings, backward overhead medicine-ball throws and plain vertical jumps all rehearse extending completely.",
+      "body": "To retrain the pattern McDonald used many easy repetitions early in each session: rope skipping, kettlebell swings, and medicine-ball throws up and back over the head from a squat. Throws suit the purpose because the ball is released, so nothing has to slow down near the top. He added bodyweight vertical jumps and tuck jumps, cued to reach full extension before the knees come up, and jumps from a half squat with a light bar. Squats stayed light, with chains or bands to reward pushing all the way up. He reports that the stall in the squat faded over four to six weeks. These are methods from a single case.",
+      "do": [
+        "Put five minutes of skipping, swings or throws into the warm-up.",
+        "Keep any loaded jumps light."
+      ]
+    },
+    {
+      "id": "tech-plyometrics-jump-height",
+      "type": "note",
+      "title": "Jump training raises jump height by about 5 to 9 percent",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "strong",
+      "sources": [
+        "markovic-2007",
+        "lees-2004"
+      ],
+      "take": "A meta-analysis of 26 studies found plyometric training improved every type of vertical jump tested. Using the arms adds height too.",
+      "body": "Plyometric training means repeated jumps and bounds that use a quick stretch before the push. Pooled across 26 studies in healthy people, it raised squat-jump height by 4.7 percent, countermovement-jump height by 8.7 percent, countermovement jump with arm swing by 7.5 percent and drop-jump height by 4.7 percent. Technique counts as well as training. In 20 men, swinging the arms added 8.6 cm (3.4 in) to jump height, mostly by raising the speed of the body at take-off. Practising the jump itself, arms included, is part of learning to jump.",
+      "do": [
+        "Include some jumping each week if jump height matters to you.",
+        "Practise the arm swing along with the leg drive."
+      ]
+    },
+    {
+      "id": "tech-term-triple-extension",
+      "type": "term",
+      "title": "Triple extension",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [],
+      "take": "Straightening the hips, knees and ankles together, as at take-off in a jump or at the top of a weightlifting pull."
+    },
+    {
+      "id": "tech-table-change-worth-it",
+      "type": "table",
+      "title": "When a technique fault is worth fixing",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-2"
+      ],
+      "take": "McDonald's view by situation. The longer a pattern has been trained and the better it is working, the higher the bar for changing it.",
+      "columns": [
+        "Situation",
+        "His advice",
+        "Why"
+      ],
+      "rows": [
+        [
+          "Beginner with a clear fault",
+          "Fix it now",
+          "Few reps to overwrite, and years of training ahead to benefit"
+        ],
+        [
+          "Any lifter with a recurring injury traced to the fault",
+          "Fix it",
+          "Nobody progresses while repeatedly hurt"
+        ],
+        [
+          "Recreational lifter with a small flaw and no pain",
+          "Optional",
+          "Low stakes either way; most gym lifts are simple enough to adjust"
+        ],
+        [
+          "Long-trained competitor, performing well and uninjured",
+          "Leave it",
+          "Change costs performance first and loads tissue that has not adapted"
+        ],
+        [
+          "Competitor with a year or two left",
+          "Leave it unless it causes injury",
+          "Too little time to relearn the lift and regain efficiency"
+        ]
+      ]
+    },
+    {
+      "id": "tech-change-costs",
+      "type": "note",
+      "title": "Changing a practised technique loads new tissue and can lower performance at first",
+      "topic": "learning",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-changing-technique-2",
+        "arendse-2004",
+        "dallam-2005"
+      ],
+      "take": "In running studies, a taught technique cut work at the knee, raised it at the ankle and worsened economy after 12 weeks.",
+      "body": "McDonald's caution is that years of training adapt tendons and ligaments to one movement pattern and make the body efficient at it, flaws included. A new pattern loads less-prepared tissue and is less efficient at first, so training load should come down while it is learned. Running research he draws on shows both effects. Twenty runners taught the Pose method absorbed less power and did less eccentric work at the knee, and more at the ankle. Of 16 sub-elite triathletes, the eight given 12 weeks of Pose instruction ended with a higher oxygen cost at the same speeds, meaning worse running economy.",
+      "do": [
+        "Cut volume and intensity in the lift you are changing.",
+        "Build back up over weeks as the new pattern holds."
+      ]
+    },
+    {
+      "id": "tech-checklist-change-technique",
+      "type": "checklist",
+      "title": "Changing an ingrained technique: a working plan",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-2",
+        "mcdonald-changing-technique-1"
+      ],
+      "take": "Coaching steps from Lyle McDonald's two-part guide. They have not been tested as a package; treat them as a sensible order of work.",
+      "groups": [
+        {
+          "name": "Before you start",
+          "items": [
+            "Confirm it is a real fault against the lift's general model, ideally with a coach",
+            "Work out the source: a weak or tight link, a wrong cue, or plain habit",
+            "Decide it is worth the time for your goals and stage"
+          ]
+        },
+        {
+          "name": "Practice",
+          "items": [
+            "Use a load light enough to do it right and heavy enough to feel",
+            "Give every rep full attention, warm-ups included",
+            "Practise often in small doses, not in one long weekly session",
+            "Drill the faulty part alone, then put it back into the whole lift",
+            "Stop when concentration fades"
+          ]
+        },
+        {
+          "name": "Progress",
+          "items": [
+            "Raise the load once about four reps in five are right",
+            "Drop back and end each session with a few good reps",
+            "Avoid reps done the old way"
+          ]
+        },
+        {
+          "name": "Meanwhile",
+          "items": [
+            "Keep size and strength with machines and lifts that do not rehearse the old pattern",
+            "Expect it to take months"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tech-practice-spacing",
+      "type": "note",
+      "title": "Short, frequent practice beats one long session for learning a skill",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "donovan-1999",
+        "czyz-2024",
+        "mcdonald-changing-technique-2"
+      ],
+      "take": "Spaced practice outperformed massed practice across 63 studies. Mixing drills helps retention in the lab and little in applied settings.",
+      "body": "McDonald's rule for technique work is that frequency beats session size: 20 to 30 focused reps on five days is better than 100 to 120 reps once a week. He also suggests switching between drills every few minutes so each return demands fresh attention. Learning research gives partial support. A meta-analysis of 63 studies found that spaced practice produced better task performance than massed practice, with an effect size of 0.46. A 2024 meta-analysis of 54 studies found that mixed, random practice improved retention of motor skills in laboratory tasks, while the benefit in applied settings was almost negligible.",
+      "do": [
+        "Add a few light technique sets of the lift on other training days.",
+        "Keep each practice block short."
+      ]
+    },
+    {
+      "id": "tech-num-reps-correct",
+      "type": "number",
+      "title": "Share of reps done correctly before adding load",
+      "topic": "learning",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-2"
+      ],
+      "value": "80",
+      "unit": "% of reps",
+      "sort": 80,
+      "take": "A rule of thumb McDonald credits to Mel Siff: once about four reps in five are right, raise the load a little. Not a research figure."
+    },
+    {
+      "id": "tech-mistake-empty-bar",
+      "type": "mistake",
+      "title": "Stripping back to an empty bar to fix every fault",
+      "topic": "learning",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-2"
+      ],
+      "take": "Too little load can make a lift harder to feel. Go light enough to do it right, not as light as possible.",
+      "body": "Lifters who post a video showing a fault are often told to return to the bare bar. McDonald thinks this is usually poor advice. Many lifts go better with a little weight on the bar, because the load lets you feel where the bar and your body are. The opposite error is staying heavy, which drags you into the old pattern. His middle course is a load that allows correct reps and still gives feedback, raised in small steps as the pattern holds, with a few lighter, clean reps to end each session. This is coaching judgment with no trial behind it.",
+      "do": [
+        "Find the heaviest load at which nearly every rep is right, and start there."
+      ]
+    },
+    {
+      "id": "tech-term-training-age",
+      "type": "term",
+      "title": "Training age",
+      "topic": "learning",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-changing-technique-2"
+      ],
+      "take": "How many years a person has been training, as distinct from how old they are. A long training age means a more automatic pattern and tissues adapted to it."
+    },
+    {
+      "id": "tech-emg-not-growth",
+      "type": "note",
+      "title": "Higher muscle activity on EMG does not mean more muscle growth",
+      "topic": "evidence",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "vigotsky-2018",
+        "contreras-2015",
+        "plotkin-2023",
+        "mcdonald-contreras-thesis"
+      ],
+      "take": "The hip thrust showed about twice the glute EMG of the squat in one session, yet nine weeks of either grew the glutes the same.",
+      "body": "Surface EMG records a muscle's electrical activity through the skin during a lift. A methods review warns that conclusions about strength or growth drawn from EMG comparisons are often unwarranted. The hip thrust is a worked example. In 13 trained women it produced mean lower-glute activity of 86.8 percent against 45.4 percent for the back squat. When 34 untrained adults trained one lift or the other for nine weeks, MRI showed similar glute growth, and first-session EMG did not consistently predict it. McDonald makes the same point and notes that authors of the EMG work have said so themselves.",
+      "do": [
+        "Treat EMG rankings as a hint about which muscles work, not as proof of what grows.",
+        "Prefer training studies that measured muscle size."
+      ]
+    },
+    {
+      "id": "tech-hip-thrust-vs-squat",
+      "type": "note",
+      "title": "Hip thrusts and squats grew the glutes equally; squats also grew the thighs",
+      "topic": "evidence",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "plotkin-2023",
+        "mcdonald-contreras-thesis"
+      ],
+      "take": "In untrained adults over nine weeks, glute growth was similar with either lift, while quadriceps and adductors grew more with squats.",
+      "body": "Thirty-four untrained adults were randomised to hip thrusts (18) or back squats (16), with sets matched, for nine weeks. MRI showed similar growth of the gluteus maximus in both groups. The quadriceps and adductors grew more with squats, by about 3.6 and 2.5 cm2. Each group gained most strength in the lift it trained, and deadlift strength improved equally. The earlier claim that hip thrusts beat squats for glutes leaned on EMG and on a two-person case study in a doctoral thesis, which McDonald reviewed and judged too small and too confounded to support it. Trained lifters may respond differently.",
+      "do": [
+        "Choose the hip thrust or the squat for glutes by which you can load and progress.",
+        "Keep a squat or leg press in the plan if thigh size matters too."
+      ]
+    },
+    {
+      "id": "tech-term-emg",
+      "type": "term",
+      "title": "Surface EMG (electromyography)",
+      "topic": "evidence",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "vigotsky-2018"
+      ],
+      "take": "A recording of a muscle's electrical activity through electrodes on the skin. It shows that a muscle is active during a lift; the size of the signal does not reliably predict strength gains or growth."
+    },
+    {
+      "id": "tech-checklist-exercise-study",
+      "type": "checklist",
+      "title": "Questions to ask of a study that compares two exercises",
+      "topic": "evidence",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-contreras-thesis"
+      ],
+      "take": "Checks drawn from Lyle McDonald's critique of a small hip thrust study. Weak answers to several of them mean the result is a hint at most.",
+      "groups": [
+        {
+          "name": "Who and how many",
+          "items": [
+            "How many people were in each group?",
+            "Were they trained lifters, or beginners who gain from almost anything?",
+            "Did each person do both exercises, or only one?"
+          ]
+        },
+        {
+          "name": "What was done",
+          "items": [
+            "How many weeks did training last?",
+            "Is one exercise much easier to learn than the other?",
+            "Were sets taken equally close to failure in both?"
+          ]
+        },
+        {
+          "name": "What was measured",
+          "items": [
+            "Was muscle size measured directly, or only EMG or strength?",
+            "Did the person measuring know who did which exercise?",
+            "Did body weight change differently between groups?"
+          ]
+        },
+        {
+          "name": "What is claimed",
+          "items": [
+            "How large is the difference next to the overall change?",
+            "Do the authors' own cautions match the headline?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tech-novice-strength-tests",
+      "type": "note",
+      "title": "In beginners, strength tests improve with practice and growth shows first in simple lifts",
+      "topic": "evidence",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mattocks-2017",
+        "chilibeck-1997",
+        "mcdonald-contreras-thesis"
+      ],
+      "take": "Untrained people who only practised a one-rep max gained as much max strength as people who trained with high volume.",
+      "body": "Thirty-eight untrained people did knee extensions and chest presses for eight weeks. One group did four sets to failure and the other only attempted a one-rep max each visit. Muscle grew more with the full training, but one-rep-max strength rose the same in both. In 19 young women training for 20 weeks, arm lean mass had increased by week 10, while trunk and leg lean mass rose significantly only later; the authors suggest the more complex presses needed longer nervous-system learning. McDonald's two lessons: a novice's first max means little, and short studies in beginners favour whichever exercise is simpler.",
+      "do": [
+        "Do not read much into strength jumps in your first weeks on a lift.",
+        "Judge an exercise for growth over months."
+      ]
+    }
+  ],
+  "sources": {
+    "mcdonald-bench-technique": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Bench Press Technique",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/a-guide-to-bench-press-technique",
+      "retrieved": "2026-11-15",
+      "support": "Source of the general-purpose bench set-up described here: slight arch, pinned shoulder blades, bar over the shoulders, vertical forearms at the chest."
+    },
+    "mcdonald-bench-variations": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Bench Press Variations",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/bench-press-variations",
+      "retrieved": "2026-11-15",
+      "support": "Source of the contrast between a flared-elbow bodybuilding press and a part-tucked general press, and of the elbow angle range."
+    },
+    "green-2007": {
+      "type": "review",
+      "authors": [
+        "Green CM",
+        "Comfort P"
+      ],
+      "year": 2007,
+      "title": "The Affect of Grip Width on Bench Press Performance and Risk of Injury",
+      "journal": "Strength and Conditioning Journal",
+      "volume": "29",
+      "issue": "5",
+      "pages": "10-14",
+      "doi": "10.1519/00126548-200710000-00001",
+      "support": "Research has demonstrated that a wide grip (> 1.5 biacromial width) may increase the risk of shoulder injury, including anterior shoulder instability, atraumatic osteolysis of distal clavicle, and pectoralis major rupture."
+    },
+    "larsen-2021-grip": {
+      "type": "trial",
+      "authors": [
+        "Larsen S",
+        "Gomo O",
+        "van den Tillaar R"
+      ],
+      "year": 2021,
+      "title": "A Biomechanical Analysis of Wide, Medium, and Narrow Grip Width Effects on Kinematics, Horizontal Kinetics, and Muscle Activity on the Sticking Region in Recreationally Trained Males During 1-RM Bench Pressing",
+      "journal": "Frontiers in Sports and Active Living",
+      "volume": "2",
+      "doi": "10.3389/fspor.2020.637066",
+      "pmid": "33554113",
+      "n_participants": 14,
+      "support": "Hence, the wide and medium grip widths produced similar shoulder and elbow joint moments and moment arm at the first located lowest barbell velocity."
+    },
+    "kolber-2010": {
+      "type": "review",
+      "authors": [
+        "Kolber MJ",
+        "Beekhuizen KS",
+        "Cheng MSS",
+        "Hellman MA"
+      ],
+      "year": 2010,
+      "title": "Shoulder Injuries Attributed to Resistance Training: A Brief Review",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "24",
+      "issue": "6",
+      "pages": "1696-1704",
+      "doi": "10.1519/jsc.0b013e3181dc4330",
+      "pmid": "20508476",
+      "support": "The results of the review indicated that up to 36% of documented RT-related injuries and disorders occur at the shoulder complex."
+    },
+    "mcdonald-benching-with-pecs": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Benching with the Pecs",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/benching-with-the-pecs",
+      "retrieved": "2026-11-15",
+      "support": "Source of the cue to think of drawing the upper arms together while pressing, and of the hand-on-chest drill."
+    },
+    "snyder-2012": {
+      "type": "trial",
+      "authors": [
+        "Snyder BJ",
+        "Fry WR"
+      ],
+      "year": 2012,
+      "title": "Effect of Verbal Instruction on Muscle Activity During the Bench Press Exercise",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "26",
+      "issue": "9",
+      "pages": "2394-2400",
+      "doi": "10.1519/jsc.0b013e31823f8d11",
+      "pmid": "22076100",
+      "n_participants": 11,
+      "support": "During the 50% max lift with verbal instructions to focus on chest muscles, PM EMG activity increased by 22% over preinstruction activity (p = 0.005), whereas AD and TB activities were statistically unchanged."
+    },
+    "calatayud-2016": {
+      "type": "trial",
+      "authors": [
+        "Calatayud J",
+        "Vinstrup J",
+        "Jakobsen MD",
+        "Sundstrup E",
+        "Brandt M",
+        "Jay K",
+        "Colado JC",
+        "Andersen LL"
+      ],
+      "year": 2016,
+      "title": "Importance of mind-muscle connection during progressive resistance training",
+      "journal": "European Journal of Applied Physiology",
+      "volume": "116",
+      "issue": "3",
+      "pages": "527-533",
+      "doi": "10.1007/s00421-015-3305-7",
+      "pmid": "26700744",
+      "n_participants": 18,
+      "support": "Resistance-trained individuals can increase triceps brachii or pectarilis major muscle activity during the bench press when focusing on using the specific muscle at intensities up to 60 % of 1RM. A threshold between 60 and 80 % appeared to exist."
+    },
+    "mcdonald-upright-rows": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2012,
+      "title": "Are Upright Rows Safe - Q&A",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/are-upright-rows-unsafe",
+      "retrieved": "2026-11-15",
+      "support": "Source of the shoulder-height limit for upright rows, the dumbbell and rope options, and the risk-against-reward view of exercise choice."
+    },
+    "kolber-2014": {
+      "type": "other",
+      "authors": [
+        "Kolber MJ",
+        "Cheatham SW",
+        "Salamh PA",
+        "Hanney WJ"
+      ],
+      "year": 2014,
+      "title": "Characteristics of Shoulder Impingement in the Recreational Weight-Training Population",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "28",
+      "issue": "4",
+      "pages": "1081-1089",
+      "doi": "10.1519/jsc.0000000000000250",
+      "pmid": "24077379",
+      "n_participants": 77,
+      "support": "A significant association existed between clinical characteristics of SIS (p ≤ 0.004) and both lateral deltoid raises and upright rows above 90°."
+    },
+    "mcallister-2013": {
+      "type": "trial",
+      "authors": [
+        "McAllister MJ",
+        "Schilling BK",
+        "Hammond KG",
+        "Weiss LW",
+        "Farney TM"
+      ],
+      "year": 2013,
+      "title": "Effect of Grip Width on Electromyographic Activity During the Upright Row",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "27",
+      "issue": "1",
+      "pages": "181-187",
+      "doi": "10.1519/jsc.0b013e31824f23ad",
+      "pmid": "22362088",
+      "n_participants": 16,
+      "support": "The main findings of this investigation are increased deltoid and trapezius activity with increasing grip width, and correspondingly less BB activity."
+    },
+    "mcdonald-cable-row": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Cable Row",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/cable-row-technique",
+      "retrieved": "2026-11-15",
+      "support": "Source of the row finish position, the common overload faults, the pause, and the coaching view of how grip and elbow path shift emphasis."
+    },
+    "fenwick-2009": {
+      "type": "trial",
+      "authors": [
+        "Fenwick CMJ",
+        "Brown SHM",
+        "McGill SM"
+      ],
+      "year": 2009,
+      "title": "Comparison of Different Rowing Exercises: Trunk Muscle Activation and Lumbar Spine Motion, Load, and Stiffness",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "23",
+      "issue": "2",
+      "pages": "350-358",
+      "doi": "10.1519/jsc.0b013e3181942019",
+      "pmid": "19197209",
+      "n_participants": 7,
+      "support": "When prescribing core exercises, those wishing to spare the low back may choose the inverted row, given the lowest spine load exercise."
+    },
+    "mcdonald-lat-pulldown": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Lat Pulldown Technique",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/lat-pulldown-technique",
+      "retrieved": "2026-11-15",
+      "support": "Source of the shoulder-blade and chest cues for pulldowns and chin-ups, his grip preferences and his view of the behind-the-neck version."
+    },
+    "snyder-2009": {
+      "type": "trial",
+      "authors": [
+        "Snyder BJ",
+        "Leech JR"
+      ],
+      "year": 2009,
+      "title": "Voluntary Increase in Latissimus Dorsi Muscle Activity During the Lat Pull-Down Following Expert Instruction",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "23",
+      "issue": "8",
+      "pages": "2204-2209",
+      "doi": "10.1519/jsc.0b013e3181bb7213",
+      "pmid": "19826307",
+      "n_participants": 8,
+      "support": "A significant increase was seen in Nrms EMG in the LD (p = 0.005) from the average of preinstruction NrmsEMG to the average of postinstruction NrmsEMG. No significant differences were observed between pre- and postinstruction muscle activity in the BB or TM."
+    },
+    "andersen-2014": {
+      "type": "trial",
+      "authors": [
+        "Andersen V",
+        "Fimland MS",
+        "Wiik E",
+        "Skoglund A",
+        "Saeterbakken AH"
+      ],
+      "year": 2014,
+      "title": "Effects of Grip Width on Muscle Strength and Activation in the Lat Pull-Down",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "28",
+      "issue": "4",
+      "pages": "1135-1142",
+      "doi": "10.1097/jsc.0000000000000232",
+      "pmid": "24662157",
+      "n_participants": 15,
+      "support": "The 6RM strengths with narrow (80.3 ± 7.2 kg) and medium grip (80 ± 7.1 kg) were higher than wide grip (77.3 ± 6.3 kg; p = 0.02). There was similar EMG activation between grip widths for latissimus, trapezius, or infraspinatus"
+    },
+    "lusk-2010": {
+      "type": "trial",
+      "authors": [
+        "Lusk SJ",
+        "Hale BD",
+        "Russell DM"
+      ],
+      "year": 2010,
+      "title": "Grip Width and Forearm Orientation Effects on Muscle Activity During the Lat Pull-Down",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "24",
+      "issue": "7",
+      "pages": "1895-1900",
+      "doi": "10.1519/jsc.0b013e3181ddb0ab",
+      "pmid": "20543740",
+      "n_participants": 12,
+      "support": "a pronated grip elicited greater LD activity than a supinated grip (p < 0.05), but had no influence of grip type on the MT and BB muscles."
+    },
+    "sperandei-2009": {
+      "type": "trial",
+      "authors": [
+        "Sperandei S",
+        "Barros MAP",
+        "Silveira-Júnior PCS",
+        "Oliveira CG"
+      ],
+      "year": 2009,
+      "title": "Electromyographic Analysis of Three Different Types of Lat Pull-Down",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "23",
+      "issue": "7",
+      "pages": "2033-2038",
+      "doi": "10.1519/jsc.0b013e3181b8d30a",
+      "pmid": "19855327",
+      "n_participants": 24,
+      "support": "For LD, there was no difference between techniques."
+    },
+    "mcdonald-clean-style-deadlift": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Clean Style Deadlift Technique",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/clean-style-deadlift-technique",
+      "retrieved": "2026-11-15",
+      "support": "Source of the flat-backed deadlift checkpoints, the bar-height point, the hip-rise fault, the options between reps and the grip advice."
+    },
+    "mcdonald-changing-technique-1": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2016,
+      "title": "A Guide to Changing Exercise Technique",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/guide-changing-exercise-technique",
+      "retrieved": "2026-11-15",
+      "support": "Source of the model-and-style view of technique, the working definition of a fault, its three sources, and the account of old habits returning."
+    },
+    "kapicioglu-2021": {
+      "type": "other",
+      "authors": [
+        "Kapicioglu M",
+        "Bilgin E",
+        "Guven N",
+        "Pulatkan A",
+        "Bilsel K"
+      ],
+      "year": 2021,
+      "title": "The Role of Deadlifts in Distal Biceps Brachii Tendon Ruptures: An Alternative Mechanism Described With YouTube Videos",
+      "journal": "Orthopaedic Journal of Sports Medicine",
+      "volume": "9",
+      "issue": "3",
+      "doi": "10.1177/2325967121991811",
+      "pmid": "34250167",
+      "support": "Among the deadlift injuries in the mixed-grip position, all ruptures occurred in a supinated extremity"
+    },
+    "swinton-2011": {
+      "type": "trial",
+      "authors": [
+        "Swinton PA",
+        "Stewart A",
+        "Agouris I",
+        "Keogh JW",
+        "Lloyd R"
+      ],
+      "year": 2011,
+      "title": "A Biomechanical Analysis of Straight and Hexagonal Barbell Deadlifts Using Submaximal Loads",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "25",
+      "issue": "7",
+      "pages": "2000-2009",
+      "doi": "10.1519/jsc.0b013e3181e73f87",
+      "pmid": "21659894",
+      "n_participants": 19,
+      "support": "resulting in lower peak moments at the lumbar spine, hip, and ankle (p < 0.05) and an increased peak moment at the knee (p < 0.05)."
+    },
+    "mcdonald-you-must-squat": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2020,
+      "title": "You Must Squat",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/you-must-squat-dsfps-2",
+      "retrieved": "2026-11-15",
+      "support": "Source of the position that no exercise is required outside sports that contest it, the replies to the toddler and resting-squat arguments, and the trap bar view."
+    },
+    "mcdonald-rdl-vs-sldl": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Romanian Deadlift vs. Stiff Legged Deadlift",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl",
+      "retrieved": "2026-11-15",
+      "support": "Source of the distinction between the two lifts, the depth rule for the Romanian deadlift, his preference for it and his programming advice."
+    },
+    "colloca-2005": {
+      "type": "review",
+      "authors": [
+        "Colloca CJ",
+        "Hinrichs RN"
+      ],
+      "year": 2005,
+      "title": "The Biomechanical and Clinical Significance of the Lumbar Erector Spinae Flexion-Relaxation Phenomenon: A Review of Literature",
+      "journal": "Journal of Manipulative and Physiological Therapeutics",
+      "volume": "28",
+      "issue": "8",
+      "pages": "623-631",
+      "doi": "10.1016/j.jmpt.2005.08.005",
+      "pmid": "16226632",
+      "support": "The myoelectric silencing of the erector spinae muscles in the trunk flexion posture is indicative of increased load sharing on passive structures"
+    },
+    "mcdonald-round-backed-deadlifts": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Round Backed Deadlifts",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/another-look-round-backed-deadlifts",
+      "retrieved": "2026-11-15",
+      "support": "Source of the distinction between losing a flat back mid-lift and deliberately holding a rounded upper back."
+    },
+    "cholewicki-1992": {
+      "type": "other",
+      "authors": [
+        "Cholewicki J",
+        "McGill SM"
+      ],
+      "year": 1992,
+      "title": "Lumbar posterior ligament involvement during extremely heavy lifts estimated from fluoroscopic measurements",
+      "journal": "Journal of Biomechanics",
+      "volume": "25",
+      "issue": "1",
+      "pages": "17-28",
+      "doi": "10.1016/0021-9290(92)90242-s",
+      "pmid": "1733981",
+      "n_participants": 4,
+      "support": "Analysis revealed that except for one trial of one subject, they accomplished their lifts with an amount of lumbar flexion between 1.5 and 13 degrees less than they demonstrated during full flexion."
+    },
+    "callaghan-2001": {
+      "type": "other",
+      "authors": [
+        "Callaghan JP",
+        "McGill SM"
+      ],
+      "year": 2001,
+      "title": "Intervertebral disc herniation: studies on a porcine model exposed to highly repetitive flexion/extension motion with compressive force",
+      "journal": "Clinical Biomechanics",
+      "volume": "16",
+      "issue": "1",
+      "pages": "28-37",
+      "doi": "10.1016/s0268-0033(00)00063-2",
+      "pmid": "11114441",
+      "support": "The results support the notion that intervertebral disc herniation may be more linked to repeated flexion extension motions than applied joint compression, at least with younger, non-degenerated specimens."
+    },
+    "saraceni-2020": {
+      "type": "meta-analysis",
+      "authors": [
+        "Saraceni N",
+        "Kent P",
+        "Ng L",
+        "Campbell A",
+        "Straker L",
+        "O'Sullivan P"
+      ],
+      "year": 2020,
+      "title": "To Flex or Not to Flex? Is There a Relationship Between Lumbar Spine Flexion During Lifting and Low Back Pain? A Systematic Review With Meta-analysis",
+      "journal": "Journal of Orthopaedic & Sports Physical Therapy",
+      "volume": "50",
+      "issue": "3",
+      "pages": "121-130",
+      "doi": "10.2519/jospt.2020.9218",
+      "pmid": "31775556",
+      "n_studies": 11,
+      "support": "There was low-quality evidence that greater lumbar spine flexion during lifting was not a risk factor for LBP onset/persistence or a differentiator of people with and without LBP."
+    },
+    "mcdonald-back-extension": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Back Extension Technique",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/back-extension-technique",
+      "retrieved": "2026-11-15",
+      "support": "Source of the pad-height logic, the stop-at-straight rule, the hand-position progression and the cautious starting dose for back extensions."
+    },
+    "steele-2013": {
+      "type": "review",
+      "authors": [
+        "Steele J",
+        "Bruce-Low S",
+        "Smith D"
+      ],
+      "year": 2013,
+      "title": "A review of the specificity of exercises designed for conditioning the lumbar extensors",
+      "journal": "British Journal of Sports Medicine",
+      "volume": "49",
+      "issue": "5",
+      "pages": "291-297",
+      "doi": "10.1136/bjsports-2013-092197",
+      "pmid": "24092889",
+      "support": "isolation of lumbar extension through appropriate pelvic restraint appears important for optimising specific adaptations in the lumbar extensors."
+    },
+    "callaghan-1998": {
+      "type": "trial",
+      "authors": [
+        "Callaghan JP",
+        "Gunning JL",
+        "McGill SM"
+      ],
+      "year": 1998,
+      "title": "The Relationship Between Lumbar Spine Load and Muscle Activity During Extensor Exercises",
+      "journal": "Physical Therapy",
+      "volume": "78",
+      "issue": "1",
+      "pages": "8-18",
+      "doi": "10.1093/ptj/78.1.8",
+      "pmid": "9442191",
+      "n_participants": 13,
+      "support": "The exercises involving active trunk extension produced the highest joint forces and muscle activity levels."
+    },
+    "biering-sorensen-1984": {
+      "type": "cohort",
+      "authors": [
+        "Biering-Sørensen F"
+      ],
+      "year": 1984,
+      "title": "Physical Measurements as Risk Indicators for Low-Back Trouble Over a One-Year Period",
+      "journal": "Spine",
+      "volume": "9",
+      "issue": "2",
+      "pages": "106-119",
+      "doi": "10.1097/00007632-198403000-00002",
+      "pmid": "6233709",
+      "n_participants": 928,
+      "support": "The main findings were that good isometric endurance of the back muscles may prevent first-time occurrence of LBT in men and that men with hypermobile backs are more liable to contract LBT."
+    },
+    "mcdonald-proper-way-to-squat": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2011,
+      "title": "The Proper Way to Squat",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/the-best-way-to-squat",
+      "retrieved": "2026-11-15",
+      "support": "Source of his view that squat style depends on build and goal, his default for general trainees and his advice on heeled shoes."
+    },
+    "glassbrook-2017": {
+      "type": "review",
+      "authors": [
+        "Glassbrook DJ",
+        "Helms ER",
+        "Brown SR",
+        "Storey AG"
+      ],
+      "year": 2017,
+      "title": "A Review of the Biomechanical Differences Between the High-Bar and Low-Bar Back-Squat",
+      "journal": "Journal of Strength and Conditioning Research",
+      "doi": "10.1519/JSC.0000000000002007",
+      "volume": "31",
+      "issue": "9",
+      "pages": "2618-2634",
+      "pmid": "28570490",
+      "support": "HBBS is characterized by greater knee flexion, lesser hip flexion, a more upright torso, and a deeper squat. The LBBS is characterized by greater hip flexion and, therefore, a greater forward lean."
+    },
+    "sato-2012": {
+      "type": "trial",
+      "authors": [
+        "Sato K",
+        "Fortenbaugh D",
+        "Hydock DS"
+      ],
+      "year": 2012,
+      "title": "Kinematic Changes Using Weightlifting Shoes on Barbell Back Squat",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "26",
+      "issue": "1",
+      "pages": "28-33",
+      "doi": "10.1519/jsc.0b013e318218dd64",
+      "pmid": "22201687",
+      "n_participants": 25,
+      "support": "Wearing WL shoes seems to be beneficial in reducing the overall trunk lean"
+    },
+    "legg-2017": {
+      "type": "trial",
+      "authors": [
+        "Legg HS",
+        "Glaister M",
+        "Cleather DJ",
+        "Goodwin JE"
+      ],
+      "year": 2017,
+      "title": "The effect of weightlifting shoes on the kinetics and kinematics of the back squat",
+      "journal": "Journal of Sports Sciences",
+      "volume": "35",
+      "issue": "5",
+      "pages": "508-515",
+      "doi": "10.1080/02640414.2016.1175652",
+      "pmid": "27096286",
+      "n_participants": 32,
+      "support": "For both load conditions, WS gave significantly (P < 0.05) reduced ankle flexion and increased knee flexion than AS, as well as a more upright trunk and greater knee moment for the unloaded condition."
+    },
+    "mcdonald-squat-vs-leg-press": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Squat vs. Leg Press for Big Legs",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs",
+      "retrieved": "2026-11-15",
+      "support": "Source of the argument that build decides how well a squat trains the thighs, and of the leg press depth, back-rounding and single-leg points."
+    },
+    "fuglsang-2017": {
+      "type": "other",
+      "authors": [
+        "Fuglsang EI",
+        "Telling AS",
+        "Sørensen H"
+      ],
+      "year": 2017,
+      "title": "Effect of Ankle Mobility and Segment Ratios on Trunk Lean in the Barbell Back Squat",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "31",
+      "issue": "11",
+      "pages": "3024-3033",
+      "doi": "10.1519/jsc.0000000000001872",
+      "pmid": "28301442",
+      "n_participants": 11,
+      "support": "Ankle mobility showed to significantly negatively correlate with trunk angle, thereby showing that a subject with greater ankle ROM had a more upright torso in the PS position. This study was unable to find a significant correlation between the segment ratios and trunk angle."
+    },
+    "kubo-2019": {
+      "type": "rct",
+      "authors": [
+        "Kubo K",
+        "Ikebukuro T",
+        "Yata H"
+      ],
+      "year": 2019,
+      "title": "Effects of squat training with different depths on lower limb muscle volumes",
+      "journal": "European Journal of Applied Physiology",
+      "volume": "119",
+      "issue": "9",
+      "pages": "1933-1942",
+      "doi": "10.1007/s00421-019-04181-y",
+      "pmid": "31230110",
+      "n_participants": 17,
+      "support": "The volumes of knee extensor muscles significantly increased by 4.9 ± 2.6% in FST (p < 0.001) and 4.6 ± 3.1% in HST (p = 0.003), whereas that of rectus femoris and hamstring muscles did not change in either group."
+    },
+    "wirth-2016": {
+      "type": "trial",
+      "authors": [
+        "Wirth K",
+        "Hartmann H",
+        "Sander A",
+        "Mickel C",
+        "Szilvas E",
+        "Keiner M"
+      ],
+      "year": 2016,
+      "title": "The Impact of Back Squat and Leg-Press Exercises on Maximal Strength and Speed-Strength Parameters",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "30",
+      "issue": "5",
+      "pages": "1205-1212",
+      "doi": "10.1519/jsc.0000000000001228",
+      "pmid": "26439782",
+      "n_participants": 78,
+      "support": "The SQ exhibited a statistically significant (p ≤ 0.05) increase in jump performance in squat jump (SJ, 12.4%) and countermovement jump (CMJ, 12.0%). Whereas, the changes in the LP did not reach statistical significance and amounted to improvements in SJ of 3.5% and CMJ 0.5%."
+    },
+    "escamilla-2001": {
+      "type": "trial",
+      "authors": [
+        "Escamilla RF",
+        "Fleisig GS",
+        "Zheng N",
+        "Lander JE",
+        "Barrentine SW",
+        "Andrews JR",
+        "Bergemann BW",
+        "Moorman CT"
+      ],
+      "year": 2001,
+      "title": "Effects of technique variations on knee biomechanics during the squat and leg press",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "33",
+      "issue": "9",
+      "pages": "1552-1566",
+      "doi": "10.1097/00005768-200109000-00020",
+      "pmid": "11528346",
+      "n_participants": 10,
+      "support": "The squat generated greater quadriceps and hamstrings activity than the LPH and LPL"
+    },
+    "mcdonald-split-squat": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Split Squat Technique",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/split-squat-technique",
+      "retrieved": "2026-11-15",
+      "support": "Source of the split squat set-up points, the three front-foot versions, when he uses the lift, and the weak-side-first and rest-between-legs advice."
+    },
+    "schutz-2014": {
+      "type": "trial",
+      "authors": [
+        "Schütz P",
+        "List R",
+        "Zemp R",
+        "Schellenberg F",
+        "Taylor WR",
+        "Lorenzetti S"
+      ],
+      "year": 2014,
+      "title": "Joint Angles of the Ankle, Knee, and Hip and Loading Conditions During Split Squats",
+      "journal": "Journal of Applied Biomechanics",
+      "volume": "30",
+      "issue": "3",
+      "pages": "373-380",
+      "doi": "10.1123/jab.2013-0175",
+      "pmid": "24345718",
+      "n_participants": 11,
+      "support": "The load distribution between the legs changed < 25% when split squat execution was varied."
+    },
+    "speirs-2016": {
+      "type": "rct",
+      "authors": [
+        "Speirs DE",
+        "Bennett MA",
+        "Finn CV",
+        "Turner AP"
+      ],
+      "year": 2016,
+      "title": "Unilateral vs. Bilateral Squat Training for Strength, Sprints, and Agility in Academy Rugby Players",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "30",
+      "issue": "2",
+      "pages": "386-392",
+      "doi": "10.1519/jsc.0000000000001096",
+      "pmid": "26200193",
+      "n_participants": 18,
+      "support": "This is the first study to suggest that BI and UNI training interventions may be equally efficacious in improving measures of lower-body strength, 40-m speed, and change of direction in academy level rugby players."
+    },
+    "mcdonald-training-calves": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Training the Calves",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/muscle-gain/training-the-calves",
+      "retrieved": "2026-11-15",
+      "support": "Source of the argument that bounced calf raises let the tendon do the work, the paused-rep fix, and the straight-knee plus bent-knee routine."
+    },
+    "lichtwark-2005": {
+      "type": "other",
+      "authors": [
+        "Lichtwark GA",
+        "Wilson AM"
+      ],
+      "year": 2005,
+      "title": "In vivo mechanical properties of the human Achilles tendon during one-legged hopping",
+      "journal": "Journal of Experimental Biology",
+      "volume": "208",
+      "issue": "24",
+      "pages": "4715-4725",
+      "doi": "10.1242/jeb.01950",
+      "pmid": "16326953",
+      "n_participants": 10,
+      "support": "An average of 38 J of energy was recovered from the elastic recoil of the tendon, which contributes 16% of the total average mechanical work of the hop (254 J)."
+    },
+    "kassiano-2023": {
+      "type": "rct",
+      "authors": [
+        "Kassiano W",
+        "Costa B",
+        "Kunevaliki G",
+        "Soares D",
+        "Zacarias G",
+        "Manske I",
+        "Takaki Y",
+        "Ruggiero MF",
+        "Stavinski N",
+        "Francsuel J",
+        "Tricoli I",
+        "Carneiro MAS",
+        "Cyrino ES"
+      ],
+      "year": 2023,
+      "title": "Greater Gastrocnemius Muscle Hypertrophy After Partial Range of Motion Training Performed at Long Muscle Lengths",
+      "journal": "Journal of Strength & Conditioning Research",
+      "volume": "37",
+      "issue": "9",
+      "pages": "1746-1753",
+      "doi": "10.1519/jsc.0000000000004460",
+      "pmid": "37015016",
+      "n_participants": 42,
+      "support": "The current results suggest that calf training performed at longer muscle lengths may optimize gastrocnemius muscle hypertrophy in young women."
+    },
+    "kinoshita-2023": {
+      "type": "trial",
+      "authors": [
+        "Kinoshita M",
+        "Maeo S",
+        "Kobayashi Y",
+        "Eihara Y",
+        "Ono M",
+        "Sato M",
+        "Sugiyama T",
+        "Kanehisa H",
+        "Isaka T"
+      ],
+      "year": 2023,
+      "title": "Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training",
+      "journal": "Frontiers in Physiology",
+      "volume": "14",
+      "doi": "10.3389/fphys.2023.1272106",
+      "pmid": "38156065",
+      "n_participants": 14,
+      "support": "The changes in muscle volume were significantly greater for the standing than seated condition leg in the lateral gastrocnemius (12.4% vs. 1.7%), medial gastrocnemius (9.2% vs. 0.6%), and whole triceps surae (5.6% vs. 2.1%) (p ≤ 0.011), but similar between legs in the soleus (2.1% vs. 2.9%, p = 0.410)."
+    },
+    "mcdonald-leg-extensions": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2018,
+      "title": "Why do Leg Extensions Hurt So Much?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/why-do-leg-extensions-hurt",
+      "retrieved": "2026-11-15",
+      "support": "Source of the untested hypothesis that a bent hip limits thigh blood flow during leg extensions, and of the reclined-seat idea."
+    },
+    "foster-1999": {
+      "type": "trial",
+      "authors": [
+        "Foster C",
+        "Rundell KW",
+        "Snyder AC",
+        "Stray-Gundersen J",
+        "Kemkers G",
+        "Thometz N",
+        "Broker J",
+        "Knapp E"
+      ],
+      "year": 1999,
+      "title": "Evidence for restricted muscle blood flow during speed skating",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "31",
+      "issue": "10",
+      "pages": "1433",
+      "doi": "10.1097/00005768-199910000-00012",
+      "pmid": "10527316",
+      "n_participants": 10,
+      "support": "The results of this study support the hypothesis that physiological responses during speed skating are dominated by restriction of blood flow, attributable either to high intramuscular forces, the long duty cycle of the skating stroke, or both."
+    },
+    "powers-2014": {
+      "type": "trial",
+      "authors": [
+        "Powers CM",
+        "Ho KY",
+        "Chen YJ",
+        "Souza RB",
+        "Farrokhi S"
+      ],
+      "year": 2014,
+      "title": "Patellofemoral Joint Stress During Weight-Bearing and Non—Weight-Bearing Quadriceps Exercises",
+      "journal": "Journal of Orthopaedic & Sports Physical Therapy",
+      "volume": "44",
+      "issue": "5",
+      "pages": "320-327",
+      "doi": "10.2519/jospt.2014.4936",
+      "pmid": "24673446",
+      "n_participants": 10,
+      "support": "Compared to the 2 non-weight-bearing exercises, the squat exercise produced significantly higher PFJ stress at 90°, 75°, and 60° of knee flexion. Conversely, the 2 non-weight-bearing exercises produced significantly higher PFJ stress at 30°, 15°, and 0° of knee flexion when compared to the squat exercise."
+    },
+    "larsen-2025": {
+      "type": "rct",
+      "authors": [
+        "Larsen S",
+        "Sandvik Kristiansen B",
+        "Swinton PA",
+        "Wolf M",
+        "Bao Fredriksen A",
+        "Nygaard Falch H",
+        "van den Tillaar R",
+        "Østerås Sandberg N"
+      ],
+      "year": 2025,
+      "title": "The effects of hip flexion angle on quadriceps femoris muscle hypertrophy in the leg extension exercise",
+      "journal": "Journal of Sports Sciences",
+      "volume": "43",
+      "issue": "2",
+      "pages": "210-221",
+      "doi": "10.1080/02640414.2024.2444713",
+      "pmid": "39699974",
+      "n_participants": 22,
+      "support": "Results indicated a greater hypertrophic response in the rectus femoris for the 40° condition"
+    },
+    "chua-2021": {
+      "type": "meta-analysis",
+      "authors": [
+        "Chua LK",
+        "Jimenez-Diaz J",
+        "Lewthwaite R",
+        "Kim T",
+        "Wulf G"
+      ],
+      "year": 2021,
+      "title": "Superiority of external attentional focus for motor performance and learning: Systematic reviews and meta-analyses.",
+      "journal": "Psychological Bulletin",
+      "volume": "147",
+      "issue": "6",
+      "pages": "618-645",
+      "doi": "10.1037/bul0000335",
+      "pmid": "34843301",
+      "n_studies": 73,
+      "n_participants": 1824,
+      "support": "The EF condition was more effective than the IF condition for performance, Hedges' g value = 0.264 (95% CI [0.217, 0.310]), retention learning, Hedges' g value = 0.583 (95% CI [0.425, 0.741]), and transfer learning, Hedges' g value = 0.584 (95% CI [0.325, 0.842])."
+    },
+    "wulf-2013": {
+      "type": "review",
+      "authors": [
+        "Wulf G"
+      ],
+      "year": 2013,
+      "title": "Attentional focus and motor learning: a review of 15 years",
+      "journal": "International Review of Sport and Exercise Psychology",
+      "volume": "6",
+      "issue": "1",
+      "pages": "77-104",
+      "doi": "10.1080/1750984x.2012.723728",
+      "support": "Findings show that the performance and learning advantages through instructions or feedback inducing an external focus extend across different types of tasks, skill levels, and age groups."
+    },
+    "bouton-2002": {
+      "type": "review",
+      "authors": [
+        "Bouton ME"
+      ],
+      "year": 2002,
+      "title": "Context, ambiguity, and unlearning: sources of relapse after behavioral extinction",
+      "journal": "Biological Psychiatry",
+      "volume": "52",
+      "issue": "10",
+      "pages": "976-986",
+      "doi": "10.1016/s0006-3223(02)01546-9",
+      "pmid": "12437938",
+      "support": "There is now ample evidence that extinction, the loss of learned performance that occurs when a Pavlovian signal or an instrumental action is repeatedly presented without its reinforcer, does not reflect a destruction of the original learning."
+    },
+    "carson-2011": {
+      "type": "review",
+      "authors": [
+        "Carson HJ",
+        "Collins D"
+      ],
+      "year": 2011,
+      "title": "Refining and regaining skills in fixation/diversification stage performers: the Five-A Model",
+      "journal": "International Review of Sport and Exercise Psychology",
+      "volume": "4",
+      "issue": "2",
+      "pages": "146-167",
+      "doi": "10.1080/1750984x.2011.613682",
+      "support": "Surprisingly, however, there is a dearth of research pertaining to this process or the most efficacious methods used to bring about such a change."
+    },
+    "mcdonald-breathing": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Breathing During Weight Training",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/breathing-during-weight-training",
+      "retrieved": "2026-11-15",
+      "support": "Source of the advice that beginners simply keep breathing, the exhale-on-effort pattern, the partial Valsalva for heavy lifts and the rep-by-rep brace."
+    },
+    "hagins-2004": {
+      "type": "trial",
+      "authors": [
+        "Hagins M",
+        "Pietrek M",
+        "Sheikhzadeh A",
+        "Nordin M",
+        "Axen K"
+      ],
+      "year": 2004,
+      "title": "The Effects of Breath Control on Intra-Abdominal Pressure During Lifting Tasks",
+      "journal": "Spine",
+      "volume": "29",
+      "issue": "4",
+      "pages": "464-469",
+      "doi": "10.1097/01.brs.0000092368.90019.d8",
+      "pmid": "15094544",
+      "n_participants": 11,
+      "support": "The inhalation-hold form of breath control produced significantly greater peak intra-abdominal pressure than all other forms of breath control"
+    },
+    "hackett-2013": {
+      "type": "review",
+      "authors": [
+        "Hackett DA",
+        "Chow CM"
+      ],
+      "year": 2013,
+      "title": "The Valsalva Maneuver",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "27",
+      "issue": "8",
+      "pages": "2338-2345",
+      "doi": "10.1519/jsc.0b013e31827de07d",
+      "pmid": "23222073",
+      "support": "During resistance exercise, a brief Valsalva maneuver (VM) is unavoidable when lifting heavy loads (>80% of maximal voluntary contraction) or when lifting lighter loads to failure."
+    },
+    "harman-1989": {
+      "type": "trial",
+      "authors": [
+        "Harman EA",
+        "Rosenstein RM",
+        "Frykman PN",
+        "Nigro GA"
+      ],
+      "year": 1989,
+      "title": "Effects of a belt on intra-abdominal pressure during weight lifting",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "21",
+      "issue": "2",
+      "pages": "186???190",
+      "doi": "10.1249/00005768-198904000-00012",
+      "n_participants": 9,
+      "support": "Results suggest that the use of a lifting belt increases IAP"
+    },
+    "macdougall-1985": {
+      "type": "trial",
+      "authors": [
+        "MacDougall JD",
+        "Tuxen D",
+        "Sale DG",
+        "Moroz JR",
+        "Sutton JR"
+      ],
+      "year": 1985,
+      "title": "Arterial blood pressure response to heavy resistance exercise",
+      "journal": "Journal of Applied Physiology",
+      "volume": "58",
+      "issue": "3",
+      "pages": "785-790",
+      "doi": "10.1152/jappl.1985.58.3.785",
+      "pmid": "3980383",
+      "n_participants": 5,
+      "support": "The greatest peak pressures occurred during the double-leg press where the mean value for the group was 320/250 mmHg, with pressures in one subject exceeding 480/350 mmHg."
+    },
+    "narloch-1995": {
+      "type": "trial",
+      "authors": [
+        "Narloch JA",
+        "Brandstater ME"
+      ],
+      "year": 1995,
+      "title": "Influence of breathing technique on arterial blood pressure during heavy weight lifting",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "volume": "76",
+      "issue": "5",
+      "pages": "457-462",
+      "doi": "10.1016/s0003-9993(95)80578-8",
+      "pmid": "7741618",
+      "n_participants": 10,
+      "support": "The mean BP at 100% maximum with Valsalva was 311/284. The highest pressure recorded in an individual was 370/360. With slow exhalation, the mean BP was 198/175 when the same 100% maximum was lifted (p < .005)."
+    },
+    "mcdonald-lifting-straps": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "To Strap or Not to Strap",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/should-i-wear-lifting-straps",
+      "retrieved": "2026-11-15",
+      "support": "Source of the strap-when-grip-limits method, the types of strap, the warning about cleans, and the case for direct grip work and chalk."
+    },
+    "jukic-2021-straps": {
+      "type": "trial",
+      "authors": [
+        "Jukic I",
+        "García-Ramos A",
+        "Baláš J",
+        "Malecek J",
+        "Omcirk D",
+        "Tufano JJ"
+      ],
+      "year": 2021,
+      "title": "Ergogenic effects of lifting straps on movement velocity, grip strength, perceived exertion and grip security during the deadlift exercise",
+      "journal": "Physiology & Behavior",
+      "volume": "229",
+      "pages": "113283",
+      "doi": "10.1016/j.physbeh.2020.113283",
+      "pmid": "33306977",
+      "n_participants": 16,
+      "support": "The magnitude of grip fatigue was lower during DLwn and DLww than DLn. Perceived grip security and power were greater during DLwn and DLww compared to DLn. Perceived exertion was lower during DLwn than DLnn and DLww."
+    },
+    "coswig-2015": {
+      "type": "trial",
+      "authors": [
+        "Coswig VS",
+        "Machado Freitas DF",
+        "Gentil P",
+        "Fukuda DH",
+        "Del Vecchio FB"
+      ],
+      "year": 2015,
+      "title": "Kinematics and Kinetics of Multiple Sets Using Lifting Straps During Deadlift Training",
+      "journal": "Journal of Strength and Conditioning Research",
+      "volume": "29",
+      "issue": "12",
+      "pages": "3399-3404",
+      "doi": "10.1519/jsc.0000000000000986",
+      "pmid": "26595133",
+      "n_participants": 11,
+      "support": "Therefore, it is concluded that the use of straps directly influences exercise performance that requires manual grip strength, increasing the amount of work performed by the target muscles."
+    },
+    "hurst-2020": {
+      "type": "systematic-review",
+      "authors": [
+        "Hurst P",
+        "Schipof‐Godart L",
+        "Szabo A",
+        "Raglin J",
+        "Hettinga F",
+        "Roelands B",
+        "Lane A",
+        "Foad A",
+        "Coleman D",
+        "Beedie C"
+      ],
+      "year": 2020,
+      "title": "The Placebo and Nocebo effect on sports performance: A systematic review",
+      "journal": "European Journal of Sport Science",
+      "volume": "20",
+      "issue": "3",
+      "pages": "279-292",
+      "doi": "10.1080/17461391.2019.1655098",
+      "pmid": "31414966",
+      "n_studies": 32,
+      "n_participants": 1513,
+      "support": "Small to moderate placebo effects were found for both placebo (d = 0.36) and nocebo (d = 0.37) effects"
+    },
+    "mcdonald-power-inside-bar": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Keeping the Power Inside the Bar",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/keeping-the-power-inside-the-bar",
+      "retrieved": "2026-11-15",
+      "support": "A humorous piece whose serious point is credited here: a harmless ritual you believe in can help performance."
+    },
+    "mcdonald-learning-to-jump": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Learning to Jump",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/learning-to-jump",
+      "retrieved": "2026-11-15",
+      "support": "Source of the case of a lifter who jumped by bending the knees, the hamstring explanation, and the drills used to retrain hip extension."
+    },
+    "markovic-2007": {
+      "type": "meta-analysis",
+      "authors": [
+        "Markovic G"
+      ],
+      "year": 2007,
+      "title": "Does plyometric training improve vertical jump height? A meta-analytical review",
+      "journal": "British Journal of Sports Medicine",
+      "volume": "41",
+      "issue": "6",
+      "pages": "349-355",
+      "doi": "10.1136/bjsm.2007.035113",
+      "pmid": "17347316",
+      "n_studies": 26,
+      "support": "The pooled estimate of the effect of PT on vertical jump height was 4.7% (95% CI 1.8 to 7.6%), 8.7% (95% CI 7.0 to 10.4%), 7.5% (95% CI 4.2 to 10.8%) and 4.7% (95% CI 0.8 to 8.6%) for the SJ, CMJ, CMJA and DJ, respectively."
+    },
+    "lees-2004": {
+      "type": "trial",
+      "authors": [
+        "Lees A",
+        "Vanrenterghem J",
+        "Clercq DD"
+      ],
+      "year": 2004,
+      "title": "Understanding how an arm swing enhances performance in the vertical jump",
+      "journal": "Journal of Biomechanics",
+      "volume": "37",
+      "issue": "12",
+      "pages": "1929-1940",
+      "doi": "10.1016/j.jbiomech.2004.02.021",
+      "pmid": "15519601",
+      "n_participants": 20,
+      "support": "Participants jumped higher (0.086 m) in the arm swing compared to the no-arm swing condition and was due to increased height (28%) and velocity (72%) of the center of mass at take-off."
+    },
+    "mcdonald-changing-technique-2": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2016,
+      "title": "A Guide to Changing Exercise Technique Part 2",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/changing-technique-part-2",
+      "retrieved": "2026-11-15",
+      "support": "Source of the factors for deciding whether to change technique, the warning about injury and lost performance, and the practice plan for relearning."
+    },
+    "arendse-2004": {
+      "type": "trial",
+      "authors": [
+        "Arendse RE",
+        "Noakes TD",
+        "Azevedo LB",
+        "Romanov N",
+        "Schwellnus MP",
+        "Fletcher G"
+      ],
+      "year": 2004,
+      "title": "Reduced Eccentric Loading of the Knee with the Pose Running Method",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "36",
+      "issue": "2",
+      "pages": "272-277",
+      "doi": "10.1249/01.mss.0000113684.61351.b0",
+      "pmid": "14767250",
+      "n_participants": 20,
+      "support": "The knee power absorption and eccentric work were significant lower (P < 0.05) in Pose than in either heel-toe or midfoot running. In contrast, there was a higher power absorption and eccentric work at the ankle in Pose compared with heel-toe and midfoot running."
+    },
+    "dallam-2005": {
+      "type": "trial",
+      "authors": [
+        "Dallam GM",
+        "Wilber RL",
+        "Jadelis K",
+        "Fletcher G",
+        "Romanov N"
+      ],
+      "year": 2005,
+      "title": "Effect of a global alteration of running technique on kinematics and economy",
+      "journal": "Journal of Sports Sciences",
+      "volume": "23",
+      "issue": "7",
+      "pages": "757-764",
+      "doi": "10.1080/02640410400022003",
+      "pmid": "16195026",
+      "n_participants": 16,
+      "support": "The global change in running mechanics associated with 12 weeks of instruction in the pose method resulted in a decrease in stride length, a reduced vertical oscillation in comparison with the control group and a decrease of running economy in triathletes."
+    },
+    "donovan-1999": {
+      "type": "meta-analysis",
+      "authors": [
+        "Donovan JJ",
+        "Radosevich DJ"
+      ],
+      "year": 1999,
+      "title": "A meta-analytic review of the distribution of practice effect: Now you see it, now you don't.",
+      "journal": "Journal of Applied Psychology",
+      "volume": "84",
+      "issue": "5",
+      "pages": "795-805",
+      "doi": "10.1037/0021-9010.84.5.795",
+      "n_studies": 63,
+      "support": "A meta-analysis of 63 studies with 112 effect sizes yielded an overall mean weighted effect size of 0.46, indicating that individuals in spaced practice conditions performed significantly higher than those in massed practice conditions."
+    },
+    "czyz-2024": {
+      "type": "meta-analysis",
+      "authors": [
+        "Czyż SH",
+        "Wójcik AM",
+        "Solarská P",
+        "Kiper P"
+      ],
+      "year": 2024,
+      "title": "High contextual interference improves retention in motor learning: systematic review and meta-analysis",
+      "journal": "Scientific Reports",
+      "volume": "14",
+      "issue": "1",
+      "doi": "10.1038/s41598-024-65753-3",
+      "pmid": "38987617",
+      "n_studies": 54,
+      "support": "We found that the random practice schedule in laboratory settings effectively improved motor skills retention. On the contrary, in the applied setting, the beneficial effect of random practice on the retention was almost negligible."
+    },
+    "vigotsky-2018": {
+      "type": "review",
+      "authors": [
+        "Vigotsky AD",
+        "Halperin I",
+        "Lehman GJ",
+        "Trajano GS",
+        "Vieira TM"
+      ],
+      "year": 2018,
+      "title": "Interpreting Signal Amplitudes in Surface Electromyography Studies in Sport and Rehabilitation Sciences",
+      "journal": "Frontiers in Physiology",
+      "volume": "8",
+      "doi": "10.3389/fphys.2017.00985",
+      "pmid": "29354060",
+      "support": "Based on such comparisons, researchers attempt to draw conclusions concerning the neuro- and electrophysiological underpinning of force production and hypothesize about possible longitudinal adaptations, such as strength and hypertrophy. However, such conclusions are frequently unsubstantiated and unwarranted."
+    },
+    "contreras-2015": {
+      "type": "trial",
+      "authors": [
+        "Contreras B",
+        "Vigotsky AD",
+        "Schoenfeld BJ",
+        "Beardsley C",
+        "Cronin J"
+      ],
+      "year": 2015,
+      "title": "A Comparison of Gluteus Maximus, Biceps Femoris, and Vastus Lateralis Electromyographic Activity in the Back Squat and Barbell Hip Thrust Exercises",
+      "journal": "Journal of Applied Biomechanics",
+      "volume": "31",
+      "issue": "6",
+      "pages": "452-458",
+      "doi": "10.1123/jab.2014-0301",
+      "pmid": "26214739",
+      "n_participants": 13,
+      "support": "The barbell hip thrust elicited significantly greater mean (69.5% vs 29.4%) and peak (172% vs 84.9%) upper gluteus maximus, mean (86.8% vs 45.4%) and peak (216% vs 130%) lower gluteus maximus"
+    },
+    "plotkin-2023": {
+      "type": "rct",
+      "authors": [
+        "Plotkin DL",
+        "Rodas MA",
+        "Vigotsky AD",
+        "McIntosh MC",
+        "Breeze E",
+        "Ubrik R",
+        "Robitzsch C",
+        "Agyin-Birikorang A",
+        "Mattingly ML",
+        "Michel JM",
+        "Kontos NJ",
+        "Lennon S",
+        "Frugé AD",
+        "Wilburn CM",
+        "Weimar WH",
+        "Bashir A",
+        "Beyers RJ",
+        "Henselmans M",
+        "Contreras BM",
+        "Roberts MD"
+      ],
+      "year": 2023,
+      "title": "Hip thrust and back squat training elicit similar gluteus muscle hypertrophy and transfer similarly to the deadlift",
+      "journal": "Frontiers in Physiology",
+      "volume": "14",
+      "doi": "10.3389/fphys.2023.1279170",
+      "pmid": "37877099",
+      "n_participants": 34,
+      "support": "All measured gluteal sites showed greater mean sEMG amplitudes during the first bout hip thrust versus squat set, but this did not consistently predict gluteal hypertrophy outcomes."
+    },
+    "mcdonald-contreras-thesis": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2020,
+      "title": "Let's Examine Bret Contreras' PhD Thesis",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/bret-contreras-phd-thesis",
+      "retrieved": "2026-11-15",
+      "support": "Source of the critique of a two-person hip thrust study, used here for how to read small exercise comparisons and for the limits of EMG."
+    },
+    "mattocks-2017": {
+      "type": "rct",
+      "authors": [
+        "Mattocks KT",
+        "Buckner SL",
+        "Jessee MB",
+        "Dankel SJ",
+        "Mouser JG",
+        "Loenneke JP"
+      ],
+      "year": 2017,
+      "title": "Practicing the Test Produces Strength Equivalent to Higher Volume Training",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "49",
+      "issue": "9",
+      "pages": "1945-1954",
+      "doi": "10.1249/mss.0000000000001300",
+      "pmid": "28463902",
+      "n_participants": 38,
+      "support": "The change in 1RM strength for both the upper body (difference of -1.1 [-4.8, 2.4] kg) and lower body (difference of 1.0 [-0.7, 2.8] kg for dominant leg) was not different between groups"
+    },
+    "chilibeck-1997": {
+      "type": "trial",
+      "authors": [
+        "Chilibeck PD",
+        "Calder AW",
+        "Sale DG",
+        "Webber CE"
+      ],
+      "year": 1997,
+      "title": "A comparison of strength and muscle mass increases during resistance training in young women",
+      "journal": "European Journal of Applied Physiology",
+      "volume": "77",
+      "issue": "1-2",
+      "pages": "170-175",
+      "doi": "10.1007/s004210050316",
+      "pmid": "9459538",
+      "n_participants": 19,
+      "support": "Increases in the lean mass of the arms were significant from pre- to mid-training, while increases in the lean mass of the trunk and legs were delayed and significant from mid- to post-training only (P < 0.05)."
+    }
+  }
+}

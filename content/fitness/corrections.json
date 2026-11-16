@@ -2,6 +2,12 @@
   "note": "The corrections log on /fitness/sources and in sources.md, shown newest first. Add a row whenever a published entry or calculator changes what it says. date is YYYY-MM-DD. entry is the id of the entry that changed (the build links it to its home page); for anything else, give href instead.",
   "corrections": [
     {
+      "date": "2026-11-16",
+      "title": "New areas added to the field guide",
+      "href": "/fitness#guide",
+      "note": "Added training basics, technique, conditioning, recovery, body composition and women, each on its own page. /fitness now links to a page for every area and for the claims, the glossary, the numbers and tables, and the sources. No published entry changed what it says."
+    },
+    {
       "date": "2026-11-15",
       "title": "Dieting faster than 1 percent of body weight a week",
       "entry": "diet-mistake-too-fast",

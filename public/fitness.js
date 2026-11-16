@@ -1,13 +1,14 @@
 /* ===================== KiteSink — fitness tools =====================
-   The five calculators on /fitness, and the filters for its reference
-   lists. Plain JS, no dependencies, nothing leaves the browser (inputs
-   are remembered in localStorage only).
+   The five calculators on /fitness, and the search box over the field
+   guide. Plain JS, no dependencies, nothing leaves the browser (inputs
+   are remembered in localStorage only). The pages under /fitness/ use
+   /fitness-ref.js instead.
 
-   The maths lives in KSFit (pure functions, exported on window so they
-   can be checked from the console or a test); the bottom half wires
-   those functions to the page.
+   The maths and the search ranking live in KSFit (pure functions,
+   exported on window so they can be checked from the console or a
+   test); the bottom half wires those functions to the page.
 
-   Formulas and their sources (full references on /fitness#sources):
+   Formulas and their sources (full references on /fitness/sources):
      • Resting energy  — Mifflin-St Jeor (1990): 10·kg + 6.25·cm − 5·age + 5 (men) / − 161 (women)
                          or, when body-fat % is given, Cunningham (1991): 370 + 21.6·FFM
      • Maintenance     — resting energy × physical activity level (FAO/WHO/UNU 2004 bands)
@@ -274,6 +275,46 @@
     return out.join("\n");
   };
   F.EXERCISES = X; F.EQUIP = EQUIP;
+
+  /* ---------- search over the field guide ----------
+     index is /fitness/search.json, written by scripts/build_fitness.py:
+       { pages, kinds, areas, rows: [[id, page, kind, area, title, short answer, extra?], …] }
+     where page, kind and area are positions in the three lists, and extra is a number's
+     value or a claim's verdict. Every word of the query has to be in a row's title or short
+     answer. A word in the title counts for more than one in the answer, the start of a word
+     for more than the middle of one, and a title that is the query comes first.
+     Returns { total, hits: [{ id, href, title, take, kind, area, extra }] }, best first. */
+  function wordHit(text, w) {   // 2: w starts a word of text, 1: w is inside one, 0: not there
+    var i = text.indexOf(w), found = 0;
+    while (i >= 0) {
+      if (i === 0 || !/[a-z0-9]/.test(text.charAt(i - 1))) return 2;
+      found = 1; i = text.indexOf(w, i + 1);
+    }
+    return found;
+  }
+  F.search = function (index, query, limit) {
+    var text = String(query == null ? "" : query).toLowerCase().replace(/\s+/g, " ").replace(/^ | $/g, "");
+    var words = text ? text.split(" ") : [], rows = (index && index.rows) || [], scored = [];
+    if (!words.length) return { total: 0, hits: [] };
+    if (!index.lower) index.lower = rows.map(function (r) { return [String(r[4]).toLowerCase(), String(r[5]).toLowerCase()]; });
+    rows.forEach(function (r, n) {
+      var title = index.lower[n][0], take = index.lower[n][1], score = 0;
+      for (var i = 0; i < words.length; i++) {
+        var t = wordHit(title, words[i]), a = t ? 0 : wordHit(take, words[i]);
+        if (!t && !a) return;
+        score += t === 2 ? 8 : t === 1 ? 4 : a === 2 ? 2 : 1;
+      }
+      if (title === text) score += 20; else if (title.indexOf(text) === 0) score += 10; else if (title.indexOf(text) > 0) score += 3;
+      scored.push([score, n]);
+    });
+    scored.sort(function (x, y) { return y[0] - x[0] || x[1] - y[1]; });
+    var hits = (limit > 0 ? scored.slice(0, limit) : scored).map(function (s) {
+      var r = rows[s[1]];
+      return { id: r[0], href: "/fitness/" + index.pages[r[1]] + "#" + r[0], title: r[4], take: r[5],
+        kind: index.kinds[r[2]], area: index.areas[r[3]], extra: r[6] || "" };
+    });
+    return { total: scored.length, hits: hits };
+  };
   window.KSFit = F;
 
   /* =====================================================================
@@ -627,211 +668,64 @@
     show(); calc();
   });
 
-  /* ---------- The reference: field guide, claims, numbers, tables, glossary ----------
-     Every entry is already in the page (scripts/build_fitness.py writes it), so this only
-     hides, counts and reorders. One "area" lens is shared by all five lists; each list
-     adds its own facets, search box and sort. */
+  /* ---------- search the field guide ----------
+     The box is hidden in the HTML and shown here, so it is never there without the script
+     that runs it. Its index (about a thousand short rows) is fetched the first time the box
+     is used. Results are plain links, best first; the arrow keys move through them and
+     Escape clears. The count is shown under the box and announced once typing settles. */
   boot(function () {
-    var guide = $("g-list"); if (!guide) return;
-    var AREAS = ["hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health"];
-    var CONF = ["strong", "rule", "moderate", "limited", "practice"], LEVEL = ["beginner", "intermediate", "advanced"];
-    var VERD = ["true", "mostly", "depends", "overstated", "false"];
-    var EVID = ["meta-analysis", "guideline", "position", "rct", "rulebook", "review", "cohort", "mixed"];
-    var area = "all", lists = [];
-    function all(sel, root) { return [].slice.call((root || document).querySelectorAll(sel)); }
-    function attr(el, name) { return el.getAttribute("data-" + name) || ""; }
-    function rank(list, v) { var i = list.indexOf(v); return i < 0 ? 99 : i; }
-    function words(input) { return input ? input.value.toLowerCase().split(/\s+/).filter(Boolean) : []; }
-    function byOrder(a, b) { return attr(a, "o") - attr(b, "o"); }
-    function reorder(parent, els, cmp) { els.slice().sort(function (a, b) { return cmp(a, b) || byOrder(a, b); }).forEach(function (el) { parent.appendChild(el); }); }
-
-    // A filterable list. cfg: items, noun, lens, facets {name: {el, test(el, value)}}, q, count, empty, after(state, shown, active)
-    function makeList(cfg) {
-      var rows = cfg.items.map(function (el) { return { el: el, d: attr(el, "d"), text: el.textContent.toLowerCase() }; });
-      var facets = cfg.facets || {}, names = Object.keys(facets), state = {};
-      names.forEach(function (n) { state[n] = "all"; });
-      function ok(r, skip, w) {
-        if (skip !== "area" && area !== "all" && r.d !== area) return false;
-        for (var i = 0; i < names.length; i++) { var n = names[i]; if (n !== skip && state[n] !== "all" && !facets[n].test(r.el, state[n])) return false; }
-        for (var j = 0; j < w.length; j++) if (r.text.indexOf(w[j]) < 0) return false;
-        return true;
-      }
-      function apply() {
-        var w = words(cfg.q), shown = 0;
-        rows.forEach(function (r) { var v = ok(r, null, w); r.el.hidden = !v; if (v) shown++; });
-        names.forEach(function (n) {
-          all("button.fx", facets[n].el).forEach(function (b) {
-            b.setAttribute("aria-pressed", b.value === state[n] ? "true" : "false");
-            var c = b.querySelector("b"); if (!c) return;
-            var k = 0; rows.forEach(function (r) { if (ok(r, n, w) && facets[n].test(r.el, b.value)) k++; });
-            c.textContent = k; b.classList.toggle("is-zero", k === 0);
-          });
-        });
-        if (cfg.lens) all("button", cfg.lens).forEach(function (b) {
-          b.setAttribute("aria-pressed", b.value === area ? "true" : "false");
-          var c = b.querySelector("b"); if (!c) return;
-          var k = 0; rows.forEach(function (r) { if (r.d === b.value && ok(r, "area", w)) k++; });
-          c.textContent = k;
-        });
-        var active = (area !== "all" ? 1 : 0) + names.filter(function (n) { return state[n] !== "all"; }).length + (w.length ? 1 : 0);
-        if (cfg.count) {
-          cfg.count.textContent = "Showing " + shown + " of " + rows.length + " " + cfg.noun + (active ? ". " : "");
-          if (active) { var x = document.createElement("button"); x.type = "button"; x.className = "k-linkbtn"; x.textContent = "Clear filters"; x.addEventListener("click", function () { api.reset(); setArea("all"); }); cfg.count.appendChild(x); }
-        }
-        if (cfg.empty) cfg.empty.hidden = shown !== 0;
-        if (cfg.after) cfg.after(state, shown, active);
-      }
-      names.forEach(function (n) {
-        facets[n].el.addEventListener("click", function (e) { var b = e.target.closest("button.fx"); if (!b) return; state[n] = b.value; apply(); });
-      });
-      if (cfg.q) cfg.q.addEventListener("input", apply);
-      var api = { apply: apply, state: state, rows: rows, reset: function () { names.forEach(function (n) { state[n] = "all"; }); if (cfg.q) cfg.q.value = ""; } };
-      lists.push(api);
-      return api;
+    var box = $("find"), q = $("f-q"); if (!box || !q) return;
+    var count = $("f-count"), list = $("f-list"), more = $("f-more"), clear = $("f-clear");
+    var FIRST = 20, index = null, state = "idle", all = false;   // state: idle | loading | failed
+    box.hidden = false;
+    function load(again) {   // a failed load is tried again only when asked: on the next keystroke
+      if (index || state === "loading" || (state === "failed" && !again)) return;
+      state = "loading";
+      window.fetch("/fitness/search.json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (data) { index = data; state = "idle"; render(); }, function () { state = "failed"; render(); });
     }
-    function applyAll() { lists.forEach(function (l) { l.apply(); }); }
-    function setArea(v, quiet) {
-      area = AREAS.indexOf(v) >= 0 ? v : "all";
-      if (gList) gList.state.topic = "all";
-      applyAll();
-      if (!quiet) history.replaceState(null, "", area === "all" ? location.pathname + location.search : "#" + area);
+    function tell(text) { count.textContent = text; say("f-say", text); }
+    function render() {
+      var text = q.value.replace(/\s+/g, " ").replace(/^ | $/g, "");
+      clear.hidden = !q.value;
+      if (!text || !index) {
+        list.hidden = true; list.innerHTML = ""; more.hidden = true;
+        tell(!text ? "" : state === "failed" ? "The search index did not load. Check your connection, then type again." : "Loading the index.");
+        return;
+      }
+      var found = F.search(index, text), hits = all ? found.hits : found.hits.slice(0, FIRST);
+      list.innerHTML = hits.map(function (h) {
+        return "<li><a href=\"" + esc(h.href) + "\"><span class=\"hub-hit-m\">" + esc(h.area + " · " + h.kind + (h.extra ? " · " + h.extra : "")) + "</span>" +
+          "<span class=\"hub-hit-t\">" + esc(h.title) + "</span><span class=\"hub-hit-s\">" + esc(h.take) + "</span></a></li>";
+      }).join("");
+      list.hidden = !hits.length;
+      more.hidden = hits.length >= found.total;
+      more.textContent = "Show all " + found.total + " results";
+      tell(!found.total ? "Nothing matches “" + text + "”. Try one word, or pick an area below."
+        : found.total === 1 ? "1 result."
+        : hits.length < found.total ? "Showing the first " + hits.length + " of " + found.total + " results. Add a word to narrow them."
+        : found.total + " results.");
     }
-    function lensOf(id) { var sec = $(id); return sec ? sec.querySelector(".lens") : null; }
-    all(".lens").forEach(function (lens) {
-      lens.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) setArea(b.value); });
+    function links() { return [].slice.call(list.querySelectorAll("a")); }
+    function reset() { q.value = ""; all = false; render(); q.focus(); }
+    q.addEventListener("focus", function () { load(false); });
+    q.addEventListener("input", function () { all = false; load(true); render(); });
+    q.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { var first = links()[0]; if (first) { e.preventDefault(); first.focus(); } }
+      else if (e.key === "Escape" && q.value) { e.preventDefault(); reset(); }
     });
-    function facetEl(root, name) { return root.querySelector('[data-facet="' + name + '"]'); }
-    function eq(name) { return function (el, v) { return attr(el, name) === v; }; }
-
-    // ---- field guide
-    var gHeads = all(".g-head", guide), gItems = all("details.g", guide), gRail = $("g-rail"), gTopic = facetEl(gRail, "topic");
-    var gList = makeList({
-      items: gItems, noun: "entries", lens: lensOf("guide"), q: $("g-q"), count: $("g-count"), empty: $("g-empty"),
-      facets: {
-        kind: { el: facetEl(gRail, "kind"), test: eq("k") },
-        level: { el: facetEl(gRail, "level"), test: eq("l") },
-        conf: { el: facetEl(gRail, "conf"), test: eq("c") },
-        topic: { el: gTopic, test: function (el, v) { return attr(el, "d") + ":" + attr(el, "tp") === v; } }
-      },
-      after: function (state, shown, active) {
-        var sorted = $("g-sort").value !== "suggested";
-        gHeads.forEach(function (h) { h.hidden = sorted || !gItems.some(function (el) { return !el.hidden && attr(el, "d") === attr(h, "d"); }); });
-        gTopic.hidden = area === "all";   // topics only make sense inside one area
-        all("button.fx[data-d]", gTopic).forEach(function (b) { b.hidden = attr(b, "d") !== area; });
-        $("g-active").textContent = active ? "· " + active + " on" : "";
-      }
+    list.addEventListener("keydown", function (e) {
+      var a = links(), i = a.indexOf(document.activeElement); if (i < 0) return;
+      if (e.key === "ArrowDown" && a[i + 1]) { e.preventDefault(); a[i + 1].focus(); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); (a[i - 1] || q).focus(); }
+      else if (e.key === "Escape") { e.preventDefault(); reset(); }
     });
-    function title(el) { var t = el.querySelector(".g-title") || el.querySelector("summary") || el; return t.textContent.toLowerCase(); }
-    $("g-sort").addEventListener("change", function () {
-      var v = this.value;
-      if (v === "suggested") reorder(guide, gHeads.concat(gItems), function () { return 0; });
-      else reorder(guide, gItems, {
-        az: function (a, b) { return title(a) < title(b) ? -1 : title(a) > title(b) ? 1 : 0; },
-        conf: function (a, b) { return rank(CONF, attr(a, "c")) - rank(CONF, attr(b, "c")); },
-        level: function (a, b) { return rank(LEVEL, attr(a, "l")) - rank(LEVEL, attr(b, "l")); },
-        newest: function (a, b) { return attr(b, "y") - attr(a, "y"); }
-      }[v]);
-      gList.apply();
+    more.addEventListener("click", function () {
+      var had = links().length; all = true; render();
+      var next = links()[had]; if (next) next.focus();   // carry on from the first new result
     });
-    $("g-open").addEventListener("click", function () {
-      var on = this.getAttribute("aria-pressed") !== "true";
-      this.setAttribute("aria-pressed", on ? "true" : "false"); this.textContent = on ? "Close all" : "Open all";
-      gItems.forEach(function (el) { if (!el.hidden || !on) el.open = on; });
-    });
-    // the filter rail is a side column on wide screens and a closed drawer on small ones
-    var wide = window.matchMedia("(min-width: 1000px)"), drawer = $("g-filters");
-    function fitDrawer() { drawer.open = wide.matches; }
-    fitDrawer(); if (wide.addEventListener) wide.addEventListener("change", fitDrawer); else wide.addListener(fitDrawer);
-
-    // ---- claims
-    var qBox = $("q-list"), qCtl = $("q-controls"), qItems = all("details.q", qBox);
-    var qList = makeList({
-      items: qItems, noun: "claims", lens: lensOf("claims"), q: $("q-q"), count: $("q-count"), empty: $("q-empty"),
-      facets: {
-        verdict: { el: facetEl(qCtl, "verdict"), test: eq("v") },
-        tag: { el: facetEl(qCtl, "tag"), test: function (el, v) { return (" " + attr(el, "tags") + " ").indexOf(" " + v + " ") >= 0; } },
-        evidence: { el: facetEl(qCtl, "evidence"), test: eq("e") }
-      }
-    });
-    $("q-sort").addEventListener("change", function () {
-      reorder(qBox, qItems, {
-        suggested: function () { return 0; },
-        verdict: function (a, b) { return rank(VERD, attr(a, "v")) - rank(VERD, attr(b, "v")); },
-        "verdict-rev": function (a, b) { return rank(VERD, attr(b, "v")) - rank(VERD, attr(a, "v")); },
-        az: function (a, b) { return title(a) < title(b) ? -1 : title(a) > title(b) ? 1 : 0; },
-        evidence: function (a, b) { return rank(EVID, attr(a, "e")) - rank(EVID, attr(b, "e")); },
-        newest: function (a, b) { return attr(b, "y") - attr(a, "y"); }
-      }[this.value]);
-    });
-
-    // ---- key numbers: the lens filters, the column headings sort
-    var nTable = $("n-table");
-    if (nTable) {
-      var nBody = nTable.tBodies[0], nRows = all("tr", nBody), nKey = null, nDir = 1;
-      makeList({ items: nRows, noun: "numbers", lens: lensOf("numbers"), empty: $("n-empty") });
-      var nGet = {
-        n: function (r) { return +attr(r, "n"); }, t: function (r) { return r.cells[1].textContent.toLowerCase(); },
-        d: function (r) { return rank(AREAS, attr(r, "d")); }, c: function (r) { return rank(CONF, attr(r, "c")); }
-      };
-      all("thead button", nTable).forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var k = attr(btn, "sort"); nDir = nKey === k ? -nDir : 1; nKey = k;
-          reorder(nBody, nRows, function (a, b) { var x = nGet[k](a), y = nGet[k](b); return (x < y ? -1 : x > y ? 1 : 0) * nDir; });
-          all("thead th", nTable).forEach(function (th) { th.removeAttribute("aria-sort"); });
-          btn.parentNode.setAttribute("aria-sort", nDir > 0 ? "ascending" : "descending");
-        });
-      });
-    }
-
-    // ---- reference tables and glossary
-    makeList({ items: all("#t-list details.rt"), noun: "tables", lens: lensOf("tables"), empty: $("t-empty") });
-    makeList({ items: all("#gl-list .gl-item"), noun: "terms", lens: lensOf("glossary"), q: $("gl-q"), count: $("gl-count"), empty: $("gl-empty") });
-
-    all("[data-reset]").forEach(function (b) { b.addEventListener("click", function () { lists.forEach(function (l) { l.reset(); }); setArea("all"); }); });
-
-    // ---- the meet bag: ticks are remembered in this browser
-    all(".ck").forEach(function (box) {
-      var key = attr(box, "ck"), inputs = all("input[type=checkbox]", box), out = box.querySelector(".ck-n");
-      var ticks = (store.get().ck || {})[key] || [];
-      inputs.forEach(function (i) { i.checked = ticks.indexOf(+attr(i, "i")) >= 0; });
-      function save() {
-        var on = inputs.filter(function (i) { return i.checked; }).map(function (i) { return +attr(i, "i"); });
-        var ck = store.get().ck || {}; ck[key] = on; store.set({ ck: ck }); out.textContent = on.length;
-      }
-      out.textContent = inputs.filter(function (i) { return i.checked; }).length;
-      box.addEventListener("change", save);
-      box.querySelector(".ck-clear").addEventListener("click", function () { inputs.forEach(function (i) { i.checked = false; }); save(); });
-    });
-
-    // ---- the source list is open in the HTML; fold it here, and open it whenever a
-    // source link, #sources or a #src-… address is followed
-    var srcWrap = $("src-wrap");
-    function wantsSources(id) { return id === "sources" || id.indexOf("src-") === 0; }
-    if (srcWrap && !wantsSources(location.hash.slice(1))) srcWrap.open = false;
-    document.addEventListener("click", function (e) {
-      var a = e.target.closest && e.target.closest('a[href^="#src-"], a[href="#sources"]');
-      if (a && srcWrap) srcWrap.open = true;   // before the browser scrolls to it
-    });
-
-    // ---- links: #hypertrophy and friends choose an area; #<entry id> opens that entry
-    function reveal(id) {
-      if (!id) return false;
-      if (wantsSources(id)) {
-        if (srcWrap) srcWrap.open = true;
-        var s = $(id); if (s && id !== "sources") s.scrollIntoView({ block: "center" });
-        return true;
-      }
-      if (AREAS.indexOf(id) >= 0) { setArea(id, true); var top = $("guide").getBoundingClientRect().top + window.scrollY - 100; window.scrollTo(0, top); return true; }
-      var el = $(id);
-      if (!el || !el.matches("details.g, details.q, details.rt, .gl-item, #n-table tr, .ck")) return false;
-      if (el.hidden) { lists.forEach(function (l) { l.reset(); }); setArea("all", true); }
-      if (el.tagName === "DETAILS") el.open = true;
-      el.scrollIntoView({ block: "center" });
-      return true;
-    }
-    window.addEventListener("hashchange", function () { reveal(location.hash.slice(1)); });
-    applyAll();
-    if (location.hash) setTimeout(function () { reveal(location.hash.slice(1)); }, 90);
+    clear.addEventListener("click", reset);
+    if (q.value) { load(true); render(); }   // a browser can restore the text when you come Back to the page
   });
 
   booting = false; // from here on, changes are announced

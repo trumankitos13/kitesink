@@ -96,7 +96,7 @@ Reviews for lean physique athletes suggest 15 to 30 percent of calories from fat
 
 - Do not cut fat below about 0.5 g per kg of body weight for long.
 
-Carbs, fat and fibre · Intermediate · Some support · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096), [Whittaker 2021](https://doi.org/10.1016/j.jsbmb.2021.105878)
+Carbs, fat and fibre · Intermediate · Some support · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096), [Whittaker 2021](https://doi.org/10.1016/j.jsbmb.2021.105878)
 
 ### Aim for 25 to 29 g of fibre a day
 
@@ -354,7 +354,7 @@ Daily protein in g per kg and per lb, with worked examples for 70 kg (154 lb) an
 | One serving (ISSN guide) | 0.25 | 0.11 | about 18 g | about 23 g |
 | One serving (off-season review) | 0.40-0.55 | 0.18-0.25 | 28-39 g | 36-50 g |
 
-Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+Some support · Sources: [Jäger 2017](https://doi.org/10.1186/s12970-017-0177-8), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096), [Iraki 2019](https://doi.org/10.3390/sports7070154)
 
 ## Hand-portion guide
 
@@ -409,6 +409,7 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 ---
 
-Source page: https://kitesink.com/fitness#nutrition  
+Source page: https://kitesink.com/fitness/nutrition  
+Every fitness page, as plain text: https://kitesink.com/fitness.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-15.
+General information, not medical advice. Last updated 2026-11-16.

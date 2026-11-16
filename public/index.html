@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.9">
+<link rel="stylesheet" href="/ks.css?v=2027.11">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://kitesink.com/">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/index.md" title="Plain-text version">
@@ -115,13 +115,23 @@
   .dc-foot a { font: 600 12px/1.3 var(--k-mono); color: var(--k-green) !important; text-decoration: none; white-space: nowrap; padding: 6px 0; }
   .dc-foot a:hover { text-decoration: underline; }
   @media (pointer: coarse) { .dc-foot a { padding: 12px 0; } }
-  /* the pager: five fixed segments, one per card. Nothing here changes size, so nothing below it moves. */
-  .deck-pager { display: flex; justify-content: center; gap: 6px; margin-top: 8px; }
-  .deck-pager button { position: relative; width: 38px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; border-radius: 6px; }
-  .deck-pager button::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; translate: 0 -50%; border-radius: 3px;
-    background: var(--k-mute); opacity: .55; transition: height .2s var(--k-ease), background .2s, opacity .2s; }
-  .deck-pager button:hover::before { opacity: 1; }
-  .deck-pager button[aria-pressed="true"]::before { height: 7px; background: var(--k-green-fill); opacity: 1; }
+  /* the pager: one line per card, in section order, with a small gap where the section changes.
+     The line of the card in front fills while the deck is turning by itself. Nothing here
+     changes size, so nothing below it moves. */
+  .deck-pager { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 8px; }
+  .deck-pager button { position: relative; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; border-radius: 6px; }
+  .deck-pager button[data-card] { width: 38px; }
+  .deck-pager button.sec-start { margin-left: 9px; }
+  .deck-pager button[data-card]::before, .deck-pager button[data-card]::after { content: ""; position: absolute; left: 0; top: 50%; height: 3px; translate: 0 -50%; border-radius: 3px; }
+  .deck-pager button[data-card]::before { right: 0; background: var(--k-mute); opacity: .55; transition: height .2s var(--k-ease), background .2s, opacity .2s; }
+  .deck-pager button[data-card]:hover::before { opacity: 1; }
+  .deck-pager button[data-card][aria-pressed="true"]::before { height: 7px; background: var(--k-green-fill); opacity: 1; }
+  .deck-pager button[data-card]::after { width: 0; height: 7px; background: var(--k-brass-fill); }
+  @keyframes deck-fill { from { width: 0; } to { width: 100%; } }
+  .deck-col.is-running .deck-pager button[aria-pressed="true"]::after { animation: deck-fill 6.5s linear forwards; }
+  .deck-pause { width: 44px; margin-left: 4px; color: var(--k-mute); font: 600 11px/1 var(--k-mono); }
+  .deck-pause:hover { color: var(--k-green); }
+  @media (prefers-reduced-motion: reduce) { .deck-pause { display: none; } }
   /* consulting card */
   .dc--pine { background: #23402b; color: #f0e8d6; border-color: transparent; }
   .dc--pine .dc-tag { color: #d8b07a; }
@@ -159,16 +169,31 @@
   .dc-meta { display: flex; justify-content: space-between; gap: 10px; margin-top: 11px; }
   .dc-meta div { font: 600 12.5px/1.2 var(--k-mono); color: var(--k-ink); }
   .dc-meta small { display: block; margin-top: 3px; font: 600 10px/1 var(--k-mono); letter-spacing: .1em; color: var(--k-mute); }
-  /* campground card */
-  .camp-shot { flex: 1; min-height: 132px; border-radius: 10px; border: 1.5px solid var(--k-rule); position: relative; background-position: center; background-size: cover;
-    background-image: image-set(url('/site_assets/picker_bg-card.avif') type('image/avif'), url('/site_assets/picker_bg-card.webp') type('image/webp'), url('/site_assets/picker_bg.png') type('image/png')); }
-  .camp-shot span { position: absolute; top: 10px; right: 10px; font: 700 10px/1 var(--k-mono); letter-spacing: .08em; background: #e0b35c; color: #221c10; border-radius: 30px; padding: 5px 10px; }
-  /* about card */
-  .dc--polaroid { background: #f7f1e2; padding: 12px 12px 14px; border-radius: 6px; }
-  html[data-theme="dark"] .dc--polaroid { background: #2a2418; }
-  .dc--polaroid picture, .dc--polaroid img { display: block; width: 100%; }
-  .dc--polaroid img { height: 236px; object-fit: cover; object-position: center 22%; border-radius: 3px; }
-  .dc--polaroid .dc-foot { border-top: 0; padding-top: 10px; }
+  /* stage first card */
+  .dc--stage { background: #0b0c0f; color: #f3f4f6; border-color: rgba(255,255,255,.16); }
+  .dc--stage .dc-tag, .dc--stage .k-status { color: #f8ab3c; }
+  .dc--stage .dc-foot { border-color: rgba(255,255,255,.2); color: #a6abb5; }
+  .dc--stage .dc-foot a { color: #f8ab3c !important; }
+  .st-need { margin-top: 14px; font: 500 12px/1.4 var(--k-mono); color: #a6abb5; }
+  .st-need b { color: #f8ab3c; font-weight: 600; }
+  .st-gigs { list-style: none; margin: 6px 0 0; padding: 0; }
+  .st-gigs li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0; border-top: 1px solid rgba(255,255,255,.12); }
+  .st-gigs b { display: block; font: 600 15px/1.3 var(--k-sans); color: #f3f4f6; }
+  .st-gigs small { font: 500 10.5px/1.3 var(--k-mono); color: #9aa0ab; }
+  .st-gigs span { font: 600 13px var(--k-mono); color: #4bd6cf; flex-shrink: 0; }
+  /* listening club card */
+  .dc--club { --cl-accent: #8a5d17; background: #f5f1e8; color: #241d14; border-color: rgba(36,29,20,.22); }
+  html[data-theme="dark"] .dc--club { --cl-accent: #dfae63; background: #1c1711; color: #efe6d3; border-color: rgba(239,230,211,.18); }
+  .dc--club .dc-tag, .dc--club .k-status { color: var(--cl-accent); }
+  .dc--club .dc-foot a { color: var(--cl-accent) !important; }
+  .club-now { display: flex; align-items: center; gap: 14px; margin-top: 2px; }
+  .club-now svg { width: 112px; height: auto; flex-shrink: 0; }
+  .club-now .dc-h { font-size: 19px; }
+  .club-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 14px 0 0; border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 10px; overflow: hidden; }
+  .club-facts div { padding: 10px 11px; } .club-facts div + div { border-left: 1px solid color-mix(in srgb, currentColor 22%, transparent); }
+  .club-line { margin-top: 12px; font-size: 13.5px; line-height: 1.45; color: color-mix(in srgb, currentColor 78%, transparent); }
+  .club-facts dd { margin: 0; font: 700 16px/1.2 var(--k-sans); letter-spacing: -.02em; }
+  .club-facts dt { margin-top: 3px; font: 600 9.5px/1.3 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: color-mix(in srgb, currentColor 72%, transparent); }
 
   /* ---------- bands ---------- */
   .two { display: grid; gap: clamp(22px, 3.4vw, 40px); }
@@ -187,8 +212,8 @@
   .stuck-panel .k-h3 { margin-bottom: 8px; }
   .stuck-panel .ex { margin-top: 14px; padding-top: 14px; border-top: 1px dashed rgba(240,232,214,.25); font-size: 14.5px; }
   .stuck-panel .ex b { display: block; font: 500 11px/1.6 var(--k-mono); color: #d8b07a; margin-bottom: 3px; }
-  .next-card { border: 1.5px dashed rgba(216,176,122,.55); border-radius: var(--k-r); padding: clamp(20px, 3vw, 28px); display: flex; flex-direction: column; gap: 12px; }
-  .next-card .k-status { color: #d8b07a; }
+  .next-card { border: 1.5px solid #d8b07a; background: rgba(216,176,122,.1); border-radius: var(--k-r); padding: clamp(20px, 3vw, 28px); display: flex; flex-direction: column; gap: 12px; }
+  .next-card .k-status { align-self: flex-start; padding: 6px 11px 6px 9px; border-radius: 30px; background: #d8b07a; color: #23402b; font-weight: 700; }
 
   /* fitness: vantix window + quick tool */
   .pillars { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 0; }
@@ -300,7 +325,7 @@
               <span class="k-num">02</span>
               <a class="idx-name" href="/fitness" style="view-transition-name:sec-fitness">Fitness</a>
               <p class="idx-desc">Vantix, free calculators, sourced training notes.</p>
-              <div class="k-chips idx-chips"><a class="k-chip" href="/vantix">Vantix</a><a class="k-chip" href="/fitness#tools">Tools</a><a class="k-chip" href="/fitness#training">Training</a><a class="k-chip" href="/fitness#nutrition">Nutrition</a></div>
+              <div class="k-chips idx-chips"><a class="k-chip" href="/vantix">Vantix</a><a class="k-chip" href="/fitness#tools">Tools</a><a class="k-chip" href="/fitness#training">Training</a><a class="k-chip" href="/fitness/nutrition">Nutrition</a></div>
               <span class="idx-arrow" aria-hidden="true">→</span>
             </li>
             <li class="idx-row" data-sec="music">
@@ -327,12 +352,13 @@
           </ol>
         </nav>
 
-      <!-- The deck: one card per section. A row, a tap on the deck or the pager under it brings a card forward. -->
-      <div class="deck-col">
+      <!-- The deck: five featured cards in section order (Consulting, Fitness, then three for Music).
+           It turns by itself; a row, a tap on the deck or the pager under it brings a card forward. -->
+      <div class="deck-col" id="deckCol">
         <svg class="deck-kite ks-kite" width="76" height="76" viewBox="0 0 64 64" fill="none" aria-hidden="true"><polygon points="32,4 52,26 32,48 12,26" fill="#b07227"/><line x1="32" y1="4" x2="32" y2="48" stroke="#ece2cb" stroke-width="1.6"/><line x1="12" y1="26" x2="52" y2="26" stroke="#ece2cb" stroke-width="1.6"/><path d="M32 48 Q38 54 32 58 Q26 62 32 64" stroke="#b07227" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
-        <div class="deck" id="deck">
+        <div class="deck" id="deck" role="group" aria-roledescription="carousel" aria-label="Featured work">
 
-          <div class="deck-card" data-sec="consulting">
+          <div class="deck-card" data-card="consulting" data-sec="consulting">
             <div class="dc dc--pine">
               <div class="dc-top"><span class="dc-tag">KiteSink Consulting</span><span class="dc-tag" aria-hidden="true">01</span></div>
               <p class="dc-h">A clearer path from intake to handoff</p>
@@ -345,7 +371,7 @@
             </div>
           </div>
 
-          <div class="deck-card" data-sec="fitness">
+          <div class="deck-card" data-card="vantix" data-sec="fitness">
             <div class="dc dc--vantix">
               <div class="dc-top"><span class="dc-tag">◈ Vantix · the periodization OS</span><span class="k-status k-status--wip">Free core · WIP</span></div>
               <p class="dc-h">Every fitness dot.<br>One instrument.</p>
@@ -360,7 +386,7 @@
             </div>
           </div>
 
-          <div class="deck-card" data-sec="music">
+          <div class="deck-card" data-card="sotd" data-sec="music">
             <div class="dc">
               <div class="dc-top"><span class="dc-tag">♪ Song of the Day</span><span class="k-status k-status--soon">Coming soon</span></div>
               <div class="sotd-now">
@@ -372,29 +398,44 @@
             </div>
           </div>
 
-          <div class="deck-card" data-sec="library">
-            <div class="dc">
-              <div class="dc-top"><span class="dc-tag" style="color:var(--k-green)">⛺ Campground Tycoon · game</span><span class="k-status">Live · demo</span></div>
-              <div class="camp-shot" role="img" aria-label="Isometric pixel-art campground from Campground Tycoon"><span>▶ PLAYABLE DEMO</span></div>
-              <p class="dc-h" style="margin-top:13px">Build a campground, anywhere.</p>
-              <div class="dc-foot"><span>From the library</span><a href="/campground-tycoon">Play demo ↗</a></div>
+          <div class="deck-card" data-card="stage" data-sec="music">
+            <div class="dc dc--stage">
+              <div class="dc-top"><span class="dc-tag">Stage First · for players</span><span class="k-status">Prototype</span></div>
+              <p class="dc-h">Your drummer bailed.<br>The show goes on.</p>
+              <p class="st-need"><b>2 bands</b> nearby need bass tonight</p>
+              <ul class="st-gigs">
+                <li><div><b>The Velvet Hours</b><small>9:00 · demo listing</small></div><span>$130</span></li>
+                <li><div><b>Ramona Fault</b><small>10:30 · demo listing</small></div><span>$90</span></li>
+              </ul>
+              <div class="dc-foot"><span>Find or be the sub</span><a href="/stage-first">Stage First ↗</a></div>
             </div>
           </div>
 
-          <div class="deck-card" data-sec="about">
-            <div class="dc dc--polaroid">
-              <img src="/img/pin.jpg" alt="Truman — enamel-pin portrait" width="760" height="950" decoding="async">
-              <div class="dc-foot"><span>fig. 01 — the operator</span><a href="/about">About ↗</a></div>
+          <div class="deck-card" data-card="club" data-sec="music">
+            <div class="dc dc--club">
+              <div class="dc-top"><span class="dc-tag">Album Listening Club</span><span class="k-status">Back for 2027</span></div>
+              <div class="club-now">
+                <svg viewBox="0 0 132 84" aria-hidden="true" focusable="false"><circle cx="88" cy="42" r="40" fill="#17130c"/><g fill="none" stroke="#f3ecd9" stroke-opacity=".14"><circle cx="88" cy="42" r="33"/><circle cx="88" cy="42" r="26"/><circle cx="88" cy="42" r="19"/></g><circle cx="88" cy="42" r="12" fill="#b07227"/><circle cx="88" cy="42" r="1.8" fill="#f3ecd9"/><rect x="1" y="1" width="82" height="82" rx="5" fill="#2f5436"/><rect x="1" y="1" width="82" height="82" rx="5" fill="none" stroke="#f3ecd9" stroke-opacity=".25"/><polygon points="42,18 58,37 42,56 26,37" fill="#d8b07a"/><path d="M42 18V56M26 37H58" stroke="#2f5436" stroke-width="1.6"/><path d="M42 56q5 5 0 10q-5 4 0 9" fill="none" stroke="#d8b07a" stroke-width="2" stroke-linecap="round"/></svg>
+                <p class="dc-h">Three albums, one quiet afternoon.</p>
+              </div>
+              <dl class="club-facts">
+                <div><dd>30 Jan</dd><dt>First session</dt></div>
+                <div><dd>Midday</dd><dt>Doors open</dt></div>
+                <div><dd>Free</dd><dt>Bring a drink</dt></div>
+              </dl>
+              <p class="club-line">Starts fresh on Saturday 30 January 2027, then the last Saturday of every month.</p>
+              <div class="dc-foot"><span>In person · monthly</span><a href="/listening-club">The club ↗</a></div>
             </div>
           </div>
 
         </div>
         <div class="deck-pager" id="deckPager" role="group" aria-label="Choose a card">
-          <button type="button" data-sec="consulting" aria-pressed="true" aria-label="Show the Consulting card"></button>
-          <button type="button" data-sec="fitness" aria-pressed="false" aria-label="Show the Fitness card"></button>
-          <button type="button" data-sec="music" aria-pressed="false" aria-label="Show the Music card"></button>
-          <button type="button" data-sec="library" aria-pressed="false" aria-label="Show the Library card"></button>
-          <button type="button" data-sec="about" aria-pressed="false" aria-label="Show the About card"></button>
+          <button type="button" data-card="consulting" data-sec="consulting" aria-pressed="true" aria-label="Show the Consulting card"></button>
+          <button type="button" class="sec-start" data-card="vantix" data-sec="fitness" aria-pressed="false" aria-label="Show the Vantix card"></button>
+          <button type="button" class="sec-start" data-card="sotd" data-sec="music" aria-pressed="false" aria-label="Show the Song of the Day card"></button>
+          <button type="button" data-card="stage" data-sec="music" aria-pressed="false" aria-label="Show the Stage First card"></button>
+          <button type="button" data-card="club" data-sec="music" aria-pressed="false" aria-label="Show the Listening Club card"></button>
+          <button type="button" class="deck-pause" id="deckPause" aria-label="Pause the cards">❚❚</button>
         </div>
       </div>
     </div>
@@ -439,9 +480,9 @@
         </div>
         <aside class="next-card k-reveal" aria-labelledby="h-concierge">
           <span class="k-status">New</span>
-          <h3 class="k-h3" id="h-concierge">Next: an AI concierge.</h3>
+          <h3 class="k-h3" id="h-concierge">The AI concierge, for any industry.</h3>
           <p class="k-copy">A one-time or ongoing role. I learn your industry, watch how the work gets done, in person or over Zoom, then fix what slows it down: with AI, with plain code, or with software built for you.</p>
-          <p class="k-small">It grew out of the music work. The method is the same in any industry.</p>
+          <p class="k-small">The expanded version of the music-team work. The method is the same.</p>
           <a class="k-go" href="/consulting#concierge">How the concierge works</a>
         </aside>
       </div>
@@ -476,7 +517,7 @@
                 <input class="k-range" id="qp-w" type="range" min="40" max="160" step="1" value="80" aria-describedby="qp-note"></label>
             </div>
             <div class="quick-out" aria-live="polite"><span class="k-stat" id="qp-out">128–176<small>g / day</small></span></div>
-            <p class="k-small" id="qp-note">1.6–2.2 g per kg per day. A meta-analysis of 49 trials put the point of diminishing returns for muscle gain near 1.6, with an upper bound of 2.2. <a class="k-inline" href="/fitness#sources">Sources</a></p>
+            <p class="k-small" id="qp-note">1.6–2.2 g per kg per day. A meta-analysis of 49 trials put the point of diminishing returns for muscle gain near 1.6, with an upper bound of 2.2. <a class="k-inline" href="/fitness/sources">Sources</a></p>
           </div>
           <ul class="toollist" style="margin-top:22px">
             <li><a href="/fitness#macros"><b>Energy &amp; macro calculator</b><span>Maintenance, a target, and protein / carbs / fat.</span><i aria-hidden="true">→</i></a></li>
@@ -484,7 +525,7 @@
             <li><a href="/fitness#loads"><b>1RM &amp; load calculator</b><span>The load for any reps × RIR target.</span><i aria-hidden="true">→</i></a></li>
             <li><a href="/fitness#travel"><b>Travel workout builder</b><span>Your kit, your minutes, a session.</span><i aria-hidden="true">→</i></a></li>
           </ul>
-          <div class="k-actions" style="margin-top:18px"><a class="k-go" href="/fitness#training">Training notes</a><a class="k-go" href="/fitness#nutrition">Nutrition notes</a></div>
+          <div class="k-actions" style="margin-top:18px"><a class="k-go" href="/fitness#training">Training notes</a><a class="k-go" href="/fitness/nutrition">Nutrition notes</a></div>
         </div>
       </div>
     </div>
@@ -599,9 +640,9 @@
 
 <div data-ks="footer"></div>
 
-<script src="/site-index.js?v=2027.9"></script>
+<script src="/site-index.js?v=2027.11"></script>
 <script src="/blog/posts.js"></script>
-<script src="/ks.js?v=2027.9"></script>
+<script src="/ks.js?v=2027.11"></script>
 <script>
 (function () {
   "use strict";
@@ -609,24 +650,39 @@
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
-  // ---- The deck: one card per section. A tap on the deck sends the front card to
-  // the back; an index row (hover or focus) or a pager segment brings that section's
-  // card forward. JS-driven so a card can lift over the stack. ----
+  // ---- The deck: five featured cards in a fixed order that follows the sections
+  // (Consulting, Fitness, then three for Music). The stack always shows the card in
+  // front and the next ones behind it, so it reads as one neat pile. It turns by
+  // itself until someone picks a card or presses pause; a tap on the deck, an index
+  // row (hover or focus) or a pager line brings a card forward. JS-driven so a card
+  // can lift over the stack. ----
   (function () {
-    var wrap = $("deck"); if (!wrap) return;
-    var cards = {}, order = [];
-    [].forEach.call(wrap.querySelectorAll(".deck-card"), function (el) { var id = el.getAttribute("data-sec"); cards[id] = el; order.push(id); });
-    var prev = null, t = 1, raf = null, start = 0;
+    var wrap = $("deck"), col = $("deckCol"); if (!wrap) return;
+    var els = [].slice.call(wrap.querySelectorAll(".deck-card"));
+    var SEQ = [], cards = {}, secOf = {}, firstOf = {};
+    els.forEach(function (el, i) {
+      var id = el.getAttribute("data-card"), sec = el.getAttribute("data-sec");
+      SEQ.push(id); cards[id] = el; secOf[id] = sec; if (!firstOf[sec]) firstOf[sec] = id;
+      el.setAttribute("role", "group"); el.setAttribute("aria-roledescription", "slide");
+      el.setAttribute("aria-label", (i + 1) + " of " + els.length);
+    });
+    var order = SEQ.slice(), prev = null, t = 1, raf = null, start = 0;
     var mq = window.matchMedia("(max-width: 700px)");
-    var DESK = [{ y: 0, s: 1, r: -1, o: 1 }, { y: 22, s: .955, r: 1.4, o: .93 }, { y: 41, s: .915, r: -1.6, o: .82 }, { y: 57, s: .88, r: 1.2, o: .66 }, { y: 66, s: .86, r: 0, o: 0 }];
-    var MOB  = [{ y: 0, s: 1, r: 0, o: 1 }, { y: 12, s: .965, r: 0, o: .92 }, { y: 22, s: .93, r: 0, o: .8 }, { y: 31, s: .9, r: 0, o: .62 }, { y: 36, s: .88, r: 0, o: 0 }];
+    // no tilt, and each card behind shows the same sliver below the one in front
+    var DESK = [{ y: 0, s: 1, o: 1 }, { y: 18, s: .965, o: 1 }, { y: 34, s: .93, o: 1 }, { y: 48, s: .895, o: 1 }, { y: 56, s: .87, o: 0 }];
+    var MOB  = [{ y: 0, s: 1, o: 1 }, { y: 13, s: .965, o: 1 }, { y: 24, s: .93, o: 1 }, { y: 33, s: .895, o: 1 }, { y: 38, s: .87, o: 0 }];
     function pose(S, i) { return S[Math.min(i, S.length - 1)]; }
-    // Height of the stack in its tallest possible arrangement (any card in any visible
-    // slot), so the deck keeps one height whichever card is in front and nothing
-    // under it moves when the cards change.
+    // Every card gets the height of the tallest, so the edges of the pile line up.
+    function level() {
+      var h = 0;
+      els.forEach(function (el) { el.firstElementChild.style.minHeight = ""; });
+      els.forEach(function (el) { h = Math.max(h, el.firstElementChild.offsetHeight); });
+      els.forEach(function (el) { el.firstElementChild.style.minHeight = h + "px"; });
+    }
+    // Height of the pile, so nothing under the deck moves when the cards change.
     function fit(S) {
       var h = 0;
-      for (var id in cards) for (var i = 0; i < S.length; i++) { if (S[i].o > 0) h = Math.max(h, S[i].y + cards[id].offsetHeight * (1 + S[i].s) / 2); }
+      for (var i = 0; i < S.length; i++) { if (S[i].o > 0) h = Math.max(h, S[i].y + els[0].offsetHeight * (1 + S[i].s) / 2); }
       return Math.ceil(h);
     }
     function render() {
@@ -641,7 +697,7 @@
         var leaving = moving && fromIdx === 0 && toIdx !== 0;          // front card tucks to the back
         var arriving = moving && toIdx === 0 && fromIdx > 1;            // a deep card jumps to the front
         var lift = leaving ? -Math.sin(Math.PI * ease) * 58 : arriving ? -Math.sin(Math.PI * ease) * 30 : 0;
-        el.style.transform = "translateY(" + (L(from.y, to.y) + lift) + "px) scale(" + L(from.s, to.s) + ") rotate(" + L(from.r, to.r) + "deg)";
+        el.style.transform = "translateY(" + (L(from.y, to.y) + lift) + "px) scale(" + L(from.s, to.s) + ")";
         el.style.opacity = L(from.o, to.o);
         el.style.zIndex = (leaving && ease < .5) || arriving ? n + 1 : n - toIdx;
         el.style.pointerEvents = toIdx === 0 ? "auto" : "none";
@@ -658,44 +714,77 @@
       if (raf) cancelAnimationFrame(raf);
       raf = requestAnimationFrame(tick);
     }
-    function bring(id) { if (cards[id]) go([id].concat(order.filter(function (x) { return x !== id; }))); }
+    // the pile is always the fixed order, started at the card in front
+    function show(id) { var i = SEQ.indexOf(id); if (i >= 0) go(SEQ.slice(i).concat(SEQ.slice(0, i))); }
 
-    // index rows ↔ deck ↔ pager ↔ headline. `picked` is the section chosen on the deck
-    // or the pager; it stays highlighted (row + headline word) until another card is
-    // chosen or a row is hovered. Hovering a row highlights only while the pointer is there.
-    var h1 = $("hero-title"), rows = document.querySelectorAll(".idx-row"), timer = null, picked = null;
-    var pager = $("deckPager"), dots = pager ? pager.querySelectorAll("button") : [];
-    function mark(sec) {
-      if (h1) { if (sec) h1.setAttribute("data-on", sec); else h1.removeAttribute("data-on"); }
-    }
+    // index rows ↔ deck ↔ pager ↔ headline. The row and the headline word of the
+    // section in front stay marked, so the deck and the list read as one thing.
+    var h1 = $("hero-title"), rows = document.querySelectorAll(".idx-row"), timer = null;
+    var pager = $("deckPager"), dots = pager ? pager.querySelectorAll("button[data-card]") : [], pause = $("deckPause");
+    function mark(sec) { if (h1) { if (sec) h1.setAttribute("data-on", sec); else h1.removeAttribute("data-on"); } }
     function sync() {
-      [].forEach.call(dots, function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-sec") === order[0] ? "true" : "false"); });
-      [].forEach.call(rows, function (r) { r.classList.toggle("is-on", !!picked && r.getAttribute("data-sec") === picked); });
+      var sec = secOf[order[0]];
+      [].forEach.call(dots, function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-card") === order[0] ? "true" : "false"); });
+      [].forEach.call(rows, function (r) { r.classList.toggle("is-on", r.getAttribute("data-sec") === sec); });
     }
-    function pick(sec) { picked = sec; bring(sec); mark(sec); sync(); }
+
+    // turning by itself: one card every DWELL, held while the pointer or the focus is on
+    // the deck or a row, while the tab is hidden, and while the deck is off screen
+    // (keyboard focus only). Pressing play is a plain instruction, so it overrides those holds.
+    var DWELL = 6500, auto = null, stopped = reduce.matches, held = {}, forced = false, seen = true;
+    function anyHold() { for (var k in held) if (held[k]) return true; return false; }
+    function running() { return !stopped && !reduce.matches && seen && !document.hidden && (forced || !anyHold()); }
+    function arm() {
+      clearTimeout(auto);
+      var on = running();
+      if (col) { col.classList.remove("is-running"); if (on) { void col.offsetWidth; col.classList.add("is-running"); } }
+      if (on) auto = setTimeout(function () { show(order[1]); mark(secOf[order[0]]); sync(); arm(); }, DWELL);
+    }
+    function setStopped(v) {
+      stopped = v;
+      if (pause) { pause.textContent = v ? "▶" : "❚❚"; pause.setAttribute("aria-label", v ? "Turn the cards again" : "Pause the cards"); }
+      arm();
+    }
+    function hold(why, v) { if (!!held[why] === !!v) return; held[why] = !!v; arm(); }
+    function keyFocus(e) { try { return e.target.matches(":focus-visible"); } catch (x) { return true; } }
+    // a card somebody chose stays put: choosing one stops the turning
+    function pick(id) { forced = false; show(id); mark(secOf[id]); sync(); setStopped(true); }
     wrap.addEventListener("click", function (e) { if (!(e.target.closest && e.target.closest("a"))) pick(order[1]); });
-    [].forEach.call(dots, function (b) { b.addEventListener("click", function () { pick(b.getAttribute("data-sec")); }); });
+    [].forEach.call(dots, function (b) { b.addEventListener("click", function () { pick(b.getAttribute("data-card")); }); });
+    if (pause) pause.addEventListener("click", function () { forced = stopped; setStopped(!stopped); });
     // back cards ignore the pointer, so a click that lands on one still moves the deck on
     wrap.style.cursor = "pointer";
 
+    var canHover = window.matchMedia("(hover: hover)").matches;
+    if (col) {
+      if (canHover) { col.addEventListener("pointerenter", function () { hold("deck", 1); }); col.addEventListener("pointerleave", function () { hold("deck", 0); }); }
+      col.addEventListener("focusin", function (e) { hold("deckFocus", keyFocus(e)); });
+      col.addEventListener("focusout", function () { hold("deckFocus", 0); });
+    }
+    // a row brings forward its section's first card, unless one of its cards is in front already
     function on(sec) {
       clearTimeout(timer);
-      timer = setTimeout(function () { picked = null; bring(sec); mark(sec); sync(); }, 90);
+      timer = setTimeout(function () {
+        if (firstOf[sec]) { if (secOf[order[0]] !== sec) show(firstOf[sec]); sync(); }
+        mark(sec);
+      }, 90);
     }
-    function off() { clearTimeout(timer); mark(picked); }
-    var canHover = window.matchMedia("(hover: hover)").matches;
+    function off() { clearTimeout(timer); mark(secOf[order[0]]); }
     [].forEach.call(rows, function (row) {
       var sec = row.getAttribute("data-sec");
-      if (canHover) { row.addEventListener("pointerenter", function () { on(sec); }); row.addEventListener("pointerleave", off); }
-      row.addEventListener("focusin", function () { on(sec); });
-      row.addEventListener("focusout", off);
+      if (canHover) { row.addEventListener("pointerenter", function () { hold("row", 1); on(sec); }); row.addEventListener("pointerleave", function () { hold("row", 0); off(); }); }
+      row.addEventListener("focusin", function (e) { hold("rowFocus", keyFocus(e)); on(sec); });
+      row.addEventListener("focusout", function () { hold("rowFocus", 0); off(); });
     });
+    document.addEventListener("visibilitychange", arm);
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { seen = en[0].isIntersecting; arm(); }, { threshold: .35 }).observe(wrap);
 
-    var onMq = function () { render(); };
-    if (mq.addEventListener) mq.addEventListener("change", onMq); else mq.addListener(onMq);
-    window.addEventListener("resize", function () { if (t === 1) render(); });
-    window.addEventListener("load", function () { if (t === 1) render(); });
-    render();
+    var relay = function () { level(); if (t === 1) render(); };
+    if (mq.addEventListener) mq.addEventListener("change", relay); else mq.addListener(relay);
+    window.addEventListener("resize", relay);
+    window.addEventListener("load", relay);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(relay);
+    level(); render(); mark(secOf[order[0]]); sync(); arm();
   })();
 
   // ---- Consulting: "what keeps getting stuck?" — three services, copy from /consulting ----
@@ -723,7 +812,7 @@
     });
   })();
 
-  // ---- Fitness: quick protein range (1.6–2.2 g/kg/day; see /fitness#sources) ----
+  // ---- Fitness: quick protein range (1.6–2.2 g/kg/day; see /fitness/sources) ----
   (function () {
     var w = $("qp-w"); if (!w) return;
     var kgBtn = $("qp-kg"), lbBtn = $("qp-lb"), read = $("qp-read"), out = $("qp-out"), unit = "kg";

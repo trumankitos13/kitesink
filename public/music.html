@@ -26,13 +26,75 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.9">
+<link rel="stylesheet" href="/ks.css?v=2027.11">
 <style>
   .k-hero { padding-bottom: clamp(26px, 3.4vw, 40px); }
 
-  /* "which one is for me?" */
+  /* hero: the words on the left, a turntable on the right (a strip under the words on a phone) */
+  .m-hero { display: grid; gap: clamp(18px, 3vw, 44px); }
+  @media (min-width: 940px) { .m-hero { grid-template-columns: minmax(0, 1fr) clamp(250px, 25vw, 320px); align-items: center; } }
+
+  /* the turntable. The record turns until it is stopped; picking a way in lifts the arm,
+     swaps the label colour and drops the needle again. */
+  .tt { --tt-label: #b07227; --tt-mark: #f3ecd9; display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; align-items: center; gap: 4px 14px;
+    padding: 12px 14px 12px 12px; border: 1.5px solid var(--k-rule-strong); border-radius: 18px; background: var(--k-raised); box-shadow: var(--k-shadow); }
+  .tt[data-mode="listen"] { --tt-label: #c0572a; }
+  .tt[data-mode="play"]   { --tt-label: #f8ab3c; --tt-mark: #1d1810; }
+  .tt[data-mode="team"]   { --tt-label: #2f5436; }
+  .tt-plat { display: block; width: 100%; height: auto; overflow: visible; }
+  .tt-spin { transform-box: view-box; transform-origin: 100px 100px; }
+  .tt-arm  { transform-box: view-box; transform-origin: 214px 34px; transition: rotate .45s var(--k-ease); }
+  .tt-label { fill: var(--tt-label); transition: fill .4s; } .tt-mark { fill: var(--tt-mark); stroke: var(--tt-mark); transition: fill .4s, stroke .4s; }
+  .tt.is-stopped .tt-arm, .tt.is-cue .tt-arm { rotate: -30deg; }
+  @keyframes tt-spin { to { rotate: 360deg; } }
+  @media (prefers-reduced-motion: no-preference) {
+    .tt-spin { animation: tt-spin 3.6s linear infinite; }
+    .tt.is-stopped .tt-spin { animation-play-state: paused; }
+  }
+  .tt-cap { min-width: 0; }
+  .tt-cap small { display: block; font: 600 10px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-brass); }
+  .tt-cap b { display: block; margin-top: 3px; font: 700 clamp(16px, 2.2vw, 19px)/1.2 var(--k-sans); letter-spacing: -.02em; color: var(--k-ink); }
+  .tt-cap span { display: block; margin-top: 3px; font-size: 13.5px; line-height: 1.4; color: var(--k-copy); }
+  .tt-toggle { border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-ink); border-radius: 30px; padding: 0 14px; min-height: 44px; cursor: pointer;
+    font: 600 12px/1 var(--k-mono); white-space: nowrap; transition: border-color .2s, color .2s; }
+  .tt-toggle:hover { border-color: var(--k-green); color: var(--k-green); }
+  @media (prefers-reduced-motion: reduce) { .tt-toggle { display: none; } }
+  @media (min-width: 940px) {
+    .tt { grid-template-columns: minmax(0, 1fr) auto; gap: 14px 12px; padding: 18px 18px 16px; rotate: 1.2deg; align-items: end; }
+    .tt-plat { grid-column: 1 / -1; }
+  }
+
+  /* "which one is for me?" — four ways in, each with its own mark */
   .ways-pick { margin-top: clamp(22px, 3vw, 30px); display: grid; gap: 12px; }
-  .ways-pick .k-seg { justify-self: start; }
+  .ways { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 880px; }
+  @media (min-width: 760px) { .ways { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .way { display: grid; grid-template-columns: 40px minmax(0, 1fr); align-items: center; gap: 2px 11px; min-height: 64px; padding: 10px 12px; text-align: left;
+    border: 1.5px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); color: var(--k-ink); cursor: pointer; font: inherit;
+    transition: background .2s, border-color .2s, color .2s, translate .2s var(--k-ease), box-shadow .2s; }
+  .way:hover { border-color: var(--k-green); translate: 0 -2px; box-shadow: var(--k-shadow); }
+  .way-ic { grid-row: 1 / span 2; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--k-tint); color: var(--k-green);
+    transition: background .2s, color .2s; }
+  .way-ic svg { width: 22px; height: 22px; overflow: visible; }
+  .way-t { align-self: end; font: 600 15.5px/1.2 var(--k-sans); letter-spacing: -.015em; }
+  .way-s { align-self: start; font: 500 10.5px/1.35 var(--k-mono); color: var(--k-mute); }
+  @media (max-width: 759px) { .way-t { grid-row: 1 / span 2; align-self: center; } .way-s { display: none; } }
+  .way[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); box-shadow: var(--k-shadow); }
+  .way[aria-pressed="true"] .way-ic { background: var(--k-on-green); color: var(--k-green-fill); }
+  .way[aria-pressed="true"] .way-s { color: var(--k-on-green-mute); }
+  .way .fd { transition: translate .35s var(--k-ease); }
+  .way[aria-pressed="true"] .fd1 { translate: 0 -5px; } .way[aria-pressed="true"] .fd2 { translate: 0 5px; } .way[aria-pressed="true"] .fd3 { translate: 0 -3px; }
+  @keyframes ic-turn  { from { rotate: -90deg; } to { rotate: 0deg; } }
+  @keyframes ic-nod   { 0%, 100% { rotate: 0deg; } 30% { rotate: -13deg; } 65% { rotate: 9deg; } }
+  @keyframes ic-strum { 0%, 100% { rotate: 0deg; translate: 0 0; } 25% { rotate: -14deg; translate: 0 -1px; } 60% { rotate: 8deg; } }
+  @keyframes ic-wave  { 0%, 100% { opacity: 0; } 40% { opacity: 1; } }
+  .way .wv { opacity: 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .way[aria-pressed="true"] .ic-all    { animation: ic-turn .6s var(--k-ease); }
+    .way[aria-pressed="true"] .ic-listen { animation: ic-nod .75s var(--k-ease); }
+    .way[aria-pressed="true"] .ic-play   { animation: ic-strum .65s var(--k-ease); }
+    .way[aria-pressed="true"] .wv        { animation: ic-wave .9s ease-out 2; }
+  }
+  @media (prefers-reduced-motion: reduce) { .way, .way .fd { transition: none; } }
   .ways-say { min-height: 3.2em; font-size: 15.5px; line-height: 1.55; color: var(--k-copy); max-width: 62ch; }
   .ways-say a { white-space: nowrap; }
 
@@ -60,6 +122,12 @@
   .feats[data-mode="play"]   .feat:not([data-for~="play"]) .k-pc,
   .feats[data-mode="team"]   .feat:not([data-for~="team"]) .k-pc { filter: saturate(.35); }
   .feats .feat .k-pc:is(:hover, :focus-within) { filter: none; }
+  /* and a tag on each one that fits, so the ring is not the only signal */
+  .feats:not([data-mode="all"]) .feat .k-pc::after { position: absolute; top: -13px; right: clamp(14px, 3vw, 28px); padding: 7px 12px; border-radius: 30px;
+    background: var(--k-green-fill); color: var(--k-on-green); font: 700 10.5px/1 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; box-shadow: var(--k-shadow); }
+  .feats[data-mode="listen"] .feat[data-for~="listen"] .k-pc::after { content: "\2713  For listeners"; }
+  .feats[data-mode="play"]   .feat[data-for~="play"] .k-pc::after   { content: "\2713  For players"; }
+  .feats[data-mode="team"]   .feat[data-for~="team"] .k-pc::after   { content: "\2713  For music teams"; }
 
   /* three-up lists inside a feature */
   .trio { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
@@ -127,16 +195,55 @@
 
   <section class="k-hero k-wrap" aria-labelledby="page-title">
     <p class="k-seclabel"><span class="k-num">03</span><span style="view-transition-name:sec-music">Music</span></p>
-    <h1 class="k-h1" id="page-title">Listen, play, sit with a <em>record.</em></h1>
-    <p class="k-lead">Three music projects: an app that brings one song a day, a network for players who need a sub tonight, and a monthly room for hearing albums start to finish, which starts fresh on 30 January 2027.</p>
+    <div class="m-hero">
+      <div>
+        <h1 class="k-h1" id="page-title">Listen, play, sit with a <em>record.</em></h1>
+        <p class="k-lead">Three music projects: an app that brings one song a day, a network for players who need a sub tonight, and a monthly room for hearing albums start to finish, which starts fresh on 30 January 2027.</p>
+      </div>
+
+      <!-- A turntable. Decorative, apart from its stop button; the picker below changes what is on it. -->
+      <div class="tt" id="tt" data-mode="all">
+        <svg class="tt-plat" viewBox="0 0 240 200" aria-hidden="true" focusable="false">
+          <circle cx="100" cy="100" r="97" fill="#17130c"/>
+          <g fill="none" stroke="#f3ecd9" stroke-opacity=".1"><circle cx="100" cy="100" r="88"/><circle cx="100" cy="100" r="79"/><circle cx="100" cy="100" r="70" stroke-opacity=".16"/><circle cx="100" cy="100" r="61"/><circle cx="100" cy="100" r="52"/><circle cx="100" cy="100" r="44" stroke-opacity=".16"/></g>
+          <g class="tt-spin">
+            <circle class="tt-label" cx="100" cy="100" r="35"/>
+            <polygon class="tt-mark" points="100,76 111,90 100,104 89,90" stroke="none"/>
+            <path class="tt-mark" d="M100 104 q4 5 0 9 q-4 4 0 8" fill="none" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M100 12 A88 88 0 0 1 139 21" fill="none" stroke="#f3ecd9" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M100 188 A88 88 0 0 1 61 179" fill="none" stroke="#f3ecd9" stroke-opacity=".18" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <circle cx="100" cy="100" r="3.6" fill="#f3ecd9"/>
+          <g class="tt-arm">
+            <line x1="214" y1="34" x2="153" y2="114" stroke="#8a7a58" stroke-width="5" stroke-linecap="round"/>
+            <rect x="141" y="107" width="18" height="12" rx="3" transform="rotate(-37 150 113)" fill="#b07227"/>
+            <circle cx="214" cy="34" r="13" fill="#3a3222"/><circle cx="214" cy="34" r="5" fill="#b07227"/>
+          </g>
+        </svg>
+        <div class="tt-cap"><small id="tt-side">Side A</small><b id="tt-now">All three projects</b><span id="tt-sub">An app, a network, a room</span></div>
+        <button class="tt-toggle" id="tt-toggle" type="button" aria-label="Stop the record">Stop</button>
+      </div>
+    </div>
 
     <div class="ways-pick">
       <p class="k-label" id="ways-label">Which one is for me?</p>
-      <div class="k-seg" id="ways" role="group" aria-labelledby="ways-label">
-        <button type="button" value="all" aria-pressed="true">Show all</button>
-        <button type="button" value="listen" aria-pressed="false">I listen</button>
-        <button type="button" value="play" aria-pressed="false">I play</button>
-        <button type="button" value="team" aria-pressed="false">I run a music team</button>
+      <div class="ways" id="ways" role="group" aria-labelledby="ways-label">
+        <button class="way" type="button" value="all" aria-pressed="true">
+          <span class="way-ic" aria-hidden="true"><svg class="ic-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span>
+          <span class="way-t">Show all</span><span class="way-s">Three projects</span>
+        </button>
+        <button class="way" type="button" value="listen" aria-pressed="false">
+          <span class="way-ic" aria-hidden="true"><svg class="ic-listen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14.5V12a7 7 0 0 1 14 0v2.5"/><path d="M5 14.5h2.6v5H6.5A1.5 1.5 0 0 1 5 18z" fill="currentColor"/><path d="M19 14.5h-2.6v5h1.1A1.5 1.5 0 0 0 19 18z" fill="currentColor"/><path class="wv" d="M1.6 13.5v4M22.4 13.5v4"/></svg></span>
+          <span class="way-t">I listen</span><span class="way-s">Songs and albums</span>
+        </button>
+        <button class="way" type="button" value="play" aria-pressed="false">
+          <span class="way-ic" aria-hidden="true"><svg class="ic-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.6" cy="15.4" r="5"/><circle cx="8.6" cy="15.4" r="1.5" fill="currentColor" stroke="none"/><path d="M12.2 11.8 19.4 4.6M17.6 3.4l3 3"/></svg></span>
+          <span class="way-t">I play</span><span class="way-s">Find or be the sub</span>
+        </button>
+        <button class="way" type="button" value="team" aria-pressed="false">
+          <span class="way-ic" aria-hidden="true"><svg class="ic-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5v17M12 3.5v17M18 3.5v17"/><rect class="fd fd1" x="3.6" y="13" width="4.8" height="3.4" rx="1.2" fill="currentColor" stroke="none"/><rect class="fd fd2" x="9.6" y="7" width="4.8" height="3.4" rx="1.2" fill="currentColor" stroke="none"/><rect class="fd fd3" x="15.6" y="11" width="4.8" height="3.4" rx="1.2" fill="currentColor" stroke="none"/></svg></span>
+          <span class="way-t">I run a music team</span><span class="way-s">The systems side</span>
+        </button>
       </div>
       <p class="ways-say" id="ways-say" aria-live="polite">An app for listening, a network for playing, and a room for sitting with a record.</p>
     </div>
@@ -263,7 +370,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.9"></script>
+<script src="/ks.js?v=2027.11"></script>
 <script>
 (function () {
   "use strict";
@@ -278,11 +385,37 @@
       play: 'The staffing side of <a class="k-inline" href="#stage-first">Stage First</a> is being built for you: find or be the sub. The <a class="k-inline" href="#listening-club">Listening Club</a> is where players and listeners share a room.',
       team: 'That’s the consulting side: <a class="k-inline" href="#for-teams">better systems behind the music</a> — intake, handoffs, and the data in between.'
     };
+    // the turntable follows the choice: arm up, new label, needle down
+    var tt = $("tt"), now = $("tt-now"), sub = $("tt-sub"), side = $("tt-side"), cue = null;
+    var DISC = {
+      all:    ["Side A", "All three projects", "An app, a network, a room"],
+      listen: ["Side B", "For listeners", "Song of the Day, then the Listening Club"],
+      play:   ["Side C", "For players", "Stage First, then the Listening Club"],
+      team:   ["Side D", "For music teams", "The consulting side"]
+    };
     seg.addEventListener("click", function (e) {
       var b = e.target.closest("button"); if (!b) return;
       [].forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
       feats.setAttribute("data-mode", b.value);
       say.innerHTML = SAY[b.value];
+      if (!tt) return;
+      var d = DISC[b.value];
+      tt.classList.add("is-cue"); clearTimeout(cue);
+      cue = setTimeout(function () {
+        tt.setAttribute("data-mode", b.value);
+        side.textContent = d[0]; now.textContent = d[1]; sub.textContent = d[2];
+        tt.classList.remove("is-cue");
+      }, 260);
+    });
+  })();
+
+  // ---- The turntable's own switch ----
+  (function () {
+    var tt = $("tt"), btn = $("tt-toggle"); if (!tt || !btn) return;
+    btn.addEventListener("click", function () {
+      var stopped = tt.classList.toggle("is-stopped");
+      btn.textContent = stopped ? "Spin" : "Stop";                                     // the label says what it does
+      btn.setAttribute("aria-label", stopped ? "Spin the record" : "Stop the record");
     });
   })();
 

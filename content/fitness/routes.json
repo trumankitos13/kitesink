@@ -1,6 +1,24 @@
 {
-  "note": "One row per page under /fitness/. scripts/build_fitness.py loops over these and writes public/fitness/<slug>.html from templates/sub.html. kind is area, claims, glossary, reference or sources; an area row names its area, and its label and blurb come from DOMAINS in the build script. h1 may contain <em>; every other field is plain text. {{n:steps}}, {{n:claims}}, {{n:terms}}, {{n:numbers}}, {{n:tables}}, {{n:sources}} and {{updated}} are filled in by the build.",
+  "note": "One row per page under /fitness/, in the order of the hub. scripts/build_fitness.py loops over these and writes public/fitness/<slug>.html from templates/sub.html. kind is area, claims, glossary, reference or sources; an area row names its area, and its label and blurb come from DOMAINS in the build script. h1 may contain <em>; every other field is plain text. {{n:steps}}, {{n:claims}}, {{n:terms}}, {{n:numbers}}, {{n:tables}}, {{n:sources}}, {{n:total}}, {{n:areas}}, {{n:pages}} and {{updated}} are filled in by the build.",
   "routes": [
+    {
+      "slug": "basics",
+      "kind": "area",
+      "area": "basics",
+      "title": "Training basics: starting out and building a programme · KiteSink Fitness",
+      "description": "Sourced guidance for the first years of lifting: starting out, building a first programme, training for strength or size, choosing loads, warming up and realistic time frames, with key numbers and reference tables.",
+      "h1": "Training basics: starting out, <em>then building on it.</em>",
+      "lead": "Starting out, building a first programme, training for strength or size, choosing loads, warming up, and how long progress takes."
+    },
+    {
+      "slug": "technique",
+      "kind": "area",
+      "area": "technique",
+      "title": "Technique: how to do the main lifts · KiteSink Fitness",
+      "description": "Sourced guidance on lifting technique: bench press, rows, deadlifts, squats and the smaller lifts, breathing and grip, and how to change an ingrained habit, with checklists, key numbers and reference tables.",
+      "h1": "Technique: the main lifts, <em>one cue at a time.</em>",
+      "lead": "Bench press, rows, deadlifts, squats and the smaller lifts: set-up, common faults, breathing and grip, and how to change a habit."
+    },
     {
       "slug": "hypertrophy",
       "kind": "area",
@@ -29,6 +47,24 @@
       "lead": "A timeline from signing up to the drive home and a bag list that remembers your ticks, then the guidance, numbers and tables behind them. Rules differ between federations: check yours."
     },
     {
+      "slug": "conditioning",
+      "kind": "area",
+      "area": "conditioning",
+      "title": "Conditioning: cardio, intervals and how they fit with lifting · KiteSink Fitness",
+      "description": "Sourced guidance on conditioning: steady cardio, intervals and sprints, what each costs, cardio for fat loss, fasted cardio and fitting it around lifting, with key numbers and reference tables.",
+      "h1": "Conditioning: cardio that <em>fits with lifting.</em>",
+      "lead": "Steady work, intervals and sprints: what each does, what it costs, how it fits around lifting, and where to start."
+    },
+    {
+      "slug": "recovery",
+      "kind": "area",
+      "area": "recovery",
+      "title": "Recovery: rest, fatigue and coming back after time off · KiteSink Fitness",
+      "description": "Sourced guidance on recovery: overreaching and overtraining, the signs worth watching, rest days and easy days, soreness, layoffs, and training while dieting or under stress, with key numbers and reference tables.",
+      "h1": "Recovery: rest, fatigue <em>and coming back.</em>",
+      "lead": "Overreaching and overtraining, the signs worth watching, rest days and easy days, soreness, and returning after a layoff."
+    },
+    {
       "slug": "nutrition",
       "kind": "area",
       "area": "nutrition",
@@ -45,6 +81,24 @@
       "description": "Sourced guidance on losing or gaining weight on purpose: setting a deficit or a surplus, keeping muscle, hunger, plateaus and pace, with key numbers and reference tables.",
       "h1": "Diet: losing or gaining weight <em>on purpose.</em>",
       "lead": "Setting a deficit or a surplus, keeping muscle, handling hunger and plateaus, and how fast to go."
+    },
+    {
+      "slug": "bodycomp",
+      "kind": "area",
+      "area": "bodycomp",
+      "title": "Body composition: fat, lean mass and how to track them · KiteSink Fitness",
+      "description": "Sourced guidance on body composition: fat and lean mass, measuring and tracking, body fat levels, water and stalls, metabolic rate and the limits of muscle gain, with key numbers and reference tables.",
+      "h1": "Body composition: fat, lean mass <em>and how to track them.</em>",
+      "lead": "What the body is made of, how to measure and track it, body fat levels, water and stalls, metabolic rate, and the limits of muscle gain."
+    },
+    {
+      "slug": "women",
+      "kind": "area",
+      "area": "women",
+      "title": "Women: what the training and nutrition research shows · KiteSink Fitness",
+      "description": "Sourced guidance on training and nutrition research in women: how women and men differ, strength and muscle gain, the menstrual cycle and contraception, energy availability, diets and supplements, with key numbers and reference tables.",
+      "h1": "Women: what the research <em>on women shows.</em>",
+      "lead": "How women and men differ, strength and muscle gain, the menstrual cycle and contraception, energy availability, and how to read the research."
     },
     {
       "slug": "health",
@@ -73,7 +127,7 @@
     },
     {
       "slug": "reference",
-      "kind": "reference",
+      "kind": "reference", "label": "Numbers and tables",
       "title": "Fitness key numbers and reference tables, indexed · KiteSink",
       "description": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables in the KiteSink fitness field guide. Each links to the page that holds it, with its reasoning and sources.",
       "h1": "Numbers and tables, <em>indexed.</em>",
