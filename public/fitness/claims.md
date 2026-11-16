@@ -729,7 +729,7 @@ Who was studied: Speakman: expert review of four models. Muller: review of contr
 - Keep daily steps up, since unplanned movement falls first.
 - Treat maintenance as a phase with its own plan.
 
-Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
+Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
 
 ### Does everyone regain the weight after a diet?
 
@@ -805,7 +805,7 @@ Who was studied: Hall 2015: 19 adults with obesity on a metabolic ward, crossove
 
 - Pick the carbohydrate and fat split you can keep to, and set calories first.
 
-Evidence: Randomised trial · Thin evidence · Sources: [Hall 2015](https://doi.org/10.1016/j.cmet.2015.07.021), [McDonald 2019d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
+Evidence: Randomised trial · Thin evidence · Sources: [Hall 2015](https://doi.org/10.1016/j.cmet.2015.07.021), [McDonald 2019e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
 
 ## Health
 
@@ -895,7 +895,7 @@ Who was studied: Weidner 1998: 50 adults aged 18 to 29 of moderate fitness, inoc
 - With a head cold, keep sessions short and moderate and stop well short of failure.
 - With fever, chest symptoms or body aches, rest and ask a clinician before training.
 
-Evidence: Mixed · Thin evidence · Sources: [Weidner 1998](https://doi.org/10.1097/00005768-199811000-00004), [McDonald 2019d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
+Evidence: Mixed · Thin evidence · Sources: [Weidner 1998](https://doi.org/10.1097/00005768-199811000-00004), [McDonald 2019e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
 
 ## Offers for people who arrive through an AI assistant
 

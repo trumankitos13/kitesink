@@ -126,7 +126,7 @@ A review of the research found that even sessions long or hard enough to keep me
 
 - Choose the session you can repeat and recover from, and ignore afterburn claims.
 
-Calories, EPOC and efficiency · Beginner · Well supported · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [Panissa 2021](https://doi.org/10.1111/obr.13099), [McDonald 2008k](https://bodyrecomposition.com/research/epoc-after-exercise)
+Calories, EPOC and efficiency · Beginner · Well supported · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [Panissa 2021](https://doi.org/10.1111/obr.13099), [McDonald 2008l](https://bodyrecomposition.com/research/epoc-after-exercise)
 
 ### One chamber study found a larger afterburn after 45 hard minutes
 
@@ -147,7 +147,7 @@ A multilevel meta-analysis of randomised trials lasting at least four weeks foun
 - Use intervals when time is short and steady work when you want more sessions.
 - Let diet drive fat loss. Either kind of cardio adds a little.
 
-Cardio for fat loss · Beginner · Well supported · Sources: [Steele 2021](https://doi.org/10.3390/sports9110155), [Wewege 2017](https://doi.org/10.1111/obr.12532), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Cardio for fat loss · Beginner · Well supported · Sources: [Steele 2021](https://doi.org/10.3390/sports9110155), [Wewege 2017](https://doi.org/10.1111/obr.12532), [McDonald 2008y](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### A few all-out sprints matched long rides for early fitness gains
 
@@ -157,7 +157,7 @@ Sixteen active men trained six times in 14 days. One group did four to six all-o
 
 - If you try sprint intervals, use a bike or rower and make each sprint a true all-out effort.
 
-Intervals and HIIT · Intermediate · Some support · Sources: [Gibala 2006](https://doi.org/10.1113/jphysiol.2006.112094), [Gibala 2012](https://doi.org/10.1113/jphysiol.2011.224725), [McDonald 2008t](https://bodyrecomposition.com/research/adaptations-interval-training)
+Intervals and HIIT · Intermediate · Some support · Sources: [Gibala 2006](https://doi.org/10.1113/jphysiol.2006.112094), [Gibala 2012](https://doi.org/10.1113/jphysiol.2011.224725), [McDonald 2008u](https://bodyrecomposition.com/research/adaptations-interval-training)
 
 ### Put intervals on leg-training days, in a separate session if you can
 
@@ -168,7 +168,7 @@ Two interval sessions can fit around two lower-body lifting days in two ways. Pu
 - Pair intervals with lower-body lifting days and keep the days between easy.
 - After heavy leg work, choose a bike over running sprints.
 
-Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008x](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008y](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Very low carbohydrate intake and frequent hard intervals do not mix
 
@@ -179,7 +179,7 @@ Hard intervals and high-rep, short-rest lifting both run on muscle glycogen. Lyl
 - When carbohydrate is very low, keep cardio mostly easy.
 - If you want frequent intervals, plan carbohydrate around them.
 
-Cardio for fat loss · Intermediate · Coaching practice · Sources: [McDonald 2008z](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
+Cardio for fat loss · Intermediate · Coaching practice · Sources: [McDonald 2008aa](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
 
 ### On a diet, make most cardio steady and keep intervals to one or two sessions
 
@@ -190,7 +190,7 @@ Dieters usually want some activity on most days. Lyle McDonald's advice is to ma
 - Fill most cardio days with steady work you could repeat tomorrow.
 - Limit intervals to two sessions a week while dieting.
 
-Cardio for fat loss · Beginner · Coaching practice · Sources: [McDonald 2009w](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Cardio for fat loss · Beginner · Coaching practice · Sources: [McDonald 2009w](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together), [McDonald 2008y](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Introduce intensity with short pick-ups inside an easy session
 
@@ -200,7 +200,7 @@ Lyle McDonald does not move beginners straight from easy cardio to hard interval
 
 - Hold the pick-ups at a pace only slightly above your normal one at first.
 
-Starting out · Beginner · Coaching practice · Sources: [McDonald 2008x](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Starting out · Beginner · Coaching practice · Sources: [McDonald 2008y](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Early trials that favoured intervals for fat loss did not control diet
 
@@ -210,7 +210,7 @@ A 1994 trial in young adults compared 20 weeks of endurance training with 15 wee
 
 - Be wary of fat-loss claims built on a single small trial without diet control.
 
-Cardio for fat loss · Intermediate · Some support · Sources: [Tremblay 1994](https://doi.org/10.1016/0026-0495(94)90259-3), [Steele 2021](https://doi.org/10.3390/sports9110155), [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-disconnect)
+Cardio for fat loss · Intermediate · Some support · Sources: [Tremblay 1994](https://doi.org/10.1016/0026-0495(94)90259-3), [Steele 2021](https://doi.org/10.3390/sports9110155), [McDonald 2008ab](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-disconnect)
 
 ### Stored fat is lost in three steps, and the slow step depends on how lean you are
 
@@ -283,7 +283,7 @@ Gym intervals of 30 to 60 seconds with short rests resemble middle-distance runn
 - If top speed is the goal, keep efforts short and rest until fully recovered.
 - For fitness or fat loss, choose intervals or steady work over true sprints.
 
-Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016p](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016q](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Split long indoor sessions into blocks and change something at each one
 
@@ -486,7 +486,7 @@ The error is the same as the fat-burning zone: it compares shares and ignores to
 
 - Compare sessions by total energy for the time you really have.
 
-Calories, EPOC and efficiency · Beginner · Some support · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [McDonald 2008y](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Calories, EPOC and efficiency · Beginner · Some support · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [McDonald 2008z](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application), [McDonald 2008y](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Calling any 20-seconds-on, 10-seconds-off circuit a Tabata
 
@@ -508,7 +508,7 @@ Lyle McDonald points out that interval studies test people who are not lifting a
 - Count each interval session as a leg session when you plan the week.
 - Keep bar weight and cut sets if you make room for intervals.
 
-Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008x](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit), [McDonald 2008z](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
+Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008y](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit), [McDonald 2008aa](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
 
 ### Thinking a night's sleep empties muscle glycogen
 
@@ -528,7 +528,7 @@ The claim is that the body adapts to steady cardio and soon burns far fewer calo
 
 - Raise speed, incline or resistance when your usual session starts to feel easy.
 
-Calories, EPOC and efficiency · Beginner · Thin evidence · Sources: [Hopker 2009](https://doi.org/10.1055/s-0029-1237712), [McDonald 2008l](https://bodyrecomposition.com/fat-loss/exercise-efficiency)
+Calories, EPOC and efficiency · Beginner · Thin evidence · Sources: [Hopker 2009](https://doi.org/10.1055/s-0029-1237712), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/exercise-efficiency)
 
 ### Rewarding a workout with more food than it burned
 
@@ -550,7 +550,7 @@ Lyle McDonald warns lifters against going to a track, jogging for a few minutes 
 - Build up over weeks with sub-maximal runs before any all-out sprint.
 - Use a bike or a hill for hard efforts if you have not trained to sprint.
 
-Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016p](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016q](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Choosing sprints over steady cardio to look like a sprinter
 
@@ -560,7 +560,7 @@ The argument compares a muscular sprinter with a thin marathon runner and credit
 
 - Lift to build muscle, and pick cardio for fitness, energy use and recovery.
 
-Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016l](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
+Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016m](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
 
 ### Going from no cardio to a lot of hard cardio when a diet starts
 
@@ -625,7 +625,7 @@ Starting out · Beginner · Coaching practice · Sources: [McDonald 2014w](https
 | 2 sessions per week | Ceiling for hard interval sessions: McDonald's upper limit for most people, and for anyone who also lifts or is dieting. Runners rarely tolerate more because of impact. | Coaching practice | [McDonald 2009u](https://bodyrecomposition.com/training/endurance-training-method-4-part-1), [McDonald 2009w](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together) |
 | 17.8 per 1,000 h of running | Injuries in novice runners: Pooled rate in novice runners, against 7.7 in recreational runners, from a meta-analysis of prospective studies. | Well supported | [Videbæk 2015](https://doi.org/10.1007/s40279-015-0333-8) |
 | 6-15 % of session energy | EPOC as a share of the session's energy cost: Share of the exercise's net oxygen cost, even after sessions hard or long enough to keep metabolism raised for hours. | Some support | [LaForgia 2006](https://doi.org/10.1080/02640410600552064) |
-| about 1 kcal per kJ of work | Energy burned per kilojoule of work on a bike power meter: Rule of thumb from McDonald: at 20 to 25% efficiency the body burns 4 to 5 times the work done, which roughly cancels the 4.2 kJ in a kcal. | Coaching practice | [McDonald 2008y](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application) |
+| about 1 kcal per kJ of work | Energy burned per kilojoule of work on a bike power meter: Rule of thumb from McDonald: at 20 to 25% efficiency the body burns 4 to 5 times the work done, which roughly cancels the 4.2 kJ in a kcal. | Coaching practice | [McDonald 2008z](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application) |
 | 2 sessions per week | Sessions a week that held endurance fitness: In general populations endurance was maintained for up to 15 weeks on two sessions a week, or with volume cut 33 to 66%, if intensity stayed the same. | Some support | [Spiering 2021](https://doi.org/10.1519/jsc.0000000000003964) |
 | 20 min, 3 times a week | First cardio target for a very unfit beginner: McDonald's first goalpost: continuous, at any pace. Effort is raised only once this has become routine. | Coaching practice | [McDonald 2014x](https://bodyrecomposition.com/fat-loss/training-the-obese-beginner-6) |
 
@@ -711,7 +711,7 @@ Checks drawn from McDonald's articles on interval training. If several fail, sta
 - First repeat paced so the last can match it
 - Session ends when pace or power falls by about a tenth
 
-Coaching practice · Sources: [McDonald 2009u](https://bodyrecomposition.com/training/endurance-training-method-4-part-1), [McDonald 2009v](https://bodyrecomposition.com/training/endurance-training-method-4-part-2), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Coaching practice · Sources: [McDonald 2009u](https://bodyrecomposition.com/training/endurance-training-method-4-part-1), [McDonald 2009v](https://bodyrecomposition.com/training/endurance-training-method-4-part-2), [McDonald 2008y](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ## First month for a very unfit beginner
 

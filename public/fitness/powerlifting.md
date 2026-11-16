@@ -24,7 +24,7 @@ This is coaching convention, not a trial result. Train squat depth, the bench pa
 - Film your heaviest set of each lift every week, from the side.
 - Use the same set-up routine on warm-ups and on heavy sets.
 
-Technique and leverages · Beginner · Coaching practice · Sources: [McDonald 2008a](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique)
+Technique and leverages · Beginner · Coaching practice · Sources: [McDonald 2008b](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique)
 
 ### RPE with reps in reserve lets you pick the load by feel
 

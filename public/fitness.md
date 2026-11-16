@@ -1,6 +1,6 @@
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1025 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1047 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -8,7 +8,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 
 - [Training basics](https://kitesink.com/fitness/basics.md): Starting out, and building a first programme. 134 entries.
 - [Technique](https://kitesink.com/fitness/technique.md): How to do the main lifts, and how to change a habit. 98 entries.
-- [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md): Training for muscle size. 77 entries.
+- [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md): Training for muscle size. 99 entries.
 - [Powerlifting](https://kitesink.com/fitness/powerlifting.md): A bigger squat, bench press and deadlift. 51 entries.
 - [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 46 entries.
 - [Conditioning](https://kitesink.com/fitness/conditioning.md): Cardio and intervals, and how they fit with lifting. 83 entries.
@@ -28,9 +28,9 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 ## Reference
 
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
-- [Glossary](https://kitesink.com/fitness/glossary.md): the 165 terms the areas use, in plain words. Each term is defined here once.
-- [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 126 key numbers and 62 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 876 sources.
+- [Glossary](https://kitesink.com/fitness/glossary.md): the 171 terms the areas use, in plain words. Each term is defined here once.
+- [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 128 key numbers and 62 reference tables, each with a link to the page that holds it.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 900 sources.
 
 ## Calculators (on the page, no sign-up)
 

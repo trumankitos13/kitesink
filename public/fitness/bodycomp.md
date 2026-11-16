@@ -12,7 +12,7 @@ Take someone at 80 kg (176 lb) and 25 percent fat: 20 kg (44 lb) of fat and 60 k
 
 - To bring the percentage down, lose fat first and hold on to muscle while you do it.
 
-Fat, lean mass and the sums · Beginner · Coaching practice · Sources: [McDonald 2008d](https://bodyrecomposition.com/fat-loss/body-composition-calculations)
+Fat, lean mass and the sums · Beginner · Coaching practice · Sources: [McDonald 2008e](https://bodyrecomposition.com/fat-loss/body-composition-calculations)
 
 ### Every body fat method estimates, and none measures fat directly
 
@@ -23,7 +23,7 @@ An international working group on body composition in sport concluded that no me
 - Read any single body fat figure as a range of several points, not a fact.
 - If a reading looks impossible, such as 2 percent, discard it.
 
-Measuring and tracking · Beginner · Well supported · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [van Marken Lichtenbelt 2004](https://doi.org/10.1249/01.mss.0000117159.70295.73), [McDonald 2008u](https://bodyrecomposition.com/fat-loss/body-composition-problems)
+Measuring and tracking · Beginner · Well supported · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [van Marken Lichtenbelt 2004](https://doi.org/10.1249/01.mss.0000117159.70295.73), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/body-composition-problems)
 
 ### For tracking change, a consistent method beats an accurate one
 
@@ -34,7 +34,7 @@ This is Lyle McDonald's central recommendation on measurement, and the research 
 - Pick one method and keep it for the whole diet or gaining phase.
 - Compare readings only with earlier readings from the same tool and tester.
 
-Measuring and tracking · Beginner · Some support · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [Friedl 1994](https://doi.org/10.1152/jappl.1994.77.2.933), [McDonald 2008u](https://bodyrecomposition.com/fat-loss/body-composition-problems)
+Measuring and tracking · Beginner · Some support · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [Friedl 1994](https://doi.org/10.1152/jappl.1994.77.2.933), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/body-composition-problems)
 
 ### DXA reads several points higher than skinfold equations
 
@@ -56,7 +56,7 @@ The widely used generalized equations for men were built on 308 men aged 18 to 6
 - Record each site in mm and add them up; convert to a percentage only if you need one.
 - Use the same caliper, the same sites and the same tester every time.
 
-Measuring and tracking · Intermediate · Some support · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [Jackson 1978](https://doi.org/10.1079/bjn19780152), [Friedl 1994](https://doi.org/10.1152/jappl.1994.77.2.933), [McDonald 2008u](https://bodyrecomposition.com/fat-loss/body-composition-problems)
+Measuring and tracking · Intermediate · Some support · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [Jackson 1978](https://doi.org/10.1079/bjn19780152), [Friedl 1994](https://doi.org/10.1152/jappl.1994.77.2.933), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/body-composition-problems)
 
 ### Bioimpedance scales read body water, so hydration changes the answer
 
@@ -67,7 +67,7 @@ European clinical guidelines say the method works in healthy people with stable 
 - Use it on waking, after the toilet, before food or drink, on the same day each week.
 - Ignore single readings and look at the four-week direction.
 
-Measuring and tracking · Beginner · Some support · Sources: [Kyle 2004](https://doi.org/10.1016/j.clnu.2004.09.012), [Dixon 2006](https://doi.org/10.1038/sj.ejcn.1602282), [McDonald 2008s](https://bodyrecomposition.com/fat-loss/measuring-body-composition)
+Measuring and tracking · Beginner · Some support · Sources: [Kyle 2004](https://doi.org/10.1016/j.clnu.2004.09.012), [Dixon 2006](https://doi.org/10.1038/sj.ejcn.1602282), [McDonald 2008t](https://bodyrecomposition.com/fat-loss/measuring-body-composition)
 
 ### A fast change in lean mass is water and glycogen, not muscle
 
@@ -78,7 +78,7 @@ Glycogen is stored with three to four parts water, and creatine pulls water into
 - Compare scans and tape readings taken on similar food, training and creatine status.
 - Do not judge muscle loss or gain from the first two weeks of a diet change.
 
-Measuring and tracking · Intermediate · Some support · Sources: [Bone 2017](https://doi.org/10.1249/mss.0000000000001174), [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [McDonald 2008f](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
+Measuring and tracking · Intermediate · Some support · Sources: [Bone 2017](https://doi.org/10.1249/mss.0000000000001174), [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [McDonald 2008g](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
 
 ### Gym strength is a practical check on muscle during a diet
 
@@ -89,7 +89,7 @@ Lyle McDonald's low-tech tracking method is scale weight plus training loads. Mu
 - Log two or three main lifts in a fixed rep range and compare month to month.
 - If loads fall for three weeks running, check protein, deficit size and sleep before anything else.
 
-Measuring and tracking · Intermediate · Coaching practice · Sources: [McDonald 2008f](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
+Measuring and tracking · Intermediate · Coaching practice · Sources: [McDonald 2008g](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
 
 ### How often to measure depends on how much fat you carry
 
@@ -99,7 +99,7 @@ The arithmetic is simple. Half a kilo (about 1 lb) of fat is 2 percent of a 25 k
 
 - Keep weighing often for the average, but take tape and skinfolds on a slower schedule.
 
-Measuring and tracking · Intermediate · Coaching practice · Sources: [McDonald 2008f](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
+Measuring and tracking · Intermediate · Coaching practice · Sources: [McDonald 2008g](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
 
 ### With a menstrual cycle, compare the same week month to month
 
@@ -110,7 +110,7 @@ In daily diaries covering 765 cycles from 62 healthy women, self-rated fluid ret
 - Mark cycle day next to each reading.
 - Judge fat loss from readings taken in the same phase.
 
-Measuring and tracking · Beginner · Some support · Sources: [White 2011](https://doi.org/10.1155/2011/138451), [McDonald 2008f](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
+Measuring and tracking · Beginner · Some support · Sources: [White 2011](https://doi.org/10.1155/2011/138451), [McDonald 2008g](https://bodyrecomposition.com/fat-loss/body-composition-recommendations)
 
 ### Healthy men bottom out at about 4 to 6 percent body fat
 
@@ -120,7 +120,7 @@ Fifty-five soldiers on an 8-week course with a large energy deficit went from 14
 
 - Treat single-digit body fat as a short peak for a purpose, never as a place to live.
 
-Body fat levels · Advanced · Some support · Sources: [Friedl 1994](https://doi.org/10.1152/jappl.1994.77.2.933), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage)
+Body fat levels · Advanced · Some support · Sources: [Friedl 1994](https://doi.org/10.1152/jappl.1994.77.2.933), [McDonald 2008f](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage)
 
 ### Each sport has a body fat level that suits it, and leaner is not always faster or stronger
 
@@ -131,7 +131,7 @@ Body composition matters most in gravitational, weight-class and judged sports. 
 - Aim for the range where you train and recover well, then judge by performance.
 - Involve a sports dietitian or doctor before chasing a low body fat target for competition.
 
-Body fat levels · Intermediate · Some support · Sources: [Santos 2014](https://doi.org/10.1371/journal.pone.0097846), [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2009am](https://bodyrecomposition.com/fat-loss/4-reasons-change-body-composition)
+Body fat levels · Intermediate · Some support · Sources: [Santos 2014](https://doi.org/10.1371/journal.pone.0097846), [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [McDonald 2008f](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2009am](https://bodyrecomposition.com/fat-loss/4-reasons-change-body-composition)
 
 ### Men and women lean out in a different order
 
@@ -142,7 +142,7 @@ The pattern follows where each sex stores most fat. Lyle McDonald's rule of thum
 - Expect the area you most want to change to be among the last to change.
 - Use a whole-body measure, such as weight trend plus waist and hip, to judge progress.
 
-Body fat levels · Beginner · Coaching practice · Sources: [Karpe 2015](https://doi.org/10.1038/nrendo.2014.185), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2008ae](https://bodyrecomposition.com/fat-loss/why-is-stubborn-fat-stubborn)
+Body fat levels · Beginner · Coaching practice · Sources: [Karpe 2015](https://doi.org/10.1038/nrendo.2014.185), [McDonald 2008f](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2008af](https://bodyrecomposition.com/fat-loss/why-is-stubborn-fat-stubborn)
 
 ### Dieting shrinks fat cells and does not remove them
 
@@ -153,7 +153,7 @@ Carbon dating of fat cell DNA showed that about 10 percent of fat cells are repl
 - Cap body fat in a gaining phase and diet back before it runs far.
 - Expect maintenance after a large loss to need lasting attention.
 
-Fat tissue and fat gain · Intermediate · Some support · Sources: [Spalding 2008](https://doi.org/10.1038/nature06902), [Tchoukalova 2010](https://doi.org/10.1073/pnas.1005259107), [McDonald 2008ac](https://bodyrecomposition.com/fat-loss/what-is-body-fat)
+Fat tissue and fat gain · Intermediate · Some support · Sources: [Spalding 2008](https://doi.org/10.1038/nature06902), [Tchoukalova 2010](https://doi.org/10.1073/pnas.1005259107), [McDonald 2008ad](https://bodyrecomposition.com/fat-loss/what-is-body-fat)
 
 ### Fat holds far more energy than glycogen in far less weight
 
@@ -163,7 +163,7 @@ At 70 kg (154 lb), full glycogen stores are roughly 1 kg (2.2 lb) and 4,200 kcal
 
 - Read fast scale changes as glycogen and water, and slow ones as fat.
 
-Fat tissue and fat gain · Beginner · Some support · Sources: [Acheson 1988](https://doi.org/10.1093/ajcn/48.2.240), [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720), [McDonald 2008ac](https://bodyrecomposition.com/fat-loss/what-is-body-fat)
+Fat tissue and fat gain · Beginner · Some support · Sources: [Acheson 1988](https://doi.org/10.1093/ajcn/48.2.240), [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720), [McDonald 2008ad](https://bodyrecomposition.com/fat-loss/what-is-body-fat)
 
 ### Any surplus adds body fat, by a different route for each nutrient
 
@@ -183,7 +183,7 @@ A review of regional fat biology describes abdominal depots as taking up dietary
 
 - Plan for the last areas to take longer than the first; the diet has not stopped working.
 
-Fat tissue and fat gain · Intermediate · Some support · Sources: [Karpe 2015](https://doi.org/10.1038/nrendo.2014.185), [McDonald 2008ae](https://bodyrecomposition.com/fat-loss/why-is-stubborn-fat-stubborn)
+Fat tissue and fat gain · Intermediate · Some support · Sources: [Karpe 2015](https://doi.org/10.1038/nrendo.2014.185), [McDonald 2008af](https://bodyrecomposition.com/fat-loss/why-is-stubborn-fat-stubborn)
 
 ### Scale loss often arrives in steps, with water hiding fat loss in between
 
@@ -237,7 +237,7 @@ Lyle McDonald lists the main internal factors as testosterone, cortisol, thyroid
 - Lift, eat enough protein and keep surpluses and deficits moderate.
 - Do not expect a supplement or meal pattern to change where calories go.
 
-Partitioning: fat or lean · Intermediate · Coaching practice · Sources: [McDonald 2008h](https://bodyrecomposition.com/muscle-gain/a-guide-to-calorie-partitioning), [Forbes 2000](https://doi.org/10.1111/j.1749-6632.2000.tb06482.x)
+Partitioning: fat or lean · Intermediate · Coaching practice · Sources: [McDonald 2008i](https://bodyrecomposition.com/muscle-gain/a-guide-to-calorie-partitioning), [Forbes 2000](https://doi.org/10.1111/j.1749-6632.2000.tb06482.x)
 
 ### The body resists fat loss much harder than it resists fat gain
 
@@ -247,7 +247,7 @@ Never-obese people held at a body weight 10 percent or more below their usual on
 
 - Plan for hunger and lower expenditure as part of dieting, and for the same after it ends.
 
-Weight regulation and leptin · Intermediate · Some support · Sources: [Leibel 1995](https://doi.org/10.1056/NEJM199503093321001), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [Heymsfield 1999](https://doi.org/10.1001/jama.282.16.1568), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
+Weight regulation and leptin · Intermediate · Some support · Sources: [Leibel 1995](https://doi.org/10.1056/NEJM199503093321001), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [Heymsfield 1999](https://doi.org/10.1001/jama.282.16.1568), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
 
 ### People with more body fat have more leptin, not less
 
@@ -255,7 +255,7 @@ Weight regulation and leptin · Intermediate · Some support · Sources: [Leibel
 
 In 136 normal-weight and 139 obese adults, mean serum leptin was 7.5 against 31.3 ng per ml, and leptin correlated strongly with body fat percentage (r = 0.85). It fell when obese subjects lost weight. Sex matters too: 63 women had about twice the leptin of 333 men (15.2 against 6.9 ng per ml) at the same average fat mass. The finding ended early hopes that obesity was a leptin shortage and led to the idea of leptin resistance. At the lean end the picture reverses, and low leptin is part of why very lean dieters feel and function badly.
 
-Weight regulation and leptin · Intermediate · Some support · Sources: [Considine 1996](https://doi.org/10.1056/nejm199602013340503), [Hickey 1996](https://doi.org/10.1006/bmme.1996.0056), [McDonald 2008g](https://bodyrecomposition.com/fat-loss/bodyweight-regulation-leptin-and-more)
+Weight regulation and leptin · Intermediate · Some support · Sources: [Considine 1996](https://doi.org/10.1056/nejm199602013340503), [Hickey 1996](https://doi.org/10.1006/bmme.1996.0056), [McDonald 2008h](https://bodyrecomposition.com/fat-loss/bodyweight-regulation-leptin-and-more)
 
 ### Leptin responds to food intake within days, and to carbohydrate more than fat
 
@@ -265,7 +265,7 @@ The trial studied ten healthy lean women and also found 24-hour energy expenditu
 
 - If you use a planned higher-calorie day while dieting, raise carbohydrate and keep fat moderate.
 
-Weight regulation and leptin · Advanced · Thin evidence · Sources: [Dirlewanger 2000](https://doi.org/10.1038/sj.ijo.0801395), [McDonald 2008g](https://bodyrecomposition.com/fat-loss/bodyweight-regulation-leptin-and-more)
+Weight regulation and leptin · Advanced · Thin evidence · Sources: [Dirlewanger 2000](https://doi.org/10.1038/sj.ijo.0801395), [McDonald 2008h](https://bodyrecomposition.com/fat-loss/bodyweight-regulation-leptin-and-more)
 
 ### Putting leptin back reverses much of the weight-reduced state
 
@@ -273,7 +273,7 @@ Weight regulation and leptin · Advanced · Thin evidence · Sources: [Dirlewang
 
 Ten inpatients were studied at their usual weight, at a 10 percent reduced weight and at the reduced weight with leptin injections matched to their earlier blood level. With leptin replaced, energy expenditure, muscle work efficiency, sympathetic nervous activity and thyroid hormones returned to pre-loss levels. In eight women whose periods had stopped from hard exercise or low weight, leptin raised luteinising hormone within two weeks and three ovulated. These are research findings that identify low leptin as a driver of the adaptation to dieting. Leptin is not a product for dieters.
 
-Weight regulation and leptin · Advanced · Thin evidence · Sources: [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [Welt 2004](https://doi.org/10.1056/nejmoa040388), [McDonald 2008g](https://bodyrecomposition.com/fat-loss/bodyweight-regulation-leptin-and-more)
+Weight regulation and leptin · Advanced · Thin evidence · Sources: [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [Welt 2004](https://doi.org/10.1056/nejmoa040388), [McDonald 2008h](https://bodyrecomposition.com/fat-loss/bodyweight-regulation-leptin-and-more)
 
 ### Small weight changes follow habits, and large losses meet biological resistance
 
@@ -284,7 +284,7 @@ A review of the competing models found that a fixed set point does not explain r
 - Use habits and environment for modest changes.
 - For large losses, plan the maintenance phase as carefully as the diet.
 
-Weight regulation and leptin · Intermediate · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [MacLean 2011](https://doi.org/10.1152/ajpregu.00755.2010), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
+Weight regulation and leptin · Intermediate · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [MacLean 2011](https://doi.org/10.1152/ajpregu.00755.2010), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
 
 ### The same surplus made some people store ten times the fat of others
 
@@ -315,7 +315,7 @@ The 1995 study measured body fat by skinfolds in 83 steroid users and 74 non-use
 
 - Work out your own FFMI from a body fat estimate to see where you stand.
 
-Muscular limits and FFMI · Intermediate · Thin evidence · Sources: [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [McDonald 2019c](https://bodyrecomposition.com/muscle-gain/another-look-at-the-ffmi)
+Muscular limits and FFMI · Intermediate · Thin evidence · Sources: [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [McDonald 2019d](https://bodyrecomposition.com/muscle-gain/another-look-at-the-ffmi)
 
 ### Treat an FFMI of 25 as a rare ceiling, not as a drug test
 
@@ -426,7 +426,7 @@ A long-standing rule for dieting people with obesity is that about a quarter of 
 - Recalculate the target from a fresh body fat estimate every four to six weeks.
 - Treat the first target as a waypoint and plan for a few more kilos.
 
-Fat, lean mass and the sums · Intermediate · Some support · Sources: [Heymsfield 2014](https://doi.org/10.1111/obr.12143), [Forbes 2000](https://doi.org/10.1111/j.1749-6632.2000.tb06482.x), [McDonald 2008d](https://bodyrecomposition.com/fat-loss/body-composition-calculations)
+Fat, lean mass and the sums · Intermediate · Some support · Sources: [Heymsfield 2014](https://doi.org/10.1111/obr.12143), [Forbes 2000](https://doi.org/10.1111/j.1749-6632.2000.tb06482.x), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/body-composition-calculations)
 
 ### Comparing a body fat number from one method with a number from another
 
@@ -446,7 +446,7 @@ Food and drink in the gut, sweat lost in training, a salty meal and a hard leg s
 
 - Set one weekly slot for measurements and skip the week if you miss it.
 
-Measuring and tracking · Beginner · Coaching practice · Sources: [McDonald 2008f](https://bodyrecomposition.com/fat-loss/body-composition-recommendations), [Nana 2015](https://doi.org/10.1123/ijsnem.2013-0228)
+Measuring and tracking · Beginner · Coaching practice · Sources: [McDonald 2008g](https://bodyrecomposition.com/fat-loss/body-composition-recommendations), [Nana 2015](https://doi.org/10.1123/ijsnem.2013-0228)
 
 ### Assuming extra carbohydrate or protein cannot become body fat
 
@@ -467,7 +467,7 @@ Checking only the slowest depot hides real progress. The same blind spot exists 
 - Track weight trend, waist and at least one other girth alongside the area you care about.
 - Give a plan four weeks of whole-body data before changing it.
 
-Fat tissue and fat gain · Beginner · Coaching practice · Sources: [Karpe 2015](https://doi.org/10.1038/nrendo.2014.185), [McDonald 2008u](https://bodyrecomposition.com/fat-loss/body-composition-problems), [McDonald 2008ae](https://bodyrecomposition.com/fat-loss/why-is-stubborn-fat-stubborn)
+Fat tissue and fat gain · Beginner · Coaching practice · Sources: [Karpe 2015](https://doi.org/10.1038/nrendo.2014.185), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/body-composition-problems), [McDonald 2008af](https://bodyrecomposition.com/fat-loss/why-is-stubborn-fat-stubborn)
 
 ### Getting extremely lean first so the next bulk will 'partition better'
 
@@ -552,7 +552,7 @@ The five sums used in this area, worked for a person of 80 kg (176 lb), 1.80 m (
 | Fat to lose to get there | current weight - target weight | 80 - 70.6 = 9.4 kg (21 lb) |
 | Fat-free mass index (FFMI) | lean mass in kg / height in m, squared | 60 / (1.80 x 1.80) = 18.5 |
 
-Coaching practice · Sources: [McDonald 2008d](https://bodyrecomposition.com/fat-loss/body-composition-calculations), [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003)
+Coaching practice · Sources: [McDonald 2008e](https://bodyrecomposition.com/fat-loss/body-composition-calculations), [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003)
 
 ## Body fat methods: what each one really measures
 
@@ -568,7 +568,7 @@ What each common method senses, where its error comes from and what it is good f
 | BMI-based estimate | Weight for height only | Cannot tell muscle from fat | People who do not lift; population screening |
 | Photos and mirror | Appearance | Lighting, posture, water and self-judgement | Four-weekly visual record under fixed conditions |
 
-Some support · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [van Marken Lichtenbelt 2004](https://doi.org/10.1249/01.mss.0000117159.70295.73), [Kyle 2004](https://doi.org/10.1016/j.clnu.2004.09.012), [Nana 2015](https://doi.org/10.1123/ijsnem.2013-0228), [Ball 2004b](https://doi.org/10.1038/sj.ejcn.1602003), [McDonald 2008s](https://bodyrecomposition.com/fat-loss/measuring-body-composition)
+Some support · Sources: [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [van Marken Lichtenbelt 2004](https://doi.org/10.1249/01.mss.0000117159.70295.73), [Kyle 2004](https://doi.org/10.1016/j.clnu.2004.09.012), [Nana 2015](https://doi.org/10.1123/ijsnem.2013-0228), [Ball 2004b](https://doi.org/10.1038/sj.ejcn.1602003), [McDonald 2008t](https://bodyrecomposition.com/fat-loss/measuring-body-composition)
 
 ## A tracking routine that works with imperfect tools
 
@@ -596,7 +596,7 @@ Fixed conditions and a small set of repeated measures tell you more than any sin
 - If nothing has moved in four weeks, change the plan.
 - Book a scan only as an occasional benchmark, under the same conditions each time.
 
-Coaching practice · Sources: [McDonald 2008f](https://bodyrecomposition.com/fat-loss/body-composition-recommendations), [Nana 2015](https://doi.org/10.1123/ijsnem.2013-0228), [White 2011](https://doi.org/10.1155/2011/138451)
+Coaching practice · Sources: [McDonald 2008g](https://bodyrecomposition.com/fat-loss/body-composition-recommendations), [Nana 2015](https://doi.org/10.1123/ijsnem.2013-0228), [White 2011](https://doi.org/10.1155/2011/138451)
 
 ## Measured body fat in athletes by sport (DXA)
 

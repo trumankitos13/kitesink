@@ -13,7 +13,7 @@ This is a coaching convention, not a trial result. Lyle McDonald teaches most no
 - Set the shoulder blades back before you unrack and hold them there until the bar is racked.
 - Film a set from the side and from behind the head to check your elbow angle.
 
-Bench press and shoulders · Beginner · Coaching practice · Sources: [McDonald 2008a](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique), [McDonald 2008b](https://bodyrecomposition.com/training/bench-press-variations)
+Bench press and shoulders · Beginner · Coaching practice · Sources: [McDonald 2008b](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique), [McDonald 2008c](https://bodyrecomposition.com/training/bench-press-variations)
 
 ### Start and finish each bench rep with the bar stacked over the shoulders
 
@@ -23,7 +23,7 @@ A coaching cue with no trial behind it. When the bar sits straight above the sho
 
 - Check from the side that every rep ends with the bar above the shoulder joint.
 
-Bench press and shoulders · Beginner · Coaching practice · Sources: [McDonald 2008a](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique)
+Bench press and shoulders · Beginner · Coaching practice · Sources: [McDonald 2008b](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique)
 
 ### Pick a bench grip that puts the forearms vertical at the bottom
 
@@ -34,7 +34,7 @@ McDonald sets grip width from the bottom position: the forearms stand upright an
 - Ask someone to look at your forearms from the foot end of the bench at the bottom of a rep.
 - If your grip is wider than 1.5 times shoulder width, try moving each hand in a little.
 
-Bench press and shoulders · Beginner · Thin evidence · Sources: [McDonald 2008a](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique), [Green 2007](https://doi.org/10.1519/00126548-200710000-00001), [Larsen 2021a](https://doi.org/10.3389/fspor.2020.637066)
+Bench press and shoulders · Beginner · Thin evidence · Sources: [McDonald 2008b](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique), [Green 2007](https://doi.org/10.1519/00126548-200710000-00001), [Larsen 2021a](https://doi.org/10.3389/fspor.2020.637066)
 
 ### To feel the chest in a press, think of bringing the upper arms together
 
@@ -45,7 +45,7 @@ The chest muscle's main job is drawing the upper arm inward across the chest. Mc
 - Before benching, press one empty hand forward with the other hand resting on that side of the chest.
 - Take some weight off for a few sessions while the cue becomes automatic.
 
-Bench press and shoulders · Beginner · Thin evidence · Sources: [McDonald 2008c](https://bodyrecomposition.com/training/benching-with-the-pecs), [Snyder 2012](https://doi.org/10.1519/jsc.0b013e31823f8d11), [Calatayud 2016](https://doi.org/10.1007/s00421-015-3305-7)
+Bench press and shoulders · Beginner · Thin evidence · Sources: [McDonald 2008d](https://bodyrecomposition.com/training/benching-with-the-pecs), [Snyder 2012](https://doi.org/10.1519/jsc.0b013e31823f8d11), [Calatayud 2016](https://doi.org/10.1007/s00421-015-3305-7)
 
 ### Stop upright rows when the elbows reach shoulder height
 
@@ -121,7 +121,7 @@ Most lifts can be learned with an empty bar. The deadlift cannot, because the ba
 - Raise a lightly loaded bar on blocks or pins to normal plate height.
 - Move to the floor once you can lift a bar with full-size plates in good position.
 
-Deadlifts and back extensions · Beginner · Coaching practice · Sources: [McDonald 2008i](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
+Deadlifts and back extensions · Beginner · Coaching practice · Sources: [McDonald 2008j](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
 
 ### With a mixed grip, keep the underhand elbow straight and swap hands between sets
 
@@ -132,7 +132,7 @@ Most heavy deadlifts are pulled with a mixed grip because it holds more than an 
 - Never bend the elbows to help a deadlift off the floor.
 - Alternate the underhand side each set, or use a hook grip or straps.
 
-Deadlifts and back extensions · Intermediate · Thin evidence · Sources: [Kapicioglu 2021](https://doi.org/10.1177/2325967121991811), [McDonald 2008i](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
+Deadlifts and back extensions · Intermediate · Thin evidence · Sources: [Kapicioglu 2021](https://doi.org/10.1177/2325967121991811), [McDonald 2008j](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
 
 ### A trap bar deadlift shifts load from the lower back toward the knees
 
@@ -142,7 +142,7 @@ Nineteen male powerlifters deadlifted with a straight bar and a hexagonal (trap)
 
 - If your gym has a trap bar and you do not compete, consider it as your main deadlift.
 
-Deadlifts and back extensions · Beginner · Thin evidence · Sources: [Swinton 2011](https://doi.org/10.1519/jsc.0b013e3181e73f87), [McDonald 2020e](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
+Deadlifts and back extensions · Beginner · Thin evidence · Sources: [Swinton 2011](https://doi.org/10.1519/jsc.0b013e3181e73f87), [McDonald 2020j](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
 
 ### A Romanian deadlift ends where the hips stop moving
 
@@ -419,7 +419,7 @@ McDonald argues that the barbell squat, bench press and deadlift became fixtures
 - Judge each lift in your plan against the three tests.
 - Keep a lift you enjoy and progress on; replace one that only wears you down.
 
-Exercise choice and EMG · Beginner · Coaching practice · Sources: [McDonald 2020e](https://bodyrecomposition.com/training/you-must-squat-dsfps-2), [McDonald 2009ad](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
+Exercise choice and EMG · Beginner · Coaching practice · Sources: [McDonald 2020j](https://bodyrecomposition.com/training/you-must-squat-dsfps-2), [McDonald 2009ad](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
 
 ### New lifters should keep breathing and leave bracing for later
 
@@ -473,7 +473,7 @@ McDonald rejects both 'always' and 'never'. His method is to start pulling work 
 - Do your first heavy pulling sets without straps.
 - Put straps on when grip, not the back, is about to end a set.
 
-Breathing, grip and straps · Beginner · Thin evidence · Sources: [McDonald 2015v](https://bodyrecomposition.com/training/should-i-wear-lifting-straps), [Jukic 2021a](https://doi.org/10.1016/j.physbeh.2020.113283), [Coswig 2015](https://doi.org/10.1519/jsc.0000000000000986)
+Breathing, grip and straps · Beginner · Thin evidence · Sources: [McDonald 2015w](https://bodyrecomposition.com/training/should-i-wear-lifting-straps), [Jukic 2021a](https://doi.org/10.1016/j.physbeh.2020.113283), [Coswig 2015](https://doi.org/10.1519/jsc.0000000000000986)
 
 ### A harmless pre-lift ritual can help, because belief moves performance a little
 
@@ -585,7 +585,7 @@ The bodybuilding-style press uses a wide grip, elbows out in line with the shoul
 - Touch the bar at the lower chest with the elbows tucked part-way.
 - Use dumbbells if you want a wider arm path.
 
-Bench press and shoulders · Beginner · Coaching practice · Sources: [McDonald 2008b](https://bodyrecomposition.com/training/bench-press-variations), [Kolber 2010](https://doi.org/10.1519/jsc.0b013e3181dc4330)
+Bench press and shoulders · Beginner · Coaching practice · Sources: [McDonald 2008c](https://bodyrecomposition.com/training/bench-press-variations), [Kolber 2010](https://doi.org/10.1519/jsc.0b013e3181dc4330)
 
 ### Rowing so heavy that the chest drops and the body swings back
 
@@ -618,7 +618,7 @@ In a sound pull the hips and shoulders rise together until the bar passes the kn
 - Think 'chest up' as the bar breaks from the floor.
 - Film from the side and compare your back angle at the floor and at the knee.
 
-Deadlifts and back extensions · Beginner · Coaching practice · Sources: [McDonald 2008i](https://bodyrecomposition.com/training/clean-style-deadlift-technique), [McDonald 2016b](https://bodyrecomposition.com/training/guide-changing-exercise-technique)
+Deadlifts and back extensions · Beginner · Coaching practice · Sources: [McDonald 2008j](https://bodyrecomposition.com/training/clean-style-deadlift-technique), [McDonald 2016b](https://bodyrecomposition.com/training/guide-changing-exercise-technique)
 
 ### Arching past straight at the top of a back extension
 
@@ -640,7 +640,7 @@ Two arguments are often used to claim that everyone can squat to full depth with
 - Squat to the depth you can reach with a flat back and the bar over mid-foot.
 - Ask a physiotherapist if a pinch at the front of the hip limits your depth.
 
-Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2020e](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
+Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2020j](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
 
 ### Bouncing calf raises through a short range
 
@@ -683,7 +683,7 @@ Refusing straps is usually defended as a way to build grip. McDonald's reply is 
 - Use straps for back and hamstring work once grip becomes the limit.
 - Add timed heavy bar holds after pulling work if you want a stronger grip.
 
-Breathing, grip and straps · Beginner · Coaching practice · Sources: [McDonald 2015v](https://bodyrecomposition.com/training/should-i-wear-lifting-straps)
+Breathing, grip and straps · Beginner · Coaching practice · Sources: [McDonald 2015w](https://bodyrecomposition.com/training/should-i-wear-lifting-straps)
 
 ### Stripping back to an empty bar to fix every fault
 
@@ -700,7 +700,7 @@ Learning and changing technique · Beginner · Coaching practice · Sources: [Mc
 | Number | What it is | Support | Sources |
 |---|---|---|---|
 | 1.5 or less x biacromial width | Bench grip width a review linked to lower shoulder risk: A review found wider grips may raise shoulder injury risk, while narrowing to this width changed the one-rep max by about 5%. | Thin evidence | [Green 2007](https://doi.org/10.1519/00126548-200710000-00001) |
-| 45-60 degrees from the torso | Upper-arm angle at the bottom of a general-purpose bench press: McDonald's coaching range: arms neither level with the shoulders nor pinned to the ribs. A convention, not a measured optimum. | Coaching practice | [McDonald 2008b](https://bodyrecomposition.com/training/bench-press-variations) |
+| 45-60 degrees from the torso | Upper-arm angle at the bottom of a general-purpose bench press: McDonald's coaching range: arms neither level with the shoulders nor pinned to the ribs. A convention, not a measured optimum. | Coaching practice | [McDonald 2008c](https://bodyrecomposition.com/training/bench-press-variations) |
 | 90 degrees | Arm angle above which upright rows were linked to impingement signs: In a case-control study of 77 men, upright rows and lateral raises above this angle were associated with clinical signs of shoulder impingement. | Thin evidence | [Kolber 2014](https://doi.org/10.1519/jsc.0000000000000250) |
 | 24 of 24 ruptures on video | Mixed-grip deadlift biceps ruptures that were in the underhand arm: In a review of injury videos, every biceps tendon rupture during a mixed-grip deadlift was in the palm-forward arm. All lifters were men. | Thin evidence | [Kapicioglu 2021](https://doi.org/10.1177/2325967121991811) |
 | 6.7 vs 2.2 % volume in 10 weeks | Glute growth from full squats against half squats: MRI change in glute volume in 17 men training twice a week. Quadriceps growth was similar, at 4.9% and 4.6%. | Thin evidence | [Kubo 2019](https://doi.org/10.1007/s00421-019-04181-y) |
@@ -751,7 +751,7 @@ The flat-backed, hip-width deadlift Lyle McDonald teaches general trainees, as c
 - Push the hips back until the bar passes the knees, then bend the knees
 - Rebuild your position before the next rep if it slipped
 
-Coaching practice · Sources: [McDonald 2008i](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
+Coaching practice · Sources: [McDonald 2008j](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
 
 ## Three ways to string deadlift reps together
 
@@ -763,7 +763,7 @@ How you treat the floor between reps changes what a set trains. The 'suits' colu
 | Controlled lowering, a short pause on the floor, body kept tight | Muscles stay loaded from rep to rep | Sets done for muscle size |
 | Full reset, then pull again | Every rep starts from a true dead stop, like a single | Strength work and powerlifters |
 
-Coaching practice · Sources: [McDonald 2008i](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
+Coaching practice · Sources: [McDonald 2008j](https://bodyrecomposition.com/training/clean-style-deadlift-technique)
 
 ## Deadlift grips compared
 
@@ -776,7 +776,7 @@ Holding strength and trade-offs of the common grips. The ranking is coaching exp
 | Mixed | One palm faces you, one faces away | Usually the strongest | Uneven pull through the trunk; biceps tendon of the underhand arm |
 | Overhand with straps | Straps wound round the bar | Grip stops being the limit | Trains the grip less |
 
-Thin evidence · Sources: [McDonald 2008i](https://bodyrecomposition.com/training/clean-style-deadlift-technique), [Kapicioglu 2021](https://doi.org/10.1177/2325967121991811)
+Thin evidence · Sources: [McDonald 2008j](https://bodyrecomposition.com/training/clean-style-deadlift-technique), [Kapicioglu 2021](https://doi.org/10.1177/2325967121991811)
 
 ## Romanian deadlift and stiff-legged deadlift compared
 
@@ -830,7 +830,7 @@ Common grip aids and where each fits. Closed-loop straps should not be used for 
 | Wrap-style grips | A wrist cuff with a flap folded round the bar | Lifters who struggle to wind loop straps | Sizes differ, so pick one that fits your hand |
 | Chalk | Magnesium carbonate dusted on the hands | A dry grip on any bar, with or without straps | Some gyms ban it; clean up after use |
 
-Coaching practice · Sources: [McDonald 2015v](https://bodyrecomposition.com/training/should-i-wear-lifting-straps)
+Coaching practice · Sources: [McDonald 2015w](https://bodyrecomposition.com/training/should-i-wear-lifting-straps)
 
 ## When a technique fault is worth fixing
 

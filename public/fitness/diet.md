@@ -215,7 +215,7 @@ In 171 women, 52 percent of the weight lost was regained at one year and 89 perc
 - After the diet, bring calories back to maintenance within about two weeks, then hold there.
 - Keep weighing, activity and protein up.
 
-Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2016m](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2016n](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### A small surplus adds muscle, and a large surplus mostly adds fat
 
@@ -266,7 +266,7 @@ Each kg lost early holds less energy than fat, because water and lean tissue go 
 
 - Use a dynamic planner, such as the NIH Body Weight Planner, for forecasts beyond a few weeks.
 
-Scale, plateaus and metabolism · Intermediate · Some support · Sources: [Thomas 2013](https://doi.org/10.1038/ijo.2013.51), [Heymsfield 2012](https://doi.org/10.1016/j.metabol.2011.11.012), [Hall 2011](https://doi.org/10.1016/S0140-6736(11)60812-X), [McDonald 2015t](https://bodyrecomposition.com/fat-loss/3500-calorie-rule)
+Scale, plateaus and metabolism · Intermediate · Some support · Sources: [Thomas 2013](https://doi.org/10.1038/ijo.2013.51), [Heymsfield 2012](https://doi.org/10.1016/j.metabol.2011.11.012), [Hall 2011](https://doi.org/10.1016/S0140-6736(11)60812-X), [McDonald 2015u](https://bodyrecomposition.com/fat-loss/3500-calorie-rule)
 
 ### Set up a fat-loss diet in order: calories, protein, fat, then carbohydrate
 
@@ -276,7 +276,7 @@ A review for natural bodybuilders in contest prep sets calories for a loss of 0.
 
 - Write down the four numbers before you choose foods.
 
-Diet type and meal pattern · Beginner · Coaching practice · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [McDonald 2009ag](https://bodyrecomposition.com/fat-loss/4-fat-loss-fundamentals), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes), [McDonald 2010f](https://bodyrecomposition.com/fat-loss/fundamental-principles-minor-details)
+Diet type and meal pattern · Beginner · Coaching practice · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [McDonald 2009ag](https://bodyrecomposition.com/fat-loss/4-fat-loss-fundamentals), [McDonald 2008n](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes), [McDonald 2010f](https://bodyrecomposition.com/fat-loss/fundamental-principles-minor-details)
 
 ### Athletes in a deficit should keep food around hard sessions and cut elsewhere
 
@@ -286,7 +286,7 @@ A review of weight management in athletes lists eating around exercise among its
 
 - Keep some carbohydrate and protein before and after hard sessions, and take cuts from other meals.
 
-Diet type and meal pattern · Intermediate · Coaching practice · Sources: [Manore 2015](https://doi.org/10.1007/s40279-015-0401-0), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
+Diet type and meal pattern · Intermediate · Coaching practice · Sources: [Manore 2015](https://doi.org/10.1007/s40279-015-0401-0), [McDonald 2008n](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
 
 ### Athletes should diet in a low-intensity training block, not close to competition
 
@@ -298,7 +298,7 @@ A review on athletes' weight advises finding a healthy weight that can be kept f
 - Choose a target weight you can hold without constant dieting.
 - If periods, mood or performance change while dieting, see a sports doctor or dietitian.
 
-Very lean, regain and maintenance · Intermediate · Coaching practice · Sources: [Manore 2015](https://doi.org/10.1007/s40279-015-0401-0), [Mountjoy 2023](https://doi.org/10.1136/bjsports-2023-106994), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
+Very lean, regain and maintenance · Intermediate · Coaching practice · Sources: [Manore 2015](https://doi.org/10.1007/s40279-015-0401-0), [Mountjoy 2023](https://doi.org/10.1136/bjsports-2023-106994), [McDonald 2008n](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
 
 ### Flexible control of eating goes with lower weight and fewer binges than rigid rules
 
@@ -309,7 +309,7 @@ Among 54,517 people in a weight-loss programme and a population sample of 1,838 
 - Plan some favourite foods into the week instead of banning them.
 - If food rules or binges feel out of your control, see a doctor or an eating disorder specialist.
 
-Hunger and fullness · Beginner · Some support · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [Stewart 2002](https://doi.org/10.1006/appe.2001.0445), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters)
+Hunger and fullness · Beginner · Some support · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [Stewart 2002](https://doi.org/10.1006/appe.2001.0445), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters)
 
 ### When the trend says change, move calories about 10 percent and wait again
 
@@ -320,7 +320,7 @@ Lifts falling with sound training, or loss well beyond the plan, means ease off:
 - Write down the weekly loss you expect before you start.
 - Change one thing at a time.
 
-Scale, plateaus and metabolism · Intermediate · Coaching practice · Sources: [McDonald 2009c](https://bodyrecomposition.com/fat-loss/adjusting-the-diet), [McDonald 2008o](https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories), [McDonald 2007d](https://bodyrecomposition.com/fat-loss/how-detail-oriented-should-you-be), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
+Scale, plateaus and metabolism · Intermediate · Coaching practice · Sources: [McDonald 2009c](https://bodyrecomposition.com/fat-loss/adjusting-the-diet), [McDonald 2008p](https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories), [McDonald 2007d](https://bodyrecomposition.com/fat-loss/how-detail-oriented-should-you-be), [McDonald 2008n](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
 
 ### Holiday weight gain is small on average, but it tends to stay
 
@@ -341,7 +341,7 @@ In randomised trials in adults, breakfast eaters weighed 0.44 kg more (7 trials)
 
 - Eat breakfast if it keeps you full to lunch, and skip it if it does not.
 
-Diet type and meal pattern · Beginner · Some support · Sources: [Sievert 2019](https://doi.org/10.1136/bmj.l42), [McDonald 2008r](https://bodyrecomposition.com/research/meal-frequency-and-energy-balance), [McDonald 2015p](https://bodyrecomposition.com/fat-loss/meal-frequency-and-meal-patterning)
+Diet type and meal pattern · Beginner · Some support · Sources: [Sievert 2019](https://doi.org/10.1136/bmj.l42), [McDonald 2008s](https://bodyrecomposition.com/research/meal-frequency-and-energy-balance), [McDonald 2015p](https://bodyrecomposition.com/fat-loss/meal-frequency-and-meal-patterning)
 
 ### Planned time off the diet did not cut total weight loss in a trial
 
@@ -361,7 +361,7 @@ In obese patients on low-calorie diets of 360 to 1,200 kcal, blood T3, the activ
 
 - On a break, McDonald's practice is at least 120 to 150 g of carbohydrate a day.
 
-Diet type and meal pattern · Advanced · Thin evidence · Sources: [Pasquali 1982](https://doi.org/10.1007/BF03350482), [McDonald 2009af](https://bodyrecomposition.com/fat-loss/the-full-diet-break), [McDonald 2016m](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Diet type and meal pattern · Advanced · Thin evidence · Sources: [Pasquali 1982](https://doi.org/10.1007/BF03350482), [McDonald 2009af](https://bodyrecomposition.com/fat-loss/the-full-diet-break), [McDonald 2016n](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### McDonald spaces diet breaks by body fat, so leaner dieters take them sooner
 
@@ -381,7 +381,7 @@ Participants first lost weight on a 4-week very low-energy diet of about 500 kca
 
 - McDonald's practice: keep protein at your dieting level for the first weeks of maintenance.
 
-Very lean, regain and maintenance · Intermediate · Thin evidence · Sources: [Westerterp-Plantenga 2004](https://doi.org/10.1038/sj.ijo.0802461), [McDonald 2016m](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Intermediate · Thin evidence · Sources: [Westerterp-Plantenga 2004](https://doi.org/10.1038/sj.ijo.0802461), [McDonald 2016n](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### After a physique contest, regain came first as water and later mostly as fat
 
@@ -392,7 +392,7 @@ Seven men and eight women were measured within a week before a show, within a we
 - McDonald's practice: return to maintenance calories before any surplus; see the entry on dieting with no end plan.
 - If eating feels out of control after a show, get help from a sports dietitian or clinician.
 
-Very lean, regain and maintenance · Advanced · Thin evidence · Sources: [Trexler 2017](https://doi.org/10.1123/ijsnem.2017-0038), [McDonald 2016m](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Advanced · Thin evidence · Sources: [Trexler 2017](https://doi.org/10.1123/ijsnem.2017-0038), [McDonald 2016n](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### McDonald puts the low days of an intermittent restriction plan on rest days
 
@@ -430,7 +430,7 @@ Four diets crossed protein (about 1.1 against 0.7 g per kg) with carbohydrate (l
 
 - Set protein first, then choose carbohydrate and fat to suit your food preferences.
 
-Diet type and meal pattern · Intermediate · Thin evidence · Sources: [Soenen 2012](https://doi.org/10.1016/j.physbeh.2012.08.004), [McDonald 2015w](https://bodyrecomposition.com/fat-loss/what-is-the-best-diet), [McDonald 2016o](https://bodyrecomposition.com/fat-loss/the-causes-diet-failure)
+Diet type and meal pattern · Intermediate · Thin evidence · Sources: [Soenen 2012](https://doi.org/10.1016/j.physbeh.2012.08.004), [McDonald 2015x](https://bodyrecomposition.com/fat-loss/what-is-the-best-diet), [McDonald 2016p](https://bodyrecomposition.com/fat-loss/the-causes-diet-failure)
 
 ### The same surplus added 4 to 13 kg in different men, and twins responded alike
 
@@ -440,7 +440,7 @@ The men were overfed on 84 days within a 100-day period, about 84,000 kcal in to
 
 - Judge your own response by your scale trend, not by someone else's results on the same plan.
 
-Gaining phases · Intermediate · Thin evidence · Sources: [Bouchard 1990](https://doi.org/10.1056/NEJM199005243222101), [McDonald 2007i](https://bodyrecomposition.com/fat-loss/you-are-not-different)
+Gaining phases · Intermediate · Thin evidence · Sources: [Bouchard 1990](https://doi.org/10.1056/NEJM199005243222101), [McDonald 2007l](https://bodyrecomposition.com/fat-loss/you-are-not-different)
 
 ### A ketogenic diet lost no more fat than a moderate-carb diet in a controlled trial
 
@@ -480,7 +480,7 @@ He advises eating at maintenance or slightly above while recovering, and dieting
 
 - Follow your surgical team's or physiotherapist's advice on eating before and after an operation.
 
-Deficit and rate of loss · Beginner · Coaching practice · Sources: [McDonald 2019e](https://bodyrecomposition.com/nutrition/dieting-and-surgery)
+Deficit and rate of loss · Beginner · Coaching practice · Sources: [McDonald 2019f](https://bodyrecomposition.com/nutrition/dieting-and-surgery)
 
 ## Common mistakes
 
@@ -524,7 +524,7 @@ In 171 women, 52 percent of lost weight was regained after one year and 89 perce
 - Plan the exit: a target date, a maintenance range and a weekly weigh-in.
 - Return to maintenance calories at once or within about two weeks.
 
-Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [McDonald 2016m](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [McDonald 2016n](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### Treating a gaining phase as a licence to eat anything
 
@@ -555,7 +555,7 @@ Glycogen is stored with three to four parts water, so emptying it moves the scal
 
 - Leave out the first two to three weeks when you compare diets or judge your rate of loss.
 
-Scale, plateaus and metabolism · Beginner · Thin evidence · Sources: [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Hall 2016](https://doi.org/10.3945/ajcn.116.133561), [McDonald 2015t](https://bodyrecomposition.com/fat-loss/3500-calorie-rule), [McDonald 2007f](https://bodyrecomposition.com/fat-loss/is-a-calorie-a-calorie)
+Scale, plateaus and metabolism · Beginner · Thin evidence · Sources: [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Hall 2016](https://doi.org/10.3945/ajcn.116.133561), [McDonald 2015u](https://bodyrecomposition.com/fat-loss/3500-calorie-rule), [McDonald 2007f](https://bodyrecomposition.com/fat-loss/is-a-calorie-a-calorie)
 
 ### Treating one off-plan snack as a ruined diet
 
@@ -566,7 +566,7 @@ All-or-nothing rules make a small lapse feel like failure. McDonald describes a 
 - After an unplanned treat, carry on with the next meal, or trim it slightly.
 - Call planned off-plan meals free meals, and plan them in advance.
 
-Hunger and fullness · Beginner · Coaching practice · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters), [McDonald 2009a](https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger)
+Hunger and fullness · Beginner · Coaching practice · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters), [McDonald 2009a](https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger)
 
 ### Dropping whole fruit from a fat-loss diet
 
@@ -597,7 +597,7 @@ At 25 percent of calories, protein is 175 g on 2,800 kcal but 125 g on 2,000 kca
 
 - Fix protein in grams first, for example 2.3 to 3.1 g per kg of lean mass for a lean lifter in a deficit.
 
-Keeping muscle · Intermediate · Some support · Sources: [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [McDonald 2008j](https://bodyrecomposition.com/fat-loss/problem-dieting-by-percentages), [McDonald 2007a](https://bodyrecomposition.com/fat-loss/comparing-the-diets)
+Keeping muscle · Intermediate · Some support · Sources: [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [McDonald 2008k](https://bodyrecomposition.com/fat-loss/problem-dieting-by-percentages), [McDonald 2007a](https://bodyrecomposition.com/fat-loss/comparing-the-diets)
 
 ### Eating more of a food because it is labelled low-fat or diet-approved
 
@@ -618,7 +618,7 @@ Before treatment the women named a goal, a dream, a happy, an acceptable and a d
 - Count a lasting loss of about 10 percent as success, the clinical yardstick McDonald cites.
 - McDonald's practice: break a large loss into stages with maintenance between them.
 
-Deficit and rate of loss · Beginner · Thin evidence · Sources: [Foster 1997](https://doi.org/10.1037/0022-006X.65.1.79), [McDonald 2016o](https://bodyrecomposition.com/fat-loss/the-causes-diet-failure), [McDonald 2009af](https://bodyrecomposition.com/fat-loss/the-full-diet-break)
+Deficit and rate of loss · Beginner · Thin evidence · Sources: [Foster 1997](https://doi.org/10.1037/0022-006X.65.1.79), [McDonald 2016p](https://bodyrecomposition.com/fat-loss/the-causes-diet-failure), [McDonald 2009af](https://bodyrecomposition.com/fat-loss/the-full-diet-break)
 
 ## Key numbers
 
@@ -706,7 +706,7 @@ McDonald's list. Check a plan against it before worrying about meal timing or ma
 - Training quality you can hold
 - Habits you can carry into maintenance
 
-Coaching practice · Sources: [McDonald 2015w](https://bodyrecomposition.com/fat-loss/what-is-the-best-diet), [Soenen 2012](https://doi.org/10.1016/j.physbeh.2012.08.004), [Westerterp-Plantenga 2004](https://doi.org/10.1038/sj.ijo.0802461)
+Coaching practice · Sources: [McDonald 2015x](https://bodyrecomposition.com/fat-loss/what-is-the-best-diet), [Soenen 2012](https://doi.org/10.1016/j.physbeh.2012.08.004), [Westerterp-Plantenga 2004](https://doi.org/10.1038/sj.ijo.0802461)
 
 ## Protein against carbohydrate: loss at 12 months in four diets
 

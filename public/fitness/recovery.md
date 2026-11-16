@@ -204,7 +204,7 @@ Supercompensation implies waiting for an overshoot before training again. McDona
 
 - Judge a programme over a block of weeks, not by whether each session beat the last.
 
-Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
+Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019m](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
 
 ### Selye's stress stages are a loose analogy for training, not a law
 
@@ -212,7 +212,7 @@ Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sourc
 
 A 2020 review notes that Selye built the syndrome from rodent studies using toxic stressors, that normal exercise in humans has never been shown to produce it, and that it gives no strong case that periodised training is necessary. A 2018 paper argues stress science has since moved on. Another 2018 review defends the syndrome as a useful framework, since disturbance does drive adaptation. McDonald sides with the critics: in Selye's work exhaustion meant death, nothing like a lifter who is tired or slightly weaker. What holds up is the general stress response, in which stressors add together.
 
-Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training)
+Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019m](https://bodyrecomposition.com/training/supercompensation-of-training)
 
 ### Take at least one day a week completely off
 
@@ -223,7 +223,7 @@ Most athletes already do it, those who never rest tend to pay later, and a week 
 - Mark one day a week as no training. A walk is fine.
 - If lifting plus cardio fills seven days, put some cardio after lifting to free a day.
 
-Rest days and easy days · Beginner · Coaching practice · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007h](https://bodyrecomposition.com/training/the-importance-of-rest), [Kreher 2012](https://doi.org/10.1177/1941738111434406)
+Rest days and easy days · Beginner · Coaching practice · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007k](https://bodyrecomposition.com/training/the-importance-of-rest), [Kreher 2012](https://doi.org/10.1177/1941738111434406)
 
 ### Easy sessions reduce soreness a little; a performance benefit is unproven
 
@@ -254,7 +254,7 @@ McDonald's survey of sports comes out the same nearly everywhere: most work is e
 - Count the hard sessions each lift or muscle gets in a week, and cap it at two.
 - Put at least one easier day between hard sessions for the same lift.
 
-Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2008q](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Foster 1998](https://doi.org/10.1097/00005768-199807000-00023)
+Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2008r](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Foster 1998](https://doi.org/10.1097/00005768-199807000-00023)
 
 ### Set the light and medium days as a share of the heavy day's weight
 
@@ -368,7 +368,7 @@ In 19 strength-trained athletes, 3 or 5 days without training preserved lower-bo
 - Do not fear a short break for illness, travel or planned rest.
 - After a break, give technical lifts one session to settle before judging them.
 
-Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007h](https://bodyrecomposition.com/training/the-importance-of-rest)
+Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007k](https://bodyrecomposition.com/training/the-importance-of-rest)
 
 ### Strength loss grows with time off and is larger in older and inactive people
 
@@ -569,7 +569,7 @@ The deplete-then-overshoot idea came from glycogen research, and glycogen does b
 
 - Aim for repeatable sessions that progress, not for maximum disruption.
 
-Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
+Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019m](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
 
 ### Turning a recovery session into a workout
 
@@ -591,7 +591,7 @@ McDonald's observation is that most people try to go hard too often and land at 
 - Mark each session hard, medium or easy in your plan, and check that all three appear.
 - Follow two or three hard weeks with an easier one.
 
-Hard, easy and medium days · Beginner · Coaching practice · Sources: [McDonald 2008q](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
+Hard, easy and medium days · Beginner · Coaching practice · Sources: [McDonald 2008r](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
 
 ### Taking the light and medium days to failure
 
@@ -721,7 +721,7 @@ Each model draws a similar curve but leads to different advice. McDonald argues 
 | Fitness-fatigue (two-factor) | Each session adds fitness and fatigue; fatigue fades faster | Explains tapers, easy weeks and bests after a short break | Fitted a season of data from nine swimmers, but with wide uncertainty in its parameters |
 | General adaptation syndrome | Stress brings alarm, then resistance, then exhaustion | All stressors draw on one general stress response | Built on rodents and toxic stressors; never shown with normal exercise in humans |
 
-Thin evidence · Sources: [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
+Thin evidence · Sources: [McDonald 2019m](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
 
 ## Planned rest at four time scales
 
@@ -734,7 +734,7 @@ Rest is scheduled weekly, inside each block, between blocks and yearly. The inte
 | Between blocks | About five days with no training at all | After each 10 to 16 week block, or every 3 to 4 months | Physical and mental reset before the next block |
 | Across the year | Two to four weeks of light or different activity | Once a year, after the main season or goal | Start the next year fresh without losing much fitness |
 
-Coaching practice · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007h](https://bodyrecomposition.com/training/the-importance-of-rest), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y)
+Coaching practice · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007k](https://bodyrecomposition.com/training/the-importance-of-rest), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y)
 
 ## Coming back after a break: what to expect by time away
 

@@ -1411,6 +1411,330 @@
    "do": [
     "If you take more sets to failure, cut sets or sessions to make room (McDonald's practice)."
    ]
+  },
+  {
+   "id": "hyp-bodybuilder-fibre-force",
+   "type": "note",
+   "title": "Bodybuilders' fibres were the largest but made the least force for their size",
+   "topic": "signals",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "meijer-2015",
+    "mcdonald-sarcoplasmic"
+   ],
+   "take": "In single thigh fibres, bodybuilders' were far bigger than power athletes', yet produced less force per unit of area than either power athletes' or control subjects'.",
+   "body": "Fibres from the vastus lateralis of 12 bodybuilders (high volume, low to moderate loads), 6 power athletes and 14 controls were tested one by one. Bodybuilders' fibre area was 67% above the power athletes' and 88% above the controls'. They produced 32% more absolute force than the controls' fibres, but force per unit of area was 62% and 41% lower; the authors suggest less densely packed contractile protein. This compares different people at one time, so it cannot show that the training caused it. McDonald's article adds that most of them, 9 of 12, said they used anabolic steroids."
+  },
+  {
+   "id": "hyp-responders-fibre-size",
+   "type": "note",
+   "title": "Trained men with smaller fast-twitch fibres at the start grew more on one plan",
+   "topic": "signals",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "haun-2019-predictors",
+    "mcdonald-sarcoplasmic"
+   ],
+   "take": "In 30 trained college-aged men on six weeks of high-volume training, a higher share of type II fibres and smaller type II fibres at the start went with more growth.",
+   "body": "All 30 men, with about five years of lifting behind them, did the same programme. The 10 lowest responders had begun with type II fibres 18% larger than the 10 highest. Starting type II share and size each accounted for only about 15% and 21% of the variation in growth, and the authors call their sample limited. McDonald reads this as fibres already near their size having less room left. That is his interpretation, not something the study tested."
+  },
+  {
+   "id": "hyp-num-responder-spread",
+   "type": "number",
+   "title": "Change in size for the top and bottom responders to one six-week plan",
+   "topic": "signals",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "haun-2019-predictors"
+   ],
+   "value": "+10.7 and -2.1",
+   "unit": "% change, thigh size score",
+   "sort": 10.7,
+   "take": "The 10 best and 10 worst of 30 trained young men on identical high-volume training: one group grew clearly, the other lost a little."
+  },
+  {
+   "id": "hyp-term-satellite-cells",
+   "type": "term",
+   "title": "Satellite cells",
+   "topic": "signals",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "kadi-2004"
+   ],
+   "take": "Stem cells that sit against the outside of each muscle fibre. Once activated they can divide and donate nuclei. In 15 young men their count rose 31% over 90 days of heavy training and was still raised 60 days after stopping."
+  },
+  {
+   "id": "hyp-term-myonuclear-domain",
+   "type": "term",
+   "title": "Myonuclear domain",
+   "topic": "signals",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "kadi-2004"
+   ],
+   "take": "The share of a fibre served by one nucleus. In 15 young men it grew over 90 days of heavy training with no rise in nuclei and returned to baseline after stopping, so moderate growth needed no new nuclei."
+  },
+  {
+   "id": "hyp-fibre-number-steroid-users",
+   "type": "note",
+   "title": "Signs of new muscle fibres in lifters turned up mainly in steroid users",
+   "topic": "signals",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "kadi-1999",
+    "mcdonald-hyperplasia"
+   ],
+   "take": "Trapezius biopsies from elite powerlifters showed more markers of fibre formation in long-term steroid users than in drug-free lifters of the same level.",
+   "body": "The users had larger fibres of every type, more nuclei, more centrally placed nuclei and more fibres carrying early developmental forms of protein, which the authors read as new fibres forming. Fibre-type mix did not differ. The groups were compared at one point in time, and the authors say genetic differences cannot be excluded. This is a research finding, not guidance on drug use. Animal models that add fibres rely on methods such as round-the-clock stretch of a bird's wing, which McDonald thinks tell us little about lifting. See the basics term on hypertrophy and hyperplasia."
+  },
+  {
+   "id": "hyp-hormones-arm-trials",
+   "type": "note",
+   "title": "Two arm trials disagree on whether a hormone-raising leg session adds growth",
+   "topic": "signals",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "west-2010",
+    "ronnestad-2011",
+    "west-2012",
+    "mcdonald-hormones-squats"
+   ],
+   "take": "Heavy leg work raised blood hormones around arm training. One trial found no extra arm growth; a smaller one, with legs trained first, found some.",
+   "body": "In 12 young men over 15 weeks, one arm trained alone and the other followed by heavy leg work. Growth hormone, IGF-1 and testosterone rose only with the legs, yet arm area grew 12% and 10%, with no difference. In 9 subjects over 11 weeks, legs trained before one arm; both arms gained strength and muscle volume, but only that arm grew at its widest point, and its curl 1RM rose more. In 56 young men, hormone rises were at most weakly linked with gains and not with strength. McDonald's view is that growth is driven in the muscle itself."
+  },
+  {
+   "id": "hyp-num-testosterone-window",
+   "type": "number",
+   "title": "How long testosterone stayed raised after exercise",
+   "topic": "signals",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "dandrea-2020"
+   ],
+   "value": "30",
+   "unit": "minutes or less",
+   "sort": 30,
+   "take": "Across 48 studies in men, testosterone rose after moderate or hard exercise when measured within 30 minutes, not later. Light activity did not raise it."
+  },
+  {
+   "id": "hyp-mistake-squats-for-upper-body",
+   "type": "mistake",
+   "title": "Squatting to make your upper body grow through a hormone boost",
+   "topic": "signals",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "mcdonald-hormones-squats",
+    "west-2010",
+    "dandrea-2020"
+   ],
+   "take": "The testosterone rise after hard exercise is brief. McDonald's view is that chest and arms grow from the work they do themselves; the trials are mixed.",
+   "body": "Heavy squatters are often big all over. McDonald's explanation is that people who train legs that hard tend to train everything hard, and that squats and deadlifts also work the back, and the arms that steady the bar. In his view only lifters who compete in the squat must do it; others can pick leg exercises that suit their build. One small trial did find extra arm growth when legs were trained first; see the entry on hormone-raising leg sessions and arm growth, and the testosterone time-window figure.",
+   "do": [
+    "Train your legs for your legs and your sport, not to raise hormones for the upper body (McDonald's view)."
+   ]
+  },
+  {
+   "id": "hyp-growth-hormone-strength",
+   "type": "note",
+   "title": "Growth hormone raised lean mass but not strength in fit young adults",
+   "topic": "signals",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "liu-2008",
+    "yarasheski-1994",
+    "mcdonald-hormones-squats"
+   ],
+   "take": "In a systematic review of controlled trials, healthy young people given growth hormone gained lean mass, but strength and exercise capacity did not seem to improve.",
+   "body": "The review pooled 27 study samples of fit people aged 13 to 45. Lean mass rose 2.1 kg against no treatment, but recipients more often had soft-tissue swelling and fatigue, and few studies measured performance. An older review found exercising young adults gained similar muscle size and strength with growth hormone or placebo. McDonald recounts older studies in which short-rest sessions raised growth hormone more, and argues that rise matters little for growth. This is not guidance on use; hormone treatment belongs with a doctor."
+  },
+  {
+   "id": "hyp-heavy-low-volume-proteins",
+   "type": "note",
+   "title": "Heavy low-volume training did not raise muscle energy proteins in one small trial",
+   "topic": "signals",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "vann-2020",
+    "mcdonald-sarcoplasmic"
+   ],
+   "take": "Ten weeks of heavy, low-volume lifting grew type II fibres in 15 trained men without the rise in energy-system proteins this lab saw after very high volume.",
+   "body": "The men trained the whole body at 68 to 90% of 1RM. Type II fibre area and squat strength rose; sarcoplasmic protein concentration and muscle fluid did not change, and in the 10 men given protein profiling, metabolic proteins were unaffected. Actin abundance fell 3.2%, myosin trended down and whole-body fat-free mass fell. McDonald cites the trial as support for heavy loads favouring contractile protein, but its abstract does not show that. The high-volume study from the same lab is in the extreme-volume fluid entry."
+  },
+  {
+   "id": "hyp-prog-heavy-then-light",
+   "type": "note",
+   "title": "McDonald pairs heavier sets with lighter, short-rest sets for the same muscle",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-sarcoplasmic",
+    "mcdonald-periodization-1",
+    "lopez-2021"
+   ],
+   "take": "His hypertrophy plans open each muscle with a few heavier sets, then add higher-rep sets on short rests. It is his practice, not a tested rule.",
+   "body": "McDonald's view is that the heavy sets supply tension, which he links to contractile protein, and the light work supplies fatigue, which he links to fluid, stored fuel and other non-contractile parts of the fibre. Older powerbuilding plans had the same shape. His articles predate pooled trials showing light and heavy loads build similar muscle when sets are hard (see that entry). No trial cited here tests the pairing against either alone. It does cover strength, which needs heavier work.",
+   "do": [
+    "If you want a stronger 1RM as well as size, start each muscle with a few heavier sets (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "hyp-term-concurrent-periodisation",
+   "type": "term",
+   "title": "Concurrent periodisation",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-periodization-1"
+   ],
+   "take": "Training several qualities, such as speed, maximal strength and size, every week with a changing emphasis. Popularly called conjugate training; McDonald says the original Russian term meant something else."
+  },
+  {
+   "id": "hyp-prog-strength-block",
+   "type": "note",
+   "title": "A spell of low-rep strength work may raise the loads you later use for size",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-periodization-2",
+    "mcdonald-periodization-3",
+    "currier-2023"
+   ],
+   "take": "McDonald's view is that a few weeks of heavy sets of five or fewer build strength that lets you use more weight in later higher-rep work.",
+   "body": "Loads above 80% of 1RM gave the largest strength gains in a network meta-analysis (see the heavier-loads entry). McDonald argues that much of that strength is neural, and that a stronger lifter then puts more tension through the muscle in later hypertrophy blocks. He describes his own scheme of four training zones and how to rotate them in his 2007 series. No trial cited here tests this sequence, and periodised plans helped strength, not size, in pooled trials (see the periodisation entry).",
+   "do": [
+    "Before your first block of sets under five reps, spend at least six weeks on sets of about four to six (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "hyp-split-legs-before-pull",
+   "type": "note",
+   "title": "Avoid a hard back day right before squats or deadlifts",
+   "topic": "frequency",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-split-sequencing"
+   ],
+   "take": "A tired upper back limits squats, deadlifts and Romanian deadlifts before the legs are done. McDonald orders a split so heavy pulling does not fall the day before them.",
+   "body": "In his view, upper-back and shoulder-girdle fatigue makes the bar harder to hold in position and lets form slip on hinge and squat patterns. Leg presses and leg curls need little upper-back support and suffer less. On an upper and lower split run on back-to-back days, he puts the lower day first, since general tiredness from legs costs the upper day less. A pull day placed before legs raises the same problem. These are coaching judgments, not trial results.",
+   "do": [
+    "On consecutive training days, put the lower-body day before the upper-body day (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "hyp-split-triceps-long-head",
+   "type": "note",
+   "title": "The long head of the triceps also works on pulling days",
+   "topic": "frequency",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-split-sequencing"
+   ],
+   "take": "It crosses the shoulder and helps draw the arm down and back. McDonald's view is that rows and pulldowns therefore tire it as well as presses.",
+   "body": "McDonald raises this for lifters whose triceps give out first when pressing. A pull day the day before a push day can cost pressing performance, and the reverse can happen too. For a push, pull and legs plan run once a week, he places the legs day between the two upper-body days. See the recovery entry on six-day splits for shoulder loading across the week."
+  },
+  {
+   "id": "hyp-split-rotating-calendar",
+   "type": "mistake",
+   "title": "Starting a rotating split without checking how sessions fall over two weeks",
+   "topic": "frequency",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-split-sequencing"
+   ],
+   "take": "Three workouts rotated over four training days land on different weekdays each week, so a poor pairing may only show up every other week.",
+   "body": "On that rotation each muscle comes round about every fifth day, but the order of neighbouring sessions keeps changing. McDonald's advice is to draw the calendar for two weeks and look for any session followed the next day by one that needs the muscles it has just tired. Plans that train each muscle once a week avoid most of these clashes. The recovery entry on six-day splits covers the arm day that spoils a following chest and back day.",
+   "do": [
+    "Before you commit to a split, mark each day's main muscles on a two-week calendar (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "hyp-prog-three-dials",
+   "type": "note",
+   "title": "McDonald: a plan that raises volume, effort or frequency must give ground on another",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-popular-programs",
+    "currier-2023"
+   ],
+   "take": "McDonald's view is that well-known hypertrophy plans differ mainly in which of the three they push, and end up in a similar place over a couple of years.",
+   "body": "One popular plan trains each muscle often with mostly submaximal sets; another trains each muscle every fifth day or so with sets driven past failure; his own sits between them on frequency and effort, with slightly more work per session than either. He judges that any of them, run for two years with steady load progression and enough food, would give similar results. A network meta-analysis of 119 trials likewise found all 12 prescriptions built muscle comparably (see that entry). He chooses between plans by temperament, recovery and equipment.",
+   "do": [
+    "Pick a plan by how much effort per set, gym time and frequency you can sustain for months."
+   ]
+  },
+  {
+   "id": "hyp-term-strategic-deconditioning",
+   "type": "term",
+   "title": "Strategic deconditioning",
+   "topic": "programming",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "mcdonald-popular-programs",
+    "ogasawara-2013"
+   ],
+   "take": "A planned week or so off, used in one popular plan to undo the repeated bout effect so muscle responds afresh. McDonald's view is that it fails. In an indirect test, three-week breaks in 14 young men matched continuous training, no better."
+  },
+  {
+   "id": "hyp-effort-bar-speed-slows",
+   "type": "note",
+   "title": "Rep speed drops as a set nears failure, so a set that never slowed was probably not close",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "izquierdo-2006",
+    "mcdonald-failure-weight-room-3",
+    "mcdonald-failing-to-fail"
+   ],
+   "take": "In sets to failure, bar speed fell well before the last rep. McDonald's view is that when every rep moved at the same speed, the set most likely ended short of failure.",
+   "body": "Thirty-six physically active men lifted as fast as they could in bench press and parallel squat sets to failure at 60 to 75% of 1RM. Average rep speed fell significantly after 34 to 40% of the reps on the bench and 48 to 69% on the squat, in the same pattern at every load. In McDonald's timings of filmed sets to true failure, the final rep lasted several times longer than the opening one. He also saw some pulling and shoulder exercises fail with little slowing, so speed is a guide, not a rule. Ending a set once reps slow past a set tempo stops it short of failure.",
+   "do": [
+    "Film or watch your last reps; if they moved as fast as the first, treat the set as probably short of failure."
+   ]
+  },
+  {
+   "id": "hyp-term-muscular-exhaustion",
+   "type": "term",
+   "title": "Muscular exhaustion",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-failure-definitions"
+   ],
+   "take": "The state in which a muscle can produce no useful force at all. Failure on a set is narrower: the muscle can no longer meet that load but could still move a lighter one. Lifting sets almost never reach exhaustion."
+  },
+  {
+   "id": "hyp-term-failure-types",
+   "type": "term",
+   "title": "Concentric, isometric and eccentric failure",
+   "topic": "effort",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-failure-weight-room-1"
+   ],
+   "take": "Being unable to lift the weight, to hold it still, or to lower it under control. A muscle can lower more than it holds and hold more than it lifts, so they come in that order. Nearly all sets stop at concentric failure."
   }
  ],
  "sources": {
@@ -3130,6 +3454,427 @@
    "url": "https://bodyrecomposition.com/research/muscle-fiber-adaptations",
    "retrieved": "2026-11-16",
    "support": "His reading of the failure-versus-percentage trial, with details he reports from the paper (last set to failure, matched sets, sprints on off days, the authors' recovery remark): recovery, not stimulus, was the likely limit."
+  },
+  "meijer-2015": {
+   "type": "trial",
+   "authors": [
+    "Meijer JP",
+    "Jaspers RT",
+    "Rittweger J",
+    "Seynnes OR",
+    "Kamandulis S",
+    "Brazaitis M",
+    "Skurvydas A",
+    "Pišot R",
+    "Šimunič B",
+    "Narici MV",
+    "Degens H"
+   ],
+   "year": 2015,
+   "title": "Single muscle fibre contractile properties differ between body-builders, power athletes and control subjects",
+   "journal": "Experimental Physiology",
+   "volume": "100",
+   "issue": "11",
+   "pages": "1331-1341",
+   "doi": "10.1113/EP085267",
+   "pmid": "26388513",
+   "support": "Fibre cross-sectional area was 67 and 88% (P < 0.01) larger in BBs than in PAs and Cs, respectively ... The specific tension of BB fibres was 62 and 41% lower than that of PA and C fibres (P < 0.05), respectively."
+  },
+  "haun-2019-predictors": {
+   "type": "trial",
+   "authors": [
+    "Haun CT",
+    "Vann CG",
+    "Mobley CB",
+    "Osburn SC",
+    "Mumford PW",
+    "Roberson PA",
+    "Romero MA",
+    "Fox CD",
+    "Parry HA",
+    "Kavazis AN",
+    "Moon JR",
+    "Young KC",
+    "Roberts MD"
+   ],
+   "year": 2019,
+   "title": "Pre-training Skeletal Muscle Fiber Size and Predominant Fiber Type Best Predict Hypertrophic Responses to 6 Weeks of Resistance Training in Previously Trained Young Men",
+   "journal": "Frontiers in Physiology",
+   "volume": "10",
+   "pages": "297",
+   "doi": "10.3389/fphys.2019.00297",
+   "pmid": "30971942",
+   "support": "PRE-to-W6 HIGH and LOW responders exhibited a composite hypertrophy change of +10.7 ± 3.2 and -2.1 ± 1.6% ... LOW responders exhibited greater PRE type II fCSA (+18%, p = 0.022)."
+  },
+  "kadi-2004": {
+   "type": "trial",
+   "authors": [
+    "Kadi F",
+    "Schjerling P",
+    "Andersen LL",
+    "Charifi N",
+    "Madsen JL",
+    "Christensen LR",
+    "Andersen JL"
+   ],
+   "year": 2004,
+   "title": "The effects of heavy resistance training and detraining on satellite cells in human skeletal muscles",
+   "journal": "The Journal of Physiology",
+   "volume": "558",
+   "issue": "3",
+   "pages": "1005-1012",
+   "doi": "10.1113/jphysiol.2004.065904",
+   "pmid": "15218062",
+   "support": "Satellite cell content increased by 19% at 30 days and by 31% at 90 days of training ... There were no significant alterations in the number of myonuclei ... The fibre area controlled by each myonucleus gradually increased throughout the training period and returned to pre-training values during detraining."
+  },
+  "kadi-1999": {
+   "type": "cohort",
+   "authors": [
+    "Kadi F",
+    "Eriksson A",
+    "Holmner S",
+    "Thornell LE"
+   ],
+   "year": 1999,
+   "title": "Effects of anabolic steroids on the muscle cells of strength-trained athletes",
+   "journal": "Medicine & Science in Sports & Exercise",
+   "volume": "31",
+   "issue": "11",
+   "pages": "1528-1534",
+   "doi": "10.1097/00005768-199911000-00006",
+   "pmid": "10589853",
+   "support": "The number of myonuclei and the proportion of central nuclei were also significantly higher in the reported steroid users ... the frequency of fibers expressing developmental protein isoforms was significantly higher in the reported steroid users group."
+  },
+  "west-2010": {
+   "type": "trial",
+   "authors": [
+    "West DWD",
+    "Burd NA",
+    "Tang JE",
+    "Moore DR",
+    "Staples AW",
+    "Holwerda AM",
+    "Baker SK",
+    "Phillips SM"
+   ],
+   "year": 2010,
+   "title": "Elevations in ostensibly anabolic hormones with resistance exercise enhance neither training-induced muscle hypertrophy nor strength of the elbow flexors",
+   "journal": "Journal of Applied Physiology",
+   "volume": "108",
+   "issue": "1",
+   "pages": "60-67",
+   "doi": "10.1152/japplphysiol.01147.2009",
+   "pmid": "19910330",
+   "support": "Muscle cross-sectional area (CSA) increased by 12% in LH and 10% in HH (P < 0.001) with no difference between conditions."
+  },
+  "ronnestad-2011": {
+   "type": "trial",
+   "authors": [
+    "Rønnestad BR",
+    "Nygaard H",
+    "Raastad T"
+   ],
+   "year": 2011,
+   "title": "Physiological elevation of endogenous hormones results in superior strength training adaptation",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "111",
+   "issue": "9",
+   "pages": "2249-2259",
+   "doi": "10.1007/s00421-011-1860-0",
+   "pmid": "21327794",
+   "support": "only L + A achieved increase in CSA at the part of the arm flexors with largest cross sectional area (p < 0.001), while no changes occurred in A. L + A had superior relative improvement in 1RM biceps curl."
+  },
+  "west-2012": {
+   "type": "cohort",
+   "authors": [
+    "West DWD",
+    "Phillips SM"
+   ],
+   "year": 2012,
+   "title": "Associations of exercise-induced hormone profiles and gains in strength and hypertrophy in a large cohort after weight training",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "112",
+   "issue": "7",
+   "pages": "2693-2702",
+   "doi": "10.1007/s00421-011-2246-z",
+   "pmid": "22105707",
+   "support": "the acute exercise-induced systemic hormonal responses of cortisol and GH are weakly correlated with resistance training-induced changes in fibre CSA and LBM (cortisol only), but not with changes in strength."
+  },
+  "dandrea-2020": {
+   "type": "meta-analysis",
+   "authors": [
+    "D’Andrea S",
+    "Spaggiari G",
+    "Barbonetti A",
+    "Santi D"
+   ],
+   "year": 2020,
+   "title": "Endogenous transient doping: physical exercise acutely increases testosterone levels-results from a meta-analysis",
+   "journal": "Journal of Endocrinological Investigation",
+   "volume": "43",
+   "issue": "10",
+   "pages": "1349-1371",
+   "doi": "10.1007/s40618-020-01251-3",
+   "pmid": "32297287",
+   "n_studies": 48,
+   "n_participants": 569,
+   "support": "the testosterone increase was evident when measured immediately at the end of the exercise and within 30 min (p < 0.001), but not after 30 min (p = 0.930)."
+  },
+  "liu-2008": {
+   "type": "systematic-review",
+   "authors": [
+    "Liu H",
+    "Bravata DM",
+    "Olkin I",
+    "Friedlander A",
+    "Liu V",
+    "Roberts B",
+    "Bendavid E",
+    "Saynina O",
+    "Salpeter SR",
+    "Garber AM",
+    "Hoffman AR"
+   ],
+   "year": 2008,
+   "title": "Systematic Review: The Effects of Growth Hormone on Athletic Performance",
+   "journal": "Annals of Internal Medicine",
+   "volume": "148",
+   "issue": "10",
+   "pages": "747-758",
+   "doi": "10.7326/0003-4819-148-10-200805200-00215",
+   "pmid": "18347346",
+   "support": "Lean body mass increased in growth hormone recipients compared with participants who did not receive growth hormone (increase, 2.1 kg [95% CI, 1.3 to 2.9 kg]), but strength and exercise capacity did not seem to improve."
+  },
+  "yarasheski-1994": {
+   "type": "review",
+   "authors": [
+    "Yarasheski KE"
+   ],
+   "year": 1994,
+   "title": "Growth Hormone Effects on Metabolism, Body Composition, Muscle Mass, and Strength",
+   "journal": "Exercise and Sport Sciences Reviews",
+   "volume": "22",
+   "issue": "1",
+   "pages": "285-312",
+   "doi": "10.1249/00003677-199401000-00013",
+   "pmid": "7925547",
+   "support": "On the basis of the similar increases in muscle protein synthesis, muscle cross-sectional area, and muscle strength observed in placebo and GH-treated exercising young adults, it is doubtful that the nitrogen retention associated with daily GH treatment results in an increase in contractile protein."
+  },
+  "vann-2020": {
+   "type": "trial",
+   "authors": [
+    "Vann CG",
+    "Osburn SC",
+    "Mumford PW",
+    "Roberson PA",
+    "Fox CD",
+    "Sexton CL",
+    "Johnson MR",
+    "Johnson JS",
+    "Shake J",
+    "Moore JH",
+    "Millevoi K",
+    "Beck DT",
+    "Badisa VLD",
+    "Mwashote BM",
+    "Ibeanusi V",
+    "Singh RK",
+    "Roberts MD"
+   ],
+   "year": 2020,
+   "title": "Skeletal Muscle Protein Composition Adaptations to 10 Weeks of High-Load Resistance Training in Previously-Trained Males",
+   "journal": "Frontiers in Physiology",
+   "volume": "11",
+   "pages": "259",
+   "doi": "10.3389/fphys.2020.00259",
+   "pmid": "32292355",
+   "support": "No changes in sarcoplasmic protein concentrations or muscle tissue percent fluid were observed. Myosin heavy chain protein abundance trended downward (-2.9 ± 5.8%, p = 0.069) and actin protein abundance decreased (-3.2 ± 5.3%, p = 0.034)."
+  },
+  "mcdonald-sarcoplasmic": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2019,
+   "title": "Another Look at Sarcoplasmic Hypertrophy",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/is-sarcoplasmic-hypertrophy-real",
+   "retrieved": "2026-11-16",
+   "support": "His review of the bodybuilder fibre-force comparison (and its steroid caveat), the responder data, the high-load protein trial, and his practice of pairing heavy and lighter fatiguing work."
+  },
+  "mcdonald-hyperplasia": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2016,
+   "title": "Hyperplasia vs. Hypertrophy in Skeletal Muscle",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/does-hyperplasia-occur-in-muscle",
+   "retrieved": "2026-11-16",
+   "support": "His survey of animal fibre-number models and the steroid-user trapezius biopsies, and his view that any fibre-number change is small and outside a lifter's control."
+  },
+  "mcdonald-hormones-squats": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "The Hormonal Response to Squats and Muscle Growth",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/hormonal-response-squats-growth",
+   "retrieved": "2026-11-16",
+   "support": "His case that the brief hormone rise after big lifts does not drive growth, the hormone trials he cites, and his reasons why heavy squatters tend to be big all over."
+  },
+  "mcdonald-periodization-1": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2007,
+   "title": "Periodization for Bodybuilders: Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/periodization-for-bodybuilders",
+   "retrieved": "2026-11-16",
+   "support": "His overview of linear, undulating and concurrent models, his terminology point on conjugate training, and the heavy-then-lighter session layout."
+  },
+  "mcdonald-periodization-2": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2007,
+   "title": "Periodization for Bodybuilders: Part 2",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/periodization-for-bodybuilders-part-2",
+   "retrieved": "2026-11-16",
+   "support": "His argument that low-rep strength phases help bodybuilders later handle heavier loads, and his own four-zone scheme."
+  },
+  "mcdonald-periodization-3": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2007,
+   "title": "Periodization for Bodybuilders: Part 3",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/periodization-for-bodybuilders-part-3",
+   "retrieved": "2026-11-16",
+   "support": "His advice to spend at least six weeks on heavy sets of about four to six before a first phase of sets under five."
+  },
+  "mcdonald-split-sequencing": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2015,
+   "title": "Split Routine Sequencing Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/split-routine-sequencing",
+   "retrieved": "2026-11-16",
+   "support": "His analysis of which workout orders clash within a week: upper-back fatigue before hinge and squat days, triceps long-head overlap, and rotating three-way splits."
+  },
+  "ogasawara-2013": {
+   "type": "rct",
+   "authors": [
+    "Ogasawara R",
+    "Yasuda T",
+    "Ishii N",
+    "Abe T"
+   ],
+   "year": 2013,
+   "title": "Comparison of muscle hypertrophy following 6-month of continuous and periodic strength training",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "113",
+   "issue": "4",
+   "pages": "975-985",
+   "doi": "10.1007/s00421-012-2511-9",
+   "pmid": "23053130",
+   "n_participants": 14,
+   "support": "14 young men were randomly divided into a CTR group and a PTR group. The results indicate that 3-week detraining/6-week retraining cycles result in muscle hypertrophy similar to that occurring with continuous resistance training after 24 weeks."
+  },
+  "mcdonald-popular-programs": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2008,
+   "title": "A Look at Some Popular Hypertrophy Programs",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/muscle-gain/popular-hypertrophy-programs",
+   "retrieved": "2026-11-16",
+   "support": "His comparison of three plans by how each balances volume, effort and frequency, his judgment that results converge over time, and his rejection of planned deconditioning."
+  },
+  "izquierdo-2006": {
+   "type": "trial",
+   "authors": [
+    "Izquierdo M",
+    "González-Badillo JJ",
+    "Häkkinen K",
+    "Ibáñez J",
+    "Kraemer WJ",
+    "Altadill A",
+    "Eslava J",
+    "Gorostiaga EM"
+   ],
+   "year": 2006,
+   "title": "Effect of Loading on Unintentional Lifting Velocity Declines During Single Sets of Repetitions to Failure During Upper and Lower Extremity Muscle Actions",
+   "journal": "International Journal of Sports Medicine",
+   "volume": "27",
+   "issue": "9",
+   "pages": "718-724",
+   "doi": "10.1055/s-2005-872825",
+   "pmid": "16944400",
+   "n_participants": 36,
+   "support": "The significant reductions observed in the average repetition velocity ... were observed at higher percentage of the total number of repetitions performed in parallel squat (48 - 69 %) than in bench press (34 - 40 %) actions."
+  },
+  "mcdonald-failure-definitions": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "What is Muscular Failure: Definitions",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/muscular-failure-definitions",
+   "retrieved": "2026-11-16",
+   "support": "His distinction between fatigue, failure at a given task and true exhaustion of a muscle."
+  },
+  "mcdonald-failure-weight-room-1": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "What is Muscular Failure: The Weight Room Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/muscular-failure-weight-room-part-1",
+   "retrieved": "2026-11-16",
+   "support": "His breakdown of failure into lifting, holding and lowering phases, and why sets almost always end at failure to lift."
+  },
+  "mcdonald-failure-weight-room-3": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "What is Muscular Failure: The Weight Room Part 3",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/what-is-muscular-failure-the-weight-room-part-3",
+   "retrieved": "2026-11-16",
+   "support": "His case that bar speed must slow near true failure, and that ending a set when reps fall below a target tempo stops it early."
+  },
+  "mcdonald-failing-to-fail": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "What is Muscular Failure: Failing to Fail",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/what-is-muscular-failure-failing-to-fail",
+   "retrieved": "2026-11-16",
+   "support": "His timed videos of sets to true failure, with final reps far slower than the first, and his note that some pulling sets failed abruptly."
   }
  }
 }
