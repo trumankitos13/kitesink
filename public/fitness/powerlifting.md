@@ -268,7 +268,7 @@ Thirty-two resistance-trained men squatted twice a week for six weeks at 80% of 
 
 - On one set a session, check within three weeks whether your squat is responding, as the authors advise.
 
-Frequency and volume · Intermediate · Thin evidence · Sources: [Marshall 2011](https://doi.org/10.1007/s00421-011-1944-x), [McDonald 2011c](https://bodyrecomposition.com/research/squat-volume-and-strength-gains)
+Frequency and volume · Intermediate · Thin evidence · Sources: [Marshall 2011](https://doi.org/10.1007/s00421-011-1944-x), [McDonald 2011d](https://bodyrecomposition.com/research/squat-volume-and-strength-gains)
 
 ### McDonald argues daily maxing does not carry over from weightlifting to powerlifting
 
@@ -314,7 +314,7 @@ Periodisation and peaking · Advanced · Thin evidence · Sources: [Zourdos 2016
 
 A 2017 meta-analysis pooled 58 measurements from 24 studies of healthy people in an untrained state. Heritability averaged 0.52, similar for grip, isometric, isotonic and isokinetic strength and for jumping (0.49 to 0.56), though results varied widely between studies. The authors read this as genetic and environmental influence being comparable, with environment counting for more at older ages. These are baseline strength tests, not gains from training or meet totals. McDonald's view is that genes set a limit that work cannot pass; the response-spread entry covers trainability.
 
-Talent and practice · Intermediate · Some support · Sources: [Zempo 2017](https://doi.org/10.1111/sms.12804), [McDonald 2011e](https://bodyrecomposition.com/training/can-hard-work-beat-talent)
+Talent and practice · Intermediate · Some support · Sources: [Zempo 2017](https://doi.org/10.1111/sms.12804), [McDonald 2011f](https://bodyrecomposition.com/training/can-hard-work-beat-talent)
 
 ### On the same 12-week plan, arm strength gains ranged from none to more than double
 
@@ -324,7 +324,7 @@ Subjects at eight centres followed the same progressive elbow-flexor programme. 
 
 - Compare your lifts with your own past numbers, not with another lifter's rate (McDonald's advice).
 
-Talent and practice · Beginner · Thin evidence · Sources: [Hubal 2005](https://pubmed.ncbi.nlm.nih.gov/15947721/), [McDonald 2011e](https://bodyrecomposition.com/training/can-hard-work-beat-talent), [McDonald 2016i](https://bodyrecomposition.com/training/determinants-strength-performance-2)
+Talent and practice · Beginner · Thin evidence · Sources: [Hubal 2005](https://pubmed.ncbi.nlm.nih.gov/15947721/), [McDonald 2011f](https://bodyrecomposition.com/training/can-hard-work-beat-talent), [McDonald 2016i](https://bodyrecomposition.com/training/determinants-strength-performance-2)
 
 ### Treat warm-up sets as focused technique practice, not filler
 

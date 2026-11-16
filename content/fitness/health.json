@@ -32,6 +32,10 @@
   {
    "id": "markers",
    "label": "Health markers"
+  },
+  {
+   "id": "evidence",
+   "label": "Reading health studies"
   }
  ],
  "entries": [
@@ -983,6 +987,166 @@
      "Near your maximum"
     ]
    ]
+  },
+  {
+   "id": "hlth-t-observational",
+   "type": "term",
+   "title": "Observational study (epidemiology)",
+   "topic": "evidence",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [],
+   "take": "A study that records what people already eat or do and then follows who becomes ill, without assigning anything. It shows which things go together, not which causes which. Cohort studies are the common kind."
+  },
+  {
+   "id": "hlth-t-confounding",
+   "type": "term",
+   "title": "Confounding and residual confounding",
+   "topic": "evidence",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "fewell-2007"
+   ],
+   "take": "Confounding is a third factor linked to both an exposure and an outcome. Residual confounding is what is left when such factors are measured badly or missed. In simulations it alone produced links of commonly reported size."
+  },
+  {
+   "id": "hlth-t-healthy-user",
+   "type": "term",
+   "title": "Healthy-user effect",
+   "topic": "evidence",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "shrank-2011"
+   ],
+   "take": "People who keep up one preventive habit, such as a screening test or a prescribed tablet, tend to look after their health in other ways too. In observational studies this can make the habit look more protective than it is."
+  },
+  {
+   "id": "hlth-ffq-attenuation",
+   "type": "note",
+   "title": "Food-frequency questionnaires blur diet and disease links",
+   "topic": "evidence",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "kipnis-2003",
+    "hu-1999",
+    "mcdonald-epidemiology"
+   ],
+   "take": "Checked against biomarkers in 484 volunteers, questionnaire error was big enough that a true doubling of risk from energy or protein intake would look like 1.1 or less.",
+   "body": "A food-frequency questionnaire asks how often you ate a list of foods over past months. The OPEN study in Maryland compared one with doubly labelled water and urine nitrogen. The error mostly hid real links rather than inventing them, and expressing protein relative to energy cut the blur (a true 2 read as about 1.3). In the Nurses' Health Study, averaging repeated questionnaires gave stronger links with heart disease than baseline diet alone. McDonald's view is that diet data recalled from memory are too weak to build health claims on. For the size of under-reporting, see the under-reporting entry.",
+   "do": [
+    "Check how diet was measured, and how often, before trusting a diet and disease link."
+   ]
+  },
+  {
+   "id": "hlth-relative-vs-absolute",
+   "type": "note",
+   "title": "A relative risk sounds bigger than the absolute difference behind it",
+   "topic": "evidence",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "akl-2011",
+    "zhong-2019",
+    "mcdonald-epidemiology"
+   ],
+   "take": "Relative risk is a ratio between groups; absolute risk is the real gap in cases. In a Cochrane review of 35 studies, people saw relative reductions as larger and more persuasive.",
+   "body": "The 2019 egg cohort that prompted McDonald's article pooled six US cohorts (29,615 adults, median 17.5 years, diet self-reported). Each extra 300 mg of dietary cholesterol a day went with a hazard ratio of 1.17 for cardiovascular disease, an absolute risk difference of 3.24% over follow-up. Each extra half egg a day gave 1.06 and 1.11%, and the egg link lost significance once cholesterol intake was adjusted for. McDonald argues such findings say little. See the hazard ratio entry for reading the ratio itself.",
+   "do": [
+    "When a headline gives a percent change in risk, look for the number of extra cases."
+   ]
+  },
+  {
+   "id": "hlth-beta-carotene-reversal",
+   "type": "note",
+   "title": "Beta-carotene looked protective in observational data and raised lung cancer in a trial",
+   "topic": "evidence",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "atbc-1994",
+    "bjelakovic-2012"
+   ],
+   "take": "Diets rich in carotenoids and high blood beta-carotene went with less lung cancer, yet a daily beta-carotene pill raised lung cancer by 18% in male smokers.",
+   "body": "The ATBC trial in Finland randomised 29,133 male smokers aged 50 to 69 and followed them for five to eight years. On 20 mg of beta-carotene a day, lung cancer incidence rose 18% and total deaths 8%, mainly from lung cancer and ischaemic heart disease. The earlier evidence came from foods and blood levels; the trial tested an isolated pill, so the two asked different questions. A Cochrane review also found beta-carotene pills raised mortality in better trials (see the antioxidant pills entry). These are trial findings; supplement decisions belong with a clinician."
+  },
+  {
+   "id": "hlth-hormone-therapy-reversal",
+   "type": "note",
+   "title": "Hormone therapy looked heart-protective in cohorts; a large trial found more heart disease",
+   "topic": "evidence",
+   "level": "advanced",
+   "confidence": "moderate",
+   "sources": [
+    "stampfer-1991",
+    "whi-2002",
+    "rossouw-2007"
+   ],
+   "take": "A 1991 overview of observational studies put estrogen users at a relative risk of 0.56 for heart disease. The WHI trial of estrogen plus progestin found more coronary events.",
+   "body": "The overview judged confounding an unlikely explanation. WHI gave 16,608 women aged 50 to 79 with a uterus one combined tablet or placebo, for 5.2 years on average. Per 10,000 woman-years there were 7 more coronary events, 8 more strokes, 8 more lung clots and 8 more breast cancers, against 6 fewer colorectal cancers and 5 fewer hip fractures; total deaths did not change. A 2007 WHI analysis saw a non-significant trend to lower coronary risk when therapy began nearer menopause; stroke risk rose regardless. These are trial findings, not advice: hormone therapy decisions belong with a clinician."
+  },
+  {
+   "id": "hlth-cohorts-vs-trials",
+   "type": "note",
+   "title": "In nutrition, cohort and trial results agreed on average but not always",
+   "topic": "evidence",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "schwingshackl-2021",
+    "ioannidis-2005",
+    "mcdonald-epidemiology"
+   ],
+   "take": "Across 97 matched diet and disease questions, cohort and trial estimates differed little on average, but single comparisons could differ widely in either direction.",
+   "body": "The 2021 analysis found a pooled ratio of risk ratios of 1.09 with a prediction interval of 0.81 to 1.46. Most gaps arose when the designs tested different things, such as a supplement in trials against blood levels in cohorts; with the same exposure, results were similar. Among highly cited clinical studies from 1990 to 2003, 5 of 6 non-randomised ones were later contradicted or overstated, against 9 of 39 randomised trials. McDonald's 2019 view is that he sets nutrition epidemiology aside altogether; his article predates this analysis, which supports caution rather than dismissal.",
+   "do": [
+    "Give a diet finding more weight when cohorts and trials testing the same exposure agree."
+   ]
+  },
+  {
+   "id": "hlth-large-effects-smoking",
+   "type": "note",
+   "title": "Cohort data settled the harm of smoking because the effect was large",
+   "topic": "evidence",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "doll-2004",
+    "fewell-2007"
+   ],
+   "take": "In 34,439 male British doctors followed for 50 years, men born 1900 to 1930 who kept smoking cigarettes died about 10 years earlier than lifelong non-smokers.",
+   "body": "Among men born around 1920, smoking from early adult life tripled the death rate at each age. Stopping at 50 halved that excess hazard, and stopping at 30 avoided almost all of it. Smoking habits were asked in 1951 and at intervals after, and the extra deaths came from diseases smoking can cause. A threefold difference is far harder to explain away than the modest ratios typical of diet cohorts, which simulations show confounding alone can produce (see the confounding entry)."
+  },
+  {
+   "id": "hlth-mistake-one-food",
+   "type": "mistake",
+   "title": "Blaming one food for a disease on the strength of a cohort headline",
+   "topic": "evidence",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "zeraatkar-2019",
+    "mcdonald-epidemiology"
+   ],
+   "take": "Foods come in eating patterns and patterns come with lifestyles, so a cohort link to one food partly reflects whatever travels with it.",
+   "body": "McDonald argues that diet and disease are multifactorial. In his reading, heavy eaters of processed and fatty meat also tend to eat fewer vegetables and differ in activity, smoking and drinking, and statistical adjustment cannot fully pull these apart. He also objects to counting lean cuts and processed meats as one food. A 2019 review of cohort studies on red and processed meat found the links with death and heart and metabolic disease very small, rated the evidence low certainty, and named residual confounding and recall bias as limits.",
+   "do": [
+    "Ask what else differed between the high and low intake groups."
+   ]
+  },
+  {
+   "id": "hlth-t-false-dilemma",
+   "type": "term",
+   "title": "False dilemma (excluding the middle)",
+   "topic": "evidence",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-excluding-middle"
+   ],
+   "take": "Arguing as if only two options exist, often a favoured one and an absurd extreme, so the favoured one wins by contrast. McDonald applies it to diet and training debates; most real choices lie on a range."
   }
  ],
  "sources": {
@@ -2380,6 +2544,333 @@
    "pmid": "32611588",
    "n_participants": 479856,
    "support": "479,856 adults. Compared with those who did not meet the guidelines, recommended muscle strengthening activity (HR 0.89) or aerobic activity (0.71) were at reduced risk of all cause mortality; even larger benefits in those engaged in both (0.60)."
+  },
+  "kipnis-2003": {
+   "type": "other",
+   "authors": [
+    "Kipnis V"
+   ],
+   "year": 2003,
+   "title": "Structure of Dietary Measurement Error: Results of the OPEN Biomarker Study",
+   "journal": "American Journal of Epidemiology",
+   "volume": "158",
+   "issue": "1",
+   "pages": "14-21",
+   "doi": "10.1093/aje/kwg091",
+   "pmid": "12835281",
+   "n_participants": 484,
+   "support": "Accounting for the reference biomarkers, the data suggest that the FFQ leads to severe attenuation in estimated disease relative risks for absolute protein or energy intake (a true relative risk of 2 would appear as 1.1 or smaller). For protein adjusted for energy intake ... a relative risk of 2 would appear as approximately 1.3."
+  },
+  "hu-1999": {
+   "type": "cohort",
+   "authors": [
+    "Hu FB",
+    "Stampfer MJ",
+    "Rimm E",
+    "Ascherio A",
+    "Rosner BA",
+    "Spiegelman D",
+    "Willett WC"
+   ],
+   "year": 1999,
+   "title": "Dietary Fat and Coronary Heart Disease: A Comparison of Approaches for Adjusting for Total Energy Intake and Modeling Repeated Dietary Measurements",
+   "journal": "American Journal of Epidemiology",
+   "volume": "149",
+   "issue": "6",
+   "pages": "531-540",
+   "doi": "10.1093/oxfordjournals.aje.a009849",
+   "pmid": "10084242",
+   "support": "Repeated assessment of diet from the Nurses' Health Study, 14 years of follow-up. Within each model, the methods using the cumulative averages in general yielded stronger associations than did those using either only baseline diet or the most recent diet."
+  },
+  "fewell-2007": {
+   "type": "other",
+   "authors": [
+    "Fewell Z",
+    "Davey Smith G",
+    "Sterne JAC"
+   ],
+   "year": 2007,
+   "title": "The Impact of Residual and Unmeasured Confounding in Epidemiologic Studies: A Simulation Study",
+   "journal": "American Journal of Epidemiology",
+   "volume": "166",
+   "issue": "6",
+   "pages": "646-655",
+   "doi": "10.1093/aje/kwm165",
+   "pmid": "17615092",
+   "support": "Nondifferential measurement error in the exposure produces bias towards the null; measurement error in confounders leads to residual confounding. With plausible assumptions, effect sizes of the magnitude frequently reported in observational epidemiologic studies can be generated by residual and/or unmeasured confounding alone."
+  },
+  "shrank-2011": {
+   "type": "review",
+   "authors": [
+    "Shrank WH",
+    "Patrick AR",
+    "Alan Brookhart M"
+   ],
+   "year": 2011,
+   "title": "Healthy User and Related Biases in Observational Studies of Preventive Interventions: A Primer for Physicians",
+   "journal": "Journal of General Internal Medicine",
+   "volume": "26",
+   "issue": "5",
+   "pages": "546-550",
+   "doi": "10.1007/s11606-010-1609-1",
+   "pmid": "21203857",
+   "support": "Numerous highly publicized observational studies of the effect of prevention on health outcomes have reported exaggerated relationships that were later contradicted by randomized controlled trials ... sources of bias related to patient behaviors or characteristics, known as the healthy user effect, the healthy adherer effect ..."
+  },
+  "zhong-2019": {
+   "type": "cohort",
+   "authors": [
+    "Zhong VW",
+    "Van Horn L",
+    "Cornelis MC",
+    "Wilkins JT",
+    "Ning H",
+    "Carnethon MR",
+    "Greenland P",
+    "Mentz RJ",
+    "Tucker KL",
+    "Zhao L",
+    "Norwood AF",
+    "Lloyd-Jones DM",
+    "Allen NB"
+   ],
+   "year": 2019,
+   "title": "Associations of Dietary Cholesterol or Egg Consumption With Incident Cardiovascular Disease and Mortality",
+   "journal": "JAMA",
+   "volume": "321",
+   "issue": "11",
+   "pages": "1081-1095",
+   "doi": "10.1001/jama.2019.1572",
+   "pmid": "30874756",
+   "n_studies": 6,
+   "n_participants": 29615,
+   "support": "Each additional 300 mg of dietary cholesterol per day: incident CVD adjusted HR 1.17, adjusted ARD 3.24%. Each additional half an egg per day: HR 1.06, ARD 1.11%. Egg associations no longer significant after adjusting for dietary cholesterol. Self-reported diet; median follow-up 17.5 years."
+  },
+  "akl-2011": {
+   "type": "systematic-review",
+   "authors": [
+    "Akl EA",
+    "Oxman AD",
+    "Herrin J",
+    "Vist GE",
+    "Terrenato I",
+    "Sperati F",
+    "Costiniuk C",
+    "Blank D",
+    "Schünemann H"
+   ],
+   "year": 2011,
+   "title": "Using alternative statistical formats for presenting risks and risk reductions",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "issue": "3",
+   "pages": "CD006776",
+   "doi": "10.1002/14651858.CD006776.pub2",
+   "pmid": "21412897",
+   "n_studies": 35,
+   "support": "35 studies, 83 comparisons. Compared with ARR, RRR had little or no difference in understanding but was perceived to be larger (SMD 0.41) and more persuasive (SMD 0.66)."
+  },
+  "atbc-1994": {
+   "type": "rct",
+   "authors": [
+    "Alpha-Tocopherol, Beta Carotene Cancer Prevention Study Group"
+   ],
+   "year": 1994,
+   "title": "The Effect of Vitamin E and Beta Carotene on the Incidence of Lung Cancer and Other Cancers in Male Smokers",
+   "journal": "New England Journal of Medicine",
+   "volume": "330",
+   "issue": "15",
+   "pages": "1029-1035",
+   "doi": "10.1056/NEJM199404143301501",
+   "pmid": "8127329",
+   "n_participants": 29133,
+   "support": "Epidemiologic evidence indicates diets high in carotenoid-rich fruits and vegetables and high serum beta carotene are associated with reduced lung cancer risk. 29,133 male smokers aged 50-69; beta carotene 20 mg/day: lung cancer incidence +18% (95% CI 3 to 36%); total mortality 8% higher."
+  },
+  "stampfer-1991": {
+   "type": "meta-analysis",
+   "authors": [
+    "Stampfer MJ",
+    "Colditz GA"
+   ],
+   "year": 1991,
+   "title": "Estrogen replacement therapy and coronary heart disease: A quantitative assessment of the epidemiologic evidence",
+   "journal": "Preventive Medicine",
+   "volume": "20",
+   "issue": "1",
+   "pages": "47-63",
+   "doi": "10.1016/0091-7435(91)90006-p",
+   "pmid": "1826173",
+   "support": "Overall, the bulk of the evidence strongly supports a protective effect of estrogens that is unlikely to be explained by confounding factors ... A quantitative overview of all studies taken together yielded a relative risk of 0.56 (95% CI 0.50-0.61)."
+  },
+  "whi-2002": {
+   "type": "rct",
+   "authors": [
+    "Writing Group for the Women's Health Initiative Investigators"
+   ],
+   "year": 2002,
+   "title": "Risks and Benefits of Estrogen Plus Progestin in Healthy Postmenopausal Women: Principal Results From the Women's Health Initiative Randomized Controlled Trial",
+   "journal": "JAMA",
+   "volume": "288",
+   "issue": "3",
+   "pages": "321-333",
+   "doi": "10.1001/jama.288.3.321",
+   "pmid": "12117397",
+   "n_participants": 16608,
+   "support": "Despite decades of accumulated observational evidence, balance uncertain. 16,608 women aged 50-79 with intact uterus, mean 5.2 y. Per 10,000 person-years: 7 more CHD events, 8 more strokes, 8 more PEs, 8 more invasive breast cancers; 6 fewer colorectal cancers, 5 fewer hip fractures. All-cause mortality not affected."
+  },
+  "rossouw-2007": {
+   "type": "rct",
+   "authors": [
+    "Rossouw JE",
+    "Prentice RL",
+    "Manson JE",
+    "Wu L",
+    "Barad D",
+    "Barnabei VM",
+    "Ko M",
+    "LaCroix AZ",
+    "Margolis KL",
+    "Stefanick ML"
+   ],
+   "year": 2007,
+   "title": "Postmenopausal Hormone Therapy and Risk of Cardiovascular Disease by Age and Years Since Menopause",
+   "journal": "JAMA",
+   "volume": "297",
+   "issue": "13",
+   "pages": "1465-1477",
+   "doi": "10.1001/jama.297.13.1465",
+   "pmid": "17405972",
+   "support": "Women who initiated hormone therapy closer to menopause tended to have reduced CHD risk compared with the increase in CHD risk among women more distant from menopause, but this trend test did not meet our criterion for statistical significance ... the risk of stroke was elevated regardless of years since menopause."
+  },
+  "schwingshackl-2021": {
+   "type": "other",
+   "authors": [
+    "Schwingshackl L",
+    "Balduzzi S",
+    "Beyerbach J",
+    "Bröckelmann N",
+    "Werner SS",
+    "Zähringer J",
+    "Nagavci B",
+    "Meerpohl JJ"
+   ],
+   "year": 2021,
+   "title": "Evaluating agreement between bodies of evidence from randomised controlled trials and cohort studies in nutrition research: meta-epidemiological study",
+   "journal": "BMJ",
+   "pages": "n1864",
+   "doi": "10.1136/bmj.n1864",
+   "pmid": "34526355",
+   "support": "97 diet-disease outcome pairs. Pooled ratio of risk ratios 1.09 (95% CI 1.04 to 1.14; 95% prediction interval 0.81 to 1.46). Differences mainly from supplements in RCTs vs nutrient status in cohorts; when the intake or exposure was identical, the estimates were similar."
+  },
+  "ioannidis-2005": {
+   "type": "other",
+   "authors": [
+    "Ioannidis JPA"
+   ],
+   "year": 2005,
+   "title": "Contradicted and Initially Stronger Effects in Highly Cited Clinical Research",
+   "journal": "JAMA",
+   "volume": "294",
+   "issue": "2",
+   "pages": "218-228",
+   "doi": "10.1001/jama.294.2.218",
+   "pmid": "16014596",
+   "n_studies": 49,
+   "support": "Highly cited clinical research 1990-2003. Five of 6 highly-cited nonrandomized studies had been contradicted or had found stronger effects vs 9 of 39 randomized controlled trials (P = .008)."
+  },
+  "doll-2004": {
+   "type": "cohort",
+   "authors": [
+    "Doll R",
+    "Peto R",
+    "Boreham J",
+    "Sutherland I"
+   ],
+   "year": 2004,
+   "title": "Mortality in relation to smoking: 50 years' observations on male British doctors",
+   "journal": "BMJ",
+   "volume": "328",
+   "issue": "7455",
+   "pages": "1519",
+   "doi": "10.1136/bmj.38142.554479.AE",
+   "pmid": "15213107",
+   "n_participants": 34439,
+   "support": "Men born in 1900-1930 who smoked only cigarettes and continued smoking died on average about 10 years younger than lifelong non-smokers. Among men born around 1920, prolonged smoking tripled age specific mortality rates, but cessation at age 50 halved the hazard, and cessation at age 30 avoided almost all of it."
+  },
+  "zeraatkar-2019": {
+   "type": "meta-analysis",
+   "authors": [
+    "Zeraatkar D",
+    "Han MA",
+    "Guyatt GH",
+    "Vernooij RW",
+    "El Dib R",
+    "Cheung K",
+    "Milio K",
+    "Zworth M",
+    "Bartoszko JJ",
+    "Valli C",
+    "Rabassa M",
+    "Lee Y",
+    "Zajac J",
+    "Prokop-Dorner A",
+    "Lo C",
+    "Bala MM",
+    "Alonso-Coello P",
+    "Hanna SE",
+    "Johnston BC"
+   ],
+   "year": 2019,
+   "title": "Red and Processed Meat Consumption and Risk for All-Cause Mortality and Cardiometabolic Outcomes",
+   "journal": "Annals of Internal Medicine",
+   "volume": "171",
+   "issue": "10",
+   "pages": "703-710",
+   "doi": "10.7326/M19-0655",
+   "pmid": "31569213",
+   "support": "The magnitude of association between red and processed meat consumption and all-cause mortality and adverse cardiometabolic outcomes is very small, and the evidence is of low certainty. Limitation: inadequate adjustment for known confounders, residual confounding, recall bias. (Corrected article; cited for its conclusion only, no figures.)"
+  },
+  "bjelakovic-2012": {
+   "type": "systematic-review",
+   "authors": [
+    "Bjelakovic G",
+    "Nikolova D",
+    "Gluud LL",
+    "Simonetti RG",
+    "Gluud C"
+   ],
+   "year": 2012,
+   "title": "Antioxidant supplements for prevention of mortality in healthy participants and patients with various diseases",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "issue": "3",
+   "pages": "CD007176",
+   "doi": "10.1002/14651858.CD007176.pub2",
+   "pmid": "22419320",
+   "n_studies": 78,
+   "n_participants": 296707,
+   "support": "In the 56 trials with a low risk of bias, the antioxidant supplements significantly increased mortality (RR 1.04) ... Beta-carotene and vitamin E seem to increase mortality, and so may higher doses of vitamin A."
+  },
+  "mcdonald-epidemiology": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2019,
+   "title": "Why I think Epidemiology is Crap",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/epidemiology-is-crap",
+   "retrieved": "2026-11-16",
+   "support": "His case against diet cohorts: recalled intake, diet measured once, foods and lifestyles that cluster, and trials that disagree. Backs his stated views in the evidence entries, not the study figures."
+  },
+  "mcdonald-excluding-middle": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2011,
+   "title": "Excluding the Middle",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/excluding-the-middle",
+   "retrieved": "2026-11-16",
+   "support": "Names the either/or argument that pits a preferred option against an absurd extreme. Backs the false dilemma term."
   }
  }
 }

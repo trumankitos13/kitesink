@@ -228,7 +228,7 @@ McDonald's answer to which squat is best is that it depends on the lifter. For a
 
 - Try each bar position for a few weeks and keep the one you can load steadily and feel in the target muscles.
 
-Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2011h](https://bodyrecomposition.com/training/the-best-way-to-squat), [Glassbrook 2017](https://doi.org/10.1519/JSC.0000000000002007)
+Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2011i](https://bodyrecomposition.com/training/the-best-way-to-squat), [Glassbrook 2017](https://doi.org/10.1519/JSC.0000000000002007)
 
 ### A raised heel lets the knees travel forward and the trunk stay more upright
 
@@ -238,7 +238,7 @@ Twenty-five people squatting 60 percent of max leaned forward less in weightlift
 
 - If you tip forward in flat shoes, test a heeled lifting shoe before changing anything else.
 
-Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [Sato 2012](https://doi.org/10.1519/jsc.0b013e318218dd64), [Legg 2017](https://doi.org/10.1080/02640414.2016.1175652), [McDonald 2011h](https://bodyrecomposition.com/training/the-best-way-to-squat)
+Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [Sato 2012](https://doi.org/10.1519/jsc.0b013e318218dd64), [Legg 2017](https://doi.org/10.1080/02640414.2016.1175652), [McDonald 2011i](https://bodyrecomposition.com/training/the-best-way-to-squat)
 
 ### Some lifters squat upright and some fold forward
 

@@ -883,7 +883,7 @@ McDonald's objection to the phrase about success leaving clues is that people ch
 - Ask whether unsuccessful lifters do the same thing before you copy it.
 - Put consistency over years ahead of any single method.
 
-Goals and self-coaching · Beginner · Coaching practice · Sources: [McDonald 2011d](https://bodyrecomposition.com/training/success-leaves-clues), [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001)
+Goals and self-coaching · Beginner · Coaching practice · Sources: [McDonald 2011e](https://bodyrecomposition.com/training/success-leaves-clues), [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001)
 
 ## Key numbers
 
@@ -1061,7 +1061,7 @@ Lyle McDonald's rule: accept the fixed factors, use them only to shape your appr
 | How appetite and metabolism react to dieting | How hard fat loss feels | Choose the diet structure you can keep to, and manage activity and sleep |
 | Other people's results | Placings and comparisons | Set process goals and compete against your own numbers |
 
-Coaching practice · Sources: [McDonald 2011j](https://bodyrecomposition.com/training/what-you-can-and-cannot-control)
+Coaching practice · Sources: [McDonald 2011k](https://bodyrecomposition.com/training/what-you-can-and-cannot-control)
 
 ## Weekly layouts for all-round fitness
 

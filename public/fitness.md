@@ -1,6 +1,6 @@
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1120 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -23,14 +23,14 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 ### People and health
 
 - [Women](https://kitesink.com/fitness/women.md): What the research on women shows. 86 entries.
-- [Health](https://kitesink.com/fitness/health.md): Training for a long working life. 55 entries.
+- [Health](https://kitesink.com/fitness/health.md): Training for a long working life. 66 entries.
 
 ## Reference
 
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
-- [Glossary](https://kitesink.com/fitness/glossary.md): the 186 terms the areas use, in plain words. Each term is defined here once.
+- [Glossary](https://kitesink.com/fitness/glossary.md): the 190 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 131 key numbers and 63 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1002 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1018 sources.
 
 ## Calculators (on the page, no sign-up)
 

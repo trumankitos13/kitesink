@@ -136,7 +136,7 @@ The study put 10 men aged 22 to 33 in a metabolic chamber for a rest day and an 
 
 - Read this as a finding for long, hard sessions at maintenance calories.
 
-Calories, EPOC and efficiency · Intermediate · Thin evidence · Sources: [Knab 2011](https://doi.org/10.1249/mss.0b013e3182118891), [McDonald 2011g](https://bodyrecomposition.com/research/epoc-following-45-minute-exercise-bout)
+Calories, EPOC and efficiency · Intermediate · Thin evidence · Sources: [Knab 2011](https://doi.org/10.1249/mss.0b013e3182118891), [McDonald 2011h](https://bodyrecomposition.com/research/epoc-following-45-minute-exercise-bout)
 
 ### Intervals and steady cardio give the same fat loss
 
