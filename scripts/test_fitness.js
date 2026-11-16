@@ -201,6 +201,8 @@ async function visit(hash, opts = {}) {
   ok('a big deficit is flagged', p.deficitPct > P.BIG_DEFICIT, p.deficitPct.toFixed(1));
   p = plan({ phase: 'lose', template: 'steady', len: 7, bf: 20 });
   eq('energy availability: (intake − training) ÷ fat-free mass', p.ea, (p.avgKcal - p.days.reduce((s, d) => s + d.exKcal, 0) / 7) / 64, 1e-6);
+  ok('long deficit: 37% for 24 weeks with no breaks warns', F.planLongWarn(37, 24, false));
+  ok('long deficit: with breaks, or 12 weeks, or a 20% deficit, does not', !F.planLongWarn(37, 24, true) && !F.planLongWarn(37, 12, false) && !F.planLongWarn(20, 24, false));
   const weeks = F.planWeeks(12, -0.4, true);
   ok('breaks: weeks 4, 8 and 12 at maintenance', weeks.weeks.map((w, i) => w === 'break' ? i + 1 : 0).filter(Boolean).join() === '4,8,12');
   eq('breaks: 9 diet weeks at 0.4 kg', weeks.kg, -3.6, 1e-9);

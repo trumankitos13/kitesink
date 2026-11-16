@@ -68,7 +68,7 @@ window.KS_INDEX = [
   { t: "Meet attempt planner", h: "/fitness#attempts", s: "fitness", k: "Tool", shelf: "tools", now: true,
     d: "Openers, seconds and thirds for a powerlifting meet, with a warm-up ladder.", w: "powerlifting competition opener attempts squat bench deadlift total" },
   { t: "Diet planner", h: "/fitness#plan", s: "fitness", k: "Tool", shelf: "tools", now: true,
-    d: "One or two weeks of very low, low, maintenance and surplus days, arranged around your training.", w: "diet plan meal calories deficit surplus cut bulk recomp week refeed intermittent fasting very low day maintenance" },
+    d: "One or two weeks of very low, low, maintenance and surplus days, arranged around your training.", w: "diet plan meal calories deficit surplus cut bulk recomp week intermittent fasting alternate day very low day maintenance" },
   { t: "Fitness field guide", h: "/fitness#guide", s: "fitness", k: "Notes", shelf: "tools", now: true,
     d: "Sourced entries by area. Search them all, or pick an area to read.", w: "training nutrition guide evidence reference notes search areas" },
   /* the pages under /fitness/, in the order of the hub: one line each */

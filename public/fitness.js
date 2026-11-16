@@ -343,7 +343,8 @@
     VLOW_SHARE: 0.25,   // a very low day eats 25% of that day's needs (Trepanowski 2017)
     FLOOR: 1200,        // average kcal a day; below it NICE NG246 sends people to specialist care
     BIG_DEFICIT: 25,    // % of maintenance; the macro tool warns at the same point
-    EA_WARN: 30         // kcal per kg fat-free mass a day: a risk marker, not a safe floor
+    EA_WARN: 30,        // kcal per kg fat-free mass a day: a risk marker, not a safe floor
+    LONG_WEEKS: 12      // a deficit over BIG_DEFICIT for longer than this without a break gets a warning (a convention)
   };
   // Which day types each template asks for. "hard" days are the ones with a hard session.
   PLAN.TEMPLATES = {
@@ -473,6 +474,8 @@
     for (var w = 1; w <= weeks; w++) { var br = breaks && w % 4 === 0; out.push(br ? "break" : "diet"); if (!br) kg += weekKg; }
     return { weeks: out, kg: kg, dietWeeks: out.filter(function (x) { return x === "diet"; }).length };
   };
+  // A big deficit run for a long time with no weeks at maintenance: true means warn.
+  F.planLongWarn = function (deficitPct, weeks, breaks) { return deficitPct > PLAN.BIG_DEFICIT && weeks > PLAN.LONG_WEEKS && !breaks; };
   F.PLAN = PLAN;
 
   window.KSFit = F;
@@ -1019,7 +1022,8 @@
       else if (r.deficitPct > P.BIG_DEFICIT) warns.push("That is a deficit of " + num(r.deficitPct) + "% of maintenance. Expect it to be hard to sustain and to cost more muscle than a slower plan.");
       if (r.adjacent) warns.push("Two very low days sit next to each other. Spread them out, or press “Arrange around training”.");
       if (r.vlowOnHard) warns.push("A very low day falls on a hard training day, and that session will suffer. " + (arranged ? "Move it, or press “Arrange around training”." : "There are not enough light days in your week to avoid it."));
-      if (r.clamped) warns.push("To reach this rate some days would fall below a very low day, so the planner stopped there. The change shown is what the plan gives.");
+      if (r.clamped) warns.push("Some days would have to fall below a very low day to balance this week, so the planner stopped there. The change shown is what the plan gives.");
+      if (ph === "lose" && F.planLongWarn(r.deficitPct, +$("d-weeks").value, $("d-breaks").checked)) warns.push("A deficit this size for more than " + P.LONG_WEEKS + " weeks without a break is a lot to ask. Tick the weeks at maintenance, or plan a shorter run. (Twelve weeks is a KiteSink convention; clinical guidance caps diets under 1,200 kcal a day at the same length.)");
       if (isFinite(r.ea) && r.ea < P.EA_WARN) warns.push("Energy availability comes to about " + num(r.ea) + " kcal per kg of fat-free mass a day. Lower levels go with rising risk to hormones and bone, for women most of all. <a href=\"/fitness/women#wom-ea-no-threshold\" style=\"color:#d8b07a\">Why 30 is a warning, not a line</a>.");
       $("d-warn").innerHTML = warns.map(function (w) { return '<p class="warn">' + w + "</p>"; }).join("");
       $("d-warn").hidden = !warns.length;
