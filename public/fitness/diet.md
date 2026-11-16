@@ -375,7 +375,7 @@ Diet type and meal pattern · Intermediate · Coaching practice · Sources: [McD
 
 ### Higher protein after a diet halved weight regain in one trial
 
-**In 148 overweight to moderately obese adults after a diet, about 48 g a day of extra protein halved regain over 3 months, all of it fat-free mass.**
+**In 148 overweight to moderately obese adults after a diet, about 48 g a day of extra protein halved regain over 3 months, and the regain was fat-free mass.**
 
 Participants first lost weight on a 4-week very low-energy diet of about 500 kcal a day, an intake for medical supervision only, then were randomised for 3 months of maintenance. The extra-protein group ate 18 percent of energy as protein against 15 percent, regained half as much weight, consisting only of fat-free mass, and felt fuller while energy intake did not differ. McDonald keeps protein at the dieting level after a diet ends, mainly because post-diet hunger is high. This was one trial in overweight to moderately obese adults; lean lifters were not studied.
 
@@ -387,9 +387,9 @@ Very lean, regain and maintenance · Intermediate · Thin evidence · Sources: [
 
 **In 15 natural physique athletes, weight and body water rose soon after competing, and fat mass climbed about 2 kg by 4 to 6 weeks later.**
 
-Seven men and eight women were measured within a week before a show, within a week after and 4 to 6 weeks later. Weight rose 2 kg between the first two visits, body water rose about 1.9 L in 8 of them, and lean mass by ultrasound rose and then held. By the last visit fat mass had gone from 7.7 to 10.0 kg. Resting metabolic rate, 92 percent of predicted before the show, was back near normal. It was a pilot study. McDonald's view is that the post-diet 'rebound' only regains lost muscle and glycogen, not new size.
+Seven men and eight women were measured within a week before a show, within a week after and 4 to 6 weeks later. Weight rose 2 kg between the first two visits, body water rose about 1.9 L in the 8 athletes tested for it, and lean mass by ultrasound rose and then held. By the last visit fat mass had gone from 7.7 to 10.0 kg. Resting metabolic rate, 92 percent of predicted before the show, was back near normal. It was a pilot study. McDonald's view is that the post-diet 'rebound' only regains lost muscle and glycogen, not new size.
 
-- McDonald's practice: return to maintenance calories before any surplus; see the diet exit entries.
+- McDonald's practice: return to maintenance calories before any surplus; see the entry on dieting with no end plan.
 - If eating feels out of control after a show, get help from a sports dietitian or clinician.
 
 Very lean, regain and maintenance · Advanced · Thin evidence · Sources: [Trexler 2017](https://doi.org/10.1123/ijsnem.2017-0038), [McDonald 2016l](https://bodyrecomposition.com/fat-loss/the-transition-phase)
@@ -416,7 +416,7 @@ Scale, plateaus and metabolism · Advanced · Thin evidence · Sources: [Jumpert
 
 **In 8 men in a chamber, alcohol at a quarter of daily energy cut fat burning by about a third that day, while carbohydrate and protein burning held.**
 
-The men drank about 96 g of alcohol a day, either on top of their usual food or in place of some fat and carbohydrate. Both ways, 24-hour fat oxidation fell by 31 to 36 percent, during the hours alcohol was being cleared, and energy expenditure rose 4 to 7 percent. The authors concluded that drinking beyond energy needs probably favours fat storage. McDonald's view is that the body keeps no store of alcohol, so it is always burned off first. This was a heavy intake in a small group.
+On the test day the men drank about 96 g of alcohol, either on top of their usual food or in place of some fat and carbohydrate. Both ways, 24-hour fat oxidation fell by 31 to 36 percent, during the hours alcohol was being cleared, and energy expenditure rose 4 to 7 percent. The authors concluded that drinking beyond energy needs probably favours fat storage. McDonald's view is that the body keeps no store of alcohol, so it is always burned off. This was a heavy intake in a small group.
 
 - Count drinks in your daily intake; see the alcohol entries in the nutrition area.
 
@@ -426,7 +426,7 @@ Diet type and meal pattern · Intermediate · Thin evidence · Sources: [Suter 1
 
 **In 132 adults with obesity, high-protein diets lost more over a year than normal-protein ones, while low-carb against normal-carb made no difference.**
 
-Four diets crossed protein (about 1.1 against 0.7 g per kg) with carbohydrate (low or normal), on a third of energy needs for 3 months, a very low intake, then two thirds for 9 months. At 12 months the high-protein groups had lost 12.8 kg against 8.9 kg, low-carb groups did no better than normal-carb ones, and changes were unrelated to fat content. McDonald's view is that low-carb diets work mainly through the protein they bring, and that more protein is the single most useful diet change. Intakes that low belong under medical supervision.
+Four diets crossed protein (about 1.1 against 0.7 g per kg) with carbohydrate (low or normal), on a third of energy needs for 3 months, a very low intake, then two thirds for 9 months. At 12 months the high-protein groups had lost 12.8 kg against 8.9 kg, low-carb groups did no better than normal-carb ones, and changes were unrelated to fat content. McDonald's view is that low-carb diets may work mainly through the protein they bring, and that more protein is the single most useful diet change. Intakes that low belong under medical supervision.
 
 - Set protein first, then choose carbohydrate and fat to suit your food preferences.
 
@@ -434,9 +434,9 @@ Diet type and meal pattern · Intermediate · Thin evidence · Sources: [Soenen 
 
 ### The same surplus added 4 to 13 kg in different men, and twins responded alike
 
-**Twelve pairs of young identical twin men overfed by 1,000 kcal a day gained 4.3 to 13.3 kg, with brothers far more alike than unrelated men.**
+**Twelve pairs of young identical twin men overfed by 1,000 kcal a day gained 4.3 to 13.3 kg, with brothers more alike than unrelated men.**
 
-The men were overfed on 84 days within a 100-day period, about 84,000 kcal in total. Mean gain was 8.1 kg. Variation between pairs was about three times that within pairs, and the authors pointed to genes governing whether energy is stored as fat or lean tissue and how resting expenditure responds. McDonald's view is that such differences change how fast weight moves, not whether energy balance applies; no one gains on a real deficit. See the NEAT number in the body composition area for one route.
+The men were overfed on 84 days within a 100-day period, about 84,000 kcal in total. Mean gain was 8.1 kg. Variation between pairs was about three times that within pairs, and the authors suggested that genes may govern whether energy is stored as fat or lean tissue and how resting expenditure responds. McDonald's view is that such differences change how fast weight moves, not whether energy balance applies; no one gains on a real deficit. See the NEAT number in the body composition area for one route.
 
 - Judge your own response by your scale trend, not by someone else's results on the same plan.
 
@@ -444,7 +444,7 @@ Gaining phases · Intermediate · Thin evidence · Sources: [Bouchard 1990](http
 
 ### A ketogenic diet lost no more fat than a moderate-carb diet in a controlled trial
 
-**In 20 sedentary adults with obesity on controlled food for 6 weeks, ketogenic and moderate-carb diets lost similar weight and fat.**
+**In 20 sedentary adults with obesity on controlled food for 6 weeks, ketogenic and moderate-carb diets did not differ significantly in weight or fat lost.**
 
 One diet began near 5 percent of energy as carbohydrate and 60 percent fat; the other was about 40 percent carbohydrate and 30 percent fat. Weight loss was 6.3 and 7.2 kg and fat loss 3.4 and 5.5 kg, neither difference significant. The ketogenic group did worse on an inflammation marker and on rated vigour. McDonald's view is that, with protein matched, ketosis gives no fat-loss edge, though some people control food intake better without starchy foods. See the first-week drop entry for a ward study.
 
@@ -456,7 +456,7 @@ Diet type and meal pattern · Intermediate · Thin evidence · Sources: [Johnsto
 
 **McDonald's practice is to drop heavy volume by up to two thirds when a diet begins, hold the usual loads, and fill any time saved with cardio or light work.**
 
-His reasoning is that recovery falls in a deficit and a few quality heavy sets beat many poor ones. Support comes from maintenance studies outside a deficit (see the maintenance dose entry in recovery). In one trial of 70 adults, a third or even a ninth of the build-up dose kept muscle size for 32 weeks in those aged 20 to 35, but not in those aged 60 to 75. No trial cited here tested a calorie deficit, so older dieters may need more.
+His reasoning is that recovery falls in a deficit and a few quality heavy sets beat many poor ones. Support comes from maintenance studies outside a deficit (see the maintenance dose entry in recovery). In one trial of 70 adults, a third or even a ninth of the build-up dose kept muscle size for 32 weeks in those aged 20 to 35, but not in those aged 60 to 75. No trial cited here tested a calorie deficit. Older dieters may need more.
 
 - McDonald's practice: in a diet, keep 2 to 4 heavy sets per muscle group, as little as once a week, at your usual loads.
 
@@ -466,7 +466,7 @@ Keeping muscle · Intermediate · Thin evidence · Sources: [McDonald 2009ai](ht
 
 **A meta-analysis of 116 studies linked some antidepressants to weight gain and others to little change or slight loss, with wide individual variation.**
 
-Amitriptyline, mirtazapine and paroxetine went with a greater risk of gain. Fluoxetine and bupropion went with some loss, for fluoxetine only early in treatment. Others had little short-term effect, and effects tended to grow over the long term. Some comparisons rested on few studies. McDonald's view is that these drugs act mainly through appetite, sometimes activity, so ordinary diet and activity changes still apply. A weight change is a reason to talk to the prescriber, never to stop or switch a medicine on your own.
+Amitriptyline, mirtazapine and paroxetine went with a greater risk of gain. Fluoxetine and bupropion went with some loss, for fluoxetine only early in treatment. Others had little short-term effect, and effects tended to grow over the long term. Some comparisons rested on few studies. McDonald's view is that these drugs change weight mainly through appetite, sometimes activity, so ordinary diet and activity changes still apply. A weight change is a reason to talk to the prescriber, never to stop or switch a medicine on your own.
 
 - If your weight changes on a psychiatric medicine, raise it with your prescriber; do not stop or change it yourself.
 
@@ -603,7 +603,7 @@ Keeping muscle · Intermediate · Some support · Sources: [Helms 2014a](https:/
 
 **Women told a yogurt was low-fat ate more at the next meal than after a yogurt of similar calories labelled high-fat.**
 
-In 48 healthy, non-dieting women, the label changed lunch intake, and total intake that day was still higher after the 'low-fat' yogurt. Women given no label showed the opposite pattern. McDonald's view is that every popular diet soon gets its own approved snacks and bars, often as calorie-dense as what they replace, and that people eat more of them because they feel allowed, until loss stalls.
+The study had 48 healthy, non-dieting women, and half were shown fat-content labels. In that half the label changed lunch intake, and intake with dinner counted was still higher after the 'low-fat' yogurt. Women given no label showed the opposite pattern. McDonald's view is that every popular diet soon gets its own approved snacks and bars, often as calorie-dense as what they replace, and that people eat more of them because they feel allowed, until loss stalls.
 
 - Log diet-approved foods by their calories, not their label.
 
@@ -618,7 +618,7 @@ Before treatment the women named a goal, a dream, a happy, an acceptable and a d
 - Count a lasting loss of about 10 percent as success, the clinical yardstick McDonald cites.
 - McDonald's practice: break a large loss into stages with maintenance between them.
 
-Deficit and rate of loss · Beginner · Thin evidence · Sources: [Foster 1997](https://doi.org/10.1037/0022-006X.65.1.79), [McDonald 2016n](https://bodyrecomposition.com/fat-loss/the-causes-diet-failure)
+Deficit and rate of loss · Beginner · Thin evidence · Sources: [Foster 1997](https://doi.org/10.1037/0022-006X.65.1.79), [McDonald 2016n](https://bodyrecomposition.com/fat-loss/the-causes-diet-failure), [McDonald 2009ae](https://bodyrecomposition.com/fat-loss/the-full-diet-break)
 
 ## Key numbers
 
@@ -634,7 +634,7 @@ Deficit and rate of loss · Beginner · Thin evidence · Sources: [Foster 1997](
 | 0.25-0.5 % body weight per week | Rate of gain, novice to intermediate: At 80 kg (176 lb) that is 0.2 to 0.4 kg (0.4 to 0.9 lb) a week. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154) |
 | 100 kJ a day per kg of change | Eventual weight change per lasting change in daily intake: About 10 kcal a day per lb. A rule of thumb from one validated model: in an average overweight adult, half arrives within a year and 95 percent within about three. | Thin evidence | [Hall 2011](https://doi.org/10.1016/S0140-6736(11)60812-X) |
 | about 4,900 kcal per kg lost | Energy in each kg lost at week four of a diet: Rose to about 6,000 by week six in 23 overweight adults. Still below the rule's 7,700, so each kg lost early needs a smaller deficit than the rule assumes. | Thin evidence | [Heymsfield 2012](https://doi.org/10.1016/j.metabol.2011.11.012) |
-| 3-5 percent below never-obese | Resting metabolic rate in formerly obese adults: Formerly obese adults against never-obese controls of equal body composition, pooled in 1999. Later studies are mixed; see the metabolic adaptation entry. | Thin evidence | [Astrup 1999](https://doi.org/10.1093/ajcn/69.6.1117), [McDonald 2010p](https://bodyrecomposition.com/fat-loss/permanent-metabolic-damage) |
+| 3-5 percent below never-obese | Resting metabolic rate in formerly obese adults: Two pooled 1999 analyses, adjusted for body composition: 2.9 percent lower (not significant) and 5.1 percent. Later work is mixed; see the metabolic adaptation entry. | Thin evidence | [Astrup 1999](https://doi.org/10.1093/ajcn/69.6.1117), [McDonald 2010p](https://bodyrecomposition.com/fat-loss/permanent-metabolic-damage) |
 
 ## Deficit size versus expected weekly loss
 
@@ -689,7 +689,7 @@ Some support · Sources: [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720), [H
 
 ## What any fat-loss diet needs before its details matter
 
-Check a plan against these before worrying about meal timing or macro ratios. The first group is essential; the second decides whether you can keep it up.
+McDonald's list. Check a plan against it before worrying about meal timing or macro ratios. The first group is essential; the second decides whether you can keep it up.
 
 **Essential**
 
