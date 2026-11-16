@@ -127,7 +127,11 @@ the HTML page. It does not use these hand-written twins.
 ## Agent discovery
 
 What isitagentready.com looks for, and what the site publishes for it. The scan of
-16 November 2026 scored level 1 of 5.
+16 November 2026 scored level 1 of 5. After PR 31 merged, the rescan the same day scored
+**level 2 (Bot-Aware)**: Link headers, Content Signals and the skills index pass. The one
+requirement left for level 3 is markdown negotiation. The account is on the Workers Free
+plan, so the worker stays off until about two weeks of Web Analytics show daily page views
+far below the free plan's 100,000 Worker requests a day; then decide.
 
 | Check | State | Where |
 |---|---|---|
