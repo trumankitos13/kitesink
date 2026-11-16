@@ -104,6 +104,10 @@ To turn the second one on, deploy with the alternative config:
 npx wrangler deploy -c wrangler.ai-twins.jsonc
 ```
 
+That is a manual deploy, and it does not last: Workers Builds deploys `wrangler.jsonc` on
+every merge to `main`, which removes the worker again. Use it to try the worker on the live
+site, not to keep it.
+
 That deploys the same site with the worker in front of the listed pages that have a twin
 (the routes in `run_worker_first`); every other request is served as before. To make it permanent, copy the `main`,
 `vars` and `assets` settings from `wrangler.ai-twins.jsonc` into `wrangler.jsonc`. To go
@@ -145,8 +149,16 @@ To add a skill: write `public/.well-known/agent-skills/<name>/SKILL.md` with `na
 skill to things an agent can really do here.
 
 Levels (from the scanner's guide): 2 needs Content Signals; 3 adds markdown negotiation;
-4 adds a skills index. With this change deployed on the normal config, expect level 2; with
-the worker config, level 4. Rescan after deploying to confirm.
+4 adds a skills index. Merging to `main` deploys `wrangler.jsonc` through Workers Builds
+(docs/DEPLOY-CLOUDFLARE.md), so merging this change should give level 2. Level 4 needs the
+worker in production, and the only lasting way to get it is to copy `main`, `vars` and
+`assets` from `wrangler.ai-twins.jsonc` into `wrangler.jsonc` and merge that. Rescan after
+each deploy to confirm.
+
+The audit also holds the skill to the site: the page slugs it names must be the pages
+under `/fitness/`, `search.json` must have the keys and row layout it describes, and every
+row must be findable in its page's twin the way it says. A change to the fitness build that
+breaks any of that fails the audit until the skill is updated.
 
 ## Before expecting any traffic
 

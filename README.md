@@ -270,8 +270,9 @@ so nothing depends on an external runtime anymore.
   page's own address is optional and off (see `docs/AI-PAGES.md`). The twins carry the offers
   block with the code word `KITESTRING`.
 - **Agent readiness (16 Nov 2026)** — `Link` headers, Content Signals in `robots.txt` and an agent
-  skills index under `/.well-known/`. Markdown negotiation is built into the optional worker and
-  needs the `wrangler.ai-twins.jsonc` deploy; check the Workers plan first. Rescan at
+  skills index under `/.well-known/`. Merging deploys them (level 2 expected). Markdown negotiation
+  is built into the optional worker; to keep it live, its settings must move into
+  `wrangler.jsonc`, since every merge redeploys that file. Check the Workers plan first. Rescan at
   isitagentready.com after deploying. The checks left out, and why, are in `docs/AI-PAGES.md`.
 - **Analytics** — off until you paste a Cloudflare Web Analytics token into `CF_TOKEN` in
   `public/ks.js` (see `docs/ANALYTICS-AND-FORMS.md`). Forms are live via `KS_FORM_KEY`.
