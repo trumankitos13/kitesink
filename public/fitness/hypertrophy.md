@@ -291,7 +291,7 @@ Recovery · Beginner · Some support · Sources: [Craven 2022](https://doi.org/1
 
 **When trained men ramped up to 32 sets per exercise a week, most of the late lean-mass gain vanished once extra water outside the cells was accounted for.**
 
-Thirty-one trained college-aged men lifted 60% of 1RM for sets of 10, rising from 10 to 32 sets per exercise a week over 6 weeks. DXA lean mass rose 1.34 kg in weeks 1-3 and 0.85 kg in weeks 4-6; adjusted for extracellular water, the later gain fell to a non-significant 0.25 kg. In a follow-up on the same study, forced post hoc tests in the 15 men whose fibres grew suggested actin and myosin concentration fell about 30%. McDonald says the men reported about 4 reps in reserve, which he sees as far from failure. His 2018 article predates Pelland 2026, whose pooled trials show size still rising with sets.
+Thirty-one trained college-aged men did sets of 10, rising from 10 to 32 sets per exercise a week over 6 weeks. DXA lean mass rose 1.34 kg in weeks 1-3 and 0.85 kg in weeks 4-6; adjusted for extracellular water, the later gain fell to a non-significant 0.25 kg. In a companion paper, forced post hoc tests in the 15 men whose fibres grew suggested actin and myosin concentration fell about 30%. McDonald gives the load as 60% of 1RM and says the men reported about 4 reps in reserve, which he sees as far from failure. His 2018 article predates Pelland 2026, whose pooled trials show size still rising with sets.
 
 - Expect scale and lean-mass gains in a very high-volume block to include fluid.
 
@@ -301,7 +301,7 @@ Volume · Advanced · Thin evidence · Sources: [Haun 2018](https://doi.org/10.3
 
 **McDonald's view: if a helper muscle gives out first, the muscle you want to grow may end the set well short of a hard effort.**
 
-He argues that a multi-joint set ends when its weakest contributor gives out, and that limb proportions and the relative strength of the helper muscles decide whether the target muscle gets a hard set. He reads this as one reason some people grow well from a lift and others do not. It is coaching reasoning. With work matched, multi-joint and single-joint training changed body composition alike, and pre-exhaustion added nothing; see the compound-and-isolation and exercise-order entries.
+He argues that a multi-joint set ends when its weakest contributor gives out, and that limb proportions and the relative strength of the helper muscles decide whether the target muscle gets a hard set. He reads this as one reason some people grow well from a lift and others do not. It is coaching reasoning. With work matched, multi-joint and single-joint training changed body composition alike, and pre-exhaustion added nothing; see the basics entry on multi-joint and single-joint lifts and the exercise-order entry here.
 
 - If a lift never tires the muscle you want to grow, add an isolation exercise for it (McDonald's practice).
 
@@ -332,7 +332,7 @@ Programming · Intermediate · Coaching practice · Sources: [McDonald 2019j](ht
 
 **In 16 highly trained men, 8 hard sets of preacher curls cut elbow-flexor strength more and for longer than rows did. That fits giving a row only part credit for the arms.**
 
-Sixteen highly trained men did 8 sets of 10RM one-arm seated rows with one arm and preacher curls with the other. Straight after, elbow-flexor strength was down 26.8% after curls and 15.1% after rows. At 24 hours it was back to baseline after rows but still 8.4% down after curls, and soreness lasted longer after curls. McDonald cites the study to argue that a row is not a full biceps set. The dose-response analysis on this page reached a half-credit rule from growth data.
+Sixteen highly trained men did 8 sets of 10RM one-arm seated rows with one arm and preacher curls with the other. Ten minutes after, elbow-flexor strength was down 26.8% after curls and 15.1% after rows. At 24 hours it was back to baseline after rows but still 8.4% down after curls, and soreness lasted longer after curls. McDonald recalls a similar comparison, pulldowns against curls, to argue that a compound set is not a full biceps set. The dose-response analysis on this page reached a half-credit rule from growth data.
 
 - Allow the biceps more recovery after hard curls than after rows.
 
@@ -340,7 +340,7 @@ Recovery · Intermediate · Thin evidence · Sources: [Soares 2015](https://doi.
 
 ### Counting hard sets is a fair volume measure across about 6 to 20-plus reps
 
-**A review of trials in trained adults found that sets taken to or near failure track training volume well when each set has between about 6 and 20+ reps.**
+**A review of trials in trained adults found that sets taken to or near failure seem an adequate measure of training volume when each set has between about 6 and 20+ reps.**
 
 The review took 14 randomised trials of at least 6 weeks in people aged 18 to 35 with a year or more of training. It judged the number of sets to or near failure an adequate volume measure for growth across that rep span, with other variables held constant. McDonald accepts set counts on those terms, but doubts that very different rep counts are equal, and he treats a set ended about 4 reps short as borderline and anything easier as a warm-up. See the basics table on three ways to count volume.
 
@@ -352,7 +352,7 @@ Volume · Intermediate · Some support · Sources: [Baz-Valle 2021](https://doi.
 
 **Twitch tests found near-full activation of the elbow flexors in 11 subjects and 88 to 95% in the quadriceps of 8 men, not the small share of muscle often claimed.**
 
-Voluntary activation is tested by adding an electrical pulse to the nerve during a maximal effort; any extra force shows drive the person did not supply. In 11 subjects the elbow flexors reached a median 99.4% in fast lifting efforts and 98.0% when held still. In 8 men the quadriceps reached 95.2% held still, 89.7% when shortening and 88.3% when lengthening, slowly. The studies came from different labs and methods, and held still the gap was only 98.0% against 95.2%. McDonald speculates that the gap may be why legs seem to need more volume; he offers no test of it.
+Voluntary activation is tested by adding an electrical pulse to the nerve or muscle during a maximal effort; any extra force shows drive the person did not supply. In 11 subjects the elbow flexors reached a median 99.4% in fast lifting efforts and 98.0% when held still. In 8 men the quadriceps reached 95.2% held still, 89.7% when shortening and 88.3% when lengthening, slowly. The studies came from different labs and methods, and held still the gap was only 98.0% against 95.2%. McDonald speculates that the gap may be why legs seem to need more volume; he offers no test of it.
 
 Growth signals · Advanced · Thin evidence · Sources: [Gandevia 1998](https://doi.org/10.1111/j.1469-7793.1998.595be.x), [Babault 2001](https://doi.org/10.1152/jappl.2001.91.6.2628), [McDonald 2009z](https://bodyrecomposition.com/muscle-gain/reps-per-set-for-muscle-growth), [McDonald 2019h](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth)
 
@@ -360,17 +360,17 @@ Growth signals · Advanced · Thin evidence · Sources: [Gandevia 1998](https://
 
 **Back-extension sets at 50% of maximal force took about three times the reps and time of 80% sets and were rated more uncomfortable. A study at 30% found no difference.**
 
-Twenty-six young adults (14 men, 12 women) did one set of machine back extensions to failure each week for 6 weeks at 80% or 50% of maximal force. Strength rose alike, but the lighter sets averaged 26 reps and 159 seconds against 8 reps and 51 seconds, with discomfort rated 7.8 against 4.8. In a single session with 8 trained men, discomfort did not differ between 30% and 80% loads. McDonald's view is that very light sets to failure earn their place mainly when a joint needs sparing or a machine stack runs out.
+Twenty-six young adults (14 men, 12 women) did one set of machine back extensions to failure each week for 6 weeks at 80% or 50% of maximal force. Strength rose alike, but the lighter sets averaged 26 reps and 159 seconds against 8 reps and 51 seconds, with discomfort rated 7.8 against 4.8. In an acute test with 8 trained men, discomfort did not differ between 30% and 80% loads. McDonald's view is that very light sets to failure earn their place mainly when a joint needs sparing or a machine stack runs out.
 
 - Keep very light sets to failure for simple machine exercises or for sparing a sore joint (McDonald's practice).
 
 Load and reps · Intermediate · Thin evidence · Sources: [Fisher 2018](https://doi.org/10.7717/peerj.6001), [Fisher 2017](https://doi.org/10.1002/mus.25645), [McDonald 2019f](https://bodyrecomposition.com/training/low-load-training-videos), [McDonald 2016h](https://bodyrecomposition.com/training/hypertrophy-zone)
 
-### Failure in every session, with nothing else cut, grew less in one small trial
+### Failure in every session grew less than percentage training in one small trial
 
-**Trained men who took the last set of every exercise to failure three days a week gained less fibre size than men training by percentages, with sets and days matched.**
+**Well-trained men who took each exercise to failure three days a week gained less fibre size than men training by percentages. McDonald describes the sets and days as matched.**
 
-Fifteen well-trained men lifted 3 days a week for 10 weeks, and both groups also sprinted twice a week. Only the percentage group increased type I and type II fibre area in the thigh; both increased muscle thickness, with effect sizes favouring the percentage group. The authors suggest the failure group could not recover between sessions. McDonald reads it the same way: raising effort without cutting volume or frequency overloads recovery. With 7 and 8 men per group it is weak evidence; see the entry on failure slowing recovery.
+Fifteen well-trained men lifted 3 days a week for 10 weeks, one group to failure on each exercise and one by percentages. Only the percentage group increased type I and type II fibre area in the thigh; both increased muscle thickness, with effect sizes favouring the percentage group. McDonald adds that both groups also sprinted twice a week and that the authors themselves raise a lack of recovery. His reading: raising effort without cutting volume or frequency overloads recovery. With 7 and 8 men per group it is weak evidence; see the recovery page on failure slowing recovery.
 
 - If you take more sets to failure, cut sets or sessions to make room (McDonald's practice).
 
@@ -473,7 +473,7 @@ Exercises and rest · Intermediate · Coaching practice · Sources: [McDonald 20
 | -7.6 % performance change | Average performance change after short sleep: Pooled across 69 publications where sleep was 6 hours or less in 24 hours. | Some support | [Craven 2022](https://doi.org/10.1007/s40279-022-01706-y) |
 | 9.6 % over 8 weeks | Thigh muscle area gain in 8 weeks, sedentary men: Includes swelling in the first weeks. Typical for new lifters, not for trained ones. | Thin evidence | [DeFreitas 2011](https://doi.org/10.1007/s00421-011-1905-4) |
 | 88 % of maximal isometric force | Force up to which the biceps kept adding motor units: Single-unit recordings found new biceps units joining up to this force. In a small thumb muscle, none joined above 50%. | Thin evidence | [Kukulka 1981](https://doi.org/10.1016/0006-8993(81)90266-3), [McDonald 2019h](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth) |
-| 62 % of light-set tonnage | Tonnage of heavy sets against light sets to failure: In 49 trained men, heavy sets (75-90% of 1RM, 8-12 reps) moved this share of the tonnage that light sets of 20-25 did, with similar growth. | Thin evidence | [Morton 2016](https://doi.org/10.1152/japplphysiol.00154.2016), [McDonald 2020d](https://bodyrecomposition.com/training/what-is-training-volume) |
+| 62 % of light-set tonnage | Tonnage of heavy sets against light sets to failure: On the tonnage McDonald quotes for a trial in 49 trained men, heavy sets (75-90% of 1RM, 8-12 reps) moved this share of what light sets of 20-25 did. Growth was similar. | Thin evidence | [Morton 2016](https://doi.org/10.1152/japplphysiol.00154.2016), [McDonald 2020d](https://bodyrecomposition.com/training/what-is-training-volume) |
 
 ## Rep ranges and what each is good for
 
@@ -541,14 +541,14 @@ Coaching practice · Sources: [McDonald 2019i](https://bodyrecomposition.com/tra
 - **Mechanotransduction**: How a muscle fibre senses physical tension and converts it into chemical signals for growth. A 2011 review puts mTOR signalling at the centre of this response to load.
 - **Moment arm and torque**: A moment arm is the perpendicular distance from a joint to the line along which a force acts. Torque, the turning effect at the joint, is force times moment arm, so a weight held farther from the joint is harder to move.
 - **Momentary muscular failure**: The point where you cannot finish another rep despite maximal effort. Volitional failure means you stop by choice.
-- **mTOR (mTORC1)**: A protein kinase complex in muscle cells that switches on protein synthesis in response to loading. In a human trial, blocking it with the drug rapamycin stopped the early rise in synthesis after hard contractions.
+- **mTOR (mTORC1)**: A protein kinase complex in muscle cells that helps switch on protein synthesis in response to loading. In a human trial, blocking it with the drug rapamycin stopped the early rise in synthesis after hard contractions.
 - **One-rep max (1RM)**: The heaviest load you can lift for one full rep. Training loads are often given as a percent of it, such as 70% of 1RM.
 - **Periodisation**: Planned changes in volume, load or exercises over weeks and months, such as linear steps or weekly undulation.
 - **Progressive overload**: Gradually asking more of the muscle over time, by adding reps, load or sets, so it keeps having a reason to adapt. Adding reps up to the top of a range and then adding weight is called double progression.
 - **Rate of perceived exertion (RPE)**: A 1-10 effort scale. On the RIR-based version, RPE 10 means 0 RIR, RPE 9 means 1 RIR, and so on.
 - **Recruitment and rate coding**: The two ways a muscle grades its force. Recruitment adds motor units; rate coding fires active ones faster. In one study the biceps kept recruiting to high forces, while a small thumb muscle finished early and relied more on firing rate.
 - **Repetitions in reserve (RIR)**: The number of reps you could still have done when the set ended. 0 RIR means failure. 2 RIR means two more reps were possible.
-- **Size principle (orderly recruitment)**: Motor units join a contraction in order of size: small, low-force units first, large, high-force units last, as the force needed rises or earlier units tire. So the largest units work only under heavy loads or late in hard sets.
+- **Size principle (orderly recruitment)**: Motor units join a contraction in order of size: small, low-force units first, large, high-force units last, as the force needed rises or earlier units tire. So the largest units work mainly under heavy loads or late in hard sets.
 - **Volume**: The amount of work. In this page, usually the number of hard sets per muscle per week. Volume load is sets times reps times weight.
 
 ## Offers for people who arrive through an AI assistant
