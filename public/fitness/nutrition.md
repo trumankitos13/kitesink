@@ -368,7 +368,7 @@ Carbs, fat and fibre · Intermediate · Thin evidence · Sources: [Baer 1997](ht
 
 **In six healthy men, a low-GI bran cereal raised insulin sooner than high-GI corn flakes. Its lower GI came from faster glucose removal, not slower entry.**
 
-Both cereals supplied 50 g of available carbohydrate, and glucose entered the blood at a similar rate. With the bran cereal, insulin was 76 percent higher at 20 minutes and glucose left the blood faster, which flattened the curve. In 30 people with type 2 diabetes, adding about 21 g of protein to 50 g of a slowly digested sugar raised insulin by roughly 190 to 270 percent without changing the glucose response. McDonald's view is that choosing foods by GI to keep insulin down rests on a false assumption.
+Both cereals supplied 50 g of available carbohydrate, and glucose entered the blood at a similar rate. With the bran cereal, insulin was 76 percent higher at 20 minutes and glucose left the blood faster, which flattened the curve. In 30 people with type 2 diabetes, adding about 21 g of protein to 50 g of a slowly digested sugar raised insulin by roughly 190 to 270 percent, but insulin action fell and the glucose response did not change. McDonald's view is that choosing foods by GI to keep insulin down rests on a false assumption.
 
 Carbs, fat and fibre · Advanced · Thin evidence · Sources: [Schenk 2003](https://doi.org/10.1093/ajcn/78.4.742), [Ang 2012](https://doi.org/10.1016/j.metabol.2012.05.008), [McDonald 2016d](https://bodyrecomposition.com/nutrition/guide-glycemic-index-glycemic-load)
 
@@ -376,15 +376,15 @@ Carbs, fat and fibre · Advanced · Thin evidence · Sources: [Schenk 2003](http
 
 **One breakfast cereal's GI differed by about 23 units between endurance-trained and sedentary young men, so a published value may not fit everyone.**
 
-In 34 young men with normal glucose tolerance, moderately trained men fell between the two groups, and the insulin index did not differ. An earlier study by the same team found the gap for one of three cereals, with a second close to significance. GI also shifts with the meal before: low-GI dinners lowered the glucose response to a standard breakfast the next morning. McDonald's reading is that GI runs lower in trained people, and he puts this down to their better insulin sensitivity.
+In 34 young men with normal glucose tolerance, moderately trained men fell between the two groups, and the insulin index did not differ. An earlier study by the same team found the gap for one of three cereals, with a second close to significance. McDonald's reading is that GI runs lower in trained people, and he puts this down to their better insulin sensitivity.
 
-Carbs, fat and fibre · Advanced · Thin evidence · Sources: [Mettler 2007](https://doi.org/10.1038/sj.ejcn.1602480), [Mettler 2006](https://doi.org/10.1024/0300-9831.76.1.39), [Wolever 1988](https://doi.org/10.1093/ajcn/48.4.1041), [McDonald 2016d](https://bodyrecomposition.com/nutrition/guide-glycemic-index-glycemic-load)
+Carbs, fat and fibre · Advanced · Thin evidence · Sources: [Mettler 2007](https://doi.org/10.1038/sj.ejcn.1602480), [Mettler 2006](https://doi.org/10.1024/0300-9831.76.1.39), [McDonald 2016d](https://bodyrecomposition.com/nutrition/guide-glycemic-index-glycemic-load)
 
 ### Lowering glycaemic index or load added nothing to a calorie deficit in a feeding trial
 
 **In 29 adults with obesity on provided food for 12 weeks, high-GI, low-GI and high-fat diets with the same deficit lost similar weight.**
 
-Each diet sat about 3,138 kJ (750 kcal) a day below estimated needs. Losses were 9.3, 9.9 and 8.4 kg, with no difference, and insulin sensitivity improved on all three; 22 people kept their losses over 24 weeks of free living. A report from the CALERIE trial in overweight adults found a low-GL diet helped only those with high insulin secretion. McDonald reads the low-GL weight-loss research as mixed, and adds that such diets also change fibre and protein.
+Each diet sat about 3,138 kJ (750 kcal) a day below estimated needs. Losses were 9.3, 9.9 and 8.4 kg, with no difference, and insulin sensitivity improved on all three; 22 people kept their losses over 24 weeks of free living. A report from the CALERIE trial in overweight adults found a low-GL diet helped only those with high insulin secretion. McDonald reads the low-GL weight-loss research as mixed, and argues that such diets also change fibre and protein.
 
 - Set the calorie deficit first and treat GI as a minor detail.
 
@@ -392,9 +392,9 @@ Energy and maintenance · Intermediate · Thin evidence · Sources: [Raatz 2005]
 
 ### Carbohydrate eaten straight after hard exercise refills glycogen fastest
 
-**Glycogen synthesis was highest with carbohydrate right after exercise, and delaying it by hours roughly halved the rate. McDonald's view is that this matters mainly for same-day sessions.**
+**After depleting exercise, glycogen refilled fastest with carbohydrate taken at once, and a delay of hours could halve the rate. McDonald thinks this matters mainly for same-day sessions.**
 
-A review of short-term recovery found the highest muscle glycogen synthesis with about 1.0 to 1.85 g/kg of carbohydrate an hour, started straight after exercise and repeated every 15 to 60 minutes for up to 5 hours. Delaying intake by several hours roughly halved the rate. Added protein raised synthesis only when carbohydrate was under about 1.2 g/kg an hour. McDonald's view is that with a day between hard sessions for the same muscles, timing and GI make no real difference, and he keeps fast, high-GI refuelling for sessions six to eight hours apart.
+A review of short-term recovery found the highest muscle glycogen synthesis with about 1.0 to 1.85 g/kg of carbohydrate an hour, started straight after exercise and repeated every 15 to 60 minutes for up to 5 hours. A delay of several hours may cut the rate by about half. Added protein raised synthesis only when carbohydrate was under about 1.2 g/kg an hour. McDonald's view is that with a day between hard sessions for the same muscles, timing and GI make no real difference, and he keeps fast, high-GI refuelling for sessions six to eight hours apart.
 
 - With two hard sessions in one day, eat carbohydrate soon after the first.
 
@@ -414,19 +414,19 @@ Timing, fluids and alcohol · Intermediate · Some support · Sources: [Hawley 1
 
 **In seven endurance-trained athletes, 3 minutes of very hard cycling then 24 hours at about 10 g/kg of high-GI carbohydrate nearly doubled muscle glycogen.**
 
-Published loading plans took two to six days; McDonald adds that the first versions began with several days of low carbohydrate and hard training. Here athletes rode 150 seconds at 130 percent of peak aerobic capacity, then 30 seconds all out, and ate 10.3 g of carbohydrate per kg of body weight over the next day. Glycogen rose from about 109 to 198 mmol/kg wet weight, similar to or above longer plans. It was seven people with no comparison group. McDonald's view is that the total carbohydrate eaten matters more than which plan delivers it.
+Published loading plans took two to six days; McDonald's article recounts that the first versions began with several days of low carbohydrate and hard training. Here athletes rode 150 seconds at 130 percent of peak aerobic capacity, then 30 seconds all out, and ate 10.3 g of carbohydrate per kg of body weight over the next day. Glycogen rose from about 109 to 198 mmol/kg wet weight, similar to or above longer plans. It was seven people with no comparison group. McDonald's view is that the total carbohydrate eaten matters more than which plan delivers it.
 
-- McDonald's practice: rehearse any race-week eating plan in training first.
+- McDonald's practice: test any pre-race meal in training, never for the first time on race day.
 
 Timing, fluids and alcohol · Advanced · Thin evidence · Sources: [Fairchild 2002](https://doi.org/10.1097/00005768-200206000-00012), [McDonald 2015j](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
 
 ### Bodybuilders who carb-loaded before a show measured bigger, and many had diarrhoea
 
-**After three low-carbohydrate days, 15 male bodybuilders who loaded for 24 hours gained muscle thickness and photo scores; 9 who did not load showed no change.**
+**After three low-carbohydrate days, 15 male bodybuilders who loaded for 24 hours gained muscle thickness and photo scores; 9 who did not load had no change in thickness or girths.**
 
-The study compared men who did and did not load, with no random allocation reported. Ultrasound thickness of the elbow flexors and triceps rose with loading, as did body mass and several girths. Diarrhoea hit 7 of the 15 loaders, 4 of them severely, and constipation was common in both groups during depletion. McDonald's article doubts that loading changes muscle size; this 2019 study found a short-term rise. Peak-week changes to food and fluid carry real risks, so plan them with an experienced coach.
+The study compared men who did and did not load, with no random allocation reported. Ultrasound thickness of the elbow flexors and triceps rose with loading, as did body mass and several girths. Diarrhoea hit 7 of the 15 loaders, 4 of them severely, and constipation was common in both groups during depletion. McDonald calls the effect of loading debatable and recalls a study finding no change in muscle size; this 2019 study, which his article links, found a short-term rise. Big peak-week swings in food and fluid can bring gut upset like this, and cutting fluid risks dehydration.
 
-- Plan any peak-week carbohydrate load with an experienced coach or sports dietitian.
+- Plan any peak-week carbohydrate load with a sports dietitian or an experienced coach.
 
 Timing, fluids and alcohol · Advanced · Thin evidence · Sources: [de Moraes 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6873117/), [McDonald 2015j](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
 
@@ -436,7 +436,7 @@ Timing, fluids and alcohol · Advanced · Thin evidence · Sources: [de Moraes 2
 
 Fifteen adults took 1,880 kJ (about 450 kcal) of carbohydrate a day for four weeks as soda and four weeks as jelly beans. With the solid load they ate less of everything else, a compensation of 118 percent. With soda they ate no less, and body weight and BMI rose only in that period. A review of beverages describes the same weak compensation for drinks sweetened with sugar or high-fructose corn syrup, and for alcohol (see the alcohol energy entry). McDonald's view is that the liquid form is the problem whatever the sugar, and that milk, with its protein and fat, behaves more like food.
 
-- Replace sugary drinks with water or diet drinks before cutting food (see the diet drinks claim).
+- McDonald's practice: swap sugary drinks for water or diet drinks (see the diet drinks claim).
 
 Energy and maintenance · Beginner · Thin evidence · Sources: [DiMeglio 2000](https://doi.org/10.1038/sj.ijo.0801229), [Wolf 2008](https://doi.org/10.1111/j.1467-789X.2007.00389.x), [McDonald 2009e](https://bodyrecomposition.com/research/how-the-body-handles-beverages)
 
@@ -444,10 +444,9 @@ Energy and maintenance · Beginner · Thin evidence · Sources: [DiMeglio 2000](
 
 **Low-fat milk was retained better than water or a sports drink after sweating, and chocolate milk beat a matched carbohydrate drink between two cycling bouts.**
 
-Eleven people lost 1.8 percent of body mass exercising in the heat, then drank 150 percent of the loss. Urine over five hours was about 550 to 610 ml after milk against about 1,180 to 1,210 ml after water or a sports drink, and only milk kept them in fluid balance. In nine trained male cyclists, chocolate milk and a fluid-replacement drink both gave longer time to exhaustion than a carbohydrate drink with the same carbohydrate as the milk. McDonald's view is that milk suits recovery but not drinking during exercise, and that big athletes may need extra carbohydrate and protein added.
+Eleven people sweated off 1.8 percent of body mass in warm-room exercise, then drank 150 percent of the loss. Five-hour urine was about 550 to 610 ml after milk against about 1,180 to 1,210 ml after water or a sports drink, and only milk kept them in fluid balance (see the plain water claim). In nine trained male cyclists, chocolate milk and a fluid-replacement drink both gave longer time to exhaustion than a carbohydrate drink matched to the milk for carbohydrate. McDonald's view is that milk suits recovery but not drinking during exercise, and that big athletes may need extra carbohydrate and protein added.
 
 - After long, sweaty sessions, milk is a sound recovery drink if you tolerate lactose (see the lactose entry).
-- For drinks at rest, see the claim on plain water and rehydration.
 
 Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Shirreffs 2007](https://doi.org/10.1017/S0007114507695543), [Karp 2006](https://doi.org/10.1123/ijsnem.16.1.78), [McDonald 2008w](https://bodyrecomposition.com/research/is-milk-the-new-sports-drink)
 
@@ -457,7 +456,7 @@ Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Shirref
 
 A 2019 meta-analysis found no change in free T3 or free T4 and a TSH rise of about 0.25 mIU/L, of unclear clinical meaning. An earlier review of 14 trials in healthy adults found no or only very modest effects in all but one. That review notes that soy may cut absorption of thyroid hormone medicine and raise the dose some patients need, though they need not avoid soy. Animal and lab work suggests low iodine makes soy's effect on the thyroid worse. McDonald's view is that trouble comes from very high soy intakes paired with low iodine.
 
-- If you take thyroid medicine, ask your clinician how to time it around soy foods.
+- If you take thyroid medicine and eat soy often, tell your clinician, as your dose may need checking.
 - If you eat a lot of soy, make sure your iodine intake is adequate.
 
 Protein · Intermediate · Some support · Sources: [Otun 2019](https://doi.org/10.1038/s41598-019-40647-x), [Messina 2006](https://doi.org/10.1089/thy.2006.16.249), [Doerge 2002](https://doi.org/10.1289/ehp.02110s3349), [McDonald 2009am](https://bodyrecomposition.com/research/soy-protein-and-thyroid-function)
@@ -466,7 +465,7 @@ Protein · Intermediate · Some support · Sources: [Otun 2019](https://doi.org/
 
 **A meta-analysis of 41 studies found no effect of soy foods, soy protein or isoflavone extracts on testosterone or oestrogen in men, at any dose or duration tested.**
 
-Total testosterone was measured in 1,753 men and oestradiol in 1,000. Total and free testosterone, oestradiol, oestrone and SHBG did not change, and splitting the studies by isoflavone dose and length found no effect either. McDonald's 2009 article holds that large intakes can cause problems and suggests a cap of about 20 to 25 g of soy protein a day; this later analysis found no dose effect on these hormones, though it did not look at other outcomes.
+Total testosterone was measured in 1,753 men and oestradiol in 1,000. Total and free testosterone, oestradiol, oestrone and SHBG did not change, and splitting the studies by isoflavone dose and length found no effect either. McDonald's 2009 article agrees that moderate intakes left testosterone alone, but argues that large daily intakes can cause problems and suggests a cap of about 20 to 25 g of soy protein a day. This later analysis found no dose effect on these hormones, though it did not look at other outcomes.
 
 - Men can use soy as a protein source without worrying about testosterone.
 
@@ -476,7 +475,7 @@ Protein · Beginner · Well supported · Sources: [Reed 2021](https://doi.org/10
 
 **HFCS and sucrose are both mixes of fructose and glucose, and in 34 adults they gave similar 24-hour glucose, insulin, leptin and blood fat profiles.**
 
-As McDonald's article sets out, the common forms, HFCS-42 and HFCS-55, are named for their fructose percentage, and sucrose is half fructose. A review found HFCS no different in any meaningful way from sucrose, honey or juice concentrates, and judged the idea that it uniquely drives obesity unsupported. In the 34-person trial, though, men's blood fats after HFCS or sucrose drinks rose about as high as after pure fructose. McDonald's view is that the problem is the calories and the soft drinks that carry HFCS, not the syrup itself (see the liquid calories entry).
+McDonald's article lists the common forms, HFCS-42 and HFCS-55, named for their fructose percentage; sucrose is half fructose. A review found HFCS no different in any meaningful way from sucrose, honey or juice concentrates, and judged the idea that it uniquely drives obesity unsupported. In eight of the men, though, blood fats after HFCS or sucrose drinks rose about as high as after pure fructose. McDonald's view is that the problem is the calories and the soft drinks that carry HFCS, not the syrup itself (see the liquid calories entry).
 
 - Count HFCS as added sugar, the same as sucrose or honey.
 
@@ -486,10 +485,10 @@ Carbs, fat and fibre · Beginner · Thin evidence · Sources: [White 2008](https
 
 **US FDA and EPA advice lists seven fish to avoid for their mercury, such as swordfish, shark and orange roughy, and many low-mercury picks such as salmon and sardines.**
 
-The advice is written for people who are or may become pregnant or breastfeeding, and for children. It suggests 2 to 3 servings a week from its best-choices list, or 1 from its good-choices list, with a serving of 4 oz (113 g) in pregnancy. Canned light tuna is a best choice and albacore a good choice; bigeye tuna, king mackerel, marlin and Gulf of Mexico tilefish are on the avoid list. McDonald warns that lifters who eat large daily amounts of tuna or other high-mercury fish can go past the safety limits.
+The advice is written for people who are or may become pregnant or breastfeeding, and for children. In pregnancy and breastfeeding it suggests 2 to 3 servings of 4 oz (113 g) a week from its best-choices list, or 1 from its good-choices list; children get 2 smaller best-choice servings. Canned light tuna is a best choice and albacore a good choice; bigeye tuna, king mackerel, marlin and Gulf of Mexico tilefish are on the avoid list. McDonald's view is that lifters who eat large daily amounts of tuna or other high-mercury fish can go past the safety limits.
 
 - If you are pregnant or planning to be, plan your fish intake with your clinician or midwife.
-- If you eat fish most days, take it mainly from the best-choices list.
+- McDonald's practice: if you eat fish most days, favour low-mercury kinds over large daily amounts of tuna.
 
 Protein · Beginner · Rulebook · Sources: [UFDA 2024](https://www.fda.gov/food/consumers/advice-about-eating-fish), [McDonald 2009p](https://bodyrecomposition.com/nutrition/mercury-content-of-fish)
 
@@ -505,9 +504,9 @@ Supplements · Intermediate · Thin evidence · Sources: [Paulsen 2014b](https:/
 
 ### Many athletes test low in vitamin D, but the count depends on the cut-off
 
-**At a cut-off of 32 ng/mL, 56 percent of 2,313 athletes were low, more in winter, indoor sports and high latitudes. The IOM counts 20 ng/mL as enough for nearly everyone.**
+**At a cut-off of 32 ng/mL, 56 percent of 2,313 athletes were low, more in winter and in indoor sports. The IOM counts 20 ng/mL as enough for nearly everyone.**
 
-The meta-analysis pooled 23 studies; any link to injury was unclear. The Institute of Medicine's 2011 report set an adult RDA of 600 IU a day (800 IU over 70), tied to a blood level of at least 20 ng/mL (50 nmol/L). It found higher levels gave no consistent extra benefit, saw some risk at both extremes, and judged deficiency overestimated. McDonald's articles aim for higher levels and treat supplements as close to essential for indoor athletes. For trial results on vitamin D pills, see the vitamin D entry in the health guide.
+The meta-analysis pooled 23 studies; risk above 40 degrees north rose only once Middle East studies were excluded, and any link to injury was unclear. The Institute of Medicine's 2011 report set an adult RDA of 600 IU a day (800 IU over 70), tied to a blood level of at least 20 ng/mL (50 nmol/L). It found higher levels gave no consistent extra benefit, saw some risk at both extremes, and judged deficiency overestimated. McDonald's articles aim for higher levels and treat supplements as close to essential for indoor athletes. For trial results on vitamin D pills, see the vitamin D entry in the health guide.
 
 - If you train indoors or through dark winters, ask a clinician whether a vitamin D test is worth doing.
 - Do not take high-dose vitamin D without a clinician's advice.
@@ -526,7 +525,7 @@ Supplements · Intermediate · Thin evidence · Sources: [Candow 2001](https://d
 
 **After 48 g of whey, synthesis in eight young men peaked at 45 to 90 minutes and returned to baseline while blood amino acids were still high.**
 
-The authors call this the muscle-full effect. In 24 trained men given 80 g of whey over 12 hours after lifting, 20 g every 3 hours raised synthesis 31 to 48 percent more than 10 g every 90 minutes or 40 g every 6 hours. McDonald's view is that protein meals 3 to 5 hours apart suit muscle gain and that eating more often adds nothing. A later tracer study found 100 g of protein gave a larger and longer response than 25 g, so the timing depends on the dose (see the protein per meal entry).
+The authors call this the muscle-full effect. In 24 trained men given 80 g of whey over 12 hours after lifting, 20 g every 3 hours raised synthesis 31 to 48 percent more than 10 g every 90 minutes or 40 g every 6 hours. McDonald's view is that protein meals 3 to 5 hours apart suit muscle gain and that eating more often adds nothing. A later tracer study found a much larger dose gave a longer response, so timing depends on dose (see the protein per meal entry).
 
 - Space protein meals a few hours apart rather than grazing every hour.
 
@@ -536,7 +535,7 @@ Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Atherto
 
 **In 16 young men who lifted in the evening, 40 g of casein 30 minutes before sleep was digested overnight and improved whole-body protein balance.**
 
-All of them had 20 g of protein and 60 g of carbohydrate straight after the session. With the bedtime casein, whole-body protein synthesis rose and net balance turned positive, and muscle protein synthesis ran about 22 percent higher, a result at the edge of significance. It covered one night, so it says nothing direct about long-term growth. McDonald's view is that a large evening meal already supplies the night, and that sleep should never be cut short to eat.
+All of them had 20 g of protein and 60 g of carbohydrate straight after the session. With the bedtime casein, whole-body protein synthesis rose and net balance turned positive, and muscle protein synthesis ran about 22 percent higher, a result at the edge of significance. It covered one night, so it says nothing direct about long-term growth. McDonald is unsure it matters, since a large evening meal already supplies the night, and he would not cut sleep short to eat.
 
 - If you train late, a protein-rich snack before bed is a reasonable option.
 
@@ -548,7 +547,7 @@ Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Res 201
 
 Thirty-nine elite athletes, about 19 years old, were randomised. The meal-plan group ate about 3,585 kcal a day against 2,964 kcal. Body weight rose 3.9 percent against 1.5 percent and fat mass 15 percent against 3 percent, while lean mass gain did not differ and one-rep maxes rose 6 to 12 percent in both. McDonald's view is that the surplus muscle gain needs is small and shrinks with training age, so extra food mostly adds fat (see the surplus entries in the diet guide).
 
-- McDonald's practice: raise intake in small steps and track skinfolds or waist as well as weight.
+- McDonald's practice: check skinfolds and gym strength every two weeks and adjust intake to the results.
 
 Energy and maintenance · Intermediate · Thin evidence · Sources: [Garthe 2013](https://doi.org/10.1080/17461391.2011.643923), [McDonald 2017h](https://bodyrecomposition.com/muscle-gain/calories-for-muscle-gain), [McDonald 2009ao](https://bodyrecomposition.com/muscle-gain/the-baseline-diet)
 
@@ -675,7 +674,7 @@ Protein · Beginner · Thin evidence · Sources: [Evenepoel 1998](https://doi.or
 
 In a GI test, fasted volunteers eat enough of a food to provide 50 g of available carbohydrate. For foods low in carbohydrate that can mean an unrealistic plate: McDonald's estimate for carrots is about a dozen medium ones. Glycaemic load scales GI by the carbohydrate actually eaten, and the international tables list it for stated serving sizes. McDonald's view is that banning carrots or similar foods over their GI makes no sense.
 
-- Do not drop a vegetable from your diet over its GI alone.
+- McDonald's practice: judge a vegetable by the portion you eat, not by its GI alone.
 
 Carbs, fat and fibre · Beginner · Coaching practice · Sources: [Foster-Powell 2002](https://doi.org/10.1093/ajcn/76.1.5), [Mettler 2007](https://doi.org/10.1038/sj.ejcn.1602480), [McDonald 2016d](https://bodyrecomposition.com/nutrition/guide-glycemic-index-glycemic-load)
 
@@ -694,7 +693,7 @@ Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Almond 
 
 **In 78 randomised trials with 296,707 people, antioxidant pills did not lower deaths, and beta-carotene and vitamin E slightly raised them in the better trials.**
 
-The Cochrane review covered beta-carotene, vitamins A, C and E, and selenium, taken for 28 days to 12 years by people with a mean age of 63. Overall there was no clear effect on deaths. In the 56 trials at low risk of bias, deaths rose by 4 percent, beta-carotene and vitamin E raised mortality, and higher vitamin A doses went with more deaths; vitamin C and selenium showed no effect. McDonald's view is that pills cannot replace the fruit and vegetables that supply these nutrients.
+The Cochrane review covered beta-carotene, vitamins A, C and E, and selenium, taken for 28 days to 12 years by healthy people and patients with various diseases, mean age 63. Overall there was no clear effect on deaths. In the 56 trials at low risk of bias, deaths rose by 4 percent, beta-carotene and vitamin E raised mortality, and higher vitamin A doses went with more deaths; vitamin C and selenium showed no effect. McDonald's view is that pills cannot replace the fruit and vegetables that supply these nutrients.
 
 - Check any high-dose vitamin plan with a clinician or dietitian before you start.
 
@@ -702,13 +701,13 @@ Supplements · Beginner · Well supported · Sources: [Bjelakovic 2012](https://
 
 ### Judging a low-carbohydrate diet by urine ketone strips
 
-**Strips show ketones spilling into urine, not blood levels or fat loss. McDonald's view is that they can read negative during ketosis and that fat lost is what counts.**
+**Strips detect ketones spilling into urine, not blood levels or fat loss. McDonald's view is that they can read negative during ketosis and that fat lost is what counts.**
 
-McDonald points out that ketosis is defined by blood ketones, that urine readings also shift with how much you drink, and that lean, active people may make too few ketones to show. In his view ketones rise because fat is being broken down, so a darker strip does not mean faster fat loss. In a six-week trial in 20 sedentary adults with obesity, a non-ketogenic low-carbohydrate diet lost as much fat as a ketogenic one (see the ketogenic diet entries in the diet guide).
+McDonald's view is that ketosis is defined by blood ketones, that urine readings also shift with how much you drink, and that lean, active people may make too few ketones to show. In his view ketones rise because fat is being broken down, so a darker strip does not mean faster fat loss (see the ketosis term and the ketogenic diet entries in the diet guide). People with diabetes who test ketones for medical reasons should follow their clinician, not this entry.
 
-- McDonald's practice: track weight, waist and training, not strip colour.
+- McDonald's practice: judge the diet by fat lost and muscle kept, not by strip colour.
 
-Carbs, fat and fibre · Intermediate · Thin evidence · Sources: [Johnston 2006](https://doi.org/10.1093/ajcn/83.5.1055), [McDonald 2009u](https://bodyrecomposition.com/nutrition/the-ketogenic-ratio), [McDonald 2008p](https://bodyrecomposition.com/nutrition/how-many-carbohydrates-do-you-need)
+Carbs, fat and fibre · Intermediate · Coaching practice · Sources: [McDonald 2009u](https://bodyrecomposition.com/nutrition/the-ketogenic-ratio), [McDonald 2008p](https://bodyrecomposition.com/nutrition/how-many-carbohydrates-do-you-need)
 
 ## Key numbers
 
@@ -800,9 +799,9 @@ Thin evidence · Sources: [Gorissen 2018](https://doi.org/10.1007/s00726-018-264
 - **Essential fatty acids (EFAs)**: Fats the body needs but cannot build: by the textbook, linoleic acid (LA, omega-6) and alpha-linolenic acid (ALA, omega-3). McDonald's view is that almost any diet with fat covers the minimum, not the optimum. See the diet planner.
 - **Essential, nonessential and conditionally essential nutrients**: Essential: needed and not made in enough amount, so food must supply it. Nonessential: needed, but the body builds its own. Conditionally essential: supply falls short only in some states; McDonald puts carbohydrate there for hard training.
 - **Fast and slow proteins**: Proteins whose amino acids reach the blood at different speeds. Whey gives a sharp, short rise in blood amino acids; casein gives a lower rise that lasts for hours, probably because it leaves the stomach slowly.
-- **Glycaemic load (GL)**: A food's glycaemic index multiplied by the grams of carbohydrate in the portion eaten, divided by 100. It accounts for both the kind and the amount of carbohydrate (see the glycaemic index entry).
+- **Glycaemic load (GL)**: A food's glycaemic index multiplied by the grams of carbohydrate in the portion eaten, divided by 100. It accounts for both the kind and the amount of carbohydrate (see the glycaemic index entry in the diet guide).
 - **Isoflavones (soy phytoestrogens)**: Plant compounds in soy, chiefly genistein and daidzein, that bind oestrogen receptors and can act like oestrogen. Phytoestrogen is the wider term for such plant compounds. They drive most worries about soy and hormones.
-- **Ketosis and ketone bodies**: Ketone bodies are fuels the liver makes from fat when carbohydrate is scarce; ketosis means raised blood ketones. It follows fat breakdown rather than causing it, and differs from diabetic ketoacidosis, an emergency.
+- **Ketosis and ketone bodies**: Ketone bodies are fuels the liver makes from fat when carbohydrate is scarce; ketosis means raised blood ketones and follows fat breakdown. Diabetic ketoacidosis is a separate danger: with diabetes, see a clinician before going low-carb.
 - **Kilojoule (kJ) and kilocalorie (kcal)**: Two units of food energy. One kcal, the calorie on most labels, equals 4.184 kJ. Many countries print kJ.
 - **Leucine**: An essential amino acid that acts as a trigger for muscle protein synthesis. Animal proteins contain more than most plant proteins, per gram of protein.
 - **Macronutrients (macros)**: The three nutrients that provide most energy: protein, carbohydrate and fat. Alcohol is sometimes counted as a fourth source of energy.

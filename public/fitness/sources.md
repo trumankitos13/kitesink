@@ -1,6 +1,6 @@
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 987 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 986 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -94,7 +94,7 @@ What changed after an entry was published, newest first.
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 987 sources, A to Z
+## All 986 sources, A to Z
 
 - Aasa U, Svartholm I, Andersson F et al. (2017). Injuries among weightlifters and powerlifters: a systematic review. *British Journal of Sports Medicine* 51(4):211-219. https://doi.org/10.1136/bjsports-2016-096037 (Systematic review, cited 2×)
 - Abad CC, Prado ML, Ugrinowitsch C et al. (2011). Combination of General and Specific Warm-Ups Improves Leg-Press One Repetition Maximum Compared With Specific Warm-Up in Trained Individuals. *Journal of Strength and Conditioning Research* 25(8):2242-2245. https://doi.org/10.1519/jsc.0b013e3181e8611b (Trial, cited 1×)
@@ -109,7 +109,7 @@ What changed after an entry was published, newest first.
 - American Diabetes Association Professional Practice Committee for Diabetes*, Bajaj M, McCoy RG et al. (2025). 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. *Diabetes Care* 49(Supplement_1):S27-S49. https://doi.org/10.2337/dc26-s002 (Guideline, cited 4×)
 - Ahtiainen JP, Pakarinen A, Alen M et al. (2005). Short vs. Long Rest Period Between the Sets in Hypertrophic Resistance Training: Influence on Muscle Strength, Size, and Hormonal Adaptations in Trained Men. *The Journal of Strength and Conditioning Research* 19(3):572. https://doi.org/10.1519/15604.1 (Trial, cited 2×)
 - Alhassan S, Kim S, Bersamin A et al. (2008). Dietary adherence and weight loss success among overweight women: results from the A TO Z weight loss study. *International Journal of Obesity* 32(6):985-991. https://doi.org/10.1038/ijo.2008.8 (Trial, cited 3×)
-- Almond CS, Shin AY, Fortescue EB et al. (2005). Hyponatremia among Runners in the Boston Marathon. *New England Journal of Medicine* 352(15):1550-1556. https://doi.org/10.1056/NEJMoa043901 (Cohort study, cited 1×)
+- Almond CSD, Shin AY, Fortescue EB et al. (2005). Hyponatremia among Runners in the Boston Marathon. *New England Journal of Medicine* 352(15):1550-1556. https://doi.org/10.1056/NEJMoa043901 (Cohort study, cited 1×)
 - Amdi CH, King A (2025). The effect of eccentric phase duration on maximal strength, muscle hypertrophy and countermovement jump height: A systematic review and meta-analysis. *Journal of Sports Sciences* 43(20):2447-2464. https://doi.org/10.1080/02640414.2025.2535198 (Meta-analysis, cited 1×)
 - Amstrup AK, Sikjaer T, Heickendorff L et al. (2015). Melatonin improves bone mineral density at the femoral neck in postmenopausal women with osteopenia: a randomized controlled trial. *Journal of Pineal Research* 59(2):221-229. https://doi.org/10.1111/jpi.12252 (Randomised trial, cited 2×)
 - Amstrup AK, Sikjaer T, Pedersen SB et al. (2016). Reduced fat mass and increased lean mass in response to 1 year of melatonin treatment in postmenopausal women: A randomized placebo-controlled trial. *Clinical Endocrinology* 84(3):342-347. https://doi.org/10.1111/cen.12942 (Randomised trial, cited 2×)
@@ -401,7 +401,7 @@ What changed after an entry was published, newest first.
 - Jentjens R, Jeukendrup AE (2003). Determinants of Post-Exercise Glycogen Synthesis During Short-Term Recovery. *Sports Medicine* 33(2):117-144. https://doi.org/10.2165/00007256-200333020-00004 (Review, cited 1×)
 - Johnson GO, Housh TJ, Powell DR et al. (1990). A physiological comparison of female body builders and power lifters. *The Journal of Sports Medicine and Physical Fitness* 30(4):361-364. https://pubmed.ncbi.nlm.nih.gov/2079841/ (Cohort study, cited 1×)
 - Johnson GH, Fritsche K (2012). Effect of Dietary Linoleic Acid on Markers of Inflammation in Healthy Persons: A Systematic Review of Randomized Controlled Trials. *Journal of the Academy of Nutrition and Dietetics* 112(7):1029-1041.e15. https://doi.org/10.1016/j.jand.2012.03.029 (Systematic review, cited 1×)
-- Johnston CS, Tjonn SL, Swan PD et al. (2006). Ketogenic low-carbohydrate diets have no metabolic advantage over nonketogenic low-carbohydrate diets. *The American Journal of Clinical Nutrition* 83(5):1055-1061. https://doi.org/10.1093/ajcn/83.5.1055 (Randomised trial, cited 2×)
+- Johnston CS, Tjonn SL, Swan PD et al. (2006). Ketogenic low-carbohydrate diets have no metabolic advantage over nonketogenic low-carbohydrate diets. *The American Journal of Clinical Nutrition* 83(5):1055-1061. https://doi.org/10.1093/ajcn/83.5.1055 (Randomised trial, cited 1×)
 - Johnston BC, Kanters S, Bandayrel K et al. (2014). Comparison of Weight Loss Among Named Diet Programs in Overweight and Obese Adults. *JAMA* 312(9):923. https://doi.org/10.1001/jama.2014.10397 (Meta-analysis, cited 4×)
 - Johnstone AM, Murison SD, Duncan JS et al. (2005). Factors influencing variation in basal metabolic rate include fat-free mass, fat mass, age, and circulating thyroxine but not sex, circulating leptin, or triiodothyronine. *The American Journal of Clinical Nutrition* 82(5):941-948. https://doi.org/10.1093/ajcn/82.5.941 (Cohort study, cited 3×)
 - Jones MD, Wewege MA, Hackett DA et al. (2021). Sex Differences in Adaptations in Muscle Strength and Size Following Resistance Training in Older Adults: A Systematic Review and Meta-analysis. *Sports Medicine* 51(3):503-517. https://doi.org/10.1007/s40279-020-01388-4 (Meta-analysis, cited 2×)
@@ -1068,7 +1068,6 @@ What changed after an entry was published, newest first.
 - Winwood PW, Travis SK, Barnes MJ et al. (2026). Tapering and Peaking in the Weight Lifting Sports: A Systematic Review of Athletes’ Self-Reported Strategies. *Sports Medicine* 56(12):3099-3123. https://doi.org/10.1007/s40279-026-02500-w (Systematic review, cited 2×)
 - Wirth K, Hartmann H, Sander A et al. (2016). The Impact of Back Squat and Leg-Press Exercises on Maximal Strength and Speed-Strength Parameters. *Journal of Strength and Conditioning Research* 30(5):1205-1212. https://doi.org/10.1519/jsc.0000000000001228 (Trial, cited 1×)
 - Wirth J, Hillesheim E, Brennan L (2020). The Role of Protein Intake and its Timing on Body Composition and Muscle Function in Healthy Adults: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. *The Journal of Nutrition* 150(6):1443-1460. https://doi.org/10.1093/jn/nxaa049 (Systematic review, cited 2×)
-- Wolever TM, Jenkins DJ, Ocana AM et al. (1988). Second-meal effect: low-glycemic-index foods eaten at dinner improve subsequent breakfast glycemic response. *The American Journal of Clinical Nutrition* 48(4):1041-1047. https://doi.org/10.1093/ajcn/48.4.1041 (Trial, cited 1×)
 - Wolf A, Bray GA, Popkin BM (2008). A short history of beverages and how our body treats them. *Obesity Reviews* 9(2):151-164. https://doi.org/10.1111/j.1467-789X.2007.00389.x (Review, cited 1×)
 - Wolfe RR (2017). Branched-chain amino acids and muscle protein synthesis in humans: myth or reality?. *Journal of the International Society of Sports Nutrition* 14(1):30. https://doi.org/10.1186/s12970-017-0184-9 (Review, cited 2×)
 - Wulf G (2013). Attentional focus and motor learning: a review of 15 years. *International Review of Sport and Exercise Psychology* 6(1):77-104. https://doi.org/10.1080/1750984x.2012.723728 (Review, cited 1×)
