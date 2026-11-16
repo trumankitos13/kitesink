@@ -1,6 +1,6 @@
 # Fitness key numbers and reference tables, indexed: KiteSink
 
-An index of the 129 key numbers and 63 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
+An index of the 130 key numbers and 63 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
 
 ## Key numbers
 
@@ -87,6 +87,7 @@ An index of the 129 key numbers and 63 reference tables in the KiteSink fitness 
 | [Caffeine dose often studied](https://kitesink.com/fitness/nutrition#nut-num-caffeine) | 3-6 | mg per kg | Nutrition |
 | [Fibre target](https://kitesink.com/fitness/nutrition#nut-num-fibre) | 25-29 | g per day | Nutrition |
 | [Energy from dietary fibre](https://kitesink.com/fitness/nutrition#nut-num-fibre-energy) | 2 | kcal per g (8 kJ) | Nutrition |
+| [Fructose intake below which blood fats did not rise after meals](https://kitesink.com/fitness/nutrition#nut-num-fructose-50g) | 50 | g of fructose a day | Nutrition |
 | [Rate of loss](https://kitesink.com/fitness/diet#diet-num-rate) | 0.5-1 | % body weight per week | Diet |
 | [Deficit that stopped lean-mass gains](https://kitesink.com/fitness/diet#diet-num-deficit-limit) | 500 | kcal per day | Diet |
 | [Energy per pound of weight lost](https://kitesink.com/fitness/diet#diet-num-3500) | 3,500 | kcal per lb | Diet |

@@ -345,7 +345,7 @@ McDonald passes on a rule from an elite sprint-cycling coach and agrees with it.
 - After a new one-rep max, do no further maximal attempts that day.
 - If warm-ups show you are well off your usual numbers, cut the heavy work.
 
-Strength and power training · Advanced · Coaching practice · Sources: [McDonald 2016e](https://bodyrecomposition.com/training/all-you-need-to-know-about-training)
+Strength and power training · Advanced · Coaching practice · Sources: [McDonald 2016f](https://bodyrecomposition.com/training/all-you-need-to-know-about-training)
 
 ### High-rep, short-rest training builds fatigue tolerance more than size or strength
 
@@ -439,7 +439,7 @@ McDonald's point is that most arguments about intensity come from people using o
 
 - Log the weight and reps, then add how many reps you had left.
 
-Intensity and load · Intermediate · Coaching practice · Sources: [McDonald 2008ai](https://bodyrecomposition.com/training/what-is-training-intensity), [Helms 2016](https://doi.org/10.1519/SSC.0000000000000218)
+Intensity and load · Intermediate · Coaching practice · Sources: [McDonald 2008ak](https://bodyrecomposition.com/training/what-is-training-intensity), [Helms 2016](https://doi.org/10.1519/SSC.0000000000000218)
 
 ### Outside the lifting sports, set loads by a rep-max zone, not a percentage
 
@@ -450,7 +450,7 @@ McDonald lists the problems of percent-based loading for non-specialists: testin
 - Pick a rep zone for each exercise and find the weight that fits it.
 - Raise the weight when your last set ends with two or three reps to spare.
 
-Intensity and load · Beginner · Some support · Sources: [McDonald 2015s](https://bodyrecomposition.com/training/setting-exercise-intensity), [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7), [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
+Intensity and load · Beginner · Some support · Sources: [McDonald 2015t](https://bodyrecomposition.com/training/setting-exercise-intensity), [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7), [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
 
 ### All-out fast work needs a longer warm-up than its light loads suggest
 
@@ -472,7 +472,7 @@ McDonald prefers a sign to a stopwatch: continue until sweating lightly, which t
 - Do a few minutes of easy movement until you feel warm, then start your ramp-up sets.
 - Take longer in the cold, or if your joints are stiff.
 
-Warming up · Beginner · Thin evidence · Sources: [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Abad 2011](https://doi.org/10.1519/jsc.0b013e3181e8611b), [Fradkin 2010](https://doi.org/10.1519/jsc.0b013e3181c643a0)
+Warming up · Beginner · Thin evidence · Sources: [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Abad 2011](https://doi.org/10.1519/jsc.0b013e3181e8611b), [Fradkin 2010](https://doi.org/10.1519/jsc.0b013e3181c643a0)
 
 ### End a warm-up set at the rep where the weight starts to feel easy
 
@@ -483,7 +483,7 @@ McDonald passes on a cue from his own mentor. During a warm-up set the first rep
 - Stop each warm-up set when a rep first feels smooth, then go up.
 - Treat every warm-up rep as technique practice.
 
-Warming up · Intermediate · Coaching practice · Sources: [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
+Warming up · Intermediate · Coaching practice · Sources: [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
 
 ### Stretch before lifting where tightness blocks a safe position
 
@@ -494,7 +494,7 @@ A systematic review found no harm from static stretches under 30 seconds, none o
 - Before lifting, stretch only the areas that stop you reaching a good position.
 - Keep any pre-lift static hold under about 30 seconds.
 
-Warming up · Beginner · Well supported · Sources: [Kay 2012](https://doi.org/10.1249/mss.0b013e318225cb27), [Behm 2016](https://doi.org/10.1139/apnm-2015-0235), [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
+Warming up · Beginner · Well supported · Sources: [Kay 2012](https://doi.org/10.1249/mss.0b013e318225cb27), [Behm 2016](https://doi.org/10.1139/apnm-2015-0235), [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
 
 ### Foam rolling before lifting is optional and does not replace warming up
 
@@ -505,7 +505,7 @@ A meta-analysis of 21 studies, 14 of them on rolling before exercise, found it i
 - Roll or do activation drills only for a specific, known problem.
 - Keep the whole warm-up short enough that it never eats into the session.
 
-Warming up · Beginner · Some support · Sources: [Wiewelhove 2019](https://doi.org/10.3389/fphys.2019.00376), [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
+Warming up · Beginner · Some support · Sources: [Wiewelhove 2019](https://doi.org/10.3389/fphys.2019.00376), [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
 
 ### A single at the working weight is an optional primer for experienced lifters
 
@@ -516,7 +516,7 @@ McDonald offers this only to lifters with a settled basic warm-up. If your secon
 - Try a single at the working weight if your first set is always your worst.
 - Drop it if it makes no difference after a few sessions.
 
-Warming up · Advanced · Thin evidence · Sources: [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347), [Seitz 2016](https://doi.org/10.1007/s40279-015-0415-7)
+Warming up · Advanced · Thin evidence · Sources: [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347), [Seitz 2016](https://doi.org/10.1007/s40279-015-0415-7)
 
 ### Five rising sets of five suit learning a lift, if someone checks the technique
 
@@ -559,7 +559,7 @@ McDonald describes the set as roughly 10 continuous reps followed by 10 near-max
 
 - Treat it as an occasional short block, not a year-round programme.
 
-Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2016d](https://bodyrecomposition.com/training/all-about-the-20-rep-squat)
+Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2016e](https://bodyrecomposition.com/training/all-about-the-20-rep-squat)
 
 ### Break in below your 10-rep max and keep a 20-rep squat cycle short
 
@@ -570,7 +570,7 @@ McDonald's first rule is never to open with a true 10-rep max: use 10 to 20% les
 - Squat inside a rack with the safety bars set just below your bottom position.
 - End the set if your back position goes, whatever the rep count.
 
-Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2016d](https://bodyrecomposition.com/training/all-about-the-20-rep-squat)
+Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2016e](https://bodyrecomposition.com/training/all-about-the-20-rep-squat)
 
 ### The 300, 400, 500 rule is a long-term target for an average-sized man
 
@@ -580,7 +580,7 @@ The rule was popularised by Stuart McRobert, and Lyle McDonald sets out the cond
 
 - Use the figures as distant goals, scaled to your body weight.
 
-Standards and time frames · Intermediate · Coaching practice · Sources: [McDonald 2011a](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
+Standards and time frames · Intermediate · Coaching practice · Sources: [McDonald 2011b](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
 
 ### In unequipped lifting the deadlift is biggest, then the squat, then the bench press
 
@@ -590,7 +590,7 @@ Among competitors aged 18 to 35, the 90th-percentile man deadlifted 3.25 times b
 
 - If your squat exceeds your deadlift, film it from the side and check depth.
 
-Standards and time frames · Intermediate · Some support · Sources: [van den Hoek 2024](https://doi.org/10.1016/j.jsams.2024.07.005), [McDonald 2011a](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
+Standards and time frames · Intermediate · Some support · Sources: [van den Hoek 2024](https://doi.org/10.1016/j.jsams.2024.07.005), [McDonald 2011b](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
 
 ### The stronger you are, the slower strength comes
 
@@ -600,7 +600,7 @@ Researchers tracked 1,897 powerlifters between 2003 and 2018. Men in the stronge
 
 - Judge progress against your own recent rate, not your first-year rate.
 
-Standards and time frames · Advanced · Some support · Sources: [Latella 2020](https://doi.org/10.1519/jsc.0000000000003657), [McDonald 2011a](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
+Standards and time frames · Advanced · Some support · Sources: [Latella 2020](https://doi.org/10.1519/jsc.0000000000003657), [McDonald 2011b](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
 
 ### Goals about what you do beat goals about what you get
 
@@ -643,7 +643,7 @@ McDonald describes three stages in a coach's development: knowing nothing, belie
 - Choose the simplest plan that covers load, weekly sets and progression.
 - Change one thing at a time, and only when progress has stopped.
 
-Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2016e](https://bodyrecomposition.com/training/all-you-need-to-know-about-training), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
+Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2016f](https://bodyrecomposition.com/training/all-you-need-to-know-about-training), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
 
 ### Sports select body types more than they build them
 
@@ -653,7 +653,7 @@ The slogan that athletic training gives an athletic look assumes the training cr
 
 - If appearance is the goal, use growth training and diet, not a sport's programme.
 
-Goals and self-coaching · Beginner · Some support · Sources: [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001), [McDonald 2016p](https://bodyrecomposition.com/training/train-to-look-like-an-athlete)
+Goals and self-coaching · Beginner · Some support · Sources: [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001), [McDonald 2016q](https://bodyrecomposition.com/training/train-to-look-like-an-athlete)
 
 ### Lifting the weight fast adds a little to physical function in older adults
 
@@ -829,7 +829,7 @@ The old ascending pyramid starts with 12 to 15 hard reps and adds weight each se
 - Do fewer reps on each warm-up set as the bar gets heavier.
 - Finish every warm-up set well short of fatigue.
 
-Warming up · Beginner · Thin evidence · Sources: [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347)
+Warming up · Beginner · Thin evidence · Sources: [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347)
 
 ### Applying the 20-rep grind to deadlifts or good mornings
 
@@ -839,7 +839,7 @@ Versions of the breathing-squat idea have been published for the deadlift and th
 
 - Keep very long, all-out sets to exercises where a failed rep is safe.
 
-Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2016d](https://bodyrecomposition.com/training/all-about-the-20-rep-squat)
+Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2016e](https://bodyrecomposition.com/training/all-about-the-20-rep-squat)
 
 ### Comparing your lifts with numbers that carry no conditions
 
@@ -850,7 +850,7 @@ McDonald's test is to ask how many strict lifts at the 300, 400 and 500 lb (136,
 - Record your own lifts to a fixed standard of depth and control.
 - Compare yourself with lifters of your sex, size and training history.
 
-Standards and time frames · Beginner · Coaching practice · Sources: [McDonald 2011a](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift), [van den Hoek 2024](https://doi.org/10.1016/j.jsams.2024.07.005)
+Standards and time frames · Beginner · Coaching practice · Sources: [McDonald 2011b](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift), [van den Hoek 2024](https://doi.org/10.1016/j.jsams.2024.07.005)
 
 ### Judging every session by whether you set a personal best
 
@@ -883,7 +883,7 @@ McDonald's objection to the phrase about success leaving clues is that people ch
 - Ask whether unsuccessful lifters do the same thing before you copy it.
 - Put consistency over years ahead of any single method.
 
-Goals and self-coaching · Beginner · Coaching practice · Sources: [McDonald 2011b](https://bodyrecomposition.com/training/success-leaves-clues), [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001)
+Goals and self-coaching · Beginner · Coaching practice · Sources: [McDonald 2011c](https://bodyrecomposition.com/training/success-leaves-clues), [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001)
 
 ## Key numbers
 
@@ -898,9 +898,9 @@ Goals and self-coaching · Beginner · Coaching practice · Sources: [McDonald 2
 | 6-8 seconds | Longest useful all-out power set: McDonald's limit for holding maximal power, after which output falls. He pairs sets this short with rests of 3 minutes or more. | Coaching practice | [McDonald 2014g](https://bodyrecomposition.com/training/categories-of-weight-training-14) |
 | 20-30 % off the working weight | Reduction from working weight for fast, explosive sets: McDonald's shortcut for lifters who train at about 80 to 85% of max. It gives roughly 50 to 65% of max, within the power range. | Coaching practice | [McDonald 2014h](https://bodyrecomposition.com/training/categories-of-weight-training-15) |
 | 40-70 reps per muscle a session | McDonald's growth guideline for reps in a session: His working range at about 60 to 85% of max, citing a 2007 review he reads as favouring 30 to 60. Newer analyses count weekly sets. | Coaching practice | [McDonald 2014a](https://bodyrecomposition.com/training/categories-of-weight-training-4), [Wernbom 2007](https://doi.org/10.2165/00007256-200737030-00004) |
-| 4-7 sets | Warm-up sets before heavy triples: McDonald's guide for work at about 85 to 90% of max. Sets of 12 at moderate loads need only one or two. | Coaching practice | [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room) |
+| 4-7 sets | Warm-up sets before heavy triples: McDonald's guide for work at about 85 to 90% of max. Sets of 12 at moderate loads need only one or two. | Coaching practice | [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room) |
 | 75-80 % of 1RM | Load that allows five sets of five at one weight: McDonald's working range for 5x5 with the same weight. A single maximal set of five is about 85%. | Coaching practice | [McDonald 2009b](https://bodyrecomposition.com/training/the-5x5-program) |
-| 1.5 / 2 / 2.5 x body weight | The 300, 400, 500 rule as multiples of body weight: Bench press, squat and deadlift for a man of about 90 kg (200 lb), as McDonald works out McRobert's rule. A coaching target, not a norm. | Coaching practice | [McDonald 2011a](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift) |
+| 1.5 / 2 / 2.5 x body weight | The 300, 400, 500 rule as multiples of body weight: Bench press, squat and deadlift for a man of about 90 kg (200 lb), as McDonald works out McRobert's rule. A coaching target, not a norm. | Coaching practice | [McDonald 2011b](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift) |
 
 ## Signs you have outgrown a beginner programme
 
@@ -1035,7 +1035,7 @@ Lyle McDonald's guidance gathered into one comparison. Heavier loads, more techn
 | Second exercise for the same muscles | 1 to 2 | A short set of 3 to 5, then 1 to 2 reps, to find the groove |
 | Sore or previously injured joint | Add 1 to 2 first | 10 to 15 easy reps with the empty bar or a very light load |
 
-Coaching practice · Sources: [McDonald 2009al](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
+Coaching practice · Sources: [McDonald 2009at](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
 
 ## Top-tenth relative strength in drug-tested, unequipped powerlifters
 
@@ -1047,7 +1047,7 @@ Coaching practice · Sources: [McDonald 2009al](https://bodyrecomposition.com/tr
 | Bench press | 1.95 x body weight | 1.35 x body weight | About 1.5 x body weight |
 | Deadlift | 3.25 x body weight | 2.66 x body weight | About 2.5 x body weight |
 
-Some support · Sources: [van den Hoek 2024](https://doi.org/10.1016/j.jsams.2024.07.005), [McDonald 2011a](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
+Some support · Sources: [van den Hoek 2024](https://doi.org/10.1016/j.jsams.2024.07.005), [McDonald 2011b](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift)
 
 ## What a lifter can and cannot control
 
@@ -1061,7 +1061,7 @@ Lyle McDonald's rule: accept the fixed factors, use them only to shape your appr
 | How appetite and metabolism react to dieting | How hard fat loss feels | Choose the diet structure you can keep to, and manage activity and sleep |
 | Other people's results | Placings and comparisons | Set process goals and compete against your own numbers |
 
-Coaching practice · Sources: [McDonald 2011f](https://bodyrecomposition.com/training/what-you-can-and-cannot-control)
+Coaching practice · Sources: [McDonald 2011h](https://bodyrecomposition.com/training/what-you-can-and-cannot-control)
 
 ## Weekly layouts for all-round fitness
 
