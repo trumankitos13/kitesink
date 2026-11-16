@@ -341,7 +341,7 @@ The accepted ceiling was 20 to 25 g, and McDonald's article says that figure cam
 
 - After a full-body session, consider nearer 40 g than 20 g; the evidence is one short study.
 
-Protein · Intermediate · Thin evidence · Sources: [Macnaughton 2016](https://doi.org/10.14814/phy2.12893), [McDonald 2016k](https://bodyrecomposition.com/research/protein-intake-protein-synthesis)
+Protein · Intermediate · Thin evidence · Sources: [Macnaughton 2016](https://doi.org/10.14814/phy2.12893), [McDonald 2016n](https://bodyrecomposition.com/research/protein-intake-protein-synthesis)
 
 ### Without animal foods, plan for vitamin B12, and expect less iron to be absorbed
 
@@ -362,7 +362,7 @@ In 17 people on controlled diets, each eaten for two weeks, raising fibre lowere
 
 - McDonald's practice: if you struggle to eat enough, eat the salad or vegetables last.
 
-Carbs, fat and fibre · Intermediate · Thin evidence · Sources: [Baer 1997](https://doi.org/10.1093/jn/127.4.579), [McDonald 2009o](https://bodyrecomposition.com/nutrition/dietary-fiber-natures-broom)
+Carbs, fat and fibre · Intermediate · Thin evidence · Sources: [Baer 1997](https://doi.org/10.1093/jn/127.4.579), [McDonald 2009p](https://bodyrecomposition.com/nutrition/dietary-fiber-natures-broom)
 
 ### A lower glycaemic index does not always mean less insulin
 
@@ -408,7 +408,7 @@ A 1997 review found that after 60 to 90 minutes of moderate running or cycling, 
 
 - For events under an hour, eat your normal diet beforehand instead of loading.
 
-Timing, fluids and alcohol · Intermediate · Some support · Sources: [Hawley 1997](https://doi.org/10.2165/00007256-199724020-00001), [McDonald 2015j](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
+Timing, fluids and alcohol · Intermediate · Some support · Sources: [Hawley 1997](https://doi.org/10.2165/00007256-199724020-00001), [McDonald 2015k](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
 
 ### A short all-out effort and one day of high carbohydrate loaded glycogen in a small study
 
@@ -418,7 +418,7 @@ Published loading plans took two to six days; McDonald's article recounts that t
 
 - McDonald's practice: test any pre-race meal in training, never for the first time on race day.
 
-Timing, fluids and alcohol · Advanced · Thin evidence · Sources: [Fairchild 2002](https://doi.org/10.1097/00005768-200206000-00012), [McDonald 2015j](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
+Timing, fluids and alcohol · Advanced · Thin evidence · Sources: [Fairchild 2002](https://doi.org/10.1097/00005768-200206000-00012), [McDonald 2015k](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
 
 ### Bodybuilders who carb-loaded before a show measured bigger, and many had diarrhoea
 
@@ -428,7 +428,7 @@ The study compared men who did and did not load, with no random allocation repor
 
 - Plan any peak-week carbohydrate load with a sports dietitian or an experienced coach.
 
-Timing, fluids and alcohol · Advanced · Thin evidence · Sources: [de Moraes 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6873117/), [McDonald 2015j](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
+Timing, fluids and alcohol · Advanced · Thin evidence · Sources: [de Moraes 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6873117/), [McDonald 2015k](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
 
 ### Calories from sugary drinks were not offset by eating less
 
@@ -459,7 +459,7 @@ A 2019 meta-analysis found no change in free T3 or free T4 and a TSH rise of abo
 - If you take thyroid medicine and eat soy often, tell your clinician, as your dose may need checking.
 - If you eat a lot of soy, make sure your iodine intake is adequate.
 
-Protein · Intermediate · Some support · Sources: [Otun 2019](https://doi.org/10.1038/s41598-019-40647-x), [Messina 2006](https://doi.org/10.1089/thy.2006.16.249), [Doerge 2002](https://doi.org/10.1289/ehp.02110s3349), [McDonald 2009am](https://bodyrecomposition.com/research/soy-protein-and-thyroid-function)
+Protein · Intermediate · Some support · Sources: [Otun 2019](https://doi.org/10.1038/s41598-019-40647-x), [Messina 2006](https://doi.org/10.1089/thy.2006.16.249), [Doerge 2002](https://doi.org/10.1289/ehp.02110s3349), [McDonald 2009an](https://bodyrecomposition.com/research/soy-protein-and-thyroid-function)
 
 ### Soy protein and isoflavones did not change men's testosterone
 
@@ -469,7 +469,7 @@ Total testosterone was measured in 1,753 men and oestradiol in 1,000. Total and 
 
 - Men can use soy as a protein source without worrying about testosterone.
 
-Protein · Beginner · Well supported · Sources: [Reed 2021](https://doi.org/10.1016/j.reprotox.2020.12.019), [McDonald 2009am](https://bodyrecomposition.com/research/soy-protein-and-thyroid-function)
+Protein · Beginner · Well supported · Sources: [Reed 2021](https://doi.org/10.1016/j.reprotox.2020.12.019), [McDonald 2009an](https://bodyrecomposition.com/research/soy-protein-and-thyroid-function)
 
 ### High-fructose corn syrup behaves much like table sugar
 
@@ -479,7 +479,7 @@ McDonald's article lists the common forms, HFCS-42 and HFCS-55, named for their 
 
 - Count HFCS as added sugar, the same as sucrose or honey.
 
-Carbs, fat and fibre · Beginner · Thin evidence · Sources: [White 2008](https://doi.org/10.3945/ajcn.2008.25825B), [Stanhope 2008](https://doi.org/10.1093/ajcn/87.5.1194), [McDonald 2009q](https://bodyrecomposition.com/research/facts-on-high-fructose-corn-syrup)
+Carbs, fat and fibre · Beginner · Thin evidence · Sources: [White 2008](https://doi.org/10.3945/ajcn.2008.25825B), [Stanhope 2008](https://doi.org/10.1093/ajcn/87.5.1194), [McDonald 2009r](https://bodyrecomposition.com/research/facts-on-high-fructose-corn-syrup)
 
 ### Choose lower-mercury fish, above all in pregnancy and for children
 
@@ -490,7 +490,7 @@ The advice is written for people who are or may become pregnant or breastfeeding
 - If you are pregnant or planning to be, plan your fish intake with your clinician or midwife.
 - McDonald's practice: if you eat fish most days, favour low-mercury kinds over large daily amounts of tuna.
 
-Protein · Beginner · Rulebook · Sources: [UFDA 2024](https://www.fda.gov/food/consumers/advice-about-eating-fish), [McDonald 2009p](https://bodyrecomposition.com/nutrition/mercury-content-of-fish)
+Protein · Beginner · Rulebook · Sources: [UFDA 2024](https://www.fda.gov/food/consumers/advice-about-eating-fish), [McDonald 2009q](https://bodyrecomposition.com/nutrition/mercury-content-of-fish)
 
 ### High-dose vitamins C and E blunted some training adaptations in trials
 
@@ -529,7 +529,7 @@ The authors call this the muscle-full effect. In 24 trained men given 80 g of wh
 
 - Space protein meals a few hours apart rather than grazing every hour.
 
-Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Atherton 2010](https://doi.org/10.3945/ajcn.2010.29819), [Areta 2013](https://doi.org/10.1113/jphysiol.2012.244897), [Trommelen 2023](https://doi.org/10.1016/j.xcrm.2023.101324), [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/meal-frequency-muscle-mass-gains), [McDonald 2009ao](https://bodyrecomposition.com/muscle-gain/the-baseline-diet)
+Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Atherton 2010](https://doi.org/10.3945/ajcn.2010.29819), [Areta 2013](https://doi.org/10.1113/jphysiol.2012.244897), [Trommelen 2023](https://doi.org/10.1016/j.xcrm.2023.101324), [McDonald 2009z](https://bodyrecomposition.com/muscle-gain/meal-frequency-muscle-mass-gains), [McDonald 2009ap](https://bodyrecomposition.com/muscle-gain/the-baseline-diet)
 
 ### Protein before bed improved overnight protein balance after evening training
 
@@ -539,7 +539,7 @@ All of them had 20 g of protein and 60 g of carbohydrate straight after the sess
 
 - If you train late, a protein-rich snack before bed is a reasonable option.
 
-Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Res 2012](https://doi.org/10.1249/MSS.0b013e31824cc363), [McDonald 2009ao](https://bodyrecomposition.com/muscle-gain/the-baseline-diet)
+Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Res 2012](https://doi.org/10.1249/MSS.0b013e31824cc363), [McDonald 2009ap](https://bodyrecomposition.com/muscle-gain/the-baseline-diet)
 
 ### A planned surplus added fat but no extra lean mass in young elite athletes
 
@@ -549,7 +549,7 @@ Thirty-nine elite athletes, about 19 years old, were randomised. The meal-plan g
 
 - McDonald's practice: check skinfolds and gym strength every two weeks and adjust intake to the results.
 
-Energy and maintenance · Intermediate · Thin evidence · Sources: [Garthe 2013](https://doi.org/10.1080/17461391.2011.643923), [McDonald 2017h](https://bodyrecomposition.com/muscle-gain/calories-for-muscle-gain), [McDonald 2009ao](https://bodyrecomposition.com/muscle-gain/the-baseline-diet)
+Energy and maintenance · Intermediate · Thin evidence · Sources: [Garthe 2013](https://doi.org/10.1080/17461391.2011.643923), [McDonald 2017h](https://bodyrecomposition.com/muscle-gain/calories-for-muscle-gain), [McDonald 2009ap](https://bodyrecomposition.com/muscle-gain/the-baseline-diet)
 
 ## Common mistakes
 
@@ -687,7 +687,7 @@ Hyponatraemia means too little sodium in the blood, and severe cases can kill. I
 - Weigh yourself before and after long training runs; finishing heavier means you drank too much.
 - Plan race drinking with a sports dietitian or clinician if you will be out over 4 hours.
 
-Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Almond 2005](https://doi.org/10.1056/NEJMoa043901), [McDonald 2015j](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
+Timing, fluids and alcohol · Intermediate · Thin evidence · Sources: [Almond 2005](https://doi.org/10.1056/NEJMoa043901), [McDonald 2015k](https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance)
 
 ### Taking antioxidant pills as health insurance
 
@@ -707,7 +707,7 @@ McDonald's view is that ketosis is defined by blood ketones, that urine readings
 
 - McDonald's practice: judge the diet by fat lost and muscle kept, not by strip colour.
 
-Carbs, fat and fibre · Intermediate · Coaching practice · Sources: [McDonald 2009u](https://bodyrecomposition.com/nutrition/the-ketogenic-ratio), [McDonald 2008p](https://bodyrecomposition.com/nutrition/how-many-carbohydrates-do-you-need)
+Carbs, fat and fibre · Intermediate · Coaching practice · Sources: [McDonald 2009v](https://bodyrecomposition.com/nutrition/the-ketogenic-ratio), [McDonald 2008p](https://bodyrecomposition.com/nutrition/how-many-carbohydrates-do-you-need)
 
 ## Key numbers
 
@@ -724,7 +724,7 @@ Carbs, fat and fibre · Intermediate · Coaching practice · Sources: [McDonald 
 | 3-6 mg per kg | Caffeine dose often studied: ISSN 2010: about 3 to 6 mg per kg works, 9 or more adds nothing; 5 mg/kg is 2.3 mg per lb. Half-life was 7.9 h on low-dose oral contraceptives, 5.4 h without. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154), [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Goldstein 2010](https://doi.org/10.1186/1550-2783-7-5), [Abernethy 1985](https://doi.org/10.1007/bf00544361) |
 | 25-29 g per day | Fibre target: Intake at which health benefits were greatest in pooled studies. | Well supported | [Reynolds 2019](https://doi.org/10.1016/S0140-6736(18)31809-9) |
 | 2 kcal per g (8 kJ) | Energy from dietary fibre: FAO factor for fibre in ordinary foods, from gut bacteria fermenting part of it. Fibre they cannot ferment gives none. | Rulebook | [FAO 2003](https://www.fao.org/4/y5022e/y5022e04.htm), [McDonald 2009d](https://bodyrecomposition.com/nutrition/a-guide-to-basic-nutrition) |
-| 50 g of fructose a day | Fructose intake below which blood fats did not rise after meals: In pooled trials of pure fructose, under 50 g a day had no clear effect on blood fats after meals, and fasting levels and body weight held up to 100 g. | Some support | [Livesey 2008](https://doi.org/10.3945/ajcn.2007.25700), [McDonald 2011d](https://bodyrecomposition.com/research/fructose-intake-low-calorie-diets) |
+| 50 g of fructose a day | Fructose intake below which blood fats did not rise after meals: In pooled trials of pure fructose, under 50 g a day had no clear effect on blood fats after meals, and fasting levels and body weight held up to 100 g. | Some support | [Livesey 2008](https://doi.org/10.3945/ajcn.2007.25700), [McDonald 2011f](https://bodyrecomposition.com/research/fructose-intake-low-calorie-diets) |
 
 ## Protein targets by goal and body weight
 

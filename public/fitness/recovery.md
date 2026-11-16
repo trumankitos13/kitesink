@@ -265,7 +265,7 @@ With the heavy day at 120 kg (265 lb) for sets of five, the light day would use 
 - Calculate light and medium loads from this week's heavy-day weight, not from your one-rep max.
 - Adjust the medium day first if the heavy day starts to suffer.
 
-Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015p](https://bodyrecomposition.com/training/heavy-light-medium-training)
+Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015q](https://bodyrecomposition.com/training/heavy-light-medium-training)
 
 ### A day can be made lighter by load, by reps in reserve or by exercise choice
 
@@ -276,7 +276,7 @@ The simplest version keeps the same lifts and sets and lowers the weight. A seco
 - Do the day's heavy lift first in the session.
 - If you squat and deadlift, put their heavy days as far apart in the week as you can.
 
-Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015p](https://bodyrecomposition.com/training/heavy-light-medium-training)
+Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015q](https://bodyrecomposition.com/training/heavy-light-medium-training)
 
 ### Sets taken to failure take a day or two longer to recover from
 
@@ -325,7 +325,7 @@ In 28 trained men, six weeks of lifting three or six times a week with volume an
 - Divide your current weekly sets across the six days. Do not add to them.
 - Save your hardest sets for the sessions before the rest day.
 
-Twice a day and six days a week · Intermediate · Some support · Sources: [McDonald 2009x](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week), [Colquhoun 2018](https://doi.org/10.1519/jsc.0000000000002414), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
+Twice a day and six days a week · Intermediate · Some support · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week), [Colquhoun 2018](https://doi.org/10.1519/jsc.0000000000002414), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
 
 ### Training a muscle more often brings less soreness, not less growth
 
@@ -335,7 +335,7 @@ McDonald lists observations that separate soreness from progress. It is worst in
 
 - Do not lower training frequency just to feel sore again.
 
-Soreness · Intermediate · Coaching practice · Sources: [McDonald 2015l](https://bodyrecomposition.com/training/doms-muscle-growth), [McHugh 2003](https://doi.org/10.1034/j.1600-0838.2003.02477.x), [Damas 2016b](https://doi.org/10.1113/jp272472)
+Soreness · Intermediate · Coaching practice · Sources: [McDonald 2015m](https://bodyrecomposition.com/training/doms-muscle-growth), [McHugh 2003](https://doi.org/10.1034/j.1600-0838.2003.02477.x), [Damas 2016b](https://doi.org/10.1113/jp272472)
 
 ### Training a sore muscle again did not worsen damage in a controlled trial
 
@@ -357,7 +357,7 @@ A review of exertional rhabdomyolysis describes it as severe muscle breakdown wh
 - Introduce new exercises and high-rep work with one or two easy sets.
 - Seek urgent medical care for dark urine, severe swelling or pain far beyond normal soreness.
 
-Soreness · Beginner · Some support · Sources: [Rawson 2017](https://doi.org/10.1007/s40279-017-0689-z), [McDonald 2015l](https://bodyrecomposition.com/training/doms-muscle-growth)
+Soreness · Beginner · Some support · Sources: [Rawson 2017](https://doi.org/10.1007/s40279-017-0689-z), [McDonald 2015m](https://bodyrecomposition.com/training/doms-muscle-growth)
 
 ### A few days off costs almost nothing, and some lifters come back stronger
 
@@ -368,7 +368,7 @@ In 19 strength-trained athletes, 3 or 5 days without training preserved lower-bo
 - Do not fear a short break for illness, travel or planned rest.
 - After a break, give technical lifts one session to settle before judging them.
 
-Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007l](https://bodyrecomposition.com/training/the-importance-of-rest)
+Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007l](https://bodyrecomposition.com/training/the-importance-of-rest)
 
 ### Strength loss grows with time off and is larger in older and inactive people
 
@@ -378,7 +378,7 @@ The pooled effects were -0.62 for submaximal strength, -0.46 for maximal force a
 
 - Expect to be weaker after two or more weeks off, and plan lighter first sessions.
 
-Layoffs and coming back · Intermediate · Well supported · Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Well supported · Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### Breaks of a few weeks did not reduce long-term gains in beginners
 
@@ -398,7 +398,7 @@ In a 2024 trial, strength and size lost over a 10-week break were regained rapid
 
 - Expect lost ground to return quicker than you first gained it, whatever the mechanism.
 
-Layoffs and coming back · Intermediate · Some support · Sources: [Halonen 2024](https://doi.org/10.1111/sms.14739), [Staron 1991](https://doi.org/10.1152/jappl.1991.70.2.631), [Rahmati 2022](https://doi.org/10.1002/jcsm.13043), [Cumming 2024](https://doi.org/10.1113/jp285675), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Some support · Sources: [Halonen 2024](https://doi.org/10.1111/sms.14739), [Staron 1991](https://doi.org/10.1152/jappl.1991.70.2.631), [Rahmati 2022](https://doi.org/10.1002/jcsm.13043), [Cumming 2024](https://doi.org/10.1113/jp285675), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### After months off, restart as a beginner and expect to move faster than one
 
@@ -409,7 +409,7 @@ He starts returning lifters with one set, two at most, of eight to ten exercises
 - Use a full-body session two or three times a week for the first month.
 - Add load or one set per week, never both in the same week.
 
-Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2015r](https://bodyrecomposition.com/training/returning-from-my-layoff)
+Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2015s](https://bodyrecomposition.com/training/returning-from-my-layoff)
 
 ### After an injury, wait a week longer than you think and test one exercise at a time
 
@@ -420,7 +420,7 @@ Motivated lifters judge themselves healed too early. His arithmetic shows the co
 - Reintroduce one exercise per session for the injured area and check how it feels the next day.
 - See a clinician if pain persists, returns or limits daily movement.
 
-Layoffs and coming back · Intermediate · Coaching practice · Sources: [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### When time is short, a small dose holds most of your strength
 
@@ -461,7 +461,7 @@ In 62 young women with normal cycles, the 24-hour urinary cortisol to creatinine
 
 - If you diet strictly and train hard, count the dieting as part of your stress load.
 
-Dieting and life stress · Intermediate · Some support · Sources: [McLean 2001](https://doi.org/10.1093/ajcn/73.1.7), [Rideout 2006](https://doi.org/10.1093/gerona/61.6.628), [McDonald 2015m](https://bodyrecomposition.com/research/dietary-restraint-cortisol-levels)
+Dieting and life stress · Intermediate · Some support · Sources: [McLean 2001](https://doi.org/10.1093/ajcn/73.1.7), [Rideout 2006](https://doi.org/10.1093/gerona/61.6.628), [McDonald 2015n](https://bodyrecomposition.com/research/dietary-restraint-cortisol-levels)
 
 ### A calorie deficit counts as stress and lowers what you can recover from
 
@@ -601,7 +601,7 @@ When the lighter days use higher reps, it is tempting to push each to its limit:
 
 - Leave about two reps in reserve on light and medium days.
 
-Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2015p](https://bodyrecomposition.com/training/heavy-light-medium-training), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
+Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2015q](https://bodyrecomposition.com/training/heavy-light-medium-training), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
 
 ### Doing two full workouts from the first day of twice-daily training
 
@@ -623,7 +623,7 @@ McDonald's reasoning starts from connective tissue, which adapts more slowly tha
 - On a six-day plan, count how many days each joint is loaded, not only each muscle.
 - See a clinician about shoulder pain that lasts beyond a week or two of reduced loading.
 
-Twice a day and six days a week · Intermediate · Coaching practice · Sources: [McDonald 2009x](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week)
+Twice a day and six days a week · Intermediate · Coaching practice · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week)
 
 ### Using soreness to decide whether a muscle has recovered
 
@@ -644,7 +644,7 @@ McDonald saw the pattern often in commercial gyms: someone returns after years, 
 - Leave your old numbers out of the first month back.
 - Stop a set well short of failure in the first two weeks.
 
-Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff), [Cheung 2003](https://doi.org/10.2165/00007256-200333020-00005)
+Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff), [Cheung 2003](https://doi.org/10.2165/00007256-200333020-00005)
 
 ### Pairing a steep calorie deficit with large amounts of hard exercise
 
@@ -667,8 +667,8 @@ Dieting and life stress · Beginner · Thin evidence · Sources: [McDonald 2010c
 | 5 and 10 beats per minute | Rise in morning heart rate that old coaching rules act on: Rule of thumb passed on by McDonald: an easy day at about 5 above your rested norm, a day off at about 10. Crude and untested. | Coaching practice | [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6) |
 | 50-67% of normal volume | Size of a recovery session against a normal one: McDonald's guide: half to two thirds of usual volume, at about 60% of maximum heart rate, or at most 75% of 1RM for easy sets of 3 to 5. | Coaching practice | [McDonald 2010b](https://bodyrecomposition.com/training/active-rest-vs-passive-rest) |
 | 4-6 hours | Break between two sessions on the same day: A rule of thumb with no trial behind it: time for a meal or two and a rest. McDonald treats 3.5 to 7 hours as fine. A review lists over 6 hours among preventive measures. | Coaching practice | [McDonald 2014y](https://bodyrecomposition.com/training/two-a-day-training-weight-room), [McDonald 2014z](https://bodyrecomposition.com/training/two-a-day-training-weight-room-2), [Kreher 2012](https://doi.org/10.1177/1941738111434406) |
-| 2x the time off | Time to get back after one to two weeks off: McDonald's rule of thumb: two weeks off takes about four weeks to regain. It stops applying once the break reaches a month or more. | Coaching practice | [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff) |
-| 50-60% of previous max | Starting load after a long layoff: McDonald's starting point, or lighter, for the first sessions back after months away, for one or two easy sets per exercise. | Coaching practice | [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff) |
+| 2x the time off | Time to get back after one to two weeks off: McDonald's rule of thumb: two weeks off takes about four weeks to regain. It stops applying once the break reaches a month or more. | Coaching practice | [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff) |
+| 50-60% of previous max | Starting load after a long layoff: McDonald's starting point, or lighter, for the first sessions back after months away, for one or two easy sets per exercise. | Coaching practice | [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff) |
 | 1.78 odds ratio | Injury restrictions in exam weeks against ordinary weeks: Odds of a player having an injury restriction in weeks of high academic stress, in 101 college football players over a season. | Thin evidence | [Mann 2016](https://doi.org/10.1519/jsc.0000000000001055) |
 
 ## From normal tiredness to overtraining syndrome: four states
@@ -747,7 +747,7 @@ Losses grow with time away and return faster than they were built. The restart a
 | About 10 weeks | Strength and size fell in new lifters, then were regained rapidly on retraining | Start lighter with fewer sets; add weekly | Several weeks |
 | Many months or years | Losses grow with duration, more so in older and inactive people | Restart as a beginner at 50 to 60% of old loads or less | Two to three months to approach old loads |
 
-Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [Halonen 2024](https://doi.org/10.1111/sms.14739), [Bosquet 2013](https://doi.org/10.1111/sms.12047), [McDonald 2009aj](https://bodyrecomposition.com/training/training-after-a-layoff)
+Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [Halonen 2024](https://doi.org/10.1111/sms.14739), [Bosquet 2013](https://doi.org/10.1111/sms.12047), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ## Terms
 

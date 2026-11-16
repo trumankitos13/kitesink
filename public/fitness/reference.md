@@ -1,6 +1,6 @@
 # Fitness key numbers and reference tables, indexed: KiteSink
 
-An index of the 130 key numbers and 63 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
+An index of the 131 key numbers and 63 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
 
 ## Key numbers
 
@@ -51,6 +51,7 @@ An index of the 130 key numbers and 63 reference tables in the KiteSink fitness 
 | [Lifters who cut weight at the 2018 IPF classic worlds](https://kitesink.com/fitness/powerlifting#pl-num-cut-prevalence) | 83 | % of 64 lifters | Powerlifting |
 | [Strength lost with hypohydration](https://kitesink.com/fitness/powerlifting#pl-num-hypohydration) | 5.5 | % lower muscle strength | Powerlifting |
 | [Mean age of peak performance in world-class powerlifters](https://kitesink.com/fitness/powerlifting#pl-num-peak-age) | 35 | years (SD 7) | Powerlifting |
+| [Half-life of the rebound effect while the bar is paused](https://kitesink.com/fitness/powerlifting#pl-num-pause-half-life) | 0.85 | seconds | Powerlifting |
 | [Opener as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-opener) | 80-85 | % of best single | Meet day |
 | [Second attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-second) | 85-92 | % of best single | Meet day |
 | [Third attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-third) | 92-95 | % of best single | Meet day |

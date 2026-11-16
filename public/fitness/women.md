@@ -13,7 +13,7 @@ Before puberty there is no sex difference in testosterone or in athletic perform
 - Compare your lifts with women's standards or with your own past numbers.
 - Do not read a smaller absolute number as a poorer response to training.
 
-How women and men differ · Beginner · Well supported · Sources: [Handelsman 2018](https://doi.org/10.1210/er.2018-00020), [Hunter 2023](https://doi.org/10.1249/mss.0000000000003300), [McDonald 2015o](https://bodyrecomposition.com/women/female-vs-male-physiology)
+How women and men differ · Beginner · Well supported · Sources: [Handelsman 2018](https://doi.org/10.1210/er.2018-00020), [Hunter 2023](https://doi.org/10.1249/mss.0000000000003300), [McDonald 2015p](https://bodyrecomposition.com/women/female-vs-male-physiology)
 
 ### The strength gap between the sexes is widest in the upper body
 
@@ -31,7 +31,7 @@ How women and men differ · Beginner · Some support · Sources: [Miller 1993](h
 
 The 1993 comparison of eight men and eight women found no significant sex difference in strength relative to muscle cross-sectional area at the elbow or the knee, in the number of biceps fibres, or in any motor unit measure. The men's fibres were larger. A 2023 review also found that men's greater strength does not come from higher voluntary activation. McDonald makes the same point from the tissue side: male and female muscle is close to identical, with small differences such as slightly more fat within women's muscle. Added muscle should therefore carry the same strength value for either sex.
 
-How women and men differ · Intermediate · Some support · Sources: [Miller 1993](https://doi.org/10.1007/bf00235103), [Nuzzo 2023](https://doi.org/10.1519/jsc.0000000000004329), [McDonald 2015o](https://bodyrecomposition.com/women/female-vs-male-physiology)
+How women and men differ · Intermediate · Some support · Sources: [Miller 1993](https://doi.org/10.1007/bf00235103), [Nuzzo 2023](https://doi.org/10.1519/jsc.0000000000004329), [McDonald 2015p](https://bodyrecomposition.com/women/female-vs-male-physiology)
 
 ### Women's muscle has a larger share of slow-twitch fibre area
 
@@ -49,7 +49,7 @@ Compared with women, active men oxidise more carbohydrate and more of the amino 
 
 - Do not expect a different fuel mix to change how fast you lose fat.
 
-How women and men differ · Advanced · Some support · Sources: [Hamadeh 2005](https://doi.org/10.1210/jc.2004-1743), [McDonald 2015o](https://bodyrecomposition.com/women/female-vs-male-physiology)
+How women and men differ · Advanced · Some support · Sources: [Hamadeh 2005](https://doi.org/10.1210/jc.2004-1743), [McDonald 2015p](https://bodyrecomposition.com/women/female-vs-male-physiology)
 
 ### The monthly cycle, not only lower testosterone, sets female physiology apart
 
@@ -57,7 +57,7 @@ How women and men differ · Advanced · Some support · Sources: [Hamadeh 2005](
 
 McDonald's argument is that a man with low testosterone does not have a woman's physiology, because the defining feature is the repeating rise and fall of estrogen and progesterone across a cycle of roughly four weeks. He lists appetite, mood, fuel use and recovery among the things reported to shift with it. Researchers make a related point: a working guide for sport science notes that most high-quality data come from men, which limits how well they transfer given the differences in reproductive hormones. How much the swings matter for performance is a separate question, covered under the cycle topic.
 
-How women and men differ · Beginner · Coaching practice · Sources: [McDonald 2015o](https://bodyrecomposition.com/women/female-vs-male-physiology), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
+How women and men differ · Beginner · Coaching practice · Sources: [McDonald 2015p](https://bodyrecomposition.com/women/female-vs-male-physiology), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
 
 ### Women gain muscle at the same relative rate as men on the same programme
 
@@ -68,7 +68,7 @@ A 2025 meta-analysis pooled 29 studies in which healthy men and women aged 18 to
 - Use the same training principles the rest of this guide gives.
 - Track growth as a percentage of where you started.
 
-Strength and muscle gain · Beginner · Well supported · Sources: [Refalo 2025](https://doi.org/10.7717/peerj.19042), [Roberts 2020c](https://doi.org/10.1519/jsc.0000000000003521), [McDonald 2016n](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Well supported · Sources: [Refalo 2025](https://doi.org/10.7717/peerj.19042), [Roberts 2020c](https://doi.org/10.1519/jsc.0000000000003521), [McDonald 2016q](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Women's upper-body strength rose faster than men's in relative terms
 
@@ -96,7 +96,7 @@ Eight women and seven men trained three days a week for 16 weeks. The women's st
 
 - Use strength records, not the mirror, to judge your first months.
 
-Strength and muscle gain · Beginner · Thin evidence · Sources: [Cureton 1988](https://doi.org/10.1249/00005768-198808000-00003), [McDonald 2016n](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Thin evidence · Sources: [Cureton 1988](https://doi.org/10.1249/00005768-198808000-00003), [McDonald 2016q](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Few female college athletes exceed an FFMI of about 24
 
@@ -190,7 +190,7 @@ McDonald groups the things that alter a woman's hormonal picture under one headi
 
 - Check whether a study says its participants had natural cycles, used contraception or were postmenopausal.
 
-Reading the research · Intermediate · Coaching practice · Sources: [McDonald 2015o](https://bodyrecomposition.com/women/female-vs-male-physiology), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
+Reading the research · Intermediate · Coaching practice · Sources: [McDonald 2015p](https://bodyrecomposition.com/women/female-vs-male-physiology), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
 
 ### Cycle phase changes performance by a trivial amount on average
 
@@ -211,7 +211,7 @@ The analysis covered 330 women of healthy weight, average age 26, with no histor
 - Expect more hunger in the two weeks before a period and plan meals for it.
 - Check your own log, since the size of the effect varies between women.
 
-Menstrual cycle and contraception · Beginner · Well supported · Sources: [Tucker 2025](https://doi.org/10.1093/nutrit/nuae093), [Davidsen 2007](https://doi.org/10.1038/sj.ijo.0803699), [McDonald 2015w](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
+Menstrual cycle and contraception · Beginner · Well supported · Sources: [Tucker 2025](https://doi.org/10.1093/nutrit/nuae093), [Davidsen 2007](https://doi.org/10.1038/sj.ijo.0803699), [McDonald 2015x](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
 
 ### A diet tailored to the cycle did not beat plain restriction in its one trial
 
@@ -222,7 +222,7 @@ Both groups were prescribed 1,600 kcal a day. One followed a diet and exercise p
 - Start a diet in the week after your period if the timing is yours to choose.
 - Put planned flexibility where your own hunger peaks.
 
-Menstrual cycle and contraception · Intermediate · Thin evidence · Sources: [Geiker 2016](https://doi.org/10.3945/ajcn.115.126565), [Davidsen 2007](https://doi.org/10.1038/sj.ijo.0803699), [McDonald 2015w](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
+Menstrual cycle and contraception · Intermediate · Thin evidence · Sources: [Geiker 2016](https://doi.org/10.3945/ajcn.115.126565), [Davidsen 2007](https://doi.org/10.1038/sj.ijo.0803699), [McDonald 2015x](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
 
 ### Oral contraceptives make little or no difference to performance or training gains
 
@@ -244,7 +244,7 @@ The review of combined pills and patches covered 49 trials. The four with a plac
 - Judge weight change on a multi-week trend, not on the first weeks of a new method.
 - Take any concern about a method to your doctor; do not stop it on your own.
 
-Menstrual cycle and contraception · Beginner · Some support · Sources: [Gallo 2014](https://doi.org/10.1002/14651858.cd003987.pub5), [Lopez 2016](https://doi.org/10.1002/14651858.cd008815.pub4), [McDonald 2015w](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
+Menstrual cycle and contraception · Beginner · Some support · Sources: [Gallo 2014](https://doi.org/10.1002/14651858.cd003987.pub5), [Lopez 2016](https://doi.org/10.1002/14651858.cd008815.pub4), [McDonald 2015x](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
 
 ### Leaking urine under heavy lifts is common in women lifters and worth getting assessed
 
@@ -272,7 +272,7 @@ Reading the research · Beginner · Some support · Sources: [Cowley 2021](https
 
 McDonald gives two main reasons. First, there were few sportswomen to study for most of the last century. In his history, women's weightlifting had no world championship until 1987 and no Olympic event until 2000, so athletes and coaching methods alike came from men. Second, a man's hormones are flat from day to day, while a woman's must be measured at a known point in a cycle whose length varies. The only certain marker is the first day of bleeding, confirming ovulation takes hormone tests, and a missed window means waiting a month. A 2021 research guide adds a shortage of specialist knowledge.
 
-Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016l](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women), [McDonald 2018b](https://bodyrecomposition.com/women/history-women-sport-2), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
+Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016o](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women), [McDonald 2018b](https://bodyrecomposition.com/women/history-women-sport-2), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
 
 ### A diet rule given as a percentage can fail a smaller person
 
@@ -283,7 +283,7 @@ In 1995, four days at 75 percent carbohydrate raised muscle glycogen 41 percent 
 - Convert percentage-based advice into grams per kg of your body weight.
 - Check that the absolute amount matches what the study participants ate.
 
-Reading the research · Intermediate · Thin evidence · Sources: [Tarnopolsky 1995](https://doi.org/10.1152/jappl.1995.78.4.1360), [Tarnopolsky 2001](https://doi.org/10.1152/jappl.2001.91.1.225), [McDonald 2016l](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Intermediate · Thin evidence · Sources: [Tarnopolsky 1995](https://doi.org/10.1152/jappl.1995.78.4.1360), [Tarnopolsky 2001](https://doi.org/10.1152/jappl.2001.91.1.225), [McDonald 2016o](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### A smaller body leaves less room in the diet for extras
 
@@ -294,7 +294,7 @@ This is McDonald's practical point, not a trial finding. A lighter person with l
 - Scale any fixed-size diet tactic to your own maintenance calories.
 - Set protein first, then see what room is left.
 
-Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016l](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016o](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### Weight-loss trials are the exception: most participants are women
 
@@ -302,7 +302,7 @@ Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016
 
 The review covered trials published from 1999 to 2009 with 95,207 participants. Only 5 percent of trials enrolled men alone. McDonald points to this as the reverse of the sports science problem: much of what is known about dieting and weight maintenance was learned largely in women, and researchers have asked whether it transfers fully to men. For a woman reading diet research the practical meaning is favourable. Findings on adherence, hunger and regain are more likely to describe people like her than findings from a lifting study are. Most of these trials enrolled people with overweight, not lean athletes.
 
-Reading the research · Beginner · Some support · Sources: [Pagoto 2012](https://doi.org/10.1038/oby.2011.140), [McDonald 2016l](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Beginner · Some support · Sources: [Pagoto 2012](https://doi.org/10.1038/oby.2011.140), [McDonald 2016o](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### In the A TO Z trial the lowest-carb diet lost most, and every group lost little
 
@@ -312,7 +312,7 @@ The women had a body mass index of 27 to 40 and each was allocated at random to 
 
 - Read a diet trial's absolute losses before its ranking of diets.
 
-Diets in trials · Beginner · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009k](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Beginner · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009l](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### Most of the loss came in the first two months, while the weekly classes ran
 
@@ -323,7 +323,7 @@ The trial weighed the women at 2, 6 and 12 months. In McDonald's reading of thos
 - Plan for support after the first weeks: check-ins, a coach or a group.
 - Expect the hard part of a diet to begin when the novelty ends.
 
-Diets in trials · Intermediate · Thin evidence · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Alhassan 2008](https://doi.org/10.1038/ijo.2008.8), [McDonald 2009k](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Intermediate · Thin evidence · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Alhassan 2008](https://doi.org/10.1038/ijo.2008.8), [McDonald 2009l](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### Within each A TO Z diet, the women who stuck closest lost the most
 
@@ -343,7 +343,7 @@ McDonald's position is that low-carbohydrate diets have no metabolic advantage b
 
 - If a doctor has told you that you are insulin resistant, ask which eating pattern they advise.
 
-Diets in trials · Advanced · Some support · Sources: [McClain 2013](https://doi.org/10.1111/j.1463-1326.2012.01668.x), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009k](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Advanced · Some support · Sources: [McClain 2013](https://doi.org/10.1111/j.1463-1326.2012.01668.x), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009l](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### No fat-loss supplement is required, and the proven ones add little
 
@@ -354,7 +354,7 @@ McDonald's view is that most fat-loss products do nothing, a handful have a meas
 - Set the diet and training first; treat any supplement as optional.
 - Ask a pharmacist or doctor about interactions with medication or contraception.
 
-Supplements studied in women · Beginner · Well supported · Sources: [Zsiborás 2018](https://doi.org/10.1080/10408398.2016.1262324), [Jurgens 2012](https://doi.org/10.1002/14651858.cd008650.pub2), [Tabrizi 2019](https://doi.org/10.1080/10408398.2018.1507996), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Supplements studied in women · Beginner · Well supported · Sources: [Zsiborás 2018](https://doi.org/10.1080/10408398.2016.1262324), [Jurgens 2012](https://doi.org/10.1002/14651858.cd008650.pub2), [Tabrizi 2019](https://doi.org/10.1080/10408398.2018.1507996), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ### Green tea extract did not reduce body fat in trials in women
 
@@ -365,7 +365,7 @@ In 83 obese premenopausal women on a diet, 300 mg a day of the catechin EGCG for
 - Do not expect fat loss from green tea extract.
 - Ask a doctor or pharmacist before taking a concentrated extract.
 
-Supplements studied in women · Intermediate · Well supported · Sources: [Mielgo-Ayuso 2014](https://doi.org/10.1017/s0007114513003784), [Dostal 2016](https://doi.org/10.3945/jn.115.219238), [Yu 2017](https://doi.org/10.1158/1940-6207.capr-17-0160), [Jurgens 2012](https://doi.org/10.1002/14651858.cd008650.pub2), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Supplements studied in women · Intermediate · Well supported · Sources: [Mielgo-Ayuso 2014](https://doi.org/10.1017/s0007114513003784), [Dostal 2016](https://doi.org/10.3945/jn.115.219238), [Yu 2017](https://doi.org/10.1158/1940-6207.capr-17-0160), [Jurgens 2012](https://doi.org/10.1002/14651858.cd008650.pub2), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ### Caffeine lasts longer in the body on oral contraceptives
 
@@ -376,7 +376,7 @@ The study compared long-term users of low-dose estrogen-containing pills with 9 
 - If you use the pill and sleep poorly, try moving your last caffeine earlier in the day.
 - Ask a pharmacist how caffeine fits with any medicine you take.
 
-Supplements studied in women · Intermediate · Thin evidence · Sources: [Abernethy 1985](https://doi.org/10.1007/bf00544361), [Lane 1992](https://doi.org/10.1007/bf02285099), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Supplements studied in women · Intermediate · Thin evidence · Sources: [Abernethy 1985](https://doi.org/10.1007/bf00544361), [Lane 1992](https://doi.org/10.1007/bf02285099), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ### Caffeine intake was not linked to developing premenstrual syndrome
 
@@ -386,7 +386,7 @@ Women with premenstrual symptoms are often told to cut caffeine, and McDonald's 
 
 - Judge caffeine by your own symptoms and sleep.
 
-Supplements studied in women · Beginner · Some support · Sources: [Purdue-Smithe 2016](https://doi.org/10.3945/ajcn.115.127027), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Supplements studied in women · Beginner · Some support · Sources: [Purdue-Smithe 2016](https://doi.org/10.3945/ajcn.115.127027), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ### Ephedrine produced modest extra weight loss in trials, with clear side effects
 
@@ -396,7 +396,7 @@ Ephedrine is a medicine, and the herb ephedra contains it. A 2003 meta-analysis 
 
 - Do not take ephedrine or ephedra products for fat loss without medical advice.
 
-Supplements studied in women · Advanced · Well supported · Sources: [Shekelle 2003](https://doi.org/10.1001/jama.289.12.1537), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Supplements studied in women · Advanced · Well supported · Sources: [Shekelle 2003](https://doi.org/10.1001/jama.289.12.1537), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ### Yohimbine has one small trial in women behind it and a known anxiety risk
 
@@ -407,7 +407,7 @@ Yohimbine blocks alpha-2 receptors, which normally hold back the release of fat 
 - Avoid yohimbine if you are prone to anxiety or have a heart or blood pressure condition.
 - Ask a doctor or pharmacist before considering it.
 
-Supplements studied in women · Advanced · Thin evidence · Sources: [Kucio 1991](https://pubmed.ncbi.nlm.nih.gov/1955308/), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Supplements studied in women · Advanced · Thin evidence · Sources: [Kucio 1991](https://pubmed.ncbi.nlm.nih.gov/1955308/), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ### A year of melatonin trimmed fat mass slightly in one trial of postmenopausal women
 
@@ -461,7 +461,7 @@ A meta-analysis of 24 studies in women found large effects of resistance trainin
 - Use loads that make the planned reps hard.
 - Judge size over months with a tape or photos, and change the plan then if you wish.
 
-Strength and muscle gain · Beginner · Well supported · Sources: [Hagstrom 2020](https://doi.org/10.1007/s40279-019-01247-x), [Refalo 2025](https://doi.org/10.7717/peerj.19042), [McDonald 2016n](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Well supported · Sources: [Hagstrom 2020](https://doi.org/10.1007/s40279-019-01247-x), [Refalo 2025](https://doi.org/10.7717/peerj.19042), [McDonald 2016q](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Treating training for women as a separate method
 
@@ -505,7 +505,7 @@ Phase-based programmes put the heaviest work in the follicular phase and lighter
 - Keep a consistent programme and adjust single sessions by how you feel on the day.
 - Log symptoms for a few cycles before changing anything permanent.
 
-Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [McDonald 2016l](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [McDonald 2016o](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### Counting on a faster metabolism before a period to cover extra eating
 
@@ -516,7 +516,7 @@ A meta-analysis of 26 studies in 318 women found a small effect toward higher re
 - Do not add calories in the luteal phase on the strength of a metabolic boost.
 - If hunger is the problem, move calories within the week and keep the weekly total.
 
-Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Benton 2020](https://doi.org/10.1371/journal.pone.0236025), [Tucker 2025](https://doi.org/10.1093/nutrit/nuae093), [McDonald 2015w](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
+Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Benton 2020](https://doi.org/10.1371/journal.pone.0236025), [Tucker 2025](https://doi.org/10.1093/nutrit/nuae093), [McDonald 2015x](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance)
 
 ### Blaming hard training itself for a lost cycle
 
@@ -549,7 +549,7 @@ The Atkins group reported eating similar calories to the others, which some read
 - Choose between low-carb and higher-carb by which you can keep to.
 - Discount the first weeks of loss on any low-carb diet as partly water.
 
-Diets in trials · Intermediate · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Hall 2017](https://doi.org/10.1053/j.gastro.2017.01.052), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009k](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Intermediate · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Hall 2017](https://doi.org/10.1053/j.gastro.2017.01.052), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009l](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### Taking more of a stimulant product than the label says to speed fat loss
 
@@ -561,7 +561,7 @@ McDonald is blunt on this point: the deaths attributed to ephedrine products inv
 - Stop and seek medical advice if you get palpitations, chest pain or severe anxiety.
 - Check with a pharmacist if you take any medication.
 
-Supplements studied in women · Beginner · Some support · Sources: [Shekelle 2003](https://doi.org/10.1001/jama.289.12.1537), [Abernethy 1985](https://doi.org/10.1007/bf00544361), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Supplements studied in women · Beginner · Some support · Sources: [Shekelle 2003](https://doi.org/10.1001/jama.289.12.1537), [Abernethy 1985](https://doi.org/10.1007/bf00544361), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ### Treating melatonin as a proven aid for PCOS or premenstrual symptoms
 
@@ -644,7 +644,7 @@ A short daily record shows whether your own appetite, weight and training follow
 - Pain, bleeding or mood symptoms that disrupt daily life
 - Any question about contraception or other medication
 
-Coaching practice · Sources: [McDonald 2015w](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [White 2011](https://doi.org/10.1155/2011/138451), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
+Coaching practice · Sources: [McDonald 2015x](https://bodyrecomposition.com/research/menstrual-cycle-energy-balance), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [White 2011](https://doi.org/10.1155/2011/138451), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
 
 ## How far a study's result carries, by who was in it
 
@@ -659,7 +659,7 @@ A quick way to weigh a training or diet study for a woman, from who took part an
 | Women using oral contraceptives | Applies to pill users; other hormonal methods are barely studied | Which type of pill, if stated |
 | Postmenopausal women | Applies after menopause; may not match younger women | Whether hormone therapy use was recorded |
 
-Coaching practice · Sources: [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8), [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [Nolan 2024](https://doi.org/10.1007/s40279-023-01911-3), [McDonald 2016l](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Coaching practice · Sources: [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8), [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [Nolan 2024](https://doi.org/10.1007/s40279-023-01911-3), [McDonald 2016o](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ## A TO Z trial: weight change at 12 months by assigned diet
 
@@ -672,7 +672,7 @@ Mean change in 311 overweight premenopausal women, with 95 percent confidence in
 | LEARN | High carbohydrate, low saturated fat | 79 | -2.6 kg (-5.7 lb); interval -3.8 to -1.3 kg |
 | Ornish | Very high carbohydrate, very low fat | 76 | -2.2 kg (-4.9 lb); interval -3.6 to -0.8 kg |
 
-Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009k](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009l](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ## Fat-loss supplement ingredients: what controlled research found
 
@@ -687,7 +687,7 @@ Pooled or trial results for the ingredients McDonald discusses. None is needed. 
 | Yohimbine | About 1.3 kg more loss than placebo in 20 obese women over 3 weeks | Raises heart rate; can provoke anxiety |
 | Garcinia, raspberry ketone and most others | McDonald's judgment: no worthwhile effect | Cost with no return |
 
-Some support · Sources: [Tabrizi 2019](https://doi.org/10.1080/10408398.2018.1507996), [Zsiborás 2018](https://doi.org/10.1080/10408398.2016.1262324), [Jurgens 2012](https://doi.org/10.1002/14651858.cd008650.pub2), [Mielgo-Ayuso 2014](https://doi.org/10.1017/s0007114513003784), [Dostal 2016](https://doi.org/10.3945/jn.115.219238), [Yu 2017](https://doi.org/10.1158/1940-6207.capr-17-0160), [Shekelle 2003](https://doi.org/10.1001/jama.289.12.1537), [Kucio 1991](https://pubmed.ncbi.nlm.nih.gov/1955308/), [Abernethy 1985](https://doi.org/10.1007/bf00544361), [McDonald 2015n](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
+Some support · Sources: [Tabrizi 2019](https://doi.org/10.1080/10408398.2018.1507996), [Zsiborás 2018](https://doi.org/10.1080/10408398.2016.1262324), [Jurgens 2012](https://doi.org/10.1002/14651858.cd008650.pub2), [Mielgo-Ayuso 2014](https://doi.org/10.1017/s0007114513003784), [Dostal 2016](https://doi.org/10.3945/jn.115.219238), [Yu 2017](https://doi.org/10.1158/1940-6207.capr-17-0160), [Shekelle 2003](https://doi.org/10.1001/jama.289.12.1537), [Kucio 1991](https://pubmed.ncbi.nlm.nih.gov/1955308/), [Abernethy 1985](https://doi.org/10.1007/bf00544361), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/fat-loss-supplements-for-women)
 
 ## Melatonin trials in women at a glance
 

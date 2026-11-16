@@ -32,6 +32,10 @@
   {
    "id": "recovery",
    "label": "Recovery and injuries"
+  },
+  {
+   "id": "talent",
+   "label": "Talent and practice"
   }
  ],
  "entries": [
@@ -916,6 +920,269 @@
      "RPE 5-7"
     ]
    ]
+  },
+  {
+   "id": "pl-pause-costs-rebound",
+   "type": "note",
+   "title": "A pause on the chest takes away the rebound that helps a touch-and-go bench",
+   "topic": "technique",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "wilson-1991",
+    "mcdonald-strength-determinants-1",
+    "mcdonald-first-meet"
+   ],
+   "take": "Pressing straight out of the lowering adds force from the stretch. When the bar sits still, that help fades within a second or two, so a paused bench moves less weight.",
+   "body": "In 12 experienced male lifters benching 95% of their max, the extra force carried over from the lowering phase decayed as the pause grew, losing half of it about every 0.85 seconds. The effect is the stretch-shortening cycle (see the term entry). McDonald's estimate is that a pause can take 5 to 10% off a touch-and-go best; his first-meet guide says about 5%. Both are rules of thumb, not measured results.",
+   "do": [
+    "Before a meet, pause your training benches the way a referee will expect (McDonald's practice).",
+    "Compare a paused max only with other paused maxes, not with touch-and-go lifts."
+   ]
+  },
+  {
+   "id": "pl-term-ssc",
+   "type": "term",
+   "title": "Stretch-shortening cycle (SSC)",
+   "topic": "technique",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "wilson-1991",
+    "mcdonald-strength-determinants-1"
+   ],
+   "take": "A muscle stretched under load and then shortened at once makes more force than one starting from still. Tendon recoil, reflexes and extra time to build force all add to it, and a pause lets it fade."
+  },
+  {
+   "id": "pl-deadlift-dead-start",
+   "type": "note",
+   "title": "The first deadlift rep starts cold, so reset reps match the meet",
+   "topic": "technique",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-strength-determinants-1"
+   ],
+   "take": "A pull from the floor has no lowering before it. Later reps in a set borrow a stretch from the controlled descent, which the single you pull at a meet never gets.",
+   "body": "McDonald's view is that rep two of a deadlift set often feels easier than rep one because the lowering loads the muscles and tendons and often sets a better start position. That is why many deadlifters stand up and reset between reps, making a set into a run of singles. Lifters who sink the hips quickly and pull straight out of that dip (a dynamic start) are chasing the same stretch; he argues it helps only if the lifter stays in position, and that most let the hips shoot up.",
+   "do": [
+    "In meet preparation, let the bar settle fully on the floor before each deadlift rep (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "pl-eight-sets-trained-men",
+   "type": "note",
+   "title": "In trained men, eight sets of squats beat one set within three weeks",
+   "topic": "volume",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "marshall-2011",
+    "mcdonald-squat-volume"
+   ],
+   "take": "Squat 1RM rose on one, four or eight sets at 80% to failure, but the eight-set group was ahead of the one-set group by week 3 and stayed ahead.",
+   "body": "Thirty-two resistance-trained men squatted twice a week for six weeks at 80% of 1RM, every set to failure, then all ran the same four-week peaking block. Every group was stronger at 6 and 10 weeks; at week 3 the eight-set group led the one-set group by 7.9%. Quadriceps activation did not change and early force development fell, which the authors tied to heavy sets to failure. For the wider dose picture, see the volume-dose, minimum-dose and not-to-failure entries.",
+   "do": [
+    "On one set a session, check within three weeks whether your squat is responding, as the authors advise."
+   ]
+  },
+  {
+   "id": "pl-term-daily-max",
+   "type": "term",
+   "title": "Daily max",
+   "topic": "periodisation",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-bulgarian-pl"
+   ],
+   "take": "The heaviest single a lifter can make on that particular day, which may sit above or below their best ever. Working up to it in singles is the core of the Bulgarian weightlifting method."
+  },
+  {
+   "id": "pl-term-bulgarian",
+   "type": "term",
+   "title": "Bulgarian method",
+   "topic": "periodisation",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-bulgarian-pl",
+    "mcdonald-forget-bulgarian"
+   ],
+   "take": "A weightlifting system associated with coach Ivan Abadjaev: about six exercises, mostly singles to a daily max, spread over several short sessions a day. It was built for full-time elite lifters."
+  },
+  {
+   "id": "pl-bulgarian-mcdonald-view",
+   "type": "note",
+   "title": "McDonald argues daily maxing does not carry over from weightlifting to powerlifting",
+   "topic": "periodisation",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-bulgarian-pl",
+    "mcdonald-forget-bulgarian"
+   ],
+   "take": "His view: a weightlifting max is a split-second explosive effort well short of maximal force, while a squat, bench or deadlift max grinds for seconds and costs far more.",
+   "body": "McDonald reasons that both Olympic lifts are limited by a brief drive near the end of the pull, and by his rough figures a best clean and jerk is only about four fifths of a best deadlift. A max powerlift is hard from start to finish and can be fought for several seconds. He argues the Bulgarian method suited only selected, full-time, drug-assisted elite lifters after years of build-up, and that most lifters who copy it get hurt. These are his judgments; the daily-max evidence entry has the two direct tests.",
+   "do": [
+    "If you train a lift often, keep most sessions well below max and only one or two heavy (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "pl-mistake-daily-max",
+   "type": "mistake",
+   "title": "Copying weightlifters' daily maxes into the squat, bench and deadlift",
+   "topic": "recovery",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-forget-bulgarian",
+    "mcdonald-bulgarian-pl",
+    "fry-1994"
+   ],
+   "take": "McDonald's view is that grinding near-max singles day after day loads joints and tendons faster than they adapt. He reports injuries when lifters try it without years of build-up.",
+   "body": "The injury claim is coaching experience, not a trial result. Tendons and other connective tissue adapt over months to years (see the tendon entry in basics). The one controlled trial measured strength, not injury: two weeks of daily machine squats at 100% of 1RM cut trained men's 1RM by about 12 kg (see the daily-max evidence entry). Frequency alone is not the issue; see the six-day and elite-loads entries in recovery.",
+   "do": [
+    "Plan any block of frequent near-max lifting with an experienced coach.",
+    "Have pain that changes how you lift checked by a clinician before you train through it."
+   ]
+  },
+  {
+   "id": "pl-imagery",
+   "type": "note",
+   "title": "Mental rehearsal raised strength in healthy adults, but less than real training",
+   "topic": "technique",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "paravlic-2018",
+    "mcdonald-strength-determinants-2"
+   ],
+   "take": "Across 13 studies, rehearsing a movement in the mind raised maximal strength more than doing nothing, and physical training raised it more than imagery.",
+   "body": "A 2018 meta-analysis pooled 370 healthy adults. Motor imagery, rehearsing a contraction mentally without moving, moderately improved maximal voluntary strength in arms and legs. Physical practice beat it by a small margin, and imagery added to physical practice showed unclear effects. The authors suggest it to keep muscle function when athletes cannot train at maximal loads. McDonald suggests imagery may come close to real practice; the pooled data say it falls short. The abstract reports maximal voluntary strength in healthy adults and does not say that lifters were studied.",
+   "do": [
+    "During a layoff, add mental rehearsal of your lifts as a supplement, not a replacement."
+   ]
+  },
+  {
+   "id": "pl-term-coactivation",
+   "type": "term",
+   "title": "Antagonist coactivation",
+   "topic": "technique",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "carolan-1992",
+    "mcdonald-strength-determinants-2"
+   ],
+   "take": "Firing of the muscle that opposes a movement, such as the hamstrings in knee extension. It steadies the joint but costs net force. In one small study of sedentary men training knee extension isometrically, it fell by a fifth in a week."
+  },
+  {
+   "id": "pl-heavy-work-in-volume-block",
+   "type": "note",
+   "title": "In a high-volume block, keep a little heavy work so top-end strength holds",
+   "topic": "periodisation",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-strength-determinants-2",
+    "androulakis-2021"
+   ],
+   "take": "McDonald's practice is to open sessions in a muscle-building block with a heavy single or triple at about 80 to 90% of max, then do the volume work.",
+   "body": "His view is that strength athletes who drop all heavy lifting during a hypertrophy phase lose their feel for near-max weights quickly, and that a small dose of heavy work holds it. He treats volume and intensity blocks as two steps: first add muscle to raise the ceiling, then train the nervous system to use it. This is coaching practice from his article. The minimum-dose entry gives data on how little heavy work keeps 1RM rising.",
+   "do": [
+    "Work up to one single or triple at about 80 to 90% before the volume sets (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "pl-daily-max-evidence",
+   "type": "note",
+   "title": "The two small studies of daily maxing point in opposite directions",
+   "topic": "periodisation",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "zourdos-2016-daily",
+    "fry-1994"
+   ],
+   "take": "Three lifters who maxed the squat daily for five weeks gained 2 to 11%. Eleven trained men lifting 100% of 1RM daily on a squat machine lost about 12 kg in two weeks.",
+   "body": "In a case series, two powerlifters and one weightlifter worked up to a squat 1RM every day for 35 days, plus back-off sets; on day 37 they were 5, 13.5 and 21 kg stronger, with no control group. In a controlled study, 11 weight-trained men squatted on a machine at 100% of 1RM daily for two weeks; 1RM fell by a mean 12.2 kg and other force measures dropped, while a light once-weekly group barely changed. Neither abstract reports injuries."
+  },
+  {
+   "id": "pl-strength-heritability",
+   "type": "note",
+   "title": "About half the spread in strength between untrained people is inherited",
+   "topic": "talent",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "zempo-2017",
+    "mcdonald-talent-work-1"
+   ],
+   "take": "Heritability studies put the inherited share of differences in strength at about 0.5. That describes differences between people, not a fixed ceiling for any one lifter.",
+   "body": "A 2017 meta-analysis pooled 58 measurements from 24 studies of healthy people in an untrained state. Heritability averaged 0.52, similar for grip, isometric, isotonic and isokinetic strength and for jumping (0.49 to 0.56), though results varied widely between studies; it fell with age. These are baseline strength tests, not gains from training or meet totals. McDonald's view is that genes set a limit that work can approach but not pass; the response-spread entry covers trainability."
+  },
+  {
+   "id": "pl-response-spread",
+   "type": "note",
+   "title": "On the same 12-week plan, arm strength gains ranged from none to more than double",
+   "topic": "talent",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "hubal-2005",
+    "mcdonald-talent-work-1",
+    "mcdonald-strength-determinants-2"
+   ],
+   "take": "In 585 men and women who trained one arm on the same 12-week programme, 1RM gains ran from 0 to 250%, and some barely changed muscle size.",
+   "body": "Subjects at eight centres followed the same progressive elbow-flexor programme. Biceps size changed by -2 to +59% and 1RM by 0 to +250% (0 to 10.2 kg). Women gained more strength in relative terms, and men slightly more size. It is one small muscle group, so it says nothing direct about the squat, bench or deadlift. McDonald argues that spreads like this in supervised trials reflect biology rather than effort. The hypertrophy guide's responder entries cover muscle growth.",
+   "do": [
+    "Compare your lifts with your own past numbers, not with another lifter's rate (McDonald's advice)."
+   ]
+  },
+  {
+   "id": "pl-term-deliberate-practice",
+   "type": "term",
+   "title": "Deliberate practice",
+   "topic": "talent",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "macnamara-2016",
+    "mcdonald-deliberate-practice"
+   ],
+   "take": "Effortful practice aimed at a specific weakness, often set by a coach, as opposed to repetition on autopilot. A 2016 meta-analysis found it explained 18% of performance differences in sport, and 1% among elite athletes."
+  },
+  {
+   "id": "pl-warm-ups-as-practice",
+   "type": "note",
+   "title": "Treat warm-up sets as focused technique practice, not filler",
+   "topic": "technique",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-deliberate-practice"
+   ],
+   "take": "McDonald's view is that warm-up reps done with full attention to position and bar path add up to a large amount of practice over a year.",
+   "body": "Every lifter does warm-up sets anyway. McDonald argues that most people stop paying attention once a lift feels competent, and that this is where their technique stops improving. Watching one point per set, such as elbow position or where the bar touches, turns those light reps into deliberate practice at no extra cost in fatigue. It is coaching practice, not a trial result; the technique guide's spacing entry covers how often to practise.",
+   "do": [
+    "Pick one technical point to watch on each warm-up set (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "pl-num-pause-half-life",
+   "type": "number",
+   "title": "Half-life of the rebound effect while the bar is paused",
+   "topic": "technique",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "wilson-1991"
+   ],
+   "value": "0.85",
+   "unit": "seconds",
+   "sort": 0.85,
+   "take": "In 12 experienced male lifters benching 95% of max, the extra force from the lowering phase halved for about every 0.85 s the bar was held still."
   }
  ],
  "sources": {
@@ -1862,6 +2129,288 @@
    "pmid": "12618576",
    "n_studies": 140,
    "support": "A meta-analysis of 140 studies with a total of 1433 effect sizes. Training with a mean intensity of 60% of one repetition maximum elicits maximal gains in untrained individuals, whereas 80% is most effective in those who are trained. Untrained participants experience maximal gains by training each muscle group 3 d.wk and trained individuals 2 d.wk. Four sets per muscle group elicited maximal gains in both trained and untrained individuals."
+  },
+  "wilson-1991": {
+   "type": "trial",
+   "authors": [
+    "Wilson GJ",
+    "Elliott BC",
+    "Wood GA"
+   ],
+   "year": 1991,
+   "title": "The effect on performance of imposing a delay during a stretch-shorten cycle movement",
+   "journal": "Medicine and Science in Sports and Exercise",
+   "volume": "23",
+   "issue": "3",
+   "pages": "364-370",
+   "doi": "10.1249/00005768-199103000-00016",
+   "pmid": "2020276",
+   "n_participants": 12,
+   "support": "Twelve experienced male weight lifters of varying ability completed a series of bench press lifts at 95% of maximum. ... The augmentation to performance derived from prior stretch was observed to decay as a function of the pause duration. This relationship was accurately described (P less than 0.01) by a negative exponential equation with a half-life of 0.85 s."
+  },
+  "marshall-2011": {
+   "type": "rct",
+   "authors": [
+    "Marshall PWM",
+    "McEwen M",
+    "Robbins DW"
+   ],
+   "year": 2011,
+   "title": "Strength and neuromuscular adaptation following one, four, and eight sets of high intensity resistance exercise in trained males",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "111",
+   "issue": "12",
+   "pages": "3007-3016",
+   "doi": "10.1007/s00421-011-1944-x",
+   "pmid": "21451937",
+   "n_participants": 32,
+   "support": "6-weeks of squat exercise, prescribed at 80% of a 1 repetition-maximum (1-RM), using either one, four, or eight sets of repetitions to failure performed twice per week. ... 32 resistance-trained male participants completed the 10-week program. ... The 8-set group was significantly stronger than the 1-set group after 3-weeks of training (7.9% difference, P < 0.05), and remained stronger after 6 and 10-weeks ... Peak muscle activation did not change ... Early (30, 50 ms) and peak RFD was significantly decreased ... Individual responsiveness to 1-set of training should be evaluated in the first 3-weeks of training."
+  },
+  "zourdos-2016-daily": {
+   "type": "other",
+   "authors": [
+    "Zourdos MC",
+    "Dolan C",
+    "Quiles JM",
+    "Klemp A",
+    "Jo E",
+    "Loenneke JP",
+    "Blanco R",
+    "Whitehurst M"
+   ],
+   "year": 2016,
+   "title": "Eficacia del entrenamiento diario de una repetición de máximo peso en levantadores de pesas bien entrenados: una serie de casos",
+   "journal": "Nutrición Hospitalaria",
+   "volume": "33",
+   "issue": "2",
+   "doi": "10.20960/nh.129",
+   "pmid": "27238810",
+   "n_participants": 3,
+   "support": "Case series (abstract in Spanish): three competitive lifters squatted for 37 consecutive days; days 1-35 a daily 1RM then 5 sets of 3 at 85% or 2 at 90% of the daily 1RM; day 37 a 1RM. Day 1 to 37 changes: +5 kg/2.3%, +13.5 kg/10.8%, +21 kg/9.5%."
+  },
+  "paravlic-2018": {
+   "type": "meta-analysis",
+   "authors": [
+    "Paravlic AH",
+    "Slimani M",
+    "Tod D",
+    "Marusic U",
+    "Milanovic Z",
+    "Pisot R"
+   ],
+   "year": 2018,
+   "title": "Effects and Dose–Response Relationships of Motor Imagery Practice on Strength Development in Healthy Adult Populations: a Systematic Review and Meta-analysis",
+   "journal": "Sports Medicine",
+   "volume": "48",
+   "issue": "5",
+   "pages": "1165-1187",
+   "doi": "10.1007/s40279-018-0874-8",
+   "pmid": "29541965",
+   "n_studies": 13,
+   "n_participants": 370,
+   "support": "data from 13 articles involving 370 participants were extracted ... MI practice moderately improved MVS. When compared to conventional PP, effects were of small benefit in favour of PP. MI-C when compared to PP showed unclear effects. ... MI practice could be considered as a substitute or additional training tool to preserve muscle function when athletes are not exposed to maximal training intensities."
+  },
+  "carolan-1992": {
+   "type": "rct",
+   "authors": [
+    "Carolan B",
+    "Cafarelli E"
+   ],
+   "year": 1992,
+   "title": "Adaptations in coactivation after isometric resistance training",
+   "journal": "Journal of Applied Physiology",
+   "volume": "73",
+   "issue": "3",
+   "pages": "911-917",
+   "doi": "10.1152/jappl.1992.73.3.911",
+   "pmid": "1400055",
+   "n_participants": 20,
+   "support": "Twenty sedentary male university students ... trained the knee extensors of one leg ... the degree of hamstring coactivation during extension MVC decreased by approximately 20% (P less than 0.05) after the 1st wk of training."
+  },
+  "mcdonald-strength-determinants-1": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2016,
+   "title": "Determinants of Strength Performance",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/determinants-strength-performance",
+   "retrieved": "2026-11-16",
+   "support": "His account of the stretch-shortening cycle in the lifts: why a pause costs bench weight (his 5-10% estimate), why the first deadlift rep is hardest, resetting reps and the dynamic start."
+  },
+  "mcdonald-strength-determinants-2": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2016,
+   "title": "Determinants of Strength Performance: Part 2",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/determinants-strength-performance-2",
+   "retrieved": "2026-11-16",
+   "support": "Neural factors in strength: reduced antagonist co-firing, mental rehearsal, and his practice of keeping a heavy single or triple during volume phases so top-end strength is not lost."
+  },
+  "mcdonald-bulgarian-pl": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2015,
+   "title": "Bulgarian Powerlifting Training",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/bulgarian-powerlifting-training",
+   "retrieved": "2026-11-16",
+   "support": "Describes the daily-max idea and argues that weightlifting maxes are explosive, short and below maximal force, so the method does not transfer to the powerlifts."
+  },
+  "mcdonald-forget-bulgarian": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2016,
+   "title": "It's Time to Forget About Bulgarian Training",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/forget-bulgarian-training",
+   "retrieved": "2026-11-16",
+   "support": "His case that the method suited only selected elite lifters with years of build-up, that injury and dropout were common, and that frequent training should be mostly submaximal."
+  },
+  "mcdonald-squat-volume": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2011,
+   "title": "Strength and Neuromuscular Adaptation to Training",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/squat-volume-and-strength-gains",
+   "retrieved": "2026-11-16",
+   "support": "His review of the one, four and eight set squat trial in trained men, and of the time cost of the larger dose."
+  },
+  "fry-1994": {
+   "type": "trial",
+   "authors": [
+    "Fry AC",
+    "Kraemer WJ",
+    "van Borselen F",
+    "Lynch JM",
+    "Marsit JL",
+    "Roy EP",
+    "Triplett NT",
+    "Knuttgen HG"
+   ],
+   "year": 1994,
+   "title": "Performance decrements with high-intensity resistance exercise overtraining",
+   "journal": "Medicine and Science in Sports and Exercise",
+   "volume": "26",
+   "issue": "9",
+   "pages": "1165-1173",
+   "doi": "10.1249/00005768-199409000-00015",
+   "pmid": "7808252",
+   "n_participants": 17,
+   "support": "Seventeen weight-trained males were divided into an overtraining group (OT; N = 11 ...) that exercised on a squat machine daily for 2 wk with 100% of 1 repetition maximum (RM) relative intensity, and a control group (CON; N = 6 ...) that exercised 1 d.wk-1 with low intensity (50% 1 RM). ... One RM performance significantly decreased from test 1 to test 3 (P < 0.05) for the OT group (mean = -12.2 +/- 3.8 kg), but not the CON group (mean = -1.1 +/- 0.8 kg)."
+  },
+  "zempo-2017": {
+   "type": "meta-analysis",
+   "authors": [
+    "Zempo H",
+    "Miyamoto-Mikami E",
+    "Kikuchi N",
+    "Fuku N",
+    "Miyachi M",
+    "Murakami H"
+   ],
+   "year": 2017,
+   "title": "Heritability estimates of muscle strength-related phenotypes: A systematic review and meta-analysis",
+   "journal": "Scandinavian Journal of Medicine & Science in Sports",
+   "volume": "27",
+   "issue": "12",
+   "pages": "1537-1546",
+   "doi": "10.1111/sms.12804",
+   "pmid": "27882617",
+   "n_studies": 24,
+   "support": "Studies reporting the H2-msp for healthy subjects in a sedentary state were included. ... Twenty-four articles including 58 measurements ... The weighted mean H2-msp for all 58 measurements was 0.52 (95% CI 0.48-0.56), with high heterogeneity (I2 = 91.0%) ... isometric grip strength, other isometric strength, isotonic strength, isokinetic strength, jumping ability, and other power measurements was 0.56, 0.49, 0.49, 0.49, 0.55, and 0.51 ... The H2-msp decreased with age."
+  },
+  "hubal-2005": {
+   "type": "trial",
+   "authors": [
+    "Hubal MJ",
+    "Gordish-Dressman H",
+    "Thompson PD",
+    "Price TB",
+    "Hoffman EP",
+    "Angelopoulos TJ",
+    "Gordon PM",
+    "Moyna NM",
+    "Pescatello LS",
+    "Visich PS",
+    "Zoeller RF",
+    "Seip RL",
+    "Clarkson PM"
+   ],
+   "year": 2005,
+   "title": "Variability in muscle size and strength gain after unilateral resistance training",
+   "journal": "Medicine and Science in Sports and Exercise",
+   "volume": "37",
+   "issue": "6",
+   "pages": "964-972",
+   "pmid": "15947721",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15947721/",
+   "n_participants": 585,
+   "support": "Five hundred eighty-five subjects (342 women, 243 men) ... 12 wk of progressive dynamic resistance training of the nondominant arm. Size changes ranged from -2 to +59% ... 1RM strength gains ranged from 0 to +250% (0 to +10.2 kg) ... Men experienced 2.5% greater gains for CSA ... relative increases in strength measures were greater in women versus men."
+  },
+  "macnamara-2016": {
+   "type": "meta-analysis",
+   "authors": [
+    "Macnamara BN",
+    "Moreau D",
+    "Hambrick DZ"
+   ],
+   "year": 2016,
+   "title": "The Relationship Between Deliberate Practice and Performance in Sports: A Meta-Analysis",
+   "journal": "Perspectives on Psychological Science",
+   "volume": "11",
+   "issue": "3",
+   "pages": "333-350",
+   "doi": "10.1177/1745691616635591",
+   "pmid": "27217246",
+   "support": "Overall, deliberate practice accounted for 18% of the variance in sports performance. However, the contribution differed depending on skill level. Most important, deliberate practice accounted for only 1% of the variance in performance among elite-level performers."
+  },
+  "mcdonald-talent-work-1": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2011,
+   "title": "Talent vs. Work Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/can-hard-work-beat-talent",
+   "retrieved": "2026-11-16",
+   "support": "His argument that inborn traits and the response to training differ between people, that supervised trial spreads reflect biology, and that genes set a limit training cannot pass."
+  },
+  "mcdonald-deliberate-practice": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "Becoming an Expert - Deliberate Practice Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/becoming-an-expert",
+   "retrieved": "2026-11-16",
+   "support": "His summary of deliberate practice and his advice to use warm-up sets as attentive technique work, since practice on autopilot stops improving skill."
+  },
+  "mcdonald-first-meet": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2021,
+   "title": "A 6 and a Half Tip Guide to a Great First Powerlifting Meet",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet",
+   "retrieved": "2026-11-16",
+   "support": "His attempt plan for a first meet: a light opener (about 80-85% on squat, lower on bench), a second near a best triple, a third near a best double. A coaching rule, not a study."
   }
  }
 }

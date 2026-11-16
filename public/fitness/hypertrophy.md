@@ -63,7 +63,7 @@ In 29 squatters, an RIR-based effort rating moved in step with bar speed. A scop
 - Rate RIR on sets of about 12 reps or fewer.
 - Occasionally check yourself with one set to failure on a safe exercise.
 
-Effort · Intermediate · Some support · Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049), [Halperin 2022](https://doi.org/10.1007/s40279-021-01559-x), [Pelland 2022](https://doi.org/10.1007/s40279-022-01667-2), [Steele 2017](https://doi.org/10.7717/peerj.4105)
+Effort · Intermediate · Some support · Sources: [Zourdos 2016b](https://doi.org/10.1519/JSC.0000000000001049), [Halperin 2022](https://doi.org/10.1007/s40279-021-01559-x), [Pelland 2022](https://doi.org/10.1007/s40279-022-01667-2), [Steele 2017](https://doi.org/10.7717/peerj.4105)
 
 ### The effective-reps idea is a useful rule of thumb, not a measured law
 
@@ -354,7 +354,7 @@ Volume · Intermediate · Some support · Sources: [Baz-Valle 2021](https://doi.
 
 Voluntary activation is tested by adding an electrical pulse to the nerve or muscle during a maximal effort; any extra force shows drive the person did not supply. In 11 subjects the elbow flexors reached a median 99.4% in fast lifting efforts and 98.0% when held still. In 8 men the quadriceps reached 95.2% held still, 89.7% when shortening and 88.3% when lengthening, slowly. The studies came from different labs and methods, and held still the gap was only 98.0% against 95.2%. McDonald speculates that the gap may be why legs seem to need more volume; he offers no test of it.
 
-Growth signals · Advanced · Thin evidence · Sources: [Gandevia 1998](https://doi.org/10.1111/j.1469-7793.1998.595be.x), [Babault 2001](https://doi.org/10.1152/jappl.2001.91.6.2628), [McDonald 2009ai](https://bodyrecomposition.com/muscle-gain/reps-per-set-for-muscle-growth), [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth)
+Growth signals · Advanced · Thin evidence · Sources: [Gandevia 1998](https://doi.org/10.1111/j.1469-7793.1998.595be.x), [Babault 2001](https://doi.org/10.1152/jappl.2001.91.6.2628), [McDonald 2009aj](https://bodyrecomposition.com/muscle-gain/reps-per-set-for-muscle-growth), [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth)
 
 ### Half-load sets to failure took three times as long and felt worse in one trial
 
@@ -364,7 +364,7 @@ Twenty-six young adults (14 men, 12 women) did one set of machine back extension
 
 - Keep very light sets to failure for simple machine exercises or for sparing a sore joint (McDonald's practice).
 
-Load and reps · Intermediate · Thin evidence · Sources: [Fisher 2018](https://doi.org/10.7717/peerj.6001), [Fisher 2017](https://doi.org/10.1002/mus.25645), [McDonald 2019g](https://bodyrecomposition.com/training/low-load-training-videos), [McDonald 2016j](https://bodyrecomposition.com/training/hypertrophy-zone)
+Load and reps · Intermediate · Thin evidence · Sources: [Fisher 2018](https://doi.org/10.7717/peerj.6001), [Fisher 2017](https://doi.org/10.1002/mus.25645), [McDonald 2019g](https://bodyrecomposition.com/training/low-load-training-videos), [McDonald 2016l](https://bodyrecomposition.com/training/hypertrophy-zone)
 
 ### Failure in every session grew less than percentage training in one small trial
 
@@ -398,7 +398,7 @@ Growth signals · Advanced · Thin evidence · Sources: [Haun 2019b](https://doi
 
 The reported users had larger fibres, more nuclei, more centrally placed nuclei and more fibres carrying early developmental forms of protein, which the authors read as new fibres forming. Fibre-type mix did not differ. The groups were compared at one point in time, use was self-reported, and the authors say genetic differences cannot be excluded. McDonald's view is that animal models, such as round-the-clock stretch of a bird's wing, say little about lifting. Anabolic steroids are prescription-only drugs with real health risks; this is a research finding, not guidance on use. See the basics hyperplasia term.
 
-Growth signals · Advanced · Thin evidence · Sources: [Kadi 1999](https://doi.org/10.1097/00005768-199911000-00006), [McDonald 2016i](https://bodyrecomposition.com/training/does-hyperplasia-occur-in-muscle)
+Growth signals · Advanced · Thin evidence · Sources: [Kadi 1999](https://doi.org/10.1097/00005768-199911000-00006), [McDonald 2016k](https://bodyrecomposition.com/training/does-hyperplasia-occur-in-muscle)
 
 ### Two arm trials disagree on whether a hormone-raising leg session adds growth
 
@@ -452,7 +452,7 @@ In his view, upper-back and shoulder-girdle fatigue makes the bar harder to hold
 
 - On consecutive training days, put the lower-body day before the upper-body day (McDonald's practice).
 
-Frequency and splits · Intermediate · Coaching practice · Sources: [McDonald 2015u](https://bodyrecomposition.com/training/split-routine-sequencing)
+Frequency and splits · Intermediate · Coaching practice · Sources: [McDonald 2015v](https://bodyrecomposition.com/training/split-routine-sequencing)
 
 ### The long head of the triceps also works on pulling days
 
@@ -460,7 +460,7 @@ Frequency and splits · Intermediate · Coaching practice · Sources: [McDonald 
 
 McDonald raises this as a fine point, mainly for lifters whose triceps give out first when pressing. He suggests push and pull days placed back to back could each cost the other some performance. For a push, pull and legs plan run once a week, he places the legs day between the two upper-body days. This is coaching reasoning, not a trial result. See the recovery entry on six-day splits for shoulder loading across the week.
 
-Frequency and splits · Advanced · Coaching practice · Sources: [McDonald 2015u](https://bodyrecomposition.com/training/split-routine-sequencing)
+Frequency and splits · Advanced · Coaching practice · Sources: [McDonald 2015v](https://bodyrecomposition.com/training/split-routine-sequencing)
 
 ### McDonald: a plan that raises volume, effort or frequency must give ground on another
 
@@ -582,7 +582,7 @@ On that rotation each muscle comes round about every fifth day, but the order of
 
 - Before you commit to a split, mark each day's main muscles on a two-week calendar (McDonald's practice).
 
-Frequency and splits · Intermediate · Coaching practice · Sources: [McDonald 2015u](https://bodyrecomposition.com/training/split-routine-sequencing)
+Frequency and splits · Intermediate · Coaching practice · Sources: [McDonald 2015v](https://bodyrecomposition.com/training/split-routine-sequencing)
 
 ## Key numbers
 

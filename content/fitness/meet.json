@@ -942,6 +942,94 @@
      ]
     }
    ]
+  },
+  {
+   "id": "meet-mistake-early-commands",
+   "type": "mistake",
+   "title": "Moving before the chief referee's command",
+   "topic": "platform",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "ipf-2026",
+    "mcdonald-first-meet"
+   ],
+   "take": "Lowering the bench before 'Start', pressing before 'Press' or racking before 'Rack' fails the lift, however easily the weight went up.",
+   "body": "IPF rules list failure to follow the chief referee's signals at the start, during or completion of the bench press, and at the start or completion of the squat, as causes for turning a lift down. McDonald's view is that these are the commonest first-meet misses on the bench: nerves make a short pause feel long, and gym habits such as touch-and-go reps or racking straight from lockout carry onto the platform. The commands table lists each word.",
+   "do": [
+    "At lockout, hold the bar still and wait for 'Rack' before moving toward the hooks.",
+    "Have a partner call the commands on your top sets in the last weeks (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "meet-rehearse-platform",
+   "type": "note",
+   "title": "Rehearse the platform in training: commands, no mirror, a referee in front",
+   "topic": "prep",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-first-meet"
+   ],
+   "take": "A meet takes away the rack, the mirror and your usual gym. McDonald has lifters practise the commands for weeks and train some sets with those cues removed.",
+   "body": "This is McDonald's coaching practice, not a study result. He starts command practice about six weeks before a meet, three at the least, with a partner sitting where the chief referee will be and giving the words and arm signals. Some lighter squats are done facing away from the mirror, so the lifter learns head position and depth by feel. He also wants someone who knows legal depth to judge squats honestly, as gym depth is often too high. Nearer the meet, a weekly run-through of the three lifts in meet order under full commands ties it together.",
+   "do": [
+    "From about six weeks out, have a partner give the referee's words and arm signals on top sets.",
+    "Do some squat sets facing away from the mirror."
+   ]
+  },
+  {
+   "id": "meet-bench-liftoff",
+   "type": "note",
+   "title": "Plan your bench lift-off: who may hand you the bar depends on the federation",
+   "topic": "platform",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "ipf-2026",
+    "uspa-2025",
+    "mcdonald-first-meet"
+   ],
+   "take": "IPF rules let the platform spotter/loaders give you a lift-off, which must reach locked arms' length. The USPA also allows your own lift-off person, who must then leave the platform.",
+   "body": "Under IPF rules you may take the bar out yourself or enlist the spotter/loaders, and an assisted lift-off must bring the bar to arm's length. The USPA allows a personal lift-off person who steps away once the lift-off is done; only the official spotters may spot after that. Either way, you then lock the elbows and wait for 'Start'. McDonald's view is that an unfamiliar hand-off that puts the bar in the wrong place or loosens your set-up is worse than none.",
+   "do": [
+    "Before the attempt, tell the spotter your count and where you want the bar.",
+    "If you will unrack alone at the meet, unrack alone in training too (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "meet-bench-after-squats",
+   "type": "note",
+   "title": "At a meet the bench follows heavy squats, so train them together at times",
+   "topic": "prep",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-first-meet"
+   ],
+   "take": "McDonald's view is that the shoulders and upper back are already tired from squatting when the bench starts, which, with the pause, pulls meet benches below gym benches.",
+   "body": "Many lifters train the bench fresh on its own day. On meet day it follows a full squat session, and McDonald argues that holding heavy squats leaves the shoulder girdle fatigued. His practice is to put squat and bench in the same session at times before a meet, and to choose a lighter first-meet bench opener than squat opener (see the attempts table). This is his coaching experience, not a measured result.",
+   "do": [
+    "In the weeks before a meet, bench after squatting in some sessions (McDonald's practice)."
+   ]
+  },
+  {
+   "id": "meet-final-run-through",
+   "type": "note",
+   "title": "A light run-through of the three lifts a day or two out, not a full week off",
+   "topic": "prep",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-first-meet",
+    "travis-2021",
+    "harrison-2019"
+   ],
+   "take": "McDonald's practice is a short session one or two days before the meet: squat, bench and deadlift in order, up to the last warm-up, under full commands.",
+   "body": "He uses it to keep lifters loose and sharp, to rehearse commands and the timed warm-up, and to finish on easy, clean lifts. His view is that raw lifters who take the whole final week off often feel flat. The loads stay light, so it fits the taper step's pattern of little hard work in the last days; surveyed lifters rested about 2.8 days on average, and this is one alternative. A priming review found limited evidence for short heavy (85% of 1RM or more) or ballistic sessions within 48 hours, which is not quite this lighter session.",
+   "do": [
+    "Stop at the weight you plan as your last warm-up on meet day (McDonald's practice)."
+   ]
   }
  ],
  "sources": {
