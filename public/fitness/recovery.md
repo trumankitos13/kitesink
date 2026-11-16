@@ -204,7 +204,7 @@ Supercompensation implies waiting for an overshoot before training again. McDona
 
 - Judge a programme over a block of weeks, not by whether each session beat the last.
 
-Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
+Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
 
 ### Selye's stress stages are a loose analogy for training, not a law
 
@@ -212,7 +212,7 @@ Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sourc
 
 A 2020 review notes that Selye built the syndrome from rodent studies using toxic stressors, that normal exercise in humans has never been shown to produce it, and that it gives no strong case that periodised training is necessary. A 2018 paper argues stress science has since moved on. Another 2018 review defends the syndrome as a useful framework, since disturbance does drive adaptation. McDonald sides with the critics: in Selye's work exhaustion meant death, nothing like a lifter who is tired or slightly weaker. What holds up is the general stress response, in which stressors add together.
 
-Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training)
+Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training)
 
 ### Take at least one day a week completely off
 
@@ -569,7 +569,7 @@ The deplete-then-overshoot idea came from glycogen research, and glycogen does b
 
 - Aim for repeatable sessions that progress, not for maximum disruption.
 
-Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
+Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
 
 ### Turning a recovery session into a workout
 
@@ -721,7 +721,7 @@ Each model draws a similar curve but leads to different advice. McDonald argues 
 | Fitness-fatigue (two-factor) | Each session adds fitness and fatigue; fatigue fades faster | Explains tapers, easy weeks and bests after a short break | Fitted a season of data from nine swimmers, but with wide uncertainty in its parameters |
 | General adaptation syndrome | Stress brings alarm, then resistance, then exhaustion | All stressors draw on one general stress response | Built on rodents and toxic stressors; never shown with normal exercise in humans |
 
-Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
+Thin evidence · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
 
 ## Planned rest at four time scales
 

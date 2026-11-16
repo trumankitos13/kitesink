@@ -148,7 +148,7 @@ FILE: https://kitesink.com/fitness.md
 
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 948 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 962 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -175,10 +175,10 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 
 ## Reference
 
-- [Claims, checked](https://kitesink.com/fitness/claims.md): 55 common claims, each with a verdict, who was studied, and the source.
+- [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 154 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 121 key numbers and 59 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 756 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 789 sources.
 
 ## Calculators (on the page, no sign-up)
 
@@ -839,7 +839,7 @@ McDonald argues that self-coached lifters lack distance, so they talk themselves
 - Before changing the plan mid-session, ask what you would tell a friend to do.
 - When in doubt about one more set, stop.
 
-Goals and self-coaching · Intermediate · Coaching practice · Sources: [McDonald 2019d](https://bodyrecomposition.com/training/coaching-yourself)
+Goals and self-coaching · Intermediate · Coaching practice · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself)
 
 ### A coach adds technique, restraint and a plan
 
@@ -849,7 +849,7 @@ McDonald lists three things a coach supplies. The first is technical feedback, w
 
 - If you cannot hire a coach, film your lifts and have an experienced lifter review them.
 
-Goals and self-coaching · Beginner · Some support · Sources: [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9), [McDonald 2019d](https://bodyrecomposition.com/training/coaching-yourself)
+Goals and self-coaching · Beginner · Some support · Sources: [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9), [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself)
 
 ### A simple plan carried out fully beats an elaborate one
 
@@ -870,7 +870,7 @@ The slogan that athletic training gives an athletic look assumes the training cr
 
 - If appearance is the goal, use growth training and diet, not a sport's programme.
 
-Goals and self-coaching · Beginner · Some support · Sources: [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001), [McDonald 2016k](https://bodyrecomposition.com/training/train-to-look-like-an-athlete)
+Goals and self-coaching · Beginner · Some support · Sources: [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001), [McDonald 2016l](https://bodyrecomposition.com/training/train-to-look-like-an-athlete)
 
 ### Lifting the weight fast adds a little to physical function in older adults
 
@@ -892,7 +892,7 @@ The ACSM's 2011 position stand recommends resistance exercise for each major mus
 - Lift two or three days a week, covering every major muscle group.
 - Keep sessions short enough that you never skip them.
 
-Health and general fitness · Beginner · Well supported · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Bull 2020](https://doi.org/10.1136/bjsports-2020-102955), [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
+Health and general fitness · Beginner · Well supported · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Bull 2020](https://doi.org/10.1136/bjsports-2020-102955), [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
 
 ### Occasional heavier sets and loaded standing lifts are worth including for bone
 
@@ -903,7 +903,7 @@ In 101 postmenopausal women with low bone mass, eight months of supervised heavy
 - Include a few weeks of sets of 5 or 6 on a well-learned lift in each training block.
 - With low bone density, start heavy loading only under professional supervision.
 
-Health and general fitness · Intermediate · Some support · Sources: [Watson 2017](https://doi.org/10.1002/jbmr.3284), [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
+Health and general fitness · Intermediate · Some support · Sources: [Watson 2017](https://doi.org/10.1002/jbmr.3284), [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
 
 ### After the first year, vary reps in simple ways
 
@@ -914,7 +914,7 @@ McDonald suggests more structure only after 6 to 12 months of steady basic train
 - Pick one scheme and run it for several months.
 - Take an easy week when a cycle of heavier weeks ends.
 
-Health and general fitness · Intermediate · Coaching practice · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Williams 2017](https://doi.org/10.1007/s40279-017-0734-y)
+Health and general fitness · Intermediate · Coaching practice · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Williams 2017](https://doi.org/10.1007/s40279-017-0734-y)
 
 ## Common mistakes
 
@@ -1089,7 +1089,7 @@ McDonald reports that experienced coaches say the same of themselves: they would
 - Write the plan before the session and do not add to it on the day.
 - Ask someone to check now and then that you are following it.
 
-Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2019d](https://bodyrecomposition.com/training/coaching-yourself), [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101)
+Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself), [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101)
 
 ### Picking one habit of champions as the reason for their success
 
@@ -1292,7 +1292,7 @@ Ways Lyle McDonald arranges lifting and cardio for general fitness, by the days 
 | Any, strength block | 3 to 4 lifting days plus 3 short cardio sessions | Run for 6 to 8 weeks, then switch emphasis |
 | Any, cardio block | 3 to 4 cardio sessions plus 2 brief lifting days | The lifting is enough to maintain strength |
 
-Coaching practice · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb)
+Coaching practice · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb)
 
 ## Terms
 
@@ -1694,7 +1694,7 @@ High-rep leg extensions cause more local burning than most lifts at the same eff
 - If the burn ends sets early, try reclining the seat back a little.
 - Or accept it and use the lift for lighter, higher-rep work.
 
-Calves and leg extensions · Intermediate · Thin evidence · Sources: [McDonald 2018c](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt), [Foster 1999](https://doi.org/10.1097/00005768-199910000-00012)
+Calves and leg extensions · Intermediate · Thin evidence · Sources: [McDonald 2018d](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt), [Foster 1999](https://doi.org/10.1097/00005768-199910000-00012)
 
 ### Leg extensions stress the kneecap joint most near straight; squats stress it most deep
 
@@ -1714,7 +1714,7 @@ Twenty-two untrained men trained leg extensions twice a week for 10 weeks, one l
 
 - Set the back pad as far back as the machine allows, or lean back and hold the handles.
 
-Calves and leg extensions · Intermediate · Thin evidence · Sources: [Larsen 2025](https://doi.org/10.1080/02640414.2024.2444713), [McDonald 2018c](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt)
+Calves and leg extensions · Intermediate · Thin evidence · Sources: [Larsen 2025](https://doi.org/10.1080/02640414.2024.2444713), [McDonald 2018d](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt)
 
 ### Good technique is a shared model with room for personal style
 
@@ -3772,7 +3772,7 @@ Gym intervals of 30 to 60 seconds with short rests resemble middle-distance runn
 - If top speed is the goal, keep efforts short and rest until fully recovered.
 - For fitness or fat loss, choose intervals or steady work over true sprints.
 
-Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016l](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016m](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Split long indoor sessions into blocks and change something at each one
 
@@ -4039,7 +4039,7 @@ Lyle McDonald warns lifters against going to a track, jogging for a few minutes 
 - Build up over weeks with sub-maximal runs before any all-out sprint.
 - Use a bike or a hill for hard efforts if you have not trained to sprint.
 
-Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016l](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016m](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Choosing sprints over steady cardio to look like a sprinter
 
@@ -4049,7 +4049,7 @@ The argument compares a muscular sprinter with a thin marathon runner and credit
 
 - Lift to build muscle, and pick cardio for fitness, energy use and recovery.
 
-Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016i](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
+Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016j](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
 
 ### Going from no cardio to a lot of hard cardio when a diet starts
 
@@ -4465,7 +4465,7 @@ Supercompensation implies waiting for an overshoot before training again. McDona
 
 - Judge a programme over a block of weeks, not by whether each session beat the last.
 
-Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
+Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
 
 ### Selye's stress stages are a loose analogy for training, not a law
 
@@ -4473,7 +4473,7 @@ Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sourc
 
 A 2020 review notes that Selye built the syndrome from rodent studies using toxic stressors, that normal exercise in humans has never been shown to produce it, and that it gives no strong case that periodised training is necessary. A 2018 paper argues stress science has since moved on. Another 2018 review defends the syndrome as a useful framework, since disturbance does drive adaptation. McDonald sides with the critics: in Selye's work exhaustion meant death, nothing like a lifter who is tired or slightly weaker. What holds up is the general stress response, in which stressors add together.
 
-Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training)
+Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training)
 
 ### Take at least one day a week completely off
 
@@ -4830,7 +4830,7 @@ The deplete-then-overshoot idea came from glycogen research, and glycogen does b
 
 - Aim for repeatable sessions that progress, not for maximum disruption.
 
-Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
+Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
 
 ### Turning a recovery session into a workout
 
@@ -4982,7 +4982,7 @@ Each model draws a similar curve but leads to different advice. McDonald argues 
 | Fitness-fatigue (two-factor) | Each session adds fitness and fatigue; fatigue fades faster | Explains tapers, easy weeks and bests after a short break | Fitted a season of data from nine swimmers, but with wide uncertainty in its parameters |
 | General adaptation syndrome | Stress brings alarm, then resistance, then exhaustion | All stressors draw on one general stress response | Built on rodents and toxic stressors; never shown with normal exercise in humans |
 
-Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
+Thin evidence · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
 
 ## Planned rest at four time scales
 
@@ -5669,7 +5669,7 @@ In 171 women, 52 percent of the weight lost was regained at one year and 89 perc
 - After the diet, bring calories back to maintenance within about two weeks, then hold there.
 - Keep weighing, activity and protein up.
 
-Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2016j](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2016k](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### A small surplus adds muscle, and a large surplus mostly adds fat
 
@@ -5733,7 +5733,7 @@ In 171 women, 52 percent of lost weight was regained after one year and 89 perce
 - Plan the exit: a target date, a maintenance range and a weekly weigh-in.
 - Return to maintenance calories at once or within about two weeks.
 
-Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [McDonald 2016j](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [McDonald 2016k](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### Treating a gaining phase as a licence to eat anything
 
@@ -6339,7 +6339,7 @@ In controlled trials testosterone raised muscle size and strength without any tr
 - Compare your progress with drug-free ranges and with your own past numbers.
 - Judge a programme by its results in drug-free lifters at your level.
 
-Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](https://doi.org/10.1056/nejm199607043350101), [Bhasin 2001](https://doi.org/10.1152/ajpendo.2001.281.6.e1172), [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [McDonald 2016e](https://bodyrecomposition.com/training/do-drugs-only-help-a-little), [McDonald 2015c](https://bodyrecomposition.com/muscle-gain/anabolic-steroids-muscle-growth)
+Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](https://doi.org/10.1056/nejm199607043350101), [Bhasin 2001](https://doi.org/10.1152/ajpendo.2001.281.6.e1172), [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [McDonald 2016f](https://bodyrecomposition.com/training/do-drugs-only-help-a-little), [McDonald 2015c](https://bodyrecomposition.com/muscle-gain/anabolic-steroids-muscle-growth)
 
 ## Key numbers
 
@@ -6610,7 +6610,7 @@ A 2025 meta-analysis pooled 29 studies in which healthy men and women aged 18 to
 - Use the same training principles the rest of this guide gives.
 - Track growth as a percentage of where you started.
 
-Strength and muscle gain · Beginner · Well supported · Sources: [Refalo 2025](https://doi.org/10.7717/peerj.19042), [Roberts 2020c](https://doi.org/10.1519/jsc.0000000000003521), [McDonald 2016h](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Well supported · Sources: [Refalo 2025](https://doi.org/10.7717/peerj.19042), [Roberts 2020c](https://doi.org/10.1519/jsc.0000000000003521), [McDonald 2016i](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Women's upper-body strength rose faster than men's in relative terms
 
@@ -6638,7 +6638,7 @@ Eight women and seven men trained three days a week for 16 weeks. The women's st
 
 - Use strength records, not the mirror, to judge your first months.
 
-Strength and muscle gain · Beginner · Thin evidence · Sources: [Cureton 1988](https://doi.org/10.1249/00005768-198808000-00003), [McDonald 2016h](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Thin evidence · Sources: [Cureton 1988](https://doi.org/10.1249/00005768-198808000-00003), [McDonald 2016i](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Few female college athletes exceed an FFMI of about 24
 
@@ -6658,7 +6658,7 @@ The study measured 29 strength-trained female college athletes. Six carried more
 
 - Estimate your own ceiling from height, then treat it as a rough upper bound.
 
-Muscular potential · Intermediate · Thin evidence · Sources: [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Muscular potential · Intermediate · Thin evidence · Sources: [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ### Most women are near their muscular limit after three to four years of good training
 
@@ -6669,7 +6669,7 @@ This is his coaching judgment, not a study result. He pairs it with a planning r
 - Count only your years of structured, progressive training.
 - Shrink the surplus as the monthly gain you can expect shrinks.
 
-Muscular potential · Intermediate · Coaching practice · Sources: [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Muscular potential · Intermediate · Coaching practice · Sources: [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ### Higher natural androgen levels are more common among elite sportswomen
 
@@ -6679,7 +6679,7 @@ A 2018 endocrine review states that women with polycystic ovary syndrome (PCOS),
 
 - Set expectations from ordinary trained women, not from the most muscular elite athletes.
 
-Muscular potential · Advanced · Some support · Sources: [Handelsman 2018](https://doi.org/10.1210/er.2018-00020), [Hagmar 2009](https://doi.org/10.1249/mss.0b013e318195a21a), [Rickenlund 2003](https://doi.org/10.1016/s0015-0282(02)04850-1), [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Muscular potential · Advanced · Some support · Sources: [Handelsman 2018](https://doi.org/10.1210/er.2018-00020), [Hagmar 2009](https://doi.org/10.1249/mss.0b013e318195a21a), [Rickenlund 2003](https://doi.org/10.1016/s0015-0282(02)04850-1), [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ### Low energy availability, not a body fat figure, shuts down the cycle
 
@@ -6814,7 +6814,7 @@ Reading the research · Beginner · Some support · Sources: [Cowley 2021](https
 
 McDonald gives two main reasons. First, there were few sportswomen to study for most of the last century. In his history, women's weightlifting had no world championship until 1987 and no Olympic event until 2000, so athletes and coaching methods alike came from men. Second, a man's hormones are flat from day to day, while a woman's must be measured at a known point in a cycle whose length varies. The only certain marker is the first day of bleeding, confirming ovulation takes hormone tests, and a missed window means waiting a month. A 2021 research guide adds a shortage of specialist knowledge.
 
-Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women), [McDonald 2018b](https://bodyrecomposition.com/women/history-women-sport-2), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
+Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women), [McDonald 2018b](https://bodyrecomposition.com/women/history-women-sport-2), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
 
 ### A diet rule given as a percentage can fail a smaller person
 
@@ -6825,7 +6825,7 @@ In 1995, four days at 75 percent carbohydrate raised muscle glycogen 41 percent 
 - Convert percentage-based advice into grams per kg of your body weight.
 - Check that the absolute amount matches what the study participants ate.
 
-Reading the research · Intermediate · Thin evidence · Sources: [Tarnopolsky 1995](https://doi.org/10.1152/jappl.1995.78.4.1360), [Tarnopolsky 2001](https://doi.org/10.1152/jappl.2001.91.1.225), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Intermediate · Thin evidence · Sources: [Tarnopolsky 1995](https://doi.org/10.1152/jappl.1995.78.4.1360), [Tarnopolsky 2001](https://doi.org/10.1152/jappl.2001.91.1.225), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### A smaller body leaves less room in the diet for extras
 
@@ -6836,7 +6836,7 @@ This is McDonald's practical point, not a trial finding. A lighter person with l
 - Scale any fixed-size diet tactic to your own maintenance calories.
 - Set protein first, then see what room is left.
 
-Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### Weight-loss trials are the exception: most participants are women
 
@@ -6844,7 +6844,7 @@ Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016
 
 The review covered trials published from 1999 to 2009 with 95,207 participants. Only 5 percent of trials enrolled men alone. McDonald points to this as the reverse of the sports science problem: much of what is known about dieting and weight maintenance was learned largely in women, and researchers have asked whether it transfers fully to men. For a woman reading diet research the practical meaning is favourable. Findings on adherence, hunger and regain are more likely to describe people like her than findings from a lifting study are. Most of these trials enrolled people with overweight, not lean athletes.
 
-Reading the research · Beginner · Some support · Sources: [Pagoto 2012](https://doi.org/10.1038/oby.2011.140), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Beginner · Some support · Sources: [Pagoto 2012](https://doi.org/10.1038/oby.2011.140), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### In the A TO Z trial the lowest-carb diet lost most, and every group lost little
 
@@ -7003,7 +7003,7 @@ A meta-analysis of 24 studies in women found large effects of resistance trainin
 - Use loads that make the planned reps hard.
 - Judge size over months with a tape or photos, and change the plan then if you wish.
 
-Strength and muscle gain · Beginner · Well supported · Sources: [Hagstrom 2020](https://doi.org/10.1007/s40279-019-01247-x), [Refalo 2025](https://doi.org/10.7717/peerj.19042), [McDonald 2016h](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Well supported · Sources: [Hagstrom 2020](https://doi.org/10.1007/s40279-019-01247-x), [Refalo 2025](https://doi.org/10.7717/peerj.19042), [McDonald 2016i](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Treating training for women as a separate method
 
@@ -7047,7 +7047,7 @@ Phase-based programmes put the heaviest work in the follicular phase and lighter
 - Keep a consistent programme and adjust single sessions by how you feel on the day.
 - Log symptoms for a few cycles before changing anything permanent.
 
-Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### Counting on a faster metabolism before a period to cover extra eating
 
@@ -7123,7 +7123,7 @@ Supplements studied in women · Intermediate · Some support · Sources: [Ziaei 
 | 52 and 66 % (upper, lower body) | Women's strength as a share of men's in one lab comparison: Upper- and lower-body strength of eight women against eight men. Strength per unit of muscle area did not differ between them. | Thin evidence | [Miller 1993](https://doi.org/10.1007/bf00235103) |
 | 0.69 % (95% interval -1.5 to 2.9) | Gap in relative muscle growth between men and women: Difference in growth relative to starting size across 29 studies that used the same training for both sexes. The interval includes zero. | Well supported | [Refalo 2025](https://doi.org/10.7717/peerj.19042) |
 | 23.9 kg/m2 | Upper FFMI threshold in female college athletes: The 97.5th percentile among 372 female collegiate athletes measured by DXA. The group mean was 18.8. | Some support | [Harty 2019](https://doi.org/10.1080/02640414.2019.1634964) |
-| 0.33 kg per cm (1.84 lb/in) | McDonald's working ceiling for women's lean mass by height: His judgment of the realistic upper figure for most women, drawn from athlete samples. A coaching estimate, not a measured limit. | Coaching practice | [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential) |
+| 0.33 kg per cm (1.84 lb/in) | McDonald's working ceiling for women's lean mass by height: His judgment of the realistic upper figure for most women, drawn from athlete samples. A coaching estimate, not a measured limit. | Coaching practice | [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential) |
 | about 45 kcal per kg FFM per day | Energy availability linked with normal cycles and bone: The level the 2025 Female Athlete Triad update associates with being energy replete, with ovulatory cycles and normal bone density. | Well supported | [De Souza 2026](https://doi.org/10.1007/s40279-025-02333-z), [Burke 2018](https://doi.org/10.1123/ijsnem.2018-0142) |
 | 9% lower per 1 kcal/kg FFM higher | Change in odds of a disturbed cycle per unit of energy availability: From 35 women followed over three cycles of diet and exercise. No threshold value emerged. | Some support | [Lieberman 2018](https://doi.org/10.1249/mss.0000000000001451) |
 | 330 kcal per day (about 18%) | Extra intake that restored menses in the REFUEL trial: Average increase achieved over 12 months by exercising women with absent or infrequent periods. The 2025 Triad update gives 300 to 600. | Some support | [De Souza 2021](https://doi.org/10.1093/humrep/deab149), [Williams 2026](https://doi.org/10.1007/s40279-025-02332-0) |
@@ -7146,7 +7146,7 @@ Published samples of trained women, oldest to newest. Methods differ, so compare
 | 266 college athletes, 2019 | 63.2 kg (139 lb) on average | FFMI mean 16.9, range 13.3 to 25.5 | DXA |
 | 372 college athletes, 2019 | 69.5 kg (153 lb), 24.2% | FFMI mean 18.8, 97.5th percentile 23.9 | DXA |
 
-Some support · Sources: [Johnson 1990](https://pubmed.ncbi.nlm.nih.gov/2079841/), [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [van der Ploeg 2001](https://doi.org/10.1038/sj.ejcn.1601154), [Blue 2019](https://doi.org/10.1080/02640414.2019.1591575), [Harty 2019](https://doi.org/10.1080/02640414.2019.1634964), [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Some support · Sources: [Johnson 1990](https://pubmed.ncbi.nlm.nih.gov/2079841/), [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [van der Ploeg 2001](https://doi.org/10.1038/sj.ejcn.1601154), [Blue 2019](https://doi.org/10.1080/02640414.2019.1591575), [Harty 2019](https://doi.org/10.1080/02640414.2019.1634964), [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ## What studies found in each part of the cycle
 
@@ -7201,7 +7201,7 @@ A quick way to weigh a training or diet study for a woman, from who took part an
 | Women using oral contraceptives | Applies to pill users; other hormonal methods are barely studied | Which type of pill, if stated |
 | Postmenopausal women | Applies after menopause; may not match younger women | Whether hormone therapy use was recorded |
 
-Coaching practice · Sources: [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8), [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [Nolan 2024](https://doi.org/10.1007/s40279-023-01911-3), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Coaching practice · Sources: [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8), [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [Nolan 2024](https://doi.org/10.1007/s40279-023-01911-3), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ## A TO Z trial: weight change at 12 months by assigned diet
 
@@ -7771,6 +7771,19 @@ Who was studied: Bell 2023: 34 expert coaches in round one, 21 in round three. R
 
 Evidence: Mixed · Thin evidence · Sources: [Bell 2023](https://doi.org/10.1186/s40798-023-00633-0), [Pancar 2026](https://doi.org/10.1038/s41598-026-40612-5), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y)
 
+### Do you gain less muscle and strength if you lift in the morning?
+
+**Verdict: Not supported.** Morning and evening training built similar strength and muscle, though most people start out a little stronger later in the day.
+
+A meta-analysis of 11 studies found people stronger in the evening at the outset. Training in the morning lifted morning strength to about evening levels, while evening training kept the daily gap. Gains in strength and muscle size were similar whichever time people trained. In one trial in men, 10 weeks of morning or late-afternoon training grew the thighs by 2.7% and 3.5%, not a significant gap. Lyle McDonald expects a few flat weeks after a switch to mornings, and suggests a longer warm-up and, for those who need it, a small snack with carbohydrate and protein beforehand.
+
+Who was studied: Grgic 2019: 11 studies comparing morning with evening training, other variables equal. Sedliak 2009: men, 10 weeks of time-of-day training after 10 weeks of preparation.
+
+- After moving sessions to the morning, give it two to three weeks before judging them.
+- Lengthen the warm-up for early sessions.
+
+Evidence: Meta-analysis · Some support · Sources: [Grgic 2019](https://doi.org/10.1080/07420528.2019.1567524), [Sedliak 2009](https://doi.org/10.1519/JSC.0b013e3181bb7388), [McDonald 2018c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-9)
+
 ## Powerlifting
 
 ### Is a calculated one-rep max as good as a tested one?
@@ -7929,6 +7942,74 @@ Who was studied: Craven 2022: 69 publications, 227 outcome measures, mostly male
 
 Evidence: Mixed · Some support · Sources: [Craven 2022](https://doi.org/10.1007/s40279-022-01706-y), [Knowles 2018](https://doi.org/10.1016/j.jsams.2018.01.012)
 
+## Conditioning
+
+### Can a fitness watch tell you how many calories you burned?
+
+**Verdict: Overstated.** Wrist devices track heart rate fairly well, but their calorie figures were off by 20% or more in laboratory tests.
+
+In 60 adults measured against lab equipment while sitting, walking, running and cycling, six of seven wrist devices kept median heart-rate error under 5% on the bike, yet none estimated energy use within 20%. Errors were largest for walking and for men, people with higher BMI and darker skin. A meta-analysis of 60 validation studies found accuracy varied widely with the activity, and adding heart rate to motion sensing helped. Lyle McDonald treats a resting heart rate that drifts down during a diet as a rough sign that energy use is falling, not a measure of how far.
+
+Who was studied: Shcherbina 2017: 60 adults, 7 wrist devices, lab tests against indirect calorimetry. O'Driscoll 2020: 60 validation studies of wrist and arm monitors in healthy adults.
+
+- Use the calorie figure to compare similar days, not to decide how much to eat.
+- Set intake from your weekly average weight over several weeks.
+
+Evidence: Meta-analysis · Some support · Sources: [Shcherbina 2017](https://doi.org/10.3390/jpm7020003), [O’Driscoll 2020](https://doi.org/10.1136/bjsports-2018-099643), [McDonald 2017b](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-4)
+
+### Are muscle cramps during exercise caused by dehydration or low salt?
+
+**Verdict: Overstated.** In a large race, cramping went with faster pacing and a history of cramps, not with fluid loss or blood salt levels.
+
+In 210 Ironman triathletes, the 43 who cramped had the same changes in body weight and blood electrolytes as the rest. Faster race times and cramps in earlier races were the only independent risk factors. A 2019 review found the causes still uncertain: some cases, mostly from industrial settings, link to water and salt loss, while others come from fatigue-driven reflex activity in the spinal cord. Lyle McDonald's answer leans on fluid and electrolytes, especially on very low-carb diets; the evidence suggests that explains only some cases.
+
+Who was studied: Schwellnus 2011: 210 Ironman triathletes, one race, 43 with cramps, blood and body weight taken before and after. Maughan 2019: narrative review.
+
+- Build race pace in training, and hold back where cramps have struck before.
+
+Evidence: Cohort study · Thin evidence · Sources: [Schwellnus 2011](https://doi.org/10.1136/bjsm.2010.078535), [Maughan 2019](https://doi.org/10.1007/s40279-019-01162-1), [McDonald 2017c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
+
+### Can you use your running heart rate zones on the bike?
+
+**Verdict: Not supported.** Heart rate at threshold on a treadmill did not predict heart rate at threshold on a bike, so each sport needs its own test.
+
+In 371 people who did graded tests on both a treadmill and a bike within three weeks, heart rate at the individual anaerobic threshold, and at a blood lactate of 4 mmol/L, did not correlate between the two. Neither the same numbers nor a fixed offset can be carried across with confidence, and the authors call a sport-specific test a prerequisite. Lyle McDonald could not confirm the gym rule that threshold sits 10 beats lower on the bike; he notes that people test best in the activity they train most, and that running uses more muscle.
+
+Who was studied: Roecker 2003: 371 people (304 men, 67 women), incremental treadmill and cycle tests no more than 3 weeks apart, with blood lactate.
+
+- Set bike zones from a bike test and running zones from a running test.
+- Until you have tested, judge effort by breathing and how well you can talk.
+
+Evidence: Cohort study · Thin evidence · Sources: [Roecker 2003](https://doi.org/10.1055/s-2003-39087), [McDonald 2016e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-2)
+
+### Is plain water the best drink after a sweaty session?
+
+**Verdict: Depends.** After heavy sweating you need more fluid than you lost, with some sodium. At rest, milk and rehydration solutions were held in the body longer than water.
+
+In 12 men dehydrated by 2% of body mass on a bike, restoring fluid balance took a drink volume greater than the sweat lost, and without enough sodium the extra mostly left as urine. In 72 men who were already hydrated, an oral rehydration solution and milk left about 1.5 times as much fluid in the body after 2 hours as still water, while coffee, tea, lager and cola did no worse than water. Lyle McDonald rates plain water a weak rehydration drink and suggests weighing before and after training to learn your losses.
+
+Who was studied: Shirreffs 1996: 12 men dehydrated by 2% of body mass, four drink volumes at two sodium levels. Maughan 2016: 72 hydrated men, 1 L of one of 13 drinks.
+
+- After a long, sweaty session, weigh before and after, then drink more than the weight lost.
+- Take that fluid with salty food or a drink that contains sodium.
+
+Evidence: Randomised trial · Some support · Sources: [Shirreffs 1996](https://doi.org/10.1097/00005768-199610000-00009), [Maughan 2016](https://doi.org/10.3945/ajcn.115.114769), [McDonald 2017c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
+
+## Recovery
+
+### Does training your healthy arm help an injured one in a cast?
+
+**Verdict: Mostly holds.** Training the free limb reduced strength loss in a limb held still, with a smaller effect on muscle size, in healthy volunteers.
+
+In a 2026 meta-analysis of eight studies (189 healthy people with one arm immobilized), training the other arm limited strength loss in the immobilized arm (effect size 0.53) and gave a small protection of muscle size (0.19), seen mainly when the immobilized joint was nearer the trunk. Across 31 trials, one-sided training raised strength in the untrained limb by 11.9%. These were healthy volunteers, not injured people, and the risk of bias varied. Lyle McDonald warns that muscles you cannot train during a diet will shrink, and suggests some loading such as isometrics where it is allowed.
+
+Who was studied: Rodríguez-Coloma 2026: 8 studies, 189 healthy adults with one arm immobilized. Manca 2017: 31 RCTs, 785 people doing one-sided resistance training.
+
+- While a limb is in a cast, keep training the other side and the rest of the body if your clinician agrees.
+- Ask your clinician or physio what loading the injured side can take.
+
+Evidence: Meta-analysis · Some support · Sources: [Rodríguez-Coloma 2026](https://doi.org/10.1152/japplphysiol.00081.2026), [Manca 2017](https://doi.org/10.1007/s00421-017-3720-z), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+
 ## Nutrition
 
 ### Do you have to eat protein within an hour of training?
@@ -8084,6 +8165,44 @@ Who was studied: Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by
 - Lean on soy and mix legumes and grains across the day.
 
 Evidence: Meta-analysis · Well supported · Sources: [Lim 2021](https://doi.org/10.3390/nu13020661), [Hevia-Larraín 2021](https://doi.org/10.1007/s40279-021-01434-9), [Reid-McCann 2025](https://doi.org/10.1093/nutrit/nuae200), [Hartman 2007b](https://doi.org/10.1093/ajcn/86.2.373)
+
+### Do diet drinks with artificial sweeteners make you gain weight?
+
+**Verdict: Not supported.** Swapping sugary drinks for diet drinks led to slightly lower weight in trials, and diet drinks did about as well as water.
+
+A network meta-analysis of 17 randomized trials in 1,733 adults with overweight or obesity found that replacing sugar-sweetened drinks with low- or no-calorie sweetened drinks lowered weight by 1.06 kg (2.3 lb) and body fat by 0.6 points. Diet drinks against water showed no weight difference. Blood glucose is a separate question: in a two-week trial of 120 healthy adults, saccharin and sucralose altered gut bacteria and worsened glucose responses, varying widely between people. Lyle McDonald sees calorie-free sweet drinks as a help to dieters; his article predates that trial.
+
+Who was studied: McGlynn 2022: 17 RCTs, 1,733 adults with overweight or obesity, at least 2 weeks each. Suez 2022: 120 healthy adults given one of four sweeteners or controls for 2 weeks.
+
+- If you drink sugary drinks, switching to diet versions or to water both remove those calories.
+
+Evidence: Meta-analysis · Some support · Sources: [McGlynn 2022](https://doi.org/10.1001/jamanetworkopen.2022.2092), [Suez 2022](https://doi.org/10.1016/j.cell.2022.07.016), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
+
+### Can you build muscle on a ketogenic diet?
+
+**Verdict: Depends.** Lifters on ketogenic diets lost more fat but also more fat-free mass than on higher-carb diets; without a planned deficit the gap was not clear.
+
+A meta-analysis of 13 randomized trials (244 people doing resistance training) found ketogenic diets cut more fat mass (2.21 kg, 4.9 lb) and also more fat-free mass (1.26 kg, 2.8 lb) than non-ketogenic diets. In five studies of trained lifters with no planned calorie deficit (111 people), fat-free mass did not differ clearly. Lyle McDonald's view is that protein burned for fuel drops after about three weeks of adaptation, but that keto remains a poor setting for building muscle.
+
+Who was studied: Ashtary-Larky 2022: 13 RCTs, 244 people doing resistance training. Vargas-Molina 2022: 5 studies, 111 resistance-trained adults, no planned energy restriction.
+
+- If gaining muscle is the main goal, keep carbohydrate in the diet unless you have a medical reason not to.
+- On keto, keep protein high and eat at or above maintenance when you want to gain.
+
+Evidence: Meta-analysis · Some support · Sources: [Ashtary-Larky 2022](https://doi.org/10.1080/10408398.2021.1890689), [Vargas-Molina 2022](https://doi.org/10.3390/ijerph191912629), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+
+### Is a food labelled zero calories truly calorie-free?
+
+**Verdict: Not supported.** US labels may show 0 calories for anything under 5 a serving and 0 g fat for under 0.5 g, so large or repeated servings still add energy.
+
+Under the US labelling rule, calories are rounded to the nearest 5 up to 50 and to the nearest 10 above that, and a serving with fewer than 5 calories may be shown as zero. Total fat under 0.5 g a serving is shown as 0 g. So the label's grams multiplied by 4, 4 and 9 seldom match its calorie line exactly. A product is treated as misbranded only when measured calories run more than 20% above the label. Lyle McDonald's point is that rounding matters little unless 'zero' foods are used freely and left out of the log. Rules differ in other countries.
+
+Who was studied: US Code of Federal Regulations, 21 CFR 101.9 (nutrition labeling of food), eCFR text current as of 1 November 2026.
+
+- Weigh and log foods you use in quantity even when the label says zero.
+- Expect small gaps between a label's macros and its calories; they come from rounding.
+
+Evidence: Guideline · Rulebook · Sources: [UFDA 2026](https://www.ecfr.gov/current/title-21/section-101.9), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
 
 ## Diet
 
@@ -8304,6 +8423,55 @@ Who was studied: Longland: 40 young men for 4 weeks. Garthe: 24 athletes. Murphy
 
 Evidence: Mixed · Thin evidence · Sources: [Longland 2016](https://doi.org/10.3945/ajcn.115.119339), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Murphy 2022](https://doi.org/10.1111/sms.14075)
 
+### Do nuts make you put on weight?
+
+**Verdict: Not supported.** In trials, adding nuts did not raise body weight, and people who ate more nuts were slightly less likely to become overweight.
+
+A 2021 meta-analysis of 86 randomized trials (5,873 people) found no effect of nuts on body weight (0.09 kg, interval -0.09 to 0.27). Across six cohorts of about 570,000 people, nut eaters had a 7% lower risk of overweight or obesity. Part of the energy is never absorbed: in 18 adults, almonds yielded 4.6 kcal per gram against 6.0 to 6.1 predicted, so the standard factors overestimated them by 32%. Lyle McDonald points out that much of the effect relies on people eating less later in the day, so large amounts eaten on top of a full diet can still add weight.
+
+Who was studied: Nishi 2021: 86 RCTs (5,873 people) and 6 prospective cohorts (569,910 people). Novotny 2012: 18 adults, crossover with 0, 42 or 84 g of almonds a day, 18 days each.
+
+- Weigh a portion now and then; a 28 g (1 oz) serving is a small handful.
+- Eat nuts in place of another snack rather than in addition to it.
+
+Evidence: Meta-analysis · Well supported · Sources: [Nishi 2021](https://doi.org/10.1111/obr.13330), [Novotny 2012](https://doi.org/10.3945/ajcn.112.035782), [McDonald 2017a](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-3)
+
+### Does keeping your home cold help you burn off fat?
+
+**Verdict: Overstated.** Mild cold raises energy use by a few percent, but studies of people who got used to the cold found little change in body weight.
+
+In 25 adults, 12 hours at 19 °C (66 °F) instead of 24 °C (75 °F) raised energy expenditure by about 6% with no change in fidgeting. In one trial, two hours a day at 17 °C (63 °F) for six weeks raised brown fat activity and lowered body fat. A 2020 review found the rise in human energy use consistently small, and cold-acclimation studies produced minimal changes in body weight; only two studies measured how much people ate in the cold. Lyle McDonald doubts most people would stay that cold every day for a small burn, and notes that cold can raise hunger.
+
+Who was studied: Celi 2010: 25 adults, two 12-hour stays at 19 and 24 °C. Yoneshiro 2013: healthy adults, 2 hours a day at 17 °C for 6 weeks. McInnis 2020: narrative review.
+
+- Treat a cooler home as a small extra at most, never as a fat-loss plan.
+
+Evidence: Mixed · Thin evidence · Sources: [Celi 2010](https://doi.org/10.1530/EJE-10-0627), [Yoneshiro 2013](https://doi.org/10.1172/JCI67803), [McInnis 2020](https://doi.org/10.1111/obr.12978), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-8)
+
+### Does skipping meals or fasting for a day slow your metabolism?
+
+**Verdict: Not supported.** Resting energy use did not fall after a day of very low intake, and it rose over the first three days of a total fast.
+
+In 11 lean, healthy adults on an 84-hour fast, resting energy expenditure rose from 3.97 to 4.53 kJ a minute by day 3, as noradrenaline more than doubled. In 8 men with overweight or obesity, a day at 25% of energy needs did not change resting energy use the next morning, and appetite and the amount eaten in the following two days matched a normal day. The slower metabolism of a long diet builds over weeks (see the starvation mode claim). Lyle McDonald's view is that the body's adjustments lag by days in both directions, so one high-calorie day does not reverse them either.
+
+Who was studied: Zauner 2000: 11 healthy lean adults, 84-hour fast, measured on days 1 to 4. Clayton 2016: 8 men with overweight or obesity, randomized crossover, 24 hours at 25% of energy needs.
+
+- Do not worry about a missed meal; judge intake over days and weeks.
+
+Evidence: Mixed · Thin evidence · Sources: [Zauner 2000](https://doi.org/10.1093/ajcn/71.6.1511), [Clayton 2016](https://doi.org/10.1038/ijo.2016.106), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+
+### Is eating extra fat the way to burn body fat?
+
+**Verdict: Not supported.** Cutting carbohydrate raises the fat you burn, yet on equal calories cutting fat removed more body fat in a ward study.
+
+Nineteen adults with obesity on a metabolic ward ate two reduced-calorie diets with equal calories, each for six days, in random order. Cutting carbohydrate raised fat burning and removed 53 g of body fat a day; cutting fat left fat burning unchanged yet removed 89 g a day, because less fat was coming in. Burning more fat is not the same as losing more. Lyle McDonald explains that the shift to fat burning on low-carb diets comes from the missing carbohydrate, not the added fat, since fasting causes the same shift. Over months the two diet styles lose similar weight (see the low-carb claim).
+
+Who was studied: Hall 2015: 19 adults with obesity on a metabolic ward, crossover, two 6-day reduced-calorie diets with equal calories, body fat loss from fat balance.
+
+- Pick the carbohydrate and fat split you can keep to, and set calories first.
+
+Evidence: Randomised trial · Thin evidence · Sources: [Hall 2015](https://doi.org/10.1016/j.cmet.2015.07.021), [McDonald 2019d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
+
 ## Health
 
 ### Does sleep matter for fat loss if your calories are right?
@@ -8381,6 +8549,19 @@ Who was studied: Ode 2007: 226 college athletes and 213 non-athletes. Okorodudu 
 
 Evidence: Mixed · Some support · Sources: [Ode 2007](https://doi.org/10.1249/01.mss.0000247008.19127.3e), [Okorodudu 2010](https://doi.org/10.1038/ijo.2010.5), [Ashwell 2011](https://doi.org/10.1111/j.1467-789x.2011.00952.x)
 
+### Is it safe to work out when you have a cold?
+
+**Verdict: Depends.** Moderate exercise during a mild head cold did not make it worse or longer in a controlled trial. Fever and chest symptoms were not tested.
+
+Fifty young adults were deliberately infected with a common-cold virus. The 34 who did 40 minutes of moderate exercise (70% of heart rate reserve) every other day had the same symptom scores and mucus weights over 10 days as the 16 who rested. That covers a mild head cold only. The 'neck check', training with symptoms above the neck and resting with chest or whole-body symptoms, is a coaching convention, not a tested rule. Lyle McDonald uses it, keeps sick-day sessions short and easy, and asks anyone contagious to stay out of shared gyms.
+
+Who was studied: Weidner 1998: 50 adults aged 18 to 29 of moderate fitness, inoculated with rhinovirus; 34 exercised every other day for 10 days, 16 did not.
+
+- With a head cold, keep sessions short and easy and stop well short of failure.
+- With fever, chest symptoms or body aches, rest and ask a clinician before training.
+
+Evidence: Mixed · Thin evidence · Sources: [Weidner 1998](https://doi.org/10.1097/00005768-199811000-00004), [McDonald 2019d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
+
 ---
 
 Source page: https://kitesink.com/fitness/claims  
@@ -8427,7 +8608,7 @@ The 154 terms the KiteSink fitness field guide uses, in plain words, A to Z. Eac
 - **Deload** (Powerlifting): A planned lighter week or block, with less volume or load, to clear fatigue between harder blocks.
 - **Detraining** (Recovery): The partial or complete loss of training adaptations when training stops or falls too low. Strength, power and muscle size fall at different rates, and the losses grow with the length of the break. Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047)
 - **Diet break and refeed** (Diet): A diet break is a planned stretch, often one to two weeks, at maintenance calories. A refeed is shorter, usually one or two days of higher carbohydrate.
-- **Double progression** (Training basics): A way of progressing inside a rep range such as 6 to 12: add reps from session to session until you reach the top of the range, then add weight, which drops you back toward the bottom, and build up again. Sources: [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
+- **Double progression** (Training basics): A way of progressing inside a rep range such as 6 to 12: add reps from session to session until you reach the top of the range, then add weight, which drops you back toward the bottom, and build up again. Sources: [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
 - **Dynapenia** (Health): The age-related loss of muscle strength. In later life it runs faster than the loss of muscle size, so strength and mass are tracked separately. Sources: [Mitchell 2012](https://doi.org/10.3389/fphys.2012.00260)
 - **Effect size and confidence interval** (Hypertrophy): Effect size is how big a difference is, in standard deviations. The interval shows a plausible range. If it spans zero, there is no clear difference.
 - **Energy availability (EA)** (Women): Energy eaten minus the energy spent in exercise, divided by fat-free mass. It is the kcal per kg of fat-free mass left each day for every other body function, including the reproductive system. Sources: [Burke 2018](https://doi.org/10.1123/ijsnem.2018-0142)
@@ -8442,7 +8623,7 @@ The 154 terms the KiteSink fitness field guide uses, in plain words, A to Z. Eac
 - **Fat-free mass index (FFMI)** (Body composition): Fat-free mass (kg) over the square of height (m). It is the lean-mass version of BMI and lets you compare muscularity between people of different heights. Sources: [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003)
 - **Fat-free mass or lean body mass (FFM, LBM)** (Body composition): All of the body that is not fat. In everyday use the two terms mean the same thing. Muscle is only part of it, and its water and glycogen content can shift by a kilo or more within days. Sources: [McDonald 2008v](https://bodyrecomposition.com/fat-loss/a-guide-to-body-composition), [McDonald 2019a](https://bodyrecomposition.com/muscle-gain/another-look-at-ffmi-2)
 - **Female athlete triad** (Women): Three linked components in active women: energy status, reproductive function and bone health. Each runs on a spectrum from healthy to clinical, and energy deficiency starts the chain. Sources: [De Souza 2026](https://doi.org/10.1007/s40279-025-02333-z)
-- **Fitness-fatigue model** (Recovery): A two-factor description of training: each session adds both fitness and fatigue, performance reflects fitness minus fatigue, and fatigue fades faster. It is a curve fitted to data, not a biological mechanism. Sources: [Hellard 2006](https://doi.org/10.1080/02640410500244697), [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training)
+- **Fitness-fatigue model** (Recovery): A two-factor description of training: each session adds both fitness and fatigue, performance reflects fitness minus fatigue, and fatigue fades faster. It is a curve fitted to data, not a biological mechanism. Sources: [Hellard 2006](https://doi.org/10.1080/02640410500244697), [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training)
 - **Five sets of five (5x5)** (Training basics): A strength routine of five sets of five reps on a few compound lifts, popularised by Bill Starr in a book for football players and revived by later barbell programmes. The label covers several quite different set plans. Sources: [McDonald 2009a](https://bodyrecomposition.com/training/the-5x5-program)
 - **Flexion-relaxation** (Technique): The spinal muscles going electrically quiet near a full forward bend, so that ligaments and discs carry more of the load. A review links it to load sharing by passive tissues. Sources: [Colloca 2005](https://doi.org/10.1016/j.jmpt.2005.08.005)
 - **Flight (group)** (Meet day): A group of lifters who take their attempts together; larger sessions split into flights, with lower previous totals lifting first in IPF rules.
@@ -8522,7 +8703,7 @@ The 154 terms the KiteSink fitness field guide uses, in plain words, A to Z. Eac
 - **Strides** (Conditioning): Short, relaxed accelerations of about 50 to 100 m, or around 20 seconds, at faster than race pace, each followed by a minute or more of rest. Runners do 5 to 10 to practise speed and good form without building fatigue. Sources: [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-method-4-part-2)
 - **Subacromial impingement** (Technique): Pinching of tendons and other soft tissue between the top of the upper arm bone and the bony roof of the shoulder as the arm is raised. A clinician makes the diagnosis. Sources: [Kolber 2014](https://doi.org/10.1519/jsc.0000000000000250)
 - **Subcutaneous, visceral and ectopic fat** (Body composition): Subcutaneous fat lies under the skin and can be pinched. Visceral fat surrounds the abdominal organs. Ectopic fat is fat stored inside organs such as the liver. Visceral and ectopic fat carry the most cardiometabolic risk. Sources: [Neeland 2019](https://doi.org/10.1016/s2213-8587(19)30084-1), [McDonald 2010e](https://bodyrecomposition.com/fat-loss/how-we-get-fat)
-- **Supercompensation** (Recovery): The idea that training first lowers a capacity, which then rebounds above its starting level before fading again. It fits muscle glycogen well and describes adaptation in general poorly. Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training)
+- **Supercompensation** (Recovery): The idea that training first lowers a capacity, which then rebounds above its starting level before fading again. It fits muscle glycogen well and describes adaptation in general poorly. Sources: [McDonald 2019f](https://bodyrecomposition.com/training/supercompensation-of-training)
 - **Supraphysiological dose** (Body composition): A dose that lifts a hormone above the range the body makes naturally. Testosterone trials use the term for doses several times those given to treat men with low testosterone. Sources: [Bhasin 1996](https://doi.org/10.1056/nejm199607043350101)
 - **Surface EMG (electromyography)** (Technique): A recording of a muscle's electrical activity through electrodes on the skin. It shows that a muscle is active during a lift; the size of the signal does not reliably predict strength gains or growth. Sources: [Vigotsky 2018](https://doi.org/10.3389/fphys.2017.00985)
 - **Sweet spot training** (Conditioning): Andrew Coggan's name for steady work between tempo and threshold effort, usually done in blocks of 10 to 20 minutes with rests half as long. It gives a large aerobic stimulus for the time and is too demanding for beginners. Sources: [McDonald 2009n](https://bodyrecomposition.com/training/endurance-training-method-2)
@@ -8545,7 +8726,7 @@ The 154 terms the KiteSink fitness field guide uses, in plain words, A to Z. Eac
 - **Volume** (Hypertrophy): The amount of work. In this page, usually the number of hard sets per muscle per week. Volume load is sets times reps times weight. Sources: [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w)
 - **Volume load (tonnage)** (Training basics): Sets multiplied by reps multiplied by the weight lifted, added up over a session or a week. Three sets of 5 with 100 kg (220 lb) is 1,500 kg (3,300 lb). Sources: [McDonald 2014a](https://bodyrecomposition.com/training/categories-of-weight-training-4)
 - **Waist-to-height ratio** (Health): Waist circumference divided by height, both in the same units. A ratio of 0.5 means the waist is half your height. Sources: [NIHCE 2025](https://www.nice.org.uk/guidance/ng246)
-- **Weider principles** (Training basics): Names such as the superset, split routine and drop set principles, attached by the publisher Joe Weider to methods lifters already used. They are labels from his magazines, not discoveries; the hypertrophy area covers what the methods do. Sources: [McDonald 2016g](https://bodyrecomposition.com/training/some-less-well-known-weider-principles)
+- **Weider principles** (Training basics): Names such as the superset, split routine and drop set principles, attached by the publisher Joe Weider to methods lifters already used. They are labels from his magazines, not discoveries; the hypertrophy area covers what the methods do. Sources: [McDonald 2016h](https://bodyrecomposition.com/training/some-less-well-known-weider-principles)
 - **Whoosh** (Body composition): Informal name for a sudden drop in scale weight, often a kilo or more overnight, after days or weeks with no change on a diet. It is thought to be retained water leaving. The mechanism has not been shown in studies. Sources: [McDonald 2009u](https://bodyrecomposition.com/fat-loss/of-whooshes-and-squishy-fat)
 - **Work capacity** (Training basics): The amount of training you can do and recover from. Beginners build it slowly. Leaving every session exhausted means the workload is ahead of it. Sources: [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training-2)
 - **Working max (training max)** (Powerlifting): A weight you can repeat on a normal day, often set below a true max, and used as the base for training percentages.
@@ -8797,7 +8978,7 @@ FILE: https://kitesink.com/fitness/sources.md
 
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 756 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 789 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -8891,7 +9072,7 @@ What changed after an entry was published, newest first.
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 756 sources, A to Z
+## All 789 sources, A to Z
 
 - Aasa U, Svartholm I, Andersson F et al. (2017). Injuries among weightlifters and powerlifters: a systematic review. *British Journal of Sports Medicine* 51(4):211-219. https://doi.org/10.1136/bjsports-2016-096037 (Systematic review, cited 2×)
 - Abad CC, Prado ML, Ugrinowitsch C et al. (2011). Combination of General and Specific Warm-Ups Improves Leg-Press One Repetition Maximum Compared With Specific Warm-Up in Trained Individuals. *Journal of Strength and Conditioning Research* 25(8):2242-2245. https://doi.org/10.1519/jsc.0b013e3181e8611b (Trial, cited 1×)
@@ -8915,6 +9096,7 @@ What changed after an entry was published, newest first.
 - Arem H, Moore SC, Patel A et al. (2015). Leisure Time Physical Activity and Mortality. *JAMA Internal Medicine* 175(6):959. https://doi.org/10.1001/jamainternmed.2015.0533 (Cohort study, cited 1×)
 - Arendse RE, Noakes TD, Azevedo LB et al. (2004). Reduced Eccentric Loading of the Knee with the Pose Running Method. *Medicine & Science in Sports & Exercise* 36(2):272-277. https://doi.org/10.1249/01.mss.0000113684.61351.b0 (Trial, cited 1×)
 - Ashtary-Larky D, Bagheri R, Tinsley GM et al. (2021). Effects of intermittent fasting combined with resistance training on body composition: a systematic review and meta‐analysis. *Physiology & Behavior* 237:113453. https://doi.org/10.1016/j.physbeh.2021.113453 (Meta-analysis, cited 1×)
+- Ashtary-Larky D, Bagheri R, Asbaghi O et al. (2022). Effects of resistance training combined with a ketogenic diet on body composition: a systematic review and meta-analysis. *Critical Reviews in Food Science and Nutrition* 62(21):5717-5732. https://doi.org/10.1080/10408398.2021.1890689 (Meta-analysis, cited 1×)
 - Ashwell M, Gunn P, Gibson S (2011). Waist‐to‐height ratio is a better screening tool than waist circumference and BMI for adult cardiometabolic risk factors: systematic review and meta‐analysis. *Obesity Reviews* 13(3):275-286. https://doi.org/10.1111/j.1467-789x.2011.00952.x (Meta-analysis, cited 2×)
 - Aubry A, Hausswirth C, Louis J et al. (2014). Functional Overreaching. *Medicine & Science in Sports & Exercise* 46(9):1769-1777. https://doi.org/10.1249/mss.0000000000000301 (Trial, cited 2×)
 - Azadinia F, Ebrahimi E, Kamyab M et al. (2017). Can lumbosacral orthoses cause trunk muscle weakness? A systematic review of literature. *The Spine Journal* 17(4):589-602. https://doi.org/10.1016/j.spinee.2016.12.005 (Systematic review, cited 1×)
@@ -8968,6 +9150,7 @@ What changed after an entry was published, newest first.
 - Capling L, Beck K, Gifford J et al. (2017). Validity of Dietary Assessment in Athletes: A Systematic Review. *Nutrients* 9(12):1313. https://doi.org/10.3390/nu9121313 (Systematic review, cited 2×)
 - Carrard J, Rigort AC, Appenzeller-Herzog C et al. (2022). Diagnosing Overtraining Syndrome: A Scoping Review. *Sports Health: A Multidisciplinary Approach* 14(5):665-673. https://doi.org/10.1177/19417381211044739 (Systematic review, cited 2×)
 - Carson HJ, Collins D (2011). Refining and regaining skills in fixation/diversification stage performers: the Five-A Model. *International Review of Sport and Exercise Psychology* 4(2):146-167. https://doi.org/10.1080/1750984x.2011.613682 (Review, cited 1×)
+- Celi FS, Brychta RJ, Linderman JD et al. (2010). Minimal changes in environmental temperature result in a significant increase in energy expenditure and changes in the hormonal homeostasis in healthy adults. *European Journal of Endocrinology* 163(6):863-872. https://doi.org/10.1530/EJE-10-0627 (Trial, cited 1×)
 - Celis-Morales CA, Welsh P, Lyall DM et al. (2018). Associations of grip strength with cardiovascular, respiratory, and cancer outcomes and all cause mortality: prospective cohort study of half a million UK Biobank participants. *BMJ*:k1651. https://doi.org/10.1136/bmj.k1651 (Cohort study, cited 1×)
 - CHAMPAGNE CM, BRAY GA, KURTZ AA et al. (2002). Energy Intake and Energy Expenditure. *Journal of the American Dietetic Association* 102(10):1428-1432. https://doi.org/10.1016/S0002-8223(02)90316-0 (Reference, cited 1×)
 - Chaves TS, Scarpelli MC, Bergamasco JGA et al. (2024). Effects of Resistance Training Overload Progression Protocols on Strength and Muscle Mass. *International Journal of Sports Medicine* 45(07):504-510. https://doi.org/10.1055/a-2256-5857 (Randomised trial, cited 3×)
@@ -8979,6 +9162,7 @@ What changed after an entry was published, newest first.
 - Cholewicki J, McGill SM (1992). Lumbar posterior ligament involvement during extremely heavy lifts estimated from fluoroscopic measurements. *Journal of Biomechanics* 25(1):17-28. https://doi.org/10.1016/0021-9290(92)90242-s (Reference, cited 1×)
 - Chua LK, Jimenez-Diaz J, Lewthwaite R et al. (2021). Superiority of external attentional focus for motor performance and learning: Systematic reviews and meta-analyses. *Psychological Bulletin* 147(6):618-645. https://doi.org/10.1037/bul0000335 (Meta-analysis, cited 3×)
 - Claudino JG, Cronin J, Mezêncio B et al. (2017). The countermovement jump to monitor neuromuscular status: A meta-analysis. *Journal of Science and Medicine in Sport* 20(4):397-402. https://doi.org/10.1016/j.jsams.2016.08.011 (Meta-analysis, cited 1×)
+- Clayton DJ, Creese M, Skidmore N et al. (2016). No effect of 24 h severe energy restriction on appetite regulation and ad libitum energy intake in overweight and obese males. *International Journal of Obesity* 40(11):1662-1670. https://doi.org/10.1038/ijo.2016.106 (Randomised trial, cited 1×)
 - Clemesha CG, Thaker H, Samplaski MK (2020). ‘Testosterone Boosting’ Supplements Composition and Claims Are not Supported by the Academic Literature. *The World Journal of Men's Health* 38(1):115. https://doi.org/10.5534/wjmh.190043 (Reference, cited 2×)
 - Colenso-Semple LM, D'Souza AC, Elliott-Sale KJ et al. (2023). Current evidence shows no influence of women's menstrual cycle phase on acute strength performance or adaptations to resistance exercise training. *Frontiers in Sports and Active Living* 5. https://doi.org/10.3389/fspor.2023.1054542 (Systematic review, cited 3×)
 - Colloca CJ, Hinrichs RN (2005). The Biomechanical and Clinical Significance of the Lumbar Erector Spinae Flexion-Relaxation Phenomenon: A Review of Literature. *Journal of Manipulative and Physiological Therapeutics* 28(8):623-631. https://doi.org/10.1016/j.jmpt.2005.08.005 (Review, cited 2×)
@@ -9074,6 +9258,7 @@ What changed after an entry was published, newest first.
 - Green CM, Comfort P (2007). The Affect of Grip Width on Bench Press Performance and Risk of Injury. *Strength and Conditioning Journal* 29(5):10-14. https://doi.org/10.1519/00126548-200710000-00001 (Review, cited 2×)
 - Grgic J, Mikulic P (2017). Tapering Practices of Croatian Open-Class Powerlifting Champions. *Journal of Strength and Conditioning Research* 31(9):2371-2378. https://doi.org/10.1519/JSC.0000000000001699 (Reference, cited 2×)
 - Grgic J, Trexler ET, Lazinica B et al. (2018). Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis. *Journal of the International Society of Sports Nutrition* 15(1). https://doi.org/10.1186/s12970-018-0216-0 (Meta-analysis, cited 6×)
+- Grgic J, Lazinica B, Garofolini A et al. (2019). The effects of time of day-specific resistance training on adaptations in skeletal muscle hypertrophy and muscle strength: A systematic review and meta-analysis. *Chronobiology International* 36(4):449-460. https://doi.org/10.1080/07420528.2019.1567524 (Meta-analysis, cited 1×)
 - Griffiths C, Harnack L, Pereira MA (2018). Assessment of the accuracy of nutrient calculations of five popular nutrition tracking applications. *Public Health Nutrition* 21(8):1495-1502. https://doi.org/10.1017/S1368980018000393 (Reference, cited 1×)
 - Gschneidner D, Carlson L, Steele J et al. (2025). The effects of lengthened-partial range of motion resistance training of the limbs on arm and thigh muscle area: A multi-site randomised trial. *Journal of Sports Sciences* 43(23):2963-2976. https://doi.org/10.1080/02640414.2025.2567805 (Randomised trial, cited 2×)
 - Hackett DA, Chow CM (2013). The Valsalva Maneuver. *Journal of Strength and Conditioning Research* 27(8):2338-2345. https://doi.org/10.1519/jsc.0b013e31827de07d (Review, cited 3×)
@@ -9085,6 +9270,7 @@ What changed after an entry was published, newest first.
 - Hall KD (2007). Body fat and fat-free mass inter-relationships: Forbes's theory revisited. *British Journal of Nutrition* 97(6):1059-1063. https://doi.org/10.1017/s0007114507691946 (Reference, cited 2×)
 - Hall KD (2008). What is the required energy deficit per unit weight loss?. *International Journal of Obesity* 32(3):573-576. https://doi.org/10.1038/sj.ijo.0803720 (Reference, cited 5×)
 - Hall KD, Sacks G, Chandramohan D et al. (2011). Quantification of the effect of energy imbalance on bodyweight. *The Lancet* 378(9793):826-837. https://doi.org/10.1016/S0140-6736(11)60812-X (Reference, cited 2×)
+- Hall KD, Bemis T, Brychta R et al. (2015). Calorie for Calorie, Dietary Fat Restriction Results in More Body Fat Loss than Carbohydrate Restriction in People with Obesity. *Cell Metabolism* 22(3):427-436. https://doi.org/10.1016/j.cmet.2015.07.021 (Randomised trial, cited 1×)
 - Hall KD, Guo J (2017). Obesity Energetics: Body Weight Regulation and the Effects of Diet Composition. *Gastroenterology* 152(7):1718-1727.e3. https://doi.org/10.1053/j.gastro.2017.01.052 (Meta-analysis, cited 2×)
 - Hall KD, Kahan S (2018). Maintenance of Lost Weight and Long-Term Management of Obesity. *Medical Clinics of North America* 102(1):183-197. https://doi.org/10.1016/j.mcna.2017.08.012 (Review, cited 1×)
 - Hall KD, Ayuketah A, Brychta R et al. (2019). Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An Inpatient Randomized Controlled Trial of Ad Libitum Food Intake. *Cell Metabolism* 30(1):67-77.e3. https://doi.org/10.1016/j.cmet.2019.05.008 (Randomised trial, cited 4×)
@@ -9234,6 +9420,7 @@ What changed after an entry was published, newest first.
 - Maeo S, Wu Y, Huang M et al. (2023). Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position. *European Journal of Sport Science* 23(7):1240-1250. https://doi.org/10.1080/17461391.2022.2100279 (Randomised trial, cited 1×)
 - Malina RM (2006). Weight Training in Youth-Growth, Maturation, and Safety: An Evidence-Based Review. *Clinical Journal of Sport Medicine* 16(6):478-487. https://doi.org/10.1097/01.jsm.0000248843.31874.be (Review, cited 1×)
 - Mamerow MM, Mettler JA, English KL et al. (2014). Dietary Protein Distribution Positively Influences 24-h Muscle Protein Synthesis in Healthy Adults. *The Journal of Nutrition* 144(6):876-880. https://doi.org/10.3945/jn.113.185280 (Trial, cited 1×)
+- Manca A, Dragone D, Dvir Z et al. (2017). Cross-education of muscular strength following unilateral resistance training: a meta-analysis. *European Journal of Applied Physiology* 117(11):2335-2354. https://doi.org/10.1007/s00421-017-3720-z (Meta-analysis, cited 1×)
 - Mandsager K, Harb S, Cremer P et al. (2018). Association of Cardiorespiratory Fitness With Long-term Mortality Among Adults Undergoing Exercise Treadmill Testing. *JAMA Network Open* 1(6):e183605. https://doi.org/10.1001/jamanetworkopen.2018.3605 (Cohort study, cited 2×)
 - Mann JB, Bryant KR, Johnstone B et al. (2016). Effect of Physical and Academic Stress on Illness and Injury in Division 1 College Football Players. *Journal of Strength and Conditioning Research* 30(1):20-25. https://doi.org/10.1519/jsc.0000000000001055 (Cohort study, cited 1×)
 - Manresa-Rocamora A, Sarabia JM, Javaloyes A et al. (2021). Heart Rate Variability-Guided Training for Enhancing Cardiac-Vagal Modulation, Aerobic Fitness, and Endurance Performance: A Methodological Systematic Review with Meta-Analysis. *International Journal of Environmental Research and Public Health* 18(19):10299. https://doi.org/10.3390/ijerph181910299 (Meta-analysis, cited 2×)
@@ -9245,7 +9432,9 @@ What changed after an entry was published, newest first.
 - Maruthur NM, Pilla SJ, White K et al. (2024). Effect of Isocaloric, Time-Restricted Eating on Body Weight in Adults With Obesity. *Annals of Internal Medicine* 177(5):549-558. https://doi.org/10.7326/M23-3132 (Randomised trial, cited 2×)
 - Matos NF, Winsley RJ, Williams CA (2011). Prevalence of Nonfunctional Overreaching/Overtraining in Young English Athletes. *Medicine & Science in Sports & Exercise* 43(7):1287-1294. https://doi.org/10.1249/mss.0b013e318207f87b (Cohort study, cited 2×)
 - Mattocks KT, Buckner SL, Jessee MB et al. (2017). Practicing the Test Produces Strength Equivalent to Higher Volume Training. *Medicine & Science in Sports & Exercise* 49(9):1945-1954. https://doi.org/10.1249/MSS.0000000000001300 (Randomised trial, cited 2×)
+- Maughan RJ, Watson P, Cordery PA et al. (2016). A randomized trial to assess the potential of different beverages to affect hydration status: development of a beverage hydration index. *The American Journal of Clinical Nutrition* 103(3):717-723. https://doi.org/10.3945/ajcn.115.114769 (Randomised trial, cited 1×)
 - Maughan RJ, Burke LM, Dvorak J et al. (2018). IOC consensus statement: dietary supplements and the high-performance athlete. *British Journal of Sports Medicine* 52(7):439-455. https://doi.org/10.1136/bjsports-2018-099027 (Position stand, cited 4×)
+- Maughan RJ, Shirreffs SM (2019). Muscle Cramping During Exercise: Causes, Solutions, and Questions Remaining. *Sports Medicine* 49(S2):115-124. https://doi.org/10.1007/s40279-019-01162-1 (Review, cited 1×)
 - McAllister MJ, Schilling BK, Hammond KG et al. (2013). Effect of Grip Width on Electromyographic Activity During the Upright Row. *Journal of Strength and Conditioning Research* 27(1):181-187. https://doi.org/10.1519/jsc.0b013e31824f23ad (Trial, cited 1×)
 - McClain AD, Otten JJ, Hekler EB et al. (2013). Adherence to a low-fat vs. low-carbohydrate diet differs by insulin resistance status. *Diabetes, Obesity and Metabolism* 15(1):87-90. https://doi.org/10.1111/j.1463-1326.2012.01668.x (Trial, cited 1×)
 - McClave SA, Snider HL (2001). Dissecting the energy needs of the body. *Current Opinion in Clinical Nutrition and Metabolic Care* 4(2):143-147. https://doi.org/10.1097/00075197-200103000-00011 (Review, cited 2×)
@@ -9378,6 +9567,7 @@ What changed after an entry was published, newest first.
 - McDonald L (2016). A Guide to Changing Exercise Technique Part 2. *Body Recomposition*. https://bodyrecomposition.com/training/changing-technique-part-2 (Article, cited 7×)
 - McDonald L (2016). All About the 20 Rep Squat. *Body Recomposition*. https://bodyrecomposition.com/training/all-about-the-20-rep-squat (Article, cited 4×)
 - McDonald L (2016). All You Need to Know About Training. *Body Recomposition*. https://bodyrecomposition.com/training/all-you-need-to-know-about-training (Article, cited 2×)
+- McDonald L (2016). Bodyrecomposition Mailbag 2. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-2 (Article, cited 1×)
 - McDonald L (2016). Do Drugs Only Help a Little?. *Body Recomposition*. https://bodyrecomposition.com/training/do-drugs-only-help-a-little (Article, cited 1×)
 - McDonald L (2016). Research on Women - Why Isn't There More?. *Body Recomposition*. https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women (Article, cited 6×)
 - McDonald L (2016). Some Less Well Known Weider Principles. *Body Recomposition*. https://bodyrecomposition.com/training/some-less-well-known-weider-principles (Article, cited 1×)
@@ -9386,13 +9576,21 @@ What changed after an entry was published, newest first.
 - McDonald L (2016). The Transition Phase Between Dieting and Gaining. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/the-transition-phase (Article, cited 2×)
 - McDonald L (2016). Train Like an Athlete, Look Like an Athlete. *Body Recomposition*. https://bodyrecomposition.com/training/train-to-look-like-an-athlete (Article, cited 1×)
 - McDonald L (2016). What is Sprint Training?. *Body Recomposition*. https://bodyrecomposition.com/training/what-is-sprint-training (Article, cited 2×)
+- McDonald L (2017). Bodyrecomposition Mailbag 3. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-3 (Article, cited 1×)
+- McDonald L (2017). Bodyrecomposition Mailbag 4. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-4 (Article, cited 1×)
+- McDonald L (2017). Bodyrecomposition Mailbag 5. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5 (Article, cited 2×)
+- McDonald L (2017). Bodyrecomposition Mailbag 6. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6 (Article, cited 2×)
+- McDonald L (2017). Bodyrecomposition Mailbag 7. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7 (Article, cited 3×)
+- McDonald L (2017). Bodyrecomposition Mailbag 8. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-8 (Article, cited 1×)
 - McDonald L (2017). Women's Muscular Potential. *Body Recomposition*. https://bodyrecomposition.com/women/womens-maximum-muscular-potential (Article, cited 5×)
 - McDonald L (2018). A History of Women in Sport. *Body Recomposition*. https://bodyrecomposition.com/women/a-history-of-women-in-sport (Article, cited 1×)
 - McDonald L (2018). A History of Women in Sport: Part 2. *Body Recomposition*. https://bodyrecomposition.com/women/history-women-sport-2 (Article, cited 4×)
+- McDonald L (2018). Bodyrecomposition Mailbag 9. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-9 (Article, cited 1×)
 - McDonald L (2018). Why do Leg Extensions Hurt So Much?. *Body Recomposition*. https://bodyrecomposition.com/training/why-do-leg-extensions-hurt (Article, cited 2×)
 - McDonald L (2019). Another Look at FFMI: Part 2. *Body Recomposition*. https://bodyrecomposition.com/muscle-gain/another-look-at-ffmi-2 (Article, cited 3×)
 - McDonald L (2019). Another Look at FFMI: Part 3. *Body Recomposition*. https://bodyrecomposition.com/muscle-gain/another-look-at-ffmi-3 (Article, cited 2×)
 - McDonald L (2019). Another Look at the Fat-Free Mass Index (FFMI). *Body Recomposition*. https://bodyrecomposition.com/muscle-gain/another-look-at-the-ffmi (Article, cited 1×)
+- McDonald L (2019). Bodyrecomposition Mailbag 11. *Body Recomposition*. https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11 (Article, cited 2×)
 - McDonald L (2019). Strategies for Coaching Yourself. *Body Recomposition*. https://bodyrecomposition.com/training/coaching-yourself (Article, cited 3×)
 - McDonald L (2019). The Facts About Supercompensation of Training. *Body Recomposition*. https://bodyrecomposition.com/training/supercompensation-of-training (Article, cited 6×)
 - McDonald L (2019). Training for Health and Fitness Q&A. *Body Recomposition*. https://bodyrecomposition.com/training/exercise-for-health-and-fitness (Article, cited 5×)
@@ -9404,7 +9602,9 @@ What changed after an entry was published, newest first.
 - McDonald L (2021). Is Fasted Cardio Useless for Fat Loss: Part 2. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2 (Article, cited 3×)
 - McDonald L (2024). Is Fasted Cardio Useless for Fat Loss?. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss (Article, cited 2×)
 - McEwen B (2000). Allostasis and Allostatic Load Implications for Neuropsychopharmacology. *Neuropsychopharmacology* 22(2):108-124. https://doi.org/10.1016/s0893-133x(99)00129-3 (Review, cited 1×)
+- McGlynn ND, Khan TA, Wang L et al. (2022). Association of Low- and No-Calorie Sweetened Beverages as a Replacement for Sugar-Sweetened Beverages With Body Weight and Cardiometabolic Risk: A Systematic Review and Meta-analysis. *JAMA Network Open* 5(3):e222092. https://doi.org/10.1001/jamanetworkopen.2022.2092 (Meta-analysis, cited 1×)
 - McHugh MP (2003). Recent advances in the understanding of the repeated bout effect: the protective effect against muscle damage from a single bout of eccentric exercise. *Scandinavian Journal of Medicine & Science in Sports* 13(2):88-97. https://doi.org/10.1034/j.1600-0838.2003.02477.x (Review, cited 2×)
+- McInnis K, Haman F, Doucet É (2020). Humans in the cold: Regulating energy balance. *Obesity Reviews* 21(3):e12978. https://doi.org/10.1111/obr.12978 (Review, cited 1×)
 - McLean JA, Barr SI, Prior JC (2001). Cognitive dietary restraint is associated with higher urinary cortisol excretion in healthy premenopausal women. *The American Journal of Clinical Nutrition* 73(1):7-12. https://doi.org/10.1093/ajcn/73.1.7 (Cohort study, cited 2×)
 - McNulty KL, Elliott-Sale KJ, Dolan E et al. (2020). The Effects of Menstrual Cycle Phase on Exercise Performance in Eumenorrheic Women: A Systematic Review and Meta-Analysis. *Sports Medicine* 50(10):1813-1827. https://doi.org/10.1007/s40279-020-01319-3 (Meta-analysis, cited 4×)
 - Meeusen R, Duclos M, Foster C et al. (2013). Prevention, diagnosis and treatment of the overtraining syndrome: Joint consensus statement of the European College of Sport Science (ECSS) and the American College of Sports Medicine (ACSM). *European Journal of Sport Science* 13(1):1-24. https://doi.org/10.1080/17461391.2012.730061 (Position stand, cited 9×)
@@ -9437,10 +9637,12 @@ What changed after an entry was published, newest first.
 - National Institute for Health and Care Excellence (2025). Overweight and obesity management (NG246): physical activity and diet. *NICE guideline NG246, recommendations 1.16.8 to 1.16.11*. https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet (Guideline, cited 1×)
 - Niering M, Wolf-Belala N, Seifert J et al. (2024). The Influence of Menstrual Cycle Phases on Maximal Strength Performance in Healthy Female Adults: A Systematic Review with Meta-Analysis. *Sports* 12(1):31. https://doi.org/10.3390/sports12010031 (Meta-analysis, cited 2×)
 - National Institute for Health and Care Excellence (2025). Overweight and obesity management (NG246). *NICE*. NG246, published 14 January 2025, last updated 8 January 2026. https://www.nice.org.uk/guidance/ng246 (Guideline, cited 3×)
+- Nishi SK, Viguiliouk E, Blanco Mejia S et al. (2021). Are fatty nuts a weighty concern? A systematic review and meta-analysis and dose-response meta-regression of prospective cohorts and randomized controlled trials. *Obesity Reviews* 22(11):e13330. https://doi.org/10.1111/obr.13330 (Meta-analysis, cited 1×)
 - Nolan D, Lynch AE, Egan B (2022). Self-Reported Prevalence, Magnitude, and Methods of Rapid Weight Loss in Male and Female Competitive Powerlifters. *Journal of Strength & Conditioning Research* 36(2):405-410. https://doi.org/10.1519/JSC.0000000000003488 (Reference, cited 1×)
 - Nolan D, McNulty KL, Manninen M et al. (2024). The Effect of Hormonal Contraceptive Use on Skeletal Muscle Hypertrophy, Power and Strength Adaptations to Resistance Exercise Training: A Systematic Review and Multilevel Meta-analysis. *Sports Medicine* 54(1):105-125. https://doi.org/10.1007/s40279-023-01911-3 (Meta-analysis, cited 2×)
 - Norton K, Olds T (2001). Morphological Evolution of Athletes Over the 20th Century. *Sports Medicine* 31(11):763-783. https://doi.org/10.2165/00007256-200131110-00001 (Review, cited 2×)
 - Nosaka K, Newton M, Sacco P (2002). Delayed‐onset muscle soreness does not reflect the magnitude of eccentric exercise‐induced muscle damage. *Scandinavian Journal of Medicine & Science in Sports* 12(6):337-346. https://doi.org/10.1034/j.1600-0838.2002.10178.x (Trial, cited 2×)
+- Novotny JA, Gebauer SK, Baer DJ (2012). Discrepancy between the Atwater factor predicted and empirically measured energy values of almonds in human diets. *The American Journal of Clinical Nutrition* 96(2):296-301. https://doi.org/10.3945/ajcn.112.035782 (Randomised trial, cited 1×)
 - Nuckols G (2019). The Evidence is Lacking for “Effective Reps”. *Stronger By Science (article, not peer-reviewed)*. https://www.strongerbyscience.com/effective-reps/ (Reference, cited 1×)
 - Nunes CL, Casanova N, Francisco R et al. (2022). Does adaptive thermogenesis occur after weight loss in adults? A systematic review. *British Journal of Nutrition* 127(3):451-469. https://doi.org/10.1017/S0007114521001094 (Systematic review, cited 1×)
 - Nunes EA, Colenso‐Semple L, McKellar SR et al. (2022). Systematic review and meta‐analysis of protein intake to support muscle mass and function in healthy adults. *Journal of Cachexia, Sarcopenia and Muscle* 13(2):795-810. https://doi.org/10.1002/jcsm.12922 (Meta-analysis, cited 4×)
@@ -9453,7 +9655,7 @@ What changed after an entry was published, newest first.
 - Orsama AL, Mattila E, Ermes M et al. (2014). Weight Rhythms: Weight Increases during Weekends and Decreases during Weekdays. *Obesity Facts* 7(1):36-47. https://doi.org/10.1159/000356147 (Cohort study, cited 4×)
 - Ortiz RO, Sinclair Elder AJ, Elder CL et al. (2019). A Systematic Review on the Effectiveness of Active Recovery Interventions on Athletic Performance of Professional-, Collegiate-, and Competitive-Level Adult Athletes. *Journal of Strength and Conditioning Research* 33(8):2275-2287. https://doi.org/10.1519/jsc.0000000000002589 (Systematic review, cited 1×)
 - Ose BM, Eisenhauer J, Roepe I et al. (2025). Where Are All the Female Participants in Sports and Exercise Medicine Research? A Decade Later. *The American Journal of Sports Medicine* 53(8):2022-2028. https://doi.org/10.1177/03635465241278350 (Systematic review, cited 1×)
-- O’Driscoll R, Turicchi J, Beaulieu K et al. (2020). How well do activity monitors estimate energy expenditure? A systematic review and meta-analysis of the validity of current technologies. *British Journal of Sports Medicine* 54(6):332-340. https://doi.org/10.1136/bjsports-2018-099643 (Meta-analysis, cited 2×)
+- O’Driscoll R, Turicchi J, Beaulieu K et al. (2020). How well do activity monitors estimate energy expenditure? A systematic review and meta-analysis of the validity of current technologies. *British Journal of Sports Medicine* 54(6):332-340. https://doi.org/10.1136/bjsports-2018-099643 (Meta-analysis, cited 3×)
 - Pagoto SL, Schneider KL, Oleski JL et al. (2012). Male Inclusion in Randomized Controlled Trials of Lifestyle Weight Loss Interventions. *Obesity* 20(6):1234-1239. https://doi.org/10.1038/oby.2011.140 (Systematic review, cited 1×)
 - Pallarés JG, Hernández‐Belmonte A, Martínez‐Cava A et al. (2021). Effects of range of motion on resistance training adaptations: A systematic review and meta‐analysis. *Scandinavian Journal of Medicine & Science in Sports* 31(10):1866-1881. https://doi.org/10.1111/sms.14006 (Meta-analysis, cited 2×)
 - Paluch AE, Bajpai S, Bassett DR et al. (2022). Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. *The Lancet Public Health* 7(3):e219-e228. https://doi.org/10.1016/s2468-2667(21)00302-9 (Meta-analysis, cited 3×)
@@ -9504,6 +9706,8 @@ What changed after an entry was published, newest first.
 - Roberts MD, Haun CT, Vann CG et al. (2020). Sarcoplasmic Hypertrophy in Skeletal Muscle: A Scientific “Unicorn” or Resistance Training Adaptation?. *Frontiers in Physiology* 11. https://doi.org/10.3389/fphys.2020.00816 (Review, cited 2×)
 - Roberts BM, Nuckols G, Krieger JW (2020). Sex Differences in Resistance Training: A Systematic Review and Meta-Analysis. *Journal of Strength and Conditioning Research* 34(5):1448-1460. https://doi.org/10.1519/jsc.0000000000003521 (Meta-analysis, cited 3×)
 - Robinson ZP, Pelland JC, Remmert JF et al. (2024). Exploring the Dose–Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions. *Sports Medicine* 54(9):2209-2231. https://doi.org/10.1007/s40279-024-02069-2 (Meta-analysis, cited 8×)
+- Rodríguez-Coloma M, Scott LD, Bascour-Sandoval C et al. (2026). Cross-education of unilateral resistance training as a strategy to mitigate immobilization-induced neuromuscular decline: a systematic review and meta-analysis. *Journal of Applied Physiology* 140(6):1813-1834. https://doi.org/10.1152/japplphysiol.00081.2026 (Meta-analysis, cited 1×)
+- Roecker K, Striegel H, Dickhuth HH (2003). Heart-rate recommendations: transfer between running and cycling exercise?. *International Journal of Sports Medicine* 24(3):173-178. https://doi.org/10.1055/s-2003-39087 (Cohort study, cited 1×)
 - Rogerson D, Nolan D, Korakakis PA et al. (2024). Deloading Practices in Strength and Physique Sports: A Cross-sectional Survey. *Sports Medicine - Open* 10(1):26. https://doi.org/10.1186/s40798-024-00691-y (Reference, cited 7×)
 - Rosenbaum M (2005). Low-dose leptin reverses skeletal muscle, autonomic, and neuroendocrine adaptations to maintenance of reduced weight. *Journal of Clinical Investigation* 115(12):3579-3586. https://doi.org/10.1172/jci25977 (Trial, cited 3×)
 - Rosenbaum M, Leibel RL (2010). Adaptive thermogenesis in humans. *International Journal of Obesity* 34(S1):S47-S55. https://doi.org/10.1038/ijo.2010.184 (Review, cited 1×)
@@ -9523,17 +9727,21 @@ What changed after an entry was published, newest first.
 - Schoenfeld BJ, Grgic J, Krieger J (2019). How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency. *Journal of Sports Sciences* 37(11):1286-1295. https://doi.org/10.1080/02640414.2018.1555906 (Meta-analysis, cited 3×)
 - Schumacher YO, Mueller P (2002). The 4000-m team pursuit cycling world record: theoretical and practical aspects. *Medicine & Science in Sports & Exercise* 34(6):1029-1036. https://doi.org/10.1097/00005768-200206000-00020 (Reference, cited 2×)
 - Schumann M, Feuerbacher JF, Sünkeler M et al. (2022). Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis. *Sports Medicine* 52(3):601-612. https://doi.org/10.1007/s40279-021-01587-7 (Meta-analysis, cited 3×)
+- Schwellnus MP, Drew N, Collins M (2011). Increased running speed and previous cramps rather than dehydration or serum sodium changes predict exercise-associated muscle cramping: a prospective cohort study in 210 Ironman triathletes. *British Journal of Sports Medicine* 45(8):650-656. https://doi.org/10.1136/bjsm.2010.078535 (Cohort study, cited 1×)
 - Schwingshackl L, Nitschke K, Zähringer J et al. (2020). Impact of Meal Frequency on Anthropometric Outcomes: A Systematic Review and Network Meta-Analysis of Randomized Controlled Trials. *Advances in Nutrition* 11(5):1108-1122. https://doi.org/10.1093/advances/nmaa056 (Meta-analysis, cited 2×)
 - Schütz P, List R, Zemp R et al. (2014). Joint Angles of the Ankle, Knee, and Hip and Loading Conditions During Split Squats. *Journal of Applied Biomechanics* 30(3):373-380. https://doi.org/10.1123/jab.2013-0175 (Trial, cited 1×)
+- Sedliak M, Finni T, Cheng S et al. (2009). Effect of time-of-day-specific strength training on muscular hypertrophy in men. *Journal of Strength and Conditioning Research* 23(9):2451-2457. https://doi.org/10.1519/JSC.0b013e3181bb7388 (Randomised trial, cited 1×)
 - Seiler S, Tønnessen E (2009). Intervals, Thresholds, and Long Slow Distance: the Role of Intensity and Duration in Endurance Training. *Sportscience* 13:32-53. https://www.sportsci.org/2009/ss.htm (Review, cited 3×)
 - Seiler S (2010). What is Best Practice for Training Intensity and Duration Distribution in Endurance Athletes?. *International Journal of Sports Physiology and Performance* 5(3):276-291. https://doi.org/10.1123/ijspp.5.3.276 (Review, cited 2×)
 - Seitz LB, Haff GG (2016). Factors Modulating Post-Activation Potentiation of Jump, Sprint, Throw, and Upper-Body Ballistic Performances: A Systematic Review with Meta-Analysis. *Sports Medicine* 46(2):231-240. https://doi.org/10.1007/s40279-015-0415-7 (Meta-analysis, cited 2×)
 - Senna GW, Willardson JM, Scudese E et al. (2016). Effect of Different Interset Rest Intervals on Performance of Single and Multijoint Exercises With Near-Maximal Loads. *Journal of Strength and Conditioning Research* 30(3):710-716. https://doi.org/10.1519/jsc.0000000000001142 (Trial, cited 3×)
 - Shailendra P, Baldock KL, Li LSK et al. (2022). Resistance Training and Mortality Risk: A Systematic Review and Meta-Analysis. *American Journal of Preventive Medicine* 63(2):277-285. https://doi.org/10.1016/j.amepre.2022.03.020 (Meta-analysis, cited 3×)
 - Shaw MP, Andersen V, Sæterbakken AH et al. (2022). Contemporary Training Practices of Norwegian Powerlifters. *Journal of Strength & Conditioning Research* 36(9):2544-2551. https://doi.org/10.1519/JSC.0000000000003584 (Reference, cited 2×)
+- Shcherbina A, Mattsson CM, Waggott D et al. (2017). Accuracy in Wrist-Worn, Sensor-Based Measurements of Heart Rate and Energy Expenditure in a Diverse Cohort. *Journal of Personalized Medicine* 7(2):3. https://doi.org/10.3390/jpm7020003 (Trial, cited 1×)
 - Shekelle PG, Hardy ML, Morton SC et al. (2003). Efficacy and Safety of Ephedra and Ephedrine for Weight Loss and Athletic Performance. *JAMA* 289(12):1537. https://doi.org/10.1001/jama.289.12.1537 (Meta-analysis, cited 3×)
 - Sherrington C, Michaleff ZA, Fairhall N et al. (2016). Exercise to prevent falls in older adults: an updated systematic review and meta-analysis. *British Journal of Sports Medicine* 51(24):1750-1758. https://doi.org/10.1136/bjsports-2016-096547 (Meta-analysis, cited 1×)
 - Sherrington C, Fairhall NJ, Wallbank GK et al. (2019). Exercise for preventing falls in older people living in the community. *Cochrane Database of Systematic Reviews* 2019(1). https://doi.org/10.1002/14651858.cd012424.pub2 (Systematic review, cited 1×)
+- Shirreffs SM, Taylor AJ, Leiper JB et al. (1996). Post-exercise rehydration in man: effects of volume consumed and drink sodium content. *Medicine & Science in Sports & Exercise* 28(10):1260-1271. https://doi.org/10.1097/00005768-199610000-00009 (Randomised trial, cited 1×)
 - Silva AM, Júdice PB, Carraça EV et al. (2018). What is the effect of diet and/or exercise interventions on behavioural compensation in non-exercise physical activity and related energy expenditure of free-living adults? A systematic review. *British Journal of Nutrition* 119(12):1327-1345. https://doi.org/10.1017/S000711451800096X (Systematic review, cited 1×)
 - Silva Oliveira P, Boppre G, Fonseca H (2024). Comparison of Polarized Versus Other Types of Endurance Training Intensity Distribution on Athletes’ Endurance Performance: A Systematic Review with Meta-analysis. *Sports Medicine* 54(8):2071-2095. https://doi.org/10.1007/s40279-024-02034-z (Meta-analysis, cited 1×)
 - Simpson CC, Mazzeo SE (2017). Calorie counting and fitness tracking technology: Associations with eating disorder symptomatology. *Eating Behaviors* 26:89-92. https://doi.org/10.1016/j.eatbeh.2017.02.002 (Cohort study, cited 1×)
@@ -9568,6 +9776,7 @@ What changed after an entry was published, newest first.
 - Stults-Kolehmainen MA, Bartholomew JB, Sinha R (2014). Chronic Psychological Stress Impairs Recovery of Muscular Function and Somatic Sensations Over a 96-Hour Period. *Journal of Strength and Conditioning Research* 28(7):2007-2017. https://doi.org/10.1519/jsc.0000000000000335 (Trial, cited 1×)
 - Suchomel TJ, Nimphius S, Stone MH (2016). The Importance of Muscular Strength in Athletic Performance. *Sports Medicine* 46(10):1419-1449. https://doi.org/10.1007/s40279-016-0486-0 (Review, cited 1×)
 - Suchomel TJ, Nimphius S, Bellon CR et al. (2018). The Importance of Muscular Strength: Training Considerations. *Sports Medicine* 48(4):765-785. https://doi.org/10.1007/s40279-018-0862-z (Review, cited 3×)
+- Suez J, Cohen Y, Valdés-Mas R et al. (2022). Personalized microbiome-driven effects of non-nutritive sweeteners on human glucose tolerance. *Cell* 185(18):3307-3328.e19. https://doi.org/10.1016/j.cell.2022.07.016 (Randomised trial, cited 1×)
 - Sundstrup E, Jakobsen MD, Andersen CH et al. (2012). Muscle Activation Strategies During Strength Training With Heavy Loading vs. Repetitions to Failure. *Journal of Strength and Conditioning Research* 26(7):1897-1903. https://doi.org/10.1519/JSC.0b013e318239c38e (Trial, cited 1×)
 - Swinton PA, Lloyd R, Agouris I et al. (2009). Contemporary Training Practices in Elite British Powerlifters: Survey Results From an International Competition. *Journal of Strength and Conditioning Research* 23(2):380-384. https://doi.org/10.1519/JSC.0b013e31819424bd (Reference, cited 1×)
 - Swinton PA, Stewart A, Agouris I et al. (2011). A Biomechanical Analysis of Straight and Hexagonal Barbell Deadlifts Using Submaximal Loads. *Journal of Strength and Conditioning Research* 25(7):2000-2009. https://doi.org/10.1519/jsc.0b013e3181e73f87 (Trial, cited 1×)
@@ -9595,6 +9804,7 @@ What changed after an entry was published, newest first.
 - Tucker JAL, McCarthy SF, Bornath DPD et al. (2025). The Effect of the Menstrual Cycle on Energy Intake: A Systematic Review and Meta-analysis. *Nutrition Reviews* 83(3):e866-e876. https://doi.org/10.1093/nutrit/nuae093 (Meta-analysis, cited 4×)
 - UK Chief Medical Officers (2019). Physical activity guidelines: UK Chief Medical Officers' report. *GOV.UK*. https://www.gov.uk/government/publications/physical-activity-guidelines-uk-chief-medical-officers-report (Guideline, cited 2×)
 - US Food and Drug Administration (2023). 21 CFR 101.9 Nutrition labeling of food, paragraph (g)(5). CFR 2023, title 21, vol. 2. https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-9.xml (Rulebook, cited 2×)
+- US Food and Drug Administration (2026). 21 CFR 101.9: Nutrition labeling of food. Electronic Code of Federal Regulations, text current as of 2026-11-01. https://www.ecfr.gov/current/title-21/section-101.9 (Guideline, cited 1×)
 - Urban LE, Dallal GE, Robinson LM et al. (2010). The Accuracy of Stated Energy Contents of Reduced-Energy, Commercially Prepared Foods. *Journal of the American Dietetic Association* 110(1):116-123. https://doi.org/10.1016/j.jada.2009.10.003 (Reference, cited 1×)
 - Urban LE, McCrory MA, Dallal GE et al. (2011). Accuracy of Stated Energy Contents of Restaurant Foods. *JAMA* 306(3). https://doi.org/10.1001/jama.2011.993 (Reference, cited 1×)
 - Urban LE, Weber JL, Heyman MB et al. (2016). Energy Contents of Frequently Ordered Restaurant Meals and Comparison with Human Energy Requirements and US Department of Agriculture Database Information: A Multisite Randomized Study. *Journal of the Academy of Nutrition and Dietetics* 116(4):590-598.e6. https://doi.org/10.1016/j.jand.2015.11.009 (Reference, cited 1×)
@@ -9606,6 +9816,7 @@ What changed after an entry was published, newest first.
 - Van Etten LMLA, Verstappen FTJ, Westerterp KR (1994). Effect of body build on weight-training-induced adaptations in body composition and muscular strength. *Medicine & Science in Sports & Exercise* 26(4):515. https://doi.org/10.1249/00005768-199404000-00018 (Trial, cited 1×)
 - van Marken Lichtenbelt WD, Hartgens F, J. Vollaard NB et al. (2004). Body Composition Changes in Bodybuilders: A Method Comparison. *Medicine & Science in Sports & Exercise* 36(3):490-497. https://doi.org/10.1249/01.mss.0000117159.70295.73 (Cohort study, cited 4×)
 - van Vliet S, Burd NA, van Loon LJ (2015). The Skeletal Muscle Anabolic Response to Plant- versus Animal-Based Protein Consumption. *The Journal of Nutrition* 145(9):1981-1991. https://doi.org/10.3945/jn.114.204305 (Review, cited 1×)
+- Vargas-Molina S, Gómez-Urquiza JL, García-Romero J et al. (2022). Effects of the Ketogenic Diet on Muscle Hypertrophy in Resistance-Trained Men and Women: A Systematic Review and Meta-Analysis. *International Journal of Environmental Research and Public Health* 19(19):12629. https://doi.org/10.3390/ijerph191912629 (Meta-analysis, cited 1×)
 - Veltzke F, Qiu F, Bey ME et al. (2026). A Weight lifting Belt Increases Squat Performance and Subjectively Perceived But Not Objectively Measured Postural Stability. *Journal of Strength & Conditioning Research* 40(8):944-952. https://doi.org/10.1519/JSC.0000000000005426 (Trial, cited 1×)
 - Videbæk S, Bueno AM, Nielsen RO et al. (2015). Incidence of Running-Related Injuries Per 1000 h of running in Different Types of Runners: A Systematic Review and Meta-Analysis. *Sports Medicine* 45(7):1017-1026. https://doi.org/10.1007/s40279-015-0333-8 (Meta-analysis, cited 2×)
 - Vieira AF, Costa RR, Macedo RCO et al. (2016). Effects of aerobic exercise performed in fasted v. fed state on fat and carbohydrate metabolism in adults: a systematic review and meta-analysis. *British Journal of Nutrition* 116(7):1153-1164. https://doi.org/10.1017/S0007114516003160 (Meta-analysis, cited 2×)
@@ -9619,6 +9830,7 @@ What changed after an entry was published, newest first.
 - Watson NF, Badr MS, Belenky G et al. (2015). Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society. *SLEEP*. https://doi.org/10.5665/sleep.4716 (Position stand, cited 2×)
 - Watson SL, Weeks BK, Weis LJ et al. (2017). High-Intensity Resistance and Impact Training Improves Bone Mineral Density and Physical Function in Postmenopausal Women With Osteopenia and Osteoporosis: The LIFTMOR Randomized Controlled Trial. *Journal of Bone and Mineral Research* 33(2):211-220. https://doi.org/10.1002/jbmr.3284 (Randomised trial, cited 2×)
 - Writing Committee Members*, Jones DW, Ferdinand KC et al. (2025). 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. *Hypertension* 82(10). https://doi.org/10.1161/hyp.0000000000000249 (Guideline, cited 2×)
+- Weidner TG, Cranston T, Schurr T et al. (1998). The effect of exercise training on the severity and duration of a viral upper respiratory illness. *Medicine & Science in Sports & Exercise* 30(11):1578-1583. https://doi.org/10.1097/00005768-199811000-00004 (Trial, cited 1×)
 - Welt CK, Chan JL, Bullen J et al. (2004). Recombinant Human Leptin in Women with Hypothalamic Amenorrhea. *New England Journal of Medicine* 351(10):987-997. https://doi.org/10.1056/nejmoa040388 (Trial, cited 1×)
 - Wen D, Utesch T, Wu J et al. (2019). Effects of different protocols of high intensity interval training for VO2max improvements in adults: A meta-analysis of randomised controlled trials. *Journal of Science and Medicine in Sport* 22(8):941-947. https://doi.org/10.1016/j.jsams.2019.01.013 (Meta-analysis, cited 3×)
 - Wernbom M, Augustsson J, Thomeé R (2007). The Influence of Frequency, Intensity, Volume and Mode of Strength Training on Whole Muscle Cross-Sectional Area in Humans. *Sports Medicine* 37(3):225-264. https://doi.org/10.2165/00007256-200737030-00004 (Review, cited 1×)
@@ -9643,8 +9855,10 @@ What changed after an entry was published, newest first.
 - Wolfe RR (2017). Branched-chain amino acids and muscle protein synthesis in humans: myth or reality?. *Journal of the International Society of Sports Nutrition* 14(1):30. https://doi.org/10.1186/s12970-017-0184-9 (Review, cited 2×)
 - Wulf G (2013). Attentional focus and motor learning: a review of 15 years. *International Review of Sport and Exercise Psychology* 6(1):77-104. https://doi.org/10.1080/1750984x.2012.723728 (Review, cited 1×)
 - Wycherley TP, Moran LJ, Clifton PM et al. (2012). Effects of energy-restricted high-protein, low-fat compared with standard-protein, low-fat diets: a meta-analysis of randomized controlled trials. *The American Journal of Clinical Nutrition* 96(6):1281-1298. https://doi.org/10.3945/ajcn.112.044321 (Meta-analysis, cited 1×)
+- Yoneshiro T, Aita S, Matsushita M et al. (2013). Recruited brown adipose tissue as an antiobesity agent in humans. *Journal of Clinical Investigation* 123(8):3404-3408. https://doi.org/10.1172/JCI67803 (Trial, cited 1×)
 - Young IE, Poobalan A, Steinbeck K et al. (2023). Distribution of energy intake across the day and weight loss: A systematic review and meta‐analysis. *Obesity Reviews* 24(3):e13537. https://doi.org/10.1111/obr.13537 (Meta-analysis, cited 1×)
 - Yu Z, Samavat H, Dostal AM et al. (2017). Effect of Green Tea Supplements on Liver Enzyme Elevation: Results from a Randomized Intervention Study in the United States. *Cancer Prevention Research* 10(10):571-579. https://doi.org/10.1158/1940-6207.capr-17-0160 (Randomised trial, cited 2×)
+- Zauner C, Schneeweiss B, Kranz A et al. (2000). Resting energy expenditure in short-term starvation is increased as a result of an increase in serum norepinephrine. *The American Journal of Clinical Nutrition* 71(6):1511-1515. https://doi.org/10.1093/ajcn/71.6.1511 (Trial, cited 1×)
 - Zhang D, Shen X, Qi X (2015). Resting heart rate and all-cause and cardiovascular mortality in the general population: a meta-analysis. *Canadian Medical Association Journal* 188(3):E53-E63. https://doi.org/10.1503/cmaj.150535 (Meta-analysis, cited 1×)
 - Zhang X, Weakley J, Li H et al. (2025). Superset Versus Traditional Resistance Training Prescriptions: A Systematic Review and Meta-analysis Exploring Acute and Chronic Effects on Mechanical, Metabolic, and Perceptual Variables. *Sports Medicine* 55(4):953-975. https://doi.org/10.1007/s40279-025-02176-8 (Meta-analysis, cited 2×)
 - Zhao M, Veeranki SP, Magnussen CG et al. (2020). Recommended physical activity and all cause and cause specific mortality in US adults: prospective cohort study. *BMJ*:m2031. https://doi.org/10.1136/bmj.m2031 (Cohort study, cited 1×)

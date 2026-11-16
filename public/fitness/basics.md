@@ -622,7 +622,7 @@ McDonald argues that self-coached lifters lack distance, so they talk themselves
 - Before changing the plan mid-session, ask what you would tell a friend to do.
 - When in doubt about one more set, stop.
 
-Goals and self-coaching · Intermediate · Coaching practice · Sources: [McDonald 2019d](https://bodyrecomposition.com/training/coaching-yourself)
+Goals and self-coaching · Intermediate · Coaching practice · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself)
 
 ### A coach adds technique, restraint and a plan
 
@@ -632,7 +632,7 @@ McDonald lists three things a coach supplies. The first is technical feedback, w
 
 - If you cannot hire a coach, film your lifts and have an experienced lifter review them.
 
-Goals and self-coaching · Beginner · Some support · Sources: [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9), [McDonald 2019d](https://bodyrecomposition.com/training/coaching-yourself)
+Goals and self-coaching · Beginner · Some support · Sources: [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9), [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself)
 
 ### A simple plan carried out fully beats an elaborate one
 
@@ -653,7 +653,7 @@ The slogan that athletic training gives an athletic look assumes the training cr
 
 - If appearance is the goal, use growth training and diet, not a sport's programme.
 
-Goals and self-coaching · Beginner · Some support · Sources: [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001), [McDonald 2016k](https://bodyrecomposition.com/training/train-to-look-like-an-athlete)
+Goals and self-coaching · Beginner · Some support · Sources: [Norton 2001](https://doi.org/10.2165/00007256-200131110-00001), [McDonald 2016l](https://bodyrecomposition.com/training/train-to-look-like-an-athlete)
 
 ### Lifting the weight fast adds a little to physical function in older adults
 
@@ -675,7 +675,7 @@ The ACSM's 2011 position stand recommends resistance exercise for each major mus
 - Lift two or three days a week, covering every major muscle group.
 - Keep sessions short enough that you never skip them.
 
-Health and general fitness · Beginner · Well supported · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Bull 2020](https://doi.org/10.1136/bjsports-2020-102955), [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
+Health and general fitness · Beginner · Well supported · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Bull 2020](https://doi.org/10.1136/bjsports-2020-102955), [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
 
 ### Occasional heavier sets and loaded standing lifts are worth including for bone
 
@@ -686,7 +686,7 @@ In 101 postmenopausal women with low bone mass, eight months of supervised heavy
 - Include a few weeks of sets of 5 or 6 on a well-learned lift in each training block.
 - With low bone density, start heavy loading only under professional supervision.
 
-Health and general fitness · Intermediate · Some support · Sources: [Watson 2017](https://doi.org/10.1002/jbmr.3284), [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
+Health and general fitness · Intermediate · Some support · Sources: [Watson 2017](https://doi.org/10.1002/jbmr.3284), [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
 
 ### After the first year, vary reps in simple ways
 
@@ -697,7 +697,7 @@ McDonald suggests more structure only after 6 to 12 months of steady basic train
 - Pick one scheme and run it for several months.
 - Take an easy week when a cycle of heavier weeks ends.
 
-Health and general fitness · Intermediate · Coaching practice · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Williams 2017](https://doi.org/10.1007/s40279-017-0734-y)
+Health and general fitness · Intermediate · Coaching practice · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Williams 2017](https://doi.org/10.1007/s40279-017-0734-y)
 
 ## Common mistakes
 
@@ -872,7 +872,7 @@ McDonald reports that experienced coaches say the same of themselves: they would
 - Write the plan before the session and do not add to it on the day.
 - Ask someone to check now and then that you are following it.
 
-Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2019d](https://bodyrecomposition.com/training/coaching-yourself), [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101)
+Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself), [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101)
 
 ### Picking one habit of champions as the reason for their success
 
@@ -1075,7 +1075,7 @@ Ways Lyle McDonald arranges lifting and cardio for general fitness, by the days 
 | Any, strength block | 3 to 4 lifting days plus 3 short cardio sessions | Run for 6 to 8 weeks, then switch emphasis |
 | Any, cardio block | 3 to 4 cardio sessions plus 2 brief lifting days | The lifting is enough to maintain strength |
 
-Coaching practice · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb)
+Coaching practice · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb)
 
 ## Terms
 

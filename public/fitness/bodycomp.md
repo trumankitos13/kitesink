@@ -519,7 +519,7 @@ In controlled trials testosterone raised muscle size and strength without any tr
 - Compare your progress with drug-free ranges and with your own past numbers.
 - Judge a programme by its results in drug-free lifters at your level.
 
-Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](https://doi.org/10.1056/nejm199607043350101), [Bhasin 2001](https://doi.org/10.1152/ajpendo.2001.281.6.e1172), [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [McDonald 2016e](https://bodyrecomposition.com/training/do-drugs-only-help-a-little), [McDonald 2015c](https://bodyrecomposition.com/muscle-gain/anabolic-steroids-muscle-growth)
+Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](https://doi.org/10.1056/nejm199607043350101), [Bhasin 2001](https://doi.org/10.1152/ajpendo.2001.281.6.e1172), [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [McDonald 2016f](https://bodyrecomposition.com/training/do-drugs-only-help-a-little), [McDonald 2015c](https://bodyrecomposition.com/muscle-gain/anabolic-steroids-muscle-growth)
 
 ## Key numbers
 

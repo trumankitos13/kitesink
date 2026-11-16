@@ -68,7 +68,7 @@ A 2025 meta-analysis pooled 29 studies in which healthy men and women aged 18 to
 - Use the same training principles the rest of this guide gives.
 - Track growth as a percentage of where you started.
 
-Strength and muscle gain · Beginner · Well supported · Sources: [Refalo 2025](https://doi.org/10.7717/peerj.19042), [Roberts 2020c](https://doi.org/10.1519/jsc.0000000000003521), [McDonald 2016h](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Well supported · Sources: [Refalo 2025](https://doi.org/10.7717/peerj.19042), [Roberts 2020c](https://doi.org/10.1519/jsc.0000000000003521), [McDonald 2016i](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Women's upper-body strength rose faster than men's in relative terms
 
@@ -96,7 +96,7 @@ Eight women and seven men trained three days a week for 16 weeks. The women's st
 
 - Use strength records, not the mirror, to judge your first months.
 
-Strength and muscle gain · Beginner · Thin evidence · Sources: [Cureton 1988](https://doi.org/10.1249/00005768-198808000-00003), [McDonald 2016h](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Thin evidence · Sources: [Cureton 1988](https://doi.org/10.1249/00005768-198808000-00003), [McDonald 2016i](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Few female college athletes exceed an FFMI of about 24
 
@@ -116,7 +116,7 @@ The study measured 29 strength-trained female college athletes. Six carried more
 
 - Estimate your own ceiling from height, then treat it as a rough upper bound.
 
-Muscular potential · Intermediate · Thin evidence · Sources: [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Muscular potential · Intermediate · Thin evidence · Sources: [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ### Most women are near their muscular limit after three to four years of good training
 
@@ -127,7 +127,7 @@ This is his coaching judgment, not a study result. He pairs it with a planning r
 - Count only your years of structured, progressive training.
 - Shrink the surplus as the monthly gain you can expect shrinks.
 
-Muscular potential · Intermediate · Coaching practice · Sources: [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Muscular potential · Intermediate · Coaching practice · Sources: [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ### Higher natural androgen levels are more common among elite sportswomen
 
@@ -137,7 +137,7 @@ A 2018 endocrine review states that women with polycystic ovary syndrome (PCOS),
 
 - Set expectations from ordinary trained women, not from the most muscular elite athletes.
 
-Muscular potential · Advanced · Some support · Sources: [Handelsman 2018](https://doi.org/10.1210/er.2018-00020), [Hagmar 2009](https://doi.org/10.1249/mss.0b013e318195a21a), [Rickenlund 2003](https://doi.org/10.1016/s0015-0282(02)04850-1), [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Muscular potential · Advanced · Some support · Sources: [Handelsman 2018](https://doi.org/10.1210/er.2018-00020), [Hagmar 2009](https://doi.org/10.1249/mss.0b013e318195a21a), [Rickenlund 2003](https://doi.org/10.1016/s0015-0282(02)04850-1), [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ### Low energy availability, not a body fat figure, shuts down the cycle
 
@@ -272,7 +272,7 @@ Reading the research · Beginner · Some support · Sources: [Cowley 2021](https
 
 McDonald gives two main reasons. First, there were few sportswomen to study for most of the last century. In his history, women's weightlifting had no world championship until 1987 and no Olympic event until 2000, so athletes and coaching methods alike came from men. Second, a man's hormones are flat from day to day, while a woman's must be measured at a known point in a cycle whose length varies. The only certain marker is the first day of bleeding, confirming ovulation takes hormone tests, and a missed window means waiting a month. A 2021 research guide adds a shortage of specialist knowledge.
 
-Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women), [McDonald 2018b](https://bodyrecomposition.com/women/history-women-sport-2), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
+Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women), [McDonald 2018b](https://bodyrecomposition.com/women/history-women-sport-2), [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8)
 
 ### A diet rule given as a percentage can fail a smaller person
 
@@ -283,7 +283,7 @@ In 1995, four days at 75 percent carbohydrate raised muscle glycogen 41 percent 
 - Convert percentage-based advice into grams per kg of your body weight.
 - Check that the absolute amount matches what the study participants ate.
 
-Reading the research · Intermediate · Thin evidence · Sources: [Tarnopolsky 1995](https://doi.org/10.1152/jappl.1995.78.4.1360), [Tarnopolsky 2001](https://doi.org/10.1152/jappl.2001.91.1.225), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Intermediate · Thin evidence · Sources: [Tarnopolsky 1995](https://doi.org/10.1152/jappl.1995.78.4.1360), [Tarnopolsky 2001](https://doi.org/10.1152/jappl.2001.91.1.225), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### A smaller body leaves less room in the diet for extras
 
@@ -294,7 +294,7 @@ This is McDonald's practical point, not a trial finding. A lighter person with l
 - Scale any fixed-size diet tactic to your own maintenance calories.
 - Set protein first, then see what room is left.
 
-Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### Weight-loss trials are the exception: most participants are women
 
@@ -302,7 +302,7 @@ Reading the research · Beginner · Coaching practice · Sources: [McDonald 2016
 
 The review covered trials published from 1999 to 2009 with 95,207 participants. Only 5 percent of trials enrolled men alone. McDonald points to this as the reverse of the sports science problem: much of what is known about dieting and weight maintenance was learned largely in women, and researchers have asked whether it transfers fully to men. For a woman reading diet research the practical meaning is favourable. Findings on adherence, hunger and regain are more likely to describe people like her than findings from a lifting study are. Most of these trials enrolled people with overweight, not lean athletes.
 
-Reading the research · Beginner · Some support · Sources: [Pagoto 2012](https://doi.org/10.1038/oby.2011.140), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Reading the research · Beginner · Some support · Sources: [Pagoto 2012](https://doi.org/10.1038/oby.2011.140), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### In the A TO Z trial the lowest-carb diet lost most, and every group lost little
 
@@ -461,7 +461,7 @@ A meta-analysis of 24 studies in women found large effects of resistance trainin
 - Use loads that make the planned reps hard.
 - Judge size over months with a tape or photos, and change the plan then if you wish.
 
-Strength and muscle gain · Beginner · Well supported · Sources: [Hagstrom 2020](https://doi.org/10.1007/s40279-019-01247-x), [Refalo 2025](https://doi.org/10.7717/peerj.19042), [McDonald 2016h](https://bodyrecomposition.com/research/strength-muscle-mass-women)
+Strength and muscle gain · Beginner · Well supported · Sources: [Hagstrom 2020](https://doi.org/10.1007/s40279-019-01247-x), [Refalo 2025](https://doi.org/10.7717/peerj.19042), [McDonald 2016i](https://bodyrecomposition.com/research/strength-muscle-mass-women)
 
 ### Treating training for women as a separate method
 
@@ -505,7 +505,7 @@ Phase-based programmes put the heaviest work in the follicular phase and lighter
 - Keep a consistent programme and adjust single sessions by how you feel on the day.
 - Log symptoms for a few cycles before changing anything permanent.
 
-Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Menstrual cycle and contraception · Intermediate · Well supported · Sources: [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [McNulty 2020](https://doi.org/10.1007/s40279-020-01319-3), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ### Counting on a faster metabolism before a period to cover extra eating
 
@@ -581,7 +581,7 @@ Supplements studied in women · Intermediate · Some support · Sources: [Ziaei 
 | 52 and 66 % (upper, lower body) | Women's strength as a share of men's in one lab comparison: Upper- and lower-body strength of eight women against eight men. Strength per unit of muscle area did not differ between them. | Thin evidence | [Miller 1993](https://doi.org/10.1007/bf00235103) |
 | 0.69 % (95% interval -1.5 to 2.9) | Gap in relative muscle growth between men and women: Difference in growth relative to starting size across 29 studies that used the same training for both sexes. The interval includes zero. | Well supported | [Refalo 2025](https://doi.org/10.7717/peerj.19042) |
 | 23.9 kg/m2 | Upper FFMI threshold in female college athletes: The 97.5th percentile among 372 female collegiate athletes measured by DXA. The group mean was 18.8. | Some support | [Harty 2019](https://doi.org/10.1080/02640414.2019.1634964) |
-| 0.33 kg per cm (1.84 lb/in) | McDonald's working ceiling for women's lean mass by height: His judgment of the realistic upper figure for most women, drawn from athlete samples. A coaching estimate, not a measured limit. | Coaching practice | [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential) |
+| 0.33 kg per cm (1.84 lb/in) | McDonald's working ceiling for women's lean mass by height: His judgment of the realistic upper figure for most women, drawn from athlete samples. A coaching estimate, not a measured limit. | Coaching practice | [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential) |
 | about 45 kcal per kg FFM per day | Energy availability linked with normal cycles and bone: The level the 2025 Female Athlete Triad update associates with being energy replete, with ovulatory cycles and normal bone density. | Well supported | [De Souza 2026](https://doi.org/10.1007/s40279-025-02333-z), [Burke 2018](https://doi.org/10.1123/ijsnem.2018-0142) |
 | 9% lower per 1 kcal/kg FFM higher | Change in odds of a disturbed cycle per unit of energy availability: From 35 women followed over three cycles of diet and exercise. No threshold value emerged. | Some support | [Lieberman 2018](https://doi.org/10.1249/mss.0000000000001451) |
 | 330 kcal per day (about 18%) | Extra intake that restored menses in the REFUEL trial: Average increase achieved over 12 months by exercising women with absent or infrequent periods. The 2025 Triad update gives 300 to 600. | Some support | [De Souza 2021](https://doi.org/10.1093/humrep/deab149), [Williams 2026](https://doi.org/10.1007/s40279-025-02332-0) |
@@ -604,7 +604,7 @@ Published samples of trained women, oldest to newest. Methods differ, so compare
 | 266 college athletes, 2019 | 63.2 kg (139 lb) on average | FFMI mean 16.9, range 13.3 to 25.5 | DXA |
 | 372 college athletes, 2019 | 69.5 kg (153 lb), 24.2% | FFMI mean 18.8, 97.5th percentile 23.9 | DXA |
 
-Some support · Sources: [Johnson 1990](https://pubmed.ncbi.nlm.nih.gov/2079841/), [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [van der Ploeg 2001](https://doi.org/10.1038/sj.ejcn.1601154), [Blue 2019](https://doi.org/10.1080/02640414.2019.1591575), [Harty 2019](https://doi.org/10.1080/02640414.2019.1634964), [McDonald 2017](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
+Some support · Sources: [Johnson 1990](https://pubmed.ncbi.nlm.nih.gov/2079841/), [Abe 1998](https://doi.org/10.1097/00005768-199807000-00007), [van der Ploeg 2001](https://doi.org/10.1038/sj.ejcn.1601154), [Blue 2019](https://doi.org/10.1080/02640414.2019.1591575), [Harty 2019](https://doi.org/10.1080/02640414.2019.1634964), [McDonald 2017g](https://bodyrecomposition.com/women/womens-maximum-muscular-potential)
 
 ## What studies found in each part of the cycle
 
@@ -659,7 +659,7 @@ A quick way to weigh a training or diet study for a woman, from who took part an
 | Women using oral contraceptives | Applies to pill users; other hormonal methods are barely studied | Which type of pill, if stated |
 | Postmenopausal women | Applies after menopause; may not match younger women | Whether hormone therapy use was recorded |
 
-Coaching practice · Sources: [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8), [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [Nolan 2024](https://doi.org/10.1007/s40279-023-01911-3), [McDonald 2016f](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
+Coaching practice · Sources: [Elliott-Sale 2021](https://doi.org/10.1007/s40279-021-01435-8), [Colenso-Semple 2023](https://doi.org/10.3389/fspor.2023.1054542), [Nolan 2024](https://doi.org/10.1007/s40279-023-01911-3), [McDonald 2016g](https://bodyrecomposition.com/women/why-isnt-there-more-research-on-women)
 
 ## A TO Z trial: weight change at 12 months by assigned diet
 

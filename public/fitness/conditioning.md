@@ -283,7 +283,7 @@ Gym intervals of 30 to 60 seconds with short rests resemble middle-distance runn
 - If top speed is the goal, keep efforts short and rest until fully recovered.
 - For fitness or fat loss, choose intervals or steady work over true sprints.
 
-Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016l](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016m](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Split long indoor sessions into blocks and change something at each one
 
@@ -550,7 +550,7 @@ Lyle McDonald warns lifters against going to a track, jogging for a few minutes 
 - Build up over weeks with sub-maximal runs before any all-out sprint.
 - Use a bike or a hill for hard efforts if you have not trained to sprint.
 
-Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016l](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016m](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Choosing sprints over steady cardio to look like a sprinter
 
@@ -560,7 +560,7 @@ The argument compares a muscular sprinter with a thin marathon runner and credit
 
 - Lift to build muscle, and pick cardio for fitness, energy use and recovery.
 
-Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016i](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
+Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016j](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
 
 ### Going from no cardio to a lot of hard cardio when a diet starts
 

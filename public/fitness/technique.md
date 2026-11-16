@@ -356,7 +356,7 @@ High-rep leg extensions cause more local burning than most lifts at the same eff
 - If the burn ends sets early, try reclining the seat back a little.
 - Or accept it and use the lift for lighter, higher-rep work.
 
-Calves and leg extensions · Intermediate · Thin evidence · Sources: [McDonald 2018c](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt), [Foster 1999](https://doi.org/10.1097/00005768-199910000-00012)
+Calves and leg extensions · Intermediate · Thin evidence · Sources: [McDonald 2018d](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt), [Foster 1999](https://doi.org/10.1097/00005768-199910000-00012)
 
 ### Leg extensions stress the kneecap joint most near straight; squats stress it most deep
 
@@ -376,7 +376,7 @@ Twenty-two untrained men trained leg extensions twice a week for 10 weeks, one l
 
 - Set the back pad as far back as the machine allows, or lean back and hold the handles.
 
-Calves and leg extensions · Intermediate · Thin evidence · Sources: [Larsen 2025](https://doi.org/10.1080/02640414.2024.2444713), [McDonald 2018c](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt)
+Calves and leg extensions · Intermediate · Thin evidence · Sources: [Larsen 2025](https://doi.org/10.1080/02640414.2024.2444713), [McDonald 2018d](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt)
 
 ### Good technique is a shared model with room for personal style
 
