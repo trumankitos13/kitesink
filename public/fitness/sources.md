@@ -491,7 +491,7 @@ What changed after an entry was published, newest first.
 - McDonald L (2008). Diet Percentages: Part 1. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/problem-dieting-by-percentages (Article, cited 1×)
 - McDonald L (2008). Excess Post-exercise Oxygen Consumption. *Body Recomposition*. https://bodyrecomposition.com/research/epoc-after-exercise (Article, cited 1×)
 - McDonald L (2008). Exercise Efficiency. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/exercise-efficiency (Article, cited 2×)
-- McDonald L (2008). Fat Loss for Athletes: Part 1. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes (Article, cited 3×)
+- McDonald L (2008). Fat Loss for Athletes: Part 1. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes (Article, cited 4×)
 - McDonald L (2008). Goal vs. Process Oriented Training: Part 1. *Body Recomposition*. https://bodyrecomposition.com/training/goal-vs-process-oriented-training (Article, cited 2×)
 - McDonald L (2008). How to Estimate Maintenance Caloric Intake. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories (Article, cited 1×)
 - McDonald L (2008). Insulin Levels and Fat Loss. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/insulin-levels-and-fat-loss (Article, cited 1×)

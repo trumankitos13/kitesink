@@ -90,7 +90,7 @@ An index of the 123 key numbers and 60 reference tables in the KiteSink fitness 
 | [Energy per kg for short-term changes](https://kitesink.com/fitness/diet#diet-num-short-term-density) | 2,380 | kcal per kg | Diet |
 | [Surplus for a gaining phase](https://kitesink.com/fitness/diet#diet-num-surplus) | 10-20 | % above maintenance | Diet |
 | [Rate of gain, novice to intermediate](https://kitesink.com/fitness/diet#diet-num-gain-rate) | 0.25-0.5 | % body weight per week | Diet |
-| [Eventual weight change per lasting change in daily intake](https://kitesink.com/fitness/diet#diet-num-intake-change-rule) | 100 | kJ a day per kg of weight | Diet |
+| [Eventual weight change per lasting change in daily intake](https://kitesink.com/fitness/diet#diet-num-intake-change-rule) | 100 | kJ a day per kg of change | Diet |
 | [Energy in each kg lost at week four of a diet](https://kitesink.com/fitness/diet#diet-num-early-loss-energy) | about 4,900 | kcal per kg lost | Diet |
 | [Individual error of field methods in bodybuilders](https://kitesink.com/fitness/bodycomp#comp-num-field-error) | 5.5-8 | body fat points | Body composition |
 | [How far skinfold equations read below DXA](https://kitesink.com/fitness/bodycomp#comp-num-dxa-offset) | 3-6 | body fat points | Body composition |
