@@ -18,7 +18,7 @@ SPECIAL_PAGES = {PUBLIC / "404.html", PUBLIC / "repost.html", PUBLIC / "blog/_te
 # The pages under /fitness/, in the order of the hub: one per row of content/fitness/routes.json
 # (scripts/build_fitness.py writes them). They are listed pages like any other, so the audit
 # wants each in site-index.js and sitemap.xml, and each has a twin (see TWINS below), which
-# wants a line in llms.txt and a route in run_worker_first in wrangler.ai-twins.jsonc.
+# wants a line in llms.txt and a route in run_worker_first in wrangler.jsonc.
 FITNESS_ROUTES = json.loads((ROOT / "content" / "fitness" / "routes.json").read_text(encoding="utf-8"))["routes"]
 FITNESS_SUBPAGES = tuple(route["slug"] for route in FITNESS_ROUTES)
 # Kept at their addresses but hidden on purpose: not in the site index or the sitemap,
@@ -192,13 +192,13 @@ def audit_twins() -> list[str]:
             target = PUBLIC / url.lstrip("/")
             if not (target.is_file() if re.search(r"\.[a-z0-9]+$", url) else resolves(url)):
                 issues.append(f"{label}: links to https://kitesink.com{url}, which does not exist")
-    config = ROOT / "wrangler.ai-twins.jsonc"
+    config = ROOT / "wrangler.jsonc"
     if config.is_file():
         match = re.search(r'"run_worker_first"\s*:\s*\[([^\]]*)\]', config.read_text(encoding="utf-8"))
         routed = set(re.findall(r'"([^"]+)"', match.group(1))) if match else set()
         listed = set(TWINS) - unlisted_routes()
         if routed != listed:
-            issues.append(f"wrangler.ai-twins.jsonc: run_worker_first lists {sorted(routed)} but the twins are for {sorted(listed)}")
+            issues.append(f"wrangler.jsonc: run_worker_first lists {sorted(routed)} but the twins are for {sorted(listed)}")
     return issues
 
 

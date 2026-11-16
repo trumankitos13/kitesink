@@ -1,15 +1,31 @@
+// The site: ./public as static assets, with worker/ai-twins.js in front of the pages that
+// have a plain-text twin. The worker answers a request that asks for markdown
+// (Accept: text/markdown) with the twin, and passes everything else to the static site
+// with the same headers as public/_headers. See docs/AI-PAGES.md.
+//
+// Cost on the Workers Free plan: every request to a route in run_worker_first counts against
+// 100,000 Worker requests a day; past that those routes answer 429 until midnight UTC.
+// Every other file stays free and unlimited. To stop the worker, delete "main", "vars" and
+// the three "assets" lines marked below, and merge.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kitesink",
+  "main": "worker/ai-twins.js",
   "compatibility_date": "2026-06-25",
-  "observability": {
-    "enabled": true
-  },
+  "observability": { "enabled": true },
+  "vars": { "AI_TWINS": "accept" },
   "assets": {
     "directory": "./public",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",                 // worker
+    "not_found_handling": "404-page",
+    // The worker runs only for the pages that have a twin; every other request is
+    // served straight from static assets and never touches it.
+    "run_worker_first": [                // worker
+      "/", "/consulting", "/fitness", "/vantix", "/music", "/listening-club", "/about",
+      "/fitness/basics", "/fitness/technique", "/fitness/hypertrophy", "/fitness/powerlifting", "/fitness/meet",
+      "/fitness/conditioning", "/fitness/recovery", "/fitness/nutrition", "/fitness/diet", "/fitness/bodycomp",
+      "/fitness/women", "/fitness/health", "/fitness/claims", "/fitness/glossary", "/fitness/reference", "/fitness/sources"
+    ]                                    // worker
   },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+  "compatibility_flags": ["nodejs_compat"]
 }
