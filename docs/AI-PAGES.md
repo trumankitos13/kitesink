@@ -27,8 +27,8 @@ checks that every twin exists, is linked from its page and has no broken links.
 and the address of its twin, the four reference twins, the calculators, and how sources are
 handled. The sixteen pages under `/fitness/` are listed pages. Each announces its twin in
 its `<head>`, `/llms.txt` lists all sixteen twins in the order of the hub, and
-`run_worker_first` in `wrangler.ai-twins.jsonc` holds their routes, so the optional worker
-below answers for them too. The audit checks all three. Every fitness twin ends with the
+`run_worker_first` in `wrangler.jsonc` holds their routes, so the worker below answers
+for them too. The audit checks all three. Every fitness twin ends with the
 address of its page and of `/fitness.md`.
 
 `/fitness/search.json` and `/fitness/ids.json` are not twins. They are data for the hub's
@@ -98,46 +98,36 @@ in `scripts/build_fitness.py`, then rebuild the fitness page.
    including the twins at their `.md` addresses, stays free and unlimited. Check the
    account's plan and the site's daily page views before deploying.
 
-To turn the second one on, deploy with the alternative config:
+The worker is set up in `wrangler.jsonc`, so every merge to `main` deploys it with the site.
+`AI_TWINS` is `accept`: it answers only requests that ask for markdown and never looks at the
+user agent. `agents` mode also switches for named crawlers, three of which (OAI-SearchBot,
+Claude-SearchBot, PerplexityBot) build search indexes; serving an indexer different content
+from people is the pattern search engines penalise, so leave it on `accept` unless you have a
+reason.
 
-```bash
-npx wrangler deploy -c wrangler.ai-twins.jsonc
-```
+To stop it: `off` in `AI_TWINS` stops the answers but the worker still runs (and counts) on
+its routes. To remove it entirely, delete `main`, `vars` and the lines marked `// worker` in
+`wrangler.jsonc`, and merge.
 
-That is a manual deploy, and it does not last: Workers Builds deploys `wrangler.jsonc` on
-every merge to `main`, which removes the worker again. Use it to try the worker on the live
-site, not to keep it.
-
-That deploys the same site with the worker in front of the listed pages that have a twin
-(the routes in `run_worker_first`); every other request is served as before. To make it permanent, copy the `main`,
-`vars` and `assets` settings from `wrangler.ai-twins.jsonc` into `wrangler.jsonc`. To go
-back, deploy with the normal `wrangler.jsonc`. Set `AI_TWINS` to `accept` to answer only
-requests that ask for markdown, or `off` to disable it without removing the worker.
-
-`wrangler.ai-twins.jsonc` ships with `AI_TWINS` set to `accept`. That mode answers only
-requests that ask for markdown and never looks at the user agent. `agents` mode also
-switches for named crawlers, three of which (OAI-SearchBot, Claude-SearchBot,
-PerplexityBot) build search indexes; serving an indexer different content from people is
-the pattern search engines penalise, so leave it on `accept` unless you have a reason.
-
-If the zone is on a Cloudflare Pro plan or higher, Cloudflare's own "Markdown for
-Agents" setting does the `Accept: text/markdown` part without a worker, by converting
-the HTML page. It does not use these hand-written twins.
+On a Cloudflare Pro zone plan or higher, Cloudflare's own "Markdown for Agents" setting
+does the `Accept: text/markdown` part without a worker, by converting the HTML page
+([availability](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/)).
+It does not use these hand-written twins, and it is not available on the Free plan.
 
 ## Agent discovery
 
 What isitagentready.com looks for, and what the site publishes for it. The scan of
 16 November 2026 scored level 1 of 5. After PR 31 merged, the rescan the same day scored
 **level 2 (Bot-Aware)**: Link headers, Content Signals and the skills index pass. The one
-requirement left for level 3 is markdown negotiation. The account is on the Workers Free
-plan, so the worker stays off until about two weeks of Web Analytics show daily page views
-far below the free plan's 100,000 Worker requests a day; then decide.
+requirement left for level 3 is markdown negotiation. On 17 November the worker moved into
+`wrangler.jsonc`, to merge once the zone's daily requests are confirmed far below the Workers
+Free plan's 100,000 a day.
 
 | Check | State | Where |
 |---|---|---|
 | `Link` headers (RFC 8288) | Done | Every page with a twin sends `Link: </<twin>.md>; rel="alternate"; type="text/markdown"`; the home page adds `</llms.txt>; rel="describedby"`. Generated into `public/_headers` |
 | Content Signals | Done | `Content-Signal: search=yes, ai-input=yes, ai-train=yes` in `public/robots.txt`, the owner's choice. It matches the Cloudflare setting that lets AI crawlers in |
-| Markdown negotiation | Built, off until deployed with `wrangler.ai-twins.jsonc` | `worker/ai-twins.js`, above |
+| Markdown negotiation | In `wrangler.jsonc`; live once that change is merged | `worker/ai-twins.js`, above |
 | Agent skills index | Done | `/.well-known/agent-skills/index.json` lists one skill, `kitesink-fitness-reference`: how to find, read and cite an entry using `search.json` and the twins |
 | WebMCP, ARD manifest | Not done, by choice | WebMCP is an experimental browser API; ARD would only re-list the skills index. Neither changes the level |
 | MCP Server Card, A2A Agent Card, API catalog, OAuth discovery and protected resource, auth.md, DNS-AID | Not applicable | The site has no MCP server, agent, API or sign-in. Publishing descriptors for them would be untrue |
@@ -154,10 +144,8 @@ skill to things an agent can really do here.
 
 Levels (from the scanner's guide): 2 needs Content Signals; 3 adds markdown negotiation;
 4 adds a skills index. Merging to `main` deploys `wrangler.jsonc` through Workers Builds
-(docs/DEPLOY-CLOUDFLARE.md), so merging this change should give level 2. Level 4 needs the
-worker in production, and the only lasting way to get it is to copy `main`, `vars` and
-`assets` from `wrangler.ai-twins.jsonc` into `wrangler.jsonc` and merge that. Rescan after
-each deploy to confirm.
+(docs/DEPLOY-CLOUDFLARE.md). With the worker in it, the scan should reach level 4, since the
+skills index is already live. Rescan after each deploy to confirm.
 
 The audit also holds the skill to the site: the page slugs it names must be the pages
 under `/fitness/`, `search.json` must have the keys and row layout it describes, and every

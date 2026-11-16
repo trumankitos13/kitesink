@@ -1,7 +1,7 @@
 /* KiteSink: serve a page's plain-text twin at the page's own address.
 
-   Off by default. It runs only if the site is deployed with wrangler.ai-twins.jsonc
-   (see docs/AI-PAGES.md). The normal wrangler.jsonc does not use this file.
+   wrangler.jsonc puts it in front of the pages that have a twin (run_worker_first); every
+   other request goes straight to the static site. See docs/AI-PAGES.md.
 
    Who gets the twin (public/<page>.md) instead of the HTML page:
      AI_TWINS = "accept"  only requests whose Accept header prefers text/markdown to HTML
