@@ -978,14 +978,27 @@ def nav_groups(pages):
     return groups + [("Reference", [by[k] for k in KINDS if k != "area"])]
 
 
+def subnav_links(routes, slug):
+    return "".join(f'<li><a href="/fitness/{r["slug"]}"' + (' class="on" aria-current="page"' if r["slug"] == slug else "")
+                   + f">{esc(route_label(r))}</a></li>" for r in routes)
+
+
 def subnav_html(pages, slug):
     """The navigation between the fitness pages, grouped as on the hub, the current page marked."""
     out = []
     for i, (name, routes) in enumerate(nav_groups(pages), 1):
-        links = "".join(f'<li><a href="/fitness/{r["slug"]}"' + (' class="on" aria-current="page"' if r["slug"] == slug else "")
-                        + f">{esc(route_label(r))}</a></li>" for r in routes)
-        out.append(f'<div class="fr-nav-g"><p class="fr-nav-l" id="fr-nav-g{i}">{esc(name)}</p><ul aria-labelledby="fr-nav-g{i}">{links}</ul></div>')
+        out.append(f'<div class="fr-nav-g"><p class="fr-nav-l" id="fr-nav-g{i}">{esc(name)}</p><ul aria-labelledby="fr-nav-g{i}">{subnav_links(routes, slug)}</ul></div>')
     return "\n    ".join(out)
+
+
+def subnav_here_html(pages, slug):
+    """The current page's own group, shown in the bar on wide screens: the pages a reader is
+    most likely to want next, one click away, while the full list stays folded."""
+    for name, routes in nav_groups(pages):
+        if any(r["slug"] == slug for r in routes):
+            return (f'<div class="fr-nav-here"><p class="fr-nav-l">{esc(name)}</p>'
+                    f'<ul aria-label="{esc(name)} pages">{subnav_links(routes, slug)}</ul></div>')
+    return ""
 
 
 # ---- old links. The one-page /fitness put everything under /fitness#<id>. Entries and sources
@@ -1064,7 +1077,7 @@ def render_sub(template, route, pages, sections, numbers, legacy=()):
     fills = {
         "slug": slug, "title": esc(filled(route["title"])), "description": esc(filled(route["description"])),
         "h1": filled(route["h1"]), "lead": esc(filled(route["lead"])), "breadcrumb": breadcrumb, "crumb": crumb,
-        "subnav": subnav_html(pages, slug), "n:pages": str(len(pages.routes)), "areas": " ".join(DOMAINS),
+        "subnav": subnav_html(pages, slug), "subnav_here": subnav_here_html(pages, slug), "n:pages": str(len(pages.routes)), "areas": " ".join(DOMAINS),
         "jump": jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
     }
 

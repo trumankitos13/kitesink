@@ -205,35 +205,44 @@
 
 /* ---------- part 2: the pages under /fitness/ (<body class="… fr">) ---------- */
 
-/* The list of fitness pages, grouped as on the hub. Wide screens show it whole. Small
-   screens fold it behind "All pages": the script next to it in the template adds .is-shut
-   and shows the button, so without scripts the list simply stays open. */
+/* The list of fitness pages, grouped as on the hub. One bar on every screen: the way back to
+   the hub, on wide screens the pages of the current group, and "All 16 pages", which opens
+   the whole list (four columns wide, two narrow). The script next to it in the template adds
+   .is-shut and shows the button, so without scripts the list simply stays open. */
 .fr-nav { border-bottom: 1px solid var(--k-rule); }
-.fr-nav > .k-wrap { display: grid; grid-template-columns: minmax(0, 1fr); padding-block: 4px; }
+.fr-nav > .k-wrap { padding-block: 4px; }
 .fr-nav-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.fr-nav-hub { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding-right: 10px; font: 600 12.5px/1 var(--k-mono); color: var(--k-green); text-decoration: none; }
+.fr-nav-hub { flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding-right: 10px; font: 600 12.5px/1 var(--k-mono); color: var(--k-green); text-decoration: none; }
 .fr-nav-hub::before { content: "\2190"; }
 .fr-nav-hub:hover { text-decoration: underline; text-underline-offset: 3px; }
-.fr-nav-t { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 16px; border: 1px solid var(--k-rule-strong); border-radius: 30px;
+.fr-nav-t { flex-shrink: 0; display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 16px; border: 1px solid var(--k-rule-strong); border-radius: 30px;
   background: transparent; font: 500 12.5px/1 var(--k-mono); color: var(--k-ink); cursor: pointer; }
 .fr-nav-t::after { content: "+"; font-size: 15px; color: var(--k-green); }
 .fr-nav-t[aria-expanded="true"]::after { content: "\2212"; }
 .fr-nav-t:hover { border-color: var(--k-green); color: var(--k-green); }
-.fr-nav-in { display: grid; gap: 12px; padding-block: 8px 12px; }
 .fr-nav-l { margin: 0; font: 600 10.5px/1.5 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--k-mute); }
-.fr-nav-g ul { display: flex; flex-wrap: wrap; gap: 0 2px; margin: 0 0 0 -12px; padding: 0; list-style: none; }
-.fr-nav-g a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 30px; font: 500 12.5px/1 var(--k-mono); color: var(--k-copy); text-decoration: none; transition: background .2s, color .2s; }
-.fr-nav-g a:hover { color: var(--k-green); }
-.fr-nav-g a.on { background: var(--k-tint); color: var(--k-ink); }
-@media (max-width: 999px) { .fr-nav.is-shut .fr-nav-in { display: none; } }
+.fr-nav :is(.fr-nav-g, .fr-nav-here) ul { margin: 0; padding: 0; list-style: none; }
+.fr-nav :is(.fr-nav-g, .fr-nav-here) a { display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 30px; font: 500 12.5px/1.2 var(--k-mono);
+  color: var(--k-copy); text-decoration: none; transition: background .2s, color .2s; }
+.fr-nav :is(.fr-nav-g, .fr-nav-here) a:hover { color: var(--k-green); }
+.fr-nav :is(.fr-nav-g, .fr-nav-here) a.on { background: var(--k-tint); color: var(--k-ink); }
+.fr-nav.is-shut .fr-nav-in { display: none; }
+/* the open list: each group a label over its pages, two to a row */
+.fr-nav-in { display: grid; gap: 14px; padding-block: 10px 14px; border-top: 1px solid var(--k-rule); margin-top: 4px; }
+.fr-nav-g .fr-nav-l { padding-inline: 12px; }
+.fr-nav-g ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 4px; }
+/* the current group sits in the bar only where it fits on one line */
+.fr-nav-here { display: none; }
 @media (min-width: 1000px) {
-  .fr-nav > .k-wrap { grid-template-columns: auto minmax(0, 1fr); column-gap: 34px; align-items: start; padding-block: 10px 8px; }
-  .fr-nav-bar { padding-top: 15px; }
-  .fr-nav-t { display: none; }
-  .fr-nav-in { display: flex; flex-wrap: wrap; gap: 4px 34px; padding-block: 0; }
-  .fr-nav-g a { min-height: 34px; }
+  .fr-nav-here { flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px 14px; padding-left: 18px; border-left: 1px solid var(--k-rule); }
+  .fr-nav-here ul { display: flex; flex-wrap: wrap; gap: 0 2px; }
+  .fr-nav-here a { min-height: 36px; }
+  .fr-nav-in { grid-template-columns: repeat(4, max-content); justify-content: start; gap: 0 clamp(28px, 4vw, 64px); padding-block: 16px 18px; }
+  .fr-nav-g .fr-nav-l { margin-bottom: 6px; }
+  .fr-nav-g ul { grid-template-columns: max-content; }
+  .fr-nav-g a { width: fit-content; min-height: 34px; }
 }
-@media (min-width: 1000px) and (pointer: coarse) { .fr-nav-g a { min-height: 44px; } }
+@media (min-width: 1000px) and (pointer: coarse) { .fr-nav :is(.fr-nav-g, .fr-nav-here) a { min-height: 44px; } }
 
 /* An id the one-page /fitness had, kept as an empty anchor on the page that replaced that
    part of it, so an old link (/fitness#glossary) lands in the right place. */

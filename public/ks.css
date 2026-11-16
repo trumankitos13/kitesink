@@ -30,9 +30,14 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 /* paper-grain overlay — opt in with <body class="ks-paper"> (cream pages only;
    the project pages keep their own art direction). Sits above content but
-   below the mobile pill nav; pointer-events:none keeps it inert. */
+   below the header and the mobile pill nav; pointer-events:none keeps it inert.
+   It must stay below the header (z-index 60). iOS 26 Safari, and iOS browsers built on the
+   same WebKit, colour the strip behind the clock by hit-testing one point near the top centre
+   of the screen and taking the first fixed or sticky element there; they ignore
+   pointer-events and never look beneath what they hit. Above the header, this full-screen
+   layer was what they hit, so the strip showed the page instead of the header's colour. */
 body.ks-paper::after {
-  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 80; opacity: .5;
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 55; opacity: .5;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.13 0 0 0 0 0.11 0 0 0 0 0.06 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 /* dark: grain flips to faint light specks so it reads on the near-black page */
