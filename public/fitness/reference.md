@@ -47,9 +47,9 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 | [Lifters who cut weight at the 2018 IPF classic worlds](https://kitesink.com/fitness/powerlifting#pl-num-cut-prevalence) | 83 | % of 64 lifters | Powerlifting |
 | [Strength lost with hypohydration](https://kitesink.com/fitness/powerlifting#pl-num-hypohydration) | 5.5 | % lower muscle strength | Powerlifting |
 | [Mean age of peak performance in world-class powerlifters](https://kitesink.com/fitness/powerlifting#pl-num-peak-age) | 35 | years (SD 7) | Powerlifting |
-| [Opener as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-opener) | 88-92 | % of best single | Meet day |
-| [Second attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-second) | 94-97.5 | % of best single | Meet day |
-| [Third attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-third) | 98-102.5 | % of best single | Meet day |
+| [Opener as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-opener) | 80-85 | % of best single | Meet day |
+| [Second attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-second) | 85-92 | % of best single | Meet day |
+| [Third attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-third) | 92-95 | % of best single | Meet day |
 | [Weigh-in start before lifting](https://kitesink.com/fitness/meet#meet-num-weigh-in-window) | 2 | hours before lifting | Meet day |
 | [Length of the weigh-in period](https://kitesink.com/fitness/meet#meet-num-weigh-in-length) | 90 | minutes | Meet day |
 | [Time to start an attempt after being called](https://kitesink.com/fitness/meet#meet-num-time-to-start) | 1 | minute | Meet day |
@@ -157,7 +157,7 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 - [A 12-week cycle outline](https://kitesink.com/fitness/powerlifting#pl-table-12-week) (Powerlifting)
 - [IPF weight classes for men and women, in kg and lb](https://kitesink.com/fitness/meet#meet-table-ipf-classes) (Meet day)
 - [Platform commands for each lift](https://kitesink.com/fitness/meet#meet-table-commands) (Meet day)
-- [Attempt selection ranges from competition data](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
+- [Attempt selection ranges, first meet and experienced](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
 - [Aerobic share of energy in track races from 200 m to 1500 m](https://kitesink.com/fitness/conditioning#cond-table-aerobic-share-track) (Conditioning)
 - [The five-zone intensity scale used in Norwegian endurance sport](https://kitesink.com/fitness/conditioning#cond-table-five-zone-scale) (Conditioning)
 - [Intervals versus steady training: what pooled trials found](https://kitesink.com/fitness/conditioning#cond-table-intervals-vs-steady) (Conditioning)

@@ -709,12 +709,13 @@
    "sources": [
     "iraki-2019",
     "grgic-2018",
-    "goldstein-2010"
+    "goldstein-2010",
+    "abernethy-1985"
    ],
    "value": "3-6",
    "unit": "mg per kg",
    "sort": 3,
-   "take": "ISSN's 2010 stand: effective at about 3 to 6 mg per kg, no further gain at 9 or more. 5 mg/kg is 2.3 mg per lb."
+   "take": "ISSN 2010: about 3 to 6 mg per kg works, 9 or more adds nothing; 5 mg/kg is 2.3 mg per lb. Half-life was 7.9 h on low-dose oral contraceptives, 5.4 h without."
   },
   {
    "id": "nut-num-fibre",
@@ -2246,6 +2247,22 @@
    "doi": "10.1186/1550-2783-7-5",
    "pmid": "20205813",
    "support": "Caffeine is effective for enhancing sport performance in trained athletes when consumed in low-to-moderate dosages (~3-6 mg/kg) and overall does not result in further enhancement in performance when consumed in higher dosages (>/= 9 mg/kg)."
+  },
+  "abernethy-1985": {
+   "type": "trial",
+   "authors": [
+    "Abernethy DR",
+    "Todd EL"
+   ],
+   "year": 1985,
+   "title": "Impairment of caffeine clearance by chronic use of low-dose oestrogen-containing oral contraceptives",
+   "journal": "European Journal of Clinical Pharmacology",
+   "volume": "28",
+   "issue": "4",
+   "pages": "425-428",
+   "doi": "10.1007/bf00544361",
+   "pmid": "4029248",
+   "support": "Treated females matched with 9 non-smoking, drug-free, healthy control females. Each subject received 162 mg caffeine base orally. OCS subjects had a prolonged elimination half-life of caffeine (mean 7.88 h vs 5.37 h in the controls), the result of marked impairment of the plasma clearance of caffeine. With chronic caffeine consumption, OCS users are predicted to have an increased steady-state plasma caffeine concentration."
   }
  }
 }

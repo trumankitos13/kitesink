@@ -221,9 +221,9 @@
     "chaves-2024"
    ],
    "take": "In new lifters, progressing by reps or by load gave the same strength and muscle gains over 10 weeks.",
-   "body": "Thirty-nine previously untrained people (20 men, 19 women) had one leg progress by load and the other by reps. Leg extension 1RM and thigh muscle area rose by similar amounts in both. This was a short trial in beginners, so it may not transfer to advanced lifters.",
+   "body": "Thirty-nine previously untrained people (20 men, 19 women) had one leg progress by load and the other by reps. Leg extension 1RM and thigh muscle area rose by similar amounts in both. This was a short trial in beginners, so it may not transfer to advanced lifters. Combining the two, adding reps within a range and then adding weight, is called double progression.",
    "do": [
-    "Add reps within a range first, then raise the load and drop back to the low end of the range."
+    "Use double progression: add reps within a range, then raise the load and build the reps back up."
    ]
   },
   {
@@ -236,12 +236,15 @@
    "sources": [
     "pelland-2026",
     "hamarsland-2022",
-    "neves-2022"
+    "neves-2022",
+    "schoenfeld-2019",
+    "mcdonald-frequency-growth"
    ],
    "take": "Once total weekly sets are equal, how often you train a muscle makes little difference to size.",
-   "body": "The meta-regression found the effect of frequency on hypertrophy compatible with a negligible effect. In 21 people given the same weekly volume over 9 weeks, two sessions a week and four sessions a week gave the same muscle and strength gains. In 24 men, training one or three times a week gave similar thigh results.",
+   "body": "The meta-regression found the effect of frequency on hypertrophy compatible with a negligible effect, and a meta-analysis of 25 studies found no growth difference between frequencies at equal volume. In 21 people given the same weekly volume over 9 weeks, two sessions a week and four sessions a week gave the same muscle and strength gains. In 24 men, training one or three times a week gave similar thigh results. McDonald's view, a practical one, is that a high weekly set count per muscle is easier to train hard when split over two or more sessions.",
    "do": [
-    "Pick the number of weekly sessions you can keep, then spread your sets across them."
+    "Pick the number of weekly sessions you can keep, then spread your sets across them.",
+    "If a muscle gets many hard sets a week, give it at least two sessions."
    ]
   },
   {
@@ -288,10 +291,11 @@
    "sources": [
     "maeo-2021",
     "maeo-2023",
-    "kassiano-2023"
+    "kassiano-2023",
+    "kinoshita-2023"
    ],
    "take": "Exercises that load a muscle when it is long gave bigger gains than versions that load it short, in trials that compared them.",
-   "body": "Seated leg curls grew the whole hamstrings more than prone leg curls (+14% against +9%, 20 adults, 12 weeks). Overhead cable triceps extensions beat neutral-arm ones (+19.9% against +13.9%, 21 adults, 12 weeks). In 42 young women, calf raises done in the lower, stretched half grew the medial calf more than full or top-half range.",
+   "body": "Seated leg curls grew the whole hamstrings more than prone leg curls (+14% against +9%, 20 adults, 12 weeks). Overhead cable triceps extensions beat neutral-arm ones (+19.9% against +13.9%, 21 adults, 12 weeks). In 42 young women, calf raises done in the lower, stretched half grew the medial calf more than full or top-half range. Knee angle matters for the calf too: in 14 untrained adults over 12 weeks, standing calf raises grew the lateral gastrocnemius 12.4% against 1.7% for seated ones, with similar soleus growth. The technique area covers calf raises.",
    "do": [
     "Include one exercise per muscle that loads it stretched, such as seated leg curls or overhead triceps extensions."
    ]
@@ -429,10 +433,11 @@
    "sources": [
     "fradkin-2010",
     "behm-2016",
-    "souza-2024"
+    "souza-2024",
+    "kay-2012"
    ],
    "take": "Warming up helps performance. Long static stretches right before lifting can reduce it slightly.",
-   "body": "A meta-analysis of 32 studies found warm-ups improved performance in 79% of measured outcomes. A review found static stretches of 60 seconds or more per muscle lowered performance by 4.6%, against 1.1% for shorter holds, when tested right afterwards. A squat trial found extra heavy or fast warm-up sets gave no clear gain in total reps or volume.",
+   "body": "A meta-analysis of 32 studies found warm-ups improved performance in 79% of measured outcomes. A review found static stretches of 60 seconds or more per muscle lowered performance by 4.6%, against 1.1% for shorter holds, when tested right afterwards, and a review of 106 studies found holds under 30 seconds had no detrimental effect. A squat trial found extra heavy or fast warm-up sets gave no clear gain in total reps or volume. The training basics area covers warm-up sets and when to stretch first.",
    "do": [
     "Do two or three lighter, increasing sets of your first lift before working sets.",
     "Hold long stretches for after training."
@@ -851,7 +856,7 @@
    "level": "beginner",
    "confidence": "practice",
    "sources": [],
-   "take": "Gradually asking more of the muscle over time, by adding reps, load or sets, so it keeps having a reason to adapt."
+   "take": "Gradually asking more of the muscle over time, by adding reps, load or sets, so it keeps having a reason to adapt. Adding reps up to the top of a range and then adding weight is called double progression."
   },
   {
    "id": "hyp-term-deload",
@@ -910,9 +915,10 @@
     "currier-2023",
     "lopez-2021",
     "refalo-2021",
-    "morton-2016"
+    "morton-2016",
+    "mcdonald-categories-3"
    ],
-   "take": "Approximate loads for each rep range, with what research suggests about the result. Percentages are rough and vary by person and lift.",
+   "take": "Approximate loads for each rep range. Growth was similar across loads in pooled trials, so 8-12 is a handy middle, not a special range. Percentages vary by person and lift.",
    "columns": [
     "Reps per set",
     "Rough load (% of 1RM)",
@@ -935,7 +941,7 @@
     [
      "8-12",
      "About 65-75%",
-     "Size; middle ground for most lifts",
+     "Size; a handy middle ground, with no special research backing",
      "Stopping far from failure"
     ],
     [
@@ -962,9 +968,11 @@
    "sources": [
     "ramos-campo-2024",
     "pelland-2026",
-    "hamarsland-2022"
+    "hamarsland-2022",
+    "schoenfeld-2019",
+    "mcdonald-frequency-growth"
    ],
-   "take": "Splits differ in how often each muscle is trained and how the week is arranged. With weekly volume equal, results were similar.",
+   "take": "Splits differ in how often each muscle is trained and how the week is arranged. With weekly volume equal, growth was similar in pooled trials.",
    "columns": [
     "Split",
     "Days a week",
@@ -998,8 +1006,8 @@
      "Body-part split",
      "5-6",
      "1",
-     "Experienced lifters wanting high volume per muscle",
-     "Each muscle only once a week"
+     "Low weekly sets per muscle",
+     "All of a muscle's sets in one session; a poor fit at high volume (McDonald)"
     ],
     [
      "Hybrid (upper/lower plus extras)",
@@ -2299,6 +2307,87 @@
    "pmid": "29204323",
    "n_participants": 141,
    "support": "One hundred and forty-one participants underwent a full body RT session involving single sets to MF and were asked to predict the number of repetitions they could complete before reaching MF on each exercise. ... There was a tendency towards improved accuracy with greater experience."
+  },
+  "kinoshita-2023": {
+   "type": "trial",
+   "authors": [
+    "Kinoshita M",
+    "Maeo S",
+    "Kobayashi Y",
+    "Eihara Y",
+    "Ono M",
+    "Sato M",
+    "Sugiyama T",
+    "Kanehisa H",
+    "Isaka T"
+   ],
+   "year": 2023,
+   "title": "Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training",
+   "journal": "Frontiers in Physiology",
+   "volume": "14",
+   "doi": "10.3389/fphys.2023.1272106",
+   "pmid": "38156065",
+   "n_participants": 14,
+   "support": "The changes in muscle volume were significantly greater for the standing than seated condition leg in the lateral gastrocnemius (12.4% vs. 1.7%), medial gastrocnemius (9.2% vs. 0.6%), and whole triceps surae (5.6% vs. 2.1%) (p ≤ 0.011), but similar between legs in the soleus (2.1% vs. 2.9%, p = 0.410)."
+  },
+  "kay-2012": {
+   "type": "systematic-review",
+   "authors": [
+    "Kay AD",
+    "Blazevich AJ"
+   ],
+   "year": 2012,
+   "title": "Effect of Acute Static Stretch on Maximal Muscle Performance",
+   "journal": "Medicine & Science in Sports & Exercise",
+   "volume": "44",
+   "issue": "1",
+   "pages": "154-164",
+   "doi": "10.1249/mss.0b013e318225cb27",
+   "pmid": "21659901",
+   "n_studies": 106,
+   "support": "106 met the inclusion criteria. Clear evidence exists indicating that short-duration acute static stretch (<30 s) has no detrimental effect (pooled estimate = -1.1%), with overwhelming evidence that stretch durations of 30-45 s also imparted no significant effect (pooled estimate = -1.9%). A significant reduction is likely to occur with stretches >= 60 s."
+  },
+  "mcdonald-categories-3": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2014,
+   "title": "Categories of Weight Training: Part 3",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/categories-of-weight-training-3",
+   "retrieved": "2026-11-15",
+   "support": "His point that growth training spans roughly 5 to 20 reps, that he can find no original research behind 8 to 12 as the growth range, and that low-rep growth work is slow and hard on joints."
+  },
+  "schoenfeld-2019": {
+   "type": "meta-analysis",
+   "authors": [
+    "Schoenfeld BJ",
+    "Grgic J",
+    "Krieger J"
+   ],
+   "year": 2019,
+   "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency",
+   "journal": "Journal of Sports Sciences",
+   "volume": "37",
+   "issue": "11",
+   "pages": "1286-1295",
+   "doi": "10.1080/02640414.2018.1555906",
+   "pmid": "30558493",
+   "n_studies": 25,
+   "support": "A total of 25 studies were deemed to meet inclusion criteria. Results showed no significant difference between higher and lower frequency on a volume-equated basis."
+  },
+  "mcdonald-frequency-growth": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "Does Training Frequency Matter for Muscle Growth?",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/training/does-training-frequency-matter-for-muscle-growth",
+   "retrieved": "2026-11-17",
+   "support": "His reasoning that a single session has a useful ceiling of hard sets per muscle, so high weekly volume is better spread over two or more sessions. A judgment, not a trial finding."
   }
  }
 }

@@ -18,11 +18,11 @@ Deficit and rate of loss · Beginner · Some support · Sources: [Hall 2008](htt
 
 **A pace of 0.5 to 1 percent of body weight a week is the usual advice for keeping muscle while getting leaner.**
 
-A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the group set 1.4 percent (1.0 percent achieved) kept lean mass unchanged and lost 21 percent of fat mass. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).
+A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the group set 1.4 percent (1.0 percent achieved) kept lean mass unchanged and lost 21 percent of fat mass. McDonald's view is that faster loss mainly costs muscle when protein is low and lifting is light. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).
 
 - Pick a weekly percentage, convert it to kg or lb, and check against your four-week trend.
 
-Deficit and rate of loss · Intermediate · Some support · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096)
+Deficit and rate of loss · Intermediate · Some support · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096), [McDonald 2010f](https://bodyrecomposition.com/fat-loss/muscle-loss-single-digit-bodyfat)
 
 ### Deficits much beyond 500 kcal a day cost lean mass in lifters
 
@@ -129,11 +129,11 @@ Scale, plateaus and metabolism · Beginner · Some support · Sources: [Lichtman
 
 **Programmes that included self-weighing beat minimal care by 3.4 kg, and daily weighing did no better than weekly.**
 
-A meta-analysis found 15 trials of multi-component programmes that included self-weighing lost 3.4 kg more than minimal or no intervention, with no significant difference between daily and weekly weighing. Only one study tested self-weighing alone, and it found no evidence of an effect. The scale works as a feedback tool inside a plan, not as a plan.
+A meta-analysis found 15 trials of multi-component programmes that included self-weighing lost 3.4 kg more than minimal or no intervention, with no significant difference between daily and weekly weighing. Only one study tested self-weighing alone, and it found no evidence of an effect. In two studies of female first-year students, daily weighing with feedback on the trend of the last 7 days kept weight steady while controls gained 3.1 and 2.0 kg. McDonald favours daily weigh-ins read as a running average. The scale is feedback inside a plan.
 
-- Weigh on a fixed schedule, then act on the weekly average.
+- Weigh daily or on a fixed schedule, and act on the 7-day average, not on single days.
 
-Scale, plateaus and metabolism · Beginner · Some support · Sources: [Madigan 2015](https://doi.org/10.1186/s12966-015-0267-4)
+Scale, plateaus and metabolism · Beginner · Some support · Sources: [Madigan 2015](https://doi.org/10.1186/s12966-015-0267-4), [Levitsky 2006](https://doi.org/10.1038/sj.ijo.0803221), [McDonald 2014q](https://bodyrecomposition.com/fat-loss/bmi-weighing-frequency)
 
 ### Diet breaks and refeeds give mixed fat-loss results and may ease hunger
 
@@ -197,25 +197,25 @@ Cardio and daily movement · Beginner · Some support · Sources: [Bellicha 2021
 
 ### Getting very lean costs hormones, mood and training quality, so go carefully
 
-**Prolonged energy availability under about 25 kcal per kg of lean mass in men led to muscle loss and hormonal and mood problems; in women, hormones were disrupted below 30.**
+**Long spells under about 25 kcal per kg of lean mass led to muscle loss and hormone and mood problems in men. In women, 30 marks rising risk, not a cut-off.**
 
-Reviews of lean athletes link a long period at low energy availability to muscle loss, hormone disruption and psychological problems. A case study of one natural bodybuilder saw body fat fall from 14.8 to 4.5 percent and testosterone from 9.22 to 2.27 ng/mL, recovering after the contest. In 27 women dieting for a fitness show, sex hormones fell and menstrual irregularities rose, and most recovered within three to four months. Involve a coach and clinician.
+Reviews of lean athletes link a long period at low energy availability to muscle loss, hormone disruption and psychological problems. In one natural bodybuilder, body fat fell from 14.8 to 4.5 percent and testosterone from 9.22 to 2.27 ng/mL, recovering after the contest. In 27 women dieting for a fitness show, sex hormones fell and most recovered within three to four months. The 30 figure comes from a five-day lab study; in 35 women over three cycles, risk rose steadily with no cut-off, and the 2025 Triad update moves away from a threshold. See the women area. Involve a coach and clinician.
 
 - Treat contest-level leanness as a short, supervised project, not a lifestyle.
 - See a clinician if periods stop or mood drops.
 
-Very lean, regain and maintenance · Advanced · Some support · Sources: [Fagerberg 2018](https://doi.org/10.1123/ijsnem.2016-0332), [Rossow 2013](https://doi.org/10.1123/ijspp.8.5.582), [Hulmi 2017](https://doi.org/10.3389/fphys.2016.00689), [Loucks 2003](https://doi.org/10.1210/jc.2002-020369), [Mountjoy 2023](https://doi.org/10.1136/bjsports-2023-106994), [Helms 2019](https://doi.org/10.3390/sports7070172)
+Very lean, regain and maintenance · Advanced · Some support · Sources: [Fagerberg 2018](https://doi.org/10.1123/ijsnem.2016-0332), [Rossow 2013](https://doi.org/10.1123/ijspp.8.5.582), [Hulmi 2017](https://doi.org/10.3389/fphys.2016.00689), [Loucks 2003](https://doi.org/10.1210/jc.2002-020369), [Mountjoy 2023](https://doi.org/10.1136/bjsports-2023-106994), [Helms 2019](https://doi.org/10.3390/sports7070172), [Lieberman 2018](https://doi.org/10.1249/mss.0000000000001451), [Williams 2026](https://doi.org/10.1007/s40279-025-02332-0), [De Souza 2026](https://doi.org/10.1007/s40279-025-02333-z)
 
 ### Weight regain is common, and maintenance is possible with sustained habits
 
-**Most people regain some weight, and a minority keep most of it off by staying active and weighing themselves.**
+**Most people regain some weight. A minority keep most of it off, and they report steady activity and regular weighing.**
 
-In 171 women, participants regained 52 percent of the weight lost at one year and 89 percent at two. A meta-analysis of 29 US studies found that after five years the average person kept off more than 3 kg. Among 2,886 National Weight Control Registry members, mean loss was 31.3 kg at entry and 23.1 kg at ten years. They report about an hour of activity a day, regular weighing and consistent eating on weekends. The registry is self-selected.
+In 171 women, 52 percent of the weight lost was regained at one year and 89 percent at two. A meta-analysis of 29 US studies found the average person kept off more than 3 kg at five years. Among 2,886 National Weight Control Registry members, mean loss was 31.3 kg at entry and 23.1 kg at ten years; they report about an hour of activity a day and regular weighing. That link to activity is observational and self-selected: an overview of controlled trials found no significant effect of exercise training on maintenance. McDonald's rule is to return to maintenance promptly, not to climb in small steps for months.
 
-- After the diet, raise calories in steps and keep weighing weekly.
-- Keep activity and protein high.
+- After the diet, bring calories back to maintenance within about two weeks, then hold there.
+- Keep weighing, activity and protein up.
 
-Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184)
+Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2016j](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### A small surplus adds muscle, and a large surplus mostly adds fat
 
@@ -239,15 +239,16 @@ Gaining phases · Intermediate · Thin evidence · Sources: [Longland 2016](http
 
 ## Common mistakes
 
-### Dieting faster than 1 percent of body weight a week
+### Losing over 1 percent of body weight a week without high protein and heavy lifting
 
-**Faster loss gave up the lean-mass gain seen with slower loss in athletes, and the speed is hard to keep up.**
+**Bigger deficits take a larger share of the loss from lean mass, and athletes who lost more slowly gained lean mass. Going faster needs high protein and heavy lifting.**
 
-In 24 athletes lifting four times a week, a group set to lose 1.4 percent a week (1.0 percent achieved) kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. Reviews recommend 0.5 to 1 percent a week.
+In 24 athletes lifting four times a week, a group set to lose 1.4 percent a week (1.0 percent achieved) kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. A review found that lean tissue makes up a growing share of the loss as the deficit deepens, and a bigger share in leaner people. McDonald's view is that the old warnings about speed came from low-protein diets without lifting, and that lean dieters with high protein and heavy loads can go faster for short spells. Reviews recommend 0.5 to 1 percent a week.
 
-- Slow the deficit to 0.5 to 1 percent of body weight a week.
+- Use 0.5 to 1 percent of body weight a week as the default pace.
+- If you go faster, keep protein high, keep lifting heavy and keep the fast spell short.
 
-Deficit and rate of loss · Beginner · Some support · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20)
+Deficit and rate of loss · Beginner · Some support · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Forbes 2000](https://doi.org/10.1111/j.1749-6632.2000.tb06482.x), [McDonald 2010f](https://bodyrecomposition.com/fat-loss/muscle-loss-single-digit-bodyfat)
 
 ### Cutting protein and stopping lifting while dieting
 
@@ -263,22 +264,22 @@ Keeping muscle · Beginner · Some support · Sources: [Helms 2014a](https://doi
 
 **Short stalls are mostly water and weekend noise, and cutting on them stacks deficit on top of a working plan.**
 
-A two-week plateau can come from water, a missed weekend or logging drift, as 48 adults who stopped losing on weekends showed. Cutting calories on a stall moves you toward the 500 kcal limit sooner. Wait three to four weeks, check the log, and only then change calories or steps.
+A two-week plateau can come from water, a missed weekend or logging drift, as 48 adults who stopped losing on weekends showed. Cutting calories on a stall moves you toward the 500 kcal limit sooner. McDonald's view is that cutting harder can also add stress-related water retention, which hides fat loss for longer. Wait three to four weeks, check the log, and only then change calories or steps.
 
 - Check the four-week trend and the log before changing calories.
 
-Scale, plateaus and metabolism · Beginner · Some support · Sources: [Racette 2008](https://doi.org/10.1038/oby.2008.320), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Murphy 2022](https://doi.org/10.1111/sms.14075)
+Scale, plateaus and metabolism · Beginner · Some support · Sources: [Racette 2008](https://doi.org/10.1038/oby.2008.320), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Murphy 2022](https://doi.org/10.1111/sms.14075), [McDonald 2009b](https://bodyrecomposition.com/fat-loss/adjusting-the-diet)
 
 ### Dieting with no end date and no plan for after
 
 **Regain follows the diet for most people, and a plan for the exit matters as much as the deficit.**
 
-In 171 women, 52 percent of lost weight was regained after one year and 89 percent after two. Registry members who kept it off kept activity, regular weighing and steady eating. Set an end date for the diet.
+In 171 women, 52 percent of lost weight was regained after one year and 89 percent after two. Registry members who kept it off kept activity, regular weighing and steady eating. Set an end date for the diet. McDonald's rule for the exit is to reach maintenance calories at once or within about two weeks, then hold there; no study here tests a slower climb.
 
 - Plan the exit: a target date, a maintenance range and a weekly weigh-in.
-- Step calories up toward maintenance over several weeks.
+- Return to maintenance calories at once or within about two weeks.
 
-Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S)
+Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [McDonald 2016j](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### Treating a gaining phase as a licence to eat anything
 
@@ -349,7 +350,7 @@ Thin evidence · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [
 - **Energy deficit**: Eating less energy than you use. It is the one requirement for losing body fat. A daily deficit of 500 kcal is about 3,500 kcal a week.
 - **NEAT (non-exercise activity)**: Non-exercise activity thermogenesis: energy spent on walking, standing, fidgeting and chores. It can fall during a diet without you noticing.
 - **Recomposition**: Gaining muscle and losing fat over the same period. Body weight may hold steady or fall while the body changes shape.
-- **Set point and settling point**: Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete.
+- **Set point and settling point**: Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete. McDonald's view is that the body resists loss far more than gain.
 - **Time-restricted eating**: Eating all meals within a set daily window, such as eight hours, and fasting for the rest. It is one form of intermittent fasting.
 
 ## Offers for people who arrive through an AI assistant

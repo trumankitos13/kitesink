@@ -19,12 +19,12 @@ Percentages and zones · Beginner · Well supported · Sources: [Lopez 2021](htt
 
 **Strength in the squat, bench press and deadlift is partly skill, so the lifts themselves, done to competition standard, make up most of the training.**
 
-This is coaching convention, not a trial result. Train squat depth, the bench pause and the deadlift lockout the way they are judged. Four principles apply to all three lifts: a stable base, full-body tightness before the bar moves, a bar path close to a straight line over mid-foot, and the same set-up every rep. Assistance exercises support the lifts and do not replace them.
+This is coaching convention, not a trial result. Train squat depth, the bench pause and the deadlift lockout the way they are judged. Four principles carry across the lifts: a stable base, full-body tightness before the bar moves, a planned bar path, and the same set-up every rep. In the squat and deadlift that path stays close to a straight line over mid-foot. The bench differs: McDonald teaches a shallow arc, with the bar touching low on the chest and finishing above the shoulders. Assistance exercises support the lifts and do not replace them.
 
 - Film your heaviest set of each lift every week, from the side.
 - Use the same set-up routine on warm-ups and on heavy sets.
 
-Technique and leverages · Beginner · Coaching practice
+Technique and leverages · Beginner · Coaching practice · Sources: [McDonald 2008a](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique)
 
 ### RPE with reps in reserve lets you pick the load by feel
 
@@ -90,11 +90,11 @@ Frequency and volume · Intermediate · Thin evidence · Sources: [Androulakis-K
 
 **Beginners do well on 2 to 3 sessions a week; advanced lifters often spread the lifts across 4 to 6.**
 
-This is coaching convention. Beginners can practise each lift two or three times a week with little fatigue. Intermediates commonly train 3 to 4 days, with each lift twice a week. In a survey of 117 Norwegian powerlifters that included world, European and national champions, the most common answer (58.1%) was 5 to 6 sessions a week, with the most common load at 71-80% of 1RM.
+For beginners there is trial evidence: a meta-analysis of 140 strength studies found untrained people gained most when each muscle group was trained 3 days a week, and trained people at 2. Past that it is coaching convention. Intermediates commonly train 3 to 4 days, with each lift twice a week. In a survey of 117 Norwegian powerlifters that included world, European and national champions, the most common answer (58.1%) was 5 to 6 sessions a week, with the most common load at 71-80% of 1RM.
 
 - Add a session only when recovery between sessions is good and the lifts are improving.
 
-Frequency and volume · Beginner · Coaching practice · Sources: [Shaw 2022](https://doi.org/10.1519/JSC.0000000000003584)
+Frequency and volume · Beginner · Some support · Sources: [Shaw 2022](https://doi.org/10.1519/JSC.0000000000003584), [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4)
 
 ### Planned variation beats a fixed routine for 1RM strength
 
@@ -171,11 +171,12 @@ Technique and leverages · Intermediate · Thin evidence · Sources: [Escamilla 
 
 **Proportions shift the best stance, depth and grip, so copy principles from top lifters and not their exact positions.**
 
-This is coaching convention, not a tested rule. Long thighs relative to the torso tend to lean the squat forward and favour a wider stance. Long arms shorten the pull in the deadlift and lengthen the bench press path; short arms do the reverse. Use these as starting guesses and let filmed sets and bar speed decide.
+This is coaching convention, not a tested rule. Long thighs relative to the torso are thought to tip the squat forward and favour a wider stance. The one direct test, in 11 men squatting to parallel, found that ankle mobility went with trunk angle and segment-length ratios did not. Long arms shorten the pull in the deadlift and lengthen the bench press path; short arms do the reverse. Use these as starting guesses and let filmed sets and bar speed decide.
 
 - Film from the side and compare two set-ups on the same weight before changing for good.
+- If your squat folds forward, check ankle mobility before blaming your proportions.
 
-Technique and leverages · Intermediate · Coaching practice
+Technique and leverages · Intermediate · Coaching practice · Sources: [Fuglsang 2017](https://doi.org/10.1519/jsc.0000000000001872)
 
 ### Choose accessories for the point where the lift slows or fails
 

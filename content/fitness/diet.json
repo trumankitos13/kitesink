@@ -62,10 +62,11 @@
       "sources": [
         "helms-2014-prep",
         "garthe-2011",
-        "roberts-2020"
+        "roberts-2020",
+        "mcdonald-single-digit"
       ],
       "take": "A pace of 0.5 to 1 percent of body weight a week is the usual advice for keeping muscle while getting leaner.",
-      "body": "A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the group set 1.4 percent (1.0 percent achieved) kept lean mass unchanged and lost 21 percent of fat mass. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).",
+      "body": "A contest-prep review recommends 0.5 to 1 percent a week, and a later review prefers 0.5 percent or less for attenuating fat-free mass loss. In 24 athletes, both groups lost about 5.5 percent of body weight, but the 0.7 percent weekly group gained 2.1 percent lean mass and lost 31 percent of fat mass, while the group set 1.4 percent (1.0 percent achieved) kept lean mass unchanged and lost 21 percent of fat mass. McDonald's view is that faster loss mainly costs muscle when protein is low and lifting is light. At 80 kg (176 lb), 0.5 to 1 percent is 0.4 to 0.8 kg (0.9 to 1.8 lb).",
       "do": [
         "Pick a weekly percentage, convert it to kg or lb, and check against your four-week trend."
       ]
@@ -90,18 +91,21 @@
     {
       "id": "diet-mistake-too-fast",
       "type": "mistake",
-      "title": "Dieting faster than 1 percent of body weight a week",
+      "title": "Losing over 1 percent of body weight a week without high protein and heavy lifting",
       "topic": "deficit",
       "level": "beginner",
       "confidence": "moderate",
       "sources": [
         "garthe-2011",
-        "helms-2014-prep"
+        "helms-2014-prep",
+        "forbes-2000",
+        "mcdonald-single-digit"
       ],
-      "take": "Faster loss gave up the lean-mass gain seen with slower loss in athletes, and the speed is hard to keep up.",
-      "body": "In 24 athletes lifting four times a week, a group set to lose 1.4 percent a week (1.0 percent achieved) kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. Reviews recommend 0.5 to 1 percent a week.",
+      "take": "Bigger deficits take a larger share of the loss from lean mass, and athletes who lost more slowly gained lean mass. Going faster needs high protein and heavy lifting.",
+      "body": "In 24 athletes lifting four times a week, a group set to lose 1.4 percent a week (1.0 percent achieved) kept lean mass unchanged and cut fat mass 21 percent, while a 0.7 percent loss gained 2.1 percent lean mass and cut fat mass 31 percent. A review found that lean tissue makes up a growing share of the loss as the deficit deepens, and a bigger share in leaner people. McDonald's view is that the old warnings about speed came from low-protein diets without lifting, and that lean dieters with high protein and heavy loads can go faster for short spells. Reviews recommend 0.5 to 1 percent a week.",
       "do": [
-        "Slow the deficit to 0.5 to 1 percent of body weight a week."
+        "Use 0.5 to 1 percent of body weight a week as the default pace.",
+        "If you go faster, keep protein high, keep lifting heavy and keep the fast spell short."
       ]
     },
     {
@@ -430,10 +434,11 @@
       "sources": [
         "racette-2008",
         "bhutani-2017",
-        "murphy-2021"
+        "murphy-2021",
+        "mcdonald-adjusting-diet"
       ],
       "take": "Short stalls are mostly water and weekend noise, and cutting on them stacks deficit on top of a working plan.",
-      "body": "A two-week plateau can come from water, a missed weekend or logging drift, as 48 adults who stopped losing on weekends showed. Cutting calories on a stall moves you toward the 500 kcal limit sooner. Wait three to four weeks, check the log, and only then change calories or steps.",
+      "body": "A two-week plateau can come from water, a missed weekend or logging drift, as 48 adults who stopped losing on weekends showed. Cutting calories on a stall moves you toward the 500 kcal limit sooner. McDonald's view is that cutting harder can also add stress-related water retention, which hides fat loss for longer. Wait three to four weeks, check the log, and only then change calories or steps.",
       "do": [
         "Check the four-week trend and the log before changing calories."
       ]
@@ -519,12 +524,14 @@
       "level": "beginner",
       "confidence": "moderate",
       "take": "Programmes that included self-weighing beat minimal care by 3.4 kg, and daily weighing did no better than weekly.",
-      "body": "A meta-analysis found 15 trials of multi-component programmes that included self-weighing lost 3.4 kg more than minimal or no intervention, with no significant difference between daily and weekly weighing. Only one study tested self-weighing alone, and it found no evidence of an effect. The scale works as a feedback tool inside a plan, not as a plan.",
+      "body": "A meta-analysis found 15 trials of multi-component programmes that included self-weighing lost 3.4 kg more than minimal or no intervention, with no significant difference between daily and weekly weighing. Only one study tested self-weighing alone, and it found no evidence of an effect. In two studies of female first-year students, daily weighing with feedback on the trend of the last 7 days kept weight steady while controls gained 3.1 and 2.0 kg. McDonald favours daily weigh-ins read as a running average. The scale is feedback inside a plan.",
       "do": [
-        "Weigh on a fixed schedule, then act on the weekly average."
+        "Weigh daily or on a fixed schedule, and act on the 7-day average, not on single days."
       ],
       "sources": [
-        "madigan-2015"
+        "madigan-2015",
+        "levitsky-2006",
+        "mcdonald-bmi-weighing"
       ]
     },
     {
@@ -534,9 +541,10 @@
       "topic": "plateau",
       "level": "intermediate",
       "confidence": "practice",
-      "take": "Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete.",
+      "take": "Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete. McDonald's view is that the body resists loss far more than gain.",
       "sources": [
-        "speakman-2011"
+        "speakman-2011",
+        "mcdonald-set-points"
       ]
     },
     {
@@ -695,10 +703,13 @@
         "hulmi-2017",
         "loucks-2003",
         "mountjoy-2023",
-        "helms-2019"
+        "helms-2019",
+        "lieberman-2018",
+        "williams-2026",
+        "desouza-2026"
       ],
-      "take": "Prolonged energy availability under about 25 kcal per kg of lean mass in men led to muscle loss and hormonal and mood problems; in women, hormones were disrupted below 30.",
-      "body": "Reviews of lean athletes link a long period at low energy availability to muscle loss, hormone disruption and psychological problems. A case study of one natural bodybuilder saw body fat fall from 14.8 to 4.5 percent and testosterone from 9.22 to 2.27 ng/mL, recovering after the contest. In 27 women dieting for a fitness show, sex hormones fell and menstrual irregularities rose, and most recovered within three to four months. Involve a coach and clinician.",
+      "take": "Long spells under about 25 kcal per kg of lean mass led to muscle loss and hormone and mood problems in men. In women, 30 marks rising risk, not a cut-off.",
+      "body": "Reviews of lean athletes link a long period at low energy availability to muscle loss, hormone disruption and psychological problems. In one natural bodybuilder, body fat fell from 14.8 to 4.5 percent and testosterone from 9.22 to 2.27 ng/mL, recovering after the contest. In 27 women dieting for a fitness show, sex hormones fell and most recovered within three to four months. The 30 figure comes from a five-day lab study; in 35 women over three cycles, risk rose steadily with no cut-off, and the 2025 Triad update moves away from a threshold. See the women area. Involve a coach and clinician.",
       "do": [
         "Treat contest-level leanness as a short, supervised project, not a lifestyle.",
         "See a clinician if periods stop or mood drops."
@@ -717,13 +728,15 @@
         "thomas-jg-2014",
         "wing-2005",
         "hall-kahan-2018",
-        "rosenbaum-2010"
+        "rosenbaum-2010",
+        "bellicha-2021",
+        "mcdonald-transition-phase"
       ],
-      "take": "Most people regain some weight, and a minority keep most of it off by staying active and weighing themselves.",
-      "body": "In 171 women, participants regained 52 percent of the weight lost at one year and 89 percent at two. A meta-analysis of 29 US studies found that after five years the average person kept off more than 3 kg. Among 2,886 National Weight Control Registry members, mean loss was 31.3 kg at entry and 23.1 kg at ten years. They report about an hour of activity a day, regular weighing and consistent eating on weekends. The registry is self-selected.",
+      "take": "Most people regain some weight. A minority keep most of it off, and they report steady activity and regular weighing.",
+      "body": "In 171 women, 52 percent of the weight lost was regained at one year and 89 percent at two. A meta-analysis of 29 US studies found the average person kept off more than 3 kg at five years. Among 2,886 National Weight Control Registry members, mean loss was 31.3 kg at entry and 23.1 kg at ten years; they report about an hour of activity a day and regular weighing. That link to activity is observational and self-selected: an overview of controlled trials found no significant effect of exercise training on maintenance. McDonald's rule is to return to maintenance promptly, not to climb in small steps for months.",
       "do": [
-        "After the diet, raise calories in steps and keep weighing weekly.",
-        "Keep activity and protein high."
+        "After the diet, bring calories back to maintenance within about two weeks, then hold there.",
+        "Keep weighing, activity and protein up."
       ]
     },
     {
@@ -735,13 +748,14 @@
       "confidence": "moderate",
       "sources": [
         "martins-2020",
-        "wing-2005"
+        "wing-2005",
+        "mcdonald-transition-phase"
       ],
       "take": "Regain follows the diet for most people, and a plan for the exit matters as much as the deficit.",
-      "body": "In 171 women, 52 percent of lost weight was regained after one year and 89 percent after two. Registry members who kept it off kept activity, regular weighing and steady eating. Set an end date for the diet.",
+      "body": "In 171 women, 52 percent of lost weight was regained after one year and 89 percent after two. Registry members who kept it off kept activity, regular weighing and steady eating. Set an end date for the diet. McDonald's rule for the exit is to reach maintenance calories at once or within about two weeks, then hold there; no study here tests a slower climb.",
       "do": [
         "Plan the exit: a target date, a maintenance range and a weekly weigh-in.",
-        "Step calories up toward maintenance over several weeks."
+        "Return to maintenance calories at once or within about two weeks."
       ]
     },
     {
@@ -2287,6 +2301,177 @@
       "doi": "10.1242/dmm.008698",
       "pmid": "22065844",
       "support": "The set point model is consistent with many biological aspects of energy balance but does not explain the rise in body weight since the 1980s; the settling point model accommodates environmental characteristics but struggles with biological and genetic aspects."
+    },
+    "levitsky-2006": {
+      "type": "trial",
+      "authors": [
+        "Levitsky DA",
+        "Garay J",
+        "Nausbaum M",
+        "Neighbors L",
+        "DellaValle DM"
+      ],
+      "year": 2006,
+      "title": "Monitoring weight daily blocks the freshman weight gain: a model for combating the epidemic of obesity",
+      "journal": "International Journal of Obesity",
+      "volume": "30",
+      "issue": "6",
+      "pages": "1003-1010",
+      "doi": "10.1038/sj.ijo.0803221",
+      "pmid": "16446748",
+      "support": "Female freshmen weighed themselves each morning and received feedback from the most recent 7 days of weights. The untreated controls gained 3.1 kg and 2.0 kg, whereas weight gain of the experimental groups was 0.1 kg and -0.82 kg, values not significantly different than zero."
+    },
+    "mcdonald-bmi-weighing": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2014,
+      "title": "Of BMI and Weighing Frequency",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/bmi-weighing-frequency",
+      "retrieved": "2026-11-15",
+      "support": "Backs the advice to weigh often, act on a rolling average and pair the scale with a second measure."
+    },
+    "forbes-2000": {
+      "type": "review",
+      "authors": [
+        "Forbes GB"
+      ],
+      "year": 2000,
+      "title": "Body Fat Content Influences the Body Composition Response to Nutrition and Exercise",
+      "journal": "Annals of the New York Academy of Sciences",
+      "volume": "904",
+      "issue": "1",
+      "pages": "359-365",
+      "doi": "10.1111/j.1749-6632.2000.tb06482.x",
+      "pmid": "10865771",
+      "support": "In experiments of at least 3-weeks' duration, the weight gain of thin people comprises 60-70% lean tissues, whereas in the obese it is 30-40%. There is an inverse curvilinear relationship between initial body fat content and the proportion of weight loss consisting of lean tissue."
+    },
+    "mcdonald-single-digit": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Muscle Loss While Dieting to Single Digit Body Fat Levels",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/muscle-loss-single-digit-bodyfat",
+      "retrieved": "2026-11-15",
+      "support": "Backs his explanation of why lean dieters lose more lean tissue and what protects it."
+    },
+    "mcdonald-set-points": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Set Point Settling Points and Bodyweight Regulation Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/set-points-and-settling-points",
+      "retrieved": "2026-11-15",
+      "support": "Backs his reading that weight defence is lopsided and that set point and settling point both operate."
+    },
+    "mcdonald-transition-phase": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2016,
+      "title": "The Transition Phase Between Dieting and Gaining",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/the-transition-phase",
+      "retrieved": "2026-11-17",
+      "support": "His rule for ending a diet: reach estimated maintenance calories at once or within about two weeks and hold there, rather than a long stepwise climb. A judgment, not a trial result."
+    },
+    "mcdonald-adjusting-diet": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Adjusting the Diet",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/adjusting-the-diet",
+      "retrieved": "2026-11-17",
+      "support": "His view that water shifts mask fat loss week to week, that hard deficits plus heavy activity worsen water retention, and that diets get adjusted too often. A judgment, not a trial result."
+    },
+    "lieberman-2018": {
+      "type": "rct",
+      "authors": [
+        "Lieberman JL",
+        "De Souza MJ",
+        "Wagstaff DA",
+        "Williams NI"
+      ],
+      "year": 2018,
+      "title": "Menstrual Disruption with Exercise Is Not Linked to an Energy Availability Threshold",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "50",
+      "issue": "3",
+      "pages": "551-561",
+      "doi": "10.1249/mss.0000000000001451",
+      "pmid": "29023359",
+      "n_participants": 35,
+      "support": "Thirty-five sedentary, ovulatory women age 18 to 24 yr completed a diet and exercise intervention over three menstrual cycles. The likelihood of a MD decreased by 9% for each unit increase in EA (odds ratio, 0.91; 95% confidence interval, 0.84-0.98). No specific value of EA emerged as a threshold below which MD were induced."
+    },
+    "williams-2026": {
+      "type": "position",
+      "authors": [
+        "Williams NI",
+        "De Souza MJ",
+        "Misra M",
+        "Nattiv A",
+        "Joy E",
+        "Barrack M",
+        "Ricker EA",
+        "Gorrell S",
+        "Koltun KJ",
+        "O’Donnell E",
+        "Mallinson RJ",
+        "Salamunes ACC",
+        "Woodruff K",
+        "Fredericson M",
+        "Plessow F"
+      ],
+      "year": 2026,
+      "title": "2025 Update to the Female Athlete Triad Coalition Consensus Statement Part 2: Clinical Guidelines for Screening, Diagnosis, Treatment, and Return to Play for Adolescents and Adults",
+      "journal": "Sports Medicine",
+      "volume": "56",
+      "issue": "2",
+      "pages": "375-427",
+      "doi": "10.1007/s40279-025-02332-0",
+      "pmid": "41474492",
+      "support": "Recent research supports the adoption of revised criteria for defining and treating energy deficiency, moving away from the concept of an energy-availability threshold. Energy deficiency-induced menstrual disturbances can be reversed with a moderate increase in food intake and modest weight gain, but restoration of menses alone is not associated with high rates of ovulation or increased ovarian steroid levels until multiple consecutive normal length menstrual cycles are achieved. Full text: an increase in energy intake between 300 and 600 kcal/day will likely initiate reproductive recovery; combined oral contraceptive pills may mask spontaneous menstrual resumption."
+    },
+    "desouza-2026": {
+      "type": "position",
+      "authors": [
+        "De Souza MJ",
+        "Williams NI",
+        "Misra M",
+        "Nattiv A",
+        "Joy E",
+        "Barrack M",
+        "Ricker EA",
+        "Gorrell S",
+        "Koltun KJ",
+        "O’Donnell E",
+        "Mallinson RJ",
+        "Salamunes ACC",
+        "Woodruff K",
+        "Fredericson M",
+        "Plessow F"
+      ],
+      "year": 2026,
+      "title": "2025 Update to the Female Athlete Triad Coalition Consensus Statement Part 1: State of the Science and Introduction of a New Adolescent Model",
+      "journal": "Sports Medicine",
+      "volume": "56",
+      "issue": "2",
+      "pages": "327-373",
+      "doi": "10.1007/s40279-025-02333-z",
+      "pmid": "41474493",
+      "support": "The Triad is defined as three inter-related components including energy status, reproductive function, and bone health. Full text: an EA of approximately 45 kcal/kg FFM/day has been associated with the healthy end of the Triad continuum; in this revised Consensus Statement, the utility of an EA threshold is less supported than in previous position stands; many women with ovulatory cycles had EA levels below 30 kcal/kg FFM/day, and women with menstrual disturbances had EA levels above 30."
     }
   }
 }

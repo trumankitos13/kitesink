@@ -67,7 +67,7 @@ Coaching practice. In McDonald's teaching, a seated row starts with a small forw
 - Hold the handle against the body for a slow count of one or two on each rep.
 - Reduce the load until the shoulder blades meet on every rep.
 
-Rows and pulldowns · Beginner · Coaching practice · Sources: [McDonald 2009d](https://bodyrecomposition.com/training/cable-row-technique)
+Rows and pulldowns · Beginner · Coaching practice · Sources: [McDonald 2009e](https://bodyrecomposition.com/training/cable-row-technique)
 
 ### Inverted rows load the spine least; bent-over rows work the whole back hardest
 
@@ -89,7 +89,7 @@ McDonald's teaching points, which apply equally to chin-ups and pull-ups: let th
 - Begin each rep by drawing the shoulders away from the ears.
 - Stop the bar at the upper chest; do not push it down toward the lap.
 
-Rows and pulldowns · Beginner · Thin evidence · Sources: [McDonald 2009j](https://bodyrecomposition.com/training/lat-pulldown-technique), [Snyder 2009](https://doi.org/10.1519/jsc.0b013e3181bb7213)
+Rows and pulldowns · Beginner · Thin evidence · Sources: [McDonald 2009k](https://bodyrecomposition.com/training/lat-pulldown-technique), [Snyder 2009](https://doi.org/10.1519/jsc.0b013e3181bb7213)
 
 ### Pulldown grip width matters less than gym lore suggests
 
@@ -100,7 +100,7 @@ Fifteen men lifted a six-rep max of about 80 kg (176 lb) with narrow and medium 
 - Use a grip between one and two times shoulder width.
 - Pick the hand position your wrists and elbows tolerate best.
 
-Rows and pulldowns · Intermediate · Thin evidence · Sources: [Andersen 2014](https://doi.org/10.1097/jsc.0000000000000232), [Lusk 2010](https://doi.org/10.1519/jsc.0b013e3181ddb0ab), [McDonald 2009j](https://bodyrecomposition.com/training/lat-pulldown-technique)
+Rows and pulldowns · Intermediate · Thin evidence · Sources: [Andersen 2014](https://doi.org/10.1097/jsc.0000000000000232), [Lusk 2010](https://doi.org/10.1519/jsc.0b013e3181ddb0ab), [McDonald 2009k](https://bodyrecomposition.com/training/lat-pulldown-technique)
 
 ### Behind-the-neck pulldowns add nothing for the lats
 
@@ -110,7 +110,7 @@ Twenty-four trained men did front, behind-the-neck and V-bar pulldowns at 80 per
 
 - Pull to the upper chest with the chest lifted.
 
-Rows and pulldowns · Intermediate · Thin evidence · Sources: [Sperandei 2009](https://doi.org/10.1519/jsc.0b013e3181b8d30a), [McDonald 2009j](https://bodyrecomposition.com/training/lat-pulldown-technique)
+Rows and pulldowns · Intermediate · Thin evidence · Sources: [Sperandei 2009](https://doi.org/10.1519/jsc.0b013e3181b8d30a), [McDonald 2009k](https://bodyrecomposition.com/training/lat-pulldown-technique)
 
 ### A deadlift bar loaded with small plates starts too low
 
@@ -142,7 +142,7 @@ Nineteen male powerlifters deadlifted with a straight bar and a hexagonal (trap)
 
 - If your gym has a trap bar and you do not compete, consider it as your main deadlift.
 
-Deadlifts and back extensions · Beginner · Thin evidence · Sources: [Swinton 2011](https://doi.org/10.1519/jsc.0b013e3181e73f87), [McDonald 2020c](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
+Deadlifts and back extensions · Beginner · Thin evidence · Sources: [Swinton 2011](https://doi.org/10.1519/jsc.0b013e3181e73f87), [McDonald 2020d](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
 
 ### A Romanian deadlift ends where the hips stop moving
 
@@ -153,7 +153,7 @@ Coaching practice. In a Romanian deadlift the knees stay slightly bent, about 10
 - Keep the lats tight and the bar touching the legs all the way.
 - End the rep when the hips stop travelling back.
 
-Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009w](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009x](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ### Use Romanian deadlifts for moderate reps and build up slowly
 
@@ -163,7 +163,7 @@ McDonald's programming advice, from coaching and not from trials. Use the Romani
 
 - Begin with a load you could lift for several more reps and add weight over two to three weeks.
 
-Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009w](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009x](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ### A back that rounds mid-lift is a fault; a set, held upper-back curve is a style
 
@@ -185,7 +185,7 @@ McDonald advises against heavy stiff-legged deadlifts with a rounded back, citin
 - Treat a flat lower back as the default for heavy hinging.
 - See a physiotherapist or doctor about back pain that persists.
 
-Deadlifts and back extensions · Advanced · Thin evidence · Sources: [Callaghan 2001](https://doi.org/10.1016/s0268-0033(00)00063-2), [Saraceni 2020](https://doi.org/10.2519/jospt.2020.9218), [Colloca 2005](https://doi.org/10.1016/j.jmpt.2005.08.005), [McDonald 2009w](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Deadlifts and back extensions · Advanced · Thin evidence · Sources: [Callaghan 2001](https://doi.org/10.1016/s0268-0033(00)00063-2), [Saraceni 2020](https://doi.org/10.2519/jospt.2020.9218), [Colloca 2005](https://doi.org/10.1016/j.jmpt.2005.08.005), [McDonald 2009x](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ### Pad height decides whether a back extension trains the hips or the spinal muscles
 
@@ -196,7 +196,7 @@ On a back extension bench, where the pad meets the pelvis sets what can move. If
 - Decide which you want to train before you set the pad.
 - Pin the pelvis on the pad when you want the lower back muscles to do the moving.
 
-Deadlifts and back extensions · Intermediate · Thin evidence · Sources: [McDonald 2009b](https://bodyrecomposition.com/training/back-extension-technique), [Steele 2013](https://doi.org/10.1136/bjsports-2013-092197)
+Deadlifts and back extensions · Intermediate · Thin evidence · Sources: [McDonald 2009c](https://bodyrecomposition.com/training/back-extension-technique), [Steele 2013](https://doi.org/10.1136/bjsports-2013-092197)
 
 ### Start back extensions with one easy set and progress in small steps
 
@@ -207,7 +207,7 @@ Coaching practice with no trial behind it. The lower back is often weak in new l
 - First session: one set of five to eight reps with the hands by your sides or on the chest.
 - Add load only once twelve reps feel easy.
 
-Deadlifts and back extensions · Beginner · Coaching practice · Sources: [McDonald 2009b](https://bodyrecomposition.com/training/back-extension-technique)
+Deadlifts and back extensions · Beginner · Coaching practice · Sources: [McDonald 2009c](https://bodyrecomposition.com/training/back-extension-technique)
 
 ### Back muscle endurance was linked to fewer first-time back problems in men
 
@@ -218,7 +218,7 @@ A health survey examined 449 men and 479 women aged 30, 40, 50 or 60 and followe
 - Include some higher-rep sets with a short hold at the top.
 - Keep those sets several reps short of failure.
 
-Deadlifts and back extensions · Intermediate · Thin evidence · Sources: [Biering-Sørensen 1984](https://doi.org/10.1097/00007632-198403000-00002), [McDonald 2009b](https://bodyrecomposition.com/training/back-extension-technique)
+Deadlifts and back extensions · Intermediate · Thin evidence · Sources: [Biering-Sørensen 1984](https://doi.org/10.1097/00007632-198403000-00002), [McDonald 2009c](https://bodyrecomposition.com/training/back-extension-technique)
 
 ### Choose a squat style from your goal and your build
 
@@ -249,7 +249,7 @@ McDonald's observation is that lifters with short thighs and a long torso stay u
 - Film a squat from the side and note what fails first: thighs or lower back.
 - Try a raised heel and a slightly wider stance before deciding the squat does not suit you.
 
-Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [McDonald 2009x](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs), [Fuglsang 2017](https://doi.org/10.1519/jsc.0000000000001872)
+Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs), [Fuglsang 2017](https://doi.org/10.1519/jsc.0000000000001872)
 
 ### Full squats grew glutes and inner thighs more than half squats; quadriceps grew the same
 
@@ -271,7 +271,7 @@ Seventy-eight students were split between training and control groups. Those who
 - Squat if jumping or squat strength is the goal.
 - Use the leg press as the main thigh lift if your back fails first in squats, or straight after squats.
 
-Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [Wirth 2016](https://doi.org/10.1519/jsc.0000000000001228), [Escamilla 2001](https://doi.org/10.1097/00005768-200109000-00020), [McDonald 2009x](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
+Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [Wirth 2016](https://doi.org/10.1519/jsc.0000000000001228), [Escamilla 2001](https://doi.org/10.1097/00005768-200109000-00020), [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
 
 ### On the leg press, go deep but stop before the pelvis rolls off the pad
 
@@ -282,7 +282,7 @@ McDonald's coaching points. Loading every plate and moving the sled a short dist
 - Set the safety stops just above the depth where your hips begin to tuck.
 - Try single-leg presses if your lower back rounds when you use both legs.
 
-Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2009x](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
+Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
 
 ### Set a split squat long enough and wide enough
 
@@ -334,7 +334,7 @@ Tendons behave like springs: stretched quickly, they give energy back. In 10 men
 - Count two seconds in the stretched position on every rep.
 - Start with much less than your usual load the first time you try paused reps.
 
-Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950)
+Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009z](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950)
 
 ### Standing calf raises grew the calf far more than seated ones
 
@@ -345,7 +345,7 @@ The gastrocnemius crosses the knee, so bending the knee slackens it and leaves m
 - Make a straight-knee calf raise your main calf exercise.
 - Treat seated raises as optional extra work for the soleus.
 
-Calves and leg extensions · Beginner · Thin evidence · Sources: [Kinoshita 2023](https://doi.org/10.3389/fphys.2023.1272106), [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/training-the-calves)
+Calves and leg extensions · Beginner · Thin evidence · Sources: [Kinoshita 2023](https://doi.org/10.3389/fphys.2023.1272106), [McDonald 2009z](https://bodyrecomposition.com/muscle-gain/training-the-calves)
 
 ### Why high-rep leg extensions burn so much is not established
 
@@ -419,7 +419,7 @@ McDonald argues that the barbell squat, bench press and deadlift became fixtures
 - Judge each lift in your plan against the three tests.
 - Keep a lift you enjoy and progress on; replace one that only wears you down.
 
-Exercise choice and EMG · Beginner · Coaching practice · Sources: [McDonald 2020c](https://bodyrecomposition.com/training/you-must-squat-dsfps-2), [McDonald 2009x](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
+Exercise choice and EMG · Beginner · Coaching practice · Sources: [McDonald 2020d](https://bodyrecomposition.com/training/you-must-squat-dsfps-2), [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
 
 ### New lifters should keep breathing and leave bracing for later
 
@@ -430,7 +430,7 @@ McDonald's coaching point is that beginners already have position, tempo and bal
 - In your first weeks, check only that you are breathing on every rep.
 - Then settle into in on the way down, out on the way up.
 
-Breathing, grip and straps · Beginner · Coaching practice · Sources: [McDonald 2009c](https://bodyrecomposition.com/training/breathing-during-weight-training)
+Breathing, grip and straps · Beginner · Coaching practice · Sources: [McDonald 2009d](https://bodyrecomposition.com/training/breathing-during-weight-training)
 
 ### A held breath stiffens the trunk for heavy squats and deadlifts
 
@@ -441,7 +441,7 @@ For heavy lifts that load the spine, McDonald teaches a partial Valsalva: breath
 - Take the breath and brace while standing, before each heavy rep starts.
 - Learn the brace with moderate loads first.
 
-Breathing, grip and straps · Intermediate · Some support · Sources: [McDonald 2009c](https://bodyrecomposition.com/training/breathing-during-weight-training), [Hagins 2004](https://doi.org/10.1097/01.brs.0000092368.90019.d8), [Hackett 2013](https://doi.org/10.1519/jsc.0b013e31827de07d), [Harman 1989](https://doi.org/10.1249/00005768-198904000-00012)
+Breathing, grip and straps · Intermediate · Some support · Sources: [McDonald 2009d](https://bodyrecomposition.com/training/breathing-during-weight-training), [Hagins 2004](https://doi.org/10.1097/01.brs.0000092368.90019.d8), [Hackett 2013](https://doi.org/10.1519/jsc.0b013e31827de07d), [Harman 1989](https://doi.org/10.1249/00005768-198904000-00012)
 
 ### Blood pressure climbs very high in heavy lifts, and higher with a held breath
 
@@ -452,7 +452,7 @@ In five experienced bodybuilders with a catheter in an arm artery, pressure peak
 - If you have high blood pressure or a heart condition, ask your doctor before heavy lifting or breath-holding.
 - Use the exhale-on-effort pattern for lighter and higher-rep work.
 
-Breathing, grip and straps · Intermediate · Some support · Sources: [MacDougall 1985](https://doi.org/10.1152/jappl.1985.58.3.785), [Narloch 1995](https://doi.org/10.1016/s0003-9993(95)80578-8), [Hackett 2013](https://doi.org/10.1519/jsc.0b013e31827de07d), [McDonald 2009c](https://bodyrecomposition.com/training/breathing-during-weight-training)
+Breathing, grip and straps · Intermediate · Some support · Sources: [MacDougall 1985](https://doi.org/10.1152/jappl.1985.58.3.785), [Narloch 1995](https://doi.org/10.1016/s0003-9993(95)80578-8), [Hackett 2013](https://doi.org/10.1519/jsc.0b013e31827de07d), [McDonald 2009d](https://bodyrecomposition.com/training/breathing-during-weight-training)
 
 ### On heavy sets, breathe and brace again before every rep
 
@@ -462,7 +462,7 @@ Coaching practice. McDonald has newer lifters stand at the top of each rep, take
 
 - On squats and deadlifts, take one full breath at the top between reps.
 
-Breathing, grip and straps · Beginner · Coaching practice · Sources: [McDonald 2009c](https://bodyrecomposition.com/training/breathing-during-weight-training)
+Breathing, grip and straps · Beginner · Coaching practice · Sources: [McDonald 2009d](https://bodyrecomposition.com/training/breathing-during-weight-training)
 
 ### Lift without straps until grip limits you, then strap up
 
@@ -484,7 +484,7 @@ Athletes collect habits they swear by: the same socks, the same warm-up order, t
 - Keep a set-up routine you trust, and keep it short.
 - Do not let a missing lucky item convince you a session is lost.
 
-Learning and changing technique · Beginner · Some support · Sources: [Hurst 2020](https://doi.org/10.1080/17461391.2019.1655098), [McDonald 2009i](https://bodyrecomposition.com/training/keeping-the-power-inside-the-bar)
+Learning and changing technique · Beginner · Some support · Sources: [Hurst 2020](https://doi.org/10.1080/17461391.2019.1655098), [McDonald 2009j](https://bodyrecomposition.com/training/keeping-the-power-inside-the-bar)
 
 ### A jump is driven by straightening hips, knees and ankles
 
@@ -495,7 +495,7 @@ McDonald describes a fault he met in coaching: a lifter who left the ground by b
 - Film a few vertical jumps or rope skips from the side.
 - Look for hips, knees and ankles straight at take-off, before the feet tuck.
 
-Learning and changing technique · Intermediate · Coaching practice · Sources: [McDonald 2009k](https://bodyrecomposition.com/training/learning-to-jump)
+Learning and changing technique · Intermediate · Coaching practice · Sources: [McDonald 2009l](https://bodyrecomposition.com/training/learning-to-jump)
 
 ### Drills that teach a full, fast hip extension
 
@@ -506,7 +506,7 @@ To retrain the pattern McDonald used many easy repetitions early in each session
 - Put five minutes of skipping, swings or throws into the warm-up.
 - Keep any loaded jumps light.
 
-Learning and changing technique · Intermediate · Coaching practice · Sources: [McDonald 2009k](https://bodyrecomposition.com/training/learning-to-jump)
+Learning and changing technique · Intermediate · Coaching practice · Sources: [McDonald 2009l](https://bodyrecomposition.com/training/learning-to-jump)
 
 ### Jump training raises jump height by about 5 to 9 percent
 
@@ -550,7 +550,7 @@ Surface EMG records a muscle's electrical activity through the skin during a lif
 - Treat EMG rankings as a hint about which muscles work, not as proof of what grows.
 - Prefer training studies that measured muscle size.
 
-Exercise choice and EMG · Intermediate · Some support · Sources: [Vigotsky 2018](https://doi.org/10.3389/fphys.2017.00985), [Contreras 2015](https://doi.org/10.1123/jab.2014-0301), [Plotkin 2023](https://doi.org/10.3389/fphys.2023.1279170), [McDonald 2020b](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
+Exercise choice and EMG · Intermediate · Some support · Sources: [Vigotsky 2018](https://doi.org/10.3389/fphys.2017.00985), [Contreras 2015](https://doi.org/10.1123/jab.2014-0301), [Plotkin 2023](https://doi.org/10.3389/fphys.2023.1279170), [McDonald 2020c](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
 
 ### Hip thrusts and squats grew the glutes equally; squats also grew the thighs
 
@@ -561,7 +561,7 @@ Thirty-four untrained adults were randomised to hip thrusts (18) or back squats 
 - Choose the hip thrust or the squat for glutes by which you can load and progress.
 - Keep a squat or leg press in the plan if thigh size matters too.
 
-Exercise choice and EMG · Intermediate · Thin evidence · Sources: [Plotkin 2023](https://doi.org/10.3389/fphys.2023.1279170), [McDonald 2020b](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
+Exercise choice and EMG · Intermediate · Thin evidence · Sources: [Plotkin 2023](https://doi.org/10.3389/fphys.2023.1279170), [McDonald 2020c](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
 
 ### In beginners, strength tests improve with practice and growth shows first in simple lifts
 
@@ -572,7 +572,7 @@ Thirty-eight untrained people did knee extensions and chest presses for eight we
 - Do not read much into strength jumps in your first weeks on a lift.
 - Judge an exercise for growth over months.
 
-Exercise choice and EMG · Intermediate · Thin evidence · Sources: [Mattocks 2017](https://doi.org/10.1249/MSS.0000000000001300), [Chilibeck 1997](https://doi.org/10.1007/s004210050316), [McDonald 2020b](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
+Exercise choice and EMG · Intermediate · Thin evidence · Sources: [Mattocks 2017](https://doi.org/10.1249/MSS.0000000000001300), [Chilibeck 1997](https://doi.org/10.1007/s004210050316), [McDonald 2020c](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
 
 ## Common mistakes
 
@@ -596,7 +596,7 @@ Three faults tend to appear together when a row is overloaded. The chest sinks a
 - Lower the weight and keep the torso almost still.
 - Think 'shoulders down and back' as the handle arrives.
 
-Rows and pulldowns · Beginner · Coaching practice · Sources: [McDonald 2009d](https://bodyrecomposition.com/training/cable-row-technique)
+Rows and pulldowns · Beginner · Coaching practice · Sources: [McDonald 2009e](https://bodyrecomposition.com/training/cable-row-technique)
 
 ### Using a very wide grip to build wider lats
 
@@ -606,7 +606,7 @@ The idea that a wide grip builds a wide back is old gym lore. In 15 men, lat act
 
 - Bring the hands in until the forearms are vertical at the bottom of the pull.
 
-Rows and pulldowns · Beginner · Thin evidence · Sources: [Andersen 2014](https://doi.org/10.1097/jsc.0000000000000232), [McDonald 2009j](https://bodyrecomposition.com/training/lat-pulldown-technique)
+Rows and pulldowns · Beginner · Thin evidence · Sources: [Andersen 2014](https://doi.org/10.1097/jsc.0000000000000232), [McDonald 2009k](https://bodyrecomposition.com/training/lat-pulldown-technique)
 
 ### Hips rising first in a deadlift
 
@@ -629,7 +629,7 @@ The exercise is often called a hyperextension, and many people treat the name as
 - Stop each rep when shoulders, hips and ankles line up.
 - Hold the top for a second or two; do not swing up.
 
-Deadlifts and back extensions · Beginner · Thin evidence · Sources: [McDonald 2009b](https://bodyrecomposition.com/training/back-extension-technique), [Callaghan 1998](https://doi.org/10.1093/ptj/78.1.8)
+Deadlifts and back extensions · Beginner · Thin evidence · Sources: [McDonald 2009c](https://bodyrecomposition.com/training/back-extension-technique), [Callaghan 1998](https://doi.org/10.1093/ptj/78.1.8)
 
 ### Expecting every adult to reach a full-depth barbell squat
 
@@ -640,7 +640,7 @@ Two arguments are often used to claim that everyone can squat to full depth with
 - Squat to the depth you can reach with a flat back and the bar over mid-foot.
 - Ask a physiotherapist if a pinch at the front of the hip limits your depth.
 
-Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2020c](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
+Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2020d](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
 
 ### Bouncing calf raises through a short range
 
@@ -650,7 +650,7 @@ The pattern is common: a heavy stack, quick shallow reps and no time spent at th
 
 - Slow the lowering and come to a dead stop at the bottom before each lift.
 
-Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950), [Kassiano 2023](https://doi.org/10.1519/jsc.0000000000004460)
+Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009z](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950), [Kassiano 2023](https://doi.org/10.1519/jsc.0000000000004460)
 
 ### Adding weight before the movement is stable
 
@@ -720,7 +720,7 @@ A coaching guide to what each row tends to emphasise. The mid-back works in all 
 | Low, close to the ribs | Close neutral handle | Mid-stomach | Lats and mid-back, plus the brachialis under the biceps |
 | Low, close to the ribs | Shoulder-width underhand bar | Navel | Lats, mid-back and the most biceps; easiest for keeping the shoulders down |
 
-Coaching practice · Sources: [McDonald 2009d](https://bodyrecomposition.com/training/cable-row-technique)
+Coaching practice · Sources: [McDonald 2009e](https://bodyrecomposition.com/training/cable-row-technique)
 
 ## Conventional deadlift: set-up and pull
 
@@ -791,7 +791,7 @@ Two lifts that often share a name. Descriptions follow Lyle McDonald's usage; so
 | Depth | Ends where the hips run out of motion, often just below the knee | Often to the feet, standing on a block |
 | Spinal muscles | Hold still under load | Lengthen and shorten under load |
 
-Coaching practice · Sources: [McDonald 2009w](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Coaching practice · Sources: [McDonald 2009x](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ## Three sources of a technique fault and where to start
 
@@ -816,7 +816,7 @@ Options coaches use, with McDonald's view of where each fits. More held breath m
 | Hold, then sharp exhale | Brace, hold through the hardest part, then breathe out forcefully | Heavy reps; McDonald's usual cue |
 | Hold to the top | Brace and keep the breath until the rep is finished | Short, heavy reps; slow reps may leave you short of air |
 
-Coaching practice · Sources: [McDonald 2009c](https://bodyrecomposition.com/training/breathing-during-weight-training)
+Coaching practice · Sources: [McDonald 2009d](https://bodyrecomposition.com/training/breathing-during-weight-training)
 
 ## Grip aids compared
 
@@ -904,7 +904,7 @@ Checks drawn from Lyle McDonald's critique of a small hip thrust study. Weak ans
 - How large is the difference next to the overall change?
 - Do the authors' own cautions match the headline?
 
-Coaching practice · Sources: [McDonald 2020b](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
+Coaching practice · Sources: [McDonald 2020c](https://bodyrecomposition.com/training/bret-contreras-phd-thesis)
 
 ## Terms
 

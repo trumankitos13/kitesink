@@ -30,7 +30,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 55 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 154 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 121 key numbers and 59 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 751 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 756 sources.
 
 ## Calculators (on the page, no sign-up)
 

@@ -131,7 +131,7 @@ Body composition matters most in gravitational, weight-class and judged sports. 
 - Aim for the range where you train and recover well, then judge by performance.
 - Involve a sports dietitian or doctor before chasing a low body fat target for competition.
 
-Body fat levels · Intermediate · Some support · Sources: [Santos 2014](https://doi.org/10.1371/journal.pone.0097846), [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2009ac](https://bodyrecomposition.com/fat-loss/4-reasons-change-body-composition)
+Body fat levels · Intermediate · Some support · Sources: [Santos 2014](https://doi.org/10.1371/journal.pone.0097846), [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2009ad](https://bodyrecomposition.com/fat-loss/4-reasons-change-body-composition)
 
 ### Men and women lean out in a different order
 
@@ -194,7 +194,7 @@ Lyle McDonald describes the pattern from years of coaching and offers a hypothes
 - Keep a weekly average and compare averages three to four weeks apart.
 - Hold the plan steady through a flat fortnight if adherence has been good.
 
-Water and stalls · Intermediate · Coaching practice · Sources: [McDonald 2009t](https://bodyrecomposition.com/fat-loss/of-whooshes-and-squishy-fat), [Tomiyama 2010](https://doi.org/10.1097/psy.0b013e3181d9523c)
+Water and stalls · Intermediate · Coaching practice · Sources: [McDonald 2009u](https://bodyrecomposition.com/fat-loss/of-whooshes-and-squishy-fat), [Tomiyama 2010](https://doi.org/10.1097/psy.0b013e3181d9523c)
 
 ### How much fat you carry sets how much of a weight change is lean tissue
 
@@ -305,7 +305,7 @@ The reviewers found no rise in the share of food energy absorbed during dieting.
 
 - When loss is slower than the sums predict, audit intake and daily steps first.
 
-Weight regulation and leptin · Intermediate · Some support · Sources: [Heymsfield 2007](https://doi.org/10.1093/ajcn/85.2.346), [McDonald 2009ab](https://bodyrecomposition.com/research/3-reasons-obese-lose-less-weight)
+Weight regulation and leptin · Intermediate · Some support · Sources: [Heymsfield 2007](https://doi.org/10.1093/ajcn/85.2.346), [McDonald 2009ac](https://bodyrecomposition.com/research/3-reasons-obese-lose-less-weight)
 
 ### In the original study, drug-free athletes topped out at an FFMI of 25
 
@@ -347,7 +347,7 @@ He gives women about half those figures and stresses that the years count only i
 - Expect fast progress early and plan for slow, small gains after the third year.
 - Shrink the surplus as you advance, since less of it can become muscle.
 
-Muscular limits and FFMI · Beginner · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential), [McDonald 2019b](https://bodyrecomposition.com/muscle-gain/another-look-at-ffmi-3)
+Muscular limits and FFMI · Beginner · Coaching practice · Sources: [McDonald 2009ab](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential), [McDonald 2019b](https://bodyrecomposition.com/muscle-gain/another-look-at-ffmi-3)
 
 ### A few organs, not muscle, do most of the resting calorie burn
 
@@ -355,7 +355,7 @@ Muscular limits and FFMI · Beginner · Coaching practice · Sources: [McDonald 
 
 The per-kilo values were proposed by Elia and later tested against measured resting expenditure and MRI organ sizes in 131 healthy, non-obese adults. A review of tissue energy needs reaches the same conclusion: a handful of very active organs, a small share of body weight, explain most of resting expenditure. Muscle adds up to a fair amount in total only through its sheer quantity. Lyle McDonald uses the figures to correct two gym beliefs, that a pound of muscle burns 50 kcal a day and that fat burns nothing.
 
-Metabolic rate · Intermediate · Some support · Sources: [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885), [McClave 2001](https://doi.org/10.1097/00075197-200103000-00011), [McDonald 2009g](https://bodyrecomposition.com/research/energy-needs-body)
+Metabolic rate · Intermediate · Some support · Sources: [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885), [McClave 2001](https://doi.org/10.1097/00075197-200103000-00011), [McDonald 2009h](https://bodyrecomposition.com/research/energy-needs-body)
 
 ### People of the same size and composition still differ in resting metabolism
 
@@ -375,7 +375,7 @@ Organ size varies far less between people than body weight does. A person of 110
 
 - If you are very heavy, estimate needs from an equation that also uses height, age and sex.
 
-Metabolic rate · Intermediate · Thin evidence · Sources: [McClave 2001](https://doi.org/10.1097/00075197-200103000-00011), [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885), [McDonald 2009g](https://bodyrecomposition.com/research/energy-needs-body)
+Metabolic rate · Intermediate · Thin evidence · Sources: [McClave 2001](https://doi.org/10.1097/00075197-200103000-00011), [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885), [McDonald 2009h](https://bodyrecomposition.com/research/energy-needs-body)
 
 ### People often look leaner in the week after a long diet ends
 
@@ -498,7 +498,7 @@ Lyle McDonald describes lifters close to their ceiling who respond to slow progr
 - Match the size of the surplus to your training age.
 - Measure progress in small steps: a rep here, a kilo there, over months.
 
-Muscular limits and FFMI · Intermediate · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential)
+Muscular limits and FFMI · Intermediate · Coaching practice · Sources: [McDonald 2009ab](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential)
 
 ### Building muscle to 'speed up your metabolism'
 
@@ -508,7 +508,7 @@ At about 13 kcal per kg a day, muscle is cheap tissue to keep. Ten kilos (22 lb)
 
 - Create the deficit with food and daily activity; lift to keep and build muscle.
 
-Metabolic rate · Beginner · Some support · Sources: [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885), [McDonald 2009g](https://bodyrecomposition.com/research/energy-needs-body), [McDonald 2007a](https://bodyrecomposition.com/muscle-gain/fat-percentage-body-comp-changes)
+Metabolic rate · Beginner · Some support · Sources: [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885), [McDonald 2009h](https://bodyrecomposition.com/research/energy-needs-body), [McDonald 2007a](https://bodyrecomposition.com/muscle-gain/fat-percentage-body-comp-changes)
 
 ### Measuring yourself against drug-assisted physiques and programmes
 
@@ -534,7 +534,7 @@ Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](h
 | about 2x serum leptin | Leptin in women compared with men at equal fat mass: 15.2 against 6.9 ng per ml in 63 women and 333 men whose average fat mass was the same, about 20.5 kg (45 lb). | Some support | [Hickey 1996](https://doi.org/10.1006/bmme.1996.0056) |
 | about 2/3 of the rise in expenditure | Share of the extra energy burned in overfeeding that came from NEAT: In 16 adults overfed by 1,000 kcal a day for 8 weeks. The change in NEAT predicted resistance to fat gain (r = 0.77). | Some support | [Levine 1999](https://doi.org/10.1126/science.283.5399.212) |
 | 25 kg/m2, height-normalized | FFMI where drug-free athletes topped out: Upper edge for 74 non-users in a 1995 study of 157 male athletes. Many steroid users exceeded it and some passed 30. | Thin evidence | [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003) |
-| 18-23 kg (40-50 lb) | Career muscle gain predicted for men by McDonald's model: His estimate of total drug-free muscle gained over four or more years of proper training. Women about half. A coaching model, not a study result. | Coaching practice | [McDonald 2009aa](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential) |
+| 18-23 kg (40-50 lb) | Career muscle gain predicted for men by McDonald's model: His estimate of total drug-free muscle gained over four or more years of proper training. Women about half. A coaching model, not a study result. | Coaching practice | [McDonald 2009ab](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential) |
 | 13 kcal per kg per day | Resting energy use of muscle: About 6 kcal per lb. Fat tissue uses about 4.5 kcal per kg (2 per lb), while the liver and brain use 200 or more. | Some support | [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885) |
 | 26 % of variance | Variation in basal metabolic rate not explained by body composition or age: What was left after fat-free mass (63 percent), fat mass (6 percent) and age (2 percent) in 150 adults. | Some support | [Johnstone 2005](https://doi.org/10.1093/ajcn/82.5.941) |
 | 7.9 kg (17.4 lb) | Fat-free mass gained in 20 weeks at the highest testosterone dose tested: In healthy young men on the highest of five doses, with energy and protein intake standardized. HDL cholesterol fell as dose rose. | Some support | [Bhasin 2001](https://doi.org/10.1152/ajpendo.2001.281.6.e1172) |
@@ -638,13 +638,14 @@ Where measured groups fall on the fat-free mass index. Methods differ, so treat 
 | Group | FFMI (kg/m2) | How it was measured |
 |---|---|---|
 | Women athletes, mean of 143 | 16.3 | DXA, 2014 reference study |
+| Women college athletes, 97.5th percentile of 372 | 23.9 (mean 18.8) | DXA, 2019 study |
 | Men athletes, mean of 339 | 19.8 | DXA, 2014 reference study |
 | Men rugby players, mean of 39 | 21.3 | DXA, 2014 reference study |
 | Drug-free male athletes, upper edge of 74 | 25.0 | Skinfolds, height-normalized, 1995 study |
 | Mr. America winners 1939 to 1959, mean of 20 | 25.4 | Estimated from records, 1995 study |
 | Steroid users, highest values among 83 | above 30 | Skinfolds, height-normalized, 1995 study |
 
-Some support · Sources: [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [Santos 2014](https://doi.org/10.1371/journal.pone.0097846)
+Some support · Sources: [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003), [Santos 2014](https://doi.org/10.1371/journal.pone.0097846), [Harty 2019](https://doi.org/10.1080/02640414.2019.1634964)
 
 ## The four parts of daily energy expenditure
 

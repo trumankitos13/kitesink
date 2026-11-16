@@ -89,19 +89,22 @@
       ],
       "verdict": "depends",
       "take": "For size, weekly sets matter more than how they are split; for strength, training more often may help, though findings differ.",
-      "body": "A meta-regression of 67 studies found growth rose with weekly set volume, while frequency's effect on growth was compatible with negligible effects. Strength gains did rise with frequency, with diminishing returns. A separate meta-analysis found no significant effect of frequency on strength when volume was equal. In one network analysis the top-ranked growth plan was twice weekly, so twice a week is a sensible default, not a requirement.",
+      "body": "A meta-regression of 67 studies found growth rose with weekly set volume, while frequency's effect was compatible with negligible effects; a meta-analysis of 25 studies found no growth difference at equal volume. Strength gains rose with frequency, with diminishing returns, though another meta-analysis found no significant strength effect at equal volume. A network analysis ranked twice weekly top for growth. McDonald's view, a practical one: once weekly sets per muscle are high, two or more sessions keep each one manageable.",
       "do": [
         "Set your weekly sets first, then choose the number of days that lets you train each session hard.",
+        "If a muscle gets many hard sets a week, split them over at least two sessions.",
         "Add a day if sessions get so long that your effort drops."
       ],
-      "studied": "Pelland 2026: 67 studies, 2,058 participants (about 79% male, average age about 25). Ralston 2018: 12 studies on strength. Currier 2023: network analysis of 12 plans.",
+      "studied": "Pelland 2026: 67 studies, 2,058 participants (about 79% male, average age about 25). Schoenfeld 2019: 25 studies. Ralston 2018: 12 studies on strength. Currier 2023: network analysis of 12 plans.",
       "evidence": "meta-analysis",
       "level": "beginner",
       "confidence": "strong",
       "sources": [
         "pelland-2026",
         "ralston-2018",
-        "currier-2023"
+        "currier-2023",
+        "schoenfeld-2019",
+        "mcdonald-frequency-growth"
       ]
     },
     {
@@ -142,7 +145,7 @@
       ],
       "verdict": "overstated",
       "take": "Adding cardio did not reduce overall muscle growth in a 43-study review, though a small effect showed at fibre level, mainly with running.",
-      "body": "A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength was reduced, more so when both were done in the same session. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.",
+      "body": "A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength gains were reduced (effect -0.28), more so when cardio and lifting shared a session than when they were 3 hours or more apart. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.",
       "do": [
         "Keep your lifting volume the same when you add cardio and, if you can, leave 3 hours or more between the sessions."
       ],
@@ -241,18 +244,19 @@
       ],
       "verdict": "overstated",
       "take": "No cited study shows a lifting belt weakening the core; short trials found little change in muscle activity and more reps with a belt.",
-      "body": "In 28 men squatting at 75% of predicted max, a belt alone did not change muscle activity, while abdominal bracing raised abdominal activity with or without a belt. In 49 lifters, a belt raised reps with a 6-rep-max load from 6.5 to 8.1. A review of 35 studies of lumbar supports, which are medical braces and not lifting belts, found inconsistent effects on trunk muscles. The two belt studies were single-session, so months of belt use are not covered.",
+      "body": "In 28 men squatting at 75% of predicted max, a belt alone did not change muscle activity, while abdominal bracing raised abdominal activity with or without a belt. In 49 lifters, a belt raised reps with a 6-rep-max load from 6.5 to 8.1. In 9 adults deadlifting 90% of max, a belt raised intra-abdominal pressure, the usual reason given for wearing one. A review of 35 studies of lumbar supports, which are medical braces and not lifting belts, found inconsistent effects on trunk muscles. The belt studies lasted one or two sessions, so months of belt use are not covered.",
       "do": [
         "Learn to brace your abdomen without a belt, then add a belt for heavy sets if you like."
       ],
-      "studied": "Lynch 2025: 28 men, one session. Veltzke 2026: 49 men and women, two sessions a week apart. Azadinia 2017: review of 35 studies of lumbar supports.",
+      "studied": "Lynch 2025: 28 men, one session. Veltzke 2026: 49 men and women, two sessions a week apart. Harman 1989: 9 adults, one session. Azadinia 2017: review of 35 studies of lumbar supports.",
       "evidence": "mixed",
       "level": "beginner",
       "confidence": "limited",
       "sources": [
         "lynch-2025",
         "veltzke-2026",
-        "azadinia-2017"
+        "azadinia-2017",
+        "harman-1989"
       ]
     },
     {
@@ -893,17 +897,19 @@
       ],
       "verdict": "overstated",
       "take": "Fasted exercise burns slightly more fat during the session, but body-mass and body-fat changes were similar in the small review that tracked them.",
-      "body": "A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) compared fasted and fed exercise on weight and body composition and found trivial differences between groups, while warning that the data were limited. Its body-fat and lean-mass results came from women only.",
+      "body": "A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) found trivial differences in weight and body composition, while warning that the data were limited; its body-fat and lean-mass results came from women only. In a trial that controlled the diet, 20 young women did an hour of cardio 3 times a week for 4 weeks, and fasted and fed groups lost similar fat. McDonald's view is that these women were not lean, so a small benefit for very lean dieters is untested rather than disproven.",
       "do": [
         "Train at the time of day you will stick to, since the evidence shows no clear fat-loss edge from fasting."
       ],
-      "studied": "Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults, exercise of 120 minutes or less.",
+      "studied": "Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults. Schoenfeld 2014: 20 young women, 4 weeks, diet controlled.",
       "evidence": "meta-analysis",
       "level": "beginner",
       "confidence": "moderate",
       "sources": [
         "hackett-2017",
-        "vieira-2016"
+        "vieira-2016",
+        "schoenfeld-2014",
+        "mcdonald-fasted-cardio-2"
       ]
     },
     {
@@ -1181,20 +1187,22 @@
       ],
       "verdict": "overstated",
       "take": "Your body does push back when you lose weight, but a single fixed set point does not explain why body weight has risen across populations.",
-      "body": "A review of competing models says the set point model fits the biology of intake and expenditure but cannot explain the rise in body weight since the 1980s, while the settling point model fits the environment but struggles with genetics. Newer models combine the two. Beyond what a smaller body predicts, adaptive thermogenesis averages about 120 kcal a day and takes more than two weeks to develop. In one 52-week trial, eating rose about 100 kcal a day per kg lost.",
+      "body": "A review of models says the set point model fits the biology of intake and expenditure but not the rise in body weight since the 1980s, while the settling point model fits the environment but not genetics. Beyond what a smaller body predicts, adaptive thermogenesis averages about 120 kcal a day, and in one 52-week trial eating rose about 100 kcal a day per kg lost. In 10 people held 10 percent below usual weight, expenditure and thyroid hormones shifted toward regain. McDonald's view: habits set weight within a modest band, and the body resists loss far more than gain.",
       "do": [
         "Plan for more hunger and less fidgeting while you diet.",
         "Keep daily steps up, since unplanned movement falls first.",
         "Treat maintenance as a phase with its own plan."
       ],
-      "studied": "Speakman: expert review of four models. Muller: review of controlled underfeeding studies. Polidori: 153 people in a 52-week trial.",
+      "studied": "Speakman: expert review of four models. Muller: review of controlled underfeeding studies. Polidori: 153 people in a 52-week trial. Rosenbaum 2005: 10 inpatients held at 10% below usual weight.",
       "evidence": "review",
       "level": "intermediate",
       "confidence": "limited",
       "sources": [
         "speakman-2011",
         "muller-2013",
-        "polidori-2016"
+        "polidori-2016",
+        "rosenbaum-2005",
+        "mcdonald-set-points"
       ]
     },
     {
@@ -3973,6 +3981,114 @@
       "pages": "459-471",
       "pmid": "19127177",
       "support": "A minimum of 150 min/wk of moderate-intensity physical activity for overweight adults; 200-300 min/wk recommended for long-term weight loss."
+    },
+    "harman-1989": {
+      "type": "trial",
+      "authors": [
+        "Harman EA",
+        "Rosenstein RM",
+        "Frykman PN",
+        "Nigro GA"
+      ],
+      "year": 1989,
+      "title": "Effects of a belt on intra-abdominal pressure during weight lifting",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "21",
+      "issue": "2",
+      "pages": "186???190",
+      "doi": "10.1249/00005768-198904000-00012",
+      "n_participants": 9,
+      "support": "Results suggest that the use of a lifting belt increases IAP"
+    },
+    "schoenfeld-2014": {
+      "type": "rct",
+      "authors": [
+        "Schoenfeld BJ",
+        "Aragon AA",
+        "Wilborn CD",
+        "Krieger JW",
+        "Sonmez GT"
+      ],
+      "year": 2014,
+      "title": "Body composition changes associated with fasted versus non-fasted aerobic exercise",
+      "journal": "Journal of the International Society of Sports Nutrition",
+      "volume": "11",
+      "issue": "1",
+      "doi": "10.1186/s12970-014-0054-7",
+      "pmid": "25429252",
+      "n_participants": 20,
+      "pages": "54",
+      "support": "Twenty healthy young female volunteers were randomly assigned to 1 of 2 experimental groups. Training consisted of 1 hour of steady-state aerobic exercise performed 3 days per week. Both groups showed a significant loss of weight (P = 0.0005) and fat mass (P = 0.02) from baseline, but no significant between-group differences were noted in any outcome measure."
+    },
+    "mcdonald-fasted-cardio-2": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2021,
+      "title": "Is Fasted Cardio Useless for Fat Loss: Part 2",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2",
+      "retrieved": "2026-11-15",
+      "support": "Source for his critique of applying the one diet-controlled trial to very lean dieters, and for his view that protein use during cardio is too small to threaten muscle."
+    },
+    "schoenfeld-2019": {
+      "type": "meta-analysis",
+      "authors": [
+        "Schoenfeld BJ",
+        "Grgic J",
+        "Krieger J"
+      ],
+      "year": 2019,
+      "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency",
+      "journal": "Journal of Sports Sciences",
+      "volume": "37",
+      "issue": "11",
+      "pages": "1286-1295",
+      "doi": "10.1080/02640414.2018.1555906",
+      "pmid": "30558493",
+      "n_studies": 25,
+      "support": "A total of 25 studies were deemed to meet inclusion criteria. Results showed no significant difference between higher and lower frequency on a volume-equated basis."
+    },
+    "mcdonald-frequency-growth": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2020,
+      "title": "Does Training Frequency Matter for Muscle Growth?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/does-training-frequency-matter-for-muscle-growth",
+      "retrieved": "2026-11-17",
+      "support": "His reasoning that a single session has a useful ceiling of hard sets per muscle, so high weekly volume is better spread over two or more sessions. A judgment, not a trial finding."
+    },
+    "rosenbaum-2005": {
+      "type": "trial",
+      "authors": [
+        "Rosenbaum M"
+      ],
+      "year": 2005,
+      "title": "Low-dose leptin reverses skeletal muscle, autonomic, and neuroendocrine adaptations to maintenance of reduced weight",
+      "journal": "Journal of Clinical Investigation",
+      "volume": "115",
+      "issue": "12",
+      "pages": "3579-3586",
+      "doi": "10.1172/jci25977",
+      "pmid": "16322796",
+      "n_participants": 10,
+      "support": "10 inpatient subjects maintaining a 10% reduced weight. During leptin administration, energy expenditure, skeletal muscle work efficiency, sympathetic nervous system tone, and circulating concentrations of thyroxine and triiodothyronine returned to pre-weight-loss levels."
+    },
+    "mcdonald-set-points": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Set Point Settling Points and Bodyweight Regulation Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/set-points-and-settling-points",
+      "retrieved": "2026-11-15",
+      "support": "Backs his reading that weight defence is lopsided and that set point and settling point both operate."
     }
   }
 }

@@ -1396,7 +1396,8 @@
       "confidence": "moderate",
       "sources": [
         "kouri-1995",
-        "santos-2014"
+        "santos-2014",
+        "harty-2019"
       ],
       "take": "Where measured groups fall on the fat-free mass index. Methods differ, so treat the rows as rough landmarks.",
       "columns": [
@@ -1409,6 +1410,11 @@
           "Women athletes, mean of 143",
           "16.3",
           "DXA, 2014 reference study"
+        ],
+        [
+          "Women college athletes, 97.5th percentile of 372",
+          "23.9 (mean 18.8)",
+          "DXA, 2019 study"
         ],
         [
           "Men athletes, mean of 339",
@@ -3240,6 +3246,28 @@
       "url": "https://bodyrecomposition.com/training/do-drugs-only-help-a-little",
       "retrieved": "2026-11-15",
       "support": "Backs his argument that drug-assisted size, recovery and training loads are not a fair yardstick for drug-free lifters."
+    },
+    "harty-2019": {
+      "type": "cohort",
+      "authors": [
+        "Harty PS",
+        "Zabriskie HA",
+        "Stecker RA",
+        "Currier BS",
+        "Moon JM",
+        "Jagim AR",
+        "Kerksick CM"
+      ],
+      "year": 2019,
+      "title": "Upper and lower thresholds of fat-free mass index in a large cohort of female collegiate athletes",
+      "journal": "Journal of Sports Sciences",
+      "volume": "37",
+      "issue": "20",
+      "pages": "2381-2388",
+      "doi": "10.1080/02640414.2019.1634964",
+      "pmid": "31238804",
+      "n_participants": 372,
+      "support": "372 female collegiate athletes underwent body composition assessment via dual-energy x-ray absorptiometry. Average FFMI was 18.82±2.08 kg/m2. FFMI in rugby athletes was 20.09, cross country 16.56, Olympic weightlifting 19.69. The upper threshold for FFMI in female athletes (97.5th percentile) was 23.90 kg/m2."
     }
   }
 }

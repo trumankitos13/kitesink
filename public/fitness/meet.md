@@ -38,11 +38,11 @@ Attempts and warm-up · Intermediate · Rulebook · Sources: [IPF 2026b](https:/
 
 **A meta-analysis of 10 strength studies found a small gain overall, clearer for upper-body strength.**
 
-Caffeine improved strength (standardised mean difference 0.20, 95% CI 0.03 to 0.36) and power. For upper-body strength the effect was 0.21 (95% CI 0.02 to 0.39); for lower-body strength it was 0.15 (95% CI -0.05 to 0.34), not clearly different from zero. Effects differ between people and the evidence in women is thin. Avoid trying it for the first time at a meet.
+Caffeine improved strength (standardised mean difference 0.20, 95% CI 0.03 to 0.36) and power. For upper-body strength the effect was 0.21 (95% CI 0.02 to 0.39); for lower-body strength it was 0.15 (95% CI -0.05 to 0.34), not clearly different from zero. Effects differ between people and the evidence in women is thin. Caffeine lasted longer in women on low-dose oral contraceptives, with a half-life of about 7.9 hours against 5.4 in non-users. Avoid trying it for the first time at a meet.
 
 - Try your planned dose in training before the meet.
 
-Attempts and warm-up · Intermediate · Some support · Sources: [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0)
+Attempts and warm-up · Intermediate · Some support · Sources: [Grgic 2018](https://doi.org/10.1186/s12970-018-0216-0), [Abernethy 1985](https://doi.org/10.1007/bf00544361)
 
 ### Aim for nine good lifts and a smooth day, not a personal record
 
@@ -68,13 +68,14 @@ Federation and entry · Beginner · Rulebook · Sources: [USA Powerlifting 2026]
 
 ### Opening with a weight that is nearly a max
 
-**An opener that is hard to lift risks all three attempts and a total; keep it around 88-92% of a current best single.**
+**An opener that is hard to lift risks all three attempts and the total. At a first meet, open lighter, at about 85% of your best single or a little less.**
 
-Elite classic lifters opened near 91% of their expected third attempt. A heavy opener burns nerves and energy, and a miss uses one of three tries. First-time lifters often over-pick because the day feels exciting. Pick a weight you could lift for a clean double on a normal day, then build.
+Elite classic lifters opened near 91% of their expected third attempt, and in 10,672 Australian raw entries squat openers averaged 92% of the best squat made that day. These data do not separate first meets. McDonald's rule for a first-timer is lighter: a weight you could squat for five clean reps on a bad day, about 80 to 85 percent, and lower still on the bench because of the pause and commands. A miss uses one of three tries, and a made opener means you cannot bomb out of that lift.
 
-- Choose an opener from your best recent single, then drop it a little if unsure.
+- At a first meet, open with a weight you could use as your last warm-up.
+- With meet experience, choose an opener from your best recent single, then drop it a little if unsure.
 
-Attempts and warm-up · Beginner · Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608)
+Attempts and warm-up · Beginner · Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ### Arriving with gear you never checked against the rulebook
 
@@ -281,9 +282,9 @@ Afterwards · Beginner · Coaching practice
 
 | Number | What it is | Support | Sources |
 |---|---|---|---|
-| 88-92 % of best single | Opener as a share of your current best single: A conservative first attempt; elite classic lifters opened near 91% of their expected third attempt. | Coaching practice | [Travis 2021b](https://doi.org/10.1177/0031512520967608) |
-| 94-97.5 % of best single | Second attempt as a share of your current best single: A step up from the opener of about 5% for elite classic lifters; a realistic, solid weight. | Coaching practice | [Travis 2021b](https://doi.org/10.1177/0031512520967608) |
-| 98-102.5 % of best single | Third attempt as a share of your current best single: An aim around your best single, up to a small personal best if the day feels good. | Coaching practice | [Travis 2021b](https://doi.org/10.1177/0031512520967608) |
+| 80-85 % of best single | Opener as a share of your current best single: First meet: about 80-85% on squat, 80-82.5% on bench. Squat openers averaged 92% of the day's best in Australian raw meets; elite lifters, 91% of their planned third. | Coaching practice | [Travis 2021b](https://doi.org/10.1177/0031512520967608), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1) |
+| 85-92 % of best single | Second attempt as a share of your current best single: First meet: about 87-92% or a best triple on squat, 85-90% on bench. Elite classic lifters went up about 5% from opener to second. | Coaching practice | [Travis 2021b](https://doi.org/10.1177/0031512520967608), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet) |
+| 92-95 % of best single | Third attempt as a share of your current best single: First meet: about 95% (a best double) on squat, 92-95% on bench, not a max attempt. Elite classic lifters added about 3% from second to third. | Coaching practice | [Travis 2021b](https://doi.org/10.1177/0031512520967608), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet) |
 | 2 hours before lifting | Weigh-in start before lifting: IPF: no earlier than two hours before the category starts. USA Powerlifting: weigh-in starts two hours before lifting. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/) |
 | 90 minutes | Length of the weigh-in period: IPF: one and a half hours. USA Powerlifting: 90 minutes, ending 30 minutes before lifting. USPA: at least 90 minutes. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf) |
 | 1 minute | Time to start an attempt after being called: IPF: one minute from the speaker's call to the start of the attempt; USPA also gives one minute. | Rulebook | [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf) |
@@ -321,17 +322,20 @@ Commands as given by the chief referee in IPF, USA Powerlifting and USPA rules; 
 
 Rulebook · Sources: [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USA Powerlifting 2026](https://www.usapowerlifting.com/technical/), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf)
 
-## Attempt selection ranges from competition data
+## Attempt selection ranges, first meet and experienced
 
-Typical ranges as a share of a current best single, with an example at 200 kg (441 lb). They follow elite and national meet data; no study covers first meets.
+Ranges as a share of a current best single, with a 200 kg (441 lb) example. Experienced rows follow meet data; first-meet rows follow McDonald, as no study covers first meets.
 
 | Attempt | % of current best single | Example at 200 kg (441 lb) | Aim |
 |---|---|---|---|
+| First-meet opener | 80-85% | 160-170 kg (353-375 lb) | A weight that feels like a last warm-up |
+| First-meet second | 85-92% | 170-184 kg (375-406 lb) | Close to a best triple |
+| First-meet third | 92-95% | 184-190 kg (406-419 lb) | About a best double, not a max |
 | Opener | 88-92% | 176-184 kg (388-406 lb) | A weight you could lift easily on any day |
 | Second | 94-97.5% | 188-195 kg (414-430 lb) | A solid, realistic lift |
 | Third | 98-102.5% | 196-205 kg (432-452 lb) | A hard but makeable attempt |
 
-Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
+Coaching practice · Sources: [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet)
 
 ## Meet bag checklist
 

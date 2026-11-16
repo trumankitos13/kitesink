@@ -312,7 +312,7 @@ The women had a body mass index of 27 to 40 and each was allocated at random to 
 
 - Read a diet trial's absolute losses before its ranking of diets.
 
-Diets in trials · Beginner · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009f](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Beginner · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009g](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### Most of the loss came in the first two months, while the weekly classes ran
 
@@ -323,7 +323,7 @@ The trial weighed the women at 2, 6 and 12 months. In McDonald's reading of thos
 - Plan for support after the first weeks: check-ins, a coach or a group.
 - Expect the hard part of a diet to begin when the novelty ends.
 
-Diets in trials · Intermediate · Thin evidence · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Alhassan 2008](https://doi.org/10.1038/ijo.2008.8), [McDonald 2009f](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Intermediate · Thin evidence · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Alhassan 2008](https://doi.org/10.1038/ijo.2008.8), [McDonald 2009g](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### Within each A TO Z diet, the women who stuck closest lost the most
 
@@ -343,7 +343,7 @@ McDonald's position is that low-carbohydrate diets have no metabolic advantage b
 
 - If a doctor has told you that you are insulin resistant, ask which eating pattern they advise.
 
-Diets in trials · Advanced · Some support · Sources: [McClain 2013](https://doi.org/10.1111/j.1463-1326.2012.01668.x), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009f](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Advanced · Some support · Sources: [McClain 2013](https://doi.org/10.1111/j.1463-1326.2012.01668.x), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009g](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### No fat-loss supplement is required, and the proven ones add little
 
@@ -549,7 +549,7 @@ The Atkins group reported eating similar calories to the others, which some read
 - Choose between low-carb and higher-carb by which you can keep to.
 - Discount the first weeks of loss on any low-carb diet as partly water.
 
-Diets in trials · Intermediate · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Hall 2017](https://doi.org/10.1053/j.gastro.2017.01.052), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009f](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Diets in trials · Intermediate · Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [Hall 2017](https://doi.org/10.1053/j.gastro.2017.01.052), [Gardner 2018](https://doi.org/10.1001/jama.2018.0245), [McDonald 2009g](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ### Taking more of a stimulant product than the label says to speed fat loss
 
@@ -672,7 +672,7 @@ Mean change in 311 overweight premenopausal women, with 95 percent confidence in
 | LEARN | High carbohydrate, low saturated fat | 79 | -2.6 kg (-5.7 lb); interval -3.8 to -1.3 kg |
 | Ornish | Very high carbohydrate, very low fat | 76 | -2.2 kg (-4.9 lb); interval -3.6 to -0.8 kg |
 
-Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009f](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
+Some support · Sources: [Gardner 2007](https://doi.org/10.1001/jama.297.9.969), [McDonald 2009g](https://bodyrecomposition.com/research/comparison-of-diets-premenopausal-women)
 
 ## Fat-loss supplement ingredients: what controlled research found
 

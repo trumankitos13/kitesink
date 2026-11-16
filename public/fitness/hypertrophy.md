@@ -109,9 +109,9 @@ Load and reps · Beginner · Well supported · Sources: [Currier 2023](https://d
 
 **In new lifters, progressing by reps or by load gave the same strength and muscle gains over 10 weeks.**
 
-Thirty-nine previously untrained people (20 men, 19 women) had one leg progress by load and the other by reps. Leg extension 1RM and thigh muscle area rose by similar amounts in both. This was a short trial in beginners, so it may not transfer to advanced lifters.
+Thirty-nine previously untrained people (20 men, 19 women) had one leg progress by load and the other by reps. Leg extension 1RM and thigh muscle area rose by similar amounts in both. This was a short trial in beginners, so it may not transfer to advanced lifters. Combining the two, adding reps within a range and then adding weight, is called double progression.
 
-- Add reps within a range first, then raise the load and drop back to the low end of the range.
+- Use double progression: add reps within a range, then raise the load and build the reps back up.
 
 Programming · Beginner · Thin evidence · Sources: [Chaves 2024](https://doi.org/10.1055/a-2256-5857)
 
@@ -119,11 +119,12 @@ Programming · Beginner · Thin evidence · Sources: [Chaves 2024](https://doi.o
 
 **Once total weekly sets are equal, how often you train a muscle makes little difference to size.**
 
-The meta-regression found the effect of frequency on hypertrophy compatible with a negligible effect. In 21 people given the same weekly volume over 9 weeks, two sessions a week and four sessions a week gave the same muscle and strength gains. In 24 men, training one or three times a week gave similar thigh results.
+The meta-regression found the effect of frequency on hypertrophy compatible with a negligible effect, and a meta-analysis of 25 studies found no growth difference between frequencies at equal volume. In 21 people given the same weekly volume over 9 weeks, two sessions a week and four sessions a week gave the same muscle and strength gains. In 24 men, training one or three times a week gave similar thigh results. McDonald's view, a practical one, is that a high weekly set count per muscle is easier to train hard when split over two or more sessions.
 
 - Pick the number of weekly sessions you can keep, then spread your sets across them.
+- If a muscle gets many hard sets a week, give it at least two sessions.
 
-Frequency and splits · Beginner · Well supported · Sources: [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Hamarsland 2022](https://doi.org/10.3389/fphys.2021.789403), [Neves 2022](https://doi.org/10.1371/journal.pone.0276154)
+Frequency and splits · Beginner · Well supported · Sources: [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Hamarsland 2022](https://doi.org/10.3389/fphys.2021.789403), [Neves 2022](https://doi.org/10.1371/journal.pone.0276154), [Schoenfeld 2019](https://doi.org/10.1080/02640414.2018.1555906), [McDonald 2020b](https://bodyrecomposition.com/training/does-training-frequency-matter-for-muscle-growth)
 
 ### Full-body and split routines give similar results
 
@@ -149,11 +150,11 @@ Exercises and rest · Beginner · Some support · Sources: [Pallarés 2021](http
 
 **Exercises that load a muscle when it is long gave bigger gains than versions that load it short, in trials that compared them.**
 
-Seated leg curls grew the whole hamstrings more than prone leg curls (+14% against +9%, 20 adults, 12 weeks). Overhead cable triceps extensions beat neutral-arm ones (+19.9% against +13.9%, 21 adults, 12 weeks). In 42 young women, calf raises done in the lower, stretched half grew the medial calf more than full or top-half range.
+Seated leg curls grew the whole hamstrings more than prone leg curls (+14% against +9%, 20 adults, 12 weeks). Overhead cable triceps extensions beat neutral-arm ones (+19.9% against +13.9%, 21 adults, 12 weeks). In 42 young women, calf raises done in the lower, stretched half grew the medial calf more than full or top-half range. Knee angle matters for the calf too: in 14 untrained adults over 12 weeks, standing calf raises grew the lateral gastrocnemius 12.4% against 1.7% for seated ones, with similar soleus growth. The technique area covers calf raises.
 
 - Include one exercise per muscle that loads it stretched, such as seated leg curls or overhead triceps extensions.
 
-Exercises and rest · Intermediate · Some support · Sources: [Maeo 2021](https://doi.org/10.1249/mss.0000000000002523), [Maeo 2023](https://doi.org/10.1080/17461391.2022.2100279), [Kassiano 2023](https://doi.org/10.1519/jsc.0000000000004460)
+Exercises and rest · Intermediate · Some support · Sources: [Maeo 2021](https://doi.org/10.1249/mss.0000000000002523), [Maeo 2023](https://doi.org/10.1080/17461391.2022.2100279), [Kassiano 2023](https://doi.org/10.1519/jsc.0000000000004460), [Kinoshita 2023](https://doi.org/10.3389/fphys.2023.1272106)
 
 ### Rest long enough to repeat your reps; 2 to 5 minutes gave similar growth in trained men
 
@@ -229,12 +230,12 @@ Programming · Beginner · Some support · Sources: [Simão 2012](https://doi.or
 
 **Warming up helps performance. Long static stretches right before lifting can reduce it slightly.**
 
-A meta-analysis of 32 studies found warm-ups improved performance in 79% of measured outcomes. A review found static stretches of 60 seconds or more per muscle lowered performance by 4.6%, against 1.1% for shorter holds, when tested right afterwards. A squat trial found extra heavy or fast warm-up sets gave no clear gain in total reps or volume.
+A meta-analysis of 32 studies found warm-ups improved performance in 79% of measured outcomes. A review found static stretches of 60 seconds or more per muscle lowered performance by 4.6%, against 1.1% for shorter holds, when tested right afterwards, and a review of 106 studies found holds under 30 seconds had no detrimental effect. A squat trial found extra heavy or fast warm-up sets gave no clear gain in total reps or volume. The training basics area covers warm-up sets and when to stretch first.
 
 - Do two or three lighter, increasing sets of your first lift before working sets.
 - Hold long stretches for after training.
 
-Programming · Beginner · Some support · Sources: [Fradkin 2010](https://doi.org/10.1519/jsc.0b013e3181c643a0), [Behm 2016](https://doi.org/10.1139/apnm-2015-0235), [Souza 2024](https://doi.org/10.7717/peerj.17347)
+Programming · Beginner · Some support · Sources: [Fradkin 2010](https://doi.org/10.1519/jsc.0b013e3181c643a0), [Behm 2016](https://doi.org/10.1139/apnm-2015-0235), [Souza 2024](https://doi.org/10.7717/peerj.17347), [Kay 2012](https://doi.org/10.1249/mss.0b013e318225cb27)
 
 ### Deloads are common practice, but trials do not yet show they are needed
 
@@ -365,31 +366,31 @@ Exercises and rest · Beginner · Some support · Sources: [Senna 2016](https://
 
 ## Rep ranges and what each is good for
 
-Approximate loads for each rep range, with what research suggests about the result. Percentages are rough and vary by person and lift.
+Approximate loads for each rep range. Growth was similar across loads in pooled trials, so 8-12 is a handy middle, not a special range. Percentages vary by person and lift.
 
 | Reps per set | Rough load (% of 1RM) | What it is good for | Watch for |
 |---|---|---|---|
 | 1-5 | Over 85% | Maximal strength; practising heavy lifts | Long rests; technique slips when tired |
 | 6-8 | About 75-85% | Strength and size; high-load range in Lopez 2021 | Joint load on heavy compounds |
-| 8-12 | About 65-75% | Size; middle ground for most lifts | Stopping far from failure |
+| 8-12 | About 65-75% | Size; a handy middle ground, with no special research backing | Stopping far from failure |
 | 12-20 | About 55-65% | Size on single-joint and machine lifts | Pump and burn limiting sets before muscle is tired |
 | 20-30 | About 30-50% | Size when taken to failure (49 trained men, 12 weeks) | Very hard sets; lower strength gains |
 
-Some support · Sources: [Currier 2023](https://doi.org/10.1136/bjsports-2023-106807), [Lopez 2021](https://doi.org/10.1249/mss.0000000000002585), [Refalo 2021](https://doi.org/10.1080/02640414.2021.1898094), [Morton 2016](https://doi.org/10.1152/japplphysiol.00154.2016)
+Some support · Sources: [Currier 2023](https://doi.org/10.1136/bjsports-2023-106807), [Lopez 2021](https://doi.org/10.1249/mss.0000000000002585), [Refalo 2021](https://doi.org/10.1080/02640414.2021.1898094), [Morton 2016](https://doi.org/10.1152/japplphysiol.00154.2016), [McDonald 2014j](https://bodyrecomposition.com/training/categories-of-weight-training-3)
 
 ## Training splits compared
 
-Splits differ in how often each muscle is trained and how the week is arranged. With weekly volume equal, results were similar.
+Splits differ in how often each muscle is trained and how the week is arranged. With weekly volume equal, growth was similar in pooled trials.
 
 | Split | Days a week | Times each muscle is hit | Fits best | Trade-off |
 |---|---|---|---|---|
 | Full body | 2-4 | 2-4 | Beginners; busy people | Long sessions; fatigue from big lifts |
 | Upper/lower | 4 | 2 | Most lifters at 4 days | Large sessions in the middle of the week |
 | Push/pull/legs | 3 or 6 | 1 or 2 | People who enjoy daily training | 6 days a week is hard to sustain |
-| Body-part split | 5-6 | 1 | Experienced lifters wanting high volume per muscle | Each muscle only once a week |
+| Body-part split | 5-6 | 1 | Low weekly sets per muscle | All of a muscle's sets in one session; a poor fit at high volume (McDonald) |
 | Hybrid (upper/lower plus extras) | 4-5 | About 2 | People wanting variety | Needs more planning |
 
-Some support · Sources: [Ramos-Campo 2024](https://doi.org/10.1519/jsc.0000000000004774), [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Hamarsland 2022](https://doi.org/10.3389/fphys.2021.789403)
+Some support · Sources: [Ramos-Campo 2024](https://doi.org/10.1519/jsc.0000000000004774), [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Hamarsland 2022](https://doi.org/10.3389/fphys.2021.789403), [Schoenfeld 2019](https://doi.org/10.1080/02640414.2018.1555906), [McDonald 2020b](https://bodyrecomposition.com/training/does-training-frequency-matter-for-muscle-growth)
 
 ## Rest between sets and sets per week: a guide
 
@@ -415,7 +416,7 @@ Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.00000000000011
 - **Momentary muscular failure**: The point where you cannot finish another rep despite maximal effort. Volitional failure means you stop by choice.
 - **One-rep max (1RM)**: The heaviest load you can lift for one full rep. Training loads are often given as a percent of it, such as 70% of 1RM.
 - **Periodisation**: Planned changes in volume, load or exercises over weeks and months, such as linear steps or weekly undulation.
-- **Progressive overload**: Gradually asking more of the muscle over time, by adding reps, load or sets, so it keeps having a reason to adapt.
+- **Progressive overload**: Gradually asking more of the muscle over time, by adding reps, load or sets, so it keeps having a reason to adapt. Adding reps up to the top of a range and then adding weight is called double progression.
 - **Rate of perceived exertion (RPE)**: A 1-10 effort scale. On the RIR-based version, RPE 10 means 0 RIR, RPE 9 means 1 RIR, and so on.
 - **Repetitions in reserve (RIR)**: The number of reps you could still have done when the set ended. 0 RIR means failure. 2 RIR means two more reps were possible.
 - **Volume**: The amount of work. In this page, usually the number of hard sets per muscle per week. Volume load is sets times reps times weight.

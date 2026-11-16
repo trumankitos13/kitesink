@@ -74,7 +74,7 @@
     // Meet attempts. Opener, second and third as fractions of the best single you could
     // lift today. A convention, not a rule: "first" aims for nine good lifts, "bold" ends
     // on a small personal best. Rounded to 2.5 kg and always rising by at least one step.
-    ATTEMPT_STYLES: { first: [0.88, 0.94, 0.98], standard: [0.91, 0.96, 1], bold: [0.92, 0.975, 1.025] },
+    ATTEMPT_STYLES: { first: [0.85, 0.90, 0.95], standard: [0.91, 0.96, 1], bold: [0.92, 0.975, 1.025] },
     attempts: function (bestKg, style) {
       var p = F.ATTEMPT_STYLES[style] || F.ATTEMPT_STYLES.standard, out = [], prev = 0;
       for (var i = 0; i < 3; i++) { var v = F.round(bestKg * p[i], 2.5); if (v <= prev) v = prev + 2.5; out.push(v); prev = v; }

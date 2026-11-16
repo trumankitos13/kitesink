@@ -47,14 +47,15 @@ Evidence: Meta-analysis · Well supported · Sources: [Lopez 2021](https://doi.o
 
 **Verdict: Depends.** For size, weekly sets matter more than how they are split; for strength, training more often may help, though findings differ.
 
-A meta-regression of 67 studies found growth rose with weekly set volume, while frequency's effect on growth was compatible with negligible effects. Strength gains did rise with frequency, with diminishing returns. A separate meta-analysis found no significant effect of frequency on strength when volume was equal. In one network analysis the top-ranked growth plan was twice weekly, so twice a week is a sensible default, not a requirement.
+A meta-regression of 67 studies found growth rose with weekly set volume, while frequency's effect was compatible with negligible effects; a meta-analysis of 25 studies found no growth difference at equal volume. Strength gains rose with frequency, with diminishing returns, though another meta-analysis found no significant strength effect at equal volume. A network analysis ranked twice weekly top for growth. McDonald's view, a practical one: once weekly sets per muscle are high, two or more sessions keep each one manageable.
 
-Who was studied: Pelland 2026: 67 studies, 2,058 participants (about 79% male, average age about 25). Ralston 2018: 12 studies on strength. Currier 2023: network analysis of 12 plans.
+Who was studied: Pelland 2026: 67 studies, 2,058 participants (about 79% male, average age about 25). Schoenfeld 2019: 25 studies. Ralston 2018: 12 studies on strength. Currier 2023: network analysis of 12 plans.
 
 - Set your weekly sets first, then choose the number of days that lets you train each session hard.
+- If a muscle gets many hard sets a week, split them over at least two sessions.
 - Add a day if sessions get so long that your effort drops.
 
-Evidence: Meta-analysis · Well supported · Sources: [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Ralston 2018](https://doi.org/10.1186/s40798-018-0149-9), [Currier 2023](https://doi.org/10.1136/bjsports-2023-106807)
+Evidence: Meta-analysis · Well supported · Sources: [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Ralston 2018](https://doi.org/10.1186/s40798-018-0149-9), [Currier 2023](https://doi.org/10.1136/bjsports-2023-106807), [Schoenfeld 2019](https://doi.org/10.1080/02640414.2018.1555906), [McDonald 2020b](https://bodyrecomposition.com/training/does-training-frequency-matter-for-muscle-growth)
 
 ### Is muscle soreness a sign of a good workout?
 
@@ -73,7 +74,7 @@ Evidence: Mixed · Some support · Sources: [Nosaka 2002](https://doi.org/10.103
 
 **Verdict: Overstated.** Adding cardio did not reduce overall muscle growth in a 43-study review, though a small effect showed at fibre level, mainly with running.
 
-A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength was reduced, more so when both were done in the same session. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.
+A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength gains were reduced (effect -0.28), more so when cardio and lifting shared a session than when they were 3 hours or more apart. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.
 
 Who was studied: Schumann 2022: 43 studies in healthy adults, at least 4 weeks of supervised concurrent training. Lundberg 2022: 15 studies on muscle fibre size, same design.
 
@@ -125,13 +126,13 @@ Evidence: Cohort study · Thin evidence · Sources: [Reynolds 2006](https://doi.
 
 **Verdict: Overstated.** No cited study shows a lifting belt weakening the core; short trials found little change in muscle activity and more reps with a belt.
 
-In 28 men squatting at 75% of predicted max, a belt alone did not change muscle activity, while abdominal bracing raised abdominal activity with or without a belt. In 49 lifters, a belt raised reps with a 6-rep-max load from 6.5 to 8.1. A review of 35 studies of lumbar supports, which are medical braces and not lifting belts, found inconsistent effects on trunk muscles. The two belt studies were single-session, so months of belt use are not covered.
+In 28 men squatting at 75% of predicted max, a belt alone did not change muscle activity, while abdominal bracing raised abdominal activity with or without a belt. In 49 lifters, a belt raised reps with a 6-rep-max load from 6.5 to 8.1. In 9 adults deadlifting 90% of max, a belt raised intra-abdominal pressure, the usual reason given for wearing one. A review of 35 studies of lumbar supports, which are medical braces and not lifting belts, found inconsistent effects on trunk muscles. The belt studies lasted one or two sessions, so months of belt use are not covered.
 
-Who was studied: Lynch 2025: 28 men, one session. Veltzke 2026: 49 men and women, two sessions a week apart. Azadinia 2017: review of 35 studies of lumbar supports.
+Who was studied: Lynch 2025: 28 men, one session. Veltzke 2026: 49 men and women, two sessions a week apart. Harman 1989: 9 adults, one session. Azadinia 2017: review of 35 studies of lumbar supports.
 
 - Learn to brace your abdomen without a belt, then add a belt for heavy sets if you like.
 
-Evidence: Mixed · Thin evidence · Sources: [Lynch 2025](https://doi.org/10.1080/02640414.2025.2535048), [Veltzke 2026](https://doi.org/10.1519/JSC.0000000000005426), [Azadinia 2017](https://doi.org/10.1016/j.spinee.2016.12.005)
+Evidence: Mixed · Thin evidence · Sources: [Lynch 2025](https://doi.org/10.1080/02640414.2025.2535048), [Veltzke 2026](https://doi.org/10.1519/JSC.0000000000005426), [Azadinia 2017](https://doi.org/10.1016/j.spinee.2016.12.005), [Harman 1989](https://doi.org/10.1249/00005768-198904000-00012)
 
 ### Do you need to max out in training to get stronger?
 
@@ -463,13 +464,13 @@ Evidence: Meta-analysis · Well supported · Sources: [Schwingshackl 2020](https
 
 **Verdict: Overstated.** Fasted exercise burns slightly more fat during the session, but body-mass and body-fat changes were similar in the small review that tracked them.
 
-A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) compared fasted and fed exercise on weight and body composition and found trivial differences between groups, while warning that the data were limited. Its body-fat and lean-mass results came from women only.
+A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) found trivial differences in weight and body composition, while warning that the data were limited; its body-fat and lean-mass results came from women only. In a trial that controlled the diet, 20 young women did an hour of cardio 3 times a week for 4 weeks, and fasted and fed groups lost similar fat. McDonald's view is that these women were not lean, so a small benefit for very lean dieters is untested rather than disproven.
 
-Who was studied: Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults, exercise of 120 minutes or less.
+Who was studied: Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults. Schoenfeld 2014: 20 young women, 4 weeks, diet controlled.
 
 - Train at the time of day you will stick to, since the evidence shows no clear fat-loss edge from fasting.
 
-Evidence: Meta-analysis · Some support · Sources: [Hackett 2017](https://doi.org/10.3390/jfmk2040043), [Vieira 2016](https://doi.org/10.1017/S0007114516003160)
+Evidence: Meta-analysis · Some support · Sources: [Hackett 2017](https://doi.org/10.3390/jfmk2040043), [Vieira 2016](https://doi.org/10.1017/S0007114516003160), [Schoenfeld 2014](https://doi.org/10.1186/s12970-014-0054-7), [McDonald 2021b](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2)
 
 ### Do diet breaks speed up fat loss?
 
@@ -602,15 +603,15 @@ Evidence: Mixed · Some support · Sources: [Bhutani 2017](https://doi.org/10.14
 
 **Verdict: Overstated.** Your body does push back when you lose weight, but a single fixed set point does not explain why body weight has risen across populations.
 
-A review of competing models says the set point model fits the biology of intake and expenditure but cannot explain the rise in body weight since the 1980s, while the settling point model fits the environment but struggles with genetics. Newer models combine the two. Beyond what a smaller body predicts, adaptive thermogenesis averages about 120 kcal a day and takes more than two weeks to develop. In one 52-week trial, eating rose about 100 kcal a day per kg lost.
+A review of models says the set point model fits the biology of intake and expenditure but not the rise in body weight since the 1980s, while the settling point model fits the environment but not genetics. Beyond what a smaller body predicts, adaptive thermogenesis averages about 120 kcal a day, and in one 52-week trial eating rose about 100 kcal a day per kg lost. In 10 people held 10 percent below usual weight, expenditure and thyroid hormones shifted toward regain. McDonald's view: habits set weight within a modest band, and the body resists loss far more than gain.
 
-Who was studied: Speakman: expert review of four models. Muller: review of controlled underfeeding studies. Polidori: 153 people in a 52-week trial.
+Who was studied: Speakman: expert review of four models. Muller: review of controlled underfeeding studies. Polidori: 153 people in a 52-week trial. Rosenbaum 2005: 10 inpatients held at 10% below usual weight.
 
 - Plan for more hunger and less fidgeting while you diet.
 - Keep daily steps up, since unplanned movement falls first.
 - Treat maintenance as a phase with its own plan.
 
-Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653)
+Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008q](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
 
 ### Does everyone regain the weight after a diet?
 
