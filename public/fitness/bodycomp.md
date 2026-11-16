@@ -131,7 +131,7 @@ Body composition matters most in gravitational, weight-class and judged sports. 
 - Aim for the range where you train and recover well, then judge by performance.
 - Involve a sports dietitian or doctor before chasing a low body fat target for competition.
 
-Body fat levels · Intermediate · Some support · Sources: [Santos 2014](https://doi.org/10.1371/journal.pone.0097846), [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2009al](https://bodyrecomposition.com/fat-loss/4-reasons-change-body-composition)
+Body fat levels · Intermediate · Some support · Sources: [Santos 2014](https://doi.org/10.1371/journal.pone.0097846), [Ackland 2012](https://doi.org/10.2165/11597140-000000000-00000), [McDonald 2008e](https://bodyrecomposition.com/fat-loss/what-is-a-good-body-fat-percentage), [McDonald 2009am](https://bodyrecomposition.com/fat-loss/4-reasons-change-body-composition)
 
 ### Men and women lean out in a different order
 
@@ -305,7 +305,7 @@ The reviewers found no rise in the share of food energy absorbed during dieting.
 
 - When loss is slower than the sums predict, audit intake and daily steps first.
 
-Weight regulation and leptin · Intermediate · Some support · Sources: [Heymsfield 2007](https://doi.org/10.1093/ajcn/85.2.346), [McDonald 2009ak](https://bodyrecomposition.com/research/3-reasons-obese-lose-less-weight)
+Weight regulation and leptin · Intermediate · Some support · Sources: [Heymsfield 2007](https://doi.org/10.1093/ajcn/85.2.346), [McDonald 2009al](https://bodyrecomposition.com/research/3-reasons-obese-lose-less-weight)
 
 ### In the original study, drug-free athletes topped out at an FFMI of 25
 
@@ -347,7 +347,7 @@ He gives women about half those figures and stresses that the years count only i
 - Expect fast progress early and plan for slow, small gains after the third year.
 - Shrink the surplus as you advance, since less of it can become muscle.
 
-Muscular limits and FFMI · Beginner · Coaching practice · Sources: [McDonald 2009aj](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential), [McDonald 2019b](https://bodyrecomposition.com/muscle-gain/another-look-at-ffmi-3)
+Muscular limits and FFMI · Beginner · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential), [McDonald 2019b](https://bodyrecomposition.com/muscle-gain/another-look-at-ffmi-3)
 
 ### A few organs, not muscle, do most of the resting calorie burn
 
@@ -498,7 +498,7 @@ Lyle McDonald describes lifters close to their ceiling who respond to slow progr
 - Match the size of the surplus to your training age.
 - Measure progress in small steps: a rep here, a kilo there, over months.
 
-Muscular limits and FFMI · Intermediate · Coaching practice · Sources: [McDonald 2009aj](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential)
+Muscular limits and FFMI · Intermediate · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential)
 
 ### Building muscle to 'speed up your metabolism'
 
@@ -534,7 +534,7 @@ Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](h
 | about 2x serum leptin | Leptin in women compared with men at equal fat mass: 15.2 against 6.9 ng per ml in 63 women and 333 men whose average fat mass was the same, about 20.5 kg (45 lb). | Some support | [Hickey 1996](https://doi.org/10.1006/bmme.1996.0056) |
 | about 2/3 of the rise in expenditure | Share of the extra energy burned in overfeeding that came from NEAT: In 16 adults overfed by 1,000 kcal a day for 8 weeks. The change in NEAT predicted resistance to fat gain (r = 0.77). | Some support | [Levine 1999](https://doi.org/10.1126/science.283.5399.212) |
 | 25 kg/m2, height-normalized | FFMI where drug-free athletes topped out: Upper edge for 74 non-users in a 1995 study of 157 male athletes. Many steroid users exceeded it and some passed 30. | Thin evidence | [Kouri 1995](https://doi.org/10.1097/00042752-199510000-00003) |
-| 18-23 kg (40-50 lb) | Career muscle gain predicted for men by McDonald's model: His estimate of total drug-free muscle gained over four or more years of proper training. Women about half. A coaching model, not a study result. | Coaching practice | [McDonald 2009aj](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential) |
+| 18-23 kg (40-50 lb) | Career muscle gain predicted for men by McDonald's model: His estimate of total drug-free muscle gained over four or more years of proper training. Women about half. A coaching model, not a study result. | Coaching practice | [McDonald 2009ak](https://bodyrecomposition.com/muscle-gain/genetic-muscular-potential) |
 | 13 kcal per kg per day | Resting energy use of muscle: About 6 kcal per lb. Fat tissue uses about 4.5 kcal per kg (2 per lb), while the liver and brain use 200 or more. | Some support | [Wang 2010](https://doi.org/10.3945/ajcn.2010.29885) |
 | 26 % of variance | Variation in basal metabolic rate not explained by body composition or age: What was left after fat-free mass (63 percent), fat mass (6 percent) and age (2 percent) in 150 adults. | Some support | [Johnstone 2005](https://doi.org/10.1093/ajcn/82.5.941) |
 | 7.9 kg (17.4 lb) | Fat-free mass gained in 20 weeks at the highest testosterone dose tested: In healthy young men on the highest of five doses, with energy and protein intake standardized. HDL cholesterol fell as dose rose. | Some support | [Bhasin 2001](https://doi.org/10.1152/ajpendo.2001.281.6.e1172) |

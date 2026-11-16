@@ -1,6 +1,6 @@
 # Fitness key numbers and reference tables, indexed: KiteSink
 
-An index of the 124 key numbers and 61 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
+An index of the 126 key numbers and 62 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
 
 ## Key numbers
 
@@ -37,6 +37,8 @@ An index of the 124 key numbers and 61 reference tables in the KiteSink fitness 
 | [Typical deload length reported by athletes](https://kitesink.com/fitness/hypertrophy#hyp-num-deload-length) | 6.4 | days, average | Hypertrophy |
 | [Average performance change after short sleep](https://kitesink.com/fitness/hypertrophy#hyp-num-sleep-loss) | -7.6 | % performance change | Hypertrophy |
 | [Thigh muscle area gain in 8 weeks, sedentary men](https://kitesink.com/fitness/hypertrophy#hyp-num-early-thigh-gain) | 9.6 | % over 8 weeks | Hypertrophy |
+| [Force up to which the biceps kept adding motor units](https://kitesink.com/fitness/hypertrophy#hyp-num-biceps-recruitment) | 88 | % of maximal isometric force | Hypertrophy |
+| [Tonnage of heavy sets against light sets to failure](https://kitesink.com/fitness/hypertrophy#hyp-num-light-load-tonnage) | 62 | % of light-set tonnage | Hypertrophy |
 | [Repetitions possible at 90% of 1RM](https://kitesink.com/fitness/powerlifting#pl-num-reps-90) | ~5 | reps (most lifts) | Powerlifting |
 | [Repetitions possible at 70% of 1RM on the bench](https://kitesink.com/fitness/powerlifting#pl-num-reps-70-bench) | ~14 | reps (bench press) | Powerlifting |
 | [Spread in reps between lifters at 80% of 1RM](https://kitesink.com/fitness/powerlifting#pl-num-rep-spread) | 2.5 | reps (SD) | Powerlifting |
@@ -155,6 +157,7 @@ An index of the 124 key numbers and 61 reference tables in the KiteSink fitness 
 - [Rep ranges and what each is good for](https://kitesink.com/fitness/hypertrophy#hyp-table-rep-ranges) (Hypertrophy)
 - [Training splits compared](https://kitesink.com/fitness/hypertrophy#hyp-table-splits) (Hypertrophy)
 - [Rest between sets and sets per week: a guide](https://kitesink.com/fitness/hypertrophy#hyp-table-rest-and-sets) (Hypertrophy)
+- [How big a fixed weight jump is on heavy and light lifts](https://kitesink.com/fitness/hypertrophy#hyp-table-plate-jumps) (Hypertrophy)
 - [Intensity zones as a percent of 1RM](https://kitesink.com/fitness/powerlifting#pl-table-intensity-zones) (Powerlifting)
 - [RPE to reps in reserve chart](https://kitesink.com/fitness/powerlifting#pl-table-rpe-rir) (Powerlifting)
 - [A 12-week cycle outline](https://kitesink.com/fitness/powerlifting#pl-table-12-week) (Powerlifting)

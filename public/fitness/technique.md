@@ -142,7 +142,7 @@ Nineteen male powerlifters deadlifted with a straight bar and a hexagonal (trap)
 
 - If your gym has a trap bar and you do not compete, consider it as your main deadlift.
 
-Deadlifts and back extensions · Beginner · Thin evidence · Sources: [Swinton 2011](https://doi.org/10.1519/jsc.0b013e3181e73f87), [McDonald 2020d](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
+Deadlifts and back extensions · Beginner · Thin evidence · Sources: [Swinton 2011](https://doi.org/10.1519/jsc.0b013e3181e73f87), [McDonald 2020e](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
 
 ### A Romanian deadlift ends where the hips stop moving
 
@@ -153,7 +153,7 @@ Coaching practice. In a Romanian deadlift the knees stay slightly bent, about 10
 - Keep the lats tight and the bar touching the legs all the way.
 - End the rep when the hips stop travelling back.
 
-Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009ab](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ### Use Romanian deadlifts for moderate reps and build up slowly
 
@@ -163,7 +163,7 @@ McDonald's programming advice, from coaching and not from trials. Use the Romani
 
 - Begin with a load you could lift for several more reps and add weight over two to three weeks.
 
-Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Deadlifts and back extensions · Intermediate · Coaching practice · Sources: [McDonald 2009ab](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ### A back that rounds mid-lift is a fault; a set, held upper-back curve is a style
 
@@ -185,7 +185,7 @@ McDonald advises against heavy stiff-legged deadlifts with a rounded back, citin
 - Treat a flat lower back as the default for heavy hinging.
 - See a physiotherapist or doctor about back pain that persists.
 
-Deadlifts and back extensions · Advanced · Thin evidence · Sources: [Callaghan 2001](https://doi.org/10.1016/s0268-0033(00)00063-2), [Saraceni 2020](https://doi.org/10.2519/jospt.2020.9218), [Colloca 2005](https://doi.org/10.1016/j.jmpt.2005.08.005), [McDonald 2009aa](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Deadlifts and back extensions · Advanced · Thin evidence · Sources: [Callaghan 2001](https://doi.org/10.1016/s0268-0033(00)00063-2), [Saraceni 2020](https://doi.org/10.2519/jospt.2020.9218), [Colloca 2005](https://doi.org/10.1016/j.jmpt.2005.08.005), [McDonald 2009ab](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ### Pad height decides whether a back extension trains the hips or the spinal muscles
 
@@ -249,7 +249,7 @@ McDonald's observation is that lifters with short thighs and a long torso stay u
 - Film a squat from the side and note what fails first: thighs or lower back.
 - Try a raised heel and a slightly wider stance before deciding the squat does not suit you.
 
-Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [McDonald 2009ac](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs), [Fuglsang 2017](https://doi.org/10.1519/jsc.0000000000001872)
+Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [McDonald 2009ad](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs), [Fuglsang 2017](https://doi.org/10.1519/jsc.0000000000001872)
 
 ### Full squats grew glutes and inner thighs more than half squats; quadriceps grew the same
 
@@ -271,7 +271,7 @@ Seventy-eight students were split between training and control groups. Those who
 - Squat if jumping or squat strength is the goal.
 - Use the leg press as the main thigh lift if your back fails first in squats, or straight after squats.
 
-Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [Wirth 2016](https://doi.org/10.1519/jsc.0000000000001228), [Escamilla 2001](https://doi.org/10.1097/00005768-200109000-00020), [McDonald 2009ac](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
+Squats, leg press and split squats · Intermediate · Thin evidence · Sources: [Wirth 2016](https://doi.org/10.1519/jsc.0000000000001228), [Escamilla 2001](https://doi.org/10.1097/00005768-200109000-00020), [McDonald 2009ad](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
 
 ### On the leg press, go deep but stop before the pelvis rolls off the pad
 
@@ -282,7 +282,7 @@ McDonald's coaching points. Loading every plate and moving the sled a short dist
 - Set the safety stops just above the depth where your hips begin to tuck.
 - Try single-leg presses if your lower back rounds when you use both legs.
 
-Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2009ac](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
+Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2009ad](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
 
 ### Set a split squat long enough and wide enough
 
@@ -334,7 +334,7 @@ Tendons behave like springs: stretched quickly, they give energy back. In 10 men
 - Count two seconds in the stretched position on every rep.
 - Start with much less than your usual load the first time you try paused reps.
 
-Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009ag](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950)
+Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009ah](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950)
 
 ### Standing calf raises grew the calf far more than seated ones
 
@@ -345,7 +345,7 @@ The gastrocnemius crosses the knee, so bending the knee slackens it and leaves m
 - Make a straight-knee calf raise your main calf exercise.
 - Treat seated raises as optional extra work for the soleus.
 
-Calves and leg extensions · Beginner · Thin evidence · Sources: [Kinoshita 2023](https://doi.org/10.3389/fphys.2023.1272106), [McDonald 2009ag](https://bodyrecomposition.com/muscle-gain/training-the-calves)
+Calves and leg extensions · Beginner · Thin evidence · Sources: [Kinoshita 2023](https://doi.org/10.3389/fphys.2023.1272106), [McDonald 2009ah](https://bodyrecomposition.com/muscle-gain/training-the-calves)
 
 ### Why high-rep leg extensions burn so much is not established
 
@@ -356,7 +356,7 @@ High-rep leg extensions cause more local burning than most lifts at the same eff
 - If the burn ends sets early, try reclining the seat back a little.
 - Or accept it and use the lift for lighter, higher-rep work.
 
-Calves and leg extensions · Intermediate · Thin evidence · Sources: [McDonald 2018d](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt), [Foster 1999](https://doi.org/10.1097/00005768-199910000-00012)
+Calves and leg extensions · Intermediate · Thin evidence · Sources: [McDonald 2018f](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt), [Foster 1999](https://doi.org/10.1097/00005768-199910000-00012)
 
 ### Leg extensions stress the kneecap joint most near straight; squats stress it most deep
 
@@ -376,7 +376,7 @@ Twenty-two untrained men trained leg extensions twice a week for 10 weeks, one l
 
 - Set the back pad as far back as the machine allows, or lean back and hold the handles.
 
-Calves and leg extensions · Intermediate · Thin evidence · Sources: [Larsen 2025](https://doi.org/10.1080/02640414.2024.2444713), [McDonald 2018d](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt)
+Calves and leg extensions · Intermediate · Thin evidence · Sources: [Larsen 2025](https://doi.org/10.1080/02640414.2024.2444713), [McDonald 2018f](https://bodyrecomposition.com/training/why-do-leg-extensions-hurt)
 
 ### Good technique is a shared model with room for personal style
 
@@ -419,7 +419,7 @@ McDonald argues that the barbell squat, bench press and deadlift became fixtures
 - Judge each lift in your plan against the three tests.
 - Keep a lift you enjoy and progress on; replace one that only wears you down.
 
-Exercise choice and EMG · Beginner · Coaching practice · Sources: [McDonald 2020d](https://bodyrecomposition.com/training/you-must-squat-dsfps-2), [McDonald 2009ac](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
+Exercise choice and EMG · Beginner · Coaching practice · Sources: [McDonald 2020e](https://bodyrecomposition.com/training/you-must-squat-dsfps-2), [McDonald 2009ad](https://bodyrecomposition.com/muscle-gain/squat-or-leg-press-for-big-legs)
 
 ### New lifters should keep breathing and leave bracing for later
 
@@ -640,7 +640,7 @@ Two arguments are often used to claim that everyone can squat to full depth with
 - Squat to the depth you can reach with a flat back and the bar over mid-foot.
 - Ask a physiotherapist if a pinch at the front of the hip limits your depth.
 
-Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2020d](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
+Squats, leg press and split squats · Beginner · Coaching practice · Sources: [McDonald 2020e](https://bodyrecomposition.com/training/you-must-squat-dsfps-2)
 
 ### Bouncing calf raises through a short range
 
@@ -650,7 +650,7 @@ The pattern is common: a heavy stack, quick shallow reps and no time spent at th
 
 - Slow the lowering and come to a dead stop at the bottom before each lift.
 
-Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009ag](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950), [Kassiano 2023](https://doi.org/10.1519/jsc.0000000000004460)
+Calves and leg extensions · Beginner · Thin evidence · Sources: [McDonald 2009ah](https://bodyrecomposition.com/muscle-gain/training-the-calves), [Lichtwark 2005](https://doi.org/10.1242/jeb.01950), [Kassiano 2023](https://doi.org/10.1519/jsc.0000000000004460)
 
 ### Adding weight before the movement is stable
 
@@ -791,7 +791,7 @@ Two lifts that often share a name. Descriptions follow Lyle McDonald's usage; so
 | Depth | Ends where the hips run out of motion, often just below the knee | Often to the feet, standing on a block |
 | Spinal muscles | Hold still under load | Lengthen and shorten under load |
 
-Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
+Coaching practice · Sources: [McDonald 2009ab](https://bodyrecomposition.com/training/romanian-deadlift-vs-sldl)
 
 ## Three sources of a technique fault and where to start
 

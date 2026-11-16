@@ -204,7 +204,7 @@ Supercompensation implies waiting for an overshoot before training again. McDona
 
 - Judge a programme over a block of weeks, not by whether each session beat the last.
 
-Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
+Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
 
 ### Selye's stress stages are a loose analogy for training, not a law
 
@@ -212,7 +212,7 @@ Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sourc
 
 A 2020 review notes that Selye built the syndrome from rodent studies using toxic stressors, that normal exercise in humans has never been shown to produce it, and that it gives no strong case that periodised training is necessary. A 2018 paper argues stress science has since moved on. Another 2018 review defends the syndrome as a useful framework, since disturbance does drive adaptation. McDonald sides with the critics: in Selye's work exhaustion meant death, nothing like a lifter who is tired or slightly weaker. What holds up is the general stress response, in which stressors add together.
 
-Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019g](https://bodyrecomposition.com/training/supercompensation-of-training)
+Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training)
 
 ### Take at least one day a week completely off
 
@@ -368,7 +368,7 @@ In 19 strength-trained athletes, 3 or 5 days without training preserved lower-bo
 - Do not fear a short break for illness, travel or planned rest.
 - After a break, give technical lifts one session to settle before judging them.
 
-Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007h](https://bodyrecomposition.com/training/the-importance-of-rest)
+Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007h](https://bodyrecomposition.com/training/the-importance-of-rest)
 
 ### Strength loss grows with time off and is larger in older and inactive people
 
@@ -378,7 +378,7 @@ The pooled effects were -0.62 for submaximal strength, -0.46 for maximal force a
 
 - Expect to be weaker after two or more weeks off, and plan lighter first sessions.
 
-Layoffs and coming back · Intermediate · Well supported · Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Well supported · Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### Breaks of a few weeks did not reduce long-term gains in beginners
 
@@ -398,7 +398,7 @@ In a 2024 trial, strength and size lost over a 10-week break were regained rapid
 
 - Expect lost ground to return quicker than you first gained it, whatever the mechanism.
 
-Layoffs and coming back · Intermediate · Some support · Sources: [Halonen 2024](https://doi.org/10.1111/sms.14739), [Staron 1991](https://doi.org/10.1152/jappl.1991.70.2.631), [Rahmati 2022](https://doi.org/10.1002/jcsm.13043), [Cumming 2024](https://doi.org/10.1113/jp285675), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Some support · Sources: [Halonen 2024](https://doi.org/10.1111/sms.14739), [Staron 1991](https://doi.org/10.1152/jappl.1991.70.2.631), [Rahmati 2022](https://doi.org/10.1002/jcsm.13043), [Cumming 2024](https://doi.org/10.1113/jp285675), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### After months off, restart as a beginner and expect to move faster than one
 
@@ -409,7 +409,7 @@ He starts returning lifters with one set, two at most, of eight to ten exercises
 - Use a full-body session two or three times a week for the first month.
 - Add load or one set per week, never both in the same week.
 
-Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2015q](https://bodyrecomposition.com/training/returning-from-my-layoff)
+Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2015q](https://bodyrecomposition.com/training/returning-from-my-layoff)
 
 ### After an injury, wait a week longer than you think and test one exercise at a time
 
@@ -420,7 +420,7 @@ Motivated lifters judge themselves healed too early. His arithmetic shows the co
 - Reintroduce one exercise per session for the injured area and check how it feels the next day.
 - See a clinician if pain persists, returns or limits daily movement.
 
-Layoffs and coming back · Intermediate · Coaching practice · Sources: [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### When time is short, a small dose holds most of your strength
 
@@ -569,7 +569,7 @@ The deplete-then-overshoot idea came from glycogen research, and glycogen does b
 
 - Aim for repeatable sessions that progress, not for maximum disruption.
 
-Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
+Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
 
 ### Turning a recovery session into a workout
 
@@ -644,7 +644,7 @@ McDonald saw the pattern often in commercial gyms: someone returns after years, 
 - Leave your old numbers out of the first month back.
 - Stop a set well short of failure in the first two weeks.
 
-Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff), [Cheung 2003](https://doi.org/10.2165/00007256-200333020-00005)
+Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff), [Cheung 2003](https://doi.org/10.2165/00007256-200333020-00005)
 
 ### Pairing a steep calorie deficit with large amounts of hard exercise
 
@@ -667,8 +667,8 @@ Dieting and life stress · Beginner · Thin evidence · Sources: [McDonald 2010b
 | 5 and 10 beats per minute | Rise in morning heart rate that old coaching rules act on: Rule of thumb passed on by McDonald: an easy day at about 5 above your rested norm, a day off at about 10. Crude and untested. | Coaching practice | [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6) |
 | 50-67% of normal volume | Size of a recovery session against a normal one: McDonald's guide: half to two thirds of usual volume, at about 60% of maximum heart rate, or at most 75% of 1RM for easy sets of 3 to 5. | Coaching practice | [McDonald 2010a](https://bodyrecomposition.com/training/active-rest-vs-passive-rest) |
 | 4-6 hours | Break between two sessions on the same day: A rule of thumb with no trial behind it: time for a meal or two and a rest. McDonald treats 3.5 to 7 hours as fine. A review lists over 6 hours among preventive measures. | Coaching practice | [McDonald 2014y](https://bodyrecomposition.com/training/two-a-day-training-weight-room), [McDonald 2014z](https://bodyrecomposition.com/training/two-a-day-training-weight-room-2), [Kreher 2012](https://doi.org/10.1177/1941738111434406) |
-| 2x the time off | Time to get back after one to two weeks off: McDonald's rule of thumb: two weeks off takes about four weeks to regain. It stops applying once the break reaches a month or more. | Coaching practice | [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff) |
-| 50-60% of previous max | Starting load after a long layoff: McDonald's starting point, or lighter, for the first sessions back after months away, for one or two easy sets per exercise. | Coaching practice | [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff) |
+| 2x the time off | Time to get back after one to two weeks off: McDonald's rule of thumb: two weeks off takes about four weeks to regain. It stops applying once the break reaches a month or more. | Coaching practice | [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff) |
+| 50-60% of previous max | Starting load after a long layoff: McDonald's starting point, or lighter, for the first sessions back after months away, for one or two easy sets per exercise. | Coaching practice | [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff) |
 | 1.78 odds ratio | Injury restrictions in exam weeks against ordinary weeks: Odds of a player having an injury restriction in weeks of high academic stress, in 101 college football players over a season. | Thin evidence | [Mann 2016](https://doi.org/10.1519/jsc.0000000000001055) |
 
 ## From normal tiredness to overtraining syndrome: four states
@@ -721,7 +721,7 @@ Each model draws a similar curve but leads to different advice. McDonald argues 
 | Fitness-fatigue (two-factor) | Each session adds fitness and fatigue; fatigue fades faster | Explains tapers, easy weeks and bests after a short break | Fitted a season of data from nine swimmers, but with wide uncertainty in its parameters |
 | General adaptation syndrome | Stress brings alarm, then resistance, then exhaustion | All stressors draw on one general stress response | Built on rodents and toxic stressors; never shown with normal exercise in humans |
 
-Thin evidence · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
+Thin evidence · Sources: [McDonald 2019l](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
 
 ## Planned rest at four time scales
 
@@ -747,7 +747,7 @@ Losses grow with time away and return faster than they were built. The restart a
 | About 10 weeks | Strength and size fell in new lifters, then were regained rapidly on retraining | Start lighter with fewer sets; add weekly | Several weeks |
 | Many months or years | Losses grow with duration, more so in older and inactive people | Restart as a beginner at 50 to 60% of old loads or less | Two to three months to approach old loads |
 
-Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [Halonen 2024](https://doi.org/10.1111/sms.14739), [Bosquet 2013](https://doi.org/10.1111/sms.12047), [McDonald 2009z](https://bodyrecomposition.com/training/training-after-a-layoff)
+Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [Halonen 2024](https://doi.org/10.1111/sms.14739), [Bosquet 2013](https://doi.org/10.1111/sms.12047), [McDonald 2009aa](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ## Terms
 

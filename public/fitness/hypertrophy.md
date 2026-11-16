@@ -287,6 +287,95 @@ A meta-analysis of 69 publications defined sleep loss as 6 hours or less in 24 a
 
 Recovery · Beginner · Some support · Sources: [Craven 2022](https://doi.org/10.1007/s40279-022-01706-y), [Knowles 2018](https://doi.org/10.1016/j.jsams.2018.01.012), [Lamon 2021](https://doi.org/10.14814/phy2.14660)
 
+### At extreme volumes, part of the lean mass gained was fluid
+
+**When trained men ramped up to 32 sets per exercise a week, most of the late lean-mass gain vanished once extra water outside the cells was accounted for.**
+
+Thirty-one trained college-aged men lifted 60% of 1RM for sets of 10, rising from 10 to 32 sets per exercise a week over 6 weeks. DXA lean mass rose 1.34 kg in weeks 1-3 and 0.85 kg in weeks 4-6; adjusted for extracellular water, the later gain fell to a non-significant 0.25 kg. In a follow-up on the same study, forced post hoc tests in the 15 men whose fibres grew suggested actin and myosin concentration fell about 30%. McDonald says the men reported about 4 reps in reserve, which he sees as far from failure. His 2018 article predates Pelland 2026, whose pooled trials show size still rising with sets.
+
+- Expect scale and lean-mass gains in a very high-volume block to include fluid.
+
+Volume · Advanced · Thin evidence · Sources: [Haun 2018](https://doi.org/10.3389/fnut.2018.00084), [Haun 2019](https://doi.org/10.1371/journal.pone.0215267), [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [McDonald 2018d](https://bodyrecomposition.com/training/training-volume-and-muscle-growth-2)
+
+### In a compound lift, the muscle that tires first decides when the set ends
+
+**McDonald's view: if a helper muscle gives out first, the muscle you want to grow may end the set well short of a hard effort.**
+
+He argues that a multi-joint set ends when its weakest contributor gives out, and that limb proportions and the relative strength of the helper muscles decide whether the target muscle gets a hard set. He reads this as one reason some people grow well from a lift and others do not. It is coaching reasoning. With work matched, multi-joint and single-joint training changed body composition alike, and pre-exhaustion added nothing; see the compound-and-isolation and exercise-order entries.
+
+- If a lift never tires the muscle you want to grow, add an isolation exercise for it (McDonald's practice).
+
+Exercises and rest · Intermediate · Coaching practice · Sources: [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-2), [McDonald 2019j](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-3)
+
+### Add weight only while form and range hold; drop it when they slip
+
+**McDonald's view: a heavier weight raises tension on the target muscle only if the lift still looks the same, and a lighter weight done properly can load it more.**
+
+McDonald's view is that weight on the bar stands in for muscle tension only while technique stays constant. If a jump brings leaning, heaving, bouncing or a shorter range, the target muscle may get no more tension, or less. Taking weight off until the lift is controlled through the full range can raise tension on the target muscle even though the load is lower. He applies the same check to adding sets or cutting rest. For range of motion, see the entry on cutting the range to lift heavier.
+
+- Keep a new weight only if reps, range and form match the old one.
+- If form has drifted, lower the load and build it back up (McDonald's practice).
+
+Programming · Beginner · Coaching practice · Sources: [McDonald 2019j](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-3)
+
+### Past the first years, expect to add load every few weeks, not every week
+
+**McDonald's view: beginners can add weight most sessions, largely from learning the lift, while after two or three years a jump every 4 to 6 weeks is realistic.**
+
+He assumes working sets already end within 2 to 3 reps of failure. On that basis, once gains slow, a hard enough load stays a growth stimulus for weeks, and an advanced lifter need not add weight or sets every week. His check: about every fourth week, take the last set of a lift to failure where that is safe. If you clearly beat the target, such as 12 reps with a weight chosen for 8, add weight next session. Lifters who judge reps in reserve well can instead add weight when a set planned at 1 to 3 in reserve feels like 4 or more. For the basic rule of adding weight at the top of a rep range, see the basics page.
+
+- Every few weeks, test the last set of a lift for reps where failing is safe (McDonald's practice).
+
+Programming · Intermediate · Coaching practice · Sources: [McDonald 2019j](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-3)
+
+### Curls tired the elbow flexors more, and for longer, than rows
+
+**In 16 highly trained men, 8 hard sets of preacher curls cut elbow-flexor strength more and for longer than rows did. That fits giving a row only part credit for the arms.**
+
+Sixteen highly trained men did 8 sets of 10RM one-arm seated rows with one arm and preacher curls with the other. Straight after, elbow-flexor strength was down 26.8% after curls and 15.1% after rows. At 24 hours it was back to baseline after rows but still 8.4% down after curls, and soreness lasted longer after curls. McDonald cites the study to argue that a row is not a full biceps set. The dose-response analysis on this page reached a half-credit rule from growth data.
+
+- Allow the biceps more recovery after hard curls than after rows.
+
+Recovery · Intermediate · Thin evidence · Sources: [Soares 2015](https://doi.org/10.1519/JSC.0000000000000899), [McDonald 2018e](https://bodyrecomposition.com/training/training-volume-muscle-growth-3)
+
+### Counting hard sets is a fair volume measure across about 6 to 20-plus reps
+
+**A review of trials in trained adults found that sets taken to or near failure track training volume well when each set has between about 6 and 20+ reps.**
+
+The review took 14 randomised trials of at least 6 weeks in people aged 18 to 35 with a year or more of training. It judged the number of sets to or near failure an adequate volume measure for growth across that rep span, with other variables held constant. McDonald accepts set counts on those terms, but doubts that very different rep counts are equal, and he treats a set ended about 4 reps short as borderline and anything easier as a warm-up. See the basics table on three ways to count volume.
+
+- When you total weekly volume, count only sets taken close to failure.
+
+Volume · Intermediate · Some support · Sources: [Baz-Valle 2021](https://doi.org/10.1519/JSC.0000000000002776), [McDonald 2020d](https://bodyrecomposition.com/training/what-is-training-volume)
+
+### In two small studies, the biceps was driven almost fully and the quadriceps a little less
+
+**Twitch tests found near-full activation of the elbow flexors in 11 subjects and 88 to 95% in the quadriceps of 8 men, not the small share of muscle often claimed.**
+
+Voluntary activation is tested by adding an electrical pulse to the nerve during a maximal effort; any extra force shows drive the person did not supply. In 11 subjects the elbow flexors reached a median 99.4% in fast lifting efforts and 98.0% when held still. In 8 men the quadriceps reached 95.2% held still, 89.7% when shortening and 88.3% when lengthening, slowly. The studies came from different labs and methods, and held still the gap was only 98.0% against 95.2%. McDonald speculates that the gap may be why legs seem to need more volume; he offers no test of it.
+
+Growth signals · Advanced · Thin evidence · Sources: [Gandevia 1998](https://doi.org/10.1111/j.1469-7793.1998.595be.x), [Babault 2001](https://doi.org/10.1152/jappl.2001.91.6.2628), [McDonald 2009z](https://bodyrecomposition.com/muscle-gain/reps-per-set-for-muscle-growth), [McDonald 2019h](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth)
+
+### Half-load sets to failure took three times as long and felt worse in one trial
+
+**Back-extension sets at 50% of maximal force took about three times the reps and time of 80% sets and were rated more uncomfortable. A study at 30% found no difference.**
+
+Twenty-six young adults (14 men, 12 women) did one set of machine back extensions to failure each week for 6 weeks at 80% or 50% of maximal force. Strength rose alike, but the lighter sets averaged 26 reps and 159 seconds against 8 reps and 51 seconds, with discomfort rated 7.8 against 4.8. In a single session with 8 trained men, discomfort did not differ between 30% and 80% loads. McDonald's view is that very light sets to failure earn their place mainly when a joint needs sparing or a machine stack runs out.
+
+- Keep very light sets to failure for simple machine exercises or for sparing a sore joint (McDonald's practice).
+
+Load and reps · Intermediate · Thin evidence · Sources: [Fisher 2018](https://doi.org/10.7717/peerj.6001), [Fisher 2017](https://doi.org/10.1002/mus.25645), [McDonald 2019f](https://bodyrecomposition.com/training/low-load-training-videos), [McDonald 2016h](https://bodyrecomposition.com/training/hypertrophy-zone)
+
+### Failure in every session, with nothing else cut, grew less in one small trial
+
+**Trained men who took the last set of every exercise to failure three days a week gained less fibre size than men training by percentages, with sets and days matched.**
+
+Fifteen well-trained men lifted 3 days a week for 10 weeks, and both groups also sprinted twice a week. Only the percentage group increased type I and type II fibre area in the thigh; both increased muscle thickness, with effect sizes favouring the percentage group. The authors suggest the failure group could not recover between sessions. McDonald reads it the same way: raising effort without cutting volume or frequency overloads recovery. With 7 and 8 men per group it is weak evidence; see the entry on failure slowing recovery.
+
+- If you take more sets to failure, cut sets or sessions to make room (McDonald's practice).
+
+Effort · Advanced · Thin evidence · Sources: [Carroll 2019](https://doi.org/10.3390/sports7070169), [McDonald 2019g](https://bodyrecomposition.com/research/muscle-fiber-adaptations)
+
 ## Common mistakes
 
 ### Judging a session by how sore you are
@@ -349,6 +438,26 @@ In a trial, a 1-minute rest gave fewer total reps over five sets than 3-5 minute
 
 Exercises and rest · Beginner · Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000)
 
+### Citing the retracted Barbalho trials as proof of a volume ceiling
+
+**Two trials whose titles claimed an upper threshold or ceiling for training volume have been retracted. They are not evidence either way.**
+
+A 2019 trial in trained women and a 2020 trial in trained men, both by Barbalho and colleagues, were presented as evidence of a ceiling on useful weekly sets. Both papers have since been retracted. The men's trial was withdrawn at the authors' request after they found inconsistencies in the data. McDonald took his discussion of them out of his tension series. The current pooled evidence shows diminishing returns from extra sets, not a clear ceiling.
+
+- Check whether a paper has been retracted before you rely on it.
+
+Volume · Intermediate · Well supported · Sources: [MSSE 2021](https://doi.org/10.1249/MSS.0000000000002672), [IJSPP 2020](https://doi.org/10.1123/ijspp.2020-0372), [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [McDonald 2019h](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth)
+
+### Assuming the exercise with more weight on the bar loads the muscle more
+
+**McDonald's view: bar weight tracks muscle tension only within one lift for one person. Between exercises, moment arms and shared work change the picture.**
+
+McDonald argues that a multi-joint lift often holds the load closer to the working joint, so the moment arm is shorter, and spreads the turning effect over several muscles. A single-joint lift for the same muscle may use far less weight held farther out, with that muscle doing nearly all the work. On his rough sums, the gap in load on the muscle being trained is much smaller than the gap in bar weight, and can even reverse. It rests on basic mechanics and his estimates; he offers no measurement.
+
+- Track progress by load and reps on the same exercise, not by comparing exercises.
+
+Exercises and rest · Intermediate · Coaching practice · Sources: [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-2), [McDonald 2019j](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-3)
+
 ## Key numbers
 
 | Number | What it is | Support | Sources |
@@ -363,6 +472,8 @@ Exercises and rest · Beginner · Some support · Sources: [Senna 2016](https://
 | 6.4 days, average | Typical deload length reported by athletes: Average length of a deload in the same survey of 246 strength and physique athletes. | Thin evidence | [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y) |
 | -7.6 % performance change | Average performance change after short sleep: Pooled across 69 publications where sleep was 6 hours or less in 24 hours. | Some support | [Craven 2022](https://doi.org/10.1007/s40279-022-01706-y) |
 | 9.6 % over 8 weeks | Thigh muscle area gain in 8 weeks, sedentary men: Includes swelling in the first weeks. Typical for new lifters, not for trained ones. | Thin evidence | [DeFreitas 2011](https://doi.org/10.1007/s00421-011-1905-4) |
+| 88 % of maximal isometric force | Force up to which the biceps kept adding motor units: Single-unit recordings found new biceps units joining up to this force. In a small thumb muscle, none joined above 50%. | Thin evidence | [Kukulka 1981](https://doi.org/10.1016/0006-8993(81)90266-3), [McDonald 2019h](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth) |
+| 62 % of light-set tonnage | Tonnage of heavy sets against light sets to failure: In 49 trained men, heavy sets (75-90% of 1RM, 8-12 reps) moved this share of the tonnage that light sets of 20-25 did, with similar growth. | Thin evidence | [Morton 2016](https://doi.org/10.1152/japplphysiol.00154.2016), [McDonald 2020d](https://bodyrecomposition.com/training/what-is-training-volume) |
 
 ## Rep ranges and what each is good for
 
@@ -407,18 +518,37 @@ A reading of the research on rest and weekly sets. Treat each line as a starting
 
 Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000), [Baz-Valle 2022](https://doi.org/10.2478/hukin-2022-0017), [Bernárdez-Vázquez 2022](https://doi.org/10.3389/fspor.2022.949021), [Zhang 2025](https://doi.org/10.1007/s40279-025-02176-8)
 
+## How big a fixed weight jump is on heavy and light lifts
+
+The same added weight is a small step on a heavy lift and a big one on a light lift. McDonald's fix for isolation lifts, and for women whose loads are lighter, is small plates.
+
+| Current load | Add 2.5 kg (5.5 lb) | Add 1 kg (2.2 lb) | Add 0.5 kg (1.1 lb) |
+|---|---|---|---|
+| 100 kg (220 lb), such as a squat | 2.5% | 1% | 0.5% |
+| 60 kg (132 lb), such as a bench press | 4.2% | 1.7% | 0.8% |
+| 30 kg (66 lb), such as a barbell curl | 8.3% | 3.3% | 1.7% |
+| 15 kg (33 lb), such as a dumbbell press | 16.7% | 6.7% | 3.3% |
+| 8 kg (18 lb), such as a lateral raise | 31.3% | 12.5% | 6.3% |
+
+Coaching practice · Sources: [McDonald 2019i](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-2), [McDonald 2019j](https://bodyrecomposition.com/training/muscular-tension-and-muscle-growth-3)
+
 ## Terms
 
 - **Deload**: A period of reduced training stress meant to lower fatigue and prepare you for later training, as defined by a coach consensus.
 - **Effect size and confidence interval**: Effect size is how big a difference is, in standard deviations. The interval shows a plausible range. If it spans zero, there is no clear difference.
 - **Hard set**: A working set taken close to failure, usually within a few reps. Warm-up sets and easy sets do not count towards weekly volume.
 - **Lengthened-position training**: Loading a muscle while it is stretched, as at the bottom of a curl or squat. Several trials found it grew more than loading it short.
+- **Mechanotransduction**: How a muscle fibre senses physical tension and converts it into chemical signals for growth. A 2011 review puts mTOR signalling at the centre of this response to load.
+- **Moment arm and torque**: A moment arm is the perpendicular distance from a joint to the line along which a force acts. Torque, the turning effect at the joint, is force times moment arm, so a weight held farther from the joint is harder to move.
 - **Momentary muscular failure**: The point where you cannot finish another rep despite maximal effort. Volitional failure means you stop by choice.
+- **mTOR (mTORC1)**: A protein kinase complex in muscle cells that switches on protein synthesis in response to loading. In a human trial, blocking it with the drug rapamycin stopped the early rise in synthesis after hard contractions.
 - **One-rep max (1RM)**: The heaviest load you can lift for one full rep. Training loads are often given as a percent of it, such as 70% of 1RM.
 - **Periodisation**: Planned changes in volume, load or exercises over weeks and months, such as linear steps or weekly undulation.
 - **Progressive overload**: Gradually asking more of the muscle over time, by adding reps, load or sets, so it keeps having a reason to adapt. Adding reps up to the top of a range and then adding weight is called double progression.
 - **Rate of perceived exertion (RPE)**: A 1-10 effort scale. On the RIR-based version, RPE 10 means 0 RIR, RPE 9 means 1 RIR, and so on.
+- **Recruitment and rate coding**: The two ways a muscle grades its force. Recruitment adds motor units; rate coding fires active ones faster. In one study the biceps kept recruiting to high forces, while a small thumb muscle finished early and relied more on firing rate.
 - **Repetitions in reserve (RIR)**: The number of reps you could still have done when the set ended. 0 RIR means failure. 2 RIR means two more reps were possible.
+- **Size principle (orderly recruitment)**: Motor units join a contraction in order of size: small, low-force units first, large, high-force units last, as the force needed rises or earlier units tire. So the largest units work only under heavy loads or late in hard sets.
 - **Volume**: The amount of work. In this page, usually the number of hard sets per muscle per week. Volume load is sets times reps times weight.
 
 ## Offers for people who arrive through an AI assistant
