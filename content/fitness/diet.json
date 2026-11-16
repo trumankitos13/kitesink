@@ -894,6 +894,412 @@
           "Mostly extra fat in an 8-week trial"
         ]
       ]
+    },
+    {
+      "id": "diet-deficit-percent-of-maintenance",
+      "type": "note",
+      "title": "Size the deficit as a share of maintenance, not a fixed calorie number",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-deficit-size",
+        "murphy-2021"
+      ],
+      "take": "A percentage cut scales with the person: 20 percent is 360 kcal a day at 1,800 kcal maintenance and 600 kcal at 3,000.",
+      "body": "A fixed 500 kcal cut is more than a quarter of a small woman's intake and a sixth of a big man's. McDonald sets deficits as a share of maintenance and calls 10 to 15 percent small, 20 to 25 percent moderate and anything beyond 25 percent large. The same percentage gives a larger person a bigger daily gap, so they lose faster on paper. At high maintenance levels a 25 percent cut can pass the roughly 500 kcal point where lean-mass gains stopped in a meta-regression.",
+      "do": [
+        "Estimate maintenance, take 20 to 25 percent off, and compare the result with the 500 kcal guide."
+      ]
+    },
+    {
+      "id": "diet-table-deficit-by-size",
+      "type": "table",
+      "title": "The same percentage deficit at two maintenance levels",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "hall-2007",
+        "heymsfield-2012",
+        "thomas-2013",
+        "murphy-2021",
+        "mcdonald-deficit-size"
+      ],
+      "take": "Daily deficit and a first-pass weekly loss at 7,700 kcal per kg (3,500 per lb). Supervised dieters lost about a quarter less than this rule predicts within two months.",
+      "columns": [
+        "Deficit",
+        "Maintenance 1,800 kcal",
+        "Maintenance 3,000 kcal",
+        "What to expect"
+      ],
+      "rows": [
+        [
+          "10%",
+          "180 kcal a day; about 0.16 kg (0.36 lb) a week",
+          "300 kcal a day; about 0.27 kg (0.6 lb) a week",
+          "Easy to keep; small enough for logging error to erase"
+        ],
+        [
+          "20%",
+          "360 kcal; about 0.33 kg (0.72 lb)",
+          "600 kcal; about 0.55 kg (1.2 lb)",
+          "A common middle ground for most dieters"
+        ],
+        [
+          "25%",
+          "450 kcal; about 0.41 kg (0.9 lb)",
+          "750 kcal; about 0.68 kg (1.5 lb)",
+          "Passes the 500 kcal guide for the larger person"
+        ]
+      ]
+    },
+    {
+      "id": "diet-mistake-tiny-deficit-loose-logging",
+      "type": "mistake",
+      "title": "Running a 10 percent deficit while logging food loosely",
+      "topic": "deficit",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "cfr-101-9",
+        "urban-2011",
+        "burrows-2019",
+        "mcdonald-deficit-size"
+      ],
+      "take": "A deficit of 200 to 300 kcal a day is about the size of ordinary label and logging error, so it can vanish without you noticing.",
+      "body": "US rules let a label run up to 20 percent over the declared calories, and 19 percent of 269 restaurant items held at least 100 kcal more per portion than stated. A review of 59 studies against doubly labelled water found most report eating less than they do. On 2,000 kcal a day, a 10 percent error cancels a 10 percent deficit. McDonald's view is that small deficits suit lean, experienced dieters who weigh their food; for others a larger cut leaves room for error.",
+      "do": [
+        "Weigh food and log everything if you choose a small deficit.",
+        "If your logging is rough, use a 20 to 25 percent cut instead."
+      ]
+    },
+    {
+      "id": "diet-fast-loss-regain",
+      "type": "note",
+      "title": "Losing weight quickly did not mean regaining it faster in a long trial",
+      "topic": "lean",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "purcell-2014",
+        "nackers-2010",
+        "mcdonald-rapid-fat-loss",
+        "mcdonald-deficit-size"
+      ],
+      "take": "In 200 adults with obesity, a 12-week rapid diet and a 36-week gradual one ended with the same share regained nearly three years later.",
+      "body": "Both groups aimed for 15 percent loss. Of the rapid group 81 percent reached 12.5 percent, against 50 percent of the gradual group, and completers had regained 70.5 and 71.2 percent by week 144. The rapid programme ran through a hospital, and one person in it needed gallbladder surgery. In 262 women, the fastest losers in month one had lost most at 18 months. McDonald argued in 2009 that fast loss can last if it builds habits; the trial came later and found no regain penalty, not an advantage.",
+      "do": [
+        "Do a rapid diet in a supervised programme, with a clinician involved.",
+        "Lean lifters should still use the slower pace in the rate-of-loss entry."
+      ]
+    },
+    {
+      "id": "diet-fixed-intake-plateau",
+      "type": "note",
+      "title": "A fixed calorie cut slows to a plateau because the gap closes as you shrink",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "thomas-2013",
+        "heymsfield-2012",
+        "hall-2011",
+        "mcdonald-3500-rule"
+      ],
+      "take": "On a fixed cut a shrinking body burns less, so loss slows and stops. Supervised dieters fell about a quarter short of the 3,500 rule within two months.",
+      "body": "Each kg lost early holds less energy than fat, because water and lean tissue go too (see the entry on energy per kg lost at week four). Even so, 103 adults with supervised or measured intake lost 20.1 lb (9.1 kg) in about 65 days, against 27.6 lb (12.5 kg) predicted by the rule. A validated model puts each lasting change of 100 kJ (24 kcal) a day at about 1 kg of eventual weight, half within a year. Eating less also trims the energy spent digesting food. To keep the pace, reopen the gap with less food or more movement.",
+      "do": [
+        "Use a dynamic planner, such as the NIH Body Weight Planner, for forecasts beyond a few weeks."
+      ]
+    },
+    {
+      "id": "diet-num-intake-change-rule",
+      "type": "number",
+      "title": "Eventual weight change per lasting change in daily intake",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "hall-2011"
+      ],
+      "value": "100",
+      "unit": "kJ a day per kg of weight",
+      "sort": 100,
+      "take": "About 10 kcal a day per lb. In an average overweight adult, half the change arrives within a year and 95 percent within about three."
+    },
+    {
+      "id": "diet-mistake-first-week-drop",
+      "type": "mistake",
+      "title": "Reading a big first-week drop on low carb as fast fat loss",
+      "topic": "plateau",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "kreitzman-1992",
+        "hall-2016",
+        "mcdonald-3500-rule",
+        "mcdonald-calorie-a-calorie"
+      ],
+      "take": "An early drop on low carb is mostly stored glycogen and the water held with it, and fat loss did not speed up on a ketogenic diet in a ward study.",
+      "body": "Glycogen is stored with three to four parts water, so emptying it moves the scale while releasing little stored energy. In 17 men on a metabolic ward, swapping a high-carbohydrate diet for a ketogenic one with the same calories raised chamber energy expenditure slightly, by about 57 kcal a day, yet body fat loss slowed and fat-free mass loss rose. McDonald notes that the water returns as soon as carbohydrate does. Judge any diet on the trend from week three or four onward.",
+      "do": [
+        "Leave out the first week when you compare diets or judge your rate of loss."
+      ]
+    },
+    {
+      "id": "diet-setup-order",
+      "type": "note",
+      "title": "Set up a fat-loss diet in order: calories, protein, fat, then carbohydrate",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "helms-2014-prep",
+        "mcdonald-fat-loss-fundamentals",
+        "mcdonald-athletes-fat-loss",
+        "mcdonald-principles-details"
+      ],
+      "take": "Fix the calorie target first, then protein, then a moderate fat intake, and let carbohydrate fill whatever is left.",
+      "body": "A contest-prep review sets calories for a loss of 0.5 to 1 percent of body weight a week, protein at 2.3 to 3.1 g per kg of lean mass, fat at 15 to 30 percent of calories and carbohydrate as the remainder. McDonald uses the same order and keeps fat near a quarter of calories because very low-fat diets are hard to stick to. Example: 75 kg (165 lb) on 2,200 kcal, with 165 g protein (660 kcal) and 61 g fat (550 kcal), leaves about 248 g of carbohydrate. When calories must drop, carbohydrate usually gives way first.",
+      "do": [
+        "Write down the four numbers before you choose foods."
+      ]
+    },
+    {
+      "id": "diet-athlete-fuel-training",
+      "type": "note",
+      "title": "Athletes in a deficit should keep food around hard sessions and cut elsewhere",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "manore-2015",
+        "mcdonald-athletes-fat-loss"
+      ],
+      "take": "When an athlete trims carbohydrate to diet, the cut should come from meals away from hard training, not from the meals that fuel it.",
+      "body": "A review of weight management in athletes lists eating around exercise among its core strategies, next to avoiding severe restriction and choosing foods of low energy density. It warns that severe restriction during hard training lowers strength, glycogen stores, concentration and the response to training. McDonald's view is that skipping food before or after hard sessions to save calories only hurts training, because the deficit sets fat loss either way. Easy, low-intensity sessions are the exception.",
+      "do": [
+        "Put most of the day's carbohydrate in the meals before and after hard training."
+      ]
+    },
+    {
+      "id": "diet-athlete-weight-timing",
+      "type": "note",
+      "title": "Athletes should diet in a low-intensity training block, not close to competition",
+      "topic": "lean",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "manore-2015",
+        "mountjoy-2023",
+        "mcdonald-athletes-fat-loss"
+      ],
+      "take": "Plan fat loss for the off-season or a general preparation block, and aim for a weight you can hold for most of the year.",
+      "body": "A review on athletes' weight advises finding a healthy weight that can be kept for most of the year, so little has to come off before competition, and allowing enough time to get there safely. McDonald places fat loss in the general preparation phase, when volume is high and intensity lower, using only a small calorie cut. In his view each sport has a useful band of body fat, and dropping under it risks the muscle, health and performance costs of low energy availability.",
+      "do": [
+        "Map the season and pick the diet weeks first.",
+        "Choose a target weight you can hold without constant dieting."
+      ]
+    },
+    {
+      "id": "diet-num-early-loss-energy",
+      "type": "number",
+      "title": "Energy in each kg lost at week four of a diet",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "heymsfield-2012"
+      ],
+      "value": "about 4,900",
+      "unit": "kcal per kg lost",
+      "sort": 4858,
+      "take": "Rose to about 6,000 by week six in 23 overweight adults, still below the 7,700 of fat tissue, so early loss runs ahead of the rule."
+    },
+    {
+      "id": "diet-term-rigid-flexible",
+      "type": "term",
+      "title": "Rigid and flexible restraint",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "westenhoefer-1999"
+      ],
+      "take": "Two styles of holding back on food. Rigid control runs on fixed rules and forbidden foods, all or nothing. Flexible control allows any food in limited amounts and evens out over days."
+    },
+    {
+      "id": "diet-flexible-control",
+      "type": "note",
+      "title": "Flexible control of eating goes with lower weight and fewer binges than rigid rules",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "westenhoefer-1999",
+        "stewart-2002",
+        "mcdonald-rigid-flexible"
+      ],
+      "take": "In large surveys, people who allowed limited amounts of any food weighed less and binged less than people who ran on strict food rules.",
+      "body": "Among 54,517 people in a weight-loss programme and a population sample of 1,838 aged 14 and over, rigid control was linked with higher BMI and more frequent, more severe binges. Flexible control was linked with lower BMI, fewer binges and a better chance of losing weight over a year. In 188 non-obese women, rigid dieting went with eating disorder symptoms and low mood, and flexible dieting did not. These are associations, not trials, so they show who does well rather than proving the cause.",
+      "do": [
+        "Plan some favourite foods into the week instead of banning them.",
+        "If food rules or binges feel out of your control, see a doctor or an eating disorder specialist."
+      ]
+    },
+    {
+      "id": "diet-mistake-lapse-spiral",
+      "type": "mistake",
+      "title": "Treating one off-plan snack as a ruined diet",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "westenhoefer-1999",
+        "mcdonald-rigid-flexible",
+        "mcdonald-hunger"
+      ],
+      "take": "A 200 kcal treat is under a tenth of a 3,500 kcal weekly deficit. Giving up on the day because of it is what costs you.",
+      "body": "All-or-nothing rules make a small lapse feel like failure, and the usual response is to eat freely until the day or the week is over. Rigid control was linked with more frequent and more severe binges in a large survey. McDonald's view is that the snack itself does little harm, especially if the next meals are a little smaller, and that calling planned meals off the diet 'cheats' keeps the good-or-bad framing that drives the spiral. He uses planned free meals and diet breaks instead.",
+      "do": [
+        "After an unplanned treat, eat the next meal as planned.",
+        "Call planned off-plan meals free meals, and plan them in advance."
+      ]
+    },
+    {
+      "id": "diet-mistake-cutting-fruit",
+      "type": "mistake",
+      "title": "Dropping whole fruit from a fat-loss diet",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "madero-2011",
+        "ello-martin-2007",
+        "mcdonald-hunger"
+      ],
+      "take": "In a six-week trial in adults with obesity, a calorie-restricted diet with fruit lost more weight than one that kept fructose very low.",
+      "body": "In 131 adults, mostly women, on restricted diets of 1,500 to 2,000 kcal, a group eating under 20 g of fructose a day lost 2.83 kg, while a group getting 50 to 70 g from natural fruit lost 4.19 kg. It was one short trial, and the authors still advised less added fructose. Water-rich foods such as fruit also lowered hunger in a year-long trial (see the energy density entry). McDonald's view is that whole fruit helps many dieters feel fuller, while juice gives the sugar without the bulk.",
+      "do": [
+        "Keep a few portions of whole fruit in the day and count them in your calories.",
+        "Choose whole fruit over juice."
+      ]
+    },
+    {
+      "id": "diet-adjust-in-steps",
+      "type": "note",
+      "title": "When the trend says change, move calories about 10 percent and wait again",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-adjusting-diet",
+        "mcdonald-maintenance",
+        "mcdonald-detail-oriented"
+      ],
+      "take": "Adjust intake or activity in steps of about a tenth, then give each change three to four weeks before you judge it.",
+      "body": "Loss faster than planned, or lifts falling with sound training, means ease off: add about 10 percent to calories or drop some cardio, as falling strength can signal muscle loss. A stall over three to four weeks of honest logging means cut intake or add activity by about a tenth. A rate on target needs nothing. Stop cutting and take a break at maintenance if intake is already low or sleep, mood or training are slipping (see the very-lean entry). McDonald's rule: replace a change that shows nothing in about four weeks and keep one that works.",
+      "do": [
+        "Write down the weekly loss you expect before you start.",
+        "Change one thing at a time."
+      ]
+    },
+    {
+      "id": "diet-holiday-gain",
+      "type": "note",
+      "title": "Holiday weight gain is small on average, but it tends to stay",
+      "topic": "lean",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "yanovski-2000",
+        "mcdonald-holiday"
+      ],
+      "take": "In 195 adults, weight rose about 0.4 kg over the winter holidays, far below the 2.3 kg (5 lb) often claimed, and the gain was not lost in the months after.",
+      "body": "Adults were weighed from late September to early March and again the following autumn. The mean gain from mid-November to January was 0.37 kg, with no significant change before or after, and the season's net 0.48 kg had not reversed by the next autumn in the 165 who returned. The spread was wide, about 1.5 kg either way. The jump after one large meal is mostly salt, carbohydrate and water and clears in days. McDonald's advice is to plan a few treats, start parties with protein and vegetables, and not write off the season after one rich meal.",
+      "do": [
+        "Weigh yourself a week after a holiday meal, not the next morning.",
+        "Choose the treats you most want rather than grazing on all of them."
+      ]
+    },
+    {
+      "id": "diet-breakfast",
+      "type": "note",
+      "title": "Skipping breakfast does not slow fat loss",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "sievert-2019",
+        "mcdonald-meal-frequency",
+        "mcdonald-meal-patterning"
+      ],
+      "take": "In a meta-analysis of short trials, people assigned to breakfast ate about 260 kcal a day more and weighed slightly more than people assigned to skip it.",
+      "body": "In randomised trials in adults, breakfast eaters weighed 0.44 kg more (7 trials) and took in about 260 kcal a day more (10 trials), though trials were short and mostly of low quality. The energy spent digesting food depends on how much you eat, not how often. McDonald's view is that smaller dieters on low intakes often do better with three or four filling meals than with six tiny ones. Skipping breakfast differs from eating late, and newer trials favour eating earlier in the day (see the meal timing entry).",
+      "do": [
+        "Eat breakfast if it keeps you full to lunch, and skip it if it does not."
+      ]
+    },
+    {
+      "id": "diet-mistake-dropping-dairy",
+      "type": "mistake",
+      "title": "Cutting out dairy for a diet or contest prep",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "chen-2012",
+        "mcdonald-contest-dieting"
+      ],
+      "take": "Dairy did not change weight overall in a meta-analysis, but in calorie-restricted trials it gave slightly more weight and fat loss.",
+      "body": "Across 29 randomised trials (2,101 people), dairy had no overall effect on weight. In short or energy-restricted trials it lowered weight, and pooled over 22 trials body fat fell a modest 0.45 kg, with the benefit confined to short or restricted trials. So dairy fits a diet and may help a little. McDonald traces the habit of dropping it before shows to old milk-heavy bulking diets, and notes dairy is a main source of calcium. Avoid it with a diagnosed milk allergy; lactose intolerance is separate and often managed with lactose-free products.",
+      "do": [
+        "Count dairy in your calories and protein like any other food."
+      ]
+    },
+    {
+      "id": "diet-mistake-protein-as-percent",
+      "type": "mistake",
+      "title": "Setting protein as a percentage of calories during a diet",
+      "topic": "muscle",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "helms-2014-protein",
+        "mcdonald-percentages",
+        "mcdonald-comparing-diets-1"
+      ],
+      "take": "A fixed share of calories gives less protein as calories fall, just when a deficit raises the need. Set protein in grams per kg instead.",
+      "body": "At 25 percent of calories, protein is 175 g on 2,800 kcal but 125 g on 2,000 kcal, a drop of 50 g. A review of lean, resistance-trained athletes in a deficit found the need rises with the size of the deficit and with leanness, and set it per kg of fat-free mass. McDonald makes the same point for every nutrient: needs follow body size, so a percentage means little until you know the calories behind it. Fix protein in grams first and share out the rest.",
+      "do": [
+        "Fix protein in grams first, for example 2.3 to 3.1 g per kg of lean mass for a lean lifter in a deficit."
+      ]
+    },
+    {
+      "id": "diet-term-glycaemic-index",
+      "type": "term",
+      "title": "Glycaemic index (GI)",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "moderate",
+      "sources": [
+        "diaz-2006",
+        "mcdonald-insulin-levels"
+      ],
+      "take": "How far a food's carbohydrate raises blood glucose against the same amount from glucose or white bread. Fat, protein and fibre in a meal lower it, and in studies GI did not change how much fat people burned."
+    },
+    {
+      "id": "diet-term-tkd-ckd",
+      "type": "term",
+      "title": "Targeted and cyclical ketogenic diets",
+      "topic": "strategy",
+      "level": "advanced",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-comparing-diets-2"
+      ],
+      "take": "Ketogenic diets adapted for hard training. A targeted version adds a small dose of carbohydrate around sessions; a cyclical one alternates several low-carbohydrate days with one or two days of high carbohydrate."
     }
   ],
   "sources": {
@@ -2472,6 +2878,551 @@
       "doi": "10.1007/s40279-025-02333-z",
       "pmid": "41474493",
       "support": "The Triad is defined as three inter-related components including energy status, reproductive function, and bone health. Full text: an EA of approximately 45 kcal/kg FFM/day has been associated with the healthy end of the Triad continuum; in this revised Consensus Statement, the utility of an EA threshold is less supported than in previous position stands; many women with ovulatory cycles had EA levels below 30 kcal/kg FFM/day, and women with menstrual disturbances had EA levels above 30."
+    },
+    "mcdonald-deficit-size": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Setting the Deficit - Small, Moderate or Large",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/3-sizes-of-calorie-deficit",
+      "retrieved": "2026-11-16",
+      "support": "Backs sizing the deficit as a percentage of maintenance, his small, moderate and large bands, and his view that small deficits need precise logging."
+    },
+    "mcdonald-3500-rule": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "The 3500 Calorie Rule",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/3500-calorie-rule",
+      "retrieved": "2026-11-16",
+      "support": "Backs the points that early losses are mostly glycogen and water, and that a fixed cut stops working as expenditure adapts."
+    },
+    "mcdonald-fat-loss-fundamentals": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "The Fundamentals of Fat Loss Diets Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/4-fat-loss-fundamentals",
+      "retrieved": "2026-11-16",
+      "support": "Backs the set-up order of calories, protein, fat and then carbohydrate, with fat kept moderate for adherence."
+    },
+    "mcdonald-athletes-fat-loss": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Fat Loss for Athletes: Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes",
+      "retrieved": "2026-11-16",
+      "support": "Backs keeping food around hard sessions while dieting, taking carbohydrate cuts from other meals, and dieting in a general preparation block."
+    },
+    "purcell-2014": {
+      "type": "rct",
+      "authors": [
+        "Purcell K",
+        "Sumithran P",
+        "Prendergast LA",
+        "Bouniu CJ",
+        "Delbridge E",
+        "Proietto J"
+      ],
+      "year": 2014,
+      "title": "The effect of rate of weight loss on long-term weight management: a randomised controlled trial",
+      "journal": "The Lancet Diabetes & Endocrinology",
+      "volume": "2",
+      "issue": "12",
+      "pages": "954-962",
+      "doi": "10.1016/S2213-8587(14)70200-1",
+      "pmid": "25459211",
+      "n_participants": 200,
+      "support": "Both gradual weight loss and rapid weight loss participants who completed the study had regained most of their lost weight (gradual weight loss 71.2% regain vs rapid weight loss 70.5%). The rate of weight loss does not affect the proportion of weight regained within 144 weeks."
+    },
+    "nackers-2010": {
+      "type": "cohort",
+      "authors": [
+        "Nackers LM",
+        "Ross KM",
+        "Perri MG"
+      ],
+      "year": 2010,
+      "title": "The Association Between Rate of Initial Weight Loss and Long-Term Success in Obesity Treatment: Does Slow and Steady Win the Race?",
+      "journal": "International Journal of Behavioral Medicine",
+      "volume": "17",
+      "issue": "3",
+      "pages": "161-167",
+      "doi": "10.1007/s12529-010-9092-y",
+      "pmid": "20443094",
+      "n_participants": 262,
+      "support": "The FAST and SLOW groups differed significantly at 18 months (-10.9, -7.1, and -3.7 kg). Fast weight losers obtained greater weight reduction and long-term maintenance, and were not more susceptible to weight regain than gradual weight losers."
+    },
+    "hall-2016": {
+      "type": "trial",
+      "authors": [
+        "Hall KD",
+        "Chen KY",
+        "Guo J",
+        "Lam YY",
+        "Leibel RL",
+        "Mayer LE",
+        "Reitman ML",
+        "Rosenbaum M",
+        "Smith SR",
+        "Walsh BT",
+        "Ravussin E"
+      ],
+      "year": 2016,
+      "title": "Energy expenditure and body composition changes after an isocaloric ketogenic diet in overweight and obese men",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "104",
+      "issue": "2",
+      "pages": "324-333",
+      "doi": "10.3945/ajcn.116.133561",
+      "pmid": "27385608",
+      "n_participants": 17,
+      "support": "Compared with BD, the KD coincided with increased EEchamber (57 +/- 13 kcal/d). Body fat loss slowed during the KD and coincided with increased protein utilization and loss of fat-free mass."
+    },
+    "thomas-2013": {
+      "type": "other",
+      "authors": [
+        "Thomas DM",
+        "Martin CK",
+        "Lettieri S",
+        "Bredlau C",
+        "Kaiser K",
+        "Church T",
+        "Bouchard C",
+        "Heymsfield SB"
+      ],
+      "year": 2013,
+      "title": "Can a weight loss of one pound a week be achieved with a 3500-kcal deficit? Commentary on a commonly accepted rule",
+      "journal": "International Journal of Obesity",
+      "volume": "37",
+      "issue": "12",
+      "pages": "1611-1613",
+      "doi": "10.1038/ijo.2013.51",
+      "pmid": "23628852",
+      "support": "Abstract: the 3500-kcal rule grossly overestimates actual weight loss in seven experiments with supervised or objectively measured intake. Full text: 103 adults lost 20.1 lb against 27.6 lb predicted by the rule, over about 65 days."
+    },
+    "manore-2015": {
+      "type": "review",
+      "authors": [
+        "Manore MM"
+      ],
+      "year": 2015,
+      "title": "Weight Management for Athletes and Active Individuals: A Brief Review",
+      "journal": "Sports Medicine",
+      "volume": "45",
+      "issue": "S1",
+      "pages": "83-92",
+      "doi": "10.1007/s40279-015-0401-0",
+      "pmid": "26553496",
+      "support": "Key points: avoiding severe energy restriction; timing of food intake around exercise and spreading meals/snacks throughout the day. Full text: identify a healthy body weight the athlete can maintain for most of the year."
+    },
+    "cfr-101-9": {
+      "type": "rulebook",
+      "authors": [
+        "US Food and Drug Administration"
+      ],
+      "year": 2023,
+      "title": "21 CFR 101.9 Nutrition labeling of food, paragraph (g)(5)",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-9.xml",
+      "retrieved": "2026-11-13",
+      "support": "A food with a label declaration of calories ... shall be deemed misbranded if the nutrient content of the composite is greater than 20 percent in excess of the value declared on the label.",
+      "edition": "CFR 2023, title 21, vol. 2"
+    },
+    "urban-2011": {
+      "type": "other",
+      "authors": [
+        "Urban LE",
+        "McCrory MA",
+        "Dallal GE",
+        "Das SK",
+        "Saltzman E",
+        "Weber JL",
+        "Roberts SB"
+      ],
+      "year": 2011,
+      "title": "Accuracy of Stated Energy Contents of Restaurant Foods",
+      "journal": "JAMA",
+      "doi": "10.1001/jama.2011.993",
+      "volume": "306",
+      "issue": "3",
+      "pmid": "21771989",
+      "support": "269 items from 42 restaurants; 50 (19%) contained at least 100 kcal/portion more than stated."
+    },
+    "burrows-2019": {
+      "type": "systematic-review",
+      "authors": [
+        "Burrows TL",
+        "Ho YY",
+        "Rollo ME",
+        "Collins CE"
+      ],
+      "year": 2019,
+      "title": "Validity of Dietary Assessment Methods When Compared to the Method of Doubly Labeled Water: A Systematic Review in Adults",
+      "journal": "Frontiers in Endocrinology",
+      "doi": "10.3389/fendo.2019.00850",
+      "volume": "10",
+      "pages": "850",
+      "pmid": "31920966",
+      "n_studies": 59,
+      "n_participants": 6298,
+      "support": "59 studies with 6,298 free living adults; the majority reported significant under-reporting of energy intake compared with doubly labeled water."
+    },
+    "heymsfield-2012": {
+      "type": "cohort",
+      "authors": [
+        "Heymsfield SB",
+        "Thomas D",
+        "Martin CK",
+        "Redman LM",
+        "Strauss B",
+        "Bosy-Westphal A",
+        "Müller MJ",
+        "Shen W",
+        "Martin Nguyen A"
+      ],
+      "year": 2012,
+      "title": "Energy content of weight loss: kinetic features during voluntary caloric restriction",
+      "journal": "Metabolism",
+      "volume": "61",
+      "issue": "7",
+      "pages": "937-943",
+      "doi": "10.1016/j.metabol.2011.11.012",
+      "pmid": "22257646",
+      "support": "Delta EC/Delta W (kilocalories per kilogram) increased significantly from week 4 (4,858 +/- 388) to 6 (6,041 +/- 376) and changed insignificantly thereafter, in 23 overweight men and women evaluated by DXA."
+    },
+    "madero-2011": {
+      "type": "rct",
+      "authors": [
+        "Madero M",
+        "Arriaga JC",
+        "Jalal D",
+        "Rivard C",
+        "McFann K",
+        "Pérez-Méndez O",
+        "Vázquez A",
+        "Ruiz A",
+        "Lanaspa MA",
+        "Jimenez CR",
+        "Johnson RJ",
+        "Lozada LGS"
+      ],
+      "year": 2011,
+      "title": "The effect of two energy-restricted diets, a low-fructose diet versus a moderate natural fructose diet, on weight loss and metabolic syndrome parameters: a randomized controlled trial",
+      "journal": "Metabolism",
+      "volume": "60",
+      "issue": "11",
+      "pages": "1551-1559",
+      "doi": "10.1016/j.metabol.2011.04.001",
+      "pmid": "21621801",
+      "n_participants": 131,
+      "support": "Weight loss was higher in the moderate natural fructose group (4.19 +/- 0.30 kg) than the low-fructose group (2.83 +/- 0.29 kg) over 6 weeks; low-fructose diet under 20 g/d vs moderate-fructose diet with natural fruit supplements 50-70 g/d."
+    },
+    "westenhoefer-1999": {
+      "type": "cohort",
+      "authors": [
+        "Westenhoefer J",
+        "Stunkard AJ",
+        "Pudel V"
+      ],
+      "year": 1999,
+      "title": "Validation of the flexible and rigid control dimensions of dietary restraint",
+      "journal": "International Journal of Eating Disorders",
+      "volume": "26",
+      "issue": "1",
+      "pages": "53-64",
+      "doi": "10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n",
+      "pmid": "10349584",
+      "support": "Rigid control is associated with higher BMI and more frequent and more severe binge eating episodes. Flexible control is associated with lower BMI, less binge eating and a higher probability of successful weight reduction during the 1-year program."
+    },
+    "stewart-2002": {
+      "type": "cohort",
+      "authors": [
+        "Stewart TM",
+        "Williamson DA",
+        "White MA"
+      ],
+      "year": 2002,
+      "title": "Rigid vs. flexible dieting: association with eating disorder symptoms in nonobese women",
+      "journal": "Appetite",
+      "volume": "38",
+      "issue": "1",
+      "pages": "39-44",
+      "doi": "10.1006/appe.2001.0445",
+      "pmid": "11883916",
+      "n_participants": 188,
+      "support": "Individuals who engage in rigid dieting strategies reported symptoms of an eating disorder, mood disturbances, and excessive concern with body size/shape; flexible dieting strategies were not highly associated with these."
+    },
+    "mcdonald-hunger": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "9 Ways to Deal with Hunger on a Diet",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger",
+      "retrieved": "2026-11-16",
+      "support": "Backs keeping whole fruit and moderate fat in a fat-loss diet for fullness, and treating small lapses as minor."
+    },
+    "mcdonald-rigid-flexible": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Rigid vs. Flexible Dieting",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that all-or-nothing food rules turn small lapses into large ones, and his preference for planned free meals over the label cheat."
+    },
+    "mcdonald-rapid-fat-loss": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Is Rapid Fat Loss Right For You?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/facts-about-rapid-fat-loss",
+      "retrieved": "2026-11-16",
+      "support": "Backs his 2009 argument that fast initial loss need not mean worse long-term results if the diet uses whole food, exercise and a plan for maintenance."
+    },
+    "mcdonald-calorie-a-calorie": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2007,
+      "title": "Is a Calorie a Calorie?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/is-a-calorie-a-calorie",
+      "retrieved": "2026-11-16",
+      "support": "Backs the point that fast early losses on low-carbohydrate diets are water, and that matched-calorie diets differ little once protein is adequate."
+    },
+    "mcdonald-principles-details": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Fundamental Principles vs. Minor Details",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/fundamental-principles-minor-details",
+      "retrieved": "2026-11-16",
+      "support": "Backs settling calories and protein before any finer detail of diet set-up."
+    },
+    "mcdonald-detail-oriented": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2007,
+      "title": "How Detail Oriented Do You Need to Be",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/how-detail-oriented-should-you-be",
+      "retrieved": "2026-11-16",
+      "support": "Backs his rule of replacing a change that shows nothing after about four weeks and leaving a working plan alone."
+    },
+    "mcdonald-maintenance": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "How to Estimate Maintenance Caloric Intake",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories",
+      "retrieved": "2026-11-16",
+      "support": "Backs treating any maintenance estimate as a starting point that must be corrected against real change."
+    },
+    "mcdonald-holiday": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2016,
+      "title": "10 Ways to Deal with Holiday Weight Gain",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/avoiding-holiday-weight-gain",
+      "retrieved": "2026-11-16",
+      "support": "Backs planning treats, filling up on protein and vegetables first, and ignoring the scale spike after a large meal."
+    },
+    "mcdonald-contest-dieting": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2007,
+      "title": "Contest Dieting Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/contest-dieting-part-1",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that dropping dairy in contest prep is a habit without a basis, and that dairy supplies calcium."
+    },
+    "mcdonald-insulin-levels": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Insulin Levels and Fat Loss",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/insulin-levels-and-fat-loss",
+      "retrieved": "2026-11-16",
+      "support": "Backs the definition of the glycaemic index and the point that GI-driven insulin differences matter little for fat burning."
+    },
+    "mcdonald-comparing-diets-1": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2007,
+      "title": "Comparing the Diets: Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/comparing-the-diets",
+      "retrieved": "2026-11-16",
+      "support": "Backs the point that diet percentages mislead because requirements follow body size."
+    },
+    "mcdonald-comparing-diets-2": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2007,
+      "title": "Comparing the Diets: Part 2",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/comparing-the-diets-2",
+      "retrieved": "2026-11-16",
+      "support": "Backs the definitions of the targeted and cyclical ketogenic diets."
+    },
+    "mcdonald-percentages": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Diet Percentages: Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/problem-dieting-by-percentages",
+      "retrieved": "2026-11-16",
+      "support": "Backs setting protein in grams per unit of body weight rather than as a share of calories."
+    },
+    "mcdonald-meal-patterning": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Meal Frequency and Meal Patterning Part 1 - Book Excerpt",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/meal-frequency-and-meal-patterning",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that smaller dieters often do better with fewer, larger meals or with calories moved to the evening."
+    },
+    "mcdonald-meal-frequency": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2008,
+      "title": "Meal Frequency and Energy Balance",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/research/meal-frequency-and-energy-balance",
+      "retrieved": "2026-11-16",
+      "support": "Backs the point that the thermic effect of food depends on total intake, not on how often you eat."
+    },
+    "yanovski-2000": {
+      "type": "cohort",
+      "authors": [
+        "Yanovski JA",
+        "Yanovski SZ",
+        "Sovik KN",
+        "Nguyen TT",
+        "O'Neil PM",
+        "Sebring NG"
+      ],
+      "year": 2000,
+      "title": "A Prospective Study of Holiday Weight Gain",
+      "journal": "New England Journal of Medicine",
+      "volume": "342",
+      "issue": "12",
+      "pages": "861-867",
+      "doi": "10.1056/NEJM200003233421206",
+      "pmid": "10727591",
+      "n_participants": 195,
+      "support": "The mean weight increased significantly during the holiday period (gain, 0.37+/-1.52 kg). Since this gain is not reversed during the spring or summer months, the net 0.48-kg weight gain in the fall and winter probably contributes to the increase in body weight that frequently occurs during adulthood."
+    },
+    "chen-2012": {
+      "type": "meta-analysis",
+      "authors": [
+        "Chen M",
+        "Pan A",
+        "Malik VS",
+        "Hu FB"
+      ],
+      "year": 2012,
+      "title": "Effects of dairy intake on body weight and fat: a meta-analysis of randomized controlled trials",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "96",
+      "issue": "4",
+      "pages": "735-747",
+      "doi": "10.3945/ajcn.112.037119",
+      "pmid": "22932282",
+      "n_studies": 29,
+      "n_participants": 2101,
+      "support": "Overall, consumption of dairy products did not result in a significant reduction in weight (-0.14 kg). Consumption of dairy products reduced body weight in the context of energy restriction or short-term intervention; 22 RCTs on body fat showed a modest reduction (-0.45 kg)."
+    },
+    "diaz-2006": {
+      "type": "review",
+      "authors": [
+        "Díaz EO",
+        "Galgani JE",
+        "Aguirre CA"
+      ],
+      "year": 2006,
+      "title": "Glycaemic index effects on fuel partitioning in humans",
+      "journal": "Obesity Reviews",
+      "volume": "7",
+      "issue": "2",
+      "pages": "219-226",
+      "doi": "10.1111/j.1467-789X.2006.00225.x",
+      "pmid": "16629877",
+      "support": "Several studies comparing meals with contrasting glycaemic carbohydrates for hours, days or weeks have failed to demonstrate any differential effect on fuel partitioning. Apparently, the glycaemic index-induced serum insulin differences are not sufficient in magnitude and/or duration to modify fuel oxidation."
+    },
+    "sievert-2019": {
+      "type": "meta-analysis",
+      "authors": [
+        "Sievert K",
+        "Hussain SM",
+        "Page MJ",
+        "Wang Y",
+        "Hughes HJ",
+        "Malek M",
+        "Cicuttini FM"
+      ],
+      "year": 2019,
+      "title": "Effect of breakfast on weight and energy intake: systematic review and meta-analysis of randomised controlled trials",
+      "journal": "BMJ",
+      "volume": "364",
+      "pages": "l42",
+      "doi": "10.1136/bmj.l42",
+      "pmid": "30700403",
+      "n_studies": 13,
+      "support": "A small difference in weight favouring participants who skipped breakfast (mean difference 0.44 kg). Participants assigned to breakfast had a higher total daily energy intake than those assigned to skip breakfast (mean difference 259.79 kcal/day)."
     }
   }
 }

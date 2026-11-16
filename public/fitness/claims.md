@@ -315,7 +315,7 @@ Who was studied: Roecker 2003: 371 people (304 men, 67 women), incremental tread
 
 - Set bike zones from a bike test and running zones from a running test.
 
-Evidence: Cohort study · Thin evidence · Sources: [Roecker 2003](https://doi.org/10.1055/s-2003-39087), [McDonald 2016e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-2)
+Evidence: Cohort study · Thin evidence · Sources: [Roecker 2003](https://doi.org/10.1055/s-2003-39087), [McDonald 2016f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-2)
 
 ### Is plain water the best drink after a sweaty session?
 
@@ -729,7 +729,7 @@ Who was studied: Speakman: expert review of four models. Muller: review of contr
 - Keep daily steps up, since unplanned movement falls first.
 - Treat maintenance as a phase with its own plan.
 
-Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008q](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
+Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
 
 ### Does everyone regain the weight after a diet?
 

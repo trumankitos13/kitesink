@@ -22,7 +22,7 @@ A contest-prep review recommends 0.5 to 1 percent a week, and a later review pre
 
 - Pick a weekly percentage, convert it to kg or lb, and check against your four-week trend.
 
-Deficit and rate of loss · Intermediate · Some support · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096), [McDonald 2010f](https://bodyrecomposition.com/fat-loss/muscle-loss-single-digit-bodyfat)
+Deficit and rate of loss · Intermediate · Some support · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096), [McDonald 2010g](https://bodyrecomposition.com/fat-loss/muscle-loss-single-digit-bodyfat)
 
 ### Deficits much beyond 500 kcal a day cost lean mass in lifters
 
@@ -215,7 +215,7 @@ In 171 women, 52 percent of the weight lost was regained at one year and 89 perc
 - After the diet, bring calories back to maintenance within about two weeks, then hold there.
 - Keep weighing, activity and protein up.
 
-Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2016k](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Intermediate · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Anderson 2001](https://doi.org/10.1093/ajcn/74.5.579), [Thomas 2014](https://doi.org/10.1016/j.amepre.2013.08.019), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Hall 2018](https://doi.org/10.1016/j.mcna.2017.08.012), [Rosenbaum 2010](https://doi.org/10.1038/ijo.2010.184), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2016l](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### A small surplus adds muscle, and a large surplus mostly adds fat
 
@@ -237,6 +237,111 @@ In 40 young men on a roughly 40 percent deficit with heavy training and 2.4 g/kg
 
 Gaining phases · Intermediate · Thin evidence · Sources: [Longland 2016](https://doi.org/10.3945/ajcn.115.119339), [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [Murphy 2022](https://doi.org/10.1111/sms.14075)
 
+### Size the deficit as a share of maintenance, not a fixed calorie number
+
+**A percentage cut scales with the person: 20 percent is 360 kcal a day at 1,800 kcal maintenance and 600 kcal at 3,000.**
+
+A fixed 500 kcal cut is more than a quarter of a small woman's intake and a sixth of a big man's. McDonald sets deficits as a share of maintenance and calls 10 to 15 percent small, 20 to 25 percent moderate and anything beyond 25 percent large. The same percentage gives a larger person a bigger daily gap, so they lose faster on paper. At high maintenance levels a 25 percent cut can pass the roughly 500 kcal point where lean-mass gains stopped in a meta-regression.
+
+- Estimate maintenance, take 20 to 25 percent off, and compare the result with the 500 kcal guide.
+
+Deficit and rate of loss · Beginner · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/fat-loss/3-sizes-of-calorie-deficit), [Murphy 2022](https://doi.org/10.1111/sms.14075)
+
+### Losing weight quickly did not mean regaining it faster in a long trial
+
+**In 200 adults with obesity, a 12-week rapid diet and a 36-week gradual one ended with the same share regained nearly three years later.**
+
+Both groups aimed for 15 percent loss. Of the rapid group 81 percent reached 12.5 percent, against 50 percent of the gradual group, and completers had regained 70.5 and 71.2 percent by week 144. The rapid programme ran through a hospital, and one person in it needed gallbladder surgery. In 262 women, the fastest losers in month one had lost most at 18 months. McDonald argued in 2009 that fast loss can last if it builds habits; the trial came later and found no regain penalty, not an advantage.
+
+- Do a rapid diet in a supervised programme, with a clinician involved.
+- Lean lifters should still use the slower pace in the rate-of-loss entry.
+
+Very lean, regain and maintenance · Intermediate · Some support · Sources: [Purcell 2014](https://doi.org/10.1016/S2213-8587(14)70200-1), [Nackers 2010](https://doi.org/10.1007/s12529-010-9092-y), [McDonald 2009k](https://bodyrecomposition.com/fat-loss/facts-about-rapid-fat-loss), [McDonald 2009aa](https://bodyrecomposition.com/fat-loss/3-sizes-of-calorie-deficit)
+
+### A fixed calorie cut slows to a plateau because the gap closes as you shrink
+
+**On a fixed cut a shrinking body burns less, so loss slows and stops. Supervised dieters fell about a quarter short of the 3,500 rule within two months.**
+
+Each kg lost early holds less energy than fat, because water and lean tissue go too (see the entry on energy per kg lost at week four). Even so, 103 adults with supervised or measured intake lost 20.1 lb (9.1 kg) in about 65 days, against 27.6 lb (12.5 kg) predicted by the rule. A validated model puts each lasting change of 100 kJ (24 kcal) a day at about 1 kg of eventual weight, half within a year. Eating less also trims the energy spent digesting food. To keep the pace, reopen the gap with less food or more movement.
+
+- Use a dynamic planner, such as the NIH Body Weight Planner, for forecasts beyond a few weeks.
+
+Scale, plateaus and metabolism · Intermediate · Some support · Sources: [Thomas 2013](https://doi.org/10.1038/ijo.2013.51), [Heymsfield 2012](https://doi.org/10.1016/j.metabol.2011.11.012), [Hall 2011](https://doi.org/10.1016/S0140-6736(11)60812-X), [McDonald 2015s](https://bodyrecomposition.com/fat-loss/3500-calorie-rule)
+
+### Set up a fat-loss diet in order: calories, protein, fat, then carbohydrate
+
+**Fix the calorie target first, then protein, then a moderate fat intake, and let carbohydrate fill whatever is left.**
+
+A contest-prep review sets calories for a loss of 0.5 to 1 percent of body weight a week, protein at 2.3 to 3.1 g per kg of lean mass, fat at 15 to 30 percent of calories and carbohydrate as the remainder. McDonald uses the same order and keeps fat near a quarter of calories because very low-fat diets are hard to stick to. Example: 75 kg (165 lb) on 2,200 kcal, with 165 g protein (660 kcal) and 61 g fat (550 kcal), leaves about 248 g of carbohydrate. When calories must drop, carbohydrate usually gives way first.
+
+- Write down the four numbers before you choose foods.
+
+Diet type and meal pattern · Beginner · Coaching practice · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [McDonald 2009ac](https://bodyrecomposition.com/fat-loss/4-fat-loss-fundamentals), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes), [McDonald 2010e](https://bodyrecomposition.com/fat-loss/fundamental-principles-minor-details)
+
+### Athletes in a deficit should keep food around hard sessions and cut elsewhere
+
+**When an athlete trims carbohydrate to diet, the cut should come from meals away from hard training, not from the meals that fuel it.**
+
+A review of weight management in athletes lists eating around exercise among its core strategies, next to avoiding severe restriction and choosing foods of low energy density. It warns that severe restriction during hard training lowers strength, glycogen stores, concentration and the response to training. McDonald's view is that skipping food before or after hard sessions to save calories only hurts training, because the deficit sets fat loss either way. Easy, low-intensity sessions are the exception.
+
+- Put most of the day's carbohydrate in the meals before and after hard training.
+
+Diet type and meal pattern · Intermediate · Coaching practice · Sources: [Manore 2015](https://doi.org/10.1007/s40279-015-0401-0), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
+
+### Athletes should diet in a low-intensity training block, not close to competition
+
+**Plan fat loss for the off-season or a general preparation block, and aim for a weight you can hold for most of the year.**
+
+A review on athletes' weight advises finding a healthy weight that can be kept for most of the year, so little has to come off before competition, and allowing enough time to get there safely. McDonald places fat loss in the general preparation phase, when volume is high and intensity lower, using only a small calorie cut. In his view each sport has a useful band of body fat, and dropping under it risks the muscle, health and performance costs of low energy availability.
+
+- Map the season and pick the diet weeks first.
+- Choose a target weight you can hold without constant dieting.
+
+Very lean, regain and maintenance · Intermediate · Coaching practice · Sources: [Manore 2015](https://doi.org/10.1007/s40279-015-0401-0), [Mountjoy 2023](https://doi.org/10.1136/bjsports-2023-106994), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
+
+### Flexible control of eating goes with lower weight and fewer binges than rigid rules
+
+**In large surveys, people who allowed limited amounts of any food weighed less and binged less than people who ran on strict food rules.**
+
+Among 54,517 people in a weight-loss programme and a population sample of 1,838 aged 14 and over, rigid control was linked with higher BMI and more frequent, more severe binges. Flexible control was linked with lower BMI, fewer binges and a better chance of losing weight over a year. In 188 non-obese women, rigid dieting went with eating disorder symptoms and low mood, and flexible dieting did not. These are associations, not trials, so they show who does well rather than proving the cause.
+
+- Plan some favourite foods into the week instead of banning them.
+- If food rules or binges feel out of your control, see a doctor or an eating disorder specialist.
+
+Hunger and fullness · Beginner · Some support · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [Stewart 2002](https://doi.org/10.1006/appe.2001.0445), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters)
+
+### When the trend says change, move calories about 10 percent and wait again
+
+**Adjust intake or activity in steps of about a tenth, then give each change three to four weeks before you judge it.**
+
+Loss faster than planned, or lifts falling with sound training, means ease off: add about 10 percent to calories or drop some cardio, as falling strength can signal muscle loss. A stall over three to four weeks of honest logging means cut intake or add activity by about a tenth. A rate on target needs nothing. Stop cutting and take a break at maintenance if intake is already low or sleep, mood or training are slipping (see the very-lean entry). McDonald's rule: replace a change that shows nothing in about four weeks and keep one that works.
+
+- Write down the weekly loss you expect before you start.
+- Change one thing at a time.
+
+Scale, plateaus and metabolism · Intermediate · Coaching practice · Sources: [McDonald 2009c](https://bodyrecomposition.com/fat-loss/adjusting-the-diet), [McDonald 2008o](https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories), [McDonald 2007d](https://bodyrecomposition.com/fat-loss/how-detail-oriented-should-you-be)
+
+### Holiday weight gain is small on average, but it tends to stay
+
+**In 195 adults, weight rose about 0.4 kg over the winter holidays, far below the 2.3 kg (5 lb) often claimed, and the gain was not lost in the months after.**
+
+Adults were weighed from late September to early March and again the following autumn. The mean gain from mid-November to January was 0.37 kg, with no significant change before or after, and the season's net 0.48 kg had not reversed by the next autumn in the 165 who returned. The spread was wide, about 1.5 kg either way. The jump after one large meal is mostly salt, carbohydrate and water and clears in days. McDonald's advice is to plan a few treats, start parties with protein and vegetables, and not write off the season after one rich meal.
+
+- Weigh yourself a week after a holiday meal, not the next morning.
+- Choose the treats you most want rather than grazing on all of them.
+
+Very lean, regain and maintenance · Beginner · Some support · Sources: [Yanovski 2000](https://doi.org/10.1056/NEJM200003233421206), [McDonald 2016a](https://bodyrecomposition.com/fat-loss/avoiding-holiday-weight-gain)
+
+### Skipping breakfast does not slow fat loss
+
+**In a meta-analysis of short trials, people assigned to breakfast ate about 260 kcal a day more and weighed slightly more than people assigned to skip it.**
+
+In randomised trials in adults, breakfast eaters weighed 0.44 kg more (7 trials) and took in about 260 kcal a day more (10 trials), though trials were short and mostly of low quality. The energy spent digesting food depends on how much you eat, not how often. McDonald's view is that smaller dieters on low intakes often do better with three or four filling meals than with six tiny ones. Skipping breakfast differs from eating late, and newer trials favour eating earlier in the day (see the meal timing entry).
+
+- Eat breakfast if it keeps you full to lunch, and skip it if it does not.
+
+Diet type and meal pattern · Beginner · Some support · Sources: [Sievert 2019](https://doi.org/10.1136/bmj.l42), [McDonald 2008r](https://bodyrecomposition.com/research/meal-frequency-and-energy-balance), [McDonald 2015o](https://bodyrecomposition.com/fat-loss/meal-frequency-and-meal-patterning)
+
 ## Common mistakes
 
 ### Losing over 1 percent of body weight a week without high protein and heavy lifting
@@ -248,7 +353,7 @@ In 24 athletes lifting four times a week, a group set to lose 1.4 percent a week
 - Use 0.5 to 1 percent of body weight a week as the default pace.
 - If you go faster, keep protein high, keep lifting heavy and keep the fast spell short.
 
-Deficit and rate of loss · Beginner · Some support · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Forbes 2000](https://doi.org/10.1111/j.1749-6632.2000.tb06482.x), [McDonald 2010f](https://bodyrecomposition.com/fat-loss/muscle-loss-single-digit-bodyfat)
+Deficit and rate of loss · Beginner · Some support · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Forbes 2000](https://doi.org/10.1111/j.1749-6632.2000.tb06482.x), [McDonald 2010g](https://bodyrecomposition.com/fat-loss/muscle-loss-single-digit-bodyfat)
 
 ### Cutting protein and stopping lifting while dieting
 
@@ -268,7 +373,7 @@ A two-week plateau can come from water, a missed weekend or logging drift, as 48
 
 - Check the four-week trend and the log before changing calories.
 
-Scale, plateaus and metabolism · Beginner · Some support · Sources: [Racette 2008](https://doi.org/10.1038/oby.2008.320), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Murphy 2022](https://doi.org/10.1111/sms.14075), [McDonald 2009b](https://bodyrecomposition.com/fat-loss/adjusting-the-diet)
+Scale, plateaus and metabolism · Beginner · Some support · Sources: [Racette 2008](https://doi.org/10.1038/oby.2008.320), [Bhutani 2017](https://doi.org/10.14814/phy2.13336), [Murphy 2022](https://doi.org/10.1111/sms.14075), [McDonald 2009c](https://bodyrecomposition.com/fat-loss/adjusting-the-diet)
 
 ### Dieting with no end date and no plan for after
 
@@ -279,7 +384,7 @@ In 171 women, 52 percent of lost weight was regained after one year and 89 perce
 - Plan the exit: a target date, a maintenance range and a weekly weigh-in.
 - Return to maintenance calories at once or within about two weeks.
 
-Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [McDonald 2016k](https://bodyrecomposition.com/fat-loss/the-transition-phase)
+Very lean, regain and maintenance · Beginner · Some support · Sources: [Martins 2020](https://doi.org/10.1093/ajcn/nqaa086), [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [McDonald 2016l](https://bodyrecomposition.com/fat-loss/the-transition-phase)
 
 ### Treating a gaining phase as a licence to eat anything
 
@@ -290,6 +395,69 @@ In 17 lifters, a 15 percent surplus mostly increased fat gain rather than streng
 - Use a measured surplus and watch the rate of weight gain.
 
 Gaining phases · Intermediate · Thin evidence · Sources: [Helms 2023](https://doi.org/10.1186/s40798-023-00651-y), [Iraki 2019](https://doi.org/10.3390/sports7070154)
+
+### Running a 10 percent deficit while logging food loosely
+
+**A deficit of 200 to 300 kcal a day is about the size of ordinary label and logging error, so it can vanish without you noticing.**
+
+US rules let a label run up to 20 percent over the declared calories, and 19 percent of 269 restaurant items held at least 100 kcal more per portion than stated. A review of 59 studies against doubly labelled water found most report eating less than they do. On 2,000 kcal a day, a 10 percent error cancels a 10 percent deficit. McDonald's view is that small deficits suit lean, experienced dieters who weigh their food; for others a larger cut leaves room for error.
+
+- Weigh food and log everything if you choose a small deficit.
+- If your logging is rough, use a 20 to 25 percent cut instead.
+
+Deficit and rate of loss · Intermediate · Some support · Sources: [UFDA 2023](https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-9.xml), [Urban 2011](https://doi.org/10.1001/jama.2011.993), [Burrows 2019](https://doi.org/10.3389/fendo.2019.00850), [McDonald 2009aa](https://bodyrecomposition.com/fat-loss/3-sizes-of-calorie-deficit)
+
+### Reading a big first-week drop on low carb as fast fat loss
+
+**An early drop on low carb is mostly stored glycogen and the water held with it, and fat loss did not speed up on a ketogenic diet in a ward study.**
+
+Glycogen is stored with three to four parts water, so emptying it moves the scale while releasing little stored energy. In 17 men on a metabolic ward, swapping a high-carbohydrate diet for a ketogenic one with the same calories raised chamber energy expenditure slightly, by about 57 kcal a day, yet body fat loss slowed and fat-free mass loss rose. McDonald notes that the water returns as soon as carbohydrate does. Judge any diet on the trend from week three or four onward.
+
+- Leave out the first week when you compare diets or judge your rate of loss.
+
+Scale, plateaus and metabolism · Beginner · Some support · Sources: [Kreitzman 1992](https://doi.org/10.1093/ajcn/56.1.292S), [Hall 2016](https://doi.org/10.3945/ajcn.116.133561), [McDonald 2015s](https://bodyrecomposition.com/fat-loss/3500-calorie-rule), [McDonald 2007f](https://bodyrecomposition.com/fat-loss/is-a-calorie-a-calorie)
+
+### Treating one off-plan snack as a ruined diet
+
+**A 200 kcal treat is under a tenth of a 3,500 kcal weekly deficit. Giving up on the day because of it is what costs you.**
+
+All-or-nothing rules make a small lapse feel like failure, and the usual response is to eat freely until the day or the week is over. Rigid control was linked with more frequent and more severe binges in a large survey. McDonald's view is that the snack itself does little harm, especially if the next meals are a little smaller, and that calling planned meals off the diet 'cheats' keeps the good-or-bad framing that drives the spiral. He uses planned free meals and diet breaks instead.
+
+- After an unplanned treat, eat the next meal as planned.
+- Call planned off-plan meals free meals, and plan them in advance.
+
+Hunger and fullness · Beginner · Coaching practice · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [McDonald 2008v](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters), [McDonald 2009a](https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger)
+
+### Dropping whole fruit from a fat-loss diet
+
+**In a six-week trial in adults with obesity, a calorie-restricted diet with fruit lost more weight than one that kept fructose very low.**
+
+In 131 adults, mostly women, on restricted diets of 1,500 to 2,000 kcal, a group eating under 20 g of fructose a day lost 2.83 kg, while a group getting 50 to 70 g from natural fruit lost 4.19 kg. It was one short trial, and the authors still advised less added fructose. Water-rich foods such as fruit also lowered hunger in a year-long trial (see the energy density entry). McDonald's view is that whole fruit helps many dieters feel fuller, while juice gives the sugar without the bulk.
+
+- Keep a few portions of whole fruit in the day and count them in your calories.
+- Choose whole fruit over juice.
+
+Hunger and fullness · Beginner · Thin evidence · Sources: [Madero 2011](https://doi.org/10.1016/j.metabol.2011.04.001), [Ello-Martin 2007](https://doi.org/10.1093/ajcn/85.6.1465), [McDonald 2009a](https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger)
+
+### Cutting out dairy for a diet or contest prep
+
+**Dairy did not change weight overall in a meta-analysis, but in calorie-restricted trials it gave slightly more weight and fat loss.**
+
+Across 29 randomised trials (2,101 people), dairy had no overall effect on weight. In short or energy-restricted trials it lowered weight, and pooled over 22 trials body fat fell a modest 0.45 kg, with the benefit confined to short or restricted trials. So dairy fits a diet and may help a little. McDonald traces the habit of dropping it before shows to old milk-heavy bulking diets, and notes dairy is a main source of calcium. Avoid it with a diagnosed milk allergy; lactose intolerance is separate and often managed with lactose-free products.
+
+- Count dairy in your calories and protein like any other food.
+
+Diet type and meal pattern · Intermediate · Some support · Sources: [Chen 2012](https://doi.org/10.3945/ajcn.112.037119), [McDonald 2007c](https://bodyrecomposition.com/fat-loss/contest-dieting-part-1)
+
+### Setting protein as a percentage of calories during a diet
+
+**A fixed share of calories gives less protein as calories fall, just when a deficit raises the need. Set protein in grams per kg instead.**
+
+At 25 percent of calories, protein is 175 g on 2,800 kcal but 125 g on 2,000 kcal, a drop of 50 g. A review of lean, resistance-trained athletes in a deficit found the need rises with the size of the deficit and with leanness, and set it per kg of fat-free mass. McDonald makes the same point for every nutrient: needs follow body size, so a percentage means little until you know the calories behind it. Fix protein in grams first and share out the rest.
+
+- Fix protein in grams first, for example 2.3 to 3.1 g per kg of lean mass for a lean lifter in a deficit.
+
+Keeping muscle · Intermediate · Some support · Sources: [Helms 2014a](https://doi.org/10.1123/ijsnem.2013-0054), [McDonald 2008j](https://bodyrecomposition.com/fat-loss/problem-dieting-by-percentages), [McDonald 2007a](https://bodyrecomposition.com/fat-loss/comparing-the-diets)
 
 ## Key numbers
 
@@ -303,6 +471,8 @@ Gaining phases · Intermediate · Thin evidence · Sources: [Helms 2023](https:/
 | 2,380 kcal per kg | Energy per kg for short-term changes: Two-week changes of 1 to 3 kg were mostly fat-free mass and water, so they carry less energy than fat. | Some support | [Bhutani 2017](https://doi.org/10.14814/phy2.13336) |
 | 10-20 % above maintenance | Surplus for a gaining phase: Suggested range for novice and intermediate lifters in a physique-sport review; advanced lifters go lower. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154) |
 | 0.25-0.5 % body weight per week | Rate of gain, novice to intermediate: At 80 kg (176 lb) that is 0.2 to 0.4 kg (0.4 to 0.9 lb) a week. | Thin evidence | [Iraki 2019](https://doi.org/10.3390/sports7070154) |
+| 100 kJ a day per kg of weight | Eventual weight change per lasting change in daily intake: About 10 kcal a day per lb. In an average overweight adult, half the change arrives within a year and 95 percent within about three. | Some support | [Hall 2011](https://doi.org/10.1016/S0140-6736(11)60812-X) |
+| about 4,900 kcal per kg lost | Energy in each kg lost at week four of a diet: Rose to about 6,000 by week six in 23 overweight adults, still below the 7,700 of fat tissue, so early loss runs ahead of the rule. | Thin evidence | [Heymsfield 2012](https://doi.org/10.1016/j.metabol.2011.11.012) |
 
 ## Deficit size versus expected weekly loss
 
@@ -343,14 +513,29 @@ Suggested pace of weight gain in a gaining phase; the research is thin and the r
 
 Thin evidence · Sources: [Iraki 2019](https://doi.org/10.3390/sports7070154), [Helms 2023](https://doi.org/10.1186/s40798-023-00651-y), [Slater 2019](https://doi.org/10.3389/fnut.2019.00131)
 
+## The same percentage deficit at two maintenance levels
+
+Daily deficit and a first-pass weekly loss at 7,700 kcal per kg (3,500 per lb). Supervised dieters lost about a quarter less than this rule predicts within two months.
+
+| Deficit | Maintenance 1,800 kcal | Maintenance 3,000 kcal | What to expect |
+|---|---|---|---|
+| 10% | 180 kcal a day; about 0.16 kg (0.36 lb) a week | 300 kcal a day; about 0.27 kg (0.6 lb) a week | Easy to keep; small enough for logging error to erase |
+| 20% | 360 kcal; about 0.33 kg (0.72 lb) | 600 kcal; about 0.55 kg (1.2 lb) | A common middle ground for most dieters |
+| 25% | 450 kcal; about 0.41 kg (0.9 lb) | 750 kcal; about 0.68 kg (1.5 lb) | Passes the 500 kcal guide for the larger person |
+
+Some support · Sources: [Hall 2008](https://doi.org/10.1038/sj.ijo.0803720), [Heymsfield 2012](https://doi.org/10.1016/j.metabol.2011.11.012), [Thomas 2013](https://doi.org/10.1038/ijo.2013.51), [Murphy 2022](https://doi.org/10.1111/sms.14075), [McDonald 2009aa](https://bodyrecomposition.com/fat-loss/3-sizes-of-calorie-deficit)
+
 ## Terms
 
 - **Adaptive thermogenesis (metabolic adaptation)**: A fall in energy use beyond what the loss of body mass explains, seen during and after weight loss. Studies find it ranges from small to modest.
 - **Diet break and refeed**: A diet break is a planned stretch, often one to two weeks, at maintenance calories. A refeed is shorter, usually one or two days of higher carbohydrate.
 - **Energy deficit**: Eating less energy than you use. It is the one requirement for losing body fat. A daily deficit of 500 kcal is about 3,500 kcal a week.
+- **Glycaemic index (GI)**: How far a food's carbohydrate raises blood glucose against the same amount from glucose or white bread. Fat, protein and fibre in a meal lower it, and in studies GI did not change how much fat people burned.
 - **NEAT (non-exercise activity)**: Non-exercise activity thermogenesis: energy spent on walking, standing, fidgeting and chores. It can fall during a diet without you noticing.
 - **Recomposition**: Gaining muscle and losing fat over the same period. Body weight may hold steady or fall while the body changes shape.
+- **Rigid and flexible restraint**: Two styles of holding back on food. Rigid control runs on fixed rules and forbidden foods, all or nothing. Flexible control allows any food in limited amounts and evens out over days.
 - **Set point and settling point**: Two models of body weight: a defended set point, or a settling point where weight drifts with food and activity. A review finds both incomplete. McDonald's view is that the body resists loss far more than gain.
+- **Targeted and cyclical ketogenic diets**: Ketogenic diets adapted for hard training. A targeted version adds a small dose of carbohydrate around sessions; a cyclical one alternates several low-carbohydrate days with one or two days of high carbohydrate.
 - **Time-restricted eating**: Eating all meals within a set daily window, such as eight hours, and fasting for the rest. It is one form of intermittent fasting.
 
 ## Offers for people who arrive through an AI assistant
