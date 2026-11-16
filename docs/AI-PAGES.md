@@ -70,13 +70,43 @@ in `scripts/build_fitness.py`, then rebuild the fitness page.
    or assistant (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-User,
    Claude-SearchBot, PerplexityBot, Perplexity-User). Browsers and search engines
    (Googlebot, Bingbot) always get the normal page. This is the mechanism the Ramp
-   experiment used. It was tested locally with `wrangler dev`, never on Cloudflare.
+   experiment used, and what isitagentready.com checks as "Markdown negotiation". It was
+   tested locally with `wrangler dev` (16 November 2026), never on Cloudflare.
+
+   How it decides, in `accept` mode: markdown only when the `Accept` header names
+   `text/markdown` with a q-value at least as high as `text/html`'s. `text/markdown` alone,
+   or `text/markdown, text/html;q=0.9`, gets the twin; a browser's header, `*/*`, `text/*`
+   and `text/markdown;q=0` get the page. Both answers carry `Vary: Accept`, so no cache
+   hands one to a reader who asked for the other. The markdown answer has
+   `Content-Type: text/markdown; charset=utf-8`, a `Link` to the page as canonical, and no
+   `noindex` (the twin file's own `noindex` stays on `/<page>.md`; the page's address must
+   stay in search). It sends no `x-markdown-tokens` header; the scanner treats that as
+   optional, and the worker has no tokenizer to count with.
+
+   Cloudflare does not apply `public/_headers` to responses from a Worker
+   ([docs](https://developers.cloudflare.com/workers/static-assets/headers/)). The worker
+   therefore applies the same rules itself, from `worker/asset-headers.js`, which
+   `scripts/build_agent_files.py` generates from `_headers`. Without it, every page the
+   worker answers would lose its security headers. Locally, the HTML it serves is
+   byte-identical to the static site, with the same headers plus `Vary: Accept`.
+
+   Cost: on the Workers Free plan, each request to a route in `run_worker_first` counts
+   against 100,000 Worker requests a day, and past that those routes answer 429 instead of
+   falling back to the static page
+   ([billing](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/),
+   [limits](https://developers.cloudflare.com/workers/platform/limits/)). Every other file,
+   including the twins at their `.md` addresses, stays free and unlimited. Check the
+   account's plan and the site's daily page views before deploying.
 
 To turn the second one on, deploy with the alternative config:
 
 ```bash
 npx wrangler deploy -c wrangler.ai-twins.jsonc
 ```
+
+That is a manual deploy, and it does not last: Workers Builds deploys `wrangler.jsonc` on
+every merge to `main`, which removes the worker again. Use it to try the worker on the live
+site, not to keep it.
 
 That deploys the same site with the worker in front of the listed pages that have a twin
 (the routes in `run_worker_first`); every other request is served as before. To make it permanent, copy the `main`,
@@ -93,6 +123,42 @@ the pattern search engines penalise, so leave it on `accept` unless you have a r
 If the zone is on a Cloudflare Pro plan or higher, Cloudflare's own "Markdown for
 Agents" setting does the `Accept: text/markdown` part without a worker, by converting
 the HTML page. It does not use these hand-written twins.
+
+## Agent discovery
+
+What isitagentready.com looks for, and what the site publishes for it. The scan of
+16 November 2026 scored level 1 of 5.
+
+| Check | State | Where |
+|---|---|---|
+| `Link` headers (RFC 8288) | Done | Every page with a twin sends `Link: </<twin>.md>; rel="alternate"; type="text/markdown"`; the home page adds `</llms.txt>; rel="describedby"`. Generated into `public/_headers` |
+| Content Signals | Done | `Content-Signal: search=yes, ai-input=yes, ai-train=yes` in `public/robots.txt`, the owner's choice. It matches the Cloudflare setting that lets AI crawlers in |
+| Markdown negotiation | Built, off until deployed with `wrangler.ai-twins.jsonc` | `worker/ai-twins.js`, above |
+| Agent skills index | Done | `/.well-known/agent-skills/index.json` lists one skill, `kitesink-fitness-reference`: how to find, read and cite an entry using `search.json` and the twins |
+| WebMCP, ARD manifest | Not done, by choice | WebMCP is an experimental browser API; ARD would only re-list the skills index. Neither changes the level |
+| MCP Server Card, A2A Agent Card, API catalog, OAuth discovery and protected resource, auth.md, DNS-AID | Not applicable | The site has no MCP server, agent, API or sign-in. Publishing descriptors for them would be untrue |
+
+`python3 scripts/build_agent_files.py` writes the skills index (with each skill's SHA-256),
+the `Link` block at the end of `public/_headers` and `worker/asset-headers.js`. Run it after
+editing a `SKILL.md`, `_headers` or the list of twins. The audit fails if any of the three is
+stale, if a file under `/.well-known/` is not in the index, or if `robots.txt` loses its
+Content Signals.
+
+To add a skill: write `public/.well-known/agent-skills/<name>/SKILL.md` with `name` and
+`description` in its frontmatter (`name` equal to the folder), then run the build. Keep a
+skill to things an agent can really do here.
+
+Levels (from the scanner's guide): 2 needs Content Signals; 3 adds markdown negotiation;
+4 adds a skills index. Merging to `main` deploys `wrangler.jsonc` through Workers Builds
+(docs/DEPLOY-CLOUDFLARE.md), so merging this change should give level 2. Level 4 needs the
+worker in production, and the only lasting way to get it is to copy `main`, `vars` and
+`assets` from `wrangler.ai-twins.jsonc` into `wrangler.jsonc` and merge that. Rescan after
+each deploy to confirm.
+
+The audit also holds the skill to the site: the page slugs it names must be the pages
+under `/fitness/`, `search.json` must have the keys and row layout it describes, and every
+row must be findable in its page's twin the way it says. A change to the fitness build that
+breaks any of that fails the audit until the skill is updated.
 
 ## Before expecting any traffic
 

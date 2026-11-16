@@ -291,6 +291,74 @@ def audit_llms_full() -> list[str]:
     return []
 
 
+def audit_fitness_skill() -> list[str]:
+    """The kitesink-fitness-reference skill describes internals that scripts/build_fitness.py
+    owns. Fail when they drift apart: the pages it names, the layout of search.json, and how
+    an entry is found in its page's twin (a heading, a bold glossary item or a table row)."""
+    label = "public/.well-known/agent-skills/kitesink-fitness-reference/SKILL.md"
+    skill_path = ROOT / label
+    if not skill_path.is_file():
+        return []
+    skill = skill_path.read_text(encoding="utf-8")
+    issues: list[str] = []
+    pages_line = re.search(r"^Pages: (.*?)\n\n", skill, re.M | re.S)
+    named = re.findall(r"`([a-z]+)`", pages_line.group(1)) if pages_line else []
+    if named != list(FITNESS_SUBPAGES):
+        issues.append(f"{label}: names the pages {named}, but the pages under /fitness/ are {list(FITNESS_SUBPAGES)}")
+    search_path = PUBLIC / "fitness" / "search.json"
+    if not search_path.is_file():
+        return issues + ["public/fitness/search.json: missing (the fitness skill relies on it)"]
+    search = json.loads(search_path.read_text(encoding="utf-8"))
+    if sorted(search) != ["areas", "kinds", "pages", "rows"]:
+        return issues + [f"{label}: says search.json holds pages, kinds, areas and rows; it holds {sorted(search)}"]
+    if search["pages"] != list(FITNESS_SUBPAGES):
+        issues.append(f"{label}: search.json lists the pages {search['pages']}, not the pages under /fitness/")
+    twins: dict[str, str] = {}
+    lost = []
+    for row in search["rows"]:
+        ok = (isinstance(row, list) and 6 <= len(row) <= 7 and all(isinstance(row[i], int) for i in (1, 2, 3))
+              and all(isinstance(row[i], str) for i in (0, 4, 5)))
+        if not ok:
+            issues.append(f"{label}: a search.json row is not [id, page, kind, area, title, short answer(, extra)]: {str(row)[:80]}")
+            break
+        page = search["pages"][row[1]]
+        if page not in twins:
+            twin = PUBLIC / "fitness" / f"{page}.md"
+            twins[page] = twin.read_text(encoding="utf-8") if twin.is_file() else ""
+        title = re.escape(row[4])
+        if not any(re.search(p, twins[page], re.M) for p in (rf"^#{{2,4}} {title}\s*$", rf"^- \*\*{title}\*\*", rf"^\|.*\| {title}:")):
+            lost.append(f"{row[0]} on {page}")
+    if lost:
+        issues.append(f"{label}: {len(lost)} entries cannot be found in their twin the way the skill says, e.g. {', '.join(lost[:3])}")
+    return issues
+
+
+def audit_agent_files() -> list[str]:
+    """What agents read about the site: the skills index and its digests, the Link headers in
+    _headers and the worker's copy of _headers are generated (scripts/build_agent_files.py);
+    every file under /.well-known/ is one the index accounts for; robots.txt states all three
+    Content Signals."""
+    import subprocess
+    issues: list[str] = []
+    result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_agent_files.py"), "--check"], capture_output=True, text=True)
+    if result.returncode:
+        issues.append("agent files: " + (result.stdout.strip() or result.stderr.strip().splitlines()[-1]))
+    index = PUBLIC / ".well-known" / "agent-skills" / "index.json"
+    known = {index}
+    if index.is_file():
+        known |= {PUBLIC / skill["url"].lstrip("/") for skill in json.loads(index.read_text(encoding="utf-8"))["skills"]}
+    for path in sorted((PUBLIC / ".well-known").rglob("*")):
+        if path.is_file() and path not in known:
+            issues.append(f"{path.relative_to(ROOT).as_posix()}: published under /.well-known/ but not in the skills index; list it or add a rule for it here")
+    issues += audit_fitness_skill()
+    robots = (PUBLIC / "robots.txt").read_text(encoding="utf-8")
+    signal = re.search(r"^User-agent: \*\n(?:.*\n)*?Content-Signal: (.+)$", robots, re.M)
+    keys = dict(part.strip().split("=", 1) for part in signal.group(1).split(",")) if signal else {}
+    if set(keys) != {"search", "ai-input", "ai-train"} or not set(keys.values()) <= {"yes", "no"}:
+        issues.append("public/robots.txt: the User-agent: * group needs one Content-Signal line with search, ai-input and ai-train, each yes or no")
+    return issues
+
+
 def audit_asset_versions() -> list[str]:
     """Every page must request the same ?v= of the shared CSS/JS, or returning
     visitors can get a new page with an old cached stylesheet."""
@@ -389,6 +457,7 @@ def main() -> int:
     issues += audit_fitness_build()
     issues += audit_fitness_homes()
     issues += audit_llms_full()
+    issues += audit_agent_files()
 
     deployed_text = "\n".join(
         path.read_text(encoding="utf-8")
