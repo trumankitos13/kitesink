@@ -175,68 +175,6 @@
       "url": "https://www.fao.org/4/y5686e/y5686e07.htm",
       "label": "FAO/WHO/UNU 2004"
     },
-    "byrne-2018": {
-      "type": "rct",
-      "authors": [
-        "Byrne NM",
-        "Sainsbury A",
-        "King NA",
-        "Hills AP",
-        "Wood RE"
-      ],
-      "year": 2018,
-      "title": "Intermittent energy restriction improves weight loss efficiency in obese men: the MATADOR study",
-      "journal": "International Journal of Obesity",
-      "doi": "10.1038/ijo.2017.206",
-      "volume": "42",
-      "issue": "2",
-      "pages": "129-138",
-      "pmid": "28925405",
-      "n_participants": 51,
-      "support": "51 men with obesity; intermittent restriction gave greater weight loss (14.1 vs 9.1 kg) and fat loss than continuous restriction over the same 16 weeks of restriction."
-    },
-    "longland-2016": {
-      "type": "rct",
-      "authors": [
-        "Longland TM",
-        "Oikawa SY",
-        "Mitchell CJ",
-        "Devries MC",
-        "Phillips SM"
-      ],
-      "year": 2016,
-      "title": "Higher compared with lower dietary protein during an energy deficit combined with intense exercise promotes greater lean mass gain and fat mass loss: a randomized trial",
-      "journal": "The American Journal of Clinical Nutrition",
-      "doi": "10.3945/ajcn.115.119339",
-      "volume": "103",
-      "issue": "3",
-      "pages": "738-746",
-      "pmid": "26817506",
-      "n_participants": 40,
-      "support": "40 young men, 4 weeks at about 40% energy deficit with resistance and interval training; 2.4 vs 1.2 g/kg protein: lean mass +1.2 vs +0.1 kg, fat mass -4.8 vs -3.5 kg."
-    },
-    "peos-2021": {
-      "type": "rct",
-      "authors": [
-        "PEOS JJ",
-        "HELMS ER",
-        "FOURNIER PA",
-        "ONG J",
-        "HALL C",
-        "KRIEGER J",
-        "SAINSBURY A"
-      ],
-      "year": 2021,
-      "title": "Continuous versus Intermittent Dieting for Fat Loss and Fat-Free Mass Retention in Resistance-trained Adults: The ICECAP Trial",
-      "journal": "Medicine & Science in Sports & Exercise",
-      "doi": "10.1249/MSS.0000000000002636",
-      "volume": "53",
-      "issue": "8",
-      "pages": "1685-1698",
-      "pmid": "33587549",
-      "n_participants": 61,
-      "support": "61 resistance-trained adults over 12 weeks; no difference in fat mass or fat-free mass between intermittent and continuous restriction; the intermittent group had lower hunger."
-    },
     "helms-2014-protein": {
       "type": "systematic-review",
       "authors": [
@@ -306,27 +244,6 @@
       "pages": "20",
       "pmid": "28642676",
       "support": "Higher protein intakes (2.3-3.1 g/kg/d) may be needed to maximize the retention of lean body mass in resistance-trained subjects during hypocaloric periods."
-    },
-    "poon-2024": {
-      "type": "meta-analysis",
-      "authors": [
-        "Poon ETC",
-        "Tsang JH",
-        "Sun F",
-        "Zheng C",
-        "Wong SHS"
-      ],
-      "year": 2025,
-      "title": "Effects of intermittent dieting with break periods on body composition and metabolic adaptation: a systematic review and meta-analysis",
-      "journal": "Nutrition Reviews",
-      "doi": "10.1093/nutrit/nuad168",
-      "volume": "83",
-      "issue": "1",
-      "pages": "59-71",
-      "pmid": "38193357",
-      "n_studies": 12,
-      "n_participants": 881,
-      "support": "12 randomized trials with 881 participants; no group differences in body mass or fat loss; resting metabolic rate fell less after intermittent dieting with breaks."
     },
     "lieberman-2018": {
       "type": "rct",
@@ -405,48 +322,6 @@
       "n_participants": 100,
       "support": "Fast days at 25% of energy needs alternating with feast days lost no more weight than a daily 25% restriction over a year, and more people dropped out."
     },
-    "herrmann-2024": {
-      "type": "other",
-      "authors": [
-        "Herrmann SD",
-        "Willis EA",
-        "Ainsworth BE",
-        "Barreira TV",
-        "Hastert M",
-        "Kracht CL",
-        "Schuna JM",
-        "Cai Z",
-        "Quan M",
-        "Tudor-Locke C",
-        "Whitt-Glover MC",
-        "Jacobs DR"
-      ],
-      "year": 2024,
-      "title": "2024 Adult Compendium of Physical Activities: A third update of the energy costs of human activities",
-      "journal": "Journal of Sport and Health Science",
-      "volume": "13",
-      "issue": "1",
-      "pages": "6-12",
-      "doi": "10.1016/j.jshs.2023.10.010",
-      "pmid": "38242596",
-      "support": "MET values for 1,114 activities in adults aged 19 to 59; the planner uses codes 02050, 02054, 17200, 12020, 01040, 01305, 02040 and 02101 from pacompendium.com."
-    },
-    "tudor-locke-2004": {
-      "type": "review",
-      "authors": [
-        "Tudor-Locke C",
-        "Bassett DR"
-      ],
-      "year": 2004,
-      "title": "How Many Steps/Day Are Enough?",
-      "journal": "Sports Medicine",
-      "volume": "34",
-      "issue": "1",
-      "pages": "1-8",
-      "doi": "10.2165/00007256-200434010-00001",
-      "pmid": "14715035",
-      "support": "Proposed bands: under 5,000 steps a day sedentary, 5,000 to 7,499 low active, 7,500 to 9,999 somewhat active, 10,000 or more active, over 12,500 highly active."
-    },
     "nice-2025": {
       "type": "guideline",
       "authors": [
@@ -458,6 +333,83 @@
       "url": "https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet",
       "label": "NICE 2025",
       "support": "Low-energy diets (800 to 1,200 kcal a day) and very-low-energy diets (under 800) only within specialist services, for no more than 12 weeks."
+    },
+    "helms-2023": {
+      "type": "rct",
+      "authors": [
+        "Helms ER",
+        "Spence AJ",
+        "Sousa C",
+        "Kreiger J",
+        "Taylor S",
+        "Oranchuk DJ",
+        "Dieter BP",
+        "Watkins CM"
+      ],
+      "year": 2023,
+      "title": "Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals: A Parallel Groups Design",
+      "journal": "Sports Medicine - Open",
+      "doi": "10.1186/s40798-023-00651-y",
+      "volume": "9",
+      "issue": "1",
+      "pages": "102",
+      "pmid": "37914977",
+      "n_participants": 17,
+      "support": "21 trained lifters randomized, 17 completers over 8 weeks; maintenance vs 5% vs 15% energy surplus; faster rates of body mass gain primarily increase rates of fat gain rather than augmenting strength or muscle thickness."
+    },
+    "nunes-2022": {
+      "type": "meta-analysis",
+      "authors": [
+        "Nunes EA",
+        "Colenso‐Semple L",
+        "McKellar SR",
+        "Yau T",
+        "Ali MU",
+        "Fitzpatrick‐Lewis D",
+        "Sherifali D",
+        "Gaudichon C",
+        "Tomé D",
+        "Atherton PJ",
+        "Robles MC",
+        "Naranjo‐Modad S",
+        "Braun M",
+        "Landi F",
+        "Phillips SM"
+      ],
+      "year": 2022,
+      "title": "Systematic review and meta‐analysis of protein intake to support muscle mass and function in healthy adults",
+      "journal": "Journal of Cachexia, Sarcopenia and Muscle",
+      "doi": "10.1002/jcsm.12922",
+      "volume": "13",
+      "issue": "2",
+      "pages": "795-810",
+      "pmid": "35187864",
+      "n_studies": 74,
+      "support": "Increasing daily protein ingestion may enhance gains in LBM in studies enrolling subjects in RE; significant for younger subjects (<65 years old) ingesting >=1.6 g of protein/kg/day."
+    },
+    "fao2010": {
+      "type": "guideline",
+      "authors": [
+        "FAO"
+      ],
+      "year": 2010,
+      "title": "Fats and fatty acids in human nutrition: report of an expert consultation",
+      "journal": "FAO Food and Nutrition Paper 91",
+      "url": "https://www.fao.org/4/i1953e/i1953e00.pdf",
+      "label": "FAO/WHO 2010",
+      "support": "Minimum to prevent essential fatty acid deficiency: 2.5% of energy as linoleic acid plus 0.5% as alpha-linolenic acid. Minimum total fat for adults 15% of energy; maximum 30-35% for most."
+    },
+    "who2003": {
+      "type": "guideline",
+      "authors": [
+        "WHO/FAO"
+      ],
+      "year": 2003,
+      "title": "Diet, nutrition and the prevention of chronic diseases: report of a joint WHO/FAO expert consultation",
+      "journal": "WHO Technical Report Series 916",
+      "url": "https://www.fao.org/4/ac911e/ac911e07.htm",
+      "label": "WHO/FAO 2003",
+      "support": "Fruits and vegetables and wholegrain foods are likely to provide more than 25 g a day of total dietary fibre; at least 400 g a day of fruits and vegetables."
     }
   }
 }

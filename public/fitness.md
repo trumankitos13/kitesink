@@ -39,7 +39,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - 1RM and load calculator: https://kitesink.com/fitness#loads
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
-- Diet planner (7 or 14 days of very low, low, maintenance and surplus days around your training; saves nothing): https://kitesink.com/fitness#plan
+- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): https://kitesink.com/fitness#plan
 
 ## Vantix
 

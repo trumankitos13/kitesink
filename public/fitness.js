@@ -315,167 +315,98 @@
     });
     return { total: scored.length, hits: hits };
   };
-  /* ---------- diet planner: a 7- or 14-day plan of day types ----------
-     Each day's maintenance = resting energy × a daily-life factor (no training) + that day's
-     session. Day types: "vlow" (very low), "maint" (maintenance), "surplus", and "flex" days,
-     which absorb whatever is left of the plan's target balance and show as low or surplus.
-     Sources (content/fitness/tools.json): FAO/WHO/UNU 2004 table 5.3 for the daily-life bands,
-     Tudor-Locke 2004 for the step counts, the 2024 Adult Compendium for session METs,
-     Trepanowski 2017 for a very low day at 25% of needs, NICE NG246 for the 1,200 kcal floor,
-     Hall 2008 for 7,700 kcal per kg. */
+  /* ---------- diet planner: a week of diet days and maintenance days ----------
+     Maintenance is one figure a day: resting energy × an activity level that already counts
+     training (the macro tool's FAO/WHO/UNU bands), or the person's own tracked figure. Losing
+     fat, a chosen number of days a week are diet days at a chosen share below maintenance; the
+     rest stay at maintenance. Everything else follows from that: the weekly deficit, protein,
+     and the lowest a diet day can go. Sources are in content/fitness/tools.json. */
   var PLAN = {
-    // Daily life, not counting training sessions. 1.40, 1.70 and 2.00 are the floors of the FAO
-    // bands; 1.53 is FAO's worked example of an office job with an hour of walking.
-    LIFE: { desk: 1.4, walk: 1.53, feet: 1.7, labour: 2.0 },
-    // m: METs from the 2024 Adult Compendium (code in c); hard: counts as a hard session when
-    // the planner places day types (a KiteSink convention, not a study result)
-    SESSIONS: {
-      rest: { m: 1, hard: false },
-      liftHard: { m: 6.0, hard: true, c: "02050" },
-      liftLight: { m: 3.5, hard: false, c: "02054" },
-      walk: { m: 4.8, hard: false, c: "17200" },
-      steady: { m: 7.5, hard: true, c: "12020" },
-      hardCardio: { m: 10.0, hard: true, c: "01040" },
-      intervals: { m: 8.8, hard: true, c: "01305" },
-      circuits: { m: 7.5, hard: true, c: "02040" },
-      mobility: { m: 2.3, hard: false, c: "02101" }
-    },
-    VLOW_SHARE: 0.25,   // a very low day eats 25% of that day's needs (Trepanowski 2017)
-    FLOOR: 1200,        // average kcal a day; below it NICE NG246 sends people to specialist care
-    BIG_DEFICIT: 25,    // % of maintenance; the macro tool warns at the same point
-    EA_WARN: 30,        // kcal per kg fat-free mass a day: a risk marker, not a safe floor
-    LONG_WEEKS: 12      // a deficit over BIG_DEFICIT for longer than this without a break gets a warning (a convention)
+    VLOW_SHARE: 0.25,  // a diet day never goes under 25% of maintenance (Trepanowski 2017's fast days)
+    FLOOR: 1200,       // the week's average a day; below it NICE NG246 means specialist care
+    BIG_DEFICIT: 25,   // % of the week's maintenance: protein tops out here, and a warning shows
+    EA_WARN: 30,       // kcal per kg fat-free mass a day: a risk marker, not a safe floor
+    FAT_SHARE: 0.25,   // fat as a share of each day's calories: a convention inside FAO/WHO 2010's 15-35%
+    EFA_SHARE: 0.03,   // linoleic plus alpha-linolenic acid, at least 2.5% + 0.5% of energy (FAO/WHO 2010)
+    FIBRE_G: 25,       // grams a day of total dietary fibre, at least (FAO/WHO 2003)
+    GAIN: [5, 10, 15]  // surplus options, % over maintenance (Helms 2023 compared 5 and 15)
   };
-  // Which day types each template asks for. "hard" days are the ones with a hard session.
-  PLAN.TEMPLATES = {
-    lose: {
-      steady: function () { return { fixed: {}, hardKind: "flex", restKind: "flex" }; },
-      train: function () { return { fixed: {}, hardKind: "maint", restKind: "flex" }; },
-      two: function (len) { return { fixed: { vlow: 2 * len / 7 }, restKind: "maint" }; },
-      alternate: function (len) { return { fixed: { vlow: Math.floor(len / 2) }, restKind: "maint" }; }
-    },
-    hold: {
-      steady: function () { return { fixed: {}, hardKind: "maint", restKind: "maint" }; },
-      train: function () { return { fixed: {}, hardKind: "surplus", restKind: "flex" }; }
-    },
-    gain: {
-      steady: function () { return { fixed: {}, hardKind: "flex", restKind: "flex" }; },
-      train: function () { return { fixed: {}, hardKind: "flex", restKind: "maint" }; }
+  // Protein in g a day. Losing fat it rises with the deficit, as Helms 2014 says needs do:
+  // 2.3 to 3.1 g per kg of fat-free mass when body fat is known; without it 1.6 to 2.3 g per kg
+  // of body weight, so a person with a lot of body fat is not over-served. Otherwise 1.6 g/kg
+  // (Nunes 2022). The straight line between the ends is a convention.
+  F.planProtein = function (kg, bf, phase, deficitPct) {
+    if (phase !== "lose") return 1.6 * kg;
+    var t = Math.max(0, Math.min(deficitPct, PLAN.BIG_DEFICIT)) / PLAN.BIG_DEFICIT;
+    return bf > 0 && bf < 60 ? kg * (1 - bf / 100) * (2.3 + 0.8 * t) : kg * (1.6 + 0.7 * t);
+  };
+  // Which days are diet days: n of L, rest days (training false) first, spread out evenly.
+  F.planPlace = function (train, n, L) {
+    var days = [], out = [];
+    for (var i = 0; i < L; i++) days.push(i);
+    var ideal = days.map(function (i) { return (i + 0.5) * L / n; });
+    // greedy: rest days first; among them the ones closest to an even spacing
+    var free = days.slice(), pick = [];
+    for (var k = 0; k < n; k++) {
+      var target = (k + 0.5) * L / n, best = null, bestScore = Infinity;
+      free.forEach(function (d) {
+        var s = (train[d % 7] ? 100 : 0) + Math.min(Math.abs(d - target), L - Math.abs(d - target));
+        pick.forEach(function (q) { if (Math.abs(q - d) === 1 || Math.abs(q - d) === L - 1) s += 0.5; });
+        if (s < bestScore) { bestScore = s; best = d; }
+      });
+      pick.push(best); free.splice(free.indexOf(best), 1);
     }
+    for (var j = 0; j < L; j++) out.push(pick.indexOf(j) >= 0);
+    return out;
   };
-
-  // Where very low days go: n of the `loads` (0 rest, 1 light, 2 hard), never two in a row
-  // (the cycle wraps), never on a hard day, lightest days first. Every set of positions is
-  // tried (at most 14 choose 7 = 3,432), so the answer is the best there is. clash = the
-  // rules could not all be kept.
-  F.placeVlow = function (loads, n) {
-    var L = loads.length, best = null, bestScore = Infinity, pick = [];
-    function score(set) {
-      var s = 0;
-      for (var i = 0; i < set.length; i++) {
-        s += loads[set[i]] === 2 ? 1000 : loads[set[i]] * 10;
-        if (set.indexOf((set[i] + 1) % L) >= 0) s += 100000;
-        s += set[i] * 0.001; // earlier days first when all else is equal
-      }
-      return s;
-    }
-    (function walk(start) {
-      if (pick.length === n) { var sc = score(pick); if (sc < bestScore) { bestScore = sc; best = pick.slice(); } return; }
-      for (var i = start; i <= L - (n - pick.length); i++) { pick.push(i); walk(i + 1); pick.pop(); }
-    })(0);
-    return { days: best || [], adjacent: bestScore >= 100000, onHard: bestScore % 100000 >= 1000 };
-  };
-
-  /* plan(o) → the whole plan.
-     o: sex, kg, cm, age, bf (optional), life (key of PLAN.LIFE), phase 'lose'|'hold'|'gain',
-        template (key of PLAN.TEMPLATES[phase]), len 7|14, rate (lose: % body weight a week),
-        surplus (% over maintenance), protein (g/kg), fatPct, week: [{ s: session key, min }] × 7,
-        kinds (optional): a day-type list the person arranged by hand, used instead of placing */
+  function dayMacros(kcal, protein, maint) {
+    var efa = PLAN.EFA_SHARE * maint / 9;                     // g of linoleic + alpha-linolenic
+    var fat = Math.max(kcal * PLAN.FAT_SHARE / 9, efa);
+    fat = Math.min(fat, Math.max(efa, (kcal - protein * 4) / 9));
+    return { kcal: kcal, protein: protein, fat: fat, carbs: Math.max(0, (kcal - protein * 4 - fat * 9) / 4) };
+  }
+  /* plan(o) → the week.
+     o: sex, kg, cm, age, bf (optional), pal, maint (optional: the person's own figure),
+        phase 'lose'|'hold'|'gain', days (diet days a week, 0.5 steps), size (% below maintenance
+        on a diet day), gain (% surplus), train: 7 booleans, diet (optional): L booleans set by hand */
   F.plan = function (o) {
     var useBf = o.bf > 0 && o.bf < 60;
     var rmr = useBf ? F.cunningham(o.kg, o.bf) : F.mifflin(o.sex, o.kg, o.cm, o.age);
-    var life = PLAN.LIFE[o.life] || PLAN.LIFE.walk, L = o.len === 14 ? 14 : 7;
-    var tplFn = (PLAN.TEMPLATES[o.phase] || PLAN.TEMPLATES.lose)[o.template] || PLAN.TEMPLATES[o.phase].steady;
-    var tpl = tplFn(L), protG = o.protein * o.kg, protKcal = protG * 4;
-    var days = [];
-    for (var i = 0; i < L; i++) {
-      var w = (o.week && o.week[i % 7]) || { s: "rest", min: 0 }, ses = PLAN.SESSIONS[w.s] || PLAN.SESSIONS.rest;
-      var min = w.s === "rest" ? 0 : Math.max(0, +w.min || 0);
-      var exKcal = (ses.m - 1) * o.kg * min / 60;   // net of the resting share already counted
-      days.push({ i: i, session: w.s, min: min, hard: ses.hard && min > 0, load: ses.hard && min > 0 ? 2 : min > 0 ? 1 : 0,
-                  exKcal: exKcal, maint: rmr * life + exKcal });
+    var own = o.maint > 0, maint = own ? o.maint : rmr * o.pal;
+    var res = { rmr: rmr, maint: maint, own: own, equation: useBf ? "Cunningham" : "Mifflin-St Jeor", phase: o.phase };
+    if (o.phase !== "lose") {
+      var kcal = o.phase === "gain" ? maint * (1 + o.gain / 100) : maint, p = F.planProtein(o.kg, o.bf, o.phase, 0);
+      res.len = 7; res.diet = [false, false, false, false, false, false, false];
+      res.dietDay = null; res.maintDay = dayMacros(kcal, p, maint);
+      res.weekBalance = (kcal - maint) * 7; res.avgKcal = kcal; res.deficitPct = 0;
+      res.weekKg = res.weekBalance / KCAL_PER_KG; res.protein = p;
+      res.minSize = 0; res.maxSize = 0;
+      return res;
     }
-    // day types: by hand, or placed
-    var kinds, placed = { adjacent: false, onHard: false };
-    if (o.kinds && o.kinds.length === L) kinds = o.kinds.slice();
-    else {
-      kinds = days.map(function (d) { return d.hard ? (tpl.hardKind || tpl.restKind) : tpl.restKind; });
-      var nv = Math.round(tpl.fixed.vlow || 0);
-      if (nv) { placed = F.placeVlow(days.map(function (d) { return d.load; }), nv); placed.days.forEach(function (j) { kinds[j] = "vlow"; }); }
+    var L = Math.round(o.days * 2) % 2 ? 14 : 7, n = Math.round(o.days * L / 7);
+    var diet = o.diet && o.diet.length === L ? o.diet.slice() : F.planPlace(o.train || [], n, L);
+    n = diet.filter(Boolean).length;
+    // the deepest a diet day can go: protein (at the deficit that size makes) + essential fat,
+    // or 25% of maintenance, whichever is more; and the week's average must stay at 1,200 or more
+    function at(size) {
+      var dk = maint * (1 - size / 100), wb = -(maint - dk) * n * 7 / L, dp = -wb / (maint * 7) * 100;
+      var pr = F.planProtein(o.kg, o.bf, "lose", dp);
+      return { dk: dk, wb: wb, dp: dp, pr: pr, low: Math.max(pr * 4 + PLAN.EFA_SHARE * maint, PLAN.VLOW_SHARE * maint),
+               avg: maint + wb / 7 };
     }
-    // a training-days template with no days left to take up the target: every day takes a share
-    if (!o.kinds && !tpl.fixed.vlow && kinds.indexOf("flex") < 0 && o.phase !== "hold") kinds = kinds.map(function () { return "flex"; });
-    for (var a = 0; a < L; a++) {
-      if (kinds[a] === "vlow" && kinds[(a + 1) % L] === "vlow") placed.adjacent = true;
-      if (kinds[a] === "vlow" && days[a].hard) placed.onHard = true;
-    }
-    // the target balance over the cycle, then each day
-    var totMaint = days.reduce(function (s, d) { return s + d.maint; }, 0);
-    var target = o.phase === "lose" ? -(o.rate / 100) * o.kg * KCAL_PER_KG * L / 7 : o.phase === "gain" ? (o.surplus / 100) * totMaint : 0;
-    var fixedBal = 0, flexMaint = 0;
-    days.forEach(function (d, j) {
-      d.kind = kinds[j];
-      if (d.kind === "vlow") d.kcal = Math.max(PLAN.VLOW_SHARE * d.maint, protKcal * 1.1);
-      else if (d.kind === "surplus") d.kcal = d.maint * (1 + o.surplus / 100);
-      else if (d.kind === "maint") d.kcal = d.maint;
-      if (d.kind !== "flex") fixedBal += d.kcal - d.maint; else flexMaint += d.maint;
-    });
-    var rest = target - fixedBal, clamped = false;
-    days.forEach(function (d) {
-      if (d.kind !== "flex") return;
-      d.kcal = d.maint + rest * d.maint / flexMaint;
-      var low = Math.max(PLAN.VLOW_SHARE * d.maint, protKcal * 1.1);
-      if (d.kcal < low) { d.kcal = low; clamped = true; }
-    });
-    var totKcal = 0, totEx = 0;
-    days.forEach(function (d) {
-      var r = d.kcal / d.maint;
-      d.type = d.kind === "vlow" ? "vlow" : r < 0.97 ? "low" : r > 1.03 ? "surplus" : "maint";
-      d.protein = protG;
-      d.fat = Math.max(0, Math.min(d.kcal * o.fatPct / 100, d.kcal - protKcal) / 9);
-      d.carbs = Math.max(0, (d.kcal - protKcal - d.fat * 9) / 4);
-      totKcal += d.kcal; totEx += d.exKcal;
-    });
-    var avgKcal = totKcal / L, avgMaint = totMaint / L, weekBal = (totKcal - totMaint) * 7 / L;
-    var ffm = useBf ? o.kg * (1 - o.bf / 100) : NaN;
-    return {
-      days: days, len: L, rmr: rmr, life: life, equation: useBf ? "Cunningham" : "Mifflin-St Jeor",
-      avgKcal: avgKcal, avgMaint: avgMaint, weekBalance: weekBal, weekKg: weekBal / KCAL_PER_KG,
-      setsOwnRate: flexMaint === 0, clamped: clamped,
-      adjacent: placed.adjacent, vlowOnHard: placed.onHard,
-      belowFloor: avgKcal < PLAN.FLOOR, belowRmr: avgKcal < rmr,
-      deficitPct: weekBal < 0 ? -weekBal / (avgMaint * 7) * 100 : 0,
-      ea: useBf ? (avgKcal - totEx / L) / ffm : NaN
-    };
+    var maxSize = 10;
+    for (var sz = 10; sz <= 75; sz++) { var t = at(sz); if (t.dk < t.low - 1e-9 || t.avg < PLAN.FLOOR) break; maxSize = sz; }
+    var floorBinds = at(10).avg < PLAN.FLOOR;
+    var size = Math.max(10, Math.min(o.size, maxSize)), c = at(size);
+    res.len = L; res.diet = diet; res.n = n; res.daysPerWeek = n * 7 / L;
+    res.size = size; res.minSize = 10; res.maxSize = maxSize; res.clampedSize = o.size > maxSize; res.floorBinds = floorBinds;
+    res.protein = c.pr; res.deficitPct = c.dp; res.weekBalance = c.wb; res.weekKg = c.wb / KCAL_PER_KG; res.avgKcal = c.avg;
+    res.dietDay = n ? dayMacros(c.dk, c.pr, maint) : null; res.maintDay = dayMacros(maint, c.pr, maint);
+    res.dietOnTraining = diet.filter(function (d, i) { return d && o.train && o.train[i % 7]; }).length;
+    res.belowFloor = c.avg < PLAN.FLOOR;
+    res.ea = useBf ? c.avg / (o.kg * (1 - o.bf / 100)) : NaN;   // intake per kg FFM; training energy is inside maintenance, so this is an upper bound
+    return res;
   };
-  // The fastest rate (% body weight a week, in steps of 0.05) a template can run without the
-  // average falling under the floor, or 0 when none can.
-  F.planMaxRate = function (o) {
-    for (var r = 1; r >= 0.25 - 1e-9; r -= 0.05) {
-      var p = F.plan(Object.assign({}, o, { rate: Math.round(r * 100) / 100 }));
-      if (!p.belowFloor) return Math.round(r * 100) / 100;
-    }
-    return 0;
-  };
-  // A long fat-loss plan with a week at maintenance after every three (the ICECAP trial's
-  // pattern, Peos 2021): which weeks are breaks, and the projected change over the plan.
-  F.planWeeks = function (weeks, weekKg, breaks) {
-    var out = [], kg = 0;
-    for (var w = 1; w <= weeks; w++) { var br = breaks && w % 4 === 0; out.push(br ? "break" : "diet"); if (!br) kg += weekKg; }
-    return { weeks: out, kg: kg, dietWeeks: out.filter(function (x) { return x === "diet"; }).length };
-  };
-  // A big deficit run for a long time with no weeks at maintenance: true means warn.
-  F.planLongWarn = function (deficitPct, weeks, breaks) { return deficitPct > PLAN.BIG_DEFICIT && weeks > PLAN.LONG_WEEKS && !breaks; };
   F.PLAN = PLAN;
 
   window.KSFit = F;
@@ -896,64 +827,27 @@
     if (!$("plan")) return;
     var P = F.PLAN, DAY = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     var DAYLONG = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    var SES = [["rest", "Rest"], ["liftHard", "Heavy lifting"], ["liftLight", "Light lifting or technique"], ["walk", "Brisk walk or easy cardio"],
-      ["steady", "Steady cardio"], ["hardCardio", "Hard cardio"], ["intervals", "Intervals"], ["circuits", "Circuits or jumps"], ["mobility", "Mobility or stretching"]];
-    var SESNAME = {}; SES.forEach(function (x) { SESNAME[x[0]] = x[1]; });
-    var TPL = {
-      lose: [["steady", "Same every day", "The same deficit every day."],
-        ["train", "More on training days", "Hard training days at maintenance; the deficit sits on the other days."],
-        ["two", "Two very low days", "Two very low days a week, never in a row and on your lightest days; the rest at maintenance. This pattern sets its own rate."],
-        ["alternate", "Alternate days", "Very low and maintenance days take turns; over 14 days that is seven of each. This pattern sets its own rate."]],
-      hold: [["steady", "Same every day", "Maintenance every day."],
-        ["train", "More on training days", "A surplus on hard training days, balanced by lower days, so the week evens out."]],
-      gain: [["steady", "Same every day", "The same surplus every day."],
-        ["train", "More on training days", "The surplus goes on hard training days; the other days stay at maintenance."]]
-    };
-    var LABEL = { vlow: "Very low", low: "Low", maint: "Maintenance", surplus: "Surplus" };
-    var mem = store.get(); // read only: the planner writes nothing
+    var mem = store.get(); // read only
     var body = { kg: mem.kg > 0 ? +mem.kg : 75, cm: mem.cm > 0 ? +mem.cm : 175 };
     if (mem.age) $("d-age").value = mem.age;
     if (mem.bf) $("d-bf").value = mem.bf;
-    var tplCur = "steady", arranged = null, last = null, refocus = null;
+    if (mem.pal) [].forEach.call($("d-act").options, function (o) { if (parseFloat(o.value) === parseFloat(mem.pal)) $("d-act").value = o.value; });
+    var train = [true, true, false, true, true, false, false], days = 3.5, manual = null, last = null, prevBal = null, changed = -1, deltaT = 0;
     var units = seg($("d-units"), mem.units, "metric", function () { showBody(); calc(); });
     var sex = seg($("d-sex"), mem.sex, "m", calc);
-    var phase = seg($("d-phase"), "lose", "lose", function () { tplCur = "steady"; tplButtons(); arranged = null; phaseChanged(); calc(); });
-    var len = seg($("d-len"), "7", "7", function () { arranged = null; calc(); });
+    var phase = seg($("d-phase"), "lose", "lose", function () { manual = null; calc(); });
+    var gainPct = seg($("d-gainseg"), "5", "5", calc);
 
-    // the training week: one session a day
-    var start = [["liftHard", 60], ["rest", 0], ["liftHard", 60], ["walk", 40], ["liftHard", 60], ["steady", 40], ["rest", 0]];
-    var opts = SES.map(function (x) { return '<option value="' + x[0] + '">' + esc(x[1]) + "</option>"; }).join("");
-    $("d-sessions").innerHTML = DAY.map(function (d, i) {
-      return '<div class="d-ses"><span aria-hidden="true">' + d + '</span><select class="k-select" id="d-s' + i + '" aria-label="' + DAYLONG[i] + ', session">' + opts +
-        '</select><span class="with-unit"><input class="k-input" id="d-m' + i + '" type="number" inputmode="numeric" min="0" max="300" step="5" aria-label="' + DAYLONG[i] + ', minutes"><span>min</span></span></div>';
-    }).join("");
-    start.forEach(function (x, i) { $("d-s" + i).value = x[0]; $("d-m" + i).value = x[1] || ""; });
-    function readWeek() {
-      return DAY.map(function (_, i) {
-        var s = $("d-s" + i).value, m = parseFloat($("d-m" + i).value);
-        $("d-m" + i).disabled = s === "rest";
-        return { s: s, min: s === "rest" ? 0 : (isFinite(m) ? m : 0) };
-      });
-    }
-    DAY.forEach(function (_, i) { $("d-s" + i).addEventListener("change", calc); $("d-m" + i).addEventListener("input", calc); });
-
-    function tplButtons() {
-      var list = TPL[phase.get()];
-      $("d-tpl").innerHTML = list.map(function (t) { return '<button type="button" value="' + t[0] + '">' + esc(t[1]) + "</button>"; }).join("");
-      pressed($("d-tpl"), tplCur);
-    }
-    $("d-tpl").addEventListener("click", function (e) {
-      var b = e.target.closest("button"); if (!b || b.value === tplCur) return;
-      tplCur = b.value; pressed($("d-tpl"), tplCur); arranged = null;
-      if (tplCur === "alternate") { len.set("14"); }
-      calc();
+    $("d-train").innerHTML = DAY.map(function (d, i) { return '<button type="button" aria-label="' + DAYLONG[i] + '" aria-pressed="' + train[i] + '">' + d + "</button>"; }).join("");
+    $("d-train").addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      var i = [].indexOf.call($("d-train").children, b); train[i] = !train[i]; b.setAttribute("aria-pressed", train[i]);
+      manual = null; calc(); say("d-say", DAYLONG[i] + (train[i] ? " is a training day. " : " is a rest day. ") + summary());
     });
-    function phaseChanged() {
-      var ph = phase.get(), r = $("d-rate");
-      if (ph === "lose") { r.min = 0.25; r.max = 1; r.step = 0.05; r.value = 0.5; } else { r.min = 5; r.max = 20; r.step = 1; r.value = 10; }
-      $("d-prot").value = ph === "lose" ? 2 : 1.6;
-      $("d-long-wrap").hidden = ph !== "lose";
-    }
+    function step(d) { days = Math.max(1, Math.min(7, days + d)); manual = null; calc(); say("d-say", summary()); }
+    $("d-days-dn").addEventListener("click", function () { step(-0.5); });
+    $("d-days-up").addEventListener("click", function () { step(0.5); });
+    $("d-reset").addEventListener("click", function () { manual = null; changed = -1; calc(); say("d-say", "Diet days back on your rest days. " + summary()); });
 
     function showBody() {
       var imp = units.get() === "imperial";
@@ -963,132 +857,108 @@
     }
     $("d-w").addEventListener("input", function () { var v = val("d-w"); body.kg = units.get() === "imperial" ? F.kg(v) : v; calc(); });
     $("d-h").addEventListener("input", function () { var v = val("d-h"); body.cm = units.get() === "imperial" ? v * 2.54 : v; calc(); });
-    ["d-age", "d-bf", "d-life", "d-rate", "d-prot", "d-fat", "d-weeks", "d-breaks"].forEach(function (id) { $(id).addEventListener("input", calc); });
-    $("d-auto").addEventListener("click", function () { arranged = null; calc(); say("d-say", "Days arranged around your training."); });
+    ["d-age", "d-bf", "d-act", "d-own", "d-size"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    $("d-size").addEventListener("change", function () { say("d-say", summary()); });
 
     function kgText(kg) { var imp = units.get() === "imperial"; return num(Math.abs(imp ? F.lb(kg) : kg), 2) + (imp ? " lb" : " kg"); }
-    function dayName(i, L) { return (L === 14 ? (i < 7 ? "W1 " : "W2 ") : "") + DAY[i % 7]; }
+    function kc(v) { return num(F.round(v, 10)); }
+    function signed(v) { return (v < 0 ? "−" : "+") + kc(Math.abs(v)); }
+    function summary() {
+      var r = last; if (!r) return "";
+      if (r.phase === "hold") return "Maintenance " + kc(r.maint) + " kcal a day.";
+      if (r.phase === "gain") return "Surplus " + kc(r.weekBalance / 7) + " kcal a day, about " + kgText(r.weekKg) + " a week.";
+      return num(r.daysPerWeek, 1) + " diet days a week. Weekly deficit " + kc(-r.weekBalance) + " kcal, about " + kgText(r.weekKg) + " a week.";
+    }
+    var narrow = window.matchMedia ? window.matchMedia("(max-width: 479px)") : { matches: false };
+    if (narrow.addEventListener) narrow.addEventListener("change", function () { if (last) drawWeek(last); });
+
+    function cell(r, i) {
+      var tr = train[i % 7], dt = r.diet[i], wk = r.len === 14 ? "Week " + (i < 7 ? 1 : 2) + ", " : "";
+      return '<button type="button" class="d-c' + (i === changed ? " is-new" : "") + '" data-i="' + i + '" aria-pressed="' + dt + '" aria-label="' + wk + DAYLONG[i % 7] +
+        (tr ? ", training day" : "") + '">' + (dt ? "Diet" : "Maint") + (tr ? '<i class="d-dot" aria-hidden="true"></i>' : "") + "</button>";
+    }
+    function drawWeek(r) {
+      var weeks = r.len / 7, h = "";
+      if (narrow.matches) {
+        h = '<table class="d-tab"><thead><tr><th scope="col"><span class="k-vh">Day</span></th>' + (weeks > 1 ? "<th scope=\"col\">Week 1</th><th scope=\"col\">Week 2</th>" : "<th scope=\"col\">Day type</th>") + "</tr></thead><tbody>";
+        for (var d = 0; d < 7; d++) { h += '<tr><th scope="row">' + DAY[d] + "</th>"; for (var w = 0; w < weeks; w++) h += "<td>" + cell(r, w * 7 + d) + "</td>"; h += "</tr>"; }
+      } else {
+        h = '<table class="d-tab"><thead><tr><th scope="col"><span class="k-vh">Week</span></th>' + DAY.map(function (d) { return '<th scope="col">' + d + "</th>"; }).join("") + "</tr></thead><tbody>";
+        for (var w2 = 0; w2 < weeks; w2++) { h += '<tr><th scope="row">' + (weeks > 1 ? "Week " + (w2 + 1) : "Week") + "</th>"; for (var d2 = 0; d2 < 7; d2++) h += "<td>" + cell(r, w2 * 7 + d2) + "</td>"; h += "</tr>"; }
+      }
+      $("d-week").innerHTML = h + "</tbody></table>";
+    }
+    $("d-week").addEventListener("click", function (e) {
+      var b = e.target.closest(".d-c"); if (!b || !last) return;
+      var i = +b.getAttribute("data-i");
+      manual = last.diet.slice(); manual[i] = !manual[i]; changed = i;
+      calc();
+      var nb = $("d-week").querySelector('.d-c[data-i="' + i + '"]'); if (nb) nb.focus();
+      say("d-say", (last.len === 14 ? "Week " + (i < 7 ? 1 : 2) + " " : "") + DAYLONG[i % 7] + " is now a " + (manual[i] ? "diet" : "maintenance") + " day. " + summary());
+    });
+
+    function dayCard(title, m, diet) {
+      return '<div class="d-card' + (diet ? " is-diet" : "") + '"><p class="d-card-h">' + title + "</p><b>" + kc(m.kcal) + ' <small style="font-size:13px;font-weight:500">kcal</small></b><p>Protein ' + num(m.protein) + " g<br>Carbohydrate " + num(m.carbs) + " g<br>Fat " + num(m.fat) + " g</p></div>";
+    }
 
     function calc() {
-      var ph = phase.get(), L = +len.get(), kg = body.kg, cm = body.cm, age = val("d-age"), bf = val("d-bf");
-      var rate = val("d-rate"), prot = val("d-prot"), fatPct = val("d-fat"), tpl = tplCur, week = readWeek();
-      var fixedRate = ph === "lose" && (tpl === "two" || tpl === "alternate");
-      var noRate = ph === "hold" && tpl === "steady";
-      $("d-rate-wrap").hidden = fixedRate || noRate;
-      $("d-rate-label").textContent = ph === "lose" ? "Rate of loss" : ph === "hold" ? "Surplus on training days" : "Surplus";
-      $("d-rate-read").textContent = ph === "lose" ? num(rate, 2) + "% of body weight / week" : "+" + num(rate) + "% over maintenance";
-      $("d-prot-read").textContent = num(prot, 1) + " g/kg · " + num(prot / LB, 2) + " g/lb";
-      $("d-fat-read").textContent = num(fatPct) + "% of calories";
-      var t = TPL[ph].filter(function (x) { return x[0] === tpl; })[0];
-      $("d-tpl-note").textContent = t ? t[2] : "";
-
+      var ph = phase.get(), kg = body.kg, cm = body.cm, age = val("d-age"), bf = val("d-bf"), own = val("d-own");
+      $("d-lose").hidden = ph !== "lose"; $("d-gain").hidden = ph !== "gain"; $("d-train-wrap").hidden = ph !== "lose"; $("d-week-wrap").hidden = ph !== "lose";
       var ok = kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 18 && age <= 95;
       $("d-out").classList.toggle("is-empty", !ok);
-      var warns = [];
-      if (!ok) {
-        $("d-kcal").textContent = "—"; $("d-sub").textContent = "Enter age (18 or over), height and weight to see a plan.";
-        $("d-days").innerHTML = ""; $("d-warn").hidden = true; $("d-long").textContent = "";
-        say("d-say", "Enter age, height and weight to see a plan."); return;
-      }
-      var o = { sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, life: $("d-life").value, phase: ph, template: tpl, len: L,
-        rate: ph === "lose" ? rate : 0, surplus: ph === "lose" ? 0 : rate, protein: prot, fatPct: fatPct, week: week,
-        kinds: arranged && arranged.length === L ? arranged : null };
-      var r = F.plan(o); last = r;
-
-      if (r.belowFloor) {
-        var max = ph === "lose" && !fixedRate ? F.planMaxRate(Object.assign({}, o, { kinds: null })) : 0;
-        $("d-out").classList.add("is-empty");
-        $("d-kcal").textContent = "—";
-        $("d-sub").textContent = "This plan averages " + num(F.round(r.avgKcal, 10)) + " kcal a day. The planner will not go under 1,200.";
-        $("d-warn").innerHTML = '<p class="warn">Under 1,200 kcal a day on average is a low-energy diet. UK clinical guidance (NICE) keeps those for specialist services with a clinician’s support. ' +
-          (max ? 'The fastest rate this pattern allows for you is ' + num(max, 2) + '% of body weight a week. <button type="button" class="k-linkbtn" id="d-use-max" style="color:#d8b07a">Use ' + num(max, 2) + '%</button>' :
-            'Try “Same every day” at a slower rate.') + "</p>";
-        $("d-warn").hidden = false; $("d-days").innerHTML = ""; $("d-long").textContent = "";
-        if (max) $("d-use-max").addEventListener("click", function () { $("d-rate").value = max; calc(); });
-        say("d-say", "This plan averages under 1,200 kcal a day, so the planner will not give it." + (max ? " The fastest rate allowed is " + num(max, 2) + " percent a week." : ""));
-        return;
-      }
-
-      $("d-kcal").textContent = num(F.round(r.avgKcal, 10));
-      var wk = r.weekKg;
-      $("d-sub").textContent = Math.abs(wk) < 0.005 ? "Holds your weight over the week." :
-        (wk < 0 ? "About " + kgText(wk) + " lost a week" : "About " + kgText(wk) + " gained a week") + (fixedRate ? ", set by this pattern." : ".");
-      $("d-maint").textContent = num(F.round(r.avgMaint, 10)) + " kcal";
-      $("d-change").textContent = Math.abs(wk) < 0.005 ? "none" : (wk < 0 ? "−" : "+") + kgText(wk);
-      $("d-rmr").textContent = num(F.round(r.rmr, 10)) + " kcal"; $("d-eq").textContent = r.equation;
-      $("d-pal").textContent = num(r.life, 2) + " × resting";
-
-      if (r.belowRmr) warns.push("Your average is below your estimated resting energy. That is a hard deficit to hold; slow it down or talk to a clinician first.");
-      else if (r.deficitPct > P.BIG_DEFICIT) warns.push("That is a deficit of " + num(r.deficitPct) + "% of maintenance. Expect it to be hard to sustain and to cost more muscle than a slower plan.");
-      if (r.adjacent) warns.push("Two very low days sit next to each other. Spread them out, or press “Arrange around training”.");
-      if (r.vlowOnHard) warns.push("A very low day falls on a hard training day, and that session will suffer. " + (arranged ? "Move it, or press “Arrange around training”." : "There are not enough light days in your week to avoid it."));
-      if (r.clamped) warns.push("Some days would have to fall below a very low day to balance this week, so the planner stopped there. The change shown is what the plan gives.");
-      if (ph === "lose" && F.planLongWarn(r.deficitPct, +$("d-weeks").value, $("d-breaks").checked)) warns.push("A deficit this size for more than " + P.LONG_WEEKS + " weeks without a break is a lot to ask. Tick the weeks at maintenance, or plan a shorter run. (Twelve weeks is a KiteSink convention; clinical guidance caps diets under 1,200 kcal a day at the same length.)");
-      if (isFinite(r.ea) && r.ea < P.EA_WARN) warns.push("Energy availability comes to about " + num(r.ea) + " kcal per kg of fat-free mass a day. Lower levels go with rising risk to hormones and bone, for women most of all. <a href=\"/fitness/women#wom-ea-no-threshold\" style=\"color:#d8b07a\">Why 30 is a warning, not a line</a>.");
-      $("d-warn").innerHTML = warns.map(function (w) { return '<p class="warn">' + w + "</p>"; }).join("");
-      $("d-warn").hidden = !warns.length;
-
-      $("d-days").innerHTML = r.days.map(function (d, i) {
-        var name = dayName(i, L), ses = d.min > 0 ? SESNAME[d.session] + " · " + num(d.min) + " min" : "Rest";
-        return '<li data-i="' + i + '"' + (L === 14 && i === 7 ? ' class="d-wk2"' : "") + '><span class="d-grip" aria-hidden="true">≡</span>' +
-          '<div class="d-day"><p><span class="d-name">' + name + '</span><span class="dt dt-' + d.type + '">' + LABEL[d.type] + '</span><span class="d-kcal">' + num(F.round(d.kcal, 10)) + ' kcal</span></p>' +
-          '<p class="d-meta">P ' + num(d.protein) + ' g · C ' + num(d.carbs) + ' g · F ' + num(d.fat) + ' g · ' + esc(ses) + "</p></div>" +
-          '<div class="d-move"><button type="button" id="d-up' + i + '" aria-label="Swap ' + name + ' with the day before"' + (i === 0 ? " disabled" : "") + '>↑</button>' +
-          '<button type="button" id="d-dn' + i + '" aria-label="Swap ' + name + ' with the day after"' + (i === L - 1 ? " disabled" : "") + '>↓</button></div></li>';
-      }).join("");
-      if (refocus && $(refocus)) { $(refocus).focus(); } refocus = null;
-
+      if (!ok) { $("d-head").textContent = "—"; $("d-sub").textContent = "Enter age (18 or over), height and weight to see a plan."; $("d-cards").innerHTML = ""; $("d-req").innerHTML = ""; $("d-warn").hidden = true; return; }
+      var r = F.plan({ sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, pal: parseFloat($("d-act").value), maint: own >= 1000 && own <= 6000 ? own : 0,
+        phase: ph, days: days, size: val("d-size"), gain: +gainPct.get(), train: train, diet: manual });
+      last = r;
+      var warns = [], req = [];
       if (ph === "lose") {
-        var weeks = +$("d-weeks").value, w = F.planWeeks(weeks, wk, $("d-breaks").checked);
-        var br = w.weeks.map(function (x, i) { return x === "break" ? i + 1 : 0; }).filter(Boolean);
-        $("d-long").textContent = "Over " + weeks + " weeks" + (br.length ? ", with week" + (br.length > 1 ? "s " + br.slice(0, -1).join(", ") + " and " + br.slice(-1) : " " + br[0]) + " at maintenance" : "") + ": about " + kgText(w.kg) + " in all, if the trend holds. In a trial of lifters, weeks at maintenance did not slow fat loss and eased hunger.";
-      } else $("d-long").textContent = "";
-
-      var counts = {}; r.days.forEach(function (d) { counts[d.type] = (counts[d.type] || 0) + 1; });
-      say("d-say", "Average " + num(F.round(r.avgKcal, 10)) + " kcal a day. " + $("d-sub").textContent + " " +
-        Object.keys(counts).map(function (k) { return counts[k] + " " + LABEL[k].toLowerCase(); }).join(", ") + " days." + (warns.length ? " " + warns.length + " warning" + (warns.length > 1 ? "s" : "") + "." : ""));
+        days = r.daysPerWeek; if (manual && r.len === 7) days = r.n;
+        $("d-days").textContent = num(r.daysPerWeek, r.daysPerWeek % 1 ? 1 : 0);
+        $("d-days-dn").disabled = r.daysPerWeek <= 1; $("d-days-up").disabled = r.daysPerWeek >= 7;
+        var sl = $("d-size"); sl.max = r.maxSize; if (+sl.value > r.maxSize) sl.value = r.maxSize;
+        $("d-size-read").textContent = num(r.size) + "% below maintenance" + (r.dietDay ? " · " + kc(r.dietDay.kcal) + " kcal" : "");
+        $("d-size-note").textContent = r.floorBinds ? "Your maintenance is low enough that even small diet days take the week under 1,200 kcal a day on average." :
+          r.size >= r.maxSize ? "That is as low as a diet day goes for you: " + (r.avgKcal <= P.FLOOR + 30 ? "any lower and the week averages under 1,200 kcal a day, which UK clinical guidance keeps for specialist care." : "protein and the essential-fat minimum, and no less than a quarter of maintenance.") : "";
+        $("d-head-l").textContent = "Weekly deficit"; $("d-head").textContent = kc(-r.weekBalance); $("d-head-u").textContent = "kcal a week";
+        $("d-sub").textContent = num(r.deficitPct) + "% of the week’s maintenance · about " + kgText(r.weekKg) + " a week · average " + kc(r.avgKcal) + " kcal a day" + (r.dietOnTraining ? ". " + r.dietOnTraining + " diet day" + (r.dietOnTraining > 1 ? "s fall" : " falls") + " on a training day." : ".");
+        drawWeek(r);
+        var suggested = F.planPlace(train, r.n, r.len);
+        $("d-reset").hidden = !manual || suggested.join() === r.diet.join();
+        $("d-cards").innerHTML = (r.dietDay ? dayCard("Diet day · " + r.n + (r.len === 14 ? " in 14" : " a week"), r.dietDay, true) : "") + dayCard("Maintenance day · " + (r.len - r.n) + (r.len === 14 ? " in 14" : " a week"), r.maintDay, false);
+        if (r.deficitPct > P.BIG_DEFICIT) warns.push("A deficit of " + num(r.deficitPct) + "% of the week is a lot. Expect it to be hard to keep up and to cost more muscle than a smaller one; protein is already at its top end.");
+        if (isFinite(r.ea) && r.ea < P.EA_WARN) warns.push("The week averages about " + num(r.ea) + " kcal per kg of fat-free mass before training, so energy availability is lower still. Lower levels go with rising risk to hormones and bone, for women most of all. <a href=\"/fitness/women#wom-ea-no-threshold\" style=\"color:#d8b07a\">Why 30 is a warning, not a line</a>.");
+        req.push(["Protein", "<b>" + num(r.protein) + " g a day</b>, every day. It rises with the deficit" + (bf > 0 ? ": " + num(r.protein / (kg * (1 - bf / 100)), 1) + " g per kg of fat-free mass, inside the 2.3 to 3.1 g that dieting lifters need." : ": " + num(r.protein / kg, 1) + " g per kg of body weight. Add body fat for a sharper figure."), false]);
+      } else if (ph === "hold") {
+        $("d-head-l").textContent = "Maintenance"; $("d-head").textContent = kc(r.maint); $("d-head-u").textContent = "kcal a day";
+        $("d-sub").textContent = "The same every day; your weight should hold.";
+        $("d-cards").innerHTML = dayCard("Every day", r.maintDay, false);
+        req.push(["Protein", "<b>" + num(r.protein) + " g a day</b>, 1.6 g per kg of body weight.", false]);
+      } else {
+        var add = r.weekBalance / 7, five = r.maint * 0.05;
+        $("d-head-l").textContent = "Weekly surplus"; $("d-head").textContent = "+" + kc(r.weekBalance); $("d-head-u").textContent = "kcal a week";
+        $("d-sub").textContent = "+" + kc(add) + " kcal a day · about " + kgText(r.weekKg) + " a week · " + kc(r.maintDay.kcal) + " kcal a day in all.";
+        $("d-cards").innerHTML = dayCard("Every day", r.maintDay, false);
+        $("d-gain-note").textContent = "+5% is " + kc(five) + " kcal a day for you. In trained lifters, +15% built no more muscle than +5% and added more fat. KiteSink’s rule of thumb: 150 to 300 kcal over maintenance is enough.";
+        if (add > 300) warns.push("+" + kc(add) + " kcal a day is past the point where more food builds more muscle. In a trial of trained lifters the extra over +5% went mostly to fat.");
+        req.push(["Protein", "<b>" + num(r.protein) + " g a day</b>, 1.6 g per kg of body weight.", false]);
+      }
+      var efa = P.EFA_SHARE * r.maint / 9, low = r.dietDay || r.maintDay;
+      req.push(["Essential fats", "<b>At least " + num(efa) + " g a day of linoleic and alpha-linolenic acid</b> (2.5% + 0.5% of energy). " + (r.dietDay ? "Diet days have " + num(r.dietDay.fat) + " g of fat, so most of it should be seed oils, nuts, seeds or oily fish." : "Get it from seed oils, nuts, seeds or oily fish."), r.dietDay && r.dietDay.fat < efa * 2]);
+      req.push(["Fibre", "<b>25 g a day or more</b>, which takes about 400 g of fruit and vegetables. " + (low.carbs < 60 ? "Diet days have only " + num(low.carbs) + " g of carbohydrate: spend it on vegetables first." : ""), low.carbs < 60]);
+      req.push(["Vitamins and minerals", "<b>The planner cannot check these.</b> Varied food covers most needs." + (low.kcal < P.FLOOR ? " Days under 1,200 kcal make that hard, which is why clinical low-energy diets are built to be nutritionally complete." : ""), low.kcal < P.FLOOR]);
+      $("d-req").innerHTML = req.map(function (x) { return '<li' + (x[2] ? ' class="is-watch"' : "") + '><span class="d-req-k">' + x[0] + "</span> " + x[1] + "</li>"; }).join("");
+      $("d-warn").innerHTML = warns.map(function (w) { return '<p class="warn">' + w + "</p>"; }).join(""); $("d-warn").hidden = !warns.length;
+      $("d-maint").textContent = r.own ? "Maintenance: your figure, " + kc(r.maint) + " kcal a day." :
+        "Maintenance: resting " + kc(r.rmr) + " kcal (" + r.equation + ") × " + num(parseFloat($("d-act").value), 1) + " = " + kc(r.maint) + " kcal a day, training included. If your own tracking says otherwise, enter that figure above.";
+      // what changed, made visible
+      var bal = Math.round(r.weekBalance);
+      if (prevBal !== null && bal !== prevBal && !booting) {
+        $("d-delta").textContent = "was " + signed(prevBal) + " kcal a week"; $("d-delta").hidden = false;
+        clearTimeout(deltaT); deltaT = setTimeout(function () { $("d-delta").hidden = true; }, 4000);
+      }
+      prevBal = bal; changed = -1;
     }
-
-    // moving days: swap the day types of two days, by drag or by the arrow buttons
-    function swap(a, b) {
-      if (!last || a === b || a < 0 || b < 0 || b >= last.days.length) return;
-      if (!arranged || arranged.length !== last.days.length) arranged = last.days.map(function (d) { return d.kind; });
-      var t = arranged[a]; arranged[a] = arranged[b]; arranged[b] = t;
-      calc();
-      var L = last.days.length;
-      say("d-say", dayName(a, L) + " and " + dayName(b, L) + " swapped. " + dayName(b, L) + " is now " + LABEL[last.days[b].type].toLowerCase() + ".");
-    }
-    var list = $("d-days"), drag = null;
-    list.addEventListener("click", function (e) {
-      var b = e.target.closest(".d-move button"); if (!b) return;
-      var i = +b.closest("li").getAttribute("data-i"), up = b.id.indexOf("d-up") === 0, j = up ? i - 1 : i + 1;
-      refocus = (up ? "d-up" : "d-dn") + j;
-      if (refocus === "d-up0" || refocus === "d-dn" + (last.days.length - 1)) refocus = (up ? "d-dn" : "d-up") + j;
-      swap(i, j);
-    });
-    list.addEventListener("pointerdown", function (e) {
-      var g = e.target.closest(".d-grip"); if (!g) return;
-      var li = g.closest("li"); drag = { from: +li.getAttribute("data-i"), li: li, to: null };
-      li.classList.add("is-drag");
-      try { g.setPointerCapture(e.pointerId); } catch (err) {}
-      e.preventDefault();
-    });
-    list.addEventListener("pointermove", function (e) {
-      if (!drag) return;
-      var el = document.elementFromPoint(e.clientX, e.clientY), over = el && el.closest ? el.closest("#d-days li") : null;
-      [].forEach.call(list.children, function (x) { x.classList.toggle("is-over", x === over && x !== drag.li); });
-      drag.to = over ? +over.getAttribute("data-i") : null;
-    });
-    function endDrag() {
-      if (!drag) return;
-      var from = drag.from, to = drag.to; drag = null;
-      [].forEach.call(list.children, function (x) { x.classList.remove("is-over", "is-drag"); });
-      if (to !== null && to !== from) swap(from, to);
-    }
-    list.addEventListener("pointerup", endDrag);
-    list.addEventListener("pointercancel", function () { if (drag) drag.to = null; endDrag(); });
-
-    tplButtons(); phaseChanged(); showBody(); calc();
+    showBody(); calc();
   });
 
   booting = false; // from here on, changes are announced

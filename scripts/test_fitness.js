@@ -147,65 +147,49 @@ async function visit(hash, opts = {}) {
 
 // ---------- diet planner ----------
 {
-  const P = F.PLAN, base = { sex: 'm', kg: 80, cm: 180, age: 30, life: 'walk', rate: 0.5, surplus: 10, protein: 2, fatPct: 25 };
-  const wk = [{ s: 'liftHard', min: 60 }, { s: 'rest' }, { s: 'liftHard', min: 60 }, { s: 'walk', min: 45 }, { s: 'liftHard', min: 60 }, { s: 'rest' }, { s: 'steady', min: 40 }];
-  const plan = o => F.plan(Object.assign({}, base, { week: wk }, o));
-  // a day's needs, by hand: Mifflin 1780 × 1.53 = 2723.4; heavy lifting adds (6.0 − 1) × 80 × 1 h = 400
-  let p = plan({ phase: 'hold', template: 'steady', len: 7 });
-  eq('planner: rest-day needs', p.days[1].maint, 1780 * 1.53, 0.01);
-  eq('planner: lifting-day needs', p.days[0].maint, 1780 * 1.53 + 400, 0.01);
-  eq('planner: brisk walk, 45 min', p.days[3].exKcal, 3.8 * 80 * 0.75, 0.01);
-  // every template that takes a rate hits it exactly: 0.5% of 80 kg a week = 0.4 kg = 3,080 kcal
-  for (const [ph, t, len] of [['lose', 'steady', 7], ['lose', 'train', 7], ['lose', 'steady', 14], ['lose', 'train', 14]]) {
-    p = plan({ phase: ph, template: t, len });
-    eq(`planner: ${t} ${len}-day week hits the rate`, p.weekBalance, -3080, 0.01);
-    ok(`planner: ${t} ${len}-day protein holds every day`, p.days.every(d => Math.abs(d.protein - 160) < 1e-9));
-    ok(`planner: ${t} ${len}-day macros add up`, p.days.every(d => Math.abs(d.protein * 4 + d.carbs * 4 + d.fat * 9 - d.kcal) < 1e-6));
+  const P = F.PLAN, train = [true, false, true, false, true, true, false];
+  const base = { sex: 'm', kg: 80, cm: 180, age: 30, pal: 1.6, train };
+  const plan = o => F.plan(Object.assign({}, base, o));
+  // maintenance by hand: Mifflin 1780 × 1.6 = 2848; an own figure replaces it
+  let p = plan({ phase: 'hold' });
+  eq('planner: maintenance is resting × activity', p.maint, 2848); ok('planner: maintain holds', p.weekBalance === 0 && !p.dietDay);
+  eq('planner: own maintenance figure is used', plan({ phase: 'hold', maint: 2500 }).maint, 2500);
+  eq('planner: maintain protein 1.6 g/kg', p.protein, 128);
+  // the weekly deficit is diet days × the gap on each
+  for (const d of [7, 4, 3.5, 2]) {
+    p = plan({ phase: 'lose', days: d, size: 25 });
+    eq(`planner: ${d} diet days a week at 25% below → weekly deficit`, p.weekBalance, -2848 * 0.25 * d, 0.01);
+    ok(`planner: ${d} diet days uses a ${d % 1 ? 14 : 7}-day cycle with ${d * (d % 1 ? 2 : 1)} diet days`, p.len === (d % 1 ? 14 : 7) && p.n === d * p.len / 7);
+    ok(`planner: ${d} diet days, macros add up`, [p.dietDay, p.maintDay].every(x => Math.abs(x.protein * 4 + x.carbs * 4 + x.fat * 9 - x.kcal) < 1e-6));
   }
-  p = plan({ phase: 'lose', template: 'train', len: 7 });
-  ok('planner: training days at maintenance', p.days.filter(d => d.hard).every(d => d.type === 'maint'));
-  p = plan({ phase: 'hold', template: 'train', len: 7 });
-  eq('planner: maintenance with higher training days nets to zero', p.weekBalance, 0, 1e-6);
-  ok('planner: and training days are the surplus days', p.days.filter(d => d.hard).every(d => d.type === 'surplus'));
-  p = plan({ phase: 'gain', template: 'steady', len: 7 });
-  eq('planner: gaining at +10% of maintenance', p.weekBalance, p.avgMaint * 7 * 0.1, 0.01);
-  // two very low days: fixed composition, so the template sets its own rate
-  p = plan({ phase: 'lose', template: 'two', len: 7 });
-  ok('planner: two very low days in a week', p.days.filter(d => d.kind === 'vlow').length === 2 && p.setsOwnRate);
-  ok('planner: on rest days, not in a row', p.days.filter(d => d.kind === 'vlow').every(d => d.load === 0) && !p.adjacent);
-  eq('planner: a very low day is 25% of needs or protein + 10%, whichever is more', p.days[1].kcal, Math.max(0.25 * 1780 * 1.53, 160 * 4 * 1.1), 0.01);
-  p = plan({ phase: 'lose', template: 'two', len: 14 });
-  ok('planner: four very low days in 14', p.days.filter(d => d.kind === 'vlow').length === 4 && !p.adjacent);
-  // alternate days over 14: 7 very low, 7 maintenance, never two very low in a row
-  p = plan({ phase: 'lose', template: 'alternate', len: 14 });
-  ok('planner: alternate days, 7 and 7', p.days.filter(d => d.kind === 'vlow').length === 7 && !p.adjacent);
-  ok('planner: with four hard days a week some very low days land on them, and it says so', p.vlowOnHard);
-  // placement: the best set when the rules can be kept, a flag when they cannot
-  let pl = F.placeVlow([2, 0, 2, 1, 2, 0, 2], 2);
-  ok('placement: rest days first', pl.days.join() === '1,5' && !pl.adjacent && !pl.onHard);
-  pl = F.placeVlow([2, 2, 2, 0, 2, 2, 0], 4);
-  ok('placement: four very low days against five hard days flags a clash', pl.days.length === 4 && (pl.adjacent || pl.onHard));
-  pl = F.placeVlow([0, 0, 0, 0, 0, 0, 0], 4);
-  ok('placement: four in seven cannot avoid a pair', pl.adjacent);
-  // arranged by hand: the plan follows the order given and checks it
-  p = plan({ phase: 'lose', template: 'two', len: 7, kinds: ['vlow', 'vlow', 'maint', 'maint', 'maint', 'maint', 'maint'] });
-  ok('by hand: two very low days in a row are flagged', p.adjacent);
-  ok('by hand: a very low day on a hard day is flagged', p.vlowOnHard);
-  // limits
-  const small = { sex: 'f', kg: 50, cm: 155, age: 60, life: 'desk' };
-  p = plan(Object.assign({}, small, { phase: 'lose', template: 'steady', len: 7, rate: 1 }));
-  ok('floor: a small person losing 1% a week falls under 1,200 a day', p.belowFloor, Math.round(p.avgKcal));
-  const max = F.planMaxRate(Object.assign({}, base, small, { week: wk, phase: 'lose', template: 'steady', len: 7 }));
-  ok('floor: the nearest plan it will give is under the floor no more', max > 0 && !plan(Object.assign({}, small, { phase: 'lose', template: 'steady', len: 7, rate: max })).belowFloor, max);
-  p = plan({ phase: 'lose', template: 'alternate', len: 14 });
-  ok('a big deficit is flagged', p.deficitPct > P.BIG_DEFICIT, p.deficitPct.toFixed(1));
-  p = plan({ phase: 'lose', template: 'steady', len: 7, bf: 20 });
-  eq('energy availability: (intake − training) ÷ fat-free mass', p.ea, (p.avgKcal - p.days.reduce((s, d) => s + d.exKcal, 0) / 7) / 64, 1e-6);
-  ok('long deficit: 37% for 24 weeks with no breaks warns', F.planLongWarn(37, 24, false));
-  ok('long deficit: with breaks, or 12 weeks, or a 20% deficit, does not', !F.planLongWarn(37, 24, true) && !F.planLongWarn(37, 12, false) && !F.planLongWarn(20, 24, false));
-  const weeks = F.planWeeks(12, -0.4, true);
-  ok('breaks: weeks 4, 8 and 12 at maintenance', weeks.weeks.map((w, i) => w === 'break' ? i + 1 : 0).filter(Boolean).join() === '4,8,12');
-  eq('breaks: 9 diet weeks at 0.4 kg', weeks.kg, -3.6, 1e-9);
+  // protein rises with the deficit: 1.6 → 2.3 g/kg body weight, or 2.3 → 3.1 g/kg FFM with body fat
+  eq('protein: no deficit, no body fat', F.planProtein(80, NaN, 'lose', 0), 128);
+  eq('protein: 25% deficit, no body fat', F.planProtein(80, NaN, 'lose', 25), 184);
+  eq('protein: capped past 25%', F.planProtein(80, NaN, 'lose', 40), 184);
+  eq('protein: 12.5% deficit at 20% body fat', F.planProtein(80, 20, 'lose', 12.5), 64 * 2.7);
+  ok('protein: a bigger deficit means more protein', plan({ phase: 'lose', days: 7, size: 30 }).protein > plan({ phase: 'lose', days: 2, size: 30 }).protein);
+  // diet days go to rest days first
+  p = plan({ phase: 'lose', days: 3, size: 25 });
+  ok('placement: three diet days on the three rest days', p.diet.every((d, i) => !d || !train[i]) && p.dietOnTraining === 0);
+  p = plan({ phase: 'lose', days: 3.5, size: 25 });
+  ok('placement: 7 diet days in 14 with 6 rest days puts one on a training day', p.dietOnTraining === 1);
+  // set by hand: the count follows the days chosen
+  p = plan({ phase: 'lose', days: 3, size: 25, diet: [true, true, true, true, false, false, false] });
+  ok('by hand: four days chosen means four diet days', p.n === 4 && p.dietOnTraining === 2);
+  // the floor on a diet day: protein + essential fat, or 25% of maintenance
+  p = plan({ phase: 'lose', days: 2, size: 90 });
+  ok('floor: a diet day cannot go under protein + essential fat or 25% of maintenance',
+    p.clampedSize && p.dietDay.kcal >= Math.max(p.protein * 4 + P.EFA_SHARE * p.maint, P.VLOW_SHARE * p.maint) - 1e-6, p.size);
+  ok('floor: the diet day keeps the essential-fat minimum', p.dietDay.fat >= P.EFA_SHARE * p.maint / 9 - 1e-9);
+  // the week's average stays at 1,200 or more
+  const small = { sex: 'f', kg: 50, cm: 155, age: 60, pal: 1.4 };
+  p = plan(Object.assign({}, small, { phase: 'lose', days: 7, size: 60 }));
+  ok('floor: a small person dieting 7 days a week is held at 1,200 on average', p.avgKcal >= 1200 - 1e-6 && p.clampedSize, Math.round(p.avgKcal));
+  // gaining
+  p = plan({ phase: 'gain', gain: 5 });
+  eq('gain: +5% over maintenance', p.maintDay.kcal, 2848 * 1.05, 0.01);
+  // energy availability needs body fat
+  ok('energy availability only with body fat', isNaN(plan({ phase: 'lose', days: 7, size: 20 }).ea) && plan({ phase: 'lose', days: 7, size: 20, bf: 20 }).ea > 0);
 }
 
 (async () => {

@@ -266,12 +266,12 @@ so nothing depends on an external runtime anymore.
   `content/fitness/meta.json` can give any source a better one.
 - **Work index** — removed. `/work` redirects to `/library` through `public/_redirects` (checked with
   `wrangler dev`). `projects.js` still feeds `/games`.
-- **Diet planner (17 Nov 2026)** — the sixth tool on `/fitness` (`#plan`). Fat loss, maintenance or
-  gaining over 7 or 14 days of very low, low, maintenance and surplus days placed around the
-  training week; drag or arrow buttons to swap days. Numbers come from published sources in
-  `content/fitness/tools.json` (FAO/WHO/UNU bands, the 2024 Compendium, Trepanowski 2017, NICE NG246
-  for the 1,200 kcal floor). The books' tables are not used. It saves nothing. Checked in Chromium
-  only: try it on a phone, and drag a day by its handle.
+- **Diet planner (17 Nov 2026)** — the sixth tool on `/fitness` (`#plan`). Losing fat: a number of diet
+  days a week (half steps plan 14 days) at a chosen size below maintenance, the rest at maintenance;
+  the headline is the weekly deficit. Protein rises with the deficit (Helms 2014). Maintenance is one
+  figure (the macro tab's activity levels) or the person's own. A requirements list covers protein,
+  essential fats (FAO/WHO 2010), fibre (WHO/FAO 2003) and what it cannot check. Tap a day to switch
+  it. Sources in `content/fitness/tools.json`; the books' tables are not used. It saves nothing.
 - **AI readers** — plain-text twins and `llms.txt` are live with the site. `worker/ai-twins.js`
   serves a twin at its page's own address to requests that ask for markdown (see
   `docs/AI-PAGES.md`). The twins carry the offers block with the code word `KITESTRING`.
