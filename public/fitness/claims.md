@@ -291,7 +291,7 @@ Who was studied: Shcherbina 2017: 60 adults, 7 wrist devices, lab tests against 
 - Use the calorie figure to compare similar days, not to decide how much to eat.
 - Set intake from your weekly average weight over several weeks.
 
-Evidence: Meta-analysis · Some support · Sources: [Shcherbina 2017](https://doi.org/10.3390/jpm7020003), [O’Driscoll 2020](https://doi.org/10.1136/bjsports-2018-099643), [McDonald 2017b](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-4)
+Evidence: Meta-analysis · Some support · Sources: [Shcherbina 2017](https://doi.org/10.3390/jpm7020003), [O’Driscoll 2020](https://doi.org/10.1136/bjsports-2018-099643), [McDonald 2017c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-4)
 
 ### Are muscle cramps during exercise caused by dehydration or low salt?
 
@@ -303,7 +303,7 @@ Who was studied: Schwellnus 2011: 210 Ironman triathletes, one race, 43 with cra
 
 - Faster racers and people with past cramps were at higher risk; no trial shows that pacing prevents cramps.
 
-Evidence: Cohort study · Thin evidence · Sources: [Schwellnus 2011](https://doi.org/10.1136/bjsm.2010.078535), [Maughan 2019](https://doi.org/10.1007/s40279-019-01162-1), [McDonald 2017c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
+Evidence: Cohort study · Thin evidence · Sources: [Schwellnus 2011](https://doi.org/10.1136/bjsm.2010.078535), [Maughan 2019](https://doi.org/10.1007/s40279-019-01162-1), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
 
 ### Can you use your running heart rate zones on the bike?
 
@@ -328,7 +328,7 @@ Who was studied: Shirreffs 1996: 12 men dehydrated by 2% of body mass, four drin
 - After a long, sweaty session, weigh before and after, then drink more than the weight lost.
 - Choose a drink that contains some sodium.
 
-Evidence: Randomised trial · Some support · Sources: [Shirreffs 1996](https://doi.org/10.1097/00005768-199610000-00009), [Maughan 2016](https://doi.org/10.3945/ajcn.115.114769), [McDonald 2017c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
+Evidence: Randomised trial · Some support · Sources: [Shirreffs 1996](https://doi.org/10.1097/00005768-199610000-00009), [Maughan 2016](https://doi.org/10.3945/ajcn.115.114769), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
 
 ## Recovery
 
@@ -343,7 +343,7 @@ Who was studied: Rodríguez-Coloma 2026: 8 studies, 189 healthy adults with one 
 - While a limb is in a cast, keep training the other side and the rest of the body if your clinician agrees.
 - Ask your clinician or physio what loading the injured side can take.
 
-Evidence: Meta-analysis · Some support · Sources: [Rodríguez-Coloma 2026](https://doi.org/10.1152/japplphysiol.00081.2026), [Manca 2017](https://doi.org/10.1007/s00421-017-3720-z), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+Evidence: Meta-analysis · Some support · Sources: [Rodríguez-Coloma 2026](https://doi.org/10.1152/japplphysiol.00081.2026), [Manca 2017](https://doi.org/10.1007/s00421-017-3720-z), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
 
 ## Nutrition
 
@@ -511,7 +511,7 @@ Who was studied: McGlynn 2022: 17 RCTs, 1,733 adults with overweight or obesity,
 
 - If you drink sugary drinks, switching to diet versions or to water both remove those calories.
 
-Evidence: Meta-analysis · Some support · Sources: [McGlynn 2022](https://doi.org/10.1001/jamanetworkopen.2022.2092), [Suez 2022](https://doi.org/10.1016/j.cell.2022.07.016), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
+Evidence: Meta-analysis · Some support · Sources: [McGlynn 2022](https://doi.org/10.1001/jamanetworkopen.2022.2092), [Suez 2022](https://doi.org/10.1016/j.cell.2022.07.016), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
 
 ### Can you build muscle on a ketogenic diet?
 
@@ -524,7 +524,7 @@ Who was studied: Ashtary-Larky 2022: 13 RCTs, 244 people doing resistance traini
 - If gaining muscle is the main goal, a diet with carbohydrate is the simpler choice.
 - On keto, eat in a surplus when you want to gain.
 
-Evidence: Meta-analysis · Some support · Sources: [Ashtary-Larky 2022](https://doi.org/10.1080/10408398.2021.1890689), [Vargas-Molina 2022](https://doi.org/10.3390/ijerph191912629), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+Evidence: Meta-analysis · Some support · Sources: [Ashtary-Larky 2022](https://doi.org/10.1080/10408398.2021.1890689), [Vargas-Molina 2022](https://doi.org/10.3390/ijerph191912629), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
 
 ### Is a food labelled zero calories truly calorie-free?
 
@@ -537,7 +537,7 @@ Who was studied: US Code of Federal Regulations, 21 CFR 101.9 (nutrition labelin
 - Weigh and log foods you use in quantity even when the label says zero.
 - Expect small gaps between a label's macros and its calories; they come from rounding.
 
-Evidence: Guideline · Rulebook · Sources: [UFDA 2026](https://www.law.cornell.edu/cfr/text/21/101.9), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
+Evidence: Guideline · Rulebook · Sources: [UFDA 2026](https://www.law.cornell.edu/cfr/text/21/101.9), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
 
 ## Diet
 
@@ -769,7 +769,7 @@ Who was studied: Nishi 2021: 86 RCTs (5,873 people) and 6 prospective cohorts (5
 - Weigh a portion now and then; a 28 g (1 oz) serving is a small handful.
 - Eat nuts in place of another snack rather than in addition to it.
 
-Evidence: Meta-analysis · Well supported · Sources: [Nishi 2021](https://doi.org/10.1111/obr.13330), [Novotny 2012](https://doi.org/10.3945/ajcn.112.035782), [McDonald 2017a](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-3)
+Evidence: Meta-analysis · Well supported · Sources: [Nishi 2021](https://doi.org/10.1111/obr.13330), [Novotny 2012](https://doi.org/10.3945/ajcn.112.035782), [McDonald 2017b](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-3)
 
 ### Does keeping your home cold help you burn off fat?
 
@@ -781,7 +781,7 @@ Who was studied: Celi 2010: 25 adults, two 12-hour stays at 19 and 24 °C. Yones
 
 - Treat a cooler home as a small extra at most, never as a fat-loss plan.
 
-Evidence: Mixed · Thin evidence · Sources: [Celi 2010](https://doi.org/10.1530/EJE-10-0627), [Yoneshiro 2013](https://doi.org/10.1172/JCI67803), [McInnis 2020](https://doi.org/10.1111/obr.12978), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-8)
+Evidence: Mixed · Thin evidence · Sources: [Celi 2010](https://doi.org/10.1530/EJE-10-0627), [Yoneshiro 2013](https://doi.org/10.1172/JCI67803), [McInnis 2020](https://doi.org/10.1111/obr.12978), [McDonald 2017g](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-8)
 
 ### Does skipping meals or fasting for a day slow your metabolism?
 
@@ -793,7 +793,7 @@ Who was studied: Zauner 2000: 11 healthy lean adults, 84-hour fast, measured on 
 
 - Do not worry about a missed meal; judge intake over days and weeks.
 
-Evidence: Mixed · Thin evidence · Sources: [Zauner 2000](https://doi.org/10.1093/ajcn/71.6.1511), [Clayton 2016](https://doi.org/10.1038/ijo.2016.106), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+Evidence: Mixed · Thin evidence · Sources: [Zauner 2000](https://doi.org/10.1093/ajcn/71.6.1511), [Clayton 2016](https://doi.org/10.1038/ijo.2016.106), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
 
 ### Is eating extra fat the way to burn body fat?
 

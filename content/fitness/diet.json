@@ -1302,6 +1302,416 @@
         "mcdonald-comparing-diets-2"
       ],
       "take": "Ketogenic diets adapted for hard training. A targeted version adds a small dose of carbohydrate around sessions; a cyclical one alternates several low-carbohydrate days with one or two days of high carbohydrate."
+    },
+    {
+      "id": "diet-prescribed-breaks",
+      "type": "note",
+      "title": "Planned time off the diet did not cut total weight loss in a trial",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "wing-2003",
+        "mcdonald-full-diet-break"
+      ],
+      "take": "In 142 adults in a behavioural weight-loss programme, scheduled breaks from dieting left total loss at 5 and 11 months unchanged.",
+      "body": "Researchers told one group to stop all weight-loss efforts for six weeks midway, and another for two weeks three times, hoping to provoke relapse. Logging, dieting and self-weighing lapsed in the breaks (exercise did not), loss slowed or reversed slightly, and people resumed quickly. Overall loss matched the control group. McDonald's view is that a break the dieter chooses keeps a sense of control, so a holiday that would derail the diet anyway is better planned as one. See the diet break entry for trials at maintenance.",
+      "do": [
+        "If a holiday or busy spell will stop your diet, McDonald's practice is to plan it as a break with an end date."
+      ]
+    },
+    {
+      "id": "diet-break-carb-floor",
+      "type": "note",
+      "title": "McDonald keeps carbohydrate at 120 to 150 g a day or more on a diet break",
+      "topic": "strategy",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "pasquali-1982",
+        "mcdonald-full-diet-break",
+        "mcdonald-transition-phase"
+      ],
+      "take": "McDonald sets a carbohydrate floor of about 120 to 150 g a day for a diet break, on the view that thyroid hormone needs it.",
+      "body": "In obese patients on low-calorie diets of 360 to 1,200 kcal, blood T3, the active thyroid hormone, fell only when carbohydrate was 120 g a day or less, whatever the calories, and reverse T3 stayed raised at 40 to 50 g. It is one 1982 study of hormone levels during dieting, not of fat loss, and it did not test a break at maintenance. McDonald's view is that a break kept very low carb misses part of its point. Fat-loss results from breaks in trials are mixed (see the diet break entry).",
+      "do": [
+        "On a break, McDonald's practice is at least 120 to 150 g of carbohydrate a day."
+      ]
+    },
+    {
+      "id": "diet-break-spacing",
+      "type": "note",
+      "title": "McDonald spaces diet breaks by body fat, so leaner dieters take them sooner",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-full-diet-break"
+      ],
+      "take": "In McDonald's practice, lean dieters take a break every 4 to 6 weeks, while people carrying more fat go 12 to 16 weeks between breaks.",
+      "body": "His reasoning is that the hormonal and metabolic response to dieting grows as people get leaner (see the bodycomp entry on lean tissue loss speeding up), so the leanest need relief most often. He sets the break near estimated maintenance, often 5 to 10 percent under it, for 10 to 14 days, and wants contest dieters to start early enough to fit one in. No trial has compared spacing by body fat, and fat-loss results from breaks in trials are mixed (see the diet break entry).",
+      "do": [
+        "McDonald's advice: put the break in the timeline before the diet starts, so a deadline cannot squeeze it out."
+      ]
+    },
+    {
+      "id": "diet-post-diet-protein",
+      "type": "note",
+      "title": "Higher protein after a diet halved weight regain in one trial",
+      "topic": "lean",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "westerterp-plantenga-2004",
+        "mcdonald-transition-phase"
+      ],
+      "take": "In 148 overweight to moderately obese adults after a diet, about 48 g a day of extra protein halved regain over 3 months, all of it fat-free mass.",
+      "body": "Participants first lost weight on a 4-week very low-energy diet of about 500 kcal a day, an intake for medical supervision only, then were randomised for 3 months of maintenance. The extra-protein group ate 18 percent of energy as protein against 15 percent, regained half as much weight, consisting only of fat-free mass, and felt fuller while energy intake did not differ. McDonald keeps protein at the dieting level after a diet ends, mainly because post-diet hunger is high. This was one trial in overweight to moderately obese adults; lean lifters were not studied.",
+      "do": [
+        "McDonald's practice: keep protein at your dieting level for the first weeks of maintenance."
+      ]
+    },
+    {
+      "id": "diet-post-contest-regain",
+      "type": "note",
+      "title": "After a physique contest, regain came first as water and later mostly as fat",
+      "topic": "lean",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "trexler-2017",
+        "mcdonald-transition-phase"
+      ],
+      "take": "In 15 natural physique athletes, weight and body water rose soon after competing, and fat mass climbed about 2 kg by 4 to 6 weeks later.",
+      "body": "Seven men and eight women were measured within a week before a show, within a week after and 4 to 6 weeks later. Weight rose 2 kg between the first two visits, body water rose about 1.9 L in 8 of them, and lean mass by ultrasound rose and then held. By the last visit fat mass had gone from 7.7 to 10.0 kg. Resting metabolic rate, 92 percent of predicted before the show, was back near normal. It was a pilot study. McDonald's view is that the post-diet 'rebound' only regains lost muscle and glycogen, not new size.",
+      "do": [
+        "McDonald's practice: return to maintenance calories before any surplus; see the diet exit entries.",
+        "If eating feels out of control after a show, get help from a sports dietitian or clinician."
+      ]
+    },
+    {
+      "id": "diet-low-days-on-rest-days",
+      "type": "note",
+      "title": "McDonald puts the low days of an intermittent restriction plan on rest days",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "harvie-2011",
+        "mcdonald-training-vs-diet"
+      ],
+      "take": "Two very low days a week lost as much as a daily cut in overweight women. McDonald's view is that the low days must miss hard training.",
+      "body": "In 107 premenopausal women with overweight or obesity, about 2,710 kJ (650 kcal) on 2 days a week lost 6.4 kg over 6 months against 5.6 kg on a daily 25 percent cut, a difference that was not significant. McDonald's view is that this kind of plan, or alternate-day fasting with low days near a quarter of maintenance, only suits a lifter whose low days can fall on rest days. The trial did not test placement or include lifters. Days near 650 kcal are a large cut; with a medical condition or medication, check with a clinician first.",
+      "do": [
+        "McDonald's practice: set low days on rest days, or choose a daily cut if your training days are fixed."
+      ]
+    },
+    {
+      "id": "diet-gut-energy-harvest",
+      "type": "note",
+      "title": "Gut bacteria went with a difference of about 150 kcal in energy absorbed",
+      "topic": "plateau",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "jumpertz-2011",
+        "mcdonald-energy-balance"
+      ],
+      "take": "In 21 inpatients, shifts in gut bacteria went with changes in the calories lost in stool, about 150 kcal in lean people.",
+      "body": "Twelve lean and nine obese adults ate diets of 2,400 and 3,400 kcal on a ward while stool energy was measured. Changing the amount of food changed the gut bacteria quickly, and in lean participants a 20 percent rise in one bacterial group went with about 150 kcal more energy harvested. This is an association in a small group. McDonald's view is that such differences alter how much energy you absorb without breaking energy balance; he wrote in 2009 that no one knew how to change it usefully."
+    },
+    {
+      "id": "diet-term-nutrient-balance",
+      "type": "term",
+      "title": "Nutrient balance (protein, carbohydrate and fat balance)",
+      "topic": "plateau",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "abbott-1988",
+        "mcdonald-what-are-calories"
+      ],
+      "take": "Intake minus oxidation for one nutrient. In 54 adults in a chamber, the body matched carbohydrate and protein burning to intake, so day-to-day surpluses and gaps landed almost entirely on fat balance."
+    },
+    {
+      "id": "diet-alcohol-fat-burning",
+      "type": "note",
+      "title": "Alcohol cut the fat burned by about a third on the day it was drunk",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "suter-1992",
+        "mcdonald-what-are-calories"
+      ],
+      "take": "In 8 men in a chamber, alcohol at a quarter of daily energy cut fat burning by about a third that day, while carbohydrate and protein burning held.",
+      "body": "The men drank about 96 g of alcohol a day, either on top of their usual food or in place of some fat and carbohydrate. Both ways, 24-hour fat oxidation fell by 31 to 36 percent, during the hours alcohol was being cleared, and energy expenditure rose 4 to 7 percent. The authors concluded that drinking beyond energy needs probably favours fat storage. McDonald's view is that the body keeps no store of alcohol, so it is always burned off first. This was a heavy intake in a small group.",
+      "do": [
+        "Count drinks in your daily intake; see the alcohol entries in the nutrition area."
+      ]
+    },
+    {
+      "id": "diet-protein-not-low-carb",
+      "type": "note",
+      "title": "The higher protein in low-carb diets, not the low carb, drove loss in one trial",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "soenen-2012",
+        "mcdonald-best-diet",
+        "mcdonald-causes-diet-failure"
+      ],
+      "take": "In 132 adults with obesity, high-protein diets lost more over a year than normal-protein ones, while low-carb against normal-carb made no difference.",
+      "body": "Four diets crossed protein (about 1.1 against 0.7 g per kg) with carbohydrate (low or normal), on a third of energy needs for 3 months, a very low intake, then two thirds for 9 months. At 12 months the high-protein groups had lost 12.8 kg against 8.9 kg, low-carb groups did no better than normal-carb ones, and changes were unrelated to fat content. McDonald's view is that low-carb diets work mainly through the protein they bring, and that more protein is the single most useful diet change. Intakes that low belong under medical supervision.",
+      "do": [
+        "Set protein first, then choose carbohydrate and fat to suit your food preferences."
+      ]
+    },
+    {
+      "id": "diet-checklist-any-diet",
+      "type": "checklist",
+      "title": "What any fat-loss diet needs before its details matter",
+      "topic": "strategy",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-best-diet",
+        "soenen-2012",
+        "westerterp-plantenga-2004"
+      ],
+      "take": "Check a plan against these before worrying about meal timing or macro ratios. The first group is essential; the second decides whether you can keep it up.",
+      "groups": [
+        {
+          "name": "Essential",
+          "items": [
+            "A real energy deficit",
+            "Enough protein for your body fat and training",
+            "Some essential fats",
+            "Fruit and vegetables for vitamins and minerals"
+          ]
+        },
+        {
+          "name": "Makes it last",
+          "items": [
+            "Hunger you can live with",
+            "Foods you actually like",
+            "A plan for lapses and breaks",
+            "Training quality you can hold",
+            "Habits you can carry into maintenance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diet-same-surplus-different-gain",
+      "type": "note",
+      "title": "The same surplus added 4 to 13 kg in different men, and twins responded alike",
+      "topic": "gain",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "bouchard-1990",
+        "mcdonald-not-different"
+      ],
+      "take": "Twelve pairs of young identical twin men overfed by 1,000 kcal a day gained 4.3 to 13.3 kg, with brothers far more alike than unrelated men.",
+      "body": "The men were overfed on 84 days within a 100-day period, about 84,000 kcal in total. Mean gain was 8.1 kg. Variation between pairs was about three times that within pairs, and the authors pointed to genes governing whether energy is stored as fat or lean tissue and how resting expenditure responds. McDonald's view is that such differences change how fast weight moves, not whether energy balance applies; no one gains on a real deficit. See the NEAT number in the body composition area for one route.",
+      "do": [
+        "Judge your own response by your scale trend, not by someone else's results on the same plan."
+      ]
+    },
+    {
+      "id": "diet-mistake-low-fat-halo",
+      "type": "mistake",
+      "title": "Eating more of a food because it is labelled low-fat or diet-approved",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "shide-1995",
+        "mcdonald-intro-dieting"
+      ],
+      "take": "Women told a yogurt was low-fat ate more at the next meal than after a yogurt of similar calories labelled high-fat.",
+      "body": "In 48 healthy, non-dieting women, the label changed lunch intake, and total intake that day was still higher after the 'low-fat' yogurt. Women given no label showed the opposite pattern. McDonald's view is that every popular diet soon gets its own approved snacks and bars, often as calorie-dense as what they replace, and that people eat more of them because they feel allowed, until loss stalls.",
+      "do": [
+        "Log diet-approved foods by their calories, not their label."
+      ]
+    },
+    {
+      "id": "diet-mistake-goal-a-third",
+      "type": "mistake",
+      "title": "Setting a goal of losing a third of your body weight in one go",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "foster-1997",
+        "mcdonald-causes-diet-failure"
+      ],
+      "take": "Sixty women with obesity aimed to lose 32 percent of their weight. After 48 weeks and a 16 kg loss, nearly half had not reached even the result they called disappointing.",
+      "body": "Before treatment the women named a goal, a dream, a happy, an acceptable and a disappointed weight. They rated a 17 kg loss disappointing and 25 kg acceptable, far beyond the modest losses guidelines recommend. McDonald's view is that goals set too large or too fast make a good result feel like failure, and people quit when progress slows. Expect the rate to fall as you go (see the fixed calorie cut entry).",
+      "do": [
+        "Count a lasting loss of about 10 percent as success, the clinical yardstick McDonald cites.",
+        "McDonald's practice: break a large loss into stages with maintenance between them."
+      ]
+    },
+    {
+      "id": "diet-term-false-hope",
+      "type": "term",
+      "title": "False hope syndrome",
+      "topic": "lean",
+      "level": "intermediate",
+      "confidence": "practice",
+      "sources": [
+        "polivy-2002",
+        "mcdonald-causes-diet-failure"
+      ],
+      "take": "Polivy and Herman's name for a cycle of repeated self-change attempts driven by unrealistic hopes about how fast, how far and how easily change will come, and what it will bring. Failure is followed by a fresh attempt."
+    },
+    {
+      "id": "diet-num-post-obese-rmr",
+      "type": "number",
+      "title": "Resting metabolic rate in formerly obese adults",
+      "topic": "plateau",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "astrup-1999",
+        "mcdonald-metabolic-damage"
+      ],
+      "value": "3-5",
+      "unit": "percent below never-obese",
+      "sort": 3,
+      "take": "Formerly obese adults against never-obese controls of equal body composition, pooled in 1999. Later studies are mixed; see the metabolic adaptation entry."
+    },
+    {
+      "id": "diet-keto-no-edge",
+      "type": "note",
+      "title": "A ketogenic diet lost no more fat than a moderate-carb diet in a controlled trial",
+      "topic": "strategy",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "johnston-2006",
+        "mcdonald-keto-advantage"
+      ],
+      "take": "In 20 sedentary adults with obesity on controlled food for 6 weeks, ketogenic and moderate-carb diets lost similar weight and fat.",
+      "body": "One diet began near 5 percent of energy as carbohydrate and 60 percent fat; the other was about 40 percent carbohydrate and 30 percent fat. Weight loss was 6.3 and 7.2 kg and fat loss 3.4 and 5.5 kg, neither difference significant. The ketogenic group did worse on an inflammation marker and on rated vigour. McDonald's view is that, with protein matched, ketosis gives no fat-loss edge, though some people control food intake better without starchy foods. See the first-week drop entry for a ward study.",
+      "do": [
+        "Pick low or moderate carbohydrate by what you can stick to and train on, not for a fat-burning edge."
+      ]
+    },
+    {
+      "id": "diet-table-protein-carb-trial",
+      "type": "table",
+      "title": "Protein against carbohydrate: loss at 12 months in four diets",
+      "topic": "strategy",
+      "level": "advanced",
+      "confidence": "limited",
+      "sources": [
+        "soenen-2012"
+      ],
+      "take": "Mean loss in 132 adults with obesity: 3 months at a third of energy needs (a supervised-only intake), then 9 at two thirds. Low carb did not beat normal carb (see the protein entry).",
+      "columns": [
+        "Diet",
+        "Protein",
+        "Carbohydrate",
+        "Weight lost",
+        "Fat lost"
+      ],
+      "rows": [
+        [
+          "High protein, normal carb",
+          "About 1.1 g per kg",
+          "Normal",
+          "14.1 kg (31.1 lb)",
+          "10.0 kg (22.0 lb)"
+        ],
+        [
+          "High protein, low carb",
+          "About 1.1 g per kg",
+          "Low",
+          "11.6 kg (25.6 lb)",
+          "8.2 kg (18.1 lb)"
+        ],
+        [
+          "Normal protein, low carb",
+          "About 0.7 g per kg",
+          "Low",
+          "9.7 kg (21.4 lb)",
+          "8.5 kg (18.7 lb)"
+        ],
+        [
+          "Normal protein, normal carb",
+          "About 0.7 g per kg",
+          "Normal",
+          "8.2 kg (18.1 lb)",
+          "6.7 kg (14.8 lb)"
+        ]
+      ]
+    },
+    {
+      "id": "diet-term-negative-calorie",
+      "type": "term",
+      "title": "Negative calorie illusion (dieter's paradox)",
+      "topic": "hunger",
+      "level": "beginner",
+      "confidence": "limited",
+      "sources": [
+        "chernev-2011",
+        "mcdonald-dieters-paradox"
+      ],
+      "take": "The mistaken belief that adding a healthy food to an unhealthy meal lowers its calories. In Chernev's studies the error was larger in people most concerned with their weight."
+    },
+    {
+      "id": "diet-maintenance-loading",
+      "type": "note",
+      "title": "In a diet, McDonald cuts heavy volume from the start and keeps the load",
+      "topic": "muscle",
+      "level": "intermediate",
+      "confidence": "limited",
+      "sources": [
+        "mcdonald-training-dieting",
+        "bickel-2011"
+      ],
+      "take": "McDonald's practice is to drop heavy volume by up to two thirds when a diet begins, hold the usual loads, and fill any time saved with cardio or light work.",
+      "body": "His reasoning is that recovery falls in a deficit and a few quality heavy sets beat many poor ones. Support comes from maintenance studies outside a deficit (see the maintenance dose entry in recovery). In one trial of 70 adults, a third or even a ninth of the build-up dose kept muscle size for 32 weeks in those aged 20 to 35, but not in those aged 60 to 75. No trial cited here tested a calorie deficit, so older dieters may need more.",
+      "do": [
+        "McDonald's practice: in a diet, keep 2 to 4 heavy sets per muscle group, as little as once a week, at your usual loads."
+      ]
+    },
+    {
+      "id": "diet-antidepressants-weight",
+      "type": "note",
+      "title": "Antidepressants differ in their effect on weight, so raise changes with the prescriber",
+      "topic": "plateau",
+      "level": "intermediate",
+      "confidence": "moderate",
+      "sources": [
+        "serretti-2010",
+        "mcdonald-antidepressants"
+      ],
+      "take": "A meta-analysis of 116 studies linked some antidepressants to weight gain and others to little change or slight loss, with wide individual variation.",
+      "body": "Amitriptyline, mirtazapine and paroxetine went with a greater risk of gain. Fluoxetine and bupropion went with some loss, for fluoxetine only early in treatment. Others had little short-term effect, and effects tended to grow over the long term. Some comparisons rested on few studies. McDonald's view is that these drugs act mainly through appetite, sometimes activity, so ordinary diet and activity changes still apply. A weight change is a reason to talk to the prescriber, never to stop or switch a medicine on your own.",
+      "do": [
+        "If your weight changes on a psychiatric medicine, raise it with your prescriber; do not stop or change it yourself."
+      ]
+    },
+    {
+      "id": "diet-heal-before-dieting",
+      "type": "note",
+      "title": "After surgery or injury, McDonald's advice is to heal first and diet later",
+      "topic": "deficit",
+      "level": "beginner",
+      "confidence": "practice",
+      "sources": [
+        "mcdonald-dieting-surgery"
+      ],
+      "take": "In McDonald's view, healing raises energy needs and a deficit may slow repair, so a little fat gained while recovering is the smaller problem.",
+      "body": "He advises eating at maintenance or slightly above while recovering, and dieting only after the injury has healed. Whether to lose fat before a planned operation is a decision for the surgical team, who may also set rules on eating, fasting and supplements beforehand. This entry rests on his judgment, not on a trial cited here.",
+      "do": [
+        "Follow your surgical team's or physiotherapist's advice on eating before and after an operation."
+      ]
     }
   ],
   "sources": {
@@ -3425,6 +3835,540 @@
       "pmid": "30700403",
       "n_studies": 13,
       "support": "A small difference in weight favouring participants who skipped breakfast (mean difference 0.44 kg). Participants assigned to breakfast had a higher total daily energy intake than those assigned to skip breakfast (mean difference 259.79 kcal/day)."
+    },
+    "mcdonald-full-diet-break": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "The Full Diet Break",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/the-full-diet-break",
+      "retrieved": "2026-11-16",
+      "support": "Backs his diet-break practice: 10 to 14 days near maintenance, a carbohydrate floor, closer spacing for leaner dieters, and planning breaks around holidays to keep control."
+    },
+    "mcdonald-training-vs-diet": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Does the Diet Determine the Training or Vice Versa",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/should-training-determine-the-diet",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that low days of alternate-day or intermittent restriction plans belong on rest days, and that fixed training days rule some patterns out."
+    },
+    "mcdonald-energy-balance": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "The Energy Balance Equation",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/the-energy-balance-equation",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that differences in digestion and gut bacteria alter the energy-in term without breaking energy balance."
+    },
+    "wing-2003": {
+      "type": "rct",
+      "authors": [
+        "Wing RR",
+        "Jeffery RW"
+      ],
+      "year": 2003,
+      "title": "Prescribed “Breaks” as a Means to Disrupt Weight Control Efforts",
+      "journal": "Obesity Research",
+      "volume": "11",
+      "issue": "2",
+      "pages": "287-291",
+      "doi": "10.1038/oby.2003.43",
+      "pmid": "12582226",
+      "n_participants": 142,
+      "support": "Breaks produced a slowing of weight loss or slight regain, but weight losses during the breaks were not significantly different from the control group. Importantly, overall weight losses (0 to 5 months or 0 to 11 months) did not differ between conditions."
+    },
+    "pasquali-1982": {
+      "type": "trial",
+      "authors": [
+        "Pasquali R",
+        "Parenti M",
+        "Mattioli L",
+        "Capelli M",
+        "Cavazzini G",
+        "Baraldi G",
+        "Sorrenti G",
+        "De Benedettis G",
+        "Biso P",
+        "Melchionda N"
+      ],
+      "year": 1982,
+      "title": "Effect of dietary carbohydrates during hypocaloric treatment of obesity on peripheral thyroid hormone metabolism",
+      "journal": "Journal of Endocrinological Investigation",
+      "volume": "5",
+      "issue": "1",
+      "pages": "47-52",
+      "doi": "10.1007/BF03350482",
+      "pmid": "7096916",
+      "support": "A fall in T3 levels during the entire period of study with respect to the basal levels occurred only when the CHO of the diet was 120 g/day or less, independent of caloric intake (360, 645 or 1200 calories)."
+    },
+    "westerterp-plantenga-2004": {
+      "type": "rct",
+      "authors": [
+        "Westerterp-Plantenga MS",
+        "Lejeune MPGM",
+        "Nijs I",
+        "van Ooijen M",
+        "Kovacs EMR"
+      ],
+      "year": 2004,
+      "title": "High protein intake sustains weight maintenance after body weight loss in humans",
+      "journal": "International Journal of Obesity",
+      "volume": "28",
+      "issue": "1",
+      "pages": "57-64",
+      "doi": "10.1038/sj.ijo.0802461",
+      "pmid": "14710168",
+      "n_participants": 148,
+      "support": "A 20% higher protein intake, that is, 18% of energy vs 15% of energy during weight maintenance after weight loss, resulted in a 50% lower body weight regain, only consisting of fat-free mass, and related to increased satiety and decreased energy efficiency."
+    },
+    "trexler-2017": {
+      "type": "cohort",
+      "authors": [
+        "Trexler ET",
+        "Hirsch KR",
+        "Campbell BI",
+        "Smith-Ryan AE"
+      ],
+      "year": 2017,
+      "title": "Physiological Changes Following Competition in Male and Female Physique Athletes: A Pilot Study",
+      "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "volume": "27",
+      "issue": "5",
+      "pages": "458-466",
+      "doi": "10.1123/ijsnem.2017-0038",
+      "pmid": "28422530",
+      "n_participants": 15,
+      "support": "FM (T1 = 7.7 ± 4.4 kg, T2 = 8.0 ± 4.4, T3 = 10.0 ± 6.2; T3 > T1 and T2). TBW increased from T1 to T2. RMR and male testosterone increased while FM was preferentially gained 4-6 weeks postcompetition."
+    },
+    "jumpertz-2011": {
+      "type": "trial",
+      "authors": [
+        "Jumpertz R",
+        "Le DS",
+        "Turnbaugh PJ",
+        "Trinidad C",
+        "Bogardus C",
+        "Gordon JI",
+        "Krakoff J"
+      ],
+      "year": 2011,
+      "title": "Energy-balance studies reveal associations between gut microbes, caloric load, and nutrient absorption in humans",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "94",
+      "issue": "1",
+      "pages": "58-65",
+      "doi": "10.3945/ajcn.110.010132",
+      "pmid": "21543530",
+      "n_participants": 21,
+      "support": "These changes were directly correlated with stool energy loss in lean individuals such that a 20% increase in Firmicutes and a corresponding decrease in Bacteroidetes were associated with an increased energy harvest of ≈150 kcal."
+    },
+    "harvie-2011": {
+      "type": "rct",
+      "authors": [
+        "Harvie MN",
+        "Pegington M",
+        "Mattson MP",
+        "Frystyk J",
+        "Dillon B",
+        "Evans G",
+        "Cuzick J",
+        "Jebb SA",
+        "Martin B",
+        "Cutler RG",
+        "Son TG",
+        "Maudsley S",
+        "Carlson OD",
+        "Egan JM",
+        "Flyvbjerg A",
+        "Howell A"
+      ],
+      "year": 2011,
+      "title": "The effects of intermittent or continuous energy restriction on weight loss and metabolic disease risk markers: a randomized trial in young overweight women",
+      "journal": "International Journal of Obesity",
+      "volume": "35",
+      "issue": "5",
+      "pages": "714-727",
+      "doi": "10.1038/ijo.2010.171",
+      "pmid": "20921964",
+      "n_participants": 107,
+      "support": "107 overweight or obese premenopausal women over 6 months: about 2,710 kJ a day on 2 days a week lost as much weight as a daily 25% restriction."
+    },
+    "mcdonald-what-are-calories": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2017,
+      "title": "What are Calories?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/what-are-calories",
+      "retrieved": "2026-11-16",
+      "support": "Backs the idea of balance for each nutrient (intake minus oxidation), and his view that alcohol has no store in the body and is burned off first."
+    },
+    "mcdonald-best-diet": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "What's the Best Diet - Book Teaser",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/what-is-the-best-diet",
+      "retrieved": "2026-11-16",
+      "support": "Backs his short list of what any fat-loss diet must provide and what makes it workable, and his view that low-carb diets may succeed mainly through higher protein."
+    },
+    "mcdonald-not-different": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2007,
+      "title": "You Are Not Different",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/you-are-not-different",
+      "retrieved": "2026-11-16",
+      "support": "Backs the point that people differ in how hard the body resists a surplus or deficit, while no one escapes energy balance."
+    },
+    "mcdonald-intro-dieting": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2017,
+      "title": "An Introduction to Dieting",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/nutrition/introduction-to-dieting",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that diet-approved processed foods carry plenty of calories and invite people to eat more of them, which helps bring on a plateau."
+    },
+    "mcdonald-causes-diet-failure": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2016,
+      "title": "What Are the Causes of Diet Failure?",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/the-causes-diet-failure",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that unrealistic goals and false expectations of quick, easy loss drive people to quit, and that higher protein is the most useful single diet change."
+    },
+    "abbott-1988": {
+      "type": "trial",
+      "authors": [
+        "Abbott WG",
+        "Howard BV",
+        "Christin L",
+        "Freymond D",
+        "Lillioja S",
+        "Boyce VL",
+        "Anderson TE",
+        "Bogardus C",
+        "Ravussin E"
+      ],
+      "year": 1988,
+      "title": "Short-term energy balance: relationship with protein, carbohydrate, and fat balances",
+      "journal": "American Journal of Physiology-Endocrinology and Metabolism",
+      "volume": "255",
+      "issue": "3",
+      "pages": "E332-E337",
+      "doi": "10.1152/ajpendo.1988.255.3.E332",
+      "pmid": "3421330",
+      "n_participants": 54,
+      "support": "There were no correlations between energy balance and either carbohydrate or protein balances. Thus fat, rather than carbohydrate or protein, is almost exclusively used or stored in response to day-to-day fluctuations in energy balance."
+    },
+    "suter-1992": {
+      "type": "trial",
+      "authors": [
+        "Suter PM",
+        "Schutz Y",
+        "Jequier E"
+      ],
+      "year": 1992,
+      "title": "The Effect of Ethanol on Fat Storage in Healthy Subjects",
+      "journal": "New England Journal of Medicine",
+      "volume": "326",
+      "issue": "15",
+      "pages": "983-987",
+      "doi": "10.1056/NEJM199204093261503",
+      "pmid": "1545851",
+      "n_participants": 8,
+      "support": "Both the addition of ethanol and the isocaloric substitution of ethanol for other foods reduced 24-hour lipid oxidation (reductions of 36 +/- 3 percent and 31 +/- 7 percent). Neither significantly altered the oxidation of carbohydrate or protein."
+    },
+    "soenen-2012": {
+      "type": "rct",
+      "authors": [
+        "Soenen S",
+        "Bonomi AG",
+        "Lemmens SG",
+        "Scholte J",
+        "Thijssen MA",
+        "van Berkum F",
+        "Westerterp-Plantenga MS"
+      ],
+      "year": 2012,
+      "title": "Relatively high-protein or ‘low-carb’ energy-restricted diets for body weight loss and body weight maintenance?",
+      "journal": "Physiology & Behavior",
+      "volume": "107",
+      "issue": "3",
+      "pages": "374-380",
+      "doi": "10.1016/j.physbeh.2012.08.004",
+      "pmid": "22935440",
+      "n_participants": 132,
+      "support": "Body-weight loss and weight-maintenance depends on the high-protein, but not on the 'low-carb' component of the diet, while it is unrelated to the concomitant fat-content of the diet."
+    },
+    "shide-1995": {
+      "type": "trial",
+      "authors": [
+        "Shide DJ",
+        "Rolls BJ"
+      ],
+      "year": 1995,
+      "title": "Information About the Fat Content of Preloads Influences Energy Intake in Healthy Women",
+      "journal": "Journal of the American Dietetic Association",
+      "volume": "95",
+      "issue": "9",
+      "pages": "993-998",
+      "doi": "10.1016/S0002-8223(95)00273-1",
+      "pmid": "7657914",
+      "n_participants": 48,
+      "support": "Subjects who had information consumed more energy at lunch after eating a preload labeled low fat than after eating a preload with similar energy content but labeled high fat. When energy consumed at dinner was included, overall intake was still significantly greater."
+    },
+    "bouchard-1990": {
+      "type": "trial",
+      "authors": [
+        "Bouchard C",
+        "Tremblay A",
+        "Després JP",
+        "Nadeau A",
+        "Lupien PJ",
+        "Thériault G",
+        "Dussault J",
+        "Moorjani S",
+        "Pinault S",
+        "Fournier G"
+      ],
+      "year": 1990,
+      "title": "The Response to Long-Term Overfeeding in Identical Twins",
+      "journal": "New England Journal of Medicine",
+      "volume": "322",
+      "issue": "21",
+      "pages": "1477-1482",
+      "doi": "10.1056/NEJM199005243222101",
+      "pmid": "2336074",
+      "n_participants": 24,
+      "support": "12 pairs of young adult male monozygotic twins were overfed by 4.2 MJ (1000 kcal) per day, 6 days a week, for a total of 84 days. The mean weight gain was 8.1 kg, but the range was 4.3 to 13.3 kg, with about three times more variance among pairs than within pairs."
+    },
+    "foster-1997": {
+      "type": "cohort",
+      "authors": [
+        "Foster GD",
+        "Wadden TA",
+        "Vogt RA",
+        "Brewer G"
+      ],
+      "year": 1997,
+      "title": "What is a reasonable weight loss? Patients' expectations and evaluations of obesity treatment outcomes.",
+      "journal": "Journal of Consulting and Clinical Psychology",
+      "volume": "65",
+      "issue": "1",
+      "pages": "79-85",
+      "doi": "10.1037/0022-006X.65.1.79",
+      "pmid": "9103737",
+      "n_participants": 60,
+      "support": "Goal weight averaged a 32% reduction in body weight. A 17-kg weight loss was defined as disappointed. After 48 weeks of treatment and a 16-kg weight loss, 47% of patients did not achieve even a disappointed weight."
+    },
+    "polivy-2002": {
+      "type": "review",
+      "authors": [
+        "Polivy J",
+        "Herman CP"
+      ],
+      "year": 2002,
+      "title": "If at first you don't succeed: False hopes of self-change.",
+      "journal": "American Psychologist",
+      "volume": "57",
+      "issue": "9",
+      "pages": "677-689",
+      "doi": "10.1037/0003-066X.57.9.677",
+      "pmid": "12237978",
+      "support": "The authors have described this cycle of failure and renewed effort as a 'false hope syndrome' characterized by unrealistic expectations about the likely speed, amount, ease, and consequences of self-change attempts."
+    },
+    "mcdonald-metabolic-damage": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2010,
+      "title": "Permanent Metabolic Damage - Q&A",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/permanent-metabolic-damage",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that formerly obese people keep a small but lasting drop in resting metabolic rate, and that claims of gaining fat on very low intakes are implausible."
+    },
+    "mcdonald-keto-advantage": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Ketogenic Low-Carbohydrate Diets and Metabolic Advantage",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/research/ketogenic-diets-metabolic-advantage",
+      "retrieved": "2026-11-16",
+      "support": "Backs his reading of a controlled 6-week trial with protein held near equal, and his view that low carb's real edge for some people is control of appetite and food choice."
+    },
+    "mcdonald-dieters-paradox": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2012,
+      "title": "The Dieters Paradox - Research Review",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/research/the-dieters-paradox",
+      "retrieved": "2026-11-16",
+      "support": "Backs the term for believing a healthy side dish lowers a meal's calories, and his view that sorting foods into good and bad distracts from portions."
+    },
+    "mcdonald-training-dieting": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2009,
+      "title": "Weight Training for Fat Loss Part 1",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/training/weight-training-while-dieting",
+      "retrieved": "2026-11-16",
+      "support": "Backs his practice of cutting heavy volume by up to two thirds while keeping the load during a diet, and adding light high-rep work only in the time saved."
+    },
+    "mcdonald-antidepressants": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2015,
+      "title": "Antidepressants and Weight Gain",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/fat-loss/antidepressants-and-weight-gain",
+      "retrieved": "2026-11-16",
+      "support": "Backs his view that antidepressant classes differ in their effect on weight, mainly through appetite and sometimes activity."
+    },
+    "mcdonald-dieting-surgery": {
+      "type": "article",
+      "authors": [
+        "McDonald L"
+      ],
+      "year": 2019,
+      "title": "Dieting and Surgery - Q&A",
+      "journal": "Body Recomposition",
+      "url": "https://bodyrecomposition.com/nutrition/dieting-and-surgery",
+      "retrieved": "2026-11-16",
+      "support": "Backs his advice to heal before dieting after surgery or injury, eating at maintenance or slightly above while recovering."
+    },
+    "astrup-1999": {
+      "type": "meta-analysis",
+      "authors": [
+        "Astrup A",
+        "Gøtzsche PC",
+        "van de Werken K",
+        "Ranneries C",
+        "Toubro S",
+        "Raben A",
+        "Buemann B"
+      ],
+      "year": 1999,
+      "title": "Meta-analysis of resting metabolic rate in formerly obese subjects",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "69",
+      "issue": "6",
+      "pages": "1117-1122",
+      "doi": "10.1093/ajcn/69.6.1117",
+      "pmid": "10357728",
+      "n_studies": 12,
+      "support": "RMR adjusted for differences in fat-free mass and fat mass was 2.9% lower in formerly obese subjects than in control subjects (P = 0.09). In the traditional meta-analysis relative RMR was lower by 5.1%. Formerly obese subjects had a 3-5% lower mean relative RMR than control subjects."
+    },
+    "johnston-2006": {
+      "type": "rct",
+      "authors": [
+        "Johnston CS",
+        "Tjonn SL",
+        "Swan PD",
+        "White A",
+        "Hutchins H",
+        "Sears B"
+      ],
+      "year": 2006,
+      "title": "Ketogenic low-carbohydrate diets have no metabolic advantage over nonketogenic low-carbohydrate diets",
+      "journal": "The American Journal of Clinical Nutrition",
+      "volume": "83",
+      "issue": "5",
+      "pages": "1055-1061",
+      "doi": "10.1093/ajcn/83.5.1055",
+      "pmid": "16685046",
+      "n_participants": 20,
+      "support": "Mean weight losses (6.3 and 7.2 kg in KLC and NLC dieters; P = 0.324) and fat losses (3.4 and 5.5 kg; P = 0.111) did not differ significantly by group after 6 wk. Inflammatory risk and perceptions of vigor were more adversely affected by the KLC than by the NLC diet."
+    },
+    "chernev-2011": {
+      "type": "trial",
+      "authors": [
+        "Chernev A"
+      ],
+      "year": 2011,
+      "title": "The Dieter's Paradox",
+      "journal": "Journal of Consumer Psychology",
+      "volume": "21",
+      "issue": "2",
+      "pages": "178-183",
+      "doi": "10.1016/j.jcps.2010.08.002",
+      "support": "People erroneously believe that eating healthy foods in addition to unhealthy ones can decrease a meal's calorie count. This misperception is stronger among individuals most concerned with managing their weight."
+    },
+    "bickel-2011": {
+      "type": "rct",
+      "authors": [
+        "Bickel CS",
+        "Cross JM",
+        "Bamman MM"
+      ],
+      "year": 2011,
+      "title": "Exercise Dosing to Retain Resistance Training Adaptations in Young and Older Adults",
+      "journal": "Medicine & Science in Sports & Exercise",
+      "volume": "43",
+      "issue": "7",
+      "pages": "1177-1187",
+      "doi": "10.1249/MSS.0b013e318207c15d",
+      "pmid": "21131862",
+      "n_participants": 70,
+      "support": "RT 3 d/wk for 16 wk followed by 32 wk of detraining or a maintenance dose of one-third or one-ninth. Both maintenance prescriptions preserved phase 1 muscle hypertrophy in the young but not the old."
+    },
+    "serretti-2010": {
+      "type": "meta-analysis",
+      "authors": [
+        "Serretti A",
+        "Mandelli L"
+      ],
+      "year": 2010,
+      "title": "Antidepressants and Body Weight",
+      "journal": "The Journal of Clinical Psychiatry",
+      "volume": "71",
+      "issue": "10",
+      "pages": "1259-1272",
+      "doi": "10.4088/JCP.09r05346blu",
+      "pmid": "21062615",
+      "n_studies": 116,
+      "support": "Amitriptyline, mirtazapine, and paroxetine were associated with a greater risk of weight gain. Some weight loss occurs with fluoxetine and bupropion, although the effect of fluoxetine appears limited to the acute phase. The effect of each antidepressant may vary greatly depending on an individual's characteristics."
     }
   }
 }

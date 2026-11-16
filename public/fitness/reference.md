@@ -1,6 +1,6 @@
 # Fitness key numbers and reference tables, indexed: KiteSink
 
-An index of the 123 key numbers and 60 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
+An index of the 124 key numbers and 61 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
 
 ## Key numbers
 
@@ -92,6 +92,7 @@ An index of the 123 key numbers and 60 reference tables in the KiteSink fitness 
 | [Rate of gain, novice to intermediate](https://kitesink.com/fitness/diet#diet-num-gain-rate) | 0.25-0.5 | % body weight per week | Diet |
 | [Eventual weight change per lasting change in daily intake](https://kitesink.com/fitness/diet#diet-num-intake-change-rule) | 100 | kJ a day per kg of change | Diet |
 | [Energy in each kg lost at week four of a diet](https://kitesink.com/fitness/diet#diet-num-early-loss-energy) | about 4,900 | kcal per kg lost | Diet |
+| [Resting metabolic rate in formerly obese adults](https://kitesink.com/fitness/diet#diet-num-post-obese-rmr) | 3-5 | percent below never-obese | Diet |
 | [Individual error of field methods in bodybuilders](https://kitesink.com/fitness/bodycomp#comp-num-field-error) | 5.5-8 | body fat points | Body composition |
 | [How far skinfold equations read below DXA](https://kitesink.com/fitness/bodycomp#comp-num-dxa-offset) | 3-6 | body fat points | Body composition |
 | [Lower limit of body fat in healthy men](https://kitesink.com/fitness/bodycomp#comp-num-lower-limit-men) | 4-6 | % body fat (DXA) | Body composition |
@@ -175,6 +176,7 @@ An index of the 123 key numbers and 60 reference tables in the KiteSink fitness 
 - [What moves scale weight day to day](https://kitesink.com/fitness/diet#diet-table-scale-moves) (Diet)
 - [Rate of gain by training age](https://kitesink.com/fitness/diet#diet-table-gain-rate) (Diet)
 - [The same percentage deficit at two maintenance levels](https://kitesink.com/fitness/diet#diet-table-deficit-by-size) (Diet)
+- [Protein against carbohydrate: loss at 12 months in four diets](https://kitesink.com/fitness/diet#diet-table-protein-carb-trial) (Diet)
 - [Body composition arithmetic](https://kitesink.com/fitness/bodycomp#comp-table-arithmetic) (Body composition)
 - [Body fat methods: what each one really measures](https://kitesink.com/fitness/bodycomp#comp-table-methods) (Body composition)
 - [Measured body fat in athletes by sport (DXA)](https://kitesink.com/fitness/bodycomp#comp-table-athlete-body-fat) (Body composition)

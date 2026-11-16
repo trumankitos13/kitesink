@@ -12,7 +12,7 @@ Lyle McDonald's position is that the first months do one job for everyone: learn
 
 - Pick a simple whole-body plan and run it for months before you specialise.
 
-Starting out · Beginner · Some support · Sources: [McDonald 2015d](https://bodyrecomposition.com/training/beginning-weight-training), [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training-2), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
+Starting out · Beginner · Some support · Sources: [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training), [McDonald 2015f](https://bodyrecomposition.com/training/beginning-weight-training-2), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
 
 ### Start with the least training that still makes you progress
 
@@ -22,7 +22,7 @@ McDonald's rule for all training is to get the most adaptation from the least wo
 
 - Raise sets, days or load when progress stalls, and not because another routine looks more serious.
 
-Starting out · Beginner · Some support · Sources: [McDonald 2015d](https://bodyrecomposition.com/training/beginning-weight-training), [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4)
+Starting out · Beginner · Some support · Sources: [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training), [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4)
 
 ### You stop being a beginner when simple training stops producing gains
 
@@ -32,7 +32,7 @@ McDonald lists three signs: sound, repeatable technique on the main exercises, t
 
 - Stay on the simple plan for as long as weights or reps keep rising from week to week.
 
-Starting out · Beginner · Coaching practice · Sources: [McDonald 2015d](https://bodyrecomposition.com/training/beginning-weight-training), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670)
+Starting out · Beginner · Coaching practice · Sources: [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670)
 
 ### Tendons adapt more slowly than strength rises
 
@@ -43,7 +43,7 @@ Eight people did knee-extension training for three months. Strength was up 29.6%
 - Add load in small steps for the first months, even when a bigger jump feels possible.
 - Hold the weight if a joint or tendon stays sore, and see a clinician if the pain persists.
 
-Starting out · Beginner · Some support · Sources: [Kubo 2010](https://doi.org/10.1519/jsc.0b013e3181c865e2), [Bohm 2015](https://doi.org/10.1186/s40798-015-0009-9), [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training-2)
+Starting out · Beginner · Some support · Sources: [Kubo 2010](https://doi.org/10.1519/jsc.0b013e3181c865e2), [Bohm 2015](https://doi.org/10.1186/s40798-015-0009-9), [McDonald 2015f](https://bodyrecomposition.com/training/beginning-weight-training-2)
 
 ### The ability to work hard is learned in small steps
 
@@ -53,7 +53,7 @@ A scoping review found that people left to choose their own weights picked an av
 
 - Once technique is steady, take one set per exercise a rep or two past where you would usually stop.
 
-Starting out · Beginner · Thin evidence · Sources: [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training-2), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9)
+Starting out · Beginner · Thin evidence · Sources: [McDonald 2015f](https://bodyrecomposition.com/training/beginning-weight-training-2), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9)
 
 ### Beginners gain strength on loads as light as 60% of their max
 
@@ -63,7 +63,7 @@ A meta-analysis of 140 studies found a mean load of 60% of one-rep max (1RM) gav
 
 - Start with a weight you could lift for well over the target reps, and add load while technique holds.
 
-Building a first programme · Beginner · Well supported · Sources: [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897), [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
+Building a first programme · Beginner · Well supported · Sources: [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
 
 ### One set per exercise is enough to start; build to two or three
 
@@ -74,7 +74,7 @@ McDonald starts beginners on one set per exercise and builds toward three over t
 - Do one set per exercise in the first sessions.
 - Add a second and third set over the following weeks if you want more than basic fitness.
 
-Building a first programme · Beginner · Some support · Sources: [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3), [Ralston 2017](https://doi.org/10.1007/s40279-017-0762-7), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
+Building a first programme · Beginner · Some support · Sources: [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3), [Ralston 2017](https://doi.org/10.1007/s40279-017-0762-7), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
 
 ### Sets of 8 to 12 suit most beginners; sets of 5 need restraint
 
@@ -84,7 +84,7 @@ The 2009 ACSM stand gives novices loads they can lift 8 to 12 times, and McDonal
 
 - Use 8 to 12 reps unless a coach is watching your lifts.
 
-Building a first programme · Beginner · Some support · Sources: [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670), [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
+Building a first programme · Beginner · Some support · Sources: [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
 
 ### Train the whole body two or three times a week at first
 
@@ -95,7 +95,7 @@ A meta-analysis of 140 studies found untrained people gained most strength train
 - Choose two or three non-consecutive days you can keep every week.
 - Repeat the same exercises each session so every lift is practised often.
 
-Building a first programme · Beginner · Well supported · Sources: [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670), [Ralston 2018](https://doi.org/10.1186/s40798-018-0149-9), [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
+Building a first programme · Beginner · Well supported · Sources: [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670), [Ralston 2018](https://doi.org/10.1186/s40798-018-0149-9), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
 
 ### Free weights and machines build similar strength and size
 
@@ -117,7 +117,7 @@ Thirty-six active men trained three times a week for eight weeks using only mult
 - Build each session around a lower-body lift, a push and a pull.
 - Add single-joint work where the big lifts leave a muscle undertrained.
 
-Building a first programme · Beginner · Thin evidence · Sources: [Paoli 2017](https://doi.org/10.3389/fphys.2017.01105), [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
+Building a first programme · Beginner · Thin evidence · Sources: [Paoli 2017](https://doi.org/10.3389/fphys.2017.01105), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
 
 ### A machine circuit is a sound first programme
 
@@ -128,7 +128,7 @@ McDonald started most beginner clients, mainly untrained adults over 30, on mach
 - Learn a few machine exercises first if nobody is available to teach you barbell lifts.
 - Introduce new exercises a few at a time after six to eight weeks.
 
-Building a first programme · Beginner · Coaching practice · Sources: [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4), [Haugen 2023](https://doi.org/10.1186/s13102-023-00713-4)
+Building a first programme · Beginner · Coaching practice · Sources: [McDonald 2015h](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4), [Haugen 2023](https://doi.org/10.1186/s13102-023-00713-4)
 
 ### Keep the same exercises for the first six to eight weeks
 
@@ -139,7 +139,7 @@ McDonald prefers a beginner to repeat one set of exercises at every session, bec
 - Run one set of exercises for six to eight weeks before swapping any.
 - Give each new exercise several weeks before you judge it.
 
-Building a first programme · Beginner · Coaching practice · Sources: [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3), [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training-2)
+Building a first programme · Beginner · Coaching practice · Sources: [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3), [McDonald 2015f](https://bodyrecomposition.com/training/beginning-weight-training-2)
 
 ### Find first weights by starting with the lightest option available
 
@@ -450,7 +450,7 @@ McDonald lists the problems of percent-based loading for non-specialists: testin
 - Pick a rep zone for each exercise and find the weight that fits it.
 - Raise the weight when your last set ends with two or three reps to spare.
 
-Intensity and load · Beginner · Some support · Sources: [McDonald 2015r](https://bodyrecomposition.com/training/setting-exercise-intensity), [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7), [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
+Intensity and load · Beginner · Some support · Sources: [McDonald 2015s](https://bodyrecomposition.com/training/setting-exercise-intensity), [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7), [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049)
 
 ### All-out fast work needs a longer warm-up than its light loads suggest
 
@@ -472,7 +472,7 @@ McDonald prefers a sign to a stopwatch: continue until sweating lightly, which t
 - Do a few minutes of easy movement until you feel warm, then start your ramp-up sets.
 - Take longer in the cold, or if your joints are stiff.
 
-Warming up · Beginner · Thin evidence · Sources: [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Abad 2011](https://doi.org/10.1519/jsc.0b013e3181e8611b), [Fradkin 2010](https://doi.org/10.1519/jsc.0b013e3181c643a0)
+Warming up · Beginner · Thin evidence · Sources: [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Abad 2011](https://doi.org/10.1519/jsc.0b013e3181e8611b), [Fradkin 2010](https://doi.org/10.1519/jsc.0b013e3181c643a0)
 
 ### End a warm-up set at the rep where the weight starts to feel easy
 
@@ -483,7 +483,7 @@ McDonald passes on a cue from his own mentor. During a warm-up set the first rep
 - Stop each warm-up set when a rep first feels smooth, then go up.
 - Treat every warm-up rep as technique practice.
 
-Warming up · Intermediate · Coaching practice · Sources: [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
+Warming up · Intermediate · Coaching practice · Sources: [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
 
 ### Stretch before lifting where tightness blocks a safe position
 
@@ -494,7 +494,7 @@ A systematic review found no harm from static stretches under 30 seconds, none o
 - Before lifting, stretch only the areas that stop you reaching a good position.
 - Keep any pre-lift static hold under about 30 seconds.
 
-Warming up · Beginner · Well supported · Sources: [Kay 2012](https://doi.org/10.1249/mss.0b013e318225cb27), [Behm 2016](https://doi.org/10.1139/apnm-2015-0235), [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
+Warming up · Beginner · Well supported · Sources: [Kay 2012](https://doi.org/10.1249/mss.0b013e318225cb27), [Behm 2016](https://doi.org/10.1139/apnm-2015-0235), [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
 
 ### Foam rolling before lifting is optional and does not replace warming up
 
@@ -505,7 +505,7 @@ A meta-analysis of 21 studies, 14 of them on rolling before exercise, found it i
 - Roll or do activation drills only for a specific, known problem.
 - Keep the whole warm-up short enough that it never eats into the session.
 
-Warming up · Beginner · Some support · Sources: [Wiewelhove 2019](https://doi.org/10.3389/fphys.2019.00376), [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
+Warming up · Beginner · Some support · Sources: [Wiewelhove 2019](https://doi.org/10.3389/fphys.2019.00376), [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
 
 ### A single at the working weight is an optional primer for experienced lifters
 
@@ -516,7 +516,7 @@ McDonald offers this only to lifters with a settled basic warm-up. If your secon
 - Try a single at the working weight if your first set is always your worst.
 - Drop it if it makes no difference after a few sessions.
 
-Warming up · Advanced · Thin evidence · Sources: [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347), [Seitz 2016](https://doi.org/10.1007/s40279-015-0415-7)
+Warming up · Advanced · Thin evidence · Sources: [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347), [Seitz 2016](https://doi.org/10.1007/s40279-015-0415-7)
 
 ### Five rising sets of five suit learning a lift, if someone checks the technique
 
@@ -527,7 +527,7 @@ In the beginner version the five sets climb to a single hard set, and the starti
 - Use the ramp while learning a lift, with a coach or video to check each session.
 - Stay at the same weight for the rest of the sets when form slips.
 
-Classic programmes and methods · Beginner · Coaching practice · Sources: [McDonald 2009b](https://bodyrecomposition.com/training/the-5x5-program), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4)
+Classic programmes and methods · Beginner · Coaching practice · Sources: [McDonald 2009b](https://bodyrecomposition.com/training/the-5x5-program), [McDonald 2015h](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4)
 
 ### For five sets of five at one weight, use about 75 to 80% of max
 
@@ -549,7 +549,7 @@ McDonald's verdict is favourable with limits. Sets of five are heavy enough to b
 - Use 5x5 for one or two main lifts and train the rest with higher reps.
 - When progress stalls, cut sets before you cut the weight.
 
-Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2009b](https://bodyrecomposition.com/training/the-5x5-program), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
+Classic programmes and methods · Intermediate · Coaching practice · Sources: [McDonald 2009b](https://bodyrecomposition.com/training/the-5x5-program), [McDonald 2015h](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4), [Currier 2026](https://doi.org/10.1249/mss.0000000000003897)
 
 ### The 20-rep squat teaches effort, but its famous weight-gain claims do not hold up
 
@@ -622,7 +622,7 @@ McDonald argues that self-coached lifters lack distance, so they talk themselves
 - Before changing the plan mid-session, ask what you would tell a friend to do.
 - When in doubt about one more set, stop.
 
-Goals and self-coaching · Intermediate · Coaching practice · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself)
+Goals and self-coaching · Intermediate · Coaching practice · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/coaching-yourself)
 
 ### A coach adds technique, restraint and a plan
 
@@ -632,7 +632,7 @@ McDonald lists three things a coach supplies. The first is technical feedback, w
 
 - If you cannot hire a coach, film your lifts and have an experienced lifter review them.
 
-Goals and self-coaching · Beginner · Some support · Sources: [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9), [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself)
+Goals and self-coaching · Beginner · Some support · Sources: [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101), [Steele 2022](https://doi.org/10.1007/s40279-022-01717-9), [McDonald 2019f](https://bodyrecomposition.com/training/coaching-yourself)
 
 ### A simple plan carried out fully beats an elaborate one
 
@@ -675,7 +675,7 @@ The ACSM's 2011 position stand recommends resistance exercise for each major mus
 - Lift two or three days a week, covering every major muscle group.
 - Keep sessions short enough that you never skip them.
 
-Health and general fitness · Beginner · Well supported · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Bull 2020](https://doi.org/10.1136/bjsports-2020-102955), [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
+Health and general fitness · Beginner · Well supported · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Bull 2020](https://doi.org/10.1136/bjsports-2020-102955), [McDonald 2019h](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
 
 ### Occasional heavier sets and loaded standing lifts are worth including for bone
 
@@ -686,7 +686,7 @@ In 101 postmenopausal women with low bone mass, eight months of supervised heavy
 - Include a few weeks of sets of 5 or 6 on a well-learned lift in each training block.
 - With low bone density, start heavy loading only under professional supervision.
 
-Health and general fitness · Intermediate · Some support · Sources: [Watson 2017](https://doi.org/10.1002/jbmr.3284), [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
+Health and general fitness · Intermediate · Some support · Sources: [Watson 2017](https://doi.org/10.1002/jbmr.3284), [McDonald 2019h](https://bodyrecomposition.com/training/exercise-for-health-and-fitness)
 
 ### After the first year, vary reps in simple ways
 
@@ -697,7 +697,7 @@ McDonald suggests more structure only after 6 to 12 months of steady basic train
 - Pick one scheme and run it for several months.
 - Take an easy week when a cycle of heavier weeks ends.
 
-Health and general fitness · Intermediate · Coaching practice · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Williams 2017](https://doi.org/10.1007/s40279-017-0734-y)
+Health and general fitness · Intermediate · Coaching practice · Sources: [McDonald 2019h](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Williams 2017](https://doi.org/10.1007/s40279-017-0734-y)
 
 ## Common mistakes
 
@@ -709,7 +709,7 @@ McDonald's observation from two decades of coaching is that almost everyone rate
 
 - Judge your level by technique and progress, then choose the routine that fits it.
 
-Starting out · Beginner · Coaching practice · Sources: [McDonald 2015d](https://bodyrecomposition.com/training/beginning-weight-training)
+Starting out · Beginner · Coaching practice · Sources: [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training)
 
 ### Starting on a one-muscle-a-day bodybuilding split
 
@@ -720,7 +720,7 @@ When weekly sets are matched, split and full-body routines produce similar stren
 - Use full-body sessions for the first months.
 - If your week forces a split, use upper and lower days and keep sets per muscle low.
 
-Building a first programme · Beginner · Some support · Sources: [Ramos-Campo 2024](https://doi.org/10.1519/jsc.0000000000004774), [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
+Building a first programme · Beginner · Some support · Sources: [Ramos-Campo 2024](https://doi.org/10.1519/jsc.0000000000004774), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
 
 ### Setting first weights from a body-weight formula
 
@@ -829,7 +829,7 @@ The old ascending pyramid starts with 12 to 15 hard reps and adds weight each se
 - Do fewer reps on each warm-up set as the bar gets heavier.
 - Finish every warm-up set well short of fatigue.
 
-Warming up · Beginner · Thin evidence · Sources: [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347)
+Warming up · Beginner · Thin evidence · Sources: [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [Souza 2024](https://doi.org/10.7717/peerj.17347)
 
 ### Applying the 20-rep grind to deadlifts or good mornings
 
@@ -872,7 +872,7 @@ McDonald reports that experienced coaches say the same of themselves: they would
 - Write the plan before the session and do not add to it on the day.
 - Ask someone to check now and then that you are following it.
 
-Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/coaching-yourself), [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101)
+Goals and self-coaching · Intermediate · Some support · Sources: [McDonald 2019f](https://bodyrecomposition.com/training/coaching-yourself), [Fisher 2022](https://doi.org/10.47206/ijsc.v2i1.101)
 
 ### Picking one habit of champions as the reason for their success
 
@@ -889,16 +889,16 @@ Goals and self-coaching · Beginner · Coaching practice · Sources: [McDonald 2
 
 | Number | What it is | Support | Sources |
 |---|---|---|---|
-| 6-12 months of proper training | Time before a beginner routine runs out: McDonald's estimate of when a beginner becomes an intermediate. The 2009 ACSM stand puts intermediates at about 6 months of consistent training. | Coaching practice | [McDonald 2015d](https://bodyrecomposition.com/training/beginning-weight-training), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670) |
+| 6-12 months of proper training | Time before a beginner routine runs out: McDonald's estimate of when a beginner becomes an intermediate. The 2009 ACSM stand puts intermediates at about 6 months of consistent training. | Coaching practice | [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training), [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670) |
 | 60 % of 1RM | Load that maximised strength gains in untrained people: Mean training load with the largest strength effect in untrained people across 140 studies. Trained people needed 80%. | Some support | [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4) |
-| about 80 % of the strength gain | Share of the three-day result from two sessions a week: McDonald's estimate for beginners training twice a week instead of three times. A coaching figure, not a pooled result. | Coaching practice | [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3) |
+| about 80 % of the strength gain | Share of the three-day result from two sessions a week: McDonald's estimate for beginners training twice a week instead of three times. A coaching figure, not a pooled result. | Coaching practice | [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3) |
 | 2-10 % of the current load | Load increase once you beat the rep target: The 2009 ACSM stand's step size, applied when you can do one to two reps more than the target number. | Some support | [ACSM 2009](https://doi.org/10.1249/MSS.0b013e3181915670) |
 | 10-20 % off the stalled load | Step back after a stall: The reset McDonald describes after two weeks without progress, followed by a rebuild over three to four weeks. | Coaching practice | [McDonald 2015b](https://bodyrecomposition.com/training/beginning-weight-training-6) |
 | 9-25 reps per exercise | Heavy reps per exercise in a strength session: From the old rule of 3 to 5 sets of 3 to 5 reps, which McDonald endorses for strength work. Stay low nearer 90% of max, higher nearer 85%. | Coaching practice | [McDonald 2014o](https://bodyrecomposition.com/training/categories-of-weight-training-9) |
 | 6-8 seconds | Longest useful all-out power set: McDonald's limit for holding maximal power, after which output falls. He pairs sets this short with rests of 3 minutes or more. | Coaching practice | [McDonald 2014g](https://bodyrecomposition.com/training/categories-of-weight-training-14) |
 | 20-30 % off the working weight | Reduction from working weight for fast, explosive sets: McDonald's shortcut for lifters who train at about 80 to 85% of max. It gives roughly 50 to 65% of max, within the power range. | Coaching practice | [McDonald 2014h](https://bodyrecomposition.com/training/categories-of-weight-training-15) |
 | 40-70 reps per muscle a session | McDonald's growth guideline for reps in a session: His working range at about 60 to 85% of max, citing a 2007 review he reads as favouring 30 to 60. Newer analyses count weekly sets. | Coaching practice | [McDonald 2014a](https://bodyrecomposition.com/training/categories-of-weight-training-4), [Wernbom 2007](https://doi.org/10.2165/00007256-200737030-00004) |
-| 4-7 sets | Warm-up sets before heavy triples: McDonald's guide for work at about 85 to 90% of max. Sets of 12 at moderate loads need only one or two. | Coaching practice | [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room) |
+| 4-7 sets | Warm-up sets before heavy triples: McDonald's guide for work at about 85 to 90% of max. Sets of 12 at moderate loads need only one or two. | Coaching practice | [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room) |
 | 75-80 % of 1RM | Load that allows five sets of five at one weight: McDonald's working range for 5x5 with the same weight. A single maximal set of five is about 85%. | Coaching practice | [McDonald 2009b](https://bodyrecomposition.com/training/the-5x5-program) |
 | 1.5 / 2 / 2.5 x body weight | The 300, 400, 500 rule as multiples of body weight: Bench press, squat and deadlift for a man of about 90 kg (200 lb), as McDonald works out McRobert's rule. A coaching target, not a norm. | Coaching practice | [McDonald 2011a](https://bodyrecomposition.com/training/300-bench-400-squat-500-deadlift) |
 
@@ -924,7 +924,7 @@ Drawn from Lyle McDonald's criteria. Most of each group should be true before yo
 - Weights and reps have not moved for two full weeks
 - A 10 to 20% step back and rebuild did not take you past your old best
 
-Coaching practice · Sources: [McDonald 2015d](https://bodyrecomposition.com/training/beginning-weight-training), [McDonald 2015b](https://bodyrecomposition.com/training/beginning-weight-training-6)
+Coaching practice · Sources: [McDonald 2015e](https://bodyrecomposition.com/training/beginning-weight-training), [McDonald 2015b](https://bodyrecomposition.com/training/beginning-weight-training-6)
 
 ## How a beginner plan shifts with the long-term goal
 
@@ -938,7 +938,7 @@ The base is shared. These are the adjustments Lyle McDonald describes for each a
 | Powerlifting or strongman | 3 | Squat, bench press and deadlift from the start, plus general work for the whole body | Sets of 5 on the main lifts for clean practice; 8 to 12 elsewhere |
 | Olympic weightlifting | Set by a coach | Both competition lifts need a coach from the first session | Set by a coach |
 
-Coaching practice · Sources: [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3), [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4)
+Coaching practice · Sources: [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3), [McDonald 2015h](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-4)
 
 ## Free weights and machines: the practical differences
 
@@ -953,7 +953,7 @@ Results are similar, so the choice turns on practical points. These are the ones
 | Equipment needed | A bar, plates, bench and rack cover dozens of exercises | Usually one machine per movement; no problem in a commercial gym |
 | Set-up time | Plates to load and more warm-up sets | Set the seat and move the pin |
 
-Coaching practice · Sources: [McDonald 2015f](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
+Coaching practice · Sources: [McDonald 2015g](https://bodyrecomposition.com/muscle-gain/beginning-weight-training-3)
 
 ## Dose that maximised strength gains, by training status
 
@@ -1035,7 +1035,7 @@ Lyle McDonald's guidance gathered into one comparison. Heavier loads, more techn
 | Second exercise for the same muscles | 1 to 2 | A short set of 3 to 5, then 1 to 2 reps, to find the groove |
 | Sore or previously injured joint | Add 1 to 2 first | 10 to 15 easy reps with the empty bar or a very light load |
 
-Coaching practice · Sources: [McDonald 2009ae](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
+Coaching practice · Sources: [McDonald 2009ah](https://bodyrecomposition.com/training/warming-up-for-the-weight-room), [McDonald 2015a](https://bodyrecomposition.com/training/beginning-weight-training-5)
 
 ## Top-tenth relative strength in drug-tested, unequipped powerlifters
 
@@ -1075,7 +1075,7 @@ Ways Lyle McDonald arranges lifting and cardio for general fitness, by the days 
 | Any, strength block | 3 to 4 lifting days plus 3 short cardio sessions | Run for 6 to 8 weeks, then switch emphasis |
 | Any, cardio block | 3 to 4 cardio sessions plus 2 brief lifting days | The lifting is enough to maintain strength |
 
-Coaching practice · Sources: [McDonald 2019g](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb)
+Coaching practice · Sources: [McDonald 2019h](https://bodyrecomposition.com/training/exercise-for-health-and-fitness), [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb)
 
 ## Terms
 
