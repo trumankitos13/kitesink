@@ -389,6 +389,7 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 ---
 
-Source page: https://kitesink.com/fitness#health  
+Source page: https://kitesink.com/fitness/health  
+Every fitness page, as plain text: https://kitesink.com/fitness.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-15.
+General information, not medical advice. Last updated 2026-11-16.

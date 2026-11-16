@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from collections import Counter
@@ -14,17 +15,16 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 SPECIAL_PAGES = {PUBLIC / "404.html", PUBLIC / "repost.html", PUBLIC / "blog/_template.html"}
-# The ten pages of the /fitness split (scripts/build_fitness.py writes them from
-# content/fitness/routes.json). Phase 3a builds them and leaves them unlisted; Phase 3b lists
-# them: take them out of UNLISTED_PAGES, add them to site-index.js and sitemap.xml, drop their
-# noindex, and add their routes to run_worker_first in wrangler.ai-twins.jsonc.
-FITNESS_SUBPAGES = ("hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health", "claims", "glossary", "reference", "sources")
+# The pages under /fitness/, in the order of the hub: one per row of content/fitness/routes.json
+# (scripts/build_fitness.py writes them). They are listed pages like any other, so the audit
+# wants each in site-index.js and sitemap.xml, and each has a twin (see TWINS below), which
+# wants a line in llms.txt and a route in run_worker_first in wrangler.ai-twins.jsonc.
+FITNESS_ROUTES = json.loads((ROOT / "content" / "fitness" / "routes.json").read_text(encoding="utf-8"))["routes"]
+FITNESS_SUBPAGES = tuple(route["slug"] for route in FITNESS_ROUTES)
 # Kept at their addresses but hidden on purpose: not in the site index or the sitemap,
 # not linked from any listed page, and marked noindex. The audit holds them to that.
 # (They may link to each other and to listed pages.)
-UNLISTED_PAGES = {PUBLIC / "vantix/roadmap.html", PUBLIC / "vantix/changelog.html"} | {
-    PUBLIC / f"fitness/{slug}.html" for slug in FITNESS_SUBPAGES   # Phase 3b lists these
-}
+UNLISTED_PAGES = {PUBLIC / "vantix/roadmap.html", PUBLIC / "vantix/changelog.html"}
 
 
 class Document(HTMLParser):
@@ -203,19 +203,23 @@ def audit_twins() -> list[str]:
 
 
 def audit_fitness_homes() -> list[str]:
-    """Nothing the old one-page /fitness could be linked to may go missing in the split.
-    scripts/fixtures/fitness-legacy-ids.txt holds every id that page had. Each of them that
-    names an entry in content/fitness/ must be an element id on exactly one page under
-    /fitness/, its home: a term on the glossary, a claim on the claims page, anything else on
-    its area's page. Each source id (src-…) must be on /fitness/sources. The other ids in the
-    file belong to controls and sections and are not checked."""
-    import json
+    """Nothing the old one-page /fitness could be linked to may go missing.
+    scripts/fixtures/fitness-legacy-ids.txt holds every id that page had. Two rules:
+
+    One home. Each id that names an entry in content/fitness/ must be an element id on exactly
+    one page under /fitness/, its home: a term on the glossary, a claim on the claims page,
+    anything else on its area's page. It is never on the hub.
+
+    Old links. /fitness#<id> must still land on that id. So each id in the file is either an
+    element of the hub, or public/fitness/ids.json (the map the hub forwards by) sends it to a
+    page that has an element with that id. No row of the map may point at a page that lacks
+    its id, and the hub must link to every page under it."""
     content = ROOT / "content" / "fitness"
     fixture = ROOT / "scripts" / "fixtures" / "fitness-legacy-ids.txt"
     if not fixture.is_file():
         return ["scripts/fixtures/fitness-legacy-ids.txt is missing"]
     legacy = fixture.read_text(encoding="utf-8").split()
-    routes = json.loads((content / "routes.json").read_text(encoding="utf-8"))["routes"]
+    routes = FITNESS_ROUTES
     slug_of = {(r.get("area") if r["kind"] == "area" else r["kind"]): r["slug"] for r in routes}
     home: dict[str, str] = {}
     for r in routes:
@@ -235,20 +239,42 @@ def audit_fitness_homes() -> list[str]:
         doc = Document()
         doc.feed(page.read_text(encoding="utf-8"))
         ids[r["slug"]] = set(doc.ids)
-    all_sources = ids.get(slug_of["sources"], set())
-    for legacy_id in legacy:
-        if legacy_id in home:
-            on = sorted(slug for slug, found in ids.items() if legacy_id in found)
-            if on != [home[legacy_id]]:
-                where = ", ".join("/fitness/" + slug for slug in on) or "no page"
-                issues.append(f"fitness: the entry {legacy_id} must be on /fitness/{home[legacy_id]} and nowhere else; it is on {where}")
-        elif legacy_id.startswith("src-") and legacy_id not in all_sources:
-            issues.append(f"fitness: /fitness/{slug_of['sources']} has nothing with id=\"{legacy_id}\", which /fitness had")
+    hub = Document()
+    hub.feed((PUBLIC / "fitness.html").read_text(encoding="utf-8"))
+    hub_ids = set(hub.ids)
+    hub_links = {urlsplit(link.get("href", "")).path for link in hub.links}
+    for r in routes:
+        if f"/fitness/{r['slug']}" not in hub_links:
+            issues.append(f"fitness: /fitness has no link to /fitness/{r['slug']}")
+
+    for entry_id, where in home.items():
+        on = sorted(slug for slug, found in ids.items() if entry_id in found)
+        if on != [where] or entry_id in hub_ids:
+            found = ", ".join(["/fitness"] * (entry_id in hub_ids) + ["/fitness/" + slug for slug in on]) or "no page"
+            issues.append(f"fitness: the entry {entry_id} must be on /fitness/{where} and nowhere else; it is on {found}")
+
+    map_file = PUBLIC / "fitness" / "ids.json"
+    if not map_file.is_file():
+        return issues + ["fitness: public/fitness/ids.json is missing (run python3 scripts/build_fitness.py)"]
+    data = json.loads(map_file.read_text(encoding="utf-8"))
+    sent = {old: data["pages"][n] for old, n in data["ids"].items()}
+    for old, slug in sent.items():
+        if old not in ids.get(slug, set()):
+            issues.append(f"fitness: ids.json sends #{old} to /fitness/{slug}, which has no element with that id")
+        if old in hub_ids:
+            issues.append(f"fitness: #{old} is an element of /fitness, and ids.json also sends it to /fitness/{slug}")
+    for old in legacy:
+        if old not in hub_ids and old not in sent:
+            issues.append(f"fitness: the old link /fitness#{old} goes nowhere: no element of the hub has that id and ids.json has no row for it")
+    for entry_id, where in home.items():
+        if sent.get(entry_id) != where:
+            issues.append(f"fitness: ids.json must send #{entry_id} to /fitness/{where}; it sends it to {sent.get(entry_id) or 'no page'}")
     return issues
 
 
 def audit_fitness_build() -> list[str]:
-    """/fitness and its twins are generated; fail if they are older than their data."""
+    """/fitness, the pages under it, their twins, the search index and the id map are
+    generated; fail if any of them is older than its data."""
     import subprocess
     result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_fitness.py"), "--check"], capture_output=True, text=True)
     if result.returncode:
@@ -314,6 +340,8 @@ def audit(path: Path) -> list[str]:
 
     if path in UNLISTED_PAGES and "noindex" not in meta_names.get("robots", "").lower():
         add("unlisted page must be noindex")
+    if path.parent == PUBLIC / "fitness" and "noindex" in meta_names.get("robots", "").lower():
+        add("a listed fitness page must not be noindex")
 
     if path == PUBLIC / "404.html":
         if "noindex" not in meta_names.get("robots", "").lower():

@@ -15,7 +15,12 @@
     "not_found_handling": "404-page",
     // The worker runs only for the pages that have a twin; every other request is
     // served straight from static assets and never touches it.
-    "run_worker_first": ["/", "/consulting", "/fitness", "/vantix", "/music", "/listening-club", "/about"]
+    "run_worker_first": [
+      "/", "/consulting", "/fitness", "/vantix", "/music", "/listening-club", "/about",
+      "/fitness/basics", "/fitness/technique", "/fitness/hypertrophy", "/fitness/powerlifting", "/fitness/meet",
+      "/fitness/conditioning", "/fitness/recovery", "/fitness/nutrition", "/fitness/diet", "/fitness/bodycomp",
+      "/fitness/women", "/fitness/health", "/fitness/claims", "/fitness/glossary", "/fitness/reference", "/fitness/sources"
+    ]
   },
   "compatibility_flags": ["nodejs_compat"]
 }

@@ -418,7 +418,7 @@ Who was studied: Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by
 - If you eat no animal foods, aim for the upper half of the protein range.
 - Lean on soy and mix legumes and grains across the day.
 
-Evidence: Meta-analysis · Well supported · Sources: [Lim 2021](https://doi.org/10.3390/nu13020661), [Hevia-Larraín 2021](https://doi.org/10.1007/s40279-021-01434-9), [Reid-McCann 2025](https://doi.org/10.1093/nutrit/nuae200), [Hartman 2007](https://doi.org/10.1093/ajcn/86.2.373)
+Evidence: Meta-analysis · Well supported · Sources: [Lim 2021](https://doi.org/10.3390/nu13020661), [Hevia-Larraín 2021](https://doi.org/10.1007/s40279-021-01434-9), [Reid-McCann 2025](https://doi.org/10.1093/nutrit/nuae200), [Hartman 2007b](https://doi.org/10.1093/ajcn/86.2.373)
 
 ## Diet
 
@@ -568,7 +568,7 @@ Who was studied: Garthe: 24 athletes in a controlled weight-loss trial. Longland
 - Pick a weekly percentage, convert it to kg or lb, and check it against your four-week trend.
 - Keep lifting and keep protein high while you diet.
 
-Evidence: Mixed · Thin evidence · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096), [Longland 2016](https://doi.org/10.3945/ajcn.115.119339)
+Evidence: Mixed · Thin evidence · Sources: [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096), [Longland 2016](https://doi.org/10.3945/ajcn.115.119339)
 
 ### Do you just have to put up with hunger when you diet?
 
@@ -728,6 +728,7 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 ---
 
-Source page: https://kitesink.com/fitness#claims  
+Source page: https://kitesink.com/fitness/claims  
+Every fitness page, as plain text: https://kitesink.com/fitness.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-15.
+General information, not medical advice. Last updated 2026-11-16.

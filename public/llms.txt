@@ -13,14 +13,20 @@
 
 ## Fitness
 
-- [Fitness overview](https://kitesink.com/fitness.md): the calculators, Vantix, and how entries are graded
-- [Claims, checked](https://kitesink.com/fitness/claims.md): common training and nutrition claims with a verdict, who was studied, and the source
-- [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md)
-- [Powerlifting](https://kitesink.com/fitness/powerlifting.md)
+- [Fitness overview](https://kitesink.com/fitness.md): what the section holds, every page below with its size, the calculators, Vantix, and how sources are handled
+- [Training basics](https://kitesink.com/fitness/basics.md): starting out, and building a first programme
+- [Technique](https://kitesink.com/fitness/technique.md): how to do the main lifts, and how to change a habit
+- [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md): training for muscle size
+- [Powerlifting](https://kitesink.com/fitness/powerlifting.md): a bigger squat, bench press and deadlift
 - [Meet day](https://kitesink.com/fitness/meet.md): a first powerlifting meet, in order
-- [Nutrition](https://kitesink.com/fitness/nutrition.md)
+- [Conditioning](https://kitesink.com/fitness/conditioning.md): cardio and intervals, and how they fit with lifting
+- [Recovery](https://kitesink.com/fitness/recovery.md): rest, fatigue and coming back after time off
+- [Nutrition](https://kitesink.com/fitness/nutrition.md): eating to support training, and tracking it honestly
 - [Diet](https://kitesink.com/fitness/diet.md): losing or gaining weight on purpose
-- [Health](https://kitesink.com/fitness/health.md)
+- [Body composition](https://kitesink.com/fitness/bodycomp.md): fat, lean mass and how to track them
+- [Women](https://kitesink.com/fitness/women.md): what the research on women shows
+- [Health](https://kitesink.com/fitness/health.md): training for a long working life
+- [Claims, checked](https://kitesink.com/fitness/claims.md): common training and nutrition claims with a verdict, who was studied, and the source
 - [Glossary](https://kitesink.com/fitness/glossary.md): every term the field guide uses, in plain words
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): each key number and reference table, with a link to the page that holds it
 - [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and every source

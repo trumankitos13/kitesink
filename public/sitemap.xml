@@ -2,7 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://kitesink.com/</loc><lastmod>2026-11-13</lastmod><priority>1.0</priority></url>
   <url><loc>https://kitesink.com/consulting</loc><lastmod>2026-11-13</lastmod><priority>0.9</priority></url>
-  <url><loc>https://kitesink.com/fitness</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://kitesink.com/fitness</loc><lastmod>2026-11-16</lastmod><priority>0.9</priority></url>
+  <url><loc>https://kitesink.com/fitness/basics</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/technique</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/hypertrophy</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/powerlifting</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/meet</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/conditioning</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/recovery</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/nutrition</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/diet</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/bodycomp</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/women</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/health</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/claims</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kitesink.com/fitness/glossary</loc><lastmod>2026-11-16</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/fitness/reference</loc><lastmod>2026-11-16</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kitesink.com/fitness/sources</loc><lastmod>2026-11-16</lastmod><priority>0.6</priority></url>
   <url><loc>https://kitesink.com/music</loc><lastmod>2026-11-13</lastmod><priority>0.9</priority></url>
   <url><loc>https://kitesink.com/library</loc><lastmod>2026-11-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://kitesink.com/games</loc><lastmod>2026-07-02</lastmod><priority>0.6</priority></url>

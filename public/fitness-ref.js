@@ -1,6 +1,6 @@
 /* ===================== KiteSink — the fitness reference pages =====================
    Loaded by the pages under /fitness/ (an area, the claims, the glossary, the reference
-   index, the sources), after /ks.js. /fitness itself still uses /fitness.js.
+   index, the sources), after /ks.js. /fitness itself, the hub, uses /fitness.js.
 
    Every entry, table and source is already in the page (scripts/build_fitness.py writes
    it), so nothing here adds content. It only:
@@ -9,13 +9,16 @@
      - remembers the meet bag's ticks (localStorage "ksFit", under "ck", as /fitness does)
      - folds the list of sources, and opens it when a source link is followed
      - opens the entry named in the address (/fitness/hypertrophy#hyp-…)
+   The list of pages at the top folds behind a button on small screens; the few lines that
+   do that sit in the page itself (content/fitness/templates/sub.html), next to the list.
    Each page has only some of these lists, so every block looks for its own markup first
    and does nothing when it is not there.
    ================================================================================== */
 (function () {
   "use strict";
 
-  var AREAS = ["hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health"];
+  // The areas in the order of the hub: the build writes them on <body data-areas="…">.
+  var AREAS = (document.body.getAttribute("data-areas") || "").split(" ");
   var CONF = ["strong", "rule", "moderate", "limited", "practice"], LEVEL = ["beginner", "intermediate", "advanced"];
   var VERD = ["true", "mostly", "depends", "overstated", "false"];
   var EVID = ["meta-analysis", "guideline", "position", "rct", "rulebook", "review", "cohort", "mixed"];
@@ -239,13 +242,6 @@
     return true;
   }
   window.addEventListener("hashchange", function () { reveal(location.hash.slice(1)); });
-
-  // The bar of fitness pages scrolls sideways on a phone: bring the current page's link into view.
-  boot(function () {
-    var cur = document.querySelector('.k-subnav a[aria-current="page"]'); if (!cur) return;
-    var row = cur.parentNode;
-    if (row.scrollWidth > row.clientWidth) row.scrollLeft += cur.getBoundingClientRect().left - row.getBoundingClientRect().left - (row.clientWidth - cur.offsetWidth) / 2;
-  });
 
   applyAll();
   if (location.hash) setTimeout(function () { reveal(location.hash.slice(1)); }, 90);

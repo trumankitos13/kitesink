@@ -1,32 +1,37 @@
 #!/usr/bin/env python3
-"""Build /fitness and the pages under /fitness/ from the data in content/fitness/.
+"""Build /fitness (the hub) and the pages under /fitness/ from the data in content/fitness/.
 
-    python3 scripts/build_fitness.py            # write the pages and their markdown twins
+    python3 scripts/build_fitness.py            # write the pages, their twins and the two data files
     python3 scripts/build_fitness.py --check    # exit 1 if what is in public/ is out of date
 
 Inputs (all in content/fitness/):
-    page.html           the /fitness shell: head, hero, Vantix feature, the calculators
+    page.html           the /fitness shell: head, hero, search box, Vantix feature, the calculators
     templates/sub.html  the one shell every page under /fitness/ is poured into
     routes.json         one row per page under /fitness/: slug, kind, title, description, h1, lead
     corrections.json    the dated corrections log shown on /fitness/sources
     meta.json           the "last updated" date and a few labels
     tools.json          sources the calculators cite
-    <domain>.json       one file per area (hypertrophy, powerlifting, meet, nutrition, diet, health)
+    <area>.json         one file per area: the keys of DOMAINS below
     claims.json         the "claims, checked" entries
+and scripts/fixtures/fitness-legacy-ids.txt, every id the one-page /fitness had.
 
 Outputs:
-    public/fitness.html
-    public/fitness/<slug>.html, one per row of routes.json
-    public/fitness.md and public/fitness/<domain>.md, claims.md, glossary.md, reference.md,
-    sources.md  (plain-text twins for AI readers)
+    public/fitness.html                the hub: search, a card per page, the calculators
+    public/fitness/<slug>.html         one per row of routes.json
+    public/fitness/search.json         the hub's search index: one row per entry
+    public/fitness/ids.json            id -> page, for old links of the form /fitness#<id>
+    public/fitness.md and public/fitness/<slug>.md  (plain-text twins for AI readers)
 
 Every entry has one home page under /fitness/: a term lives on the glossary, a claim on the
 claims page, everything else on its area's page. Other pages link to it and never repeat it.
 
-The pages are static HTML: every entry is in the markup, so it reads without
-JavaScript. /fitness.js and /fitness-ref.js only filter, sort and remember. To add an
-entry, add it to the right JSON file and run this script. scripts/check_site.py runs the
---check form, so a stale page fails the audit.
+The pages are static HTML: every entry is in the markup, so it reads without JavaScript.
+/fitness.js (the hub) and /fitness-ref.js (the pages under it) only search, filter, sort and
+remember. To add an entry, add it to the right JSON file and run this script.
+scripts/check_site.py runs the --check form, so a stale page fails the audit.
+
+To add an area: write content/fitness/<area>.json, add it to DOMAINS, GROUPS and
+SOURCE_ORDER below, give it a row in routes.json, then list its page as README.md says.
 """
 import hashlib
 import html
@@ -44,14 +49,32 @@ SRC = Path(os.environ.get("KS_FITNESS_SRC") or ROOT / "content" / "fitness")
 PUBLIC = Path(os.environ.get("KS_FITNESS_OUT") or ROOT / "public")
 SITE = "https://kitesink.com"
 
+# The areas, in the order they appear everywhere: the hub, the navigation, the twins, llms.txt.
 DOMAINS = OrderedDict([
+    ("basics", ("Training basics", "Starting out, and building a first programme.")),
+    ("technique", ("Technique", "How to do the main lifts, and how to change a habit.")),
     ("hypertrophy", ("Hypertrophy", "Training for muscle size.")),
     ("powerlifting", ("Powerlifting", "A bigger squat, bench press and deadlift.")),
     ("meet", ("Meet day", "Your first competition, in order.")),
+    ("conditioning", ("Conditioning", "Cardio and intervals, and how they fit with lifting.")),
+    ("recovery", ("Recovery", "Rest, fatigue and coming back after time off.")),
     ("nutrition", ("Nutrition", "Eating to support training, and tracking it honestly.")),
     ("diet", ("Diet", "Losing or gaining weight on purpose.")),
+    ("bodycomp", ("Body composition", "Fat, lean mass and how to track them.")),
+    ("women", ("Women", "What the research on women shows.")),
     ("health", ("Health", "Training for a long working life.")),
 ])
+# How the hub and the navigation group the areas. Every area is in exactly one group.
+GROUPS = [
+    ("Training", ("basics", "technique", "hypertrophy", "powerlifting", "meet", "conditioning", "recovery")),
+    ("Food and body", ("nutrition", "diet", "bodycomp")),
+    ("People and health", ("women", "health")),
+]
+# The order the files are read in. A source's id on the page (src-<key>) is settled by the
+# first file that has it, so a new file goes at the END of this list, whatever its place in
+# DOMAINS. Reordering it can rename a published source id.
+SOURCE_ORDER = ("tools", "hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health", "claims",
+                "basics", "technique", "conditioning", "recovery", "bodycomp", "women")
 LEVELS = OrderedDict([("beginner", "Beginner"), ("intermediate", "Intermediate"), ("advanced", "Advanced")])
 CONF = OrderedDict([
     ("strong", "Well supported"), ("rule", "Rulebook"), ("moderate", "Some support"),
@@ -86,8 +109,17 @@ WHEN = OrderedDict([
 SRC_TYPE = {
     "meta-analysis": "meta-analysis", "systematic-review": "systematic review", "rct": "randomised trial", "trial": "trial",
     "review": "review", "cohort": "cohort study", "position": "position stand", "guideline": "guideline",
-    "rulebook": "rulebook", "book": "book", "other": "reference",
+    "rulebook": "rulebook", "book": "book", "article": "article", "other": "reference",
 }
+# Said once on the sources page and in its twin.
+ARTICLE_NOTE = ("Articles are credited where an author's analysis or position shaped an entry. "
+                "Every entry is written in this guide's own words.")
+
+
+def src_type(s):
+    """A source's type as it is shown: 'Meta-analysis', 'Article', 'Reference'."""
+    label = SRC_TYPE.get(s.get("type"), "reference")
+    return label[0].upper() + label[1:]
 
 
 def esc(s):
@@ -100,6 +132,16 @@ def family(author):
     if len(parts) > 1 and re.fullmatch(r"[A-Z][A-Za-z\-]{0,4}", parts[-1]) and parts[-1].upper() == parts[-1]:
         return " ".join(parts[:-1])
     return author
+
+
+def letters(i):
+    """0 -> 'a', 25 -> 'z', 26 -> 'aa': the suffix that tells apart sources with one author and year."""
+    out = ""
+    while True:
+        out = "abcdefghijklmnopqrstuvwxyz"[i % 26] + out
+        i = i // 26 - 1
+        if i < 0:
+            return out
 
 
 class Library:
@@ -145,7 +187,7 @@ class Library:
                 self.label[keys[0]] = label
             else:
                 for i, k in enumerate(sorted(keys, key=lambda x: self.by_id[x].get("title", ""))):
-                    self.label[k] = label + "abcdefgh"[i]
+                    self.label[k] = label + letters(i)
 
     @contextmanager
     def counting(self, tally):
@@ -157,12 +199,14 @@ class Library:
         finally:
             self.uses = kept
 
-    def cite_html(self, file, keys):
+    def cite_html(self, file, keys, page=""):
+        """The citation line. page is the address of the page that lists the sources, when
+        that is not the page being written (the hub's calculators cite /fitness/sources)."""
         out = []
         for key in keys:
             k = self.alias[(file, key)]
             self.uses[k] += 1
-            out.append(f'<a href="#src-{esc(k)}">{esc(self.label[k])}</a>')
+            out.append(f'<a href="{page}#src-{esc(k)}">{esc(self.label[k])}</a>')
         return '<p class="cite">' + " · ".join(out) + "</p>" if out else ""
 
     def cite_md(self, file, keys):
@@ -198,7 +242,7 @@ class Library:
             host = re.sub(r"^https?://(www\.)?", "", s["url"]).split("/")[0]
             bits.append(f'<a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(host)}</a>')
         n = self.uses[k]
-        bits.append(f'<span class="as">{esc(SRC_TYPE.get(s.get("type"), "reference"))} · cited {n}×</span>')
+        bits.append(f'<span class="as">{esc(src_type(s))} · cited {n}×</span>')
         return f'<li id="src-{esc(k)}" data-kind="{esc(s.get("type", "other"))}">' + " ".join(bits) + "</li>"
 
 
@@ -206,7 +250,11 @@ def load():
     meta = json.loads((SRC / "meta.json").read_text(encoding="utf-8"))
     lib = Library(meta.get("labels"), meta.get("source_keys"))
     data = OrderedDict()
-    for name in ["tools"] + list(DOMAINS) + ["claims"]:
+    if sorted(SOURCE_ORDER) != sorted(["tools", "claims"] + list(DOMAINS)):
+        raise SystemExit("SOURCE_ORDER must name tools, claims and every area in DOMAINS, once each")
+    if sorted(d for _, ds in GROUPS for d in ds) != sorted(DOMAINS):
+        raise SystemExit("GROUPS must hold every area in DOMAINS, once each")
+    for name in SOURCE_ORDER:
         f = SRC / f"{name}.json"
         d = json.loads(f.read_text(encoding="utf-8"))
         for key, src in d.get("sources", {}).items():
@@ -263,49 +311,6 @@ def guide_order(entries, topics):
     return sorted(entries, key=lambda e: (list(topics).index(e["topic"]) if e.get("topic") in topics else 99, e["type"] == "mistake"))
 
 
-def build_guide(lib, data):
-    """Notes and mistakes from all six areas, grouped by area then topic."""
-    rows, n, topic_opts = [], 0, []
-    for dom, (label, blurb) in DOMAINS.items():
-        d = data[dom]
-        topics = OrderedDict((t["id"], t["label"]) for t in d.get("topics", []))
-        entries = [e for e in d["entries"] if e["type"] in ("note", "mistake")]
-        if not entries:
-            continue
-        topic_opts += [(f"{dom}:{tid}", tl, dom) for tid, tl in topics.items() if any(e.get("topic") == tid for e in entries)]
-        rows.append(f'<h3 class="g-head" id="{dom}" data-d="{dom}" data-o="{n}"><span>{esc(label)}</span> <small>{esc(blurb)} {len(entries)} entries.</small></h3>')
-        n += 1
-        for e in guide_order(entries, topics):
-            rows.append(item_html(lib, dom, e, n, topics))
-            n += 1
-    topic_btns = "".join(f'<button type="button" class="fx" value="{esc(v)}" data-d="{d}" aria-pressed="false">{esc(l)} <b></b></button>' for v, l, d in topic_opts)
-    rail = (
-        '<div class="gx-rail" id="g-rail">'
-        + facet("kind", [("note", "Guidance"), ("mistake", "Mistakes")], "Kind")
-        + facet("level", list(LEVELS.items()), "Level")
-        + facet("conf", list(CONF.items()), "Support")
-        + '<div class="fx-group" data-facet="topic" role="group" aria-label="Topic" hidden><span class="fx-label">Topic</span>'
-          '<div class="fx-row"><button type="button" class="fx" value="all" aria-pressed="true">All</button>' + topic_btns + "</div></div>"
-        + "</div>"
-    )
-    bar = (
-        '<div class="gx-bar">'
-        '<label class="k-vh" for="g-q">Search the field guide</label>'
-        '<input class="k-input gx-q" id="g-q" type="search" placeholder="Search: volume, deload, protein, zone 2…" autocomplete="off">'
-        + GUIDE_SORT +
-        "</div>"
-        '<p class="gx-count" id="g-count" aria-live="polite"></p>'
-    )
-    count = sum(1 for dom in DOMAINS for e in data[dom]["entries"] if e["type"] in ("note", "mistake"))
-    html_out = (
-        '<div class="gx"><details class="gx-filters" id="g-filters" open><summary>Filters <span id="g-active"></span></summary>' + rail + "</details>"
-        '<div class="gx-main">' + bar + '<div class="g-list" id="g-list">' + "\n".join(rows) + "</div>"
-        '<p class="gx-empty" id="g-empty" hidden>Nothing matches those filters. <button type="button" class="k-linkbtn" data-reset="guide">Clear them</button></p>'
-        "</div></div>"
-    )
-    return html_out, count
-
-
 def claim_rows(lib, claims, href=lambda entry_id: "#" + entry_id):
     """One <details> per claim. href(id) is the address of another claim from this page."""
     def related(c):
@@ -348,28 +353,8 @@ CLAIM_SORT = (
 )
 
 
-def build_claims(lib, data):
-    claims = data["claims"]["entries"]
-    used_tags = [t for t in TAGS if any(t in c.get("tags", []) for c in claims)]
-    used_ev = [v for v in EVIDENCE if any(c.get("evidence") == v for c in claims)]
-    rows = claim_rows(lib, claims)
-    controls = (
-        '<div class="qx-controls" id="q-controls">'
-        + facet("verdict", [(v, VERDICTS[v][0]) for v in VERDICTS], "Verdict")
-        + facet("tag", [(t, TAGS[t]) for t in used_tags], "Topic")
-        + facet("evidence", [(v, EVIDENCE[v]) for v in used_ev], "Evidence")
-        + '<div class="gx-bar"><label class="k-vh" for="q-q">Search the claims</label>'
-          '<input class="k-input gx-q" id="q-q" type="search" placeholder="Search: creatine, failure, fasting, kidneys…" autocomplete="off">'
-          + CLAIM_SORT + "</div>"
-        + '<p class="gx-count" id="q-count" aria-live="polite"></p></div>'
-    )
-    out = (controls + '<div id="q-list">' + "\n".join(rows) + "</div>"
-           '<p class="gx-empty" id="q-empty" hidden>No claim matches. <button type="button" class="k-linkbtn" data-reset="claims">Clear the filters</button></p>')
-    return out, len(claims)
-
-
-def build_meet(lib, data, dom="meet"):
-    d = data[dom]
+def timeline_html(lib, dom, d):
+    """The steps of an area that happens in order (a meet), grouped by when they happen."""
     topics = OrderedDict((t["id"], t["label"]) for t in d.get("topics", []))
     steps = [e for e in d["entries"] if e["type"] == "step"]
     out, n = ['<ol class="tl">'], 0
@@ -383,22 +368,26 @@ def build_meet(lib, data, dom="meet"):
             n += 1
         out.append("</div></li>")
     out.append("</ol>")
-    for e in d["entries"]:
-        if e["type"] != "checklist":
-            continue
-        total = sum(len(g["items"]) for g in e["groups"])
-        out.append(f'<div class="ck" id="{esc(e["id"])}" data-ck="{esc(e["id"])}"><div class="ck-top"><div><h3 class="k-h3">{esc(e["title"])}</h3>'
-                   f'<p class="k-small">{esc(e["take"])}</p></div><p class="ck-count"><b class="ck-n">0</b> of {total} packed '
-                   '<button type="button" class="k-linkbtn ck-clear">Clear ticks</button></p></div><div class="ck-groups">')
-        i = 0
-        for g in e["groups"]:
-            out.append(f'<fieldset><legend>{esc(g["name"])}</legend>')
-            for it in g["items"]:
-                out.append(f'<label class="ck-item"><input type="checkbox" data-i="{i}"><span>{esc(it)}</span></label>')
-                i += 1
-            out.append("</fieldset>")
-        out.append("</div>" + lib.cite_html(dom, e.get("sources", [])) + "</div>")
     return "\n".join(out), len(steps)
+
+
+def checklist_html(lib, dom, e, done="ticked"):
+    """A list to tick off. The page script remembers the ticks in this browser. done is the
+    word after the count: a bag is packed, anything else is ticked."""
+    total = sum(len(g["items"]) for g in e["groups"])
+    out = [f'<div class="ck" id="{esc(e["id"])}" data-ck="{esc(e["id"])}"><div class="ck-top"><div><h3 class="k-h3">{esc(e["title"])}</h3>'
+           f'<p class="k-small">{esc(e["take"])}</p></div><p class="ck-count"><b class="ck-n">0</b> of {total} {done} '
+           '<button type="button" class="k-linkbtn ck-clear">Clear ticks</button></p></div><div class="ck-groups">']
+    i = 0
+    for g in e["groups"]:
+        out.append(f'<fieldset><legend>{esc(g["name"])}</legend>')
+        for it in g["items"]:
+            out.append(f'<label class="ck-item"><input type="checkbox" data-i="{i}"><span>{esc(it)}</span></label>')
+            i += 1
+        out.append("</fieldset>")
+    out.append("</div>" + tag("tg-c tg-" + e["confidence"], CONF[e["confidence"]], CONF_HELP[e["confidence"]])
+               + lib.cite_html(dom, e.get("sources", [])) + "</div>")
+    return "\n".join(out)
 
 
 def number_row(lib, dom, e, order, area=True):
@@ -412,22 +401,6 @@ def number_row(lib, dom, e, order, area=True):
     )
 
 
-def build_numbers(lib, data):
-    rows = []
-    for dom in DOMAINS:
-        for e in data[dom]["entries"]:
-            if e["type"] != "number":
-                continue
-            rows.append(number_row(lib, dom, e, len(rows)))
-    head = ('<thead><tr><th scope="col"><button type="button" data-sort="n">Number</button></th>'
-            '<th scope="col"><button type="button" data-sort="t">What it is</button></th>'
-            '<th scope="col"><button type="button" data-sort="d">Area</button></th>'
-            '<th scope="col"><button type="button" data-sort="c">Support</button></th></tr></thead>')
-    out = ('<div class="nx-wrap"><table class="nx" id="n-table">' + head + "<tbody>" + "\n".join(rows) + "</tbody></table></div>"
-           '<p class="gx-empty" id="n-empty" hidden>No numbers for that area yet.</p>')
-    return out, len(rows)
-
-
 def table_html(lib, dom, e, meta=None):
     head = "".join(f'<th scope="col">{esc(c)}</th>' for c in e["columns"])
     body = "".join("<tr>" + "".join((f'<th scope="row">{esc(c)}</th>' if i == 0 else f"<td>{esc(c)}</td>") for i, c in enumerate(r)) + "</tr>" for r in e["rows"])
@@ -439,43 +412,14 @@ def table_html(lib, dom, e, meta=None):
     )
 
 
-def build_tables(lib, data):
-    out, n = [], 0
-    for dom in DOMAINS:
-        for e in data[dom]["entries"]:
-            if e["type"] != "table":
-                continue
-            out.append(table_html(lib, dom, e))
-            n += 1
-    return "\n".join(out) + '<p class="gx-empty" id="t-empty" hidden>No tables for that area yet.</p>', n
-
-
-def build_glossary(lib, data):
-    terms = [(e, dom) for dom in DOMAINS for e in data[dom]["entries"] if e["type"] == "term"]
-    terms.sort(key=lambda x: x[0]["title"].lower())
-    rows = [f'<div class="gl-item" id="{esc(e["id"])}" data-d="{dom}"><dt>{esc(e["title"])}</dt><dd>{esc(e["take"])} <span class="gl-d">{esc(DOMAINS[dom][0])}</span></dd></div>' for e, dom in terms]
-    out = ('<div class="gx-bar"><label class="k-vh" for="gl-q">Search the glossary</label>'
-           '<input class="k-input gx-q" id="gl-q" type="search" placeholder="Search a term: RIR, taper, TDEE, ApoB…" autocomplete="off">'
-           '<p class="gx-count" id="gl-count" aria-live="polite"></p></div>'
-           '<dl class="gl" id="gl-list">' + "\n".join(rows) + "</dl>"
-           '<p class="gx-empty" id="gl-empty" hidden>No term matches.</p>')
-    return out, len(rows)
-
-
 def legend_html():
     return '<dl class="lg">' + "".join(f'<div><dt>{tag("tg-c tg-" + c, CONF[c])}</dt><dd>{esc(CONF_HELP[c])}</dd></div>' for c in CONF) + "</dl>"
 
 
-def lens_counts(html, pattern):
-    """How many items of one list sit in each area, counted from the list's own markup, so the
-    area buttons are right before any script runs (the page script recounts as filters change)."""
-    found = Counter(re.findall(pattern, html))
-    return {d: found.get(d, 0) for d in DOMAINS}
-
-
 def domain_switch(counts):
     btns = ['<button type="button" value="all" aria-pressed="true">All areas</button>']
-    btns += [f'<button type="button" value="{d}" aria-pressed="false">{esc(l)} <b>{counts[d]}</b></button>' for d, (l, _) in DOMAINS.items()]
+    btns += [f'<button type="button" value="{d}" aria-pressed="false">{esc(l)} <b>{counts[d]}</b></button>'
+             for d, (l, _) in DOMAINS.items() if counts[d]]   # an area with nothing in this list gets no button
     return "".join(btns)
 
 
@@ -493,12 +437,14 @@ MD_OFFERS = (
 )
 
 
-def md_footer(meta, anchor=""):
-    return (MD_OFFERS + f"\n---\n\nSource page: {SITE}/fitness{anchor}  \nMaintained by Truman Kitos-Lindsey, KiteSink ({SITE}).  \n"
+def md_footer(meta, path=""):
+    """The end of every twin. path is the page's address under /fitness: '' for the hub."""
+    hub = f"Every fitness page, as plain text: {SITE}/fitness.md  \n" if path else ""
+    return (MD_OFFERS + f"\n---\n\nSource page: {SITE}/fitness{path}  \n{hub}Maintained by Truman Kitos-Lindsey, KiteSink ({SITE}).  \n"
             f"General information, not medical advice. Last updated {meta['updated']}.\n")
 
 
-def md_domain(lib, meta, dom, d):
+def md_domain(lib, meta, dom, d, pages):
     label, blurb = DOMAINS[dom]
     topics = OrderedDict((t["id"], t["label"]) for t in d.get("topics", []))
     out = [f"# {label}: KiteSink fitness field guide", "", f"{blurb} Each entry gives the point, the reasoning, what to do, how well supported it is, and its sources.", ""]
@@ -532,13 +478,14 @@ def md_domain(lib, meta, dom, d):
             out += [f"## {e['title']}", "", e["take"], ""]
             for g in e["groups"]:
                 out += [f"**{g['name']}**", ""] + [f"- {i}" for i in g["items"]] + [""]
+            out += [f"{CONF[e['confidence']]}" + (" · Sources: " + lib.cite_md(dom, e["sources"]) if e.get("sources") else ""), ""]
     terms = sorted((e for e in d["entries"] if e["type"] == "term"), key=lambda e: e["title"].lower())
     if terms:
         out += ["## Terms", ""] + [f"- **{e['title']}**: {e['take']}" for e in terms] + [""]
-    return "\n".join(out) + md_footer(meta, "#" + dom)
+    return "\n".join(out) + md_footer(meta, "/" + pages.slug[dom])
 
 
-def md_claims(lib, meta, claims):
+def md_claims(lib, meta, claims, pages):
     out = ["# Fitness claims, checked: KiteSink", "",
            "Common things people say about training, eating and health. Each has a verdict, the reason, who was studied, and the source.",
            "Verdicts: Holds up, Mostly holds, Depends, Overstated, Not supported.", ""]
@@ -552,7 +499,7 @@ def md_claims(lib, meta, claims):
                     f"Who was studied: {c['studied']}", ""]
             out += [f"- {x}" for x in c.get("do", [])] + ([""] if c.get("do") else [])
             out += [f"Evidence: {EVIDENCE[c['evidence']]} · {CONF[c['confidence']]}" + (" · Sources: " + lib.cite_md("claims", c["sources"]) if c.get("sources") else ""), ""]
-    return "\n".join(out) + md_footer(meta, "#claims")
+    return "\n".join(out) + md_footer(meta, "/" + pages.slug["claims"])
 
 
 def md_cell(text):
@@ -600,6 +547,8 @@ def md_sources(lib, meta, pages, corrections):
            "Each source was checked against its record.", "",
            "## How the entries are graded", ""]
     out += [f"- {CONF[c]}: {CONF_HELP[c]}" for c in CONF]
+    if any(lib.by_id[k].get("type") == "article" for k in keys):
+        out += ["", "## Articles", "", ARTICLE_NOTE]
     if corrections:
         out += ["", "## Corrections", "", "What changed after an entry was published, newest first.", ""]
         for r in corrections:
@@ -620,17 +569,31 @@ def md_sources(lib, meta, pages, corrections):
         if src.get("edition"):
             line += f" {src['edition']}."
         url = ("https://doi.org/" + src["doi"]) if src.get("doi") else src.get("url", "")
-        line += (f" {url}" if url else "") + f" ({SRC_TYPE.get(src.get('type'), 'reference')}, cited {lib.uses[k]}×)"
+        line += (f" {url}" if url else "") + f" ({src_type(src)}, cited {lib.uses[k]}×)"
         out.append(line)
     return "\n".join(out) + "\n" + md_footer(meta, "/" + pages.slug["sources"])
 
 
-def md_index(meta, counts):
+def md_index(meta, numbers, counts, pages):
+    """The hub's twin: what the section is, every page's twin, and how sources are handled."""
+    def twin(key):
+        return f"{SITE}/fitness/{pages.slug[key]}.md"
     out = ["# KiteSink Fitness", "",
-           "Free training and nutrition reference by Truman Kitos-Lindsey: a field guide in six areas, a set of common claims checked against the research, key numbers, reference tables, a first-meet timeline, and five calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.",
-           "", "## Read by area", ""]
-    out += [f"- [{l}]({SITE}/fitness/{d}.md): {b} {counts[d]} entries." for d, (l, b) in DOMAINS.items()]
-    out += [f"- [Claims, checked]({SITE}/fitness/claims.md): {counts['claims']} common claims with a verdict, who was studied, and the source.", "",
+           f"Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds {numbers['n:total']} entries in "
+           f"{numbers['n:areas']} areas, and each entry names its sources and says how well supported it is. Around it: common claims "
+           "checked against the research, a glossary, an index of key numbers and reference tables, and five calculators that run in "
+           "the browser. Vantix, a periodization app, is the flagship project on the page.",
+           "", "## The field guide, by area", ""]
+    for name, doms in GROUPS:
+        out += [f"### {name}", ""]
+        out += [f"- [{DOMAINS[d][0]}]({twin(d)}): {DOMAINS[d][1]} {count_of(counts[d], 'entry', 'entries')}." for d in doms]
+        out.append("")
+    out += ["## Reference", "",
+            f"- [Claims, checked]({twin('claims')}): {numbers['n:claims']} common claims, each with a verdict, who was studied, and the source.",
+            f"- [Glossary]({twin('glossary')}): the {numbers['n:terms']} terms the areas use, in plain words. Each term is defined here once.",
+            f"- [Key numbers and tables, indexed]({twin('reference')}): {numbers['n:numbers']} key numbers and {numbers['n:tables']} reference tables, "
+            "each with a link to the page that holds it.",
+            f"- [Sources and corrections]({twin('sources')}): how entries are graded, the corrections log, and all {numbers['n:sources']} sources.", "",
             "## Calculators (on the page, no sign-up)", "",
             f"- Energy and macro calculator: {SITE}/fitness#macros", f"- Effective reps explorer: {SITE}/fitness#reps",
             f"- 1RM and load calculator: {SITE}/fitness#loads", f"- Travel workout builder: {SITE}/fitness#travel",
@@ -638,6 +601,10 @@ def md_index(meta, counts):
             "## Vantix", "",
             "Vantix is a periodization app for lifters. Its free core (v1.0) is in progress, with a target of 31 December 2026. Paid tiers (Plus, and Pro for coaches) are planned with no prices set. "
             f"Details and the waiting list: {SITE}/vantix", "",
+            "## How sources are handled", "",
+            "Every entry names the sources it rests on, and each source was checked against its record. "
+            "Papers link to their DOI; rulebooks, guidelines and articles link to their address. " + ARTICLE_NOTE + " "
+            f"When a published entry changes what it says, the change is logged with its date at {twin('sources')}.", "",
             "## How the entries are graded", ""]
     out += [f"- {CONF[c]}: {CONF_HELP[c]}" for c in CONF]
     return "\n".join(out) + "\n" + md_footer(meta)
@@ -680,10 +647,12 @@ def load_routes():
     twice = [k for k, n in slugs.items() if n > 1]
     if twice:
         raise SystemExit("routes.json: more than one row for " + ", ".join(twice))
-    for want in list(DOMAINS) + [k for k in KINDS if k != "area"]:
+    order = list(DOMAINS) + [k for k in KINDS if k != "area"]
+    for want in order:
         if holds[want] != 1:
             raise SystemExit(f"routes.json: expected one page for {want}, found {holds[want]}")
-    return routes
+    # whatever order the file is in, the pages come out in the hub's: the areas, then the rest
+    return sorted(routes, key=lambda r: order.index(r["area"] if r["kind"] == "area" else r["kind"]))
 
 
 def route_label(r):
@@ -768,10 +737,15 @@ def page_area(lib, data, pages, route):
 
     sections = []   # (id, name in the "on this page" row, count, html)
 
-    if of("step", "checklist"):
-        timeline, n_steps = build_meet(lib, data, dom)
+    # An area with steps (a meet) opens with its timeline and keeps its lists, the bag, under it.
+    # Any other area's checklists get a section of their own further down.
+    lists = of("checklist")
+    if of("step"):
+        timeline, n_steps = timeline_html(lib, dom, d)
+        timeline += "".join("\n" + checklist_html(lib, dom, e, "packed") for e in lists)
         aside = f'{count_of(n_steps, "step")}, then the bag list. Open a step to read it.'
         sections.append(("timeline", "Timeline", n_steps, band("timeline", "In order", "From sign-up <em>to the drive home.</em>", aside, timeline)))
+        lists = []
 
     entries = guide_order(of("note", "mistake"), topics)
     if entries:
@@ -817,6 +791,11 @@ def page_area(lib, data, pages, route):
         inner = '<div id="t-list">\n' + "\n".join(table_html(lib, dom, e, meta=topic_of(e, "Table")) for e in tables) + "\n      </div>"
         aside = f'{count_of(len(tables), "table")}. Open one; wide ones scroll sideways.'
         sections.append(("tables", "Tables", len(tables), band("tables", "Reference", "Tables to <em>look things up.</em>", aside, inner)))
+
+    if lists:
+        inner = '<div class="ck-list">\n' + "\n".join(checklist_html(lib, dom, e) for e in lists) + "\n      </div>"
+        aside = f'{count_of(len(lists), "checklist")}. Your ticks are remembered in this browser and go nowhere else.'
+        sections.append(("checklists", "Checklists", len(lists), band("checklists", "Checklists", "Lists to <em>work through.</em>", aside, inner)))
 
     # The area's terms and claims live on other pages: link to them, never repeat them.
     terms = sorted(of("term"), key=lambda e: e["title"].lower())
@@ -986,11 +965,83 @@ def page_sources(lib, pages, route, corrections):
                      '<ul class="fr-log">' + "\n".join(rest) + "</ul></details>")
         sections.append(("corrections", "Corrections", len(log), band("corrections", "Corrections", "What has <em>been corrected.</em>", aside, body)))
     aside = "Each one was checked against its record. Search by author, year, title or journal."
+    if any(lib.by_id[k].get("type") == "article" for k in keys):
+        listing = f'<p class="k-small fr-note">{esc(ARTICLE_NOTE)}</p>' + listing
     sections.append(("sources", "All sources", len(keys), band("sources", "Sources", f"All {len(keys)} sources, <em>A to Z.</em>", aside, listing)))
     return sections
 
 
-def render_sub(template, route, pages, sections, numbers):
+def nav_groups(pages):
+    """The pages under /fitness/ as the hub and the navigation group them: [(name, [route])]."""
+    by = {(r["area"] if r["kind"] == "area" else r["kind"]): r for r in pages.routes}
+    groups = [(name, [by[d] for d in doms]) for name, doms in GROUPS]
+    return groups + [("Reference", [by[k] for k in KINDS if k != "area"])]
+
+
+def subnav_html(pages, slug):
+    """The navigation between the fitness pages, grouped as on the hub, the current page marked."""
+    out = []
+    for i, (name, routes) in enumerate(nav_groups(pages), 1):
+        links = "".join(f'<li><a href="/fitness/{r["slug"]}"' + (' class="on" aria-current="page"' if r["slug"] == slug else "")
+                        + f">{esc(route_label(r))}</a></li>" for r in routes)
+        out.append(f'<div class="fr-nav-g"><p class="fr-nav-l" id="fr-nav-g{i}">{esc(name)}</p><ul aria-labelledby="fr-nav-g{i}">{links}</ul></div>')
+    return "\n    ".join(out)
+
+
+# ---- old links. The one-page /fitness put everything under /fitness#<id>. Entries and sources
+# keep their ids on their new pages. This table is for the rest, the sections and controls of
+# the old page that are not on the hub: old id -> (the page that replaces it, the section of that
+# page the id is pinned to when no element there carries it already; None is the top of the page).
+# A key that ends in "-" stands for every old id that starts with it.
+# scripts/fixtures/fitness-legacy-ids.txt lists every id the old page had.
+LEGACY_SECTIONS = {
+    **{d: (d, None) for d in ("hypertrophy", "powerlifting", "meet", "nutrition", "diet", "health")},   # #diet chose that area
+    "meet-day": ("meet", "timeline"), "h-meet": ("meet", "timeline"),
+    "g-": ("basics", "guide"),            # the field guide's own controls: every area page has them
+    "claims": ("claims", "claims"), "h-claims": ("claims", "claims"), "q-": ("claims", "claims"),
+    "glossary": ("glossary", "terms"), "h-glossary": ("glossary", "terms"), "gl-": ("glossary", "terms"),
+    "numbers": ("reference", "numbers"), "h-numbers": ("reference", "numbers"),
+    "n-table": ("reference", "numbers"), "n-empty": ("reference", "numbers"),
+    "tables": ("reference", "tables"), "h-tables": ("reference", "tables"),
+    "t-list": ("reference", "tables"), "t-empty": ("reference", "tables"),
+    "sources": ("sources", "sources"), "h-sources": ("sources", "sources"),
+    "src-wrap": ("sources", "sources"), "src-list": ("sources", "sources"),
+}
+LEGACY_IDS = ROOT / "scripts" / "fixtures" / "fitness-legacy-ids.txt"
+
+
+def legacy_place(old):
+    """(page key, section) for a section or control id of the old page, or None."""
+    if old in LEGACY_SECTIONS:
+        return LEGACY_SECTIONS[old]
+    return next((v for k, v in LEGACY_SECTIONS.items() if k.endswith("-") and old.startswith(k)), None)
+
+
+def ids_in(text):
+    return re.findall(r'\sid="([^"]+)"', text)
+
+
+def pin_legacy(page, key, legacy):
+    """Give a page the old ids it replaces and does not have yet, as empty anchors, so an old
+    link lands on the right part of it. key is the page's area or kind."""
+    have = set(ids_in(page))
+    for old in legacy:
+        place = legacy_place(old)
+        if not place or place[0] != key or old in have:
+            continue
+        anchor = f'<span class="fr-was" id="{esc(old)}"></span>'
+        if place[1] is None:
+            opening = re.search(r'<main id="main">\n', page)
+        else:
+            opening = re.search(rf'<section id="{place[1]}" class="k-band"[^>]*>\n\s*<div class="k-wrap[^"]*">\n', page)
+        if not opening:
+            raise SystemExit(f"the old id {old} belongs in the {place[1] or 'top'} section of the {key} page, which has no such section")
+        page = page[:opening.end()] + f"      {anchor}\n" + page[opening.end():]
+        have.add(old)
+    return page
+
+
+def render_sub(template, route, pages, sections, numbers, legacy=()):
     """Pour one page into the shell. numbers fills {{n:…}} and {{updated}} in the route's own text."""
     def filled(text):
         def one(m):
@@ -1000,8 +1051,6 @@ def render_sub(template, route, pages, sections, numbers):
         return re.sub(r"\{\{([^}]+)\}\}", one, text)
 
     slug, label = route["slug"], route_label(route)
-    links = [("/fitness", "Fitness", False)] + [("/fitness/" + r["slug"], route_label(r), r["slug"] == slug) for r in pages.routes]
-    subnav = "".join(f'<a href="{href}"' + (' class="on" aria-current="page"' if on else "") + f">{esc(name)}</a>" for href, name, on in links)
     crumbs = [("Home", SITE + "/"), ("Fitness", SITE + "/fitness"), (label, f"{SITE}/fitness/{slug}")]
     breadcrumb = json.dumps({
         "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -1015,7 +1064,8 @@ def render_sub(template, route, pages, sections, numbers):
     fills = {
         "slug": slug, "title": esc(filled(route["title"])), "description": esc(filled(route["description"])),
         "h1": filled(route["h1"]), "lead": esc(filled(route["lead"])), "breadcrumb": breadcrumb, "crumb": crumb,
-        "subnav": subnav, "jump": jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
+        "subnav": subnav_html(pages, slug), "n:pages": str(len(pages.routes)), "areas": " ".join(DOMAINS),
+        "jump": jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
     }
 
     def fill(m):
@@ -1026,14 +1076,13 @@ def render_sub(template, route, pages, sections, numbers):
     unused = [k for k in fills if "{{" + k + "}}" not in template]
     if unused:
         raise SystemExit("content/fitness/templates/sub.html has no {{" + "}}, {{".join(unused) + "}}")
-    return page
+    return pin_legacy(page, route["area"] if route["kind"] == "area" else route["kind"], legacy)
 
 
-def build_subpages(lib, meta, data, numbers, tool_uses):
-    """Every page under /fitness/ and the three twins that have no older file. Returns
-    ({path: text}, pages). tool_uses is what the calculators on /fitness cite."""
-    routes = load_routes()
-    pages = Pages(routes, data)
+def build_subpages(lib, meta, data, numbers, tool_uses, pages, legacy):
+    """Every page under /fitness/ and the three twins that belong to no one area. Returns
+    ({path: text}, {slug: html}). tool_uses is what the calculators on /fitness cite."""
+    routes = pages.routes
     corrections = load_corrections(pages)
     template = (SRC / "templates" / "sub.html").read_text(encoding="utf-8")
 
@@ -1051,14 +1100,14 @@ def build_subpages(lib, meta, data, numbers, tool_uses):
             else:
                 sections = page_reference(data, pages, r)
         total.update(tally)
-        built[r["slug"]] = render_sub(template, r, pages, sections, numbers)
+        built[r["slug"]] = render_sub(template, r, pages, sections, numbers, legacy)
     unused = [k for k in lib.by_id if not total[k]]
     if unused:
         raise SystemExit("sources no page cites: " + ", ".join(unused))
     for r in routes:   # last, so it can show how often each source is cited across all the pages
         if r["kind"] == "sources":
             with lib.counting(total):
-                built[r["slug"]] = render_sub(template, r, pages, page_sources(lib, pages, r, corrections), numbers)
+                built[r["slug"]] = render_sub(template, r, pages, page_sources(lib, pages, r, corrections), numbers, legacy)
     check_subpages(built, pages, lib)
 
     out = OrderedDict((PUBLIC / "fitness" / f"{r['slug']}.html", built[r["slug"]]) for r in routes)
@@ -1066,13 +1115,13 @@ def build_subpages(lib, meta, data, numbers, tool_uses):
     out[PUBLIC / "fitness" / f"{pages.slug['reference']}.md"] = md_reference(meta, data, pages)
     with lib.counting(total):
         out[PUBLIC / "fitness" / f"{pages.slug['sources']}.md"] = md_sources(lib, meta, pages, corrections)
-    return out, pages
+    return out, built
 
 
 def check_subpages(built, pages, lib):
     """Hold the pages to the one-home rule: every entry is on its home page and no other, every
     source is on the sources page, and every link from one page to another lands on something."""
-    ids = {slug: Counter(re.findall(r'\sid="([^"]+)"', text)) for slug, text in built.items()}
+    ids = {slug: Counter(ids_in(text)) for slug, text in built.items()}
     problems = []
     for slug, found in ids.items():
         problems += [f"/fitness/{slug}: the id {i} is used {n} times" for i, n in found.items() if n > 1]
@@ -1089,83 +1138,200 @@ def check_subpages(built, pages, lib):
                 problems.append(f"/fitness/{slug} links to {target}, which is not a page")
             elif frag not in ids[where]:
                 problems.append(f"/fitness/{slug} links to {target}#{frag}, and nothing there has that id")
+        linked = set(re.findall(r'href="/fitness/([a-z0-9-]+)"', text))
+        problems += [f"/fitness/{slug} has no link to /fitness/{r['slug']}" for r in pages.routes if r["slug"] not in linked]
+        if 'href="/fitness"' not in text:
+            problems.append(f"/fitness/{slug} has no link back to /fitness")
     if problems:
         raise SystemExit("the pages under /fitness/ break the one-home rule:\n  " + "\n  ".join(problems))
+
+
+# ----------------------------------------------------------------- the hub, /fitness
+# What the hub says on the cards of the pages that are not areas: a blurb and what to count.
+# The card's title is the page's own name, as in the navigation.
+REFERENCE_CARDS = OrderedDict([
+    ("claims", ("Things people say, each with a verdict, who was studied, and the source.", "{n:claims} claims")),
+    ("glossary", ("Every term the areas use, defined once in plain words.", "{n:terms} terms")),
+    ("reference", ("The key numbers and the look-up tables, each linked to the page that holds it.", "{n:numbers} numbers, {n:tables} tables")),
+    ("sources", ("How entries are graded, what has been corrected, and every source.", "{n:sources} sources")),
+])
+
+
+def hub_card(href, title, blurb, count):
+    return (f'<li><a class="hub-card" href="{href}"><span class="hub-t">{esc(title)}</span>'
+            f'<span class="hub-b">{esc(blurb)}</span><span class="hub-n">{esc(count)}</span></a></li>')
+
+
+def hub_areas(pages, counts):
+    """A card per area, under the three group headings. The first heading keeps the old
+    page's id "training", which the home page links to."""
+    out = []
+    for name, doms in GROUPS:
+        gid = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+        cards = "\n          ".join(hub_card(pages.url(d), DOMAINS[d][0], DOMAINS[d][1], count_of(counts[d], "entry", "entries")) for d in doms)
+        out.append(f'<div class="hub-group">\n        <h3 class="hub-gh" id="{gid}">{esc(name)}</h3>\n'
+                   f'        <ul class="hub-cards" aria-labelledby="{gid}">\n          {cards}\n        </ul>\n      </div>')
+    return "\n      ".join(out)
+
+
+def hub_reference(pages, numbers):
+    if list(REFERENCE_CARDS) != [k for k in KINDS if k != "area"]:
+        raise SystemExit("REFERENCE_CARDS must have a row for each kind of page that is not an area, in order")
+    names = {r["kind"]: route_label(r) for r in pages.routes if r["kind"] != "area"}
+    cards = []
+    for key, (blurb, count) in REFERENCE_CARDS.items():
+        cards.append(hub_card(pages.url(key), names[key], blurb, re.sub(r"\{([^}]+)\}", lambda m: str(numbers[m.group(1)]), count)))
+    return '<ul class="hub-cards hub-cards--ref" aria-labelledby="h-reference">\n        ' + "\n        ".join(cards) + "\n      </ul>"
+
+
+SEARCH_KINDS = OrderedDict([
+    ("note", "Guidance"), ("mistake", "Mistake"), ("step", "Step"), ("number", "Number"), ("table", "Table"),
+    ("checklist", "Checklist"), ("term", "Term"), ("claim", "Claim"),
+])
+
+
+def search_index(data, pages):
+    """What the hub's search box reads, loaded when the box is first used. One row per entry:
+    [id, page, kind, area, title, short answer] and, for a number its value, for a claim its
+    verdict. page, kind and area are positions in the three lists at the top."""
+    slugs, kinds, areas = [r["slug"] for r in pages.routes], list(SEARCH_KINDS), list(DOMAINS)
+    rows = []
+    for dom in DOMAINS:
+        for e in data[dom]["entries"]:
+            row = [e["id"], slugs.index(pages.home[e["id"]]), kinds.index(e["type"]), areas.index(dom), e["title"], e["take"]]
+            if e["type"] == "number":
+                row.append(f'{e["value"]} {e.get("unit", "")}'.strip())
+            rows.append(row)
+    for c in data["claims"]["entries"]:
+        rows.append([c["id"], slugs.index(pages.home[c["id"]]), kinds.index("claim"), areas.index(c["domain"]), c["title"], c["take"], VERDICTS[c["verdict"]][0]])
+    return {"pages": slugs, "kinds": list(SEARCH_KINDS.values()), "areas": [DOMAINS[d][0] for d in DOMAINS], "rows": rows}
+
+
+def id_map(pages, lib, built, hub, legacy):
+    """Where /fitness#<id> goes now: {id: slug} for every entry, every source and every id of
+    the old page that is not an element of the hub. Nothing is sent to a page that lacks it."""
+    hub_ids = set(ids_in(hub))
+    where = OrderedDict(pages.home)
+    where.update(("src-" + k, pages.slug["sources"]) for k in lib.by_id)
+    lost = []
+    for old in legacy:
+        if old in hub_ids or old in where:
+            continue
+        place = legacy_place(old)
+        if place:
+            where[old] = pages.slug[place[0]]
+        else:
+            lost.append(old)
+    if lost:
+        raise SystemExit("ids the one-page /fitness had that are on no page now (put them back, or give them a row in LEGACY_SECTIONS): " + ", ".join(lost))
+    on_page = {slug: set(ids_in(text)) for slug, text in built.items()}
+    problems = [f"{i} is sent to /fitness/{slug}, which has no element with that id" for i, slug in where.items() if i not in on_page[slug]]
+    problems += [f"{i} is an element of the hub and is also sent to /fitness/{where[i]}" for i in where if i in hub_ids]
+    problems += [f"{i} is not an id a link can carry" for i in where if not re.fullmatch(r"[A-Za-z0-9._-]+", i)]
+    if problems:
+        raise SystemExit("the id map for old /fitness links is wrong:\n  " + "\n  ".join(problems))
+    return where
+
+
+def forward_test(where, pages, hub):
+    """A regular expression for the hub's first script: true for an id that may have moved, so
+    the map is fetched only then. Entries and sources are known by their prefix (src-, hyp-, …);
+    the few section ids are listed whole. No element of the hub may match it."""
+    families = sorted({i.split("-")[0] for i in pages.home} | {"src"})
+    family = re.compile("(?:" + "|".join(families) + ")-")
+    exact = sorted(i for i in where if not family.match(i))
+    pattern = "^(?:(?:" + "|".join(families) + ")-|(?:" + "|".join(re.escape(i).replace("\\-", "-") for i in exact) + ")$)"
+    caught = [i for i in ids_in(hub) if re.match(pattern, i)]
+    if caught:
+        raise SystemExit("ids on the hub that look like ids that moved (rename them): " + ", ".join(caught))
+    return pattern
+
+
+def check_hub(hub, pages, built):
+    """The hub lists every page and links only to things that exist."""
+    ids = Counter(ids_in(hub))
+    on_page = {slug: set(ids_in(text)) for slug, text in built.items()}
+    problems = [f"the id {i} is used {n} times" for i, n in ids.items() if n > 1]
+    problems += [f"no link to /fitness/{r['slug']}" for r in pages.routes if f'href="/fitness/{r["slug"]}"' not in hub]
+    for target, frag in set(re.findall(r'href="(/fitness/[a-z0-9-]+)?#([^"]+)"', hub)):
+        where = target[len("/fitness/"):] if target else None
+        if where is None and frag not in ids:
+            problems.append(f"links to #{frag}, and nothing on the hub has that id")
+        elif where is not None and frag not in on_page.get(where, ()):
+            problems.append(f"links to {target}#{frag}, and nothing there has that id")
+    for slug, text in built.items():   # a page under the hub may link back to a part of it (a calculator, the cards)
+        problems += [f"/fitness/{slug} links to /fitness#{frag}, and nothing on the hub has that id"
+                     for frag in set(re.findall(r'href="/fitness#([^"]+)"', text)) if frag not in ids]
+    if problems:
+        raise SystemExit("/fitness, the hub:\n  " + "\n  ".join(problems))
 
 
 # ----------------------------------------------------------------- assemble
 def build():
     meta, lib, data = load()
     page = (SRC / "page.html").read_text(encoding="utf-8")
+    pages = Pages(load_routes(), data)
+    if not LEGACY_IDS.is_file():
+        raise SystemExit("scripts/fixtures/fitness-legacy-ids.txt is missing")
+    legacy = LEGACY_IDS.read_text(encoding="utf-8").split()
 
-    # 1. inline citations in the shell (the calculators): {{c:key,key}}
+    # 1. inline citations in the shell (the calculators): {{c:key,key}}. Their sources are
+    #    listed on the sources page, so the links go there.
     def inline(m):
         keys = [k.strip() for k in m.group(1).split(",")]
-        return lib.cite_html("tools", keys).replace('<p class="cite">', '<span class="cite">').replace("</p>", "</span>")
+        return lib.cite_html("tools", keys, pages.url("sources")).replace('<p class="cite">', '<span class="cite">').replace("</p>", "</span>")
     page = re.sub(r"\{\{c:([^}]+)\}\}", inline, page)
     tool_uses = Counter(lib.uses)   # what the calculators cite; they stay on /fitness
 
-    guide, n_guide = build_guide(lib, data)
-    claims, n_claims = build_claims(lib, data)
-    meet, n_steps = build_meet(lib, data)
-    numbers, n_numbers = build_numbers(lib, data)
-    tables, n_tables = build_tables(lib, data)
-    glossary, n_terms = build_glossary(lib, data)
+    # 2. the counts every page prints
+    kinds = Counter(e["type"] for dom in DOMAINS for e in data[dom]["entries"])
+    counts = {d: len(data[d]["entries"]) for d in DOMAINS}          # an area's entries, its terms included
+    n_claims = len(data["claims"]["entries"])
+    total = sum(counts.values()) + n_claims
+    numbers = {"n:steps": kinds["step"], "n:claims": n_claims, "n:terms": kinds["term"], "n:numbers": kinds["number"],
+               "n:tables": kinds["table"], "n:sources": len(lib.by_id), "n:total": total, "n:areas": len(DOMAINS),
+               "n:pages": len(pages.routes), "updated": meta["updated_label"]}
 
-    counts = {d: len(data[d]["entries"]) for d in DOMAINS}
-    counts["claims"] = n_claims
-    lens = {
-        "guide": (lens_counts(guide, r'<details class="g" id="[^"]*" data-d="([a-z]+)"'), n_guide),
-        "claims": (lens_counts(claims, r'<details class="k-qa q" id="[^"]*" data-d="([a-z]+)"'), n_claims),
-        "numbers": (lens_counts(numbers, r'<tr id="[^"]*" data-d="([a-z]+)"'), n_numbers),
-        "tables": (lens_counts(tables, r'<details class="rt" id="[^"]*" data-d="([a-z]+)"'), n_tables),
-        "glossary": (lens_counts(glossary, r'<div class="gl-item" id="[^"]*" data-d="([a-z]+)"'), n_terms),
-    }
-    for name, (per_area, n) in lens.items():
-        if sum(per_area.values()) != n:
-            raise SystemExit(f"area counts for the {name} list add up to {sum(per_area.values())}, not {n}")
-    total = sum(counts.values())
+    # 3. the pages under /fitness/
+    sub, built = build_subpages(lib, meta, data, numbers, tool_uses, pages, legacy)
 
-    kinds = Counter(s.get("type", "other") for s in lib.by_id.values())
-    src_rows = "\n".join(lib.entry_html(k) for k in sorted(lib.by_id, key=lambda k: (lib.label[k].lower(), k)) if lib.uses[k])
-    unused = [k for k in lib.by_id if not lib.uses[k]]
-    if unused:
-        raise SystemExit("sources never cited: " + ", ".join(unused))
-    sources = f'<ol class="sources" id="src-list">{src_rows}</ol>'
-
-    fills = {
-        "guide": guide, "claims": claims, "meet": meet, "numbers": numbers, "tables": tables, "glossary": glossary, "sources": sources,
-        **{"domains:" + name: domain_switch(per_area) for name, (per_area, _) in lens.items()},
-        "legend": legend_html(),
-        "n:guide": n_guide, "n:claims": n_claims, "n:steps": n_steps, "n:numbers": n_numbers, "n:tables": n_tables,
-        "n:terms": n_terms, "n:sources": sum(1 for k in lib.by_id if lib.uses[k]), "n:total": total, "updated": meta["updated_label"],
-    }
+    # 4. the hub
+    fills = {"hub:areas": hub_areas(pages, counts), "hub:reference": hub_reference(pages, numbers),
+             **{k: numbers[k] for k in ("n:total", "n:areas", "updated")}}
     for key, value in fills.items():
         token = "{{" + key + "}}"
         if token not in page:
             raise SystemExit(f"content/fitness/page.html has no {token}")
         page = page.replace(token, str(value))
+    where = id_map(pages, lib, built, page, legacy)
+    if "{{fwd:test}}" not in page:
+        raise SystemExit("content/fitness/page.html has no {{fwd:test}}")
+    page = page.replace("{{fwd:test}}", forward_test(where, pages, page))
     left = re.findall(r"\{\{[^}]+\}\}", page)
     if left:
         raise SystemExit("unfilled tokens in page.html: " + ", ".join(sorted(set(left))))
+    check_hub(page, pages, built)
+    index = search_index(data, pages)
+    if len(index["rows"]) != total or {row[0] for row in index["rows"]} != set(pages.home):
+        raise SystemExit("the search index does not hold every entry once")
 
+    def compact(obj):
+        return json.dumps(obj, ensure_ascii=False, separators=(",", ":")) + "\n"
+    slugs = [r["slug"] for r in pages.routes]
     out = OrderedDict()
     out[PUBLIC / "fitness.html"] = page
-    out[PUBLIC / "fitness.md"] = md_index(meta, counts)
+    out[PUBLIC / "fitness.md"] = md_index(meta, numbers, counts, pages)
     for dom in DOMAINS:
-        out[PUBLIC / "fitness" / f"{dom}.md"] = md_domain(lib, meta, dom, data[dom])
-    out[PUBLIC / "fitness" / "claims.md"] = md_claims(lib, meta, data["claims"]["entries"])
-
-    # The pages under /fitness/. Built after /fitness, which they must not change.
-    numbers = {"n:steps": n_steps, "n:claims": n_claims, "n:terms": n_terms, "n:numbers": n_numbers, "n:tables": n_tables,
-               "n:sources": fills["n:sources"], "n:total": total, "updated": meta["updated_label"]}
-    sub, pages = build_subpages(lib, meta, data, numbers, tool_uses)
+        out[PUBLIC / "fitness" / f"{pages.slug[dom]}.md"] = md_domain(lib, meta, dom, data[dom], pages)
+    out[PUBLIC / "fitness" / f"{pages.slug['claims']}.md"] = md_claims(lib, meta, data["claims"]["entries"], pages)
+    out[PUBLIC / "fitness" / "search.json"] = compact(index)
+    out[PUBLIC / "fitness" / "ids.json"] = compact({"pages": slugs, "ids": {i: slugs.index(slug) for i, slug in where.items()}})
     clash = [p.name for p in sub if p in out]
     if clash:
         raise SystemExit("routes.json would overwrite: " + ", ".join(clash))
     out.update(sub)
-    return out, {"entries": total, "sources": fills["n:sources"], "guide": n_guide, "claims": n_claims, "numbers": n_numbers,
-                 "tables": n_tables, "terms": n_terms, "steps": n_steps, "pages under /fitness/": len(pages.routes)}
+    return out, {"entries": total, "pages": len(pages.routes), "sources": len(lib.by_id), "claims": n_claims, "numbers": kinds["number"],
+                 "tables": kinds["table"], "terms": kinds["term"], "steps": kinds["step"], "old ids": len(where)}
 
 
 def main():
@@ -1179,7 +1345,9 @@ def main():
     for p, text in out.items():
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(text, encoding="utf-8")
-    print("built /fitness: " + ", ".join(f"{v} {k}" for k, v in stats.items()))
+    print(f"built /fitness: {stats['entries']} entries on {stats['pages']} sub-pages, each entry with exactly one home; "
+          + ", ".join(f"{stats[k]} {k}" for k in ("sources", "claims", "numbers", "tables", "terms", "steps"))
+          + f"; {stats['old ids']} ids in the map for old links")
     return 0
 
 

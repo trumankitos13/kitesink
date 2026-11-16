@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>(function(){try{var t=localStorage.ksTheme;if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})()</script>
-<link rel="stylesheet" href="/ks.css?v=2027.10">
+<link rel="stylesheet" href="/ks.css?v=2027.11">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://kitesink.com/">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/index.md" title="Plain-text version">
@@ -325,7 +325,7 @@
               <span class="k-num">02</span>
               <a class="idx-name" href="/fitness" style="view-transition-name:sec-fitness">Fitness</a>
               <p class="idx-desc">Vantix, free calculators, sourced training notes.</p>
-              <div class="k-chips idx-chips"><a class="k-chip" href="/vantix">Vantix</a><a class="k-chip" href="/fitness#tools">Tools</a><a class="k-chip" href="/fitness#training">Training</a><a class="k-chip" href="/fitness#nutrition">Nutrition</a></div>
+              <div class="k-chips idx-chips"><a class="k-chip" href="/vantix">Vantix</a><a class="k-chip" href="/fitness#tools">Tools</a><a class="k-chip" href="/fitness#training">Training</a><a class="k-chip" href="/fitness/nutrition">Nutrition</a></div>
               <span class="idx-arrow" aria-hidden="true">→</span>
             </li>
             <li class="idx-row" data-sec="music">
@@ -517,7 +517,7 @@
                 <input class="k-range" id="qp-w" type="range" min="40" max="160" step="1" value="80" aria-describedby="qp-note"></label>
             </div>
             <div class="quick-out" aria-live="polite"><span class="k-stat" id="qp-out">128–176<small>g / day</small></span></div>
-            <p class="k-small" id="qp-note">1.6–2.2 g per kg per day. A meta-analysis of 49 trials put the point of diminishing returns for muscle gain near 1.6, with an upper bound of 2.2. <a class="k-inline" href="/fitness#sources">Sources</a></p>
+            <p class="k-small" id="qp-note">1.6–2.2 g per kg per day. A meta-analysis of 49 trials put the point of diminishing returns for muscle gain near 1.6, with an upper bound of 2.2. <a class="k-inline" href="/fitness/sources">Sources</a></p>
           </div>
           <ul class="toollist" style="margin-top:22px">
             <li><a href="/fitness#macros"><b>Energy &amp; macro calculator</b><span>Maintenance, a target, and protein / carbs / fat.</span><i aria-hidden="true">→</i></a></li>
@@ -525,7 +525,7 @@
             <li><a href="/fitness#loads"><b>1RM &amp; load calculator</b><span>The load for any reps × RIR target.</span><i aria-hidden="true">→</i></a></li>
             <li><a href="/fitness#travel"><b>Travel workout builder</b><span>Your kit, your minutes, a session.</span><i aria-hidden="true">→</i></a></li>
           </ul>
-          <div class="k-actions" style="margin-top:18px"><a class="k-go" href="/fitness#training">Training notes</a><a class="k-go" href="/fitness#nutrition">Nutrition notes</a></div>
+          <div class="k-actions" style="margin-top:18px"><a class="k-go" href="/fitness#training">Training notes</a><a class="k-go" href="/fitness/nutrition">Nutrition notes</a></div>
         </div>
       </div>
     </div>
@@ -640,9 +640,9 @@
 
 <div data-ks="footer"></div>
 
-<script src="/site-index.js?v=2027.10"></script>
+<script src="/site-index.js?v=2027.11"></script>
 <script src="/blog/posts.js"></script>
-<script src="/ks.js?v=2027.10"></script>
+<script src="/ks.js?v=2027.11"></script>
 <script>
 (function () {
   "use strict";
@@ -812,7 +812,7 @@
     });
   })();
 
-  // ---- Fitness: quick protein range (1.6–2.2 g/kg/day; see /fitness#sources) ----
+  // ---- Fitness: quick protein range (1.6–2.2 g/kg/day; see /fitness/sources) ----
   (function () {
     var w = $("qp-w"); if (!w) return;
     var kgBtn = $("qp-kg"), lbBtn = $("qp-lb"), read = $("qp-read"), out = $("qp-out"), unit = "kg";

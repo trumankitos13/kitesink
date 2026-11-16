@@ -5,7 +5,7 @@ KiteSink is the one-person workshop of Truman Kitos-Lindsey. He makes tools for 
 ## The five sections
 
 - [Consulting](https://kitesink.com/consulting.md): workflow automation, operations improvements and practical AI for music teams, and an AI concierge service for any industry.
-- [Fitness](https://kitesink.com/fitness.md): Vantix (a periodization app), five free calculators, and a sourced field guide to hypertrophy, powerlifting, meet day, nutrition, diet and health.
+- [Fitness](https://kitesink.com/fitness.md): Vantix (a periodization app), five free calculators, and a sourced field guide to training, eating and health, with a page for each area.
 - [Music](https://kitesink.com/music.md): Song of the Day (a daily music app), Stage First (the business side of a live show; its staffing app has been called Backline) and the Album Listening Club.
 - Library (https://kitesink.com/library): every page on the site in one searchable index, including Campground Tycoon, a game whose demo plays in the browser.
 - [About](https://kitesink.com/about.md): who is behind KiteSink and how to reach him.

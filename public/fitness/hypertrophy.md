@@ -203,7 +203,7 @@ A review of 17 studies found no set structure beat another for strength or hyper
 
 - Use cluster or rest-pause sets when you want heavy reps with less fatigue, not as a growth hack.
 
-Special techniques · Intermediate · Some support · Sources: [Prestes 2019](https://doi.org/10.1519/jsc.0000000000001923), [Jukic 2021](https://doi.org/10.1007/s40279-020-01423-4), [Davies 2021](https://doi.org/10.1007/s40279-020-01408-3)
+Special techniques · Intermediate · Some support · Sources: [Prestes 2019](https://doi.org/10.1519/jsc.0000000000001923), [Jukic 2021b](https://doi.org/10.1007/s40279-020-01423-4), [Davies 2021](https://doi.org/10.1007/s40279-020-01408-3)
 
 ### Blood-flow restriction can build size with light loads, but needs care
 
@@ -264,7 +264,7 @@ In 25 sedentary men, thigh muscle area rose 9.6% over 8 weeks, and the authors j
 
 - Judge progress over months, not the first three weeks.
 
-Programming · Beginner · Some support · Sources: [DeFreitas 2011](https://doi.org/10.1007/s00421-011-1905-4), [Damas 2016](https://doi.org/10.1007/s00421-015-3243-4), [Damas 2018](https://doi.org/10.1007/s00421-017-3792-9)
+Programming · Beginner · Some support · Sources: [DeFreitas 2011](https://doi.org/10.1007/s00421-011-1905-4), [Damas 2016a](https://doi.org/10.1007/s00421-015-3243-4), [Damas 2018](https://doi.org/10.1007/s00421-017-3792-9)
 
 ### How to read a training study before you act on it
 
@@ -432,6 +432,7 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 ---
 
-Source page: https://kitesink.com/fitness#hypertrophy  
+Source page: https://kitesink.com/fitness/hypertrophy  
+Every fitness page, as plain text: https://kitesink.com/fitness.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-15.
+General information, not medical advice. Last updated 2026-11-16.

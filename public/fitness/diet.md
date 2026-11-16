@@ -22,7 +22,7 @@ A contest-prep review recommends 0.5 to 1 percent a week, and a later review pre
 
 - Pick a weekly percentage, convert it to kg or lb, and check against your four-week trend.
 
-Deficit and rate of loss · Intermediate · Some support · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Roberts 2020](https://doi.org/10.2478/hukin-2019-0096)
+Deficit and rate of loss · Intermediate · Some support · Sources: [Helms 2014b](https://doi.org/10.1186/1550-2783-11-20), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Roberts 2020a](https://doi.org/10.2478/hukin-2019-0096)
 
 ### Deficits much beyond 500 kcal a day cost lean mass in lifters
 
@@ -364,6 +364,7 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 ---
 
-Source page: https://kitesink.com/fitness#diet  
+Source page: https://kitesink.com/fitness/diet  
+Every fitness page, as plain text: https://kitesink.com/fitness.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-15.
+General information, not medical advice. Last updated 2026-11-16.

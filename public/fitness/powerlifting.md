@@ -44,7 +44,7 @@ A meta-analysis found no significant 1RM difference between autoregulated and st
 
 - Use RPE when daily readiness swings; use percentages when you want a fixed plan to compare weeks.
 
-RPE and velocity · Intermediate · Some support · Sources: [Hickmott 2022](https://doi.org/10.1186/s40798-021-00404-9), [Helms 2018](https://doi.org/10.3389/fphys.2018.00247), [Larsen 2021](https://doi.org/10.7717/peerj.10663)
+RPE and velocity · Intermediate · Some support · Sources: [Hickmott 2022](https://doi.org/10.1186/s40798-021-00404-9), [Helms 2018](https://doi.org/10.3389/fphys.2018.00247), [Larsen 2021b](https://doi.org/10.7717/peerj.10663)
 
 ### Velocity loss limits did not change strength gains in a large review
 
@@ -294,9 +294,9 @@ Periodisation and peaking · Intermediate · Coaching practice · Sources: [Grgi
 
 | Number | What it is | Support | Sources |
 |---|---|---|---|
-| ~5 reps (most lifts) | Repetitions possible at 90% of 1RM: Typical maximum reps at 90% 1RM across exercises; the bench press averaged about 4. | Well supported | [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7) |
-| ~14 reps (bench press) | Repetitions possible at 70% of 1RM on the bench: Typical maximum reps for the bench press at 70% 1RM; about 9 at 80% and about 4 at 90%. | Well supported | [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7) |
-| 2.5 reps (SD) | Spread in reps between lifters at 80% of 1RM: The between-lifter standard deviation at 80% 1RM is 2.51 reps, so the same percentage gives different rep counts. | Well supported | [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7) |
+| ~5 reps (most lifts) | Repetitions possible at 90% of 1RM: Typical maximum reps at 90% 1RM across exercises; the bench press averaged about 4. | Well supported | [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7) |
+| ~14 reps (bench press) | Repetitions possible at 70% of 1RM on the bench: Typical maximum reps for the bench press at 70% 1RM; about 9 at 80% and about 4 at 90%. | Well supported | [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7) |
+| 2.5 reps (SD) | Spread in reps between lifters at 80% of 1RM: The between-lifter standard deviation at 80% 1RM is 2.51 reps, so the same percentage gives different rep counts. | Well supported | [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7) |
 | 40-50 % less volume | Volume cut during a taper: Surveyed North American powerlifters cut volume by 41-50%; a review of self-reported tapers gave about 40-45%. | Thin evidence | [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Winwood 2026](https://doi.org/10.1007/s40279-026-02500-w) |
 | 7-10 days before the meet | Last heavy squat and deadlift before a meet: Most surveyed North American raw lifters did their final heavy squat and deadlift 7 to 10 days out; bench came later. | Thin evidence | [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177) |
 | 3-6 sets per lift per week | Weekly working sets for a minimum effective dose: A floor proposed for powerlifters: 3 to 6 sets of 1 to 5 reps per lift, at loads above 80% 1RM, for 6 to 12 weeks. | Thin evidence | [Androulakis-Korakakis 2021](https://doi.org/10.3389/fspor.2021.713655) |
@@ -317,7 +317,7 @@ Common coaching zones with typical reps per set and their purpose; reps at a giv
 | Heavy | 85-92% | 1-3 | Heavy strength work, peaking blocks, openers |
 | Near-max | 92-100% | 1 | Singles, tests, second and third attempts |
 
-Coaching practice · Sources: [Nuzzo 2024](https://doi.org/10.1007/s40279-023-01937-7), [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
+Coaching practice · Sources: [Nuzzo 2024a](https://doi.org/10.1007/s40279-023-01937-7), [Travis 2021b](https://doi.org/10.1177/0031512520967608), [Howells 2022](https://doi.org/10.23736/S0022-4707.21.12140-1)
 
 ## RPE to reps in reserve chart
 
@@ -373,6 +373,7 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 ---
 
-Source page: https://kitesink.com/fitness#powerlifting  
+Source page: https://kitesink.com/fitness/powerlifting  
+Every fitness page, as plain text: https://kitesink.com/fitness.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-15.
+General information, not medical advice. Last updated 2026-11-16.

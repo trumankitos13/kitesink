@@ -1,4 +1,5 @@
-// Zero-dependency checks for the calculator maths in public/fitness.js.  Run: node scripts/test_fitness.js
+// Zero-dependency checks for public/fitness.js: the calculator maths, the hub's search ranking, and the
+// script in the hub's <head> that forwards old /fitness#<id> links.  Run: node scripts/test_fitness.js
 const fs = require('fs'), vm = require('vm');
 const ctx = { window: {}, document: { getElementById: () => null }, Math, console };
 ctx.window.window = ctx.window;
@@ -86,5 +87,95 @@ for (const style of ['first', 'standard', 'bold']) for (const best of [42.5, 60,
 console.log('ok   meet attempts and warm-up ladders (21 cases)');
 eq('standard third attempt is the best single', F.attempts(180, 'standard')[2], 180, 1e-9);
 eq('unknown style falls back to standard', F.attempts(180, 'nope')[0], F.attempts(180, 'standard')[0], 1e-9);
-console.log(fail ? 'FAILURES: ' + fail : 'ALL PASS');
-process.exit(fail ? 1 : 0);
+
+// ---------- the hub's search: KSFit.search(index, query, limit) ----------
+const ok = (name, cond, detail) => { if (!cond) fail++; console.log((cond ? 'ok   ' : 'FAIL ') + name + (cond || detail === undefined ? '' : ': ' + detail)); };
+const tiny = { pages: ['hypertrophy', 'glossary', 'claims'], kinds: ['Guidance', 'Term', 'Claim', 'Number'], areas: ['Hypertrophy', 'Nutrition'], rows: [
+  ['hyp-a', 0, 0, 0, 'Train each muscle about twice a week', 'Frequency matters less than weekly volume, which a deload can reset.'],
+  ['hyp-t', 1, 1, 0, 'Deload', 'A planned easier week.'],
+  ['hyp-b', 0, 0, 0, 'Take a deload when fatigue builds', 'A lighter week lets fatigue fall.'],
+  ['claim-c', 2, 2, 1, 'Does creatine harm the kidneys?', 'Not in healthy people at normal doses.', 'Not supported'],
+  ['nut-n', 0, 3, 1, 'Protein per day', 'A range that covers most lifters.', '1.6-2.2 g per kg per day'],
+  ['hyp-r', 0, 0, 0, 'Preloading is not a word here', 'Nothing about rest weeks.'] ] };
+let r = F.search(tiny, 'deload');
+ok('search: a title that is the query comes first, then a title word, then the short answer', r.hits.map(h => h.id).join() === 'hyp-t,hyp-b,hyp-a', r.hits.map(h => h.id).join());
+ok('search: the middle of a word counts least and still matches', F.search(tiny, 'load').hits.map(h => h.id).join() === 'hyp-t,hyp-b,hyp-r,hyp-a', F.search(tiny, 'load').hits.map(h => h.id).join());
+r = F.search(tiny, '  CREATINE   kidneys ');
+ok('search: every word must match; case and spacing do not matter', r.total === 1 && r.hits[0].id === 'claim-c');
+ok('search: a hit carries its address, area, kind and extra', r.hits[0].href === '/fitness/claims#claim-c' && r.hits[0].area === 'Nutrition' && r.hits[0].kind === 'Claim' && r.hits[0].extra === 'Not supported');
+ok('search: a term lives on the glossary', F.search(tiny, 'deload').hits[0].href === '/fitness/glossary#hyp-t');
+ok('search: no match is an empty list', F.search(tiny, 'deload zzz').total === 0 && F.search(tiny, 'zzz').hits.length === 0);
+ok('search: an empty query finds nothing', F.search(tiny, '').total === 0 && F.search(tiny, '   ').total === 0 && F.search(tiny).total === 0);
+r = F.search(tiny, 'a', 2);
+ok('search: limit cuts the list, not the total', r.hits.length === 2 && r.total > 2, r.hits.length + ' of ' + r.total);
+ok('search: a word in the title beats the same word in the answer', F.search(tiny, 'week').hits[0].id === 'hyp-a');
+
+// the real index and the real map (scripts/build_fitness.py writes both): they must agree
+const pub = require('path').join(__dirname, '..', 'public');
+const index = JSON.parse(fs.readFileSync(pub + '/fitness/search.json', 'utf8')), map = JSON.parse(fs.readFileSync(pub + '/fitness/ids.json', 'utf8'));
+const homeOf = id => Object.prototype.hasOwnProperty.call(map.ids, id) ? map.pages[map.ids[id]] : null;
+ok('index: one row per entry, each id once', new Set(index.rows.map(x => x[0])).size === index.rows.length && index.rows.length > 0, index.rows.length);
+ok('index: every row has a title and a short answer', index.rows.every(x => x[4] && x[5]));
+ok('index and map send every entry to the same page', index.rows.every(x => homeOf(x[0]) === index.pages[x[1]]));
+ok('index: terms are on the glossary and claims on the claims page', index.rows.every(x => index.kinds[x[2]] !== 'Term' || index.pages[x[1]] === 'glossary') && index.rows.every(x => index.kinds[x[2]] !== 'Claim' || index.pages[x[1]] === 'claims'));
+r = F.search(index, 'protein');
+ok('real search: "protein" finds entries, each with the word in its title or answer', r.total > 5 && r.hits.every(h => (h.title + ' ' + h.take).toLowerCase().includes('protein')), r.total);
+ok('real search: the hits are in more than one area', new Set(r.hits.map(h => h.area)).size > 1);
+ok('real search: every hit address is /fitness/<page>#<id> for a page in the map', F.search(index, 'a').hits.every(h => { const m = /^\/fitness\/([a-z0-9-]+)#(.+)$/.exec(h.href); return m && homeOf(m[2]) === m[1]; }));
+
+// ---------- the forwarder: the first script of the hub, lifted out of the built page and run here ----------
+const hubHtml = fs.readFileSync(pub + '/fitness.html', 'utf8');
+const fwd = /<script id="fit-forward">([\s\S]*?)<\/script>/.exec(hubHtml);
+ok('hub: the forwarding script is in the <head>, before the site stylesheet and the body', !!fwd && hubHtml.indexOf('id="fit-forward"') < hubHtml.indexOf('href="/ks.css') && hubHtml.indexOf('href="/ks.css') < hubHtml.indexOf('<body'));
+const hubIds = new Set([...hubHtml.matchAll(/\sid="([^"]+)"/g)].map(m => m[1]));
+async function visit(hash, opts = {}) {
+  const seen = { fetched: 0, replaced: null, hidden: false, listeners: {} };
+  const classes = new Set();
+  const win = {
+    fetch: url => { seen.fetched++; seen.url = url; return opts.offline ? Promise.reject(new Error('offline')) : Promise.resolve({ ok: !opts.missing, json: () => Promise.resolve(map) }); },
+    addEventListener: (name, fn) => { seen.listeners[name] = fn; }
+  };
+  const box = { window: win, location: { hash, replace: url => { seen.replaced = url; } },
+    document: { documentElement: { classList: { add: c => classes.add(c), remove: c => classes.delete(c), contains: c => classes.has(c) } } },
+    setTimeout: () => 1, clearTimeout: () => {}, decodeURIComponent, Object, Promise };
+  vm.runInNewContext(fwd[1], box);
+  seen.hiddenAtStart = classes.has('fwd');
+  await new Promise(done => setImmediate(done)); await new Promise(done => setImmediate(done));
+  seen.hidden = classes.has('fwd');
+  return seen;
+}
+(async () => {
+  const entry = index.rows.find(x => index.kinds[x[2]] === 'Guidance')[0], term = index.rows.find(x => index.kinds[x[2]] === 'Term')[0];
+  const source = Object.keys(map.ids).find(k => k.startsWith('src-') && homeOf(k) === 'sources');
+  for (const [id, page] of [[entry, homeOf(entry)], [term, 'glossary'], [source, 'sources'], ['glossary', 'glossary'], ['meet-day', 'meet'], ['hypertrophy', 'hypertrophy'], ['claims', 'claims']]) {
+    const s = await visit('#' + id);
+    ok(`forward: /fitness#${id} goes to /fitness/${page}#${id}, with the page hidden meanwhile`, s.replaced === `/fitness/${page}#${id}` && s.hiddenAtStart && s.url === '/fitness/ids.json', s.replaced);
+  }
+  for (const id of ['tools', 'macros', 'reps', 'loads', 'travel', 'attempts', 'vantix', 'guide', 'training', 'reference', 'main']) {
+    const s = await visit('#' + id);
+    ok(`forward: /fitness#${id} stays on the hub and fetches nothing`, hubIds.has(id) && s.replaced === null && s.fetched === 0 && !s.hiddenAtStart);
+  }
+  let s = await visit('');
+  ok('forward: no fragment, nothing happens', s.replaced === null && s.fetched === 0);
+  s = await visit('#hyp-no-entry-has-this-id');
+  ok('forward: an id no page has stays on the hub, shown again', s.replaced === null && s.fetched === 1 && s.hiddenAtStart && !s.hidden);
+  s = await visit('#' + entry, { offline: true });
+  ok('forward: if the map cannot be fetched the hub is shown', s.replaced === null && !s.hidden);
+  s = await visit('#' + entry, { missing: true });
+  ok('forward: if the map is not there the hub is shown', s.replaced === null && !s.hidden);
+  s = await visit('#' + encodeURIComponent(entry));
+  ok('forward: an encoded fragment is understood', s.replaced === `/fitness/${homeOf(entry)}#${encodeURIComponent(entry)}`);
+  ok('forward: it listens for the fragment changing later', typeof s.listeners.hashchange === 'function');
+  // leaving before the page was shown: the cross-fade between pages is skipped, and only then
+  let skipped = 0; const swap = { viewTransition: { skipTransition: () => { skipped++; } } };
+  s.listeners.pageswap(swap); s.listeners.pageswap({ viewTransition: null });
+  ok('forward: while forwarding, the page-to-page transition is skipped', skipped === 1);
+  s = await visit('#tools'); skipped = 0; s.listeners.pageswap(swap);
+  ok('forward: a normal move away from the hub keeps its transition', skipped === 0);
+  ok('map: no id in it is an element of the hub', Object.keys(map.ids).every(id => !hubIds.has(id)));
+  const legacy = fs.readFileSync(require('path').join(__dirname, 'fixtures', 'fitness-legacy-ids.txt'), 'utf8').split(/\s+/).filter(Boolean);
+  const lost = legacy.filter(id => !hubIds.has(id) && !homeOf(id));
+  ok(`map: all ${legacy.length} ids of the one-page /fitness are on the hub or in the map`, lost.length === 0, lost.join(' '));
+  console.log(fail ? 'FAILURES: ' + fail : 'ALL PASS');
+  process.exit(fail ? 1 : 0);
+})();

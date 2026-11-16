@@ -376,6 +376,8 @@ Pack in the days before the meet, and check the rules of your federation for eac
 - Phone charger
 - A friend or coach to hand up attempt cards
 
+Coaching practice
+
 ## Terms
 
 - **Bomb out**: To miss all three attempts on a lift; in a full-power meet that usually means no total.
@@ -399,6 +401,7 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 ---
 
-Source page: https://kitesink.com/fitness#meet  
+Source page: https://kitesink.com/fitness/meet  
+Every fitness page, as plain text: https://kitesink.com/fitness.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information, not medical advice. Last updated 2026-11-15.
+General information, not medical advice. Last updated 2026-11-16.

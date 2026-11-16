@@ -10,8 +10,8 @@ engines are told not to index them. Anyone with the address can read them.
 |---|---|
 | `/` | `/index.md` |
 | `/consulting` | `/consulting.md` |
-| `/fitness` | `/fitness.md` |
-| `/fitness/hypertrophy`, `powerlifting`, `meet`, `nutrition`, `diet`, `health` | `/fitness/<area>.md`, one file per area |
+| `/fitness` (the hub) | `/fitness.md` |
+| `/fitness/basics`, `technique`, `hypertrophy`, `powerlifting`, `meet`, `conditioning`, `recovery`, `nutrition`, `diet`, `bodycomp`, `women`, `health` | `/fitness/<area>.md`, one file per area |
 | `/fitness/claims`, `glossary`, `reference`, `sources` | `/fitness/claims.md`, `glossary.md`, `reference.md`, `sources.md` |
 | `/vantix` | `/vantix.md` |
 | `/music` | `/music.md` |
@@ -23,14 +23,28 @@ pages (`python3 scripts/build_fitness.py`). The others are hand-written files in
 `public/`: when a fact on a page changes, change its twin too. `scripts/check_site.py`
 checks that every twin exists, is linked from its page and has no broken links.
 
-The ten pages under `/fitness/` are built but unlisted for now (`noindex`, out of the nav,
-the Library and the sitemap). Each announces its twin in its `<head>`, and `/llms.txt`
-lists all ten twins. The optional worker below does not answer for them until they are
-listed: `run_worker_first` holds only the seven listed pages, and the audit checks that.
+`/fitness.md` is the hub's twin: what the section is, each area with its number of entries
+and the address of its twin, the four reference twins, the calculators, and how sources are
+handled. The sixteen pages under `/fitness/` are listed pages. Each announces its twin in
+its `<head>`, `/llms.txt` lists all sixteen twins in the order of the hub, and
+`run_worker_first` in `wrangler.ai-twins.jsonc` holds their routes, so the optional worker
+below answers for them too. The audit checks all three. Every fitness twin ends with the
+address of its page and of `/fitness.md`.
+
+`/fitness/search.json` and `/fitness/ids.json` are not twins. They are data for the hub's
+own scripts: the search index, and the map that sends an old `/fitness#<id>` link to the
+page that holds that id now.
+
+To add an area's twin, add the area as `README.md` describes; the build writes the twin.
+Then give it a line in `/llms.txt`, a route in `run_worker_first`, and rebuild
+`/llms-full.txt`.
 
 `/llms-full.txt` is every twin in one file, for readers that want the whole site in one
 request. `python3 scripts/build_llms_full.py` writes it; run it after the fitness build
-and after editing any hand-written twin. The audit fails if it is out of date.
+and after editing any hand-written twin. The audit fails if it is out of date. With twelve
+areas it is a little over 1 MB. If it nears 1.5 MB, decide what to leave out of it rather
+than let it grow: the list of sources is the largest single part, and it stays at
+`/fitness/sources.md` either way.
 
 Each twin says the same things as its page. The one addition is an enquiry link,
 `/consulting?via=ai-assistant#contact`, which fills the "Found via" line of the contact
@@ -64,8 +78,8 @@ To turn the second one on, deploy with the alternative config:
 npx wrangler deploy -c wrangler.ai-twins.jsonc
 ```
 
-That deploys the same site with the worker in front of the seven listed pages that have
-a twin; every other request is served as before. To make it permanent, copy the `main`,
+That deploys the same site with the worker in front of the listed pages that have a twin
+(the routes in `run_worker_first`); every other request is served as before. To make it permanent, copy the `main`,
 `vars` and `assets` settings from `wrangler.ai-twins.jsonc` into `wrangler.jsonc`. To go
 back, deploy with the normal `wrangler.jsonc`. Set `AI_TWINS` to `accept` to answer only
 requests that ask for markdown, or `off` to disable it without removing the worker.

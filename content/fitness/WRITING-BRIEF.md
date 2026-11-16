@@ -1,10 +1,11 @@
 # Fitness field guide: how to write an entry
 
 The data behind kitesink.com/fitness lives in this folder: one JSON file per area and
-`claims.json`. `scripts/build_fitness.py` turns them into the page. This file is the
-format and the rules for anyone, person or agent, who adds or changes an entry.
+`claims.json`. `scripts/build_fitness.py` turns them into the hub at `/fitness` and the
+pages under `/fitness/`. This file is the format and the rules for anyone, person or agent,
+who adds or changes an entry.
 
-The page should be a large set of information that is easy to digest, filter and sort.
+The guide should be a large set of information that is easy to digest, filter and sort.
 Every word is written for this site: never copy or closely paraphrase another site's
 sentences, numbering or named frameworks.
 
@@ -49,12 +50,15 @@ questions, no "it's not X, it's Y". A sixteen-year-old lifter and a
 fifty-year-old beginner should both follow it.
 
 ## The file
-One file per area in this folder: `hypertrophy.json`, `powerlifting.json`, `meet.json`,
-`nutrition.json`, `diet.json`, `health.json`, plus `claims.json`. Six more areas are being
-written and are accepted by the validator: `basics.json` (training basics), `technique.json`,
-`conditioning.json`, `recovery.json`, `bodycomp.json` (body composition) and `women.json`.
-The build does not read a new area until it is added to `DOMAINS` in `scripts/build_fitness.py`
-and given a page in `routes.json`.
+One file per area in this folder, twelve of them: `basics.json` (training basics),
+`technique.json`, `hypertrophy.json`, `powerlifting.json`, `meet.json`, `conditioning.json`,
+`recovery.json`, `nutrition.json`, `diet.json`, `bodycomp.json` (body composition),
+`women.json` and `health.json`, plus `claims.json`. All twelve are registered in the build.
+Each area has its own page at `/fitness/<area>`; its terms go to `/fitness/glossary` and
+the claims to `/fitness/claims`, and `/fitness` is the hub that links to every page.
+The build does not read a new area until it is added to `DOMAINS`, `GROUPS` and
+`SOURCE_ORDER` in `scripts/build_fitness.py` and given a page in `routes.json`; `README.md`
+has the full list of steps for adding one.
 
 ```json
 {
@@ -103,7 +107,7 @@ Every entry has: `id` (lowercase-hyphenated, starting with your domain prefix:
 
 ### Claims file (`"domain": "claims"`)
 Each entry: `id` (claim-...), `type` "claim", `title` (the question as people
-ask it, ending with "?"), `domain` (which of the six it belongs to), `tags`
+ask it, ending with "?"), `domain` (which area it belongs to), `tags`
 (1-3 of: protein, calories, timing, training, cardio, supplements, weight-loss,
 muscle-gain, recovery, health, myths, strength, competition, tracking),
 `verdict` (true | mostly | depends | overstated | false), `take` (the short
