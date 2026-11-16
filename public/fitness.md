@@ -1,6 +1,6 @@
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1121 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1120 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -10,7 +10,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Technique](https://kitesink.com/fitness/technique.md): How to do the main lifts, and how to change a habit. 98 entries.
 - [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md): Training for muscle size. 99 entries.
 - [Powerlifting](https://kitesink.com/fitness/powerlifting.md): A bigger squat, bench press and deadlift. 68 entries.
-- [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 51 entries.
+- [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 50 entries.
 - [Conditioning](https://kitesink.com/fitness/conditioning.md): Cardio and intervals, and how they fit with lifting. 83 entries.
 - [Recovery](https://kitesink.com/fitness/recovery.md): Rest, fatigue and coming back after time off. 95 entries.
 

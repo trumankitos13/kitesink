@@ -148,7 +148,7 @@ FILE: https://kitesink.com/fitness.md
 
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1121 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1120 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -158,7 +158,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Technique](https://kitesink.com/fitness/technique.md): How to do the main lifts, and how to change a habit. 98 entries.
 - [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md): Training for muscle size. 99 entries.
 - [Powerlifting](https://kitesink.com/fitness/powerlifting.md): A bigger squat, bench press and deadlift. 68 entries.
-- [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 51 entries.
+- [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 50 entries.
 - [Conditioning](https://kitesink.com/fitness/conditioning.md): Cardio and intervals, and how they fit with lifting. 83 entries.
 - [Recovery](https://kitesink.com/fitness/recovery.md): Rest, fatigue and coming back after time off. 95 entries.
 
@@ -3226,9 +3226,9 @@ Technique and leverages · Intermediate · Thin evidence · Sources: [Wilson 199
 
 **A pull from the floor has no lowering before it. Later reps in a set borrow a stretch from the controlled descent, which the single you pull at a meet never gets.**
 
-McDonald's view is that rep two of a deadlift set often feels easier than rep one because the lowering loads the muscles and tendons and often sets a better start position. That is why many deadlifters stand up and reset between reps, making a set into a run of singles. Lifters who sink the hips quickly and pull straight out of that dip (a dynamic start) are chasing the same stretch; he argues it helps only if the lifter stays in position, and that most let the hips shoot up.
+McDonald's view is that rep two of a deadlift set often feels easier than rep one because the controlled lowering adds a stretch before the pull and often sets a better start position. A meet pull is a single from a dead stop, which is why many deadlifters reset between reps (see the between-reps table in technique). A dynamic start, where the lifter sinks quickly and pulls out of the dip, chases the same stretch; he argues it helps only if the lifter stays in position, and that most let the hips shoot up.
 
-- In meet preparation, let the bar settle fully on the floor before each deadlift rep (McDonald's practice).
+- To make training reps match a meet pull, let the bar settle and reset before each rep (a common deadlifters' practice he describes).
 
 Technique and leverages · Intermediate · Coaching practice · Sources: [McDonald 2016h](https://bodyrecomposition.com/training/determinants-strength-performance)
 
@@ -3246,9 +3246,9 @@ Frequency and volume · Intermediate · Thin evidence · Sources: [Marshall 2011
 
 **His view: a weightlifting max is a split-second explosive effort well short of maximal force, while a squat, bench or deadlift max grinds for seconds and costs far more.**
 
-McDonald reasons that both Olympic lifts are limited by a brief drive near the end of the pull, and by his rough figures a best clean and jerk is only about four fifths of a best deadlift. A max powerlift is hard from start to finish and can be fought for several seconds. He argues the Bulgarian method suited only selected, full-time, drug-assisted elite lifters after years of build-up, and that most lifters who copy it get hurt. These are his judgments; the daily-max evidence entry has the two direct tests.
+McDonald reasons that both Olympic lifts are limited by a brief drive near the end of the pull, and by his rough figures a best clean and jerk is only about four fifths of a best deadlift. A max powerlift is hard from start to finish and can be fought for several seconds. He argues the Bulgarian method suited only selected, full-time, drug-assisted elite lifters after years of build-up, and that most lifters who copy it get hurt. These are his judgments; the daily-max evidence entry has two small direct tests.
 
-- If you train a lift often, keep most sessions well below max and only one or two heavy (McDonald's practice).
+- If you train a lift often, keep most sessions well below max and only one or two truly heavy (McDonald's rule).
 
 Periodisation and peaking · Advanced · Coaching practice · Sources: [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training), [McDonald 2016m](https://bodyrecomposition.com/training/forget-bulgarian-training)
 
@@ -3256,9 +3256,9 @@ Periodisation and peaking · Advanced · Coaching practice · Sources: [McDonald
 
 **Across 13 studies, rehearsing a movement in the mind raised maximal strength more than doing nothing, and physical training raised it more than imagery.**
 
-A 2018 meta-analysis pooled 370 healthy adults. Motor imagery, rehearsing a contraction mentally without moving, moderately improved maximal voluntary strength in arms and legs. Physical practice beat it by a small margin, and imagery added to physical practice showed unclear effects. The authors suggest it to keep muscle function when athletes cannot train at maximal loads. McDonald suggests imagery may come close to real practice; the pooled data say it falls short. The abstract reports maximal voluntary strength in healthy adults and does not say that lifters were studied.
+A 2018 meta-analysis pooled 370 healthy adults. Motor imagery, rehearsing a contraction mentally without moving, moderately improved maximal voluntary strength in arms and legs against no training. Physical practice beat it by a small margin, and adding imagery to physical practice gave no clear gain over physical practice alone. The authors suggest imagery to keep muscle function when athletes cannot train at maximal loads. McDonald writes that it can help strength once correct technique is known. The abstract does not say that lifters were studied.
 
-- During a layoff, add mental rehearsal of your lifts as a supplement, not a replacement.
+- When you cannot train heavy for a while, rehearse your lifts mentally to help hold strength, as the authors suggest.
 
 Technique and leverages · Beginner · Some support · Sources: [Paravlic 2018](https://doi.org/10.1007/s40279-018-0874-8), [McDonald 2016i](https://bodyrecomposition.com/training/determinants-strength-performance-2)
 
@@ -3266,25 +3266,25 @@ Technique and leverages · Beginner · Some support · Sources: [Paravlic 2018](
 
 **McDonald's practice is to open sessions in a muscle-building block with a heavy single or triple at about 80 to 90% of max, then do the volume work.**
 
-His view is that strength athletes who drop all heavy lifting during a hypertrophy phase lose their feel for near-max weights quickly, and that a small dose of heavy work holds it. He treats volume and intensity blocks as two steps: first add muscle to raise the ceiling, then train the nervous system to use it. This is coaching practice from his article. The minimum-dose entry gives data on how little heavy work keeps 1RM rising.
+His view is that strength athletes who drop all heavy lifting during a hypertrophy phase lose top-end strength quickly, and that a small dose of heavy work holds it. He treats volume and intensity blocks as two steps: first add muscle to raise the ceiling, then train the nervous system to use it. This is coaching practice from his article. The minimum-dose entry gives data on how little heavy work keeps 1RM rising.
 
 - Work up to one single or triple at about 80 to 90% before the volume sets (McDonald's practice).
 
 Periodisation and peaking · Intermediate · Coaching practice · Sources: [McDonald 2016i](https://bodyrecomposition.com/training/determinants-strength-performance-2), [Androulakis-Korakakis 2021](https://doi.org/10.3389/fspor.2021.713655)
 
-### The two small studies of daily maxing point in opposite directions
+### Two small studies of daily maxing point in opposite directions
 
-**Three lifters who maxed the squat daily for five weeks gained 2 to 11%. Eleven trained men lifting 100% of 1RM daily on a squat machine lost about 12 kg in two weeks.**
+**Three lifters who maxed the squat daily for five weeks gained 2 to 11%. Eleven trained men lifting 100% of 1RM daily on a squat machine lost about 12 kg (27 lb) in two weeks.**
 
-In a case series, two powerlifters and one weightlifter worked up to a squat 1RM every day for 35 days, plus back-off sets; on day 37 they were 5, 13.5 and 21 kg stronger, with no control group. In a controlled study, 11 weight-trained men squatted on a machine at 100% of 1RM daily for two weeks; 1RM fell by a mean 12.2 kg and other force measures dropped, while a light once-weekly group barely changed. Neither abstract reports injuries.
+In a case series, two powerlifters and one weightlifter worked up to a squat 1RM every day for 35 days, plus back-off sets; on day 37 they were 5, 13.5 and 21 kg (11, 30 and 46 lb) stronger, with no control group. In a controlled study, 11 weight-trained men squatted on a machine at 100% of 1RM daily for two weeks; 1RM fell by a mean 12.2 kg (27 lb) and other force measures dropped, while a light once-weekly group barely changed. Neither study was built to test safety; see the daily-max mistake entry for the injury concern.
 
 Periodisation and peaking · Advanced · Thin evidence · Sources: [Zourdos 2016a](https://doi.org/10.20960/nh.129), [Fry 1994](https://doi.org/10.1249/00005768-199409000-00015)
 
-### About half the spread in strength between untrained people is inherited
+### Genes and environment count about equally in strength differences between untrained people
 
-**Heritability studies put the inherited share of differences in strength at about 0.5. That describes differences between people, not a fixed ceiling for any one lifter.**
+**Heritability estimates for strength average about 0.5. That describes differences within a group, not a fixed ceiling for any one lifter.**
 
-A 2017 meta-analysis pooled 58 measurements from 24 studies of healthy people in an untrained state. Heritability averaged 0.52, similar for grip, isometric, isotonic and isokinetic strength and for jumping (0.49 to 0.56), though results varied widely between studies; it fell with age. These are baseline strength tests, not gains from training or meet totals. McDonald's view is that genes set a limit that work can approach but not pass; the response-spread entry covers trainability.
+A 2017 meta-analysis pooled 58 measurements from 24 studies of healthy people in an untrained state. Heritability averaged 0.52, similar for grip, isometric, isotonic and isokinetic strength and for jumping (0.49 to 0.56), though results varied widely between studies. The authors read this as genetic and environmental influence being comparable, with environment counting for more at older ages. These are baseline strength tests, not gains from training or meet totals. McDonald's view is that genes set a limit that work cannot pass; the response-spread entry covers trainability.
 
 Talent and practice · Intermediate · Some support · Sources: [Zempo 2017](https://doi.org/10.1111/sms.12804), [McDonald 2011e](https://bodyrecomposition.com/training/can-hard-work-beat-talent)
 
@@ -3292,7 +3292,7 @@ Talent and practice · Intermediate · Some support · Sources: [Zempo 2017](htt
 
 **In 585 men and women who trained one arm on the same 12-week programme, 1RM gains ran from 0 to 250%, and some barely changed muscle size.**
 
-Subjects at eight centres followed the same progressive elbow-flexor programme. Biceps size changed by -2 to +59% and 1RM by 0 to +250% (0 to 10.2 kg). Women gained more strength in relative terms, and men slightly more size. It is one small muscle group, so it says nothing direct about the squat, bench or deadlift. McDonald argues that spreads like this in supervised trials reflect biology rather than effort. The hypertrophy guide's responder entries cover muscle growth.
+Subjects at eight centres followed the same progressive elbow-flexor programme. Biceps size changed by -2 to +59% and 1RM by 0 to +250% (0 to 10.2 kg, 0 to 22 lb). Women gained more strength in relative terms, and men slightly more size. It is one small muscle group, so it says nothing direct about the squat, bench or deadlift. McDonald argues that spreads like this in supervised trials reflect biology rather than effort. The hypertrophy guide's responder entries cover muscle growth.
 
 - Compare your lifts with your own past numbers, not with another lifter's rate (McDonald's advice).
 
@@ -3302,9 +3302,9 @@ Talent and practice · Beginner · Thin evidence · Sources: [Hubal 2005](https:
 
 **McDonald's view is that warm-up reps done with full attention to position and bar path add up to a large amount of practice over a year.**
 
-Every lifter does warm-up sets anyway. McDonald argues that most people stop paying attention once a lift feels competent, and that this is where their technique stops improving. Watching one point per set, such as elbow position or where the bar touches, turns those light reps into deliberate practice at no extra cost in fatigue. It is coaching practice, not a trial result; the technique guide's spacing entry covers how often to practise.
+Every lifter does warm-up sets anyway. McDonald argues that most people stop paying attention once a lift feels competent, and that this is where their technique stops improving. Watching a point such as elbow position, bar path or where the bar touches turns those light reps into deliberate practice at little extra cost. It is coaching practice, not a trial result; the technique guide's spacing entry covers how often to practise.
 
-- Pick one technical point to watch on each warm-up set (McDonald's practice).
+- On warm-up sets, watch a point such as elbow position, bar path or where the bar touches (McDonald's practice).
 
 Technique and leverages · Beginner · Coaching practice · Sources: [McDonald 2009h](https://bodyrecomposition.com/training/becoming-an-expert)
 
@@ -3362,11 +3362,11 @@ Periodisation and peaking · Intermediate · Coaching practice · Sources: [Grgi
 
 ### Copying weightlifters' daily maxes into the squat, bench and deadlift
 
-**McDonald's view is that grinding near-max singles day after day loads joints and tendons faster than they adapt. He reports injuries when lifters try it without years of build-up.**
+**McDonald's view is that near-max singles in the powerlifts every day break most lifters who try them without years of build-up, and that connective tissue is usually what gives out.**
 
-The injury claim is coaching experience, not a trial result. Tendons and other connective tissue adapt over months to years (see the tendon entry in basics). The one controlled trial measured strength, not injury: two weeks of daily machine squats at 100% of 1RM cut trained men's 1RM by about 12 kg (see the daily-max evidence entry). Frequency alone is not the issue; see the six-day and elite-loads entries in recovery.
+The injury claim is coaching experience, not a trial result. Tendons adapt more slowly than strength rises (see the tendon entry in basics). One controlled trial measured strength, not injury: two weeks of daily machine squats at 100% of 1RM cut trained men's 1RM by about 12 kg (27 lb) (see the daily-max evidence entry). Frequency alone is not the issue; see the six-day and elite-loads entries in recovery.
 
-- Plan any block of frequent near-max lifting with an experienced coach.
+- Do not take up daily maxing on your own; McDonald advises most lifters against it, and any trial of it needs an experienced coach.
 - Have pain that changes how you lift checked by a clinician before you train through it.
 
 Recovery and injuries · Intermediate · Coaching practice · Sources: [McDonald 2016m](https://bodyrecomposition.com/training/forget-bulgarian-training), [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training), [Fry 1994](https://doi.org/10.1249/00005768-199409000-00015)
@@ -3434,16 +3434,16 @@ Coaching practice
 
 - **Accessory exercise**: An exercise outside the three competition lifts, chosen to build a muscle or fix a weak point.
 - **Antagonist coactivation**: Firing of the muscle that opposes a movement, such as the hamstrings in knee extension. It steadies the joint but costs net force. In one small study of sedentary men training knee extension isometrically, it fell by a fifth in a week.
-- **Bulgarian method**: A weightlifting system associated with coach Ivan Abadjaev: about six exercises, mostly singles to a daily max, spread over several short sessions a day. It was built for full-time elite lifters.
-- **Daily max**: The heaviest single a lifter can make on that particular day, which may sit above or below their best ever. Working up to it in singles is the core of the Bulgarian weightlifting method.
+- **Bulgarian method**: A weightlifting system associated with coach Ivan Abadjaev: about six exercises, mostly singles to a daily max, over several short sessions a day. McDonald says it suited only full-time, drug-assisted elite lifters and broke most of them.
+- **Daily max**: The heaviest single a lifter can make on that particular day, which may sit above or below their best ever. Working up to it is the core of the Bulgarian weightlifting method, which McDonald says broke most lifters who tried it.
 - **Daily undulating periodisation (DUP)**: A plan that varies rep ranges and loads between sessions within the week, such as heavy, medium and light days.
-- **Deliberate practice**: Effortful practice aimed at a specific weakness, often set by a coach, as opposed to repetition on autopilot. A 2016 meta-analysis found it explained 18% of performance differences in sport, and 1% among elite athletes.
+- **Deliberate practice**: Effortful practice aimed at a specific weakness, often set by a coach, as opposed to repetition on autopilot. A 2016 meta-analysis found it accounted for 18% of the variance in sports performance, and 1% among elite athletes.
 - **Deload**: A planned lighter week or block, with less volume or load, to clear fatigue between harder blocks.
 - **One-repetition maximum (1RM)**: The heaviest weight you can lift once with legal technique; the base for percentage programming.
 - **Rating of perceived exertion (RPE)**: A 1 to 10 rating of how hard a set was; in strength training it is tied to how many repetitions were left.
 - **Repetitions in reserve (RIR)**: How many more clean repetitions you could have done when the set ended; 2 RIR means two more were possible.
 - **Sticking point**: The position in a lift where the bar slows most or where failures happen.
-- **Stretch-shortening cycle (SSC)**: A muscle stretched under load and then shortened at once makes more force than one starting from still. Tendon recoil, reflexes and extra time to build force all add to it, and a pause lets it fade.
+- **Stretch-shortening cycle (SSC)**: A muscle stretched under load and then shortened at once makes more force than one starting from still. Elastic recoil of tendons and extra time to build force are the usual explanations, and a pause lets the effect fade.
 - **Taper (peaking)**: A planned drop in training stress, mostly volume, in the last days or weeks before a meet so fatigue clears and strength shows.
 - **Velocity-based training (VBT)**: Setting load or stopping sets from measured bar speed, using a device that reports mean concentric velocity in metres per second.
 - **Working max (training max)**: A weight you can repeat on a normal day, often set below a true max, and used as the base for training percentages.
@@ -3529,43 +3529,34 @@ Federation and entry · Beginner · Rulebook · Sources: [USA Powerlifting 2026]
 
 **A meet takes away the rack, the mirror and your usual gym. McDonald has lifters practise the commands for weeks and train some sets with those cues removed.**
 
-This is McDonald's coaching practice, not a study result. He starts command practice about six weeks before a meet, three at the least, with a partner sitting where the chief referee will be and giving the words and arm signals. Some lighter squats are done facing away from the mirror, so the lifter learns head position and depth by feel. He also wants someone who knows legal depth to judge squats honestly, as gym depth is often too high. Nearer the meet, a weekly run-through of the three lifts in meet order under full commands ties it together.
+This is McDonald's coaching practice, not a study result. He starts command practice about six weeks before a meet, three at the least, with a partner where the chief referee will sit giving the words and arm signals. On a lighter squat day the lifter faces away from the mirror, or covers it, to learn depth by feel, never in a rack that means walking backwards to re-rack. A weekly run-through of the three lifts in meet order also gets the bench used to following squats, which he thinks tire the shoulder girdle.
 
-- From about six weeks out, have a partner give the referee's words and arm signals on top sets.
-- Do some squat sets facing away from the mirror.
+- From about six weeks out, have a partner give the referee's words and arm signals on top sets (McDonald's practice).
+- On a lighter squat day, face away from the mirror or cover it (McDonald's practice).
+- Have someone who knows legal squat depth judge your squats honestly (McDonald's advice).
 
 Training and prep · Beginner · Coaching practice · Sources: [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet)
 
 ### Plan your bench lift-off: who may hand you the bar depends on the federation
 
-**IPF rules let the platform spotter/loaders give you a lift-off, which must reach locked arms' length. The USPA also allows your own lift-off person, who must then leave the platform.**
+**Under IPF rules the platform spotter/loaders may unrack the bar for you, and must bring it to arm's length. The USPA also allows your own lift-off person, who must then leave the platform.**
 
-Under IPF rules you may take the bar out yourself or enlist the spotter/loaders, and an assisted lift-off must bring the bar to arm's length. The USPA allows a personal lift-off person who steps away once the lift-off is done; only the official spotters may spot after that. Either way, you then lock the elbows and wait for 'Start'. McDonald's view is that an unfamiliar hand-off that puts the bar in the wrong place or loosens your set-up is worse than none.
+IPF rules let you take the bar out yourself or enlist the spotter/loaders, and an assisted lift-off must bring the bar to arm's length. USPA rules allow a personal lift-off person who steps away once it is done; only the official spotters may spot after that. Either way, you then lock the elbows and wait for 'Start'. Rules differ between federations and change, so check your federation's current rulebook. McDonald's view is that an unfamiliar hand-off that puts the bar in the wrong place or loosens your set-up is worse than none.
 
-- Before the attempt, tell the spotter your count and where you want the bar.
+- Before the attempt, tell the spotter your count and where you want the bar (McDonald's advice).
 - If you will unrack alone at the meet, unrack alone in training too (McDonald's practice).
 
 Platform and lights · Beginner · Rulebook · Sources: [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet)
-
-### At a meet the bench follows heavy squats, so train them together at times
-
-**McDonald's view is that the shoulders and upper back are already tired from squatting when the bench starts, which, with the pause, pulls meet benches below gym benches.**
-
-Many lifters train the bench fresh on its own day. On meet day it follows a full squat session, and McDonald argues that holding heavy squats leaves the shoulder girdle fatigued. His practice is to put squat and bench in the same session at times before a meet, and to choose a lighter first-meet bench opener than squat opener (see the attempts table). This is his coaching experience, not a measured result.
-
-- In the weeks before a meet, bench after squatting in some sessions (McDonald's practice).
-
-Training and prep · Intermediate · Coaching practice · Sources: [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet)
 
 ### A light run-through of the three lifts a day or two out, not a full week off
 
 **McDonald's practice is a short session one or two days before the meet: squat, bench and deadlift in order, up to the last warm-up, under full commands.**
 
-He uses it to keep lifters loose and sharp, to rehearse commands and the timed warm-up, and to finish on easy, clean lifts. His view is that raw lifters who take the whole final week off often feel flat. The loads stay light, so it fits the taper step's pattern of little hard work in the last days; surveyed lifters rested about 2.8 days on average, and this is one alternative. A priming review found limited evidence for short heavy (85% of 1RM or more) or ballistic sessions within 48 hours, which is not quite this lighter session.
+He uses it to keep lifters loose and sharp, to rehearse commands and the timed warm-up, and to finish on easy, clean lifts. His view is that raw lifters who take the whole final week off often feel flat. The loads stay light, so it fits the taper step's pattern of little hard work in the last days. A priming review that he links found limited evidence for short heavy (85% of 1RM or more) or ballistic sessions within 48 hours; the abstract names heavy or ballistic work, not a light session like this one.
 
 - Stop at the weight you plan as your last warm-up on meet day (McDonald's practice).
 
-Training and prep · Intermediate · Coaching practice · Sources: [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet), [Travis 2021a](https://doi.org/10.1519/JSC.0000000000004177), [Harrison 2019](https://doi.org/10.1007/s40279-019-01136-3)
+Training and prep · Intermediate · Coaching practice · Sources: [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet), [Harrison 2019](https://doi.org/10.1007/s40279-019-01136-3)
 
 ## Common mistakes
 
@@ -3613,14 +3604,13 @@ Weigh-in and food · Beginner · Coaching practice · Sources: [Henselmans 2022]
 
 ### Moving before the chief referee's command
 
-**Lowering the bench before 'Start', pressing before 'Press' or racking before 'Rack' fails the lift, however easily the weight went up.**
+**Under IPF and USPA rules, lowering the bench before 'Start', pressing before 'Press' or racking before 'Rack' fails the lift, however easily the weight went up.**
 
-IPF rules list failure to follow the chief referee's signals at the start, during or completion of the bench press, and at the start or completion of the squat, as causes for turning a lift down. McDonald's view is that these are the commonest first-meet misses on the bench: nerves make a short pause feel long, and gym habits such as touch-and-go reps or racking straight from lockout carry onto the platform. The commands table lists each word.
+Both rulebooks list failure to observe the referee's signals as a cause for turning down a bench press, and for the start or finish of a squat. Rules differ between federations and change, so check your federation's current rulebook. McDonald's view is that these are the commonest first-meet misses on the bench: nerves make a short pause feel long, and gym habits such as touch-and-go reps or racking straight from lockout carry onto the platform. The commands table lists each word.
 
 - At lockout, hold the bar still and wait for 'Rack' before moving toward the hooks.
-- Have a partner call the commands on your top sets in the last weeks (McDonald's practice).
 
-Platform and lights · Beginner · Rulebook · Sources: [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet)
+Platform and lights · Beginner · Rulebook · Sources: [IPF 2026b](https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf), [USPA 2025](https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet)
 
 ## In order
 
@@ -9825,7 +9815,7 @@ The 186 terms the KiteSink fitness field guide uses, in plain words, A to Z. Eac
 - **BMR and RMR** (Body composition): Basal metabolic rate is the lowest energy use the body can run on, measured under strict conditions. Resting metabolic rate is measured awake, fasted and lying quietly, and reads a little higher. Most labs and equations give RMR. Sources: [McDonald 2007g](https://bodyrecomposition.com/fat-loss/4-determinants-of-metabolic-rate)
 - **Body composition** (Body composition): What your body weight is made of. The simplest model has two parts. One is fat. The other, fat-free mass, is everything else: muscle, bone, organs, blood, water and stored carbohydrate. Sources: [McDonald 2008ai](https://bodyrecomposition.com/fat-loss/a-guide-to-body-composition)
 - **Bomb out** (Meet day): To miss all three attempts on a lift; in a full-power meet that usually means no total.
-- **Bulgarian method** (Powerlifting): A weightlifting system associated with coach Ivan Abadjaev: about six exercises, mostly singles to a daily max, spread over several short sessions a day. It was built for full-time elite lifters. Sources: [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training), [McDonald 2016m](https://bodyrecomposition.com/training/forget-bulgarian-training)
+- **Bulgarian method** (Powerlifting): A weightlifting system associated with coach Ivan Abadjaev: about six exercises, mostly singles to a daily max, over several short sessions a day. McDonald says it suited only full-time, drug-assisted elite lifters and broke most of them. Sources: [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training), [McDonald 2016m](https://bodyrecomposition.com/training/forget-bulgarian-training)
 - **Calorie partitioning** (Body composition): Where energy goes or comes from when intake changes: how much of a surplus builds muscle and how much is stored as fat, and how much of a deficit is met from fat and how much from lean tissue. Sources: [McDonald 2008i](https://bodyrecomposition.com/muscle-gain/a-guide-to-calorie-partitioning)
 - **Chief referee** (Meet day): The referee who gives the commands on the platform; two side referees also judge each lift.
 - **Classic (raw)** (Meet day): A division with a non-supportive singlet and no supportive suits, shirts or knee wraps; belt, knee sleeves and wrist wraps are allowed within limits.
@@ -9833,11 +9823,11 @@ The 186 terms the KiteSink fitness field guide uses, in plain words, A to Z. Eac
 - **Compound and isolation exercises** (Training basics): A compound (multi-joint) exercise moves two or more joints and works several muscles, as in a squat or row. An isolation (single-joint) exercise moves one joint, as in a leg extension or curl. Both exist as free-weight and machine versions.
 - **Concentric, isometric and eccentric failure** (Hypertrophy): Being unable to lift the weight, to hold it still, or to lower it under control. A muscle can lower more than it holds and hold more than it lifts, so they come in that order. Nearly all sets stop at concentric failure. Sources: [McDonald 2020j](https://bodyrecomposition.com/training/muscular-failure-weight-room-part-1)
 - **Concurrent periodisation** (Hypertrophy): Training several qualities, such as speed, maximal strength and size, every week, shifting which one leads. Often called conjugate periodisation, which McDonald says is not what that term first meant. Sources: [McDonald 2007h](https://bodyrecomposition.com/training/periodization-for-bodybuilders)
-- **Daily max** (Powerlifting): The heaviest single a lifter can make on that particular day, which may sit above or below their best ever. Working up to it in singles is the core of the Bulgarian weightlifting method. Sources: [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training)
+- **Daily max** (Powerlifting): The heaviest single a lifter can make on that particular day, which may sit above or below their best ever. Working up to it is the core of the Bulgarian weightlifting method, which McDonald says broke most lifters who tried it. Sources: [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training)
 - **Daily undulating periodisation (DUP)** (Powerlifting): A plan that varies rep ranges and loads between sessions within the week, such as heavy, medium and light days.
 - **De novo lipogenesis (DNL)** (Body composition): The making of new fat from carbohydrate. In people it is a minor route on ordinary diets and becomes large only when glycogen stores are full during heavy, sustained carbohydrate overfeeding. Sources: [Acheson 1988](https://doi.org/10.1093/ajcn/48.2.240)
 - **Delayed-onset muscle soreness (DOMS)** (Recovery): Muscle tenderness and stiffness that builds in the day or two after unaccustomed or eccentric-heavy exercise and fades over several days. It is most common early in a programme and after a layoff. Sources: [Cheung 2003](https://doi.org/10.2165/00007256-200333020-00005), [McDonald 2015m](https://bodyrecomposition.com/training/doms-muscle-growth)
-- **Deliberate practice** (Powerlifting): Effortful practice aimed at a specific weakness, often set by a coach, as opposed to repetition on autopilot. A 2016 meta-analysis found it explained 18% of performance differences in sport, and 1% among elite athletes. Sources: [Macnamara 2016](https://doi.org/10.1177/1745691616635591), [McDonald 2009h](https://bodyrecomposition.com/training/becoming-an-expert)
+- **Deliberate practice** (Powerlifting): Effortful practice aimed at a specific weakness, often set by a coach, as opposed to repetition on autopilot. A 2016 meta-analysis found it accounted for 18% of the variance in sports performance, and 1% among elite athletes. Sources: [Macnamara 2016](https://doi.org/10.1177/1745691616635591), [McDonald 2009h](https://bodyrecomposition.com/training/becoming-an-expert)
 - **Deload** (Hypertrophy): A period of reduced training stress meant to lower fatigue and prepare you for later training, as defined by a coach consensus. Sources: [Bell 2023](https://doi.org/10.1186/s40798-023-00633-0)
 - **Deload** (Powerlifting): A planned lighter week or block, with less volume or load, to clear fatigue between harder blocks.
 - **Detraining** (Recovery): The partial or complete loss of training adaptations when training stops or falls too low. Strength, power and muscle size fall at different rates, and the losses grow with the length of the break. Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047)
@@ -9958,7 +9948,7 @@ The 186 terms the KiteSink fitness field guide uses, in plain words, A to Z. Eac
 - **Static, dynamic and ballistic stretching** (Training basics): Static stretching holds a muscle at length without moving. Dynamic stretching moves a joint under control through a range that grows with each rep. Ballistic stretching flings the limb through the range and has fallen out of favour. Sources: [McDonald 2009au](https://bodyrecomposition.com/training/warming-up-for-the-weight-room)
 - **Sticking point** (Powerlifting): The position in a lift where the bar slows most or where failures happen.
 - **Strategic deconditioning** (Hypertrophy): A planned week or so off, used in one popular plan to undo the repeated bout effect so muscle responds afresh. McDonald's view is that it fails. In an indirect test, 14 young men taking three-week breaks grew as much as continuous trainers. Sources: [McDonald 2008a](https://bodyrecomposition.com/muscle-gain/popular-hypertrophy-programs), [Ogasawara 2013](https://doi.org/10.1007/s00421-012-2511-9)
-- **Stretch-shortening cycle (SSC)** (Powerlifting): A muscle stretched under load and then shortened at once makes more force than one starting from still. Tendon recoil, reflexes and extra time to build force all add to it, and a pause lets it fade. Sources: [Wilson 1991](https://doi.org/10.1249/00005768-199103000-00016), [McDonald 2016h](https://bodyrecomposition.com/training/determinants-strength-performance)
+- **Stretch-shortening cycle (SSC)** (Powerlifting): A muscle stretched under load and then shortened at once makes more force than one starting from still. Elastic recoil of tendons and extra time to build force are the usual explanations, and a pause lets the effect fade. Sources: [Wilson 1991](https://doi.org/10.1249/00005768-199103000-00016), [McDonald 2016h](https://bodyrecomposition.com/training/determinants-strength-performance)
 - **Strides** (Conditioning): Short, relaxed accelerations of about 50 to 100 m, or around 20 seconds, at faster than race pace, each followed by a minute or more of rest. Runners do 5 to 10 to practise speed and good form without building fatigue. Sources: [McDonald 2009af](https://bodyrecomposition.com/training/endurance-training-method-4-part-2)
 - **Subacromial impingement** (Technique): Pinching of tendons and other soft tissue between the top of the upper arm bone and the bony roof of the shoulder as the arm is raised. A clinician makes the diagnosis. Sources: [Kolber 2014](https://doi.org/10.1519/jsc.0000000000000250)
 - **Subcutaneous, visceral and ectopic fat** (Body composition): Subcutaneous fat lies under the skin and can be pinched. Visceral fat surrounds the abdominal organs. Ectopic fat is fat stored inside organs such as the liver. Visceral and ectopic fat carry the most cardiometabolic risk. Sources: [Neeland 2019](https://doi.org/10.1016/s2213-8587(19)30084-1), [McDonald 2010h](https://bodyrecomposition.com/fat-loss/how-we-get-fat)
@@ -11032,7 +11022,7 @@ What changed after an entry was published, newest first.
 - McDonald L (2020). What is Muscular Failure: The Weight Room Part 1. *Body Recomposition*. https://bodyrecomposition.com/training/muscular-failure-weight-room-part-1 (Article, cited 1×)
 - McDonald L (2020). What is Muscular Failure: The Weight Room Part 3. *Body Recomposition*. https://bodyrecomposition.com/training/what-is-muscular-failure-the-weight-room-part-3 (Article, cited 1×)
 - McDonald L (2020). You Must Squat. *Body Recomposition*. https://bodyrecomposition.com/training/you-must-squat-dsfps-2 (Article, cited 3×)
-- McDonald L (2021). A 6 and a Half Tip Guide to a Great First Powerlifting Meet. *Body Recomposition*. https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet (Article, cited 11×)
+- McDonald L (2021). A 6 and a Half Tip Guide to a Great First Powerlifting Meet. *Body Recomposition*. https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet (Article, cited 10×)
 - McDonald L (2021). Is Fasted Cardio Useless for Fat Loss: Part 2. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2 (Article, cited 3×)
 - McDonald L (2024). Is Fasted Cardio Useless for Fat Loss?. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss (Article, cited 2×)
 - McEwen B (2000). Allostasis and Allostatic Load Implications for Neuropsychopharmacology. *Neuropsychopharmacology* 22(2):108-124. https://doi.org/10.1016/s0893-133x(99)00129-3 (Review, cited 1×)
@@ -11264,7 +11254,7 @@ What changed after an entry was published, newest first.
 - Thomas DT, Erdman KA, Burke LM (2016). Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance. *Journal of the Academy of Nutrition and Dietetics* 116(3):501-528. https://doi.org/10.1016/j.jand.2015.12.006 (Position stand, cited 1×)
 - Tipton KD, Wolfe RR (2004). Protein and amino acids for athletes. *Journal of Sports Sciences* 22(1):65-79. https://doi.org/10.1080/0264041031000140554 (Review, cited 1×)
 - Tomiyama AJ, Mann T, Vinas D et al. (2010). Low Calorie Dieting Increases Cortisol. *Psychosomatic Medicine* 72(4):357-364. https://doi.org/10.1097/psy.0b013e3181d9523c (Randomised trial, cited 2×)
-- Travis SK, Pritchard HJ, Mujika I et al. (2021). Characterizing the Tapering Practices of United States and Canadian Raw Powerlifters. *Journal of Strength and Conditioning Research* 35(12S):S26-S35. https://doi.org/10.1519/JSC.0000000000004177 (Reference, cited 5×)
+- Travis SK, Pritchard HJ, Mujika I et al. (2021). Characterizing the Tapering Practices of United States and Canadian Raw Powerlifters. *Journal of Strength and Conditioning Research* 35(12S):S26-S35. https://doi.org/10.1519/JSC.0000000000004177 (Reference, cited 4×)
 - Travis SK, Zourdos MC, Bazyler CD (2021). Weight Selection Attempts of Elite Classic Powerlifters. *Perceptual and Motor Skills* 128(1):507-521. https://doi.org/10.1177/0031512520967608 (Cohort study, cited 7×)
 - Travis SK, Mujika I, Zwetsloot KA et al. (2022). The Effects of 3 vs. 5 Days of Training Cessation on Maximal Strength. *Journal of Strength & Conditioning Research* 36(3):633-640. https://doi.org/10.1519/JSC.0000000000004183 (Trial, cited 4×)
 - Treister‐Goltzman Y, Peleg R (2021). Melatonin and the health of menopausal women: A systematic review. *Journal of Pineal Research* 71(2). https://doi.org/10.1111/jpi.12743 (Systematic review, cited 2×)
@@ -11283,7 +11273,7 @@ What changed after an entry was published, newest first.
 - Urban LE, McCrory MA, Dallal GE et al. (2011). Accuracy of Stated Energy Contents of Restaurant Foods. *JAMA* 306(3). https://doi.org/10.1001/jama.2011.993 (Reference, cited 2×)
 - Urban LE, Weber JL, Heyman MB et al. (2016). Energy Contents of Frequently Ordered Restaurant Meals and Comparison with Human Energy Requirements and US Department of Agriculture Database Information: A Multisite Randomized Study. *Journal of the Academy of Nutrition and Dietetics* 116(4):590-598.e6. https://doi.org/10.1016/j.jand.2015.11.009 (Reference, cited 1×)
 - USA Powerlifting (2026). USA Powerlifting Rulebook, version 2026.2. Version 2026.2, updated 9 February 2026, in effect 1 January 2026. https://www.usapowerlifting.com/technical/ (Rulebook, cited 18×)
-- United States Powerlifting Association (2025). USPA Technical Rules 2025v1. 2025v1, dated 24 March 2025 (the file linked from uspa.net/rulebook). https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf (Rulebook, cited 12×)
+- United States Powerlifting Association (2025). USPA Technical Rules 2025v1. 2025v1, dated 24 March 2025 (the file linked from uspa.net/rulebook). https://uspa.net/wp-content/uploads/2025/03/USPA-Rulebook-March-24th-2025.pdf (Rulebook, cited 13×)
 - van den Hoek DJ, Beaumont PL, van den Hoek AK et al. (2024). Normative data for the squat, bench press and deadlift exercises in powerlifting: Data from 809,986 competition entries. *Journal of Science and Medicine in Sport* 27(10):734-742. https://doi.org/10.1016/j.jsams.2024.07.005 (Cohort study, cited 3×)
 - van der Merwe J, Brooks NE, Myburgh KH (2009). Three Weeks of Creatine Monohydrate Supplementation Affects Dihydrotestosterone to Testosterone Ratio in College-Aged Rugby Players. *Clinical Journal of Sport Medicine* 19(5):399-404. https://doi.org/10.1097/JSM.0b013e3181b8b52f (Randomised trial, cited 1×)
 - van der Ploeg G, Brooks A, Withers R et al. (2001). Body composition changes in female bodybuilders during preparation for competition. *European Journal of Clinical Nutrition* 55(4):268-277. https://doi.org/10.1038/sj.ejcn.1601154 (Cohort study, cited 1×)
