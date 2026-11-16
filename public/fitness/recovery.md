@@ -254,7 +254,7 @@ McDonald's survey of sports comes out the same nearly everywhere: most work is e
 - Count the hard sessions each lift or muscle gets in a week, and cap it at two.
 - Put at least one easier day between hard sessions for the same lift.
 
-Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2008s](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Foster 1998](https://doi.org/10.1097/00005768-199807000-00023)
+Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2008r](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Foster 1998](https://doi.org/10.1097/00005768-199807000-00023)
 
 ### Set the light and medium days as a share of the heavy day's weight
 
@@ -591,7 +591,7 @@ McDonald's observation is that most people try to go hard too often and land at 
 - Mark each session hard, medium or easy in your plan, and check that all three appear.
 - Follow two or three hard weeks with an easier one.
 
-Hard, easy and medium days · Beginner · Coaching practice · Sources: [McDonald 2008s](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
+Hard, easy and medium days · Beginner · Coaching practice · Sources: [McDonald 2008r](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
 
 ### Taking the light and medium days to failure
 

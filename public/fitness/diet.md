@@ -309,7 +309,7 @@ Among 54,517 people in a weight-loss programme and a population sample of 1,838 
 - Plan some favourite foods into the week instead of banning them.
 - If food rules or binges feel out of your control, see a doctor or an eating disorder specialist.
 
-Hunger and fullness · Beginner · Some support · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [Stewart 2002](https://doi.org/10.1006/appe.2001.0445), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters)
+Hunger and fullness · Beginner · Some support · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [Stewart 2002](https://doi.org/10.1006/appe.2001.0445), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters)
 
 ### When the trend says change, move calories about 10 percent and wait again
 
@@ -320,7 +320,7 @@ Lifts falling with sound training, or loss well beyond the plan, means ease off:
 - Write down the weekly loss you expect before you start.
 - Change one thing at a time.
 
-Scale, plateaus and metabolism · Intermediate · Coaching practice · Sources: [McDonald 2009e](https://bodyrecomposition.com/fat-loss/adjusting-the-diet), [McDonald 2008q](https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories), [McDonald 2007d](https://bodyrecomposition.com/fat-loss/how-detail-oriented-should-you-be), [McDonald 2008n](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
+Scale, plateaus and metabolism · Intermediate · Coaching practice · Sources: [McDonald 2009e](https://bodyrecomposition.com/fat-loss/adjusting-the-diet), [McDonald 2008p](https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories), [McDonald 2007d](https://bodyrecomposition.com/fat-loss/how-detail-oriented-should-you-be), [McDonald 2008n](https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes)
 
 ### Holiday weight gain is small on average, but it tends to stay
 
@@ -341,7 +341,7 @@ In randomised trials in adults, breakfast eaters weighed 0.44 kg more (7 trials)
 
 - Eat breakfast if it keeps you full to lunch, and skip it if it does not.
 
-Diet type and meal pattern · Beginner · Some support · Sources: [Sievert 2019](https://doi.org/10.1136/bmj.l42), [McDonald 2008t](https://bodyrecomposition.com/research/meal-frequency-and-energy-balance), [McDonald 2015p](https://bodyrecomposition.com/fat-loss/meal-frequency-and-meal-patterning)
+Diet type and meal pattern · Beginner · Some support · Sources: [Sievert 2019](https://doi.org/10.1136/bmj.l42), [McDonald 2008s](https://bodyrecomposition.com/research/meal-frequency-and-energy-balance), [McDonald 2015p](https://bodyrecomposition.com/fat-loss/meal-frequency-and-meal-patterning)
 
 ### Planned time off the diet did not cut total weight loss in a trial
 
@@ -566,7 +566,7 @@ All-or-nothing rules make a small lapse feel like failure. McDonald describes a 
 - After an unplanned treat, carry on with the next meal, or trim it slightly.
 - Call planned off-plan meals free meals, and plan them in advance.
 
-Hunger and fullness · Beginner · Coaching practice · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters), [McDonald 2009a](https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger)
+Hunger and fullness · Beginner · Coaching practice · Sources: [Westenhoefer 1999](https://doi.org/10.1002/(sici)1098-108x(199907)26:1<53::aid-eat7>3.0.co;2-n), [McDonald 2008w](https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters), [McDonald 2009a](https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger)
 
 ### Dropping whole fruit from a fat-loss diet
 

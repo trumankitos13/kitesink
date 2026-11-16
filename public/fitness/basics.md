@@ -439,7 +439,7 @@ McDonald's point is that most arguments about intensity come from people using o
 
 - Log the weight and reps, then add how many reps you had left.
 
-Intensity and load · Intermediate · Coaching practice · Sources: [McDonald 2008aj](https://bodyrecomposition.com/training/what-is-training-intensity), [Helms 2016](https://doi.org/10.1519/SSC.0000000000000218)
+Intensity and load · Intermediate · Coaching practice · Sources: [McDonald 2008ai](https://bodyrecomposition.com/training/what-is-training-intensity), [Helms 2016](https://doi.org/10.1519/SSC.0000000000000218)
 
 ### Outside the lifting sports, set loads by a rep-max zone, not a percentage
 

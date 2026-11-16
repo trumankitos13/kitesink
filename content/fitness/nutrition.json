@@ -1014,9 +1014,10 @@
    "confidence": "practice",
    "sources": [
     "spector-1999",
+    "le-2009",
     "mcdonald-fats-primer"
    ],
-   "take": "Fats the body needs but cannot build. Textbooks name linoleic acid (LA, an omega-6) and alpha-linolenic acid (ALA, an omega-3). The amount needed is a small share of energy, shown as the essential fats line in the diet planner."
+   "take": "Fats the body needs but cannot build: by the textbook, linoleic acid (LA, omega-6) and alpha-linolenic acid (ALA, omega-3). McDonald's view is that almost any diet with fat covers the minimum, not the optimum. See the diet planner."
   },
   {
    "id": "nut-ala-conversion",
@@ -1031,9 +1032,9 @@
     "mcdonald-real-efa"
    ],
    "take": "In tracer studies, young men made some EPA from ALA but no measurable DHA, while young women converted about 21 percent to EPA and 9 percent to DHA.",
-   "body": "Six young men on their usual diet swallowed labelled ALA with a meal. EPA and DPA appeared in the blood, but no labelled DHA showed up over 21 days, and the authors judged that men may depend on DHA eaten ready-made. A matching study in young women estimated net conversion of 21 percent to EPA, 6 percent to DPA and 9 percent to DHA, which the authors linked to the needs of pregnancy. Both studies were small. McDonald's view is that flax and other ALA oils are a poor stand-in for fish. For what omega-3 does for the heart, see the omega-3 entry.",
+   "body": "Six young men on their usual diet swallowed labelled ALA with a meal. EPA and DPA appeared in the blood, but no labelled DHA showed up over 21 days, and the authors judged that men may depend on DHA eaten ready-made. A matching study in young women estimated net conversion of 21 percent to EPA, 6 percent to DPA and 9 percent to DHA, which the authors linked to the needs of pregnancy. The men's study had only six people. McDonald's view is that flax and other ALA oils are a poor stand-in for fish. For omega-3 and the heart, see the omega-3 entry in the health section.",
    "do": [
-    "Do not count flax or other ALA sources as your EPA and DHA intake.",
+    "McDonald's practice: do not count flax or other ALA oils as your EPA and DHA.",
     "If you want EPA and DHA, eat fatty fish or another ready-made source."
    ]
   },
@@ -1051,7 +1052,7 @@
     "mcdonald-real-efa"
    ],
    "take": "LA and ALA are the textbook essential fats, but much of what they do runs through their products. McDonald's reading is that arachidonic acid (AA) and DHA are the ones the body truly needs.",
-   "body": "A 1999 review held that the need for AA is the main reason omega-6 fats are essential, and that DHA, needed for vision and nerve development, is the more likely essential omega-3. A hospital team saw no fatty acid deficiency in patients fed by drip on a fish-oil emulsion with AA and DHA but almost no LA or ALA, and in mice AA and DHA alone prevented it. In a tracer study of nine adults, only 0.3 to 0.6 percent of LA became AA. The evidence is thin and mostly not from healthy adults, so treat this as an open question.",
+   "body": "A 1999 review held that the need for AA is the main reason omega-6 fats are essential, and that DHA, needed for vision and nerve development, is the more likely essential omega-3, though the need may be for 22-carbon omega-3 fats in general. A hospital team saw no fatty acid deficiency in patients fed by drip on a fish-oil emulsion with AA and DHA but almost no LA or ALA, and in mice AA and DHA alone prevented it. In a tracer study of nine adults, 0.3 to 0.6 percent of LA became AA. The evidence is thin and mostly not from healthy adults.",
    "do": []
   },
   {
@@ -1068,7 +1069,7 @@
    "take": "In 15 randomised trials of healthy people, adding linoleic acid, the main omega-6 fat, did not raise blood markers of inflammation.",
    "body": "The worry is that linoleic acid becomes arachidonic acid, a raw material for signals that drive inflammation. A systematic review of 15 trials (8 parallel, 7 crossover) in healthy, non-infant groups found no significant change in C-reactive protein, fibrinogen, cytokines, TNF-alpha or adhesion molecules with more linoleic acid. Two trials did see shifts in urinary eicosanoid products, which their authors did not read as more inflammation. The review covered markers, not disease. McDonald's view is that the larger gap in most modern diets is too little omega-3 rather than too much omega-6.",
    "do": [
-    "McDonald's practice: put effort into omega-3 sources rather than purging omega-6."
+    "McDonald's practice: put effort into omega-3 sources; he leaves open whether omega-6 needs cutting."
    ]
   },
   {
@@ -1091,7 +1092,7 @@
   {
    "id": "nut-lactose-dose",
    "type": "note",
-   "title": "Most people with lactose intolerance can handle about a cup of milk",
+   "title": "Most adults with lactose intolerance tolerated about a cup of milk's lactose",
    "topic": "macros",
    "level": "beginner",
    "confidence": "moderate",
@@ -1100,7 +1101,7 @@
     "mcdonald-carbs-primer"
    ],
    "take": "In a systematic review, 12 to 15 g of lactose, roughly one cup of milk, was well tolerated by most adults with lactose intolerance or malabsorption.",
-   "body": "Lactose, the sugar in milk, is split by the enzyme lactase. Without enough lactase it reaches the colon and ferments, causing gas and loose stools. The review of 36 trials rated the cup-of-milk finding moderate quality, but most trials studied malabsorption rather than symptoms, and evidence for lactose-reduced milk, probiotics or gradual adaptation was too thin to judge. Milk allergy is a different, immune reaction to milk protein, and this figure does not apply to it. See also the dairy entry in the diet section.",
+   "body": "Lactose, the sugar in milk, is split by the enzyme lactase. Without enough lactase it reaches the colon and ferments, causing gas and loose stools. The review of 36 trials rated the cup-of-milk finding moderate quality, but most trials enrolled people with malabsorption rather than diagnosed intolerance, and evidence for lactose-reduced milk, probiotics or gradual adaptation was too thin to judge. Milk allergy is a different, immune reaction to milk protein, and this figure does not apply to it. See also the dairy entry in the diet section.",
    "do": [
     "If dairy upsets your stomach, have it assessed by a clinician before cutting it out.",
     "With a milk allergy, follow your allergist's advice, not the tolerance figure."
@@ -1125,16 +1126,16 @@
   {
    "id": "nut-protein-net-energy",
    "type": "note",
-   "title": "Protein gives the body less usable energy than its label value",
+   "title": "On a proposed net energy scale, protein counts for less than its label value",
    "topic": "energy",
    "level": "advanced",
-   "confidence": "moderate",
+   "confidence": "limited",
    "sources": [
     "fao-2003",
     "mcdonald-nutrition-primer"
    ],
-   "take": "Labels count protein at 4 kcal (17 kJ) per gram. On the FAO's net metabolisable energy scale it is worth 3.2 kcal (13 kJ).",
-   "body": "Label factors (see the Atwater entry) count energy the body absorbs and does not lose in urine. The FAO also describes a net scale that subtracts energy spent as heat in handling each nutrient, the thermic effect (see the TEF entry). On it, protein drops from 17 to 13 kJ a gram, which the FAO counts as a 24 percent cut, fibre from 2.0 to 1.4 kcal, and fat stays at 9. The net scale is a proposal: requirements and labels still use the older figures. McDonald mentions the lower protein value as an open debate.",
+   "take": "Labels count protein at 4 kcal (17 kJ) per gram. On a net energy scale the FAO describes but has not adopted, it is worth 3.2 kcal (13 kJ).",
+   "body": "Label factors (see the Atwater entry) count energy the body absorbs and does not lose in urine. The FAO also describes a net scale that subtracts heat lost in handling each nutrient, from the thermic effect (see the TEF entry) and gut fermentation. On it, protein drops from 17 to 13 kJ a gram, a 24 percent cut, fibre from 2.0 to 1.4 kcal, and fat stays at 9. For most mixed diets the total falls only 4 to 6 percent, and the FAO workshop kept the older factors. McDonald mentions the lower protein value as an open debate.",
    "do": [
     "Keep logging with label values, since targets and databases are built on them."
    ]
@@ -1148,20 +1149,17 @@
    "confidence": "limited",
    "sources": [
     "kim-2016",
-    "trommelen-2023",
     "mcdonald-protein-growth",
     "mcdonald-protein-connective"
    ],
    "take": "In young adults, a meal with about 70 g of protein gave better whole-body protein balance than one with 40 g, mostly by cutting protein breakdown.",
-   "body": "Per-meal caps come from studies that measure muscle protein synthesis after a single dose of protein, often whey or egg. McDonald argues this ignores breakdown and the large share of lean mass that is not muscle. In 23 young adults, net whole-body protein balance was greater after about 70 g than after 40 g, mainly through less breakdown, with or without prior lifting. That is whole-body data, not muscle. A 2023 tracer study, which postdates his article, also found 100 g gave a larger and longer muscle response than 25 g (see the per-meal entry).",
-   "do": [
-    "Do not treat 20 to 40 g a meal as a ceiling."
-   ]
+   "body": "McDonald argues that per-meal caps rest on studies measuring muscle protein synthesis after one dose of protein, often whey taken alone, and that they ignore breakdown and the large share of lean mass that is not muscle. In 23 healthy young adults, net whole-body protein balance was greater after about 70 g than after 40 g, mainly through less breakdown, with or without prior lifting. That is whole-body data, not muscle. For later tracer work with larger doses, see the per-meal entry.",
+   "do": []
   },
   {
    "id": "nut-connective-tissue-turnover",
    "type": "note",
-   "title": "Tendon, ligament and cartilage renew their protein at rates near muscle's",
+   "title": "In six knee-surgery patients, tendon and cartilage made protein at rates near muscle's",
    "topic": "protein",
    "level": "advanced",
    "confidence": "limited",
@@ -1169,8 +1167,8 @@
     "smeets-2019",
     "mcdonald-protein-connective"
    ],
-   "take": "In six patients having knee replacement, resting protein synthesis in tendon, ligament, cartilage and menisci did not differ from muscle.",
-   "body": "During surgery, a labelled amino acid was infused and tissue samples taken. Rates ran from 0.02 to 0.13 percent an hour across tissues: tendon about 0.06, cruciate ligaments 0.04 to 0.07, cartilage and menisci 0.04, against 0.04 for muscle. Only synovium ran higher, and bone from the knee notch lower. The six were in their sixties and resting, so this says nothing yet about training. McDonald reads it as support for his view that protein needs are not set by muscle alone.",
+   "take": "In six patients having knee replacement, basal protein synthesis in tendon, ligament, cartilage and menisci did not differ significantly from muscle.",
+   "body": "During surgery, a labelled amino acid was infused and tissue samples taken. Rates ran from 0.02 to 0.13 percent an hour across tissues: tendon about 0.06, cruciate ligaments 0.04 to 0.07, cartilage and menisci 0.04, against 0.04 for muscle. Only synovium ran higher, and bone from the knee notch lower. The six were in their sixties and measured at rest during surgery, so this says nothing yet about training. McDonald reads it as support for his view that protein needs are not set by muscle alone.",
    "do": []
   },
   {
@@ -1185,7 +1183,7 @@
     "tipton-2004"
    ],
    "take": "McDonald's practice: about 2.2 g per kg (1 g per lb) for recreational lifters outside a diet, and 2.5 to 3.0 g per kg (1.1 to 1.4 g per lb) for high-level strength athletes.",
-   "body": "His reasons are practical. People who aim at 1 g per lb tend to land below it, and he sees no harm in high intakes as long as carbohydrate and fat still fit. The evidence is less firm than the target. A 2004 review found few outcome data showing 2 to 3 g per kg is needed, and pooled trials show returns shrinking as intake rises (see the protein range entry). His figures are for young men with healthy kidneys; with kidney disease, set protein with a clinician (see the kidney entry).",
+   "body": "His reasons are practical. People who aim at 1 g per lb tend to land below it, and he sees no harm in high intakes as long as carbohydrate and fat still fit. The evidence is less firm than the target. He draws the higher range from a 2004 review, though that review found few outcome data showing 2 to 3 g per kg is needed, and pooled trials show returns shrinking as intake rises (see the protein range entry). With kidney disease, set protein with a clinician (see the kidney entry).",
    "do": [
     "McDonald's practice: aim at 1 g per lb, since most people land below their target."
    ]
@@ -1201,11 +1199,9 @@
     "shams-white-2017",
     "mcdonald-protein-controversies"
    ],
-   "take": "A meta-analysis of 16 trials and 20 cohort studies found no harm to bone from higher protein, and a small gain in lumbar spine density.",
-   "body": "In McDonald's account, the worry began with old studies feeding purified protein, which raised calcium loss in urine. The pooled analysis found lumbar spine density 0.52 percent higher with more protein, and no effect at the hip, femoral neck or whole body. Limited evidence did not support an extra benefit from protein combined with calcium and vitamin D, the pairing his 2007 article leans on; the analysis came later. Studies varied, and confounding could not be ruled out.",
-   "do": [
-    "McDonald's practice: pair a high protein intake with enough calcium and plenty of fruit and vegetables."
-   ]
+   "take": "A meta-analysis of 16 trials and 20 cohort studies found no harm to bone from higher protein, and a possible small gain in lumbar spine density.",
+   "body": "In McDonald's account, the worry began with early studies feeding purified protein, which saw calcium lost from the body. The pooled analysis found lumbar spine density may be 0.52 percent higher with more protein, from five trials, and no effect at the hip, femoral neck or whole body. Limited evidence did not support an extra benefit from protein combined with calcium and vitamin D, the pairing his 2007 article leans on; the analysis came later. Studies varied, and confounding could not be ruled out.",
+   "do": []
   },
   {
    "id": "nut-table-amino-acids",
@@ -1215,10 +1211,9 @@
    "level": "intermediate",
    "confidence": "limited",
    "sources": [
-    "gorissen-2018",
-    "mcdonald-protein-quality-2"
+    "gorissen-2018"
    ],
-   "take": "Share of the protein in commercial isolates, measured in one lab. A dash means the figure was not reported in the summary. Plant isolates vary widely.",
+   "take": "Share of the protein in each isolate, measured in one lab. A dash means the figure was not in the summary. Plant isolates vary widely, and blends of them can come close to animal profiles.",
    "columns": [
     "Protein",
     "Essential amino acids (% of protein)",
@@ -1285,7 +1280,8 @@
    "level": "intermediate",
    "confidence": "practice",
    "sources": [
-    "gilani-2012"
+    "gilani-2012",
+    "rutherfurd-2015"
    ],
    "take": "A protein quality score adopted by FAO/WHO in 1991. It compares a protein's essential amino acids with a reference pattern for young children, corrects for digestibility over the whole gut, and is capped at 1.0, so top proteins tie."
   },
@@ -1312,13 +1308,13 @@
    "sources": [
     "rutherfurd-2015",
     "mathai-2017",
+    "gorissen-2018",
     "mcdonald-protein-quality-1"
    ],
-   "take": "Quality scores were built to judge diets short of protein. McDonald's view is that at a lifter's intake from mixed sources, gaps between good proteins matter little.",
-   "body": "The authors of one scoring study say the gap between methods matters most where protein intake is marginal. In pig and rat work, the older method rated soy, pea and wheat higher than the newer one did, so plant scores need care when one plant source carries a low intake. McDonald's view is that quality scores tell lifters little once total protein is high and comes from several foods. For plant and animal protein over months, see the plant protein entry.",
+   "take": "McDonald's view is that quality scores matter most for diets short of protein, and that at a lifter's intake from mixed sources, gaps between good proteins matter little.",
+   "body": "The authors of one scoring study say the gap between methods matters most where protein intake is marginal. In pigs, the older method rated skimmed milk powder, soy, pea and wheat higher than the newer one, and in rats it ran higher mainly for poorer proteins, so plant scores need care when one plant source carries a low intake. Plant isolates also differ widely in amino acids (see the amino acid table). For plant and animal protein over months, see the plant protein entry.",
    "do": [
-    "Hit your daily protein total first, then worry about the source.",
-    "On a low or single-source plant intake, mix sources and aim higher."
+    "McDonald's practice: hit your daily protein total first, then think about the source."
    ]
   },
   {
@@ -1332,7 +1328,7 @@
     "boirie-1997",
     "mcdonald-protein-speed"
    ],
-   "take": "Proteins whose amino acids reach the blood at different speeds. Whey gives a sharp, short rise in blood amino acids; casein, which leaves the stomach slowly, gives a lower rise that lasts for hours."
+   "take": "Proteins whose amino acids reach the blood at different speeds. Whey gives a sharp, short rise in blood amino acids; casein gives a lower rise that lasts for hours, probably because it leaves the stomach slowly."
   },
   {
    "id": "nut-whey-casein-context",
@@ -1346,10 +1342,10 @@
     "dangin-2002",
     "mcdonald-protein-speed"
    ],
-   "take": "In a single-protein meal, casein left more protein in the body over 7 hours than whey did. Early results in young men suggest added carbohydrate and fat narrow the gap.",
-   "body": "In the first study, whey raised whole-body protein synthesis by 68 percent and burned more amino acids, while casein cut protein breakdown by 34 percent; net leucine balance over 7 hours favoured casein. That was whole-body data in rested adults, not muscle after training, and McDonald's article adds that the protein was taken alone after an overnight fast. The same group's preliminary results in young men found added fat and carbohydrate blunted the differences, and they suggest a fast protein may suit older people better.",
+   "take": "In a single-protein meal, casein left more protein in the body over 7 hours than whey did. Early results suggest added carbohydrate and fat narrow the gap.",
+   "body": "In the first study, whey raised whole-body protein synthesis by 68 percent and burned more amino acids, while casein cut protein breakdown by 34 percent; net leucine balance over 7 hours favoured casein. That was whole-body data in rested adults, not muscle after training, and McDonald's article adds that the protein was taken alone after an overnight fast. The same group's preliminary results found added fat and carbohydrate blunted the differences, and they suggest a fast protein may suit older people better.",
    "do": [
-    "McDonald's practice: before or during training, pick quick-digesting whey, since solid food sits heavy."
+    "McDonald's practice: before or during training, take quick-digesting whey, since slow protein sits in the gut."
    ]
   },
   {
@@ -1382,7 +1378,7 @@
     "mcdonald-protein-micronutrients"
    ],
    "take": "In five people with an ileostomy, about 51 percent of raw egg protein was absorbed by the end of the small intestine, against 91 percent when cooked.",
-   "body": "Digestibility is the share of eaten protein the gut takes in. Each person ate 25 g of labelled egg protein once cooked and once raw, and heating raised digestibility sharply. The study was tiny and used a measurement taken at the end of the small intestine, but the gap was large. McDonald also warns of the food safety risk of raw eggs.",
+   "body": "Digestibility is the share of eaten protein the gut takes in. Each person ate 25 g of labelled egg protein once cooked and once raw, and heating raised digestibility sharply. The study was tiny and used a measurement taken at the end of the small intestine, but the gap was large. McDonald also warns that raw eggs carry a risk of salmonella food poisoning.",
    "do": [
     "Cook eggs before you eat them."
    ]
@@ -1400,10 +1396,10 @@
     "mcdonald-protein-micronutrients"
    ],
    "take": "B12 depletion was common among vegetarians, more so vegans. In people with no iron stores, about 5 to 12 percent of iron is absorbed from vegetarian diets, 14 to 18 from mixed.",
-   "body": "A review of 18 studies found deficiency rates of 11 to 90 percent across age groups of vegetarians, and its authors advise regular B12 supplements. The iron figures are estimates. Meat raises iron absorption, while phytate, polyphenols and calcium lower it, though a person's iron status matters more than the diet. McDonald's view is that lean red meat is a strong source of iron and zinc, and that athletes who drop it, women especially, run short. See the iron entry in the women section.",
+   "body": "A review of 18 studies of vegetarians found B12 deficiency in 62 percent of pregnant women, 25 to 86 percent of children, 21 to 41 of adolescents and 11 to 90 of older people, and its authors advise regular B12 supplements. The iron figures are estimates. Phytate, polyphenols, calcium, vitamin C and meat changed iron absorption in single-meal studies, less so across varied diets, and iron status matters more than diet. McDonald's view is that lean red meat is a strong source of iron and zinc, and that athletes who drop it, women especially, risk running short.",
    "do": [
     "If you eat no animal foods, ask a clinician or dietitian about a B12 source and testing.",
-    "McDonald's caution: do not take iron pills without a blood test and a clinician's advice."
+    "Take iron only after a blood test and a clinician's advice (see the women's iron entry); McDonald warns excess harms men."
    ]
   },
   {
@@ -1422,7 +1418,7 @@
   {
    "id": "nut-fibre-big-eaters",
    "type": "note",
-   "title": "McDonald warns that very high fibre can work against big eaters",
+   "title": "McDonald warns that high fibre can work against big eaters",
    "topic": "macros",
    "level": "intermediate",
    "confidence": "limited",
@@ -1431,7 +1427,7 @@
     "mcdonald-fibre"
    ],
    "take": "More fibre lowered how much fat and protein the gut absorbed in a feeding study. McDonald's view is that this and the fullness help dieters and hinder big eaters.",
-   "body": "In 17 adults on controlled diets, each eaten for two weeks, raising fibre lowered fat and protein digestibility and the usable energy of the diet. McDonald's estimate is that going from about 18 to 36 g of fibre a day costs around 100 kcal absorbed. His general starting point for anyone is 5 to 10 g of fibre a meal. For lifters trying to gain or athletes who burn a great deal, his concern is that bulk and lost absorption make eating enough harder.",
+   "body": "In 17 people on controlled diets, each eaten for two weeks, raising fibre lowered fat and protein digestibility and the usable energy of the diet. McDonald's estimate is that going from about 18 to 36 g of fibre a day costs around 100 kcal absorbed, an effect he says is not large. His general starting point is 5 to 10 g of fibre a meal. For lifters trying to gain or athletes who burn a great deal, his concern is that bulk and lost absorption make eating enough harder.",
    "do": [
     "McDonald's practice: if you struggle to eat enough, eat the salad or vegetables last."
    ]
@@ -3102,18 +3098,6 @@
    "url": "https://bodyrecomposition.com/nutrition/protein-sources-quality-part-1",
    "retrieved": "2026-11-16",
    "support": "Survey of protein quality measures and his view that quality scores matter little for people eating plenty of protein from mixed sources."
-  },
-  "mcdonald-protein-quality-2": {
-   "type": "article",
-   "authors": [
-    "McDonald L"
-   ],
-   "year": 2008,
-   "title": "Good Sources of Protein? - Amino Acid Profile Part 2",
-   "journal": "Body Recomposition",
-   "url": "https://bodyrecomposition.com/nutrition/protein-sources-quality-part-2",
-   "retrieved": "2026-11-16",
-   "support": "Amino acid profiles of food proteins for athletes, including the branched-chain share of meat, casein and whey."
   },
   "boirie-1997": {
    "type": "trial",

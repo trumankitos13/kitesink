@@ -729,7 +729,7 @@ Who was studied: Speakman: expert review of four models. Muller: review of contr
 - Keep daily steps up, since unplanned movement falls first.
 - Treat maintenance as a phase with its own plan.
 
-Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008y](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
+Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008x](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
 
 ### Does everyone regain the weight after a diet?
 

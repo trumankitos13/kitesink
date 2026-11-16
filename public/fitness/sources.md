@@ -1,6 +1,6 @@
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 937 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 936 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -94,7 +94,7 @@ What changed after an entry was published, newest first.
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 937 sources, A to Z
+## All 936 sources, A to Z
 
 - Aasa U, Svartholm I, Andersson F et al. (2017). Injuries among weightlifters and powerlifters: a systematic review. *British Journal of Sports Medicine* 51(4):211-219. https://doi.org/10.1136/bjsports-2016-096037 (Systematic review, cited 2×)
 - Abad CC, Prado ML, Ugrinowitsch C et al. (2011). Combination of General and Specific Warm-Ups Improves Leg-Press One Repetition Maximum Compared With Specific Warm-Up in Trained Individuals. *Journal of Strength and Conditioning Research* 25(8):2242-2245. https://doi.org/10.1519/jsc.0b013e3181e8611b (Trial, cited 1×)
@@ -300,7 +300,7 @@ What changed after an entry was published, newest first.
 - Glassbrook DJ, Helms ER, Brown SR et al. (2017). A Review of the Biomechanical Differences Between the High-Bar and Low-Bar Back-Squat. *Journal of Strength and Conditioning Research* 31(9):2618-2634. https://doi.org/10.1519/JSC.0000000000002007 (Review, cited 2×)
 - Goldstein ER, Ziegenfuss T, Kalman D et al. (2010). International society of sports nutrition position stand: caffeine and performance. *Journal of the International Society of Sports Nutrition* 7(1):5. https://doi.org/10.1186/1550-2783-7-5 (Position stand, cited 3×)
 - Gordon CM, Ackerman KE, Berga SL et al. (2017). Functional Hypothalamic Amenorrhea: An Endocrine Society Clinical Practice Guideline. *The Journal of Clinical Endocrinology & Metabolism* 102(5):1413-1439. https://doi.org/10.1210/jc.2017-00131 (Guideline, cited 2×)
-- Gorissen SHM, Crombag JJR, Senden JMG et al. (2018). Protein content and amino acid composition of commercially available plant-based protein isolates. *Amino Acids* 50(12):1685-1695. https://doi.org/10.1007/s00726-018-2640-5 (Reference, cited 1×)
+- Gorissen SHM, Crombag JJR, Senden JMG et al. (2018). Protein content and amino acid composition of commercially available plant-based protein isolates. *Amino Acids* 50(12):1685-1695. https://doi.org/10.1007/s00726-018-2640-5 (Reference, cited 2×)
 - Grandou C, Wallace L, Impellizzeri FM et al. (2020). Overtraining in Resistance Exercise: An Exploratory Systematic Review and Methodological Appraisal of the Literature. *Sports Medicine* 50(4):815-828. https://doi.org/10.1007/s40279-019-01242-2 (Systematic review, cited 5×)
 - Green CM, Comfort P (2007). The Affect of Grip Width on Bench Press Performance and Risk of Injury. *Strength and Conditioning Journal* 29(5):10-14. https://doi.org/10.1519/00126548-200710000-00001 (Review, cited 2×)
 - Grgic J, Mikulic P (2017). Tapering Practices of Croatian Open-Class Powerlifting Champions. *Journal of Strength and Conditioning Research* 31(9):2371-2378. https://doi.org/10.1519/JSC.0000000000001699 (Reference, cited 2×)
@@ -443,7 +443,7 @@ What changed after an entry was published, newest first.
 - Larsen S, Kristiansen E, van den Tillaar R (2021). Effects of subjective and objective autoregulation methods for intensity and volume on enhancing maximal strength during resistance-training interventions: a systematic review. *PeerJ* 9:e10663. https://doi.org/10.7717/peerj.10663 (Systematic review, cited 1×)
 - Larsen S, Sandvik Kristiansen B, Swinton PA et al. (2025). The effects of hip flexion angle on quadriceps femoris muscle hypertrophy in the leg extension exercise. *Journal of Sports Sciences* 43(2):210-221. https://doi.org/10.1080/02640414.2024.2444713 (Randomised trial, cited 1×)
 - Latella C, Teo WP, Spathis J et al. (2020). Long-Term Strength Adaptation: A 15-Year Analysis of Powerlifting Athletes. *Journal of Strength and Conditioning Research* 34(9):2412-2418. https://doi.org/10.1519/jsc.0000000000003657 (Cohort study, cited 1×)
-- Le HD, Meisel JA, de Meijer VE et al. (2009). The essentiality of arachidonic acid and docosahexaenoic acid. *Prostaglandins, Leukotrienes and Essential Fatty Acids* 81(2-3):165-170. https://doi.org/10.1016/j.plefa.2009.05.020 (Review, cited 1×)
+- Le HD, Meisel JA, de Meijer VE et al. (2009). The essentiality of arachidonic acid and docosahexaenoic acid. *Prostaglandins, Leukotrienes and Essential Fatty Acids* 81(2-3):165-170. https://doi.org/10.1016/j.plefa.2009.05.020 (Review, cited 2×)
 - Lee DH, Rezende LFM, Joh HK et al. (2022). Long-Term Leisure-Time Physical Activity Intensity and All-Cause and Cause-Specific Mortality: A Prospective Cohort of US Adults. *Circulation* 146(7):523-534. https://doi.org/10.1161/circulationaha.121.058162 (Cohort study, cited 1×)
 - Lees A, Vanrenterghem J, Clercq DD (2004). Understanding how an arm swing enhances performance in the vertical jump. *Journal of Biomechanics* 37(12):1929-1940. https://doi.org/10.1016/j.jbiomech.2004.02.021 (Trial, cited 1×)
 - Legg HS, Glaister M, Cleather DJ et al. (2017). The effect of weightlifting shoes on the kinetics and kinematics of the back squat. *Journal of Sports Sciences* 35(5):508-515. https://doi.org/10.1080/02640414.2016.1175652 (Trial, cited 1×)
@@ -521,7 +521,6 @@ What changed after an entry was published, newest first.
 - McDonald L (2007). The Importance of Rest. *Body Recomposition*. https://bodyrecomposition.com/training/the-importance-of-rest (Article, cited 3×)
 - McDonald L (2007). You Are Not Different. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/you-are-not-different (Article, cited 1×)
 - McDonald L (2008). A Look at Some Popular Hypertrophy Programs. *Body Recomposition*. https://bodyrecomposition.com/muscle-gain/popular-hypertrophy-programs (Article, cited 2×)
-- McDonald L (2008). Steady State vs. Interval Training and EPOC. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application (Article, cited 2×)
 - McDonald L (2008). Steady State vs. Interval Training: Summing Up Part 1. *Body Recomposition*. https://bodyrecomposition.com/training/steady-state-vs-intervals-summary (Article, cited 2×)
 - McDonald L (2008). Steady state vs. Interval Intervals: Explaining the Disconnect. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/ss-vs-hiit-disconnect (Article, cited 1×)
 - McDonald L (2008). What Are Good Sources of Protein? - Introduction. *Body Recomposition*. https://bodyrecomposition.com/nutrition/complete-guide-dietary-protein (Article, cited 1×)
@@ -546,7 +545,6 @@ What changed after an entry was published, newest first.
 - McDonald L (2008). Exercise Efficiency. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/exercise-efficiency (Article, cited 2×)
 - McDonald L (2008). Fat Loss for Athletes: Part 1. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/a-guide-to-fat-loss-for-athletes (Article, cited 4×)
 - McDonald L (2008). Goal vs. Process Oriented Training: Part 1. *Body Recomposition*. https://bodyrecomposition.com/training/goal-vs-process-oriented-training (Article, cited 2×)
-- McDonald L (2008). Good Sources of Protein? - Amino Acid Profile Part 2. *Body Recomposition*. https://bodyrecomposition.com/nutrition/protein-sources-quality-part-2 (Article, cited 1×)
 - McDonald L (2008). How to Estimate Maintenance Caloric Intake. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/estimating-maintenance-calories (Article, cited 1×)
 - McDonald L (2008). Insulin Levels and Fat Loss. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/insulin-levels-and-fat-loss (Article, cited 1×)
 - McDonald L (2008). Keep the Hard Days Hard and the Easy Days Easy: Part 1. *Body Recomposition*. https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy (Article, cited 2×)
@@ -557,6 +555,7 @@ What changed after an entry was published, newest first.
 - McDonald L (2008). Rigid vs. Flexible Dieting. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/rigid-vs-flexible-eaters (Article, cited 2×)
 - McDonald L (2008). Set Point Settling Points and Bodyweight Regulation Part 1. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/set-points-and-settling-points (Article, cited 4×)
 - McDonald L (2008). Steady State and Interval Training: Part 1. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/steady-state-and-hiit (Article, cited 8×)
+- McDonald L (2008). Steady State vs. Interval Training and EPOC. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application (Article, cited 2×)
 - McDonald L (2009). 9 Ways to Deal with Hunger on a Diet. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/9-ways-to-handle-hunger (Article, cited 2×)
 - McDonald L (2009). Of Whooshes and Squishy Fat. *Body Recomposition*. https://bodyrecomposition.com/fat-loss/of-whooshes-and-squishy-fat (Article, cited 2×)
 - McDonald L (2009). Predictors of Endurance Training Performance. *Body Recomposition*. https://bodyrecomposition.com/training/determinants-endurance-performance (Article, cited 3×)
@@ -860,7 +859,7 @@ What changed after an entry was published, newest first.
 - Rosenblat MA, Watt JA, Arnold JI et al. (2025). Which Training Intensity Distribution Intervention will Produce the Greatest Improvements in Maximal Oxygen Uptake and Time-Trial Performance in Endurance Athletes? A Systematic Review and Network Meta-analysis of Individual Participant Data. *Sports Medicine* 55(3):655-673. https://doi.org/10.1007/s40279-024-02149-3 (Meta-analysis, cited 3×)
 - Rossow LM, Fukuda DH, Fahs CA et al. (2013). Natural Bodybuilding Competition Preparation and Recovery: A 12-Month Case Study. *International Journal of Sports Physiology and Performance* 8(5):582-592. https://doi.org/10.1123/ijspp.8.5.582 (Reference, cited 1×)
 - Ruddick-Collins LC, Morgan PJ, Fyfe CL et al. (2022). Timing of daily calorie loading affects appetite and hunger responses without changes in energy metabolism in healthy subjects with obesity. *Cell Metabolism* 34(10):1472-1485.e6. https://doi.org/10.1016/j.cmet.2022.08.001 (Randomised trial, cited 1×)
-- Rutherfurd SM, Fanning AC, Miller BJ et al. (2015). Protein Digestibility-Corrected Amino Acid Scores and Digestible Indispensable Amino Acid Scores Differentially Describe Protein Quality in Growing Male Rats. *The Journal of Nutrition* 145(2):372-379. https://doi.org/10.3945/jn.114.195438 (Trial, cited 2×)
+- Rutherfurd SM, Fanning AC, Miller BJ et al. (2015). Protein Digestibility-Corrected Amino Acid Scores and Digestible Indispensable Amino Acid Scores Differentially Describe Protein Quality in Growing Male Rats. *The Journal of Nutrition* 145(2):372-379. https://doi.org/10.3945/jn.114.195438 (Trial, cited 3×)
 - Rønnestad BR, Nygaard H, Raastad T (2011). Physiological elevation of endogenous hormones results in superior strength training adaptation. *European Journal of Applied Physiology* 111(9):2249-2259. https://doi.org/10.1007/s00421-011-1860-0 (Trial, cited 2×)
 - Sabag A, Najafi A, Michael S et al. (2018). The compatibility of concurrent high intensity interval training and resistance training for muscular strength and hypertrophy: a systematic review and meta-analysis. *Journal of Sports Sciences* 36(21):2472-2483. https://doi.org/10.1080/02640414.2018.1464636 (Meta-analysis, cited 1×)
 - Saint-Maurice PF, Coughlan D, Kelly SP et al. (2019). Association of Leisure-Time Physical Activity Across the Adult Life Course With All-Cause and Cause-Specific Mortality. *JAMA Network Open* 2(3):e190355. https://doi.org/10.1001/jamanetworkopen.2019.0355 (Cohort study, cited 1×)
@@ -962,7 +961,7 @@ What changed after an entry was published, newest first.
 - Trexler ET, Smith-Ryan AE, Norton LE (2014). Metabolic adaptation to weight loss: implications for the athlete. *Journal of the International Society of Sports Nutrition* 11(1):7. https://doi.org/10.1186/1550-2783-11-7 (Review, cited 1×)
 - Trexler ET, Smith-Ryan AE, Stout JR et al. (2015). International society of sports nutrition position stand: Beta-Alanine. *Journal of the International Society of Sports Nutrition* 12(1):30. https://doi.org/10.1186/s12970-015-0090-y (Position stand, cited 2×)
 - Trexler ET, Hirsch KR, Campbell BI et al. (2017). Physiological Changes Following Competition in Male and Female Physique Athletes: A Pilot Study. *International Journal of Sport Nutrition and Exercise Metabolism* 27(5):458-466. https://doi.org/10.1123/ijsnem.2017-0038 (Cohort study, cited 1×)
-- Trommelen J, van Lieshout GAA, Nyakayiru J et al. (2023). The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration in vivo in humans. *Cell Reports Medicine* 4(12):101324. https://doi.org/10.1016/j.xcrm.2023.101324 (Trial, cited 3×)
+- Trommelen J, van Lieshout GAA, Nyakayiru J et al. (2023). The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration in vivo in humans. *Cell Reports Medicine* 4(12):101324. https://doi.org/10.1016/j.xcrm.2023.101324 (Trial, cited 2×)
 - Tucker JAL, McCarthy SF, Bornath DPD et al. (2025). The Effect of the Menstrual Cycle on Energy Intake: A Systematic Review and Meta-analysis. *Nutrition Reviews* 83(3):e866-e876. https://doi.org/10.1093/nutrit/nuae093 (Meta-analysis, cited 4×)
 - UK Chief Medical Officers (2019). Physical activity guidelines: UK Chief Medical Officers' report. *GOV.UK*. https://www.gov.uk/government/publications/physical-activity-guidelines-uk-chief-medical-officers-report (Guideline, cited 2×)
 - US Food and Drug Administration (2023). 21 CFR 101.9 Nutrition labeling of food, paragraph (g)(5). CFR 2023, title 21, vol. 2. https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-9.xml (Rulebook, cited 3×)
