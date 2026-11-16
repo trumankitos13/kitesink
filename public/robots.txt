@@ -1,6 +1,14 @@
+# Content Signals (https://contentsignals.org/): how the owner of kitesink.com asks that
+# content be used once it has been fetched. search: building a search index and showing
+# links and short excerpts. ai-input: feeding a page into an AI model to answer a
+# question (retrieval, grounding). ai-train: training or fine-tuning AI models.
+# yes means allowed. These are stated preferences, not technical controls.
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://kitesink.com/sitemap.xml
 
 # Plain-text index for AI readers: https://kitesink.com/llms.txt
+# Skills for AI agents: https://kitesink.com/.well-known/agent-skills/index.json

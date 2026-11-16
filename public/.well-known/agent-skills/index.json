@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "kitesink-fitness-reference",
+      "type": "skill-md",
+      "description": "Look up, read and cite entries in the KiteSink fitness reference (kitesink.com/fitness), a sourced field guide to strength training, hypertrophy, powerlifting, conditioning, recovery, nutrition, diet and body composition, plus a list of common claims with verdicts. Use when a question about training or nutrition could be answered from it, or when a user asks what KiteSink says about a topic.",
+      "url": "/.well-known/agent-skills/kitesink-fitness-reference/SKILL.md",
+      "digest": "sha256:1aef349105f2d90c103f8233f241976bdf35dacbe52cee01e325280f1b7a9f81"
+    }
+  ]
+}

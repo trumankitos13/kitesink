@@ -291,6 +291,31 @@ def audit_llms_full() -> list[str]:
     return []
 
 
+def audit_agent_files() -> list[str]:
+    """What agents read about the site: the skills index and its digests, the Link headers in
+    _headers and the worker's copy of _headers are generated (scripts/build_agent_files.py);
+    every file under /.well-known/ is one the index accounts for; robots.txt states all three
+    Content Signals."""
+    import subprocess
+    issues: list[str] = []
+    result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_agent_files.py"), "--check"], capture_output=True, text=True)
+    if result.returncode:
+        issues.append("agent files: " + (result.stdout.strip() or result.stderr.strip().splitlines()[-1]))
+    index = PUBLIC / ".well-known" / "agent-skills" / "index.json"
+    known = {index}
+    if index.is_file():
+        known |= {PUBLIC / skill["url"].lstrip("/") for skill in json.loads(index.read_text(encoding="utf-8"))["skills"]}
+    for path in sorted((PUBLIC / ".well-known").rglob("*")):
+        if path.is_file() and path not in known:
+            issues.append(f"{path.relative_to(ROOT).as_posix()}: published under /.well-known/ but not in the skills index; list it or add a rule for it here")
+    robots = (PUBLIC / "robots.txt").read_text(encoding="utf-8")
+    signal = re.search(r"^User-agent: \*\n(?:.*\n)*?Content-Signal: (.+)$", robots, re.M)
+    keys = dict(part.strip().split("=", 1) for part in signal.group(1).split(",")) if signal else {}
+    if set(keys) != {"search", "ai-input", "ai-train"} or not set(keys.values()) <= {"yes", "no"}:
+        issues.append("public/robots.txt: the User-agent: * group needs one Content-Signal line with search, ai-input and ai-train, each yes or no")
+    return issues
+
+
 def audit_asset_versions() -> list[str]:
     """Every page must request the same ?v= of the shared CSS/JS, or returning
     visitors can get a new page with an old cached stylesheet."""
@@ -389,6 +414,7 @@ def main() -> int:
     issues += audit_fitness_build()
     issues += audit_fitness_homes()
     issues += audit_llms_full()
+    issues += audit_agent_files()
 
     deployed_text = "\n".join(
         path.read_text(encoding="utf-8")
