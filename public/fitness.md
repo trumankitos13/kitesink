@@ -1,6 +1,6 @@
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 948 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and five calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 948 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -30,7 +30,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 55 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 154 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 121 key numbers and 59 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 746 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 751 sources.
 
 ## Calculators (on the page, no sign-up)
 
@@ -39,6 +39,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - 1RM and load calculator: https://kitesink.com/fitness#loads
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
+- Diet planner (7 or 14 days of very low, low, maintenance and surplus days around your training; saves nothing): https://kitesink.com/fitness#plan
 
 ## Vantix
 

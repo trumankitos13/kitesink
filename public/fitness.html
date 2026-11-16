@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fitness — Vantix, free calculators &amp; a sourced field guide · KiteSink</title>
-<meta name="description" content="Vantix, the periodization OS, plus five free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
+<meta name="description" content="Vantix, the periodization OS, plus six free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
 <link rel="canonical" href="https://kitesink.com/fitness">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/fitness.md" title="Plain-text version">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
-<meta property="og:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta property="og:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta property="og:url" content="https://kitesink.com/fitness">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
-<meta name="twitter:description" content="Vantix, five free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta name="twitter:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -53,7 +53,7 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.12">
+<link rel="stylesheet" href="/ks.css?v=2027.13">
 <style>
   .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
@@ -170,6 +170,45 @@
   .ltable thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
   .ltable tbody th { color: #d8b07a; font-weight: 600; }
 
+  /* diet planner */
+  .d-who { max-width: 72ch; margin: 0 0 18px; padding: 12px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
+  .d-who b { color: var(--k-ink); }
+  .d-week { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 8px; }
+  .d-week legend { margin-bottom: 8px; padding: 0; }
+  .d-ses { display: grid; grid-template-columns: 40px minmax(0, 1fr) 92px; gap: 8px; align-items: center; }
+  .d-ses > span { font: 600 12px/1 var(--k-mono); color: var(--k-copy); }
+  .d-ses .k-input:disabled { opacity: .45; }
+  .d-check { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; line-height: 1.35; color: var(--k-copy); align-self: end; }
+  .d-check input { flex: none; width: 20px; height: 20px; accent-color: var(--k-green); }
+  .d-warns { display: grid; gap: 8px; }
+  .d-warns[hidden] { display: none; }
+  .d-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+  .tool-out .d-auto { background: transparent; color: #f0e8d6; border: 1px solid rgba(240,232,214,.45); }
+  .tool-out .d-auto:hover { border-color: #d8b07a; color: #d8b07a; }
+  .d-hint { margin-top: 6px; }
+  .d-days { list-style: none; margin: 8px 0 0; padding: 0; }
+  .d-days li { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 4px 10px; align-items: center; padding: 8px 0; border-top: 1px solid rgba(240,232,214,.16); }
+  .d-days li.d-wk2 { border-top: 2px solid rgba(240,232,214,.4); }
+  .d-days li.is-drag { opacity: .5; }
+  .d-days li.is-over { background: rgba(216,176,122,.14); }
+  .d-grip { display: grid; place-items: center; width: 26px; min-height: 44px; cursor: grab; touch-action: none; color: #a9b9a3; font: 600 14px/1 var(--k-mono); user-select: none; -webkit-user-select: none; }
+  .d-day { min-width: 0; display: grid; gap: 3px; }
+  .d-day p { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+  .d-name { font: 600 13px/1.2 var(--k-mono); color: #f0e8d6; min-width: 7ch; }
+  .d-kcal { font: 700 15px/1.2 var(--k-sans); font-variant-numeric: tabular-nums; color: #f0e8d6; }
+  .d-meta { font: 500 12px/1.4 var(--k-mono); color: #c2ceb9; font-variant-numeric: tabular-nums; }
+  .dt { display: inline-flex; padding: 2px 9px; border-radius: 30px; font: 600 10.5px/1.6 var(--k-mono); letter-spacing: .06em; text-transform: uppercase; }
+  .dt-vlow { background: rgba(216,176,122,.28); color: #f3e3c4; }
+  .dt-low { background: rgba(240,232,214,.12); color: #f0e8d6; }
+  .dt-maint { box-shadow: inset 0 0 0 1px rgba(143,195,155,.7); color: #cfe6d4; }
+  .dt-surplus { background: #8fc39b; color: #1f3024; }
+  .d-move { display: flex; gap: 4px; }
+  .d-move button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(240,232,214,.3); background: transparent; color: #f0e8d6; font: 600 15px/1 var(--k-mono); cursor: pointer; }
+  .d-move button:hover:not(:disabled) { border-color: #d8b07a; color: #d8b07a; }
+  .d-move button:disabled { opacity: .3; cursor: default; }
+  .d-credit { font-size: 12px !important; opacity: .85; }
+  @media (max-width: 420px) { .d-ses { grid-template-columns: 34px minmax(0, 1fr) 80px; gap: 6px; } .d-days li { grid-template-columns: 20px minmax(0, 1fr) 44px; gap: 4px 8px; } .d-move { flex-direction: column; } }
+
   /* travel */
   .wk { padding-top: 14px; border-top: 1px solid rgba(240,232,214,.18); }
   .wk h3 { margin: 0 0 8px; font: 600 10.5px/1.4 var(--k-mono); letter-spacing: .14em; text-transform: uppercase; color: #d8b07a; }
@@ -248,7 +287,7 @@
   <section class="k-hero k-wrap" aria-labelledby="page-title">
     <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
     <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, five free calculators and a field guide cover the ground: 948 sourced entries in 12 areas, from training basics to health. Everything runs in your browser.</p>
+    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, six free calculators and a field guide cover the ground: 948 sourced entries in 12 areas, from training basics to health. Everything runs in your browser.</p>
     <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
     <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
       <label class="k-label" for="f-q">Search every entry</label>
@@ -340,8 +379,8 @@
   <section id="tools" class="k-band" aria-labelledby="h-tools">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Five calculators. <em>No sign-up.</em></h2></div>
-        <p class="k-small" style="max-width:34ch">Your inputs are remembered in this browser and go nowhere else.</p>
+        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Six calculators. <em>No sign-up.</em></h2></div>
+        <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps nothing.</p>
       </header>
 
       <div class="k-seg k-seg--scroll" role="tablist" aria-label="Tools">
@@ -350,6 +389,7 @@
         <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
         <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
         <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+        <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
       </div>
 
       <!-- ---------- 1. energy & macros ---------- -->
@@ -531,6 +571,68 @@
           </div>
         </div>
       </div>
+
+      <!-- ---------- 6. diet planner ---------- -->
+      <div class="tool" id="plan" role="tabpanel" aria-labelledby="tab-plan">
+        <p class="k-copy tool-intro">Plans one or two weeks of eating around your training. Choose a phase and a pattern; the planner sets each day as very low, low, maintenance or surplus, works out its calories, protein, carbohydrate and fat, and projects the change. Drag the days around, or let it arrange them for you.</p>
+        <p class="d-who"><b>Talk to a doctor before using this</b> if you are under 18, pregnant or breastfeeding, have had an eating disorder, have diabetes or take medication that food intake affects, or have kidney, liver or heart disease. General information, not medical advice. This planner saves nothing.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="d-units-l">Units</span><div class="k-seg" id="d-units" role="group" aria-labelledby="d-units-l"><button type="button" value="metric">Metric</button><button type="button" value="imperial">Imperial</button></div></div>
+              <div class="k-field"><span class="k-label" id="d-sex-l">Sex (for the equation)</span><div class="k-seg" id="d-sex" role="group" aria-labelledby="d-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
+            </div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="d-age" type="number" inputmode="numeric" min="18" max="95" value="30"><span>yr</span></span></label>
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="d-h" type="number" inputmode="decimal" min="48" max="230" value="175"><span id="d-h-unit">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="d-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="d-w-unit">kg</span></span></label>
+            </div>
+            <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional</span></span><span class="with-unit"><input class="k-input" id="d-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
+            <label class="k-field"><span class="k-label">Daily life, without training</span>
+                <select class="k-select" id="d-life">
+                  <option value="desk">Mostly sitting · under 5,000 steps</option>
+                  <option value="walk" selected>Desk job, some walking · 5,000–7,499</option>
+                  <option value="feet">On your feet at work · 7,500–12,499</option>
+                  <option value="labour">Physical job · 12,500 or more</option>
+                </select></label>
+            <div class="k-field"><span class="k-label" id="d-phase-l">Phase</span><div class="k-seg" id="d-phase" role="group" aria-labelledby="d-phase-l"><button type="button" value="lose">Lose fat</button><button type="button" value="hold">Maintain</button><button type="button" value="gain">Gain</button></div></div>
+            <div class="k-field"><span class="k-label" id="d-tpl-l">Pattern</span><div class="k-seg" id="d-tpl" role="group" aria-labelledby="d-tpl-l"></div><p class="k-small" id="d-tpl-note"></p></div>
+            <div class="k-field"><span class="k-label" id="d-len-l">Plan length</span><div class="k-seg" id="d-len" role="group" aria-labelledby="d-len-l"><button type="button" value="7">7 days</button><button type="button" value="14">14 days</button></div></div>
+            <label class="k-field" id="d-rate-wrap"><span class="k-label"><span id="d-rate-label">Rate of loss</span><span id="d-rate-read" style="text-transform:none;letter-spacing:0"></span></span><input class="k-range" id="d-rate" type="range" min="0.25" max="1" step="0.05" value="0.5"></label>
+            <label class="k-field"><span class="k-label">Protein<span id="d-prot-read" style="text-transform:none;letter-spacing:0"></span></span><input class="k-range" id="d-prot" type="range" min="1.2" max="3" step="0.1" value="2"></label>
+            <label class="k-field"><span class="k-label">Fat<span id="d-fat-read" style="text-transform:none;letter-spacing:0"></span></span><input class="k-range" id="d-fat" type="range" min="15" max="40" step="1" value="25"></label>
+            <fieldset class="d-week">
+              <legend class="k-label">Your training week</legend>
+              <div id="d-sessions"></div>
+            </fieldset>
+            <div class="row2" id="d-long-wrap">
+              <label class="k-field"><span class="k-label">Weeks of dieting</span><select class="k-select" id="d-weeks"><option>4</option><option selected>8</option><option>12</option><option>16</option><option>20</option><option>24</option></select></label>
+              <label class="d-check"><input type="checkbox" id="d-breaks" checked> A week at maintenance after every three</label>
+            </div>
+          </div>
+
+          <div class="k-card tool-out" id="d-out">
+            <p class="k-vh" id="d-say" role="status"></p>
+            <div><p class="k-label">Average a day</p><p class="k-stat"><span id="d-kcal">—</span><small>kcal</small></p><p class="k-small" id="d-sub"></p></div>
+            <div id="d-warn" class="d-warns" hidden></div>
+            <div class="hide-empty">
+              <div class="d-head"><p class="k-label" id="d-days-l">Your days</p><button class="k-btn k-btn--sm d-auto" id="d-auto" type="button">Arrange around training</button></div>
+              <p class="k-small d-hint">Drag a day onto another to swap them, or use the arrows.</p>
+              <ol class="d-days" id="d-days" aria-labelledby="d-days-l"></ol>
+            </div>
+            <div class="kv hide-empty">
+              <div><span class="k-label">Maintenance, average</span><b id="d-maint">—</b></div>
+              <div><span class="k-label">Change a week</span><b id="d-change">—</b></div>
+              <div><span class="k-label">Resting energy</span><b id="d-rmr">—</b><span class="k-small" id="d-eq" style="font-size:12px">Mifflin-St Jeor</span></div>
+              <div><span class="k-label">Daily-life factor</span><b id="d-pal">—</b></div>
+            </div>
+            <p class="k-small hide-empty" id="d-long"></p>
+            <p class="k-small">An estimate to start from. Loss is not linear: the first week or two moves more, mostly water and stored carbohydrate, and the same deficit buys a little more loss in leaner people. Watch the trend for two or three weeks and adjust. Training energy comes from the 2024 Compendium of Physical Activities; this differs from the Energy &amp; macros tab, whose activity levels already include training. Which sessions count as hard, and the break pattern, are KiteSink conventions. <span class="cite"><a href="/fitness/sources#src-mifflin1990">Mifflin 1990</a> · <a href="/fitness/sources#src-cunningham1991">Cunningham 1991</a> · <a href="/fitness/sources#src-fao2004">FAO/WHO/UNU 2004</a> · <a href="/fitness/sources#src-tudor-locke-2004">Tudor-Locke 2004</a> · <a href="/fitness/sources#src-herrmann-2024">Herrmann 2024</a> · <a href="/fitness/sources#src-trepanowski-2017">Trepanowski 2017</a> · <a href="/fitness/sources#src-harvie-2011">Harvie 2011</a> · <a href="/fitness/sources#src-nice-2025">NICE 2025</a> · <a href="/fitness/sources#src-hall-2007">Hall 2008</a> · <a href="/fitness/sources#src-peos-2021">PEOS 2021</a> · <a href="/fitness/sources#src-poon-2024">Poon 2025</a> · <a href="/fitness/sources#src-byrne-2018">Byrne 2018</a> · <a href="/fitness/sources#src-helms-2014-protein">Helms 2014a</a> · <a href="/fitness/sources#src-jager-2017">Jäger 2017</a> · <a href="/fitness/sources#src-longland-2016">Longland 2016</a> · <a href="/fitness/sources#src-lieberman-2018">Lieberman 2018</a></span></p>
+            <p class="k-small">Want the day planning done for you, every week? That is what <a href="/vantix">Vantix</a> is being built to do.</p>
+            <p class="k-small d-credit">Planning by day type owes a debt to Lyle McDonald, whose <a href="https://bodyrecomposition.com/">books</a> set out the full methods.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -582,7 +684,7 @@
         <li><a class="hub-card" href="/fitness/claims"><span class="hub-t">Claims</span><span class="hub-b">Things people say, each with a verdict, who was studied, and the source.</span><span class="hub-n">55 claims</span></a></li>
         <li><a class="hub-card" href="/fitness/glossary"><span class="hub-t">Glossary</span><span class="hub-b">Every term the areas use, defined once in plain words.</span><span class="hub-n">154 terms</span></a></li>
         <li><a class="hub-card" href="/fitness/reference"><span class="hub-t">Numbers and tables</span><span class="hub-b">The key numbers and the look-up tables, each linked to the page that holds it.</span><span class="hub-n">121 numbers, 59 tables</span></a></li>
-        <li><a class="hub-card" href="/fitness/sources"><span class="hub-t">Sources</span><span class="hub-b">How entries are graded, what has been corrected, and every source.</span><span class="hub-n">746 sources</span></a></li>
+        <li><a class="hub-card" href="/fitness/sources"><span class="hub-t">Sources</span><span class="hub-b">How entries are graded, what has been corrected, and every source.</span><span class="hub-n">751 sources</span></a></li>
       </ul>
     </div>
   </section>
@@ -591,7 +693,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.12"></script>
-<script src="/fitness.js?v=2027.12"></script>
+<script src="/ks.js?v=2027.13"></script>
+<script src="/fitness.js?v=2027.13"></script>
 </body>
 </html>
