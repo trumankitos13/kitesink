@@ -266,9 +266,9 @@ Health markers · Advanced · Some support · Sources: [Soffer 2024](https://doi
 
 ### Food-frequency questionnaires blur diet and disease links
 
-**Checked against biomarkers in 484 volunteers, questionnaire error was big enough that a true doubling of risk from energy or protein intake would look like 1.1 or less.**
+**Checked against biomarkers in 484 volunteers, questionnaire error was big enough that a true doubling of risk from total energy or protein intake would look like 1.1 or less.**
 
-A food-frequency questionnaire asks how often you ate a list of foods over past months. The OPEN study in Maryland compared one with doubly labelled water and urine nitrogen. The error mostly hid real links rather than inventing them, and expressing protein relative to energy cut the blur (a true 2 read as about 1.3). In the Nurses' Health Study, averaging repeated questionnaires gave stronger links with heart disease than baseline diet alone. McDonald's view is that diet data recalled from memory are too weak to build health claims on. For the size of under-reporting, see the under-reporting entry.
+A food-frequency questionnaire asks how often you ate a list of foods over past months. The OPEN study of healthy Maryland volunteers checked one against doubly labelled water and urine nitrogen. The error shrank estimated risks toward no effect; expressing protein relative to energy eased this (a true 2 read as about 1.3). In US nurses, averaged repeat questionnaires generally gave stronger links between types of fat and heart disease than baseline diet alone. McDonald's view is that diet recalled from memory is too weak to build health claims on. See also the under-reporting entry.
 
 - Check how diet was measured, and how often, before trusting a diet and disease link.
 
@@ -276,9 +276,9 @@ Reading health studies · Intermediate · Thin evidence · Sources: [Kipnis 2003
 
 ### A relative risk sounds bigger than the absolute difference behind it
 
-**Relative risk is a ratio between groups; absolute risk is the real gap in cases. In a Cochrane review of 35 studies, people saw relative reductions as larger and more persuasive.**
+**Relative risk is a ratio between groups; absolute risk is the gap in cases. In a Cochrane review of 35 studies, professionals and consumers saw relative cuts as larger and more persuasive.**
 
-The 2019 egg cohort that prompted McDonald's article pooled six US cohorts (29,615 adults, median 17.5 years, diet self-reported). Each extra 300 mg of dietary cholesterol a day went with a hazard ratio of 1.17 for cardiovascular disease, an absolute risk difference of 3.24% over follow-up. Each extra half egg a day gave 1.06 and 1.11%, and the egg link lost significance once cholesterol intake was adjusted for. McDonald argues such findings say little. See the hazard ratio entry for reading the ratio itself.
+The 2019 egg cohort that prompted McDonald's article pooled six US cohorts (29,615 adults, median 17.5 years, diet self-reported). Each extra 300 mg of dietary cholesterol a day went with a hazard ratio of 1.17 for cardiovascular disease, an absolute risk difference of 3.24% over follow-up. Each extra half egg a day gave 1.06 and 1.11%, and the egg link lost significance once cholesterol intake was adjusted for. McDonald objects that, in his reading, diet was recorded once at the start and assumed to hold for decades. See the hazard ratio entry for reading the ratio itself.
 
 - When a headline gives a percent change in risk, look for the number of extra cases.
 
@@ -288,15 +288,15 @@ Reading health studies · Intermediate · Some support · Sources: [Akl 2011](ht
 
 **Diets rich in carotenoids and high blood beta-carotene went with less lung cancer, yet a daily beta-carotene pill raised lung cancer by 18% in male smokers.**
 
-The ATBC trial in Finland randomised 29,133 male smokers aged 50 to 69 and followed them for five to eight years. On 20 mg of beta-carotene a day, lung cancer incidence rose 18% and total deaths 8%, mainly from lung cancer and ischaemic heart disease. The earlier evidence came from foods and blood levels; the trial tested an isolated pill, so the two asked different questions. A Cochrane review also found beta-carotene pills raised mortality in better trials (see the antioxidant pills entry). These are trial findings; supplement decisions belong with a clinician.
+The ATBC trial in Finland randomised 29,133 male smokers aged 50 to 69 and followed them for five to eight years. On 20 mg of beta-carotene a day, lung cancer incidence rose 18% and total deaths 8%, mainly from lung cancer and ischaemic heart disease; other cancers changed little. The earlier links came from foods and blood levels, while the trial tested an isolated pill (see the cohorts and trials entry). A Cochrane review also found beta-carotene pills raised mortality in better trials (see the antioxidant pills entry). These are trial findings; supplement decisions belong with a clinician.
 
 Reading health studies · Intermediate · Some support · Sources: [ATBCCPSG 1994](https://doi.org/10.1056/NEJM199404143301501), [Bjelakovic 2012](https://doi.org/10.1002/14651858.CD007176.pub2)
 
-### Hormone therapy looked heart-protective in cohorts; a large trial found more heart disease
+### Hormone therapy looked heart-protective in observational data; a WHI trial found more
 
 **A 1991 overview of observational studies put estrogen users at a relative risk of 0.56 for heart disease. The WHI trial of estrogen plus progestin found more coronary events.**
 
-The overview judged confounding an unlikely explanation. WHI gave 16,608 women aged 50 to 79 with a uterus one combined tablet or placebo, for 5.2 years on average. Per 10,000 woman-years there were 7 more coronary events, 8 more strokes, 8 more lung clots and 8 more breast cancers, against 6 fewer colorectal cancers and 5 fewer hip fractures; total deaths did not change. A 2007 WHI analysis saw a non-significant trend to lower coronary risk when therapy began nearer menopause; stroke risk rose regardless. These are trial findings, not advice: hormone therapy decisions belong with a clinician.
+The estrogen overview judged confounding an unlikely explanation. WHI gave 16,608 healthy postmenopausal US women aged 50 to 79 with a uterus one estrogen-plus-progestin tablet or placebo for a mean 5.2 years. Per 10,000 woman-years: 7 more coronary events, 8 more strokes, 8 more lung clots, 8 more breast cancers, 6 fewer colorectal cancers, 5 fewer hip fractures; deaths did not change. With WHI's estrogen-only trial, a 2007 analysis saw a non-significant trend to lower coronary risk when started nearer menopause; stroke rose regardless. These are trial findings, not advice; decisions belong with a clinician.
 
 Reading health studies · Advanced · Some support · Sources: [Stampfer 1991](https://doi.org/10.1016/0091-7435(91)90006-p), [WGWHII 2002](https://doi.org/10.1001/jama.288.3.321), [Rossouw 2007](https://doi.org/10.1001/jama.297.13.1465)
 
@@ -304,17 +304,17 @@ Reading health studies · Advanced · Some support · Sources: [Stampfer 1991](h
 
 **Across 97 matched diet and disease questions, cohort and trial estimates differed little on average, but single comparisons could differ widely in either direction.**
 
-The 2021 analysis found a pooled ratio of risk ratios of 1.09 with a prediction interval of 0.81 to 1.46. Most gaps arose when the designs tested different things, such as a supplement in trials against blood levels in cohorts; with the same exposure, results were similar. Among highly cited clinical studies from 1990 to 2003, 5 of 6 non-randomised ones were later contradicted or overstated, against 9 of 39 randomised trials. McDonald's 2019 view is that he sets nutrition epidemiology aside altogether; his article predates this analysis, which supports caution rather than dismissal.
+The 2021 analysis found a pooled ratio of risk ratios of 1.09 with a prediction interval of 0.81 to 1.46. Most gaps arose when the designs tested different things, such as a supplement in trials against blood levels in cohorts; with the same exposure, results were similar. Among highly cited clinical studies from 1990 to 2003, 5 of 6 non-randomised ones were later contradicted or had found stronger effects than later work, against 9 of 39 randomised trials. McDonald says he ignores nutrition epidemiology altogether; his 2019 article predates this analysis, which supports caution rather than dismissal.
 
 - Give a diet finding more weight when cohorts and trials testing the same exposure agree.
 
 Reading health studies · Intermediate · Some support · Sources: [Schwingshackl 2021](https://doi.org/10.1136/bmj.n1864), [Ioannidis 2005](https://doi.org/10.1001/jama.294.2.218), [McDonald 2019p](https://bodyrecomposition.com/nutrition/epidemiology-is-crap)
 
-### Cohort data settled the harm of smoking because the effect was large
+### Male British doctors who kept smoking died about 10 years younger over a 50-year cohort
 
 **In 34,439 male British doctors followed for 50 years, men born 1900 to 1930 who kept smoking cigarettes died about 10 years earlier than lifelong non-smokers.**
 
-Among men born around 1920, smoking from early adult life tripled the death rate at each age. Stopping at 50 halved that excess hazard, and stopping at 30 avoided almost all of it. Smoking habits were asked in 1951 and at intervals after, and the extra deaths came from diseases smoking can cause. A threefold difference is far harder to explain away than the modest ratios typical of diet cohorts, which simulations show confounding alone can produce (see the confounding entry).
+Among men born around 1920, smoking from early adult life tripled the death rate at each age; stopping at 50 halved that hazard, and stopping at 30 avoided almost all of it. Smoking habits were asked in 1951 and at intervals after, and the extra deaths came chiefly from diseases smoking can cause. That is a threefold rate; simulations show links of the size commonly reported in observational studies can come from confounding alone (see the confounding entry).
 
 Reading health studies · Beginner · Some support · Sources: [Doll 2004](https://doi.org/10.1136/bmj.38142.554479.AE), [Fewell 2007](https://doi.org/10.1093/aje/kwm165)
 
@@ -364,13 +364,13 @@ Strength and muscle · Beginner · Well supported · Sources: [Bull 2020](https:
 
 ### Blaming one food for a disease on the strength of a cohort headline
 
-**Foods come in eating patterns and patterns come with lifestyles, so a cohort link to one food partly reflects whatever travels with it.**
+**Foods come in eating patterns and patterns come with lifestyles, so a cohort link to one food can partly reflect whatever travels with it.**
 
-McDonald argues that diet and disease are multifactorial. In his reading, heavy eaters of processed and fatty meat also tend to eat fewer vegetables and differ in activity, smoking and drinking, and statistical adjustment cannot fully pull these apart. He also objects to counting lean cuts and processed meats as one food. A 2019 review of cohort studies on red and processed meat found the links with death and heart and metabolic disease very small, rated the evidence low certainty, and named residual confounding and recall bias as limits.
+McDonald argues that diet and disease are multifactorial. In his reading, heavy eaters of fatty, charred meat also tend to eat fewer fruits and vegetables and differ in activity, smoking and drinking, and statistical adjustment does not fix this. He also objects to counting lean cuts and processed meats as one food. A 2019 review of cohort studies on red and processed meat found the links with death and heart and metabolic disease very small, rated the evidence low certainty, and named residual confounding and recall bias as limits.
 
 - Ask what else differed between the high and low intake groups.
 
-Reading health studies · Beginner · Some support · Sources: [Zeraatkar 2019](https://doi.org/10.7326/M19-0655), [McDonald 2019p](https://bodyrecomposition.com/nutrition/epidemiology-is-crap)
+Reading health studies · Beginner · Thin evidence · Sources: [Zeraatkar 2019](https://doi.org/10.7326/M19-0655), [McDonald 2019p](https://bodyrecomposition.com/nutrition/epidemiology-is-crap)
 
 ## Key numbers
 
@@ -431,15 +431,15 @@ Coaching practice · Sources: [Reed 2014](https://doi.org/10.1097/hco.0000000000
 ## Terms
 
 - **ApoB (apolipoprotein B)**: A protein carried on each cholesterol-bearing particle that can clog arteries. The blood level reflects the number of these particles and can differ from LDL cholesterol.
-- **Confounding and residual confounding**: Confounding is a third factor linked to both an exposure and an outcome. Residual confounding is what is left when such factors are measured badly or missed. In simulations it alone produced links of commonly reported size.
+- **Confounding and residual confounding**: A third factor linked to both an exposure and an outcome. Residual confounding remains when such a factor is measured badly; unmeasured confounding comes from factors left out. In simulations these alone made links of a commonly seen size.
 - **Dynapenia**: The age-related loss of muscle strength. In later life it runs faster than the loss of muscle size, so strength and mass are tracked separately.
 - **False dilemma (excluding the middle)**: Arguing as if only two options exist, often a favoured one and an absurd extreme, so the favoured one wins by contrast. McDonald applies it to diet and training debates; most real choices lie on a range.
 - **Hazard ratio (HR)**: A figure comparing risk between groups over time. 1.0 means no difference, 0.80 means 20% lower risk and 1.20 means 20% higher. It shows association, not cause.
 - **HbA1c (glycated haemoglobin)**: A blood test that shows average blood sugar over about the past 2 to 3 months. It is given as a percentage, and published ranges separate normal, prediabetes and diabetes.
-- **Healthy-user effect**: People who keep up one preventive habit, such as a screening test or a prescribed tablet, tend to look after their health in other ways too. In observational studies this can make the habit look more protective than it is.
+- **Healthy-user effect**: People who keep up one kind of preventive care, such as screening or a prescribed medicine, tend to look after their health in other ways too. In observational studies this can make that care look more protective than it is.
 - **Lactate threshold**: The effort above which lactate starts to build up in the blood faster than it clears. The first threshold marks the end of easy effort and varies between people.
 - **MET (metabolic equivalent)**: A unit of effort. 1 MET is resting energy use, and brisk walking is about 3 to 5 METs. Fitness is often reported as the peak METs reached on a treadmill test.
-- **Observational study (epidemiology)**: A study that records what people already eat or do and then follows who becomes ill, without assigning anything. It shows which things go together, not which causes which. Cohort studies are the common kind.
+- **Observational study (epidemiology)**: A study that records what people already eat or do and follows what happens, without assigning anything; cohorts are the common kind. Alone it shows what goes together. Cause is judged from more, such as trials or a large, consistent link.
 - **Sarcopenia**: A condition of low muscle strength with low muscle quantity or quality, found mostly in older adults. A clinician diagnoses it using strength tests and a body measure.
 - **VO2 max**: The highest rate at which your body can use oxygen during hard exercise, in mL of oxygen per kg of body weight per minute. It is the standard lab measure of aerobic fitness.
 - **Waist-to-height ratio**: Waist circumference divided by height, both in the same units. A ratio of 0.5 means the waist is half your height.

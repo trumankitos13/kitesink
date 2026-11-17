@@ -996,7 +996,7 @@
    "level": "beginner",
    "confidence": "practice",
    "sources": [],
-   "take": "A study that records what people already eat or do and then follows who becomes ill, without assigning anything. It shows which things go together, not which causes which. Cohort studies are the common kind."
+   "take": "A study that records what people already eat or do and follows what happens, without assigning anything; cohorts are the common kind. Alone it shows what goes together. Cause is judged from more, such as trials or a large, consistent link."
   },
   {
    "id": "hlth-t-confounding",
@@ -1008,7 +1008,7 @@
    "sources": [
     "fewell-2007"
    ],
-   "take": "Confounding is a third factor linked to both an exposure and an outcome. Residual confounding is what is left when such factors are measured badly or missed. In simulations it alone produced links of commonly reported size."
+   "take": "A third factor linked to both an exposure and an outcome. Residual confounding remains when such a factor is measured badly; unmeasured confounding comes from factors left out. In simulations these alone made links of a commonly seen size."
   },
   {
    "id": "hlth-t-healthy-user",
@@ -1016,11 +1016,11 @@
    "title": "Healthy-user effect",
    "topic": "evidence",
    "level": "intermediate",
-   "confidence": "moderate",
+   "confidence": "limited",
    "sources": [
     "shrank-2011"
    ],
-   "take": "People who keep up one preventive habit, such as a screening test or a prescribed tablet, tend to look after their health in other ways too. In observational studies this can make the habit look more protective than it is."
+   "take": "People who keep up one kind of preventive care, such as screening or a prescribed medicine, tend to look after their health in other ways too. In observational studies this can make that care look more protective than it is."
   },
   {
    "id": "hlth-ffq-attenuation",
@@ -1034,8 +1034,8 @@
     "hu-1999",
     "mcdonald-epidemiology"
    ],
-   "take": "Checked against biomarkers in 484 volunteers, questionnaire error was big enough that a true doubling of risk from energy or protein intake would look like 1.1 or less.",
-   "body": "A food-frequency questionnaire asks how often you ate a list of foods over past months. The OPEN study in Maryland compared one with doubly labelled water and urine nitrogen. The error mostly hid real links rather than inventing them, and expressing protein relative to energy cut the blur (a true 2 read as about 1.3). In the Nurses' Health Study, averaging repeated questionnaires gave stronger links with heart disease than baseline diet alone. McDonald's view is that diet data recalled from memory are too weak to build health claims on. For the size of under-reporting, see the under-reporting entry.",
+   "take": "Checked against biomarkers in 484 volunteers, questionnaire error was big enough that a true doubling of risk from total energy or protein intake would look like 1.1 or less.",
+   "body": "A food-frequency questionnaire asks how often you ate a list of foods over past months. The OPEN study of healthy Maryland volunteers checked one against doubly labelled water and urine nitrogen. The error shrank estimated risks toward no effect; expressing protein relative to energy eased this (a true 2 read as about 1.3). In US nurses, averaged repeat questionnaires generally gave stronger links between types of fat and heart disease than baseline diet alone. McDonald's view is that diet recalled from memory is too weak to build health claims on. See also the under-reporting entry.",
    "do": [
     "Check how diet was measured, and how often, before trusting a diet and disease link."
    ]
@@ -1052,8 +1052,8 @@
     "zhong-2019",
     "mcdonald-epidemiology"
    ],
-   "take": "Relative risk is a ratio between groups; absolute risk is the real gap in cases. In a Cochrane review of 35 studies, people saw relative reductions as larger and more persuasive.",
-   "body": "The 2019 egg cohort that prompted McDonald's article pooled six US cohorts (29,615 adults, median 17.5 years, diet self-reported). Each extra 300 mg of dietary cholesterol a day went with a hazard ratio of 1.17 for cardiovascular disease, an absolute risk difference of 3.24% over follow-up. Each extra half egg a day gave 1.06 and 1.11%, and the egg link lost significance once cholesterol intake was adjusted for. McDonald argues such findings say little. See the hazard ratio entry for reading the ratio itself.",
+   "take": "Relative risk is a ratio between groups; absolute risk is the gap in cases. In a Cochrane review of 35 studies, professionals and consumers saw relative cuts as larger and more persuasive.",
+   "body": "The 2019 egg cohort that prompted McDonald's article pooled six US cohorts (29,615 adults, median 17.5 years, diet self-reported). Each extra 300 mg of dietary cholesterol a day went with a hazard ratio of 1.17 for cardiovascular disease, an absolute risk difference of 3.24% over follow-up. Each extra half egg a day gave 1.06 and 1.11%, and the egg link lost significance once cholesterol intake was adjusted for. McDonald objects that, in his reading, diet was recorded once at the start and assumed to hold for decades. See the hazard ratio entry for reading the ratio itself.",
    "do": [
     "When a headline gives a percent change in risk, look for the number of extra cases."
    ]
@@ -1070,12 +1070,12 @@
     "bjelakovic-2012"
    ],
    "take": "Diets rich in carotenoids and high blood beta-carotene went with less lung cancer, yet a daily beta-carotene pill raised lung cancer by 18% in male smokers.",
-   "body": "The ATBC trial in Finland randomised 29,133 male smokers aged 50 to 69 and followed them for five to eight years. On 20 mg of beta-carotene a day, lung cancer incidence rose 18% and total deaths 8%, mainly from lung cancer and ischaemic heart disease. The earlier evidence came from foods and blood levels; the trial tested an isolated pill, so the two asked different questions. A Cochrane review also found beta-carotene pills raised mortality in better trials (see the antioxidant pills entry). These are trial findings; supplement decisions belong with a clinician."
+   "body": "The ATBC trial in Finland randomised 29,133 male smokers aged 50 to 69 and followed them for five to eight years. On 20 mg of beta-carotene a day, lung cancer incidence rose 18% and total deaths 8%, mainly from lung cancer and ischaemic heart disease; other cancers changed little. The earlier links came from foods and blood levels, while the trial tested an isolated pill (see the cohorts and trials entry). A Cochrane review also found beta-carotene pills raised mortality in better trials (see the antioxidant pills entry). These are trial findings; supplement decisions belong with a clinician."
   },
   {
    "id": "hlth-hormone-therapy-reversal",
    "type": "note",
-   "title": "Hormone therapy looked heart-protective in cohorts; a large trial found more heart disease",
+   "title": "Hormone therapy looked heart-protective in observational data; a WHI trial found more",
    "topic": "evidence",
    "level": "advanced",
    "confidence": "moderate",
@@ -1085,7 +1085,7 @@
     "rossouw-2007"
    ],
    "take": "A 1991 overview of observational studies put estrogen users at a relative risk of 0.56 for heart disease. The WHI trial of estrogen plus progestin found more coronary events.",
-   "body": "The overview judged confounding an unlikely explanation. WHI gave 16,608 women aged 50 to 79 with a uterus one combined tablet or placebo, for 5.2 years on average. Per 10,000 woman-years there were 7 more coronary events, 8 more strokes, 8 more lung clots and 8 more breast cancers, against 6 fewer colorectal cancers and 5 fewer hip fractures; total deaths did not change. A 2007 WHI analysis saw a non-significant trend to lower coronary risk when therapy began nearer menopause; stroke risk rose regardless. These are trial findings, not advice: hormone therapy decisions belong with a clinician."
+   "body": "The estrogen overview judged confounding an unlikely explanation. WHI gave 16,608 healthy postmenopausal US women aged 50 to 79 with a uterus one estrogen-plus-progestin tablet or placebo for a mean 5.2 years. Per 10,000 woman-years: 7 more coronary events, 8 more strokes, 8 more lung clots, 8 more breast cancers, 6 fewer colorectal cancers, 5 fewer hip fractures; deaths did not change. With WHI's estrogen-only trial, a 2007 analysis saw a non-significant trend to lower coronary risk when started nearer menopause; stroke rose regardless. These are trial findings, not advice; decisions belong with a clinician."
   },
   {
    "id": "hlth-cohorts-vs-trials",
@@ -1100,7 +1100,7 @@
     "mcdonald-epidemiology"
    ],
    "take": "Across 97 matched diet and disease questions, cohort and trial estimates differed little on average, but single comparisons could differ widely in either direction.",
-   "body": "The 2021 analysis found a pooled ratio of risk ratios of 1.09 with a prediction interval of 0.81 to 1.46. Most gaps arose when the designs tested different things, such as a supplement in trials against blood levels in cohorts; with the same exposure, results were similar. Among highly cited clinical studies from 1990 to 2003, 5 of 6 non-randomised ones were later contradicted or overstated, against 9 of 39 randomised trials. McDonald's 2019 view is that he sets nutrition epidemiology aside altogether; his article predates this analysis, which supports caution rather than dismissal.",
+   "body": "The 2021 analysis found a pooled ratio of risk ratios of 1.09 with a prediction interval of 0.81 to 1.46. Most gaps arose when the designs tested different things, such as a supplement in trials against blood levels in cohorts; with the same exposure, results were similar. Among highly cited clinical studies from 1990 to 2003, 5 of 6 non-randomised ones were later contradicted or had found stronger effects than later work, against 9 of 39 randomised trials. McDonald says he ignores nutrition epidemiology altogether; his 2019 article predates this analysis, which supports caution rather than dismissal.",
    "do": [
     "Give a diet finding more weight when cohorts and trials testing the same exposure agree."
    ]
@@ -1108,7 +1108,7 @@
   {
    "id": "hlth-large-effects-smoking",
    "type": "note",
-   "title": "Cohort data settled the harm of smoking because the effect was large",
+   "title": "Male British doctors who kept smoking died about 10 years younger over a 50-year cohort",
    "topic": "evidence",
    "level": "beginner",
    "confidence": "moderate",
@@ -1117,7 +1117,7 @@
     "fewell-2007"
    ],
    "take": "In 34,439 male British doctors followed for 50 years, men born 1900 to 1930 who kept smoking cigarettes died about 10 years earlier than lifelong non-smokers.",
-   "body": "Among men born around 1920, smoking from early adult life tripled the death rate at each age. Stopping at 50 halved that excess hazard, and stopping at 30 avoided almost all of it. Smoking habits were asked in 1951 and at intervals after, and the extra deaths came from diseases smoking can cause. A threefold difference is far harder to explain away than the modest ratios typical of diet cohorts, which simulations show confounding alone can produce (see the confounding entry)."
+   "body": "Among men born around 1920, smoking from early adult life tripled the death rate at each age; stopping at 50 halved that hazard, and stopping at 30 avoided almost all of it. Smoking habits were asked in 1951 and at intervals after, and the extra deaths came chiefly from diseases smoking can cause. That is a threefold rate; simulations show links of the size commonly reported in observational studies can come from confounding alone (see the confounding entry)."
   },
   {
    "id": "hlth-mistake-one-food",
@@ -1125,13 +1125,13 @@
    "title": "Blaming one food for a disease on the strength of a cohort headline",
    "topic": "evidence",
    "level": "beginner",
-   "confidence": "moderate",
+   "confidence": "limited",
    "sources": [
     "zeraatkar-2019",
     "mcdonald-epidemiology"
    ],
-   "take": "Foods come in eating patterns and patterns come with lifestyles, so a cohort link to one food partly reflects whatever travels with it.",
-   "body": "McDonald argues that diet and disease are multifactorial. In his reading, heavy eaters of processed and fatty meat also tend to eat fewer vegetables and differ in activity, smoking and drinking, and statistical adjustment cannot fully pull these apart. He also objects to counting lean cuts and processed meats as one food. A 2019 review of cohort studies on red and processed meat found the links with death and heart and metabolic disease very small, rated the evidence low certainty, and named residual confounding and recall bias as limits.",
+   "take": "Foods come in eating patterns and patterns come with lifestyles, so a cohort link to one food can partly reflect whatever travels with it.",
+   "body": "McDonald argues that diet and disease are multifactorial. In his reading, heavy eaters of fatty, charred meat also tend to eat fewer fruits and vegetables and differ in activity, smoking and drinking, and statistical adjustment does not fix this. He also objects to counting lean cuts and processed meats as one food. A 2019 review of cohort studies on red and processed meat found the links with death and heart and metabolic disease very small, rated the evidence low certainty, and named residual confounding and recall bias as limits.",
    "do": [
     "Ask what else differed between the high and low intake groups."
    ]
@@ -2755,6 +2755,7 @@
    "year": 2021,
    "title": "Evaluating agreement between bodies of evidence from randomised controlled trials and cohort studies in nutrition research: meta-epidemiological study",
    "journal": "BMJ",
+   "volume": "374",
    "pages": "n1864",
    "doi": "10.1136/bmj.n1864",
    "pmid": "34526355",
@@ -2801,7 +2802,7 @@
     "Zeraatkar D",
     "Han MA",
     "Guyatt GH",
-    "Vernooij RW",
+    "Vernooij RWM",
     "El Dib R",
     "Cheung K",
     "Milio K",
