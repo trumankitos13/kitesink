@@ -3,6 +3,198 @@
   "corrections": [
     {
       "date": "2026-11-16",
+      "title": "Meet attempt planner: first-meet setting",
+      "href": "/fitness#attempts",
+      "note": "The first-meet setting now suggests 85%, 90% and 95% of a best single, was 88%, 94% and 98%, to match the first-meet ranges in the meet area. Basis: McDonald's first-meet advice."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Attempt selection ranges, first meet and experienced",
+      "entry": "meet-table-attempts",
+      "note": "Added first-meet rows (80-85%, 85-92%, 92-95%) so the table matches the opener, second and third numbers. Basis: McDonald's first-meet advice; no study covers first meets."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Practise the lifts in competition style and hold four principles",
+      "entry": "pl-specificity-technique",
+      "note": "The straight bar path over mid-foot now applies to the squat and deadlift only; the bench travels in a shallow arc. The entry had applied it to all three lifts. Basis: McDonald's bench guide."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Limb and torso lengths change which set-up suits you",
+      "entry": "pl-leverages",
+      "note": "Added that the one direct test (11 men) linked forward trunk lean to ankle mobility, not to segment-length ratios, and a do item to check ankle mobility."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Training days per week usually rise with level",
+      "entry": "pl-frequency-by-level",
+      "note": "The beginner line now cites a meta-analysis of 140 strength studies (3 days a week per muscle group best for untrained people, 2 for trained). Confidence raised from practice to moderate."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Do lifting belts weaken your core?",
+      "entry": "claim-belts-weaken-core",
+      "note": "Added a study in 9 adults deadlifting at 90% of max, where a belt raised intra-abdominal pressure, the usual reason given for wearing one. Verdict unchanged."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Is fasted cardio better for fat loss?",
+      "entry": "claim-fasted-cardio",
+      "note": "Added the diet-controlled trial's scope (20 young women, 4 weeks, 3 sessions a week) and McDonald's view that a benefit in very lean dieters is untested rather than disproven. Verdict unchanged."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Does cardio kill your muscle gains?",
+      "entry": "claim-cardio-kills-gains",
+      "note": "Added the size of the drop in explosive-strength gains (effect -0.28) and that it was larger when cardio and lifting shared a session than when they were 3 hours or more apart. Verdict unchanged."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Does every muscle need training twice a week?",
+      "entry": "claim-twice-a-week",
+      "note": "Added a 25-study meta-analysis finding no growth difference between frequencies at equal volume, and McDonald's practical view that high weekly volume is better split over two or more sessions. Verdict unchanged."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Does your body have a set point it fights to defend?",
+      "entry": "claim-set-point",
+      "note": "Added that a reduced weight shifted expenditure and thyroid hormones toward regain in 10 people, and McDonald's view that the body resists loss far more than gain. Verdict unchanged."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Getting very lean costs hormones, mood and training quality, so go carefully",
+      "entry": "diet-very-lean-costs",
+      "note": "Corrected: the entry said hormones in women were disrupted below 30 kcal per kg. That figure comes from a five-day lab study; a three-cycle trial found risk rises steadily with no cut-off, and the 2025 Triad update moves away from a threshold."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Weighing yourself regularly goes with more loss inside a programme",
+      "entry": "diet-self-weighing",
+      "note": "Added that the tested daily method gives feedback on a 7-day trend (two studies in female students) and McDonald's advice to read daily weights as an average. The do item now says to act on the 7-day average."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Losing over 1 percent of body weight a week without high protein and heavy lifting",
+      "entry": "diet-mistake-too-fast",
+      "note": "Reworded the risk as losing faster than about 1 percent a week without high protein and heavy lifting, adding a review on deficit size and lean loss and McDonald's view on speed. Title, take and do items changed."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Aim to lose about 0.5 to 1 percent of body weight a week",
+      "entry": "diet-deficit-rate",
+      "note": "Added McDonald's view that faster loss mainly costs muscle when protein is low and lifting is light."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Set point and settling point",
+      "entry": "diet-term-set-point",
+      "note": "Added McDonald's view that the body resists loss far more than gain."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Weight regain is common, and maintenance is possible with sustained habits",
+      "entry": "diet-regain-and-maintenance",
+      "note": "Said that the link between activity and maintenance is observational, since controlled trials found no significant effect of exercise training. The do item now returns calories to maintenance within about two weeks instead of in steps (McDonald's rule)."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Dieting with no end date and no plan for after",
+      "entry": "diet-mistake-no-end-plan",
+      "note": "The exit now reaches maintenance at once or within about two weeks (McDonald's rule). The entry had said to step calories up over several weeks, which had no source."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Cutting calories after a short stall",
+      "entry": "diet-mistake-react-to-stall",
+      "note": "Added McDonald's view that cutting harder can add stress-related water retention."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Loading a muscle in its stretched position grew more in several trials",
+      "entry": "hyp-length-stretched-position",
+      "note": "Added a 12-week trial in which standing calf raises grew the gastrocnemius far more than seated ones, with similar soleus growth."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Warm up with lighter sets of the first lift; save long stretches for later",
+      "entry": "hyp-prog-warm-up",
+      "note": "Added that static holds under 30 seconds had no detrimental effect in a review of 106 studies, with a pointer to the training basics warm-up entries."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Rep ranges and what each is good for",
+      "entry": "hyp-table-rep-ranges",
+      "note": "The 8-12 row and the summary now say this range has no special research backing as the growth range; pooled trials found growth similar across loads."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Adding reps and adding weight both work as progression",
+      "entry": "hyp-load-progression-methods",
+      "note": "Named the add-reps-then-add-weight method double progression, matching the training basics glossary."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Progressive overload",
+      "entry": "hyp-term-progressive-overload",
+      "note": "Added the term double progression for adding reps to the top of a range and then adding weight."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "With weekly sets matched, training a muscle more often adds little growth",
+      "entry": "hyp-freq-volume-matched",
+      "note": "Added a 25-study meta-analysis finding no growth difference at equal volume, and McDonald's practical view that high weekly volume is easier to train hard over two or more sessions."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Training splits compared",
+      "entry": "hyp-table-splits",
+      "note": "The body-part split row now fits low weekly volume per muscle and is marked a poor fit at high volume (McDonald's view). It had been listed as best for high volume. Growth was similar at equal volume."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "FFMI reference points from published samples",
+      "entry": "comp-table-ffmi-reference",
+      "note": "Added an upper reference for women: among 372 female college athletes measured by DXA, the 97.5th percentile FFMI was 23.9 and the mean 18.8."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Caffeine dose often studied",
+      "entry": "nut-num-caffeine",
+      "note": "Added that caffeine's half-life was about 7.9 hours in women on low-dose oral contraceptives against 5.4 hours in non-users, which matters for timing."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Caffeine gave a small strength gain in upper-body lifts",
+      "entry": "meet-caffeine",
+      "note": "Added that caffeine's half-life was about 7.9 hours in women on low-dose oral contraceptives against 5.4 hours in non-users."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Opening with a weight that is nearly a max",
+      "entry": "meet-mistake-greedy-opener",
+      "note": "For a first meet the opener is now lighter, about 85% of a best single or less (McDonald's rule). Competition data on openers near 91-92%, which do not separate first meets, are kept. The entry had advised 88-92% and a double for everyone."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Opener as a share of your current best single",
+      "entry": "meet-num-opener",
+      "note": "The figure is now 80-85% for a first meet (80-82.5% on bench), from McDonald's first-meet rule. It had been 88-92%. The competition figures (openers near 91-92%) are kept in the text."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Second attempt as a share of your current best single",
+      "entry": "meet-num-second",
+      "note": "The figure is now 85-92% to follow a lighter first-meet opener (McDonald's rule). It had been 94-97.5%. The elite jump of about 5% is kept."
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Third attempt as a share of your current best single",
+      "entry": "meet-num-third",
+      "note": "The figure is now 92-95% for a first meet, where a personal best is not the aim (McDonald's rule). It had been 98-102.5%. The elite step of about 3% from second to third is kept."
+    },
+    {
+      "date": "2026-11-16",
       "title": "New areas added to the field guide",
       "href": "/fitness#guide",
       "note": "Added training basics, technique, conditioning, recovery, body composition and women, each on its own page. /fitness now links to a page for every area and for the claims, the glossary, the numbers and tables, and the sources. No published entry changed what it says."

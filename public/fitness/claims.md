@@ -47,14 +47,15 @@ Evidence: Meta-analysis · Well supported · Sources: [Lopez 2021](https://doi.o
 
 **Verdict: Depends.** For size, weekly sets matter more than how they are split; for strength, training more often may help, though findings differ.
 
-A meta-regression of 67 studies found growth rose with weekly set volume, while frequency's effect on growth was compatible with negligible effects. Strength gains did rise with frequency, with diminishing returns. A separate meta-analysis found no significant effect of frequency on strength when volume was equal. In one network analysis the top-ranked growth plan was twice weekly, so twice a week is a sensible default, not a requirement.
+A meta-regression of 67 studies found growth rose with weekly set volume, while frequency's effect was compatible with negligible effects; a meta-analysis of 25 studies found no growth difference at equal volume. Strength gains rose with frequency, with diminishing returns, though another meta-analysis found no significant strength effect at equal volume. A network analysis ranked twice weekly top for growth. McDonald's view, a practical one: once weekly sets per muscle are high, two or more sessions keep each one manageable.
 
-Who was studied: Pelland 2026: 67 studies, 2,058 participants (about 79% male, average age about 25). Ralston 2018: 12 studies on strength. Currier 2023: network analysis of 12 plans.
+Who was studied: Pelland 2026: 67 studies, 2,058 participants (about 79% male, average age about 25). Schoenfeld 2019: 25 studies. Ralston 2018: 12 studies on strength. Currier 2023: network analysis of 12 plans.
 
 - Set your weekly sets first, then choose the number of days that lets you train each session hard.
+- If a muscle gets many hard sets a week, split them over at least two sessions.
 - Add a day if sessions get so long that your effort drops.
 
-Evidence: Meta-analysis · Well supported · Sources: [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Ralston 2018](https://doi.org/10.1186/s40798-018-0149-9), [Currier 2023](https://doi.org/10.1136/bjsports-2023-106807)
+Evidence: Meta-analysis · Well supported · Sources: [Pelland 2026](https://doi.org/10.1007/s40279-025-02344-w), [Ralston 2018](https://doi.org/10.1186/s40798-018-0149-9), [Currier 2023](https://doi.org/10.1136/bjsports-2023-106807), [Schoenfeld 2019](https://doi.org/10.1080/02640414.2018.1555906), [McDonald 2020b](https://bodyrecomposition.com/training/does-training-frequency-matter-for-muscle-growth)
 
 ### Is muscle soreness a sign of a good workout?
 
@@ -73,7 +74,7 @@ Evidence: Mixed · Some support · Sources: [Nosaka 2002](https://doi.org/10.103
 
 **Verdict: Overstated.** Adding cardio did not reduce overall muscle growth in a 43-study review, though a small effect showed at fibre level, mainly with running.
 
-A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength was reduced, more so when both were done in the same session. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.
+A meta-analysis of 43 studies found adding aerobic work to the same lifting program did not compromise muscle hypertrophy (effect -0.01) or maximal strength, with no significant influence of cardio type (cycling or running) or weekly frequency. Explosive strength gains were reduced (effect -0.28), more so when cardio and lifting shared a session than when they were 3 hours or more apart. A second meta-analysis of 15 studies measuring muscle fibre size found a small negative effect overall (-0.23); for type I fibres it was seen with running but not cycling. The fibre data are preliminary.
 
 Who was studied: Schumann 2022: 43 studies in healthy adults, at least 4 weeks of supervised concurrent training. Lundberg 2022: 15 studies on muscle fibre size, same design.
 
@@ -106,6 +107,19 @@ Who was studied: Bell 2023: 34 expert coaches in round one, 21 in round three. R
 
 Evidence: Mixed · Thin evidence · Sources: [Bell 2023](https://doi.org/10.1186/s40798-023-00633-0), [Pancar 2026](https://doi.org/10.1038/s41598-026-40612-5), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y)
 
+### Do you gain less muscle and strength if you lift in the morning?
+
+**Verdict: Not supported.** Morning and evening training built similar strength and muscle, though strength is on average higher in the evening at the start.
+
+A meta-analysis of 11 studies found people stronger in the evening at the outset. Training in the morning lifted morning strength to about evening levels, while evening training kept the daily gap. Gains in strength and muscle size were similar whichever time people trained. In one trial in men, 10 weeks of morning or late-afternoon training grew the quadriceps by 2.7% and 3.5%, not a significant gap. Lyle McDonald expects a few flat weeks after a switch to mornings, and suggests a longer warm-up and, for those who need it, a small snack with carbohydrate and protein beforehand.
+
+Who was studied: Grgic 2019: 11 studies comparing morning with evening training, other variables equal. Sedliak 2009: men, 10 weeks of time-of-day training after 10 weeks of preparation.
+
+- McDonald suggests two to three weeks after a move to mornings before judging them.
+- Lengthen the warm-up for early sessions.
+
+Evidence: Meta-analysis · Some support · Sources: [Grgic 2019](https://doi.org/10.1080/07420528.2019.1567524), [Sedliak 2009](https://doi.org/10.1519/JSC.0b013e3181bb7388), [McDonald 2018c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-9)
+
 ## Powerlifting
 
 ### Is a calculated one-rep max as good as a tested one?
@@ -125,13 +139,13 @@ Evidence: Cohort study · Thin evidence · Sources: [Reynolds 2006](https://doi.
 
 **Verdict: Overstated.** No cited study shows a lifting belt weakening the core; short trials found little change in muscle activity and more reps with a belt.
 
-In 28 men squatting at 75% of predicted max, a belt alone did not change muscle activity, while abdominal bracing raised abdominal activity with or without a belt. In 49 lifters, a belt raised reps with a 6-rep-max load from 6.5 to 8.1. A review of 35 studies of lumbar supports, which are medical braces and not lifting belts, found inconsistent effects on trunk muscles. The two belt studies were single-session, so months of belt use are not covered.
+In 28 men squatting at 75% of predicted max, a belt alone did not change muscle activity, while abdominal bracing raised abdominal activity with or without a belt. In 49 lifters, a belt raised reps with a 6-rep-max load from 6.5 to 8.1. In 9 adults deadlifting 90% of max, a belt raised intra-abdominal pressure, the usual reason given for wearing one. A review of 35 studies of lumbar supports, which are medical braces and not lifting belts, found inconsistent effects on trunk muscles. The belt studies lasted one or two sessions, so months of belt use are not covered.
 
-Who was studied: Lynch 2025: 28 men, one session. Veltzke 2026: 49 men and women, two sessions a week apart. Azadinia 2017: review of 35 studies of lumbar supports.
+Who was studied: Lynch 2025: 28 men, one session. Veltzke 2026: 49 men and women, two sessions a week apart. Harman 1989: 9 adults, one session. Azadinia 2017: review of 35 studies of lumbar supports.
 
 - Learn to brace your abdomen without a belt, then add a belt for heavy sets if you like.
 
-Evidence: Mixed · Thin evidence · Sources: [Lynch 2025](https://doi.org/10.1080/02640414.2025.2535048), [Veltzke 2026](https://doi.org/10.1519/JSC.0000000000005426), [Azadinia 2017](https://doi.org/10.1016/j.spinee.2016.12.005)
+Evidence: Mixed · Thin evidence · Sources: [Lynch 2025](https://doi.org/10.1080/02640414.2025.2535048), [Veltzke 2026](https://doi.org/10.1519/JSC.0000000000005426), [Azadinia 2017](https://doi.org/10.1016/j.spinee.2016.12.005), [Harman 1989](https://doi.org/10.1249/00005768-198904000-00012)
 
 ### Do you need to max out in training to get stronger?
 
@@ -263,6 +277,73 @@ Who was studied: Craven 2022: 69 publications, 227 outcome measures, mostly male
 - If you sleep badly the night before, keep to your usual routine and warm-up.
 
 Evidence: Mixed · Some support · Sources: [Craven 2022](https://doi.org/10.1007/s40279-022-01706-y), [Knowles 2018](https://doi.org/10.1016/j.jsams.2018.01.012)
+
+## Conditioning
+
+### Can a fitness watch tell you how many calories you burned?
+
+**Verdict: Overstated.** Wrist devices track heart rate fairly well, but in a lab test of seven wrist devices, none estimated calories within 20%.
+
+In 60 adults measured against lab equipment while sitting, walking, running and cycling, six of seven wrist devices kept median heart-rate error under 5% on the bike, yet none estimated energy use within 20%. Errors were largest for walking and for men, people with higher BMI and darker skin. A meta-analysis of 60 validation studies found accuracy varied widely with the activity, and adding heart rate to motion sensing helped. Lyle McDonald treats a resting heart rate that drifts down during a diet as a rough sign that energy use is falling, not a measure of how far.
+
+Who was studied: Shcherbina 2017: 60 adults, 7 wrist devices, lab tests against indirect calorimetry. O'Driscoll 2020: 60 validation studies of wrist and arm monitors in healthy adults.
+
+- Use the calorie figure to compare similar days, not to decide how much to eat.
+- Set intake from your weekly average weight over several weeks.
+
+Evidence: Meta-analysis · Some support · Sources: [Shcherbina 2017](https://doi.org/10.3390/jpm7020003), [O’Driscoll 2020](https://doi.org/10.1136/bjsports-2018-099643), [McDonald 2017c](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-4)
+
+### Are muscle cramps during exercise caused by dehydration or low salt?
+
+**Verdict: Overstated.** In a large race, cramping went with faster pacing and a history of cramps, not with fluid loss or blood salt levels.
+
+In 210 Ironman triathletes, the 43 who cramped did not differ significantly in body-weight or electrolyte changes from the 166 who did not. Faster race times and cramps in earlier races were the only independent risk factors. A 2019 review found the causes still uncertain: evidence from industrial medical records and one large trial links some cases to water and salt loss, while others come from fatigue-driven reflex activity in the spinal cord. Lyle McDonald's answer leans on fluid and electrolytes, especially on very low-carb diets; the evidence suggests that explains only some cases.
+
+Who was studied: Schwellnus 2011: 210 Ironman triathletes, one race, 43 with cramps, blood and body weight taken before and after. Maughan 2019: narrative review.
+
+- Faster racers and people with past cramps were at higher risk; no trial shows that pacing prevents cramps.
+
+Evidence: Cohort study · Thin evidence · Sources: [Schwellnus 2011](https://doi.org/10.1136/bjsm.2010.078535), [Maughan 2019](https://doi.org/10.1007/s40279-019-01162-1), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
+
+### Can you use your running heart rate zones on the bike?
+
+**Verdict: Not supported.** Heart rate at threshold on a treadmill did not predict heart rate at threshold on a bike, so each sport needs its own test.
+
+In 371 people who did graded tests on both a treadmill and a bike within three weeks, heart rate at the individual anaerobic threshold, and at a blood lactate of 4 mmol/L, did not correlate between the two. Neither the same numbers nor a fixed offset can be carried across with confidence, and the authors say a sport-specific test seems to be a prerequisite. Lyle McDonald could not confirm the gym rule that threshold sits 10 beats lower on the bike; his view is that people test best in the activity they train most, and that running uses more muscle.
+
+Who was studied: Roecker 2003: 371 people (304 men, 67 women), incremental treadmill and cycle tests no more than 3 weeks apart, with blood lactate.
+
+- Set bike zones from a bike test and running zones from a running test.
+
+Evidence: Cohort study · Thin evidence · Sources: [Roecker 2003](https://doi.org/10.1055/s-2003-39087), [McDonald 2016g](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-2)
+
+### Is plain water the best drink after a sweaty session?
+
+**Verdict: Depends.** In men, restoring fluid after heavy sweating took more drink than was lost, with enough sodium. At rest, milk and rehydration solutions were retained longer than water.
+
+In 12 men dehydrated by 2% of body mass on a bike, restoring fluid balance took a drink volume greater than the sweat lost, and without enough sodium the extra mostly left as urine. In 72 men who were already hydrated, an oral rehydration solution and milk were retained about 1.5 times as well as still water after 2 hours, by a hydration index, while coffee, tea, lager and cola did no worse than water. Lyle McDonald rates plain water a weak rehydration drink and suggests weighing before and after training to learn your losses.
+
+Who was studied: Shirreffs 1996: 12 men dehydrated by 2% of body mass, four drink volumes at two sodium levels. Maughan 2016: 72 hydrated men, each drank 1 L of still water and three of 12 other drinks.
+
+- After a long, sweaty session, weigh before and after, then drink more than the weight lost.
+- Choose a drink that contains some sodium.
+
+Evidence: Randomised trial · Some support · Sources: [Shirreffs 1996](https://doi.org/10.1097/00005768-199610000-00009), [Maughan 2016](https://doi.org/10.3945/ajcn.115.114769), [McDonald 2017d](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-5)
+
+## Recovery
+
+### Does training one arm protect the other while it is immobilized?
+
+**Verdict: Depends.** Training the free limb reduced strength loss in a limb held still, with a smaller effect on muscle size, in healthy volunteers.
+
+In a 2026 meta-analysis of eight studies (189 healthy people with one arm immobilized), training the other arm limited strength loss in the immobilized arm (effect size 0.53) and gave a small protection of muscle size (0.19), seen only when the immobilized joint was nearer the trunk. Across 31 trials, one-sided training raised strength in the untrained limb by 11.9%. These were healthy volunteers, not injured people, and the risk of bias varied. Lyle McDonald warns that muscles you cannot train during a diet will shrink, and suggests some loading such as isometrics where it is allowed.
+
+Who was studied: Rodríguez-Coloma 2026: 8 studies, 189 healthy adults with one arm immobilized. Manca 2017: 31 RCTs, 785 people doing one-sided resistance training.
+
+- While a limb is in a cast, keep training the other side and the rest of the body if your clinician agrees.
+- Ask your clinician or physio what loading the injured side can take.
+
+Evidence: Meta-analysis · Some support · Sources: [Rodríguez-Coloma 2026](https://doi.org/10.1152/japplphysiol.00081.2026), [Manca 2017](https://doi.org/10.1007/s00421-017-3720-z), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
 
 ## Nutrition
 
@@ -420,6 +501,44 @@ Who was studied: Lim: 18 studies reviewed. Reid-McCann: 30 RCTs pooled, split by
 
 Evidence: Meta-analysis · Well supported · Sources: [Lim 2021](https://doi.org/10.3390/nu13020661), [Hevia-Larraín 2021](https://doi.org/10.1007/s40279-021-01434-9), [Reid-McCann 2025](https://doi.org/10.1093/nutrit/nuae200), [Hartman 2007b](https://doi.org/10.1093/ajcn/86.2.373)
 
+### Do diet drinks with artificial sweeteners make you gain weight?
+
+**Verdict: Not supported.** Swapping sugary drinks for diet drinks led to slightly lower weight in trials; against water, the lower-certainty comparison showed no clear weight difference.
+
+A network meta-analysis of 17 randomized trials in 1,733 adults with overweight or obesity, at risk for or with diabetes, found that replacing sugar-sweetened drinks with low- or no-calorie sweetened drinks lowered weight by 1.06 kg (2.3 lb) and body fat by 0.6 points. Diet drinks against water showed no weight difference. Blood glucose is a separate question: in a two-week trial of 120 healthy adults, all four sweeteners altered gut bacteria, and saccharin and sucralose also worsened glucose responses, varying widely between people. McDonald sees them as a help to dieters; his article predates that trial.
+
+Who was studied: McGlynn 2022: 17 RCTs, 1,733 adults with overweight or obesity, at risk for or with diabetes, at least 2 weeks each. Suez 2022: 120 healthy adults given one of four sweeteners or controls for 2 weeks.
+
+- If you drink sugary drinks, switching to diet versions or to water both remove those calories.
+
+Evidence: Meta-analysis · Some support · Sources: [McGlynn 2022](https://doi.org/10.1001/jamanetworkopen.2022.2092), [Suez 2022](https://doi.org/10.1016/j.cell.2022.07.016), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
+
+### Can you build muscle on a ketogenic diet?
+
+**Verdict: Depends.** People doing resistance training on ketogenic diets lost more fat and more fat-free mass; in trained lifters without planned restriction, no clear difference.
+
+A meta-analysis of 13 randomized trials (244 people doing resistance training) found ketogenic diets cut more fat mass (2.21 kg, 4.9 lb) and also more fat-free mass (1.26 kg, 2.8 lb) than non-ketogenic diets. In five studies of trained lifters with no planned calorie deficit (111 people), fat-free mass did not differ clearly. Lyle McDonald's view is that protein burned for fuel drops after about three weeks of adaptation, and that keto can work but is not the best setting for building muscle.
+
+Who was studied: Ashtary-Larky 2022: 13 RCTs, 244 people doing resistance training. Vargas-Molina 2022: 5 studies, 111 resistance-trained adults, no planned energy restriction.
+
+- If gaining muscle is the main goal, a diet with carbohydrate is the simpler choice.
+- On keto, eat in a surplus when you want to gain.
+
+Evidence: Meta-analysis · Some support · Sources: [Ashtary-Larky 2022](https://doi.org/10.1080/10408398.2021.1890689), [Vargas-Molina 2022](https://doi.org/10.3390/ijerph191912629), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+
+### Is a food labelled zero calories truly calorie-free?
+
+**Verdict: Not supported.** US labels may show 0 calories for anything under 5 a serving and 0 g fat for under 0.5 g, so large or repeated servings still add energy.
+
+Under the US labelling rule, calories are rounded to the nearest 5 up to 50 and to the nearest 10 above that, and a serving with fewer than 5 calories may be shown as zero. Total fat under 0.5 g a serving is shown as 0 g. So adding up a label's protein, carbohydrate and fat seldom matches its calorie line exactly. Calories count as misbranded when a lab composite runs more than 20% above the label. Lyle McDonald's point is that rounding matters little unless 'zero' foods are used freely and left out of the log. Rules differ in other countries.
+
+Who was studied: US Code of Federal Regulations, 21 CFR 101.9 (nutrition labeling of food), as published, retrieved November 2026.
+
+- Weigh and log foods you use in quantity even when the label says zero.
+- Expect small gaps between a label's macros and its calories; they come from rounding.
+
+Evidence: Guideline · Rulebook · Sources: [UFDA 2026](https://www.law.cornell.edu/cfr/text/21/101.9), [McDonald 2017e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-6)
+
 ## Diet
 
 ### Is low-carb better than low-fat for fat loss?
@@ -463,13 +582,13 @@ Evidence: Meta-analysis · Well supported · Sources: [Schwingshackl 2020](https
 
 **Verdict: Overstated.** Fasted exercise burns slightly more fat during the session, but body-mass and body-fat changes were similar in the small review that tracked them.
 
-A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) compared fasted and fed exercise on weight and body composition and found trivial differences between groups, while warning that the data were limited. Its body-fat and lean-mass results came from women only.
+A meta-analysis of 27 studies (273 participants) found fat oxidation during exercise was higher fasted, by about 3 g. A systematic review of 5 studies (96 participants) found trivial differences in weight and body composition, while warning that the data were limited; its body-fat and lean-mass results came from women only. In a trial that controlled the diet, 20 young women did an hour of cardio 3 times a week for 4 weeks, and fasted and fed groups lost similar fat. McDonald's view is that these women were not lean, so a small benefit for very lean dieters is untested rather than disproven.
 
-Who was studied: Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults, exercise of 120 minutes or less.
+Who was studied: Hackett 2017: 5 studies, 96 healthy adults, body-fat and lean-mass results in women only. Vieira 2016: 27 studies, 273 adults. Schoenfeld 2014: 20 young women, 4 weeks, diet controlled.
 
 - Train at the time of day you will stick to, since the evidence shows no clear fat-loss edge from fasting.
 
-Evidence: Meta-analysis · Some support · Sources: [Hackett 2017](https://doi.org/10.3390/jfmk2040043), [Vieira 2016](https://doi.org/10.1017/S0007114516003160)
+Evidence: Meta-analysis · Some support · Sources: [Hackett 2017](https://doi.org/10.3390/jfmk2040043), [Vieira 2016](https://doi.org/10.1017/S0007114516003160), [Schoenfeld 2014](https://doi.org/10.1186/s12970-014-0054-7), [McDonald 2021b](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2)
 
 ### Do diet breaks speed up fat loss?
 
@@ -602,15 +721,15 @@ Evidence: Mixed · Some support · Sources: [Bhutani 2017](https://doi.org/10.14
 
 **Verdict: Overstated.** Your body does push back when you lose weight, but a single fixed set point does not explain why body weight has risen across populations.
 
-A review of competing models says the set point model fits the biology of intake and expenditure but cannot explain the rise in body weight since the 1980s, while the settling point model fits the environment but struggles with genetics. Newer models combine the two. Beyond what a smaller body predicts, adaptive thermogenesis averages about 120 kcal a day and takes more than two weeks to develop. In one 52-week trial, eating rose about 100 kcal a day per kg lost.
+A review of models says the set point model fits the biology of intake and expenditure but not the rise in body weight since the 1980s, while the settling point model fits the environment but not genetics. Beyond what a smaller body predicts, adaptive thermogenesis averages about 120 kcal a day, and in one 52-week trial eating rose about 100 kcal a day per kg lost. In 10 people held 10 percent below usual weight, expenditure and thyroid hormones shifted toward regain. McDonald's view: habits set weight within a modest band, and the body resists loss far more than gain.
 
-Who was studied: Speakman: expert review of four models. Muller: review of controlled underfeeding studies. Polidori: 153 people in a 52-week trial.
+Who was studied: Speakman: expert review of four models. Muller: review of controlled underfeeding studies. Polidori: 153 people in a 52-week trial. Rosenbaum 2005: 10 inpatients held at 10% below usual weight.
 
 - Plan for more hunger and less fidgeting while you diet.
 - Keep daily steps up, since unplanned movement falls first.
 - Treat maintenance as a phase with its own plan.
 
-Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653)
+Evidence: Review · Thin evidence · Sources: [Speakman 2011](https://doi.org/10.1242/dmm.008698), [Müller 2013](https://doi.org/10.1002/oby.20027), [Polidori 2016](https://doi.org/10.1002/oby.21653), [Rosenbaum 2005](https://doi.org/10.1172/jci25977), [McDonald 2008z](https://bodyrecomposition.com/fat-loss/set-points-and-settling-points)
 
 ### Does everyone regain the weight after a diet?
 
@@ -638,6 +757,55 @@ Who was studied: Longland: 40 young men for 4 weeks. Garthe: 24 athletes. Murphy
 - Track strength and waist, not only the scale.
 
 Evidence: Mixed · Thin evidence · Sources: [Longland 2016](https://doi.org/10.3945/ajcn.115.119339), [Garthe 2011](https://doi.org/10.1123/ijsnem.21.2.97), [Murphy 2022](https://doi.org/10.1111/sms.14075)
+
+### Do nuts make you put on weight?
+
+**Verdict: Not supported.** In trials, adding nuts did not raise body weight, and people who ate more nuts were slightly less likely to become overweight.
+
+A 2021 meta-analysis of 86 randomized trials (5,873 people) found no effect of nuts on body weight (0.09 kg, interval -0.09 to 0.27). Across six cohorts of about 570,000 people, nut eaters had a 7% lower risk of overweight or obesity. Part of the energy is never absorbed: in 18 adults, almonds yielded 4.6 kcal per gram against 6.0 to 6.1 predicted, so the standard factors overestimated them by 32%. Lyle McDonald’s view is that much of the effect relies on people eating less later in the day, so large amounts eaten on top of a full diet can still add weight.
+
+Who was studied: Nishi 2021: 86 RCTs (5,873 people) and 6 prospective cohorts (569,910 people). Novotny 2012: 18 adults, crossover with 0, 42 or 84 g of almonds a day, 18 days each.
+
+- Weigh a portion now and then; a 28 g (1 oz) serving is a small handful.
+- Eat nuts in place of another snack rather than in addition to it.
+
+Evidence: Meta-analysis · Well supported · Sources: [Nishi 2021](https://doi.org/10.1111/obr.13330), [Novotny 2012](https://doi.org/10.3945/ajcn.112.035782), [McDonald 2017b](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-3)
+
+### Does keeping your home cold help you burn off fat?
+
+**Verdict: Overstated.** Mild cold raises energy use by a few percent, but studies of people who got used to the cold found little change in body weight.
+
+In 25 adults, 12 hours at 19 °C (66 °F) instead of 24 °C (75 °F) raised energy expenditure by about 6% with no significant change in spontaneous movement. In healthy adults with low brown fat activity, two hours a day at 17 °C (63 °F) for six weeks raised brown fat activity and lowered body fat. A 2020 review found the rise in human energy use consistently small, and cold-acclimation studies produced minimal changes in body weight; only two studies measured how much people ate in the cold. Lyle McDonald doubts most people would stay that cold every day for a small burn, and notes that cold can raise hunger.
+
+Who was studied: Celi 2010: 25 adults, two 12-hour stays at 19 and 24 °C. Yoneshiro 2013: healthy adults, 2 hours a day at 17 °C for 6 weeks. McInnis 2020: narrative review.
+
+- Treat a cooler home as a small extra at most, never as a fat-loss plan.
+
+Evidence: Mixed · Thin evidence · Sources: [Celi 2010](https://doi.org/10.1530/EJE-10-0627), [Yoneshiro 2013](https://doi.org/10.1172/JCI67803), [McInnis 2020](https://doi.org/10.1111/obr.12978), [McDonald 2017g](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-8)
+
+### Does skipping meals or fasting for a day slow your metabolism?
+
+**Verdict: Not supported.** Resting energy use did not fall after a day of very low intake, and it rose over the first three days of a total fast.
+
+In 11 lean, healthy adults on an 84-hour fast, resting energy expenditure rose from 3.97 to 4.53 kJ a minute by day 3; noradrenaline more than doubled by day 4. In 8 men with overweight or obesity, a day at 25% of energy needs did not change energy use over 4 hours after breakfast the next morning, and appetite and the amount eaten in the following two days matched a normal day. The slower metabolism of a long diet builds over weeks (see the starvation mode claim). Lyle McDonald's view is that the body's adjustments lag by days in both directions, so one high-calorie day does not reverse them either.
+
+Who was studied: Zauner 2000: 11 healthy lean adults, 84-hour fast, measured on days 1 to 4. Clayton 2016: 8 men with overweight or obesity, randomized crossover, 24 hours at 25% of energy needs.
+
+- Do not worry about a missed meal; judge intake over days and weeks.
+
+Evidence: Mixed · Thin evidence · Sources: [Zauner 2000](https://doi.org/10.1093/ajcn/71.6.1511), [Clayton 2016](https://doi.org/10.1038/ijo.2016.106), [McDonald 2017f](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-7)
+
+### Is eating extra fat the way to burn body fat?
+
+**Verdict: Not supported.** Cutting carbohydrate raises the fat you burn, yet on equal calories cutting fat removed more body fat in a ward study.
+
+The study cut fat or carbohydrate; it did not add fat. Nineteen adults with obesity on a metabolic ward ate two reduced-calorie diets with equal calories, each for six days, in random order. Cutting carbohydrate raised fat burning and lost 53 g of body fat a day by fat balance; cutting fat lost 89 g, because less fat was coming in, and the authors’ model predicts the gap narrows over time. Lyle McDonald’s view is that the shift to fat burning on low-carb diets comes from the missing carbohydrate, not the added fat. Over months the two diet styles lose similar weight (see the low-carb claim).
+
+Who was studied: Hall 2015: 19 adults with obesity on a metabolic ward, crossover, two 6-day reduced-calorie diets with equal calories, body fat loss from fat balance.
+
+- Pick the carbohydrate and fat split you can keep to, and set calories first.
+
+Evidence: Randomised trial · Thin evidence · Sources: [Hall 2015](https://doi.org/10.1016/j.cmet.2015.07.021), [McDonald 2019e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
 
 ## Health
 
@@ -715,6 +883,19 @@ Who was studied: Ode 2007: 226 college athletes and 213 non-athletes. Okorodudu 
 - Ask a clinician to interpret health numbers instead of relying on BMI alone.
 
 Evidence: Mixed · Some support · Sources: [Ode 2007](https://doi.org/10.1249/01.mss.0000247008.19127.3e), [Okorodudu 2010](https://doi.org/10.1038/ijo.2010.5), [Ashwell 2011](https://doi.org/10.1111/j.1467-789x.2011.00952.x)
+
+### Is it safe to work out when you have a cold?
+
+**Verdict: Depends.** In young adults, moderate exercise during a mild head cold did not make it worse or longer in a controlled trial. Fever and chest symptoms were not tested.
+
+Fifty young adults were deliberately infected with a common-cold virus. The 34 who did 40 minutes of moderate exercise (70% of heart rate reserve) every other day had the same symptom scores and mucus weights over 10 days as 16 non-exercising controls. That covers a mild head cold only. The 'neck check', training with symptoms above the neck and resting with chest or whole-body symptoms, is a coaching convention, not a tested rule. Lyle McDonald uses it, keeps sick-day sessions short and moderate, and asks anyone contagious to stay out of shared gyms.
+
+Who was studied: Weidner 1998: 50 adults aged 18 to 29 of moderate fitness, inoculated with rhinovirus; 34 exercised every other day for 10 days, 16 did not.
+
+- With a head cold, keep sessions short and moderate and stop well short of failure.
+- With fever, chest symptoms or body aches, rest and ask a clinician before training.
+
+Evidence: Mixed · Thin evidence · Sources: [Weidner 1998](https://doi.org/10.1097/00005768-199811000-00004), [McDonald 2019e](https://bodyrecomposition.com/mailbag/bodyrecomposition-mailbag-11)
 
 ## Offers for people who arrive through an AI assistant
 

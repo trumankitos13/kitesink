@@ -19,12 +19,12 @@ Percentages and zones · Beginner · Well supported · Sources: [Lopez 2021](htt
 
 **Strength in the squat, bench press and deadlift is partly skill, so the lifts themselves, done to competition standard, make up most of the training.**
 
-This is coaching convention, not a trial result. Train squat depth, the bench pause and the deadlift lockout the way they are judged. Four principles apply to all three lifts: a stable base, full-body tightness before the bar moves, a bar path close to a straight line over mid-foot, and the same set-up every rep. Assistance exercises support the lifts and do not replace them.
+This is coaching convention, not a trial result. Train squat depth, the bench pause and the deadlift lockout the way they are judged. Four principles carry across the lifts: a stable base, full-body tightness before the bar moves, a planned bar path, and the same set-up every rep. In the squat and deadlift that path stays close to a straight line over mid-foot. The bench differs: McDonald teaches a shallow arc, with the bar touching low on the chest and finishing above the shoulders. Assistance exercises support the lifts and do not replace them.
 
 - Film your heaviest set of each lift every week, from the side.
 - Use the same set-up routine on warm-ups and on heavy sets.
 
-Technique and leverages · Beginner · Coaching practice
+Technique and leverages · Beginner · Coaching practice · Sources: [McDonald 2008b](https://bodyrecomposition.com/training/a-guide-to-bench-press-technique)
 
 ### RPE with reps in reserve lets you pick the load by feel
 
@@ -34,7 +34,7 @@ The scale pairs effort with repetitions in reserve (RIR): RPE 10 is 0 RIR and RP
 
 - Rate each top set right after it ends, before looking at the bar speed or the numbers.
 
-RPE and velocity · Intermediate · Some support · Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049), [Helms 2017](https://doi.org/10.1519/JSC.0000000000001517)
+RPE and velocity · Intermediate · Some support · Sources: [Zourdos 2016b](https://doi.org/10.1519/JSC.0000000000001049), [Helms 2017](https://doi.org/10.1519/JSC.0000000000001517)
 
 ### Loading by RPE or bar speed works about as well as percentages
 
@@ -90,11 +90,11 @@ Frequency and volume · Intermediate · Thin evidence · Sources: [Androulakis-K
 
 **Beginners do well on 2 to 3 sessions a week; advanced lifters often spread the lifts across 4 to 6.**
 
-This is coaching convention. Beginners can practise each lift two or three times a week with little fatigue. Intermediates commonly train 3 to 4 days, with each lift twice a week. In a survey of 117 Norwegian powerlifters that included world, European and national champions, the most common answer (58.1%) was 5 to 6 sessions a week, with the most common load at 71-80% of 1RM.
+For beginners there is trial evidence: a meta-analysis of 140 strength studies found untrained people gained most when each muscle group was trained 3 days a week, and trained people at 2. Past that it is coaching convention. Intermediates commonly train 3 to 4 days, with each lift twice a week. In a survey of 117 Norwegian powerlifters that included world, European and national champions, the most common answer (58.1%) was 5 to 6 sessions a week, with the most common load at 71-80% of 1RM.
 
 - Add a session only when recovery between sessions is good and the lifts are improving.
 
-Frequency and volume · Beginner · Coaching practice · Sources: [Shaw 2022](https://doi.org/10.1519/JSC.0000000000003584)
+Frequency and volume · Beginner · Some support · Sources: [Shaw 2022](https://doi.org/10.1519/JSC.0000000000003584), [Rhea 2003](https://doi.org/10.1249/01.mss.0000053727.63505.d4)
 
 ### Planned variation beats a fixed routine for 1RM strength
 
@@ -171,11 +171,12 @@ Technique and leverages · Intermediate · Thin evidence · Sources: [Escamilla 
 
 **Proportions shift the best stance, depth and grip, so copy principles from top lifters and not their exact positions.**
 
-This is coaching convention, not a tested rule. Long thighs relative to the torso tend to lean the squat forward and favour a wider stance. Long arms shorten the pull in the deadlift and lengthen the bench press path; short arms do the reverse. Use these as starting guesses and let filmed sets and bar speed decide.
+This is coaching convention, not a tested rule. Long thighs relative to the torso are thought to tip the squat forward and favour a wider stance. The one direct test, in 11 men squatting to parallel, found that ankle mobility went with trunk angle and segment-length ratios did not. Long arms shorten the pull in the deadlift and lengthen the bench press path; short arms do the reverse. Use these as starting guesses and let filmed sets and bar speed decide.
 
 - Film from the side and compare two set-ups on the same weight before changing for good.
+- If your squat folds forward, check ankle mobility before blaming your proportions.
 
-Technique and leverages · Intermediate · Coaching practice
+Technique and leverages · Intermediate · Coaching practice · Sources: [Fuglsang 2017](https://doi.org/10.1519/jsc.0000000000001872)
 
 ### Choose accessories for the point where the lift slows or fails
 
@@ -238,6 +239,103 @@ A systematic review of 9 studies found 1.0 to 4.4 injuries per 1,000 training ho
 
 Recovery and injuries · Intermediate · Some support · Sources: [Aasa 2017](https://doi.org/10.1136/bjsports-2016-096037), [Strömbäck 2018](https://doi.org/10.1177/2325967118771016)
 
+### A pause on the chest takes away the rebound that helps a touch-and-go bench
+
+**Pressing straight out of the lowering adds force from the stretch. When the bar sits still, that help fades within a second or two, so a paused bench moves less weight.**
+
+In 12 experienced male lifters benching 95% of their max, the extra force carried over from the lowering phase decayed as the pause grew, losing half of it about every 0.85 seconds. The effect is the stretch-shortening cycle (see the term entry). McDonald's estimate is that a pause can take 5 to 10% off a touch-and-go best; his first-meet guide says about 5%. Both are rules of thumb, not measured results.
+
+- Before a meet, pause your training benches the way a referee will expect (McDonald's practice).
+- Compare a paused max only with other paused maxes, not with touch-and-go lifts.
+
+Technique and leverages · Intermediate · Thin evidence · Sources: [Wilson 1991](https://doi.org/10.1249/00005768-199103000-00016), [McDonald 2016h](https://bodyrecomposition.com/training/determinants-strength-performance), [McDonald 2021a](https://bodyrecomposition.com/powerlifting/6-tips-first-powerlifting-meet)
+
+### The first deadlift rep starts cold, so reset reps match the meet
+
+**A pull from the floor has no lowering before it. Later reps in a set borrow a stretch from the controlled descent, which the single you pull at a meet never gets.**
+
+McDonald's view is that rep two of a deadlift set often feels easier than rep one because the controlled lowering adds a stretch before the pull and often sets a better start position. A meet pull is a single from a dead stop, which is why many deadlifters reset between reps (see the between-reps table in technique). A dynamic start, where the lifter sinks quickly and pulls out of the dip, chases the same stretch; he argues it helps only if the lifter stays in position, and that most let the hips shoot up.
+
+- To make training reps match a meet pull, let the bar settle and reset before each rep (a common deadlifters' practice he describes).
+
+Technique and leverages · Intermediate · Coaching practice · Sources: [McDonald 2016h](https://bodyrecomposition.com/training/determinants-strength-performance)
+
+### In trained men, eight sets of squats beat one set within three weeks
+
+**Squat 1RM rose on one, four or eight sets at 80% to failure, but the eight-set group was ahead of the one-set group by week 3 and stayed ahead.**
+
+Thirty-two resistance-trained men squatted twice a week for six weeks at 80% of 1RM, every set to failure, then all ran the same four-week peaking block. Every group was stronger at 6 and 10 weeks; at week 3 the eight-set group led the one-set group by 7.9%. Quadriceps activation did not change and early force development fell, which the authors tied to heavy sets to failure. For the wider dose picture, see the volume-dose, minimum-dose and not-to-failure entries.
+
+- On one set a session, check within three weeks whether your squat is responding, as the authors advise.
+
+Frequency and volume · Intermediate · Thin evidence · Sources: [Marshall 2011](https://doi.org/10.1007/s00421-011-1944-x), [McDonald 2011d](https://bodyrecomposition.com/research/squat-volume-and-strength-gains)
+
+### McDonald argues daily maxing does not carry over from weightlifting to powerlifting
+
+**His view: a weightlifting max is a split-second explosive effort well short of maximal force, while a squat, bench or deadlift max grinds for seconds and costs far more.**
+
+McDonald reasons that both Olympic lifts are limited by a brief drive near the end of the pull, and by his rough figures a best clean and jerk is only about four fifths of a best deadlift. A max powerlift is hard from start to finish and can be fought for several seconds. He argues the Bulgarian method suited only selected, full-time, drug-assisted elite lifters after years of build-up, and that most lifters who copy it get hurt. These are his judgments; the daily-max evidence entry has two small direct tests.
+
+- If you train a lift often, keep most sessions well below max and only one or two truly heavy (McDonald's rule).
+
+Periodisation and peaking · Advanced · Coaching practice · Sources: [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training), [McDonald 2016m](https://bodyrecomposition.com/training/forget-bulgarian-training)
+
+### Mental rehearsal raised strength in healthy adults, but less than real training
+
+**Across 13 studies, rehearsing a movement in the mind raised maximal strength more than doing nothing, and physical training raised it more than imagery.**
+
+A 2018 meta-analysis pooled 370 healthy adults. Motor imagery, rehearsing a contraction mentally without moving, moderately improved maximal voluntary strength in arms and legs against no training. Physical practice beat it by a small margin, and adding imagery to physical practice gave no clear gain over physical practice alone. The authors suggest imagery to keep muscle function when athletes cannot train at maximal loads. McDonald writes that it can help strength once correct technique is known. The abstract does not say that lifters were studied.
+
+- When you cannot train heavy for a while, rehearse your lifts mentally to help hold strength, as the authors suggest.
+
+Technique and leverages · Beginner · Some support · Sources: [Paravlic 2018](https://doi.org/10.1007/s40279-018-0874-8), [McDonald 2016i](https://bodyrecomposition.com/training/determinants-strength-performance-2)
+
+### In a high-volume block, keep a little heavy work so top-end strength holds
+
+**McDonald's practice is to open sessions in a muscle-building block with a heavy single or triple at about 80 to 90% of max, then do the volume work.**
+
+His view is that strength athletes who drop all heavy lifting during a hypertrophy phase lose top-end strength quickly, and that a small dose of heavy work holds it. He treats volume and intensity blocks as two steps: first add muscle to raise the ceiling, then train the nervous system to use it. This is coaching practice from his article. The minimum-dose entry gives data on how little heavy work keeps 1RM rising.
+
+- Work up to one single or triple at about 80 to 90% before the volume sets (McDonald's practice).
+
+Periodisation and peaking · Intermediate · Coaching practice · Sources: [McDonald 2016i](https://bodyrecomposition.com/training/determinants-strength-performance-2), [Androulakis-Korakakis 2021](https://doi.org/10.3389/fspor.2021.713655)
+
+### Two small studies of daily maxing point in opposite directions
+
+**Three lifters who maxed the squat daily for five weeks gained 2 to 11%. Eleven trained men lifting 100% of 1RM daily on a squat machine lost about 12 kg (27 lb) in two weeks.**
+
+In a case series, two powerlifters and one weightlifter worked up to a squat 1RM every day for 35 days, plus back-off sets; on day 37 they were 5, 13.5 and 21 kg (11, 30 and 46 lb) stronger, with no control group. In a controlled study, 11 weight-trained men squatted on a machine at 100% of 1RM daily for two weeks; 1RM fell by a mean 12.2 kg (27 lb) and other force measures dropped, while a light once-weekly group barely changed. Neither study was built to test safety; see the daily-max mistake entry for the injury concern.
+
+Periodisation and peaking · Advanced · Thin evidence · Sources: [Zourdos 2016a](https://doi.org/10.20960/nh.129), [Fry 1994](https://doi.org/10.1249/00005768-199409000-00015)
+
+### Genes and environment count about equally in strength differences between untrained people
+
+**Heritability estimates for strength average about 0.5. That describes differences within a group, not a fixed ceiling for any one lifter.**
+
+A 2017 meta-analysis pooled 58 measurements from 24 studies of healthy people in an untrained state. Heritability averaged 0.52, similar for grip, isometric, isotonic and isokinetic strength and for jumping (0.49 to 0.56), though results varied widely between studies. The authors read this as genetic and environmental influence being comparable, with environment counting for more at older ages. These are baseline strength tests, not gains from training or meet totals. McDonald's view is that genes set a limit that work cannot pass; the response-spread entry covers trainability.
+
+Talent and practice · Intermediate · Some support · Sources: [Zempo 2017](https://doi.org/10.1111/sms.12804), [McDonald 2011f](https://bodyrecomposition.com/training/can-hard-work-beat-talent)
+
+### On the same 12-week plan, arm strength gains ranged from none to more than double
+
+**In 585 men and women who trained one arm on the same 12-week programme, 1RM gains ran from 0 to 250%, and some barely changed muscle size.**
+
+Subjects at eight centres followed the same progressive elbow-flexor programme. Biceps size changed by -2 to +59% and 1RM by 0 to +250% (0 to 10.2 kg, 0 to 22 lb). Women gained more strength in relative terms, and men slightly more size. It is one small muscle group, so it says nothing direct about the squat, bench or deadlift. McDonald argues that spreads like this in supervised trials reflect biology rather than effort. The hypertrophy guide's responder entries cover muscle growth.
+
+- Compare your lifts with your own past numbers, not with another lifter's rate (McDonald's advice).
+
+Talent and practice · Beginner · Thin evidence · Sources: [Hubal 2005](https://pubmed.ncbi.nlm.nih.gov/15947721/), [McDonald 2011f](https://bodyrecomposition.com/training/can-hard-work-beat-talent), [McDonald 2016i](https://bodyrecomposition.com/training/determinants-strength-performance-2)
+
+### Treat warm-up sets as focused technique practice, not filler
+
+**McDonald's view is that warm-up reps done with full attention to position and bar path add up to a large amount of practice over a year.**
+
+Every lifter does warm-up sets anyway. McDonald argues that most people stop paying attention once a lift feels competent, and that this is where their technique stops improving. Watching a point such as elbow position, bar path or where the bar touches turns those light reps into deliberate practice at little extra cost. It is coaching practice, not a trial result; the technique guide's spacing entry covers how often to practise.
+
+- On warm-up sets, watch a point such as elbow position, bar path or where the bar touches (McDonald's practice).
+
+Technique and leverages · Beginner · Coaching practice · Sources: [McDonald 2009h](https://bodyrecomposition.com/training/becoming-an-expert)
+
 ## Common mistakes
 
 ### Testing a true max every few weeks
@@ -290,6 +388,17 @@ This is coaching convention, and tapering interviews match it. Ten Croatian cham
 
 Periodisation and peaking · Intermediate · Coaching practice · Sources: [Grgic 2017](https://doi.org/10.1519/JSC.0000000000001699), [Pritchard 2016](https://doi.org/10.1519/JSC.0000000000001292)
 
+### Copying weightlifters' daily maxes into the squat, bench and deadlift
+
+**McDonald's view is that near-max singles in the powerlifts every day break most lifters who try them without years of build-up, and that connective tissue is usually what gives out.**
+
+The injury claim is coaching experience, not a trial result. Tendons adapt more slowly than strength rises (see the tendon entry in basics). One controlled trial measured strength, not injury: two weeks of daily machine squats at 100% of 1RM cut trained men's 1RM by about 12 kg (27 lb) (see the daily-max evidence entry). Frequency alone is not the issue; see the six-day and elite-loads entries in recovery.
+
+- Do not take up daily maxing on your own; McDonald advises most lifters against it, and any trial of it needs an experienced coach.
+- Have pain that changes how you lift checked by a clinician before you train through it.
+
+Recovery and injuries · Intermediate · Coaching practice · Sources: [McDonald 2016m](https://bodyrecomposition.com/training/forget-bulgarian-training), [McDonald 2015j](https://bodyrecomposition.com/training/bulgarian-powerlifting-training), [Fry 1994](https://doi.org/10.1249/00005768-199409000-00015)
+
 ## Key numbers
 
 | Number | What it is | Support | Sources |
@@ -304,6 +413,7 @@ Periodisation and peaking · Intermediate · Coaching practice · Sources: [Grgi
 | 83 % of 64 lifters | Lifters who cut weight at the 2018 IPF classic worlds: Cutters lost an average of 2.9% of body mass; most reported negative mood effects. | Some support | [Kwan 2022](https://doi.org/10.1519/JSC.0000000000004199) |
 | 5.5 % lower muscle strength | Strength lost with hypohydration: Average fall in muscle strength with hypohydration in a meta-analysis of 28 manuscripts; endurance fell 8.3%. | Some support | [Savoie 2015](https://doi.org/10.1007/s40279-015-0349-0) |
 | 35 years (SD 7) | Mean age of peak performance in world-class powerlifters: From world championship results 2003-2017; powerlifters peaked about 9 years later than weightlifters. | Some support | [Solberg 2019](https://doi.org/10.1123/ijspp.2019-0093) |
+| 0.85 seconds | Half-life of the rebound effect while the bar is paused: In 12 experienced male lifters benching 95% of max, the extra force from the lowering phase halved for about every 0.85 s the bar was held still. | Thin evidence | [Wilson 1991](https://doi.org/10.1249/00005768-199103000-00016) |
 
 ## Intensity zones as a percent of 1RM
 
@@ -332,7 +442,7 @@ RPE 5 to 10 matched to repetitions in reserve (RIR); 9.5 is a half step many lif
 | 7 | 3 | Three more possible; fast and controlled | Volume work, easier days |
 | 5-6 | 4-6 | Light; plenty left | Warm-ups, technique work |
 
-Some support · Sources: [Zourdos 2016](https://doi.org/10.1519/JSC.0000000000001049), [Helms 2016](https://doi.org/10.1519/SSC.0000000000000218)
+Some support · Sources: [Zourdos 2016b](https://doi.org/10.1519/JSC.0000000000001049), [Helms 2016](https://doi.org/10.1519/SSC.0000000000000218)
 
 ## A 12-week cycle outline
 
@@ -351,12 +461,17 @@ Coaching practice
 ## Terms
 
 - **Accessory exercise**: An exercise outside the three competition lifts, chosen to build a muscle or fix a weak point.
+- **Antagonist coactivation**: Firing of the muscle that opposes a movement, such as the hamstrings in knee extension. It steadies the joint but costs net force. In one small study of sedentary men training knee extension isometrically, it fell by a fifth in a week.
+- **Bulgarian method**: A weightlifting system associated with coach Ivan Abadjaev: about six exercises, mostly singles to a daily max, over several short sessions a day. McDonald says it suited only full-time, drug-assisted elite lifters and broke most of them.
+- **Daily max**: The heaviest single a lifter can make on that particular day, which may sit above or below their best ever. Working up to it is the core of the Bulgarian weightlifting method, which McDonald says broke most lifters who tried it.
 - **Daily undulating periodisation (DUP)**: A plan that varies rep ranges and loads between sessions within the week, such as heavy, medium and light days.
+- **Deliberate practice**: Effortful practice aimed at a specific weakness, often set by a coach, as opposed to repetition on autopilot. A 2016 meta-analysis found it accounted for 18% of the variance in sports performance, and 1% among elite athletes.
 - **Deload**: A planned lighter week or block, with less volume or load, to clear fatigue between harder blocks.
 - **One-repetition maximum (1RM)**: The heaviest weight you can lift once with legal technique; the base for percentage programming.
 - **Rating of perceived exertion (RPE)**: A 1 to 10 rating of how hard a set was; in strength training it is tied to how many repetitions were left.
 - **Repetitions in reserve (RIR)**: How many more clean repetitions you could have done when the set ended; 2 RIR means two more were possible.
 - **Sticking point**: The position in a lift where the bar slows most or where failures happen.
+- **Stretch-shortening cycle (SSC)**: A muscle stretched under load and then shortened at once makes more force than one starting from still. Elastic recoil of tendons and extra time to build force are the usual explanations, and a pause lets the effect fade.
 - **Taper (peaking)**: A planned drop in training stress, mostly volume, in the last days or weeks before a meet so fatigue clears and strength shows.
 - **Velocity-based training (VBT)**: Setting load or stopping sets from measured bar speed, using a device that reports mean concentric velocity in metres per second.
 - **Working max (training max)**: A weight you can repeat on a normal day, often set below a true max, and used as the base for training percentages.

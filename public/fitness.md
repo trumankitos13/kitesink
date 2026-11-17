@@ -1,6 +1,6 @@
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 948 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -8,29 +8,29 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 
 - [Training basics](https://kitesink.com/fitness/basics.md): Starting out, and building a first programme. 134 entries.
 - [Technique](https://kitesink.com/fitness/technique.md): How to do the main lifts, and how to change a habit. 98 entries.
-- [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md): Training for muscle size. 58 entries.
-- [Powerlifting](https://kitesink.com/fitness/powerlifting.md): A bigger squat, bench press and deadlift. 51 entries.
-- [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 46 entries.
+- [Hypertrophy](https://kitesink.com/fitness/hypertrophy.md): Training for muscle size. 99 entries.
+- [Powerlifting](https://kitesink.com/fitness/powerlifting.md): A bigger squat, bench press and deadlift. 68 entries.
+- [Meet day](https://kitesink.com/fitness/meet.md): Your first competition, in order. 50 entries.
 - [Conditioning](https://kitesink.com/fitness/conditioning.md): Cardio and intervals, and how they fit with lifting. 83 entries.
 - [Recovery](https://kitesink.com/fitness/recovery.md): Rest, fatigue and coming back after time off. 95 entries.
 
 ### Food and body
 
-- [Nutrition](https://kitesink.com/fitness/nutrition.md): Eating to support training, and tracking it honestly. 52 entries.
-- [Diet](https://kitesink.com/fitness/diet.md): Losing or gaining weight on purpose. 46 entries.
+- [Nutrition](https://kitesink.com/fitness/nutrition.md): Eating to support training, and tracking it honestly. 104 entries.
+- [Diet](https://kitesink.com/fitness/diet.md): Losing or gaining weight on purpose. 90 entries.
 - [Body composition](https://kitesink.com/fitness/bodycomp.md): Fat, lean mass and how to track them. 89 entries.
 
 ### People and health
 
 - [Women](https://kitesink.com/fitness/women.md): What the research on women shows. 86 entries.
-- [Health](https://kitesink.com/fitness/health.md): Training for a long working life. 55 entries.
+- [Health](https://kitesink.com/fitness/health.md): Training for a long working life. 66 entries.
 
 ## Reference
 
-- [Claims, checked](https://kitesink.com/fitness/claims.md): 55 common claims, each with a verdict, who was studied, and the source.
-- [Glossary](https://kitesink.com/fitness/glossary.md): the 154 terms the areas use, in plain words. Each term is defined here once.
-- [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 121 key numbers and 59 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 751 sources.
+- [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
+- [Glossary](https://kitesink.com/fitness/glossary.md): the 190 terms the areas use, in plain words. Each term is defined here once.
+- [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 131 key numbers and 63 reference tables, each with a link to the page that holds it.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1018 sources.
 
 ## Calculators (on the page, no sign-up)
 

@@ -709,12 +709,13 @@
    "sources": [
     "iraki-2019",
     "grgic-2018",
-    "goldstein-2010"
+    "goldstein-2010",
+    "abernethy-1985"
    ],
    "value": "3-6",
    "unit": "mg per kg",
    "sort": 3,
-   "take": "ISSN's 2010 stand: effective at about 3 to 6 mg per kg, no further gain at 9 or more. 5 mg/kg is 2.3 mg per lb."
+   "take": "ISSN 2010: about 3 to 6 mg per kg works, 9 or more adds nothing; 5 mg/kg is 2.3 mg per lb. Half-life was 7.9 h on low-dose oral contraceptives, 5.4 h without."
   },
   {
    "id": "nut-num-fibre",
@@ -989,6 +990,917 @@
      "No testosterone data for most ingredients",
      "Avoid"
     ]
+   ]
+  },
+  {
+   "id": "nut-term-essential-nutrient",
+   "type": "term",
+   "title": "Essential, nonessential and conditionally essential nutrients",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-real-efa",
+    "mcdonald-nutrition-primer"
+   ],
+   "take": "Essential: needed and not made in enough amount, so food must supply it. Nonessential: needed, but the body builds its own. Conditionally essential: supply falls short only in some states; McDonald puts carbohydrate there for hard training."
+  },
+  {
+   "id": "nut-term-essential-fatty-acids",
+   "type": "term",
+   "title": "Essential fatty acids (EFAs)",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "spector-1999",
+    "le-2009",
+    "mcdonald-fats-primer"
+   ],
+   "take": "Fats the body needs but cannot build: by the textbook, linoleic acid (LA, omega-6) and alpha-linolenic acid (ALA, omega-3). McDonald's view is that almost any diet with fat covers the minimum, not the optimum. See the diet planner."
+  },
+  {
+   "id": "nut-ala-conversion",
+   "type": "note",
+   "title": "Plant omega-3 (ALA) converted poorly to DHA in tracer studies, least in men",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "burdge-2002-men",
+    "burdge-2002-women",
+    "mcdonald-real-efa"
+   ],
+   "take": "In tracer studies, young men made some EPA from ALA but no measurable DHA, while young women converted about 21 percent to EPA and 9 percent to DHA.",
+   "body": "Six young men on their usual diet swallowed labelled ALA with a meal. EPA and DPA appeared in the blood, but no labelled DHA showed up over 21 days, and the authors judged that men may depend on DHA eaten ready-made. A matching study in young women estimated net conversion of 21 percent to EPA, 6 percent to DPA and 9 percent to DHA, which the authors linked to the needs of pregnancy. The men's study had only six people. McDonald's view is that flax and other ALA oils are a poor stand-in for fish. For omega-3 and the heart, see the omega-3 entry in the health section.",
+   "do": [
+    "McDonald's practice: do not count flax or other ALA oils as your EPA and DHA.",
+    "If you want EPA and DHA, eat fatty fish or another ready-made source."
+   ]
+  },
+  {
+   "id": "nut-efa-aa-dha",
+   "type": "note",
+   "title": "McDonald argues arachidonic acid and DHA may be the real essential fats",
+   "topic": "macros",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "spector-1999",
+    "le-2009",
+    "demmelmair-1999",
+    "mcdonald-real-efa"
+   ],
+   "take": "LA and ALA are the textbook essential fats, but much of what they do runs through their products. McDonald's reading is that arachidonic acid (AA) and DHA are the ones the body truly needs.",
+   "body": "A 1999 review held that the need for AA is the main reason omega-6 fats are essential, and that DHA, needed for vision and nerve development, is the more likely essential omega-3, though the need may be for 22-carbon omega-3 fats in general. A hospital team saw no fatty acid deficiency in patients fed by drip on a fish-oil emulsion with AA and DHA but almost no LA or ALA, and in mice AA and DHA alone prevented it. In a tracer study of nine adults, 0.3 to 0.6 percent of LA became AA. The evidence is thin and mostly not from healthy adults.",
+   "do": []
+  },
+  {
+   "id": "nut-mistake-linoleic-fear",
+   "type": "mistake",
+   "title": "Cutting vegetable oils for fear that omega-6 fat inflames the body",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "johnson-2012",
+    "mcdonald-fats-primer"
+   ],
+   "take": "In 15 randomised trials of healthy people, adding linoleic acid, the main omega-6 fat, did not raise blood markers of inflammation.",
+   "body": "The worry is that linoleic acid becomes arachidonic acid, a raw material for signals that drive inflammation. A systematic review of 15 trials (8 parallel, 7 crossover) in healthy, non-infant groups found no significant change in C-reactive protein, fibrinogen, cytokines, TNF-alpha or adhesion molecules with more linoleic acid. Two trials did see shifts in urinary eicosanoid products, which their authors did not read as more inflammation. The review covered markers, not disease. McDonald's view is that the larger gap in most modern diets is too little omega-3 rather than too much omega-6.",
+   "do": [
+    "McDonald's practice: put effort into omega-3 sources; he leaves open whether omega-6 needs cutting."
+   ]
+  },
+  {
+   "id": "nut-trans-fat",
+   "type": "note",
+   "title": "Keep industrial trans fat as close to zero as you can",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "micha-2009",
+    "mcdonald-fats-primer"
+   ],
+   "take": "Trans fat from partially hydrogenated oils harms blood lipids, and intakes of about 2 percent of energy went with a markedly higher rate of heart disease.",
+   "body": "A 2009 review names partially hydrogenated vegetable oils as the main source in most countries. Trans fat worsened blood lipids and raised markers of inflammation and poor blood vessel function, and some studies linked it to visceral fat and insulin resistance. In observational data, even about 2 percent of energy from trans fat went with markedly more coronary heart disease. Links with diabetes were less consistent. McDonald treats this as the rare fat question with no real debate.",
+   "do": [
+    "Check ingredient lists for partially hydrogenated oil and choose another product."
+   ]
+  },
+  {
+   "id": "nut-lactose-dose",
+   "type": "note",
+   "title": "Most adults with lactose intolerance tolerated about a cup of milk's lactose",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "moderate",
+   "sources": [
+    "shaukat-2010",
+    "mcdonald-carbs-primer"
+   ],
+   "take": "In a systematic review, 12 to 15 g of lactose, roughly one cup of milk, was well tolerated by most adults with lactose intolerance or malabsorption.",
+   "body": "Lactose, the sugar in milk, is split by the enzyme lactase. Without enough lactase it reaches the colon and ferments, causing gas and loose stools. The review of 36 trials rated the cup-of-milk finding moderate quality, but most trials enrolled people with malabsorption rather than diagnosed intolerance, and evidence for lactose-reduced milk, probiotics or gradual adaptation was too thin to judge. Milk allergy is a different, immune reaction to milk protein, and this figure does not apply to it. See also the dairy entry in the diet section.",
+   "do": [
+    "If dairy upsets your stomach, have it assessed by a clinician before cutting it out.",
+    "With a milk allergy, follow your allergist's advice, not the tolerance figure."
+   ]
+  },
+  {
+   "id": "nut-num-fibre-energy",
+   "type": "number",
+   "title": "Energy from dietary fibre",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "rule",
+   "sources": [
+    "fao-2003",
+    "mcdonald-nutrition-primer"
+   ],
+   "value": "2",
+   "unit": "kcal per g (8 kJ)",
+   "sort": 2,
+   "take": "FAO factor for fibre in ordinary foods, from gut bacteria fermenting part of it. Fibre they cannot ferment gives none."
+  },
+  {
+   "id": "nut-protein-net-energy",
+   "type": "note",
+   "title": "On a proposed net energy scale, protein counts for less than its label value",
+   "topic": "energy",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "fao-2003",
+    "mcdonald-nutrition-primer"
+   ],
+   "take": "Labels count protein at 4 kcal (17 kJ) per gram. On a net energy scale the FAO describes but has not adopted, it is worth 3.2 kcal (13 kJ).",
+   "body": "Label factors (see the Atwater entry) count energy the body absorbs and does not lose in urine. The FAO also describes a net scale that subtracts heat lost in handling each nutrient, from the thermic effect (see the TEF entry) and gut fermentation. On it, protein drops from 17 to 13 kJ a gram, a 24 percent cut, fibre from 2.0 to 1.4 kcal, and fat stays at 9. For most mixed diets the total falls only 4 to 6 percent, and the FAO workshop kept the older factors. McDonald mentions the lower protein value as an open debate.",
+   "do": [
+    "Keep logging with label values, since targets and databases are built on them."
+   ]
+  },
+  {
+   "id": "nut-mps-not-whole-story",
+   "type": "note",
+   "title": "McDonald argues per-meal protein caps ignore breakdown and non-muscle tissue",
+   "topic": "protein",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "kim-2016",
+    "mcdonald-protein-growth",
+    "mcdonald-protein-connective"
+   ],
+   "take": "In young adults, a meal with about 70 g of protein gave better whole-body protein balance than one with 40 g, mostly by cutting protein breakdown.",
+   "body": "McDonald argues that per-meal caps rest on studies measuring muscle protein synthesis after one dose of protein, often whey taken alone, and that they ignore breakdown and the large share of lean mass that is not muscle. In 23 healthy young adults, net whole-body protein balance was greater after about 70 g than after 40 g, mainly through less breakdown, with or without prior lifting. That is whole-body data, not muscle. For later tracer work with larger doses, see the per-meal entry.",
+   "do": []
+  },
+  {
+   "id": "nut-connective-tissue-turnover",
+   "type": "note",
+   "title": "In six knee-surgery patients, tendon and cartilage made protein at rates near muscle's",
+   "topic": "protein",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "smeets-2019",
+    "mcdonald-protein-connective"
+   ],
+   "take": "In six patients having knee replacement, basal protein synthesis in tendon, ligament, cartilage and menisci did not differ significantly from muscle.",
+   "body": "During surgery, a labelled amino acid was infused and tissue samples taken. Rates ran from 0.02 to 0.13 percent an hour across tissues: tendon about 0.06, cruciate ligaments 0.04 to 0.07, cartilage and menisci 0.04, against 0.04 for muscle. Only synovium ran higher, and bone from the knee notch lower. The six were in their sixties and measured at rest during surgery, so this says nothing yet about training. McDonald reads it as support for his view that protein needs are not set by muscle alone.",
+   "do": []
+  },
+  {
+   "id": "nut-mcdonald-protein-targets",
+   "type": "note",
+   "title": "McDonald sets lifters at 2.2 g per kg of protein, and high-level athletes higher",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-protein-growth",
+    "tipton-2004"
+   ],
+   "take": "McDonald's practice: about 2.2 g per kg (1 g per lb) for recreational lifters outside a diet, and 2.5 to 3.0 g per kg (1.1 to 1.4 g per lb) for high-level strength athletes.",
+   "body": "His reasons are practical. People who aim at 1 g per lb tend to land below it, and he sees no harm in high intakes as long as carbohydrate and fat still fit. The evidence is less firm than the target. He draws the higher range from a 2004 review, though that review found few outcome data showing 2 to 3 g per kg is needed, and pooled trials show returns shrinking as intake rises (see the protein range entry). With kidney disease, set protein with a clinician (see the kidney entry).",
+   "do": [
+    "McDonald's practice: aim at 1 g per lb, since most people land below their target."
+   ]
+  },
+  {
+   "id": "nut-protein-bone",
+   "type": "note",
+   "title": "Higher protein did not harm bone, and may help the spine slightly",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "shams-white-2017",
+    "mcdonald-protein-controversies"
+   ],
+   "take": "A meta-analysis of 16 trials and 20 cohort studies found no harm to bone from higher protein, and a possible small gain in lumbar spine density.",
+   "body": "In McDonald's account, the worry began with early studies feeding purified protein, which saw calcium lost from the body. The pooled analysis found lumbar spine density may be 0.52 percent higher with more protein, from five trials, and no effect at the hip, femoral neck or whole body. Limited evidence did not support an extra benefit from protein combined with calcium and vitamin D, the pairing his 2007 article leans on; the analysis came later. Studies varied, and confounding could not be ruled out.",
+   "do": []
+  },
+  {
+   "id": "nut-table-amino-acids",
+   "type": "table",
+   "title": "Essential amino acids and leucine in common protein powders",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "gorissen-2018"
+   ],
+   "take": "Share of the protein in each isolate, measured in one lab. A dash means the figure was not in the summary. Plant isolates vary widely, and blends of them can come close to animal profiles.",
+   "columns": [
+    "Protein",
+    "Essential amino acids (% of protein)",
+    "Leucine (% of protein)"
+   ],
+   "rows": [
+    [
+     "Whey",
+     "43",
+     "–"
+    ],
+    [
+     "Milk",
+     "39",
+     "9.0"
+    ],
+    [
+     "Casein",
+     "34",
+     "–"
+    ],
+    [
+     "Egg",
+     "32",
+     "7.0"
+    ],
+    [
+     "Human muscle (reference)",
+     "38",
+     "7.6"
+    ],
+    [
+     "Wheat",
+     "22",
+     "–"
+    ],
+    [
+     "Oat",
+     "21",
+     "–"
+    ],
+    [
+     "Lupin",
+     "21",
+     "–"
+    ],
+    [
+     "Corn",
+     "–",
+     "13.5 (highest of the plant isolates)"
+    ],
+    [
+     "Hemp",
+     "–",
+     "5.1 (lowest of the plant isolates)"
+    ]
+   ]
+  },
+  {
+   "id": "nut-term-pdcaas",
+   "type": "term",
+   "title": "PDCAAS (protein digestibility-corrected amino acid score)",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "gilani-2012",
+    "rutherfurd-2015"
+   ],
+   "take": "A protein quality score adopted by FAO/WHO in 1991. It compares a protein's essential amino acids with a reference pattern for young children, corrects for digestibility over the whole gut, and is capped at 1.0, so top proteins tie."
+  },
+  {
+   "id": "nut-term-diaas",
+   "type": "term",
+   "title": "DIAAS (digestible indispensable amino acid score)",
+   "topic": "protein",
+   "level": "advanced",
+   "confidence": "practice",
+   "sources": [
+    "rutherfurd-2015",
+    "mathai-2017"
+   ],
+   "take": "The score FAO has recommended in place of PDCAAS. It uses the digestibility of each essential amino acid at the end of the small intestine and is not capped. In rats it ran from 0.01 for a corn cereal to 1.18 for milk protein concentrate."
+  },
+  {
+   "id": "nut-mistake-quality-scores",
+   "type": "mistake",
+   "title": "Ranking protein sources by quality score when you already eat plenty",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "rutherfurd-2015",
+    "mathai-2017",
+    "gorissen-2018",
+    "mcdonald-protein-quality-1"
+   ],
+   "take": "McDonald's view is that quality scores matter most for diets short of protein, and that at a lifter's intake from mixed sources, gaps between good proteins matter little.",
+   "body": "The authors of one scoring study say the gap between methods matters most where protein intake is marginal. In pigs, the older method rated skimmed milk powder, soy, pea and wheat higher than the newer one, and in rats it ran higher mainly for poorer proteins, so plant scores need care when one plant source carries a low intake. Plant isolates also differ widely in amino acids (see the amino acid table). For plant and animal protein over months, see the plant protein entry.",
+   "do": [
+    "McDonald's practice: hit your daily protein total first, then think about the source."
+   ]
+  },
+  {
+   "id": "nut-term-fast-slow-protein",
+   "type": "term",
+   "title": "Fast and slow proteins",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "boirie-1997",
+    "mcdonald-protein-speed"
+   ],
+   "take": "Proteins whose amino acids reach the blood at different speeds. Whey gives a sharp, short rise in blood amino acids; casein gives a lower rise that lasts for hours, probably because it leaves the stomach slowly."
+  },
+  {
+   "id": "nut-whey-casein-context",
+   "type": "note",
+   "title": "Whey and casein differ most when eaten alone, less in a mixed meal",
+   "topic": "protein",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "boirie-1997",
+    "dangin-2002",
+    "mcdonald-protein-speed"
+   ],
+   "take": "In a single-protein meal, casein left more protein in the body over 7 hours than whey did. Early results suggest added carbohydrate and fat narrow the gap.",
+   "body": "In the first study, whey raised whole-body protein synthesis by 68 percent and burned more amino acids, while casein cut protein breakdown by 34 percent; net leucine balance over 7 hours favoured casein. That was whole-body data in rested adults, not muscle after training, and McDonald's article adds that the protein was taken alone after an overnight fast. The same group's preliminary results found added fat and carbohydrate blunted the differences, and they suggest a fast protein may suit older people better.",
+   "do": [
+    "McDonald's practice: before or during training, take quick-digesting whey, since slow protein sits in the gut."
+   ]
+  },
+  {
+   "id": "nut-protein-40g-whole-body",
+   "type": "note",
+   "title": "After whole-body training, 40 g of whey beat 20 g for muscle protein synthesis",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "macnaughton-2016",
+    "mcdonald-post-workout-protein"
+   ],
+   "take": "In 30 resistance-trained young men, 40 g of whey after a whole-body session raised muscle protein synthesis about 20 percent more than 20 g, whatever their lean mass.",
+   "body": "The accepted ceiling was 20 to 25 g, and McDonald's article says that figure came from leg-only training. Here men with lean mass of 65 kg (143 lb) or less and 70 kg (154 lb) or more did a whole-body session, then took 20 or 40 g of whey. Synthesis rose from 0.049 to 0.059 percent an hour with the larger dose, and lean mass made no difference. McDonald's view is that doubling the dose bought a modest gain, but his article notes only the thigh was sampled, so the other trained muscles may have gained too. See the per-meal entry.",
+   "do": [
+    "After a full-body session, consider nearer 40 g than 20 g; the evidence is one short study."
+   ]
+  },
+  {
+   "id": "nut-mistake-raw-eggs",
+   "type": "mistake",
+   "title": "Eating eggs raw for their protein",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "evenepoel-1998",
+    "mcdonald-protein-intro",
+    "mcdonald-protein-micronutrients"
+   ],
+   "take": "In five people with an ileostomy, about 51 percent of raw egg protein was absorbed by the end of the small intestine, against 91 percent when cooked.",
+   "body": "Digestibility is the share of eaten protein the gut takes in. Each person ate 25 g of labelled egg protein once cooked and once raw, and heating raised digestibility sharply. The study was tiny and used a measurement taken at the end of the small intestine, but the gap was large. McDonald also warns that raw eggs carry a risk of salmonella food poisoning.",
+   "do": [
+    "Cook eggs before you eat them."
+   ]
+  },
+  {
+   "id": "nut-plant-b12-iron",
+   "type": "note",
+   "title": "Without animal foods, plan for vitamin B12, and expect less iron to be absorbed",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "pawlak-2013",
+    "hurrell-2010",
+    "mcdonald-protein-micronutrients"
+   ],
+   "take": "B12 depletion was common among vegetarians, more so vegans. In people with no iron stores, about 5 to 12 percent of iron is absorbed from vegetarian diets, 14 to 18 from mixed.",
+   "body": "A review of 18 studies of vegetarians found B12 deficiency in 62 percent of pregnant women, 25 to 86 percent of children, 21 to 41 of adolescents and 11 to 90 of older people, and its authors advise regular B12 supplements. The iron figures are estimates. Phytate, polyphenols, calcium, vitamin C and meat changed iron absorption in single-meal studies, less so across varied diets, and iron status matters more than diet. McDonald's view is that lean red meat is a strong source of iron and zinc, and that athletes who drop it, women especially, risk running short.",
+   "do": [
+    "If you eat no animal foods, ask a clinician or dietitian about a B12 source and testing.",
+    "Take iron only after a blood test and a clinician's advice (see the women's iron entry); McDonald warns excess harms men."
+   ]
+  },
+  {
+   "id": "nut-term-fibre-types",
+   "type": "term",
+   "title": "Soluble, insoluble and fermentable fibre",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-fibre",
+    "fao-2003"
+   ],
+   "take": "Soluble (viscous) fibre forms a gel in water and slows stomach emptying. Insoluble fibre does not dissolve and adds bulk. Fermentable fibre is broken down by gut bacteria into gases and short-chain fatty acids, which supply some energy."
+  },
+  {
+   "id": "nut-fibre-big-eaters",
+   "type": "note",
+   "title": "McDonald warns that high fibre can work against big eaters",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "baer-1997",
+    "mcdonald-fibre"
+   ],
+   "take": "More fibre lowered how much fat and protein the gut absorbed in a feeding study. McDonald's view is that this and the fullness help dieters and hinder big eaters.",
+   "body": "In 17 people on controlled diets, each eaten for two weeks, raising fibre lowered fat and protein digestibility and the usable energy of the diet. McDonald's estimate is that going from about 18 to 36 g of fibre a day costs around 100 kcal absorbed, an effect he says is not large. His general starting point is 5 to 10 g of fibre a meal. For lifters trying to gain or athletes who burn a great deal, his concern is that bulk and lost absorption make eating enough harder.",
+   "do": [
+    "McDonald's practice: if you struggle to eat enough, eat the salad or vegetables last."
+   ]
+  },
+  {
+   "id": "nut-term-glycaemic-load",
+   "type": "term",
+   "title": "Glycaemic load (GL)",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "foster-powell-2002",
+    "mcdonald-gi-gl"
+   ],
+   "take": "A food's glycaemic index multiplied by the grams of carbohydrate in the portion eaten, divided by 100. It accounts for both the kind and the amount of carbohydrate (see the glycaemic index entry in the diet guide)."
+  },
+  {
+   "id": "nut-mistake-gi-portion",
+   "type": "mistake",
+   "title": "Ruling out a food for its glycaemic index without looking at the portion",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "foster-powell-2002",
+    "mettler-2007",
+    "mcdonald-gi-gl"
+   ],
+   "take": "GI is measured on a serving that holds 50 g of available carbohydrate, so a high value says little about a vegetable eaten in small amounts.",
+   "body": "In a GI test, fasted volunteers eat enough of a food to provide 50 g of available carbohydrate. For foods low in carbohydrate that can mean an unrealistic plate: McDonald's estimate for carrots is about a dozen medium ones. Glycaemic load scales GI by the carbohydrate actually eaten, and the international tables list it for stated serving sizes. McDonald's view is that banning carrots or similar foods over their GI makes no sense.",
+   "do": [
+    "McDonald's practice: judge a vegetable by the portion you eat, not by its GI alone."
+   ]
+  },
+  {
+   "id": "nut-gi-not-insulin",
+   "type": "note",
+   "title": "A lower glycaemic index does not always mean less insulin",
+   "topic": "macros",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "schenk-2003",
+    "ang-2012",
+    "mcdonald-gi-gl"
+   ],
+   "take": "In six healthy men, a low-GI bran cereal raised insulin sooner than high-GI corn flakes. Its lower GI came from faster glucose removal, not slower entry.",
+   "body": "Both cereals supplied 50 g of available carbohydrate, and glucose entered the blood at a similar rate. With the bran cereal, insulin was 76 percent higher at 20 minutes and glucose left the blood faster, which flattened the curve. In 30 people with type 2 diabetes, adding about 21 g of protein to 50 g of a slowly digested sugar raised insulin by roughly 190 to 270 percent, but insulin action fell and the glucose response did not change. McDonald's view is that choosing foods by GI to keep insulin down rests on a false assumption."
+  },
+  {
+   "id": "nut-gi-training-state",
+   "type": "note",
+   "title": "The same cereal scored a different glycaemic index in trained and sedentary men",
+   "topic": "macros",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "mettler-2007",
+    "mettler-2006",
+    "mcdonald-gi-gl"
+   ],
+   "take": "One breakfast cereal's GI differed by about 23 units between endurance-trained and sedentary young men, so a published value may not fit everyone.",
+   "body": "In 34 young men with normal glucose tolerance, moderately trained men fell between the two groups, and the insulin index did not differ. An earlier study by the same team found the gap for one of three cereals, with a second close to significance. McDonald's reading is that GI runs lower in trained people, and he puts this down to their better insulin sensitivity."
+  },
+  {
+   "id": "nut-low-gl-weight-loss",
+   "type": "note",
+   "title": "Lowering glycaemic index or load added nothing to a calorie deficit in a feeding trial",
+   "topic": "energy",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "raatz-2005",
+    "pittas-2005",
+    "mcdonald-gi-gl"
+   ],
+   "take": "In 29 adults with obesity on provided food for 12 weeks, high-GI, low-GI and high-fat diets with the same deficit lost similar weight.",
+   "body": "Each diet sat about 3,138 kJ (750 kcal) a day below estimated needs. Losses were 9.3, 9.9 and 8.4 kg, with no difference, and insulin sensitivity improved on all three; 22 people kept their losses over 24 weeks of free living. A report from the CALERIE trial in overweight adults found a low-GL diet helped only those with high insulin secretion. McDonald reads the low-GL weight-loss research as mixed, and argues that such diets also change fibre and protein.",
+   "do": [
+    "Set the calorie deficit first and treat GI as a minor detail."
+   ]
+  },
+  {
+   "id": "nut-glycogen-refuel-speed",
+   "type": "note",
+   "title": "Carbohydrate eaten straight after hard exercise refills glycogen fastest",
+   "topic": "timing",
+   "level": "advanced",
+   "confidence": "moderate",
+   "sources": [
+    "jentjens-2003",
+    "mcdonald-gi-gl"
+   ],
+   "take": "After depleting exercise, glycogen refilled fastest with carbohydrate taken at once, and a delay of hours could halve the rate. McDonald thinks this matters mainly for same-day sessions.",
+   "body": "A review of short-term recovery found the highest muscle glycogen synthesis with about 1.0 to 1.85 g/kg of carbohydrate an hour, started straight after exercise and repeated every 15 to 60 minutes for up to 5 hours. A delay of several hours may cut the rate by about half. Added protein raised synthesis only when carbohydrate was under about 1.2 g/kg an hour. McDonald's view is that with a day between hard sessions for the same muscles, timing and GI make no real difference, and he keeps fast, high-GI refuelling for sessions six to eight hours apart.",
+   "do": [
+    "With two hard sessions in one day, eat carbohydrate soon after the first."
+   ]
+  },
+  {
+   "id": "nut-carb-load-who",
+   "type": "note",
+   "title": "Carbohydrate loading helps in endurance events of more than about 90 minutes",
+   "topic": "timing",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "hawley-1997",
+    "mcdonald-carb-loading"
+   ],
+   "take": "Raising muscle glycogen above normal delayed fatigue by about 20 percent in events over 90 minutes, and did not help efforts under 5 minutes or runs and rides of 60 to 90.",
+   "body": "A 1997 review found that after 60 to 90 minutes of moderate running or cycling, plenty of glycogen is still left in the working muscles, so extra stores add nothing. Beyond 90 minutes, exhaustion tended to coincide with very low muscle glycogen. In races over a set distance, high-carbohydrate diets improved performance by 2 to 3 percent. McDonald's view is that a recreational 5 km runner gains nothing from loading and may only carry extra water, and that slower marathoners, out on the course longest, are the ones at risk of running low.",
+   "do": [
+    "For events under an hour, eat your normal diet beforehand instead of loading."
+   ]
+  },
+  {
+   "id": "nut-carb-load-one-day",
+   "type": "note",
+   "title": "A short all-out effort and one day of high carbohydrate loaded glycogen in a small study",
+   "topic": "timing",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "fairchild-2002",
+    "mcdonald-carb-loading"
+   ],
+   "take": "In seven endurance-trained athletes, 3 minutes of very hard cycling then 24 hours at about 10 g/kg of high-GI carbohydrate nearly doubled muscle glycogen.",
+   "body": "Published loading plans took two to six days; McDonald's article recounts that the first versions began with several days of low carbohydrate and hard training. Here athletes rode 150 seconds at 130 percent of peak aerobic capacity, then 30 seconds all out, and ate 10.3 g of carbohydrate per kg of body weight over the next day. Glycogen rose from about 109 to 198 mmol/kg wet weight, similar to or above longer plans. It was seven people with no comparison group. McDonald's view is that the total carbohydrate eaten matters more than which plan delivers it.",
+   "do": [
+    "McDonald's practice: test any pre-race meal in training, never for the first time on race day."
+   ]
+  },
+  {
+   "id": "nut-bodybuilder-carb-load",
+   "type": "note",
+   "title": "Bodybuilders who carb-loaded before a show measured bigger, and many had diarrhoea",
+   "topic": "timing",
+   "level": "advanced",
+   "confidence": "limited",
+   "sources": [
+    "demoraes-2019",
+    "mcdonald-carb-loading"
+   ],
+   "take": "After three low-carbohydrate days, 15 male bodybuilders who loaded for 24 hours gained muscle thickness and photo scores; 9 who did not load had no change in thickness or girths.",
+   "body": "The study compared men who did and did not load, with no random allocation reported. Ultrasound thickness of the elbow flexors and triceps rose with loading, as did body mass and several girths. Diarrhoea hit 7 of the 15 loaders, 4 of them severely, and constipation was common in both groups during depletion. McDonald calls the effect of loading debatable and recalls a study finding no change in muscle size; this 2019 study, which his article links, found a short-term rise. Big peak-week swings in food and fluid can bring gut upset like this, and cutting fluid risks dehydration.",
+   "do": [
+    "Plan any peak-week carbohydrate load with a sports dietitian or an experienced coach."
+   ]
+  },
+  {
+   "id": "nut-mistake-overdrinking-race",
+   "type": "mistake",
+   "title": "Drinking more than you sweat out during a long race",
+   "topic": "timing",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "almond-2005",
+    "mcdonald-carb-loading"
+   ],
+   "take": "In the 2002 Boston Marathon, 13 percent of 488 sampled runners finished with low blood sodium; weight gain during the race and finishing after 4 hours went with it.",
+   "body": "Hyponatraemia means too little sodium in the blood, and severe cases can kill. In this group, 0.6 percent had critical levels. Gaining weight while running, a sign of drinking more than was lost, went with about four times the odds, and a time over 4 hours with about seven times the odds of a time under 3:30. Sex, type of drink and anti-inflammatory painkillers were not linked. McDonald's view is that slower marathoners are the ones prone to overdrinking, since fast runners need less and have less chance to drink.",
+   "do": [
+    "Weigh yourself before and after long training runs; finishing heavier means you drank too much.",
+    "Plan race drinking with a sports dietitian or clinician if you will be out over 4 hours."
+   ]
+  },
+  {
+   "id": "nut-liquid-calories",
+   "type": "note",
+   "title": "Calories from sugary drinks were not offset by eating less",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "dimeglio-2000",
+    "wolf-2008",
+    "mcdonald-beverages"
+   ],
+   "take": "In a crossover trial, 450 kcal a day of jelly beans was matched by eating less, while the same calories as soda were simply added on and weight rose.",
+   "body": "Fifteen adults took 1,880 kJ (about 450 kcal) of carbohydrate a day for four weeks as soda and four weeks as jelly beans. With the solid load they ate less of everything else, a compensation of 118 percent. With soda they ate no less, and body weight and BMI rose only in that period. A review of beverages describes the same weak compensation for drinks sweetened with sugar or high-fructose corn syrup, and for alcohol (see the alcohol energy entry). McDonald's view is that the liquid form is the problem whatever the sugar, and that milk, with its protein and fat, behaves more like food.",
+   "do": [
+    "McDonald's practice: swap sugary drinks for water or diet drinks (see the diet drinks claim)."
+   ]
+  },
+  {
+   "id": "nut-milk-recovery-drink",
+   "type": "note",
+   "title": "Milk did well as a drink after sweaty endurance sessions in small trials",
+   "topic": "timing",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "shirreffs-2007",
+    "karp-2006",
+    "mcdonald-milk"
+   ],
+   "take": "Low-fat milk was retained better than water or a sports drink after sweating, and chocolate milk beat a matched carbohydrate drink between two cycling bouts.",
+   "body": "Eleven people sweated off 1.8 percent of body mass in warm-room exercise, then drank 150 percent of the loss. Five-hour urine was about 550 to 610 ml after milk against about 1,180 to 1,210 ml after water or a sports drink, and only milk kept them in fluid balance (see the plain water claim). In nine trained male cyclists, chocolate milk and a fluid-replacement drink both gave longer time to exhaustion than a carbohydrate drink matched to the milk for carbohydrate. McDonald's view is that milk suits recovery but not drinking during exercise, and that big athletes may need extra carbohydrate and protein added.",
+   "do": [
+    "After long, sweaty sessions, milk is a sound recovery drink if you tolerate lactose (see the lactose entry)."
+   ]
+  },
+  {
+   "id": "nut-term-energy-density",
+   "type": "term",
+   "title": "Energy density",
+   "topic": "energy",
+   "level": "beginner",
+   "confidence": "practice",
+   "sources": [
+    "ello-martin-2007",
+    "mcdonald-energy-density"
+   ],
+   "take": "Calories per gram of food. Water, fibre and air lower it; fat raises it, and so does removing water. Refined low-fat foods can still be energy dense. Low values help dieters feel full, and high values help people who must eat a lot."
+  },
+  {
+   "id": "nut-soy-thyroid",
+   "type": "note",
+   "title": "Soy did not upset thyroid hormones in healthy adults with enough iodine",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "otun-2019",
+    "messina-2006",
+    "doerge-2002",
+    "mcdonald-soy-thyroid"
+   ],
+   "take": "Across 18 randomised trials, soy did not change thyroid hormones and nudged TSH up very slightly. People treated for an underactive thyroid are a separate case.",
+   "body": "A 2019 meta-analysis found no change in free T3 or free T4 and a TSH rise of about 0.25 mIU/L, of unclear clinical meaning. An earlier review of 14 trials in healthy adults found no or only very modest effects in all but one. That review notes that soy may cut absorption of thyroid hormone medicine and raise the dose some patients need, though they need not avoid soy. Animal and lab work suggests low iodine makes soy's effect on the thyroid worse. McDonald's view is that trouble comes from very high soy intakes paired with low iodine.",
+   "do": [
+    "If you take thyroid medicine and eat soy often, tell your clinician, as your dose may need checking.",
+    "If you eat a lot of soy, make sure your iodine intake is adequate."
+   ]
+  },
+  {
+   "id": "nut-soy-testosterone",
+   "type": "note",
+   "title": "Soy protein and isoflavones did not change men's testosterone",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "reed-2021",
+    "mcdonald-soy-thyroid"
+   ],
+   "take": "A meta-analysis of 41 studies found no effect of soy foods, soy protein or isoflavone extracts on testosterone or oestrogen in men, at any dose or duration tested.",
+   "body": "Total testosterone was measured in 1,753 men and oestradiol in 1,000. Total and free testosterone, oestradiol, oestrone and SHBG did not change, and splitting the studies by isoflavone dose and length found no effect either. McDonald's 2009 article agrees that moderate intakes left testosterone alone, but argues that large daily intakes can cause problems and suggests a cap of about 20 to 25 g of soy protein a day. This later analysis found no dose effect on these hormones, though it did not look at other outcomes.",
+   "do": [
+    "Men can use soy as a protein source without worrying about testosterone."
+   ]
+  },
+  {
+   "id": "nut-term-isoflavones",
+   "type": "term",
+   "title": "Isoflavones (soy phytoestrogens)",
+   "topic": "protein",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "doerge-2002",
+    "mcdonald-soy-thyroid"
+   ],
+   "take": "Plant compounds in soy, chiefly genistein and daidzein, that bind oestrogen receptors and can act like oestrogen. Phytoestrogen is the wider term for such plant compounds. They drive most worries about soy and hormones."
+  },
+  {
+   "id": "nut-hfcs-like-sugar",
+   "type": "note",
+   "title": "High-fructose corn syrup behaves much like table sugar",
+   "topic": "macros",
+   "level": "beginner",
+   "confidence": "limited",
+   "sources": [
+    "white-2008",
+    "stanhope-2008",
+    "mcdonald-hfcs"
+   ],
+   "take": "HFCS and sucrose are both mixes of fructose and glucose, and in 34 adults they gave similar 24-hour glucose, insulin, leptin and blood fat profiles.",
+   "body": "McDonald's article lists the common forms, HFCS-42 and HFCS-55, named for their fructose percentage; sucrose is half fructose. A review found HFCS no different in any meaningful way from sucrose, honey or juice concentrates, and judged the idea that it uniquely drives obesity unsupported. In eight of the men, though, blood fats after HFCS or sucrose drinks rose about as high as after pure fructose. McDonald's view is that the problem is the calories and the soft drinks that carry HFCS, not the syrup itself (see the liquid calories entry).",
+   "do": [
+    "Count HFCS as added sugar, the same as sucrose or honey."
+   ]
+  },
+  {
+   "id": "nut-num-fructose-50g",
+   "type": "number",
+   "title": "Fructose intake below which blood fats did not rise after meals",
+   "topic": "macros",
+   "level": "advanced",
+   "confidence": "moderate",
+   "sources": [
+    "livesey-2008",
+    "mcdonald-fructose-diet"
+   ],
+   "value": "50",
+   "unit": "g of fructose a day",
+   "sort": 50,
+   "take": "In pooled trials of pure fructose, under 50 g a day had no clear effect on blood fats after meals, and fasting levels and body weight held up to 100 g."
+  },
+  {
+   "id": "nut-fish-mercury",
+   "type": "note",
+   "title": "Choose lower-mercury fish, above all in pregnancy and for children",
+   "topic": "protein",
+   "level": "beginner",
+   "confidence": "rule",
+   "sources": [
+    "fda-epa-fish",
+    "mcdonald-mercury"
+   ],
+   "take": "US FDA and EPA advice lists seven fish to avoid for their mercury, such as swordfish, shark and orange roughy, and many low-mercury picks such as salmon and sardines.",
+   "body": "The advice is written for people who are or may become pregnant or breastfeeding, and for children. In pregnancy and breastfeeding it suggests 2 to 3 servings of 4 oz (113 g) a week from its best-choices list, or 1 from its good-choices list; children get 2 smaller best-choice servings. Canned light tuna is a best choice and albacore a good choice; bigeye tuna, king mackerel, marlin and Gulf of Mexico tilefish are on the avoid list. McDonald's view is that lifters who eat large daily amounts of tuna or other high-mercury fish can go past the safety limits.",
+   "do": [
+    "If you are pregnant or planning to be, plan your fish intake with your clinician or midwife.",
+    "McDonald's practice: if you eat fish most days, favour low-mercury kinds over large daily amounts of tuna."
+   ]
+  },
+  {
+   "id": "nut-antioxidants-adaptation",
+   "type": "note",
+   "title": "High-dose vitamins C and E blunted some training adaptations in trials",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "paulsen-2014-endurance",
+    "paulsen-2014-strength",
+    "mcdonald-antioxidant-vitd",
+    "mcdonald-supplements-1"
+   ],
+   "take": "In two randomised trials, daily vitamin C and E dulled muscle markers of adaptation, though fitness and muscle growth mostly kept pace with placebo.",
+   "body": "In 54 young adults doing 11 weeks of mostly running, 1,000 mg of vitamin C and 235 mg of vitamin E a day stopped the rise in markers of new mitochondria, while VO2max rose 8 percent in both groups. In 32 recreationally trained adults lifting for 10 weeks, the same doses did not change muscle growth but blunted signalling after a session and held back biceps curl strength. The authors urge caution. McDonald's view is to avoid high-dose antioxidants in main training blocks, with a possible place in a crowded competition season.",
+   "do": [
+    "McDonald's practice: get antioxidants from fruit and vegetables, not high-dose pills, while training to improve."
+   ]
+  },
+  {
+   "id": "nut-mistake-antioxidant-pills",
+   "type": "mistake",
+   "title": "Taking antioxidant pills as health insurance",
+   "topic": "supplements",
+   "level": "beginner",
+   "confidence": "strong",
+   "sources": [
+    "bjelakovic-2012",
+    "mcdonald-antioxidant-vitd"
+   ],
+   "take": "In 78 randomised trials with 296,707 people, antioxidant pills did not lower deaths, and beta-carotene and vitamin E slightly raised them in the better trials.",
+   "body": "The Cochrane review covered beta-carotene, vitamins A, C and E, and selenium, taken for 28 days to 12 years by healthy people and patients with various diseases, mean age 63. Overall there was no clear effect on deaths. In the 56 trials at low risk of bias, deaths rose by 4 percent, beta-carotene and vitamin E raised mortality, and higher vitamin A doses went with more deaths; vitamin C and selenium showed no effect. McDonald's view is that pills cannot replace the fruit and vegetables that supply these nutrients.",
+   "do": [
+    "Check any high-dose vitamin plan with a clinician or dietitian before you start."
+   ]
+  },
+  {
+   "id": "nut-vitamin-d-athletes",
+   "type": "note",
+   "title": "Many athletes test low in vitamin D, but the count depends on the cut-off",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "moderate",
+   "sources": [
+    "farrokhyar-2015",
+    "ross-2011",
+    "mcdonald-antioxidant-vitd",
+    "mcdonald-supplements-1"
+   ],
+   "take": "At a cut-off of 32 ng/mL, 56 percent of 2,313 athletes were low, more in winter and in indoor sports. The IOM counts 20 ng/mL as enough for nearly everyone.",
+   "body": "The meta-analysis pooled 23 studies; risk above 40 degrees north rose only once Middle East studies were excluded, and any link to injury was unclear. The Institute of Medicine's 2011 report set an adult RDA of 600 IU a day (800 IU over 70), tied to a blood level of at least 20 ng/mL (50 nmol/L). It found higher levels gave no consistent extra benefit, saw some risk at both extremes, and judged deficiency overestimated. McDonald's articles aim for higher levels and treat supplements as close to essential for indoor athletes. For trial results on vitamin D pills, see the vitamin D entry in the health guide.",
+   "do": [
+    "If you train indoors or through dark winters, ask a clinician whether a vitamin D test is worth doing.",
+    "Do not take high-dose vitamin D without a clinician's advice."
+   ]
+  },
+  {
+   "id": "nut-glutamine",
+   "type": "note",
+   "title": "Glutamine added no strength or lean mass in a training trial",
+   "topic": "supplements",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "candow-2001",
+    "mcdonald-supplements-1"
+   ],
+   "take": "In 31 young adults lifting for six weeks, a large daily glutamine dose did no better than placebo for strength, lean mass or muscle breakdown.",
+   "body": "The glutamine group took 0.9 g per kg of lean mass a day against the same amount of maltodextrin. Both groups raised their squat by about 30 percent and bench press by about 14 percent, and lean mass rose about 2 percent in each. Urinary 3-methylhistidine, a marker of muscle protein breakdown, did not differ. McDonald agrees that glutamine does not build muscle, and he rates its evidence for immune support as mixed."
+  },
+  {
+   "id": "nut-muscle-full",
+   "type": "note",
+   "title": "Muscle protein synthesis rose and fell back within hours of a protein dose",
+   "topic": "timing",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "atherton-2010",
+    "areta-2013",
+    "trommelen-2023",
+    "mcdonald-meal-freq-mass",
+    "mcdonald-baseline"
+   ],
+   "take": "After 48 g of whey, synthesis in eight young men peaked at 45 to 90 minutes and returned to baseline while blood amino acids were still high.",
+   "body": "The authors call this the muscle-full effect. In 24 trained men given 80 g of whey over 12 hours after lifting, 20 g every 3 hours raised synthesis 31 to 48 percent more than 10 g every 90 minutes or 40 g every 6 hours. McDonald's view is that protein meals 3 to 5 hours apart suit muscle gain and that eating more often adds nothing. A later tracer study found a much larger dose gave a longer response, so timing depends on dose (see the protein per meal entry).",
+   "do": [
+    "Space protein meals a few hours apart rather than grazing every hour."
+   ]
+  },
+  {
+   "id": "nut-presleep-protein",
+   "type": "note",
+   "title": "Protein before bed improved overnight protein balance after evening training",
+   "topic": "timing",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "res-2012",
+    "mcdonald-baseline"
+   ],
+   "take": "In 16 young men who lifted in the evening, 40 g of casein 30 minutes before sleep was digested overnight and improved whole-body protein balance.",
+   "body": "All of them had 20 g of protein and 60 g of carbohydrate straight after the session. With the bedtime casein, whole-body protein synthesis rose and net balance turned positive, and muscle protein synthesis ran about 22 percent higher, a result at the edge of significance. It covered one night, so it says nothing direct about long-term growth. McDonald is unsure it matters, since a large evening meal already supplies the night, and he would not cut sleep short to eat.",
+   "do": [
+    "If you train late, a protein-rich snack before bed is a reasonable option."
+   ]
+  },
+  {
+   "id": "nut-surplus-elite-athletes",
+   "type": "note",
+   "title": "A planned surplus added fat but no extra lean mass in young elite athletes",
+   "topic": "energy",
+   "level": "intermediate",
+   "confidence": "limited",
+   "sources": [
+    "garthe-2013",
+    "mcdonald-calories-gain",
+    "mcdonald-baseline"
+   ],
+   "take": "Over 8 to 12 weeks of added strength work, elite athletes given a surplus meal plan gained more weight and fat than those eating freely, and similar lean mass.",
+   "body": "Thirty-nine elite athletes, about 19 years old, were randomised. The meal-plan group ate about 3,585 kcal a day against 2,964 kcal. Body weight rose 3.9 percent against 1.5 percent and fat mass 15 percent against 3 percent, while lean mass gain did not differ and one-rep maxes rose 6 to 12 percent in both. McDonald's view is that the surplus muscle gain needs is small and shrinks with training age, so extra food mostly adds fat (see the surplus entries in the diet guide).",
+   "do": [
+    "McDonald's practice: check skinfolds and gym strength every two weeks and adjust intake to the results."
+   ]
+  },
+  {
+   "id": "nut-term-ketosis",
+   "type": "term",
+   "title": "Ketosis and ketone bodies",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-carb-needs",
+    "mcdonald-keto-ratio"
+   ],
+   "take": "Ketone bodies are fuels the liver makes from fat when carbohydrate is scarce; ketosis means raised blood ketones and follows fat breakdown. Diabetic ketoacidosis is a separate danger: with diabetes, see a clinician before going low-carb."
+  },
+  {
+   "id": "nut-mistake-ketone-strips",
+   "type": "mistake",
+   "title": "Judging a low-carbohydrate diet by urine ketone strips",
+   "topic": "macros",
+   "level": "intermediate",
+   "confidence": "practice",
+   "sources": [
+    "mcdonald-keto-ratio",
+    "mcdonald-carb-needs"
+   ],
+   "take": "Strips detect ketones spilling into urine, not blood levels or fat loss. McDonald's view is that they can read negative during ketosis and that fat lost is what counts.",
+   "body": "McDonald's view is that ketosis is defined by blood ketones, that urine readings also shift with how much you drink, and that lean, active people may make too few ketones to show. In his view ketones rise because fat is being broken down, so a darker strip does not mean faster fat loss (see the ketosis term and the ketogenic diet entries in the diet guide). People with diabetes who test ketones for medical reasons should follow their clinician, not this entry.",
+   "do": [
+    "McDonald's practice: judge the diet by fat lost and muscle kept, not by strip colour."
    ]
   }
  ],
@@ -2246,6 +3158,1523 @@
    "doi": "10.1186/1550-2783-7-5",
    "pmid": "20205813",
    "support": "Caffeine is effective for enhancing sport performance in trained athletes when consumed in low-to-moderate dosages (~3-6 mg/kg) and overall does not result in further enhancement in performance when consumed in higher dosages (>/= 9 mg/kg)."
+  },
+  "abernethy-1985": {
+   "type": "trial",
+   "authors": [
+    "Abernethy DR",
+    "Todd EL"
+   ],
+   "year": 1985,
+   "title": "Impairment of caffeine clearance by chronic use of low-dose oestrogen-containing oral contraceptives",
+   "journal": "European Journal of Clinical Pharmacology",
+   "volume": "28",
+   "issue": "4",
+   "pages": "425-428",
+   "doi": "10.1007/bf00544361",
+   "pmid": "4029248",
+   "support": "Treated females matched with 9 non-smoking, drug-free, healthy control females. Each subject received 162 mg caffeine base orally. OCS subjects had a prolonged elimination half-life of caffeine (mean 7.88 h vs 5.37 h in the controls), the result of marked impairment of the plasma clearance of caffeine. With chronic caffeine consumption, OCS users are predicted to have an increased steady-state plasma caffeine concentration."
+  },
+  "burdge-2002-men": {
+   "type": "trial",
+   "authors": [
+    "Burdge GC",
+    "Jones AE",
+    "Wootton SA"
+   ],
+   "year": 2002,
+   "title": "Eicosapentaenoic and docosapentaenoic acids are the principal products of α-linolenic acid metabolism in young men",
+   "journal": "British Journal of Nutrition",
+   "volume": "88",
+   "issue": "4",
+   "pages": "355-363",
+   "doi": "10.1079/BJN2002662",
+   "pmid": "12323085",
+   "n_participants": 6,
+   "support": "Emulsified [U-13C]ALNA was administered orally with a mixed meal to six subjects. There was no apparent 13C enrichment of docosahexaenoic acid (DHA) in plasma PC, TAG or non-esterified fatty acids at any time point measured up to 21 d."
+  },
+  "burdge-2002-women": {
+   "type": "trial",
+   "authors": [
+    "Burdge GC",
+    "Wootton SA"
+   ],
+   "year": 2002,
+   "title": "Conversion of α-linolenic acid to eicosapentaenoic, docosapentaenoic and docosahexaenoic acids in young women",
+   "journal": "British Journal of Nutrition",
+   "volume": "88",
+   "issue": "4",
+   "pages": "411-420",
+   "doi": "10.1079/BJN2002689",
+   "pmid": "12323090",
+   "support": "Estimated net fractional ALNA inter-conversion was EPA 21 %, DPA 6 % and DHA 9 %. Comparison with previous studies suggests that women may possess a greater capacity for ALNA conversion than men."
+  },
+  "spector-1999": {
+   "type": "review",
+   "authors": [
+    "Spector AA"
+   ],
+   "year": 1999,
+   "title": "Essentiality of fatty acids",
+   "journal": "Lipids",
+   "volume": "34",
+   "pages": "S1-S3",
+   "doi": "10.1007/BF02562220",
+   "pmid": "10419080",
+   "support": "The need for arachidonic acid ... is the main reason why the n-6 class of PUFA are essential. ... docosahexaenoic acid (DHA) is more likely to be the essential n-3 constituent because it is necessary for optimal visual acuity and neural development."
+  },
+  "le-2009": {
+   "type": "review",
+   "authors": [
+    "Le HD",
+    "Meisel JA",
+    "de Meijer VE",
+    "Gura KM",
+    "Puder M"
+   ],
+   "year": 2009,
+   "title": "The essentiality of arachidonic acid and docosahexaenoic acid",
+   "journal": "Prostaglandins, Leukotrienes and Essential Fatty Acids",
+   "volume": "81",
+   "issue": "2-3",
+   "pages": "165-170",
+   "doi": "10.1016/j.plefa.2009.05.020",
+   "pmid": "19540099",
+   "support": "No patients receiving PN with a fish oil-based lipid emulsion in our institution have developed biochemical or clinical evidence of EFAD. AA and DHA provision alone is sufficient to prevent biochemical and physiologic evidence of EFAD in a murine model."
+  },
+  "demmelmair-1999": {
+   "type": "trial",
+   "authors": [
+    "Demmelmair H",
+    "Iser B",
+    "Rauh-Pfeiffer A",
+    "Koletzko B"
+   ],
+   "year": 1999,
+   "title": "Comparison of bolus versus fractionated oral applications of [13C]-linoleic acid in humans",
+   "journal": "European Journal of Clinical Investigation",
+   "volume": "29",
+   "issue": "7",
+   "pages": "603-609",
+   "doi": "10.1046/j.1365-2362.1999.00477.x",
+   "pmid": "10411666",
+   "n_participants": 9,
+   "support": "Oral tracer doses were given to five healthy adults as a single bolus; in four subjects in nine portions. Fractional conversion of linoleic to arachidonic acid was 0.3% vs. 0.6% (bolus vs. fraction, NS)."
+  },
+  "johnson-2012": {
+   "type": "systematic-review",
+   "authors": [
+    "Johnson GH",
+    "Fritsche K"
+   ],
+   "year": 2012,
+   "title": "Effect of Dietary Linoleic Acid on Markers of Inflammation in Healthy Persons: A Systematic Review of Randomized Controlled Trials",
+   "journal": "Journal of the Academy of Nutrition and Dietetics",
+   "volume": "112",
+   "issue": "7",
+   "pages": "1029-1041.e15",
+   "doi": "10.1016/j.jand.2012.03.029",
+   "pmid": "22889633",
+   "n_studies": 15,
+   "support": "Fifteen studies (eight parallel and seven crossover) met inclusion criteria. None of the studies reported significant findings for a wide variety of inflammatory markers, including C-reactive protein, fibrinogen, ... cytokines ... or tumor necrosis factor-alpha."
+  },
+  "micha-2009": {
+   "type": "review",
+   "authors": [
+    "Micha R",
+    "Mozaffarian D"
+   ],
+   "year": 2009,
+   "title": "Trans fatty acids: effects on metabolic syndrome, heart disease and diabetes",
+   "journal": "Nature Reviews Endocrinology",
+   "volume": "5",
+   "issue": "6",
+   "pages": "335-344",
+   "doi": "10.1038/nrendo.2009.79",
+   "pmid": "19399016",
+   "support": "Consumption of even small amounts of TFAs (2% of total energy intake) is consistently associated with a markedly increased incidence of coronary heart disease. Relationships between TFA consumption and diabetes mellitus have been less consistent."
+  },
+  "shaukat-2010": {
+   "type": "systematic-review",
+   "authors": [
+    "Shaukat A",
+    "Levitt MD",
+    "Taylor BC",
+    "MacDonald R",
+    "Shamliyan TA",
+    "Kane RL",
+    "Wilt TJ"
+   ],
+   "year": 2010,
+   "title": "Systematic Review: Effective Management Strategies for Lactose Intolerance",
+   "journal": "Annals of Internal Medicine",
+   "volume": "152",
+   "issue": "12",
+   "pages": "797-803",
+   "doi": "10.7326/0003-4819-152-12-201006150-00241",
+   "pmid": "20404262",
+   "n_studies": 36,
+   "support": "Moderate-quality evidence indicated that 12 to 15 g of lactose (approximately 1 cup of milk) is well tolerated by most adults. Most studies evaluated persons with lactose malabsorption rather than lactose intolerance."
+  },
+  "mcdonald-nutrition-primer": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "A Primer on Nutrition Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/a-guide-to-basic-nutrition",
+   "retrieved": "2026-11-16",
+   "support": "Overview of nutrient classes: the definition of an essential nutrient, carbohydrate as conditionally essential for hard training, fibre giving some energy, and a lower proposed energy value for protein."
+  },
+  "mcdonald-carbs-primer": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2010,
+   "title": "A Primer on Dietary Carbohydrates",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/a-guide-to-dietary-carbohydrates",
+   "retrieved": "2026-11-16",
+   "support": "Sugars, starches and lactose: how lactose intolerance arises from too little lactase and how it differs from a milk allergy."
+  },
+  "mcdonald-fats-primer": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "A Primer on Dietary Fats - Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/a-guide-to-dietary-fats",
+   "retrieved": "2026-11-16",
+   "support": "Fat classes and the essential fats; his view that trans fat has no place in the diet and that low omega-3 matters more than high omega-6."
+  },
+  "mcdonald-real-efa": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "What Are the Real Essential Fatty Acids?",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/the-real-essential-fatty-acids",
+   "retrieved": "2026-11-16",
+   "support": "Essentiality defined; his case that AA and DHA, not LA and ALA, are the truly essential fats, and that ALA is a poor source of EPA and DHA."
+  },
+  "kim-2016": {
+   "type": "trial",
+   "authors": [
+    "Kim IY",
+    "Schutzler S",
+    "Schrader A",
+    "Spencer HJ",
+    "Azhar G",
+    "Ferrando AA",
+    "Wolfe RR"
+   ],
+   "year": 2016,
+   "title": "The anabolic response to a meal containing different amounts of protein is not limited by the maximal stimulation of protein synthesis in healthy young adults",
+   "journal": "American Journal of Physiology-Endocrinology and Metabolism",
+   "volume": "310",
+   "issue": "1",
+   "pages": "E73-E80",
+   "doi": "10.1152/ajpendo.00365.2015",
+   "pmid": "26530155",
+   "n_participants": 23,
+   "support": "Twenty-three healthy young adults. NB was greater in response to the meal containing HP vs. MP. The greater NB with HP was achieved primarily through a greater reduction in PB and to a lesser extent stimulation of protein synthesis."
+  },
+  "smeets-2019": {
+   "type": "trial",
+   "authors": [
+    "Smeets JSJ",
+    "Horstman AMH",
+    "Vles GF",
+    "Emans PJ",
+    "Goessens JPB",
+    "Gijsen AP",
+    "van Kranenburg JMX",
+    "van Loon LJC"
+   ],
+   "year": 2019,
+   "title": "Protein synthesis rates of muscle, tendon, ligament, cartilage, and bone tissue in vivo in humans",
+   "journal": "PLOS ONE",
+   "volume": "14",
+   "issue": "11",
+   "pages": "e0224745",
+   "doi": "10.1371/journal.pone.0224745",
+   "pmid": "31697717",
+   "n_participants": 6,
+   "support": "Six otherwise healthy patients (62±3 y), scheduled to undergo unilateral total knee arthroplasty. Tendon, bone, cartilage, ... cruciate ligament, and menisci tissue protein synthesis rates ... did not significantly differ from skeletal muscle protein synthesis rates (0.04±0.01%/h)."
+  },
+  "tipton-2004": {
+   "type": "review",
+   "authors": [
+    "Tipton KD",
+    "Wolfe RR"
+   ],
+   "year": 2004,
+   "title": "Protein and amino acids for athletes",
+   "journal": "Journal of Sports Sciences",
+   "volume": "22",
+   "issue": "1",
+   "pages": "65-79",
+   "doi": "10.1080/0264041031000140554",
+   "pmid": "14971434",
+   "support": "There are few convincing outcome data to indicate that the ingestion of a high amount of protein (2-3 g/kg BW/day) is necessary. There is limited evidence for harmful effects of a high protein intake."
+  },
+  "shams-white-2017": {
+   "type": "meta-analysis",
+   "authors": [
+    "Shams-White MM",
+    "Chung M",
+    "Du M",
+    "Fu Z",
+    "Insogna KL",
+    "Karlsen MC",
+    "LeBoff MS",
+    "Shapses SA",
+    "Sackey J",
+    "Wallace TC",
+    "Weaver CM"
+   ],
+   "year": 2017,
+   "title": "Dietary protein and bone health: a systematic review and meta-analysis from the National Osteoporosis Foundation",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "105",
+   "issue": "6",
+   "pages": "1528-1543",
+   "doi": "10.3945/ajcn.116.145110",
+   "pmid": "28404575",
+   "n_studies": 36,
+   "support": "Sixteen RCTs and 20 prospective cohort studies. Higher protein intake may have a protective effect on lumbar spine BMD (net percentage change: 0.52%) but no effect on total hip, femoral neck, or total body BMD. Current evidence shows no adverse effects of higher protein intakes."
+  },
+  "gorissen-2018": {
+   "type": "other",
+   "authors": [
+    "Gorissen SHM",
+    "Crombag JJR",
+    "Senden JMG",
+    "Waterval WAH",
+    "Bierau J",
+    "Verdijk LB",
+    "van Loon LJC"
+   ],
+   "year": 2018,
+   "title": "Protein content and amino acid composition of commercially available plant-based protein isolates",
+   "journal": "Amino Acids",
+   "volume": "50",
+   "issue": "12",
+   "pages": "1685-1695",
+   "doi": "10.1007/s00726-018-2640-5",
+   "pmid": "30167963",
+   "support": "EAA contents of oat (21%), lupin (21%), and wheat (22%) were lower than animal-based proteins (whey 43%, milk 39%, casein 34%, and egg 32%) and muscle protein (38%). Leucine contents ranging from 5.1% for hemp to 13.5% for corn protein, compared to 9.0% for milk, 7.0% for egg, and 7.6% for muscle protein."
+  },
+  "gilani-2012": {
+   "type": "review",
+   "authors": [
+    "Gilani GS"
+   ],
+   "year": 2012,
+   "title": "Background on international activities on protein quality assessment of foods",
+   "journal": "British Journal of Nutrition",
+   "volume": "108",
+   "issue": "S2",
+   "pages": "S168-S182",
+   "doi": "10.1017/S0007114512002383",
+   "pmid": "23107528",
+   "support": "The 1991 report concluded that the PDCAAS method was the most suitable approach for routine evaluation of protein quality for humans; the FAO/WHO/UNU (1985) pattern for preschool children was used; the method should be revised to permit values of >100 for high quality proteins."
+  },
+  "rutherfurd-2015": {
+   "type": "trial",
+   "authors": [
+    "Rutherfurd SM",
+    "Fanning AC",
+    "Miller BJ",
+    "Moughan PJ"
+   ],
+   "year": 2015,
+   "title": "Protein Digestibility-Corrected Amino Acid Scores and Digestible Indispensable Amino Acid Scores Differentially Describe Protein Quality in Growing Male Rats",
+   "journal": "The Journal of Nutrition",
+   "volume": "145",
+   "issue": "2",
+   "pages": "372-379",
+   "doi": "10.3945/jn.114.195438",
+   "pmid": "25644361",
+   "support": "The FAO has recommended replacing PDCAAS with DIAAS. DIAAS values ranged from 0.01 for a corn-based cereal to 1.18 for milk protein concentrate. Differences in the scores are of potential practical importance for populations in which dietary protein intake may be marginal."
+  },
+  "mathai-2017": {
+   "type": "trial",
+   "authors": [
+    "Mathai JK",
+    "Liu Y",
+    "Stein HH"
+   ],
+   "year": 2017,
+   "title": "Values for digestible indispensable amino acid scores (DIAAS) for some dairy and plant proteins may better describe protein quality than values calculated using the concept for protein digestibility-corrected amino acid scores (PDCAAS)",
+   "journal": "British Journal of Nutrition",
+   "volume": "117",
+   "issue": "4",
+   "pages": "490-499",
+   "doi": "10.1017/S0007114517000125",
+   "pmid": "28382889",
+   "support": "PDCAAS-like values were greater than DIAAS values for SMP, PPC, SPI, soya flour and wheat, indicating that PDCAAS-like values estimated in pigs may overestimate the quality of these proteins."
+  },
+  "mcdonald-protein-controversies": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2007,
+   "title": "Protein Controversies",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/examining-protein-controversies",
+   "retrieved": "2026-11-16",
+   "support": "Health worries about high protein: why early calcium-loss findings came from purified protein, and his view that adequate calcium plus fruit and vegetables keeps bone safe."
+  },
+  "mcdonald-protein-connective": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2020,
+   "title": "Protein Requirements and Connective Tissue",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/protein-requirements-athletes",
+   "retrieved": "2026-11-16",
+   "support": "Uses a tracer study of connective tissue turnover to argue that protein needs cannot be set from muscle protein synthesis alone."
+  },
+  "mcdonald-protein-growth": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2019,
+   "title": "Protein Requirements for Hypertrophy",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/protein-requirements-growth",
+   "retrieved": "2026-11-16",
+   "support": "Critique of per-meal protein caps drawn from muscle synthesis studies, and his own daily targets for recreational lifters and high-level strength athletes."
+  },
+  "mcdonald-protein-quality-1": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2008,
+   "title": "What Are Good Sources of Protein? - Protein Quality",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/protein-sources-quality-part-1",
+   "retrieved": "2026-11-16",
+   "support": "Survey of protein quality measures and his view that quality scores matter little for people eating plenty of protein from mixed sources."
+  },
+  "boirie-1997": {
+   "type": "trial",
+   "authors": [
+    "Boirie Y",
+    "Dangin M",
+    "Gachon P",
+    "Vasson MP",
+    "Maubois JL",
+    "Beaufrère B"
+   ],
+   "year": 1997,
+   "title": "Slow and fast dietary proteins differently modulate postprandial protein accretion",
+   "journal": "Proceedings of the National Academy of Sciences",
+   "volume": "94",
+   "issue": "26",
+   "pages": "14930-14935",
+   "doi": "10.1073/pnas.94.26.14930",
+   "pmid": "9405716",
+   "support": "WP induced a dramatic but short increase of plasma amino acids. CAS induced a prolonged plateau of moderate hyperaminoacidemia. Whole body protein breakdown was inhibited by 34% after CAS; synthesis stimulated by 68% with WP. Net leucine balance over the 7 h was more positive with CAS."
+  },
+  "dangin-2002": {
+   "type": "review",
+   "authors": [
+    "Dangin M",
+    "Boirie Y",
+    "Guillet C",
+    "Beaufrère B"
+   ],
+   "year": 2002,
+   "title": "Influence of the Protein Digestion Rate on Protein Turnover in Young and Elderly Subjects",
+   "journal": "The Journal of Nutrition",
+   "volume": "132",
+   "issue": "10",
+   "pages": "3228S-3233S",
+   "doi": "10.1093/jn/131.10.3228S",
+   "pmid": "12368423",
+   "support": "Our preliminary results suggest that added nonprotein energy sources to CAS and WP attenuated the differences in both the protein digestion rate and protein gain. In contrast to young subjects, a fast protein may be more beneficial than a slow one in elderly subjects."
+  },
+  "macnaughton-2016": {
+   "type": "trial",
+   "authors": [
+    "Macnaughton LS",
+    "Wardle SL",
+    "Witard OC",
+    "McGlory C",
+    "Hamilton DL",
+    "Jeromson S",
+    "Lawrence CE",
+    "Wallis GA",
+    "Tipton KD"
+   ],
+   "year": 2016,
+   "title": "The response of muscle protein synthesis following whole-body resistance exercise is greater following 40 g than 20 g of ingested whey protein",
+   "journal": "Physiological Reports",
+   "volume": "4",
+   "issue": "15",
+   "pages": "e12893",
+   "doi": "10.14814/phy2.12893",
+   "pmid": "27511985",
+   "n_participants": 30,
+   "support": "Resistance-trained males (lower LBM n = 15, higher LBM n = 15). MPS was stimulated to a greater extent following ingestion of 40 g (0.059%/h) compared with 20 g (0.049%/h); the total amount of LBM does not seem to influence the response."
+  },
+  "evenepoel-1998": {
+   "type": "trial",
+   "authors": [
+    "Evenepoel P",
+    "Geypens B",
+    "Luypaerts A",
+    "Hiele M",
+    "Ghoos Y",
+    "Rutgeerts P"
+   ],
+   "year": 1998,
+   "title": "Digestibility of Cooked and Raw Egg Protein in Humans as Assessed by Stable Isotope Techniques",
+   "journal": "The Journal of Nutrition",
+   "volume": "128",
+   "issue": "10",
+   "pages": "1716-1722",
+   "doi": "10.1093/jn/128.10.1716",
+   "pmid": "9772141",
+   "n_participants": 5,
+   "support": "Five ileostomy patients; 25 g of cooked or raw egg protein. The true ileal digestibility of cooked and raw egg protein amounted to 90.9 and 51.3%, respectively."
+  },
+  "pawlak-2013": {
+   "type": "review",
+   "authors": [
+    "Pawlak R",
+    "Parrott SJ",
+    "Raj S",
+    "Cullum-Dugan D",
+    "Lucus D"
+   ],
+   "year": 2013,
+   "title": "How prevalent is vitamin B12 deficiency among vegetarians?",
+   "journal": "Nutrition Reviews",
+   "volume": "71",
+   "issue": "2",
+   "pages": "110-117",
+   "doi": "10.1111/nure.12001",
+   "pmid": "23356638",
+   "n_studies": 18,
+   "support": "18 articles; deficiency rates 62% among pregnant women, 25-86% among children, 21-41% among adolescents, 11-90% among the elderly; higher among vegans. Vegetarians should take preventive measures including regular consumption of supplements containing B12."
+  },
+  "hurrell-2010": {
+   "type": "review",
+   "authors": [
+    "Hurrell R",
+    "Egli I"
+   ],
+   "year": 2010,
+   "title": "Iron bioavailability and dietary reference values",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "91",
+   "issue": "5",
+   "pages": "1461S-1467S",
+   "doi": "10.3945/ajcn.2010.28674F",
+   "pmid": "20200263",
+   "support": "Iron bioavailability has been estimated to be in the range of 14-18% for mixed diets and 5-12% for vegetarian diets in subjects with no iron stores. Iron status generally has a greater effect than diet composition."
+  },
+  "baer-1997": {
+   "type": "trial",
+   "authors": [
+    "Baer DJ",
+    "Rumpler WV",
+    "Miles CW",
+    "Fahey GC"
+   ],
+   "year": 1997,
+   "title": "Dietary Fiber Decreases the Metabolizable Energy Content and Nutrient Digestibility of Mixed Diets Fed to Humans",
+   "journal": "The Journal of Nutrition",
+   "volume": "127",
+   "issue": "4",
+   "pages": "579-586",
+   "doi": "10.1093/jn/127.4.579",
+   "pmid": "9109608",
+   "n_participants": 17,
+   "support": "Subjects (n = 17) consumed three diets (14 d each). Increasing fiber intake decreased fat and protein digestibility; the ME content of the diets decreased as fiber intake increased."
+  },
+  "mcdonald-protein-intro": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2008,
+   "title": "What Are Good Sources of Protein? - Introduction",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/complete-guide-dietary-protein",
+   "retrieved": "2026-11-16",
+   "support": "Factors for judging a protein source, and protein digestibility defined as the share of eaten protein that is absorbed."
+  },
+  "mcdonald-protein-speed": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2008,
+   "title": "What Are Good Sources of Protein? - Speed of Digestion Pt. 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/protein-sources-speed-of-digestion",
+   "retrieved": "2026-11-16",
+   "support": "Fast and slow proteins, the whey and casein studies and their limits, and his preference for a fast protein before or during training."
+  },
+  "mcdonald-protein-micronutrients": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2008,
+   "title": "What Are Good Sources of Protein? - Micronutrient Content",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/protein-sources-other-factors",
+   "retrieved": "2026-11-16",
+   "support": "Iron, zinc, B12 and calcium in protein foods, his case for lean red meat, and his warning against raw egg whites."
+  },
+  "mcdonald-post-workout-protein": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2016,
+   "title": "Protein Intake and Post Workout Protein Synthesis",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/protein-intake-protein-synthesis",
+   "retrieved": "2026-11-16",
+   "support": "Review of a study comparing 20 and 40 g of whey after whole-body lifting, with his reading of how large the extra gain was and what the single biopsy site leaves out."
+  },
+  "mcdonald-fibre": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "Fiber - Natures Broom",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/dietary-fiber-natures-broom",
+   "retrieved": "2026-11-16",
+   "support": "Fibre types and effects, his estimate of the energy lost when fibre is doubled, and his advice on fibre for people who need to eat a lot."
+  },
+  "foster-powell-2002": {
+   "type": "review",
+   "authors": [
+    "Foster-Powell K",
+    "Holt SH",
+    "Brand-Miller JC"
+   ],
+   "year": 2002,
+   "title": "International table of glycemic index and glycemic load values: 2002",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "76",
+   "issue": "1",
+   "pages": "5-56",
+   "doi": "10.1093/ajcn/76.1.5",
+   "pmid": "12081815",
+   "support": "chronic consumption of a diet with a high glycemic load (GI x dietary carbohydrate content) ... The revised table also lists the glycemic load associated with the consumption of specified serving sizes of different foods."
+  },
+  "mettler-2007": {
+   "type": "trial",
+   "authors": [
+    "Mettler S",
+    "Lamprecht-Rusca F",
+    "Stoffel-Kurt N",
+    "Wenk C",
+    "Colombani PC"
+   ],
+   "year": 2007,
+   "title": "The influence of the subjects' training state on the glycemic index",
+   "journal": "European Journal of Clinical Nutrition",
+   "volume": "61",
+   "issue": "1",
+   "pages": "19-24",
+   "doi": "10.1038/sj.ejcn.1602480",
+   "pmid": "16835599",
+   "n_participants": 34,
+   "support": "The GI differed significantly between SE and ET subjects (P=0.02, mean difference: 23 GI units ...). The GI of the MT subjects was intermediary ... The insulin index did not differ significantly between the groups."
+  },
+  "mettler-2006": {
+   "type": "trial",
+   "authors": [
+    "Mettler S",
+    "Wenk C",
+    "Colombani PC"
+   ],
+   "year": 2006,
+   "title": "Influence of Training Status on Glycemic Index",
+   "journal": "International Journal for Vitamin and Nutrition Research",
+   "volume": "76",
+   "issue": "1",
+   "pages": "39-44",
+   "doi": "10.1024/0300-9831.76.1.39",
+   "pmid": "16711656",
+   "n_participants": 23,
+   "support": "Pair-wise comparisons between endurance-trained and sedentary subjects within the different test meals were significant for test meal D (p = 0.002), marginally non-significant for meal C (p = 0.052) and not significant for meal B."
+  },
+  "schenk-2003": {
+   "type": "trial",
+   "authors": [
+    "Schenk S",
+    "Davidson CJ",
+    "Zderic TW",
+    "Byerley LO",
+    "Coyle EF"
+   ],
+   "year": 2003,
+   "title": "Different glycemic indexes of breakfast cereals are not due to glucose entry into blood but to glucose removal by tissue",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "78",
+   "issue": "4",
+   "pages": "742-748",
+   "doi": "10.1093/ajcn/78.4.742",
+   "pmid": "14522732",
+   "n_participants": 6,
+   "support": "Postprandial hyperinsulinemia occurred earlier with BC than with CF, resulting in a 76% higher plasma insulin concentration at 20 min ... The lower GI of BC than of CF was not due to a lower rate of appearance of glucose."
+  },
+  "ang-2012": {
+   "type": "trial",
+   "authors": [
+    "Ang M",
+    "Müller AS",
+    "Wagenlehner F",
+    "Pilatz A",
+    "Linn T"
+   ],
+   "year": 2012,
+   "title": "Combining protein and carbohydrate increases postprandial insulin levels but does not improve glucose response in patients with type 2 diabetes",
+   "journal": "Metabolism",
+   "volume": "61",
+   "issue": "12",
+   "pages": "1696-1702",
+   "doi": "10.1016/j.metabol.2012.05.008",
+   "pmid": "22705093",
+   "n_participants": 30,
+   "support": "No significant differences in glucose responses were observed after ingestion of the drinks. Compared to ingestion of ISO alone, insulin response was ~190%-270% higher."
+  },
+  "raatz-2005": {
+   "type": "rct",
+   "authors": [
+    "Raatz SK",
+    "Torkelson CJ",
+    "Redmon JB",
+    "Reck KP",
+    "Kwong CA",
+    "Swanson JE",
+    "Liu C",
+    "Thomas W",
+    "Bantle JP"
+   ],
+   "year": 2005,
+   "title": "Reduced Glycemic Index and Glycemic Load Diets Do Not Increase the Effects of Energy Restriction on Weight Loss and Insulin Sensitivity in Obese Men and Women",
+   "journal": "The Journal of Nutrition",
+   "volume": "135",
+   "issue": "10",
+   "pages": "2387-2391",
+   "doi": "10.1093/jn/135.10.2387",
+   "pmid": "16177201",
+   "n_participants": 29,
+   "support": "At 12 wk, weight changes from baseline were significant in all groups but not different among groups (-9.3 ... HGI, -9.9 ... LGI, and -8.4 ... HF)."
+  },
+  "pittas-2005": {
+   "type": "rct",
+   "authors": [
+    "Pittas AG",
+    "Das SK",
+    "Hajduk CL",
+    "Golden J",
+    "Saltzman E",
+    "Stark PC",
+    "Greenberg AS",
+    "Roberts SB"
+   ],
+   "year": 2005,
+   "title": "A Low-Glycemic Load Diet Facilitates Greater Weight Loss in Overweight Adults With High Insulin Secretion but Not in Overweight Adults With Low Insulin Secretion in the CALERIE Trial",
+   "journal": "Diabetes Care",
+   "volume": "28",
+   "issue": "12",
+   "pages": "2939-2941",
+   "doi": "10.2337/diacare.28.12.2939",
+   "pmid": "16306558",
+   "support": "Brief report with no PubMed abstract; cited only for the finding stated in its title."
+  },
+  "jentjens-2003": {
+   "type": "review",
+   "authors": [
+    "Jentjens R",
+    "Jeukendrup AE"
+   ],
+   "year": 2003,
+   "title": "Determinants of Post-Exercise Glycogen Synthesis During Short-Term Recovery",
+   "journal": "Sports Medicine",
+   "volume": "33",
+   "issue": "2",
+   "pages": "117-144",
+   "doi": "10.2165/00007256-200333020-00004",
+   "pmid": "12617691",
+   "support": "The highest muscle glycogen synthesis rates have been reported when large amounts of carbohydrate (1.0-1.85 g/kg/h) are consumed immediately post-exercise ... When carbohydrate ingestion is delayed by several hours, this may lead to ~50% lower rates."
+  },
+  "hawley-1997": {
+   "type": "review",
+   "authors": [
+    "Hawley JA",
+    "Schabort EJ",
+    "Noakes TD",
+    "Dennis SC"
+   ],
+   "year": 1997,
+   "title": "Carbohydrate-Loading and Exercise Performance",
+   "journal": "Sports Medicine",
+   "volume": "24",
+   "issue": "2",
+   "pages": "73-81",
+   "doi": "10.2165/00007256-199724020-00001",
+   "pmid": "9291549",
+   "support": "Nor is there any benefit of increasing starting muscle glycogen content on moderate-intensity running or cycling lasting 60 to 90 minutes ... elevated starting muscle glycogen content will postpone fatigue by approximately 20% in endurance events lasting more than 90 minutes."
+  },
+  "fairchild-2002": {
+   "type": "trial",
+   "authors": [
+    "Fairchild TJ",
+    "Fletcher S",
+    "Steele P",
+    "Goodman C",
+    "Dawson B",
+    "Fournier PA"
+   ],
+   "year": 2002,
+   "title": "Rapid carbohydrate loading after a short bout of near maximal-intensity exercise",
+   "journal": "Medicine & Science in Sports & Exercise",
+   "volume": "34",
+   "issue": "6",
+   "pages": "980-986",
+   "doi": "10.1097/00005768-200206000-00012",
+   "pmid": "12048325",
+   "n_participants": 7,
+   "support": "Muscle glycogen increased from preloading levels of 109.1 +/- 8.2 to 198.2 +/- 13.1 mmol.kg-1 wet weight within only 24 h, these levels being comparable to or higher than those reported by others over a 2- to 6-d regimen."
+  },
+  "demoraes-2019": {
+   "type": "trial",
+   "authors": [
+    "de Moraes WMAM",
+    "de Almeida FN",
+    "Dos Santos LEA",
+    "Cavalcante KDG",
+    "Santos HO",
+    "Navalta JW",
+    "Prestes J"
+   ],
+   "year": 2019,
+   "title": "Carbohydrate Loading Practice in Bodybuilders: Effects on Muscle Thickness, Photo Silhouette Scores, Mood States and Gastrointestinal Symptoms",
+   "journal": "Journal of Sports Science and Medicine",
+   "volume": "18",
+   "issue": "4",
+   "pages": "772-779",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6873117/",
+   "pmid": "31827362",
+   "n_participants": 24,
+   "support": "Body mass, muscle thickness (elbow flexors ... and triceps brachii) and circumferences ... increased significantly in the CL at M2 ... Diarrhea was reported by 7/15 CL (4/15 as severe)."
+  },
+  "almond-2005": {
+   "type": "cohort",
+   "authors": [
+    "Almond CSD",
+    "Shin AY",
+    "Fortescue EB",
+    "Mannix RC",
+    "Wypij D",
+    "Binstadt BA",
+    "Duncan CN",
+    "Olson DP",
+    "Salerno AE",
+    "Newburger JW",
+    "Greenes DS"
+   ],
+   "year": 2005,
+   "title": "Hyponatremia among Runners in the Boston Marathon",
+   "journal": "New England Journal of Medicine",
+   "volume": "352",
+   "issue": "15",
+   "pages": "1550-1556",
+   "doi": "10.1056/NEJMoa043901",
+   "pmid": "15829535",
+   "n_participants": 488,
+   "support": "Thirteen percent had hyponatremia ...; 0.6 percent had critical hyponatremia ... associated with weight gain (odds ratio, 4.2 ...), a racing time of >4:00 hours (odds ratio ... 7.4 ...)."
+  },
+  "mcdonald-gi-gl": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2016,
+   "title": "A Guide to the Glycemic Index and Glycemic Load",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/guide-glycemic-index-glycemic-load",
+   "retrieved": "2026-11-16",
+   "support": "How GI is tested and why the 50 g portion misleads, glycaemic load, GI versus insulin, training state, refuelling speed, and his view that lean athletes need not track GI."
+  },
+  "mcdonald-carb-loading": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2015,
+   "title": "Carbohydrate Loading for Endurance Events",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/carbohydrate-loading-for-endurance",
+   "retrieved": "2026-11-16",
+   "support": "Which events need loading, older and one-day loading plans, total grams over percentages, bodybuilder loading, and overdrinking risk in slower marathoners."
+  },
+  "dimeglio-2000": {
+   "type": "trial",
+   "authors": [
+    "DiMeglio D",
+    "Mattes R"
+   ],
+   "year": 2000,
+   "title": "Liquid versus solid carbohydrate: effects on food intake and body weight",
+   "journal": "International Journal of Obesity",
+   "volume": "24",
+   "issue": "6",
+   "pages": "794-800",
+   "doi": "10.1038/sj.ijo.0801229",
+   "pmid": "10878689",
+   "n_participants": 15,
+   "support": "Dietary energy compensation was precise (118%). No decrease in free-feeding energy intake occurred during the liquid period ... body weight and BMI increased significantly only during the liquid period."
+  },
+  "wolf-2008": {
+   "type": "review",
+   "authors": [
+    "Wolf A",
+    "Bray GA",
+    "Popkin BM"
+   ],
+   "year": 2008,
+   "title": "A short history of beverages and how our body treats them",
+   "journal": "Obesity Reviews",
+   "volume": "9",
+   "issue": "2",
+   "pages": "151-164",
+   "doi": "10.1111/j.1467-789X.2007.00389.x",
+   "pmid": "18257753",
+   "support": "beverages containing sugar, high fructose corn syrup (HFCS) or alcohol are handled differently by the body than when sugar or HFCS are incorporated in solid foods ... caloric intake from solid food does not adjust to account for the calories in these beverages."
+  },
+  "shirreffs-2007": {
+   "type": "trial",
+   "authors": [
+    "Shirreffs SM",
+    "Watson P",
+    "Maughan RJ"
+   ],
+   "year": 2007,
+   "title": "Milk as an effective post-exercise rehydration drink",
+   "journal": "British Journal of Nutrition",
+   "volume": "98",
+   "issue": "1",
+   "pages": "173-180",
+   "doi": "10.1017/S0007114507695543",
+   "pmid": "17459189",
+   "n_participants": 11,
+   "support": "Cumulative urine output was less after the milk drinks (611 and 550 ml ...) compared to 1184 and 1205 ml for the water and sports drink ... Subjects remained in net positive fluid balance or euhydrated throughout the recovery period after drinking the milk drinks."
+  },
+  "karp-2006": {
+   "type": "trial",
+   "authors": [
+    "Karp JR",
+    "Johnston JD",
+    "Tecklenburg S",
+    "Mickleborough TD",
+    "Fly AD",
+    "Stager JM"
+   ],
+   "year": 2006,
+   "title": "Chocolate Milk as a Post-Exercise Recovery Aid",
+   "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+   "volume": "16",
+   "issue": "1",
+   "pages": "78-91",
+   "doi": "10.1123/ijsnem.16.1.78",
+   "pmid": "16676705",
+   "n_participants": 9,
+   "support": "Carbohydrate content was equivalent for chocolate milk and CR ... TTE and WT were significantly greater for chocolate milk and FR trials compared to CR trial."
+  },
+  "otun-2019": {
+   "type": "meta-analysis",
+   "authors": [
+    "Otun J",
+    "Sahebkar A",
+    "Östlundh L",
+    "Atkin SL",
+    "Sathyapalan T"
+   ],
+   "year": 2019,
+   "title": "Systematic Review and Meta-analysis on the Effect of Soy on Thyroid Function",
+   "journal": "Scientific Reports",
+   "volume": "9",
+   "issue": "1",
+   "pages": "3964",
+   "doi": "10.1038/s41598-019-40647-x",
+   "pmid": "30850697",
+   "n_studies": 18,
+   "support": "The meta-analysis showed no significant changes in fT3 ... fT4 ... while an elevation in TSH levels was observed (WMD: 0.248 mIU/L ...). Soy supplementation has no effect on the thyroid hormones and only very modestly raises TSH levels."
+  },
+  "messina-2006": {
+   "type": "review",
+   "authors": [
+    "Messina M",
+    "Redmond G"
+   ],
+   "year": 2006,
+   "title": "Effects of Soy Protein and Soybean Isoflavones on Thyroid Function in Healthy Adults and Hypothyroid Patients: A Review of the Relevant Literature",
+   "journal": "Thyroid",
+   "volume": "16",
+   "issue": "3",
+   "pages": "249-258",
+   "doi": "10.1089/thy.2006.16.249",
+   "pmid": "16571087",
+   "n_studies": 14,
+   "support": "With only one exception, either no effects or only very modest changes were noted ... soy foods, by inhibiting absorption, may increase the dose of thyroid hormone required by hypothyroid patients. However, hypothyroid adults need not avoid soy foods."
+  },
+  "doerge-2002": {
+   "type": "review",
+   "authors": [
+    "Doerge DR",
+    "Sheehan DM"
+   ],
+   "year": 2002,
+   "title": "Goitrogenic and estrogenic activity of soy isoflavones",
+   "journal": "Environmental Health Perspectives",
+   "volume": "110",
+   "issue": "suppl 3",
+   "pages": "349-353",
+   "doi": "10.1289/ehp.02110s3349",
+   "pmid": "12060828",
+   "support": "evidence for binding of isoflavones to the estrogen receptor ... Genistein, the major soy isoflavone ... Iodine deficiency greatly increases soy antithyroid effects, whereas iodine supplementation is protective."
+  },
+  "reed-2021": {
+   "type": "meta-analysis",
+   "authors": [
+    "Reed KE",
+    "Camargo J",
+    "Hamilton-Reeves J",
+    "Kurzer M",
+    "Messina M"
+   ],
+   "year": 2021,
+   "title": "Neither soy nor isoflavone intake affects male reproductive hormones: An expanded and updated meta-analysis of clinical studies",
+   "journal": "Reproductive Toxicology",
+   "volume": "100",
+   "pages": "60-67",
+   "doi": "10.1016/j.reprotox.2020.12.019",
+   "pmid": "33383165",
+   "n_studies": 41,
+   "support": "TT and FT levels were measured in 1753 and 752 men ... no significant effects of soy protein or isoflavone intake on any of the outcomes measured ... Sub-analysis of the data according to isoflavone dose and study duration also showed no effect."
+  },
+  "ello-martin-2007": {
+   "type": "rct",
+   "authors": [
+    "Ello-Martin JA",
+    "Roe LS",
+    "Ledikwe JH",
+    "Beach AM",
+    "Rolls BJ"
+   ],
+   "year": 2007,
+   "title": "Dietary energy density in the treatment of obesity: a year-long trial comparing 2 weight-loss diets",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "85",
+   "issue": "6",
+   "pages": "1465-1477",
+   "doi": "10.1093/ajcn/85.6.1465",
+   "pmid": "17556681",
+   "n_participants": 97,
+   "support": "Obese women (n = 97) over 1 y; the group eating more water-rich foods lost 7.9 vs 6.4 kg, ate a greater weight of food at lower energy density and reported less hunger."
+  },
+  "mcdonald-energy-density": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "Energy Density",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/energy-density-of-foods",
+   "retrieved": "2026-11-16",
+   "support": "Defines energy density, shows that water, fibre and processing change it more than fat alone, and argues that dense foods help people who need very high intakes."
+  },
+  "mcdonald-beverages": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "A Short History of Beverages and How our Body Treats Them",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/how-the-body-handles-beverages",
+   "retrieved": "2026-11-16",
+   "support": "Review of the Wolf, Bray and Popkin paper: poor compensation for drink calories, the liquid form rather than the sweetener as the problem, and milk as the exception."
+  },
+  "mcdonald-milk": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2008,
+   "title": "Milk: The New Sports Drink? A Review",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/is-milk-the-new-sports-drink",
+   "retrieved": "2026-11-16",
+   "support": "Review of milk for strength and endurance athletes: good after training, poor during it, and too small a dose of carbohydrate and protein for large athletes on its own."
+  },
+  "mcdonald-soy-thyroid": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "Soy Protein and Phytoestrogens on Thyroid Function",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/soy-protein-and-thyroid-function",
+   "retrieved": "2026-11-16",
+   "support": "Soy and thyroid in healthy and hypothyroid people, iodine status, medication timing, isoflavones, and his suggested ceiling on daily soy protein."
+  },
+  "white-2008": {
+   "type": "review",
+   "authors": [
+    "White JS"
+   ],
+   "year": 2008,
+   "title": "Straight talk about high-fructose corn syrup: what it is and what it ain't",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "88",
+   "issue": "6",
+   "pages": "1716S-1721S",
+   "doi": "10.3945/ajcn.2008.25825B",
+   "pmid": "19064536",
+   "support": "It is not meaningfully different in composition or metabolism from other fructose-glucose sweeteners like sucrose, honey, and fruit juice concentrates ... the HFCS-obesity hypothesis is supported neither in the United States nor worldwide."
+  },
+  "stanhope-2008": {
+   "type": "trial",
+   "authors": [
+    "Stanhope KL",
+    "Griffen SC",
+    "Bair BR",
+    "Swarbrick MM",
+    "Keim NL",
+    "Havel PJ"
+   ],
+   "year": 2008,
+   "title": "Twenty-four-hour endocrine and metabolic profiles following consumption of high-fructose corn syrup-, sucrose-, fructose-, and glucose-sweetened beverages with meals",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "87",
+   "issue": "5",
+   "pages": "1194-1203",
+   "doi": "10.1093/ajcn/87.5.1194",
+   "pmid": "18469239",
+   "n_participants": 34,
+   "support": "In 34 subjects, 24-h glucose, insulin, leptin, ghrelin, and TG profiles were similar between days that sucrose or HFCS was consumed ... postprandial TG profiles after HFCS or sucrose were ... comparably high as after pure fructose."
+  },
+  "livesey-2008": {
+   "type": "meta-analysis",
+   "authors": [
+    "Livesey G",
+    "Taylor R"
+   ],
+   "year": 2008,
+   "title": "Fructose consumption and consequences for glycation, plasma triacylglycerol, and body weight: meta-analyses and meta-regression models of intervention studies",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "88",
+   "issue": "5",
+   "pages": "1419-1437",
+   "doi": "10.3945/ajcn.2007.25700",
+   "pmid": "18996880",
+   "support": "Significant effects on postprandial triacylglycerols are not evident unless >50 g fructose/d is consumed, and no significant effects are seen for fasting triacylglycerol or body weight with intakes of <=100 g fructose/d in adults."
+  },
+  "fda-epa-fish": {
+   "type": "guideline",
+   "authors": [
+    "US Food and Drug Administration",
+    "US Environmental Protection Agency"
+   ],
+   "year": 2024,
+   "title": "Advice about Eating Fish: For Those Who Might Become or Are Pregnant or Breastfeeding and Children Ages 1 to 11 Years",
+   "journal": "FDA",
+   "url": "https://www.fda.gov/food/consumers/advice-about-eating-fish",
+   "edition": "Content current as of 03/05/2024",
+   "retrieved": "2026-11-16",
+   "support": "Pregnancy and breastfeeding: 1 serving is 4 ounces. Eat 2 to 3 servings a week from the Best Choices list (or 1 serving from the Good Choices list). Choices to avoid (highest mercury): king mackerel, marlin, orange roughy, shark, swordfish, tilefish (Gulf of Mexico), bigeye tuna."
+  },
+  "paulsen-2014-endurance": {
+   "type": "rct",
+   "authors": [
+    "Paulsen G",
+    "Cumming KT",
+    "Holden G",
+    "Hallén J",
+    "Rønnestad BR",
+    "Sveen O",
+    "Skaug A",
+    "Paur I",
+    "Bastani NE",
+    "Østgaard HN",
+    "Buer C",
+    "Midttun M",
+    "Freuchen F",
+    "Wiig H",
+    "Ulseth ET",
+    "Garthe I",
+    "Blomhoff R",
+    "Benestad HB",
+    "Raastad T"
+   ],
+   "year": 2014,
+   "title": "Vitamin C and E supplementation hampers cellular adaptation to endurance training in humans: a double-blind, randomised, controlled trial",
+   "journal": "The Journal of Physiology",
+   "volume": "592",
+   "issue": "8",
+   "pages": "1887-1901",
+   "doi": "10.1113/jphysiol.2013.267419",
+   "pmid": "24492839",
+   "n_participants": 54,
+   "support": "Participants in the vitamin C and E group increased their VO2 max (8 +/- 5%) ... to the same degree as those in the placebo group ... Daily vitamin C and E supplementation attenuated increases in markers of mitochondrial biogenesis following endurance training."
+  },
+  "paulsen-2014-strength": {
+   "type": "rct",
+   "authors": [
+    "Paulsen G",
+    "Hamarsland H",
+    "Cumming KT",
+    "Johansen RE",
+    "Hulmi JJ",
+    "Børsheim E",
+    "Wiig H",
+    "Garthe I",
+    "Raastad T"
+   ],
+   "year": 2014,
+   "title": "Vitamin C and E supplementation alters protein signalling after a strength training session, but not muscle growth during 10 weeks of training",
+   "journal": "The Journal of Physiology",
+   "volume": "592",
+   "issue": "24",
+   "pages": "5391-5408",
+   "doi": "10.1113/jphysiol.2014.279950",
+   "pmid": "25384788",
+   "n_participants": 32,
+   "support": "The supplementation did not affect the increase in muscle mass or the acute change in protein synthesis, but it hampered certain strength increases (biceps curl)."
+  },
+  "bjelakovic-2012": {
+   "type": "systematic-review",
+   "authors": [
+    "Bjelakovic G",
+    "Nikolova D",
+    "Gluud LL",
+    "Simonetti RG",
+    "Gluud C"
+   ],
+   "year": 2012,
+   "title": "Antioxidant supplements for prevention of mortality in healthy participants and patients with various diseases",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "issue": "3",
+   "pages": "CD007176",
+   "doi": "10.1002/14651858.CD007176.pub2",
+   "pmid": "22419320",
+   "n_studies": 78,
+   "n_participants": 296707,
+   "support": "In the 56 trials with a low risk of bias, the antioxidant supplements significantly increased mortality (RR 1.04) ... Beta-carotene and vitamin E seem to increase mortality, and so may higher doses of vitamin A."
+  },
+  "farrokhyar-2015": {
+   "type": "meta-analysis",
+   "authors": [
+    "Farrokhyar F",
+    "Tabasinejad R",
+    "Dao D",
+    "Peterson D",
+    "Ayeni OR",
+    "Hadioonzadeh R",
+    "Bhandari M"
+   ],
+   "year": 2015,
+   "title": "Prevalence of Vitamin D Inadequacy in Athletes: A Systematic-Review and Meta-Analysis",
+   "journal": "Sports Medicine",
+   "volume": "45",
+   "issue": "3",
+   "pages": "365-378",
+   "doi": "10.1007/s40279-014-0267-6",
+   "pmid": "25277808",
+   "n_studies": 23,
+   "n_participants": 2313,
+   "support": "Of 2,313 athletes, 56 % had vitamin D inadequacy [serum 25(OH)D <32 ng/mL] ... The risk significantly increased for winter and spring seasons ..., indoor sport activities ... its association with vitamin D status is unclear."
+  },
+  "ross-2011": {
+   "type": "guideline",
+   "authors": [
+    "Ross AC",
+    "Manson JE",
+    "Abrams SA",
+    "Aloia JF",
+    "Brannon PM",
+    "Clinton SK",
+    "Durazo-Arvizu RA",
+    "Gallagher JC",
+    "Gallo RL",
+    "Jones G",
+    "Kovacs CS",
+    "Mayne ST",
+    "Rosen CJ",
+    "Shapses SA"
+   ],
+   "year": 2011,
+   "title": "The 2011 Report on Dietary Reference Intakes for Calcium and Vitamin D from the Institute of Medicine: What Clinicians Need to Know",
+   "journal": "The Journal of Clinical Endocrinology & Metabolism",
+   "volume": "96",
+   "issue": "1",
+   "pages": "53-58",
+   "doi": "10.1210/jc.2010-2704",
+   "pmid": "21118827",
+   "support": "For vitamin D, RDAs of 600 IU/d for ages 1-70 yr and 800 IU/d for ages 71 yr and older, corresponding to a serum 25-hydroxyvitamin D level of at least 20 ng/ml ... Higher values were not consistently associated with greater benefit ... prevalence of vitamin D inadequacy in North America has been overestimated."
+  },
+  "candow-2001": {
+   "type": "rct",
+   "authors": [
+    "Candow D",
+    "Chilibeck P",
+    "Burke D",
+    "Davison S",
+    "Smith-Palmer T"
+   ],
+   "year": 2001,
+   "title": "Effect of glutamine supplementation combined with resistance training in young adults",
+   "journal": "European Journal of Applied Physiology",
+   "volume": "86",
+   "issue": "2",
+   "pages": "142-149",
+   "doi": "10.1007/s00421-001-0523-y",
+   "pmid": "11822473",
+   "n_participants": 31,
+   "support": "glutamine (0.9 g x kg lean tissue mass-1 x day-1) ... Both groups increased their 1 RM squat by approximately 30% and 1 RM bench press by approximately 14% ... no significant effect on muscle performance, body composition or muscle protein degradation."
+  },
+  "mcdonald-hfcs": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "High-fructose corn syrup: what it is and what it ain't.",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/facts-on-high-fructose-corn-syrup",
+   "retrieved": "2026-11-16",
+   "support": "Review of White's paper: HFCS composition against sucrose, correlation with obesity, pure-fructose studies, and his view that the calories and soft drinks are the issue."
+  },
+  "mcdonald-fructose-diet": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2011,
+   "title": "The Effect of a Low- or High-fructose diet on Weight Loss",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/fructose-intake-low-calorie-diets",
+   "retrieved": "2026-11-16",
+   "support": "Background on fructose intakes, his 50 g a day figure for the liver, unrealistic doses in feeding studies, and fruit in a fat-loss diet."
+  },
+  "mcdonald-mercury": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "Fish Intake and Mercury",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/mercury-content-of-fish",
+   "retrieved": "2026-11-16",
+   "support": "Mercury in common fish, pregnancy, and his warning that heavy daily tuna eaters can exceed reference limits."
+  },
+  "mcdonald-antioxidant-vitd": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2011,
+   "title": "Antioxidant and Vitamin D Supplements for Athletes",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/research/antioxidant-vitamin-d-supplements",
+   "retrieved": "2026-11-16",
+   "support": "Review of the case for and against antioxidant and vitamin D supplements in athletes, with his views on training blocks, competition seasons and indoor athletes."
+  },
+  "mcdonald-supplements-1": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2010,
+   "title": "Supplements Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/muscle-gain/dietary-supplements-for-athletes",
+   "retrieved": "2026-11-16",
+   "support": "Book chapter ranking supplements for mixed-sport athletes, including his views on antioxidants, vitamin D, glutamine and BCAA."
+  },
+  "atherton-2010": {
+   "type": "trial",
+   "authors": [
+    "Atherton PJ",
+    "Etheridge T",
+    "Watt PW",
+    "Wilkinson D",
+    "Selby A",
+    "Rankin D",
+    "Smith K",
+    "Rennie MJ"
+   ],
+   "year": 2010,
+   "title": "Muscle full effect after oral protein: time-dependent concordance and discordance between human muscle protein synthesis and mTORC1 signaling",
+   "journal": "The American Journal of Clinical Nutrition",
+   "volume": "92",
+   "issue": "5",
+   "pages": "1080-1088",
+   "doi": "10.3945/ajcn.2010.29819",
+   "pmid": "20844073",
+   "n_participants": 8,
+   "support": "At 45-90 min after oral protein bolus, myofibrillar protein synthesis increased ...; thereafter, myofibrillar protein synthesis returned to baseline rates even though plasma essential AA concentrations remained elevated."
+  },
+  "areta-2013": {
+   "type": "rct",
+   "authors": [
+    "Areta JL",
+    "Burke LM",
+    "Ross ML",
+    "Camera DM",
+    "West DWD",
+    "Broad EM",
+    "Jeacocke NA",
+    "Moore DR",
+    "Stellingwerff T",
+    "Phillips SM",
+    "Hawley JA",
+    "Coffey VG"
+   ],
+   "year": 2013,
+   "title": "Timing and distribution of protein ingestion during prolonged recovery from resistance exercise alters myofibrillar protein synthesis",
+   "journal": "The Journal of Physiology",
+   "volume": "591",
+   "issue": "9",
+   "pages": "2319-2331",
+   "doi": "10.1113/jphysiol.2012.244897",
+   "pmid": "23459753",
+   "n_participants": 24,
+   "support": "80 g of whey protein throughout 12 h recovery ... 8 x 10 g every 1.5 h; 4 x 20 g every 3 h; or 2 x 40 g every 6 h ... INT elicited greater MPS than PULSE and BOLUS (31-48%)."
+  },
+  "res-2012": {
+   "type": "trial",
+   "authors": [
+    "Res PT",
+    "Groen B",
+    "Pennings B",
+    "Beelen M",
+    "Wallis GA",
+    "Gijsen AP",
+    "Senden JMG",
+    "van Loon LJC"
+   ],
+   "year": 2012,
+   "title": "Protein Ingestion before Sleep Improves Postexercise Overnight Recovery",
+   "journal": "Medicine & Science in Sports & Exercise",
+   "volume": "44",
+   "issue": "8",
+   "pages": "1560-1569",
+   "doi": "10.1249/MSS.0b013e31824cc363",
+   "pmid": "22330017",
+   "n_participants": 16,
+   "support": "Protein ingestion before sleep increased whole-body protein synthesis rates ... and improved net protein balance ... Mixed muscle protein synthesis rates were ~22% higher ..., which reached borderline significance (P = 0.05)."
+  },
+  "garthe-2013": {
+   "type": "rct",
+   "authors": [
+    "Garthe I",
+    "Raastad T",
+    "Refsnes PE",
+    "Sundgot-Borgen J"
+   ],
+   "year": 2013,
+   "title": "Effect of nutritional intervention on body composition and performance in elite athletes",
+   "journal": "European Journal of Sport Science",
+   "volume": "13",
+   "issue": "3",
+   "pages": "295-303",
+   "doi": "10.1080/17461391.2011.643923",
+   "pmid": "23679146",
+   "n_participants": 39,
+   "support": "Energy intake was higher in the NCG than in the ALG (3585 vs. 2964 kcal) ... BW increased more in NCG than in ALG (3.9 vs. 1.5%). Fat mass increased more in NCG than in ALG (15 vs 3%), but gain in LBM was not different between groups."
+  },
+  "mcdonald-calories-gain": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2017,
+   "title": "Determining Calorie Intake for Muscle Gain",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/muscle-gain/calories-for-muscle-gain",
+   "retrieved": "2026-11-16",
+   "support": "Works out how small a surplus realistic muscle gain needs at each training stage, and argues that larger surpluses mostly add fat."
+  },
+  "mcdonald-meal-freq-mass": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "Meal Frequency for Mass Gains",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/muscle-gain/meal-frequency-muscle-mass-gains",
+   "retrieved": "2026-11-16",
+   "support": "Book excerpt on the muscle-full research and his case for meals three to five hours apart when gaining."
+  },
+  "mcdonald-baseline": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "The Baseline Diet: Part 1",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/muscle-gain/the-baseline-diet",
+   "retrieved": "2026-11-16",
+   "support": "His starting template for lifters: meal spacing, eating before bed, adjusting a gaining surplus by skinfolds, fluids and macronutrients."
+  },
+  "mcdonald-carb-needs": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2008,
+   "title": "How Many Carbohydrates Do You Need",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/how-many-carbohydrates-do-you-need",
+   "retrieved": "2026-11-16",
+   "support": "Carbohydrate needs from zero upward, where ketosis begins, and the limits of urine ketone strips."
+  },
+  "mcdonald-keto-ratio": {
+   "type": "article",
+   "authors": [
+    "McDonald L"
+   ],
+   "year": 2009,
+   "title": "Ketosis and The Ketogenic Ratio - Q&A",
+   "journal": "Body Recomposition",
+   "url": "https://bodyrecomposition.com/nutrition/the-ketogenic-ratio",
+   "retrieved": "2026-11-16",
+   "support": "Why he dropped the ketogenic ratio for fat-loss diets, ketosis as a result of fat burning, and why urine strips mislead."
   }
  }
 }
