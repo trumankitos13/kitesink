@@ -1,6 +1,6 @@
 # Fitness key numbers and reference tables, indexed: KiteSink
 
-An index of the 121 key numbers and 59 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
+An index of the 131 key numbers and 63 reference tables in the KiteSink fitness field guide. Each links to the area page that holds it, with its reasoning and sources. This file is the index only.
 
 ## Key numbers
 
@@ -37,6 +37,10 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 | [Typical deload length reported by athletes](https://kitesink.com/fitness/hypertrophy#hyp-num-deload-length) | 6.4 | days, average | Hypertrophy |
 | [Average performance change after short sleep](https://kitesink.com/fitness/hypertrophy#hyp-num-sleep-loss) | -7.6 | % performance change | Hypertrophy |
 | [Thigh muscle area gain in 8 weeks, sedentary men](https://kitesink.com/fitness/hypertrophy#hyp-num-early-thigh-gain) | 9.6 | % over 8 weeks | Hypertrophy |
+| [Force up to which the biceps kept adding motor units](https://kitesink.com/fitness/hypertrophy#hyp-num-biceps-recruitment) | 88 | % of maximal isometric force | Hypertrophy |
+| [Tonnage of heavy sets against light sets to failure](https://kitesink.com/fitness/hypertrophy#hyp-num-light-load-tonnage) | 62 | % of light-set tonnage | Hypertrophy |
+| [Change in size for the top and bottom responders to one six-week plan](https://kitesink.com/fitness/hypertrophy#hyp-num-responder-spread) | +10.7 and -2.1 | % change, 4 thigh measures | Hypertrophy |
+| [How long testosterone stayed raised after exercise](https://kitesink.com/fitness/hypertrophy#hyp-num-testosterone-window) | 30 | minutes or less | Hypertrophy |
 | [Repetitions possible at 90% of 1RM](https://kitesink.com/fitness/powerlifting#pl-num-reps-90) | ~5 | reps (most lifts) | Powerlifting |
 | [Repetitions possible at 70% of 1RM on the bench](https://kitesink.com/fitness/powerlifting#pl-num-reps-70-bench) | ~14 | reps (bench press) | Powerlifting |
 | [Spread in reps between lifters at 80% of 1RM](https://kitesink.com/fitness/powerlifting#pl-num-rep-spread) | 2.5 | reps (SD) | Powerlifting |
@@ -47,9 +51,10 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 | [Lifters who cut weight at the 2018 IPF classic worlds](https://kitesink.com/fitness/powerlifting#pl-num-cut-prevalence) | 83 | % of 64 lifters | Powerlifting |
 | [Strength lost with hypohydration](https://kitesink.com/fitness/powerlifting#pl-num-hypohydration) | 5.5 | % lower muscle strength | Powerlifting |
 | [Mean age of peak performance in world-class powerlifters](https://kitesink.com/fitness/powerlifting#pl-num-peak-age) | 35 | years (SD 7) | Powerlifting |
-| [Opener as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-opener) | 88-92 | % of best single | Meet day |
-| [Second attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-second) | 94-97.5 | % of best single | Meet day |
-| [Third attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-third) | 98-102.5 | % of best single | Meet day |
+| [Half-life of the rebound effect while the bar is paused](https://kitesink.com/fitness/powerlifting#pl-num-pause-half-life) | 0.85 | seconds | Powerlifting |
+| [Opener as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-opener) | 80-85 | % of best single | Meet day |
+| [Second attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-second) | 85-92 | % of best single | Meet day |
+| [Third attempt as a share of your current best single](https://kitesink.com/fitness/meet#meet-num-third) | 92-95 | % of best single | Meet day |
 | [Weigh-in start before lifting](https://kitesink.com/fitness/meet#meet-num-weigh-in-window) | 2 | hours before lifting | Meet day |
 | [Length of the weigh-in period](https://kitesink.com/fitness/meet#meet-num-weigh-in-length) | 90 | minutes | Meet day |
 | [Time to start an attempt after being called](https://kitesink.com/fitness/meet#meet-num-time-to-start) | 1 | minute | Meet day |
@@ -82,6 +87,8 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 | [Creatine monohydrate dose](https://kitesink.com/fitness/nutrition#nut-num-creatine) | 3-5 | g per day | Nutrition |
 | [Caffeine dose often studied](https://kitesink.com/fitness/nutrition#nut-num-caffeine) | 3-6 | mg per kg | Nutrition |
 | [Fibre target](https://kitesink.com/fitness/nutrition#nut-num-fibre) | 25-29 | g per day | Nutrition |
+| [Energy from dietary fibre](https://kitesink.com/fitness/nutrition#nut-num-fibre-energy) | 2 | kcal per g (8 kJ) | Nutrition |
+| [Fructose intake below which blood fats did not rise after meals](https://kitesink.com/fitness/nutrition#nut-num-fructose-50g) | 50 | g of fructose a day | Nutrition |
 | [Rate of loss](https://kitesink.com/fitness/diet#diet-num-rate) | 0.5-1 | % body weight per week | Diet |
 | [Deficit that stopped lean-mass gains](https://kitesink.com/fitness/diet#diet-num-deficit-limit) | 500 | kcal per day | Diet |
 | [Energy per pound of weight lost](https://kitesink.com/fitness/diet#diet-num-3500) | 3,500 | kcal per lb | Diet |
@@ -90,6 +97,9 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 | [Energy per kg for short-term changes](https://kitesink.com/fitness/diet#diet-num-short-term-density) | 2,380 | kcal per kg | Diet |
 | [Surplus for a gaining phase](https://kitesink.com/fitness/diet#diet-num-surplus) | 10-20 | % above maintenance | Diet |
 | [Rate of gain, novice to intermediate](https://kitesink.com/fitness/diet#diet-num-gain-rate) | 0.25-0.5 | % body weight per week | Diet |
+| [Eventual weight change per lasting change in daily intake](https://kitesink.com/fitness/diet#diet-num-intake-change-rule) | 100 | kJ a day per kg of change | Diet |
+| [Energy in each kg lost at week four of a diet](https://kitesink.com/fitness/diet#diet-num-early-loss-energy) | about 4,900 | kcal per kg lost | Diet |
+| [Resting metabolic rate in formerly obese adults](https://kitesink.com/fitness/diet#diet-num-post-obese-rmr) | 3-5 | percent below never-obese | Diet |
 | [Individual error of field methods in bodybuilders](https://kitesink.com/fitness/bodycomp#comp-num-field-error) | 5.5-8 | body fat points | Body composition |
 | [How far skinfold equations read below DXA](https://kitesink.com/fitness/bodycomp#comp-num-dxa-offset) | 3-6 | body fat points | Body composition |
 | [Lower limit of body fat in healthy men](https://kitesink.com/fitness/bodycomp#comp-num-lower-limit-men) | 4-6 | % body fat (DXA) | Body composition |
@@ -152,12 +162,13 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 - [Rep ranges and what each is good for](https://kitesink.com/fitness/hypertrophy#hyp-table-rep-ranges) (Hypertrophy)
 - [Training splits compared](https://kitesink.com/fitness/hypertrophy#hyp-table-splits) (Hypertrophy)
 - [Rest between sets and sets per week: a guide](https://kitesink.com/fitness/hypertrophy#hyp-table-rest-and-sets) (Hypertrophy)
+- [How big a fixed weight jump is on heavy and light lifts](https://kitesink.com/fitness/hypertrophy#hyp-table-plate-jumps) (Hypertrophy)
 - [Intensity zones as a percent of 1RM](https://kitesink.com/fitness/powerlifting#pl-table-intensity-zones) (Powerlifting)
 - [RPE to reps in reserve chart](https://kitesink.com/fitness/powerlifting#pl-table-rpe-rir) (Powerlifting)
 - [A 12-week cycle outline](https://kitesink.com/fitness/powerlifting#pl-table-12-week) (Powerlifting)
 - [IPF weight classes for men and women, in kg and lb](https://kitesink.com/fitness/meet#meet-table-ipf-classes) (Meet day)
 - [Platform commands for each lift](https://kitesink.com/fitness/meet#meet-table-commands) (Meet day)
-- [Attempt selection ranges from competition data](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
+- [Attempt selection ranges, first meet and experienced](https://kitesink.com/fitness/meet#meet-table-attempts) (Meet day)
 - [Aerobic share of energy in track races from 200 m to 1500 m](https://kitesink.com/fitness/conditioning#cond-table-aerobic-share-track) (Conditioning)
 - [The five-zone intensity scale used in Norwegian endurance sport](https://kitesink.com/fitness/conditioning#cond-table-five-zone-scale) (Conditioning)
 - [Intervals versus steady training: what pooled trials found](https://kitesink.com/fitness/conditioning#cond-table-intervals-vs-steady) (Conditioning)
@@ -169,9 +180,12 @@ An index of the 121 key numbers and 59 reference tables in the KiteSink fitness 
 - [Protein targets by goal and body weight](https://kitesink.com/fitness/nutrition#nut-table-protein-targets) (Nutrition)
 - [Hand-portion guide](https://kitesink.com/fitness/nutrition#nut-table-hand-portions) (Nutrition)
 - [Supplement evidence at a glance](https://kitesink.com/fitness/nutrition#nut-table-supplements) (Nutrition)
+- [Essential amino acids and leucine in common protein powders](https://kitesink.com/fitness/nutrition#nut-table-amino-acids) (Nutrition)
 - [Deficit size versus expected weekly loss](https://kitesink.com/fitness/diet#diet-table-deficit-rate) (Diet)
 - [What moves scale weight day to day](https://kitesink.com/fitness/diet#diet-table-scale-moves) (Diet)
 - [Rate of gain by training age](https://kitesink.com/fitness/diet#diet-table-gain-rate) (Diet)
+- [The same percentage deficit at two maintenance levels](https://kitesink.com/fitness/diet#diet-table-deficit-by-size) (Diet)
+- [Protein against carbohydrate: loss at 12 months in four diets](https://kitesink.com/fitness/diet#diet-table-protein-carb-trial) (Diet)
 - [Body composition arithmetic](https://kitesink.com/fitness/bodycomp#comp-table-arithmetic) (Body composition)
 - [Body fat methods: what each one really measures](https://kitesink.com/fitness/bodycomp#comp-table-methods) (Body composition)
 - [Measured body fat in athletes by sport (DXA)](https://kitesink.com/fitness/bodycomp#comp-table-athlete-body-fat) (Body composition)

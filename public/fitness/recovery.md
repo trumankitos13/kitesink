@@ -23,7 +23,7 @@ The consensus statement says athletes with non-functional overreaching and with 
 
 - Do not wait for a label. If performance keeps sliding, reduce training now.
 
-Overreaching and overtraining · Intermediate · Some support · Sources: [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [Halson 2004](https://doi.org/10.2165/00007256-200434140-00003), [McDonald 2010j](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
+Overreaching and overtraining · Intermediate · Some support · Sources: [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [Halson 2004](https://doi.org/10.2165/00007256-200434140-00003), [McDonald 2010m](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
 
 ### Full overtraining syndrome has barely been documented in lifters
 
@@ -41,7 +41,7 @@ Among 33 trained male triathletes, three weeks of overload left 11 functionally 
 
 - Plan hard blocks to finish tired but still performing, then ease off.
 
-Overreaching and overtraining · Advanced · Some support · Sources: [Aubry 2014](https://doi.org/10.1249/mss.0000000000000301), [Bellinger 2020](https://doi.org/10.1007/s40279-020-01269-w), [McDonald 2010j](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
+Overreaching and overtraining · Advanced · Some support · Sources: [Aubry 2014](https://doi.org/10.1249/mss.0000000000000301), [Bellinger 2020](https://doi.org/10.1007/s40279-020-01269-w), [McDonald 2010m](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
 
 ### When unsure how much to do, choose the smaller amount
 
@@ -52,7 +52,7 @@ McDonald's rule for setting load is to start with the least work that produces p
 - Start a new programme at the low end of its set range.
 - Add work only after two or three weeks of stalled progress with good sleep and food.
 
-Overreaching and overtraining · Beginner · Coaching practice · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
+Overreaching and overtraining · Beginner · Coaching practice · Sources: [McDonald 2010m](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
 
 ### Long slumps are not explained by training load alone
 
@@ -62,7 +62,7 @@ The survey classed 29 percent of athletes as having had non-functional overreach
 
 - When performance slides, review sleep, food, work and home stress as well as the programme.
 
-Overreaching and overtraining · Intermediate · Thin evidence · Sources: [Matos 2011](https://doi.org/10.1249/mss.0b013e318207f87b), [Kreher 2012](https://doi.org/10.1177/1941738111434406), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
+Overreaching and overtraining · Intermediate · Thin evidence · Sources: [Matos 2011](https://doi.org/10.1249/mss.0b013e318207f87b), [Kreher 2012](https://doi.org/10.1177/1941738111434406), [McDonald 2010o](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
 
 ### Recovery from a long slump is rest, and it cannot be hurried
 
@@ -73,7 +73,7 @@ A sports medicine review gives rest as the treatment, with some authors preferri
 - Stop hard training as soon as a sustained slump is clear. Do not wait to see whether it passes.
 - Get a medical check before assuming the cause is training.
 
-Overreaching and overtraining · Intermediate · Coaching practice · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Overreaching and overtraining · Intermediate · Coaching practice · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### A sustained drop in performance is the only established marker
 
@@ -84,7 +84,7 @@ The 2020 systematic review of resistance exercise concluded that nothing other t
 - Log load, reps and an effort rating for a few key lifts at every session.
 - Compare weeks, not days.
 
-Signs and monitoring · Intermediate · Well supported · Sources: [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2), [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2)
+Signs and monitoring · Intermediate · Well supported · Sources: [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2), [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [McDonald 2010n](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2)
 
 ### Rising effort for the same work is an early warning
 
@@ -94,7 +94,7 @@ A sports medicine review lists a higher rating of perceived exertion at a given 
 
 - Record RPE or reps in reserve for your top sets and watch the trend at fixed loads.
 
-Signs and monitoring · Intermediate · Some support · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758), [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2)
+Signs and monitoring · Intermediate · Some support · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758), [McDonald 2010n](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2)
 
 ### Work you can always grind through hides fatigue longest
 
@@ -104,7 +104,7 @@ McDonald argues that maximal strength and power work partly polices itself: once
 
 - If you train mostly with moderate loads, track reps at a fixed load to catch a slow decline.
 
-Signs and monitoring · Intermediate · Coaching practice · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
+Signs and monitoring · Intermediate · Coaching practice · Sources: [McDonald 2010n](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
 
 ### Worse sleep and more colds travel with overreaching
 
@@ -124,7 +124,7 @@ A narrative review set the overtraining literature beside the research on relati
 
 - When training goes up, check that food went up with it before blaming the programme.
 
-Signs and monitoring · Intermediate · Some support · Sources: [Stellingwerff 2021](https://doi.org/10.1007/s40279-021-01491-0), [McDonald 2010m](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4)
+Signs and monitoring · Intermediate · Some support · Sources: [Stellingwerff 2021](https://doi.org/10.1007/s40279-021-01491-0), [McDonald 2010p](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4)
 
 ### Heart-rate measures move the same way in good adaptation and in overreaching
 
@@ -134,7 +134,7 @@ It pooled 24 studies of endurance athletes. When training improved performance, 
 
 - Never rest or push on a heart-rate number alone. Check it against performance and how you feel.
 
-Signs and monitoring · Advanced · Some support · Sources: [Bellenger 2016](https://doi.org/10.1007/s40279-016-0484-2), [McDonald 2010m](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Signs and monitoring · Advanced · Some support · Sources: [Bellenger 2016](https://doi.org/10.1007/s40279-016-0484-2), [McDonald 2010p](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### Letting daily HRV pick the hard days gave endurance athletes a small edge at most
 
@@ -144,7 +144,7 @@ One pooled 8 studies with 198 participants. HRV-guided plans mostly contained fe
 
 - If you use HRV for endurance work, let a low reading swap a hard day for an easy one, not cancel training.
 
-Signs and monitoring · Advanced · Well supported · Sources: [Düking 2021](https://doi.org/10.1016/j.jsams.2021.04.012), [Manresa-Rocamora 2021](https://doi.org/10.3390/ijerph181910299), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Signs and monitoring · Advanced · Well supported · Sources: [Düking 2021](https://doi.org/10.1016/j.jsams.2021.04.012), [Manresa-Rocamora 2021](https://doi.org/10.3390/ijerph181910299), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### Timing lifting sessions by HRV did not beat a fixed schedule
 
@@ -152,7 +152,7 @@ Signs and monitoring · Advanced · Well supported · Sources: [Düking 2021](ht
 
 The men were randomised to train only when morning RMSSD was back at baseline, waiting another 24 hours when it was not, or to train every 48 hours regardless. One-rep max rose 30 percent in the HRV group and 42 percent in the fixed group, and cross-section of the vastus lateralis, the outer thigh muscle, rose 15.7 and 15.8 percent. Neither difference was significant. McDonald wrote in 2010 that he knew of no HRV studies in strength training and that anecdote suggested it showed little until too late. This one small trial points the same way. For lifters, performance on the bar remains the better guide.
 
-Signs and monitoring · Advanced · Thin evidence · Sources: [De Oliveira 2019](https://doi.org/10.1080/17461391.2019.1572227), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Signs and monitoring · Advanced · Thin evidence · Sources: [De Oliveira 2019](https://doi.org/10.1080/17461391.2019.1572227), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### A morning heart rate helps only if you take it the same way each day
 
@@ -162,7 +162,7 @@ McDonald's procedure removes what pushes the number around: take it at the same 
 
 - Build a baseline over two rested weeks before reading anything into a single morning.
 
-Signs and monitoring · Intermediate · Coaching practice · Sources: [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6), [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758)
+Signs and monitoring · Intermediate · Coaching practice · Sources: [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6), [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758)
 
 ### Mood, sleep and appetite often shift before performance does
 
@@ -173,7 +173,7 @@ McDonald reports that athletes sliding toward a slump usually describe low motiv
 - When several of these appear together, take two or three easy days and reassess.
 - See a doctor if low mood or poor sleep continues after training has been reduced.
 
-Signs and monitoring · Intermediate · Some support · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Signs and monitoring · Intermediate · Some support · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### Let the warm-up decide a doubtful session
 
@@ -184,7 +184,7 @@ McDonald's rule rests on two facts: how you feel walking in is unreliable, and p
 - Keep your warm-up identical between sessions so you can compare how it feels.
 - If the warm-up is poor, switch to light technique work or go home.
 
-Signs and monitoring · Beginner · Coaching practice · Sources: [McDonald 2010h](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5)
+Signs and monitoring · Beginner · Coaching practice · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5)
 
 ### Jump height and reaction time are optional extra checks, not proven tests
 
@@ -194,7 +194,7 @@ A meta-analysis of 151 articles found the average height of several countermovem
 
 - If you use a jump test, average three jumps after a fixed warm-up and compare with rested values.
 
-Signs and monitoring · Advanced · Thin evidence · Sources: [Claudino 2017](https://doi.org/10.1016/j.jsams.2016.08.011), [Nederhof 2006](https://doi.org/10.2165/00007256-200636100-00001), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Signs and monitoring · Advanced · Thin evidence · Sources: [Claudino 2017](https://doi.org/10.1016/j.jsams.2016.08.011), [Nederhof 2006](https://doi.org/10.2165/00007256-200636100-00001), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### You do not need to be fully recovered, or better, before training again
 
@@ -204,7 +204,7 @@ Supercompensation implies waiting for an overshoot before training again. McDona
 
 - Judge a programme over a block of weeks, not by whether each session beat the last.
 
-Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
+Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sources: [McDonald 2019n](https://bodyrecomposition.com/training/supercompensation-of-training), [Kataoka 2022](https://doi.org/10.1007/s40279-021-01572-0)
 
 ### Selye's stress stages are a loose analogy for training, not a law
 
@@ -212,7 +212,7 @@ Fitness, fatigue and supercompensation · Intermediate · Thin evidence · Sourc
 
 A 2020 review notes that Selye built the syndrome from rodent studies using toxic stressors, that normal exercise in humans has never been shown to produce it, and that it gives no strong case that periodised training is necessary. A 2018 paper argues stress science has since moved on. Another 2018 review defends the syndrome as a useful framework, since disturbance does drive adaptation. McDonald sides with the critics: in Selye's work exhaustion meant death, nothing like a lifter who is tired or slightly weaker. What holds up is the general stress response, in which stressors add together.
 
-Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training)
+Fitness, fatigue and supercompensation · Advanced · Thin evidence · Sources: [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Kiely 2018](https://doi.org/10.1007/s40279-017-0823-y), [Cunanan 2018](https://doi.org/10.1007/s40279-017-0855-3), [McDonald 2019n](https://bodyrecomposition.com/training/supercompensation-of-training)
 
 ### Take at least one day a week completely off
 
@@ -223,7 +223,7 @@ Most athletes already do it, those who never rest tend to pay later, and a week 
 - Mark one day a week as no training. A walk is fine.
 - If lifting plus cardio fills seven days, put some cardio after lifting to free a day.
 
-Rest days and easy days · Beginner · Coaching practice · Sources: [McDonald 2010h](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007c](https://bodyrecomposition.com/training/the-importance-of-rest), [Kreher 2012](https://doi.org/10.1177/1941738111434406)
+Rest days and easy days · Beginner · Coaching practice · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007l](https://bodyrecomposition.com/training/the-importance-of-rest), [Kreher 2012](https://doi.org/10.1177/1941738111434406)
 
 ### Easy sessions reduce soreness a little; a performance benefit is unproven
 
@@ -233,7 +233,7 @@ A meta-analysis of 99 studies found that active recovery, massage, compression g
 
 - Use an easy session if it makes you feel better, not because it is required.
 
-Rest days and easy days · Intermediate · Some support · Sources: [Dupuy 2018](https://doi.org/10.3389/fphys.2018.00403), [Ortiz 2019](https://doi.org/10.1519/jsc.0000000000002589), [McDonald 2010a](https://bodyrecomposition.com/training/active-rest-vs-passive-rest)
+Rest days and easy days · Intermediate · Some support · Sources: [Dupuy 2018](https://doi.org/10.3389/fphys.2018.00403), [Ortiz 2019](https://doi.org/10.1519/jsc.0000000000002589), [McDonald 2010b](https://bodyrecomposition.com/training/active-rest-vs-passive-rest)
 
 ### A light day can double as technique practice if you are fresh enough to move well
 
@@ -243,7 +243,7 @@ For lifts that depend on timing and feel, such as the snatch, McDonald uses ligh
 
 - Pick one technical cue for a light day and stop when repetitions stop looking clean.
 
-Rest days and easy days · Intermediate · Coaching practice · Sources: [McDonald 2010a](https://bodyrecomposition.com/training/active-rest-vs-passive-rest)
+Rest days and easy days · Intermediate · Coaching practice · Sources: [McDonald 2010b](https://bodyrecomposition.com/training/active-rest-vs-passive-rest)
 
 ### Keep truly hard sessions for the same lift or muscle to one or two a week
 
@@ -254,7 +254,7 @@ McDonald's survey of sports comes out the same nearly everywhere: most work is e
 - Count the hard sessions each lift or muscle gets in a week, and cap it at two.
 - Put at least one easier day between hard sessions for the same lift.
 
-Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2010h](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2008m](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Foster 1998](https://doi.org/10.1097/00005768-199807000-00023)
+Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2008s](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Foster 1998](https://doi.org/10.1097/00005768-199807000-00023)
 
 ### Set the light and medium days as a share of the heavy day's weight
 
@@ -265,7 +265,7 @@ With the heavy day at 120 kg (265 lb) for sets of five, the light day would use 
 - Calculate light and medium loads from this week's heavy-day weight, not from your one-rep max.
 - Adjust the medium day first if the heavy day starts to suffer.
 
-Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015n](https://bodyrecomposition.com/training/heavy-light-medium-training)
+Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015q](https://bodyrecomposition.com/training/heavy-light-medium-training)
 
 ### A day can be made lighter by load, by reps in reserve or by exercise choice
 
@@ -276,7 +276,7 @@ The simplest version keeps the same lifts and sets and lowers the weight. A seco
 - Do the day's heavy lift first in the session.
 - If you squat and deadlift, put their heavy days as far apart in the week as you can.
 
-Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015n](https://bodyrecomposition.com/training/heavy-light-medium-training)
+Hard, easy and medium days · Intermediate · Coaching practice · Sources: [McDonald 2015q](https://bodyrecomposition.com/training/heavy-light-medium-training)
 
 ### Sets taken to failure take a day or two longer to recover from
 
@@ -325,7 +325,7 @@ In 28 trained men, six weeks of lifting three or six times a week with volume an
 - Divide your current weekly sets across the six days. Do not add to them.
 - Save your hardest sets for the sessions before the rest day.
 
-Twice a day and six days a week · Intermediate · Some support · Sources: [McDonald 2009l](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week), [Colquhoun 2018](https://doi.org/10.1519/jsc.0000000000002414), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
+Twice a day and six days a week · Intermediate · Some support · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week), [Colquhoun 2018](https://doi.org/10.1519/jsc.0000000000002414), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
 
 ### Training a muscle more often brings less soreness, not less growth
 
@@ -335,7 +335,7 @@ McDonald lists observations that separate soreness from progress. It is worst in
 
 - Do not lower training frequency just to feel sore again.
 
-Soreness · Intermediate · Coaching practice · Sources: [McDonald 2015j](https://bodyrecomposition.com/training/doms-muscle-growth), [McHugh 2003](https://doi.org/10.1034/j.1600-0838.2003.02477.x), [Damas 2016b](https://doi.org/10.1113/jp272472)
+Soreness · Intermediate · Coaching practice · Sources: [McDonald 2015m](https://bodyrecomposition.com/training/doms-muscle-growth), [McHugh 2003](https://doi.org/10.1034/j.1600-0838.2003.02477.x), [Damas 2016b](https://doi.org/10.1113/jp272472)
 
 ### Training a sore muscle again did not worsen damage in a controlled trial
 
@@ -357,7 +357,7 @@ A review of exertional rhabdomyolysis describes it as severe muscle breakdown wh
 - Introduce new exercises and high-rep work with one or two easy sets.
 - Seek urgent medical care for dark urine, severe swelling or pain far beyond normal soreness.
 
-Soreness · Beginner · Some support · Sources: [Rawson 2017](https://doi.org/10.1007/s40279-017-0689-z), [McDonald 2015j](https://bodyrecomposition.com/training/doms-muscle-growth)
+Soreness · Beginner · Some support · Sources: [Rawson 2017](https://doi.org/10.1007/s40279-017-0689-z), [McDonald 2015m](https://bodyrecomposition.com/training/doms-muscle-growth)
 
 ### A few days off costs almost nothing, and some lifters come back stronger
 
@@ -368,7 +368,7 @@ In 19 strength-trained athletes, 3 or 5 days without training preserved lower-bo
 - Do not fear a short break for illness, travel or planned rest.
 - After a break, give technical lifts one session to settle before judging them.
 
-Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007c](https://bodyrecomposition.com/training/the-importance-of-rest)
+Layoffs and coming back · Beginner · Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2007l](https://bodyrecomposition.com/training/the-importance-of-rest)
 
 ### Strength loss grows with time off and is larger in older and inactive people
 
@@ -378,7 +378,7 @@ The pooled effects were -0.62 for submaximal strength, -0.46 for maximal force a
 
 - Expect to be weaker after two or more weeks off, and plan lighter first sessions.
 
-Layoffs and coming back · Intermediate · Well supported · Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Well supported · Sources: [Bosquet 2013](https://doi.org/10.1111/sms.12047), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### Breaks of a few weeks did not reduce long-term gains in beginners
 
@@ -398,7 +398,7 @@ In a 2024 trial, strength and size lost over a 10-week break were regained rapid
 
 - Expect lost ground to return quicker than you first gained it, whatever the mechanism.
 
-Layoffs and coming back · Intermediate · Some support · Sources: [Halonen 2024](https://doi.org/10.1111/sms.14739), [Staron 1991](https://doi.org/10.1152/jappl.1991.70.2.631), [Rahmati 2022](https://doi.org/10.1002/jcsm.13043), [Cumming 2024](https://doi.org/10.1113/jp285675), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Some support · Sources: [Halonen 2024](https://doi.org/10.1111/sms.14739), [Staron 1991](https://doi.org/10.1152/jappl.1991.70.2.631), [Rahmati 2022](https://doi.org/10.1002/jcsm.13043), [Cumming 2024](https://doi.org/10.1113/jp285675), [Psilander 2019](https://doi.org/10.1152/japplphysiol.00917.2018), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### After months off, restart as a beginner and expect to move faster than one
 
@@ -409,7 +409,7 @@ He starts returning lifters with one set, two at most, of eight to ten exercises
 - Use a full-body session two or three times a week for the first month.
 - Add load or one set per week, never both in the same week.
 
-Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2015o](https://bodyrecomposition.com/training/returning-from-my-layoff)
+Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff), [McDonald 2015s](https://bodyrecomposition.com/training/returning-from-my-layoff)
 
 ### After an injury, wait a week longer than you think and test one exercise at a time
 
@@ -420,7 +420,7 @@ Motivated lifters judge themselves healed too early. His arithmetic shows the co
 - Reintroduce one exercise per session for the injured area and check how it feels the next day.
 - See a clinician if pain persists, returns or limits daily movement.
 
-Layoffs and coming back · Intermediate · Coaching practice · Sources: [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff)
+Layoffs and coming back · Intermediate · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ### When time is short, a small dose holds most of your strength
 
@@ -441,7 +441,7 @@ Among 135 undergraduates lifting twice a week for 12 weeks, the low-stress half 
 - In a high-stress stretch, hold or trim training volume and do not add to it.
 - Leave an extra day between hard sessions for the same muscles when life is rough.
 
-Dieting and life stress · Beginner · Some support · Sources: [Bartholomew 2008](https://doi.org/10.1519/jsc.0b013e318173d0bf), [Stults-Kolehmainen 2014](https://doi.org/10.1519/jsc.0000000000000335), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
+Dieting and life stress · Beginner · Some support · Sources: [Bartholomew 2008](https://doi.org/10.1519/jsc.0b013e318173d0bf), [Stults-Kolehmainen 2014](https://doi.org/10.1519/jsc.0000000000000335), [McDonald 2010o](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
 
 ### When training cannot come down further, raise recovery
 
@@ -451,7 +451,7 @@ McDonald's argument is that load can only be cut so far before it stops producin
 
 - Before cutting a programme you need, fix sleep length and daily food intake for two weeks.
 
-Dieting and life stress · Intermediate · Coaching practice · Sources: [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3), [Stellingwerff 2021](https://doi.org/10.1007/s40279-021-01491-0)
+Dieting and life stress · Intermediate · Coaching practice · Sources: [McDonald 2010o](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3), [Stellingwerff 2021](https://doi.org/10.1007/s40279-021-01491-0)
 
 ### Women who restricted eating most strictly excreted more cortisol
 
@@ -461,7 +461,7 @@ In 62 young women with normal cycles, the 24-hour urinary cortisol to creatinine
 
 - If you diet strictly and train hard, count the dieting as part of your stress load.
 
-Dieting and life stress · Intermediate · Some support · Sources: [McLean 2001](https://doi.org/10.1093/ajcn/73.1.7), [Rideout 2006](https://doi.org/10.1093/gerona/61.6.628), [McDonald 2015k](https://bodyrecomposition.com/research/dietary-restraint-cortisol-levels)
+Dieting and life stress · Intermediate · Some support · Sources: [McLean 2001](https://doi.org/10.1093/ajcn/73.1.7), [Rideout 2006](https://doi.org/10.1093/gerona/61.6.628), [McDonald 2015n](https://bodyrecomposition.com/research/dietary-restraint-cortisol-levels)
 
 ### A calorie deficit counts as stress and lowers what you can recover from
 
@@ -472,7 +472,7 @@ In 121 women, three weeks at 1,200 kcal a day raised total cortisol output. A me
 - Do not raise training volume in the same weeks that you start a diet.
 - Expect to hold strength on a diet, not to set records.
 
-Dieting and life stress · Intermediate · Some support · Sources: [Tomiyama 2010](https://doi.org/10.1097/psy.0b013e3181d9523c), [Nakamura 2016](https://doi.org/10.3109/10253890.2015.1121984), [Murphy 2022](https://doi.org/10.1111/sms.14075), [McDonald 2010b](https://bodyrecomposition.com/fat-loss/low-calories-and-too-much-exercise)
+Dieting and life stress · Intermediate · Some support · Sources: [Tomiyama 2010](https://doi.org/10.1097/psy.0b013e3181d9523c), [Nakamura 2016](https://doi.org/10.3109/10253890.2015.1121984), [Murphy 2022](https://doi.org/10.1111/sms.14075), [McDonald 2010c](https://bodyrecomposition.com/fat-loss/low-calories-and-too-much-exercise)
 
 ## Common mistakes
 
@@ -484,7 +484,7 @@ Minor fatigue and a brief dip in performance are part of normal training, and a 
 
 - Judge fatigue by whether it has cleared after one or two easy days.
 
-Overreaching and overtraining · Beginner · Some support · Sources: [Halson 2004](https://doi.org/10.2165/00007256-200434140-00003), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
+Overreaching and overtraining · Beginner · Some support · Sources: [Halson 2004](https://doi.org/10.2165/00007256-200434140-00003), [McDonald 2010o](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
 
 ### Stretching a hard block and skipping the easy weeks after it
 
@@ -495,7 +495,7 @@ The consensus statement describes functional overreaching as a short-term drop t
 - Write the easier weeks into the plan before the hard block begins.
 - End the block early if performance falls for more than a few sessions in a row.
 
-Overreaching and overtraining · Advanced · Coaching practice · Sources: [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [McDonald 2010j](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
+Overreaching and overtraining · Advanced · Coaching practice · Sources: [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [McDonald 2010m](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching)
 
 ### Answering a slump by training harder
 
@@ -505,7 +505,7 @@ A sports medicine review advises clinicians to ask athletes with unexplained und
 
 - If your numbers fall for a week, reduce training first and add work only once they are back.
 
-Overreaching and overtraining · Intermediate · Coaching practice · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [McDonald 2010j](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching), [McDonald 2010m](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4)
+Overreaching and overtraining · Intermediate · Coaching practice · Sources: [Kreher 2012](https://doi.org/10.1177/1941738111434406), [McDonald 2010m](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching), [McDonald 2010p](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4)
 
 ### Copying the training load of elite or full-time athletes
 
@@ -516,7 +516,7 @@ McDonald's argument has three parts. Tolerance for training grows slowly, and to
 - Base your load on what you have recovered from lately, not on a champion's programme.
 - Change one thing at a time, a set, a session or the load, then watch for two to three weeks.
 
-Overreaching and overtraining · Beginner · Coaching practice · Sources: [McDonald 2010j](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
+Overreaching and overtraining · Beginner · Coaching practice · Sources: [McDonald 2010m](https://bodyrecomposition.com/training/guide-to-overtraining-overreaching), [McDonald 2010o](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-3)
 
 ### Assuming you cannot overdo it as long as you rotate muscle groups
 
@@ -526,7 +526,7 @@ An older idea split overtraining into a local kind, in the muscle, and a central
 
 - Count total hard sessions in a week, not only sets per muscle.
 
-Overreaching and overtraining · Intermediate · Thin evidence · Sources: [Smith 2000](https://doi.org/10.1097/00005768-200002000-00011), [Cheng 2020](https://doi.org/10.1016/j.redox.2020.101480), [McDonald 2010m](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4)
+Overreaching and overtraining · Intermediate · Thin evidence · Sources: [Smith 2000](https://doi.org/10.1097/00005768-200002000-00011), [Cheng 2020](https://doi.org/10.1016/j.redox.2020.101480), [McDonald 2010p](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-4)
 
 ### Dieting while trying to recover from a training slump
 
@@ -537,7 +537,7 @@ People forced to rest often cut food to avoid gaining fat. McDonald advises the 
 - Hold body weight steady during a recovery period.
 - Leave fat loss until training and performance are back to normal.
 
-Overreaching and overtraining · Intermediate · Some support · Sources: [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [Stellingwerff 2021](https://doi.org/10.1007/s40279-021-01491-0), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Overreaching and overtraining · Intermediate · Some support · Sources: [Meeusen 2013](https://doi.org/10.1080/17461391.2012.730061), [Stellingwerff 2021](https://doi.org/10.1007/s40279-021-01491-0), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### Returning to the exact load that caused the slump
 
@@ -548,7 +548,7 @@ McDonald describes athletes who repeat one cycle for years: overdo it, break dow
 - Write down what your training, sleep, diet and stress looked like before the slump.
 - Change at least one of them before building back up.
 
-Overreaching and overtraining · Intermediate · Coaching practice · Sources: [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Overreaching and overtraining · Intermediate · Coaching practice · Sources: [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ### Reading one bad session as a sign of overtraining
 
@@ -559,7 +559,7 @@ Sleep, food, heat, work and mood all shift performance between days, so one poor
 - After one bad session, change nothing and train the next one as planned.
 - After a week of bad sessions, take two or three light days and see whether you freshen up.
 
-Signs and monitoring · Beginner · Coaching practice · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2)
+Signs and monitoring · Beginner · Coaching practice · Sources: [McDonald 2010n](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-2)
 
 ### Picturing training as breaking muscle down so it rebuilds bigger
 
@@ -569,7 +569,7 @@ The deplete-then-overshoot idea came from glycogen research, and glycogen does b
 
 - Aim for repeatable sessions that progress, not for maximum disruption.
 
-Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
+Fitness, fatigue and supercompensation · Beginner · Thin evidence · Sources: [McDonald 2019n](https://bodyrecomposition.com/training/supercompensation-of-training), [Damas 2016b](https://doi.org/10.1113/jp272472)
 
 ### Turning a recovery session into a workout
 
@@ -580,7 +580,7 @@ McDonald sees two routes to this. The lifter feels good and starts adding weight
 - Set the load and the number of sets before you arrive, and leave when they are done.
 - If you finish more tired than you started, make the next recovery day a rest day.
 
-Rest days and easy days · Beginner · Coaching practice · Sources: [McDonald 2010a](https://bodyrecomposition.com/training/active-rest-vs-passive-rest)
+Rest days and easy days · Beginner · Coaching practice · Sources: [McDonald 2010b](https://bodyrecomposition.com/training/active-rest-vs-passive-rest)
 
 ### Training at the same effort every day, all year
 
@@ -591,7 +591,7 @@ McDonald's observation is that most people try to go hard too often and land at 
 - Mark each session hard, medium or easy in your plan, and check that all three appear.
 - Follow two or three hard weeks with an easier one.
 
-Hard, easy and medium days · Beginner · Coaching practice · Sources: [McDonald 2008m](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
+Hard, easy and medium days · Beginner · Coaching practice · Sources: [McDonald 2008s](https://bodyrecomposition.com/training/hard-days-hard-easy-days-easy), [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2)
 
 ### Taking the light and medium days to failure
 
@@ -601,7 +601,7 @@ When the lighter days use higher reps, it is tempting to push each to its limit:
 
 - Leave about two reps in reserve on light and medium days.
 
-Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2015n](https://bodyrecomposition.com/training/heavy-light-medium-training), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
+Hard, easy and medium days · Intermediate · Thin evidence · Sources: [McDonald 2015q](https://bodyrecomposition.com/training/heavy-light-medium-training), [Morán-Navarro 2017](https://doi.org/10.1007/s00421-017-3725-7)
 
 ### Doing two full workouts from the first day of twice-daily training
 
@@ -623,7 +623,7 @@ McDonald's reasoning starts from connective tissue, which adapts more slowly tha
 - On a six-day plan, count how many days each joint is loaded, not only each muscle.
 - See a clinician about shoulder pain that lasts beyond a week or two of reduced loading.
 
-Twice a day and six days a week · Intermediate · Coaching practice · Sources: [McDonald 2009l](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week)
+Twice a day and six days a week · Intermediate · Coaching practice · Sources: [McDonald 2009y](https://bodyrecomposition.com/muscle-gain/lifting-six-days-a-week)
 
 ### Using soreness to decide whether a muscle has recovered
 
@@ -644,7 +644,7 @@ McDonald saw the pattern often in commercial gyms: someone returns after years, 
 - Leave your old numbers out of the first month back.
 - Stop a set well short of failure in the first two weeks.
 
-Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff), [Cheung 2003](https://doi.org/10.2165/00007256-200333020-00005)
+Layoffs and coming back · Beginner · Coaching practice · Sources: [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff), [Cheung 2003](https://doi.org/10.2165/00007256-200333020-00005)
 
 ### Pairing a steep calorie deficit with large amounts of hard exercise
 
@@ -655,7 +655,7 @@ He describes very low intakes with hours of often intense cardio, a stalled scal
 - With a large deficit, keep lifting and keep cardio modest.
 - If you want a high training load, use a small deficit.
 
-Dieting and life stress · Beginner · Thin evidence · Sources: [McDonald 2010b](https://bodyrecomposition.com/fat-loss/low-calories-and-too-much-exercise), [Phinney 1988](https://doi.org/10.1016/0026-0495(88)90011-x)
+Dieting and life stress · Beginner · Thin evidence · Sources: [McDonald 2010c](https://bodyrecomposition.com/fat-loss/low-calories-and-too-much-exercise), [Phinney 1988](https://doi.org/10.1016/0026-0495(88)90011-x)
 
 ## Key numbers
 
@@ -664,11 +664,11 @@ Dieting and life stress · Beginner · Thin evidence · Sources: [McDonald 2010b
 | 10 of 22 studies | Lifting studies that tried to overtrain people and saw no drop: In a 2020 systematic review, 10 of the 22 studies that set out to overreach or overtrain lifters found no decline in performance. | Well supported | [Grandou 2020](https://doi.org/10.1007/s40279-019-01242-2) |
 | 29% of 376 athletes | Young athletes who reported a long slump at least once: English athletes of about 15, across 19 sports, who reported non-functional overreaching or overtraining in a survey. | Thin evidence | [Matos 2011](https://doi.org/10.1249/mss.0b013e318207f87b) |
 | 67% of overreached athletes | Infections reported by overreached triathletes: After 3 weeks of overload, against 22% of athletes who were only tired and 11% of controls, in 27 trained men. | Thin evidence | [Hausswirth 2014](https://doi.org/10.1249/mss.0000000000000177) |
-| 5 and 10 beats per minute | Rise in morning heart rate that old coaching rules act on: Rule of thumb passed on by McDonald: an easy day at about 5 above your rested norm, a day off at about 10. Crude and untested. | Coaching practice | [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6) |
-| 50-67% of normal volume | Size of a recovery session against a normal one: McDonald's guide: half to two thirds of usual volume, at about 60% of maximum heart rate, or at most 75% of 1RM for easy sets of 3 to 5. | Coaching practice | [McDonald 2010a](https://bodyrecomposition.com/training/active-rest-vs-passive-rest) |
+| 5 and 10 beats per minute | Rise in morning heart rate that old coaching rules act on: Rule of thumb passed on by McDonald: an easy day at about 5 above your rested norm, a day off at about 10. Crude and untested. | Coaching practice | [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6) |
+| 50-67% of normal volume | Size of a recovery session against a normal one: McDonald's guide: half to two thirds of usual volume, at about 60% of maximum heart rate, or at most 75% of 1RM for easy sets of 3 to 5. | Coaching practice | [McDonald 2010b](https://bodyrecomposition.com/training/active-rest-vs-passive-rest) |
 | 4-6 hours | Break between two sessions on the same day: A rule of thumb with no trial behind it: time for a meal or two and a rest. McDonald treats 3.5 to 7 hours as fine. A review lists over 6 hours among preventive measures. | Coaching practice | [McDonald 2014y](https://bodyrecomposition.com/training/two-a-day-training-weight-room), [McDonald 2014z](https://bodyrecomposition.com/training/two-a-day-training-weight-room-2), [Kreher 2012](https://doi.org/10.1177/1941738111434406) |
-| 2x the time off | Time to get back after one to two weeks off: McDonald's rule of thumb: two weeks off takes about four weeks to regain. It stops applying once the break reaches a month or more. | Coaching practice | [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff) |
-| 50-60% of previous max | Starting load after a long layoff: McDonald's starting point, or lighter, for the first sessions back after months away, for one or two easy sets per exercise. | Coaching practice | [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff) |
+| 2x the time off | Time to get back after one to two weeks off: McDonald's rule of thumb: two weeks off takes about four weeks to regain. It stops applying once the break reaches a month or more. | Coaching practice | [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff) |
+| 50-60% of previous max | Starting load after a long layoff: McDonald's starting point, or lighter, for the first sessions back after months away, for one or two easy sets per exercise. | Coaching practice | [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff) |
 | 1.78 odds ratio | Injury restrictions in exam weeks against ordinary weeks: Odds of a player having an injury restriction in weeks of high academic stress, in 101 college football players over a season. | Thin evidence | [Mann 2016](https://doi.org/10.1519/jsc.0000000000001055) |
 
 ## From normal tiredness to overtraining syndrome: four states
@@ -709,7 +709,7 @@ Simple self-ratings follow training load better than lab markers. The log shows 
 - Effort rising at the same loads for a week: cut volume and review sleep and food
 - Fatigue, low mood, repeated illness or falling performance beyond two to three weeks: see a doctor
 
-Some support · Sources: [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758), [Duignan 2020](https://doi.org/10.4085/1062-6050-0528.19), [McDonald 2010i](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
+Some support · Sources: [Saw 2016](https://doi.org/10.1136/bjsports-2015-094758), [Duignan 2020](https://doi.org/10.4085/1062-6050-0528.19), [McDonald 2010l](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-6)
 
 ## Three pictures of how training works, compared
 
@@ -721,7 +721,7 @@ Each model draws a similar curve but leads to different advice. McDonald argues 
 | Fitness-fatigue (two-factor) | Each session adds fitness and fatigue; fatigue fades faster | Explains tapers, easy weeks and bests after a short break | Fitted a season of data from nine swimmers, but with wide uncertainty in its parameters |
 | General adaptation syndrome | Stress brings alarm, then resistance, then exhaustion | All stressors draw on one general stress response | Built on rodents and toxic stressors; never shown with normal exercise in humans |
 
-Thin evidence · Sources: [McDonald 2019e](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
+Thin evidence · Sources: [McDonald 2019n](https://bodyrecomposition.com/training/supercompensation-of-training), [Buckner 2020](https://doi.org/10.1249/mss.0000000000002171), [Hellard 2006](https://doi.org/10.1080/02640410500244697)
 
 ## Planned rest at four time scales
 
@@ -734,7 +734,7 @@ Rest is scheduled weekly, inside each block, between blocks and yearly. The inte
 | Between blocks | About five days with no training at all | After each 10 to 16 week block, or every 3 to 4 months | Physical and mental reset before the next block |
 | Across the year | Two to four weeks of light or different activity | Once a year, after the main season or goal | Start the next year fresh without losing much fitness |
 
-Coaching practice · Sources: [McDonald 2010h](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007c](https://bodyrecomposition.com/training/the-importance-of-rest), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y)
+Coaching practice · Sources: [McDonald 2010k](https://bodyrecomposition.com/training/a-guide-to-overtraining-overreaching-5), [McDonald 2007l](https://bodyrecomposition.com/training/the-importance-of-rest), [Rogerson 2024](https://doi.org/10.1186/s40798-024-00691-y)
 
 ## Coming back after a break: what to expect by time away
 
@@ -747,7 +747,7 @@ Losses grow with time away and return faster than they were built. The restart a
 | About 10 weeks | Strength and size fell in new lifters, then were regained rapidly on retraining | Start lighter with fewer sets; add weekly | Several weeks |
 | Many months or years | Losses grow with duration, more so in older and inactive people | Restart as a beginner at 50 to 60% of old loads or less | Two to three months to approach old loads |
 
-Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [Halonen 2024](https://doi.org/10.1111/sms.14739), [Bosquet 2013](https://doi.org/10.1111/sms.12047), [McDonald 2009v](https://bodyrecomposition.com/training/training-after-a-layoff)
+Some support · Sources: [Travis 2022](https://doi.org/10.1519/JSC.0000000000004183), [Hwang 2017](https://doi.org/10.1519/jsc.0000000000001807), [Halonen 2024](https://doi.org/10.1111/sms.14739), [Bosquet 2013](https://doi.org/10.1111/sms.12047), [McDonald 2009ak](https://bodyrecomposition.com/training/training-after-a-layoff)
 
 ## Terms
 

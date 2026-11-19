@@ -12,7 +12,7 @@ A review of champion athletes names three main factors: VO2 max, the lactate thr
 
 - Track the pace or power you can hold for a set time. A VO2 max estimate alone says little.
 
-Methods and intensity zones · Intermediate · Some support · Sources: [Joyner 2008](https://doi.org/10.1113/jphysiol.2007.143834), [McDonald 2009u](https://bodyrecomposition.com/training/determinants-endurance-performance)
+Methods and intensity zones · Intermediate · Some support · Sources: [Joyner 2008](https://doi.org/10.1113/jphysiol.2007.143834), [McDonald 2009ai](https://bodyrecomposition.com/training/determinants-endurance-performance)
 
 ### Aerobic fitness supports repeated hard efforts in stop-and-go sports
 
@@ -23,7 +23,7 @@ Repeated-sprint ability means holding your average over a series of sprints of 1
 - Keep a few easy aerobic sessions a week if your sport is stop-and-go.
 - Train sprint speed with short efforts and full rests.
 
-Methods and intensity zones · Intermediate · Some support · Sources: [Bishop 2011](https://doi.org/10.2165/11590560-000000000-00000), [Spencer 2001](https://doi.org/10.1097/00005768-200101000-00024), [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
+Methods and intensity zones · Intermediate · Some support · Sources: [Bishop 2011](https://doi.org/10.2165/11590560-000000000-00000), [Spencer 2001](https://doi.org/10.1097/00005768-200101000-00024), [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
 
 ### No single intensity trains every part of endurance
 
@@ -33,7 +33,7 @@ Endurance training raises the heart's stroke volume, blood volume, capillary sup
 
 - Choose your mix from your goal and weekly hours. Be wary of claims that one zone is best.
 
-Methods and intensity zones · Intermediate · Some support · Sources: [Rosenblat 2025](https://doi.org/10.1007/s40279-024-02149-3), [McDonald 2009n](https://bodyrecomposition.com/training/guide-to-endurance-training-methods)
+Methods and intensity zones · Intermediate · Some support · Sources: [Rosenblat 2025](https://doi.org/10.1007/s40279-024-02149-3), [McDonald 2009ab](https://bodyrecomposition.com/training/guide-to-endurance-training-methods)
 
 ### Easy aerobic training pays off through volume
 
@@ -43,7 +43,7 @@ Studies of national and international endurance athletes who train 10 to 13 time
 
 - If you train only a few hours a week, do not copy an elite split by default.
 
-Methods and intensity zones · Intermediate · Some support · Sources: [Seiler 2010](https://doi.org/10.1123/ijspp.5.3.276), [Schumacher 2002](https://doi.org/10.1097/00005768-200206000-00020), [McDonald 2009o](https://bodyrecomposition.com/training/endurance-training-method-1)
+Methods and intensity zones · Intermediate · Some support · Sources: [Seiler 2010](https://doi.org/10.1123/ijspp.5.3.276), [Schumacher 2002](https://doi.org/10.1097/00005768-200206000-00020), [McDonald 2009ac](https://bodyrecomposition.com/training/endurance-training-method-1)
 
 ### Polarized training has not clearly beaten other intensity splits
 
@@ -53,7 +53,7 @@ A network meta-analysis of individual data from 13 studies and 348 trained endur
 
 - With limited weekly hours, a mostly easy week with some tempo work is a sound default.
 
-Methods and intensity zones · Advanced · Well supported · Sources: [Rosenblat 2025](https://doi.org/10.1007/s40279-024-02149-3), [Silva Oliveira 2024](https://doi.org/10.1007/s40279-024-02034-z), [McDonald 2009q](https://bodyrecomposition.com/training/endurance-training-method-4-part-1)
+Methods and intensity zones · Advanced · Well supported · Sources: [Rosenblat 2025](https://doi.org/10.1007/s40279-024-02149-3), [Silva Oliveira 2024](https://doi.org/10.1007/s40279-024-02034-z), [McDonald 2009ae](https://bodyrecomposition.com/training/endurance-training-method-4-part-1)
 
 ### The more often you train, the easier most sessions must be
 
@@ -64,7 +64,7 @@ Lyle McDonald frames endurance planning as a trade. Harder steady work gives mor
 - Count your weekly sessions first, then set how hard the typical one should be.
 - When you add a training day, make it an easy one.
 
-Methods and intensity zones · Intermediate · Coaching practice · Sources: [McDonald 2009m](https://bodyrecomposition.com/training/endurance-training-method-2), [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
+Methods and intensity zones · Intermediate · Coaching practice · Sources: [McDonald 2009aa](https://bodyrecomposition.com/training/endurance-training-method-2), [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
 
 ### Threshold sessions work in small doses
 
@@ -74,7 +74,7 @@ The standard session is one to three blocks of 20 minutes at the hardest pace yo
 
 - Start with shorter blocks, such as 4 x 5 minutes, before trying 20 minutes straight.
 
-Methods and intensity zones · Advanced · Coaching practice · Sources: [McDonald 2009p](https://bodyrecomposition.com/training/endurance-training-method-3), [Seiler 2009](https://www.sportsci.org/2009/ss.htm)
+Methods and intensity zones · Advanced · Coaching practice · Sources: [McDonald 2009ad](https://bodyrecomposition.com/training/endurance-training-method-3), [Seiler 2009](https://www.sportsci.org/2009/ss.htm)
 
 ### VO2 max intervals last 2 to 5 minutes at just above threshold pace
 
@@ -84,7 +84,7 @@ The aim is time near maximal oxygen uptake. As McDonald describes common practic
 
 - Pace the first repeat so that the last one can match it.
 
-Intervals and HIIT · Advanced · Some support · Sources: [Wen 2019](https://doi.org/10.1016/j.jsams.2019.01.013), [Bossi 2020](https://doi.org/10.1123/ijspp.2019-0260), [McDonald 2009r](https://bodyrecomposition.com/training/endurance-training-method-4-part-2)
+Intervals and HIIT · Advanced · Some support · Sources: [Wen 2019](https://doi.org/10.1016/j.jsams.2019.01.013), [Bossi 2020](https://doi.org/10.1123/ijspp.2019-0260), [McDonald 2009af](https://bodyrecomposition.com/training/endurance-training-method-4-part-2)
 
 ### Plan hard intervals in short blocks on top of an aerobic base
 
@@ -94,7 +94,7 @@ Lyle McDonald's reading of research and coaching practice is that the systems tr
 
 - Use a block of intervals before an event or a test, then go back to mostly steady work.
 
-Intervals and HIIT · Advanced · Thin evidence · Sources: [Hickson 1977](https://doi.org/10.1152/jappl.1977.42.3.372), [Schumacher 2002](https://doi.org/10.1097/00005768-200206000-00020), [McDonald 2009r](https://bodyrecomposition.com/training/endurance-training-method-4-part-2)
+Intervals and HIIT · Advanced · Thin evidence · Sources: [Hickson 1977](https://doi.org/10.1152/jappl.1977.42.3.372), [Schumacher 2002](https://doi.org/10.1097/00005768-200206000-00020), [McDonald 2009af](https://bodyrecomposition.com/training/endurance-training-method-4-part-2)
 
 ### Beginners improve on short, easy sessions
 
@@ -105,7 +105,7 @@ People new to training adapt to very little. Lyle McDonald's starting dose is 20
 - Start with three easy sessions of 20 to 30 minutes a week.
 - Add minutes before you add intensity.
 
-Starting out · Beginner · Some support · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Wen 2019](https://doi.org/10.1016/j.jsams.2019.01.013), [McDonald 2009m](https://bodyrecomposition.com/training/endurance-training-method-2), [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
+Starting out · Beginner · Some support · Sources: [Garber 2011](https://doi.org/10.1249/mss.0b013e318213fefb), [Wen 2019](https://doi.org/10.1016/j.jsams.2019.01.013), [McDonald 2009aa](https://bodyrecomposition.com/training/endurance-training-method-2), [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
 
 ### Very few weekly hours can be met with interval blocks a few times a year
 
@@ -116,7 +116,7 @@ McDonald passes on cycling coach Chris Carmichael's observation that the usual m
 - Save interval-heavy blocks for the weeks before an event that matters.
 - Between blocks, hold fitness with easier sessions.
 
-Intervals and HIIT · Advanced · Coaching practice · Sources: [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
+Intervals and HIIT · Advanced · Coaching practice · Sources: [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
 
 ### The afterburn adds only a few dozen calories to a session
 
@@ -126,7 +126,7 @@ A review of the research found that even sessions long or hard enough to keep me
 
 - Choose the session you can repeat and recover from, and ignore afterburn claims.
 
-Calories, EPOC and efficiency · Beginner · Well supported · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [Panissa 2021](https://doi.org/10.1111/obr.13099), [McDonald 2008j](https://bodyrecomposition.com/research/epoc-after-exercise)
+Calories, EPOC and efficiency · Beginner · Well supported · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [Panissa 2021](https://doi.org/10.1111/obr.13099), [McDonald 2008l](https://bodyrecomposition.com/research/epoc-after-exercise)
 
 ### One chamber study found a larger afterburn after 45 hard minutes
 
@@ -136,7 +136,7 @@ The study put 10 men aged 22 to 33 in a metabolic chamber for a rest day and an 
 
 - Read this as a finding for long, hard sessions at maintenance calories.
 
-Calories, EPOC and efficiency · Intermediate · Thin evidence · Sources: [Knab 2011](https://doi.org/10.1249/mss.0b013e3182118891), [McDonald 2011c](https://bodyrecomposition.com/research/epoc-following-45-minute-exercise-bout)
+Calories, EPOC and efficiency · Intermediate · Thin evidence · Sources: [Knab 2011](https://doi.org/10.1249/mss.0b013e3182118891), [McDonald 2011h](https://bodyrecomposition.com/research/epoc-following-45-minute-exercise-bout)
 
 ### Intervals and steady cardio give the same fat loss
 
@@ -147,7 +147,7 @@ A multilevel meta-analysis of randomised trials lasting at least four weeks foun
 - Use intervals when time is short and steady work when you want more sessions.
 - Let diet drive fat loss. Either kind of cardio adds a little.
 
-Cardio for fat loss · Beginner · Well supported · Sources: [Steele 2021](https://doi.org/10.3390/sports9110155), [Wewege 2017](https://doi.org/10.1111/obr.12532), [McDonald 2008r](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Cardio for fat loss · Beginner · Well supported · Sources: [Steele 2021](https://doi.org/10.3390/sports9110155), [Wewege 2017](https://doi.org/10.1111/obr.12532), [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### A few all-out sprints matched long rides for early fitness gains
 
@@ -157,7 +157,7 @@ Sixteen active men trained six times in 14 days. One group did four to six all-o
 
 - If you try sprint intervals, use a bike or rower and make each sprint a true all-out effort.
 
-Intervals and HIIT · Intermediate · Some support · Sources: [Gibala 2006](https://doi.org/10.1113/jphysiol.2006.112094), [Gibala 2012](https://doi.org/10.1113/jphysiol.2011.224725), [McDonald 2008o](https://bodyrecomposition.com/research/adaptations-interval-training)
+Intervals and HIIT · Intermediate · Some support · Sources: [Gibala 2006](https://doi.org/10.1113/jphysiol.2006.112094), [Gibala 2012](https://doi.org/10.1113/jphysiol.2011.224725), [McDonald 2008v](https://bodyrecomposition.com/research/adaptations-interval-training)
 
 ### Put intervals on leg-training days, in a separate session if you can
 
@@ -168,7 +168,7 @@ Two interval sessions can fit around two lower-body lifting days in two ways. Pu
 - Pair intervals with lower-body lifting days and keep the days between easy.
 - After heavy leg work, choose a bike over running sprints.
 
-Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008r](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Very low carbohydrate intake and frequent hard intervals do not mix
 
@@ -179,7 +179,7 @@ Hard intervals and high-rep, short-rest lifting both run on muscle glycogen. Lyl
 - When carbohydrate is very low, keep cardio mostly easy.
 - If you want frequent intervals, plan carbohydrate around them.
 
-Cardio for fat loss · Intermediate · Coaching practice · Sources: [McDonald 2008t](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
+Cardio for fat loss · Intermediate · Coaching practice · Sources: [McDonald 2008ac](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
 
 ### On a diet, make most cardio steady and keep intervals to one or two sessions
 
@@ -190,7 +190,7 @@ Dieters usually want some activity on most days. Lyle McDonald's advice is to ma
 - Fill most cardio days with steady work you could repeat tomorrow.
 - Limit intervals to two sessions a week while dieting.
 
-Cardio for fat loss · Beginner · Coaching practice · Sources: [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together), [McDonald 2008r](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Cardio for fat loss · Beginner · Coaching practice · Sources: [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together), [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Introduce intensity with short pick-ups inside an easy session
 
@@ -200,7 +200,7 @@ Lyle McDonald does not move beginners straight from easy cardio to hard interval
 
 - Hold the pick-ups at a pace only slightly above your normal one at first.
 
-Starting out · Beginner · Coaching practice · Sources: [McDonald 2008r](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Starting out · Beginner · Coaching practice · Sources: [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Early trials that favoured intervals for fat loss did not control diet
 
@@ -210,7 +210,7 @@ A 1994 trial in young adults compared 20 weeks of endurance training with 15 wee
 
 - Be wary of fat-loss claims built on a single small trial without diet control.
 
-Cardio for fat loss · Intermediate · Some support · Sources: [Tremblay 1994](https://doi.org/10.1016/0026-0495(94)90259-3), [Steele 2021](https://doi.org/10.3390/sports9110155), [McDonald 2008u](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-disconnect)
+Cardio for fat loss · Intermediate · Some support · Sources: [Tremblay 1994](https://doi.org/10.1016/0026-0495(94)90259-3), [Steele 2021](https://doi.org/10.3390/sports9110155), [McDonald 2008ad](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-disconnect)
 
 ### Stored fat is lost in three steps, and the slow step depends on how lean you are
 
@@ -220,7 +220,7 @@ Lyle McDonald explains fat loss as mobilization, transport and oxidation. Insuli
 
 - Treat timing tricks as relevant, at most, to lean people getting leaner.
 
-Fasted cardio · Intermediate · Coaching practice · Sources: [McDonald 2024](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss), [McDonald 2010d](https://bodyrecomposition.com/fat-loss/fasted-cardio-fat-loss)
+Fasted cardio · Intermediate · Coaching practice · Sources: [McDonald 2024](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss), [McDonald 2010f](https://bodyrecomposition.com/fat-loss/fasted-cardio-fat-loss)
 
 ### Fasted cardio is unproven for very lean dieters, which differs from disproven
 
@@ -231,7 +231,7 @@ Twenty young women in a calorie deficit did an hour of steady cardio three days 
 - At average or high body fat, do cardio at whatever time you will keep to.
 - If you are lean and prefer fasted cardio, trials give no sign that it harms fat loss.
 
-Fasted cardio · Advanced · Thin evidence · Sources: [Schoenfeld 2014](https://doi.org/10.1186/s12970-014-0054-7), [Hackett 2017](https://doi.org/10.3390/jfmk2040043), [McDonald 2021](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2)
+Fasted cardio · Advanced · Thin evidence · Sources: [Schoenfeld 2014](https://doi.org/10.1186/s12970-014-0054-7), [Hackett 2017](https://doi.org/10.3390/jfmk2040043), [McDonald 2021b](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2)
 
 ### Cardio burns only a few grams of protein, even with low glycogen
 
@@ -241,7 +241,7 @@ Six subjects cycled for an hour at 61 percent of VO2 max, after loading carbohyd
 
 - Have a protein-containing meal or drink soon after a fasted session.
 
-Fasted cardio · Intermediate · Thin evidence · Sources: [Lemon 1980](https://doi.org/10.1152/jappl.1980.48.4.624), [McDonald 2021](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2)
+Fasted cardio · Intermediate · Thin evidence · Sources: [Lemon 1980](https://doi.org/10.1152/jappl.1980.48.4.624), [McDonald 2021b](https://bodyrecomposition.com/fat-loss/is-fasted-cardio-useless-for-fat-loss-part-2)
 
 ### Realistic amounts of exercise create a small deficit
 
@@ -252,7 +252,7 @@ Lyle McDonald's working figures for untrained people are 5 to 10 kcal a minute a
 - Set the deficit mainly through food, and use exercise to add to it.
 - Progress duration or intensity as you get fitter.
 
-Cardio for fat loss · Beginner · Some support · Sources: [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2010c](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
+Cardio for fat loss · Beginner · Some support · Sources: [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2010e](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
 
 ### Keeping weight off is linked with about an hour of activity a day
 
@@ -262,7 +262,7 @@ Lyle McDonald's view in 2010 was that exercise matters more for keeping weight o
 
 - Plan to keep or raise your activity after a diet ends.
 
-Cardio for fat loss · Intermediate · Some support · Sources: [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2010c](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
+Cardio for fat loss · Intermediate · Some support · Sources: [Wing 2005](https://doi.org/10.1093/ajcn/82.1.222S), [Bellicha 2021](https://doi.org/10.1111/obr.13256), [McDonald 2010e](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
 
 ### Exercise can help you hold a diet, and hunger responses vary
 
@@ -272,7 +272,7 @@ In Lyle McDonald's experience many people keep to their diet better on days they
 
 - If you are new to training and hungrier after sessions, give it about four weeks before judging.
 
-Cardio for fat loss · Beginner · Coaching practice · Sources: [McDonald 2010c](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
+Cardio for fat loss · Beginner · Coaching practice · Sources: [McDonald 2010e](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
 
 ### Real sprint training is a few seconds of work with minutes of rest
 
@@ -283,7 +283,7 @@ Gym intervals of 30 to 60 seconds with short rests resemble middle-distance runn
 - If top speed is the goal, keep efforts short and rest until fully recovered.
 - For fitness or fat loss, choose intervals or steady work over true sprints.
 
-Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016k](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Intermediate · Coaching practice · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016v](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Split long indoor sessions into blocks and change something at each one
 
@@ -304,7 +304,7 @@ Lyle McDonald rejects both no cardio and an hour every day. His range for a gain
 - Start with three easy sessions of 20 to 30 minutes a week.
 - Eat back the energy if your weight gain stalls.
 
-Cardio with lifting · Intermediate · Some support · Sources: [Schumann 2022](https://doi.org/10.1007/s40279-021-01587-7), [McDonald 2009e](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
+Cardio with lifting · Intermediate · Some support · Sources: [Schumann 2022](https://doi.org/10.1007/s40279-021-01587-7), [McDonald 2009k](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
 
 ### Why keep some cardio when the goal is muscle
 
@@ -314,7 +314,7 @@ Lyle McDonald lists several benefits of easy cardio in a gaining phase, none of 
 
 - Treat off-season cardio as upkeep. It will not offset a large surplus.
 
-Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2009e](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
+Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2009k](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
 
 ### Keep cardio and lifting a few hours apart when power matters
 
@@ -325,7 +325,7 @@ Across 43 studies, adding aerobic training left muscle growth and maximal streng
 - Put cardio on non-lifting days, or leave 3 or more hours between sessions.
 - After heavy leg training, limit same-session cardio to a short, easy spin or walk.
 
-Cardio with lifting · Intermediate · Some support · Sources: [Schumann 2022](https://doi.org/10.1007/s40279-021-01587-7), [Lundberg 2022](https://doi.org/10.1007/s40279-022-01688-x), [McDonald 2009e](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
+Cardio with lifting · Intermediate · Some support · Sources: [Schumann 2022](https://doi.org/10.1007/s40279-021-01587-7), [Lundberg 2022](https://doi.org/10.1007/s40279-022-01688-x), [McDonald 2009k](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
 
 ### Intervals alongside lifting slightly reduce lower-body strength gains
 
@@ -335,7 +335,7 @@ A meta-analysis compared resistance training alone with resistance training plus
 
 - If squat or deadlift strength is the priority, limit intervals or place them well away from leg sessions.
 
-Cardio with lifting · Intermediate · Some support · Sources: [Sabag 2018](https://doi.org/10.1080/02640414.2018.1464636), [McDonald 2009e](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
+Cardio with lifting · Intermediate · Some support · Sources: [Sabag 2018](https://doi.org/10.1080/02640414.2018.1464636), [McDonald 2009k](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
 
 ### Training for a marathon or century: cut lifting to brief maintenance
 
@@ -423,7 +423,7 @@ The old account says lactic acid releases the protons that turn muscle acidic. A
 
 - Read a high lactate value as a sign of intensity. It is not a toxin to flush out.
 
-Methods and intensity zones · Intermediate · Thin evidence · Sources: [Robergs 2004](https://doi.org/10.1152/ajpregu.00114.2004), [McDonald 2009p](https://bodyrecomposition.com/training/endurance-training-method-3)
+Methods and intensity zones · Intermediate · Thin evidence · Sources: [Robergs 2004](https://doi.org/10.1152/ajpregu.00114.2004), [McDonald 2009ad](https://bodyrecomposition.com/training/endurance-training-method-3)
 
 ### Doing every session at the same moderately hard effort
 
@@ -434,7 +434,7 @@ Seiler and Tønnessen describe this as a typical error of recreational athletes.
 - Keep easy days slow enough to talk in full sentences.
 - Make hard days clearly hard, and keep them to one or two a week.
 
-Methods and intensity zones · Intermediate · Thin evidence · Sources: [Seiler 2009](https://www.sportsci.org/2009/ss.htm), [McDonald 2009m](https://bodyrecomposition.com/training/endurance-training-method-2)
+Methods and intensity zones · Intermediate · Thin evidence · Sources: [Seiler 2009](https://www.sportsci.org/2009/ss.htm), [McDonald 2009aa](https://bodyrecomposition.com/training/endurance-training-method-2)
 
 ### Treating 4 mmol/L of lactate as everyone's threshold
 
@@ -444,7 +444,7 @@ The maximal lactate steady state is the highest workload at which blood lactate 
 
 - Set threshold from a timed effort or from a test that tracks your own lactate curve.
 
-Methods and intensity zones · Advanced · Some support · Sources: [Billat 2003](https://doi.org/10.2165/00007256-200333060-00003), [McDonald 2009p](https://bodyrecomposition.com/training/endurance-training-method-3)
+Methods and intensity zones · Advanced · Some support · Sources: [Billat 2003](https://doi.org/10.2165/00007256-200333060-00003), [McDonald 2009ad](https://bodyrecomposition.com/training/endurance-training-method-3)
 
 ### Pacing short intervals by heart rate
 
@@ -455,7 +455,7 @@ Heart rate climbs slowly after effort changes and needs a few minutes to settle.
 - Use pace, power or an even hard effort for work bouts under about two minutes.
 - End the session when you can no longer hold your target pace or power.
 
-Intervals and HIIT · Intermediate · Coaching practice · Sources: [McDonald 2009q](https://bodyrecomposition.com/training/endurance-training-method-4-part-1)
+Intervals and HIIT · Intermediate · Coaching practice · Sources: [McDonald 2009ae](https://bodyrecomposition.com/training/endurance-training-method-4-part-1)
 
 ### Running too much, too soon
 
@@ -466,7 +466,7 @@ A meta-analysis of prospective studies put injuries at 17.8 per 1,000 hours of r
 - Alternate walking and jogging for the first weeks.
 - Use a bike, rower or brisk walk for extra sessions while your legs adapt.
 
-Starting out · Beginner · Some support · Sources: [Videbæk 2015](https://doi.org/10.1007/s40279-015-0333-8), [McDonald 2009m](https://bodyrecomposition.com/training/endurance-training-method-2), [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
+Starting out · Beginner · Some support · Sources: [Videbæk 2015](https://doi.org/10.1007/s40279-015-0333-8), [McDonald 2009aa](https://bodyrecomposition.com/training/endurance-training-method-2), [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
 
 ### Staying in the 'fat-burning zone' to lose more fat
 
@@ -476,7 +476,7 @@ The idea rests on fuel mix: at low effort a larger fraction of energy comes from
 
 - Judge a cardio session by total energy burned and by how well you recover from it.
 
-Cardio for fat loss · Beginner · Thin evidence · Sources: [Melanson 2002](https://doi.org/10.1152/japplphysiol.00706.2001), [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
+Cardio for fat loss · Beginner · Thin evidence · Sources: [Melanson 2002](https://doi.org/10.1152/japplphysiol.00706.2001), [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together)
 
 ### Picking the workout with the bigger afterburn percentage
 
@@ -486,7 +486,7 @@ The error is the same as the fat-burning zone: it compares shares and ignores to
 
 - Compare sessions by total energy for the time you really have.
 
-Calories, EPOC and efficiency · Beginner · Some support · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [McDonald 2008s](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application), [McDonald 2008r](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Calories, EPOC and efficiency · Beginner · Some support · Sources: [LaForgia 2006](https://doi.org/10.1080/02640410600552064), [McDonald 2008ab](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application), [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ### Calling any 20-seconds-on, 10-seconds-off circuit a Tabata
 
@@ -497,7 +497,7 @@ In the 1996 study, seven subjects did seven to eight 20-second bouts at about 17
 - Use the 20/10 timer if you enjoy it, without expecting the study's results from light circuits.
 - Do all-out intervals on a bike, rower or similar low-skill machine.
 
-Intervals and HIIT · Intermediate · Thin evidence · Sources: [Tabata 1996](https://doi.org/10.1097/00005768-199610000-00018), [McDonald 2009h](https://bodyrecomposition.com/research/the-tabata-protocol)
+Intervals and HIIT · Intermediate · Thin evidence · Sources: [Tabata 1996](https://doi.org/10.1097/00005768-199610000-00018), [McDonald 2009n](https://bodyrecomposition.com/research/the-tabata-protocol)
 
 ### Adding intervals on top of two or three hard leg sessions
 
@@ -508,7 +508,7 @@ Lyle McDonald points out that interval studies test people who are not lifting a
 - Count each interval session as a leg session when you plan the week.
 - Keep bar weight and cut sets if you make room for intervals.
 
-Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008r](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit), [McDonald 2008t](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
+Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit), [McDonald 2008ac](https://bodyrecomposition.com/training/steady-state-vs-intervals-summary)
 
 ### Thinking a night's sleep empties muscle glycogen
 
@@ -528,7 +528,7 @@ The claim is that the body adapts to steady cardio and soon burns far fewer calo
 
 - Raise speed, incline or resistance when your usual session starts to feel easy.
 
-Calories, EPOC and efficiency · Beginner · Thin evidence · Sources: [Hopker 2009](https://doi.org/10.1055/s-0029-1237712), [McDonald 2008k](https://bodyrecomposition.com/fat-loss/exercise-efficiency)
+Calories, EPOC and efficiency · Beginner · Thin evidence · Sources: [Hopker 2009](https://doi.org/10.1055/s-0029-1237712), [McDonald 2008m](https://bodyrecomposition.com/fat-loss/exercise-efficiency)
 
 ### Rewarding a workout with more food than it burned
 
@@ -539,7 +539,7 @@ Lyle McDonald describes a common trap. Someone guesses that an hour of moderate 
 - Assume a session burned less than the display says.
 - Keep meals on plan on training days unless your weight trend says otherwise.
 
-Cardio for fat loss · Beginner · Coaching practice · Sources: [O’Driscoll 2020](https://doi.org/10.1136/bjsports-2018-099643), [McDonald 2010c](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
+Cardio for fat loss · Beginner · Coaching practice · Sources: [O’Driscoll 2020](https://doi.org/10.1136/bjsports-2018-099643), [McDonald 2010e](https://bodyrecomposition.com/fat-loss/exercise-weight-and-fat-loss)
 
 ### Running all-out sprints with no preparation
 
@@ -550,7 +550,7 @@ Lyle McDonald warns lifters against going to a track, jogging for a few minutes 
 - Build up over weeks with sub-maximal runs before any all-out sprint.
 - Use a bike or a hill for hard efforts if you have not trained to sprint.
 
-Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016k](https://bodyrecomposition.com/training/what-is-sprint-training)
+Sprint and speed work · Beginner · Thin evidence · Sources: [Haugen 2019](https://doi.org/10.1186/s40798-019-0221-0), [McDonald 2016v](https://bodyrecomposition.com/training/what-is-sprint-training)
 
 ### Choosing sprints over steady cardio to look like a sprinter
 
@@ -560,7 +560,7 @@ The argument compares a muscular sprinter with a thin marathon runner and credit
 
 - Lift to build muscle, and pick cardio for fitness, energy use and recovery.
 
-Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016i](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
+Sprint and speed work · Beginner · Some support · Sources: [Wilson 2012](https://doi.org/10.1519/jsc.0b013e31823a3e2d), [McDonald 2016r](https://bodyrecomposition.com/training/sprinters-endurance-athletes-again)
 
 ### Going from no cardio to a lot of hard cardio when a diet starts
 
@@ -571,7 +571,7 @@ Many lifters do no cardio at all in the off-season and then begin a diet with lo
 - Keep a base of easy cardio year-round.
 - Add cardio in small steps across the first weeks of a diet.
 
-Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2009e](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
+Cardio with lifting · Intermediate · Coaching practice · Sources: [McDonald 2009k](https://bodyrecomposition.com/muscle-gain/cardio-for-mass-gains)
 
 ### Making a beginner's first session as hard as possible
 
@@ -620,12 +620,12 @@ Starting out · Beginner · Coaching practice · Sources: [McDonald 2014w](https
 
 | Number | What it is | Support | Sources |
 |---|---|---|---|
-| 95 % of best 20-min power | Threshold power estimated from a 20-minute effort: Cycling convention as McDonald describes it. A scoping review found the 20-minute test reliable but not interchangeable with lab markers. | Coaching practice | [Mackey 2021](https://doi.org/10.1080/02640414.2021.1955515), [McDonald 2009u](https://bodyrecomposition.com/training/determinants-endurance-performance) |
+| 95 % of best 20-min power | Threshold power estimated from a 20-minute effort: Cycling convention as McDonald describes it. A scoping review found the 20-minute test reliable but not interchangeable with lab markers. | Coaching practice | [Mackey 2021](https://doi.org/10.1080/02640414.2021.1955515), [McDonald 2009ai](https://bodyrecomposition.com/training/determinants-endurance-performance) |
 | 80 % of sessions | Share of elite endurance sessions done at low intensity: Typical in studies of athletes training 10 to 13 times a week. The other 20% is dominated by hard work such as intervals. | Some support | [Seiler 2010](https://doi.org/10.1123/ijspp.5.3.276) |
-| 2 sessions per week | Ceiling for hard interval sessions: McDonald's upper limit for most people, and for anyone who also lifts or is dieting. Runners rarely tolerate more because of impact. | Coaching practice | [McDonald 2009q](https://bodyrecomposition.com/training/endurance-training-method-4-part-1), [McDonald 2009s](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together) |
+| 2 sessions per week | Ceiling for hard interval sessions: McDonald's upper limit for most people, and for anyone who also lifts or is dieting. Runners rarely tolerate more because of impact. | Coaching practice | [McDonald 2009ae](https://bodyrecomposition.com/training/endurance-training-method-4-part-1), [McDonald 2009ag](https://bodyrecomposition.com/training/endurance-training-methods-putting-it-together) |
 | 17.8 per 1,000 h of running | Injuries in novice runners: Pooled rate in novice runners, against 7.7 in recreational runners, from a meta-analysis of prospective studies. | Well supported | [Videbæk 2015](https://doi.org/10.1007/s40279-015-0333-8) |
 | 6-15 % of session energy | EPOC as a share of the session's energy cost: Share of the exercise's net oxygen cost, even after sessions hard or long enough to keep metabolism raised for hours. | Some support | [LaForgia 2006](https://doi.org/10.1080/02640410600552064) |
-| about 1 kcal per kJ of work | Energy burned per kilojoule of work on a bike power meter: Rule of thumb from McDonald: at 20 to 25% efficiency the body burns 4 to 5 times the work done, which roughly cancels the 4.2 kJ in a kcal. | Coaching practice | [McDonald 2008s](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application) |
+| about 1 kcal per kJ of work | Energy burned per kilojoule of work on a bike power meter: Rule of thumb from McDonald: at 20 to 25% efficiency the body burns 4 to 5 times the work done, which roughly cancels the 4.2 kJ in a kcal. | Coaching practice | [McDonald 2008ab](https://bodyrecomposition.com/fat-loss/ss-vs-hiit-epoc-application) |
 | 2 sessions per week | Sessions a week that held endurance fitness: In general populations endurance was maintained for up to 15 weeks on two sessions a week, or with volume cut 33 to 66%, if intensity stayed the same. | Some support | [Spiering 2021](https://doi.org/10.1519/jsc.0000000000003964) |
 | 20 min, 3 times a week | First cardio target for a very unfit beginner: McDonald's first goalpost: continuous, at any pace. Effort is raised only once this has become routine. | Coaching practice | [McDonald 2014x](https://bodyrecomposition.com/fat-loss/training-the-obese-beginner-6) |
 
@@ -640,7 +640,7 @@ Measured in 20 highly trained runners on a treadmill. Even a 400 m race drew mor
 | 800 m | 66% | 5 |
 | 1500 m | 84% | 6 |
 
-Thin evidence · Sources: [Spencer 2001](https://doi.org/10.1097/00005768-200101000-00024), [McDonald 2009n](https://bodyrecomposition.com/training/guide-to-endurance-training-methods)
+Thin evidence · Sources: [Spencer 2001](https://doi.org/10.1097/00005768-200101000-00024), [McDonald 2009ab](https://bodyrecomposition.com/training/guide-to-endurance-training-methods)
 
 ## The five-zone intensity scale used in Norwegian endurance sport
 
@@ -711,7 +711,7 @@ Checks drawn from McDonald's articles on interval training. If several fail, sta
 - First repeat paced so the last can match it
 - Session ends when pace or power falls by about a tenth
 
-Coaching practice · Sources: [McDonald 2009q](https://bodyrecomposition.com/training/endurance-training-method-4-part-1), [McDonald 2009r](https://bodyrecomposition.com/training/endurance-training-method-4-part-2), [McDonald 2008r](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
+Coaching practice · Sources: [McDonald 2009ae](https://bodyrecomposition.com/training/endurance-training-method-4-part-1), [McDonald 2009af](https://bodyrecomposition.com/training/endurance-training-method-4-part-2), [McDonald 2008aa](https://bodyrecomposition.com/fat-loss/steady-state-and-hiit)
 
 ## First month for a very unfit beginner
 
