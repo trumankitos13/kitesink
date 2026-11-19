@@ -15,6 +15,22 @@ the owner closes items. Newest first within each section.
 - [ ] Admin retainer: now, later or never
 - [ ] Briefing pipeline: scheduled task, page and email
 
+## From batch 1 (mechanicals and the MLC, 2026-11-19)
+
+- [ ] Is the Cornell LII mirror acceptable as the cited text of 37 CFR 385 and 210? (ecfr.gov
+      cannot be read automatically.) Check eCFR currency before publishing
+- [ ] The 2027 cost-of-living notice for mechanical rates is due by about 7 December 2026:
+      update the rate numbers when it is published
+- [ ] Phonorecords V: recheck the docket before publishing (decision on the Subpart B partial
+      settlement pending; a subpoena motion on the MLC had responses due 23 November 2026)
+- [ ] MLC pages disagree with each other: works count (55M on the tools page, 53M in the June
+      2026 one-sheet, 60M+ in the September 2026 release) and the first historical
+      distribution month (May or June 2022). Entries use dated snapshots for now
+- [ ] Copyright Office decision continuing the MLC's designation (June 2026): not read, so
+      no entry covers it yet
+- [ ] Circular 73 is revised 01/2018, before the Music Modernization Act: not used for rates
+      or the blanket-licence process
+
 ## Checks by hand (sites that block automated reading)
 
 - [ ] Login needed or not: ASCAP ACE, BMI Repertoire, SoundExchange unregistered search,
