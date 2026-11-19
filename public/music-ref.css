@@ -1,0 +1,48 @@
+/* ===================== KiteSink — music field guide styles =====================
+   Loaded by the pages under /music/ (<body class="… fr mr">), after /ks.css and /fitness.css.
+   The lists, the page frame and the navigation come from /fitness.css unchanged; this file
+   only adds what the music guide has and the fitness guide does not: the two grade labels,
+   the "as of" dates, the facts line (reader, territory, grade), the release-order index and
+   the note under the territory filter. /fitness.css is never edited for music.
+   ==================================================================================== */
+
+/* the two labels a reader sees; the finer grade is in data-grade and the tooltip */
+.mr .tg-sourced { border-color: transparent; color: var(--k-green); background: color-mix(in srgb, var(--k-green) 14%, transparent); }
+.mr .tg-directional { border-color: var(--k-brass-fill); border-style: dashed; color: var(--k-brass); background: transparent; }
+.mr .tg-step { border-color: var(--k-green); color: var(--k-green); }
+.mr .tg-asof { border-color: var(--k-rule-strong); color: var(--k-copy); background: var(--k-tint); }
+
+/* who, where, how graded, as of: one line under an entry's body */
+.g-facts { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; font: 500 12px/1.6 var(--k-mono); color: var(--k-copy); }
+.g-facts b { margin-right: 5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 10.5px; color: var(--k-mute); }
+.rt > .g-facts, .ck > .g-facts { margin: 8px 0 6px; }
+.rt > .tg-asof, .ck > .tg-asof { margin-left: 6px; }
+.k-qa-body .g-facts { margin-top: 2px; }
+
+.fx-note { margin: 2px 0 0; font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); max-width: 32ch; }
+
+/* key numbers: the date each figure was true, and where it applies */
+.nx td > .nx-asof, .nx td > .nx-where { display: inline-block; margin: 6px 12px 0 0; font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); }
+.nx td > .nx-asof { color: var(--k-brass); }
+.ix-a { font: 500 12px/1.5 var(--k-mono); color: var(--k-copy); white-space: nowrap; }
+@media (max-width: 760px) {
+  .ix tbody td.ix-a { display: inline; margin: 0 8px 0 0; padding: 0; } .ix tbody td.ix-a:empty { display: none; }
+  .mr .ix tbody td.nx-d { white-space: normal; }   /* music area names are longer than fitness's: let them wrap on a phone */
+}
+
+/* an area's steps in release order: an index that links down to each step in the list */
+.mr-order { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.mr-phase { display: grid; gap: 4px 30px; padding: 14px 0 12px; border-top: 2px solid var(--k-ink); }
+@media (min-width: 860px) { .mr-phase { grid-template-columns: 200px minmax(0, 1fr); } }
+.mr-when { margin: 0; padding-top: 10px; font: 800 clamp(18px, 2.2vw, 21px)/1.15 var(--k-sans); letter-spacing: -.03em; color: var(--k-green); }
+.mr-phase ol { margin: 0; padding: 0; list-style: none; counter-reset: st; }
+.mr-phase li { counter-increment: st; }
+.mr-phase a { display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: center; min-height: 44px; padding: 6px 2px; border-bottom: 1px solid var(--k-rule);
+  font: 600 15px/1.35 var(--k-sans); letter-spacing: -.01em; color: var(--k-ink); text-decoration: none; }
+.mr-phase li:last-child a { border-bottom: 0; }
+.mr-phase a::before { content: counter(st); font: 500 11.5px/1 var(--k-mono); color: var(--k-mute); }
+.mr-phase a:hover { color: var(--k-green); }
+
+/* the sources page: each label over the two grades it covers */
+.mr-lg dd.mr-grade { padding-left: 12px; border-left: 2px solid var(--k-rule); }
+.mr-lg dd.mr-grade b { color: var(--k-ink); font-weight: 600; }

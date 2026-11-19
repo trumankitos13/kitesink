@@ -193,7 +193,7 @@ def surname(author):
 def short_body(name):
     """A long organisation name becomes its initials: 'United States Copyright Office' -> 'USCO'."""
     if len(name) > 24:
-        return "".join(w[0] for w in re.findall(r"[A-Z][a-z]+|[A-Z]{2,}", name)) or name[:24]
+        return "".join(w if w.isupper() else w[0] for w in re.findall(r"[A-Z][a-z]+|[A-Z]{2,}", name)) or name[:24]
     return name
 
 
@@ -252,6 +252,8 @@ class Library:
             elif s.get("type") == "ruling":
                 case = re.split(r",|\(", s.get("title", ""))[0].strip()
                 first = case if 0 < len(case) <= 32 else short_body(s.get("court") or s.get("publisher") or "Court")
+            elif s.get("type") in ("statute", "regulation") and 0 < len(s.get("edition", "")) <= 24:
+                first = s["edition"]          # '17 USC 115', '37 CFR 385.11'
             else:
                 first = short_body(s.get("publisher") or s.get("site") or "Anon")
             label = self.overrides.get(k) or s.get("label") or f"{first} {year_of(s)}"
