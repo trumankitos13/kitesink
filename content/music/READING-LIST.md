@@ -1,6 +1,6 @@
 # Music field guide: reading list
 
-**Status: PROPOSED (2026-11-19). A batch starts only once the owner approves its list.**
+**Status: batches 1 and 2 approved by the owner 2026-11-19. A later batch starts only once the owner approves its list.**
 
 Batches follow the master plan's phases. Each batch is about 15 to 20 long sources. Primary
 sources first; trade press only where no primary source exists, and graded `reported`.
@@ -8,7 +8,7 @@ sources first; trade press only where no primary source exists, and graded `repo
 which stays outside the repository: it is uploaded to the session for the overlap check and
 cited by its public URL where one exists.
 
-## Batch 1: mechanicals and the MLC (phase 1) — PROPOSED
+## Batch 1: mechanicals and the MLC (phase 1) — APPROVED 2026-11-19
 
 Target: ~30 entries in `mechanicals-mlc.json`, plus the first rows for `/music/claimable`.
 
@@ -33,7 +33,7 @@ Target: ~30 entries in `mechanicals-mlc.json`, plus the first rows for `/music/c
 | 17 | MLC: DSP audit programme | collective | https://www.themlc.com/audits-dsp |
 | 18 | HFA help: Songfile and the public search | collective | https://help.harryfox.com/does-hfa-have-a-public-database-search-what-happened-to-the-songfile-public-search |
 
-## Batch 2: unclaimed money and royalty basics (phase 1) — PROPOSED
+## Batch 2: unclaimed money and royalty basics (phase 1) — APPROVED 2026-11-19
 
 Target: ~25 entries in `unclaimed-recovery.json`, ~35 in `royalty-basics.json` (may split
 into two batches), and the remaining `/music/claimable` rows.

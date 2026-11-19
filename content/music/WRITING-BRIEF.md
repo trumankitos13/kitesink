@@ -1,6 +1,6 @@
 # Music field guide: how to write an entry
 
-**Status: DRAFT for the owner's approval (2026-11-19). No entries are written until it is approved.**
+**Status: approved by the owner 2026-11-19.**
 
 The data behind kitesink.com/music will live in this folder: one JSON file per area and
 `claims.json`. `scripts/build_music.py` (a fork of `scripts/build_fitness.py`, still to be
@@ -167,11 +167,16 @@ MIDiA, IFPI, Luminate, BPI) are always `reported`.
 
 ## Validate before you report
 
-Still to be built in setup (see the pull request): `python3 scripts/validate_music.py
-content/music/<file>.json` (schema, lengths, enums, `as_of` where required, every URL
-opens or is flagged), `python3 scripts/check_overlap.py <file> <private-corpus-dir>` (8-word
-runs are errors, 6-word runs are reviewed; the corpus stays outside the repository), then
-`python3 scripts/build_music.py`. Fix every ERROR. Read the warnings.
+1. `python3 scripts/validate_music.py content/music/<file>.json`: schema, lengths, enums,
+   `as_of` where something moves, the standing corrections, and that every source URL opens
+   (a blocked URL is a warning for the owner to check by hand).
+2. `python3 scripts/check_overlap.py content/music/<file>.json --corpus <private-dir>`: 8-word
+   runs in common with the private corpus are errors, 6-word runs are reviewed. Quoted text is
+   left out of the check. The corpus stays outside the repository.
+3. `python3 scripts/build_music.py`, once it exists.
+
+Fix every ERROR. Read the warnings. Work in passes: write a few entries, validate, fix,
+continue.
 
 Anything that only the owner can decide goes in `HOLDS.md`. Any change to an entry from an
 earlier batch goes in `PROPOSED-REVISIONS.md`, never into the entry itself.

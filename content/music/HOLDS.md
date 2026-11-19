@@ -5,8 +5,8 @@ the owner closes items. Newest first within each section.
 
 ## Decisions
 
-- [ ] Approve `WRITING-BRIEF.md` (draft 2026-11-19)
-- [ ] Approve the batch 1 reading list in `READING-LIST.md`
+- [x] Approve `WRITING-BRIEF.md` (approved 2026-11-19)
+- [x] Approve the batch 1 and 2 reading lists in `READING-LIST.md` (approved 2026-11-19)
 - [ ] Scope line wording for every page
 - [ ] Hero H1 wording
 - [ ] Employer check: gates the paid audit, the music consult call to action and any retainer
