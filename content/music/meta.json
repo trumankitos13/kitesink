@@ -1,0 +1,28 @@
+{
+  "updated": "2026-11-19",
+  "updated_label": "19 November 2026",
+  "scope_line": "General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer.",
+  "scope_line_status": "Placeholder: the wording is held for the owner (content/music/HOLDS.md, 'Scope line wording for every page'). Change it here; every page and twin picks it up on the next build.",
+  "labels": {},
+  "source_keys": {},
+  "tools": [
+    {
+      "title": "Claimable royalties",
+      "blurb": "Where unclaimed money is held, by body and territory, and how each one is searched and claimed.",
+      "href": "/music/claimable",
+      "live": false
+    },
+    {
+      "title": "AI tools directory",
+      "blurb": "AI tools that touch music rights, with what each one does with your files and your data.",
+      "href": "/music/ai-tools",
+      "live": false
+    },
+    {
+      "title": "For music teams",
+      "blurb": "Workflow automation and practical AI for labels, publishers and artist teams.",
+      "href": "/consulting",
+      "live": true
+    }
+  ]
+}

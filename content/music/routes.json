@@ -1,0 +1,172 @@
+{
+  "routes": [
+    {
+      "slug": "royalty-basics",
+      "kind": "area",
+      "area": "royalty-basics",
+      "title": "Royalty basics: the two copyrights in a song and what each earns · KiteSink Music",
+      "description": "Sourced notes on how music earns money: the composition and the recording, the royalty streams each one earns, who collects them and who pays.",
+      "h1": "Two copyrights, <em>several kinds of royalty.</em>",
+      "lead": "How a song earns money: the composition and the recording, the royalty streams each one creates, and who collects and pays them."
+    },
+    {
+      "slug": "pros-performance",
+      "kind": "area",
+      "area": "pros-performance",
+      "title": "Performance royalties and PROs: how plays become writer pay · KiteSink Music",
+      "description": "Sourced notes on public performance royalties: what a PRO does, registering works, the writer and publisher shares, and how radio, live and streaming plays are paid.",
+      "h1": "Performance royalties, <em>from play to payment.</em>",
+      "lead": "What a performing rights organisation does, how a work is registered, how the writer and publisher shares split, and how plays turn into statements."
+    },
+    {
+      "slug": "mechanicals-mlc",
+      "kind": "area",
+      "area": "mechanicals-mlc",
+      "title": "Mechanical royalties and the MLC: rates, registration and unclaimed money · KiteSink Music",
+      "description": "Sourced notes on mechanical royalties: the US statutory rates, the Mechanical Licensing Collective, registering and matching works, and unclaimed royalties.",
+      "h1": "Mechanicals and <em>the MLC.</em>",
+      "lead": "Mechanical royalties for reproducing a song, the US statutory rates, how the Mechanical Licensing Collective matches and pays, and what to do about unclaimed money."
+    },
+    {
+      "slug": "recorded-neighboring",
+      "kind": "area",
+      "area": "recorded-neighboring",
+      "title": "Recordings and neighbouring rights: SoundExchange, PPL and performer pay · KiteSink Music",
+      "description": "Sourced notes on the money a sound recording earns: digital performance royalties, neighbouring rights outside the US, and the performer and owner shares.",
+      "h1": "The recording's own money, <em>and who collects it.</em>",
+      "lead": "What a sound recording earns on its own: digital radio in the US, neighbouring rights elsewhere, the owner and performer shares, and how to register for them."
+    },
+    {
+      "slug": "deal-structures",
+      "kind": "area",
+      "area": "deal-structures",
+      "title": "Music deal structures: publishing, admin, label and distribution deals · KiteSink Music",
+      "description": "Sourced notes on the deals behind music income: publishing, co-publishing and admin deals, label and distribution deals, and what each one takes and for how long.",
+      "h1": "Deals, <em>and what each one takes.</em>",
+      "lead": "Publishing, co-publishing and administration deals, label and distribution deals: what each covers, what share it takes, and for how long. Not legal advice."
+    },
+    {
+      "slug": "metadata-registration",
+      "kind": "area",
+      "area": "metadata-registration",
+      "title": "Music metadata and registration: ISWC, ISRC, IPI and splits · KiteSink Music",
+      "description": "Sourced notes on the identifiers and registrations that route royalties: ISWC, ISRC, IPI, split sheets, and the registrations each collecting body needs.",
+      "h1": "Metadata, <em>the routing for the money.</em>",
+      "lead": "The codes and registrations that decide where royalties go: ISWC, ISRC and IPI, split sheets, and what each collecting body needs to match a work."
+    },
+    {
+      "slug": "international-societies",
+      "kind": "area",
+      "area": "international-societies",
+      "title": "International collecting societies: royalties earned outside your home country · KiteSink Music",
+      "description": "Sourced notes on collecting outside your home territory: reciprocal agreements between societies, sub-publishing, and what reaches a writer from abroad.",
+      "h1": "Money from abroad, <em>and the long way home.</em>",
+      "lead": "How royalties earned in another country reach you: reciprocal society agreements, sub-publishing, the deductions on the way, and the delays."
+    },
+    {
+      "slug": "sync-licensing",
+      "kind": "area",
+      "area": "sync-licensing",
+      "title": "Sync licensing: music in film, TV, games and adverts · KiteSink Music",
+      "description": "Sourced notes on sync licensing: the two licences a placement needs, how fees are set, the cue sheet, and the performance royalties that follow.",
+      "h1": "Sync: music <em>with pictures.</em>",
+      "lead": "Licensing music for film, television, games and adverts: the two licences a placement needs, how fees are agreed, cue sheets, and the royalties that follow."
+    },
+    {
+      "slug": "unclaimed-recovery",
+      "kind": "area",
+      "area": "unclaimed-recovery",
+      "title": "Unclaimed royalties: finding and claiming money that was never matched · KiteSink Music",
+      "description": "Sourced notes on unclaimed royalties: why money goes unmatched, where it is held, how to search and claim it, and what happens to it if nobody does.",
+      "h1": "Unclaimed money, <em>and how to claim it.</em>",
+      "lead": "Why royalties go unmatched, which bodies hold them, how to search and claim, and what happens to money that nobody claims in time."
+    },
+    {
+      "slug": "audits",
+      "kind": "area",
+      "area": "audits",
+      "title": "Royalty audits: checking statements and auditing the payer · KiteSink Music",
+      "description": "Sourced notes on royalty audits: reading a statement, the audit rights in a deal or in law, what audits commonly find, and the time limits that apply.",
+      "h1": "Audits: <em>checking the payer's sums.</em>",
+      "lead": "Reading a royalty statement, the audit rights a deal or the law gives you, what audits tend to find, and the time limits on raising a dispute."
+    },
+    {
+      "slug": "copyright-fundamentals",
+      "kind": "area",
+      "area": "copyright-fundamentals",
+      "title": "Copyright fundamentals for music: ownership, registration, terms and termination · KiteSink Music",
+      "description": "Sourced notes on music copyright: what is protected, who owns it, registration, how long it lasts, works made for hire, and getting rights back by termination.",
+      "h1": "Copyright, <em>the ground everything stands on.</em>",
+      "lead": "What copyright protects in music, who owns it, why registration matters, how long it lasts, and how rights can come back to the author. Not legal advice."
+    },
+    {
+      "slug": "ai-rights",
+      "kind": "area",
+      "area": "ai-rights",
+      "title": "AI and music rights: training, outputs, likeness and the cases so far · KiteSink Music",
+      "description": "Sourced notes on AI and music rights: training on recordings and songs, who owns an AI-assisted work, voice and likeness, licensing deals, and the court cases so far.",
+      "h1": "AI and music rights, <em>dated and sourced.</em>",
+      "lead": "Training on songs and recordings, who owns AI-assisted work, voice and likeness rights, licensing deals, and the cases and rules so far, each with its date."
+    },
+    {
+      "slug": "producer-royalties",
+      "kind": "area",
+      "area": "producer-royalties",
+      "title": "Producer royalties: points, letters of direction and SoundExchange · KiteSink Music",
+      "description": "Sourced notes on how record producers are paid: fees and points, recoupment, letters of direction to SoundExchange, and publishing shares for producers who write.",
+      "h1": "Producer pay, <em>point by point.</em>",
+      "lead": "How producers are paid: the fee and the points, recoupment, a letter of direction for SoundExchange, and when a producer also earns as a writer."
+    },
+    {
+      "slug": "distribution-dsps",
+      "kind": "area",
+      "area": "distribution-dsps",
+      "title": "Music distribution and streaming services: getting released and getting paid · KiteSink Music",
+      "description": "Sourced notes on distribution and streaming services: what a distributor does, delivery and metadata, how streaming services pay, and the policies that change payouts.",
+      "h1": "Distribution and <em>the streaming services.</em>",
+      "lead": "What a distributor does, what a release needs to be delivered, how the streaming services calculate and pay royalties, and the policies that change payouts."
+    },
+    {
+      "slug": "catalog-finance",
+      "kind": "area",
+      "area": "catalog-finance",
+      "title": "Catalogue finance: valuing, selling and borrowing against music rights · KiteSink Music",
+      "description": "Sourced notes on music catalogue finance: how catalogues are valued, what a sale or an advance involves, royalty-backed loans, and the figures reported so far.",
+      "h1": "Catalogues, <em>as assets.</em>",
+      "lead": "How a music catalogue is valued, what selling it or borrowing against it involves, and what the reported market figures do and do not show."
+    },
+    {
+      "slug": "claims",
+      "kind": "claims",
+      "title": "Music business claims, checked against the sources · KiteSink",
+      "description": "{{n:claims}} common claims about royalties, rights and the music business, each with a verdict, what the answer rests on, and the source. Filter by area, verdict, topic, reader or territory.",
+      "h1": "{{n:claims}} things <em>people say.</em>",
+      "lead": "Common claims about royalties, rights and deals. Each has a verdict, what the answer rests on, and its source. Open one to read it."
+    },
+    {
+      "slug": "glossary",
+      "kind": "glossary",
+      "title": "Music business glossary: royalty and rights terms in plain words · KiteSink",
+      "description": "{{n:terms}} music rights and royalty terms defined in plain words, from mechanical and PRO to ISWC and letter of direction. Search, or narrow by area.",
+      "h1": "{{n:terms}} terms, <em>in plain words.</em>",
+      "lead": "Every term the music field guide uses, defined once. Search, or narrow by area."
+    },
+    {
+      "slug": "reference",
+      "kind": "reference",
+      "label": "Numbers and tables",
+      "title": "Music key numbers and reference tables, indexed · KiteSink",
+      "description": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables in the KiteSink music field guide, each dated and linked to the page that holds it with its sources.",
+      "h1": "Numbers and tables, <em>indexed.</em>",
+      "lead": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables. Each number carries the date it was true, and links to the page that holds it with its sources."
+    },
+    {
+      "slug": "sources",
+      "kind": "sources",
+      "title": "Music sources and grading · KiteSink",
+      "description": "How the KiteSink music field guide grades its entries, and all {{n:sources}} sources it cites: statutes, regulations, rulings, collecting bodies, standards and articles.",
+      "h1": "Where this <em>comes from.</em>",
+      "lead": "How entries are graded and all {{n:sources}} sources, from statutes and rulings to the collecting bodies' own documents. Last updated {{updated}}."
+    }
+  ]
+}
