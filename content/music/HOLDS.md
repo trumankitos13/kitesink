@@ -30,6 +30,10 @@ the owner closes items. Newest first within each section.
       no entry covers it yet
 - [ ] Circular 73 is revised 01/2018, before the Music Modernization Act: not used for rates
       or the blanket-licence process
+- [ ] Grading policy (from the batch 1 review): an entry that rests partly on a Copyright
+      Office, MLC or docket page is graded `official`, not `law`, even when a statute is also
+      cited. Batch 1 is 16 law, 27 official on that reading. Confirm, or say if a statute plus
+      an agency explainer should count as `law`
 
 ## Checks by hand (sites that block automated reading)
 
