@@ -49,12 +49,11 @@
       "territory": [
         "US"
       ],
-      "confidence": "official",
+      "confidence": "law",
       "sources": [
-        "circ-73",
         "usc-115"
       ],
-      "take": "A US legal route to record and distribute a version of a published song without the owner's agreement, if you meet the conditions and pay the statutory rate."
+      "take": "A US legal route to record and distribute your own version of a song once recordings of it have been released in the US with the owner's permission. You must meet the conditions and pay the statutory rate."
     },
     {
       "id": "mech-phonorecord-term",
@@ -72,9 +71,10 @@
       ],
       "confidence": "official",
       "sources": [
-        "circ-73"
+        "circ-73",
+        "usc-115"
       ],
-      "take": "A phonorecord is an object that holds recorded sound, such as vinyl or a CD. A DPD is a digital transmission that leaves the recipient with a specific copy, including a download or an on-demand stream."
+      "take": "A phonorecord is an object that holds recorded sound, such as vinyl or a CD. A DPD is a digital transmission that leaves the recipient with a specific copy: a permanent or limited download, or an on-demand stream."
     },
     {
       "id": "mech-noi-term",
@@ -110,12 +110,12 @@
       "territory": [
         "US"
       ],
-      "confidence": "law",
+      "confidence": "official",
       "sources": [
         "usc-115",
         "usco-mma-faq"
       ],
-      "take": "Since 1 January 2021, one license from the MLC lets a qualifying digital service make and distribute digital copies of all compulsory-eligible songs, in place of song-by-song notices.",
+      "take": "Since 1 January 2021, a qualifying digital service can get one license through the MLC that covers every song open to the compulsory license, in place of song-by-song notices.",
       "as_of": "2026-11-19"
     },
     {
@@ -163,10 +163,10 @@
       ],
       "when": "before-release",
       "take": "For a compulsory license on vinyl or CDs, serve an NOI on the owner before, or within 30 days after, making copies, and always before distributing any.",
-      "body": "The statute puts the notice before distribution. If the Copyright Office records name an owner and an address, serve that owner. If they do not, the notice is filed with the Office instead. Many releases use a licensing agent or a direct license rather than this route, and a mistake here can mean infringement, so involve a music lawyer if the situation is unusual.",
+      "body": "The statute puts the notice before distribution. If the Copyright Office records name an owner and an address, serve that owner. If they do not, the notice is filed with the Office instead. Missing the notice rules out the compulsory license, and without a voluntary (direct) license from the owner, making and selling the copies is infringement. Involve a music lawyer if the situation is unusual.",
       "do": [
         "Search the Copyright Office records for the owner before serving",
-        "Diary the 30-day outer limit and the pre-distribution rule"
+        "Note the 30-day outer limit and the rule to serve before distributing"
       ]
     },
     {
@@ -184,13 +184,13 @@
       "territory": [
         "US"
       ],
-      "confidence": "law",
+      "confidence": "official",
       "sources": [
         "usc-115",
         "usco-mma-faq"
       ],
       "take": "Since 2021 a digital service licenses US mechanicals from the MLC under a blanket license. Physical copies still use the song-by-song notice route.",
-      "body": "For digital phonorecord deliveries on or after the license availability date, 17 USC 115 sends a service to the blanket license process through the MLC. The Copyright Office FAQ adds that it no longer accepts NOIs for digital uses and that NOIs remain for non-digital uses such as CDs and vinyl. Direct deals can sit outside this route.",
+      "body": "For digital phonorecord deliveries on or after the license availability date, 17 USC 115 sends a service to the blanket license process through the MLC. The Copyright Office FAQ adds that it no longer accepts NOIs for digital uses and that NOIs remain for non-digital uses such as CDs and vinyl. The statute keeps one exception: a record company may still get an individual download license by notice. Direct deals can sit outside this route.",
       "do": [
         "Check which route a release uses before chasing a payment"
       ],
@@ -273,7 +273,7 @@
     {
       "id": "mech-note-long-tracks",
       "type": "note",
-      "title": "Past about five minutes, the per-minute rate sets the price of a track",
+      "title": "Past five minutes, the per-minute rate sets the price of a copy",
       "topic": "rates",
       "level": "intermediate",
       "readers": [
@@ -290,7 +290,7 @@
         "fr-2025-21695"
       ],
       "as_of": "2026-11-19",
-      "take": "The rate is the larger of a flat per-work amount and a per-minute amount, so long tracks cost more to license than short ones.",
+      "take": "For copies and downloads the rate is the larger of a flat amount and a per-minute amount, so a track over five minutes costs more per copy than a shorter one.",
       "body": "For 2026 the larger of two figures applies: a flat 13.1 cents, or 2.52 cents multiplied by the minutes, counting any part of a minute as a whole one. A track of exactly five minutes works out to 12.6 cents by the minute formula, so the 13.1 cent rate wins. A track of 5:01 counts as six minutes, which gives 15.12 cents. This is arithmetic on the published rates, not a separate rule.",
       "do": [
         "Round each track up to whole minutes before comparing the two amounts"
@@ -315,8 +315,8 @@
         "fr-2025-21695"
       ],
       "as_of": "2026-11-19",
-      "take": "The Judges publish a cost-of-living notice at least 25 days before 1 January. It ties the base rates to the change in CPI-U since November 2022.",
-      "body": "The 2026 notice used a CPI-U of 324.800 against a November 2022 base of 298.012. It gave 13.1 cents and 2.52 cents. The same notice records that the October 2025 index was affected by a lapse in appropriations. On the retrieval date the regulation text read showed 2026 figures only, so a 2027 figure has not been confirmed here.",
+      "take": "The Judges publish a cost-of-living notice at least 25 days before 1 January. It indexes base rates of 12 cents and 2.31 cents to the CPI-U published in November 2022.",
+      "body": "The 2026 notice used a CPI-U of 324.800 against the November 2022 base of 298.012, which gave 13.1 cents and 2.52 cents. It notes that the Bureau of Labor Statistics could not collect October 2025 data during a lapse in appropriations, so the index published on 24 October 2025 was used. On 19 November 2026 the regulation still showed the 2026 rate, so no 2027 figure is given here.",
       "do": [
         "Look for the next Federal Register notice from the Copyright Royalty Board in December"
       ]
@@ -462,7 +462,7 @@
       ],
       "as_of": "2026-11-19",
       "take": "Take the greater of the revenue and content-cost prongs, subtract performance royalties, apply any floor, then split the pool across plays.",
-      "body": "37 CFR 385.21(b) sets out the steps for each offering: the all-in royalty, the deduction of performance royalties the service pays, the payable pool after any floor, and the per-work share. The MLC does the last allocation. For splitting, a play of a track over five minutes counts extra: 1.2 plays for 5:01 to 6:00, rising to 1.8 for 8:01 to 9:00.",
+      "body": "37 CFR 385.21(b) sets out the steps for each offering: the all-in royalty, the deduction of performance royalties the service pays, the payable pool after any floor, and the per-work share. Mixed service bundles use the content-cost prong alone. The MLC does the last allocation. For that split only, a play of a track over five minutes counts extra: 1.2 plays for 5:01 to 6:00, plus 0.2 for each further minute or part of one.",
       "do": [
         "Read the regulation itself for any Offering-specific term"
       ]
@@ -508,7 +508,7 @@
         "usco-mma-faq",
         "usco-mlc-dlc"
       ],
-      "take": "The non-profit that represents licensed digital services. It sits as a non-voting member on the MLC board and can take part in Copyright Royalty Board proceedings on the administrative assessment."
+      "take": "The non-profit that represents licensed digital services. It names a non-voting member of the MLC board and can take part in Copyright Royalty Board proceedings that set the assessment funding the MLC."
     },
     {
       "id": "mech-note-mlc-funding",
@@ -526,14 +526,13 @@
       ],
       "confidence": "official",
       "sources": [
-        "mlc-audits"
+        "mlc-audits",
+        "usco-mma-faq"
       ],
       "as_of": "2026-11-19",
-      "take": "Digital services fund the MLC's operating budget through an assessment, so it does not deduct fees from the royalties it distributes.",
-      "body": "The MLC's own audits page says digital services fund its budget through an assessment that the Copyright Royalty Board sets, separate from the royalties they pay. It also says audit costs are not taken from royalties and that any additional royalties recovered by an audit go out in full. This is the MLC describing itself, so read the current statements for your own payments.",
-      "do": [
-        "Check your statement for adjustments that name an audit"
-      ]
+      "take": "The MLC says digital services fund its operating budget and that it takes no fees out of the mechanical royalties it pays.",
+      "body": "The MLC's audits page says its budget is paid by an assessment that the Copyright Royalty Board sets, separate from the royalties the services owe, and that it deducts no fees from royalties. The Copyright Office FAQ also names voluntary contributions from the services. This is how the MLC describes itself, so check your own statements.",
+      "do": []
     },
     {
       "id": "mech-table-mlc-snapshots",
@@ -552,39 +551,52 @@
       "confidence": "official",
       "sources": [
         "mlc-market-share",
+        "mlc-tools",
         "mlc-pr-2026-09"
       ],
-      "as_of": "2026-09-30",
-      "take": "The MLC's own pages give different totals because they were written at different times. Cite the source and date with any figure.",
+      "as_of": "2026-11-19",
+      "take": "The MLC's own pages give different totals because they were written at different times. Its tools page still says 55 million works. Cite the source and date with any figure.",
       "columns": [
         "Measure",
         "June 2026 one-sheet",
+        "Tools page, read 19 Nov 2026",
         "September 2026 release"
       ],
       "rows": [
         [
           "Members",
           "More than 85,000",
+          "Not stated",
           "More than 100,000"
         ],
         [
           "Works in public database",
           "More than 53 million",
+          "More than 55 million",
           "More than 60 million"
         ],
         [
           "Match rate",
           "Average of nearly 92%",
+          "Not stated",
           "Current rate above 92%"
         ],
         [
-          "Royalties",
-          "Over $4 billion processed",
-          "Over $4.2 billion distributed"
+          "Royalties processed",
+          "Over $4 billion",
+          "Not stated",
+          "Nearly $5 billion"
+        ],
+        [
+          "Royalties distributed",
+          "Not stated",
+          "Not stated",
+          "More than $4.2 billion"
         ],
         [
           "Songwriter Hub users",
           "More than 10,000",
+          "Not stated",
           "More than 20,000"
         ]
       ]
@@ -607,7 +619,7 @@
         "usco-mma-faq",
         "usco-mma"
       ],
-      "take": "A Copyright Office registration and an MLC registration are different. You need the MLC record to be paid digital mechanicals through the blanket license.",
+      "take": "A Copyright Office registration and an MLC registration are different. You, or your publisher or administrator, need the MLC record to be paid blanket-license digital mechanicals.",
       "body": "The Copyright Office FAQ says owners with a copyright registration still need to register with the MLC. It also says a song need not be registered with the Office to be eligible for royalties through the MLC, though physical-copy royalties under the notice route depend on the owner appearing in the Office's records. Registration has other benefits in copyright law.",
       "do": [
         "Register or claim the song with the MLC as its own task"
@@ -661,7 +673,7 @@
       ],
       "when": "after-release",
       "take": "Join the MLC, use the Claiming Tool for songs that exist, use the Works Registration Tools for songs that do not, and keep banking and tax details current.",
-      "body": "The MLC says connecting is free. Its tools page lists individual, bulk and CWR registration for new works, and says banking details and tax forms live in Member Settings. Its Missing Member Lookup lists rightsholders who are not yet members and may be owed US digital audio mechanicals, excluding historical unmatched royalties. A songwriter with a publisher or administrator may need to work through them, so ask first.",
+      "body": "The MLC says connecting is free. Its tools page lists individual, bulk and CWR registration for new works, and says banking details and tax forms live in Member Settings. Its Missing Member Lookup lists people and companies who have not joined but may be owed US digital audio mechanicals; those amounts leave out historical unmatched money. A songwriter with a publisher or administrator may need to work through them, so ask first.",
       "do": [
         "Check the Missing Member Lookup for your name or company",
         "Keep banking and tax details current in Member Settings"
@@ -763,7 +775,7 @@
         "mlc-tools"
       ],
       "as_of": "2026-11-19",
-      "take": "A song where the ownership shares submitted by all members add up to more than 100 percent. The MLC's Overclaims Tool lets owners amend or relinquish shares and share documents while it is resolved."
+      "take": "A song where the shares claimed by all members together come to more than 100 percent. The MLC's Overclaims Tool lets owners amend or give up shares and upload documents while it is resolved."
     },
     {
       "id": "mech-note-database-limits",
@@ -785,8 +797,8 @@
         "mlc-db-terms"
       ],
       "as_of": "2026-11-19",
-      "take": "Public search is free by law, with bulk and API routes too. The MLC warns that listed ownership may be incomplete or out of date.",
-      "body": "37 CFR 210.32 requires a free searchable online database and bulk access, including APIs. The MLC's terms say shares may not show the whole ownership, that a work in the portal may not be licensable through the MLC, and that it will not delete accurate information. If your own data is wrong, a member contacts MLC support, and a represented writer tells their publisher or administrator.",
+      "take": "Public search is free by law, and bulk and API access must be offered too. The MLC warns that listed ownership may be incomplete or out of date.",
+      "body": "37 CFR 210.32 requires a free, searchable online database and bulk access through APIs. Bulk access is free to licensed services and the Register; others may be charged up to the MLC's marginal cost. The MLC's terms say shares shown may not reflect the whole ownership, that some works in the portal cannot be licensed through the MLC, and that it will not delete accurate data. Members report errors to MLC support; a represented writer tells their publisher or administrator.",
       "do": [
         "Report errors to MLC support or to your publisher or administrator"
       ]
@@ -811,7 +823,7 @@
         "usc-115"
       ],
       "as_of": "2026-11-19",
-      "take": "Royalties the MLC has received but not matched or distributed after the statutory minimum holding period. They include unmatched royalties and unclaimed royalties."
+      "take": "Money the MLC has collected but still cannot match to an owner or pay out when the legal minimum holding period ends. The MLC counts both unmatched and unclaimed amounts in it."
     },
     {
       "id": "mech-market-share-term",
@@ -935,7 +947,7 @@
     {
       "id": "mech-number-historical-transferred",
       "type": "number",
-      "title": "Historical unmatched royalties transferred to the MLC",
+      "title": "Historical unmatched royalties that services transferred to the MLC",
       "topic": "unclaimed",
       "level": "intermediate",
       "readers": [
@@ -999,8 +1011,8 @@
         "mlc-missing-members"
       ],
       "as_of": "2026-11-19",
-      "take": "Services transferred money for pre-2021 streams by 15 February 2021. The MLC began paying matched amounts in 2022 and has not begun market-share distributions for them.",
-      "body": "The MLC's historical page says the remaining unmatched historical royalties will eventually go through market share, and that process had not begun as of its November 2026 data. Its one-sheet says it will start on remaining historical royalties after the blanket process has launched. The Missing Member Lookup does not include historical money.",
+      "take": "Services handed over unmatched money for 2007 to 2020 streams in early 2021. The MLC began paying matched amounts in 2022 and has not started market-share distributions for them.",
+      "body": "The Music Modernization Act (MMA) limited a service's liability if it transferred by 15 February 2021, and 21 services chose to. The historical page gives both May and June 2022 as the start of matched payments. It says leftover historical money will go through market share later, and that this had not begun as of its November 2026 data. The one-sheet says the MLC will look to start on it once blanket market-share distributions are under way. The Missing Member Lookup leaves historical money out.",
       "do": [
         "Search the Matching Tool for old unmatched uses of your songs"
       ]
@@ -1023,6 +1035,7 @@
       "sources": [
         "mlc-historical",
         "mlc-unclaimed",
+        "mlc-market-share",
         "mlc-pr-2026-09"
       ],
       "as_of": "2026-11-19",
@@ -1053,7 +1066,7 @@
     {
       "id": "mech-note-study-2021",
       "type": "note",
-      "title": "The Copyright Office told the MLC to hold unclaimed money longer than the minimum",
+      "title": "The Copyright Office recommended holding unclaimed money longer than the minimum",
       "topic": "unclaimed",
       "level": "advanced",
       "readers": [
@@ -1066,10 +1079,12 @@
       "confidence": "official",
       "sources": [
         "usco-unclaimed-study",
-        "usc-115"
+        "usc-115",
+        "mlc-pr-2026-09"
       ],
-      "take": "The 2021 report recommends no first distribution for at least five years after claiming was fully available. The statute says the MLC gives it substantial weight.",
-      "body": "The Register's July 2021 report also recommends independent checks of market-share calculations, wide advance publicity and public metrics. These are recommendations. The MLC must weigh them carefully, and the statute sets the legal minimum hold at three years. The MLC has chosen its own schedule."
+      "take": "The Office's July 2021 report recommends no first distribution until at least five years after claiming was fully available. The MMA requires the MLC to give the report substantial weight.",
+      "body": "The Register's report also recommends independent checks of market-share calculations, wide publicity for the advance notice of a distribution, and close tracking of match and engagement metrics. These are recommendations; the statute's minimum hold is three years. The MLC says that by its April 2027 start it will have tried for more than six years to match January 2021 usage.",
+      "as_of": "2026-11-19"
     },
     {
       "id": "mech-note-statement-layouts",
@@ -1090,9 +1105,9 @@
         "mlc-statements"
       ],
       "take": "Royalty Detail shows rows per sound recording from the services' reports. Work Summary rolls the same money up per musical work. Both are .tsv files.",
-      "body": "The MLC's help centre links example files for both layouts. The .tsv format opens in common spreadsheet software. Pick Royalty Detail when you want to trace a payment to a service's usage line and Work Summary to see what each song earned.",
+      "body": "The MLC's Help Center links example files for both layouts. The .tsv format opens in common spreadsheet software. Royalty Detail is the one to use when tracing a payment to a service's usage line; Work Summary shows what each song earned.",
       "do": [
-        "Open a statement in a spreadsheet and set the columns as text"
+        "Open the .tsv file in a spreadsheet program to sort and filter it"
       ]
     },
     {
@@ -1108,14 +1123,17 @@
       "territory": [
         "US"
       ],
-      "confidence": "law",
+      "confidence": "official",
       "sources": [
         "usc-115",
         "mlc-audits"
       ],
       "as_of": "2026-11-19",
       "take": "An audit covers up to three full calendar years, starts with a notice filed at the Copyright Office, and is done by an independent qualified auditor.",
-      "body": "Under 17 USC 115(d)(4)(D) the MLC pays for the audit unless the auditor finds an underpayment of at least 10 percent, in which case the service bears the reasonable costs. The MLC says it will pay out recovered royalties in full, with no audit costs deducted. Owners can audit the MLC too, but they bear the cost, once a year, over the three preceding calendar years."
+      "body": "Under 17 USC 115(d)(4)(D) the MLC pays for the audit unless the auditor finds an underpayment of at least 10 percent, in which case the service bears the reasonable costs. The MLC says it will pass on recovered royalties in full and mark audit adjustments on members' statements. Owners can audit the MLC too, at their own cost, once a year, covering up to the three preceding calendar years.",
+      "do": [
+        "Look for adjustments marked as audit results on your MLC statement"
+      ]
     },
     {
       "id": "mech-number-audit-notices",
@@ -1209,15 +1227,15 @@
       "territory": [
         "US"
       ],
-      "confidence": "law",
+      "confidence": "official",
       "sources": [
         "crb-phono-v",
         "crb-order-10",
         "crb-order-16"
       ],
       "as_of": "2026-11-19",
-      "take": "The 2028 to 2032 proceeding is in discovery. A settlement on physical copies, downloads, ringtones and bundles was proposed in June 2026 and is stayed pending a decision by the Judges.",
-      "body": "Order 10 (18 September 2026) records a 29 June 2026 motion by NMPA, NSAI, MAC and record-company participants, objections from four participants and comments from 24 others. It splits that part off and stays it. Replies were filed on 2 October 2026, and the docket list read on the retrieval date showed no decision. Streaming stays in the main case. On 16 November 2026 the Copyright Owners again asked for a subpoena to the MLC. Nothing here is final.",
+      "take": "The 2028 to 2032 proceeding is in discovery. A partial settlement on physical copies, downloads, ringtones and bundles was proposed in June 2026; the Judges have split it off and paused it.",
+      "body": "Order 10 (18 September 2026) records a 29 June 2026 motion by NMPA, NSAI, MAC and record-company participants, four objections from participants and 24 comments from non-participants. It splits that part off and stays it until further notice. The movants replied on 2 October 2026, and the docket read on 19 November 2026 showed no decision. Streaming stays in the main case. On 16 November 2026 NMPA and NSAI renewed a motion for a subpoena to the MLC. Nothing here is final.",
       "do": [
         "Check the eCRB docket before relying on any proposed rate"
       ]
@@ -1282,7 +1300,7 @@
       "url": "https://app.crb.gov/case/detail/25-CRB-0013-PR%20%282028-2032%29",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Status Open, phase Discovery, party list, and the document list showing the June 2026 motion to adopt a settlement and later orders.",
+      "support": "Status Open, phase Discovery. Document list read 19 Nov 2026: movants' replies to Order 10 on 2 Oct 2026, Order 13 of 2 Oct 2026, renewed subpoena motion of 16 Nov 2026, no ruling on the Subpart B settlement.",
       "edition": "Docket page read on the retrieval date"
     },
     "crb-order-10": {
@@ -1316,7 +1334,7 @@
       "url": "https://www.law.cornell.edu/cfr/text/37/210.32",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "(a) free searchable public database; bulk and API access; (b) single point of contact for inquiries and complaints.",
+      "support": "(a)(1) free searchable public database; bulk real-time access free to licensees and the Register, marginal-cost fee for others; APIs from 31 December 2021; (b) single point of contact for inquiries and complaints.",
       "edition": "Mirror of the eCFR text"
     },
     "circ-73": {
@@ -1326,7 +1344,7 @@
       "url": "https://www.copyright.gov/circs/circ73.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Section 115 does not cover sound recordings; NOI timing and recipients; monthly payment and statements by the 20th; 30-day default notice. Revised January 2018, before the blanket license.",
+      "support": "Defines phonorecord and DPD; says Section 115 does not cover sound recordings and that the song and the recording are licensed separately. Revised January 2018, before the MMA blanket license.",
       "date": "2018-01-01",
       "edition": "Revised 01/2018"
     },
@@ -1337,7 +1355,7 @@
       "url": "https://www.copyright.gov/music-modernization/faq.html",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "NOIs stay for non-digital uses and are no longer accepted for digital; copyright registration is separate from MLC registration; MLC and DLC roles."
+      "support": "NOIs stay for non-digital uses and are no longer accepted for digital; copyright registration is separate from MLC registration; MLC and DLC roles; MLC costs paid by services through voluntary contributions and an assessment."
     },
     "usco-mma": {
       "type": "government",
@@ -1364,7 +1382,7 @@
       "url": "https://www.copyright.gov/policy/unclaimed-royalties/unclaimed-royalties-final-report.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Executive summary: recommended holding beyond the statutory minimum, no first distribution for at least five years, independent verification of market-share calculations; MLC must give recommendations substantial weight.",
+      "support": "Front matter reproduces MMA sec. 102(f) (substantial weight). Executive summary: hold beyond the statutory minimum, no first distribution for at least five years, independent verification of market-share calculations.",
       "date": "2021-07-01",
       "edition": "Report of the Register of Copyrights, July 2021"
     },
@@ -1384,7 +1402,7 @@
       "url": "https://www.themlc.com/historical-royalties",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Historical royalties are 2007 to 2020 streaming; 21 DSPs transferred by 15 February 2021; about $427M reduced to about $397M; distributions since 2022; remaining unmatched to go through market share, not yet begun.",
+      "support": "2007 to 2020 streaming; 21 DSPs; liability limit for transfer by 15 Feb 2021; about $427M cut to about $397M; first matched payouts given as May 2022 and June 2022; market share for remainder not begun (Nov 2026 data).",
       "edition": "Dashboard text states data current as of November 2026"
     },
     "mlc-market-share": {
@@ -1394,18 +1412,18 @@
       "url": "https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "June 2026 snapshot (more than 85,000 Members, more than 53 million works, over $4 billion processed, nearly 92% average match rate); priorities for the distribution process.",
+      "support": "June 2026 snapshot (85,000+ Members, 53M+ works, over $4B processed, nearly 92% average match rate); plans: keep reprocessing into regular monthly distributions, pro rata by DSP and offering, historical later.",
       "date": "2026-06-01",
       "edition": "Rev. 06/2026"
     },
     "mlc-pr-2026-09": {
       "type": "collective",
       "publisher": "The Mechanical Licensing Collective",
-      "title": "Press release: The MLC Holds Annual Membership Meeting, more than $4.2 billion distributed, announces date of first monthly market share distribution",
+      "title": "The MLC Holds Annual Membership Meeting: Highlights More Than $4.2 Billion in Total Royalties Distributed and Announces Date of First Monthly Market Share Distribution",
       "url": "https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "30 September 2026: April 2027 start; one month at a time from January 2021; song-based pro rata by DSP and offering; $4.2B distributed; more than 100,000 Members; more than 60 million works; over 92% match rate.",
+      "support": "30 September 2026: April 2027 start, one month at a time from January 2021; pro rata by DSP and offering; more than six years of matching; nearly $5B processed, $4.2B distributed; $239M historical; 100,000 Members; 60M works.",
       "date": "2026-09-30"
     },
     "mlc-missing-members": {
@@ -1424,7 +1442,7 @@
       "url": "https://www.themlc.com/tools",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Public Work Search, Claiming Tool, Works Registration Tools, Matching Tool, Overclaims Tool, Catalog Export and Transfer tools; check the Claiming Tool before registering; keep banking and tax details current."
+      "support": "Public Work Search (more than 55 million songs), Claiming, Works Registration, Matching, Overclaims, Catalog Export and Transfer tools; check the Claiming Tool before registering; keep banking and tax details current."
     },
     "mlc-db-terms": {
       "type": "collective",
@@ -1452,7 +1470,7 @@
       "url": "https://www.themlc.com/audits-dsp",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Audit rights, process and frequency; costs and recoveries; list of DSPs sent notice letters dated 10 January 2024 for 2021 to 2023; no fees deducted from royalties."
+      "support": "Audit rights, process and frequency; assessment funds the budget, no fees deducted; recoveries paid in full; audit adjustments shown on statements; 49 DSPs sent notice letters dated 10 January 2024 for 2021 to 2023."
     },
     "hfa-public-search": {
       "type": "collective",
