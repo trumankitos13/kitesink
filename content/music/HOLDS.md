@@ -18,9 +18,8 @@ changes, copy answers here, tick what is closed, then continue.
 - [ ] Field-guide heading: the page H1 is the original "Listen, play, sit with a record."; the
       field-guide section below the projects is headed "Where the money in a song comes from."
       (placeholder; D2, owner reworking)
-- [ ] Music agent skill (like the fitness one in public/.well-known/agent-skills/): add one? (D23)
-- [ ] public/llms-full.txt is now about 1.5 MB; docs/AI-PAGES.md says to decide what to leave
-      out at that size (D24)
+- [x] Music agent skill: yes (D23, 2026-11-21); being built
+- [x] public/llms-full.txt size: trim smartly without losing data (D24, 2026-11-21); being done
 
 - [x] Remove the three old em dashes in the projects band (D8: yes; done in the hub template, 2026-11-20)
 - [x] AI and music deep-research run (D14: go-ahead 2026-11-20)
@@ -70,10 +69,8 @@ changes, copy answers here, tick what is closed, then continue.
 
 ## From batch 2a (unclaimed recovery, 2026-11-20)
 
-- [ ] CISAC Global Collections Report: entries use the 2023 edition (2022 data). Newer
-      editions exist; update to the latest?
-- [ ] The Butler 2020 CMO survey and the WIPO 2012 module are dated in each entry. Look for
-      newer sources, or keep them with their dates?
+- [x] CISAC Global Collections Report: update to the 2025 edition (D16, 2026-11-21); research running
+- [x] Butler 2020 and WIPO 2012: look for newer sources (D17, 2026-11-21); research running
 - [ ] "A PRO keeps its own accounts, separate from the MLC and SoundExchange" rests on Butler
       and SoundExchange, not a PRO page (PRO pages block automated reading; see C4, C5, C7, C8)
 
@@ -86,10 +83,10 @@ changes, copy answers here, tick what is closed, then continue.
 
 ## From the identifier checker and split sheet (2026-11-20)
 
-- [ ] ISWC check digit: the formula's public source is ISO/TC 46/SC 9 N 268 (1999), written for
+- [x] ISWC check digit accepted (D18, 2026-11-21: "ISWC format is on Wikipedia"). Was: the formula's public source is ISO/TC 46/SC 9 N 268 (1999), written for
       the superseded 2001 edition; all 400 ISWCs sampled from Wikidata pass it. The page says
       "consistent with the published formula". Accept, or show format only?
-- [ ] Approve the tools' own copy: the not-a-contract notice, the line above the signatures,
+- [ ] Split sheet needs work: no composer/author role (D19, owner, 2026-11-21); rework running with CWR writer designations. Then approve the tools' own copy: the not-a-contract notice, the line above the signatures,
       the sheet footer, the IPI wording, the "Producer, as a writer" role, the two hub cards
 - [ ] iswc.org's usage page shows an example (T-345246800-1) whose check digit fails the
       formula; a typo on their page, noted only
@@ -105,8 +102,8 @@ changes, copy answers here, tick what is closed, then continue.
 ## Written asks
 
 - [ ] CISAC (info@cisac.org): building a CWR viewer from the spec; republishing society codes
-      or lookup tables
-- [ ] Apple: showing the RSS chart feed on a commercial site
+      or lookup tables (W1: owner said yes; email drafted in the Holds & Inputs tab for the owner to send)
+- [ ] Apple: showing the RSS chart feed on a commercial site (W2: owner said yes; message drafted in the Holds & Inputs tab)
 - [ ] MLC Data Access Hub: API enrolment terms and fee
 
 ## Corpus files whose origin needs confirming before use
