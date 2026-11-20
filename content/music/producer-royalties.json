@@ -1,0 +1,709 @@
+{
+  "domain": "producer-royalties",
+  "topics": [
+    {
+      "id": "points",
+      "label": "Points and other routes"
+    },
+    {
+      "id": "letters",
+      "label": "Letters of direction"
+    },
+    {
+      "id": "older",
+      "label": "Recordings before 1995"
+    },
+    {
+      "id": "writer",
+      "label": "Producer or writer"
+    },
+    {
+      "id": "ownership",
+      "label": "Ownership and work for hire"
+    },
+    {
+      "id": "credits",
+      "label": "Credits and session players"
+    },
+    {
+      "id": "abroad",
+      "label": "Producers abroad"
+    }
+  ],
+  "entries": [
+    {
+      "id": "prod-term-points",
+      "type": "term",
+      "title": "Points (a producer's royalty)",
+      "topic": "points",
+      "level": "beginner",
+      "readers": [
+        "producer",
+        "artist",
+        "publisher-label"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "confidence": "practice",
+      "sources": [],
+      "take": "A producer's royalty on a record is usually called points. The producer's contract defines what the points are measured on, what comes off first and when they are paid."
+    },
+    {
+      "id": "prod-note-points-contract",
+      "type": "note",
+      "title": "Points are a contract term, and this guide states no standard figure",
+      "topic": "points",
+      "level": "beginner",
+      "readers": [
+        "producer",
+        "artist",
+        "publisher-label"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "confidence": "practice",
+      "sources": [],
+      "take": "How many points a producer gets, what they are measured on and when they are paid are all set by the producer's agreement. No law or collective sets them.",
+      "body": "A producer may be paid by a label, an artist or a company, and each agreement says what income counts and which costs come off first. Whether the royalty is paid only after the label has recovered its costs (recoupment) is also a contract matter. Because the terms vary, this guide gives no typical number. A music lawyer should review the agreement.",
+      "do": [
+        "Get the points, what they are measured on and the payment timing into a signed written agreement.",
+        "Have a music lawyer review the agreement before you agree to it."
+      ]
+    },
+    {
+      "id": "prod-table-routes",
+      "type": "table",
+      "title": "Four ways a producer can be paid beyond a fee, and what triggers each",
+      "topic": "points",
+      "level": "intermediate",
+      "readers": [
+        "producer",
+        "artist",
+        "publisher-label"
+      ],
+      "territory": [
+        "US",
+        "UK"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usc-114",
+        "sx-lod",
+        "ppl-performers",
+        "usco-mma"
+      ],
+      "take": "Contract points are separate from these. Each route below has its own trigger and its own register, and one does not stand in for another.",
+      "columns": [
+        "Route",
+        "Paid from",
+        "What triggers it",
+        "Where"
+      ],
+      "rows": [
+        [
+          "Letter of direction",
+          "A featured artist's performance royalties at SoundExchange",
+          "The artist signs a letter and SoundExchange accepts it",
+          "US"
+        ],
+        [
+          "Pre-1995 two percent",
+          "Taken from the featured artists' share at SoundExchange",
+          "Statutory conditions, including a written contract and notice to the artist",
+          "US"
+        ],
+        [
+          "Writer's share of the song",
+          "The song's income, through the song's registrations",
+          "Being a writer of the song, by agreement among the writers",
+          "Where the song is registered"
+        ],
+        [
+          "PPL studio-producer claim",
+          "Performer money at PPL",
+          "Directing another performer's live performance as recorded; form signed by both",
+          "UK"
+        ]
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-mistake-no-letter",
+      "type": "mistake",
+      "title": "Mistake: expecting SoundExchange to pay a producer who has no letter of direction",
+      "topic": "letters",
+      "level": "beginner",
+      "readers": [
+        "producer",
+        "artist"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod",
+        "usc-114",
+        "usco-amp"
+      ],
+      "take": "SoundExchange pays producers, mixers and engineers only from a featured artist's royalties, by letter, or under the narrow pre-1995 route. A credit or contract points do not trigger payment.",
+      "body": "SoundExchange says it never pays a producer ahead of the featured artists; it allocates their royalties first. A producer credit, or points in a record deal, does not by itself put money in a producer's SoundExchange account. Section 114(g)(6) gives a separate route for some recordings fixed before 1 November 1995.",
+      "do": [
+        "Ask each featured artist for a letter of direction around release.",
+        "Open your own SoundExchange account so a letter has somewhere to pay."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-term-lod",
+      "type": "term",
+      "title": "Letter of direction (LOD)",
+      "topic": "letters",
+      "level": "beginner",
+      "readers": [
+        "producer",
+        "artist"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114"
+      ],
+      "take": "A written instruction from a payee to the collective that distributes digital performance royalties, now SoundExchange, to pay part of that payee's money on a recording to someone who produced, mixed or engineered it.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-amp-act",
+      "type": "note",
+      "title": "Title III of the Music Modernization Act made letters of direction a statutory policy",
+      "topic": "letters",
+      "level": "intermediate",
+      "readers": [
+        "producer",
+        "artist",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usc-114",
+        "usco-amp"
+      ],
+      "take": "Section 114(g)(5) requires the designated collective to adopt a policy for accepting letters of direction. While a letter is carried out, the producer counts as owner of that payment.",
+      "body": "Title III of the Music Modernization Act, the AMP Act, added this rule. The collective decides in which circumstances it accepts letters. The statute lets a payee under the recording-owner share or the featured-artist share send part of its payment to a producer, mixer or engineer. While a letter is in effect, the named person is treated as owning that payment, and the artist as having no interest in it. SoundExchange's page describes the featured-artist letter, which this guide covers.",
+      "do": [
+        "Read section 114(g)(5) and SoundExchange's current page before drafting a letter."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-lod-every-release",
+      "type": "note",
+      "title": "One letter follows a recording onto every release it appears on",
+      "topic": "letters",
+      "level": "intermediate",
+      "readers": [
+        "producer",
+        "artist"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod"
+      ],
+      "take": "SoundExchange applies a letter to the recording wherever it appears, whatever the album. One letter can list several recordings by the same artist, but not recordings by different artists.",
+      "body": "If the same recording is on a single, an album and a compilation, the letter applies to every one. Recordings by two featured artists need a letter from each. The percentage in a letter reaches only the share of the artist who signed it. The 'featuring' credit split is covered in the recorded-music area.",
+      "do": [
+        "List every recording by that artist in one repertoire chart.",
+        "Keep each artist's signed letter with the release file."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-lod-timing",
+      "type": "note",
+      "title": "Letter payments wait for thresholds and stop if the artist's money is held",
+      "topic": "letters",
+      "level": "intermediate",
+      "readers": [
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod"
+      ],
+      "take": "Payment starts in the first pay period after the letter is active and the producer's balance passes SoundExchange's threshold. It stops on a recording whose featured-artist money is held.",
+      "body": "SoundExchange's page gives these thresholds: for electronic payment, monthly above $100 and quarterly above $10; for cheques, quarterly above $100. It names a dispute over the featured artist's royalties, or the artist withdrawing registration, as cases where nothing is paid on a recording. Read on 20 November 2026; amounts can change.",
+      "do": [
+        "Check your payment method and account details before the first payment is due."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-lod-tax",
+      "type": "note",
+      "title": "SoundExchange handles withholding and reporting on letter payments",
+      "topic": "letters",
+      "level": "intermediate",
+      "readers": [
+        "producer",
+        "artist"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod"
+      ],
+      "take": "SoundExchange says that since 1 January 2020 artists and producers face backup withholding unless it holds a taxpayer ID, and that it handles the reporting itself. This is not tax advice.",
+      "body": "Before that date SoundExchange says artists reported letter payments themselves and gave producers a yearly tax form. It now says the artist no longer needs to do that. SoundExchange gives no tax advice, and neither does this guide. Payees outside the US may be asked for other forms.",
+      "do": [
+        "Give SoundExchange your taxpayer details in your account.",
+        "Ask a tax adviser how these payments are taxed for you."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-mistake-points-on-letter",
+      "type": "mistake",
+      "title": "Mistake: copying contract points onto a letter of direction",
+      "topic": "letters",
+      "level": "advanced",
+      "readers": [
+        "producer",
+        "artist"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod"
+      ],
+      "take": "A letter states a percentage of one featured artist's share at SoundExchange. Points are measured on whatever the producer agreement says, so the two numbers differ.",
+      "body": "SoundExchange's chart asks for a payment percentage for each recording, measured against the featured artist's share, and tells filers to give a percentage, not points. Contract points are usually measured on other income, so a number cannot simply be carried across. Agreeing what the letter will state belongs in the producer's agreement.",
+      "do": [
+        "Agree the letter percentage in writing with the artist.",
+        "Have a music lawyer help turn the deal into that percentage."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-pre1995",
+      "type": "note",
+      "title": "For recordings fixed before 1 November 1995, a producer may get 2 percent without a letter",
+      "topic": "older",
+      "level": "advanced",
+      "readers": [
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114"
+      ],
+      "take": "Section 114(g)(6) lets the collective move 2 percent of an older recording's receipts from the featured artists' share to eligible producers, mixers or engineers, on strict conditions.",
+      "body": "The 2 percent is taken from receipts for the recording, out of the share otherwise paid to the featured artists (45 percent of receipts), after costs. The collective adopts a policy and applies it where it considers that appropriate. The person needs a written contract entitling them to take part in royalties payable from the artist's royalties. This entry rests on the statute alone, so check SoundExchange's current procedure.",
+      "do": [
+        "Check SoundExchange's current procedure and forms for this route.",
+        "Have a music lawyer read the statute and your contract."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-checklist-pre1995",
+      "type": "checklist",
+      "title": "Conditions for the pre-1995 two percent route, as the statute states them",
+      "topic": "older",
+      "level": "advanced",
+      "readers": [
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114"
+      ],
+      "take": "Every condition has to be met. A written objection from the artist stops later payments, though earlier ones stand.",
+      "groups": [
+        {
+          "name": "Who can be paid",
+          "items": [
+            "The person produced, mixed or engineered the recording",
+            "A contract in writing, with a label involved in the recording or with the featured artist, giving a share of royalties paid from the artist's",
+            "A creative contribution to the recording",
+            "A sworn certification of these points and an accurate copy of the contract, sent to the collective"
+          ]
+        },
+        {
+          "name": "Before any payment",
+          "items": [
+            "At least 120 days of reasonable efforts to reach the artist for a letter, with no written yes or no",
+            "A certification of those efforts sent to the collective",
+            "At least 120 days of the collective trying to notify the artist",
+            "No written objection from the artist 10 business days before the first distribution"
+          ]
+        },
+        {
+          "name": "Afterwards",
+          "items": [
+            "Several eligible people divide the 2 percent equally",
+            "An objection stops later payment within 10 business days; payments already made stand"
+          ]
+        }
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-mistake-credit-is-writing",
+      "type": "mistake",
+      "title": "Mistake: assuming a producer credit is a songwriting credit",
+      "topic": "writer",
+      "level": "beginner",
+      "readers": [
+        "producer",
+        "writer",
+        "artist"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "circ-56"
+      ],
+      "take": "A producer is an author of the recording. A songwriter is an author of the song. Credit for one does not make someone an author of the other.",
+      "body": "The Copyright Office treats the song and the recording as two separate works. For the recording it names as authors the featured performer and the producer who captured the sounds and shaped the final mix. A producer who also wrote part of the music or lyrics is a writer of the song too, but that rests on what they contributed and what the writers agree, not on the production credit.",
+      "do": [
+        "Agree in writing who wrote what, and each writer's share, before release.",
+        "In the split-sheet tool, pick the writer role for what you wrote and tick the producer box."
+      ]
+    },
+    {
+      "id": "prod-note-joint-work",
+      "type": "note",
+      "title": "A producer who helps write the song may be a joint author, and then registers as a writer",
+      "topic": "writer",
+      "level": "intermediate",
+      "readers": [
+        "producer",
+        "writer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usc-101",
+        "usco-mma"
+      ],
+      "take": "The Copyright Act defines a joint work as one made by two or more authors who intend their contributions to merge into a unitary whole. Whether a producer's input counts is a legal question.",
+      "body": "The statute does not say how much a producer's input to a song counts. Where it is unclear or disputed, a music lawyer should advise. A producer who is a writer registers like any writer: the Copyright Office says songwriters must register with the MLC to be paid under the blanket licence. See the PRO and MLC areas for the steps.",
+      "do": [
+        "Put every writer's agreed share on a signed split sheet.",
+        "Register the song where a writer registers; see the PRO and MLC areas."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-term-wmh",
+      "type": "term",
+      "title": "Work made for hire",
+      "topic": "ownership",
+      "level": "intermediate",
+      "readers": [
+        "producer",
+        "artist",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-101",
+        "circ-30"
+      ],
+      "take": "A work whose legal author is the employer or commissioning party, not the person who made it. Either an employee made it within the job, or it is a listed kind of commissioned work with a signed written agreement."
+    },
+    {
+      "id": "prod-note-wmh-recording",
+      "type": "note",
+      "title": "Whether a recording is made for hire turns on facts and signed wording",
+      "topic": "ownership",
+      "level": "advanced",
+      "readers": [
+        "producer",
+        "artist",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "circ-56",
+        "circ-30",
+        "usc-101"
+      ],
+      "take": "Calling a recording 'for hire' in an agreement does not settle it. The Copyright Office describes tests that have to be met, and a producer agreement should get legal review.",
+      "body": "Circular 56 says that when an employee makes a recording in the course of the job, the employer is the author. It also describes a recording made as a compilation or collective-work contribution under a signed written agreement saying it is for hire. Circular 30 lists nine categories and four conditions for commissioned works, and says a work that fails any is not for hire. Status affects authorship, ownership, term and termination rights. Which route fits a given recording is for a music lawyer.",
+      "do": [
+        "Have a music lawyer review any work-for-hire or ownership wording before you accept it."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-session-players",
+      "type": "note",
+      "title": "Session musicians are paid by the funds, by contract or by PPL, not by a producer's letter",
+      "topic": "credits",
+      "level": "intermediate",
+      "readers": [
+        "producer",
+        "artist"
+      ],
+      "territory": [
+        "US",
+        "UK"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usc-114",
+        "sx-lod",
+        "ppl-performers"
+      ],
+      "take": "SoundExchange will not honour a letter for studio musicians or backing singers. Their statutory share goes through escrow funds; outside the statutory licence, their own contract applies.",
+      "body": "The recorded-music area explains the two escrow funds. For a transmission licensed outside the statutory licence, section 114(g)(1) says a non-featured artist is paid by the copyright owner under the applicable contract or agreement. In the UK, PPL pays performers directly for qualifying performances. A producer's letter does not reach a session player's money.",
+      "do": [
+        "Send a session player's payment question to the fund administrator or PPL.",
+        "Put session payment terms in the session agreement."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-credits-paperwork",
+      "type": "note",
+      "title": "Keep legal names, roles and ISRCs from the session, because the paperwork asks for them",
+      "topic": "credits",
+      "level": "beginner",
+      "readers": [
+        "producer",
+        "artist",
+        "admin"
+      ],
+      "territory": [
+        "US",
+        "UK"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod",
+        "ppl-performers"
+      ],
+      "take": "A SoundExchange letter needs legal names, the payee's name and the track details, with an ISRC where available. PPL asks performers to choose a role. Accurate credits avoid delay.",
+      "body": "SoundExchange asks for performers' legal names, the payee's name (or a company the payee solely owns) and, on its chart, track title, start date and ISRC if known. It says missing items delay activation. PPL's claim route asks the performer to pick a role, and some roles do not pay. This guide suggests recording these details at the session.",
+      "do": [
+        "Write down each contributor's legal name, role and contact when the session ends.",
+        "Match each letter's track title and ISRC to the released credit."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-ppl-producer",
+      "type": "note",
+      "title": "In the UK, PPL treats a studio producer as a performer only in specific cases",
+      "topic": "abroad",
+      "level": "intermediate",
+      "readers": [
+        "producer"
+      ],
+      "territory": [
+        "UK"
+      ],
+      "confidence": "official",
+      "sources": [
+        "ppl-performers"
+      ],
+      "take": "PPL says a studio producer may count as a performer when they conduct, or musically direct in a similar way, another performer's live take while it is captured.",
+      "body": "PPL says later edits and remixes do not qualify, though new versions with new audible performances may. A qualifying producer is listed as non-featured. PPL's Eligible Studio Producer form has to be completed by the producer and by the featured performers. Some myPPL roles are not payable, such as studio work adding no audible contribution. Performances must also qualify by country.",
+      "do": [
+        "Read PPL's Eligible Studio Producer form and its performer page before claiming."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "prod-note-elsewhere",
+      "type": "note",
+      "title": "Producer rules in Canada, Australia, Germany and France were not checked here",
+      "topic": "abroad",
+      "level": "beginner",
+      "readers": [
+        "producer",
+        "artist"
+      ],
+      "territory": [
+        "CA",
+        "AU",
+        "DE",
+        "FR"
+      ],
+      "confidence": "practice",
+      "sources": [],
+      "take": "This area covers only SoundExchange (US) and PPL (UK) on producers. Elsewhere a society's own rules decide whether a producer can claim, so ask that society and a local lawyer.",
+      "body": "Whether a producer can claim recording money, and on what proof, differs by country and by society. The US letter route and the PPL studio-producer test do not apply abroad. This guide has not read the producer rules of the societies in these countries.",
+      "do": [
+        "Ask the recording-rights society in your country about producer claims.",
+        "Get advice from a music lawyer in that country."
+      ]
+    },
+    {
+      "id": "prod-checklist-before-release",
+      "type": "checklist",
+      "title": "A producer's checklist before release",
+      "topic": "letters",
+      "level": "beginner",
+      "readers": [
+        "producer"
+      ],
+      "territory": [
+        "US",
+        "UK"
+      ],
+      "confidence": "practice",
+      "sources": [
+        "sx-lod",
+        "usc-114",
+        "ppl-performers",
+        "circ-56"
+      ],
+      "take": "Tick what applies. The agreements come first, because the letters and claims that follow rest on them.",
+      "groups": [
+        {
+          "name": "Agreements",
+          "items": [
+            "Points, what they are measured on and payment timing written down",
+            "Ownership and any work-for-hire wording reviewed by a music lawyer",
+            "Any songwriting share agreed in writing on a split sheet"
+          ]
+        },
+        {
+          "name": "US recording money",
+          "items": [
+            "A letter from each featured artist you are to be paid by",
+            "Your own SoundExchange account and tax details",
+            "Repertoire chart with ISRCs and the agreed percentage",
+            "Older recording: conditions of the pre-1995 route checked"
+          ]
+        },
+        {
+          "name": "Credits",
+          "items": [
+            "Legal names and roles recorded for everyone who worked on the track",
+            "Released credits match the paperwork"
+          ]
+        },
+        {
+          "name": "UK",
+          "items": [
+            "Studio-producer claim only if PPL's conditions fit, with both signatures"
+          ]
+        }
+      ],
+      "as_of": "2026-11-20"
+    }
+  ],
+  "sources": {
+    "usc-114": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 114: Scope of exclusive rights in sound recordings",
+      "url": "https://www.law.cornell.edu/uscode/text/17/114",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "(a) no section 106(4) right for sound recordings; (g)(1) artist payments by contract for transmissions outside the statutory licence; (g)(2) 50 / 2.5 / 2.5 / 45 percent split and escrow funds; (g)(3) costs; (g)(5) letters of direction.",
+      "edition": "Title 17, section 114, as shown by LII"
+    },
+    "sx-lod": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "Letters of Direction",
+      "url": "https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Who an LOD can pay; no off-the-top payment; paperwork; two-week minimum; payment thresholds; non-featured artists are not paid directly; 50/50 default for a \"featuring\" credit."
+    },
+    "ppl-performers": {
+      "type": "collective",
+      "publisher": "PPL",
+      "title": "Performers",
+      "url": "https://www.ppluk.com/royalties/uk-royalties/performers/",
+      "jurisdiction": "UK",
+      "retrieved": "2026-11-20",
+      "support": "Audible contributions count; some roles non-payable; myPPL line-up claim, evidence; missing track: ask rightsholder; studio producer only if directing live performance, own form signed by featured performers; over 28 million tracks."
+    },
+    "usc-101": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 101: Definitions",
+      "url": "https://www.law.cornell.edu/uscode/text/17/101",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Definitions of sound recordings, phonorecords, joint work, work made for hire, perform publicly, and performing rights society (names ASCAP, BMI, SESAC).",
+      "edition": "Title 17, section 101, as shown by LII"
+    },
+    "circ-56": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "Circular 56: Copyright Registration for Sound Recordings",
+      "url": "https://www.copyright.gov/circs/circ56.pdf",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Sound recording defined; distinct from song and phonorecord; authors are featured performer and producer unless work made for hire; recordings after 1 January 1978 protected on fixation; registration not required; digital performance right only."
+    },
+    "usco-mma": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "The Music Modernization Act (overview page)",
+      "url": "https://www.copyright.gov/music-modernization/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Three titles; MLC designated to collect and distribute mechanicals; from 1 January 2021 songwriters and publishers register with the MLC portal to be paid under the blanket license."
+    },
+    "circ-30": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "Circular 30: Works Made for Hire",
+      "url": "https://www.copyright.gov/circs/circ30.pdf",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Two routes to made for hire; nine commissioned-work categories and four conditions for a commissioned work; effect on authorship, ownership, term and termination rights; Office gives no legal advice on status."
+    },
+    "usco-amp": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "Allocations for Music Producers (Title III of the Music Modernization Act)",
+      "url": "https://www.copyright.gov/music-modernization/amp/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Title III lets producers, mixers and sound engineers receive section 114 royalties through the designated collective (SoundExchange) under a letter of direction."
+    }
+  }
+}
