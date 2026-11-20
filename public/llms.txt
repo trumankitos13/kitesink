@@ -38,6 +38,7 @@
 - [Royalty basics](https://kitesink.com/music/royalty-basics.md): the two copyrights in a song, and the money each one earns
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): reproduction royalties, US rates and the Mechanical Licensing Collective
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): money that was earned but never matched, and how to claim it
+- [AI and music rights](https://kitesink.com/music/ai-rights.md): training on songs and recordings, who owns AI-assisted work, voice and likeness, licensing deals, and the court cases so far, each dated
 - [Claims, checked](https://kitesink.com/music/claims.md): common claims about royalties and rights, each with a verdict, what it rests on, and the source
 - [Glossary](https://kitesink.com/music/glossary.md): every term the music field guide uses, in plain words
 - [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): each dated key number and reference table, with a link to the page that holds it

@@ -117,6 +117,8 @@ window.KS_INDEX = [
     d: "US mechanical rates, the Mechanical Licensing Collective, registering and matching works.", w: "mechanicals mlc statutory rate section 115 blanket licence phonorecords crb streaming" },
   { t: "Unclaimed royalties", h: "/music/unclaimed-recovery", s: "music", k: "Notes", shelf: "tools",
     d: "Why money goes unmatched, where it is held, and how to search for it and claim it.", w: "unclaimed black box unmatched royalties claim search recovery mlc soundexchange" },
+  { t: "AI and music rights", h: "/music/ai-rights", s: "music", k: "Notes", shelf: "tools",
+    d: "Training on songs and recordings, who owns AI-assisted work, voice and likeness, licensing deals, and the court cases so far.", w: "ai artificial intelligence training generative suno udio likeness voice no fakes copyright office deals lawsuits eu ai act" },
   { t: "Music claims, checked", h: "/music/claims", s: "music", k: "Notes", shelf: "tools", now: true,
     d: "Common claims about royalties, rights and the music business, each with a verdict and its source.", w: "myths true false verdict royalties streaming ai splits unclaimed" },
   { t: "Music business glossary", h: "/music/glossary", s: "music", k: "Notes", shelf: "tools",

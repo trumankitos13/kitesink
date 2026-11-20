@@ -20,7 +20,7 @@ Its scope line, on every page: "General information on how music rights and roya
 | The claimable royalties table as data | https://kitesink.com/music/claimable.json |
 | The whole site as plain text, in one file | https://kitesink.com/llms-full.txt |
 
-Pages: `royalty-basics`, `mechanicals-mlc`, `unclaimed-recovery` (the areas written so far), and
+Pages: `royalty-basics`, `mechanicals-mlc`, `unclaimed-recovery`, `ai-rights` (the areas written so far), and
 `claims`, `glossary`, `reference`, `sources`, `claimable`, `tools`.
 
 - An area page holds guidance, steps in order, common mistakes, key numbers, reference tables,
