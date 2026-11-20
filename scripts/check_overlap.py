@@ -4,7 +4,8 @@
 DIR holds the private source material as .txt (or .pdf, converted with pdftotext). It stays
 outside the repository: pass a path in the session's scratch area, never a tracked folder.
 
-Every entry's published text (title, take, body, do, basis, table cells, checklist items) is
+Every published text field (entries: title, take, body, do, basis, table cells, checklist
+items; claimable rows: pot, who_can_claim, how_to_claim, rule, cost; tools: what, note) is
 compared with every corpus file, word by word after lower-casing and dropping punctuation.
   ERROR  a run of 8 or more words in common
   review a run of 6 or 7 words in common (read it; common phrases are fine)
@@ -43,7 +44,9 @@ def ngrams(ws, n):
 
 def entry_fields(e):
     out = []
-    for k in ("title", "take", "body", "basis"):
+    for k in ("title", "take", "body", "basis",                                   # area entries
+              "pot", "who_can_claim", "how_to_claim", "rule", "cost",            # claimable rows
+              "what", "note"):                                                   # tools rows
         if isinstance(e.get(k), str): out.append((k, e[k]))
     for i, x in enumerate(e.get("do") or []): out.append((f"do[{i}]", x))
     for r, row in enumerate(e.get("rows") or []):
@@ -79,7 +82,10 @@ def main():
     errors = reviews = 0
     for path in files:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
-        for e in data.get("entries", []):
+        items = data.get("entries", []) + data.get("rows", []) + data.get("tools", [])
+        if not items:
+            print(f"note {path}: no entries, rows or tools to check")
+        for e in items:
             for field, text in entry_fields(e):
                 for q in QUOTE.findall(text):
                     if len(words(q)) > QUOTE_MAX:
