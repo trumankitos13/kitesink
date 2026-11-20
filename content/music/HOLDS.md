@@ -10,10 +10,13 @@ changes, copy answers here, tick what is closed, then continue.
 
 ## Decisions
 
+- [x] Remove the three old em dashes in the projects band (D8: yes; done in the hub template, 2026-11-20)
+- [x] AI and music deep-research run (D14: go-ahead 2026-11-20)
+
 - [x] Approve `WRITING-BRIEF.md` (approved 2026-11-19)
 - [x] Approve the batch 1 and 2 reading lists in `READING-LIST.md` (approved 2026-11-19)
-- [ ] Scope line wording for every page
-- [ ] Hero H1 wording
+- [x] Scope line wording for every page (D1: placeholder approved as written, 2026-11-20)
+- [ ] Hero H1 wording (D2: owner is reworking it)
 - [ ] Employer check: gates the paid audit, the music consult call to action and any retainer
 - [ ] Email-list tool: gates the lead magnets and the weekly briefing
 - [ ] Audit price: needs the competitor pricing pass
@@ -22,8 +25,8 @@ changes, copy answers here, tick what is closed, then continue.
 
 ## From batch 1 (mechanicals and the MLC, 2026-11-19)
 
-- [ ] Is the Cornell LII mirror acceptable as the cited text of 37 CFR 385 and 210? (ecfr.gov
-      cannot be read automatically.) Check eCFR currency before publishing
+- [x] Is the Cornell LII mirror acceptable as the cited text of 37 CFR 385 and 210? (D4: yes,
+      2026-11-20)
 - [ ] The 2027 cost-of-living notice for mechanical rates is due by about 7 December 2026:
       update the rate numbers when it is published
 - [ ] Phonorecords V: recheck the docket before publishing (decision on the Subpart B partial
@@ -35,7 +38,7 @@ changes, copy answers here, tick what is closed, then continue.
       no entry covers it yet
 - [ ] Circular 73 is revised 01/2018, before the Music Modernization Act: not used for rates
       or the blanket-licence process
-- [ ] Grading policy (from the batch 1 review): an entry that rests partly on a Copyright
+- [x] Grading policy (D3, 2026-11-20: confirmed, a statute plus an agency page grades `official`) (from the batch 1 review): an entry that rests partly on a Copyright
       Office, MLC or docket page is graded `official`, not `law`, even when a statute is also
       cited. Batch 1 is 16 law, 27 official on that reading. Confirm, or say if a statute plus
       an agency explainer should count as `law`
