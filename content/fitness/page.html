@@ -53,7 +53,7 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.15">
+<link rel="stylesheet" href="/ks.css?v=2027.16">
 <style>
   .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
 
@@ -624,6 +624,10 @@
             </div>
             <div class="row2">
               <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional</span></span><span class="with-unit"><input class="k-input" id="m-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
+              <div class="row2">
+                <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="m-src"><option value="cat">Weight × body fat category</option><option value="mifflin">Mifflin-St Jeor equation</option><option value="cunningham">Cunningham (needs body fat)</option></select></label>
+                <label class="k-field" id="m-cat-wrap"><span class="k-label">Body fat category</span><select class="k-select" id="m-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+              </div>
               <label class="k-field"><span class="k-label">Activity</span>
                 <select class="k-select" id="m-act">
                   <option value="1.4" data-short="mostly sedentary">Sedentary · mostly sitting</option>
@@ -670,7 +674,7 @@
               <div><span class="k-label">Resting energy</span><b id="m-rmr">—</b><span class="k-small" id="m-eq" style="font-size:12px">Mifflin-St Jeor</span></div>
               <div><span class="k-label">Activity level</span><b id="m-pal">—</b></div>
             </div>
-            <p class="k-small">A starting estimate. The best equation lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. {{c:mifflin1990,frankenfield2005,cunningham1991,fao2004}}</p>
+            <p class="k-small">A starting estimate. Resting energy starts from KiteSink’s own working numbers: 10, 9 or 8 kcal per lb of body weight by body fat category, with day levels of × 1.1 to 1.5 and training added in the activity multiplier. The published equations are there to choose instead; the best of them lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. {{c:mifflin1990,frankenfield2005,cunningham1991,fao2004}}</p>
           </div>
         </div>
       </div>
@@ -832,11 +836,9 @@
               <p class="k-label">Resting energy (BMR)</p>
               <p class="k-small ac-from" id="ac-from"></p>
               <div class="ac-need" id="ac-need" hidden>
-                <p class="k-small">This starts from your weight and body fat in Energy &amp; macros. Fill that in first, or type your BMR below.</p>
-                <button class="k-btn k-btn--sm" id="ac-go" type="button">Go to Energy &amp; macros</button>
+                <p class="k-small">Those are the example inputs. Put in your own weight and body fat for your number.</p>
+                <button class="k-btn k-btn--sm k-btn--ghost" id="ac-go" type="button">Set mine in Energy &amp; macros</button>
               </div>
-              <div class="k-field" id="ac-cat-wrap" hidden><span class="k-label" id="ac-cat-l">Body fat category <span style="text-transform:none;letter-spacing:0">add body fat in Energy &amp; macros to set it</span></span>
-                <div class="k-seg" id="ac-cat" role="group" aria-labelledby="ac-cat-l"><button type="button" value="1">1</button><button type="button" value="2">2</button><button type="button" value="3">3</button></div></div>
               <div class="ac-own">
                 <label class="k-label" for="ac-bmr">Or type your own BMR</label>
                 <span class="with-unit"><input class="k-input" id="ac-bmr" type="number" inputmode="numeric" min="800" max="5000" step="10" placeholder="—"><span>kcal</span></span>
@@ -869,7 +871,7 @@
             <div class="kv hide-empty"><div><span class="k-label" id="ac-k1-l">Maintenance</span><b id="ac-k1">—</b></div><div><span class="k-label" id="ac-k2-l">On a training day</span><b id="ac-k2">—</b></div></div>
             <p class="k-small hide-empty" id="ac-k3"></p>
             <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="ac-use" type="button">Use in Energy &amp; macros</button></div>
-            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">These are KiteSink’s own working numbers from coaching, not results from a study. Resting energy is 10, 9 or 8 kcal per lb of body weight, by body fat category. A usual day is × 1.1 to 1.5, and each hour of training adds 0.1 to 0.4. Use the answer as a starting point and correct it against your weight trend over two or three weeks. Energy &amp; macros applies the multiplier to its own resting estimate, so its maintenance can differ a little from this one.</p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">These are KiteSink’s own working numbers from coaching, not results from a study. Resting energy comes from Energy &amp; macros (by default 10, 9 or 8 kcal per lb of body weight, by body fat category). A usual day is × 1.1 to 1.5, and each hour of training adds 0.1 to 0.4. Use the answer as a starting point and correct it against your weight trend over two or three weeks.</p>
           </div>
         </div>
       </div>
@@ -890,7 +892,11 @@
               <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="d-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="d-w-unit">kg</span></span></label>
             </div>
             <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional, sharpens protein</span></span><span class="with-unit"><input class="k-input" id="d-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
-            <label class="k-field"><span class="k-label">Activity, training included</span>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="d-src"><option value="cat">Weight × body fat category</option><option value="mifflin">Mifflin-St Jeor equation</option><option value="cunningham">Cunningham (needs body fat)</option></select></label>
+              <label class="k-field" id="d-cat-wrap"><span class="k-label">Body fat category</span><select class="k-select" id="d-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+            </div>
+            <label class="k-field"><span class="k-label">Activity</span>
               <select class="k-select" id="d-act">
                 <option value="1.4">Sedentary · mostly sitting</option>
                 <option value="1.6" selected>Light · desk job, regular training</option>
@@ -961,7 +967,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.15"></script>
-<script src="/fitness.js?v=2027.15"></script>
+<script src="/ks.js?v=2027.16"></script>
+<script src="/fitness.js?v=2027.16"></script>
 </body>
 </html>

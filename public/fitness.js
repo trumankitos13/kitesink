@@ -45,15 +45,14 @@
              goal 'lose'|'hold'|'gain', rate (lose: % body weight / week; gain: % above maintenance),
              protein (g per kg), fatPct (% of calories) */
     energy: function (o) {
-      var useBf = o.bf > 0 && o.bf < 60;
-      var rmr = useBf ? F.cunningham(o.kg, o.bf) : F.mifflin(o.sex, o.kg, o.cm, o.age);
+      var R = F.resting(o), rmr = R.rmr;
       var maint = rmr * o.pal, delta = 0;
       if (o.goal === "lose") delta = -(o.rate / 100) * o.kg * KCAL_PER_KG / 7;
       else if (o.goal === "gain") delta = maint * (o.rate / 100);
       var kcal = maint + delta;
       var p = o.protein * o.kg, f = kcal * (o.fatPct / 100) / 9, c = (kcal - p * 4 - f * 9) / 4;
       return {
-        rmr: rmr, maint: maint, kcal: kcal, delta: delta, equation: useBf ? "Cunningham" : "Mifflin-St Jeor",
+        rmr: rmr, maint: maint, kcal: kcal, delta: delta, equation: R.equation, cat: R.cat, method: R.method,
         protein: p, fat: f, carbs: c,
         weekly: delta * 7 / KCAL_PER_KG,                       // kg per week implied by the rule of thumb
         belowRmr: kcal < rmr, deficitPct: delta < 0 ? -delta / maint * 100 : 0, carbsLow: c < 50
@@ -370,10 +369,9 @@
         phase 'lose'|'hold'|'gain', days (diet days a week, 0.5 steps), size (% below maintenance
         on a diet day), gain (% surplus), train: 7 booleans, diet (optional): L booleans set by hand */
   F.plan = function (o) {
-    var useBf = o.bf > 0 && o.bf < 60;
-    var rmr = useBf ? F.cunningham(o.kg, o.bf) : F.mifflin(o.sex, o.kg, o.cm, o.age);
+    var R = F.resting(o), rmr = R.rmr;
     var own = o.maint > 0, maint = own ? o.maint : rmr * o.pal;
-    var res = { rmr: rmr, maint: maint, own: own, equation: useBf ? "Cunningham" : "Mifflin-St Jeor", phase: o.phase };
+    var res = { rmr: rmr, maint: maint, own: own, equation: R.equation, cat: R.cat, method: R.method, phase: o.phase };
     if (o.phase !== "lose") {
       var kcal = o.phase === "gain" ? maint * (1 + o.gain / 100) : maint, p = F.planProtein(o.kg, o.bf, o.phase, 0);
       res.len = 7; res.diet = [false, false, false, false, false, false, false];
@@ -404,7 +402,7 @@
     res.dietDay = n ? dayMacros(c.dk, c.pr, maint) : null; res.maintDay = dayMacros(maint, c.pr, maint);
     res.dietOnTraining = diet.filter(function (d, i) { return d && o.train && o.train[i % 7]; }).length;
     res.belowFloor = c.avg < PLAN.FLOOR;
-    res.ea = useBf ? c.avg / (o.kg * (1 - o.bf / 100)) : NaN;   // intake per kg FFM; training energy is inside maintenance, so this is an upper bound
+    res.ea = (o.bf > 0 && o.bf < 60) ? c.avg / (o.kg * (1 - o.bf / 100)) : NaN;   // intake per kg FFM; training energy is inside maintenance, so this is an upper bound
     return res;
   };
   F.PLAN = PLAN;
@@ -446,8 +444,8 @@
   ];
   F.EXERCISE = [
     { id: "aer1", n: "Cardio, low", d: "HR \u2264130", m: 0.2 },
-    { id: "aer2", n: "Cardio, medium", d: "HR 130\u2013150", m: 0.3 },
-    { id: "aer3", n: "Cardio, high", d: "HR 160\u2013180", m: 0.4 },
+    { id: "aer2", n: "Cardio, medium", d: "HR 130\u2013155", m: 0.3 },
+    { id: "aer3", n: "Cardio, high", d: "HR 155\u2013180", m: 0.4 },
     { id: "hiit", n: "HIIT", d: "", m: 0.3 },
     { id: "wt1", n: "Weight training, moderate", d: "", m: 0.1 },
     { id: "wt2", n: "Weight training, high intensity", d: "", m: 0.2 }
@@ -460,6 +458,20 @@
     for (var i = 0; i < F.BMR_CATS.length; i++) if (bf <= F.BMR_CATS[i][sex === "f" ? "f" : "m"]) return F.BMR_CATS[i].cat;
     return 3;
   };
+  /* resting(o) → { rmr, equation, method, cat }. o.method: "cat" (body weight x the category's
+     rate; the category from body fat when it is known, else o.cat), "mifflin", or "cunningham"
+     (Mifflin-St Jeor when there is no body fat). No method: the old rule, Cunningham with body
+     fat and Mifflin-St Jeor without. */
+  F.resting = function (o) {
+    var hasBf = o.bf > 0 && o.bf < 60, m = o.method || (hasBf ? "cunningham" : "mifflin");
+    if (m === "cat") {
+      var c = F.bmrCategory(o.sex, hasBf ? o.bf : NaN) || (+o.cat >= 1 && +o.cat <= 3 ? +o.cat : 2);
+      return { rmr: F.categoryBmr(o.kg, c), equation: "Category " + c + ": " + num2(F.BMR_CATS[c - 1].kg) + " kcal per kg", method: "cat", cat: c };
+    }
+    if (m === "cunningham" && hasBf) return { rmr: F.cunningham(o.kg, o.bf), equation: "Cunningham", method: m };
+    return { rmr: F.mifflin(o.sex, o.kg, o.cm, o.age), equation: "Mifflin-St Jeor" + (m === "cunningham" ? " (Cunningham needs body fat)" : ""), method: "mifflin" };
+  };
+  function num2(v) { return String(Math.round(v * 10) / 10); }
   F.categoryBmr = function (kg, cat) { var c = F.BMR_CATS[cat - 1]; return c && kg > 0 ? kg * c.kg : NaN; };
   // a day: the usual day's multiplier plus each session's multiplier per hour times its hours
   F.dayMult = function (base, sessions) {
@@ -533,6 +545,49 @@
     else done(false);
   }
 
+  /* Resting energy, shared by Energy & macros and the diet planner: a "from" choice (body weight
+     x body-fat category, KiteSink's default; or a published equation), a category for when body
+     fat is not given, and activity options to match: the category method pairs with KiteSink's
+     day levels (x 1.1 to 1.5, training added by the activity multiplier), the equations with
+     the lifestyle factors (x 1.4 to 2.0, training included). A multiplier sent from the activity
+     multiplier stays as its own option either way. */
+  function setPalOption(act, pal) {
+    var v = (Math.round(pal * 100) / 100).toFixed(2), opt = act.querySelector("option[data-custom]");
+    if (!opt) { opt = document.createElement("option"); opt.setAttribute("data-custom", "1"); act.appendChild(opt); }
+    opt.value = v; opt.textContent = "Your own \u00b7 \u00d7 " + v + " from the activity multiplier"; opt.setAttribute("data-short", "with an activity multiplier of " + v);
+    act.value = v;
+  }
+  function restSource(pfx, mem, sexOf, onChange) {
+    var src = $(pfx + "-src"), cat = $(pfx + "-cat"), act = $(pfx + "-act"), bf = $(pfx + "-bf");
+    if (!src || !cat || !act) return { method: function () { return undefined; }, cat: function () { return 2; }, paint: function () {} };
+    var EQ = [].map.call(act.querySelectorAll("option:not([data-custom])"), function (o) { return [o.value, o.textContent, o.getAttribute("data-short") || o.textContent]; });
+    var SHORT = { inactive: "mostly sedentary", light: "lightly active", moderate: "moderately active", high: "very active" };
+    var CAT = F.LEVELS.map(function (l) { return [l.m.toFixed(1), l.n + " \u00b7 " + l.d.toLowerCase() + " (\u00d7 " + l.m.toFixed(1) + ")", SHORT[l.id]]; });
+    function fill(list, wanted, fallback) {
+      var custom = act.querySelector("option[data-custom]");
+      act.innerHTML = list.map(function (o) { return '<option value="' + o[0] + '" data-short="' + esc(o[2]) + '">' + esc(o[1]) + "</option>"; }).join("");
+      if (custom) act.appendChild(custom);
+      var hit = [].filter.call(act.options, function (o) { return parseFloat(o.value) === parseFloat(wanted); })[0];
+      act.value = hit ? hit.value : fallback;
+    }
+    src.value = ["cat", "mifflin", "cunningham"].indexOf(mem.rmrSrc) >= 0 ? mem.rmrSrc : "cat";
+    cat.value = mem.cat >= 1 && mem.cat <= 3 ? String(mem.cat) : "2";
+    var shown = src.value === "cat" ? "cat" : "eq";
+    fill(shown === "cat" ? CAT : EQ, act.value, shown === "cat" ? "1.2" : "1.6");
+    function paint() {
+      var isCat = src.value === "cat", hasBf = bf && parseFloat(bf.value) > 0, f = sexOf() === "f";
+      var cut = f ? ["24% or less", "25\u201334%", "35% or more"] : ["15% or less", "16\u201325%", "26% or more"];
+      [].forEach.call(cat.options, function (o, i) { o.textContent = (i + 1) + " \u00b7 body fat " + cut[i]; });
+      $(pfx + "-cat-wrap").hidden = !isCat || hasBf;
+      var want = isCat ? "cat" : "eq";
+      if (want !== shown) { shown = want; var keep = act.querySelector("option[data-custom]") && act.selectedOptions[0] && act.selectedOptions[0].hasAttribute("data-custom") ? act.value : null; fill(want === "cat" ? CAT : EQ, keep, want === "cat" ? "1.2" : "1.6"); }
+    }
+    src.addEventListener("change", function () { paint(); onChange(); });
+    cat.addEventListener("change", onChange);
+    paint();
+    return { method: function () { return src.value; }, cat: function () { return +cat.value; }, paint: paint };
+  }
+
   // Each tool starts inside boot(), so a failure in one cannot stop the others.
   function boot(fn) { try { fn(); } catch (err) { if (window.console) console.error("A fitness tool failed to start:", err); } }
 
@@ -601,14 +656,11 @@
 
     if (saved.age) $("m-age").value = saved.age;
     if (saved.bf !== "" && isFinite(saved.bf)) $("m-bf").value = saved.bf;
+    var rest = restSource("m", saved, function () { return sex.get(); }, function () { calc(); });
     if (saved.pal) {
       var found = false;
       [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) { $("m-act").value = o.value; found = true; } }); // 2 must find "2.0"
-      if (!found && saved.pal >= 1.2 && saved.pal <= 2.5) {   // a multiplier the activity tool put there
-        var v = (+saved.pal).toFixed(2), o = document.createElement("option");
-        o.value = v; o.setAttribute("data-custom", "1"); o.setAttribute("data-short", "with an activity multiplier of " + v);
-        o.textContent = "Your own \u00b7 \u00d7 " + v + " from the activity multiplier"; $("m-act").appendChild(o); $("m-act").value = v;
-      }
+      if (!found && saved.pal >= 1.05 && saved.pal <= 2.5) setPalOption($("m-act"), +saved.pal);   // a multiplier the activity tool put there
     }
     if (saved.fatPct) $("m-fat").value = saved.fatPct;
     if (saved.protein && protTouched) $("m-prot").value = saved.protein;
@@ -645,7 +697,8 @@
         return;
       }
 
-      var r = F.energy({ sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, pal: pal, goal: g, rate: rate, protein: prot, fatPct: fatPct });
+      rest.paint();
+      var r = F.energy({ sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, pal: pal, goal: g, rate: rate, protein: prot, fatPct: fatPct, method: rest.method(), cat: rest.cat() });
       var carbs = Math.max(0, r.carbs);
       $("m-kcal").textContent = num(F.round(r.kcal, 10));
       $("m-sub").textContent = g === "hold" ? "to hold your weight" : (g === "lose" ? "about " + num(F.round(-r.delta, 10)) + " kcal under maintenance" : "about " + num(F.round(r.delta, 10)) + " kcal over maintenance");
@@ -682,7 +735,7 @@
         "For each day give every meal with ingredient weights in grams and its calories and protein, then a daily total against the targets. After day 7 add one consolidated shopping list and two swap options per meal.\n" +
         "Show the arithmetic for each daily total and flag any day that misses a target by more than 5%. Use ordinary supermarket food. Ask me before assuming anything about allergies or medical conditions.";
 
-      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched, mTouched: mTouched };
+      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched, mTouched: mTouched, rmrSrc: rest.method(), cat: rest.cat() };
       if (g === "lose") patch.loseRate = rate; else if (g === "gain") patch.gainRate = rate;
       store.set(patch); saved = store.get();
     }
@@ -858,7 +911,8 @@
      which moves it to the Cunningham equation. */
   boot(function () {
     if (!$("bodyfat")) return;
-    var mine = saved.navy || {}, FIELDS = ["h", "neck", "waist", "hip"];
+    var mine = saved.navy || {}, FIELDS = ["h", "neck", "waist", "hip"], touched = !!mine.touched;   // touched: the readings are the visitor's, not the examples
+    ["input", "click"].forEach(function (t) { $("bodyfat").addEventListener(t, function (e) { if (e.isTrusted && (t === "input" || e.target.closest("button"))) touched = true; }, true); });
     var cm = {}; FIELDS.forEach(function (f) { cm[f] = mine[f] > 0 ? +mine[f] : val("bf-" + f); });
     var kg = mine.kg > 0 ? +mine.kg : NaN;
     var units = seg($("bf-units"), mine.units || (saved.units === "imperial" ? "in" : ""), "cm", function () { show(); calc(); });
@@ -908,7 +962,7 @@
         }
         say("bf-say", "Estimated body fat " + num(shown, 1) + " percent" + (mass ? ", " + num(inch() ? F.lb(kg * shown / 100) : kg * shown / 100, 1) + (inch() ? " pounds" : " kilograms") + " of fat." : "."));
       }
-      store.set({ navy: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "", pct: isFinite(pct) ? Math.round(pct * 10) / 10 : "" } });
+      store.set({ navy: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "", pct: isFinite(pct) ? Math.round(pct * 10) / 10 : "", touched: touched } });
     }
     show(); calc();
   });
@@ -922,11 +976,12 @@
     if (!$("activity")) return;
     var mine = saved.ac || {}, result = null;
     var mode = seg($("ac-mode"), mine.mode, "one", calc);
-    var levelEl = $("ac-level"), cat = seg($("ac-cat"), mine.cat, "2", calc);
+    var levelEl = $("ac-level");
     levelEl.innerHTML = F.LEVELS.map(function (l) {
       return '<button type="button" class="ac-lv" value="' + l.id + '" aria-pressed="false"><b>' + esc(l.n) + '<span>\u00d7 ' + l.m.toFixed(1) + "</span></b><small>" + esc(l.d) + "</small><small>" + esc(l.steps) + "</small></button>";
     }).join("");
     var level = seg(levelEl, mine.level, "light", calc);
+    // Energy & macros picks the resting-energy method; offer its day level when it uses the categories
     var exOpts = F.EXERCISE.map(function (e) { return '<option value="' + e.id + '">' + esc(e.n) + (e.d ? " \u00b7 " + e.d : "") + "</option>"; }).join("");
     $("ac-ex").innerHTML = exOpts;
     $("ac-ex").value = F.exercise(mine.ex) ? mine.ex : "wt1";
@@ -965,34 +1020,22 @@
     // Energy & macros and the navy tool save as they change; follow them
     ["macros", "bodyfat"].forEach(function (id) { var p = $(id); if (p) { p.addEventListener("input", function () { setTimeout(calc, 0); }); p.addEventListener("click", function () { setTimeout(calc, 0); }); } });
 
-    function person() {   // what Energy & macros and the navy tool know
-      var m = store.get(), kg = m.mTouched ? +m.kg : NaN, sex = m.sex === "f" ? "f" : "m", bf = m.bf === "" || m.bf == null ? NaN : +m.bf, from = "Energy & macros";
-      if (!(bf > 0) && m.navy && m.navy.pct > 0) { bf = +m.navy.pct; from = "Navy body fat"; }
-      return { kg: kg > 30 && kg < 300 ? kg : NaN, sex: sex, bf: bf > 0 ? bf : NaN, bfFrom: from, imp: m.units === "imperial" };
-    }
-    function baseline() {   // {bmr, text} or {missing: true}
-      var own = val("ac-bmr"), p = person();
+    function baseline() {   // {bmr, text, example}
+      var own = val("ac-bmr");
       $("ac-bmr-clear").hidden = !(own > 0);
-      if (own >= 800 && own <= 5000) return { bmr: own, p: p, own: true, text: "Your BMR: " + num(own) + " kcal a day." };
-      var c = F.bmrCategory(p.sex, p.bf), auto = c > 0;
-      $("ac-cat-wrap").hidden = auto || !isFinite(p.kg);
-      if (!auto) c = +cat.get();
-      var C = F.BMR_CATS[c - 1];
-      [].forEach.call($("ac-cat").querySelectorAll("button"), function (b) {
-        var k = F.BMR_CATS[+b.value - 1], cut = p.sex === "f" ? ["24% or less", "25\u201334%", "35% or more"] : ["15% or less", "16\u201325%", "26% or more"];
-        b.innerHTML = b.value + " <small>" + cut[+b.value - 1] + "</small>";
-      });
-      if (!isFinite(p.kg)) return { missing: true, p: p };
-      var bmr = F.categoryBmr(p.kg, c), rate = p.imp ? C.lb + " kcal per lb" : C.kg + " kcal per kg";
-      return { bmr: bmr, p: p, cat: c, text: num(F.round(bmr, 10)) + " kcal a day: " + (p.imp ? num(F.lb(p.kg)) + " lb" : num(p.kg, 1) + " kg") + " \u00d7 " + rate +
-        ", category " + c + (auto ? " from your " + num(p.bf, 1) + "% body fat (" + p.bfFrom + ")." : ".") };
+      if (own >= 800 && own <= 5000) return { bmr: own, own: true, text: "Your BMR: " + num(own) + " kcal a day." };
+      var m = store.get(), imp = m.units === "imperial";
+      var kg = +m.kg > 30 && +m.kg < 300 ? +m.kg : 75, cm = +m.cm > 120 && +m.cm < 230 ? +m.cm : 175, age = +m.age >= 16 && +m.age <= 95 ? +m.age : 30;
+      var bf = m.bf === "" || m.bf == null ? NaN : +m.bf, from = "";
+      if (!(bf > 0) && m.navy && m.navy.touched && m.navy.pct > 0) { bf = +m.navy.pct; from = " (body fat from Navy body fat)"; }
+      var R = F.resting({ method: m.rmrSrc || "cat", cat: m.cat, sex: m.sex === "f" ? "f" : "m", kg: kg, cm: cm, age: age, bf: bf });
+      var who = imp ? num(F.lb(kg)) + " lb" : num(kg, 1) + " kg";
+      return { bmr: R.rmr, kg: kg, imp: imp, example: !m.mTouched,
+        text: num(F.round(R.rmr, 10)) + " kcal a day from Energy & macros: " + who + ", " + R.equation + from + "." };
     }
     function setUse(pal) {
       var act = $("m-act"); if (!act) return;
-      var v = (Math.round(pal * 100) / 100).toFixed(2), opt = act.querySelector("option[data-custom]");
-      if (!opt) { opt = document.createElement("option"); opt.setAttribute("data-custom", "1"); act.appendChild(opt); }
-      opt.value = v; opt.textContent = "Your own \u00b7 \u00d7 " + v + " from the activity multiplier"; opt.setAttribute("data-short", "with an activity multiplier of " + v);
-      act.value = v; act.dispatchEvent(new Event("input", { bubbles: true })); act.dispatchEvent(new Event("change", { bubbles: true }));
+      setPalOption(act, pal); act.dispatchEvent(new Event("input", { bubbles: true })); act.dispatchEvent(new Event("change", { bubbles: true }));
     }
     $("ac-use").addEventListener("click", function () {
       if (!result) return; setUse(result);
@@ -1006,10 +1049,9 @@
     function calc() {
       var one = mode.get() === "one", b = baseline(), L = F.level(level.get()), out = $("ac-out");
       $("ac-one").hidden = !one; $("ac-day").hidden = one;
-      $("ac-need").hidden = !b.missing; $("ac-from").hidden = !!b.missing; $("ac-from").textContent = b.text || "";
-      store.set({ ac: { mode: mode.get(), level: level.get(), cat: cat.get(), ex: $("ac-ex").value, min: val("ac-min"), times: val("ac-times"), bmr: val("ac-bmr") || "", rows: rows } });
-      if (b.missing) return empty("Needs your weight: fill in Energy & macros, or type your BMR.");
-      var perLb = function (kcal) { return b.p && isFinite(b.p.kg) ? (b.p.imp ? num(kcal / F.lb(b.p.kg), 1) + " kcal per lb" : num(kcal / b.p.kg, 1) + " kcal per kg") : ""; };
+      $("ac-need").hidden = !b.example; $("ac-from").textContent = b.example ? b.text.replace("from Energy & macros:", "from Energy & macros\u2019 example inputs:") : b.text;
+      store.set({ ac: { mode: mode.get(), level: level.get(), ex: $("ac-ex").value, min: val("ac-min"), times: val("ac-times"), bmr: val("ac-bmr") || "", rows: rows } });
+      var perLb = function (kcal) { return b.kg ? (b.imp ? num(kcal / F.lb(b.kg), 1) + " kcal per lb" : num(kcal / b.kg, 1) + " kcal per kg") : ""; };
       if (one) {
         var e = F.exercise($("ac-ex").value), min = val("ac-min"), times = val("ac-times");
         if (!(min >= 5 && min <= 600 && times >= 1 && times <= 14)) return empty("Check the minutes and the times a week.");
@@ -1240,10 +1282,17 @@
     var body = { kg: mem.kg > 0 ? +mem.kg : 75, cm: mem.cm > 0 ? +mem.cm : 175 };
     if (mem.age) $("d-age").value = mem.age;
     if (mem.bf) $("d-bf").value = mem.bf;
-    if (mem.pal) [].forEach.call($("d-act").options, function (o) { if (parseFloat(o.value) === parseFloat(mem.pal)) $("d-act").value = o.value; });
+    var dSex = function () { return mem.sex === "f" ? "f" : "m"; };   // replaced once the sex control exists
+    var rest = restSource("d", mem, function () { return dSex(); }, function () { calc(); });
+    if (mem.pal) {
+      var dFound = false;
+      [].forEach.call($("d-act").options, function (o) { if (parseFloat(o.value) === parseFloat(mem.pal)) { $("d-act").value = o.value; dFound = true; } });
+      if (!dFound && mem.pal >= 1.05 && mem.pal <= 2.5) setPalOption($("d-act"), +mem.pal);
+    }
     var train = [true, true, false, true, true, false, false], days = 3.5, manual = null, last = null, prevBal = null, changed = -1, deltaT = 0;
     var units = seg($("d-units"), mem.units, "metric", function () { showBody(); calc(); });
     var sex = seg($("d-sex"), mem.sex, "m", calc);
+    dSex = function () { return sex.get(); };
     var phase = seg($("d-phase"), "lose", "lose", function () { manual = null; calc(); });
     var gainPct = seg($("d-gainseg"), "5", "5", calc);
 
@@ -1316,7 +1365,8 @@
       var ok = kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 18 && age <= 95;
       $("d-out").classList.toggle("is-empty", !ok);
       if (!ok) { $("d-head").textContent = "—"; $("d-sub").textContent = "Enter age (18 or over), height and weight to see a plan."; $("d-cards").innerHTML = ""; $("d-req").innerHTML = ""; $("d-warn").hidden = true; return; }
-      var r = F.plan({ sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, pal: parseFloat($("d-act").value), maint: own >= 1000 && own <= 6000 ? own : 0,
+      rest.paint();
+      var r = F.plan({ sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, pal: parseFloat($("d-act").value), maint: own >= 1000 && own <= 6000 ? own : 0, method: rest.method(), cat: rest.cat(),
         phase: ph, days: days, size: val("d-size"), gain: +gainPct.get(), train: train, diet: manual });
       last = r;
       var warns = [], req = [];

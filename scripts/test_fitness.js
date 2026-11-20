@@ -79,6 +79,15 @@ eq('a day: light plus an hour of moderate weights and 30 min of low cardio', F.d
 eq('a day with no exercise is the usual day', F.dayMult(1.3, []), 1.3);
 let wk = F.weekMult(1.2, 'wt2', 90, 4);
 eq('week: training day', wk.train, 1.5, 1e-9); eq('week: other days', wk.rest, 1.2); eq('week: average', wk.avg, 1.2 + 0.3 * 4 / 7, 1e-12);
+// one resting energy for Energy & macros, the planner and the activity multiplier
+let R = F.resting({ method: 'cat', sex: 'm', kg: 80, bf: 18 });
+eq('resting: category from body fat (men 18% is 2)', R.rmr, 80 * 19.8, 1e-9); same('resting: category 2', String(R.cat), '2');
+R = F.resting({ method: 'cat', sex: 'f', kg: 60, bf: NaN, cat: 3 });
+eq('resting: no body fat uses the chosen category', R.rmr, 60 * 17.6, 1e-9);
+eq('resting: Cunningham without body fat falls back to Mifflin', F.resting({ method: 'cunningham', sex: 'm', kg: 80, cm: 180, age: 30 }).rmr, 1780);
+eq('resting: no method keeps the old rule', F.resting({ sex: 'm', kg: 80, cm: 180, age: 30, bf: 20 }).rmr, 1752.4);
+eq('energy with the category method', F.energy({ method: 'cat', sex: 'm', kg: 80, cm: 180, age: 30, bf: 18, pal: 1.2, goal: 'hold', rate: 0, protein: 2, fatPct: 25 }).maint, 80 * 19.8 * 1.2, 1e-9);
+same('exercise bands: medium 130-155, high 155-180', F.exercise('aer2').d + ' / ' + F.exercise('aer3').d, 'HR 130\u2013155 / HR 155\u2013180');
 same('levels and exercise: every multiplier in range', String(F.LEVELS.every(l => l.m >= 1.1 && l.m <= 1.5) && F.EXERCISE.every(e => e.m >= 0.1 && e.m <= 0.4)), 'true');
 // travel builder: every combination produces a session with moves, only using allowed kit and level
 const kits = [[], ['db'], ['kb', 'band'], ['bar', 'bench', 'sus'], ['db', 'kb', 'band', 'bar', 'bench', 'sus']];
