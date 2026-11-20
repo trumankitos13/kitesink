@@ -410,6 +410,50 @@
       "url": "https://www.fao.org/4/ac911e/ac911e07.htm",
       "label": "WHO/FAO 2003",
       "support": "Fruits and vegetables and wholegrain foods are likely to provide more than 25 g a day of total dietary fibre; at least 400 g a day of fruits and vegetables."
+    },
+    "hodgdon1984m": {
+      "type": "other",
+      "authors": [
+        "Hodgdon JA",
+        "Beckett MB"
+      ],
+      "year": 1984,
+      "title": "Prediction of percent body fat for U.S. Navy men from body circumferences and height",
+      "journal": "Naval Health Research Center, Report 84-11",
+      "url": "https://apps.dtic.mil/sti/citations/ADA143890"
+    },
+    "hodgdon1984f": {
+      "type": "other",
+      "authors": [
+        "Hodgdon JA",
+        "Beckett MB"
+      ],
+      "year": 1984,
+      "title": "Prediction of percent body fat for U.S. Navy women from body circumferences and height",
+      "journal": "Naval Health Research Center, Report 84-29",
+      "url": "https://apps.dtic.mil/sti/html/tr/ADA146456/index.html"
+    },
+    "foulis2023": {
+      "type": "cohort",
+      "authors": [
+        "Foulis SA",
+        "Friedl KE",
+        "Spiering BA",
+        "Walker LA",
+        "Guerriere KI",
+        "Pecorelli VP",
+        "Zeppetelli DJ",
+        "Reynoso MC",
+        "Taylor KM",
+        "Hughes JM"
+      ],
+      "year": 2023,
+      "title": "Body composition changes during 8 weeks of military training are not accurately captured by circumference-based assessments",
+      "journal": "Frontiers in Physiology",
+      "doi": "10.3389/fphys.2023.1183836",
+      "volume": "14",
+      "pages": "1183836",
+      "support": "Tape-method body fat against DXA in 1,407 Army recruits: standard error of estimate 3.42 points (men) and 4.12 (women) before training, reading about 6 points below DXA on average."
     }
   }
 }

@@ -243,6 +243,92 @@
   }
   window.addEventListener("hashchange", function () { reveal(location.hash.slice(1)); });
 
+  /* ---------- the hero card ----------
+     A rotator shows one item at a time; "Another" moves on. The widgets do small sums from the
+     numbers the build wrote into them, and start from the weight Energy & macros has (once the
+     visitor has set it there: "ksFit", read only). Every number they print is also in the
+     entry they link to. */
+  var LB = 2.20462;
+  var fit = {}; try { fit = JSON.parse(localStorage.getItem("ksFit") || "{}") || {}; } catch (e) {}
+  function fmt(v, d) { return Number(v).toLocaleString("en-US", { maximumFractionDigits: d || 0, minimumFractionDigits: d || 0 }); }
+  all("[data-rot]", document).forEach(function (rot) {
+    var items = all(".fc-items > li", rot), btn = rot.querySelector(".fc-next"), of = rot.querySelector(".fc-of"), i = 0;
+    if (!btn || items.length < 2) return;
+    if (rot.closest(".fr-card") && document.body.querySelector("#gl-list")) i = Math.floor(Math.random() * items.length);   // the glossary: a term of the moment
+    function show() { items.forEach(function (li, j) { li.hidden = j !== i; }); if (of) of.textContent = (i + 1) + " of " + items.length; }
+    btn.hidden = false; show();
+    btn.addEventListener("click", function () { i = (i + 1) % items.length; show(); });
+  });
+  all(".fw[data-w]", document).forEach(function (w) {
+    var kind = attr(w, "w");
+    function weightBox(onChange) {   // a weight (or max) field with a kg / lb switch; returns kg
+      var input = w.querySelector("input.k-input"), unitBtn = w.querySelector(".fw-unit"), unitLbl = w.querySelector(".fw-u"), lb = fit.units === "imperial";
+      var kg = kind !== "zones" && fit.mTouched && fit.kg > 30 ? +fit.kg : (kind === "zones" ? NaN : +input.value);
+      function paint() {
+        unitLbl.textContent = lb ? "lb" : "kg"; unitBtn.textContent = lb ? "kg" : "lb"; unitBtn.setAttribute("aria-label", lb ? "Switch to kilograms" : "Switch to pounds");
+        if (isFinite(kg)) input.value = lb ? Math.round(kg * LB) : Math.round(kg * 2) / 2;
+      }
+      input.addEventListener("input", function () { var v = parseFloat(input.value); kg = isFinite(v) ? (lb ? v / LB : v) : NaN; onChange(kg, lb); });
+      unitBtn.addEventListener("click", function () { lb = !lb; paint(); onChange(kg, lb); });
+      paint();
+      return function () { return [kg, lb]; };
+    }
+    if (kind === "protein" || kind === "rate") {
+      var lo = +attr(w, "lo"), hi = +attr(w, "hi"), out = w.querySelector(".fw-a"), ou = w.querySelector(".fw-ou");
+      var calc = function (kg, lb) {
+        if (!(kg > 25 && kg < 300)) { out.textContent = "\u2014"; return; }
+        if (kind === "protein") out.textContent = fmt(Math.round(kg * lo / 5) * 5) + "\u2013" + fmt(Math.round(kg * hi / 5) * 5);
+        else { var a = kg * lo / 100, b = kg * hi / 100, k = lb ? LB : 1, t = function (v) { return (Math.round(v * 100) / 100).toFixed(2).replace(/\.?0+$/, ""); }; out.textContent = t(a * k) + "\u2013" + t(b * k); ou.textContent = lb ? "lb" : "kg"; }
+      };
+      var get = weightBox(calc); calc.apply(null, get());
+    } else if (kind === "zones") {
+      var zones = all(".fw-zone", w), head = w.querySelector(".fw-a"), z = w.querySelector(".fw-z"), kgOut = w.querySelector(".fw-kg"), cur = zones.filter(function (b) { return b.getAttribute("aria-pressed") === "true"; })[0] || zones[0];
+      var max = NaN, lbs = false;
+      var paintZ = function () {
+        zones.forEach(function (b) { b.setAttribute("aria-pressed", b === cur ? "true" : "false"); });
+        var lo2 = +attr(cur, "lo"), hi2 = +attr(cur, "hi");
+        head.textContent = cur.querySelector("span").textContent + " \u00b7 " + lo2 + "\u2013" + hi2 + "%";
+        z.textContent = attr(cur, "reps") + " reps a set. " + attr(cur, "why") + ".";
+        kgOut.hidden = !(max >= 20);
+        if (max >= 20) { var k = lbs ? LB : 1, step = lbs ? 5 : 2.5, r = function (v) { var x = Math.round(v * k / step) * step; return fmt(x, x % 1 ? 1 : 0); }; kgOut.textContent = r(max * lo2 / 100) + "\u2013" + r(max * hi2 / 100) + (lbs ? " lb" : " kg") + " for this zone"; }
+      };
+      zones.forEach(function (b) { b.addEventListener("click", function () { cur = b; paintZ(); }); });
+      weightBox(function (kg, lb) { max = kg; lbs = lb; paintZ(); });
+      paintZ();
+    } else if (kind === "who") {
+      var mod = w.querySelector("#fc-mod"), vig = w.querySelector("#fc-vig"), str = w.querySelector("#fc-str");
+      var calcW = function () {
+        var minutes = +mod.value + 2 * +vig.value, days = +str.value;
+        w.querySelector(".fw-mod").textContent = mod.value; w.querySelector(".fw-vig").textContent = vig.value; w.querySelector(".fw-str").textContent = days;
+        [[".r-act", minutes, 150], [".r-str", days, 2]].forEach(function (r) {
+          var ring = w.querySelector(r[0]); ring.querySelector(".fw-rv").textContent = r[1];
+          ring.querySelector(".fw-arc").style.strokeDasharray = Math.min(100, r[1] / r[2] * 100) + " 100";
+          ring.classList.toggle("is-met", r[1] >= r[2]);
+        });
+      };
+      [mod, vig, str].forEach(function (el) { el.addEventListener("input", calcW); });
+      calcW();
+    } else if (kind === "meet") {
+      var date = w.querySelector("#fc-date"), when = w.querySelector(".fw-when"), stages = all(".fw-tl li", w);
+      try { if (fit.meetDate) date.value = fit.meetDate; } catch (e) {}
+      var calcM = function () {
+        stages.forEach(function (li) { li.classList.remove("is-now", "is-past"); });
+        try { var st = JSON.parse(localStorage.getItem("ksFit") || "{}") || {}; st.meetDate = date.value || ""; localStorage.setItem("ksFit", JSON.stringify(st)); } catch (e) {}
+        var d = date.value ? new Date(date.value + "T12:00:00") : null;
+        if (!d || isNaN(d)) { when.hidden = true; return; }
+        var today = new Date(); today.setHours(12, 0, 0, 0);
+        var days = Math.round((d - today) / 864e5), now = -1;
+        stages.forEach(function (li, j) { if (days <= +attr(li, "from") && (now < 0 || +attr(li, "from") !== +attr(stages[now], "from"))) now = days <= +attr(li, "from") ? j : now; });
+        stages.forEach(function (li, j) { if (j < now) li.classList.add("is-past"); });
+        if (now >= 0) stages[now].classList.add("is-now");
+        when.hidden = false;
+        when.innerHTML = days > 1 ? "<b>" + days + "</b> days to go" : days === 1 ? "<b>Tomorrow</b>" : days === 0 ? "<b>Meet day</b>" : "<b>Done</b>: well lifted";
+      };
+      date.addEventListener("input", calcM); date.addEventListener("change", calcM);
+      calcM();
+    }
+  });
+
   applyAll();
   if (location.hash) setTimeout(function () { reveal(location.hash.slice(1)); }, 90);
 })();

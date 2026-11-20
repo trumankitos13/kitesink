@@ -6,6 +6,7 @@
 
 Inputs (all in content/fitness/):
     page.html           the /fitness shell: head, hero, search box, Vantix feature, the calculators
+    hero.json           the hero's goal picker: per goal, the load, the week, the entry and what it rings
     templates/sub.html  the one shell every page under /fitness/ is poured into
     routes.json         one row per page under /fitness/: slug, kind, title, description, h1, lead
     corrections.json    the dated corrections log shown on /fitness/sources
@@ -581,7 +582,7 @@ def md_index(meta, numbers, counts, pages):
     out = ["# KiteSink Fitness", "",
            f"Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds {numbers['n:total']} entries in "
            f"{numbers['n:areas']} areas, and each entry names its sources and says how well supported it is. Around it: common claims "
-           "checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in "
+           "checked against the research, a glossary, an index of key numbers and reference tables, and eight calculators that run in "
            "the browser. Vantix, a periodization app, is the flagship project on the page.",
            "", "## The field guide, by area", ""]
     for name, doms in GROUPS:
@@ -598,7 +599,9 @@ def md_index(meta, numbers, counts, pages):
             f"- Energy and macro calculator: {SITE}/fitness#macros", f"- Effective reps explorer: {SITE}/fitness#reps",
             f"- 1RM and load calculator: {SITE}/fitness#loads", f"- Travel workout builder: {SITE}/fitness#travel",
             f"- Meet attempt planner: {SITE}/fitness#attempts",
-            f"- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): {SITE}/fitness#plan", "",
+            f"- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): {SITE}/fitness#plan",
+            f"- Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): {SITE}/fitness#activity",
+            f"- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): {SITE}/fitness#bodyfat", "",
             "## Vantix", "",
             "Vantix is a periodization app for lifters. Its free core (v1.0) is in progress, with a target of 31 December 2026. Paid tiers (Plus, and Pro for coaches) are planned with no prices set. "
             f"Details and the waiting list: {SITE}/vantix", "",
@@ -1055,7 +1058,173 @@ def pin_legacy(page, key, legacy):
     return page
 
 
-def render_sub(template, route, pages, sections, numbers, legacy=()):
+# ----------------------------------------------------------------- each page's hero card
+# The card in the top right of every page under /fitness/: a small working widget on six pages,
+# a rotating key number (or claim, or term) on the rest, and "on this page" under it. All of it
+# is in the HTML; /fitness-ref.js only cycles the rotator and runs the widgets' arithmetic.
+# Each widget names the entry its numbers come from, and the build checks that entry exists.
+CARD_WIDGETS = {
+    "nutrition": ("protein", "nut-protein-range"),
+    "diet": ("rate", "diet-deficit-rate"),
+    "health": ("who", "hlth-who-weekly-targets"),
+    "powerlifting": ("zones", "pl-table-intensity-zones"),
+    "meet": ("meet", None),
+    "sources": ("mix", None),
+}
+# The numbers a widget computes with must be what its entry says. If an entry is revised, the build
+# stops here until the widget (in widget_html and /fitness-ref.js) is brought into line.
+WIDGET_SAYS = {
+    "nut-protein-range": ("1.6 to 2.2 g per kg",),
+    "diet-deficit-rate": ("0.5 to 1 percent of body weight a week",),
+    "hlth-who-weekly-targets": ("150 to 300 minutes of moderate", "75 to 150 minutes of vigorous", "2 or more days"),
+}
+ROTATE = 12   # items in a rotator: enough to browse, few enough to keep the page light
+MEET_STAGES = [   # WHEN keys -> (days before the meet at which the stage starts; the meet is day 0)
+    ("months-out", 9999), ("weeks-out", 28), ("week-before", 7), ("day-before", 1), ("weigh-in", 0),
+    ("warm-up", 0), ("platform", 0), ("between-lifts", 0), ("after", -1),
+]
+
+
+def conf_badge(c):
+    return f'<span class="fc-badge c-{esc(c)}">{esc(CONF[c])}</span>'
+
+
+def spread(items, n=ROTATE):
+    """n items spread evenly through a list, the best supported first."""
+    order = {c: i for i, c in enumerate(CONF)}
+    items = sorted(items, key=lambda e: order.get(e.get("confidence"), 9))
+    if len(items) <= n:
+        return items
+    return [items[round(i * (len(items) - 1) / (n - 1))] for i in range(n)]
+
+
+def rotator(label, items, render):
+    if not items:
+        return ""
+    lis = "".join(f'<li{"" if i == 0 else " hidden"}>{render(e)}</li>' for i, e in enumerate(items))
+    more = (f'<button type="button" class="fc-next" hidden>Another <span aria-hidden="true">→</span></button>' if len(items) > 1 else "")
+    return (f'<div class="fc-rot" data-rot><div class="fc-top"><p class="k-label">{esc(label)}</p>'
+            f'<span class="fc-of" aria-hidden="true">1 of {len(items)}</span></div><ul class="fc-items" aria-live="polite">{lis}</ul>{more}</div>')
+
+
+def number_card(e, href):
+    return (f'<a class="fc-num" href="{href}"><b>{esc(e["value"])}</b>' + (f' <small>{esc(e.get("unit", ""))}</small>' if e.get("unit") else "") + "</a>"
+            f'<p class="fc-t"><a href="{href}">{esc(e["title"])}</a></p>{conf_badge(e["confidence"])}')
+
+
+def widget_html(kind, entry, data, lib, pages, here):
+    def ref(eid):
+        dom = next(d for d in DOMAINS if any(x["id"] == eid for x in data[d]["entries"]))
+        e = next(x for x in data[dom]["entries"] if x["id"] == eid)
+        return e, pages.href(eid, here)
+    if kind == "protein":
+        e, href = ref(entry)
+        return ('<div class="fw" data-w="protein" data-lo="1.6" data-hi="2.2"><p class="k-label">Protein for you</p>'
+                '<div class="fw-in"><label for="fc-kg">Body weight</label><span class="with-unit"><input class="k-input" id="fc-kg" type="number" inputmode="decimal" min="30" max="660" step="0.5" value="75"><span class="fw-u">kg</span></span>'
+                '<button type="button" class="fw-unit" aria-label="Switch to pounds">lb</button></div>'
+                '<p class="fw-out"><b class="fw-a">120–165</b> g a day</p>'
+                f'<p class="fw-note">1.6 to 2.2 g per kg (0.7 to 1.0 g per lb). <a href="{href}">The entry</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "rate":
+        e, href = ref(entry)
+        return ('<div class="fw" data-w="rate" data-lo="0.5" data-hi="1"><p class="k-label">A pace for you</p>'
+                '<div class="fw-in"><label for="fc-kg">Body weight</label><span class="with-unit"><input class="k-input" id="fc-kg" type="number" inputmode="decimal" min="30" max="660" step="0.5" value="75"><span class="fw-u">kg</span></span>'
+                '<button type="button" class="fw-unit" aria-label="Switch to pounds">lb</button></div>'
+                '<p class="fw-out"><b class="fw-a">0.38–0.75</b> <span class="fw-ou">kg</span> a week</p>'
+                f'<p class="fw-note">0.5 to 1 percent of body weight a week, the usual pace for keeping muscle. <a href="{href}">The entry</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "who":
+        e, href = ref(entry)
+        ring = lambda cls, label: (f'<div class="fw-ring {cls}"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18"/><circle class="fw-arc" cx="22" cy="22" r="18" pathLength="100"/></svg>'
+                                   f'<p><b class="fw-rv">0</b><small>{label}</small></p></div>')
+        return ('<div class="fw" data-w="who"><p class="k-label">Your week against WHO</p><div class="fw-rings">'
+                + ring("r-act", "of 150 min") + ring("r-str", "of 2 days") + '</div>'
+                '<label class="fw-sl"><span>Moderate activity <b class="fw-mod">90</b> min a week</span><input type="range" class="k-range" id="fc-mod" min="0" max="420" step="10" value="90"></label>'
+                '<label class="fw-sl"><span>Vigorous <b class="fw-vig">0</b> min, counted double</span><input type="range" class="k-range" id="fc-vig" min="0" max="210" step="5" value="0"></label>'
+                '<label class="fw-sl"><span>Strength days <b class="fw-str">1</b> a week</span><input type="range" class="k-range" id="fc-str" min="0" max="7" step="1" value="1"></label>'
+                f'<p class="fw-note">150 to 300 minutes of moderate activity, or half as much vigorous, plus strength work on 2 or more days. <a href="{href}">The entry</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "zones":
+        e, href = ref(entry)
+        rows = e["rows"]
+        def pcts(cell):
+            lo, hi = re.findall(r"\d+", cell)[:2]
+            return int(lo), int(hi)
+        btns = "".join(f'<button type="button" class="fw-zone" aria-pressed="{"true" if i == 2 else "false"}" data-lo="{pcts(r[1])[0]}" data-hi="{pcts(r[1])[1]}" data-reps="{esc(r[2])}" data-why="{esc(r[3])}" '
+                       f'><span>{esc(r[0])}</span><small>{pcts(r[1])[0]}–{pcts(r[1])[1]}%</small></button>' for i, r in enumerate(rows))
+        r = rows[2]
+        lo, hi = pcts(r[1])
+        return ('<div class="fw" data-w="zones"><p class="k-label">Intensity zones</p>'
+                f'<div class="fw-zones" role="group" aria-label="Zones by percent of one-rep max">{btns}</div>'
+                f'<p class="fw-out"><b class="fw-a">{esc(r[0])} · {lo}–{hi}%</b></p><p class="fw-z">{esc(r[2])} reps a set. {esc(r[3])}.</p>'
+                '<div class="fw-in"><label for="fc-max">Your max</label><span class="with-unit"><input class="k-input" id="fc-max" type="number" inputmode="decimal" min="20" max="500" step="2.5" placeholder="—"><span class="fw-u">kg</span></span>'
+                '<button type="button" class="fw-unit" aria-label="Switch to pounds">lb</button></div>'
+                '<p class="fw-kg" hidden></p>'
+                f'<p class="fw-note">Common coaching zones; reps at a given percentage vary by lifter. <a href="{href}">The table</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "meet":
+        steps = [x for x in data["meet"]["entries"] if x["type"] == "step"]
+        lis = []
+        for when, starts in MEET_STAGES:
+            group = [x for x in steps if x.get("when") == when]
+            if not group:
+                continue
+            lis.append(f'<li data-from="{starts}"><a href="#{esc(group[0]["id"])}"><span>{esc(WHEN[when])}</span><b>{len(group)}</b></a></li>')
+        return ('<div class="fw" data-w="meet"><p class="k-label">From sign-up to the platform</p>'
+                '<div class="fw-in"><label for="fc-date">Meet date</label><input class="k-input" id="fc-date" type="date"></div>'
+                '<p class="fw-out fw-when" hidden></p>'
+                f'<ol class="fw-tl">{"".join(lis)}</ol>'
+                '<p class="fw-note">The steps in each stage, in order. Put in your date to see where you are.</p></div>')
+    if kind == "mix":
+        rows = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] != "term"] + data["claims"]["entries"]
+        n = Counter(e.get("confidence") for e in rows)
+        total = sum(n[c] for c in CONF)
+        bar = "".join(f'<i class="c-{c}" style="flex-grow:{n[c]}" title="{esc(CONF[c])}: {n[c]}"></i>' for c in CONF if n[c])
+        legend = "".join(f'<li><i class="c-{c}"></i>{esc(CONF[c])}<b>{n[c]}</b></li>' for c in CONF if n[c])
+        types = Counter(src_type(s) for s in lib.by_id.values())
+        tlist = "".join(f"<li>{esc(t)}<b>{k}</b></li>" for t, k in types.most_common(6))
+        return ('<div class="fw" data-w="mix"><p class="k-label">How well supported the guide is</p>'
+                f'<div class="fw-bar" role="img" aria-label="{total} entries by grade: ' + ", ".join(f"{CONF[c]} {n[c]}" for c in CONF if n[c]) + f'">{bar}</div>'
+                f'<ul class="fw-leg">{legend}</ul>'
+                f'<p class="k-label fw-sub">{len(lib.by_id)} sources, by kind</p><ul class="fw-types">{tlist}</ul></div>')
+    raise SystemExit(f"unknown card widget {kind}")
+
+
+def hero_card(route, data, lib, pages, jump):
+    """The card for one page: a widget or a rotator, then the jump links."""
+    here, kind = route["slug"], route["kind"]
+    key = route["area"] if kind == "area" else kind
+    body = ""
+    if key in CARD_WIDGETS:
+        w, entry = CARD_WIDGETS[key]
+        if entry and entry not in pages.home:
+            raise SystemExit(f"the {key} page's card names {entry}, which is not an entry")
+        if entry in WIDGET_SAYS:
+            take = next(e["take"] for d in DOMAINS for e in data[d]["entries"] if e["id"] == entry)
+            lost = [w for w in WIDGET_SAYS[entry] if w not in take]
+            if lost:
+                raise SystemExit(f"the {key} page's widget computes with numbers its entry {entry} no longer states: {lost}")
+        body = widget_html(w, entry, data, lib, pages, here)
+    elif kind == "area":
+        nums = [e for e in data[key]["entries"] if e["type"] == "number"]
+        body = rotator("Key number", spread(nums), lambda e: number_card(e, pages.href(e["id"], here)))
+    elif kind == "reference":
+        nums = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] == "number"]
+        body = rotator("Key number", spread(nums), lambda e: number_card(e, pages.href(e["id"], here))
+                       .replace('<p class="fc-t">', f'<p class="fc-t"><span class="fc-area">{esc(DOMAINS[next(d for d in DOMAINS if e in data[d]["entries"])][0])}</span> ', 1))
+    elif kind == "claims":
+        cl = data["claims"]["entries"]
+        n = Counter(c["verdict"] for c in cl)
+        meter = "".join(f'<i class="{VERDICTS[v][1]}" style="flex-grow:{n[v]}"></i>' for v in VERDICTS if n[v])
+        legend = "".join(f'<li><i class="{VERDICTS[v][1]}"></i>{esc(VERDICTS[v][0])}<b>{n[v]}</b></li>' for v in VERDICTS if n[v])
+        body = (f'<div class="fw"><p class="k-label">{len(cl)} claims, by verdict</p><div class="fw-bar" role="img" aria-label="'
+                + ", ".join(f"{VERDICTS[v][0]} {n[v]}" for v in VERDICTS if n[v]) + f'">{meter}</div><ul class="fw-leg">{legend}</ul></div>'
+                + rotator("A claim", spread(cl), lambda c: f'<p class="fc-t"><a href="{pages.href(c["id"], here)}">{esc(c["title"])}</a></p><span class="fc-verdict {VERDICTS[c["verdict"]][1]}">{esc(VERDICTS[c["verdict"]][0])}</span>'))
+    elif kind == "glossary":
+        terms = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] == "term"]
+        body = rotator("A term", spread(terms), lambda e: f'<p class="fc-term"><a href="{pages.href(e["id"], here)}">{esc(e["title"])}</a></p><p class="fc-def">{esc(e["take"])}</p>')
+    if not body and not jump:
+        return ""
+    return f'<aside class="fr-card" aria-label="{esc(route_label(route))} at a glance">{body}{jump}</aside>'
+
+
+def render_sub(template, route, pages, sections, numbers, legacy=(), card=None):
     """Pour one page into the shell. numbers fills {{n:…}} and {{updated}} in the route's own text."""
     def filled(text):
         def one(m):
@@ -1073,13 +1242,13 @@ def render_sub(template, route, pages, sections, numbers, legacy=()):
     crumb = f'<li><a href="/">Home</a></li><li><a href="/fitness">Fitness</a></li><li aria-current="page">{esc(label)}</li>'
     jump = ""
     if len(sections) > 1 and route["kind"] not in ("claims", "glossary"):   # those two are one list each; the rest have sections to move between
-        jump = ('<nav class="fr-jump" aria-label="On this page">'
+        jump = ('<nav class="fr-jump" aria-label="On this page"><p class="k-label">On this page</p>'
                 + "".join(f'<a href="#{sid}">{esc(name)}' + (f" <b>{n}</b>" if n is not None else "") + "</a>" for sid, name, n, _ in sections) + "</nav>")
     fills = {
         "slug": slug, "title": esc(filled(route["title"])), "description": esc(filled(route["description"])),
         "h1": filled(route["h1"]), "lead": esc(filled(route["lead"])), "breadcrumb": breadcrumb, "crumb": crumb,
         "subnav": subnav_html(pages, slug), "subnav_here": subnav_here_html(pages, slug), "n:pages": str(len(pages.routes)), "areas": " ".join(DOMAINS),
-        "jump": jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
+        "card": card(jump) if card else jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
     }
 
     def fill(m):
@@ -1114,14 +1283,14 @@ def build_subpages(lib, meta, data, numbers, tool_uses, pages, legacy):
             else:
                 sections = page_reference(data, pages, r)
         total.update(tally)
-        built[r["slug"]] = render_sub(template, r, pages, sections, numbers, legacy)
+        built[r["slug"]] = render_sub(template, r, pages, sections, numbers, legacy, lambda jump, r=r: hero_card(r, data, lib, pages, jump))
     unused = [k for k in lib.by_id if not total[k]]
     if unused:
         raise SystemExit("sources no page cites: " + ", ".join(unused))
     for r in routes:   # last, so it can show how often each source is cited across all the pages
         if r["kind"] == "sources":
             with lib.counting(total):
-                built[r["slug"]] = render_sub(template, r, pages, page_sources(lib, pages, r, corrections), numbers, legacy)
+                built[r["slug"]] = render_sub(template, r, pages, page_sources(lib, pages, r, corrections), numbers, legacy, lambda jump, r=r: hero_card(r, data, lib, pages, jump))
     check_subpages(built, pages, lib)
 
     out = OrderedDict((PUBLIC / "fitness" / f"{r['slug']}.html", built[r["slug"]]) for r in routes)
@@ -1280,6 +1449,91 @@ def check_hub(hub, pages, built):
         raise SystemExit("/fitness, the hub:\n  " + "\n  ".join(problems))
 
 
+# ----------------------------------------------------------------- the hero's goal picker
+HERO_LEVELS = ("new", "mid", "adv")
+HERO_WEEK_KINDS = ("lift", "cardio", "rest", "meet")
+HERO_OVERRIDES = ("pct", "pct_from", "how", "entry", "areas", "vantix", "week")
+
+
+def hero(lib, data, pages, page):
+    """content/fitness/hero.json, checked against the field guide, as two things for page.html:
+    the goal buttons (HTML) and everything else /fitness.js needs (JSON). Each goal is resolved
+    for each level, so the script does no merging. An entry is sent with its title, short answer,
+    grade, home and first source; nothing here counts as a citation on the sources page."""
+    spec = json.loads((SRC / "hero.json").read_text(encoding="utf-8"))
+    where = {e["id"]: (dom, e) for dom in DOMAINS for e in data[dom]["entries"]}
+    problems, entries = [], OrderedDict()
+
+    def entry(eid, what):
+        if eid not in where:
+            problems.append(f"{what}: {eid!r} is not an entry in any area")
+            return
+        dom, e = where[eid]
+        src = []
+        for key in e.get("sources", [])[:1]:
+            k = lib.alias[(dom, key)]
+            src.append({"label": lib.label[k], "type": src_type(lib.by_id[k]), "href": pages.url("sources") + "#src-" + k})
+        entries[eid] = {"t": e["title"], "take": e["take"], "c": e["confidence"], "cl": CONF[e["confidence"]],
+                        "href": pages.href(eid, None), "src": src}
+
+    tools = spec.get("tools", {})
+    for t in tools:
+        if f'id="tab-{t}"' not in page:
+            problems.append(f"tools: page.html has no calculator tab tab-{t}")
+    if sorted(spec.get("days_by_level", {})) != sorted(HERO_LEVELS):
+        problems.append("days_by_level needs new, mid and adv")
+    entry(spec.get("days_from", ""), "days_from")
+    goals, buttons, keys = OrderedDict(), [], set()
+    for g in spec.get("goals", []):
+        name = g.get("key") or "?"
+        missing = [f for f in ("key", "label", "h1", "sub", "icon", "pct", "how", "entry", "tools", "areas", "week") if f not in g]
+        if missing:
+            problems.append(f"goal {name}: no {', '.join(missing)}")
+            continue
+        if name in keys or not re.fullmatch(r"[a-z]+", name):
+            problems.append(f"goal {name}: keys are unique lowercase words")
+        keys.add(name)
+        if not re.fullmatch(r'(<path d="[^"<>]*"/>)+', g["icon"]):
+            problems.append(f"goal {name}: the icon is one or more <path d=\"...\"/> and nothing else")
+        bad = [lv for lv in g.get("by_level", {}) if lv not in HERO_LEVELS]
+        bad += [f"{lv}.{f}" for lv, o in g.get("by_level", {}).items() for f in o if f not in HERO_OVERRIDES]
+        if bad:
+            problems.append(f"goal {name}: by_level has {', '.join(bad)}; it takes {', '.join(HERO_LEVELS)} and the fields {', '.join(HERO_OVERRIDES)}")
+        levels = OrderedDict()
+        for lv in HERO_LEVELS:
+            m = dict(g, **g.get("by_level", {}).get(lv, {}))
+            what = f"goal {name} ({lv})"
+            if not (isinstance(m["pct"], (int, float)) and 20 <= m["pct"] <= 100):
+                problems.append(f"{what}: pct is a share of max between 20 and 100")
+            if m.get("pct_from"):
+                entry(m["pct_from"], what + " pct_from")
+            entry(m["entry"], what + " entry")
+            problems += [f"{what}: {a!r} is not an area" for a in m["areas"] if a not in DOMAINS]
+            problems += [f"{what}: {t!r} is not one of the tools" for t in m["tools"] if t not in tools]
+            week = m["week"]
+            if len(week) != 7 or any(len(d) != 3 or d[0] not in HERO_WEEK_KINDS or not d[1] or not d[2] for d in week):
+                problems.append(f"{what}: a week is seven [kind, name, what happens] rows, kind one of {', '.join(HERO_WEEK_KINDS)}")
+            levels[lv] = {"pct": m["pct"], "example": not m.get("pct_from"), "how": m["how"], "rest": m.get("rest", ""),
+                          "days": m.get("days") or spec.get("days_by_level", {}).get(lv, ""), "collars": bool(m.get("collars")),
+                          "entry": m["entry"], "tools": m["tools"], "areas": m["areas"], "vantix": bool(m.get("vantix")), "week": week}
+        goals[name] = {"label": g["label"], "h1": g["h1"], "levels": levels}
+        buttons.append(f'<button type="button" class="fx-goal" value="{esc(name)}" aria-pressed="false">'
+                       f'<span class="fx-goal-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" '
+                       f'stroke-linecap="round" stroke-linejoin="round" focusable="false">{g["icon"]}</svg></span>'
+                       f'<span class="fx-goal-t">{esc(g["label"])}</span><span class="fx-goal-s">{esc(g["sub"])}</span></button>')
+    if len(goals) != 6:
+        problems.append(f"there are {len(goals)} goals; the picker is laid out for six (two rows of three, three rows of two)")
+    if problems:
+        raise SystemExit("content/fitness/hero.json:\n  " + "\n  ".join(problems))
+    used = {a for g in goals.values() for lv in g["levels"].values() for a in lv["areas"]}
+    blob = {"max": spec.get("max", 100), "daysFrom": spec["days_from"],
+            "tools": {t: {"label": label, "href": "#" + t} for t, label in tools.items()},
+            "areas": {a: {"label": DOMAINS[a][0], "href": pages.url(a)} for a in DOMAINS if a in used},
+            "entries": entries, "goals": goals}
+    data_json = json.dumps(blob, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    return "\n            ".join(buttons), data_json
+
+
 # ----------------------------------------------------------------- assemble
 def build():
     meta, lib, data = load()
@@ -1310,7 +1564,9 @@ def build():
     sub, built = build_subpages(lib, meta, data, numbers, tool_uses, pages, legacy)
 
     # 4. the hub
+    hero_goals, hero_data = hero(lib, data, pages, page)
     fills = {"hub:areas": hub_areas(pages, counts), "hub:reference": hub_reference(pages, numbers),
+             "hero:goals": hero_goals, "hero:data": hero_data,
              **{k: numbers[k] for k in ("n:total", "n:areas", "updated")}}
     for key, value in fills.items():
         token = "{{" + key + "}}"

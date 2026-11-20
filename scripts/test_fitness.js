@@ -45,6 +45,51 @@ eq('loadFor', F.loadFor(114.5833, 5, 0), 100, 0.001); eq('loadFor 8@2', F.loadFo
 // reps at a percentage inverts it again: 75% → 10 ; 100% → 1 ; 60% → Epley's 20 ; 95% → about 2.16, shown as 2
 eq('repsAt 75%', F.repsAt(0.75), 10, 0.001); eq('repsAt 100%', F.repsAt(1), 1); eq('repsAt 60%', F.repsAt(0.6), 20, 0.001);
 eq('repsAt 95%', F.repsAt(0.95), 2.158, 0.01); eq('repsAt 95% rounds to 2', Math.round(F.repsAt(0.95)), 2);
+// the hero's bar: a share of the max to the nearest 2.5 kg, never under the 20 kg bar; plates biggest first
+eq('heroLoad 85% of 100', F.heroLoad(100, 85), 85); eq('heroLoad 82.5% of 100', F.heroLoad(100, 82.5), 82.5);
+eq('heroLoad rounds to 2.5', F.heroLoad(143, 70), 100); eq('heroLoad never under the bar', F.heroLoad(25, 60), 20);
+eq('heroLoad with no max', F.heroLoad(NaN, 70), 20);
+const pl = (kg, c) => F.plates(kg, c).join(' ');
+const same = (name, got, want) => { const ok = got === want; if (!ok) fail++; console.log((ok ? 'ok   ' : 'FAIL ') + name + ': ' + got + (ok ? '' : ' (want ' + want + ')')); };
+same('plates 85', pl(85), '25 5 2.5'); same('plates 60', pl(60), '20'); same('plates 20', pl(20), '');
+same('plates 82.5 with collars', pl(82.5, true), '25 2.5 1.25'); same('plates 220 with collars', pl(220, true), '25 25 25 20 2.5');
+// every load the hero can show (20 to 350 kg in 2.5 kg steps) is made exactly by its plates
+let off = 0;
+for (let kg = 20; kg <= 350; kg += 2.5) for (const c of [false, true]) {
+  if (c && kg < 25) continue;
+  const p = F.plates(kg, c), sum = 20 + (c ? 5 : 0) + 2 * p.reduce((a, b) => a + b, 0);
+  if (Math.abs(sum - kg) > 1e-9 || p.some((x, i) => i && x > p[i - 1])) { off++; console.log('BAD plates', kg, c, p); }
+}
+eq('plates: every load from 20 to 350 kg adds up, biggest first', off, 0);
+// navy body fat (Hodgdon & Beckett 1984, inch form), worked by hand:
+//   man 70 in tall, neck 15, abdomen 34: 86.010·log10(19) − 70.041·log10(70) + 36.76 = 17.51
+//   woman 65 in, neck 13, waist 28, hip 38: 163.205·log10(53) − 97.684·log10(65) − 78.387 = 25.93
+eq('navy man', F.navy('m', 70 * 2.54, 15 * 2.54, 34 * 2.54), 17.51, 0.01);
+eq('navy woman', F.navy('f', 65 * 2.54, 13 * 2.54, 28 * 2.54, 38 * 2.54), 25.93, 0.01);
+same('navy: abdomen not above the neck is not a reading', String(F.navy('m', 178, 40, 40)), 'NaN');
+same('navy: a woman needs her hips', String(F.navy('f', 165, 33, 71)), 'NaN');
+// activity multiplier (KiteSink's own numbers): BMR = weight x 22 / 19.8 / 17.6 kcal per kg by body-fat category;
+// a usual day x 1.1-1.5; each hour of training adds 0.1-0.4 to that day
+same('bmr category: men (15.x is "15% or less")', [10, 15, 15.9, 16, 25.9, 26].map(b => F.bmrCategory('m', b)).join(' '), '1 1 1 2 2 3');
+same('bmr category: women', [20, 24.9, 25, 34.9, 35].map(b => F.bmrCategory('f', b)).join(' '), '1 1 2 2 3');
+same('bmr category: unknown body fat', String(F.bmrCategory('m', NaN)), '0');
+eq('category BMR, 80 kg, category 2', F.categoryBmr(80, 2), 1584);
+eq('category BMR per lb matches the table', F.categoryBmr(100 / 2.2, 1), 1000, 1e-9);   // 100 lb at 10 kcal/lb
+eq('a day: light plus an hour of moderate weights and 30 min of low cardio', F.dayMult(1.2, [{ id: 'wt1', min: 60 }, { id: 'aer1', min: 30 }]), 1.4, 1e-9);
+eq('a day with no exercise is the usual day', F.dayMult(1.3, []), 1.3);
+eq('one activity: an hour of medium cardio adds 0.3', F.activityMult('aer2', 60), 0.3, 1e-12);
+eq('one activity: 90 min of heavy weights adds 0.3', F.activityMult('wt2', 90), 0.3, 1e-12);
+eq('one activity: no minutes adds nothing', F.activityMult('aer3', 0), 0);
+// one resting energy for Energy & macros, the planner and the activity multiplier
+let R = F.resting({ method: 'cat', sex: 'm', kg: 80, bf: 18 });
+eq('resting: category from body fat (men 18% is 2)', R.rmr, 80 * 19.8, 1e-9); same('resting: category 2', String(R.cat), '2');
+R = F.resting({ method: 'cat', sex: 'f', kg: 60, bf: NaN, cat: 3 });
+eq('resting: no body fat uses the chosen category', R.rmr, 60 * 17.6, 1e-9);
+eq('resting: Cunningham without body fat falls back to Mifflin', F.resting({ method: 'cunningham', sex: 'm', kg: 80, cm: 180, age: 30 }).rmr, 1780);
+eq('resting: no method keeps the old rule', F.resting({ sex: 'm', kg: 80, cm: 180, age: 30, bf: 20 }).rmr, 1752.4);
+eq('energy with the category method', F.energy({ method: 'cat', sex: 'm', kg: 80, cm: 180, age: 30, bf: 18, pal: 1.2, goal: 'hold', rate: 0, protein: 2, fatPct: 25 }).maint, 80 * 19.8 * 1.2, 1e-9);
+same('exercise bands: medium 130-155, high 155-180', F.exercise('aer2').d + ' / ' + F.exercise('aer3').d, 'HR 130\u2013155 / HR 155\u2013180');
+same('levels and exercise: every multiplier in range', String(F.LEVELS.every(l => l.m >= 1.1 && l.m <= 1.5) && F.EXERCISE.every(e => e.m >= 0.1 && e.m <= 0.4)), 'true');
 // travel builder: every combination produces a session with moves, only using allowed kit and level
 const kits = [[], ['db'], ['kb', 'band'], ['bar', 'bench', 'sus'], ['db', 'kb', 'band', 'bar', 'bench', 'sus']];
 let n = 0, bad = 0;

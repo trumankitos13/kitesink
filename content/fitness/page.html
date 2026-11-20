@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fitness — Vantix, free calculators &amp; a sourced field guide · KiteSink</title>
-<meta name="description" content="Vantix, the periodization OS, plus six free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
+<meta name="description" content="Vantix, the periodization OS, plus eight free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
 <link rel="canonical" href="https://kitesink.com/fitness">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/fitness.md" title="Plain-text version">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
-<meta property="og:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta property="og:description" content="Vantix, eight free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta property="og:url" content="https://kitesink.com/fitness">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
-<meta name="twitter:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta name="twitter:description" content="Vantix, eight free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -53,9 +53,118 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.14">
+<link rel="stylesheet" href="/ks.css?v=2027.21">
 <style>
-  .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
+  .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
+
+  /* ---------- hero: the goal picker, the bar, the week ----------
+     On a phone: the words and the picker, then the card, then the search. On a wide screen:
+     the words, the picker and the search on the left, the card on the right. The picker and
+     the card are hidden in the HTML and shown by /fitness.js, like the search box. */
+  .fx { display: grid; gap: clamp(24px, 3.4vw, 52px); grid-template-areas: "copy" "rig" "find"; }
+  .fx > * { min-width: 0; }
+  .fx-copy { grid-area: copy; } .fx-rig { grid-area: rig; } .fx-find { grid-area: find; }
+  .fx-find .hub-find { margin-top: 0; }
+  .fx-find .hero-note { margin-top: 22px; }
+  /* the headline's last words follow the goal: they slide up and out, the new ones up and in */
+  .fx-word { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .08em; margin-bottom: -.08em; }
+  .fx-word span { display: inline-block; }
+  @keyframes fx-w-out { to { translate: 0 -105%; opacity: 0; } }
+  @keyframes fx-w-in { from { translate: 0 105%; opacity: 0; } }
+  .fx-word span.out { animation: fx-w-out .26s ease-in forwards; }
+  .fx-word span.in { animation: fx-w-in .38s var(--k-ease); }
+  @media (min-width: 980px) {
+    .fx { grid-template-columns: minmax(0, 1fr) minmax(340px, 400px); grid-template-rows: auto 1fr; grid-template-areas: "copy rig" "find rig"; align-items: start; row-gap: 26px; }
+    .fx-rig { rotate: -.8deg; margin-top: 18px; }
+  }
+  .fx-pick { margin-top: clamp(22px, 3vw, 30px); }
+  .fx-pick > .k-label { display: block; margin-bottom: 10px; }
+  .fx-goals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 660px; }
+  @media (min-width: 700px) { .fx-goals { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .fx-goal { display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: center; gap: 0 10px; min-height: 58px; padding: 9px 11px; text-align: left; cursor: pointer; font: inherit; color: var(--k-ink);
+    border: 1.5px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); transition: background .2s, border-color .2s, color .2s, translate .2s var(--k-ease), box-shadow .2s; }
+  .fx-goal:hover { border-color: var(--k-green); translate: 0 -2px; box-shadow: var(--k-shadow); }
+  .fx-goal-ic { grid-row: 1 / span 2; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--k-tint); color: var(--k-green); transition: background .2s, color .2s; }
+  .fx-goal-ic svg { width: 20px; height: 20px; }
+  .fx-goal-t { align-self: end; font: 600 14.5px/1.2 var(--k-sans); letter-spacing: -.015em; }
+  .fx-goal-s { align-self: start; font: 500 10.5px/1.35 var(--k-mono); color: var(--k-mute); }
+  @media (max-width: 520px) { .fx-goal { min-height: 52px; } .fx-goal-s { display: none; } .fx-goal-t { grid-row: 1 / span 2; align-self: center; } }
+  .fx-goal[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); box-shadow: var(--k-shadow); }
+  .fx-goal[aria-pressed="true"] .fx-goal-ic { background: var(--k-on-green); color: var(--k-green-fill); }
+  .fx-goal[aria-pressed="true"] .fx-goal-s { color: var(--k-on-green-mute); }
+  @keyframes fx-pop { 0% { rotate: 0deg; scale: 1; } 35% { rotate: -14deg; scale: 1.15; } 70% { rotate: 8deg; } 100% { rotate: 0deg; scale: 1; } }
+  .fx-level { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 14px; }
+  .fx-clear { border: 0; background: none; padding: 0 2px; min-height: 40px; cursor: pointer; font: 600 12px var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
+
+  .fx-rig { --fx-bar: #8a7a58; --fx-bar-hi: #b5a582; --fx-iron: #3a3222; --fx-edge: rgba(29,24,16,.35);
+    border: 1.5px solid var(--k-rule-strong); border-radius: 18px; background: var(--k-raised); box-shadow: var(--k-shadow); padding: 16px; display: grid; gap: 12px; }
+  html[data-theme="dark"] .fx-rig { --fx-bar: #9d8d69; --fx-bar-hi: #c9b991; --fx-iron: #4a4131; --fx-edge: rgba(242,234,214,.28); }
+  .fx-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 10px; }
+  .fx-kg { font: 800 clamp(24px, 3vw, 30px)/1 var(--k-sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; color: var(--k-ink); }
+  .fx-max { display: flex; align-items: center; gap: 6px; }
+  .fx-max label { font: 600 10px/1.2 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--k-mute); text-align: right; max-width: 7ch; }
+  .fx-max .with-unit { position: relative; }
+  .fx-max .with-unit .k-input { width: 92px; min-height: 40px; padding: 0 28px 0 10px; font: 600 14px var(--k-mono); font-variant-numeric: tabular-nums; }
+  .fx-max .with-unit span { right: 9px; font-size: 11px; }
+  .fx-pause { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-ink); cursor: pointer; display: grid; place-items: center; }
+  .fx-pause:hover { border-color: var(--k-green); color: var(--k-green); }
+  .fx-pause svg { width: 14px; height: 14px; }
+  .fx-plates { grid-column: 1 / -1; font: 500 11px/1.4 var(--k-mono); color: var(--k-mute); }
+  .fx-bar { display: block; width: 100%; height: auto; overflow: visible; }
+  .fx-plate { stroke: var(--fx-edge); stroke-width: 1; }
+  @keyframes fx-in-l { from { translate: -46px 0; opacity: 0; } }
+  @keyframes fx-in-r { from { translate: 46px 0; opacity: 0; } }
+  .fx-rx { margin: 0; font: 700 17px/1.3 var(--k-sans); letter-spacing: -.015em; color: var(--k-ink); text-wrap: balance; }
+  .fx-rx > span { color: var(--k-green); }
+  .fx-rx small { display: block; margin-top: 4px; font: 500 11px/1.5 var(--k-mono); letter-spacing: 0; color: var(--k-mute); }
+  .fx-rx small span { color: var(--k-brass); }
+  .fx-wk { border-top: 1px dashed var(--k-rule-strong); padding-top: 12px; display: grid; gap: 8px; }
+  .fx-wk-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .fx-leg { display: flex; gap: 10px; font: 500 10.5px var(--k-mono); color: var(--k-mute); }
+  .fx-leg i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 4px; }
+  .fx-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+  .fx-day { display: grid; justify-items: center; gap: 5px; padding: 7px 0 8px; border: 0; border-radius: 8px; background: transparent; cursor: pointer; font: inherit; color: inherit; transition: background .2s; }
+  .fx-day:hover { background: var(--k-tint); }
+  .fx-day .dl { font: 600 10px/1 var(--k-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--k-mute); }
+  .fx-day .blk { width: 100%; max-width: 34px; height: 22px; border-radius: 5px; background: var(--k-tint); box-shadow: inset 0 0 0 1px var(--k-rule); }
+  .fx-day.lift .blk, .fx-leg .lift { background: var(--k-green-fill); box-shadow: none; }
+  .fx-day.cardio .blk, .fx-leg .cardio { background: var(--k-tan); box-shadow: none; }
+  .fx-day.meet .blk, .fx-leg .meet { background: var(--k-brass-fill); box-shadow: none; }
+  .fx-day.empty .blk { background: transparent; box-shadow: inset 0 0 0 1.5px var(--k-rule-strong); }
+  .fx-day.today .dl { color: var(--k-ink); }
+  .fx-day.today .dl::after { content: ""; display: block; width: 4px; height: 4px; margin: 3px auto 0; border-radius: 50%; background: var(--k-brass-fill); }
+  .fx-day[aria-pressed="true"] { background: var(--k-tint); box-shadow: inset 0 0 0 1.5px var(--k-ink); }
+  @keyframes fx-blk { from { opacity: 0; translate: 0 6px; } }
+  .fx-say-day { min-height: 2.9em; margin: 0; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .fx-say-day b { color: var(--k-ink); font-weight: 600; }
+  .fx-ent { display: grid; gap: 4px; padding: 10px 12px; border-radius: 12px; background: var(--k-tint); }
+  .fx-ent-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .fx-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 20px; font: 600 10.5px/1.2 var(--k-mono); white-space: nowrap; background: var(--k-tint); color: var(--k-ink); box-shadow: inset 0 0 0 1px var(--k-rule-strong); }
+  .fx-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .fx-badge.strong { background: var(--k-green-fill); color: var(--k-on-green); box-shadow: none; }
+  .fx-badge.moderate { color: var(--k-brass); }
+  .fx-ent b { font: 600 14.5px/1.3 var(--k-sans); letter-spacing: -.01em; color: var(--k-ink); }
+  .fx-ent b a { text-decoration: none; } .fx-ent b a:hover { color: var(--k-green); text-decoration: underline; }
+  .fx-ent p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .fx-ent .cite { font-size: 10.5px; }
+  .fx-then { display: flex; flex-wrap: wrap; gap: 6px; }
+  .fx-then:empty { display: none; }
+  .fx-chip { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 5px 10px; border-radius: 20px; border: 1.5px solid var(--k-rule-strong); font: 600 12px/1.2 var(--k-sans); color: var(--k-ink); text-decoration: none; white-space: nowrap; }
+  .fx-chip:hover { border-color: var(--k-green); color: var(--k-green); }
+  .fx-chip small { font: 500 10px var(--k-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--k-mute); }
+  .fx-fade { transition: opacity .2s; } .fx-fade.swap { opacity: 0; }
+  /* what the chosen goal points at further down: a ring and a tick, never a dimmed neighbour */
+  .hub-card.fx-match, .vx-card.fx-match { outline: 3px solid var(--k-green); outline-offset: 4px; }
+  .k-seg [role="tab"].fx-match { box-shadow: inset 0 0 0 2px var(--k-green); }
+  .hub-card.fx-match { position: relative; }
+  .hub-card.fx-match::after { content: "\2713  Fits your goal"; position: absolute; top: -12px; right: 12px; padding: 5px 9px; border-radius: 20px; background: var(--k-green-fill); color: var(--k-on-green); font: 700 10px/1 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; }
+  @media (prefers-reduced-motion: no-preference) {
+    .fx-goal[aria-pressed="true"] .fx-goal-ic svg { animation: fx-pop .6s var(--k-ease); }
+    .fx-plate.in-l { animation: fx-in-l .42s var(--k-ease) both; }
+    .fx-plate.in-r { animation: fx-in-r .42s var(--k-ease) both; }
+    .fx-days.go .blk { animation: fx-blk .35s var(--k-ease) both; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fx-pause { display: none; } .fx-goal, .fx-fade { transition: none; } }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
   .cite a { color: inherit; text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 2px; }
   .cite a:hover { color: var(--k-green); text-decoration-color: currentColor; }
@@ -112,6 +221,43 @@
 
   /* ---------- tools ---------- */
   .tool { margin-top: 22px; }
+  .ac-base { display: grid; gap: 8px; padding: 14px; border-radius: 12px; background: var(--k-tint); }
+  .ac-base > .k-label { margin: 0; }
+  .ac-from { color: var(--k-ink) !important; }
+  .ac-need { display: grid; gap: 10px; justify-items: start; }
+  .ac-own { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 10px; }
+  .ac-own .k-label { grid-column: 1 / -1; }
+  .ac-own .with-unit { max-width: 180px; }
+  .ac-clear { border: 0; background: none; padding: 0; min-height: 40px; cursor: pointer; font: 600 12px var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
+  .ac-levels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .ac-lv { display: grid; gap: 2px; padding: 10px 12px; text-align: left; border: 1.5px solid var(--k-rule-strong); border-radius: 12px; background: transparent; color: var(--k-ink); cursor: pointer; font: inherit; transition: background .2s, border-color .2s; }
+  .ac-lv:hover { border-color: var(--k-green); }
+  .ac-lv b { display: flex; justify-content: space-between; gap: 8px; font: 600 14.5px/1.25 var(--k-sans); }
+  .ac-lv b span { font: 600 12px/1.6 var(--k-mono); color: var(--k-green); }
+  .ac-lv small { font-size: 12.5px; line-height: 1.35; color: var(--k-copy); }
+  .ac-lv small + small { font: 500 11px/1.4 var(--k-mono); color: var(--k-mute); }
+  .ac-lv[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); }
+  .ac-lv[aria-pressed="true"] b span, .ac-lv[aria-pressed="true"] small { color: var(--k-on-green-mute); }
+  .ac-block { display: grid; gap: 14px; }
+  .ac-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .ac-rows li { display: grid; grid-template-columns: minmax(0, 1fr) 96px 40px; gap: 6px; align-items: center; }
+  .ac-rows .k-select, .ac-rows .k-input { min-height: 44px; }
+  .ac-rows .with-unit .k-input { padding-right: 36px; }
+  .ac-rows .with-unit span { right: 8px; }
+  @media (max-width: 560px) {
+    .ac-rows { gap: 10px; }
+    .ac-rows li { grid-template-columns: minmax(0, 1fr) 40px; padding-bottom: 10px; border-bottom: 1px solid var(--k-rule); }
+    .ac-rows li .k-select { grid-column: 1 / -1; }
+  }
+  .ac-x { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-copy); cursor: pointer; font: 600 16px/1 var(--k-sans); }
+  .ac-x:hover { border-color: var(--k-green); color: var(--k-green); }
+  .tool-tabs { display: grid; gap: 10px; }
+  .tool-row { display: grid; gap: 6px; min-width: 0; }
+  .tool-row .k-seg { justify-self: start; }
+  .tool-grp { font: 600 11px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-green); text-decoration: none; justify-self: start; }
+  .tool-grp::after { content: " \2192"; }
+  .tool-grp:hover { text-decoration: underline; text-underline-offset: 3px; }
+  @media (min-width: 760px) { .tool-row { grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 12px; } }
   .tool-grid { display: grid; gap: 18px; }
   @media (min-width: 920px) { .tool-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .tool-out { position: sticky; top: 130px; } }
   .tool-in { gap: 18px; }
@@ -119,10 +265,12 @@
   #vantix { padding-top: clamp(26px, 4vw, 44px); }
   .k-hero { padding-bottom: clamp(26px, 3.4vw, 40px); }
   .row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .row2.rest-row { align-items: end; }
+  @media (max-width: 519px) { .row2.rest-row { grid-template-columns: minmax(0, 1fr); } }   /* after .row2, so it wins */
   .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .with-unit { position: relative; }
   .with-unit .k-input { padding-right: 44px; }
-  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; }
+  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; z-index: 2; }   /* above the input: ks.css lifts inputs in a card to z-index 1 */
   .tool-out { background: #23402b; color: #f0e8d6; border-color: transparent; gap: 16px; }
   .tool-out .k-label { color: #a9b9a3; }
   .tool-out .k-stat, .tool-out .k-h3 { color: #f0e8d6; }
@@ -296,23 +444,66 @@
 <main id="main">
 
   <section class="k-hero k-wrap" aria-labelledby="page-title">
-    <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
-    <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, six free calculators and a field guide cover the ground: {{n:total}} sourced entries in {{n:areas}} areas, from training basics to health. Everything runs in your browser.</p>
-    <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
-    <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
-      <label class="k-label" for="f-q">Search every entry</label>
-      <div class="hub-find-row">
-        <input class="k-input" id="f-q" type="search" placeholder="Protein, deload, zone 2, RIR…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="f-hint">
-        <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-clear" hidden>Clear</button>
+    <div class="fx" id="fx">
+      <div class="fx-copy">
+        <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
+        <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em class="fx-word"><span id="fx-word">lift.</span></em></h1>
+        <p class="k-lead">Eight free calculators and a sourced field guide, with Vantix, the flagship, on the way. Everything runs in your browser.</p>
+        <!-- The goal picker and its card are shown by /fitness.js, which reads #fx-data (scripts/build_fitness.py writes it from content/fitness/hero.json). Without scripts the cards below do the job. -->
+        <div class="fx-pick" id="fx-pick" hidden>
+          <p class="k-label" id="fx-pick-l">What are you after?</p>
+          <div class="fx-goals" id="fx-goals" role="group" aria-labelledby="fx-pick-l">
+            {{hero:goals}}
+          </div>
+          <div class="fx-level">
+            <span class="k-label" id="fx-lv-l">Lifting for</span>
+            <div class="k-seg" id="fx-lv" role="group" aria-labelledby="fx-lv-l"><button type="button" value="new">Under a year</button><button type="button" value="mid">1–3 years</button><button type="button" value="adv">3+ years</button></div>
+            <button type="button" class="fx-clear" id="fx-clear" hidden>Clear</button>
+          </div>
+        </div>
       </div>
-      <p class="k-small" id="f-hint">Looks in the title, the short answer and the glossary terms of all {{n:total}} entries. A result opens on its own page.</p>
-      <p class="hub-find-count" id="f-count"></p>
-      <p class="k-vh" id="f-say" role="status" aria-live="polite"></p>
-      <ol class="hub-hits" id="f-list" aria-label="Search results" hidden></ol>
-      <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-more" hidden>Show every result</button>
+      <div class="fx-rig" id="fx-rig" hidden>
+        <div class="fx-top">
+          <span class="fx-kg" id="fx-kg">20 kg</span>
+          <div class="fx-max"><label for="fx-max">Best squat</label><span class="with-unit"><input class="k-input" id="fx-max" type="number" inputmode="decimal" min="20" max="350" step="2.5" value="100"><span>kg</span></span>
+            <button type="button" class="fx-pause" id="fx-pause" aria-pressed="false" aria-label="Stop the bar moving"></button></div>
+          <span class="fx-plates" id="fx-plates">The empty bar.</span>
+        </div>
+        <svg class="fx-bar" viewBox="0 0 360 140" aria-hidden="true" focusable="false">
+          <g transform="translate(0 -5)">
+            <path id="fx-shaft" d="M8 75 Q180 75 352 75" fill="none" stroke="var(--fx-bar)" stroke-width="5" stroke-linecap="round"/>
+            <g id="fx-knurl" stroke="var(--fx-bar-hi)" stroke-width="1" opacity=".7"></g>
+            <g id="fx-l"></g><g id="fx-r"></g>
+          </g>
+        </svg>
+        <p class="fx-rx fx-fade" id="fx-rx"></p>
+        <div class="fx-wk">
+          <div class="fx-wk-top"><span class="k-label" id="fx-wk-t">A typical week</span><span class="fx-leg" aria-hidden="true"><span><i class="lift"></i>Lift</span><span><i class="cardio"></i>Cardio</span><span id="fx-leg-meet" hidden><i class="meet"></i>Meet</span></span></div>
+          <div class="fx-days" id="fx-days" role="group" aria-labelledby="fx-wk-t"></div>
+          <p class="fx-say-day" id="fx-day"></p>
+        </div>
+        <div class="fx-ent fx-fade" id="fx-ent"></div>
+        <div class="fx-then" id="fx-then"></div>
+        <p class="k-vh" id="fx-say" role="status" aria-live="polite"></p>
+      </div>
+      <div class="fx-find">
+        <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
+        <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
+          <label class="k-label" for="f-q">Search every entry</label>
+          <div class="hub-find-row">
+            <input class="k-input" id="f-q" type="search" placeholder="Protein, deload, zone 2, RIR…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="f-hint">
+            <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-clear" hidden>Clear</button>
+          </div>
+          <p class="k-small" id="f-hint">Looks in the title, the short answer and the glossary terms of all {{n:total}} entries. A result opens on its own page.</p>
+          <p class="hub-find-count" id="f-count"></p>
+          <p class="k-vh" id="f-say" role="status" aria-live="polite"></p>
+          <ol class="hub-hits" id="f-list" aria-label="Search results" hidden></ol>
+          <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-more" hidden>Show every result</button>
+        </div>
+        <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains. Each one names its source and says how well supported it is. They’re general information, not medical advice.</p>
+      </div>
     </div>
-    <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains. Each one names its source and says how well supported it is. They’re general information, not medical advice.</p>
+    <script type="application/json" id="fx-data">{{hero:data}}</script>
   </section>
 
   <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
@@ -390,17 +581,31 @@
   <section id="tools" class="k-band" aria-labelledby="h-tools">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Six calculators. <em>No sign-up.</em></h2></div>
+        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Eight calculators. <em>No sign-up.</em></h2></div>
         <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps nothing.</p>
       </header>
 
-      <div class="k-seg k-seg--scroll" role="tablist" aria-label="Tools">
-        <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
-        <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
-        <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
-        <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
-        <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
-        <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
+      <!-- The tools in the field guide's groups: a tablist per group, with the group's link beside it.
+           The arrow keys move through every tab, across both rows, in this order. -->
+      <div class="tool-tabs">
+        <div class="tool-row">
+          <a class="tool-grp" href="#training">Training</a>
+          <div class="k-seg k-seg--scroll" role="tablist" aria-label="Training tools">
+            <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
+            <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
+            <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+            <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
+          </div>
+        </div>
+        <div class="tool-row">
+          <a class="tool-grp" href="#food-and-body">Food and body</a>
+          <div class="k-seg k-seg--scroll" role="tablist" aria-label="Food and body tools">
+            <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
+            <button type="button" role="tab" id="tab-activity" aria-controls="activity" aria-selected="false">Activity multiplier</button>
+            <button type="button" role="tab" id="tab-bodyfat" aria-controls="bodyfat" aria-selected="false">Navy body fat</button>
+            <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
+          </div>
+        </div>
       </div>
 
       <!-- ---------- 1. energy & macros ---------- -->
@@ -427,6 +632,10 @@
                   <option value="1.8" data-short="active">Active · on your feet or training hard</option>
                   <option value="2.0" data-short="very active">Vigorous · physical job + hard training</option>
                 </select></label>
+            </div>
+            <div class="row2 rest-row">
+              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="m-src"><option value="cat">Body fat category</option><option value="mifflin">Mifflin-St Jeor</option><option value="cunningham">Cunningham</option></select></label>
+              <label class="k-field" id="m-cat-wrap"><span class="k-label">Category</span><select class="k-select" id="m-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
             </div>
             <div class="k-field"><span class="k-label" id="m-goal-l">Goal</span><div class="k-seg" id="m-goal" role="group" aria-labelledby="m-goal-l"><button type="button" value="lose">Lose fat</button><button type="button" value="hold">Maintain</button><button type="button" value="gain">Gain muscle</button></div></div>
             <label class="k-field" id="m-rate-wrap"><span class="k-label"><span id="m-rate-label">Rate of loss</span><span id="m-rate-read" style="text-transform:none;letter-spacing:0">0.50% of body weight / week</span></span><input class="k-range" id="m-rate" type="range" min="0.25" max="1" step="0.05" value="0.5"></label>
@@ -466,7 +675,7 @@
               <div><span class="k-label">Resting energy</span><b id="m-rmr">—</b><span class="k-small" id="m-eq" style="font-size:12px">Mifflin-St Jeor</span></div>
               <div><span class="k-label">Activity level</span><b id="m-pal">—</b></div>
             </div>
-            <p class="k-small">A starting estimate. The best equation lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. {{c:mifflin1990,frankenfield2005,cunningham1991,fao2004}}</p>
+            <p class="k-small">A starting estimate. Resting energy starts from KiteSink’s own working numbers: 10, 9 or 8 kcal per lb of body weight by body fat category, with day levels of × 1.1 to 1.5 and training added in the activity multiplier. The published equations are there to choose instead; the best of them lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. {{c:mifflin1990,frankenfield2005,cunningham1991,fao2004}}</p>
           </div>
         </div>
       </div>
@@ -583,6 +792,87 @@
         </div>
       </div>
 
+      <!-- ---------- 7. navy body fat ---------- -->
+      <div class="tool" id="bodyfat" role="tabpanel" aria-labelledby="tab-bodyfat">
+        <p class="k-copy tool-intro">The US Navy tape method: a body fat estimate from your height and a few circumferences. All it needs is a tape measure. Like every method, it estimates; use it to follow a trend, measured the same way each time.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="bf-units-l">Units</span><div class="k-seg" id="bf-units" role="group" aria-labelledby="bf-units-l"><button type="button" value="cm">cm</button><button type="button" value="in">in</button></div></div>
+              <div class="k-field"><span class="k-label" id="bf-sex-l">Sex (for the equation)</span><div class="k-seg" id="bf-sex" role="group" aria-labelledby="bf-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="bf-h" type="number" inputmode="decimal" min="50" max="250" step="0.5" value="178"><span class="bf-u">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Neck <span style="text-transform:none;letter-spacing:0">below the larynx</span></span><span class="with-unit"><input class="k-input" id="bf-neck" type="number" inputmode="decimal" min="10" max="80" step="0.5" value="38"><span class="bf-u">cm</span></span></label>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label" id="bf-waist-l">Abdomen <span style="text-transform:none;letter-spacing:0">at the navel</span></span><span class="with-unit"><input class="k-input" id="bf-waist" type="number" inputmode="decimal" min="30" max="250" step="0.5" value="86"><span class="bf-u">cm</span></span></label>
+              <label class="k-field" id="bf-hip-wrap" hidden><span class="k-label">Hips <span style="text-transform:none;letter-spacing:0">at the widest</span></span><span class="with-unit"><input class="k-input" id="bf-hip" type="number" inputmode="decimal" min="30" max="250" step="0.5" value="97"><span class="bf-u">cm</span></span></label>
+            </div>
+            <label class="k-field"><span class="k-label">Body weight <span style="text-transform:none;letter-spacing:0">optional, for fat and lean mass</span></span><span class="with-unit"><input class="k-input" id="bf-kg" type="number" inputmode="decimal" min="25" max="300" step="0.1" placeholder="—"><span id="bf-kg-u">kg</span></span></label>
+            <details class="more">
+              <summary>How to measure</summary>
+              <p class="k-small" id="bf-how"></p>
+            </details>
+          </div>
+          <div class="k-card tool-out is-empty" id="bf-out">
+            <p class="k-vh" id="bf-say" role="status"></p>
+            <div><p class="k-label">Estimated body fat</p><p class="k-stat"><span id="bf-pct">—<small>%</small></span></p><p class="k-small" id="bf-sub">Enter your measurements.</p></div>
+            <div class="kv hide-empty" id="bf-mass" hidden><div><span class="k-label">Fat mass</span><b id="bf-fm">—</b></div><div><span class="k-label">Lean mass</span><b id="bf-lm">—</b></div></div>
+            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="bf-use" type="button">Use in Energy &amp; macros</button></div>
+            <p class="k-small" id="bf-warn" hidden></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">The equations are the US Navy’s, built on Navy men and women from height and tape measures. Against DXA in 1,407 Army recruits they read about 6 points low on average, with a typical error of about 3.4 points for men and 4.1 for women. A tape used the same way each time is good for following change; one reading is a rough guide. <a href="/fitness/bodycomp#comp-methods-estimate">Every body fat method estimates</a>. {{c:hodgdon1984m,hodgdon1984f,foulis2023}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 8. activity multiplier ---------- -->
+      <div class="tool" id="activity" role="tabpanel" aria-labelledby="tab-activity">
+        <p class="k-copy tool-intro">Maintenance is resting energy times an activity multiplier. See what one activity adds to it, or build a whole day: how active it is, plus the training in it.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-seg" id="ac-mode" role="group" aria-label="Work it out from"><button type="button" value="one">One activity</button><button type="button" value="day">A whole day</button></div>
+
+            <div class="ac-base">
+              <p class="k-label">Resting energy (BMR)</p>
+              <p class="k-small ac-from" id="ac-from"></p>
+              <div class="ac-need" id="ac-need" hidden>
+                <p class="k-small">Those are the example inputs. Put in your own weight and body fat for your number.</p>
+                <button class="k-btn k-btn--sm k-btn--ghost" id="ac-go" type="button">Set mine in Energy &amp; macros</button>
+              </div>
+              <div class="ac-own">
+                <label class="k-label" for="ac-bmr">Or type your own BMR</label>
+                <span class="with-unit"><input class="k-input" id="ac-bmr" type="number" inputmode="numeric" min="800" max="5000" step="10" placeholder="—"><span>kcal</span></span>
+                <button type="button" class="ac-clear" id="ac-bmr-clear" hidden>Use Energy &amp; macros</button>
+              </div>
+            </div>
+
+            <div id="ac-one" class="ac-block">
+              <label class="k-field"><span class="k-label">Activity</span><select class="k-select" id="ac-ex"></select></label>
+              <label class="k-field"><span class="k-label">Minutes</span><input class="k-input" id="ac-min" type="number" inputmode="numeric" min="5" max="600" step="5" value="60"></label>
+            </div>
+
+            <div id="ac-day" class="ac-block" hidden>
+              <div class="k-field"><span class="k-label" id="ac-level-l">Your usual day, outside training</span>
+                <div class="ac-levels" id="ac-level" role="group" aria-labelledby="ac-level-l"></div></div>
+              <p class="k-label">Exercise on this day</p>
+              <ol class="ac-rows" id="ac-rows" aria-label="Exercise on this day"></ol>
+              <p class="k-small" id="ac-none" hidden>No exercise: a rest day.</p>
+              <div><button class="k-btn k-btn--sm k-btn--ghost" id="ac-add" type="button">Add exercise</button></div>
+            </div>
+            <p class="k-small">Running, cycling, rowing and the like count as cardio: pick the intensity by heart rate (HR, beats a minute).</p>
+          </div>
+          <div class="k-card tool-out is-empty" id="ac-out">
+            <p class="k-vh" id="ac-say" role="status"></p>
+            <div><p class="k-label" id="ac-big-l">Your multiplier</p><p class="k-stat"><span id="ac-big">—</span></p><p class="k-small" id="ac-sub"></p></div>
+            <div class="kv hide-empty"><div><span class="k-label" id="ac-k1-l">Maintenance</span><b id="ac-k1">—</b></div><div><span class="k-label" id="ac-k2-l">Resting energy</span><b id="ac-k2">—</b></div></div>
+            <p class="k-small hide-empty" id="ac-k3"></p>
+            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="ac-use" type="button">Use in Energy &amp; macros</button></div>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">These are KiteSink’s own working numbers from coaching, not results from a study. Resting energy comes from Energy &amp; macros (by default 10, 9 or 8 kcal per lb of body weight, by body fat category). A usual day is × 1.1 to 1.5, and each hour of training adds 0.1 to 0.4. Use the answer as a starting point and correct it against your weight trend over two or three weeks.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- ---------- 6. diet planner ---------- -->
       <div class="tool" id="plan" role="tabpanel" aria-labelledby="tab-plan">
         <p class="k-copy tool-intro">See your weekly deficit, not just a daily number. Pick how many days a week you diet and how hard; the other days stay at maintenance. The planner works out the week, the protein that deficit calls for, and what each kind of day looks like.</p>
@@ -599,7 +889,11 @@
               <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="d-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="d-w-unit">kg</span></span></label>
             </div>
             <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional, sharpens protein</span></span><span class="with-unit"><input class="k-input" id="d-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
-            <label class="k-field"><span class="k-label">Activity, training included</span>
+            <div class="row2 rest-row">
+              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="d-src"><option value="cat">Body fat category</option><option value="mifflin">Mifflin-St Jeor</option><option value="cunningham">Cunningham</option></select></label>
+              <label class="k-field" id="d-cat-wrap"><span class="k-label">Category</span><select class="k-select" id="d-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+            </div>
+            <label class="k-field"><span class="k-label">Activity</span>
               <select class="k-select" id="d-act">
                 <option value="1.4">Sedentary · mostly sitting</option>
                 <option value="1.6" selected>Light · desk job, regular training</option>
@@ -670,7 +964,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.14"></script>
-<script src="/fitness.js?v=2027.14"></script>
+<script src="/ks.js?v=2027.21"></script>
+<script src="/fitness.js?v=2027.21"></script>
 </body>
 </html>
