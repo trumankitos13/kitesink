@@ -336,6 +336,36 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   ok('supplements: the fat-loss rows carry findings and cautions, no dose', TD.fatLoss.rows.every(r => r.found && r.cautions && !('dose' in r)));
 }
 
+// ---------- review fixes ----------
+{
+  const J = x => JSON.stringify(x);
+  // navy: only typed tape readings carry over
+  const X = F.NAVY_EXAMPLES;
+  ok('navy examples match the fields the page starts with', ['h', 'neck', 'waist', 'hip'].every(k => new RegExp('id="bf-' + k + '"[^>]*value="' + X[k] + '"').test(fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8'))));
+  let m = F.migrate({ navy: { touched: true, sex: 'm', h: 178, neck: 38, waist: 86, hip: 97, kg: '', pct: 17.9 } });
+  same('migrate: navy touched by a click, example readings: nothing carried', J(m.own), '{}');
+  m = F.migrate({ navy: { touched: true, sex: 'f', h: 178, neck: 38, waist: 86, hip: 97, kg: 64, pct: 30.1 } });
+  ok('migrate: navy example readings, but a typed weight (no example): the weight only', m.kg === 64 && !m.own.bf && !m.own.cm && !m.own.sex);
+  m = F.migrate({ navy: { touched: true, sex: 'm', h: 178, neck: 40, waist: 92, hip: 97, kg: '', pct: 21.5 } });
+  ok('migrate: navy readings that differ from the example carry height, sex and body fat', m.bf === 21.5 && m.bfFrom === 'navy' && m.cm === 178 && m.sex === 'm');
+  m = F.migrate({ navy: { touched: true, sex: 'f', h: 165, neck: 38, waist: 86, hip: 101, pct: 33 } });
+  ok('migrate: for a woman a typed hip counts', m.bf === 33);
+  m = F.migrate({ navy: { touched: true, tape: false, sex: 'm', h: 181, neck: 40, waist: 92, pct: 21.5 } });
+  ok('migrate: the new tape flag decides when it is saved (false)', !m.own.bf && !m.own.cm);
+  ok('migrate: the new tape flag decides when it is saved (true, example readings)', F.migrate({ navy: { touched: true, tape: true, h: 178, neck: 38, waist: 86, pct: 17.9 } }).bf === 17.9);
+  ok('navyTyped: untouched is never typed', !F.navyTyped({ touched: false, neck: 41, waist: 95 }) && !F.navyTyped(null));
+  // weight class: two decimals when the hundredths matter
+  same('places: 59.01 needs two, 59.0 and 6.5 one', [59.01, 59, 6.5, 0.01, 6.99].map(F.places).join(' '), '2 1 1 2 2');
+  const r = F.ipfClass(59.01, 'm', false, TD.ipf);
+  ok('class: 59.01 is 6.99 under 66 and 0.01 over 59', r.name === '66' && Math.abs(r.under - 6.99) < 1e-9 && Math.abs(r.below.cut - 0.01) < 1e-9);
+  ok('class: each sex has a junior class from the table', TD.ipf.m.filter(c => c.junior).length === 1 && TD.ipf.f.filter(c => c.junior).length === 1);
+  // the RPE options come from the chart
+  same('rpe options from the chart', F.rpeOptions(TD.rpe.rows).map(o => o.rpe + ':' + o.rir).join(' '), '10:0 9.5:0.5 9:1 8:2 7:3 6:4 5:5');
+  // FFMI starts from the guide's worked example
+  same('FFMI example inputs are the guide\'s worked example', [TD.arith.kg, TD.arith.cm, TD.arith.bf, TD.arith.target].join(' '), '80 180 25 15');
+  ok('the FFMI reference rows are sexed from their labels', TD.ffmiRef.rows.map(x => x.sex).join('') === 'ffmmmmm');
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);

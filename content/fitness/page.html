@@ -53,7 +53,7 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.22">
+<link rel="stylesheet" href="/ks.css?v=2027.23">
 <style>
   .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
 
@@ -249,12 +249,17 @@
   .te-t a { color: inherit; text-decoration: none; } .te-t a:hover { color: var(--k-green); text-decoration: underline; }
   .te-s { font-size: 13px; line-height: 1.45; color: var(--k-copy); }
   .te-do { margin: 2px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  /* on the light cards, the brass of a "some support" badge is a shade darker for 4.5:1 (the dark theme resets it below) */
+  .te .fx-badge.moderate, .tt-h .fx-badge.moderate { color: #6b440d; }
   .tool-out .te { background: rgba(240,232,214,.08); }
-  .tool-out .te-top { color: #a9b9a3; } .tool-out .te-t { color: #f0e8d6; } .tool-out .te-s, .tool-out .te-do { color: #c2ceb9; }
+  .tool-out .te-top { color: #c2ceb9; } .tool-out .te-t { color: #f0e8d6; } .tool-out .te-s, .tool-out .te-do { color: #c2ceb9; }
   .tool-out .te-t a:hover { color: #d8b07a; }
-  .tool-out .fx-badge { background: rgba(240,232,214,.1); color: #f0e8d6; box-shadow: inset 0 0 0 1px rgba(240,232,214,.3); }
+  /* badges on the dark results card: a darker chip so every grade's text holds 4.5:1 */
+  .tool-out .fx-badge { background: rgba(0,0,0,.28); color: #f0e8d6; box-shadow: inset 0 0 0 1px rgba(240,232,214,.3); }
   .tool-out .fx-badge.strong { background: #8fc39b; color: #1f3024; box-shadow: none; }
-  .tool-out .fx-badge.moderate { color: #d8b07a; }
+  .tool-out .fx-badge.moderate { color: #ecc994; }
+  html[data-theme="dark"] .te .fx-badge.moderate, html[data-theme="dark"] .tt-h .fx-badge.moderate { color: var(--k-brass); }
+  html[data-theme="dark"] .tool-out .fx-badge.moderate { color: #ecc994; }
   .te-list { display: grid; gap: 8px; }
   .tt { display: grid; gap: 6px; }
   .tt-h { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font: 600 13.5px/1.35 var(--k-sans); color: var(--k-ink); }
@@ -727,7 +732,7 @@
             <label class="k-field"><span class="k-label">Max heart rate <span class="k-opt">measured</span></span><span class="with-unit"><input class="k-input" id="me-hrmax" type="number" inputmode="numeric" min="100" max="230" placeholder="—"><span>bpm</span></span></label>
             <label class="k-field"><span class="k-label">Resting heart rate</span><span class="with-unit"><input class="k-input" id="me-hrrest" type="number" inputmode="numeric" min="30" max="110" placeholder="—"><span>bpm</span></span></label>
           </div>
-          <p class="k-small" id="me-bad" hidden></p>
+          <p class="k-small" id="me-bad" role="status" hidden></p>
           <div class="k-actions"><button class="k-btn k-btn--sm k-btn--ghost" id="me-clear" type="button">Clear my numbers</button></div>
           <p class="k-vh" id="me-say" role="status"></p>
         </div>
@@ -1121,12 +1126,12 @@
               <div class="k-field"><span class="k-label" id="ff-sex-l">Compare with</span><div class="k-seg" id="ff-sex" role="group" aria-labelledby="ff-sex-l"><button type="button" value="m">Men</button><button type="button" value="f">Women</button></div></div>
             </div>
             <div class="row3">
-              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="ff-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="80"><span id="ff-w-u">kg</span></span></label>
-              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="ff-h" type="number" inputmode="decimal" min="47" max="230" step="0.5" value="180"><span id="ff-h-u">cm</span></span></label>
-              <label class="k-field"><span class="k-label">Body fat</span><span class="with-unit"><input class="k-input" id="ff-bf" type="number" inputmode="decimal" min="3" max="60" step="0.1" value="25"><span>%</span></span></label>
+              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="ff-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="{{tools:val:arith.kg}}"><span id="ff-w-u">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="ff-h" type="number" inputmode="decimal" min="47" max="230" step="0.5" value="{{tools:val:arith.cm}}"><span id="ff-h-u">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Body fat</span><span class="with-unit"><input class="k-input" id="ff-bf" type="number" inputmode="decimal" min="3" max="60" step="0.1" value="{{tools:val:arith.bf}}"><span>%</span></span></label>
             </div>
             <p class="k-small" id="ff-bf-from" hidden></p>
-            <label class="k-field"><span class="k-label">Target body fat</span><span class="with-unit"><input class="k-input" id="ff-t" type="number" inputmode="decimal" min="3" max="59" step="0.5" value="15"><span>%</span></span></label>
+            <label class="k-field"><span class="k-label">Target body fat</span><span class="with-unit"><input class="k-input" id="ff-t" type="number" inputmode="decimal" min="3" max="59" step="0.5" value="{{tools:val:arith.target}}"><span>%</span></span></label>
             <p class="k-small">No body fat figure? <a href="#bodyfat">Navy body fat</a> estimates one from a tape measure. Every method estimates: {{e:comp-methods-estimate|how far each one can be off}}.</p>
             <details class="more">
               <summary>The sums this uses</summary>
@@ -1315,7 +1320,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.22"></script>
-<script src="/fitness.js?v=2027.22"></script>
+<script src="/ks.js?v=2027.23"></script>
+<script src="/fitness.js?v=2027.23"></script>
 </body>
 </html>

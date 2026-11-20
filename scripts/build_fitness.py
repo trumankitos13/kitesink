@@ -1642,12 +1642,28 @@ def td_hr_rest(e, spec):
     return {"adult": [int(m.group(1)), int(m.group(2))], "athlete": [int(m.group(3)), int(m.group(4))]}
 
 
+def ffmi_sex(group, named):
+    """A row's sex from its group label: women/female, men/male/Mr. For a label with neither word,
+    tool-data.json's sex_by_group names it, by the whole label, so a reworded row fails."""
+    f = re.search(r"\b(women|woman|female)\b", group, re.I)
+    m = re.search(r"\b(men|man|male|mr)\b", group, re.I)
+    if f and not m:
+        return "f"
+    if m and not f:
+        return "m"
+    if named.get(group) in ("m", "f"):
+        return named[group]
+    raise ToolDataError(f"ffmiRef: cannot tell the sex of the row {group!r} (name it in sex_by_group)")
+
+
 def td_ffmi_ref(e, spec):
-    sexes = spec.get("sex", [])
-    if len(sexes) != len(e["rows"]) or any(s not in ("m", "f") for s in sexes):
-        raise ToolDataError(f"ffmiRef: tool-data.json gives a sex for {len(sexes)} rows; the table has {len(e['rows'])}")
+    named = spec.get("sex_by_group", {})
+    stale = [g for g in named if g not in [r[0] for r in e["rows"]]]
+    if stale:
+        raise ToolDataError(f"ffmiRef: sex_by_group names rows the table no longer has: {stale}")
     out = []
-    for r, sex in zip(e["rows"], sexes):
+    for r in e["rows"]:
+        sex = ffmi_sex(r[0], named)
         m = re.match(r"(above )?(\d+(?:\.\d+)?)", r[1])
         if not m:
             raise ToolDataError(f"ffmiRef: {r[1]!r} does not start with an FFMI")
@@ -1703,7 +1719,11 @@ def _ipf_column(cells, who):
 
 def td_ipf(e, spec):
     rows = e["rows"]
-    return {"m": _ipf_column([r[0] for r in rows], "men"), "f": _ipf_column([r[2] for r in rows], "women")}
+    out = {"m": _ipf_column([r[0] for r in rows], "men"), "f": _ipf_column([r[2] for r in rows], "women")}
+    for sex, who in (("m", "men"), ("f", "women")):
+        if not out[sex][0]["junior"]:
+            raise ToolDataError(f"ipf {who}: no sub-junior and junior class, which the class finder names")
+    return out
 
 
 def td_comeback(e, spec):
@@ -1730,7 +1750,18 @@ def td_return_load(e, spec):
 
 
 def td_supps(e, spec):
+    if not any(r[0].strip().lower() == "caffeine" for r in e["rows"]):
+        raise ToolDataError("supps: the table has no Caffeine row, and the checker works out a caffeine dose from it")
     return {"rows": [{"name": r[0], "evidence": r[1], "does": r[2], "dose": r[3]} for r in e["rows"]]}
+
+
+def td_arith(e, spec):
+    """The worked example the FFMI tool starts from: weight, body fat, height, target."""
+    rows = {r[0]: r[2] for r in e["rows"]}
+    fat = _find(r"^(\d+(?:\.\d+)?) x (0\.\d+) = ", rows.get("Fat mass", ""), "arith")
+    h = _find(r"\((\d+(?:\.\d+)?) x \1\)", rows.get("Fat-free mass index (FFMI)", ""), "arith")
+    tg = _find(r"^Target (\d+(?:\.\d+)?) percent", rows.get("Weight at a target body fat, if lean mass holds", ""), "arith")
+    return {"kg": _n(fat.group(1)), "bf": _n(round(float(fat.group(2)) * 100, 6)), "cm": _n(round(float(h.group(1)) * 100, 6)), "target": _n(tg.group(1))}
 
 
 def td_fat_loss(e, spec):
@@ -1762,7 +1793,7 @@ TOOL_PARSERS = {
     "zones": td_zones, "zoneFeel": td_zone_feel, "hrMax": td_hr_max, "hrRest": td_hr_rest,
     "ffmiRef": td_ffmi_ref, "ffmiNorm": td_ffmi_norm, "rpe": td_rpe, "ipf": td_ipf,
     "comeback": td_comeback, "returnRatio": td_return_ratio, "returnLoad": td_return_load,
-    "supps": td_supps, "fatLoss": td_fat_loss, "caffeine": td_caffeine, "sets": td_sets, "setsHelper": td_sets_helper,
+    "supps": td_supps, "fatLoss": td_fat_loss, "arith": td_arith, "caffeine": td_caffeine, "sets": td_sets, "setsHelper": td_sets_helper,
 }
 
 
@@ -1832,6 +1863,20 @@ def tool_data(data, pages):
     return out
 
 
+SITE_INDEX = ROOT / "public" / "site-index.js"
+
+
+def check_site_index(tabs, word):
+    """public/site-index.js is typed by hand: it must give the same count of calculators as the
+    tabs, and a row for each of them."""
+    text = SITE_INDEX.read_text(encoding="utf-8")
+    m = re.search(r'h: "/fitness", [^\n]*\n\s*d: "Vantix, (\w+) free calculators', text)
+    problems = [] if m and m.group(1) == word else [f"the Fitness row says {m.group(1) if m else 'no number of'} free calculators; there are {word} tabs"]
+    problems += [f"no row for /fitness#{t}" for t in tabs if f'h: "/fitness#{t}"' not in text]
+    if problems:
+        raise SystemExit("public/site-index.js:\n  " + "\n  ".join(problems))
+
+
 def fill_tools(page, data, pages):
     """The {{tools:…}} and {{e:…}} tokens of page.html (see the comment above TOOL_DATA)."""
     idx, problems = guide_index(data), []
@@ -1861,7 +1906,19 @@ def fill_tools(page, data, pages):
     if not 0 < len(tabs) < len(NUMBER_WORDS):
         raise SystemExit("content/fitness/page.html: cannot count the calculator tabs")
     word = NUMBER_WORDS[len(tabs)]
-    blob = json.dumps(tool_data(data, pages), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    td = tool_data(data, pages)
+
+    def value(m):   # {{tools:val:<key>.<field>}}: one parsed number, e.g. the FFMI tool's example inputs
+        key, field = m.group(1), m.group(2)
+        if key not in td or field not in td[key]:
+            problems.append(f"{{{{tools:val:{key}.{field}}}}}: no such value in the tool data")
+            return ""
+        return esc(td[key][field])
+    page = re.sub(r"\{\{tools:val:([A-Za-z]+)\.([A-Za-z]+)\}\}", value, page)
+    if problems:
+        raise SystemExit("content/fitness/page.html:\n  " + "\n  ".join(problems))
+    check_site_index(tabs, word)
+    blob = json.dumps(td, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     for token, value in (("{{tools:data}}", blob), ("{{tools:n}}", word), ("{{tools:N}}", word.capitalize())):
         if token == "{{tools:data}}" and token not in page:
             raise SystemExit("content/fitness/page.html has no {{tools:data}}")

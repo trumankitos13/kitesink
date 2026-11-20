@@ -87,6 +87,16 @@
     rirFromRpe: function (rpe) { return rpe >= 5 && rpe <= 10 ? 10 - rpe : NaN; },
     // the chart's row for an RPE (rows from #tool-data: { rpe: [lo, hi], rir, feel, use })
     rpeRow: function (rows, rpe) { for (var i = 0; i < rows.length; i++) if (rpe >= rows[i].rpe[0] && rpe <= rows[i].rpe[1]) return rows[i]; return null; },
+    // the RPEs the chart offers, highest first: each row's own, a range ("5-6") as each whole step in it
+    rpeOptions: function (rows) {
+      var out = [];
+      (rows || []).forEach(function (r) {
+        var vs = [];
+        if (r.rpe[0] === r.rpe[1]) vs.push(r.rpe[0]); else for (var v = Math.floor(r.rpe[1]); v >= Math.ceil(r.rpe[0]); v--) vs.push(v);
+        vs.forEach(function (v) { if (v >= 5 && v <= 10) out.push({ rpe: v, rir: 10 - v }); });
+      });
+      return out;
+    },
 
     // Meet attempts. Opener, second and third as fractions of the best single you could
     // lift today. A convention, not a rule: "first" aims for nine good lifts, "bold" ends
@@ -573,6 +583,8 @@
      ipfClass(kg, sex, junior, classes): the IPF class a body weight is in, and the one below.
      classes is #tool-data's ipf (the guide's class table): per sex, limits rising, the lightest
      for sub-juniors and juniors only, the last open. A limit includes its own number. */
+  // decimals to show a weight with: one, or two when the hundredths matter (59.01 must not read 59.0)
+  F.places = function (v) { var r = Math.round(v * 100); return r % 10 ? 2 : 1; };
   F.ipfClass = function (kg, sex, junior, T) {
     var list = ((T && T[sex === "f" ? "f" : "m"]) || []).filter(function (c) { return junior || !c.junior; });
     if (!(kg > 0) || !list.length) return null;
@@ -651,6 +663,17 @@
   // The examples the tools used to start with, which are not anyone's numbers: Energy & macros'
   // 75 kg, 175 cm, 30 years; Meet attempts' 140 / 90 / 170; the hero's best squat of 100.
   F.MIGRATE_EXAMPLES = { kg: 75, cm: 175, age: 30, squat: 140, bench: 90, dead: 170, heroMax: 100 };
+  // the navy tool's example tape readings, in cm (the values its fields start with; a test checks the page)
+  F.NAVY_EXAMPLES = { h: 178, neck: 38, waist: 86, hip: 97 };
+  // Are the navy tool's tape readings the visitor's? Saved since 2027.23 as navy.tape (set only by
+  // typing a neck, waist or hip). Before that only `touched`, which any click set, so a reading
+  // counts only when it differs from the example.
+  F.navyTyped = function (nv) {
+    if (!nv || typeof nv !== "object") return false;
+    if (typeof nv.tape === "boolean") return nv.tape;
+    var X = F.NAVY_EXAMPLES;
+    return !!nv.touched && (+nv.neck !== X.neck || +nv.waist !== X.waist || (nv.sex === "f" && +nv.hip !== X.hip));
+  };
   F.migrate = function (blob) {
     if (!blob || typeof blob !== "object" || Array.isArray(blob)) return F.meEmpty();
     if (blob.me && blob.me.v === 1) return F.meClean(blob.me);   // already done: migrating again changes nothing
@@ -662,10 +685,13 @@
     var touched = blob.mTouched != null ? !!blob.mTouched
       : n(blob.kg) > 0 && (n(blob.kg) !== X.kg || n(blob.cm) !== X.cm || n(blob.age) !== X.age || n(blob.bf) > 0);
     if (touched) { take("sex", blob.sex); take("age", n(blob.age)); take("kg", n(blob.kg)); take("cm", n(blob.cm)); take("bf", n(blob.bf)); }
-    // the navy tool's readings fill what is still empty; its result is the body fat if none was typed
+    // the navy tool's readings fill what is still empty, and its result is the body fat if none
+    // was typed, but only when its tape readings were the visitor's (F.navyTyped). Its weight has
+    // no example (the field starts empty), so a saved one was typed.
     var nv = blob.navy;
-    if (nv && typeof nv === "object" && nv.touched) {
-      take("sex", nv.sex); take("kg", n(nv.kg)); take("cm", n(nv.h));
+    if (nv && typeof nv === "object" && nv.touched) take("kg", n(nv.kg));
+    if (F.navyTyped(nv)) {
+      take("sex", nv.sex); take("cm", n(nv.h));
       if (!("bf" in p)) { take("bf", n(nv.pct)); bfNavy = "bf" in p; }
     }
     // Meet attempts has no flag: a lift is the visitor's only when it is not the example
@@ -906,8 +932,9 @@
       pressed($("me-units"), imp() ? "imperial" : "metric");
       pressed($("me-sex"), m.own.sex ? m.sex : "");
       Object.keys(FIELD).forEach(function (k) {
-        if (all || hits(keys, [k, "units"])) { setField($(FIELD[k]), m.own[k] ? toShown(k, m[k]) : ""); if (document.activeElement !== $(FIELD[k])) $(FIELD[k]).removeAttribute("aria-invalid"); }
+        if (all || hits(keys, [k, "units"])) setField($(FIELD[k]), m.own[k] ? toShown(k, m[k]) : "");
       });
+      unsaved();
       [].forEach.call(box.querySelectorAll(".me-wu"), function (el) { el.textContent = imp() ? "lb" : "kg"; });
       $("me-hu").textContent = imp() ? "in" : "cm";
       $("me-kg").max = imp() ? 660 : 300; $("me-cm").min = imp() ? 47 : 120; $("me-cm").max = imp() ? 91 : 230;
@@ -920,18 +947,35 @@
     Object.keys(FIELD).forEach(function (k) {
       var el = $(FIELD[k]);
       el.addEventListener("input", function () {
-        var v = val(FIELD[k]), bad = el.value !== "" && !F.meOk(k, fromShown(k, v));
-        el.setAttribute("aria-invalid", bad ? "true" : "false");
-        $("me-bad").hidden = !bad;
-        if (bad) { var r = F.ME_RANGE[k]; $("me-bad").textContent = "That is outside what the tools take (" + toShown(k, r[0]) + " to " + toShown(k, r[1]) + "), so it is not saved."; }
+        var v = val(FIELD[k]);
         var patch = {}; patch[k] = el.value === "" ? "" : fromShown(k, v); ME.set(patch);
+        unsaved();
       });
     });
+    // A field holding a number the tools do not take says so, and says what they use instead,
+    // for as long as it holds it: the field never shows a number other than the saved one silently.
+    var NAME = { age: "Age", kg: "Weight", cm: "Height", bf: "Body fat", squat: "Best squat", bench: "Best bench", dead: "Best deadlift", hrMax: "Max heart rate", hrRest: "Resting heart rate" };
+    function unsaved() {
+      var m = ME.get(), msgs = [];
+      Object.keys(FIELD).forEach(function (k) {
+        var el = $(FIELD[k]), bad = el.value !== "" && !F.meOk(k, fromShown(k, val(FIELD[k])));
+        el.setAttribute("aria-invalid", bad ? "true" : "false");
+        if (!bad) return;
+        var r = F.ME_RANGE[k];
+        msgs.push(NAME[k] + " is not saved: the tools take " + toShown(k, r[0]) + " to " + toShown(k, r[1]) + ", so they " + (m.own[k] ? "still use " + toShown(k, m[k]) : "use their example") + ".");
+      });
+      $("me-bad").hidden = !msgs.length;
+      $("me-bad").textContent = msgs.join(" ");
+    }
     $("me-units").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ units: b.value }); paint(); });
     $("me-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
     $("me-clear").addEventListener("click", function () { ME.clear(); paint(); say("me-say", "Your numbers are cleared. The tools show their examples again."); $("me-units").querySelector("button").focus(); });
     onMe(paint);
     paint();
+    // /fitness#mine opens the panel, on arrival and when the fragment changes later
+    function fromHash() { if (location.hash === "#mine") { box.open = true; box.scrollIntoView({ block: "start" }); } }
+    window.addEventListener("hashchange", fromHash);
+    fromHash();
   });
 
   /* ---------- 1. energy & macros ----------
@@ -1173,15 +1217,17 @@
     ["l-reps", "l-treps", "l-trir", "l-rir"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("l-rir").addEventListener("change", calc);
     if (saved.loadReps) $("l-reps").value = saved.loadReps;
+    showLift();   // the field shows the set the result is worked from, in the unit chosen
     onMe(function (keys) { if (hits(keys, ["units"]) && ME.units()) { units.set(ME.units() === "imperial" ? "lb" : "kg"); showLift(); calc(); } });
-    // the options of "How hard was that set?", by reps in reserve or by the chart's RPE
-    var RIRS = [0, 0.5, 1, 2, 3, 4, 5];
+    // the options of "How hard was that set?", one per RPE the guide's chart lists (F.rpeOptions)
+    var RIRS = F.rpeOptions(RPE).map(function (o) { return o.rir; });
+    if (!RIRS.length) RIRS = [0];
     function options() {
       var sel = $("l-rir"), cur = parseFloat(sel.value), rpe = fx.get() === "rpe";
       sel.innerHTML = RIRS.map(function (r) {
         var row = F.rpeRow(RPE, 10 - r);
         var label = rpe ? "RPE " + num(10 - r, r % 1 ? 1 : 0) + (row ? ": " + row.feel.charAt(0).toLowerCase() + row.feel.slice(1) : "")
-          : r === 0 ? "0 in reserve: to failure" : r === 0.5 ? "0 to 1 in reserve" : r + " in reserve";
+          : r === 0 ? "0 in reserve: to failure" : r % 1 ? (row ? row.rir.replace("-", " to ") : num(r, 1)) + " in reserve" : r + " in reserve";
         return '<option value="' + r + '">' + esc(label) + "</option>";
       }).join("");
       sel.value = RIRS.indexOf(cur) >= 0 ? String(cur) : "0";
@@ -1297,6 +1343,8 @@
     $("z-max").addEventListener("input", function () { ME.set({ hrMax: val("z-max") }); calc(); });
     $("z-rest").addEventListener("input", function () { ME.set({ hrRest: val("z-rest") }); calc(); });
     onMe(function (keys) {
+      // a measured maximum arriving from My numbers switches to it; cleared there, back to age
+      if (hits(keys, ["hrMax"]) && document.activeElement !== $("z-max")) { src.set(ME.has("hrMax") ? "max" : "age"); paintSrc(); }
       if (hits(keys, ["age"])) setField($("z-age"), ME.val("age", EXAGE));
       if (hits(keys, ["hrMax"])) setField($("z-max"), ME.val("hrMax", ""));
       if (hits(keys, ["hrRest"])) setField($("z-rest"), ME.val("hrRest", ""));
@@ -1449,7 +1497,7 @@
     $("wc-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
     function lb() { var b = document.querySelector('#a-units [aria-pressed="true"]'); return !!b && b.value === "lb"; }
     function show() { if (isFinite(kg)) setField($("wc-kg"), lb() ? Math.round(F.lb(kg) * 10) / 10 : Math.round(kg * 100) / 100); $("wc-u").textContent = lb() ? "lb" : "kg"; }
-    function both(v) { return num(v, 1) + " kg" + (lb() ? " (" + num(F.lb(v), 1) + " lb)" : ""); }
+    function both(v) { var d = F.places(v); return num(v, d) + " kg" + (lb() ? " (" + num(F.lb(v), d) + " lb)" : ""); }
     $("wc-kg").addEventListener("input", function () { var v = val("wc-kg"); kg = lb() ? F.kg(v) : v; ME.set({ kg: kg }); calc(); });
     $("wc-jr").addEventListener("change", function () { jr = $("wc-jr").checked; store.set({ att: Object.assign({}, store.get().att, { junior: jr }) }); calc(); });
     $("a-units").addEventListener("click", function () { setTimeout(function () { show(); calc(); }, 0); });
@@ -1466,8 +1514,9 @@
       $("wc-class").textContent = r.name + " kg";
       $("wc-sub").textContent = r.open ? "Over " + num(r.floor, 1) + " kg: the open class, with no upper limit." :
         both(kg) + " is " + both(r.under) + " under the " + r.name + " kg limit" + (r.floor != null ? " (over " + num(r.floor, 1) + ", up to " + num(r.limit, 1) + " kg)." : " (up to " + num(r.limit, 1) + " kg).");
-      $("wc-below").textContent = r.below ? "The class below is " + r.below.name + " kg. Making it means weighing " + both(r.below.cut) + " less at weigh-in: " + num(r.below.pct, 1) + "% of your body weight."
-        : "There is no lighter class " + (jr ? "in the IPF." : "for you: the " + T[sex.get() === "f" ? "f" : "m"][0].name + " kg class is for sub-juniors and juniors only.");
+      var junior = T[sex.get() === "f" ? "f" : "m"].filter(function (c) { return c.junior; })[0];   // the build fails without one
+      $("wc-below").textContent = r.below ? "The class below is " + r.below.name + " kg. Making it means weighing " + both(r.below.cut) + " less at weigh-in: " + num(r.below.pct, r.below.pct < 0.1 ? 2 : 1) + "% of your body weight."
+        : "There is no lighter class " + (jr || !junior ? "in the IPF." : "for you: the " + junior.name + " kg class is for sub-juniors and juniors only.");
       say("wc-say", "IPF class " + r.name + " kilograms." + (r.below ? " The class below is " + r.below.name + ", " + num(r.below.cut, 1) + " kilograms lighter." : ""));
     }
     show(); calc();
@@ -1484,7 +1533,7 @@
     ["input", "click"].forEach(function (t) { $("bodyfat").addEventListener(t, function (e) { if (e.isTrusted && (t === "input" || e.target.closest("button"))) touched = true; }, true); });
     // the tape readings are the visitor's once typed (or saved as theirs before); until then the
     // result is an example's, and "Use as my body fat" waits for them
-    var tape = !!mine.touched && mine.neck > 0;
+    var tape = F.navyTyped(mine);
     ["neck", "waist", "hip"].forEach(function (f) { $("bf-" + f).addEventListener("input", function () { tape = true; }); });
     var EXH = val("bf-h");   // the example height the field starts with
     var cm = {}; FIELDS.forEach(function (f) { cm[f] = f === "h" ? ME.val("cm", EXH) : mine.touched && mine[f] > 0 ? +mine[f] : val("bf-" + f); });
@@ -1548,7 +1597,7 @@
         }
         say("bf-say", "Estimated body fat " + num(shown, 1) + " percent" + (mass ? ", " + num(inch() ? F.lb(kg * shown / 100) : kg * shown / 100, 1) + (inch() ? " pounds" : " kilograms") + " of fat." : "."));
       }
-      store.set({ navy: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "", pct: isFinite(pct) ? Math.round(pct * 10) / 10 : "", touched: touched } });
+      store.set({ navy: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "", pct: isFinite(pct) ? Math.round(pct * 10) / 10 : "", touched: touched, tape: tape } });
       if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:navy"));   // the activity multiplier reads the result when My numbers has no body fat
     }
     show(); calc();
