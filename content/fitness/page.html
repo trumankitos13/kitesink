@@ -470,6 +470,17 @@
   .hub-n { margin-top: auto; padding-top: 10px; font: 500 12px/1.4 var(--k-mono); color: var(--k-mute); }
   .hub-n::after { content: " \2192"; color: var(--k-green); }
 
+  /* FFMI: the published groups as a list, with you in your place */
+  .ff-ref { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 2px; }
+  .ff-ref li { display: grid; grid-template-columns: 4.2em minmax(0, 1fr); gap: 4px 10px; align-items: baseline; padding: 6px 0; border-top: 1px solid rgba(240,232,214,.14); font-size: 13px; line-height: 1.35; color: #c2ceb9; }
+  .ff-ref li b { font: 600 13px/1.3 var(--k-mono); color: #f0e8d6; font-variant-numeric: tabular-nums; }
+  .ff-ref li i { grid-column: 2; display: block; height: 5px; border-radius: 3px; background: rgba(240,232,214,.25); }
+  .ff-ref li.you { color: #f0e8d6; font-weight: 600; }
+  .ff-ref li.you b { color: #d8b07a; }
+  .ff-ref li.you i { background: #d8b07a; }
+  .te-wrap { display: grid; gap: 8px; }
+  .te-wrap[hidden] { display: none; }
+
   /* meet attempt planner */
   .wc { margin-top: 18px; display: grid; gap: 18px; }
   @media (min-width: 920px) { .wc { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .wc-cards { grid-column: 1 / -1; } }
@@ -683,6 +694,7 @@
             <button type="button" role="tab" id="tab-activity" aria-controls="activity" aria-selected="false">Activity multiplier</button>
             <button type="button" role="tab" id="tab-bodyfat" aria-controls="bodyfat" aria-selected="false">Navy body fat</button>
             <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
+            <button type="button" role="tab" id="tab-ffmi" aria-controls="ffmi" aria-selected="false">FFMI &amp; goal weight</button>
           </div>
         </div>
       </div>
@@ -940,6 +952,49 @@
             <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">The equations are the US Navy’s, built on Navy men and women from height and tape measures. Against DXA in 1,407 Army recruits they read about 6 points low on average, with a typical error of about 3.4 points for men and 4.1 for women. A tape used the same way each time is good for following change; one reading is a rough guide. <a href="/fitness/bodycomp#comp-methods-estimate">Every body fat method estimates</a>. {{c:hodgdon1984m,hodgdon1984f,foulis2023}}</p>
           </div>
         </div>
+      </div>
+
+      <!-- ---------- FFMI & goal weight: the guide's body composition arithmetic ---------- -->
+      <div class="tool" id="ffmi" role="tabpanel" aria-labelledby="tab-ffmi">
+        <p class="k-copy tool-intro">How much of you is lean mass, your fat-free mass index (FFMI) beside published groups, and the weight a target body fat comes to if your lean mass holds. The sums are the field guide’s {{e:comp-table-arithmetic|body composition arithmetic}}, worked on your numbers.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="ff-units-l">Units</span><div class="k-seg" id="ff-units" role="group" aria-labelledby="ff-units-l"><button type="button" value="metric">Metric</button><button type="button" value="imperial">Imperial</button></div></div>
+              <div class="k-field"><span class="k-label" id="ff-sex-l">Compare with</span><div class="k-seg" id="ff-sex" role="group" aria-labelledby="ff-sex-l"><button type="button" value="m">Men</button><button type="button" value="f">Women</button></div></div>
+            </div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="ff-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="80"><span id="ff-w-u">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="ff-h" type="number" inputmode="decimal" min="47" max="230" step="0.5" value="180"><span id="ff-h-u">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Body fat</span><span class="with-unit"><input class="k-input" id="ff-bf" type="number" inputmode="decimal" min="3" max="60" step="0.1" value="25"><span>%</span></span></label>
+            </div>
+            <p class="k-small" id="ff-bf-from" hidden></p>
+            <label class="k-field"><span class="k-label">Target body fat</span><span class="with-unit"><input class="k-input" id="ff-t" type="number" inputmode="decimal" min="3" max="59" step="0.5" value="15"><span>%</span></span></label>
+            <p class="k-small">No body fat figure? <a href="#bodyfat">Navy body fat</a> estimates one from a tape measure. Every method estimates: {{e:comp-methods-estimate|how far each one can be off}}.</p>
+            <details class="more">
+              <summary>The sums this uses</summary>
+              <div>{{tools:table:comp-table-arithmetic}}</div>
+            </details>
+          </div>
+          <div class="k-card tool-out" id="ff-out">
+            <p class="k-vh" id="ff-say" role="status"></p>
+            <div><p class="k-label">Your FFMI</p><p class="k-stat"><span id="ff-ffmi">—</span><small>kg/m²</small></p><p class="k-small" id="ff-sub">Enter weight, height and body fat.</p></div>
+            <div class="kv hide-empty"><div><span class="k-label">Lean mass</span><b id="ff-lean">—</b></div><div><span class="k-label">Fat mass</span><b id="ff-fat">—</b></div></div>
+            <div class="hide-empty"><p class="k-label" id="ff-ref-h">Beside published groups</p><ol class="ff-ref" id="ff-ref" aria-labelledby="ff-ref-h"></ol><p class="k-small" id="ff-norm"></p></div>
+            <div class="te-wrap hide-empty" id="ff-25">{{tools:entry:comp-ffmi-not-a-drug-test}}</div>
+            <div class="kv hide-empty" id="ff-goal-kv"><div><span class="k-label" id="ff-goal-l">Weight at 15%, if lean mass holds</span><b id="ff-goal">—</b></div><div><span class="k-label">Fat to lose</span><b id="ff-lose">—</b></div></div>
+            <p class="k-small hide-empty" id="ff-weeks"></p>
+            <div class="k-actions hide-empty" id="ff-plan-wrap"><button class="k-btn k-btn--sm" id="ff-plan" type="button">Plan this loss in Energy &amp; macros</button></div>
+            <div class="te-wrap hide-empty" id="ff-hi" hidden><p class="warn" id="ff-hi-t"></p>{{tools:entry:comp-mistake-ffmi-high-fat}}</div>
+            <p class="k-small ex-note" id="ff-ex" hidden></p>
+            <div class="te-wrap hide-empty">{{tools:entry:comp-mistake-all-loss-is-fat}}</div>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">The goal weight assumes every kilo lost is fat. How much of a loss is lean depends on how lean you start, as {{e:comp-table-forbes|Forbes’s review of feeding studies}} shows; its people were not lifting, so no second figure is worked out here. FFMI landmarks are from {{e:comp-table-ffmi-reference|published samples}} measured in different ways: rough guides, not grades.</p>
+          </div>
+        </div>
+        <details class="more tool-src">
+          <summary>The FFMI reference table</summary>
+          <div>{{tools:table:comp-table-ffmi-reference}}{{tools:entry:comp-kouri-ceiling}}</div>
+        </details>
       </div>
 
       <!-- ---------- 8. activity multiplier ---------- -->

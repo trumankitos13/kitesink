@@ -272,6 +272,19 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   ok('class: no weight, no class', F.ipfClass(NaN, 'm', false, TD.ipf) === null);
 }
 
+// ---------- FFMI & goal weight: the guide's worked example (comp-table-arithmetic) ----------
+{
+  const r = F.ffmi({ kg: 80, cm: 180, bf: 25, target: 15 }, TD.ffmiNorm);
+  eq('ffmi: fat 80 x 0.25', r.fat, 20, 1e-9); eq('ffmi: lean 80 - 20', r.lean, 60, 1e-9); eq('ffmi: 60 / 1.8 squared = 18.5', r.ffmi, 18.52, 0.01);
+  eq('ffmi: target 15% if lean holds, 60 / 0.85 = 70.6', r.goal, 70.6, 0.02); eq('ffmi: to lose 9.4', r.lose, 9.4, 0.02);
+  eq('ffmi: at 1.80 m the height adjustment is nothing', r.norm, r.ffmi, 1e-9);
+  const s = F.ffmi({ kg: 70, cm: 170, bf: 15, target: 10 }, TD.ffmiNorm);
+  eq('ffmi: height-normalised at 1.70 m adds 6.3 x 0.10', s.norm - s.ffmi, TD.ffmiNorm.k * 0.1, 1e-9);
+  same('ffmi: the adjustment read from the guide is 6.3 x (1.80 - h)', TD.ffmiNorm.k + ' ' + TD.ffmiNorm.h, '6.3 1.8');
+  ok('ffmi: a target at or above body fat now gives no goal weight', F.ffmi({ kg: 80, cm: 180, bf: 25, target: 25 }).goal === null && F.ffmi({ kg: 80, cm: 180, bf: 25, target: 30 }).lose === null);
+  ok('ffmi: the reference rows are read by sex', TD.ffmiRef.rows.filter(x => x.sex === 'f').map(x => x.value).join() === '16.3,23.9' && TD.ffmiRef.rows.some(x => x.value === 25 && x.sex === 'm'));
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);

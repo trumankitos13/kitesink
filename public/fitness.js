@@ -495,6 +495,18 @@
   // what one activity adds to its day's multiplier: its multiplier an hour times the hours
   F.activityMult = function (id, min) { var e = F.exercise(id); return e && min > 0 ? e.m * min / 60 : 0; };
 
+  /* ---------- FFMI and goal weight ----------
+     The field guide's body composition arithmetic (comp-table-arithmetic): fat = weight x body fat;
+     lean = weight - fat; FFMI = lean / height in m squared; weight at a target body fat, if lean
+     mass holds = lean / (1 - target); fat to lose = weight - that. N (#tool-data's ffmiNorm) is the
+     1995 study's height adjustment, FFMI + k x (h - height in m). o: kg, cm, bf, target (both %). */
+  F.ffmi = function (o, N) {
+    var m = o.cm / 100, fat = o.kg * o.bf / 100, lean = o.kg - fat, v = lean / (m * m);
+    var r = { fat: fat, lean: lean, ffmi: v, norm: N ? v + N.k * (N.h - m) : NaN, goal: null, lose: null };
+    if (o.target > 0 && o.target < o.bf) { r.goal = lean / (1 - o.target / 100); r.lose = o.kg - r.goal; }
+    return r;
+  };
+
   /* ---------- weight class finder ----------
      ipfClass(kg, sex, junior, classes): the IPF class a body weight is in, and the one below.
      classes is #tool-data's ipf (the guide's class table): per sex, limits rising, the lightest
@@ -756,7 +768,8 @@
 
   /* ---------- tabs: one tool at a time; each has its own #hash ---------- */
   boot(function () {
-    var ids = ["reps", "loads", "attempts", "travel", "macros", "activity", "bodyfat", "plan"].filter(function (id) { return $("tab-" + id) && $(id); });
+    // every tab in #tools, in page order across both rows: <button role="tab" id="tab-<id>"> for the panel #<id>
+    var ids = [].map.call(document.querySelectorAll('#tools [role="tab"]'), function (t) { return t.id.slice(4); }).filter(function (id) { return $("tab-" + id) && $(id); });
     var tabs = ids.map(function (id) { return $("tab-" + id); }), panels = ids.map($);
     function show(id, focus) {
       var i = ids.indexOf(id); if (i < 0) return false;
@@ -1304,6 +1317,82 @@
       }
       store.set({ navy: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "", pct: isFinite(pct) ? Math.round(pct * 10) / 10 : "", touched: touched } });
       if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:navy"));   // the activity multiplier reads the result when My numbers has no body fat
+    }
+    show(); calc();
+  });
+
+  /* ---------- FFMI & goal weight ----------
+     Weight, height, body fat and sex are My numbers (examples: the guide's own worked case, 80 kg,
+     1.80 m, 25%). The landmarks are the guide's FFMI table, by sex, from #tool-data. */
+  boot(function () {
+    if (!$("ffmi")) return;
+    var TD = toolData(), REF = TD.ffmiRef ? TD.ffmiRef.rows : [], N = TD.ffmiNorm, mine = saved.ff || {};
+    var EX = { kg: val("ff-w"), cm: val("ff-h"), bf: val("ff-bf"), sex: "m" };
+    var body = { kg: ME.val("kg", EX.kg), cm: ME.val("cm", EX.cm) };
+    $("ff-bf").value = ME.val("bf", EX.bf);
+    if (mine.target >= 3 && mine.target < 60) $("ff-t").value = mine.target;
+    var units = seg($("ff-units"), mine.units || ME.units(), "metric", function () { show(); calc(); });
+    var sex = seg($("ff-sex"), ME.val("sex", EX.sex), EX.sex, calc);
+    $("ff-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
+    function imp() { return units.get() === "imperial"; }
+    function mass(v) { return num(imp() ? F.lb(v) : v, 1) + (imp() ? " lb" : " kg"); }
+    function show() {
+      if (isFinite(body.kg)) setField($("ff-w"), imp() ? Math.round(F.lb(body.kg) * 10) / 10 : Math.round(body.kg * 10) / 10);
+      if (isFinite(body.cm)) setField($("ff-h"), imp() ? Math.round(body.cm / 2.54 * 2) / 2 : Math.round(body.cm * 2) / 2);
+      $("ff-w-u").textContent = imp() ? "lb" : "kg"; $("ff-h-u").textContent = imp() ? "in" : "cm";
+    }
+    $("ff-w").addEventListener("input", function () { var v = val("ff-w"); body.kg = imp() ? F.kg(v) : v; ME.set({ kg: body.kg }); calc(); });
+    $("ff-h").addEventListener("input", function () { var v = val("ff-h"); body.cm = imp() ? v * 2.54 : v; ME.set({ cm: body.cm }); calc(); });
+    $("ff-bf").addEventListener("input", function () { ME.set({ bf: val("ff-bf") }); calc(); });
+    $("ff-t").addEventListener("input", calc);
+    onMe(function (keys) {
+      if (hits(keys, ["units"]) && ME.units()) units.set(ME.units());
+      if (hits(keys, ["kg"]) && document.activeElement !== $("ff-w")) body.kg = ME.val("kg", EX.kg);
+      if (hits(keys, ["cm"]) && document.activeElement !== $("ff-h")) body.cm = ME.val("cm", EX.cm);
+      if (hits(keys, ["bf"])) setField($("ff-bf"), ME.val("bf", EX.bf));
+      if (hits(keys, ["sex"])) sex.set(ME.val("sex", EX.sex));
+      if (hits(keys, ["units", "kg", "cm", "bf", "sex"])) { show(); calc(); }
+    });
+    $("ff-plan").addEventListener("click", function () {   // Energy & macros, set to lose
+      if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:goal", { detail: "lose" }));
+      var tab = $("tab-macros"); if (tab) { tab.click(); tab.focus(); }
+    });
+    function calc() {
+      var kg = body.kg, cm = body.cm, bf = val("ff-bf"), target = val("ff-t"), f = sex.get() === "f";
+      var me = ME.get(), fromNavy = ME.has("bf") && me.bfFrom === "navy" && document.activeElement !== $("ff-bf") && Math.abs(bf - me.bf) < 1e-9;
+      $("ff-bf-from").hidden = !fromNavy; $("ff-bf-from").textContent = fromNavy ? "Body fat from Navy body fat, a tape estimate." : "";
+      var ok = kg >= 30 && kg <= 300 && cm >= 120 && cm <= 230 && bf >= 3 && bf <= 60, out = $("ff-out");
+      out.classList.toggle("is-empty", !ok);
+      exampleNote($("ff-ex"), ok ? [["kg", "weight"], ["cm", "height"], ["bf", "body fat"], ["sex", "sex"]].filter(function (x) { return !ME.has(x[0]); }).map(function (x) { return x[1]; }) : []);
+      store.set({ ff: { target: isFinite(target) ? target : "", units: units.get() } });
+      if (!ok) { $("ff-ffmi").textContent = "\u2014"; $("ff-sub").textContent = "Enter weight (30 to 300 kg), height (120 to 230 cm) and body fat (3 to 60%)."; $("ff-hi").hidden = true; say("ff-say", $("ff-sub").textContent); return; }
+      var r = F.ffmi({ kg: kg, cm: cm, bf: bf, target: target }, N);
+      $("ff-ffmi").textContent = num(r.ffmi, 1);
+      $("ff-sub").textContent = "Lean mass " + mass(r.lean) + " over " + num(cm / 100, 2) + " m squared.";
+      $("ff-lean").textContent = mass(r.lean); $("ff-fat").textContent = mass(r.fat);
+      // the published groups for this sex, lowest first, with you in your place
+      var rows = REF.filter(function (x) { return x.sex === (f ? "f" : "m"); }).map(function (x) { return { v: x.value, t: (x.above ? "above " : "") + x.shown.replace(/^above /, ""), g: x.group }; });
+      rows.push({ v: r.ffmi, t: num(r.ffmi, 1), g: "You", you: true });
+      rows.sort(function (a, b) { return a.v - b.v || (a.you ? 1 : -1); });
+      var top = Math.max.apply(null, rows.map(function (x) { return x.v; })) * 1.05;
+      $("ff-ref").innerHTML = rows.map(function (x) { return '<li' + (x.you ? ' class="you"' : "") + '><b>' + esc(x.t) + "</b><span>" + esc(x.g) + '</span><i style="width:' + Math.round(x.v / top * 100) + '%" aria-hidden="true"></i></li>'; }).join("");
+      $("ff-norm").textContent = f ? "" : "Height-normalised, as the 1995 study that set the 25.0 line did (+ " + N.k + " \u00d7 (" + num(N.h, 2) + " \u2212 height in m)): " + num(r.norm, 1) + ".";
+      $("ff-25").hidden = f;
+      // a high body fat inflates FFMI: KiteSink flags it from its third body-fat category
+      var cut = F.BMR_CATS[1][f ? "f" : "m"], hi = bf >= cut;
+      $("ff-hi").hidden = !hi;
+      $("ff-hi-t").textContent = hi ? "At " + num(bf, 1) + "% body fat this FFMI says less about muscle. (" + cut + "% for " + (f ? "women" : "men") + " is where KiteSink’s third body-fat category starts, its own convention.)" : "";
+      $("ff-goal-l").textContent = "Weight at " + num(target, target % 1 ? 1 : 0) + "%, if lean mass holds";
+      $("ff-plan-wrap").hidden = r.goal == null;
+      if (r.goal == null) {
+        $("ff-goal").textContent = "\u2014"; $("ff-lose").textContent = "\u2014";
+        $("ff-weeks").textContent = isFinite(target) && target > 0 ? "Pick a target below your body fat now. At or above it there is no fat to lose: the sum only works downward." : "Enter a target body fat.";
+      } else {
+        $("ff-goal").textContent = mass(r.goal); $("ff-lose").textContent = mass(r.lose);
+        var rate = saved.loseRate >= 0.25 && saved.loseRate <= 1 ? +saved.loseRate : 0.5, wk = r.lose / (rate / 100 * kg);
+        $("ff-weeks").textContent = "At " + num(rate, 2) + "% of body weight a week (" + (saved.loseRate ? "Energy & macros’ rate" : "Energy & macros’ starting rate") + "), about " + num(Math.ceil(wk)) + " weeks. That is KiteSink’s arithmetic on today’s weight, not a forecast.";
+      }
+      say("ff-say", "FFMI " + num(r.ffmi, 1) + ". Lean mass " + mass(r.lean) + "." + (r.goal != null ? " At " + target + " percent body fat, if lean mass holds: " + mass(r.goal) + "." : ""));
     }
     show(); calc();
   });

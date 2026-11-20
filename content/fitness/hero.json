@@ -14,7 +14,7 @@
   "tools": {
     "macros": "Energy & macros", "reps": "Effective reps", "loads": "1RM & loads",
     "travel": "Travel workout", "attempts": "Meet attempts", "plan": "Diet planner",
-    "activity": "Activity multiplier", "bodyfat": "Navy body fat"
+    "activity": "Activity multiplier", "bodyfat": "Navy body fat", "ffmi": "FFMI & goal weight"
   },
   "goals": [
     {
