@@ -65,6 +65,23 @@ changes, copy answers here, tick what is closed, then continue.
 - [ ] "A PRO keeps its own accounts, separate from the MLC and SoundExchange" rests on Butler
       and SoundExchange, not a PRO page (PRO pages block automated reading; see C4, C5, C7, C8)
 
+## From batch 2b (royalty basics, 2026-11-20)
+
+- [ ] PRS for Music (UK songs) and GVL (German recordings): no page read, so those cells in
+      the international table say "Not covered here". Hand check or new sources
+- [ ] SACEM (France) blocked automated reading (403): France left out
+- [ ] SOCAN and Re:Sound are cited from their home pages only
+
+## From the identifier checker and split sheet (2026-11-20)
+
+- [ ] ISWC check digit: the formula's public source is ISO/TC 46/SC 9 N 268 (1999), written for
+      the superseded 2001 edition; all 400 ISWCs sampled from Wikidata pass it. The page says
+      "consistent with the published formula". Accept, or show format only?
+- [ ] Approve the tools' own copy: the not-a-contract notice, the line above the signatures,
+      the sheet footer, the IPI wording, the "Producer, as a writer" role, the two hub cards
+- [ ] iswc.org's usage page shows an example (T-345246800-1) whose check digit fails the
+      formula; a typo on their page, noted only
+
 ## Checks by hand (sites that block automated reading)
 
 - [ ] Login needed or not: ASCAP ACE, BMI Repertoire, SoundExchange unregistered search,
