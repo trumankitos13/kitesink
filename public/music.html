@@ -246,6 +246,28 @@
   @media (prefers-reduced-motion: reduce) { .way, .way .fd { transition: none; } }
   .ways-say { min-height: 3.2em; font-size: 15.5px; line-height: 1.55; color: var(--k-copy); max-width: 62ch; }
   .ways-say a { white-space: nowrap; }
+
+  /* Phones: the four projects become a swipeable row, one project in view at a time, with dots.
+     Desktop keeps the full sections stacked. Without scripts it still swipes; the dots need scripts. */
+  .feats-nav { display: none; }
+  @media (max-width: 759px) {
+    .feats { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+      scroll-padding-inline: var(--k-gutter); padding-block: 6px 30px; align-items: flex-start; scrollbar-width: none; }
+    .feats::-webkit-scrollbar { display: none; }
+    .feats:focus-visible { outline: 2px solid var(--k-green); outline-offset: -2px; }
+    .feats > .feat { flex: 0 0 88%; scroll-snap-align: start; padding-block: 0 !important; display: flex; }
+    .feats > .feat > * { flex: 1 1 auto; }
+    .feats .feat .k-pc { outline-offset: -3px; }
+    .feats:not([data-mode="all"]) .feat .k-pc::after { top: 10px; }
+    .feats-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 22px 4px; }
+    .feats-hint { margin: 0; font: 600 11px/1.3 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
+    .feats-dots { display: flex; gap: 6px; }
+    .feats-dot { width: 28px; height: 28px; border: 0; padding: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+    .feats-dot::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--k-rule-strong); transition: background .2s, width .2s; }
+    .feats-dot[aria-current="true"]::before { width: 22px; border-radius: 6px; background: var(--k-green); }
+    .feats-dot:focus-visible { outline: 2px solid var(--k-green); outline-offset: 2px; border-radius: 8px; }
+  }
+  @media (max-width: 759px) and (prefers-reduced-motion: no-preference) { .feats { scroll-behavior: smooth; } }
 </style>
 </head>
 <body class="ks-paper k2 mr mr-hub">
@@ -313,6 +335,12 @@
   <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
     <a href="#song-of-the-day">Song of the Day</a><a href="#stage-first">Stage First</a><a href="#listening-club">Listening Club</a><a href="#for-teams">For music teams</a><a href="#field-guide">Field guide</a><a href="#tools">Tools</a><a href="#ai">AI</a>
   </div></nav>
+
+  <!-- Phones only: where you are in the projects row, and dots to jump between them. -->
+  <div class="feats-nav k-wrap" id="feats-nav">
+    <p class="feats-hint" id="feats-hint">Swipe for more projects</p>
+    <div class="feats-dots" id="feats-dots" role="group" aria-label="Choose a project" hidden></div>
+  </div>
 
   <div class="feats k-wrap" id="feats" data-mode="all">
 
@@ -427,6 +455,7 @@
     </section>
 
   </div>
+
 
   <!-- ===================== THE FIELD GUIDE: an introduction and a search over every entry ===================== -->
   <section id="field-guide" class="k-band" aria-labelledby="h-field-guide">
@@ -604,6 +633,52 @@
         side.textContent = d[0]; now.textContent = d[1]; sub.textContent = d[2];
         tt.classList.remove("is-cue");
       }, 260);
+    });
+  })();
+
+  // ---- Phones: the projects row swipes; dots and the picker move it ----
+  (function () {
+    var row = $("feats"), dotsBox = $("feats-dots"), hint = $("feats-hint"), ways = $("ways");
+    if (!row || !dotsBox || !window.matchMedia) return;
+    var mq = matchMedia("(max-width: 759px)"), slides = [].slice.call(row.querySelectorAll(":scope > .feat")), dots = [];
+    function name(f) { var h = f.querySelector(".k-pc-title"); return h ? h.textContent.trim() : f.id; }
+    var LABEL = { "song-of-the-day": "Song of the Day", "stage-first": "Stage First", "listening-club": "Listening Club", "for-teams": "For music teams" };
+    slides.forEach(function (f, i) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "feats-dot";
+      b.setAttribute("aria-label", (LABEL[f.id] || name(f)) + " (" + (i + 1) + " of " + slides.length + ")");
+      b.addEventListener("click", function () { go(i); });
+      dotsBox.appendChild(b); dots.push(b);
+    });
+    function go(i) {
+      var f = slides[i]; if (!f) return;
+      var pad = parseFloat(getComputedStyle(row).scrollPaddingLeft) || 0;
+      row.scrollTo({ left: f.offsetLeft - row.offsetLeft - pad });
+    }
+    function mark(i) {
+      dots.forEach(function (d, j) { d.setAttribute("aria-current", j === i ? "true" : "false"); });
+      if (hint) hint.textContent = (i + 1) + " of " + slides.length + (i < slides.length - 1 ? " \u00b7 swipe for more" : "");
+    }
+    function current() {
+      var best = 0, bestD = Infinity, left = row.getBoundingClientRect().left;
+      slides.forEach(function (f, i) { var d = Math.abs(f.getBoundingClientRect().left - left); if (d < bestD) { bestD = d; best = i; } });
+      return best;
+    }
+    var t = null;
+    row.addEventListener("scroll", function () { clearTimeout(t); t = setTimeout(function () { mark(current()); }, 60); }, { passive: true });
+    function setup() {
+      var on = mq.matches;
+      dotsBox.hidden = !on;
+      if (on) { row.setAttribute("tabindex", "0"); row.setAttribute("role", "region"); row.setAttribute("aria-roledescription", "carousel"); row.setAttribute("aria-label", "Projects: swipe, or use the arrow keys"); mark(current()); }
+      else { row.removeAttribute("tabindex"); row.removeAttribute("role"); row.removeAttribute("aria-roledescription"); row.removeAttribute("aria-label"); }
+    }
+    if (mq.addEventListener) mq.addEventListener("change", setup); else if (mq.addListener) mq.addListener(setup);
+    setup();
+    // the picker: on a phone, bring the first matching project into view
+    if (ways) ways.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b || !mq.matches) return;
+      var i = b.value === "all" ? 0 : slides.findIndex(function (f) { return (" " + (f.getAttribute("data-for") || "") + " ").indexOf(" " + b.value + " ") > -1; });
+      if (i > -1) go(i);
     });
   })();
 
