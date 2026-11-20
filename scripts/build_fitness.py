@@ -583,7 +583,7 @@ def md_index(meta, numbers, counts, pages):
     out = ["# KiteSink Fitness", "",
            f"Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds {numbers['n:total']} entries in "
            f"{numbers['n:areas']} areas, and each entry names its sources and says how well supported it is. Around it: common claims "
-           "checked against the research, a glossary, an index of key numbers and reference tables, and eight calculators that run in "
+           "checked against the research, a glossary, an index of key numbers and reference tables, and " + NUMBER_WORDS[numbers["n:tools"]] + " calculators that run in "
            "the browser. Vantix, a periodization app, is the flagship project on the page.",
            "", "## The field guide, by area", ""]
     for name, doms in GROUPS:
@@ -602,7 +602,14 @@ def md_index(meta, numbers, counts, pages):
             f"- Meet attempt planner: {SITE}/fitness#attempts",
             f"- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; keeps only the shared body numbers): {SITE}/fitness#plan",
             f"- Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): {SITE}/fitness#activity",
-            f"- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): {SITE}/fitness#bodyfat", "",
+            f"- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): {SITE}/fitness#bodyfat",
+            f"- FFMI and goal weight (fat and lean mass, the fat-free mass index beside published groups, and the weight at a target body fat if lean mass holds): {SITE}/fitness#ffmi",
+            f"- Heart-rate zones (five zones as shares of a measured or age-estimated maximum, with how each feels): {SITE}/fitness#zones",
+            f"- Weekly sets per muscle (direct sets plus helper sets at half credit, read against the guide's weekly-sets lines): {SITE}/fitness#sets",
+            f"- Coming back after a break (what to expect and how to restart, by time away, with starting loads after a long layoff): {SITE}/fitness#comeback",
+            f"- Supplement checker (the guide's evidence, doses and cautions for common supplements, and a caffeine dose for your weight): {SITE}/fitness#supplements",
+            "The 1RM calculator also takes how hard the set was (reps in reserve or RPE), and the meet attempt planner finds an IPF weight class. "
+            "A shared My numbers panel holds weight, height, age, body fat, best lifts and heart rates once for every tool, in the browser only.", "",
             "## Vantix", "",
             "Vantix is a periodization app for lifters. Its free core (v1.0) is in progress, with a target of 31 December 2026. Paid tiers (Plus, and Pro for coaches) are planned with no prices set. "
             f"Details and the waiting list: {SITE}/vantix", "",

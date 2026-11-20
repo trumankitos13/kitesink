@@ -28,6 +28,9 @@
                          fall inside the last five before failure
      • Meet attempts   — a coaching convention: fixed fractions of a current best single,
                          rounded to the 2.5 kg a meet loads
+     • From the guide, through #tool-data: heart-rate zones (208 − 0.7·age and the five-zone
+                         scale), IPF weight classes, FFMI landmarks and body composition sums,
+                         the return-after-a-break table, supplement rows, weekly-sets lines, the RPE chart
    ================================================================== */
 (function () {
   "use strict";
@@ -841,8 +844,20 @@
       if (focus) tabs[i].focus();
       var bar = tabs[i].parentNode; // centre the tab in its own strip; never move the page
       if (bar.scrollWidth > bar.clientWidth) bar.scrollLeft += tabs[i].getBoundingClientRect().left - bar.getBoundingClientRect().left - (bar.clientWidth - tabs[i].offsetWidth) / 2;
+      fades();
       return true;
     }
+    // a strip that overflows fades at whichever edge has more tabs past it
+    var strips = [].slice.call(document.querySelectorAll("#tools .tool-row .k-seg--scroll"));
+    function fades() {
+      strips.forEach(function (s) {
+        var more = s.scrollWidth - s.clientWidth > 2;
+        s.classList.toggle("fade-l", more && s.scrollLeft > 2);
+        s.classList.toggle("fade-r", more && s.scrollLeft < s.scrollWidth - s.clientWidth - 2);
+      });
+    }
+    strips.forEach(function (s) { s.addEventListener("scroll", fades, { passive: true }); });
+    window.addEventListener("resize", fades);
     tabs.forEach(function (t, i) {
       t.addEventListener("click", function () { show(ids[i]); history.replaceState(null, "", "#" + ids[i]); });
       t.addEventListener("keydown", function (e) {
