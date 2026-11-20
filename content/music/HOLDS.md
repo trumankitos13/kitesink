@@ -35,6 +35,19 @@ the owner closes items. Newest first within each section.
       cited. Batch 1 is 16 law, 27 official on that reading. Confirm, or say if a statute plus
       an agency explainer should count as `law`
 
+## From the data pages review (claimable, tools, rates, 2026-11-20)
+
+- [ ] Tools directory, open by hand and confirm what it does and whether a login is needed:
+      MLC Public Work Search (portal shows only a script shell to automated reading; the MLC
+      tools page says it is free to anyone), ASCAP ACE, BMI Repertoire, ISNI search, Curve
+      Royalty Tools, PRS works search, ISWC-Network, Copyright Office Public Records, DDEX
+      validator, ISRC Search, GEMA portal search
+- [ ] SOCAN repertoire search: showed a maintenance notice; confirm it works at
+      socan.com/jsp/en/mem/pubRepertoireSearch.jsp
+- [ ] Access level not stated on the page: Session Studio, ValuePunks, Songtrust resources
+- [ ] RapidCue: what it does (its page never says cue sheets)
+- [ ] Only verified tools are published; the rest stay in tools.json as `check`
+
 ## Checks by hand (sites that block automated reading)
 
 - [ ] Login needed or not: ASCAP ACE, BMI Repertoire, SoundExchange unregistered search,
