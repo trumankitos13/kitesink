@@ -425,6 +425,86 @@
     return 86.010 * log(w - n) - 70.041 * log(h) + 36.76;
   };
 
+  /* ---------- activity multiplier ----------
+     Two kinds of activity, each in its source's own unit:
+       par: FAO/WHO/UNU 2004 physical activity ratio, a multiple of BMR (table 5.1). kcal/h = PAR x BMR / 24.
+       met: 2024 Adult Compendium MET, a multiple of a standard resting rate of about 1 kcal/kg/h
+            (code given). kcal/h = MET x body weight.
+     The multiplier (PAL) is a day's energy divided by BMR, FAO's PAL = TEE / BMR. */
+  F.ACTIVITIES = [
+    { id: "sleep", g: "Everyday", n: "Sleeping", par: 1.0 },
+    { id: "care", g: "Everyday", n: "Personal care (dressing, showering)", par: 2.3 },
+    { id: "eat", g: "Everyday", n: "Eating", par: 1.5 },
+    { id: "cook", g: "Everyday", n: "Cooking", par: 2.1 },
+    { id: "desk", g: "Everyday", n: "Sitting: office work", par: 1.5 },
+    { id: "leisure", g: "Everyday", n: "Light leisure: TV, chatting", par: 1.4 },
+    { id: "drive", g: "Everyday", n: "Driving a car", par: 2.0 },
+    { id: "bus", g: "Everyday", n: "Commuting by bus", par: 1.2 },
+    { id: "stand", g: "Everyday", n: "Standing, carrying light loads", par: 2.2 },
+    { id: "house", g: "Everyday", n: "General household work", par: 2.8 },
+    { id: "walkday", g: "Everyday", n: "Walking at varying paces, no load", par: 3.2 },
+    { id: "w8", g: "Lifting", n: "Weights: several exercises, 8–15 reps", met: 3.5, code: "02054" },
+    { id: "wsq", g: "Lifting", n: "Weights: squats, deadlifts", met: 5.0, code: "02052" },
+    { id: "wvig", g: "Lifting", n: "Powerlifting or bodybuilding, vigorous", met: 6.0, code: "02050" },
+    { id: "wcirc", g: "Lifting", n: "Weights: circuit or supersets", met: 5.8, code: "02055" },
+    { id: "circm", g: "Conditioning", n: "Circuit training, moderate", met: 5.0, code: "02035" },
+    { id: "circv", g: "Conditioning", n: "Circuit training, vigorous", met: 7.5, code: "02040" },
+    { id: "cal", g: "Conditioning", n: "Calisthenics, moderate", met: 3.8, code: "02022" },
+    { id: "hiitm", g: "Conditioning", n: "HIIT, moderate", met: 7.0, code: "02210" },
+    { id: "hiitv", g: "Conditioning", n: "HIIT, vigorous", met: 11.0, code: "02214" },
+    { id: "ellm", g: "Conditioning", n: "Elliptical, moderate", met: 5.0, code: "02048" },
+    { id: "ellv", g: "Conditioning", n: "Elliptical, vigorous", met: 9.0, code: "02049" },
+    { id: "rowm", g: "Conditioning", n: "Rowing machine, under 100 W", met: 5.0, code: "02071" },
+    { id: "rowv", g: "Conditioning", n: "Rowing machine, 100–149 W", met: 7.5, code: "02072" },
+    { id: "yoga", g: "Conditioning", n: "Yoga, hatha", met: 2.3, code: "02150" },
+    { id: "pyoga", g: "Conditioning", n: "Yoga, power", met: 4.0, code: "02160" },
+    { id: "walk3", g: "Walking and running", n: "Walking, 4.5–5.5 km/h (2.8–3.4 mph)", met: 3.8, code: "17190" },
+    { id: "walk4", g: "Walking and running", n: "Walking, 5.6–6.3 km/h (3.5–3.9 mph)", met: 4.8, code: "17200" },
+    { id: "walk5", g: "Walking and running", n: "Walking, 6.4–7.1 km/h (4.0–4.4 mph)", met: 5.5, code: "17220" },
+    { id: "hike", g: "Walking and running", n: "Hiking, normal pace", met: 5.3, code: "17082" },
+    { id: "run8", g: "Walking and running", n: "Running, 8.0–8.4 km/h (5.0–5.2 mph)", met: 8.5, code: "12030" },
+    { id: "run10", g: "Walking and running", n: "Running, 9.7–10.1 km/h (6–6.3 mph)", met: 9.3, code: "12050" },
+    { id: "run11", g: "Walking and running", n: "Running, 11.3 km/h (7 mph)", met: 11.0, code: "12070" },
+    { id: "run13", g: "Walking and running", n: "Running, 12.9 km/h (8 mph)", met: 12.0, code: "12090" },
+    { id: "run16", g: "Walking and running", n: "Running, 16.1 km/h (10 mph)", met: 14.8, code: "12120" },
+    { id: "bike1", g: "Cycling and swimming", n: "Cycling, leisure, under 16 km/h (10 mph)", met: 4.0, code: "01010" },
+    { id: "bike2", g: "Cycling and swimming", n: "Cycling, 19–22 km/h (12–13.9 mph)", met: 8.0, code: "01030" },
+    { id: "bike3", g: "Cycling and swimming", n: "Cycling, 22.5–25.6 km/h (14–15.9 mph)", met: 10.0, code: "01040" },
+    { id: "bikes", g: "Cycling and swimming", n: "Stationary bike, general", met: 6.8, code: "01200" },
+    { id: "swim1", g: "Cycling and swimming", n: "Swimming laps, freestyle, slow", met: 5.8, code: "18240" },
+    { id: "swim2", g: "Cycling and swimming", n: "Swimming laps, freestyle, fast", met: 9.8, code: "18230" },
+    { id: "soc1", g: "Sport", n: "Soccer, casual", met: 7.0, code: "15610" },
+    { id: "soc2", g: "Sport", n: "Soccer, competitive", met: 9.5, code: "15605" },
+    { id: "bball", g: "Sport", n: "Basketball, general", met: 7.5, code: "15055" },
+    { id: "ten1", g: "Sport", n: "Tennis, general", met: 6.8, code: "15675" },
+    { id: "ten2", g: "Sport", n: "Tennis, singles", met: 8.0, code: "15690" },
+    { id: "clean", g: "Home and garden", n: "House cleaning, moderate", met: 3.3, code: "05030" },
+    { id: "garden", g: "Home and garden", n: "Gardening, moderate", met: 3.8, code: "08245" },
+    { id: "mow", g: "Home and garden", n: "Mowing, walking", met: 5.5, code: "08095" }
+  ];
+  F.activity = function (id) { for (var i = 0; i < F.ACTIVITIES.length; i++) if (F.ACTIVITIES[i].id === id) return F.ACTIVITIES[i]; return null; };
+  // kcal an hour of activity a costs this person
+  F.perHour = function (a, bmr, kg) { return a.par ? a.par * bmr / 24 : a.met * kg; };
+  // a day: rows [{id, h}], the hours left over spent on `fill`. pal = tee / bmr.
+  F.dayPal = function (rows, bmr, kg, fill) {
+    var hours = 0, tee = 0, parts = [];
+    rows.forEach(function (r) {
+      var a = F.activity(r.id); if (!a || !(r.h > 0)) return;
+      var kcal = F.perHour(a, bmr, kg) * r.h; hours += r.h; tee += kcal; parts.push({ a: a, h: r.h, kcal: kcal });
+    });
+    var left = 24 - hours, f = F.activity(fill);
+    if (left > 0 && f) { var k = F.perHour(f, bmr, kg) * left; tee += k; parts.push({ a: f, h: left, kcal: k, fill: true }); }
+    return { pal: tee / bmr, tee: tee, hours: hours, left: left, parts: parts };
+  };
+  // the multiplier an activity adds, averaged over the week, over the hour it replaces
+  F.addedPal = function (a, minutes, perWeek, bmr, kg, instead) {
+    var h = minutes / 60, extra = (F.perHour(a, bmr, kg) - F.perHour(instead, bmr, kg)) * h;
+    return { session: F.perHour(a, bmr, kg) * h, extra: extra, weekly: extra * perWeek, pal: extra * perWeek / 7 / bmr };
+  };
+  F.palBand = function (pal) {
+    return pal < 1.4 ? "below" : pal < 1.7 ? "sedentary" : pal < 2.0 ? "active" : pal <= 2.4 ? "vigorous" : "above";
+  };
+
   /* ---------- the hero's bar ----------
      heroLoad: the load for a share of a max, to the nearest 2.5 kg and never below the 20 kg bar.
      plates: what goes on each side, biggest first (so innermost), from 25, 20, 15, 10, 5, 2.5 and
@@ -551,7 +631,15 @@
 
     if (saved.age) $("m-age").value = saved.age;
     if (saved.bf) $("m-bf").value = saved.bf;
-    if (saved.pal) [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) $("m-act").value = o.value; }); // 2 must find "2.0"
+    if (saved.pal) {
+      var found = false;
+      [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) { $("m-act").value = o.value; found = true; } }); // 2 must find "2.0"
+      if (!found && saved.pal >= 1.2 && saved.pal <= 2.5) {   // a multiplier the activity tool put there
+        var v = (+saved.pal).toFixed(2), o = document.createElement("option");
+        o.value = v; o.setAttribute("data-custom", "1"); o.setAttribute("data-short", "with an activity multiplier of " + v);
+        o.textContent = "Your own \u00b7 \u00d7 " + v + " from the activity multiplier"; $("m-act").appendChild(o); $("m-act").value = v;
+      }
+    }
     if (saved.fatPct) $("m-fat").value = saved.fatPct;
     if (saved.protein && protTouched) $("m-prot").value = saved.protein;
 
@@ -594,7 +682,7 @@
       $("m-maint").textContent = num(F.round(r.maint, 10)) + " kcal";
       $("m-rmr").textContent = num(F.round(r.rmr, 10)) + " kcal";
       $("m-eq").textContent = r.equation;
-      $("m-pal").textContent = "× " + num(pal, 1);
+      $("m-pal").textContent = "× " + num(pal, Math.round(pal * 10) === pal * 10 ? 1 : 2);
       var wk = imp ? F.lb(r.weekly) : r.weekly, u = imp ? " lb" : " kg";
       $("m-change").textContent = g === "hold" ? "steady" : (wk > 0 ? "+" : "−") + num(Math.abs(wk), 2) + u + " / week";
       $("m-p").textContent = num(r.protein) + " g"; $("m-c").textContent = num(carbs) + " g"; $("m-f").textContent = num(r.fat) + " g";
@@ -853,6 +941,113 @@
       store.set({ bf: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "" } });
     }
     show(); calc();
+  });
+
+  /* ---------- 8. activity multiplier ----------
+     The resting energy comes from Energy & macros (read from what that tool saved, so it follows
+     it as it changes) or is typed in. "Use in Energy & macros" puts the multiplier into that
+     tool's activity list as its own option. */
+  boot(function () {
+    if (!$("activity")) return;
+    var mine = saved.ac || {}, BAND = { below: "Below FAO\u2019s lowest band", sedentary: "Sedentary or light", active: "Active", vigorous: "Vigorous", above: "Above 2.40: hard to keep up" };
+    var LEISURE = F.activity("leisure"), result = null;
+    var src = seg($("ac-src"), mine.src, "calc", calc), mode = seg($("ac-mode"), mine.mode, "one", calc);
+    function options(sel, everydayOnly) {
+      var groups = {}, order = [];
+      F.ACTIVITIES.forEach(function (a) { if (everydayOnly && a.met) return; if (!groups[a.g]) { groups[a.g] = []; order.push(a.g); } groups[a.g].push(a); });
+      sel.innerHTML = order.map(function (g) {
+        return '<optgroup label="' + esc(g) + '">' + groups[g].map(function (a) { return '<option value="' + a.id + '">' + esc(a.n) + "</option>"; }).join("") + "</optgroup>";
+      }).join("");
+    }
+    options($("ac-act")); options($("ac-fill"), true);
+    $("ac-act").value = F.activity(mine.act) ? mine.act : "w8";
+    $("ac-fill").value = F.activity(mine.fill) && !F.activity(mine.fill).met ? mine.fill : "leisure";
+    ["min", "times", "base", "bmr", "kg"].forEach(function (k) { if (mine[k] > 0) $("ac-" + k).value = mine[k]; });
+    var rows = Array.isArray(mine.rows) && mine.rows.length ? mine.rows : [["sleep", 8], ["desk", 8], ["care", 1], ["eat", 1.5], ["drive", 1], ["walkday", 1], ["w8", 1]];
+    function drawRows() {
+      $("ac-rows").innerHTML = rows.map(function (r, i) {
+        return '<li><select class="k-select" aria-label="Activity ' + (i + 1) + '" data-i="' + i + '">' + $("ac-act").innerHTML + "</select>" +
+          '<span class="with-unit"><input class="k-input" type="number" inputmode="decimal" min="0.25" max="24" step="0.25" value="' + r[1] + '" aria-label="Hours of activity ' + (i + 1) + '" data-i="' + i + '"><span>h</span></span>' +
+          '<button type="button" class="ac-x" data-i="' + i + '" aria-label="Remove activity ' + (i + 1) + '">\u00d7</button></li>';
+      }).join("");
+      [].forEach.call($("ac-rows").querySelectorAll("select"), function (s, i) { s.value = rows[i][0]; });
+    }
+    $("ac-rows").addEventListener("input", function (e) {
+      var i = +e.target.getAttribute("data-i"); if (!(i >= 0)) return;
+      if (e.target.tagName === "SELECT") rows[i][0] = e.target.value; else rows[i][1] = parseFloat(e.target.value) || 0;
+      calc();
+    });
+    $("ac-rows").addEventListener("change", function (e) { if (e.target.tagName === "SELECT") { rows[+e.target.getAttribute("data-i")][0] = e.target.value; calc(); } });
+    $("ac-rows").addEventListener("click", function (e) {
+      var b = e.target.closest(".ac-x"); if (!b) return;
+      rows.splice(+b.getAttribute("data-i"), 1); drawRows(); calc();
+      var x = $("ac-rows").querySelectorAll(".ac-x"); (x[Math.min(+b.getAttribute("data-i"), x.length - 1)] || $("ac-add")).focus();
+    });
+    $("ac-add").addEventListener("click", function () { if (rows.length >= 16) return; rows.push(["walkday", 1]); drawRows(); calc(); var s = $("ac-rows").querySelectorAll("select"); s[s.length - 1].focus(); });
+    ["ac-act", "ac-fill"].forEach(function (id) { $(id).addEventListener("change", calc); });
+    ["ac-min", "ac-times", "ac-base", "ac-bmr", "ac-kg"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    var macros = $("macros"); if (macros) { macros.addEventListener("input", function () { setTimeout(calc, 0); }); macros.addEventListener("click", function () { setTimeout(calc, 0); }); }
+
+    function baseline() {   // {bmr, kg, text} or null
+      if (src.get() === "own") {
+        var b = val("ac-bmr"), k = val("ac-kg");
+        return b >= 800 && b <= 4000 && k >= 30 && k <= 300 ? { bmr: b, kg: k } : null;
+      }
+      var m = store.get(), kg = +m.kg, cm = +m.cm, age = +m.age, bf = m.bf === "" || m.bf == null ? NaN : +m.bf;
+      if (!(kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 16 && age <= 95)) return null;
+      var r = F.energy({ sex: m.sex || "m", kg: kg, cm: cm, age: age, bf: bf, pal: 1, goal: "hold", rate: 0, protein: 1.6, fatPct: 25 });
+      return { bmr: r.rmr, kg: kg, text: num(F.round(r.rmr, 10)) + " kcal a day, by " + r.equation + ", and " + num(kg, 1) + " kg, from Energy & macros." };
+    }
+    function setUse(pal) {
+      var act = $("m-act"); if (!act) return;
+      var v = (Math.round(pal * 100) / 100).toFixed(2), opt = act.querySelector("option[data-custom]");
+      if (!opt) { opt = document.createElement("option"); opt.setAttribute("data-custom", "1"); act.appendChild(opt); }
+      opt.value = v; opt.textContent = "Your own \u00b7 \u00d7 " + v + " from the activity multiplier"; opt.setAttribute("data-short", "with an activity multiplier of " + v);
+      act.value = v; act.dispatchEvent(new Event("input", { bubbles: true })); act.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+    $("ac-use").addEventListener("click", function () {
+      if (!result) return; setUse(result.pal);
+      var b = $("ac-use"); b.textContent = "Added \u2713"; clearTimeout(b._t); b._t = setTimeout(function () { b.textContent = "Use in Energy & macros"; }, 1600);
+    });
+    $("ac-usual").addEventListener("click", function () { if (!result) return; $("ac-base").value = (Math.round(result.pal * 100) / 100).toFixed(2); mode.set("one"); calc(); });
+
+    function calc() {
+      var one = mode.get() === "one", b = baseline(), out = $("ac-out");
+      $("ac-own").hidden = src.get() !== "own"; $("ac-one").hidden = !one; $("ac-day").hidden = one; $("ac-usual").hidden = one;
+      $("ac-from").textContent = src.get() === "own" ? "Type your resting energy and weight." : b ? b.text : "Fill in age, height and weight in Energy & macros first, or enter your own.";
+      $("ac-table").hidden = one; $("ac-warn").hidden = true; result = null;
+      store.set({ ac: { src: src.get(), mode: mode.get(), act: $("ac-act").value, min: val("ac-min"), times: val("ac-times"), base: val("ac-base"), bmr: val("ac-bmr"), kg: val("ac-kg"), rows: rows, fill: $("ac-fill").value } });
+      if (!one && !$("ac-rows").children.length && rows.length) drawRows();
+      var day = F.dayPal(rows.map(function (r) { return { id: r[0], h: +r[1] }; }), b ? b.bmr : 1, b ? b.kg : 1, $("ac-fill").value);
+      $("ac-left").textContent = day.left > 0 ? num(day.left, 2).replace(/\.?0+$/, "") + " h left" : day.left < 0 ? "over by " + num(-day.left, 2).replace(/\.?0+$/, "") + " h" : "none left";
+      if (!b) { out.classList.add("is-empty"); $("ac-big").textContent = "\u2014"; $("ac-sub").textContent = "Needs your resting energy."; say("ac-say", "Needs your resting energy."); return; }
+      if (one) {
+        var a = F.activity($("ac-act").value), min = val("ac-min"), times = val("ac-times"), base = val("ac-base");
+        if (!(min > 0 && min <= 600 && times >= 1 && times <= 14 && base >= 1.2 && base <= 2.5)) { out.classList.add("is-empty"); $("ac-big").textContent = "\u2014"; $("ac-sub").textContent = "Check the minutes, the times a week and your usual day."; return; }
+        var r = F.addedPal(a, min, times, b.bmr, b.kg, LEISURE), pal = base + r.pal;
+        result = { pal: pal };
+        out.classList.remove("is-empty");
+        $("ac-big-l").textContent = "Your multiplier with it";
+        $("ac-big").innerHTML = "\u00d7 " + num(pal, 2) + "<small>+" + num(r.pal, 2) + "</small>";
+        $("ac-sub").textContent = "About " + num(F.round(r.session, 5)) + " kcal a session, " + num(F.round(r.extra, 5)) + " more than the same time spent on light leisure. Averaged over the week, that adds " + num(r.pal, 2) + " to a usual day of \u00d7 " + num(base, 2) + ".";
+        $("ac-k1-l").textContent = "Maintenance"; $("ac-k1").textContent = num(F.round(b.bmr * pal, 10)) + " kcal";
+        $("ac-k2-l").textContent = a.met ? "MET (code " + a.code + ")" : "Multiple of BMR"; $("ac-k2").textContent = num(a.met || a.par, 1);
+        say("ac-say", "Multiplier " + num(pal, 2) + ", maintenance about " + num(F.round(b.bmr * pal, 10)) + " kilocalories a day.");
+      } else {
+        result = day.left < -0.001 ? null : { pal: day.pal };
+        out.classList.toggle("is-empty", !result);
+        $("ac-big-l").textContent = "Your day\u2019s multiplier";
+        if (!result) { $("ac-big").textContent = "\u2014"; $("ac-sub").textContent = "Your day adds up to more than 24 hours. Shorten or remove an activity."; say("ac-say", $("ac-sub").textContent); return; }
+        $("ac-big").textContent = "\u00d7 " + num(day.pal, 2);
+        $("ac-sub").textContent = "About " + num(F.round(day.tee, 10)) + " kcal for the day: " + num(F.round(b.bmr, 10)) + " kcal resting energy \u00d7 " + num(day.pal, 2) + ".";
+        $("ac-k1-l").textContent = "Maintenance"; $("ac-k1").textContent = num(F.round(day.tee, 10)) + " kcal";
+        $("ac-k2-l").textContent = "FAO band"; $("ac-k2").textContent = BAND[F.palBand(day.pal)];
+        $("ac-tbody").innerHTML = day.parts.map(function (p) { return "<tr><th scope=\"row\">" + esc(p.a.n) + (p.fill ? " (the rest)" : "") + "</th><td>" + num(p.h, 2).replace(/\.?0+$/, "") + "</td><td>" + num(F.round(p.kcal, 5)) + "</td></tr>"; }).join("");
+        if (day.pal > 2.4) { $("ac-warn").hidden = false; $("ac-warn").textContent = "Above 2.40, FAO says a level is hard to keep up for long. Check the hours."; }
+        say("ac-say", "Multiplier " + num(day.pal, 2) + ", about " + num(F.round(day.tee, 10)) + " kilocalories for the day.");
+      }
+    }
+    drawRows(); calc();
   });
 
   /* ---------- the hero: a goal picker, a bar, a week ----------

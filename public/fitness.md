@@ -1,6 +1,6 @@
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and eight calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -30,7 +30,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 190 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 131 key numbers and 63 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1018 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1022 sources.
 
 ## Calculators (on the page, no sign-up)
 
@@ -40,6 +40,8 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
 - Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): https://kitesink.com/fitness#plan
+- Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): https://kitesink.com/fitness#activity
+- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): https://kitesink.com/fitness#bodyfat
 
 ## Vantix
 

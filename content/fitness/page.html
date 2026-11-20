@@ -213,6 +213,18 @@
 
   /* ---------- tools ---------- */
   .tool { margin-top: 22px; }
+  .ac-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .ac-rows li { display: grid; grid-template-columns: minmax(0, 1fr) 84px 40px; gap: 6px; align-items: center; }
+  .ac-rows .k-select, .ac-rows .k-input { min-height: 44px; }
+  .ac-rows .with-unit .k-input { padding-right: 26px; }
+  .ac-rows .with-unit span { right: 8px; }
+  @media (max-width: 560px) {
+    .ac-rows { gap: 10px; }
+    .ac-rows li { grid-template-columns: minmax(0, 1fr) 40px; padding-bottom: 10px; border-bottom: 1px solid var(--k-rule); }
+    .ac-rows li .k-select { grid-column: 1 / -1; }
+  }
+  .ac-x { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-copy); cursor: pointer; font: 600 16px/1 var(--k-sans); }
+  .ac-x:hover { border-color: var(--k-green); color: var(--k-green); }
   .tool-tabs { display: grid; gap: 10px; }
   .tool-row { display: grid; gap: 6px; min-width: 0; }
   .tool-row .k-seg { justify-self: start; }
@@ -230,7 +242,7 @@
   .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .with-unit { position: relative; }
   .with-unit .k-input { padding-right: 44px; }
-  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; }
+  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; z-index: 2; }   /* above the input: ks.css lifts inputs in a card to z-index 1 */
   .tool-out { background: #23402b; color: #f0e8d6; border-color: transparent; gap: 16px; }
   .tool-out .k-label { color: #a9b9a3; }
   .tool-out .k-stat, .tool-out .k-h3 { color: #f0e8d6; }
@@ -749,7 +761,7 @@
       </div>
 
       <!-- ---------- 7. navy body fat ---------- -->
-      <div class="tool" id="bodyfat" role="tabpanel" aria-labelledby="tab-bodyfat" hidden>
+      <div class="tool" id="bodyfat" role="tabpanel" aria-labelledby="tab-bodyfat">
         <p class="k-copy tool-intro">The US Navy tape method: a body fat estimate from your height and a few circumferences. All it needs is a tape measure. Like every method, it estimates; use it to follow a trend, measured the same way each time.</p>
         <div class="tool-grid">
           <div class="k-card tool-in">
@@ -777,12 +789,53 @@
             <div class="kv hide-empty" id="bf-mass" hidden><div><span class="k-label">Fat mass</span><b id="bf-fm">—</b></div><div><span class="k-label">Lean mass</span><b id="bf-lm">—</b></div></div>
             <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="bf-use" type="button">Use in Energy &amp; macros</button></div>
             <p class="k-small" id="bf-warn" hidden></p>
-            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">{{bf:note}}</p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">The equations are the US Navy’s, built on Navy men and women from height and tape measures. Against DXA in 1,407 Army recruits they read about 6 points low on average, with a typical error of about 3.4 points for men and 4.1 for women. A tape used the same way each time is good for following change; one reading is a rough guide. <a href="/fitness/bodycomp#comp-methods-estimate">Every body fat method estimates</a>. {{c:hodgdon1984m,hodgdon1984f,foulis2023}}</p>
           </div>
         </div>
       </div>
 
-{{ac:panel}}
+      <!-- ---------- 8. activity multiplier ---------- -->
+      <div class="tool" id="activity" role="tabpanel" aria-labelledby="tab-activity">
+        <p class="k-copy tool-intro">Your activity multiplier is your day’s energy use divided by your resting energy (BMR). Work it out from one activity you add to your week, or from a whole day, hour by hour. It starts from the resting energy in Energy &amp; macros, or one you enter.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-field"><span class="k-label" id="ac-src-l">Resting energy (BMR)</span><div class="k-seg" id="ac-src" role="group" aria-labelledby="ac-src-l"><button type="button" value="calc">From Energy &amp; macros</button><button type="button" value="own">Enter my own</button></div></div>
+            <p class="k-small" id="ac-from"></p>
+            <div class="row2" id="ac-own" hidden>
+              <label class="k-field"><span class="k-label">BMR</span><span class="with-unit"><input class="k-input" id="ac-bmr" type="number" inputmode="numeric" min="800" max="4000" step="10" value="1750"><span>kcal</span></span></label>
+              <label class="k-field"><span class="k-label">Body weight</span><span class="with-unit"><input class="k-input" id="ac-kg" type="number" inputmode="decimal" min="30" max="300" step="0.1" value="80"><span>kg</span></span></label>
+            </div>
+            <div class="k-field"><span class="k-label" id="ac-mode-l">Work it out from</span><div class="k-seg" id="ac-mode" role="group" aria-labelledby="ac-mode-l"><button type="button" value="one">One activity</button><button type="button" value="day">A whole day</button></div></div>
+            <div id="ac-one" style="display:grid;gap:14px">
+              <label class="k-field"><span class="k-label">Activity</span><select class="k-select" id="ac-act"></select></label>
+              <div class="row2">
+                <label class="k-field"><span class="k-label">Minutes</span><input class="k-input" id="ac-min" type="number" inputmode="numeric" min="5" max="600" step="5" value="60"></label>
+                <label class="k-field"><span class="k-label">Times a week</span><input class="k-input" id="ac-times" type="number" inputmode="numeric" min="1" max="14" step="1" value="4"></label>
+              </div>
+              <label class="k-field"><span class="k-label">Your usual day <span style="text-transform:none;letter-spacing:0">its multiplier without this</span></span><input class="k-input" id="ac-base" type="number" inputmode="decimal" min="1.2" max="2.5" step="0.01" value="1.53"></label>
+              <p class="k-small">1.53 is FAO’s worked example of a sedentary day: office work, a commute and light leisure. Build your own day under “A whole day” and it fills in here.</p>
+            </div>
+            <div id="ac-day" style="display:grid;gap:12px" hidden>
+              <ol class="ac-rows" id="ac-rows" aria-label="Your day"></ol>
+              <div class="k-actions"><button class="k-btn k-btn--sm k-btn--ghost" id="ac-add" type="button">Add an activity</button></div>
+              <label class="k-field"><span class="k-label">The rest of the day<span id="ac-left" style="text-transform:none;letter-spacing:0"></span></span><select class="k-select" id="ac-fill"></select></label>
+            </div>
+          </div>
+          <div class="k-card tool-out is-empty" id="ac-out">
+            <p class="k-vh" id="ac-say" role="status"></p>
+            <div><p class="k-label" id="ac-big-l">Activity multiplier</p><p class="k-stat"><span id="ac-big">—</span></p><p class="k-small" id="ac-sub"></p></div>
+            <div class="kv hide-empty"><div><span class="k-label" id="ac-k1-l">Maintenance</span><b id="ac-k1">—</b></div><div><span class="k-label" id="ac-k2-l">Band</span><b id="ac-k2">—</b></div></div>
+            <table class="ltable hide-empty" id="ac-table" hidden><caption class="k-vh">Energy use by activity across the day</caption>
+              <thead><tr><th scope="col">Activity</th><th scope="col">Hours</th><th scope="col">kcal</th></tr></thead>
+              <tbody id="ac-tbody"></tbody>
+            </table>
+            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="ac-use" type="button">Use in Energy &amp; macros</button><button class="k-btn k-btn--sm k-btn--ghost" id="ac-usual" type="button" hidden>Use as my usual day</button></div>
+            <p class="k-small" id="ac-warn" hidden></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">Everyday activities use FAO/WHO/UNU’s physical activity ratios, multiples of resting energy, so they scale with your BMR. Exercise uses the 2024 Compendium’s METs, where one MET is about 1 kcal per kg per hour, so it scales with your weight. FAO calls 1.40–1.69 a sedentary or light lifestyle, 1.70–1.99 active and 2.00–2.40 vigorous, and says values above 2.40 are hard to keep up for long. The Compendium says its values are not any one person’s precise energy use: treat this as an estimate, and correct it against your weight trend. {{c:fao2004,herrmann2024}}</p>
+          </div>
+        </div>
+      </div>
+
       <!-- ---------- 6. diet planner ---------- -->
       <div class="tool" id="plan" role="tabpanel" aria-labelledby="tab-plan">
         <p class="k-copy tool-intro">See your weekly deficit, not just a daily number. Pick how many days a week you diet and how hard; the other days stay at maintenance. The planner works out the week, the protein that deficit calls for, and what each kind of day looks like.</p>

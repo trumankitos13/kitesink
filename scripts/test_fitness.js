@@ -61,6 +61,27 @@ for (let kg = 20; kg <= 350; kg += 2.5) for (const c of [false, true]) {
   if (Math.abs(sum - kg) > 1e-9 || p.some((x, i) => i && x > p[i - 1])) { off++; console.log('BAD plates', kg, c, p); }
 }
 eq('plates: every load from 20 to 350 kg adds up, biggest first', off, 0);
+// navy body fat (Hodgdon & Beckett 1984, inch form), worked by hand:
+//   man 70 in tall, neck 15, abdomen 34: 86.010·log10(19) − 70.041·log10(70) + 36.76 = 17.51
+//   woman 65 in, neck 13, waist 28, hip 38: 163.205·log10(53) − 97.684·log10(65) − 78.387 = 25.93
+eq('navy man', F.navy('m', 70 * 2.54, 15 * 2.54, 34 * 2.54), 17.51, 0.01);
+eq('navy woman', F.navy('f', 65 * 2.54, 13 * 2.54, 28 * 2.54, 38 * 2.54), 25.93, 0.01);
+same('navy: abdomen not above the neck is not a reading', String(F.navy('m', 178, 40, 40)), 'NaN');
+same('navy: a woman needs her hips', String(F.navy('f', 165, 33, 71)), 'NaN');
+// activity multiplier: PAR items scale with BMR, MET items with weight; pal = day energy / BMR
+const kg80 = 80, bmr = 1920;   // 80 kcal an hour at rest
+eq('perHour: sleeping is BMR/24', F.perHour(F.activity('sleep'), bmr, kg80), 80);
+eq('perHour: 3.5 MET at 80 kg', F.perHour(F.activity('w8'), bmr, kg80), 280);
+eq('dayPal: a day asleep is 1.0', F.dayPal([], bmr, kg80, 'sleep').pal, 1);
+eq('dayPal: 8 h asleep, 16 at a desk', F.dayPal([{ id: 'sleep', h: 8 }], bmr, kg80, 'desk').pal, (8 + 16 * 1.5) / 24, 1e-9);
+let d = F.dayPal([{ id: 'sleep', h: 8 }, { id: 'w8', h: 1 }], bmr, kg80, 'leisure');
+eq('dayPal: the rest of the day is filled', d.left, 15); eq('dayPal: energy adds up', d.tee, 8 * 80 + 280 + 15 * 1.4 * 80, 1e-9);
+eq('dayPal: hours over 24 leave a negative remainder', F.dayPal([{ id: 'sleep', h: 25 }], bmr, kg80, 'leisure').left, -1);
+let ad = F.addedPal(F.activity('w8'), 60, 4, bmr, kg80, F.activity('leisure'));
+eq('addedPal: one session', ad.session, 280); eq('addedPal: over leisure', ad.extra, 280 - 112);
+eq('addedPal: averaged over the week', ad.pal, (280 - 112) * 4 / 7 / 1920, 1e-12);
+same('palBand edges', [1.39, 1.4, 1.69, 1.7, 1.99, 2.0, 2.4, 2.41].map(F.palBand).join(' '), 'below sedentary sedentary active active vigorous vigorous above');
+same('activities: every one has a unit and every MET a code', String(F.ACTIVITIES.every(a => (a.par > 0) !== (a.met > 0) && (!a.met || /^\d{5}$/.test(a.code)))), 'true');
 // travel builder: every combination produces a session with moves, only using allowed kit and level
 const kits = [[], ['db'], ['kb', 'band'], ['bar', 'bench', 'sus'], ['db', 'kb', 'band', 'bar', 'bench', 'sus']];
 let n = 0, bad = 0;
