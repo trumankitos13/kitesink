@@ -59,7 +59,7 @@ into two batches), and the remaining `/music/claimable` rows.
 Later batches (phases 2 to 5) are drafted after batch 1 lands, so they can use what it
 taught.
 
-## Batches 3 to 6: phase 2 areas — PROPOSED 2026-11-20
+## Batches 3 to 6: phase 2 areas — APPROVED 2026-11-21 (D15)
 
 Drafted for the owner's approval (Holds & Inputs). Primary sources first; URLs are confirmed
 by the writer when the batch runs, and any page that blocks automated reading goes to the
@@ -124,7 +124,7 @@ are proposed from the AI and music research run when it lands.
 | 6 | PPL and other society pages on producer and session-performer claims that open | collective |
 | 7 | Music Business Association Metadata Style Guide: credits (corpus F8) | other |
 
-## Batches 7 and 8: AI (phase 2) — PROPOSED 2026-11-20
+## Batches 7 and 8: AI (phase 2) — APPROVED 2026-11-21 (D20)
 
 Drafted from the verified AI research run and two gap-research passes
 (`docs/RESEARCH-AI-MUSIC.md`). Every item below was opened in research on 2026-11-20 unless

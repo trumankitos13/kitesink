@@ -10,8 +10,9 @@ changes, copy answers here, tick what is closed, then continue.
 
 ## Decisions
 
-- [ ] LAUNCH: go-ahead to merge PR #36 to main, which deploys /music as the field-guide hub
-      (D22). The branch is launch-ready; merging is the owner's call only
+- [ ] LAUNCH: go-ahead to merge PR #36 to main (D22). Owner, 2026-11-21: waits until the hub
+      is right. Before launch also bump the site asset version (music-tools.js and
+      music-ref.css changed; see README's version-bump note)
 - [x] Old /music hero (turntable and "Which one is for me?" picker): restored verbatim at the
       top of the hub, with the four projects featured directly under it, as on /fitness (D21,
       owner, 2026-11-21)
@@ -104,7 +105,7 @@ changes, copy answers here, tick what is closed, then continue.
 - [ ] CISAC (info@cisac.org): building a CWR viewer from the spec; republishing society codes
       or lookup tables (W1: owner said yes; email drafted in the Holds & Inputs tab for the owner to send)
 - [ ] Apple: showing the RSS chart feed on a commercial site (W2: owner said yes; message drafted in the Holds & Inputs tab)
-- [ ] MLC Data Access Hub: API enrolment terms and fee
+- [x] MLC Data Access Hub: API enrolment (W3, owner 2026-11-21: no MLC API; the MLC data widget is dropped)
 
 ## Corpus files whose origin needs confirming before use
 
