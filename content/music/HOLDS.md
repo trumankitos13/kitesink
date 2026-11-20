@@ -3,6 +3,11 @@
 Decisions only the owner can make, and checks only the owner can do. Agents add to this list;
 the owner closes items. Newest first within each section.
 
+The owner works from the "Holds & Inputs" tab of the master doc
+(https://claude.ai/artifact/Sui1S8HvviWShxV2gk95Eu), which numbers these items (D decisions,
+F files, C hand checks, W written asks). When the owner says "holds updated", read that tab's
+changes, copy answers here, tick what is closed, then continue.
+
 ## Decisions
 
 - [x] Approve `WRITING-BRIEF.md` (approved 2026-11-19)
