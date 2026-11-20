@@ -644,7 +644,7 @@ A reading of the research on rest and weekly sets. Treat each line as a starting
 | Weekly sets, trained men | 12-20 per muscle | Baz-Valle 2022; newer data show no clear ceiling |
 | Rest vs growth | 2 or 5 minutes | Similar growth in trained men (Ahtiainen 2005) |
 
-Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000), [Baz-Valle 2022](https://doi.org/10.2478/hukin-2022-0017), [Bernárdez-Vázquez 2022](https://doi.org/10.3389/fspor.2022.949021), [Zhang 2025](https://doi.org/10.1007/s40279-025-02176-8)
+Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000), [Baz-Valle 2022](https://doi.org/10.2478/hukin-2022-0017), [Bernárdez-Vázquez 2022](https://doi.org/10.3389/fspor.2022.949021), [Zhang 2025](https://doi.org/10.1007/s40279-025-02176-8), [Ahtiainen 2005](https://doi.org/10.1519/15604.1)
 
 ## How big a fixed weight jump is on heavy and light lifts
 

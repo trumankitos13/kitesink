@@ -14,7 +14,9 @@
   "tools": {
     "macros": "Energy & macros", "reps": "Effective reps", "loads": "1RM & loads",
     "travel": "Travel workout", "attempts": "Meet attempts", "plan": "Diet planner",
-    "activity": "Activity multiplier", "bodyfat": "Navy body fat"
+    "activity": "Activity multiplier", "bodyfat": "Navy body fat", "ffmi": "FFMI & goal weight",
+    "zones": "Heart-rate zones", "comeback": "Coming back",
+    "sets": "Weekly sets", "supplements": "Supplements"
   },
   "goals": [
     {
@@ -40,7 +42,7 @@
       "key": "muscle", "h1": "build muscle.", "label": "Build muscle", "sub": "Size, sets, food",
       "icon": "<path d=\"M3 9v6M6.5 7v10M17.5 7v10M21 9v6M6.5 12h11\"/>",
       "pct": 70, "pct_from": null, "how": "3–4 sets of 8–12", "rest": "2 min",
-      "entry": "base-rep-range-progression", "tools": ["reps", "macros"], "areas": ["hypertrophy", "nutrition", "recovery"], "vantix": true,
+      "entry": "base-rep-range-progression", "tools": ["reps", "macros", "sets"], "areas": ["hypertrophy", "nutrition", "recovery"], "vantix": true,
       "week": [
         ["lift", "Upper A", "Chest, back, shoulders, arms, 3–4 sets of 8–12."],
         ["lift", "Lower A", "Quads, hamstrings, glutes, calves, 3–4 sets of 8–12."],
@@ -140,7 +142,7 @@
       "key": "weight", "h1": "cut or bulk.", "label": "Lose or gain", "sub": "Body weight, on purpose",
       "icon": "<path d=\"M5 20h14l-2-12H7z\"/><path d=\"M12 14l2.5-2.5\"/><path d=\"M9.5 8a2.5 2.5 0 0 1 5 0\"/>",
       "pct": 75, "pct_from": null, "how": "the same loads, fewer sets", "rest": "2–3 min",
-      "entry": "diet-lift-in-deficit", "tools": ["macros", "plan", "bodyfat"], "areas": ["diet", "nutrition", "bodycomp", "women"], "vantix": false,
+      "entry": "diet-lift-in-deficit", "tools": ["macros", "plan", "bodyfat", "ffmi"], "areas": ["diet", "nutrition", "bodycomp", "women"], "vantix": false,
       "week": [
         ["lift", "Full body A", "Keep the loads, cut the sets."],
         ["cardio", "Easy cardio", "30 min. It adds to the deficit without eating into recovery."],
@@ -168,7 +170,7 @@
       "key": "health", "h1": "train for life.", "label": "Fitter, healthier", "sub": "Cardio, a long life",
       "icon": "<path d=\"M3 12h4l2-4 4 8 2-4h6\"/>",
       "pct": 65, "pct_from": null, "how": "8–12 reps, all major muscles", "rest": "90 s", "days": "2 or more",
-      "entry": "hlth-who-weekly-targets", "tools": ["travel", "activity"], "areas": ["conditioning", "health", "recovery"], "vantix": false,
+      "entry": "hlth-who-weekly-targets", "tools": ["travel", "activity", "zones"], "areas": ["conditioning", "health", "recovery"], "vantix": false,
       "week": [
         ["lift", "Strength", "All major muscles, 8–12 reps."],
         ["cardio", "Brisk walk", "30 min, moderate."],

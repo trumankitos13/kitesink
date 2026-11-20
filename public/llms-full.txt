@@ -148,7 +148,7 @@ FILE: https://kitesink.com/fitness.md
 
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and eight calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and thirteen calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -187,9 +187,15 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - 1RM and load calculator: https://kitesink.com/fitness#loads
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
-- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): https://kitesink.com/fitness#plan
+- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; keeps only the shared body numbers): https://kitesink.com/fitness#plan
 - Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): https://kitesink.com/fitness#activity
 - Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): https://kitesink.com/fitness#bodyfat
+- FFMI and goal weight (fat and lean mass, the fat-free mass index beside published groups, and the weight at a target body fat if lean mass holds): https://kitesink.com/fitness#ffmi
+- Heart-rate zones (five zones as shares of a measured or age-estimated maximum, with how each feels): https://kitesink.com/fitness#zones
+- Weekly sets per muscle (direct sets plus helper sets at half credit, read against the guide's weekly-sets lines): https://kitesink.com/fitness#sets
+- Coming back after a break (what to expect and how to restart, by time away, with starting loads after a long layoff): https://kitesink.com/fitness#comeback
+- Supplement checker (the guide's evidence, doses and cautions for common supplements, and a caffeine dose for your weight): https://kitesink.com/fitness#supplements
+The 1RM calculator also takes how hard the set was (reps in reserve or RPE), and the meet attempt planner finds an IPF weight class. A shared My numbers panel holds weight, height, age, body fat, best lifts and heart rates once for every tool, in the browser only.
 
 ## Vantix
 
@@ -2920,7 +2926,7 @@ A reading of the research on rest and weekly sets. Treat each line as a starting
 | Weekly sets, trained men | 12-20 per muscle | Baz-Valle 2022; newer data show no clear ceiling |
 | Rest vs growth | 2 or 5 minutes | Similar growth in trained men (Ahtiainen 2005) |
 
-Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000), [Baz-Valle 2022](https://doi.org/10.2478/hukin-2022-0017), [Bernárdez-Vázquez 2022](https://doi.org/10.3389/fspor.2022.949021), [Zhang 2025](https://doi.org/10.1007/s40279-025-02176-8)
+Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000), [Baz-Valle 2022](https://doi.org/10.2478/hukin-2022-0017), [Bernárdez-Vázquez 2022](https://doi.org/10.3389/fspor.2022.949021), [Zhang 2025](https://doi.org/10.1007/s40279-025-02176-8), [Ahtiainen 2005](https://doi.org/10.1519/15604.1)
 
 ## How big a fixed weight jump is on heavy and light lifts
 
@@ -7582,7 +7588,7 @@ Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](h
 
 ## Body composition arithmetic
 
-The five sums used in this area, worked for a person of 80 kg (176 lb), 1.80 m (5 ft 11 in) and 25 percent body fat.
+The six sums used in this area, worked for a person of 80 kg (176 lb), 1.80 m (5 ft 11 in) and 25 percent body fat.
 
 | What you want | Sum | Worked example |
 |---|---|---|
@@ -10334,6 +10340,8 @@ Articles are credited where an author's analysis or position shaped an entry. Ev
 
 What changed after an entry was published, newest first.
 
+- **2026-11-20 · Rest between sets and sets per week: a guide**: The row on rest and growth names Ahtiainen 2005; that trial is now in the table's source list too. It was cited in the row but missing from the sources. (https://kitesink.com/fitness/hypertrophy#hyp-table-rest-and-sets)
+- **2026-11-20 · Body composition arithmetic**: The short answer now says six sums, was five; the table has six rows. (https://kitesink.com/fitness/bodycomp#comp-table-arithmetic)
 - **2026-11-16 · Meet attempt planner: first-meet setting**: The first-meet setting now suggests 85%, 90% and 95% of a best single, was 88%, 94% and 98%, to match the first-meet ranges in the meet area. Basis: McDonald's first-meet advice. (https://kitesink.com/fitness#attempts)
 - **2026-11-16 · Attempt selection ranges, first meet and experienced**: Added first-meet rows (80-85%, 85-92%, 92-95%) so the table matches the opener, second and third numbers. Basis: McDonald's first-meet advice; no study covers first meets. (https://kitesink.com/fitness/meet#meet-table-attempts)
 - **2026-11-16 · Practise the lifts in competition style and hold four principles**: The straight bar path over mid-foot now applies to the squat and deadlift only; the bench travels in a shallow arc. The entry had applied it to all three lifts. Basis: McDonald's bench guide. (https://kitesink.com/fitness/powerlifting#pl-specificity-technique)
@@ -10423,7 +10431,7 @@ What changed after an entry was published, newest first.
 - Ackland TR, Lohman TG, Sundgot-Borgen J et al. (2012). Current Status of Body Composition Assessment in Sport. *Sports Medicine* 42(3):227-249. https://doi.org/10.2165/11597140-000000000-00000 (Position stand, cited 5×)
 - American College of Sports Medicine (2009). Progression Models in Resistance Training for Healthy Adults. *Medicine & Science in Sports & Exercise* 41(3):687-708. https://doi.org/10.1249/MSS.0b013e3181915670 (Position stand, cited 13×)
 - American Diabetes Association Professional Practice Committee for Diabetes*, Bajaj M, McCoy RG et al. (2025). 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. *Diabetes Care* 49(Supplement_1):S27-S49. https://doi.org/10.2337/dc26-s002 (Guideline, cited 4×)
-- Ahtiainen JP, Pakarinen A, Alen M et al. (2005). Short vs. Long Rest Period Between the Sets in Hypertrophic Resistance Training: Influence on Muscle Strength, Size, and Hormonal Adaptations in Trained Men. *The Journal of Strength and Conditioning Research* 19(3):572. https://doi.org/10.1519/15604.1 (Trial, cited 2×)
+- Ahtiainen JP, Pakarinen A, Alen M et al. (2005). Short vs. Long Rest Period Between the Sets in Hypertrophic Resistance Training: Influence on Muscle Strength, Size, and Hormonal Adaptations in Trained Men. *The Journal of Strength and Conditioning Research* 19(3):572. https://doi.org/10.1519/15604.1 (Trial, cited 3×)
 - Akl EA, Oxman AD, Herrin J et al. (2011). Using alternative statistical formats for presenting risks and risk reductions. *Cochrane Database of Systematic Reviews*:CD006776. https://doi.org/10.1002/14651858.CD006776.pub2 (Systematic review, cited 1×)
 - Alhassan S, Kim S, Bersamin A et al. (2008). Dietary adherence and weight loss success among overweight women: results from the A TO Z weight loss study. *International Journal of Obesity* 32(6):985-991. https://doi.org/10.1038/ijo.2008.8 (Trial, cited 3×)
 - Almond CSD, Shin AY, Fortescue EB et al. (2005). Hyponatremia among Runners in the Boston Marathon. *New England Journal of Medicine* 352(15):1550-1556. https://doi.org/10.1056/NEJMoa043901 (Cohort study, cited 1×)
