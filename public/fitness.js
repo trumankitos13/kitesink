@@ -495,6 +495,20 @@
   // what one activity adds to its day's multiplier: its multiplier an hour times the hours
   F.activityMult = function (id, min) { var e = F.exercise(id); return e && min > 0 ? e.m * min / 60 : 0; };
 
+  /* ---------- weight class finder ----------
+     ipfClass(kg, sex, junior, classes): the IPF class a body weight is in, and the one below.
+     classes is #tool-data's ipf (the guide's class table): per sex, limits rising, the lightest
+     for sub-juniors and juniors only, the last open. A limit includes its own number. */
+  F.ipfClass = function (kg, sex, junior, T) {
+    var list = ((T && T[sex === "f" ? "f" : "m"]) || []).filter(function (c) { return junior || !c.junior; });
+    if (!(kg > 0) || !list.length) return null;
+    var i = 0;
+    while (i < list.length - 1 && list[i].limit != null && kg > list[i].limit + 1e-9) i++;
+    var c = list[i], b = i > 0 ? list[i - 1] : null;
+    return { name: c.name, limit: c.limit, open: c.limit == null, floor: b ? b.limit : null, under: c.limit == null ? null : c.limit - kg,
+      below: b ? { name: b.name, limit: b.limit, cut: kg - b.limit, pct: (kg - b.limit) / kg * 100 } : null };
+  };
+
   /* ---------- the hero's bar ----------
      heroLoad: the load for a share of a max, to the nearest 2.5 kg and never below the 20 kg bar.
      plates: what goes on each side, biggest first (so innermost), from 25, 20, 15, 10, 5, 2.5 and
@@ -1173,7 +1187,42 @@
       }).join("") + "<li><span>" + wt(sets[w][0]) + " kg" + (units.get() === "lb" ? " · " + num(F.lb(sets[w][0])) + " lb" : "") + "</span><span>opener, on the platform</span></li>" : "";
       say("a-say", allIn ? "Suggested openers: squat " + wt(sets.squat[0]) + ", bench " + wt(sets.bench[0]) + ", deadlift " + wt(sets.dead[0]) + " kilograms. Total if every third goes: " + wt(sum(2)) + " kilograms."
         : "Enter your best single for each lift.");
-      store.set({ att: { units: units.get(), style: st, warm: w, squat: kg.squat, bench: kg.bench, dead: kg.dead } });
+      store.set({ att: { units: units.get(), style: st, warm: w, squat: kg.squat, bench: kg.bench, dead: kg.dead, junior: !!(store.get().att || {}).junior } });
+    }
+    show(); calc();
+  });
+
+  /* ---------- 5b. weight class finder (inside Meet attempts) ----------
+     Sex and body weight are My numbers; the units follow Meet attempts' switch, with kilograms
+     first as a meet uses them. It names classes and gaps; the cards under it say what cutting costs. */
+  boot(function () {
+    if (!$("wc-out")) return;
+    var T = toolData().ipf, EX = val("wc-kg"), kg = ME.val("kg", EX);
+    var jr = !!(saved.att || {}).junior; $("wc-jr").checked = jr;
+    var sex = seg($("wc-sex"), ME.val("sex", "m"), "m", calc);
+    $("wc-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
+    function lb() { var b = document.querySelector('#a-units [aria-pressed="true"]'); return !!b && b.value === "lb"; }
+    function show() { if (isFinite(kg)) setField($("wc-kg"), lb() ? Math.round(F.lb(kg) * 10) / 10 : Math.round(kg * 100) / 100); $("wc-u").textContent = lb() ? "lb" : "kg"; }
+    function both(v) { return num(v, 1) + " kg" + (lb() ? " (" + num(F.lb(v), 1) + " lb)" : ""); }
+    $("wc-kg").addEventListener("input", function () { var v = val("wc-kg"); kg = lb() ? F.kg(v) : v; ME.set({ kg: kg }); calc(); });
+    $("wc-jr").addEventListener("change", function () { jr = $("wc-jr").checked; store.set({ att: Object.assign({}, store.get().att, { junior: jr }) }); calc(); });
+    $("a-units").addEventListener("click", function () { setTimeout(function () { show(); calc(); }, 0); });
+    onMe(function (keys) {
+      if (hits(keys, ["kg"]) && document.activeElement !== $("wc-kg")) kg = ME.val("kg", EX);
+      if (hits(keys, ["sex"])) sex.set(ME.val("sex", "m"));
+      if (hits(keys, ["kg", "sex", "units"])) { show(); calc(); }
+    });
+    function calc() {
+      var r = kg >= 30 && kg <= 300 ? F.ipfClass(kg, sex.get(), jr, T) : null, out = $("wc-out");
+      out.classList.toggle("is-empty", !r);
+      exampleNote($("wc-ex"), r ? [["sex", "sex"], ["kg", "body weight"]].filter(function (f) { return !ME.has(f[0]); }).map(function (f) { return f[1]; }) : []);
+      if (!r) { $("wc-class").textContent = "\u2014"; $("wc-sub").textContent = "Enter a body weight between 30 and 300 kg."; $("wc-below").textContent = ""; say("wc-say", $("wc-sub").textContent); return; }
+      $("wc-class").textContent = r.name + " kg";
+      $("wc-sub").textContent = r.open ? "Over " + num(r.floor, 1) + " kg: the open class, with no upper limit." :
+        both(kg) + " is " + both(r.under) + " under the " + r.name + " kg limit" + (r.floor != null ? " (over " + num(r.floor, 1) + ", up to " + num(r.limit, 1) + " kg)." : " (up to " + num(r.limit, 1) + " kg).");
+      $("wc-below").textContent = r.below ? "The class below is " + r.below.name + " kg. Making it means weighing " + both(r.below.cut) + " less at weigh-in: " + num(r.below.pct, 1) + "% of your body weight."
+        : "There is no lighter class " + (jr ? "in the IPF." : "for you: the " + T[sex.get() === "f" ? "f" : "m"][0].name + " kg class is for sub-juniors and juniors only.");
+      say("wc-say", "IPF class " + r.name + " kilograms." + (r.below ? " The class below is " + r.below.name + ", " + num(r.below.cut, 1) + " kilograms lighter." : ""));
     }
     show(); calc();
   });

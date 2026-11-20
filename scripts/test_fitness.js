@@ -257,6 +257,21 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   ok('rpe chart: every whole RPE from 5 to 10 has a row, and 10 - RPE sits in its range', [5, 6, 7, 8, 9, 9.5, 10].every(r => { const row = F.rpeRow(rows, r); const [lo, hi] = row.rir.split('-').map(Number); return F.rirFromRpe(r) >= lo && F.rirFromRpe(r) <= (hi === undefined ? lo : hi); }));
 }
 
+// ---------- weight class finder: the IPF classes from the guide's class table ----------
+{
+  const C = (kg, sex, jr) => F.ipfClass(kg, sex, jr, TD.ipf).name;
+  same('class: 59.00 kg is the 59 class (a limit includes its number)', C(59.00, 'm', false), '59');
+  same('class: 59.01 kg is the 66 class', C(59.01, 'm', false), '66');
+  same('class: 120.0 kg is the 120 class, 120.01 is 120+', C(120, 'm', false) + ' ' + C(120.01, 'm', false), '120 120+');
+  same('class: 52 kg is 59 for an open lifter, 53 for a junior', C(52, 'm', false) + ' ' + C(52, 'm', true), '59 53');
+  same('class: women 84.0 and 84.01', C(84.0, 'f', false) + ' ' + C(84.01, 'f', false), '84 84+');
+  same('class: women 43 is a junior class only', C(42, 'f', false) + ' ' + C(42, 'f', true), '47 43');
+  const r = F.ipfClass(80, 'm', false, TD.ipf);
+  ok('class: 80 kg is 3 under 83; the class below is 74, a cut of 6 kg, 7.5% of body weight', r.name === '83' && Math.abs(r.under - 3) < 1e-9 && r.below.name === '74' && Math.abs(r.below.cut - 6) < 1e-9 && Math.abs(r.below.pct - 7.5) < 1e-9);
+  ok('class: the lightest open class has none below; the open class has no limit', F.ipfClass(55, 'm', false, TD.ipf).below === null && F.ipfClass(130, 'm', false, TD.ipf).open);
+  ok('class: no weight, no class', F.ipfClass(NaN, 'm', false, TD.ipf) === null);
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);

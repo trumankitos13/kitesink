@@ -241,7 +241,7 @@
   .ex-note { padding: 8px 12px; border-radius: 10px; background: rgba(216,176,122,.14); border: 1px dashed rgba(216,176,122,.55); color: #f3e3c4 !important; }
   .ex-note[hidden] { display: none; }
   /* a field-guide entry as a small card, and a guide table: scripts/build_fitness.py writes both */
-  .te { display: grid; gap: 4px; padding: 10px 12px; border-radius: 12px; background: var(--k-tint); }
+  .te { display: grid; gap: 4px; align-content: start; padding: 10px 12px; border-radius: 12px; background: var(--k-tint); }
   .te p { margin: 0; }
   .te-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font: 600 10px/1.3 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
   .te-t { font: 600 14px/1.3 var(--k-sans); letter-spacing: -.01em; color: var(--k-ink); }
@@ -471,6 +471,16 @@
   .hub-n::after { content: " \2192"; color: var(--k-green); }
 
   /* meet attempt planner */
+  .wc { margin-top: 18px; display: grid; gap: 18px; }
+  @media (min-width: 920px) { .wc { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .wc-cards { grid-column: 1 / -1; } }
+  .wc-in { display: grid; gap: 14px; }
+  .wc-h { margin: 0; font: 700 19px/1.25 var(--k-sans); letter-spacing: -.02em; color: var(--k-ink); }
+  .wc .tool-out { position: static; }
+  .wc-cards { display: grid; gap: 8px; }
+  .te-list { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
+  .k-check { display: flex; align-items: flex-start; gap: 10px; min-height: 44px; padding: 10px 0; font-size: 14.5px; line-height: 1.4; color: var(--k-ink); cursor: pointer; }
+  .k-check input { width: 20px; height: 20px; margin: 0; flex: none; accent-color: var(--k-green-fill); }
+  .k-check small { color: var(--k-mute); font-size: 12.5px; }
   .att { width: 100%; border-collapse: collapse; font: 500 14px/1.3 var(--k-mono); font-variant-numeric: tabular-nums; }
   .att th, .att td { padding: 10px 6px 10px 0; text-align: left; border-top: 1px solid rgba(240,232,214,.16); }
   .att thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
@@ -872,6 +882,29 @@
             <p class="k-small">These percentages are a common coaching convention, not a rule or a study result: an opener you could lift for a triple, a second that sets up the third, and a third near your best. Meets load in kilograms in 2.5 kg steps, so every attempt is rounded to that. Change a later attempt on the day by how the last one moved.</p>
           </div>
         </div>
+
+        <!-- weight class finder: the IPF classes from the guide's class table (#tool-data) -->
+        <section class="k-card wc" aria-labelledby="wc-h">
+          <div class="wc-in">
+            <h3 class="wc-h" id="wc-h">Which IPF weight class?</h3>
+            <p class="k-small">Your class by the IPF’s 2026 limits, from the guide’s {{e:meet-table-ipf-classes|class table}}. A limit includes its own number: 59.0 kg is the 59 kg class. Other federations draw other lines: {{e:meet-federations-differ|classes differ between federations}}.</p>
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="wc-sex-l">Classes for</span><div class="k-seg" id="wc-sex" role="group" aria-labelledby="wc-sex-l"><button type="button" value="m">Men</button><button type="button" value="f">Women</button></div></div>
+              <label class="k-field"><span class="k-label">Body weight</span><span class="with-unit"><input class="k-input" id="wc-kg" type="number" inputmode="decimal" min="30" max="300" step="0.05" value="80"><span id="wc-u">kg</span></span></label>
+            </div>
+            <label class="k-check"><input type="checkbox" id="wc-jr"><span>Sub-junior or junior lifter <small>(the lightest class is theirs only)</small></span></label>
+          </div>
+          <div class="k-card tool-out wc-out" id="wc-out">
+            <p class="k-vh" id="wc-say" role="status"></p>
+            <div><p class="k-label">Your class</p><p class="k-stat"><span id="wc-class">—</span></p><p class="k-small" id="wc-sub">Enter your body weight.</p></div>
+            <p class="k-small" id="wc-below"></p>
+            <p class="k-small ex-note" id="wc-ex" hidden></p>
+          </div>
+          <div class="wc-cards">
+            <p class="k-label">Before you think about a cut</p>
+            <div class="te-list">{{tools:entry:meet-step-register-class}}{{tools:entry:pl-weight-class-choice}}{{tools:entry:claim-water-cut-first-meet}}{{tools:entry:pl-num-cut-prevalence}}{{tools:entry:pl-cut-risks}}</div>
+          </div>
+        </section>
       </div>
 
       <!-- ---------- 7. navy body fat ---------- -->
