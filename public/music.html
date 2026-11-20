@@ -249,13 +249,21 @@
 
   /* The projects row: one project at a time, the next one peeking in, at every width.
      Swipe or scroll it; the dots and (on wider screens) the arrows move it. Without scripts it still scrolls. */
-  .feats { display: flex; gap: clamp(12px, 2vw, 22px); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
-    scroll-padding-inline: var(--k-gutter); padding-block: 6px 30px; align-items: flex-start; scrollbar-width: none; }
+  /* The row runs to the window's edges (so the next card is never cut off at the column's edge), with its
+     first card lined up with the page column. Every card takes the height of the tallest. */
+  .feats { --feats-edge: max(var(--k-gutter), calc((100% - var(--k-max)) / 2 + var(--k-gutter)));
+    max-width: none; margin-inline: 0; padding-inline: var(--feats-edge); scroll-padding-inline: var(--feats-edge);
+    display: flex; gap: clamp(12px, 2vw, 22px); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    padding-block: 6px 30px; align-items: stretch; scrollbar-width: none; }
   .feats::-webkit-scrollbar { display: none; }
   .feats:focus-visible { outline: 2px solid var(--k-green); outline-offset: -2px; }
   .feats > .feat { flex: 0 0 88%; scroll-snap-align: start; padding-block: 0 !important; display: flex; }
   @media (min-width: 760px) { .feats > .feat { flex-basis: 90%; } }
   .feats > .feat > * { flex: 1 1 auto; }
+  .feats::after { content: ""; flex: 0 0 1px; }
+  .feats .team { align-content: center; height: 100%; }
+  .feats > .feat > .k-pc:not(.team) { display: flex; flex-direction: column; justify-content: center; }
+  .feats > .feat > .k-pc > .feat-grid { width: 100%; }
   .feats .feat .k-pc { outline-offset: -3px; }
   .feats:not([data-mode="all"]) .feat .k-pc::after { top: 10px; }
   .feats-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: clamp(22px, 3vw, 34px) 4px; }
@@ -706,8 +714,7 @@
     });
     function go(i) {
       i = Math.max(0, Math.min(slides.length - 1, i));
-      var pad = parseFloat(getComputedStyle(row).scrollPaddingLeft) || 0;
-      row.scrollTo({ left: slides[i].offsetLeft - row.offsetLeft - pad });
+      row.scrollTo({ left: slides[i].offsetLeft - slides[0].offsetLeft });
     }
     function mark(i) {
       now = i;
@@ -717,7 +724,7 @@
       if (hint) hint.textContent = (i + 1) + " of " + slides.length + (i < slides.length - 1 ? (wide.matches ? " \u00b7 more to the right" : " \u00b7 swipe for more") : "");
     }
     function current() {
-      var best = 0, bestD = Infinity, left = row.getBoundingClientRect().left + (parseFloat(getComputedStyle(row).scrollPaddingLeft) || 0);
+      var best = 0, bestD = Infinity, left = row.getBoundingClientRect().left + (parseFloat(getComputedStyle(row).paddingLeft) || 0);
       slides.forEach(function (f, i) { var d = Math.abs(f.getBoundingClientRect().left - left); if (d < bestD) { bestD = d; best = i; } });
       return best;
     }
