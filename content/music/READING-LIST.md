@@ -58,3 +58,68 @@ into two batches), and the remaining `/music/claimable` rows.
 
 Later batches (phases 2 to 5) are drafted after batch 1 lands, so they can use what it
 taught.
+
+## Batches 3 to 6: phase 2 areas — PROPOSED 2026-11-20
+
+Drafted for the owner's approval (Holds & Inputs). Primary sources first; URLs are confirmed
+by the writer when the batch runs, and any page that blocks automated reading goes to the
+owner's hand checks instead of being cited. Batch 7 (ai-rights) and the ai-tools directory
+are proposed from the AI and music research run when it lands.
+
+### Batch 3: PROs and performance royalties (`pros-performance.json`, ~30 entries)
+
+| # | Source | Type |
+| --- | --- | --- |
+| 1 | 17 USC 101 (definitions: perform publicly) and 106(4) | statute |
+| 2 | US Department of Justice: ASCAP and BMI consent decrees and the 2021 review closing statement (justice.gov) | government |
+| 3 | Copyright Office inquiry into performing rights organisations (copyright.gov/policy/pro-issues) | government |
+| 4 | SESAC: how it licenses and pays (sesac.com) | collective |
+| 5 | GMR: about and membership pages (globalmusicrights.com) | collective |
+| 6 | Songview (songview.com) | collective |
+| 7 | ASCAP and BMI payment and membership pages (likely blocked: owner hand checks C4, C5, C7, C8) | collective |
+| 8 | PRS for Music, SOCAN, APRA AMCOS, GEMA, SACEM: membership and live-performance reporting pages that open | collective |
+| 9 | BMI foreign live performance form (corpus `foreign_live_performance_notification.docx`) | collective |
+| 10 | CISAC Global Collections Report 2023 (performance share by territory) | standard |
+| 11 | WIPO CMO module, music (corpus) | government |
+
+### Batch 4: recorded and neighbouring rights (`recorded-neighboring.json`, ~25 entries)
+
+| # | Source | Type |
+| --- | --- | --- |
+| 1 | 17 USC 106(6) and 114 (digital audio transmission; 114(g) allocation) | statute |
+| 2 | 37 CFR 380 (webcasting and other statutory licence rates) | regulation |
+| 3 | Copyright Royalty Board Web V / Web VI determinations (crb.gov, Federal Register) | ruling |
+| 4 | Copyright Office MMA Title II (pre-1972 recordings) | government |
+| 5 | SoundExchange: registration, featured and non-featured artists, payments | collective |
+| 6 | AFM & SAG-AFTRA Intellectual Property Rights Distribution Fund (non-featured share) | collective |
+| 7 | PPL (UK) performer and rightsholder pages | collective |
+| 8 | Re:Sound and ACTRA RACS (Canada) | collective |
+| 9 | YouTube Help: Content ID eligibility and how it works | other |
+| 10 | Rome Convention and WPPT summaries (wipo.int) | government |
+
+### Batch 5: metadata and registration (`metadata-registration.json`, ~30 entries)
+
+| # | Source | Type |
+| --- | --- | --- |
+| 1 | IFPI ISRC Handbook and structure pages | standard |
+| 2 | ISO 15707:2022 (ISWC) catalogue page; iswc.org; CISAC ISWC-Network | standard |
+| 3 | ISNI (isni.org) and ISO 27729 | standard |
+| 4 | DDEX knowledge base: ERN, DSR, validating messages | standard |
+| 5 | CISAC CWR documents that are public; corpus CWR user manual (F9, when uploaded) | standard |
+| 6 | Music Business Association Music Metadata Style Guide 2.0 (corpus F8; cite musicbiz.org if public) | other |
+| 7 | MLC: registering works, Matching Tool help pages | collective |
+| 8 | Copyright Office Circulars 50 and 56 (registering musical works and sound recordings) | government |
+| 9 | SoundExchange ISRC search and repertoire pages | collective |
+| 10 | Society registration pages that open (PRS, SOCAN, GEMA) | collective |
+
+### Batch 6: producer royalties (`producer-royalties.json`, ~20 entries)
+
+| # | Source | Type |
+| --- | --- | --- |
+| 1 | 17 USC 114(g)(5) (letters of direction; MMA Title III) | statute |
+| 2 | Copyright Office MMA Title III (AMP Act) pages | government |
+| 3 | SoundExchange: producer and engineer letters of direction | collective |
+| 4 | 17 USC 101 (joint work; work made for hire) | statute |
+| 5 | Copyright Office Circular 30 (works made for hire) and Circular 56 | government |
+| 6 | PPL and other society pages on producer and session-performer claims that open | collective |
+| 7 | Music Business Association Metadata Style Guide: credits (corpus F8) | other |
