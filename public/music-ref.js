@@ -1,12 +1,13 @@
 /* ===================== KiteSink — the music field guide pages =====================
    Loaded by the pages under /music/ (an area, the claims, the glossary, the reference index,
-   the sources) after /ks.js, and by the /music hub once it is generated. A fork of
+   the sources, the claimable royalties, the tools) after /ks.js, and by the /music hub once it is generated. A fork of
    /fitness-ref.js: the music guide filters by reader and territory, and grades entries
    law | official | reported | practice, shown as Sourced or Directional.
 
    Every entry, table and source is already in the page (scripts/build_music.py writes it),
    so nothing here adds content. It only:
-     - filters, searches and sorts the lists (guidance, steps and mistakes, claims, terms, sources)
+     - filters, searches and sorts the lists (guidance, steps and mistakes, claims, terms, sources,
+       the claimable royalties, the tools directory)
      - presets the reader and territory filters from the address (?reader=writer&territory=UK),
        which is how the hub's five reader paths link in
      - sorts a numbers table by its column headings
@@ -15,6 +16,7 @@
      - opens the entry named in the address (/music/mechanicals-mlc#mech-…)
      - on the hub, runs the search box over /music/search.json
    Each page has only some of these, so every block looks for its own markup first.
+   The rate calculator and the unclaimed-money checklist are /music-tools.js.
    ================================================================================== */
 (function () {
   "use strict";
@@ -90,6 +92,7 @@
       }
       if (cfg.empty) cfg.empty.hidden = shown !== 0;
       if (cfg.active) cfg.active.textContent = active ? "· " + active + " on" : "";
+      if (cfg.after) cfg.after();
     }
     names.forEach(function (n) {
       facets[n].el.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b || !facets[n].el.contains(b)) return; state[n] = b.value; apply(); });
@@ -164,6 +167,26 @@
     makeList({
       items: all(".gl-item", box), noun: "terms", q: $("gl-q"), count: $("gl-count"), empty: $("gl-empty"),
       facets: { area: { el: facetIn(box.parentNode, "area"), test: eq("d") } }
+    });
+  });
+
+  /* ---------- claimable royalties ---------- */
+  boot(function () {
+    var box = $("cl-list"); if (!box) return;
+    var f = people($("cl-rail"));
+    delete f.support;
+    f.money = { el: facetIn($("cl-rail"), "money"), test: eq("mt") };
+    makeList({ items: all("article.cl", box), noun: "places", q: $("cl-q"), count: $("cl-count"), empty: $("cl-empty"), active: $("cl-active"), facets: f });
+  });
+
+  /* ---------- the tools directory: a group whose tools are all filtered out hides its heading ---------- */
+  boot(function () {
+    var box = $("ot-list"); if (!box) return;
+    var f = people($("ot-rail"));
+    delete f.support;
+    makeList({
+      items: all("li.ot", box), noun: "tools", count: $("ot-count"), empty: $("ot-empty"), active: $("ot-active"), facets: f,
+      after: function () { all(".ot-g", box).forEach(function (g) { g.hidden = !all("li.ot", g).some(function (el) { return !el.hidden; }); }); }
     });
   });
 
@@ -247,7 +270,7 @@
       if (el && id !== "sources") { if (el.hidden) resetAll(); el.scrollIntoView({ block: "center" }); }
       return true;
     }
-    if (!el || !el.matches("details.g, details.q, details.rt, .gl-item, #n-table tr, .ck")) return false;
+    if (!el || !el.matches("details.g, details.q, details.rt, .gl-item, #n-table tr, .ck, article.cl, li.ot")) return false;
     if (el.hidden) resetAll();
     if (el.tagName === "DETAILS") el.open = true;
     el.scrollIntoView({ block: "center" });

@@ -13,6 +13,12 @@
       "live": false
     },
     {
+      "title": "Tools and calculators",
+      "blurb": "A mechanical rate calculator, an unclaimed-money checklist, and a checked directory of other tools.",
+      "href": "/music/tools",
+      "live": false
+    },
+    {
       "title": "AI tools directory",
       "blurb": "AI tools that touch music rights, with what each one does with your files and your data.",
       "href": "/music/ai-tools",

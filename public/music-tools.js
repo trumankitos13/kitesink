@@ -51,7 +51,7 @@
       for (var i = 0; i < rows.length; i++) if (rows[i].year === +year) return rows[i];
       return null;
     },
-    years: function (rates) { return ((rates && rates.physical) || []).map(function (r) { return r.year; }).sort(); },
+    years: function (rates) { return ((rates && rates.physical) || []).map(function (r) { return r.year; }).sort(function (a, b) { return a - b; }); },
     // The year a calculator starts on: this year when the data has it, else the latest it has.
     defaultYear: function (rates, now) {
       var ys = M.years(rates), y = now == null ? new Date().getFullYear() : now;
@@ -59,13 +59,13 @@
     },
 
     // The rate per copy for one year's row and a playing time.
-    //   -> { h: hundredths of a cent, cents, rule: "per-work" | "per-minute", minutes, workH, minuteH }
+    //   -> { h: hundredths of a cent, cents, rule: "per-work" | "per-minute", tie (both give the same), minutes, workH, minuteH }
     perCopy: function (row, seconds) {
       var minutes = M.minutesCharged(seconds);
       if (!row || !(minutes > 0)) return null;
       var workH = hundredths(row.per_work_cents), minuteH = hundredths(row.per_minute_cents) * minutes;
       var h = Math.max(workH, minuteH);
-      return { h: h, cents: h / 100, rule: minuteH > workH ? "per-minute" : "per-work", minutes: minutes, workH: workH, minuteH: minuteH };
+      return { h: h, cents: h / 100, rule: minuteH > workH ? "per-minute" : "per-work", tie: minuteH === workH, minutes: minutes, workH: workH, minuteH: minuteH };
     },
 
     // The whole calculation. copies is a whole number >= 1. -> perCopy's result plus
@@ -146,6 +146,10 @@
       if (saved.sec != null) sec.value = saved.sec;
       if (saved.copies != null) copies.value = saved.copies;
 
+      // Every figure shows its source and the date the rates were checked.
+      function srcLine(row) {
+        return "Rates for " + esc(row.year) + (rates.as_of_label ? ", as of " + esc(rates.as_of_label) : "") + ". Source: " + cites(row.cite);
+      }
       function render() {
         var s = M.seconds(min.value === "" ? 0 : min.value, sec.value === "" ? 0 : sec.value);
         var r = M.calc(rates, year.value, s, copies.value), row = M.yearRow(rates, year.value);
@@ -154,19 +158,21 @@
           o("cents").textContent = "–"; o("total").textContent = "–";
           o("rule").textContent = !(s > 0) ? "Enter a playing time: whole minutes and seconds, more than zero."
             : "Enter the number of copies: a whole number, 1 or more.";
-          o("src").innerHTML = row ? "Rates for " + esc(row.year) + ": " + cites(row.cite) : "";
+          o("src").innerHTML = row ? srcLine(row) : "";
           return;
         }
         var work = M.formatCents(r.workH), perMin = M.formatCents(hundredths(row.per_minute_cents));
         var charged = r.minutes + (r.minutes === 1 ? " minute" : " minutes");
         o("cents").textContent = M.formatCents(r.h);
-        o("rule").textContent = r.rule === "per-minute"
+        o("rule").textContent = r.tie
+          ? "Both rates give the same: " + work + " cents per work, and " + charged + " x " + perMin + " cents = " + M.formatCents(r.minuteH) + " cents."
+          : r.rule === "per-minute"
           ? "The per-minute rate applies: " + charged + " x " + perMin + " cents = " + M.formatCents(r.minuteH) + " cents, more than the " + work + "-cent per-work rate."
           : "The per-work rate applies: " + work + " cents is more than " + charged + " x " + perMin + " cents = " + M.formatCents(r.minuteH) + " cents.";
         o("total").textContent = r.dollars;
         o("total-note").textContent = r.copies.toLocaleString("en-US") + (r.copies === 1 ? " copy" : " copies") + " x " + M.formatCents(r.h) + " cents"
           + (r.exact ? "" : ", rounded to the nearest cent");
-        o("src").innerHTML = "Rates for " + esc(r.year) + ": " + cites(row.cite);
+        o("src").innerHTML = srcLine(row);
         var sp = M.streamingPercent(rates, year.value), spBox = o("stream");
         if (spBox) {
           spBox.innerHTML = sp

@@ -12,6 +12,11 @@ Inputs (in content/music/, or KS_MUSIC_SRC):
                         no twin until its file exists.
     claims.json         the "claims, checked" entries (optional)
     corrections.json    a dated corrections log for /music/sources (optional; same shape as fitness)
+    claimable.json      the claimable-royalties table (optional; content/music/DATA-PAGES.md): the page
+                        /music/claimable, its twin and /music/claimable.json, and the rows the
+                        unclaimed-money checklist reads
+    rates.json          the mechanical rates (optional; DATA-PAGES.md): the rate calculator
+    tools.json          the external tools directory (optional; DATA-PAGES.md)
     routes.json         one row per page under /music/: slug, kind, title, description, h1, lead
     meta.json           the "last updated" date, the scope line, source labels, the hub's tools
     templates/sub.html  the one shell every page under /music/ is poured into
@@ -25,12 +30,17 @@ Outputs (in public/, or KS_MUSIC_OUT):
                                             reference page that has something to show
                                             (claims, glossary, reference, sources)
     music/search.json                       the hub's search index: one row per entry
+    music/claimable.json                    the claimable rows as public data (no `support`)
+    music/tools.html and music/tools.md     KiteSink's two tools and the directory, written when
+                                            any of claimable.json, rates.json or tools.json exists
     music.html and music.md                 the hub and its twin, ONLY when HUB_LIVE is True
 
 Every entry has one home page under /music/: a term lives on the glossary, a claim on the
 claims page, everything else on its area's page. Other pages link to it and never repeat it.
 The pages are static HTML: every entry is in the markup, so it reads without JavaScript.
-/music-ref.js only searches, filters, sorts and remembers.
+/music-ref.js only searches, filters, sorts and remembers. /music-tools.js runs the rate
+calculator and the unclaimed-money checklist, on the pages that have one, from data this
+script embeds in the page; without it the page shows the yearly rates and the full checklist.
 
 The schema is content/music/WRITING-BRIEF.md; scripts/validate_music.py checks a file
 against it. This script trusts validated data and stops on anything it cannot place.
@@ -141,6 +151,21 @@ SRC_TYPE = OrderedDict([
 # Said once on the sources page and in its twin.
 ARTICLE_NOTE = ("Articles and trade press are credited where they are the source of a point. An entry that rests on them alone "
                 "is graded Directional. Every entry is written in this guide's own words.")
+# The three data files (content/music/DATA-PAGES.md), read after the areas. Each is optional.
+DATA_FILES = ("claimable", "rates", "tools")
+MONEY = OrderedDict([("mechanical", "Mechanical"), ("performance", "Performance"), ("neighboring", "Neighbouring rights"), ("other", "Other")])
+ACCESS = OrderedDict([
+    ("free-no-login", "Free, no login"), ("free-login", "Free, login needed"), ("members", "Members only"),
+    ("licensees", "Licensees only"), ("paid", "Paid"), ("unknown", "Access not confirmed"),
+])
+# The directory's groups, in this order whatever order tools.json lists them in. The file's own labels win.
+TOOL_GROUPS = OrderedDict([
+    ("works-search", "Works and repertoire searches"), ("recordings", "Recordings and identifiers"), ("unclaimed", "Unclaimed money"),
+    ("metadata", "Metadata and file formats"), ("splits-contracts", "Splits and agreements"), ("sync-cue", "Sync and cue sheets"),
+    ("valuation", "Catalogue valuation"),
+])
+# The area page each KiteSink tool is also embedded on (near the top), when that area and the tool's data exist.
+TOOL_HOMES = {"mechanicals-mlc": "calculator", "unclaimed-recovery": "checklist"}
 MONTHS = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 
 
@@ -360,6 +385,16 @@ def load():
         d = json.loads(f.read_text(encoding="utf-8"))
         if d.get("domain") != name:
             raise SystemExit(f"{f}: its domain is {d.get('domain')!r}, but the file is named for {name!r}")
+        for key, src in d.get("sources", {}).items():
+            lib.add(name, key, src)
+        data[name] = d
+    for name in DATA_FILES:
+        f = SRC / f"{name}.json"
+        if not f.is_file():
+            continue          # not written yet: the page or tool that reads it shows as in preparation
+        d = json.loads(f.read_text(encoding="utf-8"))
+        if d.get("kind") != name:
+            raise SystemExit(f"{f}: its kind is {d.get('kind')!r}, but the file is named for {name!r}")
         for key, src in d.get("sources", {}).items():
             lib.add(name, key, src)
         data[name] = d
@@ -622,7 +657,7 @@ def md_cell(text):
     return str(text).replace("|", "\\|")
 
 
-def md_domain(lib, meta, dom, d, pages):
+def md_domain(lib, meta, dom, d, pages, extra=None):
     label, blurb = DOMAINS[dom]
     topics = OrderedDict((t["id"], t["label"]) for t in d.get("topics", []))
     out = [f"# {label}: KiteSink music field guide", "",
@@ -661,6 +696,7 @@ def md_domain(lib, meta, dom, d, pages):
     if terms:
         out += ["## Terms", "", f"Defined on the glossary: {SITE}/music/{pages.slug['glossary']}.md", ""]
         out += [f"- **{e['title']}**: {e['take']}" for e in terms] + [""]
+    out += extra or []
     return "\n".join(out) + md_footer(meta, "/" + pages.slug[dom])
 
 
@@ -749,7 +785,9 @@ def md_sources(lib, meta, pages, corrections):
 
 
 # ----------------------------------------------------------------- the pages under /music/
-KINDS = ("area", "claims", "glossary", "reference", "sources")
+KINDS = ("area", "claims", "glossary", "reference", "sources", "claimable", "tools")
+REF_KINDS = ("claims", "glossary", "reference", "sources")
+TOOL_KINDS = ("claimable", "tools")
 
 
 def load_routes():
@@ -805,6 +843,8 @@ class Pages:
             "glossary": any(e["type"] == "term" for e in entries),
             "reference": any(e["type"] in ("number", "table") for e in entries),
             "sources": bool(lib.by_id),
+            "claimable": bool(data.get("claimable", {}).get("rows")),
+            "tools": any(name in data for name in DATA_FILES),
         }
         self.routes = [r for r in routes if (r["area"] in present if r["kind"] == "area" else has[r["kind"]])]
         self.all_routes = routes
@@ -878,6 +918,13 @@ def page_area(lib, data, pages, route):
         return topics.get(e.get("topic")) or fallback
 
     sections = []   # (id, name in the "on this page" row, count, html)
+
+    # A KiteSink tool that belongs with this area, near the top, when its data exists.
+    tool = TOOL_HOMES.get(dom)
+    if tool == "calculator" and "rates" in data:
+        sections.append(calculator_band(lib, data["rates"]))
+    elif tool == "checklist" and pages.has("claimable"):
+        sections.append(unclaimed_band(data["claimable"], pages, here))
 
     steps = of("step")
     if steps:
@@ -1131,7 +1178,8 @@ def nav_groups(pages):
     """The pages under /music/ as the hub and the navigation group them: [(name, [route])]."""
     by = {route_key(r): r for r in pages.routes}
     groups = [(f"{letter}. {name}", [by[d] for d in doms if d in by]) for letter, name, doms in GROUPS]
-    groups.append(("Reference", [by[k] for k in KINDS if k != "area" and k in by]))
+    groups.append(("Tools and data", [by[k] for k in TOOL_KINDS if k in by]))
+    groups.append(("Reference", [by[k] for k in REF_KINDS if k in by]))
     return [(name, routes) for name, routes in groups if routes]
 
 
@@ -1167,8 +1215,10 @@ def fill_numbers(text, numbers, where):
     return re.sub(r"\{\{([^}]+)\}\}", one, text)
 
 
-def render_sub(template, route, pages, sections, numbers, meta):
-    """Pour one page into the shell. numbers fills {{n:…}} and {{updated}} in the route's own text."""
+def render_sub(template, route, pages, sections, numbers, meta, head=""):
+    """Pour one page into the shell. numbers fills {{n:…}} and {{updated}} in the route's own text.
+    head is more for <head> (the claimable page's Dataset markup). A page that holds the rate
+    calculator or the unclaimed-money checklist also loads /music-tools.js."""
     def filled(text):
         return fill_numbers(text, numbers, f"routes.json: {route['slug']}")
 
@@ -1189,7 +1239,10 @@ def render_sub(template, route, pages, sections, numbers, meta):
         "subnav": subnav_html(pages, slug), "subnav_here": subnav_here_html(pages, slug), "n:pages": str(len(pages.routes)),
         "areas": " ".join(pages.areas), "scope": esc(meta["scope_line"]),
         "jump": jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
+        "head": head, "foot": "",
     }
+    if "data-rate-calc" in fills["body"] or "data-unclaimed" in fills["body"]:
+        fills["foot"] = '<script src="/music-tools.js?v=2027.14"></script>'
 
     def fill(m):
         if m.group(1) not in fills:
@@ -1217,10 +1270,15 @@ def build_subpages(lib, meta, data, numbers, pages):
                 sections = page_claims(lib, data, pages, r)
             elif r["kind"] == "glossary":
                 sections = page_glossary(lib, data, pages, r)
+            elif r["kind"] == "claimable":
+                sections = page_claimable(lib, data, pages, r)
+            elif r["kind"] == "tools":
+                sections = page_tools(lib, data, pages, r)
             else:
                 sections = page_reference(data, pages, r)
         total.update(tally)
-        built[r["slug"]] = render_sub(template, r, pages, sections, numbers, meta)
+        head = dataset_jsonld(data["claimable"], r, meta) if r["kind"] == "claimable" else ""
+        built[r["slug"]] = render_sub(template, r, pages, sections, numbers, meta, head)
     unused = [k for k in lib.by_id if not total[k]]
     if unused:
         raise SystemExit("sources no page cites: " + ", ".join(unused))
@@ -1238,6 +1296,11 @@ def build_subpages(lib, meta, data, numbers, pages):
     if pages.has("sources"):
         with lib.counting(total):
             out[PUBLIC / "music" / f"{pages.slug['sources']}.md"] = md_sources(lib, meta, pages, corrections)
+    if pages.has("claimable"):
+        out[PUBLIC / "music" / f"{pages.slug['claimable']}.md"] = md_claimable(lib, meta, data, pages)
+        out[PUBLIC / "music" / "claimable.json"] = claimable_public(lib, data["claimable"], meta)
+    if pages.has("tools"):
+        out[PUBLIC / "music" / f"{pages.slug['tools']}.md"] = md_tools(lib, meta, data, pages)
     return out, built, total
 
 
@@ -1296,6 +1359,427 @@ def search_index(data, pages):
     return {"pages": slugs, "kinds": list(SEARCH_KINDS.values()), "areas": [DOMAINS[d][0] for d in DOMAINS], "rows": rows}
 
 
+# ----------------------------------------------------------------- the data pages and KiteSink's tools
+# content/music/DATA-PAGES.md: /music/claimable (claimable.json), /music/tools (tools.json), the
+# mechanical rate calculator (rates.json) and the unclaimed-money checklist (claimable.json again).
+# The two tools run in /music-tools.js from data embedded here; the HTML around them is what a
+# reader without JavaScript gets: the yearly rates as a table, and the full checklist.
+def embed(obj, cls):
+    """Data for /music-tools.js, inside the tool's own markup. '</' is escaped so it cannot end the script."""
+    return f'<script type="application/json" class="{cls}">' + json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + "</script>"
+
+
+def cite_pairs(lib, file, keys):
+    """[label, #src-…] for each source, for a citation the script writes. Counted by the static table beside it."""
+    return [[lib.label[k], "#src-" + k] for k in (lib.alias[(file, key)] for key in keys)]
+
+
+def bare_cite(lib, file, keys):
+    """The citation links without their paragraph, for a table cell or a sentence."""
+    return lib.cite_html(file, keys).replace('<p class="cite">', "").replace("</p>", "")
+
+
+def cents_label(v):
+    """13.1 -> '13.1', 24.0 -> '24', 12.40 -> '12.4'."""
+    return f"{v:.2f}".rstrip("0").rstrip(".")
+
+
+def terr_options(items):
+    return [t for t in TERRITORY if any(t in i.get("territory", []) for i in items)]
+
+
+def reader_options(items):
+    return [r for r in READERS if any(r in i.get("readers", []) for i in items)]
+
+
+CALC_METHOD = ("For physical copies and permanent downloads made and distributed in the US. Per copy, the rate is the larger "
+               "of the per-work rate and the per-minute rate times the playing time, with a part minute counted as a whole "
+               "one (37 CFR 385.11). This is the statutory rate; a licence agreed directly with the publisher can set a different one.")
+STREAM_NOTE = ("Streaming mechanicals are not a per-stream rate. Under 37 CFR 385.21 a service works out a royalty pool for each "
+               "offering, the larger of a share of its revenue and other measures the rule sets, takes off what it pays for "
+               "performance rights, and divides the rest among the works by their share of plays.")
+
+
+def calculator_html(lib, rates):
+    """The mechanical rate calculator: the form (hidden until /music-tools.js shows it), the method,
+    the ringtone note, the streaming illustration, and the yearly rates as a table."""
+    rows = sorted(rates["physical"], key=lambda r: r["year"])
+    stream = OrderedDict((r["year"], r) for r in sorted(rates.get("streaming_revenue_percent", []), key=lambda r: r["year"]))
+    latest = rows[-1]["year"]
+    asof = date_label(rates["as_of"])
+    payload = {
+        "as_of": rates["as_of"], "as_of_label": asof,
+        "physical": [{"year": r["year"], "per_work_cents": r["per_work_cents"], "per_minute_cents": r["per_minute_cents"],
+                      "cite": cite_pairs(lib, "rates", r["sources"])} for r in rows],
+        "streaming_revenue_percent": [{"year": y, "percent": r["percent"], "cite": cite_pairs(lib, "rates", r["sources"])} for y, r in stream.items()],
+    }
+    head = ('<thead><tr><th scope="col">Year</th><th scope="col">Per work</th><th scope="col">Per minute or part minute</th>'
+            + ('<th scope="col">Streaming, first prong (illustration)</th>' if stream else "") + '<th scope="col">Sources</th></tr></thead>')
+    body = []
+    for r in rows:
+        keys = list(r["sources"]) + [k for k in (stream[r["year"]]["sources"] if r["year"] in stream else []) if k not in r["sources"]]
+        cells = (f'<th scope="row">{r["year"]}</th><td>{cents_label(r["per_work_cents"])} cents</td><td>{cents_label(r["per_minute_cents"])} cents</td>'
+                 + ((f'<td>{esc(stream[r["year"]]["percent"])}% of revenue</td>' if r["year"] in stream else "<td>Not given</td>") if stream else "")
+                 + "<td>" + bare_cite(lib, "rates", keys) + "</td>")
+        body.append(f"<tr>{cells}</tr>")
+    years = "".join(f'<option value="{r["year"]}"' + (" selected" if r["year"] == latest else "") + f'>{r["year"]}</option>' for r in rows)
+    form = (
+        '<form class="rc-form" hidden><div class="rc-in">'
+        f'<label class="k-field" for="rc-year"><span class="k-label">Year</span><select class="k-select" id="rc-year" name="year">{years}</select></label>'
+        '<fieldset class="k-field rc-time"><legend class="k-label">Playing time</legend><div class="rc-pair">'
+        '<span class="rc-unit"><input class="k-input" id="rc-min" name="min" type="number" inputmode="numeric" min="0" max="999" step="1" value="3" aria-label="Playing time, minutes"><span aria-hidden="true">min</span></span>'
+        '<span class="rc-unit"><input class="k-input" id="rc-sec" name="sec" type="number" inputmode="numeric" min="0" max="59" step="1" value="30" aria-label="Playing time, seconds"><span aria-hidden="true">sec</span></span>'
+        '</div></fieldset>'
+        '<label class="k-field" for="rc-copies"><span class="k-label">Copies</span><input class="k-input" id="rc-copies" name="copies" type="number" inputmode="numeric" min="1" step="1" value="1000"></label>'
+        '</div>'
+        '<div class="rc-out" aria-live="polite">'
+        '<div class="rc-fig"><p class="k-label">Per copy</p><p class="rc-stat"><span data-o="cents">–</span><small>cents</small></p></div>'
+        '<div class="rc-fig"><p class="k-label">Total</p><p class="rc-stat"><span data-o="total">–</span></p><p class="k-small" data-o="total-note"></p></div>'
+        '<p class="rc-rule" data-o="rule"></p><p class="rc-src" data-o="src"></p>'
+        '</div></form>'
+    )
+    ring = rates.get("ringtone_cents")
+    ring_html = (f'<p class="rc-note"><b>Ringtones.</b> {cents_label(ring["value"])} cents per ringtone, whatever its length (37 CFR 385.11). '
+                 + lib.cite_html("rates", ring["sources"]).replace('<p class="cite">', '<span class="cite">').replace("</p>", "</span>") + "</p>") if ring else ""
+    stream_html = ""
+    if stream:
+        last = stream[next(reversed(stream))]
+        stream_html = (
+            '<div class="rc-stream"><p class="k-label">Streaming: an illustration, not a rate</p>'
+            f'<p>{esc(STREAM_NOTE)}</p>'
+            f'<p data-o="stream">In {last["year"]} the first prong is <b>{esc(last["percent"])}%</b> of the service\'s revenue for the offering. '
+            + " · ".join(f'<a href="{esc(h)}">{esc(l)}</a>' for l, h in cite_pairs(lib, "rates", last["sources"])) + "</p></div>"
+        )
+    table = (f'<details class="rc-table" open><summary>The yearly rates, as of {esc(asof)}</summary>'
+             f'<div class="rt-scroll" tabindex="0" role="region" aria-label="Mechanical rates by year"><table><caption class="k-vh">US mechanical rates by year, as of {esc(asof)}</caption>'
+             + head + "<tbody>" + "".join(body) + "</tbody></table></div></details>")
+    return (f'<div class="rc" id="rate-calc" data-rate-calc>{embed(payload, "rc-data")}'
+            f'<p class="rc-method">{esc(CALC_METHOD)} <span class="rc-asof">Rates as of {esc(asof)}.</span></p>'
+            + form + table + ring_html + stream_html + "</div>")
+
+
+def calculator_band(lib, rates):
+    aside = "The US statutory rate per copy for a year, a playing time and a number of copies. Not legal advice."
+    return ("calculator", "Rate calculator", None,
+            band("calculator", "Calculator", "Mechanical rates, <em>per copy.</em>", aside, calculator_html(lib, rates)))
+
+
+def unclaimed_html(claimable, pages, here):
+    """The unclaimed-money checklist: every claimable row as a place to check, with its link, what to
+    look for and the cost. /music-tools.js narrows it by reader and territory and remembers the ticks;
+    without it, the full list shows and the boxes can still be ticked (not remembered)."""
+    rows = claimable["rows"]
+    payload = {"rows": [{"id": r["id"], "readers": r["readers"], "territory": r["territory"], "money_type": r["money_type"]} for r in rows]}
+    readers = "".join(f'<option value="{r}">{esc(READERS[r][0])}</option>' for r in reader_options(rows))
+    terrs = "".join(f'<option value="{t}">{esc(TERRITORY[t])}</option>' for t in terr_options(rows) if t != "INTL")
+    pick = (
+        '<div class="uc-pick" hidden>'
+        f'<label class="k-field" for="uc-reader"><span class="k-label">I am</span><select class="k-select" id="uc-reader" name="reader"><option value="">Anyone</option>{readers}</select></label>'
+        f'<label class="k-field" for="uc-territory"><span class="k-label">My music earns in</span><select class="k-select" id="uc-territory" name="territory"><option value="">Anywhere</option>{terrs}</select></label>'
+        '</div>'
+    )
+    items = []
+    for r in rows:
+        details = f'/music/{pages.slug["claimable"]}#{r["id"]}'
+        items.append(
+            f'<li class="uc-item" data-id="{esc(r["id"])}">'
+            f'<label class="ck-item"><input type="checkbox" data-id="{esc(r["id"])}"><span><b>{esc(r["holder"])}</b>: {esc(r["pot"])}</span></label>'
+            f'<dl class="uc-facts"><div><dt>Where</dt><dd>{esc(terr_label(r["territory"]))} · {esc(MONEY[r["money_type"]])}</dd></div>'
+            f'<div><dt>What to look for</dt><dd>{esc(r["how_to_claim"])}</dd></div>'
+            f'<div><dt>Cost</dt><dd>{esc(r["cost"])}</dd></div></dl>'
+            f'<p class="uc-go"><a class="k-btn k-btn--ghost k-btn--sm" href="{esc(r["link"])}" target="_blank" rel="noopener">{esc(r["link_label"])}'
+            f'<span class="k-vh"> at {esc(r["holder"])} (opens in a new tab)</span></a>'
+            f'<a class="k-inline" href="{esc(details)}">Who can claim, the rule and sources</a></p></li>'
+        )
+    n = len(rows)
+    return (
+        f'<div class="uc" id="unclaimed-checklist" data-unclaimed>{embed(payload, "uc-data")}'
+        + pick
+        + f'<p class="uc-count"><b class="uc-n">0</b> of <span class="uc-of">{n}</span> checked '
+          '<button type="button" class="k-linkbtn uc-clear">Clear ticks</button></p>'
+        # FUTURE: an "Email me this checklist" gate goes here, beside the count. It is not built: there is
+        # no email capture on this site. When it is, it needs the owner's sign-off on what is stored and why.
+        + '<!-- FUTURE: "Email me this checklist" gate (not built; no email capture). -->'
+        + '<ol class="uc-list">' + "".join(items) + "</ol>"
+        + '<p class="gx-empty uc-empty" hidden>Nothing listed for that choice yet. Choose Anyone or Anywhere to see every place.</p>'
+        + '<p class="k-small uc-keep">Your ticks are remembered in this browser and go nowhere else.</p></div>'
+    )
+
+
+def unclaimed_band(claimable, pages, here):
+    n = len(claimable["rows"])
+    aside = (f'{count_of(n, "place")} where money can sit unclaimed. Choose who you are and where your music earns, then tick each one off. '
+             f'<a class="k-inline" href="/music/{pages.slug["claimable"]}">The full table, with sources</a>.')
+    return ("checklist", "Checklist", n,
+            band("checklist", "Checklist", "Where to look for <em>unclaimed money.</em>", aside, unclaimed_html(claimable, pages, here)))
+
+
+def claimable_row(lib, r, i):
+    meta = " · ".join([MONEY[r["money_type"]], terr_label(r["territory"])])
+    facts = "".join(f'<div><dt>{esc(label)}</dt><dd>{esc(r[key])}</dd></div>' for key, label in
+                    (("who_can_claim", "Who can claim"), ("how_to_claim", "How to claim"), ("rule", "If nobody claims"), ("cost", "Cost")))
+    return (
+        f'<article class="cl" id="{esc(r["id"])}" data-r="{esc(" ".join(r["readers"]))}" data-tr="{esc(" ".join(r["territory"]))}" '
+        f'data-mt="{esc(r["money_type"])}" data-c="{r["confidence"]}" data-y="{r["as_of"].replace("-", "")}" data-o="{i}">'
+        f'<p class="g-meta">{esc(meta)}</p><h3 class="cl-holder">{esc(r["holder"])}</h3><p class="cl-pot">{esc(r["pot"])}</p>'
+        f'<dl class="cl-facts">{facts}</dl>'
+        f'<p class="cl-go"><a class="k-btn k-btn--sm" href="{esc(r["link"])}" target="_blank" rel="noopener">{esc(r["link_label"])}'
+        f'<span class="k-vh"> at {esc(r["holder"])} (opens in a new tab)</span></a>{grade_tag(r["confidence"])}{asof_tag(r)}</p>'
+        + facts_html(r) + lib.cite_html("claimable", r["sources"]) + "</article>"
+    )
+
+
+CLAIMABLE_SCOPE = ("Covers the holders whose own published pages or the law could be read and checked, in the territories this guide "
+                   "covers. A holder not listed may still hold money for you. Each row is dated: rules and amounts change, so check the "
+                   "holder's page before you act.")
+
+
+def page_claimable(lib, data, pages, route):
+    rows = data["claimable"]["rows"]
+    n_r = Counter(x for r in rows for x in r["readers"])
+    named = terr_options(rows)
+    n_t = Counter({t: sum(1 for r in rows if in_territory(r, t)) for t in TERRITORY})
+    n_m = Counter(r["money_type"] for r in rows)
+    rail = ('<div class="gx-rail" id="cl-rail">'
+            + facet("reader", [(r, READERS[r][0]) for r in READERS if n_r[r]], "Reader", counts=n_r)
+            + facet("territory", [(t, TERRITORY[t]) for t in named], "Territory", counts=n_t,
+                    note=INTL_NOTE if "INTL" in named and len(named) > 1 else "")
+            + facet("money", [(m, MONEY[m]) for m in MONEY if n_m[m]], "Money type", counts=n_m) + "</div>")
+    latest = max(r["as_of"] for r in rows)
+    about = (f'<p class="k-small fr-note" id="about-data">{esc(CLAIMABLE_SCOPE)} This table is KiteSink\'s own summary of each holder\'s '
+             'published pages and the law, not a copy of them, and not legal advice. The same rows as data: '
+             f'<a class="k-inline" href="/music/{route["slug"]}.json">{route["slug"]}.json</a>; as plain text: '
+             f'<a class="k-inline" href="/music/{route["slug"]}.md">{route["slug"]}.md</a>. Newest row checked {esc(date_label(latest))}.</p>')
+    inner = (
+        about
+        + '<div class="gx"><details class="gx-filters" id="cl-filters" open><summary>Filters <span id="cl-active"></span></summary>' + rail + "</details>"
+        '<div class="gx-main"><div class="gx-bar"><label class="k-vh" for="cl-q">Search the claimable royalties</label>'
+        '<input class="k-input gx-q" id="cl-q" type="search" placeholder="Search: a holder, a country, a kind of money…" autocomplete="off"></div>'
+        '<p class="gx-count" id="cl-count" aria-live="polite"></p>'
+        '<div class="cl-list" id="cl-list">' + "\n".join(claimable_row(lib, r, i) for i, r in enumerate(rows)) + "</div>"
+        '<p class="gx-empty" id="cl-empty" hidden>Nothing matches those filters. <button type="button" class="k-linkbtn" data-reset="claimable">Clear them</button></p>'
+        "</div></div>"
+    )
+    aside = f'{count_of(len(rows), "place")}. Narrow by who you are, where your music earns, or the kind of money.'
+    sections = [("rows", "The table", len(rows), band("rows", "Claimable", "Where money <em>is held.</em>", aside, inner))]
+    if pages.has("tools"):
+        sections.append(("tools", "Checklist", None, bare_band("tools", "The checklist",
+            f'<p class="k-small">To work through these one by one, ticking each off, use the '
+            f'<a class="k-inline" href="/music/{pages.slug["tools"]}#checklist">unclaimed-money checklist</a>.</p>')))
+    n_src, src = sources_band(lib, pages)
+    if n_src:
+        sections.append(("sources", "Sources", n_src, src))
+    return sections
+
+
+# KiteSink's own tools, as cards at the top of /music/tools: (anchor, name, blurb, data file it needs; None = not built yet)
+KS_TOOLS = [
+    ("calculator", "Mechanical rate calculator", "The US statutory rate per copy for physical copies and downloads, for a year, a playing time and a number of copies.", "rates"),
+    ("checklist", "Unclaimed-money checklist", "The places that may hold royalties for you, for who you are and where your music earns, to tick off one by one.", "claimable"),
+    (None, "Identifier checker", "Checks that an ISWC, ISRC or IPI number is in the right form before you send it anywhere.", None),
+    (None, "Split-sheet generator", "A plain split sheet for co-writers to fill in.", None),
+    (None, "Society directory", "Collecting societies by territory, and the rights each one collects.", None),
+]
+
+
+def ks_tool_cards(data):
+    out = []
+    for anchor, name, blurb, needs in KS_TOOLS:
+        live = anchor and needs in data and (needs != "claimable" or data["claimable"].get("rows"))
+        inner = f'<span class="kt-t">{esc(name)}</span><span class="kt-b">{esc(blurb)}</span><span class="kt-n">{"Open" if live else "In preparation"}</span>'
+        out.append(f'<li><a class="kt-card" href="#{anchor}">{inner}</a></li>' if live else
+                   f'<li><div class="kt-card kt-card--soon">{inner}</div></li>')
+    return '<ul class="kt-cards" aria-label="KiteSink tools">' + "".join(out) + "</ul>"
+
+
+def tool_row(t):
+    facts = (f'<span><b>Access</b> {esc(ACCESS[t["access"]])}</span>'
+             f'<span><b>For</b> {esc(and_list(READERS[r][0] for r in t["readers"]))}</span>'
+             f'<span><b>Where</b> {esc(terr_label(t["territory"]))}</span>'
+             + (f'<span><b>Checked</b> {esc(date_label(t["checked"]))}</span>' if t.get("checked") else ""))
+    note = f'<p class="ot-note">{esc(t["note"])}</p>' if t.get("note") else ""
+    return (f'<li class="ot" id="{esc(t["id"])}" data-r="{esc(" ".join(t["readers"]))}" data-tr="{esc(" ".join(t["territory"]))}" data-g="{esc(t["group"])}">'
+            f'<p class="ot-name"><a href="{esc(t["url"])}" target="_blank" rel="noopener">{esc(t["name"])}<span class="k-vh"> (opens in a new tab)</span></a>'
+            f' <span class="ot-owner">{esc(t["owner"])}</span></p><p class="ot-what">{esc(t["what"])}</p>{note}<p class="g-facts">{facts}</p></li>')
+
+
+def verified_tools(data):
+    return [t for t in data.get("tools", {}).get("tools", []) if t.get("status") == "verified"]
+
+
+def tool_group_labels(data):
+    own = {g["id"]: g["label"] for g in data.get("tools", {}).get("groups", []) if g.get("id") and g.get("label")}
+    return OrderedDict((g, own.get(g, label)) for g, label in TOOL_GROUPS.items())
+
+
+def page_tools(lib, data, pages, route):
+    here = route["slug"]
+    sections = [("kitesink", "KiteSink tools", None, band("kitesink", "Built here", "KiteSink <em>tools.</em>",
+                 "Two tools run in this page and keep nothing outside your browser. Three more are in preparation.", ks_tool_cards(data)))]
+    if "rates" in data:
+        sections.append(calculator_band(lib, data["rates"]))
+    if pages.has("claimable"):
+        sections.append(unclaimed_band(data["claimable"], pages, here))
+    tools = verified_tools(data)
+    if tools:
+        labels = tool_group_labels(data)
+        n_r = Counter(r for t in tools for r in t["readers"])
+        named = terr_options(tools)
+        n_t = Counter({c: sum(1 for t in tools if in_territory(t, c)) for c in TERRITORY})
+        rail = ('<div class="gx-rail" id="ot-rail">'
+                + facet("reader", [(r, READERS[r][0]) for r in READERS if n_r[r]], "Reader", counts=n_r)
+                + facet("territory", [(c, TERRITORY[c]) for c in named], "Territory", counts=n_t,
+                        note=INTL_NOTE if "INTL" in named and len(named) > 1 else "") + "</div>")
+        groups = []
+        for g, label in labels.items():
+            mine = [t for t in tools if t["group"] == g]
+            if mine:
+                groups.append(f'<section class="ot-g" data-g="{g}" aria-labelledby="og-{g}"><h3 class="fx-label ot-gh" id="og-{g}">{esc(label)}</h3>'
+                              '<ul class="ot-list">' + "".join(tool_row(t) for t in mine) + "</ul></section>")
+        inner = (
+            '<p class="k-small fr-note">Each tool was opened and checked by two people before it was listed, and carries the date. '
+            'Listed for what it does, in our words; no ranking, no paid placement.</p>'
+            '<div class="gx"><details class="gx-filters" id="ot-filters" open><summary>Filters <span id="ot-active"></span></summary>' + rail + "</details>"
+            '<div class="gx-main"><p class="gx-count" id="ot-count" aria-live="polite"></p><div id="ot-list">' + "\n".join(groups) + "</div>"
+            '<p class="gx-empty" id="ot-empty" hidden>No tool matches. <button type="button" class="k-linkbtn" data-reset="tools">Clear the filters</button></p></div></div>'
+        )
+        aside = f'{count_of(len(tools), "tool")}, grouped by what they do. Narrow by who you are or where you work.'
+        sections.append(("directory", "Other tools", len(tools), band("directory", "Directory", "Other tools <em>worth knowing.</em>", aside, inner)))
+    else:
+        sections.append(("directory", "Other tools", None, band("directory", "Directory", "Other tools <em>worth knowing.</em>", "",
+                         '<p class="k-small">In preparation: a directory of outside tools for works searches, identifiers, unclaimed money, '
+                         'metadata, splits, sync and valuation, each opened and checked before it is listed.</p>')))
+    n_src, src = sources_band(lib, pages)
+    if n_src:
+        sections.append(("sources", "Sources", n_src, src))
+    return sections
+
+
+def dataset_jsonld(claimable, route, meta):
+    """schema.org Dataset for /music/claimable, pointing at the public JSON and the twin."""
+    rows = claimable["rows"]
+    url = f"{SITE}/music/{route['slug']}"
+    doc = {
+        "@context": "https://schema.org", "@type": "Dataset",
+        "name": "Claimable music royalties",
+        "description": (f"{count_of(len(rows), 'place')} where music royalties can sit unclaimed, by holder and territory: who can claim, "
+                        "how to claim, the cost, and what happens to money nobody claims. Each row is dated and sourced."),
+        "url": url, "dateModified": max(r["as_of"] for r in rows), "inLanguage": "en", "isAccessibleForFree": True,
+        "creator": {"@type": "Organization", "name": "KiteSink", "url": SITE + "/"},
+        "license": {"@type": "CreativeWork", "url": url + "#about-data",
+                    "name": "KiteSink's own summary of each holder's published pages and the law. Not legal advice."},
+        "spatialCoverage": [TERRITORY[t] for t in terr_options(rows)],
+        "keywords": ["unclaimed royalties", "music royalties"] + [MONEY[m].lower() for m in MONEY if any(r["money_type"] == m for r in rows)],
+        "distribution": [
+            {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": url + ".json"},
+            {"@type": "DataDownload", "encodingFormat": "text/markdown", "contentUrl": url + ".md"},
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(doc, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def public_source(s):
+    return OrderedDict((k, v) for k, v in s.items() if k != "support")
+
+
+def claimable_public(lib, claimable, meta):
+    """/music/claimable.json: the rows, and the sources they cite, without `support`."""
+    keys = []
+    for r in claimable["rows"]:
+        keys += [k for k in r["sources"] if k not in keys]
+    doc = OrderedDict([
+        ("name", "Claimable music royalties"),
+        ("url", f"{SITE}/music/claimable"),
+        ("publisher", "KiteSink"),
+        ("note", "KiteSink's own summary of each holder's published pages and the law, checked on each row's as_of date. Not legal advice. "
+                 + meta["scope_line"]),
+        ("dateModified", max(r["as_of"] for r in claimable["rows"])),
+        ("rows", claimable["rows"]),
+        ("sources", OrderedDict((k, public_source(claimable["sources"][k])) for k in keys)),
+    ])
+    text = json.dumps(doc, ensure_ascii=False, indent=1) + "\n"
+    if any(len(s.get("support", "")) >= 24 and s["support"] in text for s in claimable["sources"].values()):
+        raise SystemExit("claimable.json (public) would carry a source's support text")
+    return text
+
+
+def md_claimable(lib, meta, data, pages):
+    rows = data["claimable"]["rows"]
+    slug = pages.slug["claimable"]
+    out = ["# Claimable music royalties: KiteSink", "",
+           f"{count_of(len(rows), 'place')} where music royalties can sit unclaimed, by holder and territory. Each row says who can claim, "
+           "how, what it costs and what happens if nobody does, with the date it was checked and its sources.", "",
+           CLAIMABLE_SCOPE, "", f"The same rows as data: {SITE}/music/{slug}.json", ""]
+    for r in rows:
+        out += [f"## {r['holder']}: {r['pot']}", "",
+                f"- Money: {MONEY[r['money_type']]} · Where: {terr_label(r['territory'])} · For: {', '.join(READERS[x][0].lower() for x in r['readers'])}",
+                f"- Who can claim: {r['who_can_claim']}", f"- How to claim: {r['how_to_claim']}", f"- If nobody claims: {r['rule']}",
+                f"- Cost: {r['cost']}", f"- Link: [{r['link_label']}]({r['link']})",
+                f"- {SUPPORT[SUPPORT_OF[r['confidence']]]} ({CONF[r['confidence']].lower()}) · As of {date_label(r['as_of'])} · Sources: {lib.cite_md('claimable', r['sources'])}", ""]
+    if pages.has("tools"):
+        out += [f"To work through these as a checklist: {SITE}/music/{pages.slug['tools']}.md", ""]
+    return "\n".join(out) + md_footer(meta, "/" + slug)
+
+
+def md_rates(lib, rates):
+    """The calculator, as plain text: the method and the yearly rates."""
+    stream = {r["year"]: r for r in rates.get("streaming_revenue_percent", [])}
+    out = ["## Mechanical rate calculator", "", CALC_METHOD, "", f"Rates as of {date_label(rates['as_of'])}.", "",
+           "| Year | Per work | Per minute or part minute | Streaming, first prong (illustration) | Sources |", "|---|---|---|---|---|"]
+    for r in sorted(rates["physical"], key=lambda r: r["year"]):
+        s = stream.get(r["year"])
+        keys = list(r["sources"]) + [k for k in (s["sources"] if s else []) if k not in r["sources"]]
+        out.append(f"| {r['year']} | {cents_label(r['per_work_cents'])} cents | {cents_label(r['per_minute_cents'])} cents | "
+                   f"{str(s['percent']) + '% of revenue' if s else 'Not given'} | {lib.cite_md('rates', keys)} |")
+    out += ["", "Example: a 5:01 track counts as 6 minutes; at 2.52 cents a minute that is 15.12 cents, more than a 13.1-cent per-work rate, so 15.12 cents per copy.", ""]
+    if rates.get("ringtone_cents"):
+        out += [f"Ringtones: {cents_label(rates['ringtone_cents']['value'])} cents per ringtone, whatever its length. Sources: {lib.cite_md('rates', rates['ringtone_cents']['sources'])}", ""]
+    if stream:
+        out += [STREAM_NOTE + " The percentages above are the first prong only, shown as an illustration.", ""]
+    return out
+
+
+def md_checklist(data, pages):
+    out = ["## Unclaimed-money checklist", "", "Places that may hold royalties for you. Check each one that fits who you are and where your music earns.", ""]
+    for r in data["claimable"]["rows"]:
+        out.append(f"- [ ] **{r['holder']}** ({terr_label(r['territory'])}, {MONEY[r['money_type']].lower()}): {r['pot']}. "
+                   f"What to look for: {r['how_to_claim']} Cost: {r['cost']}. [{r['link_label']}]({r['link']})")
+    out += ["", f"Who can claim, the rules and the sources: {SITE}/music/{pages.slug['claimable']}.md", ""]
+    return out
+
+
+def md_tools(lib, meta, data, pages):
+    out = ["# Music rights tools: KiteSink", "",
+           "Two tools built here, a mechanical rate calculator and an unclaimed-money checklist, and a checked directory of other tools.", ""]
+    out += md_rates(lib, data["rates"]) if "rates" in data else ["## Mechanical rate calculator", "", "In preparation.", ""]
+    out += md_checklist(data, pages) if pages.has("claimable") else ["## Unclaimed-money checklist", "", "In preparation.", ""]
+    out += ["## In preparation", ""] + [f"- {name}: {blurb}" for anchor, name, blurb, _ in KS_TOOLS if not anchor] + [""]
+    out += ["## Other tools worth knowing", ""]
+    tools = verified_tools(data)
+    if not tools:
+        out += ["In preparation.", ""]
+    for g, label in tool_group_labels(data).items():
+        mine = [t for t in tools if t["group"] == g]
+        if mine:
+            out += [f"### {label}", ""]
+            for t in mine:
+                out.append(f"- [{t['name']}]({t['url']}) ({t['owner']}): {t['what']}" + (f" {t['note']}" if t.get("note") else "")
+                           + f" Access: {ACCESS[t['access']]}. For: {', '.join(READERS[r][0].lower() for r in t['readers'])}. "
+                           f"Where: {terr_label(t['territory'])}." + (f" Checked {date_label(t['checked'])}." if t.get("checked") else ""))
+            out.append("")
+    return "\n".join(out) + md_footer(meta, "/" + pages.slug["tools"])
+
+
+def md_area_tool(lib, dom, data, pages):
+    """What an area's twin says about the KiteSink tool embedded on its page."""
+    tool = TOOL_HOMES.get(dom)
+    if tool == "calculator" and "rates" in data:
+        return md_rates(lib, data["rates"]) + [f"The calculator itself: {SITE}/music/{pages.slug[dom]}#calculator", ""]
+    if tool == "checklist" and pages.has("claimable"):
+        return md_checklist(data, pages)
+    return []
+
+
 # ----------------------------------------------------------------- the hub, /music (behind HUB_LIVE)
 REFERENCE_CARDS = OrderedDict([
     ("claims", ("Things people say about royalties and rights, each with a verdict and its source.", "{n:claims} claims")),
@@ -1352,10 +1836,13 @@ def hub_readers(data, pages):
 
 def hub_tools(meta, pages):
     cards = []
+    written = [r["slug"] for r in pages.routes]
     for t in meta.get("tools", []):
-        href = t.get("href") if t.get("live") else None
-        if href and href.startswith("/music/") and href[len("/music/"):] not in [r["slug"] for r in pages.routes]:
-            href = None    # a page this build does not write: shown, not linked
+        href = t.get("href")
+        if href and href.startswith("/music/"):
+            href = href if href[len("/music/"):] in written else None   # linked when this build writes the page, else shown as in preparation
+        elif not t.get("live"):
+            href = None
         cards.append(hub_card(href, t["title"], t["blurb"], "Open" if href else "In preparation"))
     return '<ul class="hub-cards mr-tools" aria-labelledby="h-tools">\n        ' + "\n        ".join(cards) + "\n      </ul>"
 
@@ -1419,6 +1906,10 @@ def md_index(meta, data, numbers, counts, pages):
         ref.append(f"- [Key numbers and tables, indexed]({twin('reference')}): {numbers['n:numbers']} dated key numbers and {numbers['n:tables']} reference tables.")
     if pages.has("sources"):
         ref.append(f"- [Sources and grading]({twin('sources')}): how entries are graded, and all {numbers['n:sources']} sources.")
+    if pages.has("claimable"):
+        ref.append(f"- [Claimable royalties]({twin('claimable')}): {numbers['n:claimable']} places where royalties can sit unclaimed, and how to claim. As data: {SITE}/music/{pages.slug['claimable']}.json")
+    if pages.has("tools"):
+        ref.append(f"- [Tools]({twin('tools')}): a mechanical rate calculator, an unclaimed-money checklist and a checked directory of other tools.")
     if ref:
         out += ["", "## Reference", ""] + ref
     out += ["", "## How the entries are graded", ""] + md_grading() + [""]
@@ -1456,9 +1947,12 @@ def build():
     total = sum(counts.values()) + n_claims
     numbers = {"n:steps": kinds["step"], "n:claims": n_claims, "n:terms": kinds["term"], "n:numbers": kinds["number"],
                "n:tables": kinds["table"], "n:sources": len(lib.by_id), "n:total": total, "n:areas": len(present),
-               "n:planned": len(DOMAINS), "n:pages": len(pages.routes), "updated": meta["updated_label"]}
+               "n:planned": len(DOMAINS), "n:pages": len(pages.routes), "updated": meta["updated_label"],
+               "n:claimable": len(data.get("claimable", {}).get("rows", [])), "n:tools": len(verified_tools(data))}
     stats = {"areas": len(present), "entries": total, "pages": len(pages.routes), "sources": len(lib.by_id), "claims": n_claims,
-             "numbers": kinds["number"], "tables": kinds["table"], "terms": kinds["term"], "steps": kinds["step"]}
+             "numbers": kinds["number"], "tables": kinds["table"], "terms": kinds["term"], "steps": kinds["step"],
+             "claimable rows": len(data.get("claimable", {}).get("rows", [])), "listed tools": len(verified_tools(data)),
+             "rate years": len(data.get("rates", {}).get("physical", []))}
     out = OrderedDict()
     if not pages.routes:
         return out, stats   # nothing written yet: no pages, no index, and the hub stays as it is
@@ -1468,7 +1962,7 @@ def build():
     if len(index["rows"]) != total or {row[0] for row in index["rows"]} != set(pages.home):
         raise SystemExit("the search index does not hold every entry once")
     for dom in present:
-        out[PUBLIC / "music" / f"{pages.slug[dom]}.md"] = md_domain(lib, meta, dom, data[dom], pages)
+        out[PUBLIC / "music" / f"{pages.slug[dom]}.md"] = md_domain(lib, meta, dom, data[dom], pages, md_area_tool(lib, dom, data, pages))
     if pages.has("claims"):
         out[PUBLIC / "music" / f"{pages.slug['claims']}.md"] = md_claims(lib, meta, data["claims"]["entries"], pages)
     out[PUBLIC / "music" / "search.json"] = json.dumps(index, ensure_ascii=False, separators=(",", ":")) + "\n"
@@ -1498,7 +1992,8 @@ def main():
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(text, encoding="utf-8")
     print(f"built /music/: {stats['areas']} of {len(DOMAINS)} areas, {stats['entries']} entries on {stats['pages']} pages, each entry with "
-          "exactly one home; " + ", ".join(f"{stats[k]} {k}" for k in ("sources", "claims", "numbers", "tables", "terms", "steps"))
+          "exactly one home; " + ", ".join(f"{stats[k]} {k}" for k in ("sources", "claims", "numbers", "tables", "terms", "steps",
+                                                                         "claimable rows", "listed tools", "rate years"))
           + ("; hub written" if HUB_LIVE else "; hub not written (HUB_LIVE is False)"))
     return 0
 

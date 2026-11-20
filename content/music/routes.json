@@ -167,6 +167,24 @@
       "description": "How the KiteSink music field guide grades its entries, and all {{n:sources}} sources it cites: statutes, regulations, rulings, collecting bodies, standards and articles.",
       "h1": "Where this <em>comes from.</em>",
       "lead": "How entries are graded and all {{n:sources}} sources, from statutes and rulings to the collecting bodies' own documents. Last updated {{updated}}."
+    },
+    {
+      "slug": "claimable",
+      "kind": "claimable",
+      "label": "Claimable royalties",
+      "title": "Claimable music royalties: where unclaimed money is held and how to claim it · KiteSink",
+      "description": "{{n:claimable}} places where music royalties can sit unclaimed, by holder and territory: who can claim, how, what it costs, and what happens to money nobody claims. Each row dated and sourced.",
+      "h1": "Money you may be owed, <em>and where it is held.</em>",
+      "lead": "Places that hold royalties nobody has claimed yet. Each row says who is owed, how to claim, what it costs and what happens if nobody does, with the date it was checked and its sources."
+    },
+    {
+      "slug": "tools",
+      "kind": "tools",
+      "label": "Tools",
+      "title": "Music rights tools: mechanical rate calculator and unclaimed-money checklist · KiteSink",
+      "description": "A US mechanical rate calculator, a checklist of places to look for unclaimed royalties, and a directory of other music rights tools, each checked before it is listed.",
+      "h1": "Tools, <em>checked before they are listed.</em>",
+      "lead": "Two tools built here, a mechanical rate calculator and an unclaimed-money checklist, and a directory of other tools worth knowing. Each outside tool was opened and checked, and carries the date."
     }
   ]
 }
