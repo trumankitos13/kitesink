@@ -1058,7 +1058,161 @@ def pin_legacy(page, key, legacy):
     return page
 
 
-def render_sub(template, route, pages, sections, numbers, legacy=()):
+# ----------------------------------------------------------------- each page's hero card
+# The card in the top right of every page under /fitness/: a small working widget on six pages,
+# a rotating key number (or claim, or term) on the rest, and "on this page" under it. All of it
+# is in the HTML; /fitness-ref.js only cycles the rotator and runs the widgets' arithmetic.
+# Each widget names the entry its numbers come from, and the build checks that entry exists.
+CARD_WIDGETS = {
+    "nutrition": ("protein", "nut-protein-range"),
+    "diet": ("rate", "diet-deficit-rate"),
+    "health": ("who", "hlth-who-weekly-targets"),
+    "powerlifting": ("zones", "pl-table-intensity-zones"),
+    "meet": ("meet", None),
+    "sources": ("mix", None),
+}
+ROTATE = 12   # items in a rotator: enough to browse, few enough to keep the page light
+MEET_STAGES = [   # WHEN keys -> (days before the meet at which the stage starts; the meet is day 0)
+    ("months-out", 9999), ("weeks-out", 28), ("week-before", 7), ("day-before", 1), ("weigh-in", 0),
+    ("warm-up", 0), ("platform", 0), ("between-lifts", 0), ("after", -1),
+]
+
+
+def conf_badge(c):
+    return f'<span class="fc-badge c-{esc(c)}">{esc(CONF[c])}</span>'
+
+
+def spread(items, n=ROTATE):
+    """n items spread evenly through a list, the best supported first."""
+    order = {c: i for i, c in enumerate(CONF)}
+    items = sorted(items, key=lambda e: order.get(e.get("confidence"), 9))
+    if len(items) <= n:
+        return items
+    return [items[round(i * (len(items) - 1) / (n - 1))] for i in range(n)]
+
+
+def rotator(label, items, here, pages, render):
+    if not items:
+        return ""
+    lis = "".join(f'<li{"" if i == 0 else " hidden"}>{render(e)}</li>' for i, e in enumerate(items))
+    more = (f'<button type="button" class="fc-next" hidden>Another <span aria-hidden="true">→</span></button>' if len(items) > 1 else "")
+    return (f'<div class="fc-rot" data-rot><div class="fc-top"><p class="k-label">{esc(label)}</p>'
+            f'<span class="fc-of" aria-hidden="true">1 of {len(items)}</span></div><ul class="fc-items" aria-live="polite">{lis}</ul>{more}</div>')
+
+
+def number_card(e, href):
+    return (f'<a class="fc-num" href="{href}"><b>{esc(e["value"])}</b>' + (f' <small>{esc(e.get("unit", ""))}</small>' if e.get("unit") else "") + "</a>"
+            f'<p class="fc-t"><a href="{href}">{esc(e["title"])}</a></p>{conf_badge(e["confidence"])}')
+
+
+def widget_html(kind, entry, data, lib, pages, here):
+    def ref(eid):
+        dom = next(d for d in DOMAINS if any(x["id"] == eid for x in data[d]["entries"]))
+        e = next(x for x in data[dom]["entries"] if x["id"] == eid)
+        return e, pages.href(eid, here)
+    if kind == "protein":
+        e, href = ref(entry)
+        return ('<div class="fw" data-w="protein" data-lo="1.6" data-hi="2.2"><p class="k-label">Protein for you</p>'
+                '<div class="fw-in"><label for="fc-kg">Body weight</label><span class="with-unit"><input class="k-input" id="fc-kg" type="number" inputmode="decimal" min="30" max="660" step="0.5" value="75"><span class="fw-u">kg</span></span>'
+                '<button type="button" class="fw-unit" aria-label="Switch to pounds">lb</button></div>'
+                '<p class="fw-out"><b class="fw-a">120–165</b> g a day</p>'
+                f'<p class="fw-note">1.6 to 2.2 g per kg (0.7 to 1.0 g per lb). <a href="{href}">The entry</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "rate":
+        e, href = ref(entry)
+        return ('<div class="fw" data-w="rate" data-lo="0.5" data-hi="1"><p class="k-label">A pace for you</p>'
+                '<div class="fw-in"><label for="fc-kg">Body weight</label><span class="with-unit"><input class="k-input" id="fc-kg" type="number" inputmode="decimal" min="30" max="660" step="0.5" value="75"><span class="fw-u">kg</span></span>'
+                '<button type="button" class="fw-unit" aria-label="Switch to pounds">lb</button></div>'
+                '<p class="fw-out"><b class="fw-a">0.4–0.75</b> <span class="fw-ou">kg</span> a week</p>'
+                f'<p class="fw-note">0.5 to 1 percent of body weight a week, the usual pace for keeping muscle. <a href="{href}">The entry</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "who":
+        e, href = ref(entry)
+        ring = lambda cls, label: (f'<div class="fw-ring {cls}"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18"/><circle class="fw-arc" cx="22" cy="22" r="18" pathLength="100"/></svg>'
+                                   f'<p><b class="fw-rv">0</b><small>{label}</small></p></div>')
+        return ('<div class="fw" data-w="who"><p class="k-label">Your week against WHO</p><div class="fw-rings">'
+                + ring("r-act", "of 150 min") + ring("r-str", "of 2 days") + '</div>'
+                '<label class="fw-sl"><span>Moderate activity <b class="fw-mod">90</b> min a week</span><input type="range" class="k-range" id="fc-mod" min="0" max="420" step="10" value="90"></label>'
+                '<label class="fw-sl"><span>Vigorous <b class="fw-vig">0</b> min, counted double</span><input type="range" class="k-range" id="fc-vig" min="0" max="210" step="5" value="0"></label>'
+                '<label class="fw-sl"><span>Strength days <b class="fw-str">1</b> a week</span><input type="range" class="k-range" id="fc-str" min="0" max="7" step="1" value="1"></label>'
+                f'<p class="fw-note">150 to 300 minutes of moderate activity, or half as much vigorous, plus strength work on 2 or more days. <a href="{href}">The entry</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "zones":
+        e, href = ref(entry)
+        rows = e["rows"]
+        def pcts(cell):
+            lo, hi = re.findall(r"\d+", cell)[:2]
+            return int(lo), int(hi)
+        btns = "".join(f'<button type="button" class="fw-zone" aria-pressed="{"true" if i == 2 else "false"}" data-lo="{pcts(r[1])[0]}" data-hi="{pcts(r[1])[1]}" data-reps="{esc(r[2])}" data-why="{esc(r[3])}" '
+                       f'><span>{esc(r[0])}</span><small>{pcts(r[1])[0]}–{pcts(r[1])[1]}%</small></button>' for i, r in enumerate(rows))
+        r = rows[2]
+        lo, hi = pcts(r[1])
+        return ('<div class="fw" data-w="zones"><p class="k-label">Intensity zones</p>'
+                f'<div class="fw-zones" role="group" aria-label="Zones by percent of one-rep max">{btns}</div>'
+                f'<p class="fw-out"><b class="fw-a">{esc(r[0])} · {lo}–{hi}%</b></p><p class="fw-z">{esc(r[2])} reps a set. {esc(r[3])}.</p>'
+                '<div class="fw-in"><label for="fc-max">Your max</label><span class="with-unit"><input class="k-input" id="fc-max" type="number" inputmode="decimal" min="20" max="500" step="2.5" placeholder="—"><span class="fw-u">kg</span></span>'
+                '<button type="button" class="fw-unit" aria-label="Switch to pounds">lb</button></div>'
+                '<p class="fw-kg" hidden></p>'
+                f'<p class="fw-note">Common coaching zones; reps at a given percentage vary by lifter. <a href="{href}">The table</a> {conf_badge(e["confidence"])}</p></div>')
+    if kind == "meet":
+        steps = [x for x in data["meet"]["entries"] if x["type"] == "step"]
+        lis = []
+        for when, starts in MEET_STAGES:
+            group = [x for x in steps if x.get("when") == when]
+            if not group:
+                continue
+            lis.append(f'<li data-from="{starts}"><a href="#{esc(group[0]["id"])}"><span>{esc(WHEN[when])}</span><b>{len(group)}</b></a></li>')
+        return ('<div class="fw" data-w="meet"><p class="k-label">From sign-up to the platform</p>'
+                '<div class="fw-in"><label for="fc-date">Meet date</label><input class="k-input" id="fc-date" type="date"></div>'
+                '<p class="fw-out fw-when" hidden></p>'
+                f'<ol class="fw-tl">{"".join(lis)}</ol>'
+                '<p class="fw-note">The steps in each stage, in order. Put in your date to see where you are.</p></div>')
+    if kind == "mix":
+        rows = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] != "term"] + data["claims"]["entries"]
+        n = Counter(e.get("confidence") for e in rows)
+        total = sum(n[c] for c in CONF)
+        bar = "".join(f'<i class="c-{c}" style="flex-grow:{n[c]}" title="{esc(CONF[c])}: {n[c]}"></i>' for c in CONF if n[c])
+        legend = "".join(f'<li><i class="c-{c}"></i>{esc(CONF[c])}<b>{n[c]}</b></li>' for c in CONF if n[c])
+        types = Counter(src_type(s) for s in lib.by_id.values())
+        tlist = "".join(f"<li>{esc(t)}<b>{k}</b></li>" for t, k in types.most_common(6))
+        return ('<div class="fw" data-w="mix"><p class="k-label">How well supported the guide is</p>'
+                f'<div class="fw-bar" role="img" aria-label="{total} entries by grade: ' + ", ".join(f"{CONF[c]} {n[c]}" for c in CONF if n[c]) + f'">{bar}</div>'
+                f'<ul class="fw-leg">{legend}</ul>'
+                f'<p class="k-label fw-sub">{len(lib.by_id)} sources, by kind</p><ul class="fw-types">{tlist}</ul></div>')
+    raise SystemExit(f"unknown card widget {kind}")
+
+
+def hero_card(route, data, lib, pages, jump):
+    """The card for one page: a widget or a rotator, then the jump links."""
+    here, kind = route["slug"], route["kind"]
+    key = route["area"] if kind == "area" else kind
+    body = ""
+    if key in CARD_WIDGETS:
+        w, entry = CARD_WIDGETS[key]
+        if entry and entry not in pages.home:
+            raise SystemExit(f"the {key} page's card names {entry}, which is not an entry")
+        body = widget_html(w, entry, data, lib, pages, here)
+    elif kind == "area":
+        nums = [e for e in data[key]["entries"] if e["type"] == "number"]
+        body = rotator("Key number", spread(nums), here, pages, lambda e: number_card(e, pages.href(e["id"], here)))
+    elif kind == "reference":
+        nums = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] == "number"]
+        body = rotator("Key number", spread(nums), here, pages, lambda e: number_card(e, pages.href(e["id"], here))
+                       .replace('<p class="fc-t">', f'<p class="fc-t"><span class="fc-area">{esc(DOMAINS[next(d for d in DOMAINS if e in data[d]["entries"])][0])}</span> ', 1))
+    elif kind == "claims":
+        cl = data["claims"]["entries"]
+        n = Counter(c["verdict"] for c in cl)
+        meter = "".join(f'<i class="{VERDICTS[v][1]}" style="flex-grow:{n[v]}"></i>' for v in VERDICTS if n[v])
+        legend = "".join(f'<li><i class="{VERDICTS[v][1]}"></i>{esc(VERDICTS[v][0])}<b>{n[v]}</b></li>' for v in VERDICTS if n[v])
+        body = (f'<div class="fw"><p class="k-label">{len(cl)} claims, by verdict</p><div class="fw-bar" role="img" aria-label="'
+                + ", ".join(f"{VERDICTS[v][0]} {n[v]}" for v in VERDICTS if n[v]) + f'">{meter}</div><ul class="fw-leg">{legend}</ul></div>'
+                + rotator("A claim", spread(cl), here, pages, lambda c: f'<p class="fc-t"><a href="{pages.href(c["id"], here)}">{esc(c["title"])}</a></p><span class="fc-verdict {VERDICTS[c["verdict"]][1]}">{esc(VERDICTS[c["verdict"]][0])}</span>'))
+    elif kind == "glossary":
+        terms = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] == "term"]
+        body = rotator("A term", spread(terms), here, pages, lambda e: f'<p class="fc-term"><a href="{pages.href(e["id"], here)}">{esc(e["title"])}</a></p><p class="fc-def">{esc(e["take"])}</p>')
+    if not body and not jump:
+        return ""
+    return f'<aside class="fr-card" aria-label="{esc(route_label(route))} at a glance">{body}{jump}</aside>'
+
+
+def render_sub(template, route, pages, sections, numbers, legacy=(), card=None):
     """Pour one page into the shell. numbers fills {{n:…}} and {{updated}} in the route's own text."""
     def filled(text):
         def one(m):
@@ -1076,13 +1230,13 @@ def render_sub(template, route, pages, sections, numbers, legacy=()):
     crumb = f'<li><a href="/">Home</a></li><li><a href="/fitness">Fitness</a></li><li aria-current="page">{esc(label)}</li>'
     jump = ""
     if len(sections) > 1 and route["kind"] not in ("claims", "glossary"):   # those two are one list each; the rest have sections to move between
-        jump = ('<nav class="fr-jump" aria-label="On this page">'
+        jump = ('<nav class="fr-jump" aria-label="On this page"><p class="k-label">On this page</p>'
                 + "".join(f'<a href="#{sid}">{esc(name)}' + (f" <b>{n}</b>" if n is not None else "") + "</a>" for sid, name, n, _ in sections) + "</nav>")
     fills = {
         "slug": slug, "title": esc(filled(route["title"])), "description": esc(filled(route["description"])),
         "h1": filled(route["h1"]), "lead": esc(filled(route["lead"])), "breadcrumb": breadcrumb, "crumb": crumb,
         "subnav": subnav_html(pages, slug), "subnav_here": subnav_here_html(pages, slug), "n:pages": str(len(pages.routes)), "areas": " ".join(DOMAINS),
-        "jump": jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
+        "card": card(jump) if card else jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
     }
 
     def fill(m):
@@ -1117,14 +1271,14 @@ def build_subpages(lib, meta, data, numbers, tool_uses, pages, legacy):
             else:
                 sections = page_reference(data, pages, r)
         total.update(tally)
-        built[r["slug"]] = render_sub(template, r, pages, sections, numbers, legacy)
+        built[r["slug"]] = render_sub(template, r, pages, sections, numbers, legacy, lambda jump, r=r: hero_card(r, data, lib, pages, jump))
     unused = [k for k in lib.by_id if not total[k]]
     if unused:
         raise SystemExit("sources no page cites: " + ", ".join(unused))
     for r in routes:   # last, so it can show how often each source is cited across all the pages
         if r["kind"] == "sources":
             with lib.counting(total):
-                built[r["slug"]] = render_sub(template, r, pages, page_sources(lib, pages, r, corrections), numbers, legacy)
+                built[r["slug"]] = render_sub(template, r, pages, page_sources(lib, pages, r, corrections), numbers, legacy, lambda jump, r=r: hero_card(r, data, lib, pages, jump))
     check_subpages(built, pages, lib)
 
     out = OrderedDict((PUBLIC / "fitness" / f"{r['slug']}.html", built[r["slug"]]) for r in routes)
