@@ -40,7 +40,8 @@ the reference twins, how entries are graded, and then the music projects (from
 `content/music/templates/hub.md`). The pages under `/music/` are listed pages with a twin each,
 announced in their `<head>`, listed in `/llms.txt` in the order of the hub, and routed in
 `run_worker_first`; the audit checks all three for every page the build has written. When the
-build writes a new music page, add its line and route by hand, as for a fitness area.
+build writes a new music page, add its line and route by hand, as for a fitness area, and its
+slug to the `Pages:` paragraph of the music agent skill (see Agent discovery below).
 `/music/search.json` (the hub's search index) and `/music/claimable.json` (the claimable table
 as data, linked from its twin) are not twins.
 
@@ -54,10 +55,39 @@ Then give it a line in `/llms.txt`, a route in `run_worker_first`, and rebuild
 
 `/llms-full.txt` is every twin in one file, for readers that want the whole site in one
 request. `python3 scripts/build_llms_full.py` writes it; run it after the fitness or music
-build and after editing any hand-written twin. The audit fails if it is out of date. With twelve
-fitness areas and three music areas it is about 1.5 MB (1.34 MB before the music pages). Decide
-what to leave out of it rather than let it grow: the fitness list of sources is the largest
-single part, and it stays at `/fitness/sources.md` either way.
+build and after editing any hand-written twin. The audit fails if it is out of date.
+
+### What llms-full.txt leaves out
+
+Every twin listed in `/llms.txt` has its own part in `/llms-full.txt`, headed by its address,
+in the same order. Within those parts, text that would be repeated is given once, and nothing
+goes without a pointer to where it is. Each twin at its own address stays complete. The rules,
+all in `scripts/build_llms_full.py`:
+
+1. **Offers.** The offers block that ends every twin appears once, at the end of the file.
+2. **Repeated sections.** A `## ` section (200 characters or more) whose text is word for
+   word a section already in the file becomes one line naming the part that holds it. Today
+   that is the fitness and music reference twins' "The full entries, as plain text" (the same
+   as each glossary's "Read the areas"), "How the entries are graded" on `/fitness/sources.md`
+   (the same as on `/fitness.md`), and the unclaimed-money checklist on `/music/tools.md` (the
+   same as on `/music/unclaimed-recovery.md`).
+3. **Terms.** The `## Terms` section at the end of a fitness or music area (each term and its
+   definition) becomes the list of its term names, when every definition is word for word in
+   that guide's glossary, which has its own part. If any is not, the section stays whole.
+4. **Lists of sources.** The A-to-Z list on `/fitness/sources.md` and `/music/sources.md`
+   (`## All N sources, A to Z`) becomes a line giving the twin's address, followed only by the
+   sources whose address appears nowhere else in the file. The entries link their own sources
+   (author, year and address), so every source's address stays in the file; what moves out is
+   each full reference (title, journal, kind, times cited), which stays at its twin. The
+   grading notes, articles and corrections on those twins stay. To put the lists back, set
+   `LEAVE_OUT_SOURCE_LISTS` to `False`.
+
+On 20 November 2026 this took the file from 1,498,232 bytes to 1,200,659: the source lists
+saved about 257 KB, the terms about 38 KB, the repeated sections about 5 KB (the offers rule
+was already in place). Nothing else is left out. When it grows again, look first for text
+that repeats; the next candidates are the fitness reference twin (an index of numbers and
+tables that the areas hold in full) and the mechanical rate calculator section, which
+`/music/tools.md` and `/music/mechanicals-mlc.md` repeat except for one line.
 
 Each twin says the same things as its page. The one addition is an enquiry link,
 `/consulting?via=ai-assistant#contact`, which fills the "Found via" line of the contact
@@ -143,7 +173,7 @@ daily requests: the Workers Free plan allows 100,000 a day on the worker's route
 | `Link` headers (RFC 8288) | Done | Every page with a twin sends `Link: </<twin>.md>; rel="alternate"; type="text/markdown"`; the home page adds `</llms.txt>; rel="describedby"`. Generated into `public/_headers` |
 | Content Signals | Done | `Content-Signal: search=yes, ai-input=yes, ai-train=yes` in `public/robots.txt`, the owner's choice. It matches the Cloudflare setting that lets AI crawlers in |
 | Markdown negotiation | Done | `worker/ai-twins.js` through `wrangler.jsonc`, above |
-| Agent skills index | Done | `/.well-known/agent-skills/index.json` lists one skill, `kitesink-fitness-reference`: how to find, read and cite an entry using `search.json` and the twins |
+| Agent skills index | Done | `/.well-known/agent-skills/index.json` lists two skills, `kitesink-fitness-reference` and `kitesink-music-reference`: how to find, read and cite an entry using each guide's `search.json` and twins (and, for music, `claimable.json`) |
 | WebMCP, ARD manifest | Not done, by choice | WebMCP is an experimental browser API; ARD would only re-list the skills index. Neither changes the level |
 | MCP Server Card, A2A Agent Card, API catalog, OAuth discovery and protected resource, auth.md, DNS-AID | Not applicable | The site has no MCP server, agent, API or sign-in. Publishing descriptors for them would be untrue |
 
@@ -162,10 +192,15 @@ Levels (from the scanner's guide): 2 needs Content Signals; 3 adds markdown nego
 (docs/DEPLOY-CLOUDFLARE.md). With the worker in it, the scan should reach level 4, since the
 skills index is already live. Rescan after each deploy to confirm.
 
-The audit also holds the skill to the site: the page slugs it names must be the pages
-under `/fitness/`, `search.json` must have the keys and row layout it describes, and every
-row must be findable in its page's twin the way it says. A change to the fitness build that
-breaks any of that fails the audit until the skill is updated.
+The audit also holds each skill to the site: the page slugs it names (its `Pages:` paragraph)
+must be the pages under `/fitness/` or `/music/`, `search.json` must have the keys and row
+layout it describes, and every row must be findable in its page's twin the way it says. For
+the music skill it also checks that `claimable.json` has exactly the keys the skill names, for
+the file and for each row, and that the skill quotes `scope_line` from `content/music/meta.json`
+word for word. A change to the fitness or music build that breaks any of that fails the audit
+until the skill is updated. When the music build writes a new area, add its slug to the music
+skill's `Pages:` paragraph (and its description, if the area changes what the guide covers),
+then run `python3 scripts/build_agent_files.py`.
 
 ## Before expecting any traffic
 

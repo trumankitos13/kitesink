@@ -7,6 +7,13 @@
       "description": "Look up, read and cite entries in the KiteSink fitness reference (kitesink.com/fitness), a sourced field guide to strength training, hypertrophy, powerlifting, conditioning, recovery, nutrition, diet and body composition, plus a list of common claims with verdicts. Use when a question about training or nutrition could be answered from it, or when a user asks what KiteSink says about a topic.",
       "url": "/.well-known/agent-skills/kitesink-fitness-reference/SKILL.md",
       "digest": "sha256:1aef349105f2d90c103f8233f241976bdf35dacbe52cee01e325280f1b7a9f81"
+    },
+    {
+      "name": "kitesink-music-reference",
+      "type": "skill-md",
+      "description": "Look up, read and cite entries in the KiteSink music field guide (kitesink.com/music), a sourced guide to music rights and royalties (the two copyrights in a song, mechanical royalties and the MLC, unclaimed royalties), plus common claims with verdicts and a dated table of where unclaimed royalties are held and how to claim them. Use when a question about music royalties or rights could be answered from it, or when a user asks what KiteSink says about a topic.",
+      "url": "/.well-known/agent-skills/kitesink-music-reference/SKILL.md",
+      "digest": "sha256:e0c734b54a5fe56c5e692902c3f6fca517ba5e4873bfbeab267e997cc3b18fdb"
     }
   ]
 }

@@ -310,28 +310,23 @@ def audit_llms_full() -> list[str]:
     return []
 
 
-def audit_fitness_skill() -> list[str]:
-    """The kitesink-fitness-reference skill describes internals that scripts/build_fitness.py
-    owns. Fail when they drift apart: the pages it names, the layout of search.json, and how
-    an entry is found in its page's twin (a heading, a bold glossary item or a table row)."""
-    label = "public/.well-known/agent-skills/kitesink-fitness-reference/SKILL.md"
-    skill_path = ROOT / label
-    if not skill_path.is_file():
-        return []
-    skill = skill_path.read_text(encoding="utf-8")
+def audit_skill_search(label: str, skill: str, section: str, subpages: tuple[str, ...]) -> list[str]:
+    """What a field-guide skill says about its section, held to the build that owns it: the
+    pages it names (its "Pages:" paragraph), the layout of /<section>/search.json, and how an
+    entry is found in its page's twin (a heading, a bold glossary item or a table row)."""
     issues: list[str] = []
     pages_line = re.search(r"^Pages: (.*?)\n\n", skill, re.M | re.S)
-    named = re.findall(r"`([a-z]+)`", pages_line.group(1)) if pages_line else []
-    if named != list(FITNESS_SUBPAGES):
-        issues.append(f"{label}: names the pages {named}, but the pages under /fitness/ are {list(FITNESS_SUBPAGES)}")
-    search_path = PUBLIC / "fitness" / "search.json"
+    named = re.findall(r"`([a-z-]+)`", pages_line.group(1)) if pages_line else []
+    if named != list(subpages):
+        issues.append(f"{label}: names the pages {named}, but the pages under /{section}/ are {list(subpages)}")
+    search_path = PUBLIC / section / "search.json"
     if not search_path.is_file():
-        return issues + ["public/fitness/search.json: missing (the fitness skill relies on it)"]
+        return issues + [f"public/{section}/search.json: missing (the {section} skill relies on it)"]
     search = json.loads(search_path.read_text(encoding="utf-8"))
     if sorted(search) != ["areas", "kinds", "pages", "rows"]:
         return issues + [f"{label}: says search.json holds pages, kinds, areas and rows; it holds {sorted(search)}"]
-    if search["pages"] != list(FITNESS_SUBPAGES):
-        issues.append(f"{label}: search.json lists the pages {search['pages']}, not the pages under /fitness/")
+    if search["pages"] != list(subpages):
+        issues.append(f"{label}: search.json lists the pages {search['pages']}, not the pages under /{section}/")
     twins: dict[str, str] = {}
     lost = []
     for row in search["rows"]:
@@ -342,13 +337,61 @@ def audit_fitness_skill() -> list[str]:
             break
         page = search["pages"][row[1]]
         if page not in twins:
-            twin = PUBLIC / "fitness" / f"{page}.md"
+            twin = PUBLIC / section / f"{page}.md"
             twins[page] = twin.read_text(encoding="utf-8") if twin.is_file() else ""
         title = re.escape(row[4])
         if not any(re.search(p, twins[page], re.M) for p in (rf"^#{{2,4}} {title}\s*$", rf"^- \*\*{title}\*\*", rf"^\|.*\| {title}:")):
             lost.append(f"{row[0]} on {page}")
     if lost:
         issues.append(f"{label}: {len(lost)} entries cannot be found in their twin the way the skill says, e.g. {', '.join(lost[:3])}")
+    return issues
+
+
+def audit_fitness_skill() -> list[str]:
+    """The kitesink-fitness-reference skill describes internals that scripts/build_fitness.py
+    owns. Fail when they drift apart: the pages it names, the layout of search.json, and how
+    an entry is found in its page's twin (a heading, a bold glossary item or a table row)."""
+    label = "public/.well-known/agent-skills/kitesink-fitness-reference/SKILL.md"
+    skill_path = ROOT / label
+    if not skill_path.is_file():
+        return []
+    return audit_skill_search(label, skill_path.read_text(encoding="utf-8"), "fitness", FITNESS_SUBPAGES)
+
+
+# The keys of /music/claimable.json and of each of its rows, as the music skill names them.
+# scripts/build_music.py writes the file from content/music/claimable.json (DATA-PAGES.md).
+CLAIMABLE_KEYS = ["name", "url", "publisher", "note", "dateModified", "rows", "sources"]
+CLAIMABLE_ROW_KEYS = ["id", "holder", "pot", "money_type", "territory", "readers", "who_can_claim", "how_to_claim",
+                      "rule", "cost", "link", "link_label", "confidence", "sources", "as_of"]
+
+
+def audit_music_skill() -> list[str]:
+    """The kitesink-music-reference skill describes internals that scripts/build_music.py owns.
+    Fail when they drift apart: the pages it names (the music pages written so far), the layout
+    of search.json, how an entry is found in its twin, the keys of claimable.json, and the
+    scope line, which must be the one in content/music/meta.json word for word."""
+    label = "public/.well-known/agent-skills/kitesink-music-reference/SKILL.md"
+    skill_path = ROOT / label
+    if not skill_path.is_file():
+        return []
+    skill = skill_path.read_text(encoding="utf-8")
+    issues = audit_skill_search(label, skill, "music", MUSIC_SUBPAGES)
+    claimable_path = PUBLIC / "music" / "claimable.json"
+    if not claimable_path.is_file():
+        issues.append("public/music/claimable.json: missing (the music skill relies on it)")
+    else:
+        claimable = json.loads(claimable_path.read_text(encoding="utf-8"))
+        if list(claimable) != CLAIMABLE_KEYS:
+            issues.append(f"{label}: says claimable.json holds {CLAIMABLE_KEYS}; it holds {list(claimable)}")
+        odd = sorted({key for row in claimable.get("rows", []) for key in row} ^ set(CLAIMABLE_ROW_KEYS))
+        if odd:
+            issues.append(f"{label}: the claimable.json row keys differ from the ones the skill names: {odd}")
+        unnamed = [key for key in CLAIMABLE_KEYS + CLAIMABLE_ROW_KEYS if f"`{key}`" not in skill]
+        if unnamed:
+            issues.append(f"{label}: does not name the claimable.json keys {unnamed}")
+    scope = json.loads((ROOT / "content" / "music" / "meta.json").read_text(encoding="utf-8")).get("scope_line", "")
+    if scope and f'"{scope}"' not in skill:
+        issues.append(f"{label}: must quote the scope line in content/music/meta.json word for word")
     return issues
 
 
@@ -370,6 +413,7 @@ def audit_agent_files() -> list[str]:
         if path.is_file() and path not in known:
             issues.append(f"{path.relative_to(ROOT).as_posix()}: published under /.well-known/ but not in the skills index; list it or add a rule for it here")
     issues += audit_fitness_skill()
+    issues += audit_music_skill()
     robots = (PUBLIC / "robots.txt").read_text(encoding="utf-8")
     signal = re.search(r"^User-agent: \*\n(?:.*\n)*?Content-Signal: (.+)$", robots, re.M)
     keys = dict(part.strip().split("=", 1) for part in signal.group(1).split(",")) if signal else {}
