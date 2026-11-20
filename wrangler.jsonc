@@ -24,7 +24,9 @@
       "/", "/consulting", "/fitness", "/vantix", "/music", "/listening-club", "/about",
       "/fitness/basics", "/fitness/technique", "/fitness/hypertrophy", "/fitness/powerlifting", "/fitness/meet",
       "/fitness/conditioning", "/fitness/recovery", "/fitness/nutrition", "/fitness/diet", "/fitness/bodycomp",
-      "/fitness/women", "/fitness/health", "/fitness/claims", "/fitness/glossary", "/fitness/reference", "/fitness/sources"
+      "/fitness/women", "/fitness/health", "/fitness/claims", "/fitness/glossary", "/fitness/reference", "/fitness/sources",
+      "/music/royalty-basics", "/music/mechanicals-mlc", "/music/unclaimed-recovery", "/music/claims", "/music/glossary",
+      "/music/reference", "/music/sources", "/music/claimable", "/music/tools"
     ]                                    // worker
   },
   "compatibility_flags": ["nodejs_compat"]

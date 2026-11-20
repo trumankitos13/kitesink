@@ -62,11 +62,11 @@ SRC = Path(os.environ.get("KS_MUSIC_SRC") or DEFAULT_SRC)
 PUBLIC = Path(os.environ.get("KS_MUSIC_OUT") or ROOT / "public")
 SITE = "https://kitesink.com"
 
-# /music is still the live page for Song of the Day, Stage First and the Listening Club.
-# While this is False the build never writes public/music.html or public/music.md. Set it to
-# True (or preview with KS_MUSIC_OUT pointing at a scratch folder) to write the new hub, which
-# keeps those three projects in a band of its own (content/music/templates/hub.html).
-HUB_LIVE = False
+# True: the build writes public/music.html and public/music.md, the field guide's hub, which
+# keeps Song of the Day, Stage First, the Listening Club and "For music teams" in a band of its
+# own (content/music/templates/hub.html, content/music/templates/hub.md). Set it to False and
+# the build leaves those two files alone (restore the hand-written page from git if you do).
+HUB_LIVE = True
 
 # The areas, in the order they appear everywhere: the hub, the navigation, the twins.
 DOMAINS = OrderedDict([

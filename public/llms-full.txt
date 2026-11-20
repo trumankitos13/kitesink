@@ -1,8 +1,8 @@
 # KiteSink: every page in one file
 
-> The one-person workshop of Truman Kitos-Lindsey: consulting (including an AI concierge service), fitness tools and a sourced training and nutrition reference, music projects, and a game. Each link below is a plain-text version of a page on kitesink.com.
+> The one-person workshop of Truman Kitos-Lindsey: consulting (including an AI concierge service), fitness tools and a sourced training and nutrition reference, music projects and a sourced music rights and royalties reference, and a game. Each link below is a plain-text version of a page on kitesink.com.
 
-The 23 plain-text pages listed in https://kitesink.com/llms.txt, one after another. Each part begins with the address of the file it came from.
+The 32 plain-text pages listed in https://kitesink.com/llms.txt, one after another. Each part begins with the address of the file it came from.
 
 ================================================================
 FILE: https://kitesink.com/index.md
@@ -11478,15 +11478,79 @@ Last updated 2026-11-13.
 FILE: https://kitesink.com/music.md
 ================================================================
 
-# Music at KiteSink
+# KiteSink Music
+
+A free field guide to music rights and royalties by Truman Kitos-Lindsey, and three music projects. The guide holds 119 sourced entries in 3 of 15 planned areas. Every entry says who it is for (songwriters, artists, producers, publishers and labels, administrators), where it applies, how well sourced it is, and the date of anything that moves.
+
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer.
+
+## The field guide, by area
+
+### A. The money
+
+- [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns. 36 entries.
+- Performance royalties: PROs, public performance, and how plays become pay. In preparation.
+- [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective. 43 entries.
+- Neighbouring rights: What the recording earns on its own: SoundExchange, PPL and performer shares. In preparation.
+
+### B. Infrastructure
+
+- Deal structures: Publishing, admin, label and distribution deals, and what each takes. In preparation.
+- Metadata and registration: ISWC, ISRC, IPI and the registrations that route the money. In preparation.
+- International societies: Royalties earned abroad, and how they reach you. In preparation.
+- Sync licensing: Music in film, TV, games and adverts. In preparation.
+
+### C. Recovery and guardrails
+
+- [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it. 26 entries.
+- Audits: Reading a statement, and checking the payer's sums. In preparation.
+- Copyright fundamentals: Ownership, registration, terms and getting rights back. In preparation.
+
+### D. AI
+
+- AI and music rights: Training, outputs, likeness, and the cases and rules so far. In preparation.
+
+### E. Also new
+
+- Producer royalties: Points, letters of direction and SoundExchange. In preparation.
+- Distribution and DSPs: Getting released on streaming services, and how they pay. In preparation.
+- Catalogue finance: Valuing, selling and borrowing against a catalogue. In preparation.
+
+## By reader
+
+- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 72 entries.
+- Artists: Getting paid for the recording, and what a deal takes from it. 47 entries.
+- Producers: Points, letters of direction, SoundExchange, and producers who also write. 31 entries.
+- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 97 entries.
+- Administrators: The detail work: metadata, matching, claims and statements. 80 entries.
+
+## Reference
+
+- [Claims, checked](https://kitesink.com/music/claims.md): 14 common claims, each with a verdict, what it rests on, and the source.
+- [Glossary](https://kitesink.com/music/glossary.md): the 22 terms the areas use, in plain words.
+- [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): 11 dated key numbers and 9 reference tables.
+- [Sources and grading](https://kitesink.com/music/sources.md): how entries are graded, and all 47 sources.
+- [Claimable royalties](https://kitesink.com/music/claimable.md): 7 places where royalties can sit unclaimed, and how to claim. As data: https://kitesink.com/music/claimable.json
+- [Tools](https://kitesink.com/music/tools.md): a mechanical rate calculator, an unclaimed-money checklist, an identifier checker, a split-sheet generator and a checked directory of other tools.
+
+## How the entries are graded
+
+- **Sourced**: The law, or the responsible body's own document, states it.
+  - Law: A statute, regulation, court decision or Copyright Royalty Board determination states it.
+  - Official: The responsible body's own published document states it: the MLC, a PRO or society, SoundExchange, the Copyright Office, CISAC, DDEX, IFPI or ISO.
+- **Directional**: Trade press, a secondary source, an estimate or common practice. A good guide, not a settled fact.
+  - Reported: Trade press or a credible secondary source only, or a figure its source calls an estimate.
+  - Industry practice: Common industry convention with no direct source.
+
+## Music projects
 
 Three music projects by Truman Kitos-Lindsey, plus consulting for music teams.
 
-## Song of the Day
+### Song of the Day
 
 One curated song every day, with the story, the lineage and the liner notes to go with it. An iOS app for deep listening. **Status: coming soon.** It is not on the App Store yet. The app works fully signed out; signing in with Apple or Google is only for syncing collected songs across devices. More: https://kitesink.com/song-of-the-day
 
-## Stage First
+### Stage First
 
 The business side of a live show, from staffing the stage to closing out the night. It has two sides.
 
@@ -11495,19 +11559,1575 @@ The business side of a live show, from staffing the stage to closing out the nig
 
 First cities planned: Austin and Nashville. Nothing is launched. More: https://kitesink.com/stage-first
 
-## Album Listening Club
+### Album Listening Club
 
 An in-person club: three albums, one quiet afternoon, once a month. It starts fresh in 2027 with an inaugural session on **Saturday 30 January 2027 at midday**, then meets on the last Saturday of every month. Free, no ticket, no RSVP. Venues rotate and are posted in Discord. Details: [https://kitesink.com/listening-club.md](https://kitesink.com/listening-club.md)
 
-## For music teams
+### For music teams
 
 Workflow automation, operations improvements and practical AI for labels, artist teams and music companies: [https://kitesink.com/consulting.md](https://kitesink.com/consulting.md)
 
 ---
 
-Page for people: https://kitesink.com/music  
-Contact: hello@kitesink.com  
-Last updated 2026-11-13.
+Source page: https://kitesink.com/music  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/royalty-basics.md
+================================================================
+
+# Royalty basics: KiteSink music field guide
+
+The two copyrights in a song, and the money each one earns. Each entry gives the point, the reasoning, what to do, who it is for, where it applies, how well sourced it is, and its sources.
+Grades: Sourced (law or official) and Directional (reported or industry practice).
+
+## Guidance
+
+### Every recorded song holds two separate copyrights
+
+**The song (music and lyrics) and the recording of it are two works, each with its own rights and its own income.**
+
+A song is a musical work. A recording of someone performing it is a sound recording. US law treats them as distinct works, and their owners can be different people. The rest of this page follows that split: each work earns through its own rights and its own collectors.
+
+- Write down who owns the song and who owns the recording for every release.
+
+Two copyrights · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+
+### A recording's authors: the performer and producer, unless made for hire
+
+**The Copyright Office names the featured performer and the producer as authors of a sound recording. For a work made for hire, the employer or hiring party is the author.**
+
+That is the starting point for US registration. Ownership can be transferred by contract, so the owner on paper may differ from the author. Read the agreement for each release, and have a music lawyer review anything that transfers ownership.
+
+- Check each contract for who owns the master and for how long.
+
+Two copyrights · Intermediate · Sourced (official) · For: artists, producers, publishers and labels · Where: US · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+
+### Copyright protection starts on creation; registration is a separate step
+
+**A US sound recording made since 1978 is protected from the moment it is fixed. Registering with the Copyright Office is a separate step with its own form, fee and deposit.**
+
+Circular 56 says protection under current law needs neither registration nor publication. Circulars 50 and 56 explain how to apply: a completed application, a filing fee and a copy of the work. The Office warns that its fees change, so check the current list before you file.
+
+- Read the circular for your type of work before applying.
+
+Two copyrights · Intermediate · Sourced (official) · For: songwriters, artists · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+
+### Mechanical and performance royalties pay for different uses
+
+**A mechanical royalty pays for making copies of a song, and a performance royalty pays when it is performed or communicated to the public.**
+
+Both terms come from industry custom more than from statute. WIPO describes the mechanical right as the right to record a work and distribute copies, and the performing right as covering live or broadcast use and other ways of reaching the public. A single stream of a song can involve both rights, so more than one body may collect on it.
+
+- Register each song with every body that collects on it.
+
+Income streams · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106)
+
+### US recordings have no general public performance right
+
+**A US sound recording owner has a performance right only for digital audio transmissions, not the broader right that song owners hold.**
+
+Section 114(a) gives a sound recording owner only four of the section 106 rights, (1), (2), (3) and (6), leaving out the general performance right in (4). Clause (6) covers digital audio transmissions, so the US recording side has one dedicated route for performance money.
+
+- Do not assume a UK or Canadian recording royalty has a US equivalent.
+
+Income streams · Intermediate · Sourced (law) · For: artists, publishers and labels · Where: US · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106)
+
+### Sync licences need permission for the song and for the recording
+
+**Putting music in a film, ad or game is licensed by deal. In practice, using an existing recording means clearing both the song and the recording.**
+
+Sync is agreed case by case between the user and the owners of each work, and this guide gives no fee levels. Clearing one side does not clear the other. A music lawyer should review a sync licence before it is signed.
+
+- Ask the owner of each side for a written licence before the music is used.
+
+Income streams · Beginner · Directional (industry practice) · For: songwriters, artists, publishers and labels · Where: US, International
+
+### Printed music and lyrics are another reproduction use
+
+**Printed sheet music counts as a reproduction of the song. Lyrics are part of the song, so using them is also a use of the song.**
+
+WIPO lists printed sheet music as one form of reproducing a musical work, and Circular 50 treats the words that go with the music as part of the musical work. Who licenses print and lyrics varies, so do not assume it is covered.
+
+- Ask your publisher or administrator whether print and lyric licensing is included.
+
+Income streams · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+
+### The MLC collects US digital mechanicals for songs
+
+**The MLC collects mechanical royalties from eligible US streaming and download services under the blanket licence, then pays the song's owners.**
+
+The Copyright Office designated the MLC under Title I of the Music Modernization Act. Services send it usage data and royalties each month, and it pays members monthly for registered songs it can match. Registering, claiming and matching are covered on the mechanicals page.
+
+- Register your songs with the MLC, or confirm your publisher has.
+
+Who collects · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.](https://www.themlc.com/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
+
+### Performing rights societies collect for public performance of songs
+
+**In the US, a performing rights society licenses public performance of songs for their owners. The statute names ASCAP, BMI and SESAC; Songview also lists GMR.**
+
+Section 101 describes a performing rights society as a body that licenses public performance of nondramatic musical works for their copyright owners. Songview, a joint project of ASCAP, BMI, GMR and SESAC, reconciles their song ownership data and feeds the ASCAP and BMI public databases.
+
+- Join a performing rights society as a writer and register each song with it.
+
+Who collects · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com)
+
+### SoundExchange collects digital performance money for recordings
+
+**SoundExchange pays recording owners and artists for digital play on non-interactive services, but only those who have registered with it.**
+
+SoundExchange names services such as SiriusXM and Pandora, and says recording artists and owners must register with it to be paid. The U.S. Copyright Royalty Board decides what these services pay. Its lists of creators owed money are covered on the unclaimed-money page.
+
+- Register as artist and, if you own the master, as a recording owner.
+
+Who collects · Beginner · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+
+### A song's income divides into a writer share and a publisher share
+
+**Where a song has a publisher, a society divides its income between the writer and the publisher, by their contract, the society's rules, or both.**
+
+WIPO notes that most musical works have at least a composer and a publisher as rights holders, and that a society's rules may set a minimum part for the composer. This guide gives no standard percentage; check your publishing agreement and your society's distribution rules.
+
+- Read your publishing contract and your society's rules for the split.
+
+Splits and shares · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+
+### A publisher licenses songs and pays advances
+
+**A music publisher gets the right to license a writer's songs, collects the income, and often pays an advance that is later recovered from royalties.**
+
+WIPO describes publishers as the link that brings songs to record and broadcast companies and as a source of advances to writers. The writer is paid a share of what the publisher receives. Terms vary, and a music lawyer should read any publishing deal before it is signed.
+
+- Ask what the publisher does for the share it keeps.
+
+Splits and shares · Beginner · Sourced (official) · For: songwriters, publishers and labels · Where: International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+
+### Pre-1972 recordings and producer letters of direction have their own rules
+
+**Title II of the Music Modernization Act gives federal remedies to recordings fixed before 15 February 1972. Title III lets producers, mixers and engineers be paid by letter of direction.**
+
+To recover statutory damages or fees for a pre-1972 recording, the owner usually has to file a schedule with the Copyright Office first. Under section 114(g)(5), SoundExchange can accept a letter from the artist or recording owner sending part of their digital performance money to a producer, mixer or engineer. Neither is covered in detail here.
+
+- Read the Copyright Office pages on Titles II and III before relying on either.
+
+Registrations · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+
+### Societies work abroad through reciprocal agreements
+
+**A society licenses mainly at home. To be paid abroad, societies appoint each other, so foreign income reaches you through your own society.**
+
+WIPO describes reciprocal representation agreements, under which each society licenses the other's repertoire in its own country and then passes on the money. Because of this, a writer's registration at home matters for income earned in other countries.
+
+- Confirm that your society collects abroad on your behalf.
+
+International · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+
+### Outside the US, recordings can earn neighbouring rights money
+
+**In the UK and Canada, PPL and Re:Sound deal with money for recordings on behalf of performers and recording owners. It is a separate account from songwriter income.**
+
+PPL says rightsholder members can ask it to collect royalties from abroad, and Re:Sound tells anyone who performed on or made released recordings that they may be owed. Each body has its own rules on who qualifies, so a US artist should check country by country.
+
+- Ask PPL or Re:Sound whether you qualify for recordings played in those countries.
+
+International · Intermediate · Sourced (official) · For: artists, producers, publishers and labels · Where: UK, Canada, International · As of 20 November 2026 · Sources: [PPL n.d.-a](https://www.ppluk.com/royalties/how-royalties-are-calculated/), [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [Re:Sound n.d.](https://www.resound.ca/)
+
+### PPL divides UK recording money between rightsholders and performers
+
+**For UK public play and broadcasts, PPL matches reported use against its database of over 28 million recordings and, after costs, pays half to rightsholders and half to qualifying performers.**
+
+PPL checks that a performer qualifies for a track before paying the performer share; if not, that part goes to the rightsholder. Several performers on one recording share by agreement or under PPL's allocation policy. PPL says the performer share is sometimes called equitable remuneration.
+
+- Check in myPPL that you are credited on each recording.
+
+International · Beginner · Sourced (official) · For: artists, producers, publishers and labels · Where: UK · As of 20 November 2026 · Sources: [PPL n.d.-a](https://www.ppluk.com/royalties/how-royalties-are-calculated/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+### How money moves from a stream to a songwriter
+
+**A service reports plays and pays a collector, which matches them to registered songs and pays the owners on file. A writer may be paid by the collector directly or through a publisher.**
+
+For US digital mechanicals the collector is the MLC; for public performance it is a performing rights society. WIPO notes that societies usually take both writers and publishers as members. Where a publisher receives the writer's money, the writer is paid a share under the publishing contract. A song that is not registered or matched stays unpaid.
+
+- Check each step: registered, matched, and paid to the right account.
+
+How money flows · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.](https://www.themlc.com/), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+
+### How money moves from a stream to an artist
+
+**Statutory digital performance money goes through SoundExchange and is split by law. Other recording income reaches the artist through the recording owner, as the contract says.**
+
+Section 114(g)(2) sets the split for money collected under the statutory licence. For a transmission licensed outside it, section 114(g)(1) entitles a featured artist to payment from the recording owner under the artist's contract. WIPO notes that recording contracts often include a recoupable advance. Have a music lawyer review the deal.
+
+- Ask for the royalty statement that shows each source of income.
+
+How money flows · Beginner · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+
+### Form W-8 BEN: a form non-US payees may be asked to give
+
+**The IRS says a foreign person who is the "beneficial owner of an amount subject to withholding" gives this form to whoever withholds the tax or makes the payment.**
+
+The IRS page says to submit it when the withholding agent or payer asks, whether or not you claim a reduced rate or an exemption. It does not say which rate applies to royalties. This guide is not tax advice; ask a tax adviser how US withholding applies to you.
+
+- Ask each payer which form it needs from you.
+- Ask a tax adviser how US withholding applies to you.
+
+Foreign income and tax · Intermediate · Sourced (official) · For: songwriters, artists, producers · Where: US, International · As of 20 November 2026 · Sources: [Internal Revenue Service n.d.](https://www.irs.gov/forms-pubs/about-form-w-8-ben)
+
+## In order
+
+### Register a song before it earns
+
+**Register each new song with your performing rights society and with the MLC, then check that every register shows the same details.**
+
+A song can earn from more than one collector, so one registration is not enough. Register with the MLC directly or through a publisher or administrator. The mechanicals page covers the MLC's search, claim and matching tools step by step.
+
+- Register each new song with your society and the MLC.
+- Check that the shares match in every register.
+
+Before release · Registrations · Beginner · Sourced (official) · For: songwriters, administrators · Where: US · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [TMLC n.d.](https://www.themlc.com/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com)
+
+### Register the recording when it is released
+
+**Register with SoundExchange, make sure the recording has an ISRC, and check it is linked to the song so the song's owners are paid.**
+
+SoundExchange says recording artists and owners must be registered to receive its digital performance royalties. The ISRC identifies the recording, and the MLC's Matching Tool uses it to connect recordings to songs, so give the code to your co-writers or publisher.
+
+- Register with SoundExchange for each role you hold.
+- Check the match to the song in the MLC Matching Tool.
+
+At release · Registrations · Beginner · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [MLC: tools](https://www.themlc.com/tools)
+
+## Common mistakes
+
+### Mistake: registering the song and assuming the recording is covered
+
+**A registration for a song covers its music and lyrics, not the recorded performance. Recordings are normally registered on their own.**
+
+Circular 50 says a song and a recording usually have to be registered with the Copyright Office separately. Only in limited cases can a single application cover both, and the Office points to Circular 56A for those.
+
+- Check that the song and the recording each have their own registration.
+- Read Circular 50 and Circular 56 before filing.
+
+Two copyrights · Beginner · Sourced (official) · For: songwriters, artists · Where: US · Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+
+## Key numbers
+
+| Number | What it is | As of | Where | Grade | Sources |
+|---|---|---|---|---|---|
+| 35 percent of EUR 12.1 bn, all repertoires, 2022 | Digital was 35% of CISAC collections, all repertoires, in 2022: Digital income reached EUR 4.17 bn, about a third of all CISAC society collections across every repertoire in 2022. | 26 October 2023 | International | Sourced (official) | [CISAC 2023](https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf) |
+
+## Income streams and who collects each in the US
+
+A song and a recording earn through different rights, and different bodies collect them. This table covers the main US routes.
+
+| Income stream | What it pays for | Right in US law | Who collects |
+|---|---|---|---|
+| Digital mechanical | Streams and downloads of the song | Reproduce and distribute, 106(1), (3) | The MLC, for eligible services |
+| Song public performance | Radio, TV, venues, streams as performances | Perform publicly, 106(4) | A performing rights society (ASCAP, BMI, SESAC, GMR) |
+| Recording digital performance | Non-interactive streaming, webcasts, satellite radio | Digital audio transmission, 106(6) | SoundExchange |
+| Sound recording sales and licences | Copies, downloads and direct licences of the recording | Reproduce and distribute, 106(1), (3) | The recording owner; artists are paid under their contracts |
+| Physical mechanical | CDs, vinyl | Reproduce and distribute, 106(1), (3) | The song's publisher, directly or through an agent |
+| Sync and print | Film, ads, games, sheet music | Depends on the use; licensed by contract | The owners of each work, by direct licence |
+
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [TMLC n.d.](https://www.themlc.com/), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+
+## Statutory digital performance split for recordings, as the law states it
+
+Section 114(g)(2) sets how the designated collective divides statutory licence money for digital transmission of recordings, after any costs it deducts. Other income is not covered.
+
+| Payee | Share | Paid through |
+|---|---|---|
+| Recording owner (holder of the digital performance right) | 50 percent | Paid by the collective |
+| Featured recording artists | 45 percent | Paid by the collective, per recording |
+| Non-featured musicians | 2.5 percent | Escrow fund; administrator chosen jointly by recording owners and the AFM |
+| Non-featured vocalists | 2.5 percent | Escrow fund; administrator chosen jointly by recording owners and AFTRA |
+
+Intermediate · Sourced (law) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+
+## Registrations for a songwriter and for an artist
+
+Each kind of money has its own register. Tick what applies to you and check it separately; one registration does not cover another.
+
+**If you write songs**
+
+- A performing rights society, as a writer
+- Each song at the MLC, directly or through a publisher or administrator
+- Recordings of your songs matched in the MLC Matching Tool
+- Songs you share: the same agreed splits in every register
+- Your details in the ASCAP and BMI public databases
+
+**If you make recordings**
+
+- SoundExchange as artist, and as recording owner if you own the master
+- An ISRC on each recording (in the UK, PPL issues them)
+
+**If you are outside the US**
+
+- Your home society for songs and for recordings
+- PPL for UK performers and recording rightsholders
+- Re:Sound for Canadian recordings
+
+**For everyone**
+
+- Bank and tax details in each payee account
+- The Copyright Office, if you choose to register works (Circulars 50 and 56)
+
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [Re:Sound n.d.](https://www.resound.ca/)
+
+## Who collects what in the UK, Canada and Germany
+
+A basic map, limited to bodies whose pages were read for this guide. Other countries and rights are not shown, and rules differ by body.
+
+| Country | Songs | Recordings |
+|---|---|---|
+| UK | Not covered here (no society page read) | PPL: recording rightsholders and performers |
+| Canada | SOCAN (performing and reproduction rights); CMRRA (online services) | Re:Sound: artists and record companies |
+| Germany | GEMA: composers, lyricists and publishers | Not covered here (no page read) |
+
+Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: UK, Canada, Germany · As of 20 November 2026 · Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [SOCAN n.d.](https://www.socan.com/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [Re:Sound n.d.](https://www.resound.ca/), [GEMA n.d.](https://www.gema.de/en/)
+
+## Terms
+
+Defined on the glossary: https://kitesink.com/music/glossary.md
+
+- **ISRC code**: International Standard Recording Code: a 12-character identifier for one recording, made of a rightsholder code, a year and a five-digit number.
+- **ISWC code**: International Standard Musical Work Code: a number that identifies a song and links it to its rights holders in the society systems.
+- **Mechanical right**: The right to record a song and to make copies of that recording and distribute them. In the US, streaming and download services get it for songs through the MLC's blanket licence.
+- **Musical work (the song)**: The composition: the music plus any words that go with it. Its authors are the people who wrote the music and lyrics, unless it was made for hire.
+- **Neighbouring (related) rights**: Rights that performers, record producers and broadcasters hold, separate from the copyright in the song. Also called related rights. Societies in many countries manage them for broadcasts and public play of recordings.
+- **Performing right**: The right to perform a song publicly, or to authorise others to. US law counts a performance as public where the public can attend, or when it is transmitted to the public.
+- **Publishing administrator**: Industry name for a company that registers songs, collects their income and keeps the records on an owner's behalf, without becoming the owner. Terms vary by contract.
+- **Sound recording (the master)**: A work made by fixing a series of sounds, such as a recorded performance. In US law it excludes sounds that accompany a film or other audiovisual work.
+- **Writer's share and publisher's share**: Common industry names for the part of a song's income that goes to its writers and the part that goes to its publishers. See the note on how societies divide it.
+
+---
+
+Source page: https://kitesink.com/music/royalty-basics  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/mechanicals-mlc.md
+================================================================
+
+# Mechanicals and the MLC: KiteSink music field guide
+
+Reproduction royalties, US rates and the Mechanical Licensing Collective. Each entry gives the point, the reasoning, what to do, who it is for, where it applies, how well sourced it is, and its sources.
+Grades: Sourced (law or official) and Directional (reported or industry practice).
+
+## Guidance
+
+### Digital mechanicals now run through the MLC, physical ones still use NOIs
+
+**Since 2021 a digital service licenses US mechanicals from the MLC under a blanket license. Physical copies still use the song-by-song notice route.**
+
+For digital phonorecord deliveries on or after the license availability date, 17 USC 115 sends a service to the blanket license process through the MLC. The Copyright Office FAQ adds that it no longer accepts NOIs for digital uses and that NOIs remain for non-digital uses such as CDs and vinyl. The statute keeps one exception: a record company may still get an individual download license by notice. Direct deals can sit outside this route.
+
+- Check which route a release uses before chasing a payment
+
+The license · Beginner · Sourced (official) · For: songwriters, artists, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
+
+### Past five minutes, the per-minute rate sets the price of a copy
+
+**For copies and downloads the rate is the larger of a flat amount and a per-minute amount, so a track over five minutes costs more per copy than a shorter one.**
+
+For 2026 the larger of two figures applies: a flat 13.1 cents, or 2.52 cents multiplied by the minutes, counting any part of a minute as a whole one. A track of exactly five minutes works out to 12.6 cents by the minute formula, so the 13.1 cent rate wins. A track of 5:01 counts as six minutes, which gives 15.12 cents. This is arithmetic on the published rates, not a separate rule.
+
+- Round each track up to whole minutes before comparing the two amounts
+
+Rates · Intermediate · Sourced (law) · For: songwriters, artists, publishers and labels · Where: US · As of 19 November 2026 · Sources: [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11), [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm)
+
+### The physical and download rate is adjusted every January for inflation
+
+**The Judges publish a cost-of-living notice at least 25 days before 1 January. It indexes base rates of 12 cents and 2.31 cents to the CPI-U published in November 2022.**
+
+The 2026 notice used a CPI-U of 324.800 against the November 2022 base of 298.012, which gave 13.1 cents and 2.52 cents. It notes that the Bureau of Labor Statistics could not collect October 2025 data during a lapse in appropriations, so the index published on 24 October 2025 was used. On 19 November 2026 the regulation still showed the 2026 rate, so no 2027 figure is given here.
+
+- Look for the next Federal Register notice from the Copyright Royalty Board in December
+
+Rates · Intermediate · Sourced (law) · For: publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11), [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm)
+
+### Streaming mechanicals are worked out in four steps from a pool
+
+**Take the greater of the revenue and content-cost prongs, subtract performance royalties, apply any floor, then split the pool across plays.**
+
+37 CFR 385.21(b) sets out the steps for each offering: the all-in royalty, the deduction of performance royalties the service pays, the payable pool after any floor, and the per-work share. Mixed service bundles use the content-cost prong alone. The MLC does the last allocation. For that split only, a play of a track over five minutes counts extra: 1.2 plays for 5:01 to 6:00, plus 0.2 for each further minute or part of one.
+
+- Read the regulation itself for any Offering-specific term
+
+Rates · Advanced · Sourced (law) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21)
+
+### The MLC does not take a fee from mechanical royalties
+
+**The MLC says digital services fund its operating budget and that it takes no fees out of the mechanical royalties it pays.**
+
+The MLC's audits page says its budget is paid by an assessment that the Copyright Royalty Board sets, separate from the royalties the services owe, and that it deducts no fees from royalties. The Copyright Office FAQ also names voluntary contributions from the services. This is how the MLC describes itself, so check your own statements.
+
+The MLC · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [MLC: DSP audits](https://www.themlc.com/audits-dsp), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
+
+### The MLC database is free to search, but its ownership data can be wrong or partial
+
+**Public search is free by law, and bulk and API access must be offered too. The MLC warns that listed ownership may be incomplete or out of date.**
+
+37 CFR 210.32 requires a free, searchable online database and bulk access through APIs. Bulk access is free to licensed services and the Register; others may be charged up to the MLC's marginal cost. The MLC's terms say shares shown may not reflect the whole ownership, that some works in the portal cannot be licensed through the MLC, and that it will not delete accurate data. Members report errors to MLC support; a represented writer tells their publisher or administrator.
+
+- Report errors to MLC support or to your publisher or administrator
+
+Registration and matching · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [37 CFR 210.32](https://www.law.cornell.edu/cfr/text/37/210.32), [TMLC 2022](https://themlc.com/musicalworksdatabasetermsuse)
+
+### April 2027 is when market-share distributions begin, one month at a time
+
+**The MLC plans to start in April 2027 with January 2021 usage, then take one more month of usage each month. It is a start date, not a cut-off.**
+
+The MLC's September 2026 release says it will allocate each month's remainder song by song, pro rata, separately for each DSP and offering, with interest at the statutory rate. The June 2026 one-sheet adds that it will keep reprocessing unmatched royalties into regular distributions. These are the MLC's plans; the schedule can change.
+
+- Watch the MLC's unclaimed dashboard for the monthly figures
+- Register and match your songs before your usage months come up
+
+Unclaimed money · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [TMLC 2026b](https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution), [TMLC 2026a](https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf)
+
+### Claiming before a month's royalties are distributed gets you the accrued amount
+
+**If an owner is found before the accrued royalties are included in a market-share distribution, the MLC pays them to that owner with interest.**
+
+17 USC 115(d)(3)(I) says that when an owner is located for an unmatched work, or a share of one, the MLC updates its records and, if the royalties have not yet gone into an unclaimed-royalties distribution, pays them with proportionate interest and a cumulative statement. The text does not say what happens to a claim after that point, so ask a music lawyer if an old amount matters.
+
+- Claim and match songs well ahead of any distribution
+
+Unclaimed money · Intermediate · Sourced (law) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### The MLC must hold unmatched royalties for at least three years first
+
+**The statute sets a three-year minimum hold, in an interest-bearing account, before unmatched money can go into a market-share distribution.**
+
+The hold runs from the date of receipt, or from the date a service accrued the money before transferring it, whichever ends sooner. The account earns interest each month at the federal short-term rate for the benefit of the owners. A longer hold is allowed; the statute sets only the minimum.
+
+Unclaimed money · Intermediate · Sourced (law) · For: songwriters, publishers and labels, administrators · Where: US · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### Publishers must pass a share of unclaimed distributions to songwriters
+
+**Owners who receive an unclaimed distribution must pay or credit songwriters by reported usage, and never under half of what the owner receives for that songwriter's works.**
+
+17 USC 115(d)(3)(J)(iv) applies despite contrary terms in an agreement. The allocation follows each song's reported usage in the periods covered, and the floor is 50 percent of the payment the owner receives attributable to that songwriter's works. Contract terms otherwise apply, so a music lawyer should read any agreement.
+
+- Ask your publisher how it will credit these payments
+
+Unclaimed money · Advanced · Sourced (law) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### Historical royalties cover 2007 to 2020 and are separate from blanket royalties
+
+**Services handed over unmatched money for 2007 to 2020 streams in early 2021. The MLC began paying matched amounts in 2022 and has not started market-share distributions for them.**
+
+The Music Modernization Act (MMA) limited a service's liability if it transferred by 15 February 2021, and 21 services chose to. The historical page gives both May and June 2022 as the start of matched payments. It says leftover historical money will go through market share later, and that this had not begun as of its November 2026 data. The one-sheet says the MLC will look to start on it once blanket market-share distributions are under way. The Missing Member Lookup leaves historical money out.
+
+- Search the Matching Tool for old unmatched uses of your songs
+
+Unclaimed money · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [MLC: historical royalties](https://www.themlc.com/historical-royalties), [TMLC 2026a](https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf), [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup)
+
+### The Copyright Office recommended holding unclaimed money longer than the minimum
+
+**The Office's July 2021 report recommends no first distribution until at least five years after claiming was fully available. The MMA requires the MLC to give the report substantial weight.**
+
+The Register's report also recommends independent checks of market-share calculations, wide publicity for the advance notice of a distribution, and close tracking of match and engagement metrics. These are recommendations; the statute's minimum hold is three years. The MLC says that by its April 2027 start it will have tried for more than six years to match January 2021 usage.
+
+Unclaimed money · Advanced · Sourced (official) · For: publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [U.S. Copyright Office 2021](https://www.copyright.gov/policy/unclaimed-royalties/unclaimed-royalties-final-report.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [TMLC 2026b](https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution)
+
+### MLC statements come in two layouts: by recording or by work
+
+**Royalty Detail shows rows per sound recording from the services' reports. Work Summary rolls the same money up per musical work. Both are .tsv files.**
+
+The MLC's Help Center links example files for both layouts. The .tsv format opens in common spreadsheet software. Royalty Detail is the one to use when tracing a payment to a service's usage line; Work Summary shows what each song earned.
+
+- Open the .tsv file in a spreadsheet program to sort and filter it
+
+Statements · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · Sources: [MLC Help Center: statement types](https://help.themlc.com/en/support/what-do-the-different-statement-layouts-mean)
+
+### The MLC can audit digital services, at most once in any three calendar years
+
+**An audit covers up to three full calendar years, starts with a notice filed at the Copyright Office, and is done by an independent qualified auditor.**
+
+Under 17 USC 115(d)(4)(D) the MLC pays for the audit unless the auditor finds an underpayment of at least 10 percent, in which case the service bears the reasonable costs. The MLC says it will pass on recovered royalties in full and mark audit adjustments on members' statements. Owners can audit the MLC too, at their own cost, once a year, covering up to the three preceding calendar years.
+
+- Look for adjustments marked as audit results on your MLC statement
+
+Audits · Advanced · Sourced (official) · For: publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [MLC: DSP audits](https://www.themlc.com/audits-dsp)
+
+### Phonorecords V is open, and a partial settlement on physical rates is under review
+
+**The 2028 to 2032 proceeding is in discovery. A partial settlement on physical copies, downloads, ringtones and bundles was proposed in June 2026; the Judges have split it off and paused it.**
+
+Order 10 (18 September 2026) records a 29 June 2026 motion by NMPA, NSAI, MAC and record-company participants, four objections from participants and 24 comments from non-participants. It splits that part off and stays it until further notice. The movants replied on 2 October 2026, and the docket read on 19 November 2026 showed no decision. Streaming stays in the main case. On 16 November 2026 NMPA and NSAI renewed a motion for a subpoena to the MLC. Nothing here is final.
+
+- Check the eCRB docket before relying on any proposed rate
+
+Rate-setting · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [CRB Phonorecords V docket](https://app.crb.gov/case/detail/25-CRB-0013-PR%20%282028-2032%29), [CRJLC 2026a](https://app.crb.gov/document/download/79449), [CRJLC 2026b](https://app.crb.gov/document/download/79807)
+
+## In order
+
+### Serve the notice before you distribute physical copies
+
+**For a compulsory license on vinyl or CDs, serve an NOI on the owner before, or within 30 days after, making copies, and always before distributing any.**
+
+The statute puts the notice before distribution. If the Copyright Office records name an owner and an address, serve that owner. If they do not, the notice is filed with the Office instead. Missing the notice rules out the compulsory license, and without a voluntary (direct) license from the owner, making and selling the copies is infringement. Involve a music lawyer if the situation is unusual.
+
+- Search the Copyright Office records for the owner before serving
+- Note the 30-day outer limit and the rule to serve before distributing
+
+Before release · The license · Intermediate · Sourced (law) · For: artists, publishers and labels · Where: US · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### Search the public database before you register a song
+
+**Use the MLC's Public Work Search to see if the song exists and who is credited. Search by title, ISWC, MLC or HFA song code, writer or publisher.**
+
+The MLC says its database is open to anyone and the HFA help page points to the same search for its old public lookup. The MLC also advises checking the Claiming Tool before registering, since someone may already have registered the song and you only need to claim your share.
+
+- Search by ISWC or song code when you have one
+- Note which shares are missing before registering anything
+
+After release · Registration and matching · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · Sources: [MLC: tools](https://www.themlc.com/tools), [HFA help: public search](https://help.harryfox.com/does-hfa-have-a-public-database-search-what-happened-to-the-songfile-public-search)
+
+### Claim your share or register the work, then add your details
+
+**Join the MLC, use the Claiming Tool for songs that exist, use the Works Registration Tools for songs that do not, and keep banking and tax details current.**
+
+The MLC says connecting is free. Its tools page lists individual, bulk and CWR registration for new works, and says banking details and tax forms live in Member Settings. Its Missing Member Lookup lists people and companies who have not joined but may be owed US digital audio mechanicals; those amounts leave out historical unmatched money. A songwriter with a publisher or administrator may need to work through them, so ask first.
+
+- Check the Missing Member Lookup for your name or company
+- Keep banking and tax details current in Member Settings
+
+After release · Registration and matching · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · Sources: [MLC: tools](https://www.themlc.com/tools), [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup)
+
+### Check the Matching Tool for recordings not yet tied to your songs
+
+**Unmatched recordings can earn royalties the MLC holds. Propose matches in the Matching Tool, and look again, as new usage data arrives continuously.**
+
+The MLC says it matches by both automated and manual work and that what it cannot match shows up in the Matching Tool, which sits in the Member Hub and also in the Songwriter Hub. Members propose matches between a recording and a registered song, and once the MLC approves one, the member receives the royalties accrued for those uses. Historical unmatched data can also be searched there.
+
+- Search the Matching Tool by your own song and artist names
+- Re-check after each new release or catalogue change
+
+Every year · Registration and matching · Intermediate · Sourced (official) · For: songwriters, artists, publishers and labels, administrators · Where: US · Sources: [MLC: tools](https://www.themlc.com/tools), [MLC: historical royalties](https://www.themlc.com/historical-royalties)
+
+## Common mistakes
+
+### Treating a mechanical license as permission to use someone's recording
+
+**Section 115 covers the song only. Copying another person's recording needs separate permission from whoever owns that recording.**
+
+A song and a recording of it are two separate works with separate owners. The compulsory license lets you record your own version of a published song. It does not let you copy, sample or reissue an existing recording. Whoever controls that recording has to agree separately, and a music lawyer should check any case that mixes the two.
+
+- Clear the song and the recording as two separate permissions
+- Record your own version if you only hold a mechanical license
+
+The license · Beginner · Sourced (official) · For: artists, producers, publishers and labels · Where: US · Sources: [U.S. Copyright Office 2018](https://www.copyright.gov/circs/circ73.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### Reading 13.1 cents as what a stream pays
+
+**The 13.1 cent figure is for physical copies and downloads. Streaming mechanicals come from a pool formula, not a fixed amount per play.**
+
+Subpart B sets a per-work rate for each physical copy or permanent download. Subpart C works out a royalty pool for each streaming offering, then divides it across plays. What one stream earns depends on the service, the offering and the pool, so no single per-stream figure appears in the regulation.
+
+- Use the Subpart B rate only for copies and downloads
+
+Rates · Beginner · Sourced (law) · For: songwriters, artists · Where: US · As of 19 November 2026 · Sources: [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21)
+
+### Assuming a copyright registration puts your song in the MLC
+
+**A Copyright Office registration and an MLC registration are different. You, or your publisher or administrator, need the MLC record to be paid blanket-license digital mechanicals.**
+
+The Copyright Office FAQ says owners with a copyright registration still need to register with the MLC. It also says a song need not be registered with the Office to be eligible for royalties through the MLC, though physical-copy royalties under the notice route depend on the owner appearing in the Office's records. Registration has other benefits in copyright law.
+
+- Register or claim the song with the MLC as its own task
+
+Registration and matching · Beginner · Sourced (official) · For: songwriters, artists · Where: US · Sources: [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
+
+## Key numbers
+
+| Number | What it is | As of | Where | Grade | Sources |
+|---|---|---|---|---|---|
+| 13.1 cents per work, physical and downloads, 2026 | Physical and download mechanical rate per work, 2026: The 2026 per-song rate, unless the per-minute rate of 2.52 cents is larger. The notice applies it from 1 January to 31 December 2026. | 19 November 2026 | US | Sourced (law) | [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11), [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm) |
+| 2.52 cents per minute or fraction, 2026 | Per-minute alternative for long tracks, 2026: Applies to a work when it comes out larger than the 13.1 cent flat rate. Each started minute counts as a minute. | 19 November 2026 | US | Sourced (law) | [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11), [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm) |
+| 24 cents per ringtone, per work | Ringtone mechanical rate: The fixed ringtone rate in 37 CFR 385.11(b) on the retrieval date. It is not part of the yearly cost-of-living adjustment. | 19 November 2026 | US | Sourced (law) | [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11) |
+| 15.3 % of service revenue, 2026 (first prong) | Streaming revenue percentage for 2026: Table 1 in 37 CFR 385.21: the revenue prong for 2026, which is compared with a content-cost prong. The same table gives 15.35 for 2027. | 19 November 2026 | US | Sourced (law) | [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+| 397 million USD, approx., after Phono III adjustments | Historical unmatched royalties that services transferred to the MLC: Twenty-one services transferred money for 2007 to 2020 use. The first total was about $427 million, adjusted down after final rates. | 19 November 2026 | US | Sourced (official) | [MLC: historical royalties](https://www.themlc.com/historical-royalties) |
+| 239 million USD, approx., historical royalties | Historical royalties distributed by September 2026: The MLC reports it has distributed nearly this much, which it says is over 60 percent of the historical unmatched total. | 30 September 2026 | US | Sourced (official) | [TMLC 2026b](https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution) |
+| 49 DSPs listed on notice letters dated 10 January 2024 | Services sent MLC audit notice letters for 2021 to 2023: The MLC preserved audit rights for 1 January 2021 to 31 December 2023. The page lists the services but gives no results. | 19 November 2026 | US | Sourced (official) | [MLC: DSP audits](https://www.themlc.com/audits-dsp) |
+
+## Streaming content-cost prongs by type of offering
+
+The second prong of the streaming formula depends on the offering. TCC is the service's expensed cost of the rights it takes for streams and limited downloads.
+
+| Offering | TCC prong | Per-subscriber cap |
+|---|---|---|
+| Standalone non-portable subscription, streaming only | 26.2% of TCC | Lesser of this or 60 cents |
+| Standalone non-portable subscription, mixed | 26.2% of TCC | Lesser of this or 60 cents |
+| Standalone portable subscription | 26.2% of TCC | Lesser of this or $1.10 |
+| Free, ad-supported | 26.2% of TCC | None |
+| Bundled subscription | 24.5% of TCC | None |
+| Mixed service bundle | 26.2% of TCC | None |
+| Purchased content locker service | 26.2% of TCC | None |
+| Standalone limited offering | 26.2% of TCC | None |
+| Paid locker service | 26.2% of TCC | None |
+
+Advanced · Sourced (law) · For: publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21), [37 CFR 385.2](https://www.law.cornell.edu/cfr/text/37/385.2)
+
+## MLC scale figures differ by date, so quote the date
+
+The MLC's own pages give different totals because they were written at different times. Its tools page still says 55 million works. Cite the source and date with any figure.
+
+| Measure | June 2026 one-sheet | Tools page, read 19 Nov 2026 | September 2026 release |
+|---|---|---|---|
+| Members | More than 85,000 | Not stated | More than 100,000 |
+| Works in public database | More than 53 million | More than 55 million | More than 60 million |
+| Match rate | Average of nearly 92% | Not stated | Current rate above 92% |
+| Royalties processed | Over $4 billion | Not stated | Nearly $5 billion |
+| Royalties distributed | Not stated | Not stated | More than $4.2 billion |
+| Songwriter Hub users | More than 10,000 | Not stated | More than 20,000 |
+
+Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [TMLC 2026a](https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf), [MLC: tools](https://www.themlc.com/tools), [TMLC 2026b](https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution)
+
+## Getting paid digital mechanicals by the MLC: a checklist
+
+A short order of work for a writer or admin. It follows what the MLC says each tool does.
+
+**Find out where you stand**
+
+- Search the Public Work Search for each song
+- Check the Missing Member Lookup for your name
+- Ask your publisher or administrator whether they already handle the MLC for you
+
+**Get the songs right**
+
+- Claim missing shares with the Claiming Tool
+- Register songs that are not in the database
+- Resolve any overclaim flagged on a song
+
+**Keep it current**
+
+- Update banking and tax details in Member Settings
+- Check the Matching Tool for unmatched recordings
+- Download a catalogue export after each change
+
+Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
+
+## Three pools of MLC money and where each stands
+
+The MLC separates ongoing blanket royalties, historical unmatched royalties and the remainder it will pay by market share.
+
+| Pool | Usage covered | Status in the MLC's own pages |
+|---|---|---|
+| Blanket royalties | From January 2021 | Paid in regular monthly distributions |
+| Historical unmatched | 2007 to 2020 | Matched amounts paid since 2022; remainder not yet through market share |
+| Unclaimed accrued (blanket) | Remainder after the minimum hold | Market-share distributions planned from April 2027, January 2021 first |
+
+Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [MLC: historical royalties](https://www.themlc.com/historical-royalties), [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [TMLC 2026a](https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf), [TMLC 2026b](https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution)
+
+## The rate periods referred to in MLC and CRB documents
+
+Proceedings are named Phonorecords I to V. The years below are the ones the cited pages state.
+
+| Proceeding | Years stated | Where stated |
+|---|---|---|
+| Phonorecords I | 2007 to 2012 | MLC historical royalties page |
+| Phonorecords II | 2013 to 2017 | MLC historical royalties page |
+| Phonorecords III | 2018 to 2022 | MLC historical royalties page |
+| Phonorecords IV | Streaming table lists 2023 to 2027 | 37 CFR 385.21 Table 1 |
+| Phonorecords V | 2028 to 2032 | CRB docket 25-CRB-0013-PR |
+
+Intermediate · Sourced (official) · For: publishers and labels, administrators · Where: US · As of 19 November 2026 · Sources: [MLC: historical royalties](https://www.themlc.com/historical-royalties), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21), [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm), [CRB Phonorecords V docket](https://app.crb.gov/case/detail/25-CRB-0013-PR%20%282028-2032%29)
+
+## Terms
+
+Defined on the glossary: https://kitesink.com/music/glossary.md
+
+- **Blanket license (digital)**: Since 1 January 2021, a qualifying digital service can get one license through the MLC that covers every song open to the compulsory license, in place of song-by-song notices.
+- **Compulsory (mechanical) license**: A US legal route to record and distribute your own version of a song once recordings of it have been released in the US with the owner's permission. You must meet the conditions and pay the statutory rate.
+- **Market-share distribution**: How the statute says remaining unclaimed accrued royalties are paid: to identified owners in proportion to their relative market shares in the usage reports, with a share passed on to songwriters.
+- **Notice of intention (NOI)**: The notice a person serves on a song's copyright owner, or files with the Copyright Office when the owner cannot be found in its records, to use the compulsory license for physical copies.
+- **Overclaim**: A song where the shares claimed by all members together come to more than 100 percent. The MLC's Overclaims Tool lets owners amend or give up shares and upload documents while it is resolved.
+- **Phonorecord and digital phonorecord delivery (DPD)**: A phonorecord is an object that holds recorded sound, such as vinyl or a CD. A DPD is a digital transmission that leaves the recipient with a specific copy: a permanent or limited download, or an on-demand stream.
+- **The DLC (Digital Licensee Coordinator)**: The non-profit that represents licensed digital services. It names a non-voting member of the MLC board and can take part in Copyright Royalty Board proceedings that set the assessment funding the MLC.
+- **The MLC (Mechanical Licensing Collective)**: The non-profit the Copyright Office designated on 8 July 2019 to run the blanket license: it collects digital mechanicals, matches them to songs and owners, distributes them, and keeps the public database.
+- **Unclaimed accrued royalties**: Money the MLC has collected but still cannot match to an owner or pay out when the legal minimum holding period ends. The MLC counts both unmatched and unclaimed amounts in it.
+
+## Mechanical rate calculator
+
+For physical copies and permanent downloads made and distributed in the US. Per copy, the rate is the larger of the per-work rate and the per-minute rate times the playing time, with a part minute counted as a whole one (37 CFR 385.11). This is the statutory rate; a licence agreed directly with the publisher can set a different one.
+
+Rates as of 20 November 2026.
+
+| Year | Per work | Per minute or part minute | Streaming, first prong (illustration) | Sources |
+|---|---|---|---|---|
+| 2023 | 12 cents | 2.31 cents | 15.1% of revenue | [Copyright Royalty Board 2022](https://www.govinfo.gov/content/pkg/FR-2022-12-16/html/2022-27237.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+| 2024 | 12.4 cents | 2.38 cents | 15.2% of revenue | [Copyright Royalty Board 2023](https://www.govinfo.gov/content/pkg/FR-2023-12-21/html/2023-28075.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+| 2025 | 12.7 cents | 2.45 cents | 15.25% of revenue | [Copyright Royalty Board 2024](https://www.govinfo.gov/content/pkg/FR-2024-11-27/html/2024-27819.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+| 2026 | 13.1 cents | 2.52 cents | 15.3% of revenue | [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+
+Example: a 5:01 track counts as 6 minutes; at 2.52 cents a minute that is 15.12 cents, more than a 13.1-cent per-work rate, so 15.12 cents per copy.
+
+Ringtones: 24 cents per ringtone, whatever its length. Sources: [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11)
+
+Streaming mechanicals are not a per-stream rate. Under 37 CFR 385.21 a service works out a royalty pool for each offering, the larger of a share of its revenue and other measures the rule sets, takes off what it pays for performance rights, and divides the rest among the works by their share of plays. The percentages above are the first prong only, shown as an illustration.
+
+The calculator itself: https://kitesink.com/music/mechanicals-mlc#calculator
+
+---
+
+Source page: https://kitesink.com/music/mechanicals-mlc  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/unclaimed-recovery.md
+================================================================
+
+# Unclaimed royalties: KiteSink music field guide
+
+Money that was earned but never matched, and how to claim it. Each entry gives the point, the reasoning, what to do, who it is for, where it applies, how well sourced it is, and its sources.
+Grades: Sourced (law or official) and Directional (reported or industry practice).
+
+## Guidance
+
+### The commonest reason money goes unmatched is a thin usage report
+
+**In a 2020 survey, collectives put first a service report that names the recording but says nothing about the song, its writers or its publishers.**
+
+The survey, written for the US Copyright Office from the answers of collectives that were not named, lists the reasons in order of how often they come up. First come reports that identify only the recording, then data that needs manual research nobody has done or that would cost too much, then works the owner never registered. Your own registrations cannot fix a thin report, but they give the collective something to match it against.
+
+- Register each song and recording wherever it earns, with writers, shares and identifiers.
+- Check that recording codes and song codes agree across your distributor and your registrations.
+
+Why money goes unclaimed · Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+### Conflicting registrations and unknown shares hold money back
+
+**Money can stay unpaid when registrations disagree, when shares are unknown or add up to more than 100 percent, or when owners dispute a song.**
+
+Collectives surveyed in 2020 also named missing proof that an owner controls a work, registrations not yet checked and ownership disputes still open. In the US, the MLC's Overclaims Tool, covered in the mechanicals guide, deals with songs whose claimed shares come to more than the whole. A dispute over who owns a song is a matter for a music lawyer, not a registration form.
+
+- Agree splits in writing with co-writers before anyone registers.
+- Compare what each publisher and society holds for the same song.
+
+Why money goes unclaimed · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf), [MLC: tools](https://www.themlc.com/tools)
+
+### A song can be known at home and missing abroad
+
+**A collective may lack a foreign owner's details, or hold incomplete data from a sister society, so income earned abroad can stall.**
+
+Collectives learn about works from their own members, from sister societies under reciprocal agreements and from shared databases such as the IPI system. The 2020 survey lists missing information on foreign owners and incomplete data from other societies among the reasons money goes unmatched. If your society or sub-publisher abroad does not hold your song, income there may sit unallocated.
+
+- Ask your society which sister societies hold your works.
+- Ask your sub-publisher which territories have your registrations.
+
+Why money goes unclaimed · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+
+### No collective matches everything
+
+**The 2020 survey says any claimed 100 percent match rate should be doubted. Its author reports that executives see the high 80s percent as very good for current service reports.**
+
+The warning about 100 percent reflects the experience of the collectives surveyed. The high 80s figure is the author's account of past conversations with executives, not a measured benchmark, and it concerns matching current service reports to works that members have registered. Even then some usage of registered songs goes unmatched, so it pays to check statements and the collectors' unmatched lists from time to time.
+
+- Check your statements and each collector's unmatched list on a schedule.
+
+Why money goes unclaimed · Intermediate · Directional (reported) · For: publishers and labels, administrators, songwriters · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+### US law makes the MLC list unmatched works and give notice
+
+**The statute requires a public place to see unmatched works and claim them, and industry notice of a payout at least 90 days ahead.**
+
+Section 115 requires the MLC to keep an online facility with its contact details showing works, or shares of works, it could not match, where an owner can assert a claim. It must also make good-faith efforts to announce to the industry a coming payout of unclaimed money, with interest, at least 90 days ahead. Watch for those notices.
+
+- Check the MLC's unmatched list and distribution notices as they appear.
+
+Where to look · Intermediate · Sourced (law) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### Societies post lists of unidentified works, but not always openly
+
+**Posting lists of unidentified works is a common outreach step, but some societies list only works above a money threshold, and some open the lists to members or affiliates only.**
+
+In the 2020 survey, putting such lists on a society's website was one of the most common ways to find owners. The report's example threshold is $100, given in US dollars for illustration; smaller amounts may go into a shared pool instead. Because societies usually pay only members, affiliates and sister societies, the lists may be open to them alone, and publishers may get bulk access that songwriters do not. Ask your own society where its list is.
+
+- Ask each society if it posts a list and who may see it.
+
+Where to look · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+### Collectives match in layers, and spend manual effort where money is
+
+**Societies match by machine first, then research by hand, and some keep manual research for works above a money or usage level, such as $10.**
+
+The 2020 survey describes matching on recording, work and party codes plus titles and names, followed by manual research and quality checks. Some societies now match recordings to works before any service report arrives. Audio fingerprinting is used less often. Because research can cost more than a small amount recovers, low-earning works may never get individual attention.
+
+What collectives do · Advanced · Sourced (official) · For: administrators, publishers and labels · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+### Identifiers let a collective link your song to you
+
+**Collectives use the ISWC for the song, the IPI number for each writer and publisher, and the ISRC for the recording to link a usage report to a payee.**
+
+WIPO's 2012 music module describes the ISWC as an ISO reference number for a musical work that ties the work to its rights holders in the IPI system. The 2020 survey says societies match on ISRC, ISWC and IPI codes alongside titles and names. Registrations that carry these codes give a collective more to match on.
+
+- Add your IPI number and song codes to registrations where the form asks.
+
+What collectives do · Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+### Most societies surveyed in 2020 did not use US-style market share
+
+**Collectives surveyed in 2020 most often did not share out unclaimed money by each owner's market share, the method US law sets for the MLC.**
+
+Section 115 tells the MLC to divide unclaimed accrued royalties by owners' relative market shares in the usage reports. The 2020 survey says the participating collectives "most often do not use copyright owner market share calculations" for this money. Its list of methods does include market share counted by catalogue rather than by owner, and several pro rata splits among owners already paid from the same source. Do not assume a society abroad follows the MLC's method.
+
+- Ask each society abroad how it shares out income it cannot allocate.
+
+Undistributed money · Advanced · Sourced (official) · For: administrators, publishers and labels · Where: International, US · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### Some societies deduct for cultural and social funds
+
+**The author of the 2020 survey writes that most societies in continental Europe and Latin America deduct part of collections for social, cultural or educational purposes.**
+
+She calls this very controversial in the industry when the sums are large, their use is unclear, or they come from foreign rights holders without permission. WIPO's 2012 music module says such deductions are common in many countries and are not cost recovery, so rights holders and other societies have to accept them beforehand. CISAC's collection figures are gross, before these deductions.
+
+- Ask your society, and any society abroad that collects for you, what it deducts and why.
+
+Undistributed money · Advanced · Directional (reported) · For: songwriters, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [CISAC 2023](https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf)
+
+### US study: hold money for an owner who is known but cannot be found
+
+**The Copyright Office's July 2021 report recommends that the MLC keep holding unclaimed royalties for an owner who is known but cannot be found, until that owner turns up.**
+
+In the Office's reading of the statute, money for a song whose owner is known and can be found is not unclaimed, so the MLC cannot give it to others by market share just because that owner has not joined or has not supplied payment details. The holding advice is a recommendation the MLC must give substantial weight, not a rule; the report's five-year advice is in the mechanicals guide. Check the MLC's own current policy.
+
+- Compare the MLC's current policy with the recommendations.
+
+Undistributed money · Advanced · Sourced (official) · For: administrators, publishers and labels · Where: US · As of 1 July 2021 · Sources: [U.S. Copyright Office 2021](https://www.copyright.gov/policy/unclaimed-royalties/unclaimed-royalties-final-report.pdf)
+
+### Do not assume a deadline, and do not assume time is unlimited
+
+**The CMRRA, PPL and SoundExchange pages checked here name no claim deadline. That does not mean money waits forever, and the MLC's April 2027 date is a start, not a cut-off.**
+
+Silence on a page is not a promise. The MLC plans to begin market-share distributions of money still unmatched in April 2027, starting with January 2021 usage, so claiming before your usage months come up matters; the mechanicals guide has the detail. The 2020 survey also describes societies pooling small unclaimed amounts and sharing them out. Ask each collector in writing how long it holds money.
+
+- Claim early.
+- Get any holding period confirmed in writing.
+
+Mistakes · Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International, Canada, UK, US · As of 20 November 2026 · Sources: [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+## In order
+
+### In myPPL, the role you claim decides whether a UK performance pays
+
+**When you ask PPL to add you to a recording's line-up, you pick a role. Audible contributions generally count; some studio roles with no audible part do not pay.**
+
+PPL treats playing, singing, electronics and other audible parts as a performance. A studio producer counts only when they conduct, or give similar direction to, a live performance while it is recorded; later edits and remixes do not. Such a producer claims on a separate PPL form that the featured performers also sign, and always joins the line-up as non-featured. Joining, evidence and missing tracks are covered in the claimable-royalties table.
+
+- Note your role, the session dates and the recording details before you claim.
+- Studio producers: ask the featured performers to sign the producer form.
+
+After release · Where to look · Beginner · Sourced (official) · For: artists, producers · Where: UK · As of 20 November 2026 · Sources: [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+### Gather identity and ownership papers before you claim
+
+**Collectives may ask for your legal name and aliases, contact and tax details, proof of identity, and proof of ownership or splits for each work.**
+
+The 2020 survey for the US Copyright Office lists what collectives may require or recommend: full names and pseudonyms, party codes such as the IPI number, your role and share, contact details, proof of identity, tax numbers, and documents proving rights in each territory. Keeping them in one folder speeds every claim.
+
+- Collect agreements, split sheets and ID in one folder.
+- Note every alias used on past releases.
+
+After release · Claiming · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+## Common mistakes
+
+### Letting contact and bank details go stale
+
+**Collectives surveyed in 2020 listed missing current addresses and bank details among the reasons a known owner still goes unpaid.**
+
+A song can be matched to a known owner and still not be paid, because the collective cannot reach that owner or has no valid payment details. The same survey notes rights taken away from a society while its records were never changed. After a move, a name change or a change of publisher, update every account.
+
+- Update address, bank and tax details after any change.
+- Tell each society in writing when rights move.
+
+Why money goes unclaimed · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+### Assuming one registration covers every collector
+
+**A performing rights society, the MLC and SoundExchange each keep their own accounts. Each pays only what it collects, so a missing registration leaves money unclaimed.**
+
+SoundExchange says artists and recording owners must register with it to be paid US digital performance royalties. The MLC's Missing Member Lookup lists rightsholders who may be owed money but have not joined. The 2020 survey adds that collectives typically pay only their own members, affiliates and sister societies. Check each kind of income separately; the claimable-royalties table lists where to look.
+
+- List every collector for each kind of income you earn.
+
+Mistakes · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, International · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup), [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+## Key numbers
+
+| Number | What it is | As of | Where | Grade | Sources |
+|---|---|---|---|---|---|
+| 90 days' minimum notice before an MLC unclaimed distribution | Minimum notice before a US unclaimed distribution: Section 115 makes the MLC publicize any pending distribution of unclaimed money across the industry at least this many days before it is paid. | 20 November 2026 | US | Sourced (law) | [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115) |
+| 10.83 EUR billion, gross, 2022 | Music collections by CISAC member societies in 2022: Scale only: gross collections before deductions, from CISAC's 2023 report. It gives no unclaimed total, so do not read this as money waiting. | 26 October 2023 | International | Sourced (official) | [CISAC 2023](https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf) |
+| 28 million tracks or more | Tracks on PPL's repertoire database: PPL says its repertoire database holds over 28 million tracks. Members search it for recordings they performed on before they claim. | 20 November 2026 | UK | Sourced (official) | [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/) |
+
+## SoundExchange's four status lists for unclaimed royalties
+
+SoundExchange sorts creators it holds unclaimed royalties for into four lists. The list you are on shows what is missing. How to register and claim is in the claimable-royalties table.
+
+| List | What it means |
+|---|---|
+| Unregistered Artists | SoundExchange has no registration for the act, or the people registered have not finished claiming |
+| Partially Unregistered Artists | Some members of a group are registered and paid; at least one is not, so that share waits |
+| Unregistered Performers | These individual performers have no current registration |
+| Unregistered Sound Recording Owners | The owner has not registered, or has registered but not finished claiming |
+
+Beginner · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/)
+
+## What collectives do with royalties they cannot allocate
+
+The 2020 survey lists ways societies share out money they cannot allocate, now or in the past. Practice varies by society and by type of income, so ask your own.
+
+| Method | In short |
+|---|---|
+| Add to the next pool | Held over and shared among current earners of the next payout for the same kind of use |
+| Pro rata to paid owners | Split among owners paid from the same source in the same period |
+| Allocate by work | Split by work first, then by each owner's share of the work |
+| Market share by catalogue | Shared by catalogue market share, not by owner or administrator |
+| Send to a foreign society | A use known to involve a work from another country goes to that country's society |
+| Pay the current owner | Where the work is known but a past owner is not, the present owner is paid |
+| Cover costs or fund causes | Used for running costs, or for shared causes such as anti-piracy or social and cultural funds |
+
+Advanced · Sourced (official) · For: administrators, publishers and labels, songwriters · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+## Unclaimed-money check, step by step
+
+A short pass to find money held for you, built from each collector's own page and the 2020 survey for the US Copyright Office.
+
+**Prepare**
+
+- List every name, alias and company you have used
+- Collect IDs, split sheets and ownership papers
+- Update bank, address and tax details
+
+**Search**
+
+- MLC Missing Member Lookup (US digital mechanicals)
+- SoundExchange unregistered lists (US digital performance)
+- CMRRA Unclaimed Works portal (Canada)
+- PPL myPPL claim (UK performers)
+- Your own society's list of unidentified works, if it has one
+
+**Claim and follow up**
+
+- Register or join where you are missing
+- Claim only your own share
+- Diary a check on each claim
+- Ask a music lawyer about disputed ownership
+
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, Canada, UK, International · As of 20 November 2026 · Sources: [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+## Terms
+
+Defined on the glossary: https://kitesink.com/music/glossary.md
+
+- **Black box**: Informal industry name for a pool of collected royalties that nobody has been able to allocate. It is a nickname, not a legal or official term; collectives use names such as suspense account.
+- **Suspense account**: An account where a collective holds royalties while the works in a usage report are still unidentified. A 2020 survey for the US Copyright Office lists checking it against past payouts among some societies' pre-payment steps.
+- **Unclaimed royalties**: A loose word for royalties that no owner has collected yet. Meanings vary between collectors, and the MLC uses it both for its wider unclaimed accrued royalties and for one part of them. Read each collector's own definition.
+- **Unmatched royalties**: Money collected for a use of a song that cannot be paid yet because the song, its owner or the owner's share is still unknown or unfound. In US law it means the owner "has not been identified or located".
+
+## Unclaimed-money checklist
+
+Places that may hold royalties for you. Check each one that fits who you are and where your music earns.
+
+- [ ] **The MLC** (US, mechanical): Unclaimed accrued US digital mechanicals under the blanket licence, 2021 usage onward. What to look for: Use the MLC's tools to register songs, claim missing shares and propose matches for unmatched recordings. Money still unclaimed is later shared out by market share. Cost: Free to join, per the MLC. [Unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- [ ] **The MLC** (US, mechanical): Historical unmatched US streaming mechanicals from 2007 to 2020. What to look for: Join the MLC, register your works, then use its claiming and matching tools to find missing shares and propose links to unmatched uses. Matched money is paid with interest. Cost: Free to join, per the MLC. [Historical royalties](https://www.themlc.com/historical-royalties)
+- [ ] **The MLC** (US, mechanical): US digital mechanicals held for rightsholders who have not yet joined the MLC. What to look for: Search your name in the Missing Member Lookup. If it appears, sign up as an MLC Member to collect the digital audio mechanicals owed to you. Cost: Free lookup and free to join. [Missing Member Lookup](https://www.themlc.com/missing-members-lookup)
+- [ ] **Copyright owners, usually publishers, paid MLC unclaimed money** (US, mechanical): The songwriter's share of any unclaimed accrued royalties a publisher receives from the MLC. What to look for: When your publisher or administrator receives an MLC unclaimed distribution, ask for the payment or credit due to you and the usage behind it. If it is disputed, involve a music lawyer. Cost: The statute sets no fee or claim process. [17 USC 115(d)(3)(J)(iv)](https://www.law.cornell.edu/uscode/text/17/115)
+- [ ] **SoundExchange** (US, neighbouring rights): US digital performance royalties for unregistered artists and sound recording owners. What to look for: Use the search on SoundExchange's page to see if you appear on one of its unregistered lists. Then register for free and claim your recordings in SX Direct. Cost: Free to register. [Are you owed royalties?](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/#are-you-owed-royalties)
+- [ ] **CMRRA** (Canada, mechanical): Uses by online music services in Canada of recordings or work shares that CMRRA has not yet matched. What to look for: Apply for a CMRRA Direct account (approval may need as long as 3 business days), open Unclaimed Works, match recordings to your works and add missing ownership shares. Cost: No fee stated on the page. [Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/)
+- [ ] **PPL** (UK, neighbouring rights): UK recorded-music royalties for performers missing from a recording's line-up. What to look for: Join PPL as a performer and, if you are not on a track's line-up, claim in myPPL. PPL may ask for evidence. If the track itself is missing, ask its rightsholder to add it. Cost: No fee stated on the page. [PPL performer claims](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+Who can claim, the rules and the sources: https://kitesink.com/music/claimable.md
+
+---
+
+Source page: https://kitesink.com/music/unclaimed-recovery  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/claims.md
+================================================================
+
+# Music business claims, checked: KiteSink
+
+Common things people say about royalties, rights and deals. Each has a verdict, what the answer rests on, and the source.
+Verdicts: Holds up, Mostly holds, Depends, Overstated, Not supported.
+
+## Royalty basics
+
+### Does owning the master mean I own the song?
+
+**Verdict: Not supported.** No. The song and the recording are two separate works with separate rights, and they can have different owners.
+
+The Copyright Office treats a song (the music and lyrics) and a recording of someone performing it as two distinct works. Its circular on sound recordings says the copyright in a recording does not cover the underlying music or lyrics. The songwriter is the usual author of a song, and the featured performer and the producer are the usual authors of a recording, unless the work was made for hire. Read your agreements too, and have a music lawyer check any deal that moves ownership.
+
+What this rests on: Copyright Office Circulars 50 and 56, as retrieved 20 November 2026 (US).
+
+- Write down who owns the song and who owns the recording for each release
+
+Topics: Publishing, Myths · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+
+### Are featured artists paid 45% of US digital performance royalties?
+
+**Verdict: Depends.** It depends on the money. For receipts under the US statutory licence, the law gives featured artists 45 percent, paid per recording. Other income follows contracts.
+
+17 USC 114(g)(2) divides receipts from transmissions licensed under the statutory licence: 50 percent to the owner of the digital performance right, 45 percent to featured recording artists, and 2.5 percent each to escrow funds for non-featured musicians and vocalists. The collective may first deduct its reasonable costs, and an artist can send part of the share to a producer, mixer or engineer by letter of direction. For transmissions outside that licence, section 114(g)(1) points the artist to the recording owner and the artist's contract.
+
+What this rests on: 17 USC 114(g)(1) to (g)(5), as retrieved 20 November 2026 (US).
+
+- Read your recording contract for income outside the statutory licence
+
+Topics: Neighbouring rights, Royalties · Intermediate · Sourced (law) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+
+### Do I have to register my recording with the Copyright Office to have a copyright?
+
+**Verdict: Not supported.** No. For a US sound recording made since 1978, protection starts when it is fixed. Registration is a separate, optional step with its own form, fee and deposit.
+
+The Copyright Office's sound recordings circular says recordings created after 1 January 1978 are protected automatically once first fixed, and that neither registration nor publication is required. This answer rests on that circular and covers recordings only, not songs. Registering has other effects, and the Office changes its fees, so check its current pages before you apply.
+
+What this rests on: Copyright Office Circular 56 for recordings; application steps in Circulars 50 and 56.
+
+- Read the Office's circular for your type of work before applying
+
+Topics: Myths, Metadata · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+
+### Do recording owners get paid when a song plays on US AM/FM radio?
+
+**Verdict: Not supported.** Not under US copyright law. Recording owners hold a performance right only for digital audio transmissions, and over-the-air radio broadcasts fall outside it.
+
+17 USC 114(a) gives a sound recording owner only some of the section 106 rights and leaves out the general public performance right in clause (4). Clause (6) covers digital audio transmissions, and section 114(d)(1)(A) exempts nonsubscription broadcast transmissions, which (j)(3) defines as those of FCC-licensed terrestrial stations. Song owners do hold a performing right, usually licensed through a society. This is US law only: in the UK, for example, PPL pays recording owners and qualifying performers for broadcasts.
+
+What this rests on: 17 USC 106(4), 106(6), 114(a), (d)(1)(A) and (j)(3), as retrieved 20 November 2026 (US); PPL for the UK example.
+
+- Check each country's rules before expecting recording income from radio play
+
+Topics: Neighbouring rights, Performance · Intermediate · Sourced (official) · For: artists, producers, publishers and labels · Where: US, UK · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [PPL n.d.-a](https://www.ppluk.com/royalties/how-royalties-are-calculated/)
+
+### Do non-US songwriters need to fill in Form W-8 BEN?
+
+**Verdict: Depends.** It depends on the payer and your situation. The IRS says a foreign individual gives the form to the withholding agent or payer when asked for it.
+
+The IRS page says a foreign individual who beneficially owns an amount that is subject to US withholding gives the form to whoever pays or withholds, when that party asks, whether or not a lower rate or an exemption is claimed. The form is for individuals; the page links a separate form for entities. It does not say which rate applies to royalties. This is not tax advice: ask a tax adviser how US withholding applies to you.
+
+What this rests on: IRS page About Form W-8 BEN, as retrieved 20 November 2026 (US).
+
+- Ask each payer which form it needs from you
+- Ask a tax adviser how US withholding applies to you
+
+Topics: Royalties, International · Intermediate · Sourced (official) · For: songwriters, artists, producers · Where: US, International · As of 20 November 2026 · Sources: [Internal Revenue Service n.d.](https://www.irs.gov/forms-pubs/about-form-w-8-ben)
+
+## Mechanicals and the MLC
+
+### Do I have to claim my unclaimed MLC royalties before April 2027?
+
+**Verdict: Not supported.** No. April 2027 is when the MLC plans to start paying out remaining unclaimed accrued royalties by market share. It is a start date, not a cut-off for claims.
+
+The MLC says it intends to begin in April 2027 with the earliest blanket usage, from January 2021, then to work through the remaining eligible 2021 royalties one month at a time. The pool is only money the MLC has not matched or paid out by then, so a song matched before its usage month comes up is paid in the normal way instead. These are the MLC's plans, so watch its dashboard, and register and match early.
+
+What this rests on: MLC unclaimed-royalties page and its 30 September 2026 release; 17 USC 115(d)(3), as of November 2026.
+
+- Register and match your songs well before your usage months come up
+- Watch the MLC's unclaimed dashboard for updated schedules
+
+Topics: Unclaimed money, Mechanicals · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [TMLC 2026b](https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution), [TMLC 2026a](https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+### Does the MLC take a fee from my mechanical royalties?
+
+**Verdict: Not supported.** No. The MLC says it deducts no fees from the mechanical royalties it pays out. Digital services fund its budget separately. Your own publisher or administrator may still keep a share.
+
+The MLC's audits page says digital services fully fund its operating budget through an administrative assessment set by the Copyright Royalty Board, separate from the royalties they owe, and that it deducts no fees from royalties. It adds that rightsholders do not pay for its audits of services and that audit recoveries are passed on without costs taken out. The Copyright Office FAQ also names voluntary contributions from the services. This covers US digital mechanicals as the MLC describes them. A publisher or administrator may charge under its own contract.
+
+What this rests on: MLC DSP audits page and Copyright Office MMA FAQ, US digital mechanicals, as retrieved 19 November 2026.
+
+- Ask your publisher or administrator what share it keeps
+
+Topics: Mechanicals, Royalties · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [MLC: DSP audits](https://www.themlc.com/audits-dsp), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
+
+### Does registering my song with the Copyright Office also register it with the MLC?
+
+**Verdict: Not supported.** No. The Copyright Office says a copyright registration does not replace an MLC registration. You, or your publisher or administrator, still have to register the song with the MLC.
+
+The Copyright Office FAQ says owners who already hold a copyright registration must still sign up with the MLC to receive blanket-license digital mechanicals. It also says a song need not be registered with the Office to be eligible for those royalties. For statutory royalties on some physical uses, such as CDs and vinyl, the song must be in the Office's records. Registration has other effects in copyright law that this answer does not cover.
+
+What this rests on: Copyright Office Music Modernization Act FAQ and overview page, as retrieved 19 November 2026.
+
+- Search the MLC's public database, then claim or register the song
+- Ask your publisher or administrator whether it handles the MLC
+
+Topics: Metadata, Mechanicals · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
+
+### Does a streaming service pay a fixed mechanical rate per stream?
+
+**Verdict: Not supported.** No. US law sets no per-stream amount for mechanicals. It sets a formula that produces a pool for each service offering, which is then divided across plays.
+
+37 CFR 385.21 takes, for most offerings, the greater of a share of service revenue and a content-cost amount, subtracts performance royalties the service pays, applies any per-subscriber floor, then divides the pool by plays. What one stream earns therefore depends on the service, the type of offering and its results. This covers interactive streaming and limited downloads in the US under the MLC's blanket license, for the rate period the regulation states.
+
+What this rests on: 37 CFR 385.21(b), Subpart C, as retrieved 19 November 2026.
+
+- Read the offering and period on your statement before comparing per-stream figures
+
+Topics: Mechanicals, Royalties · Intermediate · Sourced (law) · For: songwriters, artists, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21)
+
+### Is 13.1 cents the streaming mechanical rate?
+
+**Verdict: Not supported.** No. 13.1 cents is the 2026 US rate per work for physical copies and permanent downloads. Streaming mechanicals come from a formula, not that figure.
+
+37 CFR 385.11 sets the 2026 rate for physical copies and permanent downloads as 13.1 cents per work, or, if larger, 2.52 cents for each minute or part of one. The Judges' 2026 cost-of-living notice applies those adjusted figures from 1 January to 31 December 2026. Streaming falls under 385.21 and has no fixed per-play amount. A 2027 figure is not given here.
+
+What this rests on: 37 CFR 385.11(a)(1) and 385.21; Federal Register notice of 1 December 2025, as of November 2026.
+
+- Use the 13.1 cent rate only for copies and downloads in 2026
+
+Topics: Mechanicals, Myths · Beginner · Sourced (law) · For: songwriters, artists, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11), [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21)
+
+### Must publishers pay songwriters a share of unclaimed MLC money they receive?
+
+**Verdict: Holds up.** Yes. A copyright owner that receives an MLC unclaimed distribution must pay or credit its songwriters by reported usage, never less than half of what it receives for their works.
+
+17 USC 115(d)(3)(J)(iv) covers songwriters whose works the owner licenses or administers for covered activities, and applies despite any agreement to the contrary. The payment is allocated by each song's usage as reported by digital services in the periods the distribution covers, and a songwriter's amount cannot be under 50 percent of what the owner received for that songwriter's works. Contract terms govern the rest. The rule covers distributions of unclaimed accrued royalties and interest, not all publishing income. A music lawyer should read any agreement that matters.
+
+What this rests on: 17 USC 115(d)(3)(J)(iv), as retrieved 19 November 2026.
+
+- Ask your publisher how it will credit these payments to you
+
+Topics: Unclaimed money, Publishing · Intermediate · Sourced (law) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+## Unclaimed royalties
+
+### Is a "black box" the same as unclaimed royalties?
+
+**Verdict: Depends.** Not exactly. Black box is an informal nickname for money no one has allocated. The MLC uses its own terms, and each collector defines its own.
+
+Industry use of black box varies, and collectives use names such as suspense account for money held while works are unidentified. The MLC counts both unmatched and unclaimed royalties inside what it calls unclaimed accrued royalties. In US law, unmatched means the owner is not yet known or found. Read the collector's own definition before comparing figures.
+
+What this rests on: Industry nickname with no official definition; MLC unclaimed page, 17 USC 115 and the 2020 Copyright Office survey, as of November 2026.
+
+- Use each collector's own term when you search for money held for you
+
+Topics: Unclaimed money, Myths · Beginner · Directional (industry practice) · For: songwriters, artists, publishers and labels, administrators · Where: US, International · As of 20 November 2026 · Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+
+### Does registering with my PRO also get me SoundExchange or MLC money?
+
+**Verdict: Not supported.** No. A performing rights society, the MLC and SoundExchange each keep their own accounts and pay only what they collect. Each needs its own registration.
+
+SoundExchange says artists and recording owners must register with it to receive US digital performance royalties. The MLC's Missing Member Lookup lists rightsholders who have not joined but may be owed US digital audio mechanicals. A PRO registration covers neither. Each kind of income has its own register, so a missing one can leave money unpaid.
+
+What this rests on: SoundExchange artists page and MLC Missing Member Lookup, as retrieved 19 to 20 November 2026.
+
+- List every collector for each kind of income you earn
+- Search the MLC and SoundExchange unregistered lists for your names
+
+Topics: Royalties, Unclaimed money · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
+
+### Do collecting societies worldwide share out unclaimed money by market share?
+
+**Verdict: Overstated.** Not as a rule. US law tells the MLC to use market share. A 2020 survey of collectives found most of those taking part did not use owner market share for such money.
+
+The survey was written for the Copyright Office from the answers of collectives whose names were kept confidential, gathered between January and April 2020. It says that, for works nobody has identified or claimed, the participants usually share the money out without weighing each owner's market share. Its list of methods includes catalogue market share and several pro rata splits among owners already paid. The survey is not a count of every society, and practice varies by society and type of income, so ask your own.
+
+What this rests on: Butler survey of collective rights management, April 2020 (participating collectives only); 17 USC 115(d)(3)(J).
+
+- Ask each society abroad how it shares out income it cannot allocate
+
+Topics: International, Unclaimed money · Advanced · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International, US · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+---
+
+Source page: https://kitesink.com/music/claims  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/glossary.md
+================================================================
+
+# Music business glossary: KiteSink
+
+The 22 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
+
+- **Black box** (Unclaimed royalties; International): Informal industry name for a pool of collected royalties that nobody has been able to allocate. It is a nickname, not a legal or official term; collectives use names such as suspense account.
+- **Blanket license (digital)** (Mechanicals and the MLC; US): Since 1 January 2021, a qualifying digital service can get one license through the MLC that covers every song open to the compulsory license, in place of song-by-song notices. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
+- **Compulsory (mechanical) license** (Mechanicals and the MLC; US): A US legal route to record and distribute your own version of a song once recordings of it have been released in the US with the owner's permission. You must meet the conditions and pay the statutory rate. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **ISRC code** (Royalty basics; International, UK): International Standard Recording Code: a 12-character identifier for one recording, made of a rightsholder code, a year and a five-digit number. Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/)
+- **ISWC code** (Royalty basics; International): International Standard Musical Work Code: a number that identifies a song and links it to its rights holders in the society systems. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+- **Market-share distribution** (Mechanicals and the MLC; US): How the statute says remaining unclaimed accrued royalties are paid: to identified owners in proportion to their relative market shares in the usage reports, with a share passed on to songwriters. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Mechanical right** (Royalty basics; International, US): The right to record a song and to make copies of that recording and distribute them. In the US, streaming and download services get it for songs through the MLC's blanket licence. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [TMLC n.d.](https://www.themlc.com/)
+- **Musical work (the song)** (Royalty basics; US): The composition: the music plus any words that go with it. Its authors are the people who wrote the music and lyrics, unless it was made for hire. Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+- **Neighbouring (related) rights** (Royalty basics; International): Rights that performers, record producers and broadcasters hold, separate from the copyright in the song. Also called related rights. Societies in many countries manage them for broadcasts and public play of recordings. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+- **Notice of intention (NOI)** (Mechanicals and the MLC; US): The notice a person serves on a song's copyright owner, or files with the Copyright Office when the owner cannot be found in its records, to use the compulsory license for physical copies. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Overclaim** (Mechanicals and the MLC; US): A song where the shares claimed by all members together come to more than 100 percent. The MLC's Overclaims Tool lets owners amend or give up shares and upload documents while it is resolved. Sources: [MLC: tools](https://www.themlc.com/tools)
+- **Performing right** (Royalty basics; US): The right to perform a song publicly, or to authorise others to. US law counts a performance as public where the public can attend, or when it is transmitted to the public. Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+- **Phonorecord and digital phonorecord delivery (DPD)** (Mechanicals and the MLC; US): A phonorecord is an object that holds recorded sound, such as vinyl or a CD. A DPD is a digital transmission that leaves the recipient with a specific copy: a permanent or limited download, or an on-demand stream. Sources: [U.S. Copyright Office 2018](https://www.copyright.gov/circs/circ73.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Publishing administrator** (Royalty basics; US, International): Industry name for a company that registers songs, collects their income and keeps the records on an owner's behalf, without becoming the owner. Terms vary by contract.
+- **Sound recording (the master)** (Royalty basics; US): A work made by fixing a series of sounds, such as a recorded performance. In US law it excludes sounds that accompany a film or other audiovisual work. Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+- **Suspense account** (Unclaimed royalties; International): An account where a collective holds royalties while the works in a usage report are still unidentified. A 2020 survey for the US Copyright Office lists checking it against past payouts among some societies' pre-payment steps. Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+- **The DLC (Digital Licensee Coordinator)** (Mechanicals and the MLC; US): The non-profit that represents licensed digital services. It names a non-voting member of the MLC board and can take part in Copyright Royalty Board proceedings that set the assessment funding the MLC. Sources: [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html), [Copyright Office: MLC and DLC boards](https://www.copyright.gov/music-modernization/mlc-dlc-info/)
+- **The MLC (Mechanical Licensing Collective)** (Mechanicals and the MLC; US): The non-profit the Copyright Office designated on 8 July 2019 to run the blanket license: it collects digital mechanicals, matches them to songs and owners, distributes them, and keeps the public database. Sources: [Copyright Office: MLC and DLC boards](https://www.copyright.gov/music-modernization/mlc-dlc-info/), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
+- **Unclaimed accrued royalties** (Mechanicals and the MLC; US): Money the MLC has collected but still cannot match to an owner or pay out when the legal minimum holding period ends. The MLC counts both unmatched and unclaimed amounts in it. Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Unclaimed royalties** (Unclaimed royalties; International): A loose word for royalties that no owner has collected yet. Meanings vary between collectors, and the MLC uses it both for its wider unclaimed accrued royalties and for one part of them. Read each collector's own definition. Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- **Unmatched royalties** (Unclaimed royalties; International, US): Money collected for a use of a song that cannot be paid yet because the song, its owner or the owner's share is still unknown or unfound. In US law it means the owner "has not been identified or located". Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- **Writer's share and publisher's share** (Royalty basics; International): Common industry names for the part of a song's income that goes to its writers and the part that goes to its publishers. See the note on how societies divide it.
+
+## Read the areas
+
+- [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
+- [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
+- [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
+
+---
+
+Source page: https://kitesink.com/music/glossary  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/reference.md
+================================================================
+
+# Music key numbers and reference tables, indexed: KiteSink
+
+An index of the 11 key numbers and 9 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
+
+## Key numbers
+
+| Number | Value | Unit | As of | Area |
+|---|---|---|---|---|
+| [Digital was 35% of CISAC collections, all repertoires, in 2022](https://kitesink.com/music/royalty-basics#roy-number-cisac-digital) | 35 | percent of EUR 12.1 bn, all repertoires, 2022 | 26 October 2023 | Royalty basics |
+| [Physical and download mechanical rate per work, 2026](https://kitesink.com/music/mechanicals-mlc#mech-rate-physical-2026) | 13.1 | cents per work, physical and downloads, 2026 | 19 November 2026 | Mechanicals and the MLC |
+| [Per-minute alternative for long tracks, 2026](https://kitesink.com/music/mechanicals-mlc#mech-rate-permin-2026) | 2.52 | cents per minute or fraction, 2026 | 19 November 2026 | Mechanicals and the MLC |
+| [Ringtone mechanical rate](https://kitesink.com/music/mechanicals-mlc#mech-rate-ringtone) | 24 | cents per ringtone, per work | 19 November 2026 | Mechanicals and the MLC |
+| [Streaming revenue percentage for 2026](https://kitesink.com/music/mechanicals-mlc#mech-rate-streaming-pct-2026) | 15.3 | % of service revenue, 2026 (first prong) | 19 November 2026 | Mechanicals and the MLC |
+| [Historical unmatched royalties that services transferred to the MLC](https://kitesink.com/music/mechanicals-mlc#mech-number-historical-transferred) | 397 | million USD, approx., after Phono III adjustments | 19 November 2026 | Mechanicals and the MLC |
+| [Historical royalties distributed by September 2026](https://kitesink.com/music/mechanicals-mlc#mech-number-historical-distributed) | 239 | million USD, approx., historical royalties | 30 September 2026 | Mechanicals and the MLC |
+| [Services sent MLC audit notice letters for 2021 to 2023](https://kitesink.com/music/mechanicals-mlc#mech-number-audit-notices) | 49 | DSPs listed on notice letters dated 10 January 2024 | 19 November 2026 | Mechanicals and the MLC |
+| [Minimum notice before a US unclaimed distribution](https://kitesink.com/music/unclaimed-recovery#unc-number-notice-days) | 90 | days' minimum notice before an MLC unclaimed distribution | 20 November 2026 | Unclaimed royalties |
+| [Music collections by CISAC member societies in 2022](https://kitesink.com/music/unclaimed-recovery#unc-number-cisac-music) | 10.83 | EUR billion, gross, 2022 | 26 October 2023 | Unclaimed royalties |
+| [Tracks on PPL's repertoire database](https://kitesink.com/music/unclaimed-recovery#unc-number-ppl-tracks) | 28 | million tracks or more | 20 November 2026 | Unclaimed royalties |
+
+## Reference tables
+
+- [Income streams and who collects each in the US](https://kitesink.com/music/royalty-basics#roy-table-streams-us) (Royalty basics)
+- [Statutory digital performance split for recordings, as the law states it](https://kitesink.com/music/royalty-basics#roy-table-digital-performance-split) (Royalty basics)
+- [Who collects what in the UK, Canada and Germany](https://kitesink.com/music/royalty-basics#roy-table-international) (Royalty basics)
+- [Streaming content-cost prongs by type of offering](https://kitesink.com/music/mechanicals-mlc#mech-table-streaming-prongs) (Mechanicals and the MLC)
+- [MLC scale figures differ by date, so quote the date](https://kitesink.com/music/mechanicals-mlc#mech-table-mlc-snapshots) (Mechanicals and the MLC)
+- [Three pools of MLC money and where each stands](https://kitesink.com/music/mechanicals-mlc#mech-table-money-pools) (Mechanicals and the MLC)
+- [The rate periods referred to in MLC and CRB documents](https://kitesink.com/music/mechanicals-mlc#mech-table-rate-periods) (Mechanicals and the MLC)
+- [SoundExchange's four status lists for unclaimed royalties](https://kitesink.com/music/unclaimed-recovery#unc-table-soundexchange-lists) (Unclaimed royalties)
+- [What collectives do with royalties they cannot allocate](https://kitesink.com/music/unclaimed-recovery#unc-table-undistributed-methods) (Unclaimed royalties)
+
+## The full entries, as plain text
+
+- [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
+- [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
+- [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
+
+---
+
+Source page: https://kitesink.com/music/reference  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/sources.md
+================================================================
+
+# Music sources and grading: KiteSink
+
+Where the KiteSink music field guide comes from: how entries are graded and all 47 sources it cites.
+
+## How the entries are graded
+
+Each entry records one of four grades. Pages show two labels: Sourced and Directional. An entry takes the grade of its weakest load-bearing source.
+
+- **Sourced**: The law, or the responsible body's own document, states it.
+  - Law: A statute, regulation, court decision or Copyright Royalty Board determination states it.
+  - Official: The responsible body's own published document states it: the MLC, a PRO or society, SoundExchange, the Copyright Office, CISAC, DDEX, IFPI or ISO.
+- **Directional**: Trade press, a secondary source, an estimate or common practice. A good guide, not a settled fact.
+  - Reported: Trade press or a credible secondary source only, or a figure its source calls an estimate.
+  - Industry practice: Common industry convention with no direct source.
+
+## All 47 sources, A to Z
+
+- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 115: Scope of exclusive rights in nondramatic musical works, compulsory license for making and distributing phonorecords*. Title 17, section 115, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/115 (Statute, retrieved 19 November 2026, cited 23×)
+- U.S. Copyright Office (n.d.). *37 CFR 210.32: Musical works database usability, interoperability, and usage restrictions*. Mirror of the eCFR text. US. https://www.law.cornell.edu/cfr/text/37/210.32 (Regulation, retrieved 19 November 2026, cited 1×)
+- Copyright Royalty Board (n.d.). *37 CFR 385.11: Royalty rates (Subpart B, physical phonorecords, permanent downloads, ringtones)*. Mirror of the eCFR text; the eCFR page itself is script-driven and could not be read automatically. US. https://www.law.cornell.edu/cfr/text/37/385.11 (Regulation, retrieved 19 November 2026, cited 9×)
+- Copyright Royalty Board (n.d.). *37 CFR 385.2: Definitions (Subpart A), including TCC*. Mirror of the eCFR text. US. https://www.law.cornell.edu/cfr/text/37/385.2 (Regulation, retrieved 19 November 2026, cited 1×)
+- Copyright Royalty Board (n.d.). *37 CFR 385.21: Royalty rates and calculations (Subpart C, interactive streaming and limited downloads)*. Mirror of the eCFR text. US. https://www.law.cornell.edu/cfr/text/37/385.21 (Regulation, retrieved 19 November 2026, cited 15×)
+- CISAC (2023). *Global Collections Report 2023 (for 2022 data)*. 26 October 2023. Published 26 October 2023, 2022 data. International. https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf (Standard, retrieved 20 November 2026, cited 3×)
+- CMRRA (n.d.). *Unclaimed Works Portal for Online Music Services*. Canada. https://cmrra.ca/unclaimed-works/ (Collecting body, retrieved 20 November 2026, cited 4×)
+- U.S. Copyright Office (n.d.). *MLC and DLC Contact Information, Boards of Directors, and Committees*. US. https://www.copyright.gov/music-modernization/mlc-dlc-info/ (Government, retrieved 19 November 2026, cited 2×)
+- U.S. Copyright Office (n.d.). *Music Modernization Act: Frequently Asked Questions*. US. https://www.copyright.gov/music-modernization/faq.html (Government, retrieved 19 November 2026, cited 8×)
+- U.S. Copyright Office (n.d.). *The Music Modernization Act (overview page)*. US. https://www.copyright.gov/music-modernization/ (Government, retrieved 19 November 2026, cited 6×)
+- Copyright Royalty Board (2022). *Determination of Royalty Rates and Terms for Making and Distributing Phonorecords (Phonorecords IV)*. 16 December 2022. 87 FR 76937-76942, Docket 21-CRB-0001-PR (2023-2027). US. https://www.govinfo.gov/content/pkg/FR-2022-12-16/html/2022-27237.htm (Regulation, retrieved 20 November 2026, cited 2×)
+- Copyright Royalty Board (2023). *Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords; Correction*. 21 December 2023. 88 FR 88253-88254, Docket 23-CRB-0014-PR-COLA (2024). US. https://www.govinfo.gov/content/pkg/FR-2023-12-21/html/2023-28075.htm (Regulation, retrieved 20 November 2026, cited 2×)
+- Copyright Royalty Board (2024). *Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords*. 27 November 2024. 89 FR 93477, Docket 24-CRB-0010-PR-COLA (2025). US. https://www.govinfo.gov/content/pkg/FR-2024-11-27/html/2024-27819.htm (Regulation, retrieved 20 November 2026, cited 2×)
+- Copyright Royalty Board (2025). *Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords (2026)*. 1 December 2025. 90 FR 55044, Docket 25-CRB-0012-PR COLA (2026). US. https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm (Regulation, retrieved 19 November 2026, cited 8×)
+- U.S. Copyright Office (report commissioned from Susan P. Butler) (2020). *Collective Rights Management Practices Around the World: A Survey of CMO Practices to Reduce the Occurrence of Unclaimed Royalties in Musical Works*. 1 April 2020. Butler, April 2020; CMOs anonymous, information gathered January to April 2020. International. https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf (Government, retrieved 20 November 2026, cited 18×)
+- Copyright Royalty Board (n.d.). *eCRB case details: Phonorecords V, 25-CRB-0013-PR (2028-2032)*. Docket page read on the retrieval date. US. https://app.crb.gov/case/detail/25-CRB-0013-PR%20%282028-2032%29 (Government, retrieved 19 November 2026, cited 2×)
+- *Order 10 Requesting Response by Settlement Movants Regarding Proposed Settlement for Subpart B; and Order of Bifurcation*, Copyright Royalty Judges, Library of Congress, 25-CRB-0013-PR (2028-2032) (18 September 2026). Published by Copyright Royalty Board. US. https://app.crb.gov/document/download/79449 (Ruling, retrieved 19 November 2026, cited 1×)
+- *Order 16 for Accelerated Briefing Schedule*, Copyright Royalty Judges, Library of Congress, 25-CRB-0013-PR (2028-2032) (18 November 2026). Published by Copyright Royalty Board. US. https://app.crb.gov/document/download/79807 (Ruling, retrieved 19 November 2026, cited 1×)
+- GEMA (n.d.). *GEMA: For composers, lyricists and music publishers*. Germany. https://www.gema.de/en/ (Collecting body, retrieved 20 November 2026, cited 1×)
+- The Harry Fox Agency (n.d.). *Does HFA have a public database search? What happened to the Songfile public search?*. US. https://help.harryfox.com/does-hfa-have-a-public-database-search-what-happened-to-the-songfile-public-search (Collecting body, retrieved 19 November 2026, cited 1×)
+- Internal Revenue Service (n.d.). *About Form W-8 BEN, Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)*. US. https://www.irs.gov/forms-pubs/about-form-w-8-ben (Government, retrieved 20 November 2026, cited 2×)
+- The Mechanical Licensing Collective (n.d.). *What do the different statement types mean? (MLC Help Center)*. US. https://help.themlc.com/en/support/what-do-the-different-statement-layouts-mean (Collecting body, retrieved 19 November 2026, cited 1×)
+- The Mechanical Licensing Collective (n.d.). *DSP Audits*. US. https://www.themlc.com/audits-dsp (Collecting body, retrieved 19 November 2026, cited 4×)
+- The Mechanical Licensing Collective (n.d.). *Historical Royalties*. Dashboard text states data current as of November 2026. US. https://www.themlc.com/historical-royalties (Collecting body, retrieved 19 November 2026, cited 7×)
+- The Mechanical Licensing Collective (n.d.). *Missing Member Lookup*. US. https://www.themlc.com/missing-members-lookup (Collecting body, retrieved 19 November 2026, cited 9×)
+- The Mechanical Licensing Collective (n.d.). *The MLC's Tools*. US. https://www.themlc.com/tools (Collecting body, retrieved 19 November 2026, cited 10×)
+- The Mechanical Licensing Collective (n.d.). *Unclaimed Accrued Royalties*. US. https://www.themlc.com/unclaimed-accrued-royalties (Collecting body, retrieved 19 November 2026, cited 9×)
+- PPL (n.d.). *How royalties are calculated*. UK. https://www.ppluk.com/royalties/how-royalties-are-calculated/ (Collecting body, retrieved 20 November 2026, cited 3×)
+- PPL (n.d.). *Recording rightsholders*. UK. https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/ (Collecting body, retrieved 20 November 2026, cited 4×)
+- PPL (n.d.). *Performers*. UK. https://www.ppluk.com/royalties/uk-royalties/performers/ (Collecting body, retrieved 20 November 2026, cited 8×)
+- Re:Sound (n.d.). *Re:Sound Music Licensing Company (home page)*. Canada. https://www.resound.ca/ (Collecting body, retrieved 20 November 2026, cited 3×)
+- Songview (ASCAP, BMI, GMR and SESAC) (n.d.). *Songview*. US. https://www.songview.com (Collecting body, retrieved 20 November 2026, cited 4×)
+- SOCAN (n.d.). *SOCAN (home page)*. Canada. https://www.socan.com/ (Collecting body, retrieved 20 November 2026, cited 1×)
+- SoundExchange (n.d.). *Artists, Labels & Producers*. US. https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/ (Collecting body, retrieved 20 November 2026, cited 11×)
+- The Mechanical Licensing Collective (2022). *Musical Works Database Terms of Use (last updated 11 April 2022)*. 11 April 2022. US. https://themlc.com/musicalworksdatabasetermsuse (Collecting body, retrieved 19 November 2026, cited 1×)
+- The Mechanical Licensing Collective (2026). *Looking Ahead: Market Share Distributions (one-sheet, Rev. 06/2026)*. 1 June 2026. Rev. 06/2026. US. https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf (Collecting body, retrieved 19 November 2026, cited 5×)
+- The Mechanical Licensing Collective (2026). *The MLC Holds Annual Membership Meeting: Highlights More Than $4.2 Billion in Total Royalties Distributed and Announces Date of First Monthly Market Share Distribution*. 30 September 2026. US. https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution (Collecting body, retrieved 19 November 2026, cited 7×)
+- The Mechanical Licensing Collective (n.d.). *The MLC (home page)*. US. https://www.themlc.com/ (Collecting body, retrieved 20 November 2026, cited 5×)
+- U.S. Copyright Office (2018). *Circular 73: Compulsory License for Making and Distributing Phonorecords*. 1 January 2018. Revised 01/2018. US. https://www.copyright.gov/circs/circ73.pdf (Government, retrieved 19 November 2026, cited 2×)
+- U.S. Copyright Office (2021). *Unclaimed Royalties: Best Practice Recommendations for the Mechanical Licensing Collective*. 1 July 2021. Report of the Register of Copyrights, July 2021. US. https://www.copyright.gov/policy/unclaimed-royalties/unclaimed-royalties-final-report.pdf (Government, retrieved 19 November 2026, cited 2×)
+- U.S. Copyright Office (n.d.). *Circular 50: Copyright Registration for Musical Compositions*. US. https://www.copyright.gov/circs/circ50.pdf (Government, retrieved 20 November 2026, cited 8×)
+- U.S. Copyright Office (n.d.). *Circular 56: Copyright Registration for Sound Recordings*. US. https://www.copyright.gov/circs/circ56.pdf (Government, retrieved 20 November 2026, cited 7×)
+- U.S. Copyright Office (n.d.). *Classics Protection and Access Act (Title II of the Music Modernization Act)*. US. https://www.copyright.gov/music-modernization/pre1972-soundrecordings/ (Government, retrieved 20 November 2026, cited 1×)
+- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 101: Definitions*. Title 17, section 101, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/101 (Statute, retrieved 20 November 2026, cited 5×)
+- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 106: Exclusive rights in copyrighted works*. Title 17, section 106, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/106 (Statute, retrieved 20 November 2026, cited 5×)
+- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 114: Scope of exclusive rights in sound recordings*. Title 17, section 114, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/114 (Statute, retrieved 20 November 2026, cited 8×)
+- World Intellectual Property Organization (2012). *Educational Material on Collective Management of Copyright and Related Rights, Module 2: Management of copyright and related rights in the field of music*. 30 August 2012. Module 2, 30 August 2012. International. https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf (Government, retrieved 20 November 2026, cited 14×)
+
+---
+
+Source page: https://kitesink.com/music/sources  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/claimable.md
+================================================================
+
+# Claimable music royalties: KiteSink
+
+7 places where music royalties can sit unclaimed, by holder and territory. Each row says who can claim, how, what it costs and what happens if nobody does, with the date it was checked and its sources.
+
+Covers the holders whose own published pages or the law could be read and checked, in the territories this guide covers. A holder not listed may still hold money for you. Each row is dated: rules and amounts change, so check the holder's page before you act.
+
+The same rows as data: https://kitesink.com/music/claimable.json
+
+## The MLC: Unclaimed accrued US digital mechanicals under the blanket licence, 2021 usage onward
+
+- Money: Mechanical · Where: US · For: songwriters, publishers and labels, administrators
+- Who can claim: Songwriters, publishers and administrators whose songs earned US digital audio mechanicals that the MLC received but could not match or pay out.
+- How to claim: Use the MLC's tools to register songs, claim missing shares and propose matches for unmatched recordings. Money still unclaimed is later shared out by market share.
+- If nobody claims: The MLC plans to start market-share payouts in April 2027, beginning with usage from January 2021 and moving forward a month per payout. This is a start date, not a deadline.
+- Cost: Free to join, per the MLC
+- Link: [Unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- Sourced (official) · As of 20 November 2026 · Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [TMLC 2026b](https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution), [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup)
+
+## The MLC: Historical unmatched US streaming mechanicals from 2007 to 2020
+
+- Money: Mechanical · Where: US · For: songwriters, publishers and labels, administrators
+- Who can claim: Owners of musical works used in US streaming before 2021 whose use the services could not match to a copyright owner.
+- How to claim: Join the MLC, register your works, then use its claiming and matching tools to find missing shares and propose links to unmatched uses. Matched money is paid with interest.
+- If nobody claims: As of November 2026 the MLC says its market-share process for what stays unmatched has not begun. It gives no claim cut-off date on the page.
+- Cost: Free to join, per the MLC
+- Link: [Historical royalties](https://www.themlc.com/historical-royalties)
+- Sourced (official) · As of 20 November 2026 · Sources: [MLC: historical royalties](https://www.themlc.com/historical-royalties), [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup)
+
+## The MLC: US digital mechanicals held for rightsholders who have not yet joined the MLC
+
+- Money: Mechanical · Where: US · For: songwriters, publishers and labels, administrators
+- Who can claim: Rightsholders who are not yet MLC Members and who find their own name, or the name they collect under, in the lookup.
+- How to claim: Search your name in the Missing Member Lookup. If it appears, sign up as an MLC Member to collect the digital audio mechanicals owed to you.
+- If nobody claims: The lookup leaves out historical unmatched royalties, so a hit shows only part of what may be owed. The page states no claim cut-off.
+- Cost: Free lookup and free to join
+- Link: [Missing Member Lookup](https://www.themlc.com/missing-members-lookup)
+- Sourced (official) · As of 20 November 2026 · Sources: [MLC: Missing Member Lookup](https://www.themlc.com/missing-members-lookup), [MLC: historical royalties](https://www.themlc.com/historical-royalties)
+
+## Copyright owners, usually publishers, paid MLC unclaimed money: The songwriter's share of any unclaimed accrued royalties a publisher receives from the MLC
+
+- Money: Mechanical · Where: US · For: songwriters, publishers and labels, administrators
+- Who can claim: Songwriters whose works a publisher licenses or administers for US digital mechanicals, or their authorised agents.
+- How to claim: When your publisher or administrator receives an MLC unclaimed distribution, ask for the payment or credit due to you and the usage behind it. If it is disputed, involve a music lawyer.
+- If nobody claims: By statute the share follows reported usage and is never under 50% of what the owner got for that songwriter's works or shares, whatever the contract says.
+- Cost: The statute sets no fee or claim process
+- Link: [17 USC 115(d)(3)(J)(iv)](https://www.law.cornell.edu/uscode/text/17/115)
+- Sourced (law) · As of 20 November 2026 · Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+
+## SoundExchange: US digital performance royalties for unregistered artists and sound recording owners
+
+- Money: Neighbouring rights · Where: US · For: artists, producers, publishers and labels, administrators
+- Who can claim: Unregistered recording artists, performers and sound recording owners whose recordings were played on US non-interactive services such as SiriusXM and Pandora.
+- How to claim: Use the search on SoundExchange's page to see if you appear on one of its unregistered lists. Then register for free and claim your recordings in SX Direct.
+- If nobody claims: The page says registration is required to be paid. It gives no time limit for claiming, so check with SoundExchange before assuming money is safe.
+- Cost: Free to register
+- Link: [Are you owed royalties?](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/#are-you-owed-royalties)
+- Sourced (official) · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/)
+
+## CMRRA: Uses by online music services in Canada of recordings or work shares that CMRRA has not yet matched
+
+- Money: Mechanical · Where: Canada · For: publishers and labels, administrators, songwriters
+- Who can claim: Rightsholders who own or control musical works and hold an approved CMRRA Direct account. The page is written as a guide for publishers.
+- How to claim: Apply for a CMRRA Direct account (approval may need as long as 3 business days), open Unclaimed Works, match recordings to your works and add missing ownership shares.
+- If nobody claims: After CMRRA verifies the submission, its quarterly invoicing covers past and current use. The page gives no claim cut-off date.
+- Cost: No fee stated on the page
+- Link: [Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/)
+- Sourced (official) · As of 20 November 2026 · Sources: [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/)
+
+## PPL: UK recorded-music royalties for performers missing from a recording's line-up
+
+- Money: Neighbouring rights · Where: UK · For: artists, producers
+- Who can claim: Performers on a recording in PPL's repertoire that was played in public or broadcast, if the performer's residence or citizenship, or where they recorded, qualifies.
+- How to claim: Join PPL as a performer and, if you are not on a track's line-up, claim in myPPL. PPL may ask for evidence. If the track itself is missing, ask its rightsholder to add it.
+- If nobody claims: The page states no claim deadline. It says the UK right to equitable remuneration through PPL runs 70 years from the recording being made or released.
+- Cost: No fee stated on the page
+- Link: [PPL performer claims](https://www.ppluk.com/royalties/uk-royalties/performers/)
+- Sourced (official) · As of 20 November 2026 · Sources: [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+To work through these as a checklist: https://kitesink.com/music/tools.md
+
+---
+
+Source page: https://kitesink.com/music/claimable  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+
+================================================================
+FILE: https://kitesink.com/music/tools.md
+================================================================
+
+# Music rights tools: KiteSink
+
+Tools built here (a mechanical rate calculator, an unclaimed-money checklist, an identifier checker and a split-sheet generator) and a checked directory of other tools.
+
+## Mechanical rate calculator
+
+For physical copies and permanent downloads made and distributed in the US. Per copy, the rate is the larger of the per-work rate and the per-minute rate times the playing time, with a part minute counted as a whole one (37 CFR 385.11). This is the statutory rate; a licence agreed directly with the publisher can set a different one.
+
+Rates as of 20 November 2026.
+
+| Year | Per work | Per minute or part minute | Streaming, first prong (illustration) | Sources |
+|---|---|---|---|---|
+| 2023 | 12 cents | 2.31 cents | 15.1% of revenue | [Copyright Royalty Board 2022](https://www.govinfo.gov/content/pkg/FR-2022-12-16/html/2022-27237.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+| 2024 | 12.4 cents | 2.38 cents | 15.2% of revenue | [Copyright Royalty Board 2023](https://www.govinfo.gov/content/pkg/FR-2023-12-21/html/2023-28075.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+| 2025 | 12.7 cents | 2.45 cents | 15.25% of revenue | [Copyright Royalty Board 2024](https://www.govinfo.gov/content/pkg/FR-2024-11-27/html/2024-27819.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+| 2026 | 13.1 cents | 2.52 cents | 15.3% of revenue | [Copyright Royalty Board 2025](https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm), [37 CFR 385.21](https://www.law.cornell.edu/cfr/text/37/385.21) |
+
+Example: a 5:01 track counts as 6 minutes; at 2.52 cents a minute that is 15.12 cents, more than a 13.1-cent per-work rate, so 15.12 cents per copy.
+
+Ringtones: 24 cents per ringtone, whatever its length. Sources: [37 CFR 385.11](https://www.law.cornell.edu/cfr/text/37/385.11)
+
+Streaming mechanicals are not a per-stream rate. Under 37 CFR 385.21 a service works out a royalty pool for each offering, the larger of a share of its revenue and other measures the rule sets, takes off what it pays for performance rights, and divides the rest among the works by their share of plays. The percentages above are the first prong only, shown as an illustration.
+
+## Unclaimed-money checklist
+
+Places that may hold royalties for you. Check each one that fits who you are and where your music earns.
+
+- [ ] **The MLC** (US, mechanical): Unclaimed accrued US digital mechanicals under the blanket licence, 2021 usage onward. What to look for: Use the MLC's tools to register songs, claim missing shares and propose matches for unmatched recordings. Money still unclaimed is later shared out by market share. Cost: Free to join, per the MLC. [Unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- [ ] **The MLC** (US, mechanical): Historical unmatched US streaming mechanicals from 2007 to 2020. What to look for: Join the MLC, register your works, then use its claiming and matching tools to find missing shares and propose links to unmatched uses. Matched money is paid with interest. Cost: Free to join, per the MLC. [Historical royalties](https://www.themlc.com/historical-royalties)
+- [ ] **The MLC** (US, mechanical): US digital mechanicals held for rightsholders who have not yet joined the MLC. What to look for: Search your name in the Missing Member Lookup. If it appears, sign up as an MLC Member to collect the digital audio mechanicals owed to you. Cost: Free lookup and free to join. [Missing Member Lookup](https://www.themlc.com/missing-members-lookup)
+- [ ] **Copyright owners, usually publishers, paid MLC unclaimed money** (US, mechanical): The songwriter's share of any unclaimed accrued royalties a publisher receives from the MLC. What to look for: When your publisher or administrator receives an MLC unclaimed distribution, ask for the payment or credit due to you and the usage behind it. If it is disputed, involve a music lawyer. Cost: The statute sets no fee or claim process. [17 USC 115(d)(3)(J)(iv)](https://www.law.cornell.edu/uscode/text/17/115)
+- [ ] **SoundExchange** (US, neighbouring rights): US digital performance royalties for unregistered artists and sound recording owners. What to look for: Use the search on SoundExchange's page to see if you appear on one of its unregistered lists. Then register for free and claim your recordings in SX Direct. Cost: Free to register. [Are you owed royalties?](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/#are-you-owed-royalties)
+- [ ] **CMRRA** (Canada, mechanical): Uses by online music services in Canada of recordings or work shares that CMRRA has not yet matched. What to look for: Apply for a CMRRA Direct account (approval may need as long as 3 business days), open Unclaimed Works, match recordings to your works and add missing ownership shares. Cost: No fee stated on the page. [Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/)
+- [ ] **PPL** (UK, neighbouring rights): UK recorded-music royalties for performers missing from a recording's line-up. What to look for: Join PPL as a performer and, if you are not on a track's line-up, claim in myPPL. PPL may ask for evidence. If the track itself is missing, ask its rightsholder to add it. Cost: No fee stated on the page. [PPL performer claims](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+Who can claim, the rules and the sources: https://kitesink.com/music/claimable.md
+
+## Identifier checker
+
+Paste or type one identifier. The checker says what kind it is, whether it is in the right form, whether the check digit adds up where the standard has one, and gives the form to store and the form to print. A code can pass every check and still belong to another song or person, so look it up before you rely on it. Nothing you type is sent anywhere or kept.
+
+The checker itself: https://kitesink.com/music/tools#identifiers
+
+### ISRC (International Standard Recording Code)
+
+- Identifies: A sound recording or music video. Each different recording has its own.
+- Form: 12 characters: a 5-character prefix (2 letters, then 3 letters or digits), 2 digits for the year the code was assigned, and a 5-digit number. Written for people as ISRC AA-6Q7-20-00047. The word ISRC, spaces and hyphens are not part of the code, and lower case is read as capitals.
+- Check digit: None. ISRC has no check digit, so a checker can only test the form.
+- Look it up: [ISRC Search (IFPI)](https://isrcsearch.ifpi.org/)
+- Sources (opened 20 November 2026): [IFPI: ISRC Handbook, 4th edition (2021), sections 3.3 and 5](https://www.ifpi.org/wp-content/uploads/2021/02/ISRC_Handbook.pdf); [IFPI: ISRC structure](https://isrc.ifpi.org/isrc-standard/isrc-structure); [International ISRC Agency: Bulletin 2015/01, validating an ISRC](https://isrc.ifpi.org/images/downloads/Bulletin_2015-01_-_Validating_ISRC_Codes.pdf)
+
+### ISWC (International Standard Musical Work Code)
+
+- Identifies: A musical work: the song as written, not any one recording of it.
+- Form: The letter T, a 9-digit work number and one check digit (ISO 15707:2022). Usually written ISWC T-034.524.680-1; the hyphens and dots are only there to help reading.
+- Check digit: ISO 15707:2022 says the check digit is a weighted modulus 10 and sets out the formula in an annex its public preview leaves out. The checker uses the formula in the ISO committee's 1999 papers: 1 plus each work digit times its position (1 to 9), and the check digit makes the total a multiple of 10. It gives the standard's own example, so a pass reads “consistent with the published formula”.
+- Look it up: [ISWC-Network (CISAC)](https://iswcnet.cisac.org/)
+- Sources (opened 20 November 2026): [ISO 15707:2022, clause 4 (preview)](https://cdn.standards.iteh.ai/samples/83125/8adf68d27507472b892f3370f710813e/ISO-15707-2022.pdf); [ISWC International Agency: the ISWC](https://www.iswc.org/iswc); [ISO/TC 46/SC 9 N 268 (1999): the check digit formula](https://groups.niso.org/higherlogic/ws/public/download/2544/sc9n268.pdf)
+
+### ISNI (International Standard Name Identifier)
+
+- Identifies: The public identity of a person or organisation, such as a performer, a writer or a label. A pseudonym can have its own.
+- Form: 16 characters: 15 digits and a check character, which is a digit or X. Written ISNI 0000 0001 2124 1960; the word ISNI and the spaces are not part of it.
+- Check digit: The check character comes from the first 15 digits by the ISO/IEC 7064 MOD 11-2 method (ISO 27729, Annex A). X stands for 10.
+- Look it up: [ISNI search](https://isni.org/page/search-database/)
+- Sources (opened 20 November 2026): [ISO 27729:2024, clause 4 and Annex A (preview)](https://cdn.standards.iteh.ai/samples/87177/3bea4cd1719644159883964978cc57fa/ISO-27729-2024.pdf); [ISNI: FAQs](https://isni.org/page/faqs/); [IANA: ISNI namespace registration](https://www.iana.org/assignments/urn-namespaces/urn-formal/isni)
+
+### IPI (Interested Party Information)
+
+- Identifies: A writer or publisher in the IPI system the CISAC societies share. Each name has an IPI name number; the IPI base number ties all of one party's names together.
+- Form: Name number: 11 digits. An older 9-digit number is written with two leading zeros. Base number: usually written I-NNNNNNNNN-C, the letter I, nine digits and a final digit.
+- Check digit: No check-digit rule is published for either, so the checker tests the form only. A number in the right form may still be wrong.
+- Look it up: ask your PRO or society for the IPI numbers they hold for you.
+- Sources (opened 20 November 2026): [SUISA: What is the IPI number? (17 April 2025)](https://blog.suisa.ch/en/what-is-the-ipi-number/); [Harry Fox Agency: What is an IPI number?](https://help.harryfox.com/what-is-an-ipi-number); [CISAC: IPI](https://www.cisac.org/services/information-services/ipi); [Wikipedia: Interested Parties Information (the base number pattern; a secondary source)](https://en.wikipedia.org/wiki/Interested_Parties_Information)
+
+## Split-sheet generator
+
+A split sheet records what the writers of a song agreed: who wrote it and each writer's share. It is not a publishing contract. For anything beyond recording the split, get a music lawyer.
+
+Fill it in together, check that the shares make exactly 100 percent, then print it and have every writer sign and date it. Give every writer a copy.
+
+A sheet holds the song title, the date agreed, any other titles and the recording artist; and for each writer their name, role (lyrics, music, lyrics and music, or a producer who helped write the song), PRO or society, IPI number, publisher and share, with a line to sign and date. Shares are percentages of the song, to two decimal places, and must add up to exactly 100. Split evenly gives three writers 33.34, 33.33 and 33.33.
+
+The generator itself: https://kitesink.com/music/tools#split-sheet
+
+## In preparation
+
+- Society directory: Collecting societies by territory, and the rights each one collects.
+
+## Other tools worth knowing
+
+### Works and repertoire searches
+
+- [SESAC Repertory](https://www.sesac.com/repertory/) (SESAC): Search works SESAC represents by title, work number, writer, publisher or artist; shows SESAC's share and its writers and publishers. You accept extra terms of use before searching; SESAC warns results may be incomplete. Access: Free, no login. For: songwriters, publishers and labels, administrators. Where: US. Checked 20 November 2026.
+
+### Unclaimed money
+
+- [MLC Missing Member Lookup](https://www.themlc.com/missing-members-lookup) (The MLC): Search a name to see whether the MLC may hold US digital mechanicals for a rightsholder who has not joined. Leaves out historical unmatched money. Access: Free, no login. For: songwriters, publishers and labels, administrators. Where: US. Checked 20 November 2026.
+- [MLC royalty dashboards](https://www.themlc.com/dashboards) (The MLC): Public MLC pages charting royalty totals: blanket royalties since 2021, historical 2007-2020 by rate period and service, and unclaimed 2021 usage by month. Each dashboard sits on a public MLC page that opened without sign-in. Access: Free, no login. For: songwriters, publishers and labels, administrators. Where: US. Checked 20 November 2026.
+- [MLC Matching and Claiming tools](https://www.themlc.com/tools) (The MLC): Portal tools to claim missing shares of registered songs and to propose matches between unmatched recordings and your songs. Sign in to the Member Hub (matching also in the Songwriter Hub). The MLC says connecting with it is free. Access: Free, login needed. For: songwriters, publishers and labels, administrators. Where: US. Checked 20 November 2026.
+
+### Metadata and file formats
+
+- [Django Music Publisher](https://github.com/matijakolaric-com/django-music-publisher) (Matija Kolaric): Open-source software you install and run yourself to keep song metadata, register and license works and process publishing royalties. MIT licence per the repository; installed from PyPI and needs technical skill to run. Access: Free, no login. For: publishers and labels, administrators. Where: International. Checked 20 November 2026.
+
+### Splits and agreements
+
+- [Music Business Toolbox](https://musicbusinesstoolbox.com/) (Music Business Toolbox): Music business templates and calculators, including split agreements, budgets and contracts, in a paid subscription with a small free set. Split, budget and contract tools are in the paid tier; the free tier has a checklist and guides. Access: Paid. For: songwriters, artists, producers. Where: International. Checked 20 November 2026.
+
+---
+
+Source page: https://kitesink.com/music/tools  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
 
 ================================================================
 FILE: https://kitesink.com/listening-club.md

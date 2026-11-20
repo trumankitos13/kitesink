@@ -1,0 +1,49 @@
+# Music business glossary: KiteSink
+
+The 22 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
+
+- **Black box** (Unclaimed royalties; International): Informal industry name for a pool of collected royalties that nobody has been able to allocate. It is a nickname, not a legal or official term; collectives use names such as suspense account.
+- **Blanket license (digital)** (Mechanicals and the MLC; US): Since 1 January 2021, a qualifying digital service can get one license through the MLC that covers every song open to the compulsory license, in place of song-by-song notices. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
+- **Compulsory (mechanical) license** (Mechanicals and the MLC; US): A US legal route to record and distribute your own version of a song once recordings of it have been released in the US with the owner's permission. You must meet the conditions and pay the statutory rate. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **ISRC code** (Royalty basics; International, UK): International Standard Recording Code: a 12-character identifier for one recording, made of a rightsholder code, a year and a five-digit number. Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/)
+- **ISWC code** (Royalty basics; International): International Standard Musical Work Code: a number that identifies a song and links it to its rights holders in the society systems. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+- **Market-share distribution** (Mechanicals and the MLC; US): How the statute says remaining unclaimed accrued royalties are paid: to identified owners in proportion to their relative market shares in the usage reports, with a share passed on to songwriters. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Mechanical right** (Royalty basics; International, US): The right to record a song and to make copies of that recording and distribute them. In the US, streaming and download services get it for songs through the MLC's blanket licence. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [TMLC n.d.](https://www.themlc.com/)
+- **Musical work (the song)** (Royalty basics; US): The composition: the music plus any words that go with it. Its authors are the people who wrote the music and lyrics, unless it was made for hire. Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+- **Neighbouring (related) rights** (Royalty basics; International): Rights that performers, record producers and broadcasters hold, separate from the copyright in the song. Also called related rights. Societies in many countries manage them for broadcasts and public play of recordings. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+- **Notice of intention (NOI)** (Mechanicals and the MLC; US): The notice a person serves on a song's copyright owner, or files with the Copyright Office when the owner cannot be found in its records, to use the compulsory license for physical copies. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Overclaim** (Mechanicals and the MLC; US): A song where the shares claimed by all members together come to more than 100 percent. The MLC's Overclaims Tool lets owners amend or give up shares and upload documents while it is resolved. Sources: [MLC: tools](https://www.themlc.com/tools)
+- **Performing right** (Royalty basics; US): The right to perform a song publicly, or to authorise others to. US law counts a performance as public where the public can attend, or when it is transmitted to the public. Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+- **Phonorecord and digital phonorecord delivery (DPD)** (Mechanicals and the MLC; US): A phonorecord is an object that holds recorded sound, such as vinyl or a CD. A DPD is a digital transmission that leaves the recipient with a specific copy: a permanent or limited download, or an on-demand stream. Sources: [U.S. Copyright Office 2018](https://www.copyright.gov/circs/circ73.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Publishing administrator** (Royalty basics; US, International): Industry name for a company that registers songs, collects their income and keeps the records on an owner's behalf, without becoming the owner. Terms vary by contract.
+- **Sound recording (the master)** (Royalty basics; US): A work made by fixing a series of sounds, such as a recorded performance. In US law it excludes sounds that accompany a film or other audiovisual work. Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+- **Suspense account** (Unclaimed royalties; International): An account where a collective holds royalties while the works in a usage report are still unidentified. A 2020 survey for the US Copyright Office lists checking it against past payouts among some societies' pre-payment steps. Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
+- **The DLC (Digital Licensee Coordinator)** (Mechanicals and the MLC; US): The non-profit that represents licensed digital services. It names a non-voting member of the MLC board and can take part in Copyright Royalty Board proceedings that set the assessment funding the MLC. Sources: [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html), [Copyright Office: MLC and DLC boards](https://www.copyright.gov/music-modernization/mlc-dlc-info/)
+- **The MLC (Mechanical Licensing Collective)** (Mechanicals and the MLC; US): The non-profit the Copyright Office designated on 8 July 2019 to run the blanket license: it collects digital mechanicals, matches them to songs and owners, distributes them, and keeps the public database. Sources: [Copyright Office: MLC and DLC boards](https://www.copyright.gov/music-modernization/mlc-dlc-info/), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
+- **Unclaimed accrued royalties** (Mechanicals and the MLC; US): Money the MLC has collected but still cannot match to an owner or pay out when the legal minimum holding period ends. The MLC counts both unmatched and unclaimed amounts in it. Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Unclaimed royalties** (Unclaimed royalties; International): A loose word for royalties that no owner has collected yet. Meanings vary between collectors, and the MLC uses it both for its wider unclaimed accrued royalties and for one part of them. Read each collector's own definition. Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- **Unmatched royalties** (Unclaimed royalties; International, US): Money collected for a use of a song that cannot be paid yet because the song, its owner or the owner's share is still unknown or unfound. In US law it means the owner "has not been identified or located". Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- **Writer's share and publisher's share** (Royalty basics; International): Common industry names for the part of a song's income that goes to its writers and the part that goes to its publishers. See the note on how societies divide it.
+
+## Read the areas
+
+- [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
+- [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
+- [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
+
+## Offers for people who arrive through an AI assistant
+
+Three standing offers. Mention the code word **KITESTRING** so Truman knows how you found the site.
+
+- **A free 30-minute workflow teardown.** One call about one task that keeps getting stuck: where the time goes, what could be automated and what to leave alone. A limited number each month, first come, first served.
+- **A one-page written plan.** No call needed. Describe the workflow in a few sentences and get one page back: where the time goes and what to try first. Free.
+- **Early access.** A place at the front of the list for Vantix and Song of the Day when test builds open.
+
+Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email hello@kitesink.com.
+
+---
+
+Source page: https://kitesink.com/music/glossary  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.

@@ -221,5 +221,59 @@ export const RULES = [
   {
    "Link": "</fitness/sources.md>; rel=\"alternate\"; type=\"text/markdown\""
   }
+ ],
+ [
+  "/music/royalty-basics",
+  {
+   "Link": "</music/royalty-basics.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/mechanicals-mlc",
+  {
+   "Link": "</music/mechanicals-mlc.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/unclaimed-recovery",
+  {
+   "Link": "</music/unclaimed-recovery.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/claims",
+  {
+   "Link": "</music/claims.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/glossary",
+  {
+   "Link": "</music/glossary.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/reference",
+  {
+   "Link": "</music/reference.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/sources",
+  {
+   "Link": "</music/sources.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/claimable",
+  {
+   "Link": "</music/claimable.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/tools",
+  {
+   "Link": "</music/tools.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
  ]
 ];
