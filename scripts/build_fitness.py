@@ -6,6 +6,7 @@
 
 Inputs (all in content/fitness/):
     page.html           the /fitness shell: head, hero, search box, Vantix feature, the calculators
+    hero.json           the hero's goal picker: per goal, the load, the week, the entry and what it rings
     templates/sub.html  the one shell every page under /fitness/ is poured into
     routes.json         one row per page under /fitness/: slug, kind, title, description, h1, lead
     corrections.json    the dated corrections log shown on /fitness/sources
@@ -1280,6 +1281,91 @@ def check_hub(hub, pages, built):
         raise SystemExit("/fitness, the hub:\n  " + "\n  ".join(problems))
 
 
+# ----------------------------------------------------------------- the hero's goal picker
+HERO_LEVELS = ("new", "mid", "adv")
+HERO_WEEK_KINDS = ("lift", "cardio", "rest", "meet")
+HERO_OVERRIDES = ("pct", "pct_from", "how", "entry", "areas", "vantix", "week")
+
+
+def hero(lib, data, pages, page):
+    """content/fitness/hero.json, checked against the field guide, as two things for page.html:
+    the goal buttons (HTML) and everything else /fitness.js needs (JSON). Each goal is resolved
+    for each level, so the script does no merging. An entry is sent with its title, short answer,
+    grade, home and first source; nothing here counts as a citation on the sources page."""
+    spec = json.loads((SRC / "hero.json").read_text(encoding="utf-8"))
+    where = {e["id"]: (dom, e) for dom in DOMAINS for e in data[dom]["entries"]}
+    problems, entries = [], OrderedDict()
+
+    def entry(eid, what):
+        if eid not in where:
+            problems.append(f"{what}: {eid!r} is not an entry in any area")
+            return
+        dom, e = where[eid]
+        src = []
+        for key in e.get("sources", [])[:1]:
+            k = lib.alias[(dom, key)]
+            src.append({"label": lib.label[k], "type": src_type(lib.by_id[k]), "href": pages.url("sources") + "#src-" + k})
+        entries[eid] = {"t": e["title"], "take": e["take"], "c": e["confidence"], "cl": CONF[e["confidence"]],
+                        "href": pages.href(eid, None), "src": src}
+
+    tools = spec.get("tools", {})
+    for t in tools:
+        if f'id="tab-{t}"' not in page:
+            problems.append(f"tools: page.html has no calculator tab tab-{t}")
+    if sorted(spec.get("days_by_level", {})) != sorted(HERO_LEVELS):
+        problems.append("days_by_level needs new, mid and adv")
+    entry(spec.get("days_from", ""), "days_from")
+    goals, buttons, keys = OrderedDict(), [], set()
+    for g in spec.get("goals", []):
+        name = g.get("key") or "?"
+        missing = [f for f in ("key", "label", "sub", "icon", "pct", "how", "entry", "tools", "areas", "week") if f not in g]
+        if missing:
+            problems.append(f"goal {name}: no {', '.join(missing)}")
+            continue
+        if name in keys or not re.fullmatch(r"[a-z]+", name):
+            problems.append(f"goal {name}: keys are unique lowercase words")
+        keys.add(name)
+        if not re.fullmatch(r'(<path d="[^"<>]*"/>)+', g["icon"]):
+            problems.append(f"goal {name}: the icon is one or more <path d=\"...\"/> and nothing else")
+        bad = [lv for lv in g.get("by_level", {}) if lv not in HERO_LEVELS]
+        bad += [f"{lv}.{f}" for lv, o in g.get("by_level", {}).items() for f in o if f not in HERO_OVERRIDES]
+        if bad:
+            problems.append(f"goal {name}: by_level has {', '.join(bad)}; it takes {', '.join(HERO_LEVELS)} and the fields {', '.join(HERO_OVERRIDES)}")
+        levels = OrderedDict()
+        for lv in HERO_LEVELS:
+            m = dict(g, **g.get("by_level", {}).get(lv, {}))
+            what = f"goal {name} ({lv})"
+            if not (isinstance(m["pct"], (int, float)) and 20 <= m["pct"] <= 100):
+                problems.append(f"{what}: pct is a share of max between 20 and 100")
+            if m.get("pct_from"):
+                entry(m["pct_from"], what + " pct_from")
+            entry(m["entry"], what + " entry")
+            problems += [f"{what}: {a!r} is not an area" for a in m["areas"] if a not in DOMAINS]
+            problems += [f"{what}: {t!r} is not one of the tools" for t in m["tools"] if t not in tools]
+            week = m["week"]
+            if len(week) != 7 or any(len(d) != 3 or d[0] not in HERO_WEEK_KINDS or not d[1] or not d[2] for d in week):
+                problems.append(f"{what}: a week is seven [kind, name, what happens] rows, kind one of {', '.join(HERO_WEEK_KINDS)}")
+            levels[lv] = {"pct": m["pct"], "example": not m.get("pct_from"), "how": m["how"], "rest": m.get("rest", ""),
+                          "days": m.get("days") or spec.get("days_by_level", {}).get(lv, ""), "collars": bool(m.get("collars")),
+                          "entry": m["entry"], "tools": m["tools"], "areas": m["areas"], "vantix": bool(m.get("vantix")), "week": week}
+        goals[name] = {"label": g["label"], "levels": levels}
+        buttons.append(f'<button type="button" class="fx-goal" value="{esc(name)}" aria-pressed="false">'
+                       f'<span class="fx-goal-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" '
+                       f'stroke-linecap="round" stroke-linejoin="round" focusable="false">{g["icon"]}</svg></span>'
+                       f'<span class="fx-goal-t">{esc(g["label"])}</span><span class="fx-goal-s">{esc(g["sub"])}</span></button>')
+    if len(goals) != 6:
+        problems.append(f"there are {len(goals)} goals; the picker is laid out for six (two rows of three, three rows of two)")
+    if problems:
+        raise SystemExit("content/fitness/hero.json:\n  " + "\n  ".join(problems))
+    used = {a for g in goals.values() for lv in g["levels"].values() for a in lv["areas"]}
+    blob = {"max": spec.get("max", 100), "daysFrom": spec["days_from"],
+            "tools": {t: {"label": label, "href": "#" + t} for t, label in tools.items()},
+            "areas": {a: {"label": DOMAINS[a][0], "href": pages.url(a)} for a in DOMAINS if a in used},
+            "entries": entries, "goals": goals}
+    data_json = json.dumps(blob, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    return "\n            ".join(buttons), data_json
+
+
 # ----------------------------------------------------------------- assemble
 def build():
     meta, lib, data = load()
@@ -1310,7 +1396,9 @@ def build():
     sub, built = build_subpages(lib, meta, data, numbers, tool_uses, pages, legacy)
 
     # 4. the hub
+    hero_goals, hero_data = hero(lib, data, pages, page)
     fills = {"hub:areas": hub_areas(pages, counts), "hub:reference": hub_reference(pages, numbers),
+             "hero:goals": hero_goals, "hero:data": hero_data,
              **{k: numbers[k] for k in ("n:total", "n:areas", "updated")}}
     for key, value in fills.items():
         token = "{{" + key + "}}"

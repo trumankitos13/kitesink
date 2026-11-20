@@ -409,6 +409,21 @@
   };
   F.PLAN = PLAN;
 
+  /* ---------- the hero's bar ----------
+     heroLoad: the load for a share of a max, to the nearest 2.5 kg and never below the 20 kg bar.
+     plates: what goes on each side, biggest first (so innermost), from 25, 20, 15, 10, 5, 2.5 and
+     1.25 kg plates; with collars, 2.5 kg a side of the load is theirs. */
+  F.HERO_PLATES = [25, 20, 15, 10, 5, 2.5, 1.25];
+  F.heroLoad = function (max, pct) {
+    if (!(max > 0) || !(pct > 0)) return 20;
+    return Math.max(20, Math.round(max * pct / 100 / 2.5) * 2.5);
+  };
+  F.plates = function (kg, collars) {
+    var per = (kg - 20 - (collars ? 5 : 0)) / 2, out = [];
+    F.HERO_PLATES.forEach(function (p) { while (per >= p - 1e-9) { out.push(p); per -= p; } });
+    return out;
+  };
+
   window.KSFit = F;
 
   /* =====================================================================
@@ -484,6 +499,7 @@
       if (show(id)) { var top = $("tools").getBoundingClientRect().top + window.scrollY - 110; window.scrollTo(0, top); }
     }
     show("macros");
+    window.addEventListener("ks:tool", function (e) { if (!location.hash) show(e.detail); });   // the hero's goal picker
     window.addEventListener("hashchange", fromHash);
     if (location.hash) setTimeout(fromHash, 60);
   });
@@ -760,6 +776,131 @@
       store.set({ att: { units: units.get(), style: st, warm: w, squat: kg.squat, bench: kg.bench, dead: kg.dead } });
     }
     show(); calc();
+  });
+
+  /* ---------- the hero: a goal picker, a bar, a week ----------
+     content/fitness/hero.json, checked and resolved by scripts/build_fitness.py, arrives as
+     #fx-data. Picking a goal loads the bar (a share of the best squat, in plates), lays out a
+     typical week, shows one field-guide entry, and rings the tools, areas and Vantix below.
+     The picker and its card are hidden in the HTML and shown here. The only motion is the
+     plates sliding on and the bar settling, then a slow breath, which the pause button stops;
+     none of it runs when the visitor asks for reduced motion, or while the card is off screen. */
+  boot(function () {
+    var dataEl = $("fx-data"), rig = $("fx-rig"); if (!dataEl || !rig) return;
+    var D = JSON.parse(dataEl.textContent), goalsEl = $("fx-goals"), lvEl = $("fx-lv"), clear = $("fx-clear");
+    var L = $("fx-l"), R = $("fx-r"), shaft = $("fx-shaft"), knurl = $("fx-knurl"), maxIn = $("fx-max"), pause = $("fx-pause");
+    var days = $("fx-days"), dayEl = $("fx-day"), rx = $("fx-rx"), ent = $("fx-ent"), then = $("fx-then");
+    var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var DN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var PLATE = { 25: [15, 118, "var(--k-brass-fill)"], 20: [13, 118, "var(--k-green-fill)"], 15: [11, 118, "var(--k-tan)"], 10: [9, 118, "var(--fx-iron)"], 5: [7, 72, "var(--fx-bar)"], 2.5: [6, 54, "var(--k-copy)"], 1.25: [5, 44, "var(--k-mute)"] };
+    var mine = saved.hero || {}, goal = D.goals[mine.goal] ? mine.goal : null, today = (new Date().getDay() + 6) % 7, sel = today;
+    var level = seg(lvEl, mine.level, "mid", function () { paint(true); keep(); });
+    var load = 20, shown = "", impulse = 0, t0 = 0, moving = !RM, onScreen = true, frame = 0;
+    if (mine.max >= 20 && mine.max <= 350) maxIn.value = mine.max;
+    $("fx-pick").hidden = false; rig.hidden = false;
+
+    var k = ""; for (var x = 128; x <= 232; x += 4) if (x < 172 || x > 188) k += '<line x1="' + x + '" y1="71" x2="' + x + '" y2="79"/>';
+    knurl.innerHTML = k;
+    function keep() { store.set({ hero: { goal: goal, level: level.get(), max: maxOf() } }); }
+    function maxOf() { var v = parseFloat(maxIn.value); return isFinite(v) ? Math.max(20, Math.min(350, v)) : D.max; }
+    function side(g, plates, dir, collars, animate) {
+      var x = dir < 0 ? 88 : 272, cls = animate && !RM ? (dir < 0 ? " in-l" : " in-r") : "";
+      var h = '<rect x="' + (dir < 0 ? 8 : 272) + '" y="70" width="80" height="10" rx="3" fill="var(--fx-bar)"/><rect x="' + (dir < 0 ? 88 : 266) + '" y="60" width="6" height="30" rx="2" fill="var(--fx-bar-hi)"/>';
+      plates.forEach(function (p, i) {
+        var d = PLATE[p];
+        h += '<rect class="fx-plate' + cls + '" style="animation-delay:' + (i * 70) + 'ms" x="' + (dir < 0 ? x - d[0] : x) + '" y="' + (75 - d[1] / 2) + '" width="' + d[0] + '" height="' + d[1] + '" rx="2.5" fill="' + d[2] + '"/>';
+        x += dir * (d[0] + 1.5);
+      });
+      if (collars) h += '<rect class="fx-plate' + cls + '" style="animation-delay:' + (plates.length * 70) + 'ms" x="' + (dir < 0 ? x - 10 : x) + '" y="61" width="10" height="28" rx="2" fill="var(--k-brass)"/>';
+      g.innerHTML = h;
+    }
+    function swap(el, html, animate) {
+      if (!animate || RM || !el.innerHTML) { el.innerHTML = html; return; }
+      el.classList.add("swap"); setTimeout(function () { el.innerHTML = html; el.classList.remove("swap"); }, 180);
+    }
+    function entryHTML(id) {
+      var e = D.entries[id]; if (!e) return "";
+      var src = e.src.map(function (s) { return '<a href="' + esc(s.href) + '">' + esc(s.label) + "</a> · " + esc(s.type); }).join("");
+      return '<div class="fx-ent-top"><span class="k-label">Field guide</span><span class="fx-badge ' + esc(e.c) + '">' + esc(e.cl) + "</span></div>" +
+        '<b><a href="' + esc(e.href) + '">' + esc(e.t) + "</a></b><p>" + esc(e.take) + "</p>" + (src ? '<p class="cite">' + src + "</p>" : "");
+    }
+    function showDay(i, week) {
+      sel = i;
+      [].forEach.call(days.children, function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+      if (!week) { dayEl.textContent = "Pick a goal to see what a typical week looks like."; return; }
+      var d = week[i];
+      dayEl.innerHTML = "<b>" + (i === today ? "Today, " : "") + DN[i] + ": " + esc(d[1]) + ".</b> " + esc(d[2]);
+    }
+    function ring(lv) {
+      [].forEach.call(document.querySelectorAll(".fx-match"), function (el) { el.classList.remove("fx-match"); });
+      if (!lv) return;
+      lv.areas.forEach(function (a) { var c = document.querySelector('#guide .hub-card[href="' + D.areas[a].href + '"]'); if (c) c.classList.add("fx-match"); });
+      lv.tools.forEach(function (t) { var b = $("tab-" + t); if (b) b.classList.add("fx-match"); });
+      if (lv.vantix) { var v = document.querySelector(".vx-card"); if (v) v.classList.add("fx-match"); }
+    }
+    function paint(animate) {
+      var g = goal && D.goals[goal], lv = g && g.levels[level.get()], max = maxOf();
+      load = lv ? F.heroLoad(max, lv.pct) : 20;
+      var plates = lv ? F.plates(load, lv.collars) : [], sig = (goal || "") + load + (lv && lv.collars);
+      if (sig !== shown) { shown = sig; side(L, plates, -1, lv && lv.collars, animate); side(R, plates, 1, lv && lv.collars, animate); if (animate) { impulse = 1; t0 = now(); } }
+      $("fx-kg").textContent = num(load, load % 1 ? 1 : 0) + " kg";
+      $("fx-plates").textContent = !lv ? "The empty bar. Pick a goal to load it." : (plates.length ? plates.join(" · ") + " kg a side" : "Just the bar") + (lv.collars ? ", 2.5 kg collars" : "");
+      swap(rx, !lv ? "Pick what you’re after. The bar loads a share of your best squat, and the week below lays out the training."
+        : "<span>" + num(lv.pct, lv.pct % 1 ? 1 : 0) + "%</span> of " + num(max, max % 1 ? 1 : 0) + " kg, for " + esc(lv.how) +
+          "<small>" + (lv.rest ? "Rest " + esc(lv.rest) + " · " : "") + (/\d/.test(lv.days) ? "Lifting days: " + esc(lv.days) : esc(lv.days.charAt(0).toUpperCase() + lv.days.slice(1))) + (lv.example ? ' · <span>an example load: the guide gives reps for this goal, not a %</span>' : "") + "</small>", animate);
+      swap(ent, entryHTML(lv ? lv.entry : D.daysFrom), animate);
+      then.innerHTML = !lv ? "" : lv.tools.map(function (t) { return '<a class="fx-chip" href="' + esc(D.tools[t].href) + '"><small>Tool</small>' + esc(D.tools[t].label) + "</a>"; }).join("") +
+        lv.areas.map(function (a) { return '<a class="fx-chip" href="' + esc(D.areas[a].href) + '"><small>Guide</small>' + esc(D.areas[a].label) + "</a>"; }).join("") +
+        (lv.vantix ? '<a class="fx-chip" href="/vantix"><small>Track</small>Vantix</a>' : "");
+      var week = lv && lv.week, lifts = week ? week.filter(function (d) { return d[0] === "lift"; }).length : 0;
+      days.innerHTML = DN.map(function (n, i) {
+        var d = week && week[i];
+        return '<button type="button" class="fx-day ' + (d ? d[0] : "empty") + (i === today ? " today" : "") + '" aria-pressed="false" aria-label="' + n + (d ? ": " + esc(d[1]) : "") + (i === today ? " (today)" : "") + '">' +
+          '<span class="dl">' + n.slice(0, 2) + '</span><span class="blk" style="animation-delay:' + (i * 45) + 'ms"></span></button>';
+      }).join("");
+      if (animate) { days.classList.remove("go"); void days.offsetWidth; days.classList.add("go"); }
+      $("fx-wk-t").textContent = !lv ? "A typical week" : goal === "meet" ? "Meet week" : "A typical week · " + lifts + " lifting day" + (lifts === 1 ? "" : "s");
+      showDay(week ? sel : today, week);
+      [].forEach.call(goalsEl.querySelectorAll(".fx-goal"), function (b) { b.setAttribute("aria-pressed", b.value === goal ? "true" : "false"); });
+      clear.hidden = !goal;
+      ring(lv);
+      if (lv) say("fx-say", g.label + ": " + num(load, load % 1 ? 1 : 0) + " kg on the bar, " + lv.pct + "% of " + max + " kg, for " + lv.how + ". " + (goal === "meet" ? "A meet week." : "Lifting days a week: " + lv.days + "."));
+    }
+    function now() { return window.performance ? performance.now() : Date.now(); }
+    function step(t) {
+      frame = 0;
+      var kk = 1.5 + load / 220 * 4, b = Math.sin(t / 1600) * kk * .22;
+      if (impulse) { var s = (t - t0) / 1000; b += kk * 1.1 * Math.exp(-s * 3.2) * Math.sin(s * 11); if (s > 2) impulse = 0; }
+      shaft.setAttribute("d", "M8 " + (75 + b) + " Q180 " + (75 - b) + " 352 " + (75 + b));
+      L.setAttribute("transform", "translate(0 " + (b * .8).toFixed(2) + ") rotate(" + (-b * .25).toFixed(2) + " 92 75)");
+      R.setAttribute("transform", "translate(0 " + (b * .8).toFixed(2) + ") rotate(" + (b * .25).toFixed(2) + " 268 75)");
+      knurl.setAttribute("transform", "translate(0 " + (-b * .5).toFixed(2) + ")");
+      run();
+    }
+    function run() { if (moving && onScreen && !document.hidden && !frame) frame = requestAnimationFrame(step); }
+    function setPause() {
+      pause.setAttribute("aria-pressed", moving ? "false" : "true");
+      pause.setAttribute("aria-label", moving ? "Stop the bar moving" : "Let the bar move");
+      pause.innerHTML = moving ? '<svg viewBox="0 0 14 14" fill="currentColor" aria-hidden="true" focusable="false"><rect x="2" y="1" width="3.5" height="12" rx="1"/><rect x="8.5" y="1" width="3.5" height="12" rx="1"/></svg>'
+        : '<svg viewBox="0 0 14 14" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z"/></svg>';
+    }
+
+    goalsEl.addEventListener("click", function (e) {
+      var b = e.target.closest(".fx-goal"); if (!b) return;
+      goal = b.value; paint(true); keep();
+      var lv = D.goals[goal].levels[level.get()];
+      if (lv.tools.length && window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:tool", { detail: lv.tools[0] }));
+    });
+    clear.addEventListener("click", function () { goal = null; paint(true); keep(); });
+    days.addEventListener("click", function (e) {
+      var b = e.target.closest(".fx-day"), lv = goal && D.goals[goal].levels[level.get()];
+      if (b) showDay([].indexOf.call(days.children, b), lv && lv.week);
+    });
+    maxIn.addEventListener("input", function () { paint(false); keep(); });
+    pause.addEventListener("click", function () { moving = !moving; setPause(); run(); });
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; run(); }).observe(rig);
+    document.addEventListener("visibilitychange", run);
+    setPause(); paint(false); run();
   });
 
   /* ---------- search the field guide ----------

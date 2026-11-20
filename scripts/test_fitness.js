@@ -45,6 +45,22 @@ eq('loadFor', F.loadFor(114.5833, 5, 0), 100, 0.001); eq('loadFor 8@2', F.loadFo
 // reps at a percentage inverts it again: 75% → 10 ; 100% → 1 ; 60% → Epley's 20 ; 95% → about 2.16, shown as 2
 eq('repsAt 75%', F.repsAt(0.75), 10, 0.001); eq('repsAt 100%', F.repsAt(1), 1); eq('repsAt 60%', F.repsAt(0.6), 20, 0.001);
 eq('repsAt 95%', F.repsAt(0.95), 2.158, 0.01); eq('repsAt 95% rounds to 2', Math.round(F.repsAt(0.95)), 2);
+// the hero's bar: a share of the max to the nearest 2.5 kg, never under the 20 kg bar; plates biggest first
+eq('heroLoad 85% of 100', F.heroLoad(100, 85), 85); eq('heroLoad 82.5% of 100', F.heroLoad(100, 82.5), 82.5);
+eq('heroLoad rounds to 2.5', F.heroLoad(143, 70), 100); eq('heroLoad never under the bar', F.heroLoad(25, 60), 20);
+eq('heroLoad with no max', F.heroLoad(NaN, 70), 20);
+const pl = (kg, c) => F.plates(kg, c).join(' ');
+const same = (name, got, want) => { const ok = got === want; if (!ok) fail++; console.log((ok ? 'ok   ' : 'FAIL ') + name + ': ' + got + (ok ? '' : ' (want ' + want + ')')); };
+same('plates 85', pl(85), '25 5 2.5'); same('plates 60', pl(60), '20'); same('plates 20', pl(20), '');
+same('plates 82.5 with collars', pl(82.5, true), '25 2.5 1.25'); same('plates 220 with collars', pl(220, true), '25 25 25 20 2.5');
+// every load the hero can show (20 to 350 kg in 2.5 kg steps) is made exactly by its plates
+let off = 0;
+for (let kg = 20; kg <= 350; kg += 2.5) for (const c of [false, true]) {
+  if (c && kg < 25) continue;
+  const p = F.plates(kg, c), sum = 20 + (c ? 5 : 0) + 2 * p.reduce((a, b) => a + b, 0);
+  if (Math.abs(sum - kg) > 1e-9 || p.some((x, i) => i && x > p[i - 1])) { off++; console.log('BAD plates', kg, c, p); }
+}
+eq('plates: every load from 20 to 350 kg adds up, biggest first', off, 0);
 // travel builder: every combination produces a session with moves, only using allowed kit and level
 const kits = [[], ['db'], ['kb', 'band'], ['bar', 'bench', 'sus'], ['db', 'kb', 'band', 'bar', 'bench', 'sus']];
 let n = 0, bad = 0;

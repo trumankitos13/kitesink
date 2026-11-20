@@ -1,0 +1,181 @@
+{
+  "_about": [
+    "The /fitness hero: a goal picker that loads a barbell, lays out a typical week, shows one field-guide entry and rings the tools and areas that fit.",
+    "scripts/build_fitness.py checks this file against the field guide and writes it into the hub (the buttons as HTML, the rest as JSON for /fitness.js).",
+    "pct is the share of the visitor's best squat the bar loads. pct_from names the entry that gives that share; null means the share is an example, because the guide gives reps for that goal, not a percentage, and the page says so.",
+    "days is the lifting days a week. A goal without its own days uses days_by_level, from days_from.",
+    "by_level overrides any of pct, pct_from, how, entry, areas, vantix, week for one level: new (under a year), mid (1 to 3 years), adv (3+ years).",
+    "A week is seven rows, Monday first: [kind, name, what happens]. kind is lift, cardio, rest or meet. The weeks are example templates, not programmes from the guide."
+  ],
+  "max": 100,
+  "days_by_level": { "new": "2–3", "mid": "3–4", "adv": "4–6" },
+  "days_from": "pl-frequency-by-level",
+  "tools": {
+    "macros": "Energy & macros", "reps": "Effective reps", "loads": "1RM & loads",
+    "travel": "Travel workout", "attempts": "Meet attempts", "plan": "Diet planner"
+  },
+  "goals": [
+    {
+      "key": "start", "label": "Just starting", "sub": "A first programme",
+      "icon": "<path d=\"M6 21V4M6 4h11l-2 4 2 4H6\"/>",
+      "pct": 60, "pct_from": "base-beginner-load", "how": "3 sets of 8–10", "rest": "2 min", "days": "2–3",
+      "entry": "base-beginner-load", "tools": ["loads"], "areas": ["basics", "technique", "recovery"], "vantix": false,
+      "week": [
+        ["lift", "Full body A", "A squat or deadlift, a press and a pull, 3 sets each."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["lift", "Full body B", "A squat or deadlift, a press and a pull, 3 sets each."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["lift", "Full body A", "A squat or deadlift, a press and a pull, 3 sets each."],
+        ["cardio", "Walk", "30 min at an easy pace."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."]
+      ],
+      "by_level": {
+        "mid": { "areas": ["basics", "technique", "hypertrophy"] },
+        "adv": { "areas": ["basics", "technique", "hypertrophy"] }
+      }
+    },
+    {
+      "key": "muscle", "label": "Build muscle", "sub": "Size, sets, food",
+      "icon": "<path d=\"M3 9v6M6.5 7v10M17.5 7v10M21 9v6M6.5 12h11\"/>",
+      "pct": 70, "pct_from": null, "how": "3–4 sets of 8–12", "rest": "2 min",
+      "entry": "base-rep-range-progression", "tools": ["reps", "macros"], "areas": ["hypertrophy", "nutrition", "recovery"], "vantix": true,
+      "week": [
+        ["lift", "Upper A", "Chest, back, shoulders, arms, 3–4 sets of 8–12."],
+        ["lift", "Lower A", "Quads, hamstrings, glutes, calves, 3–4 sets of 8–12."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["lift", "Upper B", "Chest, back, shoulders, arms, 3–4 sets of 8–12."],
+        ["lift", "Lower B", "Quads, hamstrings, glutes, calves, 3–4 sets of 8–12."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."]
+      ],
+      "by_level": {
+        "new": {
+          "areas": ["basics", "technique", "hypertrophy"], "vantix": false,
+          "week": [
+            ["lift", "Full body A", "A squat or deadlift, a press and a pull, 3 sets each."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["lift", "Full body B", "A squat or deadlift, a press and a pull, 3 sets each."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["lift", "Full body A", "A squat or deadlift, a press and a pull, 3 sets each."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."]
+          ]
+        },
+        "adv": {
+          "week": [
+            ["lift", "Push", "Chest, shoulders, triceps."],
+            ["lift", "Pull", "Back and biceps."],
+            ["lift", "Legs", "Quads, hamstrings, glutes."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["lift", "Upper", "Chest, back, shoulders, arms, 3–4 sets of 8–12."],
+            ["lift", "Lower", "Quads, hamstrings, glutes, calves, 3–4 sets of 8–12."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."]
+          ]
+        }
+      }
+    },
+    {
+      "key": "strength", "label": "Get stronger", "sub": "Squat, bench, pull",
+      "icon": "<path d=\"M12 20V5M7 10l5-5 5 5M5 20h14\"/>",
+      "pct": 85, "pct_from": "base-strength-zone", "how": "3–5 sets of 3–5", "rest": "3–5 min",
+      "entry": "base-strength-zone", "tools": ["loads"], "areas": ["powerlifting", "technique", "recovery"], "vantix": true,
+      "week": [
+        ["lift", "Squat", "Heavy, 3–5 sets of 3–5."],
+        ["lift", "Bench", "Heavy, 3–5 sets of 3–5."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["lift", "Deadlift", "Heavy pulls, then back work."],
+        ["lift", "Bench volume", "Lighter, more sets."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."]
+      ],
+      "by_level": {
+        "new": {
+          "pct": 75, "pct_from": "base-5x5-sets-across", "how": "5 sets of 5 at one weight", "entry": "base-5x5-sets-across",
+          "areas": ["basics", "technique", "powerlifting"], "vantix": false,
+          "week": [
+            ["lift", "Squat + bench", "5 sets of 5 at one weight."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["lift", "Deadlift + press", "A heavy pull, then the overhead press."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["lift", "Squat + bench", "5 sets of 5 at one weight."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."]
+          ]
+        },
+        "adv": {
+          "week": [
+            ["lift", "Squat", "Heavy, 3–5 sets of 3–5."],
+            ["lift", "Bench", "Heavy, 3–5 sets of 3–5."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."],
+            ["lift", "Deadlift", "Heavy pulls, then back work."],
+            ["lift", "Bench volume", "Lighter, more sets."],
+            ["lift", "Squat volume", "Lighter, more sets."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."]
+          ]
+        }
+      }
+    },
+    {
+      "key": "meet", "label": "First meet", "sub": "Attempts and the day",
+      "icon": "<path d=\"M3 20h18M5 20v-6h4v6M9 20V9h6v11M15 20v-8h4v8\"/>",
+      "pct": 82.5, "pct_from": "meet-num-opener", "how": "your opener, one single", "rest": "", "days": "meet week", "collars": true,
+      "entry": "meet-num-opener", "tools": ["attempts", "loads"], "areas": ["meet", "powerlifting"], "vantix": false,
+      "week": [
+        ["lift", "Openers", "One heavy single at each opener, nothing more."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["lift", "Light technique", "Squat and bench, well short of hard."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["rest", "Rest", "Pack the kit, eat as usual, sleep."],
+        ["meet", "Meet day", "Weigh in two hours before lifting, then nine attempts."],
+        ["rest", "Rest", "Nothing planned."]
+      ],
+      "by_level": {
+        "new": { "pct": 80, "areas": ["meet", "basics"] },
+        "adv": { "pct": 90, "vantix": true }
+      }
+    },
+    {
+      "key": "weight", "label": "Lose or gain", "sub": "Body weight, on purpose",
+      "icon": "<path d=\"M5 20h14l-2-12H7z\"/><path d=\"M12 14l2.5-2.5\"/><path d=\"M9.5 8a2.5 2.5 0 0 1 5 0\"/>",
+      "pct": 75, "pct_from": null, "how": "the same loads, fewer sets", "rest": "2–3 min",
+      "entry": "diet-lift-in-deficit", "tools": ["macros", "plan"], "areas": ["diet", "nutrition", "bodycomp"], "vantix": false,
+      "week": [
+        ["lift", "Full body A", "Keep the loads, cut the sets."],
+        ["cardio", "Easy cardio", "30 min. It adds to the deficit without eating into recovery."],
+        ["lift", "Full body B", "Keep the loads, cut the sets."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."],
+        ["lift", "Full body A", "Keep the loads, cut the sets."],
+        ["cardio", "Easy cardio", "30 min. It adds to the deficit without eating into recovery."],
+        ["rest", "Rest", "Nothing planned. A walk is fine."]
+      ],
+      "by_level": {
+        "adv": {
+          "week": [
+            ["lift", "Upper", "Keep the loads, cut the sets."],
+            ["lift", "Lower", "Keep the loads, cut the sets."],
+            ["cardio", "Easy cardio", "30 min. It adds to the deficit without eating into recovery."],
+            ["lift", "Upper", "Keep the loads, cut the sets."],
+            ["lift", "Lower", "Keep the loads, cut the sets."],
+            ["cardio", "Easy cardio", "30 min. It adds to the deficit without eating into recovery."],
+            ["rest", "Rest", "Nothing planned. A walk is fine."]
+          ]
+        }
+      }
+    },
+    {
+      "key": "health", "label": "Fitter, healthier", "sub": "Cardio, a long life",
+      "icon": "<path d=\"M3 12h4l2-4 4 8 2-4h6\"/>",
+      "pct": 65, "pct_from": null, "how": "8–12 reps, all major muscles", "rest": "90 s", "days": "2 or more",
+      "entry": "hlth-who-weekly-targets", "tools": ["travel"], "areas": ["conditioning", "health", "recovery"], "vantix": false,
+      "week": [
+        ["lift", "Strength", "All major muscles, 8–12 reps."],
+        ["cardio", "Brisk walk", "30 min, moderate."],
+        ["cardio", "Bike or swim", "30 min, moderate."],
+        ["lift", "Strength", "All major muscles, 8–12 reps."],
+        ["cardio", "Brisk walk", "30 min, moderate."],
+        ["cardio", "Long walk", "60 min at a brisk pace."],
+        ["rest", "Rest", "Nothing planned."]
+      ]
+    }
+  ]
+}

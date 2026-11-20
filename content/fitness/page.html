@@ -53,9 +53,110 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.14">
+<link rel="stylesheet" href="/ks.css?v=2027.15">
 <style>
-  .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
+  .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
+
+  /* ---------- hero: the goal picker, the bar, the week ----------
+     On a phone: the words and the picker, then the card, then the search. On a wide screen:
+     the words, the picker and the search on the left, the card on the right. The picker and
+     the card are hidden in the HTML and shown by /fitness.js, like the search box. */
+  .fx { display: grid; gap: clamp(24px, 3.4vw, 52px); grid-template-areas: "copy" "rig" "find"; }
+  .fx > * { min-width: 0; }
+  .fx-copy { grid-area: copy; } .fx-rig { grid-area: rig; } .fx-find { grid-area: find; }
+  .fx-find .hub-find { margin-top: 0; }
+  @media (min-width: 980px) {
+    .fx { grid-template-columns: minmax(0, 1fr) minmax(340px, 400px); grid-template-rows: auto 1fr; grid-template-areas: "copy rig" "find rig"; align-items: start; row-gap: 26px; }
+    .fx-rig { rotate: -.8deg; margin-top: 18px; }
+  }
+  .fx-pick { margin-top: clamp(22px, 3vw, 30px); }
+  .fx-pick > .k-label { display: block; margin-bottom: 10px; }
+  .fx-goals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 660px; }
+  @media (min-width: 700px) { .fx-goals { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .fx-goal { display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: center; gap: 0 10px; min-height: 58px; padding: 9px 11px; text-align: left; cursor: pointer; font: inherit; color: var(--k-ink);
+    border: 1.5px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); transition: background .2s, border-color .2s, color .2s, translate .2s var(--k-ease), box-shadow .2s; }
+  .fx-goal:hover { border-color: var(--k-green); translate: 0 -2px; box-shadow: var(--k-shadow); }
+  .fx-goal-ic { grid-row: 1 / span 2; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--k-tint); color: var(--k-green); transition: background .2s, color .2s; }
+  .fx-goal-ic svg { width: 20px; height: 20px; }
+  .fx-goal-t { align-self: end; font: 600 14.5px/1.2 var(--k-sans); letter-spacing: -.015em; }
+  .fx-goal-s { align-self: start; font: 500 10.5px/1.35 var(--k-mono); color: var(--k-mute); }
+  @media (max-width: 520px) { .fx-goal { min-height: 52px; } .fx-goal-s { display: none; } .fx-goal-t { grid-row: 1 / span 2; align-self: center; } }
+  .fx-goal[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); box-shadow: var(--k-shadow); }
+  .fx-goal[aria-pressed="true"] .fx-goal-ic { background: var(--k-on-green); color: var(--k-green-fill); }
+  .fx-goal[aria-pressed="true"] .fx-goal-s { color: var(--k-on-green-mute); }
+  @keyframes fx-pop { 0% { rotate: 0deg; scale: 1; } 35% { rotate: -14deg; scale: 1.15; } 70% { rotate: 8deg; } 100% { rotate: 0deg; scale: 1; } }
+  .fx-level { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 14px; }
+  .fx-clear { border: 0; background: none; padding: 0 2px; min-height: 40px; cursor: pointer; font: 600 12px var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
+
+  .fx-rig { --fx-bar: #8a7a58; --fx-bar-hi: #b5a582; --fx-iron: #3a3222; --fx-edge: rgba(29,24,16,.35);
+    border: 1.5px solid var(--k-rule-strong); border-radius: 18px; background: var(--k-raised); box-shadow: var(--k-shadow); padding: 16px; display: grid; gap: 12px; }
+  html[data-theme="dark"] .fx-rig { --fx-bar: #9d8d69; --fx-bar-hi: #c9b991; --fx-iron: #4a4131; --fx-edge: rgba(242,234,214,.28); }
+  .fx-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 10px; }
+  .fx-kg { font: 800 clamp(24px, 3vw, 30px)/1 var(--k-sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; color: var(--k-ink); }
+  .fx-max { display: flex; align-items: center; gap: 6px; }
+  .fx-max label { font: 600 10px/1.2 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--k-mute); text-align: right; max-width: 7ch; }
+  .fx-max .with-unit { position: relative; }
+  .fx-max .with-unit .k-input { width: 92px; min-height: 40px; padding: 0 28px 0 10px; font: 600 14px var(--k-mono); font-variant-numeric: tabular-nums; }
+  .fx-max .with-unit span { right: 9px; font-size: 11px; }
+  .fx-pause { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-ink); cursor: pointer; display: grid; place-items: center; }
+  .fx-pause:hover { border-color: var(--k-green); color: var(--k-green); }
+  .fx-pause svg { width: 14px; height: 14px; }
+  .fx-plates { grid-column: 1 / -1; font: 500 11px/1.4 var(--k-mono); color: var(--k-mute); }
+  .fx-bar { display: block; width: 100%; height: auto; overflow: visible; }
+  .fx-plate { stroke: var(--fx-edge); stroke-width: 1; }
+  @keyframes fx-in-l { from { translate: -46px 0; opacity: 0; } }
+  @keyframes fx-in-r { from { translate: 46px 0; opacity: 0; } }
+  .fx-rx { margin: 0; font: 700 17px/1.3 var(--k-sans); letter-spacing: -.015em; color: var(--k-ink); text-wrap: balance; }
+  .fx-rx > span { color: var(--k-green); }
+  .fx-rx small { display: block; margin-top: 4px; font: 500 11px/1.5 var(--k-mono); letter-spacing: 0; color: var(--k-mute); }
+  .fx-rx small span { color: var(--k-brass); }
+  .fx-wk { border-top: 1px dashed var(--k-rule-strong); padding-top: 12px; display: grid; gap: 8px; }
+  .fx-wk-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .fx-leg { display: flex; gap: 10px; font: 500 10.5px var(--k-mono); color: var(--k-mute); }
+  .fx-leg i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 4px; }
+  .fx-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+  .fx-day { display: grid; justify-items: center; gap: 5px; padding: 7px 0 8px; border: 0; border-radius: 8px; background: transparent; cursor: pointer; font: inherit; color: inherit; transition: background .2s; }
+  .fx-day:hover { background: var(--k-tint); }
+  .fx-day .dl { font: 600 10px/1 var(--k-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--k-mute); }
+  .fx-day .blk { width: 100%; max-width: 34px; height: 22px; border-radius: 5px; background: var(--k-tint); box-shadow: inset 0 0 0 1px var(--k-rule); }
+  .fx-day.lift .blk, .fx-leg .lift { background: var(--k-green-fill); box-shadow: none; }
+  .fx-day.cardio .blk, .fx-leg .cardio { background: var(--k-tan); box-shadow: none; }
+  .fx-day.meet .blk { background: var(--k-brass-fill); box-shadow: none; }
+  .fx-day.empty .blk { background: transparent; box-shadow: inset 0 0 0 1.5px var(--k-rule-strong); }
+  .fx-day.today .dl { color: var(--k-ink); }
+  .fx-day.today .dl::after { content: ""; display: block; width: 4px; height: 4px; margin: 3px auto 0; border-radius: 50%; background: var(--k-brass-fill); }
+  .fx-day[aria-pressed="true"] { background: var(--k-tint); box-shadow: inset 0 0 0 1.5px var(--k-ink); }
+  @keyframes fx-blk { from { opacity: 0; translate: 0 6px; } }
+  .fx-say-day { min-height: 2.9em; margin: 0; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .fx-say-day b { color: var(--k-ink); font-weight: 600; }
+  .fx-ent { display: grid; gap: 4px; padding: 10px 12px; border-radius: 12px; background: var(--k-tint); }
+  .fx-ent-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .fx-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 20px; font: 600 10.5px/1.2 var(--k-mono); white-space: nowrap; background: var(--k-tint); color: var(--k-ink); box-shadow: inset 0 0 0 1px var(--k-rule-strong); }
+  .fx-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .fx-badge.strong { background: var(--k-green-fill); color: var(--k-on-green); box-shadow: none; }
+  .fx-badge.moderate { color: var(--k-brass); }
+  .fx-ent b { font: 600 14.5px/1.3 var(--k-sans); letter-spacing: -.01em; color: var(--k-ink); }
+  .fx-ent b a { text-decoration: none; } .fx-ent b a:hover { color: var(--k-green); text-decoration: underline; }
+  .fx-ent p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .fx-ent .cite { font-size: 10.5px; }
+  .fx-then { display: flex; flex-wrap: wrap; gap: 6px; }
+  .fx-then:empty { display: none; }
+  .fx-chip { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 5px 10px; border-radius: 20px; border: 1.5px solid var(--k-rule-strong); font: 600 12px/1.2 var(--k-sans); color: var(--k-ink); text-decoration: none; white-space: nowrap; }
+  .fx-chip:hover { border-color: var(--k-green); color: var(--k-green); }
+  .fx-chip small { font: 500 10px var(--k-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--k-mute); }
+  .fx-fade { transition: opacity .2s; } .fx-fade.swap { opacity: 0; }
+  /* what the chosen goal points at further down: a ring and a tick, never a dimmed neighbour */
+  .hub-card.fx-match, .vx-card.fx-match { outline: 3px solid var(--k-green); outline-offset: 4px; }
+  .k-seg [role="tab"].fx-match { box-shadow: inset 0 0 0 2px var(--k-green); }
+  .hub-card.fx-match { position: relative; }
+  .hub-card.fx-match::after { content: "\2713  Fits your goal"; position: absolute; top: -12px; right: 12px; padding: 5px 9px; border-radius: 20px; background: var(--k-green-fill); color: var(--k-on-green); font: 700 10px/1 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; }
+  @media (prefers-reduced-motion: no-preference) {
+    .fx-goal[aria-pressed="true"] .fx-goal-ic svg { animation: fx-pop .6s var(--k-ease); }
+    .fx-plate.in-l { animation: fx-in-l .42s var(--k-ease) both; }
+    .fx-plate.in-r { animation: fx-in-r .42s var(--k-ease) both; }
+    .fx-days.go .blk { animation: fx-blk .35s var(--k-ease) both; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fx-pause { display: none; } .fx-goal, .fx-fade { transition: none; } }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
   .cite a { color: inherit; text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 2px; }
   .cite a:hover { color: var(--k-green); text-decoration-color: currentColor; }
@@ -296,23 +397,66 @@
 <main id="main">
 
   <section class="k-hero k-wrap" aria-labelledby="page-title">
-    <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
-    <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, six free calculators and a field guide cover the ground: {{n:total}} sourced entries in {{n:areas}} areas, from training basics to health. Everything runs in your browser.</p>
-    <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
-    <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
-      <label class="k-label" for="f-q">Search every entry</label>
-      <div class="hub-find-row">
-        <input class="k-input" id="f-q" type="search" placeholder="Protein, deload, zone 2, RIR…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="f-hint">
-        <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-clear" hidden>Clear</button>
+    <div class="fx" id="fx">
+      <div class="fx-copy">
+        <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
+        <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
+        <p class="k-lead">Six free calculators and a sourced field guide, with Vantix, the flagship, on the way. Everything runs in your browser.</p>
+        <!-- The goal picker and its card are shown by /fitness.js, which reads #fx-data (scripts/build_fitness.py writes it from content/fitness/hero.json). Without scripts the cards below do the job. -->
+        <div class="fx-pick" id="fx-pick" hidden>
+          <p class="k-label" id="fx-pick-l">What are you after?</p>
+          <div class="fx-goals" id="fx-goals" role="group" aria-labelledby="fx-pick-l">
+            {{hero:goals}}
+          </div>
+          <div class="fx-level">
+            <span class="k-label" id="fx-lv-l">Lifting for</span>
+            <div class="k-seg" id="fx-lv" role="group" aria-labelledby="fx-lv-l"><button type="button" value="new">Under a year</button><button type="button" value="mid">1–3 years</button><button type="button" value="adv">3+ years</button></div>
+            <button type="button" class="fx-clear" id="fx-clear" hidden>Clear</button>
+          </div>
+        </div>
       </div>
-      <p class="k-small" id="f-hint">Looks in the title, the short answer and the glossary terms of all {{n:total}} entries. A result opens on its own page.</p>
-      <p class="hub-find-count" id="f-count"></p>
-      <p class="k-vh" id="f-say" role="status" aria-live="polite"></p>
-      <ol class="hub-hits" id="f-list" aria-label="Search results" hidden></ol>
-      <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-more" hidden>Show every result</button>
+      <div class="fx-rig" id="fx-rig" hidden>
+        <div class="fx-top">
+          <span class="fx-kg" id="fx-kg">20 kg</span>
+          <div class="fx-max"><label for="fx-max">Best squat</label><span class="with-unit"><input class="k-input" id="fx-max" type="number" inputmode="decimal" min="20" max="350" step="2.5" value="100"><span>kg</span></span>
+            <button type="button" class="fx-pause" id="fx-pause" aria-pressed="false" aria-label="Stop the bar moving"></button></div>
+          <span class="fx-plates" id="fx-plates">The empty bar.</span>
+        </div>
+        <svg class="fx-bar" viewBox="0 0 360 140" aria-hidden="true" focusable="false">
+          <g transform="translate(0 -5)">
+            <path id="fx-shaft" d="M8 75 Q180 75 352 75" fill="none" stroke="var(--fx-bar)" stroke-width="5" stroke-linecap="round"/>
+            <g id="fx-knurl" stroke="var(--fx-bar-hi)" stroke-width="1" opacity=".7"></g>
+            <g id="fx-l"></g><g id="fx-r"></g>
+          </g>
+        </svg>
+        <p class="fx-rx fx-fade" id="fx-rx"></p>
+        <div class="fx-wk">
+          <div class="fx-wk-top"><span class="k-label" id="fx-wk-t">A typical week</span><span class="fx-leg" aria-hidden="true"><span><i class="lift"></i>Lift</span><span><i class="cardio"></i>Cardio</span></span></div>
+          <div class="fx-days" id="fx-days" role="group" aria-labelledby="fx-wk-t"></div>
+          <p class="fx-say-day" id="fx-day"></p>
+        </div>
+        <div class="fx-ent fx-fade" id="fx-ent"></div>
+        <div class="fx-then" id="fx-then"></div>
+        <p class="k-vh" id="fx-say" role="status" aria-live="polite"></p>
+      </div>
+      <div class="fx-find">
+        <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
+        <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
+          <label class="k-label" for="f-q">Search every entry</label>
+          <div class="hub-find-row">
+            <input class="k-input" id="f-q" type="search" placeholder="Protein, deload, zone 2, RIR…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="f-hint">
+            <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-clear" hidden>Clear</button>
+          </div>
+          <p class="k-small" id="f-hint">Looks in the title, the short answer and the glossary terms of all {{n:total}} entries. A result opens on its own page.</p>
+          <p class="hub-find-count" id="f-count"></p>
+          <p class="k-vh" id="f-say" role="status" aria-live="polite"></p>
+          <ol class="hub-hits" id="f-list" aria-label="Search results" hidden></ol>
+          <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-more" hidden>Show every result</button>
+        </div>
+      </div>
     </div>
     <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains. Each one names its source and says how well supported it is. They’re general information, not medical advice.</p>
+    <script type="application/json" id="fx-data">{{hero:data}}</script>
   </section>
 
   <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
@@ -670,7 +814,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.14"></script>
-<script src="/fitness.js?v=2027.14"></script>
+<script src="/ks.js?v=2027.15"></script>
+<script src="/fitness.js?v=2027.15"></script>
 </body>
 </html>
