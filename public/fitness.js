@@ -1,5 +1,5 @@
 /* ===================== KiteSink — fitness tools =====================
-   The five calculators on /fitness, and the search box over the field
+   The calculators on /fitness, its hero, and the search box over the field
    guide. Plain JS, no dependencies, nothing leaves the browser (inputs
    are remembered in localStorage only). The pages under /fitness/ use
    /fitness-ref.js instead.
@@ -9,9 +9,11 @@
    test); the bottom half wires those functions to the page.
 
    Formulas and their sources (full references on /fitness/sources):
-     • Resting energy  — Mifflin-St Jeor (1990): 10·kg + 6.25·cm − 5·age + 5 (men) / − 161 (women)
-                         or, when body-fat % is given, Cunningham (1991): 370 + 21.6·FFM
-     • Maintenance     — resting energy × physical activity level (FAO/WHO/UNU 2004 bands)
+     • Resting energy  — by default KiteSink's convention: body weight × 10, 9 or 8 kcal per lb by
+                         body-fat category (F.resting); or Mifflin-St Jeor (1990): 10·kg + 6.25·cm − 5·age
+                         + 5 (men) / − 161 (women); or Cunningham (1991): 370 + 21.6·FFM
+     • Maintenance     — resting energy × an activity multiplier: KiteSink's day levels with the
+                         category method, the FAO/WHO/UNU 2004 lifestyle bands with the equations
      • 1RM             — Epley: w·(1 + r/30)   ·   Brzycki (1993): w·36/(37 − r)
                          The tool uses their mean up to 10 reps and Epley alone above; they meet at 10.
      • Effective reps  — a coaching heuristic, not a measured quantity: the reps that
@@ -426,14 +428,14 @@
   /* ---------- activity multiplier ----------
      KiteSink's own working numbers (the owner's coaching convention, not a study):
        BMR by body-fat category: 10, 9 or 8 kcal per lb of body weight (22, 19.8, 17.6 per kg).
-         Category 1: men 15% body fat or less, women 24% or less; 2: men 16-25%, women 25-34%;
+         Category 1: men under 16% body fat, women under 25%; 2: men 16-25%, women 25-34%;
          3: men 26% or more, women 35% or more.
        A usual day's multiplier, from how active life is outside training: 1.1, 1.2, 1.3 or 1.5.
        Each hour of exercise adds to that day's multiplier, by intensity: 0.1 to 0.4.
      Maintenance = BMR x (day multiplier + exercise). */
   F.BMR_CATS = [
-    { cat: 1, lb: 10, kg: 22, m: 15, f: 24 },
-    { cat: 2, lb: 9, kg: 19.8, m: 25, f: 34 },
+    { cat: 1, lb: 10, kg: 22, m: 16, f: 25 },   // m, f: the body fat a category stops below
+    { cat: 2, lb: 9, kg: 19.8, m: 26, f: 35 },
     { cat: 3, lb: 8, kg: 17.6, m: Infinity, f: Infinity }
   ];
   F.LEVELS = [
@@ -455,7 +457,7 @@
   F.exercise = function (id) { return byId(F.EXERCISE, id); };
   F.bmrCategory = function (sex, bf) {   // 1, 2 or 3; 0 when body fat is unknown
     if (!(bf > 0)) return 0;
-    for (var i = 0; i < F.BMR_CATS.length; i++) if (bf <= F.BMR_CATS[i][sex === "f" ? "f" : "m"]) return F.BMR_CATS[i].cat;
+    for (var i = 0; i < F.BMR_CATS.length; i++) if (bf < F.BMR_CATS[i][sex === "f" ? "f" : "m"]) return F.BMR_CATS[i].cat;
     return 3;
   };
   /* resting(o) → { rmr, equation, method, cat }. o.method: "cat" (body weight x the category's
@@ -552,8 +554,9 @@
     var v = (Math.round(pal * 100) / 100).toFixed(2), opt = act.querySelector("option[data-custom]");
     if (!opt) { opt = document.createElement("option"); opt.setAttribute("data-custom", "1"); act.appendChild(opt); }
     opt.value = v; opt.textContent = "Your own \u00b7 \u00d7 " + v + " from the activity multiplier"; opt.setAttribute("data-short", "with an activity multiplier of " + v);
-    act.value = v;
+    opt.selected = true;
   }
+  function isCustom(act) { return !!(act.selectedOptions[0] && act.selectedOptions[0].hasAttribute("data-custom")); }
   function restSource(pfx, mem, sexOf, onChange) {
     var src = $(pfx + "-src"), cat = $(pfx + "-cat"), act = $(pfx + "-act"), bf = $(pfx + "-bf");
     if (!src || !cat || !act) return { method: function () { return undefined; }, cat: function () { return 2; }, paint: function () {} };
@@ -567,7 +570,9 @@
       var hit = [].filter.call(act.options, function (o) { return parseFloat(o.value) === parseFloat(wanted); })[0];
       act.value = hit ? hit.value : fallback;
     }
-    src.value = ["cat", "mifflin", "cunningham"].indexOf(mem.rmrSrc) >= 0 ? mem.rmrSrc : "cat";
+    // Saved before the categories existed (a pal but no method): keep the equation that visitor had
+    var legacy = !mem.rmrSrc && mem.pal > 0 && !mem.palCustom;
+    src.value = ["cat", "mifflin", "cunningham"].indexOf(mem.rmrSrc) >= 0 ? mem.rmrSrc : legacy ? (mem.bf > 0 ? "cunningham" : "mifflin") : "cat";
     cat.value = mem.cat >= 1 && mem.cat <= 3 ? String(mem.cat) : "2";
     var shown = src.value === "cat" ? "cat" : "eq";
     fill(shown === "cat" ? CAT : EQ, act.value, shown === "cat" ? "1.2" : "1.6");
@@ -577,7 +582,12 @@
       [].forEach.call(cat.options, function (o, i) { o.textContent = (i + 1) + " \u00b7 body fat " + cut[i]; });
       $(pfx + "-cat-wrap").hidden = !isCat || hasBf;
       var want = isCat ? "cat" : "eq";
-      if (want !== shown) { shown = want; var keep = act.querySelector("option[data-custom]") && act.selectedOptions[0] && act.selectedOptions[0].hasAttribute("data-custom") ? act.value : null; fill(want === "cat" ? CAT : EQ, keep, want === "cat" ? "1.2" : "1.6"); }
+      if (want !== shown) {
+        shown = want;
+        var custom = act.selectedOptions[0] && act.selectedOptions[0].hasAttribute("data-custom") ? act.selectedOptions[0] : null;
+        fill(want === "cat" ? CAT : EQ, null, want === "cat" ? "1.2" : "1.6");
+        if (custom) custom.selected = true;   // by the option, not its value: 1.40 must not land on a preset 1.4
+      }
     }
     src.addEventListener("change", function () { paint(); onChange(); });
     cat.addEventListener("change", onChange);
@@ -626,7 +636,9 @@
     var protTouched = !!saved.protTouched;
     // mTouched: the visitor has changed something here, so the numbers are theirs, not the examples
     // the fields start with. The activity multiplier only borrows weight and body fat once it is set.
-    var mTouched = !!saved.mTouched;
+    var mTouched = saved.mTouched != null ? !!saved.mTouched
+      : saved.kg > 0 && (+saved.kg !== 75 || +saved.cm !== 175 || +saved.age !== 30 || saved.bf > 0);   // saved before the flag existed
+    $("macros").addEventListener("ks:mine", function () { mTouched = true; });   // the navy and activity tools' "Use in" buttons
     ["input", "click"].forEach(function (t) { $("macros").addEventListener(t, function (e) { if (e.isTrusted && (t === "input" || e.target.closest("button"))) mTouched = true; }, true); });
     // The maths runs on these metric values. The fields only display them, so switching
     // units back and forth cannot drift the number that was entered.
@@ -655,9 +667,8 @@
     if (saved.bf !== "" && isFinite(saved.bf)) $("m-bf").value = saved.bf;
     var rest = restSource("m", saved, function () { return sex.get(); }, function () { calc(); });
     if (saved.pal) {
-      var found = false;
-      [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) { $("m-act").value = o.value; found = true; } }); // 2 must find "2.0"
-      if (!found && saved.pal >= 1.05 && saved.pal <= 2.5) setPalOption($("m-act"), +saved.pal);   // a multiplier the activity tool put there
+      if (saved.palCustom && saved.pal >= 1.05 && saved.pal <= 4) setPalOption($("m-act"), +saved.pal);   // one the activity tool put there
+      else [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) $("m-act").value = o.value; }); // 2 must find "2.0"
     }
     if (saved.fatPct) $("m-fat").value = saved.fatPct;
     if (saved.protein && protTouched) $("m-prot").value = saved.protein;
@@ -732,7 +743,7 @@
         "For each day give every meal with ingredient weights in grams and its calories and protein, then a daily total against the targets. After day 7 add one consolidated shopping list and two swap options per meal.\n" +
         "Show the arithmetic for each daily total and flag any day that misses a target by more than 5%. Use ordinary supermarket food. Ask me before assuming anything about allergies or medical conditions.";
 
-      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched, mTouched: mTouched, rmrSrc: rest.method(), cat: rest.cat() };
+      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched, mTouched: mTouched, rmrSrc: rest.method(), cat: rest.cat(), palCustom: isCustom($("m-act")) };
       if (g === "lose") patch.loseRate = rate; else if (g === "gain") patch.gainRate = rate;
       store.set(patch); saved = store.get();
     }
@@ -905,7 +916,7 @@
   /* ---------- 7. navy body fat ----------
      The fields show the chosen unit; the maths runs on centimetres kept in `cm`, so switching
      units cannot drift what was typed. "Use in Energy & macros" fills that tool's body-fat box,
-     which moves it to the Cunningham equation. */
+     and its sex, so the category there is the right one. */
   boot(function () {
     if (!$("bodyfat")) return;
     var mine = saved.navy || {}, FIELDS = ["h", "neck", "waist", "hip"], touched = !!mine.touched;   // touched: the readings are the visitor's, not the examples
@@ -926,6 +937,9 @@
     $("bf-use").addEventListener("click", function () {
       var pct = $("bf-out").getAttribute("data-pct"); if (!pct) return;
       var box = $("m-bf"); if (!box) return;
+      $("macros").dispatchEvent(new CustomEvent("ks:mine"));
+      var sx = document.querySelector('#m-sex button[value="' + sex.get() + '"]');   // the category depends on it
+      if (sx && sx.getAttribute("aria-pressed") !== "true") sx.click();
       box.value = pct; box.dispatchEvent(new Event("input", { bubbles: true }));
       $("bf-use").textContent = "Added ✓";
       clearTimeout($("bf-use")._t); $("bf-use")._t = setTimeout(function () { $("bf-use").textContent = "Use in Energy & macros"; }, 1600);
@@ -940,11 +954,14 @@
         "Measure each one three times and use the average. Weigh and measure at the same time of day, each time.";
       var pct = F.navy(sex.get(), cm.h, cm.neck, cm.waist, cm.hip);
       var ok = isFinite(pct) && cm.h >= 120 && cm.h <= 230, out = $("bf-out");
-      out.classList.toggle("is-empty", !ok); out.setAttribute("data-pct", ok ? Math.round(pct * 10) / 10 : "");
+      var usable = ok && pct >= 3 && pct <= 60;   // what Energy & macros' body-fat box accepts
+      out.classList.toggle("is-empty", !ok); out.setAttribute("data-pct", usable ? Math.round(pct * 10) / 10 : "");
+      $("bf-use").disabled = !usable;
       $("bf-warn").hidden = true;
       if (!ok) {
         $("bf-pct").innerHTML = "—<small>%</small>"; $("bf-mass").hidden = true;
-        $("bf-sub").textContent = isFinite(pct) || !(cm.h > 0) ? "Enter your measurements." : (f ? "Waist and hips together must be more than the neck." : "The abdomen must measure more than the neck.");
+        var filled = cm.h > 0 && cm.neck > 0 && cm.waist > 0 && (!f || cm.hip > 0);
+        $("bf-sub").textContent = !filled ? "Enter your measurements." : isFinite(pct) ? "Check the height." : (f ? "Waist and hips together must be more than the neck." : "The abdomen must measure more than the neck.");
         say("bf-say", $("bf-sub").textContent);
       } else {
         var shown = Math.max(0, pct);
@@ -978,7 +995,6 @@
       return '<button type="button" class="ac-lv" value="' + l.id + '" aria-pressed="false"><b>' + esc(l.n) + '<span>\u00d7 ' + l.m.toFixed(1) + "</span></b><small>" + esc(l.d) + "</small><small>" + esc(l.steps) + "</small></button>";
     }).join("");
     var level = seg(levelEl, mine.level, "light", calc);
-    // Energy & macros picks the resting-energy method; offer its day level when it uses the categories
     var exOpts = F.EXERCISE.map(function (e) { return '<option value="' + e.id + '">' + esc(e.n) + (e.d ? " \u00b7 " + e.d : "") + "</option>"; }).join("");
     $("ac-ex").innerHTML = exOpts;
     $("ac-ex").value = F.exercise(mine.ex) ? mine.ex : "wt1";
@@ -1035,7 +1051,7 @@
       setPalOption(act, pal); act.dispatchEvent(new Event("input", { bubbles: true })); act.dispatchEvent(new Event("change", { bubbles: true }));
     }
     $("ac-use").addEventListener("click", function () {
-      if (!result) return; setUse(result);
+      if (!result) return; $("macros").dispatchEvent(new CustomEvent("ks:mine")); setUse(result);
       var b = $("ac-use"); b.textContent = "Added \u2713"; clearTimeout(b._t); b._t = setTimeout(function () { b.textContent = "Use in Energy & macros"; }, 1600);
     });
 
@@ -1063,7 +1079,7 @@
         $("ac-k3").textContent = "Build a whole day to see the day\u2019s multiplier with it.";
         say("ac-say", "Adds " + num(add, 2) + " to the day's multiplier, about " + num(F.round(add * b.bmr, 5)) + " kilocalories.");
       } else {
-        $("ac-k3").hidden = false;
+        if (rows.some(function (r) { return !(+r[1] >= 5 && +r[1] <= 600); })) return empty("Each exercise needs between 5 and 600 minutes.");
         var m = F.dayMult(L.m, rows.map(function (r) { return { id: r[0], min: +r[1] }; }));
         result = m; out.classList.remove("is-empty");
         $("ac-big-l").textContent = "This day\u2019s multiplier";
@@ -1072,6 +1088,7 @@
         $("ac-k1-l").textContent = "Maintenance"; $("ac-k1").textContent = num(F.round(b.bmr * m, 10)) + " kcal";
         $("ac-k2-l").textContent = "Resting energy"; $("ac-k2").textContent = num(F.round(b.bmr, 10)) + " kcal";
         $("ac-k3").textContent = perLb(b.bmr * m);
+        if (m > 2.5) $("ac-k3").textContent = "That is a very high multiplier. Check the minutes.";
         say("ac-say", "This day's multiplier " + num(m, 2) + "; maintenance about " + num(F.round(b.bmr * m, 10)) + " kilocalories.");
       }
     }
@@ -1155,7 +1172,7 @@
       $("fx-plates").textContent = !lv ? "The empty bar. Pick a goal to load it." : (plates.length ? plates.join(" · ") + " kg a side" : "Just the bar") + (lv.collars ? ", 2.5 kg collars" : "");
       swap(rx, !lv ? "Pick what you’re after. The bar loads a share of your best squat, and the week below lays out the training."
         : "<span>" + num(lv.pct, lv.pct % 1 ? 1 : 0) + "%</span> of " + num(max, max % 1 ? 1 : 0) + " kg, for " + esc(lv.how) +
-          "<small>" + (lv.rest ? "Rest " + esc(lv.rest) + " · " : "") + (/\d/.test(lv.days) ? "Lifting days: " + esc(lv.days) : esc(lv.days.charAt(0).toUpperCase() + lv.days.slice(1))) + (lv.example ? ' · <span>an example load: the guide gives reps for this goal, not a %</span>' : "") + "</small>", animate);
+          "<small>" + (lv.rest ? "Rest " + esc(lv.rest) + " · " : "") + (/\d/.test(lv.days) ? "Lifting days: " + esc(lv.days) : esc(lv.days.charAt(0).toUpperCase() + lv.days.slice(1))) + (lv.example ? ' · <span>an example load, not a figure from the guide</span>' : "") + "</small>", animate);
       swap(ent, entryHTML(lv ? lv.entry : D.daysFrom), animate);
       then.innerHTML = !lv ? "" : lv.tools.map(function (t) { return '<a class="fx-chip" href="' + esc(D.tools[t].href) + '"><small>Tool</small>' + esc(D.tools[t].label) + "</a>"; }).join("") +
         lv.areas.map(function (a) { return '<a class="fx-chip" href="' + esc(D.areas[a].href) + '"><small>Guide</small>' + esc(D.areas[a].label) + "</a>"; }).join("") +
@@ -1167,6 +1184,7 @@
           '<span class="dl">' + n.slice(0, 2) + '</span><span class="blk" style="animation-delay:' + (i * 45) + 'ms"></span></button>';
       }).join("");
       if (animate) { days.classList.remove("go"); void days.offsetWidth; days.classList.add("go"); }
+      $("fx-leg-meet").hidden = !(week && week.some(function (d) { return d[0] === "meet"; }));
       $("fx-wk-t").textContent = !lv ? "A typical week" : goal === "meet" ? "Meet week" : "A typical week · " + lifts + " lifting day" + (lifts === 1 ? "" : "s");
       showDay(week ? sel : today, week);
       [].forEach.call(goalsEl.querySelectorAll(".fx-goal"), function (b) { b.setAttribute("aria-pressed", b.value === goal ? "true" : "false"); });
@@ -1284,9 +1302,8 @@
     var dSex = function () { return mem.sex === "f" ? "f" : "m"; };   // replaced once the sex control exists
     var rest = restSource("d", mem, function () { return dSex(); }, function () { calc(); });
     if (mem.pal) {
-      var dFound = false;
-      [].forEach.call($("d-act").options, function (o) { if (parseFloat(o.value) === parseFloat(mem.pal)) { $("d-act").value = o.value; dFound = true; } });
-      if (!dFound && mem.pal >= 1.05 && mem.pal <= 2.5) setPalOption($("d-act"), +mem.pal);
+      if (mem.palCustom && mem.pal >= 1.05 && mem.pal <= 4) setPalOption($("d-act"), +mem.pal);
+      else [].forEach.call($("d-act").options, function (o) { if (parseFloat(o.value) === parseFloat(mem.pal)) $("d-act").value = o.value; });
     }
     var train = [true, true, false, true, true, false, false], days = 3.5, manual = null, last = null, prevBal = null, changed = -1, deltaT = 0;
     var units = seg($("d-units"), mem.units, "metric", function () { showBody(); calc(); });

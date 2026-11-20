@@ -53,7 +53,7 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.18">
+<link rel="stylesheet" href="/ks.css?v=2027.19">
 <style>
   .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
 
@@ -129,7 +129,7 @@
   .fx-day .blk { width: 100%; max-width: 34px; height: 22px; border-radius: 5px; background: var(--k-tint); box-shadow: inset 0 0 0 1px var(--k-rule); }
   .fx-day.lift .blk, .fx-leg .lift { background: var(--k-green-fill); box-shadow: none; }
   .fx-day.cardio .blk, .fx-leg .cardio { background: var(--k-tan); box-shadow: none; }
-  .fx-day.meet .blk { background: var(--k-brass-fill); box-shadow: none; }
+  .fx-day.meet .blk, .fx-leg .meet { background: var(--k-brass-fill); box-shadow: none; }
   .fx-day.empty .blk { background: transparent; box-shadow: inset 0 0 0 1.5px var(--k-rule-strong); }
   .fx-day.today .dl { color: var(--k-ink); }
   .fx-day.today .dl::after { content: ""; display: block; width: 4px; height: 4px; margin: 3px auto 0; border-radius: 50%; background: var(--k-brass-fill); }
@@ -229,7 +229,6 @@
   .ac-own .k-label { grid-column: 1 / -1; }
   .ac-own .with-unit { max-width: 180px; }
   .ac-clear { border: 0; background: none; padding: 0; min-height: 40px; cursor: pointer; font: 600 12px var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
-  #ac-cat button small { font: 500 10.5px var(--k-mono); color: var(--k-mute); margin-left: 4px; }
   .ac-levels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .ac-lv { display: grid; gap: 2px; padding: 10px 12px; text-align: left; border: 1.5px solid var(--k-rule-strong); border-radius: 12px; background: transparent; color: var(--k-ink); cursor: pointer; font: inherit; transition: background .2s, border-color .2s; }
   .ac-lv:hover { border-color: var(--k-green); }
@@ -253,6 +252,7 @@
   .ac-x { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-copy); cursor: pointer; font: 600 16px/1 var(--k-sans); }
   .ac-x:hover { border-color: var(--k-green); color: var(--k-green); }
   .tool-tabs { display: grid; gap: 10px; }
+  @media (max-width: 519px) { .rest-row { grid-template-columns: minmax(0, 1fr); } }
   .tool-row { display: grid; gap: 6px; min-width: 0; }
   .tool-row .k-seg { justify-self: start; }
   .tool-grp { font: 600 11px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-green); text-decoration: none; justify-self: start; }
@@ -477,7 +477,7 @@
         </svg>
         <p class="fx-rx fx-fade" id="fx-rx"></p>
         <div class="fx-wk">
-          <div class="fx-wk-top"><span class="k-label" id="fx-wk-t">A typical week</span><span class="fx-leg" aria-hidden="true"><span><i class="lift"></i>Lift</span><span><i class="cardio"></i>Cardio</span></span></div>
+          <div class="fx-wk-top"><span class="k-label" id="fx-wk-t">A typical week</span><span class="fx-leg" aria-hidden="true"><span><i class="lift"></i>Lift</span><span><i class="cardio"></i>Cardio</span><span id="fx-leg-meet" hidden><i class="meet"></i>Meet</span></span></div>
           <div class="fx-days" id="fx-days" role="group" aria-labelledby="fx-wk-t"></div>
           <p class="fx-say-day" id="fx-day"></p>
         </div>
@@ -584,12 +584,12 @@
         <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps nothing.</p>
       </header>
 
-      <!-- One tablist, laid out in the field guide's groups. Each row is a plain wrapper, so the tabs
-           still belong to the one list; the arrow keys move through all of them in this order. -->
-      <div class="tool-tabs" role="tablist" aria-label="Tools">
+      <!-- The tools in the field guide's groups: a tablist per group, with the group's link beside it.
+           The arrow keys move through every tab, across both rows, in this order. -->
+      <div class="tool-tabs">
         <div class="tool-row">
           <a class="tool-grp" href="#training">Training</a>
-          <div class="k-seg k-seg--scroll">
+          <div class="k-seg k-seg--scroll" role="tablist" aria-label="Training tools">
             <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
             <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
             <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
@@ -598,7 +598,7 @@
         </div>
         <div class="tool-row">
           <a class="tool-grp" href="#food-and-body">Food and body</a>
-          <div class="k-seg k-seg--scroll">
+          <div class="k-seg k-seg--scroll" role="tablist" aria-label="Food and body tools">
             <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
             <button type="button" role="tab" id="tab-activity" aria-controls="activity" aria-selected="false">Activity multiplier</button>
             <button type="button" role="tab" id="tab-bodyfat" aria-controls="bodyfat" aria-selected="false">Navy body fat</button>
@@ -624,10 +624,6 @@
             </div>
             <div class="row2">
               <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional</span></span><span class="with-unit"><input class="k-input" id="m-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
-              <div class="row2">
-                <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="m-src"><option value="cat">Weight × body fat category</option><option value="mifflin">Mifflin-St Jeor equation</option><option value="cunningham">Cunningham (needs body fat)</option></select></label>
-                <label class="k-field" id="m-cat-wrap"><span class="k-label">Body fat category</span><select class="k-select" id="m-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
-              </div>
               <label class="k-field"><span class="k-label">Activity</span>
                 <select class="k-select" id="m-act">
                   <option value="1.4" data-short="mostly sedentary">Sedentary · mostly sitting</option>
@@ -635,6 +631,10 @@
                   <option value="1.8" data-short="active">Active · on your feet or training hard</option>
                   <option value="2.0" data-short="very active">Vigorous · physical job + hard training</option>
                 </select></label>
+            </div>
+            <div class="row2 rest-row">
+              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="m-src"><option value="cat">Body fat category</option><option value="mifflin">Mifflin-St Jeor</option><option value="cunningham">Cunningham</option></select></label>
+              <label class="k-field" id="m-cat-wrap"><span class="k-label">Category</span><select class="k-select" id="m-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
             </div>
             <div class="k-field"><span class="k-label" id="m-goal-l">Goal</span><div class="k-seg" id="m-goal" role="group" aria-labelledby="m-goal-l"><button type="button" value="lose">Lose fat</button><button type="button" value="hold">Maintain</button><button type="button" value="gain">Gain muscle</button></div></div>
             <label class="k-field" id="m-rate-wrap"><span class="k-label"><span id="m-rate-label">Rate of loss</span><span id="m-rate-read" style="text-transform:none;letter-spacing:0">0.50% of body weight / week</span></span><input class="k-range" id="m-rate" type="range" min="0.25" max="1" step="0.05" value="0.5"></label>
@@ -864,7 +864,7 @@
           <div class="k-card tool-out is-empty" id="ac-out">
             <p class="k-vh" id="ac-say" role="status"></p>
             <div><p class="k-label" id="ac-big-l">Your multiplier</p><p class="k-stat"><span id="ac-big">—</span></p><p class="k-small" id="ac-sub"></p></div>
-            <div class="kv hide-empty"><div><span class="k-label" id="ac-k1-l">Maintenance</span><b id="ac-k1">—</b></div><div><span class="k-label" id="ac-k2-l">On a training day</span><b id="ac-k2">—</b></div></div>
+            <div class="kv hide-empty"><div><span class="k-label" id="ac-k1-l">Maintenance</span><b id="ac-k1">—</b></div><div><span class="k-label" id="ac-k2-l">Resting energy</span><b id="ac-k2">—</b></div></div>
             <p class="k-small hide-empty" id="ac-k3"></p>
             <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="ac-use" type="button">Use in Energy &amp; macros</button></div>
             <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">These are KiteSink’s own working numbers from coaching, not results from a study. Resting energy comes from Energy &amp; macros (by default 10, 9 or 8 kcal per lb of body weight, by body fat category). A usual day is × 1.1 to 1.5, and each hour of training adds 0.1 to 0.4. Use the answer as a starting point and correct it against your weight trend over two or three weeks.</p>
@@ -888,9 +888,9 @@
               <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="d-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="d-w-unit">kg</span></span></label>
             </div>
             <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional, sharpens protein</span></span><span class="with-unit"><input class="k-input" id="d-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
-            <div class="row2">
-              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="d-src"><option value="cat">Weight × body fat category</option><option value="mifflin">Mifflin-St Jeor equation</option><option value="cunningham">Cunningham (needs body fat)</option></select></label>
-              <label class="k-field" id="d-cat-wrap"><span class="k-label">Body fat category</span><select class="k-select" id="d-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+            <div class="row2 rest-row">
+              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="d-src"><option value="cat">Body fat category</option><option value="mifflin">Mifflin-St Jeor</option><option value="cunningham">Cunningham</option></select></label>
+              <label class="k-field" id="d-cat-wrap"><span class="k-label">Category</span><select class="k-select" id="d-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
             </div>
             <label class="k-field"><span class="k-label">Activity</span>
               <select class="k-select" id="d-act">
@@ -963,7 +963,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.18"></script>
-<script src="/fitness.js?v=2027.18"></script>
+<script src="/ks.js?v=2027.19"></script>
+<script src="/fitness.js?v=2027.19"></script>
 </body>
 </html>

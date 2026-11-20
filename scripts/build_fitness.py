@@ -1071,6 +1071,13 @@ CARD_WIDGETS = {
     "meet": ("meet", None),
     "sources": ("mix", None),
 }
+# The numbers a widget computes with must be what its entry says. If an entry is revised, the build
+# stops here until the widget (in widget_html and /fitness-ref.js) is brought into line.
+WIDGET_SAYS = {
+    "nut-protein-range": ("1.6 to 2.2 g per kg",),
+    "diet-deficit-rate": ("0.5 to 1 percent of body weight a week",),
+    "hlth-who-weekly-targets": ("150 to 300 minutes of moderate", "75 to 150 minutes of vigorous", "2 or more days"),
+}
 ROTATE = 12   # items in a rotator: enough to browse, few enough to keep the page light
 MEET_STAGES = [   # WHEN keys -> (days before the meet at which the stage starts; the meet is day 0)
     ("months-out", 9999), ("weeks-out", 28), ("week-before", 7), ("day-before", 1), ("weigh-in", 0),
@@ -1091,7 +1098,7 @@ def spread(items, n=ROTATE):
     return [items[round(i * (len(items) - 1) / (n - 1))] for i in range(n)]
 
 
-def rotator(label, items, here, pages, render):
+def rotator(label, items, render):
     if not items:
         return ""
     lis = "".join(f'<li{"" if i == 0 else " hidden"}>{render(e)}</li>' for i, e in enumerate(items))
@@ -1122,7 +1129,7 @@ def widget_html(kind, entry, data, lib, pages, here):
         return ('<div class="fw" data-w="rate" data-lo="0.5" data-hi="1"><p class="k-label">A pace for you</p>'
                 '<div class="fw-in"><label for="fc-kg">Body weight</label><span class="with-unit"><input class="k-input" id="fc-kg" type="number" inputmode="decimal" min="30" max="660" step="0.5" value="75"><span class="fw-u">kg</span></span>'
                 '<button type="button" class="fw-unit" aria-label="Switch to pounds">lb</button></div>'
-                '<p class="fw-out"><b class="fw-a">0.4–0.75</b> <span class="fw-ou">kg</span> a week</p>'
+                '<p class="fw-out"><b class="fw-a">0.38–0.75</b> <span class="fw-ou">kg</span> a week</p>'
                 f'<p class="fw-note">0.5 to 1 percent of body weight a week, the usual pace for keeping muscle. <a href="{href}">The entry</a> {conf_badge(e["confidence"])}</p></div>')
     if kind == "who":
         e, href = ref(entry)
@@ -1188,13 +1195,18 @@ def hero_card(route, data, lib, pages, jump):
         w, entry = CARD_WIDGETS[key]
         if entry and entry not in pages.home:
             raise SystemExit(f"the {key} page's card names {entry}, which is not an entry")
+        if entry in WIDGET_SAYS:
+            take = next(e["take"] for d in DOMAINS for e in data[d]["entries"] if e["id"] == entry)
+            lost = [w for w in WIDGET_SAYS[entry] if w not in take]
+            if lost:
+                raise SystemExit(f"the {key} page's widget computes with numbers its entry {entry} no longer states: {lost}")
         body = widget_html(w, entry, data, lib, pages, here)
     elif kind == "area":
         nums = [e for e in data[key]["entries"] if e["type"] == "number"]
-        body = rotator("Key number", spread(nums), here, pages, lambda e: number_card(e, pages.href(e["id"], here)))
+        body = rotator("Key number", spread(nums), lambda e: number_card(e, pages.href(e["id"], here)))
     elif kind == "reference":
         nums = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] == "number"]
-        body = rotator("Key number", spread(nums), here, pages, lambda e: number_card(e, pages.href(e["id"], here))
+        body = rotator("Key number", spread(nums), lambda e: number_card(e, pages.href(e["id"], here))
                        .replace('<p class="fc-t">', f'<p class="fc-t"><span class="fc-area">{esc(DOMAINS[next(d for d in DOMAINS if e in data[d]["entries"])][0])}</span> ', 1))
     elif kind == "claims":
         cl = data["claims"]["entries"]
@@ -1203,10 +1215,10 @@ def hero_card(route, data, lib, pages, jump):
         legend = "".join(f'<li><i class="{VERDICTS[v][1]}"></i>{esc(VERDICTS[v][0])}<b>{n[v]}</b></li>' for v in VERDICTS if n[v])
         body = (f'<div class="fw"><p class="k-label">{len(cl)} claims, by verdict</p><div class="fw-bar" role="img" aria-label="'
                 + ", ".join(f"{VERDICTS[v][0]} {n[v]}" for v in VERDICTS if n[v]) + f'">{meter}</div><ul class="fw-leg">{legend}</ul></div>'
-                + rotator("A claim", spread(cl), here, pages, lambda c: f'<p class="fc-t"><a href="{pages.href(c["id"], here)}">{esc(c["title"])}</a></p><span class="fc-verdict {VERDICTS[c["verdict"]][1]}">{esc(VERDICTS[c["verdict"]][0])}</span>'))
+                + rotator("A claim", spread(cl), lambda c: f'<p class="fc-t"><a href="{pages.href(c["id"], here)}">{esc(c["title"])}</a></p><span class="fc-verdict {VERDICTS[c["verdict"]][1]}">{esc(VERDICTS[c["verdict"]][0])}</span>'))
     elif kind == "glossary":
         terms = [e for d in DOMAINS for e in data[d]["entries"] if e["type"] == "term"]
-        body = rotator("A term", spread(terms), here, pages, lambda e: f'<p class="fc-term"><a href="{pages.href(e["id"], here)}">{esc(e["title"])}</a></p><p class="fc-def">{esc(e["take"])}</p>')
+        body = rotator("A term", spread(terms), lambda e: f'<p class="fc-term"><a href="{pages.href(e["id"], here)}">{esc(e["title"])}</a></p><p class="fc-def">{esc(e["take"])}</p>')
     if not body and not jump:
         return ""
     return f'<aside class="fr-card" aria-label="{esc(route_label(route))} at a glance">{body}{jump}</aside>'

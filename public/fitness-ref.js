@@ -278,7 +278,7 @@
       var calc = function (kg, lb) {
         if (!(kg > 25 && kg < 300)) { out.textContent = "\u2014"; return; }
         if (kind === "protein") out.textContent = fmt(Math.round(kg * lo / 5) * 5) + "\u2013" + fmt(Math.round(kg * hi / 5) * 5);
-        else { var a = kg * lo / 100, b = kg * hi / 100, k = lb ? LB : 1; out.textContent = fmt(a * k, 2).replace(/0$/, "") + "\u2013" + fmt(b * k, 2).replace(/0$/, ""); ou.textContent = lb ? "lb" : "kg"; }
+        else { var a = kg * lo / 100, b = kg * hi / 100, k = lb ? LB : 1, t = function (v) { return (Math.round(v * 100) / 100).toFixed(2).replace(/\.?0+$/, ""); }; out.textContent = t(a * k) + "\u2013" + t(b * k); ou.textContent = lb ? "lb" : "kg"; }
       };
       var get = weightBox(calc); calc.apply(null, get());
     } else if (kind === "zones") {
@@ -313,6 +313,7 @@
       try { if (fit.meetDate) date.value = fit.meetDate; } catch (e) {}
       var calcM = function () {
         stages.forEach(function (li) { li.classList.remove("is-now", "is-past"); });
+        try { var st = JSON.parse(localStorage.getItem("ksFit") || "{}") || {}; st.meetDate = date.value || ""; localStorage.setItem("ksFit", JSON.stringify(st)); } catch (e) {}
         var d = date.value ? new Date(date.value + "T12:00:00") : null;
         if (!d || isNaN(d)) { when.hidden = true; return; }
         var today = new Date(); today.setHours(12, 0, 0, 0);
@@ -322,7 +323,6 @@
         if (now >= 0) stages[now].classList.add("is-now");
         when.hidden = false;
         when.innerHTML = days > 1 ? "<b>" + days + "</b> days to go" : days === 1 ? "<b>Tomorrow</b>" : days === 0 ? "<b>Meet day</b>" : "<b>Done</b>: well lifted";
-        try { var s = JSON.parse(localStorage.getItem("ksFit") || "{}") || {}; s.meetDate = date.value; localStorage.setItem("ksFit", JSON.stringify(s)); } catch (e) {}
       };
       date.addEventListener("input", calcM); date.addEventListener("change", calcM);
       calcM();

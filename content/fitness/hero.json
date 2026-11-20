@@ -133,7 +133,7 @@
       ],
       "by_level": {
         "new": { "pct": 80, "areas": ["meet", "basics"] },
-        "adv": { "pct": 90, "vantix": true }
+        "adv": { "pct": 90, "pct_from": null, "vantix": true }
       }
     },
     {

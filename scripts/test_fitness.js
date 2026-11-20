@@ -70,8 +70,8 @@ same('navy: abdomen not above the neck is not a reading', String(F.navy('m', 178
 same('navy: a woman needs her hips', String(F.navy('f', 165, 33, 71)), 'NaN');
 // activity multiplier (KiteSink's own numbers): BMR = weight x 22 / 19.8 / 17.6 kcal per kg by body-fat category;
 // a usual day x 1.1-1.5; each hour of training adds 0.1-0.4 to that day
-same('bmr category: men', [10, 15, 15.5, 25, 26].map(b => F.bmrCategory('m', b)).join(' '), '1 1 2 2 3');
-same('bmr category: women', [20, 24, 30, 34, 35].map(b => F.bmrCategory('f', b)).join(' '), '1 1 2 2 3');
+same('bmr category: men (15.x is "15% or less")', [10, 15, 15.9, 16, 25.9, 26].map(b => F.bmrCategory('m', b)).join(' '), '1 1 1 2 2 3');
+same('bmr category: women', [20, 24.9, 25, 34.9, 35].map(b => F.bmrCategory('f', b)).join(' '), '1 1 2 2 3');
 same('bmr category: unknown body fat', String(F.bmrCategory('m', NaN)), '0');
 eq('category BMR, 80 kg, category 2', F.categoryBmr(80, 2), 1584);
 eq('category BMR per lb matches the table', F.categoryBmr(100 / 2.2, 1), 1000, 1e-9);   // 100 lb at 10 kcal/lb
