@@ -27,8 +27,8 @@
         "mlc-market-share",
         "usc-115"
       ],
-      "take": "No. April 2027 is when the MLC plans to start paying out unmatched money by market share. It is a start date, not a cut-off for claims.",
-      "body": "The MLC says it intends to begin in April 2027 with the earliest blanket usage, from January 2021, then to work through the remaining eligible 2021 royalties one month at a time. Money for a song you have claimed and matched before its month comes up is not part of that pool. These are the MLC's plans, so watch its dashboard, and register and match early.",
+      "take": "No. April 2027 is when the MLC plans to start paying out remaining unclaimed accrued royalties by market share. It is a start date, not a cut-off for claims.",
+      "body": "The MLC says it intends to begin in April 2027 with the earliest blanket usage, from January 2021, then to work through the remaining eligible 2021 royalties one month at a time. The pool is only money the MLC has not matched or paid out by then, so a song matched before its usage month comes up is paid in the normal way instead. These are the MLC's plans, so watch its dashboard, and register and match early.",
       "do": [
         "Register and match your songs well before your usage months come up",
         "Watch the MLC's unclaimed dashboard for updated schedules"
@@ -45,7 +45,7 @@
         "mechanicals",
         "royalties"
       ],
-      "verdict": "mostly",
+      "verdict": "false",
       "level": "beginner",
       "readers": [
         "writer",
@@ -60,19 +60,18 @@
         "mlc-audits",
         "usco-mma-faq"
       ],
-      "take": "The MLC says it takes no fee out of the mechanical royalties it pays. Digital services fund it separately. That does not cover what your own publisher or administrator keeps.",
-      "body": "The MLC's audits page says its operating budget comes from digital services through an assessment fixed by the Copyright Royalty Judges, and that it deducts no fees from royalties. The Copyright Office FAQ adds voluntary contributions from the services. This is how the MLC describes itself for US digital mechanicals, so check your statements. A publisher or administrator may charge under its own contract.",
+      "take": "No. The MLC says it deducts no fees from the mechanical royalties it pays out. Digital services fund its budget separately. Your own publisher or administrator may still keep a share.",
+      "body": "The MLC's audits page says digital services fully fund its operating budget through an administrative assessment set by the Copyright Royalty Board, separate from the royalties they owe, and that it deducts no fees from royalties. It adds that rightsholders do not pay for its audits of services and that audit recoveries are passed on without costs taken out. The Copyright Office FAQ also names voluntary contributions from the services. This covers US digital mechanicals as the MLC describes them. A publisher or administrator may charge under its own contract.",
       "do": [
-        "Read the deductions line on each MLC statement",
-        "Ask your publisher or administrator what it keeps"
+        "Ask your publisher or administrator what share it keeps"
       ],
-      "basis": "MLC DSP audits page and Copyright Office MMA FAQ, as retrieved 19 November 2026.",
+      "basis": "MLC DSP audits page and Copyright Office MMA FAQ, US digital mechanicals, as retrieved 19 November 2026.",
       "as_of": "2026-11-20"
     },
     {
       "id": "claim-copyright-registration-mlc",
       "type": "claim",
-      "title": "If my song is registered with the Copyright Office, does the MLC know about it?",
+      "title": "Does registering my song with the Copyright Office also register it with the MLC?",
       "domain": "mechanicals-mlc",
       "tags": [
         "metadata",
@@ -93,8 +92,8 @@
         "usco-mma-faq",
         "usco-mma"
       ],
-      "take": "No. The Copyright Office and the MLC keep separate records. You, or your publisher or administrator, still need to register the song with the MLC to be paid.",
-      "body": "The Copyright Office FAQ says owners with a copyright registration still need to register with the MLC. It also says a song need not be registered with the Office to be eligible for MLC royalties on digital uses. For physical copies, such as CDs and vinyl, the owner must appear in the Office's records. Registration has other effects in copyright law that this answer does not cover.",
+      "take": "No. The Copyright Office says a copyright registration does not replace an MLC registration. You, or your publisher or administrator, still have to register the song with the MLC.",
+      "body": "The Copyright Office FAQ says owners who already hold a copyright registration must still sign up with the MLC to receive blanket-license digital mechanicals. It also says a song need not be registered with the Office to be eligible for those royalties. For statutory royalties on some physical uses, such as CDs and vinyl, the song must be in the Office's records. Registration has other effects in copyright law that this answer does not cover.",
       "do": [
         "Search the MLC's public database, then claim or register the song",
         "Ask your publisher or administrator whether it handles the MLC"
@@ -127,7 +126,7 @@
         "cfr-385-21"
       ],
       "take": "No. US law sets no per-stream amount for mechanicals. It sets a formula that produces a pool for each service offering, which is then divided across plays.",
-      "body": "37 CFR 385.21 takes the greater of a share of service revenue and a content-cost amount, subtracts performance royalties the service pays, applies any per-subscriber floor, then divides the pool by plays. What one stream earns therefore depends on the service, the type of offering and its results. This covers interactive streaming and limited downloads in the US under the MLC's blanket license, for the rate period the regulation states.",
+      "body": "37 CFR 385.21 takes, for most offerings, the greater of a share of service revenue and a content-cost amount, subtracts performance royalties the service pays, applies any per-subscriber floor, then divides the pool by plays. What one stream earns therefore depends on the service, the type of offering and its results. This covers interactive streaming and limited downloads in the US under the MLC's blanket license, for the rate period the regulation states.",
       "do": [
         "Read the offering and period on your statement before comparing per-stream figures"
       ],
@@ -191,8 +190,8 @@
       "sources": [
         "usc-115"
       ],
-      "take": "Yes. A copyright owner that receives an MLC unclaimed distribution must pay or credit songwriters, and never less than half of what it receives for their works.",
-      "body": "17 USC 115(d)(3)(J)(iv) says this applies despite any agreement to the contrary. The payment is allocated by the reported usage of each song in the periods the distribution covers, and a songwriter's amount cannot be under 50 percent of what the owner received for that songwriter's works. The rule covers money from market-share distributions of unclaimed accrued royalties, not all publishing income. A music lawyer should read any agreement that matters.",
+      "take": "Yes. A copyright owner that receives an MLC unclaimed distribution must pay or credit its songwriters by reported usage, never less than half of what it receives for their works.",
+      "body": "17 USC 115(d)(3)(J)(iv) covers songwriters whose works the owner licenses or administers for covered activities, and applies despite any agreement to the contrary. The payment is allocated by each song's usage as reported by digital services in the periods the distribution covers, and a songwriter's amount cannot be under 50 percent of what the owner received for that songwriter's works. Contract terms govern the rest. The rule covers distributions of unclaimed accrued royalties and interest, not all publishing income. A music lawyer should read any agreement that matters.",
       "do": [
         "Ask your publisher how it will credit these payments to you"
       ],
@@ -223,14 +222,15 @@
       "confidence": "practice",
       "sources": [
         "mlc-unclaimed",
-        "usc-115"
+        "usc-115",
+        "butler-cmo-2020"
       ],
       "take": "Not exactly. Black box is an informal nickname for money no one has allocated. The MLC uses its own terms, and each collector defines its own.",
       "body": "Industry use of black box varies, and collectives use names such as suspense account for money held while works are unidentified. The MLC counts both unmatched and unclaimed royalties inside what it calls unclaimed accrued royalties. In US law, unmatched means the owner is not yet known or found. Read the collector's own definition before comparing figures.",
       "do": [
         "Use each collector's own term when you search for money held for you"
       ],
-      "basis": "Industry nickname with no official definition; MLC unclaimed page and 17 USC 115, as of November 2026.",
+      "basis": "Industry nickname with no official definition; MLC unclaimed page, 17 USC 115 and the 2020 Copyright Office survey, as of November 2026.",
       "as_of": "2026-11-20"
     },
     {
@@ -294,8 +294,8 @@
         "butler-cmo-2020",
         "usc-115"
       ],
-      "take": "No. US law tells the MLC to use market share. A 2020 survey of collectives found most of those taking part did not use owner market share for such money.",
-      "body": "The survey was written for the Copyright Office from the answers of anonymous collectives, gathered between January and April 2020. It says that, for works nobody has identified or claimed, the participants usually share the money out without weighing each owner's market share. Its list of methods includes catalogue market share and several pro rata splits among owners already paid. The survey is not a count of every society, and practice varies by society and type of income, so ask your own.",
+      "take": "Not as a rule. US law tells the MLC to use market share. A 2020 survey of collectives found most of those taking part did not use owner market share for such money.",
+      "body": "The survey was written for the Copyright Office from the answers of collectives whose names were kept confidential, gathered between January and April 2020. It says that, for works nobody has identified or claimed, the participants usually share the money out without weighing each owner's market share. Its list of methods includes catalogue market share and several pro rata splits among owners already paid. The survey is not a count of every society, and practice varies by society and type of income, so ask your own.",
       "do": [
         "Ask each society abroad how it shares out income it cannot allocate"
       ],
@@ -327,7 +327,7 @@
         "circ-56"
       ],
       "take": "No. The song and the recording are two separate works with separate rights, and they can have different owners.",
-      "body": "The Copyright Office treats a song (the music and lyrics) and a recording of someone performing it as two distinct works. Its circular on sound recordings says the copyright in a recording does not cover the underlying music or lyrics. In most cases the two are registered separately. Ownership of either can be transferred by contract, so read the agreements, and have a music lawyer check any deal that moves ownership.",
+      "body": "The Copyright Office treats a song (the music and lyrics) and a recording of someone performing it as two distinct works. Its circular on sound recordings says the copyright in a recording does not cover the underlying music or lyrics. The songwriter is the usual author of a song, and the featured performer and the producer are the usual authors of a recording, unless the work was made for hire. Read your agreements too, and have a music lawyer check any deal that moves ownership.",
       "do": [
         "Write down who owns the song and who owns the recording for each release"
       ],
@@ -343,7 +343,7 @@
         "neighboring",
         "royalties"
       ],
-      "verdict": "mostly",
+      "verdict": "depends",
       "level": "intermediate",
       "readers": [
         "artist",
@@ -357,18 +357,18 @@
       "sources": [
         "usc-114"
       ],
-      "take": "Only for money collected under the statutory licence. There the law gives featured artists 45 percent, paid by the collective per recording. Other income follows contracts.",
-      "body": "17 USC 114(g)(2) divides receipts from transmissions licensed under the statutory licence: 50 percent to the owner of the digital performance right, 45 percent to featured recording artists, and 2.5 percent each to escrow funds for non-featured musicians and vocalists. The collective may deduct costs first. For transmissions outside that licence, section 114(g)(1) points the artist to the recording owner and the artist's contract.",
+      "take": "It depends on the money. For receipts under the US statutory licence, the law gives featured artists 45 percent, paid per recording. Other income follows contracts.",
+      "body": "17 USC 114(g)(2) divides receipts from transmissions licensed under the statutory licence: 50 percent to the owner of the digital performance right, 45 percent to featured recording artists, and 2.5 percent each to escrow funds for non-featured musicians and vocalists. The collective may first deduct its reasonable costs, and an artist can send part of the share to a producer, mixer or engineer by letter of direction. For transmissions outside that licence, section 114(g)(1) points the artist to the recording owner and the artist's contract.",
       "do": [
         "Read your recording contract for income outside the statutory licence"
       ],
-      "basis": "17 USC 114(g)(1) and (g)(2), as retrieved 20 November 2026.",
+      "basis": "17 USC 114(g)(1) to (g)(5), as retrieved 20 November 2026 (US).",
       "as_of": "2026-11-20"
     },
     {
       "id": "claim-registration-to-own",
       "type": "claim",
-      "title": "Do I have to register with the Copyright Office to own a copyright?",
+      "title": "Do I have to register my recording with the Copyright Office to have a copyright?",
       "domain": "royalty-basics",
       "tags": [
         "myths",
@@ -390,7 +390,7 @@
         "circ-50"
       ],
       "take": "No. For a US sound recording made since 1978, protection starts when it is fixed. Registration is a separate, optional step with its own form, fee and deposit.",
-      "body": "The Copyright Office's sound recordings circular says recordings created after 1 January 1978 are protected automatically and that neither registration nor publication is required. This answer rests on that circular and does not address songs separately. Registering has other effects, and the Office changes its fees, so check its current pages before you apply.",
+      "body": "The Copyright Office's sound recordings circular says recordings created after 1 January 1978 are protected automatically once first fixed, and that neither registration nor publication is required. This answer rests on that circular and covers recordings only, not songs. Registering has other effects, and the Office changes its fees, so check its current pages before you apply.",
       "do": [
         "Read the Office's circular for your type of work before applying"
       ],
@@ -400,7 +400,7 @@
     {
       "id": "claim-am-fm-recording-owner",
       "type": "claim",
-      "title": "Do US recording owners get paid when a song plays on AM/FM radio?",
+      "title": "Do recording owners get paid when a song plays on US AM/FM radio?",
       "domain": "royalty-basics",
       "tags": [
         "neighboring",
@@ -414,25 +414,27 @@
         "publisher-label"
       ],
       "territory": [
-        "US"
+        "US",
+        "UK"
       ],
-      "confidence": "law",
+      "confidence": "official",
       "sources": [
         "usc-114",
-        "usc-106"
+        "usc-106",
+        "ppl-calc"
       ],
-      "take": "Not under US copyright law. Recording owners hold a performance right only for digital audio transmissions, and ordinary radio broadcasts are carved out of it.",
-      "body": "17 USC 114(a) gives a sound recording owner only some of the section 106 rights and leaves out the general public performance right in clause (4). Clause (6) covers digital audio transmissions. Section 114(d)(1)(A) says a nonsubscription broadcast transmission does not infringe that right. Song owners are different: they hold the performing right, usually licensed through a society. Other countries differ, so do not assume a UK or Canadian rule applies in the US.",
+      "take": "Not under US copyright law. Recording owners hold a performance right only for digital audio transmissions, and over-the-air radio broadcasts fall outside it.",
+      "body": "17 USC 114(a) gives a sound recording owner only some of the section 106 rights and leaves out the general public performance right in clause (4). Clause (6) covers digital audio transmissions, and section 114(d)(1)(A) exempts nonsubscription broadcast transmissions, which (j)(3) defines as those of FCC-licensed terrestrial stations. Song owners do hold a performing right, usually licensed through a society. This is US law only: in the UK, for example, PPL pays recording owners and qualifying performers for broadcasts.",
       "do": [
         "Check each country's rules before expecting recording income from radio play"
       ],
-      "basis": "17 USC 106(4), 106(6) and 114(a), (d)(1)(A), as retrieved 20 November 2026 (US).",
+      "basis": "17 USC 106(4), 106(6), 114(a), (d)(1)(A) and (j)(3), as retrieved 20 November 2026 (US); PPL for the UK example.",
       "as_of": "2026-11-20"
     },
     {
       "id": "claim-w8ben-non-us",
       "type": "claim",
-      "title": "Do non-US songwriters need to file Form W-8BEN?",
+      "title": "Do non-US songwriters need to fill in Form W-8 BEN?",
       "domain": "royalty-basics",
       "tags": [
         "royalties",
@@ -453,8 +455,8 @@
       "sources": [
         "irs-w8ben"
       ],
-      "take": "It depends on the payer and your situation. The IRS says a foreign person gives the form when the withholding agent or payer asks for it.",
-      "body": "The IRS page says a non-US person who beneficially owns income that is subject to US withholding hands the form to whoever pays or withholds, when that party asks. This holds whether or not the person seeks a lower rate or an exemption. The page does not say which rate applies to royalties. This is not tax advice: ask a tax adviser how US withholding applies to you.",
+      "take": "It depends on the payer and your situation. The IRS says a foreign individual gives the form to the withholding agent or payer when asked for it.",
+      "body": "The IRS page says a foreign individual who beneficially owns an amount that is subject to US withholding gives the form to whoever pays or withholds, when that party asks, whether or not a lower rate or an exemption is claimed. The form is for individuals; the page links a separate form for entities. It does not say which rate applies to royalties. This is not tax advice: ask a tax adviser how US withholding applies to you.",
       "do": [
         "Ask each payer which form it needs from you",
         "Ask a tax adviser how US withholding applies to you"
@@ -581,6 +583,15 @@
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
       "support": "Defines unclaimed accrued royalties as unmatched plus unclaimed; intends to begin distributions in April 2027 through market share, starting with January 2021 blanket usage; dashboard for 2021 usage."
+    },
+    "ppl-calc": {
+      "type": "collective",
+      "publisher": "PPL",
+      "title": "How royalties are calculated",
+      "url": "https://www.ppluk.com/royalties/how-royalties-are-calculated/",
+      "jurisdiction": "UK",
+      "retrieved": "2026-11-20",
+      "support": "UK public play and broadcast money, after costs: one half to the recording rightsholder, one half to qualifying performers (equitable remuneration); several performers share by agreement or allocation policy; 28 million recordings."
     },
     "sx-owed": {
       "type": "collective",
