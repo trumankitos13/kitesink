@@ -45,14 +45,15 @@
         "admin"
       ],
       "territory": [
-        "INTL"
+        "INTL",
+        "US"
       ],
       "confidence": "official",
       "sources": [
-        "mlc-unclaimed",
-        "usco-unclaimed-study"
+        "usc-115",
+        "mlc-unclaimed"
       ],
-      "take": "Money a collector has received for a use of music but cannot yet tie to a specific song or owner. The MLC counts it inside unclaimed accrued royalties once the holding period ends."
+      "take": "Money collected for a use of a song that cannot be paid yet because the song, its owner or the owner's share is still unknown or unfound. In US law it means the owner \"has not been identified or located\"."
     },
     {
       "id": "unc-term-unclaimed",
@@ -72,10 +73,9 @@
       ],
       "confidence": "official",
       "sources": [
-        "mlc-unclaimed",
-        "butler-cmo-2020"
+        "mlc-unclaimed"
       ],
-      "take": "Everyday word for money no owner has collected. Collectives use it loosely, so check whether a page means unmatched money, or money for an owner who has been identified but not found."
+      "take": "A loose word for royalties that no owner has collected yet. Meanings vary between collectors, and the MLC uses it both for its wider unclaimed accrued royalties and for one part of them. Read each collector's own definition."
     },
     {
       "id": "unc-term-black-box",
@@ -114,12 +114,12 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "The ledger a collective uses to park royalties when the works in a usage report have not been identified. Societies review it for reasonableness before each distribution."
+      "take": "An account where a collective holds royalties while the works in a usage report are still unidentified. A 2020 survey for the US Copyright Office lists checking it against past payouts among some societies' pre-payment steps."
     },
     {
       "id": "unc-note-matching-causes",
       "type": "note",
-      "title": "Most unmatched money starts with thin usage reports",
+      "title": "The commonest reason money goes unmatched is a thin usage report",
       "topic": "causes",
       "level": "intermediate",
       "readers": [
@@ -136,12 +136,13 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "The commonest cause the surveyed societies gave: a service reports the recording but nothing about the song, its writers or its publishers.",
-      "body": "A 2020 survey for the Copyright Office, based on anonymous replies from collectives worldwide, ranks the reasons money cannot be matched. Top of the list are reports that name only the recording, data that cannot be matched by machine and still needs manual research, and works the owner never registered. Better registered data on your side shrinks the gap.",
+      "take": "In a 2020 survey, collectives put first a service report that names the recording but says nothing about the song, its writers or its publishers.",
+      "body": "The survey, written for the US Copyright Office from the answers of collectives that were not named, lists the reasons in order of how often they come up. First come reports that identify only the recording, then data that needs manual research nobody has done or that would cost too much, then works the owner never registered. Your own registrations cannot fix a thin report, but they give the collective something to match it against.",
       "do": [
         "Register each song and recording wherever it earns, with writers, shares and identifiers.",
         "Check that recording codes and song codes agree across your distributor and your registrations."
-      ]
+      ],
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-note-conflicting-data",
@@ -162,8 +163,8 @@
         "butler-cmo-2020",
         "mlc-tools"
       ],
-      "take": "Money can sit unpaid when two registrations disagree, when shares are unknown or total over 100 percent, or when an ownership dispute is open.",
-      "body": "The surveyed societies also named multiple registrations with conflicting data, missing proof of who controls a work, unverified registrations and unresolved disputes. The MLC's Overclaims Tool exists for the case where claimed shares add to more than the whole. A dispute over who owns a song is a matter for a music lawyer, not a registration form.",
+      "take": "Money can stay unpaid when registrations disagree, when shares are unknown or add up to more than 100 percent, or when owners dispute a song.",
+      "body": "Collectives surveyed in 2020 also named missing proof that an owner controls a work, registrations not yet checked and ownership disputes still open. In the US, the MLC's Overclaims Tool, covered in the mechanicals guide, deals with songs whose claimed shares come to more than the whole. A dispute over who owns a song is a matter for a music lawyer, not a registration form.",
       "do": [
         "Agree splits in writing with co-writers before anyone registers.",
         "Compare what each publisher and society holds for the same song."
@@ -189,42 +190,13 @@
         "butler-cmo-2020",
         "wipo-cmo-music"
       ],
-      "take": "Societies often lack a foreign owner's details, or hold data from another society that is incomplete, so foreign income can stall.",
-      "body": "Societies learn about works from their own members, from sister societies under reciprocal agreements and from shared databases. The survey lists missing foreign interested-party information and incomplete data from other societies among the causes. If your sub-publisher or society abroad lacks your song, income there may sit unallocated.",
+      "take": "A collective may lack a foreign owner's details, or hold incomplete data from a sister society, so income earned abroad can stall.",
+      "body": "Collectives learn about works from their own members, from sister societies under reciprocal agreements and from shared databases such as the IPI system. The 2020 survey lists missing information on foreign owners and incomplete data from other societies among the reasons money goes unmatched. If your society or sub-publisher abroad does not hold your song, income there may sit unallocated.",
       "do": [
         "Ask your society which sister societies hold your works.",
         "Ask your sub-publisher which territories have your registrations."
-      ]
-    },
-    {
-      "id": "unc-note-no-registration",
-      "type": "note",
-      "title": "No account with the collector, no payment",
-      "topic": "causes",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "artist",
-        "producer",
-        "publisher-label"
       ],
-      "territory": [
-        "US",
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "sx-owed",
-        "mlc-missing-members",
-        "butler-cmo-2020"
-      ],
-      "take": "SoundExchange pays only registered owners and artists, and the MLC keeps a list of owners who have not joined. Societies generally pay members or affiliates.",
-      "body": "SoundExchange says artists and sound recording owners must register to receive digital performance royalties. The MLC publishes a lookup of rightsholders who may be owed money and have not joined. The CMO survey adds that societies typically pay their own members and affiliates. Not being known to the collector is the simplest reason money goes unclaimed.",
-      "do": [
-        "Register with each collector that pays your kind of income.",
-        "Search each collector's list for your name."
-      ],
-      "as_of": "2026-11-20"
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-mistake-stale-details",
@@ -246,12 +218,13 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "Societies list missing current addresses and bank details among the reasons identified owners still go unpaid.",
-      "body": "A work can be matched to a known owner and still be unpaid because the collector cannot reach that owner or has no valid payment details. The survey also notes rights withdrawn from a society while the database was never updated. After a move, a name change or a change of publisher, update every account.",
+      "take": "Collectives surveyed in 2020 listed missing current addresses and bank details among the reasons a known owner still goes unpaid.",
+      "body": "A song can be matched to a known owner and still not be paid, because the collective cannot reach that owner or has no valid payment details. The same survey notes rights taken away from a society while its records were never changed. After a move, a name change or a change of publisher, update every account.",
       "do": [
         "Update address, bank and tax details after any change.",
         "Tell each society in writing when rights move."
-      ]
+      ],
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-note-no-perfect-match",
@@ -271,38 +244,12 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "The survey author says a claim of a perfect match rate deserves doubt, and that high 80s percent on current service data is generally seen as very good.",
-      "body": "This is the report author's account of conversations with executives, not a measured benchmark. Her point is that a share of reported usage will always stay unmatched, so owners should not assume that a missing line on a statement is a mistake by them. Check, then claim.",
+      "take": "The 2020 survey says any claimed 100 percent match rate should be doubted. Its author reports that executives see the high 80s percent as very good for current service reports.",
+      "body": "The warning about 100 percent reflects the experience of the collectives surveyed. The high 80s figure is the author's account of past conversations with executives, not a measured benchmark, and it concerns matching current service reports to works that members have registered. Even then some usage of registered songs goes unmatched, so it pays to check statements and the collectors' unmatched lists from time to time.",
       "do": [
-        "Treat unmatched usage as normal and check for it on a schedule."
-      ]
-    },
-    {
-      "id": "unc-step-mlc-lookup",
-      "type": "step",
-      "title": "Search the MLC's list of owners who have not joined",
-      "topic": "where-to-look",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "publisher-label",
-        "admin"
+        "Check your statements and each collector's unmatched list on a schedule."
       ],
-      "territory": [
-        "US"
-      ],
-      "confidence": "official",
-      "sources": [
-        "mlc-missing-members"
-      ],
-      "take": "Search your name, or the name you collect royalties under, in the Missing Member Lookup. If you appear, join the MLC. The page says connecting is free.",
-      "body": "The lookup covers US digital audio mechanical royalties for rightsholders who are not yet members. It leaves out historical unmatched royalties, which the MLC treats separately. Try each name variant you have used, including the name on your song registrations.",
-      "do": [
-        "Search every name and alias you have used.",
-        "Join the MLC if your name appears."
-      ],
-      "when": "after-release",
-      "as_of": "2026-11-20"
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-note-statute-public-list",
@@ -330,33 +277,6 @@
       "as_of": "2026-11-20"
     },
     {
-      "id": "unc-step-soundexchange",
-      "type": "step",
-      "title": "Check SoundExchange's lists, register, then claim recordings",
-      "topic": "where-to-look",
-      "level": "beginner",
-      "readers": [
-        "artist",
-        "producer",
-        "publisher-label"
-      ],
-      "territory": [
-        "US"
-      ],
-      "confidence": "official",
-      "sources": [
-        "sx-owed"
-      ],
-      "take": "If you have not registered, use SoundExchange's search tool to see whether you are owed. Registration is free, and SX Direct is used to search and claim recordings.",
-      "body": "SoundExchange collects US digital performance royalties for sound recordings on non-interactive services. Its page keeps four lists of unregistered or partly registered creators. The page does not set out a claim deadline or what becomes of money nobody claims, so ask SoundExchange directly about older plays.",
-      "do": [
-        "Search the unregistered lists for your name and recordings.",
-        "Register, then use SX Direct to claim recordings."
-      ],
-      "when": "after-release",
-      "as_of": "2026-11-20"
-    },
-    {
       "id": "unc-table-soundexchange-lists",
       "type": "table",
       "title": "SoundExchange's four status lists for unclaimed royalties",
@@ -374,7 +294,7 @@
       "sources": [
         "sx-owed"
       ],
-      "take": "SoundExchange sorts creators with royalties waiting into four lists. Knowing which one fits you shows what is missing.",
+      "take": "SoundExchange sorts creators it holds unclaimed royalties for into four lists. The list you are on shows what is missing. How to register and claim is in the claimable-royalties table.",
       "columns": [
         "List",
         "What it means"
@@ -382,54 +302,27 @@
       "rows": [
         [
           "Unregistered Artists",
-          "No registration, or the registered parties have not made a complete claim"
+          "SoundExchange has no registration for the act, or the people registered have not finished claiming"
         ],
         [
           "Partially Unregistered Artists",
-          "Only some performers of a group are registered; others are still missing"
+          "Some members of a group are registered and paid; at least one is not, so that share waits"
         ],
         [
           "Unregistered Performers",
-          "No current registration for these individuals"
+          "These individual performers have no current registration"
         ],
         [
           "Unregistered Sound Recording Owners",
-          "No registration, or the registered party has not made a full claim"
+          "The owner has not registered, or has registered but not finished claiming"
         ]
       ],
       "as_of": "2026-11-20"
     },
     {
-      "id": "unc-step-cmrra",
-      "type": "step",
-      "title": "In Canada, match recordings in CMRRA's unclaimed works portal",
-      "topic": "where-to-look",
-      "level": "intermediate",
-      "readers": [
-        "publisher-label",
-        "admin",
-        "writer"
-      ],
-      "territory": [
-        "CA"
-      ],
-      "confidence": "official",
-      "sources": [
-        "cmrra-unclaimed"
-      ],
-      "take": "Get a CMRRA Direct account, then use the Unclaimed Works menu to match recordings or add missing ownership shares for online service uses in Canada.",
-      "body": "CMRRA says approval of a new account can take up to 3 business days. After it verifies a submission, its usual quarterly invoicing covers current and past use of the recording. The page names no fee or deadline. Details such as the footnote on the menu item were not on the page, so confirm them with CMRRA.",
-      "do": [
-        "Apply for CMRRA Direct before you need to claim.",
-        "Keep the share evidence ready for each claim."
-      ],
-      "when": "after-release",
-      "as_of": "2026-11-20"
-    },
-    {
       "id": "unc-step-ppl",
       "type": "step",
-      "title": "In the UK, add yourself to a recording's line-up through myPPL",
+      "title": "In myPPL, the role you claim decides whether a UK performance pays",
       "topic": "where-to-look",
       "level": "beginner",
       "readers": [
@@ -443,11 +336,11 @@
       "sources": [
         "ppl-performers"
       ],
-      "take": "If you played on a recording but are not on its line-up, submit a performer claim in myPPL and choose your role. PPL may ask for evidence.",
-      "body": "PPL says an audible contribution generally counts, and some roles do not pay. Studio producers use a separate form that the featured performers must also complete. If the track is not on PPL's database, ask the rightsholder to add it. Qualification depends on where the performance happened or where the performer lived or held citizenship.",
+      "take": "When you ask PPL to add you to a recording's line-up, you pick a role. Audible contributions generally count; some studio roles with no audible part do not pay.",
+      "body": "PPL treats playing, singing, electronics and other audible parts as a performance. A studio producer counts only when they conduct, or give similar direction to, a live performance while it is recorded; later edits and remixes do not. Such a producer claims on a separate PPL form that the featured performers also sign, and always joins the line-up as non-featured. Joining, evidence and missing tracks are covered in the claimable-royalties table.",
       "do": [
-        "List your role, dates and the recording details before you submit.",
-        "Ask the label to add a missing track."
+        "Note your role, the session dates and the recording details before you claim.",
+        "Studio producers: ask the featured performers to sign the producer form."
       ],
       "when": "after-release",
       "as_of": "2026-11-20"
@@ -470,67 +363,12 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "Many societies publish unidentified works on their sites, some only above a money threshold, and some only to members or affiliates.",
-      "body": "The survey found posting lists of unidentified works to be the commonest outreach method. One example threshold was works earning $100 or more. Since societies usually pay members and affiliates, such lists may be open to them alone. Publishers often get bulk access that songwriters lack. Ask your own society where its list is.",
+      "take": "Posting lists of unidentified works is a common outreach step, but some societies list only works above a money threshold, and some open the lists to members or affiliates only.",
+      "body": "In the 2020 survey, putting such lists on a society's website was one of the most common ways to find owners. The report's example threshold is $100, given in US dollars for illustration; smaller amounts may go into a shared pool instead. Because societies usually pay only members, affiliates and sister societies, the lists may be open to them alone, and publishers may get bulk access that songwriters do not. Ask your own society where its list is.",
       "do": [
         "Ask each society if it posts a list and who may see it."
       ],
       "as_of": "2020-04-01"
-    },
-    {
-      "id": "unc-table-where-to-look",
-      "type": "table",
-      "title": "Where to check for unclaimed money, by country and type of income",
-      "topic": "where-to-look",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "artist",
-        "producer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US",
-        "CA",
-        "UK"
-      ],
-      "confidence": "official",
-      "sources": [
-        "mlc-missing-members",
-        "sx-owed",
-        "cmrra-unclaimed",
-        "ppl-performers"
-      ],
-      "take": "Four places that publish a way to check or claim: the MLC, SoundExchange, CMRRA and PPL. Each covers a different kind of income.",
-      "columns": [
-        "Where",
-        "Covers",
-        "First step"
-      ],
-      "rows": [
-        [
-          "The MLC (US)",
-          "Digital mechanicals for owners not yet joined",
-          "Search the Missing Member Lookup, then join"
-        ],
-        [
-          "SoundExchange (US)",
-          "Digital performance royalties for recordings",
-          "Search its lists, register, claim in SX Direct"
-        ],
-        [
-          "CMRRA (Canada)",
-          "Online service uses of unmatched recordings and shares",
-          "Open a CMRRA Direct account, use Unclaimed Works"
-        ],
-        [
-          "PPL (UK)",
-          "Performer income for recordings",
-          "Claim a line-up place in myPPL"
-        ]
-      ],
-      "as_of": "2026-11-20"
     },
     {
       "id": "unc-note-cmo-matching",
@@ -549,8 +387,8 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "Societies run automated matching, then manual research, and often reserve the manual step for works above a value or usage level, such as $10.",
-      "body": "The survey describes matching against work and recording codes plus titles and names, with manual research afterwards and quality checks. Some societies match recordings to works before service reports arrive. Audio fingerprinting is used less often. For small amounts, the cost of research can exceed what it recovers, so low earners may wait longest.",
+      "take": "Societies match by machine first, then research by hand, and some keep manual research for works above a money or usage level, such as $10.",
+      "body": "The 2020 survey describes matching on recording, work and party codes plus titles and names, followed by manual research and quality checks. Some societies now match recordings to works before any service report arrives. Audio fingerprinting is used less often. Because research can cost more than a small amount recovers, low-earning works may never get individual attention.",
       "do": [],
       "as_of": "2020-04-01"
     },
@@ -575,8 +413,8 @@
         "wipo-cmo-music",
         "butler-cmo-2020"
       ],
-      "take": "Societies lean on the ISWC for the song, the IPI number for the person and the ISRC for the recording to link a report to a payee.",
-      "body": "WIPO's music module describes the ISWC as the reference number for a work, tied to rights holders in the IPI system. The survey says societies use ISRC, ISWC and IPI alongside titles and names. Registrations that carry these codes give a collector more to match on.",
+      "take": "Collectives use the ISWC for the song, the IPI number for each writer and publisher, and the ISRC for the recording to link a usage report to a payee.",
+      "body": "WIPO's 2012 music module describes the ISWC as an ISO reference number for a musical work that ties the work to its rights holders in the IPI system. The 2020 survey says societies match on ISRC, ISWC and IPI codes alongside titles and names. Registrations that carry these codes give a collective more to match on.",
       "do": [
         "Add your IPI number and song codes to registrations where the form asks."
       ]
@@ -599,42 +437,47 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "The survey lists several methods that societies use or have used. Practice varies by society and by type of income, so ask your own.",
+      "take": "The 2020 survey lists ways societies share out money they cannot allocate, now or in the past. Practice varies by society and by type of income, so ask your own.",
       "columns": [
         "Method",
         "In short"
       ],
       "rows": [
         [
-          "Share to the same pool",
-          "Held over and shared among current earners of the next distribution"
+          "Add to the next pool",
+          "Held over and shared among current earners of the next payout for the same kind of use"
         ],
         [
           "Pro rata to paid owners",
-          "Split among those paid from the same source in the same period"
+          "Split among owners paid from the same source in the same period"
         ],
         [
           "Allocate by work",
-          "Sorted by work first, then by each owner's share"
+          "Split by work first, then by each owner's share of the work"
+        ],
+        [
+          "Market share by catalogue",
+          "Shared by catalogue market share, not by owner or administrator"
         ],
         [
           "Send to a foreign society",
-          "A work known to be foreign goes to the society in that country"
+          "A use known to involve a work from another country goes to that country's society"
         ],
         [
           "Pay the current owner",
-          "If the owner at the time is unknown, the present owner is paid"
+          "Where the work is known but a past owner is not, the present owner is paid"
         ],
         [
           "Cover costs or fund causes",
-          "Used for operating costs or for shared member benefits"
+          "Used for running costs, or for shared causes such as anti-piracy or social and cultural funds"
         ]
-      ]
+      ],
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-note-no-market-share",
       "type": "note",
-      "title": "Most surveyed societies do not use US-style market share",
+      "title": "Most societies surveyed in 2020 did not use US-style market share",
       "topic": "undistributed",
       "level": "advanced",
       "readers": [
@@ -650,11 +493,12 @@
         "butler-cmo-2020",
         "usc-115"
       ],
-      "take": "The MLC's statutory market-share method is not the usual approach abroad: the surveyed societies most often use other ways to share out money.",
-      "body": "US law tells the MLC to share unclaimed accrued royalties by relative market share. The survey says participating societies most often do not use owner market share, and one method it lists works by catalogue. Do not assume a society abroad pays out unclaimed money to larger owners.",
+      "take": "Collectives surveyed in 2020 most often did not share out unclaimed money by each owner's market share, the method US law sets for the MLC.",
+      "body": "Section 115 tells the MLC to divide unclaimed accrued royalties by owners' relative market shares in the usage reports. The 2020 survey says the participating collectives \"most often do not use copyright owner market share calculations\" for this money. Its list of methods does include market share counted by catalogue rather than by owner, and several pro rata splits among owners already paid from the same source. Do not assume a society abroad follows the MLC's method.",
       "do": [
-        "Ask each foreign society how it distributes undistributed income."
-      ]
+        "Ask each society abroad how it shares out income it cannot allocate."
+      ],
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-note-social-cultural",
@@ -668,25 +512,25 @@
         "admin"
       ],
       "territory": [
-        "INTL",
-        "DE",
-        "FR"
+        "INTL"
       ],
-      "confidence": "official",
+      "confidence": "reported",
       "sources": [
         "butler-cmo-2020",
-        "wipo-cmo-music"
+        "wipo-cmo-music",
+        "cisac-gcr-2023"
       ],
-      "take": "Many continental European and Latin American societies divert part of collections to social, cultural or educational purposes. WIPO says they need prior agreement.",
-      "body": "The survey calls the practice controversial when sums are large, unclear or taken from foreign rights holders. WIPO's module states that these deductions are not cost recovery, so rights holders and other societies have to agree to them beforehand. CISAC's collection figures are reported before such deductions.",
+      "take": "The author of the 2020 survey writes that most societies in continental Europe and Latin America deduct part of collections for social, cultural or educational purposes.",
+      "body": "She calls this very controversial in the industry when the sums are large, their use is unclear, or they come from foreign rights holders without permission. WIPO's 2012 music module says such deductions are common in many countries and are not cost recovery, so rights holders and other societies have to accept them beforehand. CISAC's collection figures are gross, before these deductions.",
       "do": [
-        "Check a society's deduction rules before choosing where to register."
-      ]
+        "Ask your society, and any society abroad that collects for you, what it deducts and why."
+      ],
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-note-study-held-owners",
       "type": "note",
-      "title": "US study: known owners who cannot be found should be held for",
+      "title": "US study: hold money for an owner who is known but cannot be found",
       "topic": "undistributed",
       "level": "advanced",
       "readers": [
@@ -700,12 +544,12 @@
       "sources": [
         "usco-unclaimed-study"
       ],
-      "take": "The Copyright Office recommended that money for an owner who is identified but not located be held until that owner is found, and that market shares be independently verified.",
-      "body": "This adds to the five-year holding advice covered elsewhere in this guide. These are recommendations the MLC must weigh substantially, not rules. Check the MLC's own current policy before relying on them.",
+      "take": "The Copyright Office's July 2021 report recommends that the MLC keep holding unclaimed royalties for an owner who is known but cannot be found, until that owner turns up.",
+      "body": "In the Office's reading of the statute, money for a song whose owner is known and can be found is not unclaimed, so the MLC cannot give it to others by market share just because that owner has not joined or has not supplied payment details. The holding advice is a recommendation the MLC must give substantial weight, not a rule; the report's five-year advice is in the mechanicals guide. Check the MLC's own current policy.",
       "do": [
         "Compare the MLC's current policy with the recommendations."
       ],
-      "as_of": "2026-11-20"
+      "as_of": "2021-07-01"
     },
     {
       "id": "unc-step-gather-documents",
@@ -727,46 +571,14 @@
       "sources": [
         "butler-cmo-2020"
       ],
-      "take": "Societies commonly ask for legal name and aliases, contact and tax details, identity documents and proof of ownership or splits for each work.",
-      "body": "The survey lists what collectives may require: full names and pseudonyms, ID codes, role and share, contact details, proof of identity, tax numbers and documents proving rights by territory. Having them in one folder speeds every claim.",
+      "take": "Collectives may ask for your legal name and aliases, contact and tax details, proof of identity, and proof of ownership or splits for each work.",
+      "body": "The 2020 survey for the US Copyright Office lists what collectives may require or recommend: full names and pseudonyms, party codes such as the IPI number, your role and share, contact details, proof of identity, tax numbers, and documents proving rights in each territory. Keeping them in one folder speeds every claim.",
       "do": [
         "Collect agreements, split sheets and ID in one folder.",
         "Note every alias used on past releases."
       ],
-      "when": "after-release"
-    },
-    {
-      "id": "unc-step-claim-order",
-      "type": "step",
-      "title": "Claim in a fixed order: find, register, claim, then follow up",
-      "topic": "claim-process",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "artist",
-        "producer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US",
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "mlc-tools",
-        "sx-owed",
-        "cmrra-unclaimed",
-        "ppl-performers"
-      ],
-      "take": "Each body works the same way: search its list, register or join, claim the song or recording, then watch for the payment and ask when none comes.",
-      "body": "The MLC separates a Claiming Tool for partly claimed songs, a Matching Tool for unmatched recordings and registration tools for missing songs. SoundExchange, CMRRA and PPL each ask for registration before a claim. Wait times are not promised on these pages.",
-      "do": [
-        "Do the same four steps for each collector.",
-        "Diary a check on each claim."
-      ],
       "when": "after-release",
-      "as_of": "2026-11-20"
+      "as_of": "2020-04-01"
     },
     {
       "id": "unc-mistake-one-registration",
@@ -791,39 +603,12 @@
         "mlc-missing-members",
         "butler-cmo-2020"
       ],
-      "take": "A PRO account, an MLC account and a SoundExchange account are separate. Each pays only what it collects, so a missing registration leaves money unclaimed.",
-      "body": "SoundExchange requires its own registration for digital performance royalties. The MLC's lookup lists owners not yet in the MLC. Societies abroad typically pay their own members and affiliates. Check each income type separately.",
+      "take": "A performing rights society, the MLC and SoundExchange each keep their own accounts. Each pays only what it collects, so a missing registration leaves money unclaimed.",
+      "body": "SoundExchange says artists and recording owners must register with it to be paid US digital performance royalties. The MLC's Missing Member Lookup lists rightsholders who may be owed money but have not joined. The 2020 survey adds that collectives typically pay only their own members, affiliates and sister societies. Check each kind of income separately; the claimable-royalties table lists where to look.",
       "do": [
         "List every collector for each kind of income you earn."
       ],
       "as_of": "2026-11-20"
-    },
-    {
-      "id": "unc-mistake-overclaim",
-      "type": "mistake",
-      "title": "Claiming the whole song when you share it",
-      "topic": "mistakes",
-      "level": "intermediate",
-      "readers": [
-        "writer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US",
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "mlc-tools",
-        "butler-cmo-2020"
-      ],
-      "take": "Claim only your own share. Shares that total more than the whole create an overclaim, which freezes payment while the owners sort it out.",
-      "body": "The MLC's Overclaims Tool lets owners change or give up shares, contact each other and upload documents. Societies abroad also list conflicting claims as a cause of unpaid money. Disputed ownership is a matter for a music lawyer.",
-      "do": [
-        "Confirm splits with co-writers before claiming.",
-        "See a music lawyer if ownership is disputed."
-      ]
     },
     {
       "id": "unc-note-deadlines",
@@ -849,10 +634,11 @@
         "cmrra-unclaimed",
         "ppl-performers",
         "sx-owed",
-        "mlc-unclaimed"
+        "mlc-unclaimed",
+        "butler-cmo-2020"
       ],
-      "take": "The CMRRA, PPL and SoundExchange pages read here name no claim deadline. The MLC's April 2027 date starts distributions and is not a cut-off.",
-      "body": "Silence on a page is not a promise. PPL notes the 70-year term of the performer right, and the MLC will share remaining money by market share from April 2027, so claiming early protects you. Ask each collector in writing how long it holds money.",
+      "take": "The CMRRA, PPL and SoundExchange pages checked here name no claim deadline. That does not mean money waits forever, and the MLC's April 2027 date is a start, not a cut-off.",
+      "body": "Silence on a page is not a promise. The MLC plans to begin market-share distributions of money still unmatched in April 2027, starting with January 2021 usage, so claiming before your usage months come up matters; the mechanicals guide has the detail. The 2020 survey also describes societies pooling small unclaimed amounts and sharing them out. Ask each collector in writing how long it holds money.",
       "do": [
         "Claim early.",
         "Get any holding period confirmed in writing."
@@ -886,7 +672,7 @@
         "ppl-performers",
         "butler-cmo-2020"
       ],
-      "take": "A short pass to find money held for you. It follows what each collector's own page and the Copyright Office survey describe.",
+      "take": "A short pass to find money held for you, built from each collector's own page and the 2020 survey for the US Copyright Office.",
       "groups": [
         {
           "name": "Prepare",
@@ -937,15 +723,15 @@
         "usc-115"
       ],
       "value": "90",
-      "unit": "days of public notice before a distribution",
+      "unit": "days' minimum notice before an MLC unclaimed distribution",
       "sort": 90,
-      "take": "Section 115 sets this as the least advance warning the MLC must give the industry before it pays out unclaimed money.",
+      "take": "Section 115 makes the MLC publicize any pending distribution of unclaimed money across the industry at least this many days before it is paid.",
       "as_of": "2026-11-20"
     },
     {
       "id": "unc-number-cisac-music",
       "type": "number",
-      "title": "Music collections reported to CISAC societies for 2022",
+      "title": "Music collections by CISAC member societies in 2022",
       "topic": "undistributed",
       "level": "intermediate",
       "readers": [
@@ -962,7 +748,7 @@
       "value": "10.83",
       "unit": "EUR billion, gross, 2022",
       "sort": 10.83,
-      "take": "Scale only: gross music collections before deductions. The report gives no unclaimed total, so do not read this as money waiting.",
+      "take": "Scale only: gross collections before deductions, from CISAC's 2023 report. It gives no unclaimed total, so do not read this as money waiting.",
       "as_of": "2023-10-26"
     },
     {
@@ -983,9 +769,9 @@
         "ppl-performers"
       ],
       "value": "28",
-      "unit": "million tracks, 'over'",
+      "unit": "million tracks or more",
       "sort": 28,
-      "take": "PPL says its database holds more than this many tracks, so searching it for your recordings is worthwhile.",
+      "take": "PPL says its repertoire database holds over 28 million tracks. Members search it for recordings they performed on before they claim.",
       "as_of": "2026-11-20"
     }
   ],
@@ -997,7 +783,7 @@
       "url": "https://www.law.cornell.edu/uscode/text/17/115",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Subsections (a) and (b) on eligibility and notices; (d) on the blanket license, MLC duties, holding, distribution of unclaimed accrued royalties, songwriter share and audits.",
+      "support": "115(d)(3)(J)(i)(II) relative market shares; (J)(iii)(I) public online facility listing unmatched works; (J)(iii)(II)(dd) publicize pending distribution not less than 90 days ahead; (e)(35) definition of unmatched.",
       "edition": "Title 17, section 115, as shown by LII"
     },
     "usco-unclaimed-study": {
@@ -1007,7 +793,7 @@
       "url": "https://www.copyright.gov/policy/unclaimed-royalties/unclaimed-royalties-final-report.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Front matter reproduces MMA sec. 102(f) (substantial weight). Executive summary: hold beyond the statutory minimum, no first distribution for at least five years, independent verification of market-share calculations.",
+      "support": "Exec. summary p. iv and p. 93: hold royalties for identified but unlocated owners until found; matched owner not registered or missing payment details is not grounds for market-share distribution; five-year first-distribution advice; MMA sec. 102(f)(2) substantial weight.",
       "date": "2021-07-01",
       "edition": "Report of the Register of Copyrights, July 2021"
     },
@@ -1027,7 +813,7 @@
       "url": "https://www.themlc.com/unclaimed-accrued-royalties",
       "jurisdiction": "US",
       "retrieved": "2026-11-19",
-      "support": "Defines unclaimed accrued royalties as unmatched plus unclaimed; intends to begin distributions in April 2027 through market share, starting with January 2021 blanket usage; dashboard for 2021 usage."
+      "support": "Unclaimed accrued royalties: received but not matched or distributed by end of minimum hold; include unmatched and unclaimed royalties; distributions to begin April 2027 by market share, starting with January 2021 usage."
     },
     "mlc-missing-members": {
       "type": "collective",
@@ -1045,7 +831,7 @@
       "url": "https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "'Are you owed royalties?' section: registration needed to be paid; search tool; four status lists; registering free; SX Direct free, used to search and claim recordings; no time limit. Read with WebFetch."
+      "support": "'Are you owed royalties?': artists and recording owners must register to be paid; search tool; four status lists and what each means; registering free; SX Direct to search and claim. No claim deadline."
     },
     "cmrra-unclaimed": {
       "type": "collective",
@@ -1063,7 +849,7 @@
       "url": "https://www.ppluk.com/royalties/uk-royalties/performers/",
       "jurisdiction": "UK",
       "retrieved": "2026-11-20",
-      "support": "Performer claim via myPPL if not on line-up; may need evidence; missing track: ask rightsholder; repertoire and played or broadcast; qualification by residence, citizenship or place; UK 70-year ER right. Read with WebFetch."
+      "support": "Audible contributions count; some roles non-payable; myPPL line-up claim, evidence; missing track: ask rightsholder; studio producer only if directing live performance, own form signed by featured performers; over 28 million tracks."
     },
     "butler-cmo-2020": {
       "type": "government",
@@ -1072,9 +858,10 @@
       "url": "https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf",
       "jurisdiction": "INTL",
       "retrieved": "2026-11-20",
-      "support": "Sec. 4 sources of data; sec. 5B reasons CMOs cannot match; sec. 6 lists, thresholds, manual research; match-rate remarks; sec. 7 suspense accounts and pre-matching; sec. 9 ways unclaimed money is distributed; social and cultural deductions.",
+      "support": "Sec. 2 method; sec. 4 data sources and what CMOs ask for; sec. 5B reasons, most prevalent first; sec. 6 lists, $100 and $10 examples, match-rate remarks; sec. 7 suspense accounts, pre-matching; sec. 9 methods, 'most often do not use' owner market share; cultural deductions.",
       "date": "2020-04-01",
-      "edition": "Butler, April 2020; CMOs anonymous, information gathered January to April 2020"
+      "edition": "Butler, April 2020; CMOs anonymous, information gathered January to April 2020",
+      "authors": "Susan P. Butler"
     },
     "wipo-cmo-music": {
       "type": "government",
@@ -1083,7 +870,7 @@
       "url": "https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf",
       "jurisdiction": "INTL",
       "retrieved": "2026-11-20",
-      "support": "Sec. 3.4: a CMO needs full documentation of works and rights holders to distribute; sec. 3.6: social and cultural deductions to be agreed in advance; sec. 3.7: ISWC, IPI.",
+      "support": "Sec. 3.6: social and cultural deductions common in many countries, not cost cover, must be agreed in advance with rights holders and other CMOs; sec. 3.7: ISWC is an ISO work number linked to rights holders in the IPI system; reciprocal agreements.",
       "date": "2012-08-30",
       "authors": "Tarja Koskinen-Olsson and Nicholas Lowe",
       "edition": "Module 2, 30 August 2012"
@@ -1095,7 +882,7 @@
       "url": "https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf",
       "jurisdiction": "INTL",
       "retrieved": "2026-11-20",
-      "support": "Music collections 10.83 bn EUR in 2022, up 28.0%; methodology: gross collections before deductions for administration, cultural or social purposes; 225 societies in 116 countries or territories.",
+      "support": "Music collections EUR 10.83 bn in 2022, up 28.0%; About the report: gross collections before deductions for administrative, cultural or social purposes; 225 members in 116 countries or territories.",
       "date": "2023-10-26",
       "edition": "Published 26 October 2023, 2022 data"
     }
