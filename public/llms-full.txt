@@ -178,7 +178,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 190 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 131 key numbers and 63 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1022 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1021 sources.
 
 ## Calculators (on the page, no sign-up)
 
@@ -10316,7 +10316,7 @@ FILE: https://kitesink.com/fitness/sources.md
 
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 1022 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 1021 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -10410,7 +10410,7 @@ What changed after an entry was published, newest first.
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 1022 sources, A to Z
+## All 1021 sources, A to Z
 
 - Aasa U, Svartholm I, Andersson F et al. (2017). Injuries among weightlifters and powerlifters: a systematic review. *British Journal of Sports Medicine* 51(4):211-219. https://doi.org/10.1136/bjsports-2016-096037 (Systematic review, cited 2×)
 - Abad CC, Prado ML, Ugrinowitsch C et al. (2011). Combination of General and Specific Warm-Ups Improves Leg-Press One Repetition Maximum Compared With Specific Warm-Up in Trained Individuals. *Journal of Strength and Conditioning Research* 25(8):2242-2245. https://doi.org/10.1519/jsc.0b013e3181e8611b (Trial, cited 1×)
@@ -10593,7 +10593,7 @@ What changed after an entry was published, newest first.
 - Fairchild TJ, Fletcher S, Steele P et al. (2002). Rapid carbohydrate loading after a short bout of near maximal-intensity exercise. *Medicine & Science in Sports & Exercise* 34(6):980-986. https://doi.org/10.1097/00005768-200206000-00012 (Trial, cited 1×)
 - FAO (2003). Food energy: methods of analysis and conversion factors (Chapter 3: Calculation of the energy content of foods). https://www.fao.org/4/y5022e/y5022e04.htm (Guideline, cited 6×)
 - FAO (2010). Fats and fatty acids in human nutrition: report of an expert consultation. *FAO Food and Nutrition Paper 91*. https://www.fao.org/4/i1953e/i1953e00.pdf (Guideline, cited 1×)
-- FAO/WHO/UNU (2004). Human energy requirements: report of a joint expert consultation, Rome, 17–24 October 2001. *FAO Food and Nutrition Technical Report Series 1, tables 5.1 and 5.3*. https://www.fao.org/4/y5686e/y5686e07.htm (Guideline, cited 6×)
+- FAO/WHO/UNU (2004). Human energy requirements: report of a joint expert consultation, Rome, 17–24 October 2001. *FAO Food and Nutrition Technical Report Series 1, table 5.3*. https://www.fao.org/4/y5686e/y5686e07.htm (Guideline, cited 5×)
 - Farrokhyar F, Tabasinejad R, Dao D et al. (2015). Prevalence of Vitamin D Inadequacy in Athletes: A Systematic-Review and Meta-Analysis. *Sports Medicine* 45(3):365-378. https://doi.org/10.1007/s40279-014-0267-6 (Meta-analysis, cited 1×)
 - Fenwick CMJ, Brown SHM, McGill SM (2009). Comparison of Different Rowing Exercises: Trunk Muscle Activation and Lumbar Spine Motion, Load, and Stiffness. *Journal of Strength and Conditioning Research* 23(2):350-358. https://doi.org/10.1519/jsc.0b013e3181942019 (Trial, cited 1×)
 - Ferland PM, Comtois AS (2019). Classic Powerlifting Performance: A Systematic Review. *Journal of Strength and Conditioning Research* 33(1):S194-S201. https://doi.org/10.1519/JSC.0000000000003099 (Systematic review, cited 1×)
@@ -10691,7 +10691,6 @@ What changed after an entry was published, newest first.
 - Helms ER, Prnjak K, Linardon J (2019). Towards a Sustainable Nutrition Paradigm in Physique Sport: A Narrative Review. *Sports* 7(7):172. https://doi.org/10.3390/sports7070172 (Review, cited 2×)
 - Helms ER, Spence AJ, Sousa C et al. (2023). Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals: A Parallel Groups Design. *Sports Medicine - Open* 9(1):102. https://doi.org/10.1186/s40798-023-00651-y (Randomised trial, cited 5×)
 - Henselmans M, Bjørnsen T, Hedderman R et al. (2022). The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review. *Nutrients* 14(4):856. https://doi.org/10.3390/nu14040856 (Systematic review, cited 4×)
-- Herrmann SD, Willis EA, Ainsworth BE et al. (2024). 2024 Adult Compendium of Physical Activities: A third update of the energy costs of human activities. *Journal of Sport and Health Science* 13(1):6-12. https://doi.org/10.1016/j.jshs.2023.10.010 (Review, cited 1×)
 - Hevia-Larraín V, Gualano B, Longobardi I et al. (2021). High-Protein Plant-Based Diet Versus a Protein-Matched Omnivorous Diet to Support Resistance Training Adaptations: A Comparison Between Habitual Vegans and Omnivores. *Sports Medicine* 51(6):1317-1330. https://doi.org/10.1007/s40279-021-01434-9 (Randomised trial, cited 2×)
 - Heymsfield SB, Greenberg AS, Fujioka K et al. (1999). Recombinant Leptin for Weight Loss in Obese and Lean Adults. *JAMA* 282(16):1568. https://doi.org/10.1001/jama.282.16.1568 (Randomised trial, cited 1×)
 - Heymsfield SB, Harp JB, Reitman ML et al. (2007). Why do obese patients not lose more weight when treated with low-calorie diets? A mechanistic perspective. *The American Journal of Clinical Nutrition* 85(2):346-354. https://doi.org/10.1093/ajcn/85.2.346 (Systematic review, cited 1×)

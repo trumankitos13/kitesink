@@ -171,7 +171,7 @@
       ],
       "year": 2004,
       "title": "Human energy requirements: report of a joint expert consultation, Rome, 17–24 October 2001",
-      "journal": "FAO Food and Nutrition Technical Report Series 1, tables 5.1 and 5.3",
+      "journal": "FAO Food and Nutrition Technical Report Series 1, table 5.3",
       "url": "https://www.fao.org/4/y5686e/y5686e07.htm",
       "label": "FAO/WHO/UNU 2004"
     },
@@ -454,31 +454,6 @@
       "volume": "14",
       "pages": "1183836",
       "support": "Tape-method body fat against DXA in 1,407 Army recruits: standard error of estimate 3.42 points (men) and 4.12 (women) before training, reading about 6 points below DXA on average."
-    },
-    "herrmann2024": {
-      "type": "review",
-      "authors": [
-        "Herrmann SD",
-        "Willis EA",
-        "Ainsworth BE",
-        "Barreira TV",
-        "Hastert M",
-        "Kracht CL",
-        "Schuna JM",
-        "Cai Z",
-        "Quan M",
-        "Tudor-Locke C",
-        "Whitt-Glover MC",
-        "Jacobs DR"
-      ],
-      "year": 2024,
-      "title": "2024 Adult Compendium of Physical Activities: A third update of the energy costs of human activities",
-      "journal": "Journal of Sport and Health Science",
-      "doi": "10.1016/j.jshs.2023.10.010",
-      "volume": "13",
-      "issue": "1",
-      "pages": "6-12",
-      "support": "METs as multiples of a standard resting rate of 3.5 mL/kg/min, about 1 kcal/kg/h; MET values per activity code at pacompendium.com."
     }
   }
 }

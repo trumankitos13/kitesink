@@ -68,20 +68,18 @@ eq('navy man', F.navy('m', 70 * 2.54, 15 * 2.54, 34 * 2.54), 17.51, 0.01);
 eq('navy woman', F.navy('f', 65 * 2.54, 13 * 2.54, 28 * 2.54, 38 * 2.54), 25.93, 0.01);
 same('navy: abdomen not above the neck is not a reading', String(F.navy('m', 178, 40, 40)), 'NaN');
 same('navy: a woman needs her hips', String(F.navy('f', 165, 33, 71)), 'NaN');
-// activity multiplier: PAR items scale with BMR, MET items with weight; pal = day energy / BMR
-const kg80 = 80, bmr = 1920;   // 80 kcal an hour at rest
-eq('perHour: sleeping is BMR/24', F.perHour(F.activity('sleep'), bmr, kg80), 80);
-eq('perHour: 3.5 MET at 80 kg', F.perHour(F.activity('w8'), bmr, kg80), 280);
-eq('dayPal: a day asleep is 1.0', F.dayPal([], bmr, kg80, 'sleep').pal, 1);
-eq('dayPal: 8 h asleep, 16 at a desk', F.dayPal([{ id: 'sleep', h: 8 }], bmr, kg80, 'desk').pal, (8 + 16 * 1.5) / 24, 1e-9);
-let d = F.dayPal([{ id: 'sleep', h: 8 }, { id: 'w8', h: 1 }], bmr, kg80, 'leisure');
-eq('dayPal: the rest of the day is filled', d.left, 15); eq('dayPal: energy adds up', d.tee, 8 * 80 + 280 + 15 * 1.4 * 80, 1e-9);
-eq('dayPal: hours over 24 leave a negative remainder', F.dayPal([{ id: 'sleep', h: 25 }], bmr, kg80, 'leisure').left, -1);
-let ad = F.addedPal(F.activity('w8'), 60, 4, bmr, kg80, F.activity('leisure'));
-eq('addedPal: one session', ad.session, 280); eq('addedPal: over leisure', ad.extra, 280 - 112);
-eq('addedPal: averaged over the week', ad.pal, (280 - 112) * 4 / 7 / 1920, 1e-12);
-same('palBand edges', [1.39, 1.4, 1.69, 1.7, 1.99, 2.0, 2.4, 2.41].map(F.palBand).join(' '), 'below sedentary sedentary active active vigorous vigorous above');
-same('activities: every one has a unit and every MET a code', String(F.ACTIVITIES.every(a => (a.par > 0) !== (a.met > 0) && (!a.met || /^\d{5}$/.test(a.code)))), 'true');
+// activity multiplier (KiteSink's own numbers): BMR = weight x 22 / 19.8 / 17.6 kcal per kg by body-fat category;
+// a usual day x 1.1-1.5; each hour of training adds 0.1-0.4 to that day
+same('bmr category: men', [10, 15, 15.5, 25, 26].map(b => F.bmrCategory('m', b)).join(' '), '1 1 2 2 3');
+same('bmr category: women', [20, 24, 30, 34, 35].map(b => F.bmrCategory('f', b)).join(' '), '1 1 2 2 3');
+same('bmr category: unknown body fat', String(F.bmrCategory('m', NaN)), '0');
+eq('category BMR, 80 kg, category 2', F.categoryBmr(80, 2), 1584);
+eq('category BMR per lb matches the table', F.categoryBmr(100 / 2.2, 1), 1000, 1e-9);   // 100 lb at 10 kcal/lb
+eq('a day: light plus an hour of moderate weights and 30 min of low cardio', F.dayMult(1.2, [{ id: 'wt1', min: 60 }, { id: 'aer1', min: 30 }]), 1.4, 1e-9);
+eq('a day with no exercise is the usual day', F.dayMult(1.3, []), 1.3);
+let wk = F.weekMult(1.2, 'wt2', 90, 4);
+eq('week: training day', wk.train, 1.5, 1e-9); eq('week: other days', wk.rest, 1.2); eq('week: average', wk.avg, 1.2 + 0.3 * 4 / 7, 1e-12);
+same('levels and exercise: every multiplier in range', String(F.LEVELS.every(l => l.m >= 1.1 && l.m <= 1.5) && F.EXERCISE.every(e => e.m >= 0.1 && e.m <= 0.4)), 'true');
 // travel builder: every combination produces a session with moves, only using allowed kit and level
 const kits = [[], ['db'], ['kb', 'band'], ['bar', 'bench', 'sus'], ['db', 'kb', 'band', 'bar', 'bench', 'sus']];
 let n = 0, bad = 0;

@@ -1320,7 +1320,7 @@ def hero(lib, data, pages, page):
     goals, buttons, keys = OrderedDict(), [], set()
     for g in spec.get("goals", []):
         name = g.get("key") or "?"
-        missing = [f for f in ("key", "label", "sub", "icon", "pct", "how", "entry", "tools", "areas", "week") if f not in g]
+        missing = [f for f in ("key", "label", "h1", "sub", "icon", "pct", "how", "entry", "tools", "areas", "week") if f not in g]
         if missing:
             problems.append(f"goal {name}: no {', '.join(missing)}")
             continue
@@ -1350,7 +1350,7 @@ def hero(lib, data, pages, page):
             levels[lv] = {"pct": m["pct"], "example": not m.get("pct_from"), "how": m["how"], "rest": m.get("rest", ""),
                           "days": m.get("days") or spec.get("days_by_level", {}).get(lv, ""), "collars": bool(m.get("collars")),
                           "entry": m["entry"], "tools": m["tools"], "areas": m["areas"], "vantix": bool(m.get("vantix")), "week": week}
-        goals[name] = {"label": g["label"], "levels": levels}
+        goals[name] = {"label": g["label"], "h1": g["h1"], "levels": levels}
         buttons.append(f'<button type="button" class="fx-goal" value="{esc(name)}" aria-pressed="false">'
                        f'<span class="fx-goal-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" '
                        f'stroke-linecap="round" stroke-linejoin="round" focusable="false">{g["icon"]}</svg></span>'

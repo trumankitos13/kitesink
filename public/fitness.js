@@ -426,83 +426,49 @@
   };
 
   /* ---------- activity multiplier ----------
-     Two kinds of activity, each in its source's own unit:
-       par: FAO/WHO/UNU 2004 physical activity ratio, a multiple of BMR (table 5.1). kcal/h = PAR x BMR / 24.
-       met: 2024 Adult Compendium MET, a multiple of a standard resting rate of about 1 kcal/kg/h
-            (code given). kcal/h = MET x body weight.
-     The multiplier (PAL) is a day's energy divided by BMR, FAO's PAL = TEE / BMR. */
-  F.ACTIVITIES = [
-    { id: "sleep", g: "Everyday", n: "Sleeping", par: 1.0 },
-    { id: "care", g: "Everyday", n: "Personal care (dressing, showering)", par: 2.3 },
-    { id: "eat", g: "Everyday", n: "Eating", par: 1.5 },
-    { id: "cook", g: "Everyday", n: "Cooking", par: 2.1 },
-    { id: "desk", g: "Everyday", n: "Sitting: office work", par: 1.5 },
-    { id: "leisure", g: "Everyday", n: "Light leisure: TV, chatting", par: 1.4 },
-    { id: "drive", g: "Everyday", n: "Driving a car", par: 2.0 },
-    { id: "bus", g: "Everyday", n: "Commuting by bus", par: 1.2 },
-    { id: "stand", g: "Everyday", n: "Standing, carrying light loads", par: 2.2 },
-    { id: "house", g: "Everyday", n: "General household work", par: 2.8 },
-    { id: "walkday", g: "Everyday", n: "Walking at varying paces, no load", par: 3.2 },
-    { id: "w8", g: "Lifting", n: "Weights: several exercises, 8–15 reps", met: 3.5, code: "02054" },
-    { id: "wsq", g: "Lifting", n: "Weights: squats, deadlifts", met: 5.0, code: "02052" },
-    { id: "wvig", g: "Lifting", n: "Powerlifting or bodybuilding, vigorous", met: 6.0, code: "02050" },
-    { id: "wcirc", g: "Lifting", n: "Weights: circuit or supersets", met: 5.8, code: "02055" },
-    { id: "circm", g: "Conditioning", n: "Circuit training, moderate", met: 5.0, code: "02035" },
-    { id: "circv", g: "Conditioning", n: "Circuit training, vigorous", met: 7.5, code: "02040" },
-    { id: "cal", g: "Conditioning", n: "Calisthenics, moderate", met: 3.8, code: "02022" },
-    { id: "hiitm", g: "Conditioning", n: "HIIT, moderate", met: 7.0, code: "02210" },
-    { id: "hiitv", g: "Conditioning", n: "HIIT, vigorous", met: 11.0, code: "02214" },
-    { id: "ellm", g: "Conditioning", n: "Elliptical, moderate", met: 5.0, code: "02048" },
-    { id: "ellv", g: "Conditioning", n: "Elliptical, vigorous", met: 9.0, code: "02049" },
-    { id: "rowm", g: "Conditioning", n: "Rowing machine, under 100 W", met: 5.0, code: "02071" },
-    { id: "rowv", g: "Conditioning", n: "Rowing machine, 100–149 W", met: 7.5, code: "02072" },
-    { id: "yoga", g: "Conditioning", n: "Yoga, hatha", met: 2.3, code: "02150" },
-    { id: "pyoga", g: "Conditioning", n: "Yoga, power", met: 4.0, code: "02160" },
-    { id: "walk3", g: "Walking and running", n: "Walking, 4.5–5.5 km/h (2.8–3.4 mph)", met: 3.8, code: "17190" },
-    { id: "walk4", g: "Walking and running", n: "Walking, 5.6–6.3 km/h (3.5–3.9 mph)", met: 4.8, code: "17200" },
-    { id: "walk5", g: "Walking and running", n: "Walking, 6.4–7.1 km/h (4.0–4.4 mph)", met: 5.5, code: "17220" },
-    { id: "hike", g: "Walking and running", n: "Hiking, normal pace", met: 5.3, code: "17082" },
-    { id: "run8", g: "Walking and running", n: "Running, 8.0–8.4 km/h (5.0–5.2 mph)", met: 8.5, code: "12030" },
-    { id: "run10", g: "Walking and running", n: "Running, 9.7–10.1 km/h (6–6.3 mph)", met: 9.3, code: "12050" },
-    { id: "run11", g: "Walking and running", n: "Running, 11.3 km/h (7 mph)", met: 11.0, code: "12070" },
-    { id: "run13", g: "Walking and running", n: "Running, 12.9 km/h (8 mph)", met: 12.0, code: "12090" },
-    { id: "run16", g: "Walking and running", n: "Running, 16.1 km/h (10 mph)", met: 14.8, code: "12120" },
-    { id: "bike1", g: "Cycling and swimming", n: "Cycling, leisure, under 16 km/h (10 mph)", met: 4.0, code: "01010" },
-    { id: "bike2", g: "Cycling and swimming", n: "Cycling, 19–22 km/h (12–13.9 mph)", met: 8.0, code: "01030" },
-    { id: "bike3", g: "Cycling and swimming", n: "Cycling, 22.5–25.6 km/h (14–15.9 mph)", met: 10.0, code: "01040" },
-    { id: "bikes", g: "Cycling and swimming", n: "Stationary bike, general", met: 6.8, code: "01200" },
-    { id: "swim1", g: "Cycling and swimming", n: "Swimming laps, freestyle, slow", met: 5.8, code: "18240" },
-    { id: "swim2", g: "Cycling and swimming", n: "Swimming laps, freestyle, fast", met: 9.8, code: "18230" },
-    { id: "soc1", g: "Sport", n: "Soccer, casual", met: 7.0, code: "15610" },
-    { id: "soc2", g: "Sport", n: "Soccer, competitive", met: 9.5, code: "15605" },
-    { id: "bball", g: "Sport", n: "Basketball, general", met: 7.5, code: "15055" },
-    { id: "ten1", g: "Sport", n: "Tennis, general", met: 6.8, code: "15675" },
-    { id: "ten2", g: "Sport", n: "Tennis, singles", met: 8.0, code: "15690" },
-    { id: "clean", g: "Home and garden", n: "House cleaning, moderate", met: 3.3, code: "05030" },
-    { id: "garden", g: "Home and garden", n: "Gardening, moderate", met: 3.8, code: "08245" },
-    { id: "mow", g: "Home and garden", n: "Mowing, walking", met: 5.5, code: "08095" }
+     KiteSink's own working numbers (the owner's coaching convention, not a study):
+       BMR by body-fat category: 10, 9 or 8 kcal per lb of body weight (22, 19.8, 17.6 per kg).
+         Category 1: men 15% body fat or less, women 24% or less; 2: men 16-25%, women 25-34%;
+         3: men 26% or more, women 35% or more.
+       A usual day's multiplier, from how active life is outside training: 1.1, 1.2, 1.3 or 1.5.
+       Each hour of exercise adds to that day's multiplier, by intensity: 0.1 to 0.4.
+     Maintenance = BMR x (day multiplier + exercise). */
+  F.BMR_CATS = [
+    { cat: 1, lb: 10, kg: 22, m: 15, f: 24 },
+    { cat: 2, lb: 9, kg: 19.8, m: 25, f: 34 },
+    { cat: 3, lb: 8, kg: 17.6, m: Infinity, f: Infinity }
   ];
-  F.activity = function (id) { for (var i = 0; i < F.ACTIVITIES.length; i++) if (F.ACTIVITIES[i].id === id) return F.ACTIVITIES[i]; return null; };
-  // kcal an hour of activity a costs this person
-  F.perHour = function (a, bmr, kg) { return a.par ? a.par * bmr / 24 : a.met * kg; };
-  // a day: rows [{id, h}], the hours left over spent on `fill`. pal = tee / bmr.
-  F.dayPal = function (rows, bmr, kg, fill) {
-    var hours = 0, tee = 0, parts = [];
-    rows.forEach(function (r) {
-      var a = F.activity(r.id); if (!a || !(r.h > 0)) return;
-      var kcal = F.perHour(a, bmr, kg) * r.h; hours += r.h; tee += kcal; parts.push({ a: a, h: r.h, kcal: kcal });
-    });
-    var left = 24 - hours, f = F.activity(fill);
-    if (left > 0 && f) { var k = F.perHour(f, bmr, kg) * left; tee += k; parts.push({ a: f, h: left, kcal: k, fill: true }); }
-    return { pal: tee / bmr, tee: tee, hours: hours, left: left, parts: parts };
+  F.LEVELS = [
+    { id: "inactive", n: "Inactive", d: "Desk job or mostly sitting", steps: "5,000 steps or fewer", m: 1.1 },
+    { id: "light", n: "Light", d: "A job with some walking", steps: "5,000\u201310,000 steps", m: 1.2 },
+    { id: "moderate", n: "Moderate", d: "A busy day or an active job", steps: "10,000\u201320,000 steps", m: 1.3 },
+    { id: "high", n: "High", d: "Construction or other hard labour", steps: "20,000 steps or more", m: 1.5 }
+  ];
+  F.EXERCISE = [
+    { id: "aer1", n: "Cardio, low", d: "HR \u2264130", m: 0.2 },
+    { id: "aer2", n: "Cardio, medium", d: "HR 130\u2013150", m: 0.3 },
+    { id: "aer3", n: "Cardio, high", d: "HR 160\u2013180", m: 0.4 },
+    { id: "hiit", n: "HIIT", d: "", m: 0.3 },
+    { id: "wt1", n: "Weight training, moderate", d: "", m: 0.1 },
+    { id: "wt2", n: "Weight training, high intensity", d: "", m: 0.2 }
+  ];
+  function byId(list, id) { for (var i = 0; i < list.length; i++) if (list[i].id === id) return list[i]; return null; }
+  F.level = function (id) { return byId(F.LEVELS, id); };
+  F.exercise = function (id) { return byId(F.EXERCISE, id); };
+  F.bmrCategory = function (sex, bf) {   // 1, 2 or 3; 0 when body fat is unknown
+    if (!(bf > 0)) return 0;
+    for (var i = 0; i < F.BMR_CATS.length; i++) if (bf <= F.BMR_CATS[i][sex === "f" ? "f" : "m"]) return F.BMR_CATS[i].cat;
+    return 3;
   };
-  // the multiplier an activity adds, averaged over the week, over the hour it replaces
-  F.addedPal = function (a, minutes, perWeek, bmr, kg, instead) {
-    var h = minutes / 60, extra = (F.perHour(a, bmr, kg) - F.perHour(instead, bmr, kg)) * h;
-    return { session: F.perHour(a, bmr, kg) * h, extra: extra, weekly: extra * perWeek, pal: extra * perWeek / 7 / bmr };
+  F.categoryBmr = function (kg, cat) { var c = F.BMR_CATS[cat - 1]; return c && kg > 0 ? kg * c.kg : NaN; };
+  // a day: the usual day's multiplier plus each session's multiplier per hour times its hours
+  F.dayMult = function (base, sessions) {
+    return sessions.reduce(function (m, x) { var e = F.exercise(x.id); return m + (e && x.min > 0 ? e.m * x.min / 60 : 0); }, base);
   };
-  F.palBand = function (pal) {
-    return pal < 1.4 ? "below" : pal < 1.7 ? "sedentary" : pal < 2.0 ? "active" : pal <= 2.4 ? "vigorous" : "above";
+  // one activity done `times` a week: its training days, and the multiplier averaged over the week
+  F.weekMult = function (base, id, min, times) {
+    var e = F.exercise(id), add = e ? e.m * min / 60 : 0;
+    return { train: base + add, rest: base, avg: base + add * times / 7 };
   };
 
   /* ---------- the hero's bar ----------
@@ -606,6 +572,10 @@
     var sex = seg($("m-sex"), saved.sex, "m", calc);
     var goal = seg($("m-goal"), saved.goal, "lose", function () { goalChanged(); calc(); });
     var protTouched = !!saved.protTouched;
+    // mTouched: the visitor has changed something here, so the numbers are theirs, not the examples
+    // the fields start with. The activity multiplier only borrows weight and body fat once it is set.
+    var mTouched = !!saved.mTouched;
+    ["input", "click"].forEach(function (t) { $("macros").addEventListener(t, function (e) { if (e.isTrusted && (t === "input" || e.target.closest("button"))) mTouched = true; }, true); });
     // The maths runs on these metric values. The fields only display them, so switching
     // units back and forth cannot drift the number that was entered.
     var body = { kg: saved.kg > 0 ? +saved.kg : val("m-weight"), cm: saved.cm > 0 ? +saved.cm : val("m-cm") };
@@ -630,7 +600,7 @@
     $("m-copy").addEventListener("click", function () { copy($("m-prompt").value, $("m-copy")); });
 
     if (saved.age) $("m-age").value = saved.age;
-    if (saved.bf) $("m-bf").value = saved.bf;
+    if (saved.bf !== "" && isFinite(saved.bf)) $("m-bf").value = saved.bf;
     if (saved.pal) {
       var found = false;
       [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) { $("m-act").value = o.value; found = true; } }); // 2 must find "2.0"
@@ -712,7 +682,7 @@
         "For each day give every meal with ingredient weights in grams and its calories and protein, then a daily total against the targets. After day 7 add one consolidated shopping list and two swap options per meal.\n" +
         "Show the arithmetic for each daily total and flag any day that misses a target by more than 5%. Use ordinary supermarket food. Ask me before assuming anything about allergies or medical conditions.";
 
-      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched };
+      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched, mTouched: mTouched };
       if (g === "lose") patch.loseRate = rate; else if (g === "gain") patch.gainRate = rate;
       store.set(patch); saved = store.get();
     }
@@ -888,7 +858,7 @@
      which moves it to the Cunningham equation. */
   boot(function () {
     if (!$("bodyfat")) return;
-    var mine = saved.bf || {}, FIELDS = ["h", "neck", "waist", "hip"];
+    var mine = saved.navy || {}, FIELDS = ["h", "neck", "waist", "hip"];
     var cm = {}; FIELDS.forEach(function (f) { cm[f] = mine[f] > 0 ? +mine[f] : val("bf-" + f); });
     var kg = mine.kg > 0 ? +mine.kg : NaN;
     var units = seg($("bf-units"), mine.units || (saved.units === "imperial" ? "in" : ""), "cm", function () { show(); calc(); });
@@ -938,65 +908,84 @@
         }
         say("bf-say", "Estimated body fat " + num(shown, 1) + " percent" + (mass ? ", " + num(inch() ? F.lb(kg * shown / 100) : kg * shown / 100, 1) + (inch() ? " pounds" : " kilograms") + " of fat." : "."));
       }
-      store.set({ bf: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "" } });
+      store.set({ navy: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "", pct: isFinite(pct) ? Math.round(pct * 10) / 10 : "" } });
     }
     show(); calc();
   });
 
   /* ---------- 8. activity multiplier ----------
-     The resting energy comes from Energy & macros (read from what that tool saved, so it follows
-     it as it changes) or is typed in. "Use in Energy & macros" puts the multiplier into that
-     tool's activity list as its own option. */
+     BMR is body weight times the rate for the body-fat category. Weight, sex and body fat come
+     from Energy & macros (body fat from the navy tool when Energy & macros has none); without a
+     weight there, the tool asks for it there first. A BMR typed here overrides all of that.
+     "Use in Energy & macros" puts the multiplier into that tool's activity list. */
   boot(function () {
     if (!$("activity")) return;
-    var mine = saved.ac || {}, BAND = { below: "Below FAO\u2019s lowest band", sedentary: "Sedentary or light", active: "Active", vigorous: "Vigorous", above: "Above 2.40: hard to keep up" };
-    var LEISURE = F.activity("leisure"), result = null;
-    var src = seg($("ac-src"), mine.src, "calc", calc), mode = seg($("ac-mode"), mine.mode, "one", calc);
-    function options(sel, everydayOnly) {
-      var groups = {}, order = [];
-      F.ACTIVITIES.forEach(function (a) { if (everydayOnly && a.met) return; if (!groups[a.g]) { groups[a.g] = []; order.push(a.g); } groups[a.g].push(a); });
-      sel.innerHTML = order.map(function (g) {
-        return '<optgroup label="' + esc(g) + '">' + groups[g].map(function (a) { return '<option value="' + a.id + '">' + esc(a.n) + "</option>"; }).join("") + "</optgroup>";
-      }).join("");
-    }
-    options($("ac-act")); options($("ac-fill"), true);
-    $("ac-act").value = F.activity(mine.act) ? mine.act : "w8";
-    $("ac-fill").value = F.activity(mine.fill) && !F.activity(mine.fill).met ? mine.fill : "leisure";
-    ["min", "times", "base", "bmr", "kg"].forEach(function (k) { if (mine[k] > 0) $("ac-" + k).value = mine[k]; });
-    var rows = Array.isArray(mine.rows) && mine.rows.length ? mine.rows : [["sleep", 8], ["desk", 8], ["care", 1], ["eat", 1.5], ["drive", 1], ["walkday", 1], ["w8", 1]];
+    var mine = saved.ac || {}, result = null;
+    var mode = seg($("ac-mode"), mine.mode, "one", calc);
+    var levelEl = $("ac-level"), cat = seg($("ac-cat"), mine.cat, "2", calc);
+    levelEl.innerHTML = F.LEVELS.map(function (l) {
+      return '<button type="button" class="ac-lv" value="' + l.id + '" aria-pressed="false"><b>' + esc(l.n) + '<span>\u00d7 ' + l.m.toFixed(1) + "</span></b><small>" + esc(l.d) + "</small><small>" + esc(l.steps) + "</small></button>";
+    }).join("");
+    var level = seg(levelEl, mine.level, "light", calc);
+    var exOpts = F.EXERCISE.map(function (e) { return '<option value="' + e.id + '">' + esc(e.n) + (e.d ? " \u00b7 " + e.d : "") + "</option>"; }).join("");
+    $("ac-ex").innerHTML = exOpts;
+    $("ac-ex").value = F.exercise(mine.ex) ? mine.ex : "wt1";
+    ["min", "times"].forEach(function (k) { if (mine[k] > 0) $("ac-" + k).value = mine[k]; });
+    if (mine.bmr > 0) $("ac-bmr").value = mine.bmr;
+    var rows = Array.isArray(mine.rows) ? mine.rows.filter(function (r) { return F.exercise(r[0]); }) : [["wt1", 60], ["aer1", 30]];
     function drawRows() {
       $("ac-rows").innerHTML = rows.map(function (r, i) {
-        return '<li><select class="k-select" aria-label="Activity ' + (i + 1) + '" data-i="' + i + '">' + $("ac-act").innerHTML + "</select>" +
-          '<span class="with-unit"><input class="k-input" type="number" inputmode="decimal" min="0.25" max="24" step="0.25" value="' + r[1] + '" aria-label="Hours of activity ' + (i + 1) + '" data-i="' + i + '"><span>h</span></span>' +
-          '<button type="button" class="ac-x" data-i="' + i + '" aria-label="Remove activity ' + (i + 1) + '">\u00d7</button></li>';
+        return '<li><select class="k-select" aria-label="Exercise ' + (i + 1) + '" data-i="' + i + '">' + exOpts + "</select>" +
+          '<span class="with-unit"><input class="k-input" type="number" inputmode="numeric" min="5" max="600" step="5" value="' + r[1] + '" aria-label="Minutes of exercise ' + (i + 1) + '" data-i="' + i + '"><span>min</span></span>' +
+          '<button type="button" class="ac-x" data-i="' + i + '" aria-label="Remove exercise ' + (i + 1) + '">\u00d7</button></li>';
       }).join("");
       [].forEach.call($("ac-rows").querySelectorAll("select"), function (s, i) { s.value = rows[i][0]; });
+      $("ac-none").hidden = rows.length > 0;
     }
-    $("ac-rows").addEventListener("input", function (e) {
-      var i = +e.target.getAttribute("data-i"); if (!(i >= 0)) return;
+    function rowEdit(e) {
+      var i = +e.target.getAttribute("data-i"); if (!(i >= 0) || !rows[i]) return;
       if (e.target.tagName === "SELECT") rows[i][0] = e.target.value; else rows[i][1] = parseFloat(e.target.value) || 0;
       calc();
-    });
-    $("ac-rows").addEventListener("change", function (e) { if (e.target.tagName === "SELECT") { rows[+e.target.getAttribute("data-i")][0] = e.target.value; calc(); } });
+    }
+    $("ac-rows").addEventListener("input", rowEdit); $("ac-rows").addEventListener("change", rowEdit);
     $("ac-rows").addEventListener("click", function (e) {
       var b = e.target.closest(".ac-x"); if (!b) return;
-      rows.splice(+b.getAttribute("data-i"), 1); drawRows(); calc();
-      var x = $("ac-rows").querySelectorAll(".ac-x"); (x[Math.min(+b.getAttribute("data-i"), x.length - 1)] || $("ac-add")).focus();
+      var i = +b.getAttribute("data-i"); rows.splice(i, 1); drawRows(); calc();
+      var x = $("ac-rows").querySelectorAll(".ac-x"); (x[Math.min(i, x.length - 1)] || $("ac-add")).focus();
     });
-    $("ac-add").addEventListener("click", function () { if (rows.length >= 16) return; rows.push(["walkday", 1]); drawRows(); calc(); var s = $("ac-rows").querySelectorAll("select"); s[s.length - 1].focus(); });
-    ["ac-act", "ac-fill"].forEach(function (id) { $(id).addEventListener("change", calc); });
-    ["ac-min", "ac-times", "ac-base", "ac-bmr", "ac-kg"].forEach(function (id) { $(id).addEventListener("input", calc); });
-    var macros = $("macros"); if (macros) { macros.addEventListener("input", function () { setTimeout(calc, 0); }); macros.addEventListener("click", function () { setTimeout(calc, 0); }); }
+    $("ac-add").addEventListener("click", function () { if (rows.length >= 8) return; rows.push(["aer1", 30]); drawRows(); calc(); var s = $("ac-rows").querySelectorAll("select"); s[s.length - 1].focus(); });
+    $("ac-ex").addEventListener("change", calc);
+    ["ac-min", "ac-times", "ac-bmr"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    $("ac-bmr-clear").addEventListener("click", function () { $("ac-bmr").value = ""; calc(); $("ac-bmr").focus(); });
+    $("ac-go").addEventListener("click", function () {   // take the visitor to Energy & macros, then to its weight box
+      if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:tool", { detail: "macros" }));
+      var t = $("tab-macros"); if (t) t.click();
+      var w = $("m-weight"); if (w) setTimeout(function () { w.focus(); }, 60);
+    });
+    // Energy & macros and the navy tool save as they change; follow them
+    ["macros", "bodyfat"].forEach(function (id) { var p = $(id); if (p) { p.addEventListener("input", function () { setTimeout(calc, 0); }); p.addEventListener("click", function () { setTimeout(calc, 0); }); } });
 
-    function baseline() {   // {bmr, kg, text} or null
-      if (src.get() === "own") {
-        var b = val("ac-bmr"), k = val("ac-kg");
-        return b >= 800 && b <= 4000 && k >= 30 && k <= 300 ? { bmr: b, kg: k } : null;
-      }
-      var m = store.get(), kg = +m.kg, cm = +m.cm, age = +m.age, bf = m.bf === "" || m.bf == null ? NaN : +m.bf;
-      if (!(kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 16 && age <= 95)) return null;
-      var r = F.energy({ sex: m.sex || "m", kg: kg, cm: cm, age: age, bf: bf, pal: 1, goal: "hold", rate: 0, protein: 1.6, fatPct: 25 });
-      return { bmr: r.rmr, kg: kg, text: num(F.round(r.rmr, 10)) + " kcal a day, by " + r.equation + ", and " + num(kg, 1) + " kg, from Energy & macros." };
+    function person() {   // what Energy & macros and the navy tool know
+      var m = store.get(), kg = m.mTouched ? +m.kg : NaN, sex = m.sex === "f" ? "f" : "m", bf = m.bf === "" || m.bf == null ? NaN : +m.bf, from = "Energy & macros";
+      if (!(bf > 0) && m.navy && m.navy.pct > 0) { bf = +m.navy.pct; from = "Navy body fat"; }
+      return { kg: kg > 30 && kg < 300 ? kg : NaN, sex: sex, bf: bf > 0 ? bf : NaN, bfFrom: from, imp: m.units === "imperial" };
+    }
+    function baseline() {   // {bmr, text} or {missing: true}
+      var own = val("ac-bmr"), p = person();
+      $("ac-bmr-clear").hidden = !(own > 0);
+      if (own >= 800 && own <= 5000) return { bmr: own, p: p, own: true, text: "Your BMR: " + num(own) + " kcal a day." };
+      var c = F.bmrCategory(p.sex, p.bf), auto = c > 0;
+      $("ac-cat-wrap").hidden = auto || !isFinite(p.kg);
+      if (!auto) c = +cat.get();
+      var C = F.BMR_CATS[c - 1];
+      [].forEach.call($("ac-cat").querySelectorAll("button"), function (b) {
+        var k = F.BMR_CATS[+b.value - 1], cut = p.sex === "f" ? ["24% or less", "25\u201334%", "35% or more"] : ["15% or less", "16\u201325%", "26% or more"];
+        b.innerHTML = b.value + " <small>" + cut[+b.value - 1] + "</small>";
+      });
+      if (!isFinite(p.kg)) return { missing: true, p: p };
+      var bmr = F.categoryBmr(p.kg, c), rate = p.imp ? C.lb + " kcal per lb" : C.kg + " kcal per kg";
+      return { bmr: bmr, p: p, cat: c, text: num(F.round(bmr, 10)) + " kcal a day: " + (p.imp ? num(F.lb(p.kg)) + " lb" : num(p.kg, 1) + " kg") + " \u00d7 " + rate +
+        ", category " + c + (auto ? " from your " + num(p.bf, 1) + "% body fat (" + p.bfFrom + ")." : ".") };
     }
     function setUse(pal) {
       var act = $("m-act"); if (!act) return;
@@ -1006,45 +995,43 @@
       act.value = v; act.dispatchEvent(new Event("input", { bubbles: true })); act.dispatchEvent(new Event("change", { bubbles: true }));
     }
     $("ac-use").addEventListener("click", function () {
-      if (!result) return; setUse(result.pal);
+      if (!result) return; setUse(result);
       var b = $("ac-use"); b.textContent = "Added \u2713"; clearTimeout(b._t); b._t = setTimeout(function () { b.textContent = "Use in Energy & macros"; }, 1600);
     });
-    $("ac-usual").addEventListener("click", function () { if (!result) return; $("ac-base").value = (Math.round(result.pal * 100) / 100).toFixed(2); mode.set("one"); calc(); });
 
+    function empty(text) {
+      result = null; $("ac-out").classList.add("is-empty");
+      $("ac-big").textContent = "\u2014"; $("ac-sub").textContent = text; say("ac-say", text);
+    }
     function calc() {
-      var one = mode.get() === "one", b = baseline(), out = $("ac-out");
-      $("ac-own").hidden = src.get() !== "own"; $("ac-one").hidden = !one; $("ac-day").hidden = one; $("ac-usual").hidden = one;
-      $("ac-from").textContent = src.get() === "own" ? "Type your resting energy and weight." : b ? b.text : "Fill in age, height and weight in Energy & macros first, or enter your own.";
-      $("ac-table").hidden = one; $("ac-warn").hidden = true; result = null;
-      store.set({ ac: { src: src.get(), mode: mode.get(), act: $("ac-act").value, min: val("ac-min"), times: val("ac-times"), base: val("ac-base"), bmr: val("ac-bmr"), kg: val("ac-kg"), rows: rows, fill: $("ac-fill").value } });
-      if (!one && !$("ac-rows").children.length && rows.length) drawRows();
-      var day = F.dayPal(rows.map(function (r) { return { id: r[0], h: +r[1] }; }), b ? b.bmr : 1, b ? b.kg : 1, $("ac-fill").value);
-      $("ac-left").textContent = day.left > 0 ? num(day.left, 2).replace(/\.?0+$/, "") + " h left" : day.left < 0 ? "over by " + num(-day.left, 2).replace(/\.?0+$/, "") + " h" : "none left";
-      if (!b) { out.classList.add("is-empty"); $("ac-big").textContent = "\u2014"; $("ac-sub").textContent = "Needs your resting energy."; say("ac-say", "Needs your resting energy."); return; }
+      var one = mode.get() === "one", b = baseline(), L = F.level(level.get()), out = $("ac-out");
+      $("ac-one").hidden = !one; $("ac-day").hidden = one;
+      $("ac-need").hidden = !b.missing; $("ac-from").hidden = !!b.missing; $("ac-from").textContent = b.text || "";
+      store.set({ ac: { mode: mode.get(), level: level.get(), cat: cat.get(), ex: $("ac-ex").value, min: val("ac-min"), times: val("ac-times"), bmr: val("ac-bmr") || "", rows: rows } });
+      if (b.missing) return empty("Needs your weight: fill in Energy & macros, or type your BMR.");
+      var perLb = function (kcal) { return b.p && isFinite(b.p.kg) ? (b.p.imp ? num(kcal / F.lb(b.p.kg), 1) + " kcal per lb" : num(kcal / b.p.kg, 1) + " kcal per kg") : ""; };
       if (one) {
-        var a = F.activity($("ac-act").value), min = val("ac-min"), times = val("ac-times"), base = val("ac-base");
-        if (!(min > 0 && min <= 600 && times >= 1 && times <= 14 && base >= 1.2 && base <= 2.5)) { out.classList.add("is-empty"); $("ac-big").textContent = "\u2014"; $("ac-sub").textContent = "Check the minutes, the times a week and your usual day."; return; }
-        var r = F.addedPal(a, min, times, b.bmr, b.kg, LEISURE), pal = base + r.pal;
-        result = { pal: pal };
-        out.classList.remove("is-empty");
-        $("ac-big-l").textContent = "Your multiplier with it";
-        $("ac-big").innerHTML = "\u00d7 " + num(pal, 2) + "<small>+" + num(r.pal, 2) + "</small>";
-        $("ac-sub").textContent = "About " + num(F.round(r.session, 5)) + " kcal a session, " + num(F.round(r.extra, 5)) + " more than the same time spent on light leisure. Averaged over the week, that adds " + num(r.pal, 2) + " to a usual day of \u00d7 " + num(base, 2) + ".";
-        $("ac-k1-l").textContent = "Maintenance"; $("ac-k1").textContent = num(F.round(b.bmr * pal, 10)) + " kcal";
-        $("ac-k2-l").textContent = a.met ? "MET (code " + a.code + ")" : "Multiple of BMR"; $("ac-k2").textContent = num(a.met || a.par, 1);
-        say("ac-say", "Multiplier " + num(pal, 2) + ", maintenance about " + num(F.round(b.bmr * pal, 10)) + " kilocalories a day.");
+        var e = F.exercise($("ac-ex").value), min = val("ac-min"), times = val("ac-times");
+        if (!(min >= 5 && min <= 600 && times >= 1 && times <= 14)) return empty("Check the minutes and the times a week.");
+        var w = F.weekMult(L.m, e.id, min, times);
+        result = w.avg; out.classList.remove("is-empty");
+        $("ac-big-l").textContent = "Your multiplier, averaged over the week";
+        $("ac-big").textContent = "\u00d7 " + num(w.avg, 2);
+        $("ac-sub").textContent = "Training days \u00d7 " + num(w.train, 2) + ", other days \u00d7 " + num(w.rest, 2) + ". Each session burns about " + num(F.round(e.m * min / 60 * b.bmr, 5)) + " kcal.";
+        $("ac-k1-l").textContent = "Maintenance, average"; $("ac-k1").textContent = num(F.round(b.bmr * w.avg, 10)) + " kcal";
+        $("ac-k2-l").textContent = "On a training day"; $("ac-k2").textContent = num(F.round(b.bmr * w.train, 10)) + " kcal";
+        $("ac-k3").textContent = perLb(b.bmr * w.avg);
+        say("ac-say", "Multiplier " + num(w.avg, 2) + " averaged over the week; maintenance about " + num(F.round(b.bmr * w.avg, 10)) + " kilocalories a day.");
       } else {
-        result = day.left < -0.001 ? null : { pal: day.pal };
-        out.classList.toggle("is-empty", !result);
-        $("ac-big-l").textContent = "Your day\u2019s multiplier";
-        if (!result) { $("ac-big").textContent = "\u2014"; $("ac-sub").textContent = "Your day adds up to more than 24 hours. Shorten or remove an activity."; say("ac-say", $("ac-sub").textContent); return; }
-        $("ac-big").textContent = "\u00d7 " + num(day.pal, 2);
-        $("ac-sub").textContent = "About " + num(F.round(day.tee, 10)) + " kcal for the day: " + num(F.round(b.bmr, 10)) + " kcal resting energy \u00d7 " + num(day.pal, 2) + ".";
-        $("ac-k1-l").textContent = "Maintenance"; $("ac-k1").textContent = num(F.round(day.tee, 10)) + " kcal";
-        $("ac-k2-l").textContent = "FAO band"; $("ac-k2").textContent = BAND[F.palBand(day.pal)];
-        $("ac-tbody").innerHTML = day.parts.map(function (p) { return "<tr><th scope=\"row\">" + esc(p.a.n) + (p.fill ? " (the rest)" : "") + "</th><td>" + num(p.h, 2).replace(/\.?0+$/, "") + "</td><td>" + num(F.round(p.kcal, 5)) + "</td></tr>"; }).join("");
-        if (day.pal > 2.4) { $("ac-warn").hidden = false; $("ac-warn").textContent = "Above 2.40, FAO says a level is hard to keep up for long. Check the hours."; }
-        say("ac-say", "Multiplier " + num(day.pal, 2) + ", about " + num(F.round(day.tee, 10)) + " kilocalories for the day.");
+        var m = F.dayMult(L.m, rows.map(function (r) { return { id: r[0], min: +r[1] }; }));
+        result = m; out.classList.remove("is-empty");
+        $("ac-big-l").textContent = "This day\u2019s multiplier";
+        $("ac-big").textContent = "\u00d7 " + num(m, 2);
+        $("ac-sub").textContent = L.n + " day \u00d7 " + num(L.m, 1) + (m > L.m ? " plus " + num(m - L.m, 2) + " from exercise." : ", no exercise.");
+        $("ac-k1-l").textContent = "Maintenance"; $("ac-k1").textContent = num(F.round(b.bmr * m, 10)) + " kcal";
+        $("ac-k2-l").textContent = "Resting energy"; $("ac-k2").textContent = num(F.round(b.bmr, 10)) + " kcal";
+        $("ac-k3").textContent = perLb(b.bmr * m);
+        say("ac-say", "This day's multiplier " + num(m, 2) + "; maintenance about " + num(F.round(b.bmr * m, 10)) + " kilocalories.");
       }
     }
     drawRows(); calc();
@@ -1103,6 +1090,14 @@
       var d = week[i];
       dayEl.innerHTML = "<b>" + (i === today ? "Today, " : "") + DN[i] + ": " + esc(d[1]) + ".</b> " + esc(d[2]);
     }
+    var word = $("fx-word"), wordNow = word ? word.textContent : "";
+    function headline(text, animate) {
+      if (!word || text === wordNow) return;
+      wordNow = text;
+      if (!animate || RM) { word.textContent = text; return; }
+      word.classList.remove("in"); word.classList.add("out");
+      setTimeout(function () { word.textContent = text; word.classList.remove("out"); void word.offsetWidth; word.classList.add("in"); }, 240);
+    }
     function ring(lv) {
       [].forEach.call(document.querySelectorAll(".fx-match"), function (el) { el.classList.remove("fx-match"); });
       if (!lv) return;
@@ -1135,6 +1130,7 @@
       showDay(week ? sel : today, week);
       [].forEach.call(goalsEl.querySelectorAll(".fx-goal"), function (b) { b.setAttribute("aria-pressed", b.value === goal ? "true" : "false"); });
       clear.hidden = !goal;
+      headline(g ? g.h1 : "lift.", animate);
       ring(lv);
       if (lv) say("fx-say", g.label + ": " + num(load, load % 1 ? 1 : 0) + " kg on the bar, " + lv.pct + "% of " + max + " kg, for " + lv.how + ". " + (goal === "meet" ? "A meet week." : "Lifting days a week: " + lv.days + "."));
     }
