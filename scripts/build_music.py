@@ -2069,11 +2069,16 @@ def md_index(meta, data, numbers, counts, pages):
     """The hub's twin: what the guide is, every page's twin, and the music projects (templates/hub.md)."""
     def twin(key):
         return f"{SITE}/music/{pages.slug[key]}.md"
+    # The projects come first, as they do on the page (the hub opens with them, then the guide).
+    projects = config("templates/hub.md")
     out = ["# KiteSink Music", "",
-           f"A free field guide to music rights and royalties by Truman Kitos-Lindsey, and three music projects. The guide holds "
+           f"Three music projects by Truman Kitos-Lindsey, and a free field guide to music rights and royalties. The guide holds "
            f"{numbers['n:total']} sourced entries in {numbers['n:areas']} of {len(DOMAINS)} planned areas. Every entry says who it is for "
            "(songwriters, artists, producers, publishers and labels, administrators), where it applies, how well sourced it is, and the date "
-           "of anything that moves.", "", meta["scope_line"], "", "## The field guide, by area", ""]
+           "of anything that moves.", ""]
+    if projects.is_file():
+        out += [projects.read_text(encoding="utf-8").strip(), ""]
+    out += [meta["scope_line"], "", "## The field guide, by area", ""]
     for letter, name, doms in GROUPS:
         out += [f"### {letter}. {name}", ""]
         for d in doms:
@@ -2101,9 +2106,6 @@ def md_index(meta, data, numbers, counts, pages):
     if ref:
         out += ["", "## Reference", ""] + ref
     out += ["", "## How the entries are graded", ""] + md_grading() + [""]
-    projects = config("templates/hub.md")
-    if projects.is_file():
-        out += [projects.read_text(encoding="utf-8").strip(), ""]
     return "\n".join(out) + md_footer(meta)
 
 

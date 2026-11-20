@@ -12,11 +12,12 @@ changes, copy answers here, tick what is closed, then continue.
 
 - [ ] LAUNCH: go-ahead to merge PR #36 to main, which deploys /music as the field-guide hub
       (D22). The branch is launch-ready; merging is the owner's call only
-- [ ] The hub replaces the old /music hero (turntable and "Which one is for me?" chooser);
-      keep that, or bring them back into the new hub? (D21)
-- [ ] Hero H1: the built hub shows the template placeholder "Where the money in a song comes
-      from."; the Page Structure draft had "Money from your songs may be sitting unclaimed..."
-      (D2, owner reworking)
+- [x] Old /music hero (turntable and "Which one is for me?" picker): restored verbatim at the
+      top of the hub, with the four projects featured directly under it, as on /fitness (D21,
+      owner, 2026-11-21)
+- [ ] Field-guide heading: the page H1 is the original "Listen, play, sit with a record."; the
+      field-guide section below the projects is headed "Where the money in a song comes from."
+      (placeholder; D2, owner reworking)
 - [ ] Music agent skill (like the fitness one in public/.well-known/agent-skills/): add one? (D23)
 - [ ] public/llms-full.txt is now about 1.5 MB; docs/AI-PAGES.md says to decide what to leave
       out at that size (D24)
