@@ -60,7 +60,7 @@
         "usc-101"
       ],
       "take": "The owner of a musical work controls public performance of it. Radio, venues and streaming services need permission, usually through a PRO.",
-      "body": "Section 106(4) gives the copyright owner of a musical work the exclusive right to perform it publicly. Section 101 treats a performance as public if it happens where the public can gather, or if it is transmitted to the public, whether people receive it together or apart. That is the right a performing rights organisation licenses.",
+      "body": "Section 106(4) gives whoever owns a musical work the exclusive right to perform it publicly. Section 101 treats a performance as public if it happens where the public can gather, or if it is transmitted to the public, whether people receive it together or apart. That is the right a performing rights organisation licenses.",
       "do": [
         "Treat any play to an audience, live or transmitted, as a use that needs a licence."
       ]
@@ -84,7 +84,7 @@
       "sources": [
         "usc-101"
       ],
-      "take": "A performance at a place open to the public, or before many people outside family and friends, or a transmission of one to the public, together or separately."
+      "take": "A performance where the public can attend, or before a crowd beyond family and friends, or a transmission of one reaching the public, together or separately."
     },
     {
       "id": "pro-term-pro",
@@ -188,7 +188,8 @@
       ],
       "confidence": "official",
       "sources": [
-        "gmr-faq"
+        "gmr-faq",
+        "doj-closing-2021"
       ],
       "take": "GMR says a venue licensed by ASCAP, BMI or SESAC still needs a GMR licence to play GMR writers' music, and the reverse also holds.",
       "body": "The reason a writer's PRO matters to the money: each US PRO licenses only its own repertoire. GMR's FAQ says its licence is separate from the other three. A user playing songs from several PROs needs a licence from each, which is also why a song with writers at different PROs is licensed in parts.",
@@ -212,8 +213,8 @@
       "sources": [
         "wipo-cmo-music"
       ],
-      "take": "In many English-speaking countries a society takes a full legal assignment of the performing right, so it holds the right and can enforce it.",
-      "body": "WIPO describes a range: some bodies act only as agent for a rights holder, while in many English-speaking countries the society takes a full assignment of the performing right in its members' works. Terms differ by country and society, so read the membership terms before you sign. A music lawyer can explain what an assignment means for your own catalogue."
+      "take": "In many English-speaking countries a society takes over ownership of the performing right outright, so it holds that right and can enforce it.",
+      "body": "WIPO describes a range: some bodies act only as agent for a rights holder, while in many English-speaking countries the society becomes owner of its members' performing rights in their works. Terms differ by country and society, so read the membership terms before you sign. A music lawyer can explain what an assignment means for your own catalogue."
     },
     {
       "id": "pro-table-us-pros",
@@ -282,7 +283,7 @@
       "sources": [
         "gmr-about"
       ],
-      "take": "GMR describes a select, invitation-only client base. For most new writers the practical choice is among the other US PROs.",
+      "take": "GMR describes a client base chosen by invitation.",
       "body": "GMR's About page says it founded in 2013 and services a select, invitation-only base of writers, composers and publishers. It does not describe an open application route. Page read in November 2026; check GMR directly, as its client list and policy can change.",
       "do": [
         "Check GMR's site for its current approach to new clients."
@@ -308,7 +309,7 @@
         "doj-closing-2021"
       ],
       "value": "90",
-      "unit": "percent of the US public performance licensing market, ASCAP and BMI together",
+      "unit": "percent of US public performance licensing, ASCAP and BMI",
       "sort": 90,
       "take": "The DOJ's own 2021 estimate of the two decree-bound PROs' combined share. It is a January 2021 figure, since the market has changed.",
       "as_of": "2021-01-15"
@@ -352,14 +353,14 @@
       "sources": [
         "doj-closing-2021"
       ],
-      "take": "The DOJ notes the decrees regulate only ASCAP and BMI, leaving other PROs free of those constraints. Terms can differ between PROs.",
+      "take": "The DOJ notes that the two decrees bind only ASCAP and BMI, so other PROs work without those limits. Terms can differ.",
       "body": "In its 2021 statement the DOJ listed this among critics' concerns and also noted that more PROs had risen in the market. The decrees set rules on membership terms and licence access for ASCAP and BMI; the other two PROs run under their own terms. Read each PRO's agreement, and use a music lawyer for any decision about assigning rights.",
       "as_of": "2021-01-15"
     },
     {
       "id": "pro-note-doj-2021-closing",
       "type": "note",
-      "title": "In January 2021 the DOJ closed its decree review without changing the decrees",
+      "title": "In January 2021 the DOJ closed its review of the decrees and announced no change",
       "topic": "consent-decrees",
       "level": "intermediate",
       "readers": [
@@ -373,8 +374,8 @@
       "sources": [
         "doj-closing-2021"
       ],
-      "take": "The DOJ ended its review of the ASCAP and BMI decrees on 15 January 2021 with no modification, and said they should be reviewed every five years.",
-      "body": "The statement, by the Assistant Attorney General for Antitrust, followed over 800 public comments in 2019 and a public workshop in 2020. It said the decrees remain in place while competition concerns persist. This guide did not check for any later DOJ action; confirm the current status with the Antitrust Division.",
+      "take": "The DOJ ended its review of the two decrees on 15 January 2021, announced no change to them, and called for a fresh look every five years.",
+      "body": "The statement, by the Assistant Attorney General for Antitrust, followed over 800 public comments in 2019 and a public workshop in 2020. It recorded views that the competition concerns behind the decrees still exist. This guide did not check for any later DOJ action; confirm the current status with the Antitrust Division.",
       "do": [
         "Check the DOJ's current decree pages before relying on this status."
       ],
@@ -399,7 +400,7 @@
         "doj-closing-2021"
       ],
       "take": "Under fractional licensing, a user needs a licence from every PRO that represents a share of a song. The Second Circuit held that the BMI decree allows it.",
-      "body": "The DOJ once took the view that the decrees required full-work licensing, where one licence covers the whole song. The Second Circuit disagreed on BMI's decree. The 2021 statement says the BMI decree does not require BMI to license full works, and that the debate continues. For writers, it means co-writers' PRO choices affect how a work is licensed.",
+      "body": "The DOJ once took the view that the decrees required full-work licensing, where one licence covers the whole song. The Second Circuit disagreed on BMI's decree. The 2021 statement says BMI is not obliged by its decree to license full works, and that the debate continues. For writers, it means co-writers' PRO choices affect how a work is licensed.",
       "as_of": "2021-01-15"
     },
     {
@@ -420,7 +421,7 @@
         "doj-closing-2021"
       ],
       "take": "Partial withdrawal would let an owner keep digital services out of a PRO licence. The DOJ says a 2013 attempt to read the decrees that way failed.",
-      "body": "The 2021 statement explains that publishers favouring partial withdrawal want to negotiate direct deals with streaming services, while many licensees oppose it. Because the 2013 effort failed in the rate courts, the DOJ says change would likely need modified decrees or an act of Congress. Status as of January 2021.",
+      "body": "The 2021 statement explains that publishers favouring partial withdrawal want to negotiate direct deals with streaming services, while many licensees oppose it. Because the 2013 effort failed in the rate courts, the DOJ says change would probably take amended decrees or legislation. Status as of January 2021.",
       "as_of": "2021-01-15"
     },
     {
@@ -441,8 +442,8 @@
       "sources": [
         "doj-closing-2021"
       ],
-      "take": "The DOJ says ASCAP's decree bars licensing anything but performance rights, while BMI's decree does not expressly address other rights.",
-      "body": "So mechanical and sync licensing sit with publishers and other bodies, not with ASCAP, as of the 2021 statement. For mechanical money, see the mechanicals page; it covers the MLC. The DOJ added that ASCAP and BMI had shown interest in other rights and that some publishers were concerned.",
+      "take": "The DOJ says ASCAP's decree bars licensing anything but performance rights, while BMI's decree is silent on other rights.",
+      "body": "The DOJ says the publishing community handles most mechanical and sync licensing, as of its 2021 statement. For mechanical money, see the mechanicals page; it covers the MLC. The DOJ added that ASCAP and BMI had shown interest in other rights and that some publishers were concerned.",
       "as_of": "2021-01-15"
     },
     {
@@ -462,8 +463,8 @@
       "sources": [
         "doj-closing-2021"
       ],
-      "take": "Rate disputes now go to one of several judges in the Southern District of New York, not the judge who oversees the decree, per the DOJ.",
-      "body": "The DOJ's 2021 statement says the Act created this rotation, partly repealed a limit on using digital sound recording rates as evidence in setting musical work rates, and requires DOJ to notify Congress before moving to end a decree. Described as of January 2021.",
+      "take": "Per the DOJ, rate disputes now go to one of several New York federal judges, not the judge who oversees the decree.",
+      "body": "The DOJ's 2021 statement says the Act created this rotation, partly repealed a limit on using digital sound recording rates as evidence in setting musical work rates, and means DOJ must tell Congress before it moves to end a decree. Described as of January 2021.",
       "as_of": "2021-01-15"
     },
     {
@@ -485,7 +486,7 @@
         "usco-pro-inquiry"
       ],
       "take": "Congress asked the Office to look at the rise in PRO numbers and how PROs distribute. The Office's 20 November 2025 letter made no new policy recommendations.",
-      "body": "Three members of Congress asked in 2024. The Office published a notice of inquiry on 10 February 2025, took comments to April and May, and received over 5,000, of which more than 4,865 were near-identical. Its letter summarising them points to earlier Office reports on music licensing. Check the Office's page for later steps.",
+      "body": "Three members of Congress asked in 2024. The Office opened its inquiry with a notice on 10 February 2025, took comments to April and May, and received over 5,000, of which more than 4,865 were near-identical. Its letter summarising them points to earlier Office reports on music licensing. Check the Office's page for later steps.",
       "do": [
         "Check the Copyright Office's PRO page for any follow-up."
       ],
@@ -536,7 +537,7 @@
         "doj-closing-2021"
       ],
       "take": "Songview takes song ownership data from each PRO, reconciles it by agreed rules and returns it to the public ASCAP and BMI databases.",
-      "body": "The DOJ's 2021 statement says ASCAP and BMI announced the Songview databases in December 2020, as an authoritative listing of ownership and shares, and encouraged improvements. The Songview site now links to ASCAP and BMI repertory searches. Shares that disagree between PROs are the problem it targets, so check yours.",
+      "body": "The DOJ's 2021 statement says ASCAP and BMI announced the Songview databases in December 2020, as an authoritative listing of ownership and shares, and encouraged improvements. The Songview site now links to ASCAP and BMI repertory searches. Check that your shares match across PROs.",
       "do": [
         "Search your songs in the ASCAP and BMI repertory tools and compare shares."
       ],
@@ -561,8 +562,8 @@
       "sources": [
         "wipo-cmo-music"
       ],
-      "take": "Most songs have at least a writer and a publisher. If the publisher side of a registration is empty or wrong, that share may sit unpaid.",
-      "body": "WIPO notes most works have a composer and a publisher, and that societies need every rights holder documented. Whether a society pays the publisher share to a writer with no publisher is a society rule that this guide has not verified for ASCAP. Ask your society how it treats an unpublished song.",
+      "take": "Most songs have at least a writer and a publisher. If the publisher side of a registration is empty or wrong, the song may not pay as you expect.",
+      "body": "WIPO notes most works have a composer and a publisher, and that societies need every rights holder documented. Societies differ on how they treat the publisher share of a song with no publisher, and this guide states no rule for any US PRO. Ask your society how it treats an unpublished song.",
       "do": [
         "Ask your society in writing how it handles the publisher share of a self-published song."
       ]
@@ -581,13 +582,13 @@
         "INTL",
         "CA"
       ],
-      "confidence": "official",
+      "confidence": "practice",
       "sources": [
         "wipo-cmo-music",
         "socan-creator"
       ],
       "take": "A society cannot pay for a use it does not know about. For many live shows the writer reports the set, so keep dates and set lists.",
-      "body": "WIPO says a society cannot distribute properly without knowing what works were used, and that a club reporting what a visiting DJ played is hard. SOCAN's member portal lets members submit live performances. Other societies set their own routes, so check yours, and note that a venue may not be licensed at all.",
+      "body": "WIPO says a society cannot distribute properly without knowing what works were used, and that a club reporting what a visiting DJ played is hard. SOCAN's member portal lets members submit live performances. Other societies set their own routes, so check yours.",
       "do": [
         "Keep date, venue and set list for each show.",
         "Find where your society takes live reports."
@@ -611,7 +612,7 @@
         "socan-signup"
       ],
       "take": "A writer, producer or lyricist can join SOCAN free if a work is published, recorded or performed where SOCAN licenses it. Publishers need five qualifying works.",
-      "body": "Per the sign-up page, publishers need signed contracts showing they own, or are entitled to the publisher's share of, at least five works written or co-written by a SOCAN member or a Canadian. Reproduction rights can be assigned separately. Terms as read in November 2026.",
+      "body": "Per the sign-up page, publishers need signed contracts showing they own, or are entitled to the publisher's share of, at least five works by a SOCAN member or a Canadian, alone or with others. Reproduction rights can be assigned separately. Terms as read in November 2026.",
       "do": [
         "Read the SOCAN sign-up page and agreement before applying."
       ],
@@ -635,7 +636,7 @@
         "gema-join"
       ],
       "take": "A creator pays EUR 90 once plus EUR 50 a year, net of VAT. The admission fee is waived for those turning 30 or younger in the year they apply.",
-      "body": "A publisher pays EUR 180 once and EUR 100 a year; the first edition name is free and later ones cost EUR 100 net each. An application received by 31 October starts membership that year; a later one starts on 1 January. Fees as read in November 2026.",
+      "body": "A publisher pays EUR 180 once and EUR 100 a year; the first edition name costs nothing and each later one EUR 100 net. An application received by 31 October starts membership that year; a later one starts on 1 January. Fees as read in November 2026.",
       "do": [
         "Check GEMA's current fee page and application date before applying."
       ],
@@ -715,7 +716,7 @@
         "gema-join"
       ],
       "value": "50",
-      "unit": "EUR per year, creator membership, plus a one-off EUR 90 admission fee, net of VAT",
+      "unit": "EUR a year, creator membership, net of VAT",
       "sort": 50,
       "take": "What a German-society composer or lyricist pays each year. Under-30s skip the admission fee.",
       "as_of": "2026-11-20"
