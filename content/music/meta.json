@@ -3,7 +3,27 @@
   "updated_label": "19 November 2026",
   "scope_line": "General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer.",
   "scope_line_status": "Placeholder: the wording is held for the owner (content/music/HOLDS.md, 'Scope line wording for every page'). Change it here; every page and twin picks it up on the next build.",
-  "labels": {},
+  "labels": {
+    "usc-115": "17 USC 115",
+    "cfr-210-32": "37 CFR 210.32",
+    "cfr-385-2": "37 CFR 385.2",
+    "cfr-385-11": "37 CFR 385.11",
+    "cfr-385-21": "37 CFR 385.21",
+    "crb-phono-v": "CRB Phonorecords V docket",
+    "cmrra-unclaimed": "CMRRA Unclaimed Works Portal",
+    "hfa-public-search": "HFA help: public search",
+    "mlc-audits": "MLC: DSP audits",
+    "mlc-historical": "MLC: historical royalties",
+    "mlc-missing-members": "MLC: Missing Member Lookup",
+    "mlc-statements": "MLC Help Center: statement types",
+    "mlc-tools": "MLC: tools",
+    "mlc-unclaimed": "MLC: unclaimed accrued royalties",
+    "ppl-performers": "PPL: performers",
+    "sx-owed": "SoundExchange: artists, labels and producers",
+    "usco-mlc-dlc": "Copyright Office: MLC and DLC boards",
+    "usco-mma": "Copyright Office: MMA overview",
+    "usco-mma-faq": "Copyright Office: MMA FAQ"
+  },
   "source_keys": {},
   "tools": [
     {
