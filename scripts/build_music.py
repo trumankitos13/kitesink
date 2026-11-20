@@ -164,8 +164,9 @@ TOOL_GROUPS = OrderedDict([
     ("metadata", "Metadata and file formats"), ("splits-contracts", "Splits and agreements"), ("sync-cue", "Sync and cue sheets"),
     ("valuation", "Catalogue valuation"),
 ])
-# The area page each KiteSink tool is also embedded on (near the top), when that area and the tool's data exist.
-TOOL_HOMES = {"mechanicals-mlc": "calculator", "unclaimed-recovery": "checklist"}
+# The area page each KiteSink tool is also embedded on (near the top), when that area (and the tool's data, if it needs any) exist.
+TOOL_HOMES = {"mechanicals-mlc": "calculator", "unclaimed-recovery": "checklist",
+              "metadata-registration": "identifiers", "producer-royalties": "splits"}
 MONTHS = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 
 
@@ -925,6 +926,10 @@ def page_area(lib, data, pages, route):
         sections.append(calculator_band(lib, data["rates"]))
     elif tool == "checklist" and pages.has("claimable"):
         sections.append(unclaimed_band(data["claimable"], pages, here))
+    elif tool == "identifiers":
+        sections.append(identifier_band())
+    elif tool == "splits":
+        sections.append(split_band())
 
     steps = of("step")
     if steps:
@@ -1217,8 +1222,8 @@ def fill_numbers(text, numbers, where):
 
 def render_sub(template, route, pages, sections, numbers, meta, head=""):
     """Pour one page into the shell. numbers fills {{n:…}} and {{updated}} in the route's own text.
-    head is more for <head> (the claimable page's Dataset markup). A page that holds the rate
-    calculator or the unclaimed-money checklist also loads /music-tools.js."""
+    head is more for <head> (the claimable page's Dataset markup). A page that holds one of
+    KiteSink's tools (calculator, checklist, identifier checker, split sheet) also loads /music-tools.js."""
     def filled(text):
         return fill_numbers(text, numbers, f"routes.json: {route['slug']}")
 
@@ -1241,7 +1246,7 @@ def render_sub(template, route, pages, sections, numbers, meta, head=""):
         "jump": jump, "body": "\n\n".join(html for _, _, _, html in sections if html),
         "head": head, "foot": "",
     }
-    if "data-rate-calc" in fills["body"] or "data-unclaimed" in fills["body"]:
+    if any(hook in fills["body"] for hook in ("data-rate-calc", "data-unclaimed", "data-id-check", "data-split-sheet")):
         fills["foot"] = '<script src="/music-tools.js?v=2027.14"></script>'
 
     def fill(m):
@@ -1572,20 +1577,167 @@ def page_claimable(lib, data, pages, route):
     return sections
 
 
-# KiteSink's own tools, as cards at the top of /music/tools: (anchor, name, blurb, data file it needs; None = not built yet)
+# ----------------------------------------------------------------- the identifier checker and the split sheet
+# Both run in /music-tools.js with no data file. Their copy and sources live here, not in content/music/,
+# because they describe the tools rather than make field-guide entries. Every source was opened on TOOLS_OPENED.
+TOOLS_OPENED = "20 November 2026"
+ID_FORMATS = [
+    {"id": "isrc", "name": "ISRC", "long": "International Standard Recording Code",
+     "what": "A sound recording or music video. Each different recording has its own.",
+     "form": "12 characters: a 5-character prefix (2 letters, then 3 letters or digits), 2 digits for the year the code was "
+             "assigned, and a 5-digit number. Written for people as ISRC AA-6Q7-20-00047. The word ISRC, spaces and hyphens are "
+             "not part of the code, and lower case is read as capitals.",
+     "check": "None. ISRC has no check digit, so a checker can only test the form.",
+     "lookup": ("ISRC Search (IFPI)", "https://isrcsearch.ifpi.org/"),
+     "sources": [("IFPI: ISRC Handbook, 4th edition (2021), sections 3.3 and 5", "https://www.ifpi.org/wp-content/uploads/2021/02/ISRC_Handbook.pdf"),
+                 ("IFPI: ISRC structure", "https://isrc.ifpi.org/isrc-standard/isrc-structure"),
+                 ("International ISRC Agency: Bulletin 2015/01, validating an ISRC", "https://isrc.ifpi.org/images/downloads/Bulletin_2015-01_-_Validating_ISRC_Codes.pdf")]},
+    {"id": "iswc", "name": "ISWC", "long": "International Standard Musical Work Code",
+     "what": "A musical work: the song as written, not any one recording of it.",
+     "form": "The letter T, a 9-digit work number and one check digit (ISO 15707:2022). Usually written ISWC T-034.524.680-1; "
+             "the hyphens and dots are only there to help reading.",
+     "check": "ISO 15707:2022 says the check digit is a weighted modulus 10 and sets out the formula in an annex its public preview "
+              "leaves out. The checker uses the formula in the ISO committee's 1999 papers: 1 plus each work digit times its position "
+              "(1 to 9), and the check digit makes the total a multiple of 10. It gives the standard's own example, so a pass reads "
+              "“consistent with the published formula”.",
+     "lookup": ("ISWC-Network (CISAC)", "https://iswcnet.cisac.org/"),
+     "sources": [("ISO 15707:2022, clause 4 (preview)", "https://cdn.standards.iteh.ai/samples/83125/8adf68d27507472b892f3370f710813e/ISO-15707-2022.pdf"),
+                 ("ISWC International Agency: the ISWC", "https://www.iswc.org/iswc"),
+                 ("ISO/TC 46/SC 9 N 268 (1999): the check digit formula", "https://groups.niso.org/higherlogic/ws/public/download/2544/sc9n268.pdf")]},
+    {"id": "isni", "name": "ISNI", "long": "International Standard Name Identifier",
+     "what": "The public identity of a person or organisation, such as a performer, a writer or a label. A pseudonym can have its own.",
+     "form": "16 characters: 15 digits and a check character, which is a digit or X. Written ISNI 0000 0001 2124 1960; the word "
+             "ISNI and the spaces are not part of it.",
+     "check": "The check character comes from the first 15 digits by the ISO/IEC 7064 MOD 11-2 method (ISO 27729, Annex A). "
+              "X stands for 10. ORCID iDs use the same method.",
+     "lookup": ("ISNI search", "https://isni.org/page/search-database/"),
+     "sources": [("ISO 27729:2024, clause 4 and Annex A (preview)", "https://cdn.standards.iteh.ai/samples/87177/3bea4cd1719644159883964978cc57fa/ISO-27729-2024.pdf"),
+                 ("ISNI: FAQs", "https://isni.org/page/faqs/"),
+                 ("IANA: ISNI namespace registration", "https://www.iana.org/assignments/urn-namespaces/urn-formal/isni"),
+                 ("ORCID: structure of the ORCID iD", "https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier")]},
+    {"id": "ipi", "name": "IPI", "long": "Interested Party Information",
+     "what": "A writer or publisher in the IPI system the CISAC societies share. Each name has an IPI name number; the IPI base "
+             "number ties all of one party's names together.",
+     "form": "Name number: 11 digits. An older 9-digit number is written with two leading zeros. Base number: usually written "
+             "I-NNNNNNNNN-C, the letter I, nine digits and a final digit.",
+     "check": "No check-digit rule is published for either, so the checker tests the form only. A number in the right form may still be wrong.",
+     "lookup": None,
+     "sources": [("SUISA: What is the IPI number? (17 April 2025)", "https://blog.suisa.ch/en/what-is-the-ipi-number/"),
+                 ("Harry Fox Agency: What is an IPI number?", "https://help.harryfox.com/what-is-an-ipi-number"),
+                 ("CISAC: IPI", "https://www.cisac.org/services/information-services/ipi"),
+                 ("Wikipedia: Interested Parties Information (the base number pattern; a secondary source)", "https://en.wikipedia.org/wiki/Interested_Parties_Information")]},
+]
+ID_EXAMPLES = [("T-034.524.680-1", "ISWC T-034.524.680-1", "the ISO 15707 example"),
+               ("ISNI 1422 4586 3573 0476", "ISNI 1422 4586 3573 0476", "the ISO 27729 example"),
+               ("ISRC AA-6Q7-20-00047", "ISRC AA-6Q7-20-00047", "the ISRC Handbook's made-up example")]
+ID_METHOD = ("Paste or type one identifier. The checker says what kind it is, whether it is in the right form, whether the check "
+             "digit adds up where the standard has one, and gives the form to store and the form to print. A code can pass every "
+             "check and still belong to another song or person, so look it up before you rely on it. Nothing you type is sent "
+             "anywhere or kept.")
+
+
+def opened_links(pairs):
+    return " · ".join(f'<a href="{esc(u)}">{esc(l)}</a>' for l, u in pairs) + f", opened {TOOLS_OPENED}"
+
+
+def identifier_html():
+    """The identifier checker: the form (hidden until /music-tools.js shows it) and, for every reader, the four formats
+    with their sources. With JavaScript the formats fold away under their summary."""
+    tries = " ".join(f'<button type="button" class="k-linkbtn" data-try="{esc(v)}" title="{esc(why)}">{esc(label)}</button>' for v, label, why in ID_EXAMPLES)
+    form = ('<form class="idc-form" hidden><div class="idc-row">'
+            '<label class="k-field idc-field" for="idc-q"><span class="k-label">Identifier</span>'
+            '<input class="k-input idc-q" id="idc-q" name="q" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" '
+            'placeholder="e.g. T-034.524.680-1"></label><button class="k-btn idc-go" type="submit">Check</button></div>'
+            f'<p class="k-small idc-try">Or try an example from the standards: {tries}</p></form>'
+            '<div class="idc-out" aria-live="polite" hidden></div>')
+    fmts = []
+    for f in ID_FORMATS:
+        lookup = (f'<a class="k-inline" href="{esc(f["lookup"][1])}">{esc(f["lookup"][0])}</a>' if f["lookup"]
+                  else "Ask your PRO or society for the IPI numbers they hold for you.")
+        rows = "".join(f'<div><dt>{label}</dt><dd>{body}</dd></div>' for label, body in (
+            ("Identifies", esc(f["what"])), ("Form", esc(f["form"])), ("Check digit", esc(f["check"])), ("Look it up", lookup)))
+        fmts.append(f'<section class="idc-fmt" id="idc-{f["id"]}" aria-labelledby="idc-h-{f["id"]}"><h3 class="idc-fh" id="idc-h-{f["id"]}">'
+                    f'{esc(f["name"])} <span>{esc(f["long"])}</span></h3><dl class="idc-fdl">{rows}</dl>'
+                    f'<p class="cite idc-src">Sources: {opened_links(f["sources"])}.</p></section>')
+    formats = ('<details class="idc-formats" open><summary>The four formats, and where each rule comes from</summary>'
+               '<div class="idc-fmts">' + "".join(fmts) + "</div></details>")
+    return (f'<div class="idc" id="id-check" data-id-check><p class="rc-method">{esc(ID_METHOD)}</p>' + form + formats + "</div>")
+
+
+def identifier_band():
+    aside = "ISRC, ISWC, ISNI and IPI: what each one identifies, whether a code is well formed, and where to look it up."
+    return ("identifiers", "Identifier checker", None,
+            band("identifiers", "Identifiers", "Check a code <em>before you send it.</em>", aside, identifier_html()))
+
+
+SPLIT_NOTE = ("A split sheet records what the writers of a song agreed: who wrote it and each writer's share. It is not a "
+              "publishing contract. For anything beyond recording the split, get a music lawyer.")
+SPLIT_HOW = ("Fill it in together, check that the shares make exactly 100 percent, then print it and have every writer sign and "
+             "date it. Give every writer a copy.")
+SPLIT_OFF = ("The generator needs JavaScript. A split sheet can also be written by hand: the song title and the date; any other "
+             "titles and the recording artist; then for each writer their name, role (lyrics, music or both), PRO or society, IPI "
+             "number, publisher and share, with the shares adding up to 100 percent; and a line for each writer to sign and date.")
+SPLIT_SHARES = ("Shares are percentages of the song, to two decimal places, and must add up to exactly 100. "
+                "Split evenly gives three writers 33.34, 33.33 and 33.33.")
+
+
+def split_html():
+    """The split-sheet generator. The form and the preview are hidden until /music-tools.js shows them; without it the
+    reader gets what a split sheet holds. The writer rows are drawn by the script."""
+    def field(name, label, extra="", typ="text", ph=""):
+        return (f'<label class="k-field ss-f ss-f--{name}" for="ss-{name}"><span class="k-label">{label}</span>'
+                f'<input class="k-input" id="ss-{name}" name="{name}" type="{typ}" autocomplete="off"' + (f' placeholder="{esc(ph)}"' if ph else "") + f'{extra}></label>')
+    song = ('<fieldset class="ss-song"><legend class="ss-legend">The song</legend><div class="ss-grid ss-grid--song">'
+            + field("title", "Song title", ' required')
+            + field("date", "Date agreed", typ="date")
+            + field("alt", "Other titles <i>optional</i>", ph="Working titles, translations")
+            + field("artist", "Recording artist <i>optional</i>")
+            + "</div></fieldset>")
+    writers = ('<fieldset class="ss-writers"><legend class="ss-legend">The writers</legend>'
+               f'<p class="k-small ss-help">{esc(SPLIT_SHARES)} The producer role is for a producer who helped write the song.</p>'
+               '<ol class="ss-rows"></ol>'
+               '<div class="ss-rowbtns"><button type="button" class="k-btn k-btn--ghost k-btn--sm" data-ss="add">Add a writer</button>'
+               '<button type="button" class="k-btn k-btn--ghost k-btn--sm" data-ss="even">Split evenly</button></div>'
+               '<p class="ss-total" aria-live="polite"></p></fieldset>')
+    actions = ('<ul class="ss-issues" hidden></ul>'
+               '<div class="ss-actions"><button type="button" class="k-btn" data-ss="print">Print or save as PDF</button>'
+               '<button type="button" class="k-btn k-btn--ghost" data-ss="copy">Copy as text</button>'
+               '<button type="button" class="k-linkbtn ss-clear" data-ss="clear">Clear the form</button>'
+               '<span class="ss-status" role="status" aria-live="polite"></span></div>'
+               '<p class="k-small ss-keep">Your draft is kept in this browser only, so you can come back to it. Nothing is sent anywhere.</p>')
+    return ('<div class="ss" id="split-tool" data-split-sheet>'
+            f'<div class="ss-note"><p class="ss-note-h">Not a contract</p><p>{esc(SPLIT_NOTE)}</p><p>{esc(SPLIT_HOW)}</p></div>'
+            f'<p class="ss-off k-small">{esc(SPLIT_OFF)}</p>'
+            '<form class="ss-form" hidden novalidate>' + song + writers + actions + "</form>"
+            '<div class="ss-out" hidden><p class="k-label ss-out-h">The sheet, as it will print</p>'
+            '<article class="ss-sheet" aria-label="Split sheet preview"></article></div></div>')
+
+
+def split_band():
+    aside = "For the co-writers of one song: who wrote it, in what role, and each writer's share, ready to print and sign."
+    return ("split-sheet", "Split sheet", None,
+            band("split-sheet", "Split sheet", "Agree the split, <em>then write it down.</em>", aside, split_html()))
+
+
+# KiteSink's own tools, as cards at the top of /music/tools: (anchor, name, blurb, data file it needs or None).
+# A tool with no anchor is not built yet and shows as in preparation.
 KS_TOOLS = [
     ("calculator", "Mechanical rate calculator", "The US statutory rate per copy for physical copies and downloads, for a year, a playing time and a number of copies.", "rates"),
     ("checklist", "Unclaimed-money checklist", "The places that may hold royalties for you, for who you are and where your music earns, to tick off one by one.", "claimable"),
-    (None, "Identifier checker", "Checks that an ISWC, ISRC or IPI number is in the right form before you send it anywhere.", None),
-    (None, "Split-sheet generator", "A plain split sheet for co-writers to fill in.", None),
+    ("identifiers", "Identifier checker", "Says whether an ISRC, ISWC, ISNI or IPI number is in the right form, and checks the check digit where there is one.", None),
+    ("split-sheet", "Split-sheet generator", "Records who wrote a song and each writer's share, checks the shares make 100 percent, and prints a sheet to sign.", None),
     (None, "Society directory", "Collecting societies by territory, and the rights each one collects.", None),
 ]
+
+
+def ks_tool_live(data, anchor, needs):
+    return bool(anchor) and (needs is None or (needs in data and (needs != "claimable" or bool(data["claimable"].get("rows")))))
 
 
 def ks_tool_cards(data):
     out = []
     for anchor, name, blurb, needs in KS_TOOLS:
-        live = anchor and needs in data and (needs != "claimable" or data["claimable"].get("rows"))
+        live = ks_tool_live(data, anchor, needs)
         inner = f'<span class="kt-t">{esc(name)}</span><span class="kt-b">{esc(blurb)}</span><span class="kt-n">{"Open" if live else "In preparation"}</span>'
         out.append(f'<li><a class="kt-card" href="#{anchor}">{inner}</a></li>' if live else
                    f'<li><div class="kt-card kt-card--soon">{inner}</div></li>')
@@ -1614,12 +1766,18 @@ def tool_group_labels(data):
 
 def page_tools(lib, data, pages, route):
     here = route["slug"]
-    sections = [("kitesink", "KiteSink tools", None, band("kitesink", "Built here", "KiteSink <em>tools.</em>",
-                 "Two tools run in this page and keep nothing outside your browser. Three more are in preparation.", ks_tool_cards(data)))]
+    live = sum(1 for anchor, _, _, needs in KS_TOOLS if ks_tool_live(data, anchor, needs))
+    soon = len(KS_TOOLS) - live
+    words = ("No", "One", "Two", "Three", "Four", "Five", "Six")
+    aside = ((f"{words[live]} tool runs in this page and keeps" if live == 1 else f"{words[live]} tools run in this page and keep")
+             + " nothing outside your browser." + (f" {words[soon]} more {'is' if soon == 1 else 'are'} in preparation." if soon else ""))
+    sections = [("kitesink", "KiteSink tools", None, band("kitesink", "Built here", "KiteSink <em>tools.</em>", aside, ks_tool_cards(data)))]
     if "rates" in data:
         sections.append(calculator_band(lib, data["rates"]))
     if pages.has("claimable"):
         sections.append(unclaimed_band(data["claimable"], pages, here))
+    sections.append(identifier_band())
+    sections.append(split_band())
     tools = verified_tools(data)
     if tools:
         labels = tool_group_labels(data)
@@ -1748,11 +1906,30 @@ def md_checklist(data, pages):
     return out
 
 
+def md_identifiers(here):
+    out = ["## Identifier checker", "", ID_METHOD, "", f"The checker itself: {here}#identifiers", ""]
+    for f in ID_FORMATS:
+        out += [f"### {f['name']} ({f['long']})", "", f"- Identifies: {f['what']}", f"- Form: {f['form']}", f"- Check digit: {f['check']}",
+                f"- Look it up: [{f['lookup'][0]}]({f['lookup'][1]})" if f["lookup"] else "- Look it up: ask your PRO or society for the IPI numbers they hold for you.",
+                "- Sources (opened " + TOOLS_OPENED + "): " + "; ".join(f"[{l}]({u})" for l, u in f["sources"]), ""]
+    return out
+
+
+def md_split(here):
+    return ["## Split-sheet generator", "", SPLIT_NOTE, "", SPLIT_HOW, "",
+            "A sheet holds the song title, the date agreed, any other titles and the recording artist; and for each writer their name, "
+            "role (lyrics, music, lyrics and music, or a producer who helped write the song), PRO or society, IPI number, publisher and "
+            "share, with a line to sign and date. " + SPLIT_SHARES, "", f"The generator itself: {here}#split-sheet", ""]
+
+
 def md_tools(lib, meta, data, pages):
+    here = f"{SITE}/music/{pages.slug['tools']}"
     out = ["# Music rights tools: KiteSink", "",
-           "Two tools built here, a mechanical rate calculator and an unclaimed-money checklist, and a checked directory of other tools.", ""]
+           "Tools built here (a mechanical rate calculator, an unclaimed-money checklist, an identifier checker and a split-sheet "
+           "generator) and a checked directory of other tools.", ""]
     out += md_rates(lib, data["rates"]) if "rates" in data else ["## Mechanical rate calculator", "", "In preparation.", ""]
     out += md_checklist(data, pages) if pages.has("claimable") else ["## Unclaimed-money checklist", "", "In preparation.", ""]
+    out += md_identifiers(here) + md_split(here)
     out += ["## In preparation", ""] + [f"- {name}: {blurb}" for anchor, name, blurb, _ in KS_TOOLS if not anchor] + [""]
     out += ["## Other tools worth knowing", ""]
     tools = verified_tools(data)
@@ -1777,6 +1954,10 @@ def md_area_tool(lib, dom, data, pages):
         return md_rates(lib, data["rates"]) + [f"The calculator itself: {SITE}/music/{pages.slug[dom]}#calculator", ""]
     if tool == "checklist" and pages.has("claimable"):
         return md_checklist(data, pages)
+    if tool == "identifiers":
+        return md_identifiers(f"{SITE}/music/{pages.slug[dom]}")
+    if tool == "splits":
+        return md_split(f"{SITE}/music/{pages.slug[dom]}")
     return []
 
 
@@ -1840,7 +2021,7 @@ def hub_tools(meta, pages):
     for t in meta.get("tools", []):
         href = t.get("href")
         if href and href.startswith("/music/"):
-            href = href if href[len("/music/"):] in written else None   # linked when this build writes the page, else shown as in preparation
+            href = href if href[len("/music/"):].split("#")[0] in written else None   # linked when this build writes the page, else shown as in preparation
         elif not t.get("live"):
             href = None
         cards.append(hub_card(href, t["title"], t["blurb"], "Open" if href else "In preparation"))
@@ -1909,7 +2090,8 @@ def md_index(meta, data, numbers, counts, pages):
     if pages.has("claimable"):
         ref.append(f"- [Claimable royalties]({twin('claimable')}): {numbers['n:claimable']} places where royalties can sit unclaimed, and how to claim. As data: {SITE}/music/{pages.slug['claimable']}.json")
     if pages.has("tools"):
-        ref.append(f"- [Tools]({twin('tools')}): a mechanical rate calculator, an unclaimed-money checklist and a checked directory of other tools.")
+        ref.append(f"- [Tools]({twin('tools')}): a mechanical rate calculator, an unclaimed-money checklist, an identifier checker, "
+                   "a split-sheet generator and a checked directory of other tools.")
     if ref:
         out += ["", "## Reference", ""] + ref
     out += ["", "## How the entries are graded", ""] + md_grading() + [""]

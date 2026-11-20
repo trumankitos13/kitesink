@@ -34,8 +34,20 @@
     },
     {
       "title": "Tools and calculators",
-      "blurb": "A mechanical rate calculator, an unclaimed-money checklist, and a checked directory of other tools.",
+      "blurb": "A mechanical rate calculator, an unclaimed-money checklist, an identifier checker, a split-sheet generator, and a checked directory of other tools.",
       "href": "/music/tools",
+      "live": false
+    },
+    {
+      "title": "Identifier checker",
+      "blurb": "Whether an ISRC, ISWC, ISNI or IPI number is in the right form, and whether its check digit adds up where it has one.",
+      "href": "/music/tools#identifiers",
+      "live": false
+    },
+    {
+      "title": "Split-sheet generator",
+      "blurb": "Who wrote a song and each writer's share, checked to 100 percent, ready to print and sign. Not a contract.",
+      "href": "/music/tools#split-sheet",
       "live": false
     },
     {
