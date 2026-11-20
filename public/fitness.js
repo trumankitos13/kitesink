@@ -8,6 +8,14 @@
    exported on window so they can be checked from the console or a
    test); the bottom half wires those functions to the page.
 
+   Numbers from the field guide (zone percentages, class limits, FFMI
+   landmarks, supplement rows…) are never typed here: the build reads
+   them from content/fitness/*.json into #tool-data (see TOOL_DATA in
+   scripts/build_fitness.py), and the tools take them from there.
+   My numbers (ksFit.me, see F.meSet and F.migrate) holds the body and
+   lift numbers every tool shares; a field is the visitor's only once
+   they typed it, and examples are never saved as theirs.
+
    Formulas and their sources (full references on /fitness/sources):
      • Resting energy  — by default KiteSink's convention: body weight × 10, 9 or 8 kcal per lb by
                          body-fat category (F.resting); or Mifflin-St Jeor (1990): 10·kg + 6.25·cm − 5·age
@@ -497,6 +505,88 @@
     return out;
   };
 
+  /* ---------- my numbers: the body and lift numbers every tool shares ----------
+     localStorage ksFit.me = { v: 1, units, sex, age, kg, cm, bf, bfFrom, squat, bench, dead, hrMax,
+     hrRest, own: { <field>: 1 } }, metric inside. A field is the visitor's only when own[field] is
+     set, and only something the visitor typed or pressed sets it: a tool shows its example value
+     for every other field and never writes that example here. Clearing a field un-owns it.
+     migrate(blob) builds the first `me` from what the tools saved before it existed. */
+  F.ME_RANGE = { age: [16, 95], kg: [30, 300], cm: [120, 230], bf: [3, 60], squat: [1, 500], bench: [1, 400], dead: [1, 500], hrMax: [100, 230], hrRest: [30, 110] };
+  F.ME_KEYS = ["sex"].concat(Object.keys(F.ME_RANGE));
+  F.meOk = function (key, v) {
+    if (key === "sex") return v === "m" || v === "f";
+    var r = F.ME_RANGE[key], n = typeof v === "string" && v.trim() === "" ? NaN : +v;
+    return !!r && v !== null && typeof v !== "boolean" && isFinite(n) && n >= r[0] && n <= r[1];
+  };
+  F.meEmpty = function () { return { v: 1, units: "", own: {} }; };
+  // a stored `me`, checked field by field: anything not owned or out of range is dropped
+  F.meClean = function (me) {
+    var out = F.meEmpty();
+    if (!me || typeof me !== "object") return out;
+    if (me.units === "metric" || me.units === "imperial") out.units = me.units;
+    var own = me.own && typeof me.own === "object" ? me.own : {};
+    F.ME_KEYS.forEach(function (k) { if (own[k] && F.meOk(k, me[k])) { out[k] = k === "sex" ? me[k] : +me[k]; out.own[k] = 1; } });
+    if (out.own.bf) out.bfFrom = me.bfFrom === "navy" ? "navy" : "typed";
+    return out;
+  };
+  /* meSet(me, patch, opts) → { me, changed }: a new `me` and the fields that changed. A value in
+     range is set and owned; an empty one (null, "", NaN) clears and un-owns the field; one out of
+     range leaves the field as it was. opts.bfFrom: "navy" when the body fat came from the navy tool. */
+  F.meSet = function (me, patch, opts) {
+    var out = F.meClean(me), changed = [];
+    opts = opts || {};
+    Object.keys(patch || {}).forEach(function (k) {
+      var v = patch[k];
+      if (k === "units") { if ((v === "metric" || v === "imperial") && out.units !== v) { out.units = v; changed.push(k); } return; }
+      if (F.ME_KEYS.indexOf(k) < 0) return;
+      if (v === null || v === undefined || v === "" || (typeof v === "number" && isNaN(v))) {
+        if (out.own[k]) { delete out[k]; delete out.own[k]; if (k === "bf") delete out.bfFrom; changed.push(k); }
+        return;
+      }
+      if (!F.meOk(k, v)) return;
+      v = k === "sex" ? v : +v;
+      var from = opts.bfFrom === "navy" ? "navy" : "typed";
+      if (out[k] !== v || !out.own[k] || (k === "bf" && out.bfFrom !== from)) changed.push(k);
+      out[k] = v; out.own[k] = 1;
+      if (k === "bf") out.bfFrom = from;
+    });
+    return { me: out, changed: changed };
+  };
+  F.parseBlob = function (text) {
+    try { var b = JSON.parse(text || "{}"); return b && typeof b === "object" && !Array.isArray(b) ? b : {}; } catch (e) { return {}; }
+  };
+  // The examples the tools used to start with, which are not anyone's numbers: Energy & macros'
+  // 75 kg, 175 cm, 30 years; Meet attempts' 140 / 90 / 170; the hero's best squat of 100.
+  F.MIGRATE_EXAMPLES = { kg: 75, cm: 175, age: 30, squat: 140, bench: 90, dead: 170, heroMax: 100 };
+  F.migrate = function (blob) {
+    if (!blob || typeof blob !== "object" || Array.isArray(blob)) return F.meEmpty();
+    if (blob.me && blob.me.v === 1) return F.meClean(blob.me);   // already done: migrating again changes nothing
+    var X = F.MIGRATE_EXAMPLES, p = {}, bfNavy = false;
+    function take(k, v) { if (!(k in p) && F.meOk(k, v)) p[k] = k === "sex" ? v : +v; }
+    function n(v) { return v === "" || v == null ? NaN : +v; }
+    // Energy & macros: its body fields are the visitor's when mTouched says so, or, saved before
+    // that flag existed, when they differ from its examples
+    var touched = blob.mTouched != null ? !!blob.mTouched
+      : n(blob.kg) > 0 && (n(blob.kg) !== X.kg || n(blob.cm) !== X.cm || n(blob.age) !== X.age || n(blob.bf) > 0);
+    if (touched) { take("sex", blob.sex); take("age", n(blob.age)); take("kg", n(blob.kg)); take("cm", n(blob.cm)); take("bf", n(blob.bf)); }
+    // the navy tool's readings fill what is still empty; its result is the body fat if none was typed
+    var nv = blob.navy;
+    if (nv && typeof nv === "object" && nv.touched) {
+      take("sex", nv.sex); take("kg", n(nv.kg)); take("cm", n(nv.h));
+      if (!("bf" in p)) { take("bf", n(nv.pct)); bfNavy = "bf" in p; }
+    }
+    // Meet attempts has no flag: a lift is the visitor's only when it is not the example
+    var at = blob.att;
+    if (at && typeof at === "object") ["squat", "bench", "dead"].forEach(function (k) { if (n(at[k]) > 0 && n(at[k]) !== X[k]) take(k, n(at[k])); });
+    if (blob.hero && typeof blob.hero === "object" && n(blob.hero.max) > 0 && n(blob.hero.max) !== X.heroMax) take("squat", n(blob.hero.max));
+    // loadKg is the weight of one set, not a best, so the 1RM tool's input stays its own
+    var me = F.meEmpty();
+    if (blob.units === "metric" || blob.units === "imperial") me.units = blob.units;
+    Object.keys(p).forEach(function (k) { me[k] = p[k]; me.own[k] = 1; });
+    if (me.own.bf) me.bfFrom = bfNavy ? "navy" : "typed";
+    return me;
+  };
+
   window.KSFit = F;
 
   /* =====================================================================
@@ -543,6 +633,46 @@
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
     else done(false);
   }
+
+  function wt(v) { return num(v, v % 1 ? 1 : 0); }   // 85 → "85", 82.5 → "82.5"
+  // a field the visitor is typing in keeps what they typed; every other one shows the new value
+  function setField(el, v) { if (el && document.activeElement !== el) el.value = v; }
+  // a result built on any example input says so, and which
+  function exampleNote(el, names) {
+    if (!el) return;
+    el.hidden = !names.length;
+    el.textContent = names.length ? "Built on example inputs: " + names.join(", ") + ". Put in your own here or in My numbers above for your numbers." : "";
+  }
+
+  /* My numbers: the shared `me` (see F.meSet). ME.val(field, example) is the visitor's value or the
+     example; ME.set(patch) saves, owns and tells every tool through a "ks:me" event carrying the
+     changed fields. Built from the older saved keys once, by F.migrate, when it is not there yet.
+     Another tab's change arrives through the storage event. The tools still write their old keys
+     too, so a cached older /fitness.js finds what it expects. */
+  var ME = (function () {
+    var s = store.get(), cur = s.me && s.me.v === 1 ? F.meClean(s.me) : F.migrate(s);
+    if (!s.me) store.set({ me: cur });
+    function fire(keys) { if (keys.length && window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:me", { detail: { keys: keys } })); }
+    window.addEventListener("storage", function (e) {
+      if (e.key !== "ksFit") return;
+      var next = F.meClean(store.get().me);
+      var keys = ["units"].concat(F.ME_KEYS).filter(function (k) { return next[k] !== cur[k] || !!next.own[k] !== !!cur.own[k] || (k === "bf" && next.bfFrom !== cur.bfFrom); });
+      cur = next; saved = store.get(); fire(keys);
+    });
+    return {
+      get: function () { return cur; },
+      has: function (k) { return !!cur.own[k]; },
+      val: function (k, example) { return cur.own[k] ? cur[k] : example; },
+      units: function () { return cur.units === "imperial" ? "imperial" : cur.units === "metric" ? "metric" : ""; },
+      set: function (patch, opts) { var r = F.meSet(cur, patch, opts); if (!r.changed.length) return; cur = r.me; store.set({ me: cur }); fire(r.changed); },
+      clear: function () {
+        var keys = F.ME_KEYS.filter(function (k) { return cur.own[k]; }), units = cur.units;
+        cur = F.meEmpty(); cur.units = units; store.set({ me: cur }); fire(keys);
+      }
+    };
+  })();
+  function onMe(fn) { window.addEventListener("ks:me", function (e) { fn(e.detail && e.detail.keys || []); }); }
+  function hits(keys, list) { return keys.some(function (k) { return list.indexOf(k) >= 0; }); }
 
   /* Resting energy, shared by Energy & macros and the diet planner: a "from" choice (body weight
      x body-fat category, KiteSink's default; or a published equation), a category for when body
@@ -800,7 +930,6 @@
     ["l-reps", "l-treps", "l-trir"].forEach(function (id) { $(id).addEventListener("input", calc); });
     if (saved.loadReps) $("l-reps").value = saved.loadReps;
     showLift();
-    function wt(v) { return num(v, v % 1 ? 1 : 0); } // 85 → "85", 82.5 → "82.5"
     function calc() {
       var u = units.get(), step = u === "lb" ? 5 : 2.5, w = u === "lb" ? F.lb(liftKg) : liftKg, reps = val("l-reps"), tr = val("l-treps"), ti = val("l-trir");
       $("l-unit").textContent = u; $("l-treps-read").textContent = tr + (tr === 1 ? " rep" : " reps"); $("l-trir-read").textContent = ti + " in reserve";
@@ -892,7 +1021,6 @@
       LIFTS.forEach(function (l) { if (isFinite(kg[l[0]])) $(l[2]).value = Math.round((u === "lb" ? F.lb(kg[l[0]]) : kg[l[0]]) * 10) / 10; });
       [].forEach.call(document.querySelectorAll(".a-unit"), function (el) { el.textContent = u; });
     }
-    function wt(v) { return num(v, v % 1 ? 1 : 0); }
     // A meet loads kilograms, so kilograms always lead; pounds follow when that is the chosen unit.
     function cell(v) { return wt(v) + " kg" + (units.get() === "lb" ? "<small>" + num(F.lb(v)) + " lb</small>" : ""); }
     function calc() {

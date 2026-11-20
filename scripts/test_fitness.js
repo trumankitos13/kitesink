@@ -1,5 +1,6 @@
-// Zero-dependency checks for public/fitness.js: the calculator maths, the hub's search ranking, and the
-// script in the hub's <head> that forwards old /fitness#<id> links.  Run: node scripts/test_fitness.js
+// Zero-dependency checks for public/fitness.js: the calculator maths (on the guide numbers the build puts in
+// the hub), My numbers and its migration, the hub's search ranking, and the script in the hub's <head> that
+// forwards old /fitness#<id> links.  Run after python3 scripts/build_fitness.py: node scripts/test_fitness.js
 const fs = require('fs'), vm = require('vm');
 const ctx = { window: {}, document: { getElementById: () => null }, Math, console };
 ctx.window.window = ctx.window;
@@ -235,6 +236,68 @@ async function visit(hash, opts = {}) {
   eq('gain: +5% over maintenance', p.maintDay.kcal, 2848 * 1.05, 0.01);
   // energy availability needs body fat
   ok('energy availability only with body fat', isNaN(plan({ phase: 'lose', days: 7, size: 20 }).ea) && plan({ phase: 'lose', days: 7, size: 20, bf: 20 }).ea > 0);
+}
+
+// ---------- the calculators' guide numbers: scripts/build_fitness.py puts them in the hub as #tool-data ----------
+const TD = JSON.parse(/<script type="application\/json" id="tool-data">([\s\S]*?)<\/script>/.exec(fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8'))[1]);
+ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k !== 'suppItems').every(k => /^\/fitness\/[a-z-]+#[a-z0-9-]+$/.test(TD[k].href) && TD[k].title));
+
+// ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
+{
+  const J = x => JSON.stringify(x);
+  const mig = b => F.migrate(b);
+  same('migrate: nothing saved is an empty me', J(mig({})), J({ v: 1, units: '', own: {} }));
+  same('migrate: not an object is an empty me', J(mig(null)) + J(mig([1, 2])) + J(mig('x')), J(F.meEmpty()).repeat(3));
+  same('migrate: corrupt JSON reads as nothing', J(mig(F.parseBlob('{"kg": 80,'))), J(F.meEmpty()));
+  same('migrate: a JSON array reads as nothing', J(F.parseBlob('[1]')), '{}');
+  // the examples every tool saved on its first visit are nobody's numbers
+  const untouched = { units: 'metric', sex: 'm', kg: 75, cm: 175, age: 30, bf: '', pal: 1.6, mTouched: false,
+    att: { units: 'kg', style: 'first', warm: 'squat', squat: 140, bench: 90, dead: 170 }, hero: { goal: null, level: 'mid', max: 100 },
+    navy: { units: 'cm', sex: 'm', h: 178, neck: 38, waist: 86, hip: 97, kg: '', pct: 17.9, touched: false } };
+  same('migrate: untouched defaults own nothing', J(mig(untouched).own), '{}');
+  same('migrate: units carry over without owning anything', mig(untouched).units, 'metric');
+  // mTouched: the body fields are the visitor's
+  let m = mig({ units: 'imperial', sex: 'f', kg: 61.2, cm: 166, age: 41, bf: 27, mTouched: true });
+  same('migrate: mTouched owns sex, age, weight, height and body fat', Object.keys(m.own).sort().join(), 'age,bf,cm,kg,sex');
+  ok('migrate: mTouched keeps the values and marks body fat as typed', m.kg === 61.2 && m.cm === 166 && m.age === 41 && m.bf === 27 && m.sex === 'f' && m.bfFrom === 'typed' && m.units === 'imperial');
+  m = mig({ kg: 80, cm: 180, age: 30, bf: '', mTouched: true });
+  ok('migrate: an empty body fat is not owned', !m.own.bf && !('bf' in m) && !m.bfFrom);
+  // before the flag existed: values that differ from 75 / 175 / 30 were the visitor's
+  ok('migrate: pre-flag, a weight other than 75 is the visitor\'s', mig({ kg: 82, cm: 175, age: 30 }).own.kg === 1);
+  ok('migrate: pre-flag, body fat alone is enough', mig({ kg: 75, cm: 175, age: 30, bf: 20 }).bf === 20);
+  ok('migrate: pre-flag, 75 / 175 / 30 with no body fat is the example', J(mig({ kg: 75, cm: 175, age: 30, bf: '' }).own) === '{}');
+  ok('migrate: mTouched false wins over the old inference', J(mig({ kg: 90, cm: 190, age: 44, mTouched: false }).own) === '{}');
+  // the navy tool: fills what is empty, and its result is the body fat when none was typed
+  m = mig({ navy: { touched: true, sex: 'm', h: 180, kg: 92, pct: 17 } });
+  ok('migrate: navy only fills sex, height, weight and body fat (from navy)', m.cm === 180 && m.kg === 92 && m.bf === 17 && m.bfFrom === 'navy' && m.sex === 'm');
+  m = mig({ units: 'metric', sex: 'm', kg: 92, cm: 180, age: 35, bf: 18, pal: 1.6, mTouched: true, navy: { touched: true, pct: 17, h: 178, kg: 90 } });
+  ok('migrate: a typed body fat and body numbers beat the navy tool\'s', m.bf === 18 && m.bfFrom === 'typed' && m.cm === 180 && m.kg === 92);
+  ok('migrate: untouched navy readings are examples', J(mig({ navy: { touched: false, h: 178, kg: 80, pct: 17.9 } }).own) === '{}');
+  ok('migrate: a navy reading out of range is skipped', mig({ navy: { touched: true, pct: 72, h: 180 } }).bf === undefined);
+  // Meet attempts has no flag: a lift is the visitor's only when it is not the example
+  m = mig({ att: { units: 'lb', squat: 150, bench: 90, dead: 200.5 } });
+  ok('migrate: attempts only, lifts that differ from 140 / 90 / 170', m.squat === 150 && m.dead === 200.5 && !m.own.bench);
+  ok('migrate: the hero\'s best squat when it is not 100', mig({ hero: { max: 120 } }).squat === 120 && !mig({ hero: { max: 100 } }).own.squat);
+  ok('migrate: attempts beat the hero for the squat', mig({ att: { squat: 150 }, hero: { max: 120 } }).squat === 150);
+  ok('migrate: the 1RM tool\'s set weight is not a best', J(mig({ loadKg: 120, loadReps: 5 }).own) === '{}');
+  // the returning visitor the browser pass uses, and idempotence
+  const visitor = { units: 'metric', sex: 'm', kg: 92, cm: 180, age: 35, bf: 18, pal: 1.6, mTouched: true, navy: { touched: true, pct: 17, h: 180, kg: 92 } };
+  const once = mig(visitor);
+  same('migrate: twice is the same as once', J(mig(Object.assign({}, visitor, { me: once }))), J(once));
+  same('migrate: an existing me is kept, cleaned', J(mig({ kg: 50, mTouched: true, me: { v: 1, kg: 999, own: { kg: 1 }, units: 'x' } })), J(F.meEmpty()));
+  // own marking
+  let r = F.meSet(F.meEmpty(), { kg: 80, cm: '' });
+  ok('meSet: a value in range is set and owned', r.me.kg === 80 && r.me.own.kg === 1 && J(r.changed) === '["kg"]');
+  r = F.meSet(r.me, { kg: 12 });
+  ok('meSet: a value out of range changes nothing', r.me.kg === 80 && r.changed.length === 0);
+  r = F.meSet(r.me, { kg: '' });
+  ok('meSet: clearing a field un-owns it', !('kg' in r.me) && !r.me.own.kg && J(r.changed) === '["kg"]');
+  r = F.meSet(F.meEmpty(), { bf: 17.5 }, { bfFrom: 'navy' });
+  ok('meSet: body fat remembers where it came from', r.me.bfFrom === 'navy' && F.meSet(r.me, { bf: 17.5 }).changed.join() === 'bf' && F.meSet(r.me, { bf: 17.5 }).me.bfFrom === 'typed');
+  ok('meSet: the same value again changes nothing', F.meSet(F.meSet(F.meEmpty(), { age: 40 }).me, { age: '40' }).changed.length === 0);
+  ok('meSet: units are a setting, not an owned number', F.meSet(F.meEmpty(), { units: 'imperial' }).me.units === 'imperial' && J(F.meSet(F.meEmpty(), { units: 'imperial' }).me.own) === '{}');
+  ok('meSet: unknown keys are ignored', F.meSet(F.meEmpty(), { pal: 1.6, goal: 'lose' }).changed.length === 0);
+  ok('meSet: the input is not changed', (() => { const a = F.meEmpty(); F.meSet(a, { kg: 80 }); return J(a) === J(F.meEmpty()); })());
 }
 
 (async () => {
