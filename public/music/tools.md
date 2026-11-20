@@ -75,11 +75,27 @@ The checker itself: https://kitesink.com/music/tools#identifiers
 
 ## Split-sheet generator
 
-A split sheet records what the writers of a song agreed: who wrote it and each writer's share. It is not a publishing contract. For anything beyond recording the split, get a music lawyer.
+A split sheet records what the writers of a song agreed: who wrote it, in what role, and each writer's share. It is not a publishing contract, and this page is not legal advice. For anything beyond recording the split, get a music lawyer.
 
 Fill it in together, check that the shares make exactly 100 percent, then print it and have every writer sign and date it. Give every writer a copy.
 
-A sheet holds the song title, the date agreed, any other titles and the recording artist; and for each writer their name, role (lyrics, music, lyrics and music, or a producer who helped write the song), PRO or society, IPI number, publisher and share, with a line to sign and date. Shares are percentages of the song, to two decimal places, and must add up to exactly 100. Split evenly gives three writers 33.34, 33.33 and 33.33.
+A sheet holds the song title, any alternate titles and the date agreed; the ISWC, and the ISRC and artist of the recording, if there are any; and whether the song uses samples or interpolations, and which. Samples and interpolations need clearance from the owners of the work they use. This sheet does not clear them.
+
+For each writer it holds their legal name, role, PRO or society, IPI name number, publisher and the publisher's role, and share, with a line to sign and date. Shares are percentages of the song, to two decimal places, and must add up to exactly 100. Split evenly gives three writers 33.34, 33.33 and 33.33. Pick each writer's role for what they wrote. A producer who co-wrote the song gets the role for their part, with "Also credited as the producer" ticked.
+
+Writer roles: These are the writer roles societies use when a song is registered. Arranger, adaptor and translator are for a new version of a song that already exists. If that song is still in copyright, its owners must agree to the new version.
+
+- Composer: Wrote music for the song, but none of the words.
+- Author (lyricist): Wrote words for the song, but none of the music.
+- Composer and author: Wrote both music and words for the song.
+- Arranger: Made a new arrangement of the music of a song that already existed.
+- Adaptor: Reworked the words of a song that already existed, other than by translating them.
+- Translator: Translated the words of a song that already existed into another language.
+
+Publisher roles:
+
+- Original publisher: The publisher the writer signed their share of this song to. A writer who publishes themselves names their own company.
+- Administrator: A company that registers the song and collects for the writer or their publisher under an admin deal, usually without owning it.
 
 The generator itself: https://kitesink.com/music/tools#split-sheet
 

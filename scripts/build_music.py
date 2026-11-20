@@ -1669,32 +1669,82 @@ def identifier_band():
             band("identifiers", "Identifiers", "Check a code <em>before you send it.</em>", aside, identifier_html()))
 
 
-SPLIT_NOTE = ("A split sheet records what the writers of a song agreed: who wrote it and each writer's share. It is not a "
-              "publishing contract. For anything beyond recording the split, get a music lawyer.")
+SPLIT_NOTE = ("A split sheet records what the writers of a song agreed: who wrote it, in what role, and each writer's share. "
+              "It is not a publishing contract, and this page is not legal advice. For anything beyond recording the split, "
+              "get a music lawyer.")
 SPLIT_HOW = ("Fill it in together, check that the shares make exactly 100 percent, then print it and have every writer sign and "
              "date it. Give every writer a copy.")
-SPLIT_OFF = ("The generator needs JavaScript. A split sheet can also be written by hand: the song title and the date; any other "
-             "titles and the recording artist; then for each writer their name, role (lyrics, music or both), PRO or society, IPI "
-             "number, publisher and share, with the shares adding up to 100 percent; and a line for each writer to sign and date.")
+SPLIT_OFF = ("The generator needs JavaScript. A split sheet can also be written by hand: the song title, any other titles and "
+             "the date agreed; the ISWC, and the ISRC and artist of the recording, if there are any; whether the song uses "
+             "samples or interpolations, and which; then for each writer their legal name, role, PRO or society, IPI name "
+             "number, publisher and the publisher's role, and share, with the shares adding up to 100 percent; and a line for "
+             "each writer to sign and date.")
 SPLIT_SHARES = ("Shares are percentages of the song, to two decimal places, and must add up to exactly 100. "
                 "Split evenly gives three writers 33.34, 33.33 and 33.33.")
+SPLIT_PRODUCER = ("Pick each writer's role for what they wrote. A producer who co-wrote the song gets the role for their part, "
+                  "with \"Also credited as the producer\" ticked.")
+# The writer roles and the publisher roles, with their help text. public/music-tools.js holds the same labels and
+# help (KSMusic.ROLES, ROLE_HELP, PUB_ROLES, PUB_ROLE_HELP); scripts/test_music.js checks that the two agree.
+# The keys are the CWR codes societies use when a song is registered.
+SPLIT_ROLES = [
+    ("C", "Composer", "Wrote music for the song, but none of the words."),
+    ("A", "Author (lyricist)", "Wrote words for the song, but none of the music."),
+    ("CA", "Composer and author", "Wrote both music and words for the song."),
+    ("AR", "Arranger", "Made a new arrangement of the music of a song that already existed."),
+    ("AD", "Adaptor", "Reworked the words of a song that already existed, other than by translating them."),
+    ("TR", "Translator", "Translated the words of a song that already existed into another language."),
+]
+SPLIT_ROLES_NOTE = ("These are the writer roles societies use when a song is registered. Arranger, adaptor and translator are "
+                    "for a new version of a song that already exists. If that song is still in copyright, its owners must "
+                    "agree to the new version.")
+SPLIT_PUB_ROLES = [
+    ("E", "Original publisher", "The publisher the writer signed their share of this song to. A writer who publishes themselves "
+                                "names their own company."),
+    ("AM", "Administrator", "A company that registers the song and collects for the writer or their publisher under an admin "
+                            "deal, usually without owning it."),
+]
+SPLIT_SAMPLE_HELP = "A sample uses part of an existing recording. An interpolation re-records part of an existing song."
+SPLIT_SAMPLE_LINE = ("Samples and interpolations need clearance from the owners of the work they use. This sheet does not "
+                     "clear them.")
+SPLIT_ISWC_HELP = ("Only if the song already has one. A song gets its ISWC when it is first registered, so a new song will "
+                   "not have one yet.")
+SPLIT_ISRC_HELP = "The code of the recording this split is for, if it has one."
 
 
 def split_html():
     """The split-sheet generator. The form and the preview are hidden until /music-tools.js shows them; without it the
     reader gets what a split sheet holds. The writer rows are drawn by the script."""
-    def field(name, label, extra="", typ="text", ph=""):
-        return (f'<label class="k-field ss-f ss-f--{name}" for="ss-{name}"><span class="k-label">{label}</span>'
-                f'<input class="k-input" id="ss-{name}" name="{name}" type="{typ}" autocomplete="off"' + (f' placeholder="{esc(ph)}"' if ph else "") + f'{extra}></label>')
-    song = ('<fieldset class="ss-song"><legend class="ss-legend">The song</legend><div class="ss-grid ss-grid--song">'
+    def field(name, label, extra="", typ="text", ph="", help=""):
+        hid = f' aria-describedby="ss-{name}-h"' if help else ""
+        return (f'<div class="k-field ss-f ss-f--{name}"><label class="k-label" for="ss-{name}">{label}</label>'
+                f'<input class="k-input" id="ss-{name}" name="{name}" type="{typ}" autocomplete="off"'
+                + (f' placeholder="{esc(ph)}"' if ph else "") + f'{extra}{hid}>'
+                + (f'<p class="ss-fhelp" id="ss-{name}-h">{esc(help)}</p>' if help else "") + "</div>")
+    def dl(rows):
+        return '<dl class="ss-dl">' + "".join(f"<dt>{esc(label)}</dt><dd>{esc(help)}</dd>" for _, label, help in rows) + "</dl>"
+    radios = "".join(f'<label class="ss-tick" for="ss-samples-{v}"><input type="radio" id="ss-samples-{v}" name="samples" value="{v}">'
+                     f"<span>{label}</span></label>" for v, label in (("no", "No"), ("yes", "Yes")))
+    samples = ('<fieldset class="ss-samples" aria-describedby="ss-samples-h ss-samples-w"><legend class="k-label">Does the song use a sample or an interpolation?</legend>'
+               f'<div class="ss-radios">{radios}</div>'
+               f'<p class="ss-fhelp" id="ss-samples-h">{esc(SPLIT_SAMPLE_HELP)}</p>'
+               f'<p class="ss-samplewarn" id="ss-samples-w">{esc(SPLIT_SAMPLE_LINE)}</p>'
+               + field("samplesNote", "Which ones, and whose work", ph="For each: the song or recording, and who owns it")
+               + "</fieldset>")
+    song = ('<fieldset class="ss-songfs"><legend class="ss-legend">The song</legend><div class="ss-grid ss-grid--song">'
             + field("title", "Song title", ' required')
             + field("date", "Date agreed", typ="date")
-            + field("alt", "Other titles <i>optional</i>", ph="Working titles, translations")
+            + field("alt", "Alternate titles <i>optional</i>", ph="Working titles, translations")
             + field("artist", "Recording artist <i>optional</i>")
-            + "</div></fieldset>")
+            + field("iswc", "ISWC <i>optional</i>", ' spellcheck="false"', ph="T and 10 digits", help=SPLIT_ISWC_HELP)
+            + field("isrc", "ISRC of the recording <i>optional</i>", ' spellcheck="false"', ph="12 characters", help=SPLIT_ISRC_HELP)
+            + "</div>" + samples + "</fieldset>")
+    roles = ('<details class="ss-roles"><summary>What the roles mean</summary>'
+             f'<p class="k-small">{esc(SPLIT_ROLES_NOTE)}</p>' + dl(SPLIT_ROLES)
+             + '<p class="k-small">The publisher\'s role, when the writer has a publisher for this song:</p>' + dl(SPLIT_PUB_ROLES)
+             + "</details>")
     writers = ('<fieldset class="ss-writers"><legend class="ss-legend">The writers</legend>'
-               f'<p class="k-small ss-help">{esc(SPLIT_SHARES)} The producer role is for a producer who helped write the song.</p>'
-               '<ol class="ss-rows"></ol>'
+               f'<p class="k-small ss-help">{esc(SPLIT_SHARES)} {esc(SPLIT_PRODUCER)}</p>' + roles
+               + '<ol class="ss-rows"></ol>'
                '<div class="ss-rowbtns"><button type="button" class="k-btn k-btn--ghost k-btn--sm" data-ss="add">Add a writer</button>'
                '<button type="button" class="k-btn k-btn--ghost k-btn--sm" data-ss="even">Split evenly</button></div>'
                '<p class="ss-total" aria-live="polite"></p></fieldset>')
@@ -1724,7 +1774,7 @@ KS_TOOLS = [
     ("calculator", "Mechanical rate calculator", "The US statutory rate per copy for physical copies and downloads, for a year, a playing time and a number of copies.", "rates"),
     ("checklist", "Unclaimed-money checklist", "The places that may hold royalties for you, for who you are and where your music earns, to tick off one by one.", "claimable"),
     ("identifiers", "Identifier checker", "Says whether an ISRC, ISWC, ISNI or IPI number is in the right form, and checks the check digit where there is one.", None),
-    ("split-sheet", "Split-sheet generator", "Records who wrote a song and each writer's share, checks the shares make 100 percent, and prints a sheet to sign.", None),
+    ("split-sheet", "Split-sheet generator", "Records who wrote a song, in what role, and each writer's share, checks the shares make 100 percent and the codes are well formed, and prints a sheet to sign.", None),
     (None, "Society directory", "Collecting societies by territory, and the rights each one collects.", None),
 ]
 
@@ -1915,10 +1965,15 @@ def md_identifiers(here):
 
 
 def md_split(here):
-    return ["## Split-sheet generator", "", SPLIT_NOTE, "", SPLIT_HOW, "",
-            "A sheet holds the song title, the date agreed, any other titles and the recording artist; and for each writer their name, "
-            "role (lyrics, music, lyrics and music, or a producer who helped write the song), PRO or society, IPI number, publisher and "
-            "share, with a line to sign and date. " + SPLIT_SHARES, "", f"The generator itself: {here}#split-sheet", ""]
+    return (["## Split-sheet generator", "", SPLIT_NOTE, "", SPLIT_HOW, "",
+             "A sheet holds the song title, any alternate titles and the date agreed; the ISWC, and the ISRC and artist of the "
+             "recording, if there are any; and whether the song uses samples or interpolations, and which. " + SPLIT_SAMPLE_LINE, "",
+             "For each writer it holds their legal name, role, PRO or society, IPI name number, publisher and the publisher's "
+             "role, and share, with a line to sign and date. " + SPLIT_SHARES + " " + SPLIT_PRODUCER, "",
+             "Writer roles: " + SPLIT_ROLES_NOTE, ""]
+            + [f"- {label}: {help}" for _, label, help in SPLIT_ROLES]
+            + ["", "Publisher roles:", ""] + [f"- {label}: {help}" for _, label, help in SPLIT_PUB_ROLES]
+            + ["", f"The generator itself: {here}#split-sheet", ""])
 
 
 def md_tools(lib, meta, data, pages):

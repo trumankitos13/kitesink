@@ -27,6 +27,7 @@
 
   // 13.1 cents -> 1310 hundredths of a cent. Rates are stated to at most two decimal places.
   function hundredths(cents) { return Math.round(cents * 100); }
+  function own(o, k) { return Object.prototype.hasOwnProperty.call(o, k); }
 
   var M = {
     hundredths: hundredths,
@@ -295,20 +296,86 @@
     },
     // 3333 -> "33.33", 5000 -> "50", 1250 -> "12.5"
     pct: function (h) { return (h / 100).toFixed(2).replace(/\.?0+$/, ""); },
-    ROLES: { lyrics: "Lyrics", music: "Music", both: "Lyrics and music", producer: "Producer, as a writer" },
+    /* Writer roles: the designations societies use when a song is registered (the CISAC Common Works
+       Registration user manual names composer, author, arranger, adaptor, translator, sub-arranger and
+       sub-author; the combined composer-author is in the CWR lookup table). The keys are the CWR codes, so
+       a sheet can be keyed in at a society or publisher without guessing. Sub-arranger and sub-author are
+       left out: they are local versions a sub-publisher commissions for its territory, agreed in a
+       publishing deal, not at a writing session. "Producer" is not a writer role; a producer who co-wrote
+       picks the role for what they wrote and ticks "also credited as the producer". */
+    ROLES: { C: "Composer", A: "Author (lyricist)", CA: "Composer and author", AR: "Arranger", AD: "Adaptor", TR: "Translator" },
+    ROLE_HELP: {
+      C: "Wrote music for the song, but none of the words.",
+      A: "Wrote words for the song, but none of the music.",
+      CA: "Wrote both music and words for the song.",
+      AR: "Made a new arrangement of the music of a song that already existed.",
+      AD: "Reworked the words of a song that already existed, other than by translating them.",
+      TR: "Translated the words of a song that already existed into another language."
+    },
+    // The publisher's role for this writer's share of this song: the CWR codes E and AM.
+    PUB_ROLES: { E: "Original publisher", AM: "Administrator" },
+    PUB_ROLE_HELP: {
+      E: "The publisher the writer signed their share of this song to. A writer who publishes themselves names their own company.",
+      AM: "A company that registers the song and collects for the writer or their publisher under an admin deal, usually without owning it."
+    },
+    // Role values a draft saved before November 2026 used, and what each becomes.
+    OLD_ROLES: { lyrics: "A", music: "C", both: "CA", producer: "C" },
+    // A saved draft, of any version, as the current shape. Old roles are mapped; "Producer, as a writer"
+    // becomes Composer with the producer tick. Unknown values are dropped, never guessed.
+    splitMigrate: function (s) {
+      if (!s || typeof s !== "object") return null;
+      function str(x) { return x == null ? "" : String(x); }
+      return {
+        v: 2, title: str(s.title), alt: str(s.alt), date: str(s.date), artist: str(s.artist), iswc: str(s.iswc), isrc: str(s.isrc),
+        samples: s.samples === "yes" || s.samples === "no" ? s.samples : "", samplesNote: str(s.samplesNote),
+        writers: (Array.isArray(s.writers) ? s.writers : []).filter(function (w) { return w && typeof w === "object"; }).map(function (w) {
+          var role = own(M.ROLES, w.role) ? w.role : own(M.OLD_ROLES, w.role) ? M.OLD_ROLES[w.role] : "";
+          return { name: str(w.name), role: role, producer: w.producer === true || w.role === "producer", pro: str(w.pro), ipi: str(w.ipi),
+                   publisher: str(w.publisher), pubRole: own(M.PUB_ROLES, w.pubRole) ? w.pubRole : "", share: str(w.share) };
+        })
+      };
+    },
+    // "Composer", "Composer; also credited as the producer", "" when no role is chosen.
+    roleLabel: function (w) {
+      var r = w && own(M.ROLES, w.role) ? M.ROLES[w.role] : "";
+      return w && w.producer ? (r ? r + "; also credited as the producer" : "Also credited as the producer") : r;
+    },
+    // One identifier on the sheet, checked with the identifier checker above. kind: "ipi" (name number),
+    // "iswc" or "isrc". null when empty; else { ok, shown (the form to print), why (a sentence, when not ok) }.
+    splitId: function (kind, text, who) {
+      var raw = String(text == null ? "" : text).trim();
+      if (!raw) return null;
+      var r = M.idCheck(raw), good = r && r.valid && r.kind === (kind === "ipi" ? "ipi-name" : kind);
+      if (kind === "ipi") {
+        if (good) return { ok: true, shown: r.display };
+        if (r && r.valid && r.kind === "ipi-base") return { ok: false, shown: raw, why: who + "'s IPI number is a base number (I-NNNNNNNNN-C). The sheet asks for the IPI name number, 11 digits, which your PRO or society can give you." };
+        return { ok: false, shown: raw, why: who + "'s IPI name number is not in the right form: 11 digits." };
+      }
+      if (kind === "iswc") {
+        if (!good) return { ok: false, shown: raw, why: "The ISWC is not in the right form: T, then nine digits and a check digit." };
+        if (!r.check.ok) return { ok: false, shown: raw, why: "The ISWC's check digit does not fit the published formula, which gives " + r.check.expected + ". A digit is probably mistyped." };
+        return { ok: true, shown: r.display.replace(/^ISWC /, "") };
+      }
+      if (!good) return { ok: false, shown: raw, why: "The ISRC is not in the right form: 12 characters, written CC-XXX-YY-NNNNN." };
+      if (r.warn) return { ok: false, shown: raw, why: "The ISRC: " + r.warn };
+      return { ok: true, shown: r.display.replace(/^ISRC /, "") };
+    },
     // What still needs doing before the sheet is ready to sign. The sheet still shows; this is advice.
     splitIssues: function (sheet) {
       var out = [], ws = (sheet && sheet.writers) || [];
-      if (!String(sheet && sheet.title || "").trim()) out.push("Add the song title.");
+      function has(x) { return !!String(x == null ? "" : x).trim(); }
+      if (!has(sheet && sheet.title)) out.push("Add the song title.");
+      [["iswc", sheet && sheet.iswc], ["isrc", sheet && sheet.isrc]].forEach(function (p) { var c = M.splitId(p[0], p[1]); if (c && !c.ok) out.push(c.why); });
+      if (sheet && sheet.samples === "yes" && !has(sheet.samplesNote)) out.push("Name each sample or interpolation, and whose work it uses.");
+      else if (!(sheet && (sheet.samples === "yes" || sheet.samples === "no"))) out.push("Say whether the song uses samples or interpolations.");
       if (!ws.length) out.push("Add at least one writer.");
       ws.forEach(function (w, i) {
-        var who = String(w.name || "").trim() || "Writer " + (i + 1);
-        if (!String(w.name || "").trim()) out.push("Writer " + (i + 1) + " has no name.");
-        var ipi = String(w.ipi || "").trim();
-        if (ipi) {
-          var c = M.idCheck(ipi);
-          if (!c || !c.valid || (c.kind !== "ipi-name" && c.kind !== "ipi-base")) out.push(who + "'s IPI number is not in the form of an IPI name number (11 digits) or base number (I-NNNNNNNNN-C).");
-        }
+        var who = has(w.name) ? String(w.name).trim() : "Writer " + (i + 1);
+        if (!has(w.name)) out.push("Writer " + (i + 1) + " has no name.");
+        if (!own(M.ROLES, w.role)) out.push(who + " has no role.");
+        var c = M.splitId("ipi", w.ipi, who);
+        if (c && !c.ok) out.push(c.why);
+        if (w.pubRole && !has(w.publisher)) out.push(who + " has a publisher role but no publisher name.");
       });
       var t = M.splitTotal(ws.map(function (w) { return w.share; }));
       t.bad.forEach(function (i) { out.push("Writer " + (i + 1) + "'s share is not a percentage from 0 to 100."); });
@@ -324,24 +391,35 @@
       if (t.status === "invalid") return "A share is not a percentage from 0 to 100.";
       return "Enter each writer's share.";
     },
+    SAMPLE_LINE: "Samples and interpolations need clearance from the owners of the work they use. This sheet does not clear them.",
+    NOT_CONTRACT: "A split sheet records what the writers agreed. It is not a publishing contract.",
+    CONFIRM: "By signing, each writer confirms that the details and shares above are what the writers agreed.",
     // The sheet as plain text, for "Copy as text".
     splitText: function (sheet) {
       var ws = sheet.writers || [], t = M.splitTotal(ws.map(function (w) { return w.share; })), L = [];
       function v(x, none) { x = String(x == null ? "" : x).trim(); return x || none; }
+      function id(kind, x, who) { var c = M.splitId(kind, x, who); return c ? c.shown + (c.ok ? "" : " (check this)") : ""; }
       L.push("SPLIT SHEET", "");
       L.push("Song: " + v(sheet.title, "(no title)"));
       if (v(sheet.alt, "")) L.push("Also known as: " + v(sheet.alt, ""));
       if (v(sheet.artist, "")) L.push("Recording artist: " + v(sheet.artist, ""));
-      L.push("Date agreed: " + v(M.dateLabel(sheet.date), "____________"), "", "Writers and shares:");
+      if (id("iswc", sheet.iswc)) L.push("ISWC: " + id("iswc", sheet.iswc));
+      if (id("isrc", sheet.isrc)) L.push("ISRC of the recording: " + id("isrc", sheet.isrc));
+      L.push("Date agreed: " + v(M.dateLabel(sheet.date), "____________"));
+      L.push("Samples or interpolations: " + (sheet.samples === "yes" ? "Yes" + (v(sheet.samplesNote, "") ? ". " + v(sheet.samplesNote, "") : ", not yet listed") : sheet.samples === "no" ? "None" : "Not stated"));
+      if (sheet.samples === "yes") L.push(M.SAMPLE_LINE);
+      L.push("", "Writers and shares:");
       ws.forEach(function (w, i) {
-        var s = M.shareH(w.share);
-        L.push((i + 1) + ". " + v(w.name, "(no name)") + ": " + (isNaN(s.h) ? "share not given" : M.pct(s.h) + "%") + ", " + (M.ROLES[w.role] || "role not given")
-          + ". PRO: " + v(w.pro, "not given") + ". IPI: " + v(w.ipi, "not given") + ". Publisher: " + v(w.publisher, "none given") + ".");
+        var s = M.shareH(w.share), who = v(w.name, "Writer " + (i + 1));
+        L.push((i + 1) + ". " + v(w.name, "(no name)") + ": " + (isNaN(s.h) ? "share not given" : M.pct(s.h) + "%") + ".");
+        L.push("   Role: " + v(M.roleLabel(w), "not given") + ".");
+        L.push("   PRO or society: " + v(w.pro, "not given") + ". IPI name number: " + v(id("ipi", w.ipi, who), "not given") + ".");
+        L.push("   Publisher: " + (v(w.publisher, "") ? v(w.publisher, "") + (own(M.PUB_ROLES, w.pubRole) ? " (" + M.PUB_ROLES[w.pubRole].toLowerCase() + ")" : "") : "none given") + ".");
       });
       L.push("Total: " + M.pct(t.totalH) + "%" + (t.status === "ok" ? "" : " (does not add up to 100%)"), "");
-      L.push("By signing, each writer confirms that the details and shares above are what the writers agreed.", "");
+      L.push(M.CONFIRM, "");
       ws.forEach(function (w, i) { L.push(v(w.name, "Writer " + (i + 1)) + "   Signature: ____________________   Date: ____________"); });
-      L.push("", "A split sheet records what the writers agreed. It is not a publishing contract.");
+      L.push("", M.NOT_CONTRACT);
       return L.join("\n");
     },
     // "2026-11-20" -> "20 November 2026"; anything else is returned as typed.
@@ -531,28 +609,38 @@
           outWrap = box.querySelector(".ss-out"), totalEl = box.querySelector(".ss-total"), issuesEl = box.querySelector(".ss-issues"),
           statusEl = box.querySelector(".ss-status"), off = box.querySelector(".ss-off");
       if (!form || !list || !sheetEl) return;
-      var song = { title: form.querySelector('[name="title"]'), date: form.querySelector('[name="date"]'), alt: form.querySelector('[name="alt"]'), artist: form.querySelector('[name="artist"]') };
+      var SONG = ["title", "date", "alt", "artist", "iswc", "isrc", "samplesNote"], song = {};
+      SONG.forEach(function (k) { song[k] = form.querySelector('[name="' + k + '"]'); });
+      var samples = all('[name="samples"]', form), sampleNote = box.querySelector(".ss-f--samplesNote");
       var uid = 0;
       function today() { var d = new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
-      function blank() { return { name: "", role: "", pro: "", ipi: "", publisher: "", share: "" }; }
+      function blank() { return { name: "", role: "", producer: false, pro: "", ipi: "", publisher: "", pubRole: "", share: "" }; }
+      function options(map, chosen) {
+        return '<option value="">Choose</option>' + Object.keys(map).map(function (k) {
+          return '<option value="' + k + '"' + (chosen === k ? " selected" : "") + ">" + esc(map[k]) + "</option>"; }).join("");
+      }
 
       function rowHtml(w, i) {
-        var id = "ssw" + (++uid), roles = '<option value="">Choose</option>' + Object.keys(M.ROLES).map(function (k) {
-          return '<option value="' + k + '"' + (w.role === k ? " selected" : "") + ">" + esc(M.ROLES[k]) + "</option>"; }).join("");
-        function field(name, label, extra, cls) {
-          return '<label class="k-field ss-f ss-f--' + name + (cls ? " " + cls : "") + '" for="' + id + name + '"><span class="k-label">' + label + "</span>" + extra + "</label>";
+        var id = "ssw" + (++uid);
+        function field(name, label, extra, help) {
+          return '<div class="k-field ss-f ss-f--' + name + '"><label class="k-label" for="' + id + name + '">' + label + "</label>" + extra
+            + (help != null ? '<p class="ss-fhelp" id="' + id + name + 'h">' + esc(help) + "</p>" : "") + "</div>";
         }
         function text(name, label, ph, attrs) {
           return field(name, label, '<input class="k-input" id="' + id + name + '" name="' + name + '" type="text" autocomplete="off" value="' + esc(w[name] || "") + '"' + (ph ? ' placeholder="' + esc(ph) + '"' : "") + (attrs || "") + ">");
         }
         return '<li class="ss-row"><fieldset class="ss-fs"><legend class="ss-legend">Writer ' + (i + 1) + "</legend>"
           + '<div class="ss-grid">'
-          + text("name", "Name", "Legal name, or as registered")
-          + field("role", "Role", '<select class="k-select" id="' + id + 'role" name="role">' + roles + "</select>")
+          + text("name", "Legal name", "As the writer's PRO or society has it")
+          + field("role", "Role", '<select class="k-select" id="' + id + 'role" name="role" aria-describedby="' + id + 'roleh">' + options(M.ROLES, w.role) + "</select>", (own(M.ROLE_HELP, w.role) ? M.ROLE_HELP[w.role] : "Pick the role for what this writer wrote."))
+          + field("share", "Share of the song", '<span class="ss-unit"><input class="k-input" id="' + id + 'share" name="share" type="text" inputmode="decimal" autocomplete="off" value="' + esc(w.share || "") + '" placeholder="0"><span aria-hidden="true">%</span></span>')
           + text("pro", "PRO or society", "e.g. ASCAP, BMI, PRS, SOCAN")
-          + text("ipi", "IPI number <i>optional</i>", "11 digits", ' inputmode="numeric" spellcheck="false"')
-          + text("publisher", "Publisher <i>optional</i>", "None, or the publisher's name")
-          + field("share", "Share", '<span class="ss-unit"><input class="k-input" id="' + id + 'share" name="share" type="text" inputmode="decimal" autocomplete="off" value="' + esc(w.share || "") + '" placeholder="0"><span aria-hidden="true">%</span></span>')
+          + text("ipi", "IPI name number <i>optional</i>", "11 digits", ' inputmode="numeric" spellcheck="false"')
+          + '<div class="ss-f ss-f--producer"><label class="ss-tick" for="' + id + 'producer"><input type="checkbox" id="' + id + 'producer" name="producer"' + (w.producer ? " checked" : "") + ' aria-describedby="' + id + 'producerh">'
+          + "<span>Also credited as the producer</span></label>"
+          + '<p class="ss-fhelp" id="' + id + 'producerh">Producer is not a writer role. Tick this as a note, and pick the role for what they wrote.</p></div>'
+          + text("publisher", "Publisher <i>optional</i>", "Leave blank if none")
+          + field("pubRole", "Publisher's role <i>optional</i>", '<select class="k-select" id="' + id + 'pubRole" name="pubRole" aria-describedby="' + id + 'pubRoleh">' + options(M.PUB_ROLES, w.pubRole) + "</select>", (own(M.PUB_ROLE_HELP, w.pubRole) ? M.PUB_ROLE_HELP[w.pubRole] : ""))
           + "</div>"
           + '<button type="button" class="k-linkbtn ss-remove" data-ss="remove">Remove writer ' + (i + 1) + "</button></fieldset></li>";
       }
@@ -560,43 +648,72 @@
         list.innerHTML = writers.map(rowHtml).join("");
         all(".ss-remove", list).forEach(function (b) { b.hidden = writers.length < 2; });
       }
+      function sampleValue() { var c = samples.filter(function (r) { return r.checked; })[0]; return c ? c.value : ""; }
       function read() {
-        return {
-          title: song.title.value, date: song.date.value, alt: song.alt.value, artist: song.artist.value,
-          writers: all(".ss-row", list).map(function (li) {
-            var w = {};
-            ["name", "role", "pro", "ipi", "publisher", "share"].forEach(function (k) { var el = li.querySelector('[name="' + k + '"]'); w[k] = el ? el.value : ""; });
-            return w;
-          })
-        };
+        var s = { v: 2, samples: sampleValue() };
+        SONG.forEach(function (k) { s[k] = song[k] ? song[k].value : ""; });
+        s.writers = all(".ss-row", list).map(function (li) {
+          var w = {};
+          ["name", "role", "pro", "ipi", "publisher", "pubRole", "share"].forEach(function (k) { var el = li.querySelector('[name="' + k + '"]'); w[k] = el ? el.value : ""; });
+          var p = li.querySelector('[name="producer"]'); w.producer = !!(p && p.checked);
+          return w;
+        });
+        return s;
       }
       function v(x) { return String(x == null ? "" : x).trim(); }
+      function none(text) { return '<span class="ss-none">' + esc(text) + "</span>"; }
+      // An identifier on the sheet: the printed form when it checks out; as typed, marked, when it does not.
+      function idCell(c) { return c ? (c.ok ? esc(c.shown) : esc(c.shown) + ' <span class="ss-flag">check this</span>') : ""; }
       function sheetHtml(s) {
         var t = M.splitTotal(s.writers.map(function (w) { return w.share; }));
-        var meta = [];
+        var meta = [], iswc = M.splitId("iswc", s.iswc), isrc = M.splitId("isrc", s.isrc);
         if (v(s.alt)) meta.push("<span><b>Also known as</b> " + esc(v(s.alt)) + "</span>");
         if (v(s.artist)) meta.push("<span><b>Recording artist</b> " + esc(v(s.artist)) + "</span>");
         meta.push("<span><b>Date agreed</b> " + (v(s.date) ? esc(M.dateLabel(v(s.date))) : "____________") + "</span>");
+        if (iswc) meta.push("<span><b>ISWC</b> " + idCell(iswc) + "</span>");
+        if (isrc) meta.push("<span><b>ISRC of the recording</b> " + idCell(isrc) + "</span>");
+        var smp = s.samples === "yes" ? "Yes" + (v(s.samplesNote) ? ": " + esc(v(s.samplesNote)) : ", " + none("not yet listed"))
+          : s.samples === "no" ? "None" : none("Not stated");
         var rows = s.writers.map(function (w, i) {
-          var sh = M.shareH(w.share);
-          function cell(label, val, cls) { return '<td data-l="' + label + '"' + (cls ? ' class="' + cls + '"' : "") + ">" + (val ? esc(val) : '<span class="ss-none">Not given</span>') + "</td>"; }
-          return "<tr>" + '<th scope="row" data-l="Writer">' + (v(w.name) ? esc(v(w.name)) : '<span class="ss-none">Writer ' + (i + 1) + "</span>") + "</th>"
-            + cell("Role", M.ROLES[w.role] || "") + cell("PRO or society", v(w.pro)) + cell("IPI", v(w.ipi)) + cell("Publisher", v(w.publisher))
-            + cell("Share", isNaN(sh.h) ? "" : M.pct(sh.h) + "%", "ss-num") + "</tr>";
+          var sh = M.shareH(w.share), who = v(w.name) || "Writer " + (i + 1);
+          function cell(label, html, cls) { return '<td data-l="' + label + '"' + (cls ? ' class="' + cls + '"' : "") + ">" + (html || none("Not given")) + "</td>"; }
+          var role = own(M.ROLES, w.role) ? esc(M.ROLES[w.role]) : "";
+          if (w.producer) role = (role || none("Not given")) + '<span class="ss-sub">Also credited as the producer</span>';
+          var pub = v(w.publisher) ? esc(v(w.publisher)) + (own(M.PUB_ROLES, w.pubRole) ? '<span class="ss-sub">' + esc(M.PUB_ROLES[w.pubRole]) + "</span>" : "") : "";
+          return "<tr>" + '<th scope="row" data-l="Writer">' + (v(w.name) ? esc(v(w.name)) : none("Writer " + (i + 1))) + "</th>"
+            + cell("Role", role) + cell("PRO or society", esc(v(w.pro))) + cell("IPI name number", idCell(M.splitId("ipi", w.ipi, who)), "ss-id")
+            + cell("Publisher", pub || none("None given")) + cell("Share", isNaN(sh.h) ? "" : M.pct(sh.h) + "%", "ss-num") + "</tr>";
         }).join("");
         var signs = s.writers.map(function (w, i) {
           return '<div class="ss-sign"><p class="ss-sign-n">' + (v(w.name) ? esc(v(w.name)) : "Writer " + (i + 1)) + "</p>"
             + '<p class="ss-line"><span>Signature</span></p><p class="ss-line ss-line--date"><span>Date</span></p></div>';
         }).join("");
-        return '<header class="ss-sh"><p class="ss-kicker">Split sheet</p><h3 class="ss-song">' + (v(s.title) ? esc(v(s.title)) : '<span class="ss-none">Song title</span>') + "</h3>"
-          + '<p class="ss-meta">' + meta.join("") + "</p></header>"
-          + '<table class="ss-table"><caption class="k-vh">Writers and their shares</caption><thead><tr><th scope="col">Writer</th><th scope="col">Role</th><th scope="col">PRO or society</th>'
-          + '<th scope="col">IPI</th><th scope="col">Publisher</th><th scope="col" class="ss-num">Share</th></tr></thead><tbody>' + rows + "</tbody>"
+        return '<header class="ss-sh"><p class="ss-kicker">Split sheet</p><h3 class="ss-song">' + (v(s.title) ? esc(v(s.title)) : none("Song title")) + "</h3>"
+          + '<p class="ss-meta">' + meta.join("") + "</p>"
+          + '<p class="ss-meta ss-meta--samples"><span><b>Samples or interpolations</b> ' + smp + "</span></p></header>"
+          + (s.samples === "yes" ? '<p class="ss-sampleline">' + esc(M.SAMPLE_LINE) + "</p>" : "")
+          + '<table class="ss-table"><caption class="k-vh">Writers, their roles and their shares</caption><thead><tr><th scope="col">Writer</th><th scope="col">Role</th><th scope="col">PRO or society</th>'
+          + '<th scope="col">IPI name number</th><th scope="col">Publisher</th><th scope="col" class="ss-num">Share</th></tr></thead><tbody>' + rows + "</tbody>"
           + '<tfoot><tr><th scope="row" colspan="5">Total</th><td class="ss-num" data-l="Total">' + M.pct(t.totalH) + "%</td></tr></tfoot></table>"
           + (t.status === "ok" ? "" : '<p class="ss-warn">' + esc(M.totalLine(t)) + " Fix the shares before anyone signs.</p>")
-          + '<p class="ss-confirm">By signing, each writer confirms that the details and shares above are what the writers agreed.</p>'
-          + '<div class="ss-signs">' + signs + "</div>"
-          + '<p class="ss-foot">A split sheet records what the writers agreed. It is not a publishing contract. Made with the split-sheet generator at kitesink.com/music/tools.</p>';
+          + '<p class="ss-confirm">' + esc(M.CONFIRM) + "</p>"
+          + '<div class="ss-signs' + (s.writers.length > 4 ? " ss-signs--many" : "") + '">' + signs + "</div>"
+          + '<p class="ss-foot">' + esc(M.NOT_CONTRACT) + " Made with the split-sheet generator at kitesink.com/music/tools.</p>";
+      }
+      // The parts of the form that follow what is typed: each row's role and publisher help, the sample note, bad identifiers.
+      function liveForm(s) {
+        all(".ss-row", list).forEach(function (li, i) {
+          var w = s.writers[i] || {}, rh = li.querySelector(".ss-f--role .ss-fhelp"), ph = li.querySelector(".ss-f--pubRole .ss-fhelp");
+          if (rh) rh.textContent = (own(M.ROLE_HELP, w.role) ? M.ROLE_HELP[w.role] : "Pick the role for what this writer wrote.");
+          if (ph) { ph.textContent = (own(M.PUB_ROLE_HELP, w.pubRole) ? M.PUB_ROLE_HELP[w.pubRole] : ""); ph.hidden = !ph.textContent; }
+          var ipi = li.querySelector('[name="ipi"]'), c = M.splitId("ipi", w.ipi, "");
+          if (ipi) { if (c && !c.ok) ipi.setAttribute("aria-invalid", "true"); else ipi.removeAttribute("aria-invalid"); }
+        });
+        ["iswc", "isrc"].forEach(function (k) {
+          var c = M.splitId(k, s[k]);
+          if (song[k]) { if (c && !c.ok) song[k].setAttribute("aria-invalid", "true"); else song[k].removeAttribute("aria-invalid"); }
+        });
+        if (sampleNote) sampleNote.hidden = s.samples !== "yes";
       }
       function update() {
         var s = read(), t = M.splitTotal(s.writers.map(function (w) { return w.share; }));
@@ -606,12 +723,15 @@
         var issues = M.splitIssues(s);
         issuesEl.innerHTML = issues.length ? "<li>" + issues.map(esc).join("</li><li>") + "</li>" : "";
         issuesEl.hidden = !issues.length;
+        liveForm(s);
         sheetEl.innerHTML = sheetHtml(s);
         return s;
       }
       function load(s) {
-        song.title.value = s.title || ""; song.date.value = s.date || ""; song.alt.value = s.alt || ""; song.artist.value = s.artist || "";
-        drawRows(s.writers && s.writers.length ? s.writers : [blank(), blank()]);
+        s = M.splitMigrate(s) || M.splitMigrate({ date: today() });
+        SONG.forEach(function (k) { if (song[k]) song[k].value = s[k] || ""; });
+        samples.forEach(function (r) { r.checked = r.value === s.samples; });
+        drawRows(s.writers.length ? s.writers : [blank(), blank()]);
         update();
       }
       function say(text) { if (statusEl) { statusEl.textContent = text; clearTimeout(say.t); say.t = setTimeout(function () { statusEl.textContent = ""; }, 4000); } }
@@ -659,6 +779,7 @@
         }
       });
 
+      // A draft saved by an earlier version of this page is read through splitMigrate (old roles mapped).
       var saved = store.get().ss;
       load(saved && typeof saved === "object" && Array.isArray(saved.writers) ? saved : { date: today(), writers: [] });
       form.hidden = false;

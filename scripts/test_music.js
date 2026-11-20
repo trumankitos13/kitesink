@@ -143,19 +143,88 @@ eq('even split 3', JSON.stringify(M.evenSplit(3)), '[3334,3333,3333]'); eq('even
 eq('even split 1', JSON.stringify(M.evenSplit(1)), '[10000]'); eq('pct format', M.pct(3333) + ' ' + M.pct(5000) + ' ' + M.pct(1250), '33.33 50 12.5');
 eq('total line under', M.totalLine(tot(['50', '49.99'])), 'The shares add up to 99.99 percent: 0.01 short of 100.');
 eq('total line over', M.totalLine(tot(['50', '50.01'])), 'The shares add up to 100.01 percent: 0.01 over 100.');
-const sheet = { title: 'Example Song', date: '2026-11-20', alt: '', artist: 'The Examples',
-  writers: [{ name: 'A Writer', role: 'lyrics', pro: 'ASCAP', ipi: '00045620792', publisher: '', share: '50' },
-            { name: 'B Writer', role: 'music', pro: 'PRS', ipi: '12345', publisher: 'B Music', share: '49.99' }] };
+// Roles: the standard writer designations, keyed by their CWR codes, each with one line of help.
+eq('roles', Object.keys(M.ROLES).join(), 'C,A,CA,AR,AD,TR');
+eq('role labels', Object.values(M.ROLES).join('|'), 'Composer|Author (lyricist)|Composer and author|Arranger|Adaptor|Translator');
+eq('every role has help', Object.keys(M.ROLES).every(k => typeof M.ROLE_HELP[k] === 'string' && M.ROLE_HELP[k].length > 20), true);
+eq('no producer role', Object.values(M.ROLES).some(l => /producer/i.test(l)), false);
+eq('publisher roles', Object.keys(M.PUB_ROLES).join() + ' ' + Object.values(M.PUB_ROLES).join('|'), 'E,AM Original publisher|Administrator');
+eq('role label with producer tick', M.roleLabel({ role: 'CA', producer: true }), 'Composer and author; also credited as the producer');
+eq('role label not a role', M.roleLabel({ role: 'constructor' }), '');
+// No em dashes in any copy the tool writes.
+eq('no em dashes in role copy', /—/.test(JSON.stringify([M.ROLES, M.ROLE_HELP, M.PUB_ROLES, M.PUB_ROLE_HELP, M.SAMPLE_LINE, M.NOT_CONTRACT, M.CONFIRM])), false);
+// The page's "What the roles mean" list and the script say the same thing (both are written by hand).
+const toolsPage = path.join(__dirname, '..', 'public', 'music', 'tools.html');
+if (fs.existsSync(toolsPage)) {
+  const html = fs.readFileSync(toolsPage, 'utf8'), e = (t) => t.replace(/&/g, '&amp;').replace(/'/g, '&#x27;').replace(/"/g, '&quot;');
+  eq('page lists every role and its help', Object.keys(M.ROLES).every(k => html.includes('<dt>' + e(M.ROLES[k]) + '</dt><dd>' + e(M.ROLE_HELP[k]) + '</dd>')), true);
+  eq('page lists every publisher role and its help', Object.keys(M.PUB_ROLES).every(k => html.includes('<dt>' + e(M.PUB_ROLES[k]) + '</dt><dd>' + e(M.PUB_ROLE_HELP[k]) + '</dd>')), true);
+  eq('page has the sample clearance line', html.includes(e(M.SAMPLE_LINE)), true);
+}
+
+// Migration: a draft saved with the old roles.
+const old = { title: 'Old Song', date: '2026-10-01', alt: 'Demo', artist: '',
+  writers: [{ name: 'L', role: 'lyrics', pro: 'BMI', ipi: '', publisher: '', share: '25' }, { name: 'M', role: 'music', share: '25' },
+            { name: 'B', role: 'both', share: '25' }, { name: 'P', role: 'producer', share: '25' }, { name: 'X', role: 'drums', share: '' }, null] };
+const mig = M.splitMigrate(old);
+eq('migrate roles', mig.writers.map(w => w.role).join(), 'A,C,CA,C,');
+eq('migrate producer tick', mig.writers.map(w => w.producer).join(), 'false,false,false,true,false');
+eq('migrate keeps fields', mig.title + '|' + mig.alt + '|' + mig.writers[0].pro + '|' + mig.writers[0].share, 'Old Song|Demo|BMI|25');
+eq('migrate adds new fields empty', mig.iswc + mig.isrc + mig.samples + mig.writers[0].pubRole, '');
+eq('migrate drops non-objects', mig.writers.length, 5); eq('migrate version', mig.v, 2);
+eq('migrate is stable on a new draft', JSON.stringify(M.splitMigrate(mig)), JSON.stringify(mig));
+eq('migrate keeps a new role and publisher role', M.splitMigrate({ writers: [{ role: 'TR', pubRole: 'AM' }] }).writers[0].role + M.splitMigrate({ writers: [{ role: 'TR', pubRole: 'AM' }] }).writers[0].pubRole, 'TRAM');
+eq('migrate drops an unknown publisher role', M.splitMigrate({ writers: [{ pubRole: 'SE' }] }).writers[0].pubRole, '');
+eq('migrate nothing', M.splitMigrate(null), null);
+eq('migrated old draft totals 100', M.splitTotal(mig.writers.map(w => w.share)).status, 'ok');
+
+// Identifiers on the sheet, through the identifier checker.
+eq('sheet ipi ok', JSON.stringify(M.splitId('ipi', '00045620792', 'A')), JSON.stringify({ ok: true, shown: '00045620792' }));
+eq('sheet ipi 9 digits padded', M.splitId('ipi', '123456789', 'A').shown, '00123456789');
+eq('sheet ipi short', M.splitId('ipi', '12345', 'A').ok, false); eq('sheet ipi short says why', /A's IPI name number is not in the right form/.test(M.splitId('ipi', '12345', 'A').why), true);
+eq('sheet ipi base number asks for the name number', /base number/.test(M.splitId('ipi', 'I-001068130-6', 'A').why), true);
+eq('sheet ipi an ISWC is not an IPI', M.splitId('ipi', 'T-034.524.680-1', 'A').ok, false);
+eq('sheet ipi empty', M.splitId('ipi', '  ', 'A'), null);
+eq('sheet iswc ok', M.splitId('iswc', 'T0345246801').shown, 'T-034.524.680-1');
+eq('sheet iswc bad check digit', /gives 1/.test(M.splitId('iswc', 'T-034.524.680-2').why), true);
+eq('sheet iswc bad form', /not in the right form/.test(M.splitId('iswc', 'T-034.524.68-1').why), true);
+eq('sheet isrc ok', M.splitId('isrc', 'gbaye0601498').shown, 'GB-AYE-06-01498');
+eq('sheet isrc bad form', /12 characters/.test(M.splitId('isrc', 'GBAYE060149').why), true);
+eq('sheet isrc example prefix flagged', M.splitId('isrc', 'US-S1Z-99-00001').ok, false);
+eq('sheet isrc an ISWC is not an ISRC', M.splitId('isrc', 'T0345246801').ok, false);
+
+const sheet = { title: 'Example Song', date: '2026-11-20', alt: 'Example (Demo)', artist: 'The Examples', iswc: 'T-034.524.680-2', isrc: 'GBAYE0601498',
+  samples: 'yes', samplesNote: '',
+  writers: [{ name: 'A Writer', role: 'A', pro: 'ASCAP', ipi: '00045620792', publisher: '', pubRole: '', share: '50' },
+            { name: 'B Writer', role: 'C', producer: true, pro: 'PRS', ipi: '12345', publisher: 'B Music', pubRole: 'E', share: '49.99' },
+            { name: 'C Writer', role: '', pro: '', ipi: '', publisher: '', pubRole: 'AM', share: '0' }] };
 const issues = M.splitIssues(sheet);
 eq('issues flag a bad IPI', issues.some(i => /B Writer's IPI/.test(i)), true); eq('issues flag the total', issues.some(i => /0.01 short/.test(i)), true);
 eq('issues accept a good IPI', issues.some(i => /A Writer's IPI/.test(i)), false);
+eq('issues flag the ISWC check digit', issues.some(i => /ISWC's check digit/.test(i)), true);
+eq('issues accept a good ISRC', issues.some(i => /ISRC/.test(i)), false);
+eq('issues flag a missing role', issues.some(i => /C Writer has no role/.test(i)), true);
+eq('issues flag a publisher role with no publisher', issues.some(i => /C Writer has a publisher role but no publisher name/.test(i)), true);
+eq('issues ask to name the samples', issues.some(i => /Name each sample/.test(i)), true);
+eq('issues ask about samples when unanswered', M.splitIssues({ title: 'X', writers: [{ name: 'X', role: 'CA', share: '100' }] }).join('|'), 'Say whether the song uses samples or interpolations.');
+eq('issues none when complete', M.splitIssues({ title: 'X', samples: 'no', writers: [{ name: 'X', role: 'CA', share: '100' }] }).length, 0);
 eq('issues: no title', M.splitIssues({ title: '', writers: [{ name: 'X', share: '100' }] }).some(i => /title/.test(i)), true);
 const txt = M.splitText(sheet);
 eq('text has song', /Song: Example Song/.test(txt), true); eq('text has date', /Date agreed: 20 November 2026/.test(txt), true);
-eq('text has a writer line', /1\. A Writer: 50%, Lyrics\. PRO: ASCAP\. IPI: 00045620792\. Publisher: none given\./.test(txt), true);
+eq('text has alternate titles', /Also known as: Example \(Demo\)/.test(txt), true);
+eq('text has ISWC, marked', /ISWC: T-034\.524\.680-2 \(check this\)/.test(txt), true);
+eq('text has ISRC, printed form', /ISRC of the recording: GB-AYE-06-01498\n/.test(txt), true);
+eq('text has samples and the clearance line', /Samples or interpolations: Yes, not yet listed\nSamples and interpolations need clearance/.test(txt), true);
+eq('text has a writer line', txt.includes('1. A Writer: 50%.\n   Role: Author (lyricist).\n   PRO or society: ASCAP. IPI name number: 00045620792.\n   Publisher: none given.'), true);
+eq('text spells out the producer note and publisher role', txt.includes('2. B Writer: 49.99%.\n   Role: Composer; also credited as the producer.\n   PRO or society: PRS. IPI name number: 12345 (check this).\n   Publisher: B Music (original publisher).'), true);
+eq('text role not given', /Role: not given\./.test(txt), true);
 eq('text flags the total', /Total: 99\.99% \(does not add up to 100%\)/.test(txt), true);
 eq('text says not a contract', /not a publishing contract/.test(txt), true);
-eq('text signature lines', (txt.match(/Signature: _+/g) || []).length, 2);
+eq('text signature lines', (txt.match(/Signature: _+   Date: _+/g) || []).length, 3);
+eq('text no em dashes', /—/.test(txt), false);
+const txt2 = M.splitText({ title: 'Y', samples: 'no', writers: [{ name: 'Z', role: 'TR', share: '100' }] });
+eq('text no samples', /Samples or interpolations: None\n/.test(txt2) && !/need clearance/.test(txt2), true);
+eq('text total ok', /Total: 100%\n/.test(txt2), true); eq('text leaves out empty codes', /ISWC|ISRC/.test(txt2), false);
 eq('date label', M.dateLabel('2026-02-03'), '3 February 2026'); eq('date label passthrough', M.dateLabel('soon'), 'soon');
 
 console.log(fail ? `\n${fail} FAILED` : '\nALL PASS');
