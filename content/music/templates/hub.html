@@ -247,27 +247,47 @@
   .ways-say { min-height: 3.2em; font-size: 15.5px; line-height: 1.55; color: var(--k-copy); max-width: 62ch; }
   .ways-say a { white-space: nowrap; }
 
-  /* Phones: the four projects become a swipeable row, one project in view at a time, with dots.
-     Desktop keeps the full sections stacked. Without scripts it still swipes; the dots need scripts. */
-  .feats-nav { display: none; }
-  @media (max-width: 759px) {
-    .feats { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
-      scroll-padding-inline: var(--k-gutter); padding-block: 6px 30px; align-items: flex-start; scrollbar-width: none; }
-    .feats::-webkit-scrollbar { display: none; }
-    .feats:focus-visible { outline: 2px solid var(--k-green); outline-offset: -2px; }
-    .feats > .feat { flex: 0 0 88%; scroll-snap-align: start; padding-block: 0 !important; display: flex; }
-    .feats > .feat > * { flex: 1 1 auto; }
-    .feats .feat .k-pc { outline-offset: -3px; }
-    .feats:not([data-mode="all"]) .feat .k-pc::after { top: 10px; }
-    .feats-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 22px 4px; }
-    .feats-hint { margin: 0; font: 600 11px/1.3 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
-    .feats-dots { display: flex; gap: 6px; }
-    .feats-dot { width: 28px; height: 28px; border: 0; padding: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
-    .feats-dot::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--k-rule-strong); transition: background .2s, width .2s; }
-    .feats-dot[aria-current="true"]::before { width: 22px; border-radius: 6px; background: var(--k-green); }
-    .feats-dot:focus-visible { outline: 2px solid var(--k-green); outline-offset: 2px; border-radius: 8px; }
-  }
-  @media (max-width: 759px) and (prefers-reduced-motion: no-preference) { .feats { scroll-behavior: smooth; } }
+  /* The projects row: one project at a time, the next one peeking in, at every width.
+     Swipe or scroll it; the dots and (on wider screens) the arrows move it. Without scripts it still scrolls. */
+  .feats { display: flex; gap: clamp(12px, 2vw, 22px); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--k-gutter); padding-block: 6px 30px; align-items: flex-start; scrollbar-width: none; }
+  .feats::-webkit-scrollbar { display: none; }
+  .feats:focus-visible { outline: 2px solid var(--k-green); outline-offset: -2px; }
+  .feats > .feat { flex: 0 0 88%; scroll-snap-align: start; padding-block: 0 !important; display: flex; }
+  @media (min-width: 760px) { .feats > .feat { flex-basis: 90%; } }
+  .feats > .feat > * { flex: 1 1 auto; }
+  .feats .feat .k-pc { outline-offset: -3px; }
+  .feats:not([data-mode="all"]) .feat .k-pc::after { top: 10px; }
+  .feats-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: clamp(22px, 3vw, 34px) 4px; }
+  .feats-hint { margin: 0; font: 600 11px/1.3 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
+  .feats-ctrl { display: flex; align-items: center; gap: 10px; }
+  .feats-dots { display: flex; gap: 6px; }
+  .feats-dot { width: 28px; height: 28px; border: 0; padding: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+  .feats-dot::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--k-rule-strong); transition: background .2s, width .2s; }
+  .feats-dot[aria-current="true"]::before { width: 22px; border-radius: 6px; background: var(--k-green); }
+  .feats-dot:focus-visible, .feats-arrow:focus-visible { outline: 2px solid var(--k-green); outline-offset: 2px; border-radius: 8px; }
+  .feats-arrow { display: none; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: var(--k-raised);
+    color: var(--k-ink); cursor: pointer; place-items: center; font: 600 18px/1 var(--k-sans); transition: border-color .2s, color .2s; }
+  .feats-arrow:hover:not(:disabled) { border-color: var(--k-green); color: var(--k-green); }
+  .feats-arrow:disabled { opacity: .35; cursor: default; }
+  @media (min-width: 760px) { .feats-arrow:not([hidden]) { display: grid; } }
+  @media (prefers-reduced-motion: no-preference) { .feats { scroll-behavior: smooth; } }
+
+  /* The fifth path: here to learn. Its card points to the field guide. */
+  .tt[data-mode="learn"] { --tt-label: #3f6b8c; }
+  .feats[data-mode="learn"] .feat[data-for~="learn"] .k-pc { outline: 3px solid var(--k-green); outline-offset: -3px; }
+  .feats[data-mode="learn"] .feat:not([data-for~="learn"]) .k-pc { filter: saturate(.35); }
+  .feats[data-mode="learn"] .feat[data-for~="learn"] .k-pc::after { content: "\2713  For learners"; }
+  .k-pc--learn { --pc-bg: #eef2f1; --pc-ink: #17242b; --pc-copy: #4d5b61; --pc-accent: #2f5f7d; --pc-rule: rgba(23,36,43,.18); --pc-tint: rgba(23,36,43,.06); }
+  html[data-theme="dark"] .k-pc--learn { --pc-bg: #172126; --pc-ink: #e6eef0; --pc-copy: #a7b6bb; --pc-accent: #8cc0dc; --pc-rule: rgba(230,238,240,.16); --pc-tint: rgba(230,238,240,.07); }
+  .learn-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .learn-list li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; color: var(--pc-copy); font-size: clamp(15px, 1.7vw, 16.5px); line-height: 1.5; }
+  .learn-list b { color: var(--pc-ink); font-weight: 600; }
+  .learn-list .n { font: 600 12px/1.6 var(--k-mono); color: var(--pc-accent); }
+  /* five ways in: three across on mid screens, five on wide ones; on a phone the last one spans the row */
+  @media (min-width: 760px) and (max-width: 1059px) { .ways { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (min-width: 1060px) { .ways { grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: 1120px; } }
+  @media (max-width: 759px) { .ways .way:last-child { grid-column: 1 / -1; } }
 </style>
 </head>
 <body class="ks-paper k2 mr mr-hub">
@@ -327,6 +347,10 @@
           <span class="way-ic" aria-hidden="true"><svg class="ic-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 3.5v17M12 3.5v17M18 3.5v17"/><rect class="fd fd1" x="3.6" y="13" width="4.8" height="3.4" rx="1.2" fill="currentColor" stroke="none"/><rect class="fd fd2" x="9.6" y="7" width="4.8" height="3.4" rx="1.2" fill="currentColor" stroke="none"/><rect class="fd fd3" x="15.6" y="11" width="4.8" height="3.4" rx="1.2" fill="currentColor" stroke="none"/></svg></span>
           <span class="way-t">I run a music team</span><span class="way-s">The systems side</span>
         </button>
+        <button class="way" type="button" value="learn" aria-pressed="false">
+          <span class="way-ic" aria-hidden="true"><svg class="ic-learn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.6 3.5 5v13c3.5-.4 6.5 0 8.5 1.5 2-1.5 5-1.9 8.5-1.5V5C17 4.6 14 5 12 6.5z"/><path d="M12 6.5v13"/></svg></span>
+          <span class="way-t">I&rsquo;m here to learn</span><span class="way-s">Rights and royalties</span>
+        </button>
       </div>
       <p class="ways-say" id="ways-say" aria-live="polite">An app for listening, a network for playing, and a room for sitting with a record.</p>
     </div>
@@ -338,8 +362,12 @@
 
   <!-- Phones only: where you are in the projects row, and dots to jump between them. -->
   <div class="feats-nav k-wrap" id="feats-nav">
-    <p class="feats-hint" id="feats-hint">Swipe for more projects</p>
-    <div class="feats-dots" id="feats-dots" role="group" aria-label="Choose a project" hidden></div>
+    <p class="feats-hint" id="feats-hint">Scroll or swipe for more</p>
+    <div class="feats-ctrl">
+      <button type="button" class="feats-arrow" id="feats-prev" aria-label="Previous project" hidden>&larr;</button>
+      <div class="feats-dots" id="feats-dots" role="group" aria-label="Choose a project" hidden></div>
+      <button type="button" class="feats-arrow" id="feats-next" aria-label="Next project" hidden>&rarr;</button>
+    </div>
   </div>
 
   <div class="feats k-wrap" id="feats" data-mode="all">
@@ -454,6 +482,30 @@
       </article>
     </section>
 
+    <!-- ===================== HERE TO LEARN: the field guide ===================== -->
+    <section class="feat" id="here-to-learn" data-for="learn" aria-labelledby="h-learn">
+      <article class="k-pc k-pc--learn k-reveal">
+        <div class="feat-grid">
+          <div class="feat-copy">
+            <p class="k-pc-tag">KiteSink field guide &middot; rights and royalties</p>
+            <h2 class="k-pc-title" id="h-learn">Here to learn? Start with where the money comes from.</h2>
+            <p>{{n:total}} sourced entries on how a song earns money and how that money is collected and paid, each saying who it is for, where it applies and when it was true. Free to read, no sign-up.</p>
+            <div class="feat-links">
+              <a class="k-btn feat-btn" href="#field-guide">Read the field guide</a>
+              <a class="k-chip" href="/music/tools">Free tools</a>
+              <a class="k-chip" href="/music/claims">Claims, checked</a>
+            </div>
+          </div>
+          <ol class="learn-list" aria-label="Good places to start">
+            <li><span class="n">01</span><span><b>Royalty basics.</b> The two copyrights in a song, and what each one earns.</span></li>
+            <li><span class="n">02</span><span><b>Mechanicals and the MLC.</b> US rates, and how streaming mechanicals are paid.</span></li>
+            <li><span class="n">03</span><span><b>Unclaimed royalties.</b> Money that was earned but never matched, and how to look for yours.</span></li>
+            <li><span class="n">04</span><span><b>Claims, checked.</b> Common beliefs about music money, each with a verdict and its source.</span></li>
+          </ol>
+        </div>
+      </article>
+    </section>
+
   </div>
 
 
@@ -555,7 +607,8 @@
       all: 'An app for listening, a network for playing, and a room for sitting with a record.',
       listen: 'Start with <a class="k-inline" href="#song-of-the-day">Song of the Day</a> for one good song each morning, and come to the <a class="k-inline" href="#listening-club">Listening Club</a> when you want a whole afternoon of it.',
       play: 'The staffing side of <a class="k-inline" href="#stage-first">Stage First</a> is being built for you: find or be the sub. The <a class="k-inline" href="#listening-club">Listening Club</a> is where players and listeners share a room.',
-      team: 'That’s the consulting side: <a class="k-inline" href="#for-teams">better systems behind the music</a>: intake, handoffs, and the data in between.'
+      team: 'That’s the consulting side: <a class="k-inline" href="#for-teams">better systems behind the music</a>: intake, handoffs, and the data in between.',
+      learn: 'Start with <a class="k-inline" href="#field-guide">the field guide</a>: how a song earns money and how that money is collected and paid, in plain words, with <a class="k-inline" href="/music/tools">free tools</a> to check your own.'
     };
     // the turntable follows the choice: arm up, new label, needle down
     var tt = $("tt"), now = $("tt-now"), sub = $("tt-sub"), side = $("tt-side"), cue = null;
@@ -563,7 +616,8 @@
       all:    ["Side A", "All three projects", "An app, a network, a room"],
       listen: ["Side B", "For listeners", "Song of the Day, then the Listening Club"],
       play:   ["Side C", "For players", "Stage First, then the Listening Club"],
-      team:   ["Side D", "For music teams", "The consulting side"]
+      team:   ["Side D", "For music teams", "The consulting side"],
+      learn:  ["Side E", "For the curious", "The field guide to music money"]
     };
     seg.addEventListener("click", function (e) {
       var b = e.target.closest("button"); if (!b) return;
@@ -581,47 +635,49 @@
     });
   })();
 
-  // ---- Phones: the projects row swipes; dots and the picker move it ----
+  // ---- The projects row: one project at a time; dots, arrows and the picker move it ----
   (function () {
-    var row = $("feats"), dotsBox = $("feats-dots"), hint = $("feats-hint"), ways = $("ways");
-    if (!row || !dotsBox || !window.matchMedia) return;
-    var mq = matchMedia("(max-width: 759px)"), slides = [].slice.call(row.querySelectorAll(":scope > .feat")), dots = [];
-    function name(f) { var h = f.querySelector(".k-pc-title"); return h ? h.textContent.trim() : f.id; }
-    var LABEL = { "song-of-the-day": "Song of the Day", "stage-first": "Stage First", "listening-club": "Listening Club", "for-teams": "For music teams" };
+    var row = $("feats"), dotsBox = $("feats-dots"), hint = $("feats-hint"), ways = $("ways"), prev = $("feats-prev"), next = $("feats-next");
+    if (!row || !dotsBox) return;
+    var slides = [].slice.call(row.querySelectorAll(":scope > .feat")), dots = [], now = 0;
+    var wide = window.matchMedia ? matchMedia("(min-width: 760px)") : { matches: true };
+    var LABEL = { "song-of-the-day": "Song of the Day", "stage-first": "Stage First", "listening-club": "Listening Club", "for-teams": "For music teams", "here-to-learn": "The field guide" };
     slides.forEach(function (f, i) {
       var b = document.createElement("button");
       b.type = "button"; b.className = "feats-dot";
-      b.setAttribute("aria-label", (LABEL[f.id] || name(f)) + " (" + (i + 1) + " of " + slides.length + ")");
+      b.setAttribute("aria-label", (LABEL[f.id] || f.id) + " (" + (i + 1) + " of " + slides.length + ")");
       b.addEventListener("click", function () { go(i); });
       dotsBox.appendChild(b); dots.push(b);
     });
     function go(i) {
-      var f = slides[i]; if (!f) return;
+      i = Math.max(0, Math.min(slides.length - 1, i));
       var pad = parseFloat(getComputedStyle(row).scrollPaddingLeft) || 0;
-      row.scrollTo({ left: f.offsetLeft - row.offsetLeft - pad });
+      row.scrollTo({ left: slides[i].offsetLeft - row.offsetLeft - pad });
     }
     function mark(i) {
+      now = i;
       dots.forEach(function (d, j) { d.setAttribute("aria-current", j === i ? "true" : "false"); });
-      if (hint) hint.textContent = (i + 1) + " of " + slides.length + (i < slides.length - 1 ? " \u00b7 swipe for more" : "");
+      if (prev) prev.disabled = i === 0;
+      if (next) next.disabled = i === slides.length - 1;
+      if (hint) hint.textContent = (i + 1) + " of " + slides.length + (i < slides.length - 1 ? (wide.matches ? " \u00b7 more to the right" : " \u00b7 swipe for more") : "");
     }
     function current() {
-      var best = 0, bestD = Infinity, left = row.getBoundingClientRect().left;
+      var best = 0, bestD = Infinity, left = row.getBoundingClientRect().left + (parseFloat(getComputedStyle(row).scrollPaddingLeft) || 0);
       slides.forEach(function (f, i) { var d = Math.abs(f.getBoundingClientRect().left - left); if (d < bestD) { bestD = d; best = i; } });
       return best;
     }
     var t = null;
     row.addEventListener("scroll", function () { clearTimeout(t); t = setTimeout(function () { mark(current()); }, 60); }, { passive: true });
-    function setup() {
-      var on = mq.matches;
-      dotsBox.hidden = !on;
-      if (on) { row.setAttribute("tabindex", "0"); row.setAttribute("role", "region"); row.setAttribute("aria-roledescription", "carousel"); row.setAttribute("aria-label", "Projects: swipe, or use the arrow keys"); mark(current()); }
-      else { row.removeAttribute("tabindex"); row.removeAttribute("role"); row.removeAttribute("aria-roledescription"); row.removeAttribute("aria-label"); }
-    }
-    if (mq.addEventListener) mq.addEventListener("change", setup); else if (mq.addListener) mq.addListener(setup);
-    setup();
-    // the picker: on a phone, bring the first matching project into view
+    if (prev) { prev.hidden = false; prev.addEventListener("click", function () { go(now - 1); }); }
+    if (next) { next.hidden = false; next.addEventListener("click", function () { go(now + 1); }); }
+    dotsBox.hidden = false;
+    row.setAttribute("tabindex", "0"); row.setAttribute("role", "region"); row.setAttribute("aria-roledescription", "carousel");
+    row.setAttribute("aria-label", "Projects: scroll, swipe, or use the arrow keys");
+    if (wide.addEventListener) wide.addEventListener("change", function () { mark(current()); });
+    mark(current());
+    // the picker brings the first matching project into view
     if (ways) ways.addEventListener("click", function (e) {
-      var b = e.target.closest("button"); if (!b || !mq.matches) return;
+      var b = e.target.closest("button"); if (!b) return;
       var i = b.value === "all" ? 0 : slides.findIndex(function (f) { return (" " + (f.getAttribute("data-for") || "") + " ").indexOf(" " + b.value + " ") > -1; });
       if (i > -1) go(i);
     });
