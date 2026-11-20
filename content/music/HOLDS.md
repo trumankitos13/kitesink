@@ -120,6 +120,28 @@ changes, copy answers here, tick what is closed, then continue.
       session musicians paid by SoundExchange; does PPL pay any performer; Content ID for a full
       album; a US performance right for pre-1972 recordings
 
+## From batch 5 (metadata and registration, 2026-11-20)
+
+- [ ] ISO catalogue pages for 15707:2022 and 27729 are behind a bot check: the 2022 edition
+      rests on iswc.org. CISAC's own identifiers page still says 15707:2001 (stale): mention it
+      to CISAC with the W1 permission request?
+- [ ] isni.org FAQ: curl 403, read by WebFetch; confirm by hand
+- [ ] PRS registration pages (JavaScript-only): no UK registration entry yet; hand check ISWC
+      and tunecode timing and share-split help
+- [ ] MLC CWR guide (May 2024) lists CWR 3.1 as pending: recheck when the MLC updates it
+- [ ] Candidate claims (not added): can I assign my own ISWC; does a remix need a new ISRC;
+      does a new distributor mean a new ISRC; is the ISRC year the recording year; does one
+      US registration cover the song and the recording; is ISWC ISO 15707:2001
+
+## From batch 6 (producer royalties, 2026-11-20)
+
+- [ ] SoundExchange's procedure for the pre-1995 2 percent route (114(g)(6)): no page found;
+      the entries claim no procedure
+- [ ] `sx-lod` thresholds, backup withholding and processing time: recheck at the next refresh
+- [ ] Candidate claims (not added): does SoundExchange pay my producer automatically; does a
+      producer credit make me a songwriter; is work made for hire whatever my contract says;
+      do producers get 2 percent of older recordings without asking
+
 ## From batch 7 (AI and music rights, 2026-11-20)
 
 - [ ] congress.gov blocks automated reading: check S. 4591 (NO FAKES) for any action after

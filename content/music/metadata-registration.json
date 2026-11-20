@@ -103,7 +103,7 @@
         [
           "ISNI",
           "The public identity of a person, group or company",
-          "An ISNI registration agency (fees may apply)",
+          "An ISNI registration agency; isni.org says ISNI is not free",
           "The ISNI database at isni.org"
         ],
         [
@@ -141,30 +141,6 @@
         "Copy each code from the register that issued it.",
         "Test a code at /music/tools#identifiers before you submit it."
       ]
-    },
-    {
-      "id": "meta-term-registration-agency",
-      "type": "term",
-      "title": "Registration agency",
-      "topic": "identifiers",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "artist",
-        "producer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "iswc-get",
-        "isni-faq",
-        "ifpi-faq"
-      ],
-      "take": "A body appointed to issue a standard's codes. ISWCs come from agencies that are usually societies, ISNIs through ISNI agencies, and ISRC prefixes from national ISRC agencies."
     },
     {
       "id": "meta-note-isrc-structure",
@@ -270,7 +246,7 @@
       "value": "$95",
       "unit": "one-time fee for a US rights owner prefix",
       "sort": 95,
-      "take": "The US ISRC Agency states a one-time administrative fee to allocate a prefix to a rights owner. Other agencies set their own terms."
+      "take": "The US ISRC Agency charges this once to allocate a prefix to a rights owner and says no further costs follow. Elsewhere, ask your territory's agency."
     },
     {
       "id": "meta-table-isrc-new-or-same",
@@ -296,11 +272,11 @@
         "ifpi-ownership"
       ],
       "as_of": "2026-11-20",
-      "take": "A new ISRC follows a change to the recording itself. The old code stays when only the packaging, format or owner changes.",
+      "take": "A creative change to the recording needs a new ISRC; a new format, release or owner does not. Rows follow IFPI's 2021 Handbook, which qualifies the FAQ's 10-second rule.",
       "columns": [
         "What happened",
-        "New ISRC?",
-        "Why, as IFPI puts it"
+        "New ISRC",
+        "Why, per the ISRC Handbook (2021)"
       ],
       "rows": [
         [
@@ -334,9 +310,14 @@
           "A video differs from the audio recording"
         ],
         [
-          "Length changed by 10 seconds or more",
+          "Verses or choruses added or cut",
           "Yes",
-          "Under 10 seconds, with no creative change, the code stays"
+          "The edit changes the creative content"
+        ],
+        [
+          "Length changed only by speed or fade-out",
+          "Only if 10 seconds or more",
+          "Adding or cutting only silence, ambience or applause never needs one"
         ],
         [
           "Same recording in another format or bit rate",
@@ -355,64 +336,9 @@
         ],
         [
           "A remaster",
-          "Usually no",
-          "Only significant new creative input can justify a new code"
+          "Only with creative input",
+          "Uniform level, EQ, compression or noise fixes do not count"
         ]
-      ]
-    },
-    {
-      "id": "meta-mistake-isrc-remix-reuse",
-      "type": "mistake",
-      "title": "Mistake: reusing the original ISRC for a remix, edit or new take",
-      "topic": "isrc",
-      "level": "beginner",
-      "readers": [
-        "artist",
-        "producer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "ifpi-when-to-assign",
-        "ifpi-using",
-        "ifpi-handbook"
-      ],
-      "take": "A remix, an edit or a new take is a different recording and needs its own ISRC. The original's code stays with the original.",
-      "body": "IFPI's rule is that a recording that is new, or changed in its musical content, takes a new ISRC. It names different mixes and edits, versions that differ in playing time, a new surround mix from stems, and creative restoration of historical recordings. The code exists so one recording can be told from another, and two recordings sharing one code defeat that.",
-      "do": [
-        "Assign a new ISRC to every remix and edit before delivery.",
-        "Put the mix name in the version title field."
-      ]
-    },
-    {
-      "id": "meta-mistake-isrc-second-code",
-      "type": "mistake",
-      "title": "Mistake: getting a second ISRC for a recording that already has one",
-      "topic": "isrc",
-      "level": "intermediate",
-      "readers": [
-        "artist",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "ifpi-when-not",
-        "ifpi-ownership",
-        "ifpi-faq"
-      ],
-      "take": "Changing distributor, label or release does not make a new recording. The existing ISRC should travel with it.",
-      "body": "IFPI says an ISRC should not be assigned when one already exists, that it stays when ownership changes or a recording is licensed, and that it is the same across releases and formats. A recording that first came out with no code can be given one before any re-release, and its year element is the year of assignment.",
-      "do": [
-        "Ask the old distributor or label for your ISRCs before you move.",
-        "Search the ISRC database for the track first."
       ]
     },
     {
@@ -438,11 +364,11 @@
         "sx-register"
       ],
       "as_of": "2026-11-20",
-      "take": "IFPI runs a free ISRC database and SoundExchange offers a free ISRC Search. Neither is guaranteed to list every code.",
-      "body": "IFPI says its database draws on repertoire data submitted to SoundExchange, is updated daily, and has looser matching than its assignment service. A track can be missing because a rights owner never submitted data or a distributor did not enter it. IFPI says data from its own online assignment shows up after around 10 days.",
+      "take": "IFPI's International ISRC Database and SoundExchange's ISRC Search are both free to search. Neither is guaranteed to list every code.",
+      "body": "IFPI says its database is powered by repertoire data that rights owners submit to SoundExchange, is updated daily, and matches more loosely than its paid assignment service. A track can be missing because its owner never submitted data or a distributor did not enter it. Codes from IFPI's own online assignment appear after around 10 days.",
       "do": [
         "Search by artist and title, not only by code.",
-        "Look in your own distributor account too."
+        "Ask a former distributor or label for your ISRCs before you move."
       ]
     },
     {
@@ -519,10 +445,11 @@
       "sources": [
         "iswc-get",
         "iswc-about",
-        "iswc-usage"
+        "iswc-usage",
+        "iswc-publishers"
       ],
       "take": "ISWCs come from the society or agency a work is registered with. For new works, registering the work is the step that gets the number.",
-      "body": "CISAC says creators and publishers may not allocate their own ISWCs, and that a number is assigned as part of registration once all creators are uniquely identified. Since a 2020 modernisation ISWCs are assigned centrally, and CISAC says codes can be ready within hours. CISAC adds that a society's own numbering system is not replaced, so you will see both.",
+      "body": "CISAC says creators and publishers may not allocate their own ISWCs, and that a number is assigned as part of registration once all creators are uniquely identified. A publisher can ask its society for access to CISAC's ISWC Allocation Service to get codes before registering. Since a 2020 modernisation ISWCs are assigned centrally, and CISAC says codes can be ready within hours. A society's own numbering system is not replaced, so you will see both.",
       "do": [
         "Register the work with your society, then read the ISWC from its catalogue."
       ]
@@ -546,7 +473,7 @@
       "sources": [
         "iswc-publishers",
         "iswc-get",
-        "gema-register"
+        "gema-iswc"
       ],
       "take": "An ISWC needs every creator identified. A co-writer outside any society can leave the work without a code at first.",
       "body": "CISAC says registration needs complete metadata, including the IPI name number and role of every creator, and that a code is allocated only when all creators have been uniquely identified. GEMA gives the same reason when a work lacks an ISWC: a contributor who is not in a society, so not in the IPI database, means no ISWC initially.",
@@ -631,27 +558,6 @@
       ]
     },
     {
-      "id": "meta-term-ip-name-number",
-      "type": "term",
-      "title": "IPI name number",
-      "topic": "ipi-isni",
-      "level": "intermediate",
-      "readers": [
-        "writer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "mlc-identifiers",
-        "cisac-ipi"
-      ],
-      "take": "The public number for one name a writer or publisher uses, held in the societies' IPI system. A person with several names has several, all tied to one private base number."
-    },
-    {
       "id": "meta-note-isni",
       "type": "note",
       "title": "ISNI names a public identity, and anyone can apply through an agency",
@@ -672,38 +578,13 @@
         "cisac-identifiers"
       ],
       "as_of": "2026-11-20",
-      "take": "An ISNI identifies a public identity, such as an artist name or a band. It is voluntary, and fees may apply.",
-      "body": "isni.org says an ISNI identifies public identities of people, organisations and groups, has 16 digits ending in a check character that can be X, and is issued only through registration agencies, which may charge fees. CISAC says pseudonyms get separate ISNIs, linked in the database, and that ISNI can act as a bridge to codes like the IPI. The checker here tests the check character."
+      "take": "An ISNI identifies a public identity, such as an artist name or a band. CISAC calls it voluntary, and isni.org says it is not free.",
+      "body": "isni.org says an ISNI identifies public identities of people, organisations and groups, has 16 characters ending in a check character that can be X, and is issued only through registration agencies, which charge fees. CISAC says pseudonyms get separate ISNIs, linked in the database, and that ISNI can act as a bridge to codes like the IPI. The checker here tests the check character."
     },
     {
       "id": "meta-note-cwr-what",
       "type": "note",
-      "title": "CWR is the standard format publishers use to register works with societies",
-      "topic": "cwr",
-      "level": "intermediate",
-      "readers": [
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "cisac-formats",
-        "mlc-cwr-guide",
-        "mlc-register-works"
-      ],
-      "take": "Common Works Registration carries a publisher's work data to a society in one agreed layout and lets both sides follow registration status.",
-      "body": "CISAC describes CWR as a standard format holding the data a publisher needs to register a song with a performing or mechanical society, and says a common format means more accurate data and savings in cost and time. A writer entering a few songs uses a society or MLC portal instead. The layouts and code lists belong to CISAC and are not reproduced here.",
-      "do": [
-        "Ask your society or administrator which CWR version it takes."
-      ]
-    },
-    {
-      "id": "meta-note-cwr-who",
-      "type": "note",
-      "title": "CWR suits catalogues: publishers and administrators send many works at once",
+      "title": "CWR is the bulk file format publishers use to register works with societies",
       "topic": "cwr",
       "level": "advanced",
       "readers": [
@@ -717,12 +598,17 @@
       ],
       "confidence": "official",
       "sources": [
+        "cisac-formats",
+        "mlc-what-is-cwr",
         "mlc-cwr-guide",
         "socan-faq"
       ],
       "as_of": "2026-11-20",
-      "take": "The MLC calls CWR typical for hundreds or thousands of works at once. A sub-publisher can use it to register abroad.",
-      "body": "The MLC's May 2024 guide accepts CWR versions 2.1 and 2.2 and lists 3.1 as pending, and asks a submitter to set up a sender identity before delivering files. SOCAN says that where a song is sub-published abroad, the sub-publisher registers it with the local society, by CWR files, online forms or email. Without a sub-publisher, foreign societies can read the home society's data on CIS-Net."
+      "take": "Common Works Registration (CWR), a CISAC file format, carries many work registrations at once. The MLC aims it at hundreds or thousands of works.",
+      "body": "CISAC oversees CWR, and a sender has to be set up with CISAC before using it. Publishers and administrators send registrations in it and get status back from the society. The MLC says it may not suit you without thousands of works; a writer with a few songs uses a portal. Its user guide, dated May 2024 and still the one its help page linked on 20 November 2026, takes versions 2.1 and 2.2 and lists 3.1 as pending. SOCAN says a sub-publisher abroad registers your songs there, by CWR or other means. CISAC's layouts and code lists are not reproduced here.",
+      "do": [
+        "Ask your society or administrator which CWR version it takes."
+      ]
     },
     {
       "id": "meta-mistake-cwr-owners",
@@ -742,8 +628,8 @@
         "mlc-cwr-guide"
       ],
       "as_of": "2026-11-20",
-      "take": "The MLC wants every party on a work listed, shares that reach 100 percent, and no unknown flag on a party you control.",
-      "body": "In its CWR guide the MLC asks for ownership of every party, controlled or not. Total ownership shares must reach 100 percent within 0.06 points, and collection shares may not exceed 100 percent. Unknown writer or publisher markers are accepted for parties you do not control. A controlled party marked unknown is rejected, because those records form your claim, and reusing a file name gets the file rejected.",
+      "take": "The MLC wants every party on a work listed, ownership that totals 100 percent, and no unknown flag on a party you control.",
+      "body": "The MLC's CWR guide (May 2024) asks for ownership records for every party, controlled or not. For each right, ownership shares must total 100 percent, give or take 0.06 points, or zero, and collection shares may not pass 100 percent. Unknown writer or publisher markers are accepted for parties you do not control. A controlled party marked unknown is rejected, because those records form your claim, and a file whose name was used before is rejected too.",
       "do": [
         "Check totals and party flags before you send a file."
       ]
@@ -767,7 +653,7 @@
         "ddex-standards"
       ],
       "as_of": "2026-11-20",
-      "take": "DDEX has ten families of standards and anyone may use them with a free licence. These are the ones a music business meets most.",
+      "take": "DDEX has ten families of standards, and anyone may use them with a free licence. Six of them are below, as DDEX describes them.",
       "columns": [
         "Standard",
         "What it carries",
@@ -835,7 +721,7 @@
       ],
       "as_of": "2026-11-20",
       "take": "ERN goes from a label or distributor to the store with the release and its terms. DSR comes back from the store with sales and usage.",
-      "body": "DDEX says ERN tells a digital service about releases and resources, such as recordings and videos, and the terms on which they can be offered. DSR is the report the service sends back so the rights owner can invoice for rights used. DDEX names ERN 4.3.2 as the latest published and urges 4.3.x. DSR is a flat-file standard with profiles for different business models. The AI page covers the ERN flags for generative AI.",
+      "body": "DDEX says ERN tells a digital service about releases and resources, such as recordings and videos, and the terms on which they can be offered. DSR is the report the service sends back so the rights owner can invoice for rights used. As of 20 November 2026 DDEX names ERN 4.3.2 as the latest published version and urges 4.3.x. DSR is a flat-file standard with profiles for different business models. The AI page covers the ERN flags for generative AI.",
       "do": [
         "Ask your distributor which ERN version it sends."
       ]
@@ -886,7 +772,7 @@
         "circ-56"
       ],
       "as_of": "2026-11-20",
-      "take": "The Copyright Office treats the song and the recording as two works. One application can cover both only when the same party owns both.",
+      "take": "The Copyright Office treats the song and the recording as two works. One application can cover both only if both are on the same phonorecord and one party claims both.",
       "columns": [
         "Situation",
         "How Circular 56A says to apply"
@@ -939,8 +825,8 @@
         "circ-56"
       ],
       "as_of": "2026-11-20",
-      "take": "Protection starts when a work is fixed. Registration adds a public record, a route to court and, if timely, stronger remedies.",
-      "body": "Circular 1 lists the advantages: a public record of the authorship and ownership facts; registration, or refusal, before a suit over a US work; prima facie evidence of validity when registration comes up to five years after publication; and eligibility for statutory damages and attorneys' fees when it precedes infringement or comes within three months of publication. Circular 56 says registration is not required for protection. When to register, or sue, is a question for a copyright lawyer."
+      "take": "Registration adds a public record, a route to court for US works and, if made in time, stronger remedies. Protection itself does not depend on it.",
+      "body": "Circular 1 lists the advantages: a public record of the authorship and ownership facts; registration, or refusal, before a suit over a US work; prima facie evidence of validity when it comes before publication or within the first five years after it; and eligibility for statutory damages and attorneys' fees when it precedes infringement or comes within three months of publication. Circular 56 says registration is not required for protection. When to register, or sue, is a question for a copyright lawyer."
     },
     {
       "id": "meta-step-cr-song",
@@ -970,7 +856,7 @@
     {
       "id": "meta-step-cr-recording",
       "type": "step",
-      "title": "Register a recording: the author is the performer and producer unless made for hire",
+      "title": "Register a recording: choose Sound Recording and send the right deposit",
       "topic": "copyright-registration",
       "level": "intermediate",
       "readers": [
@@ -987,8 +873,8 @@
       ],
       "as_of": "2026-11-20",
       "when": "at-release",
-      "take": "Choose Sound Recording. The authors are the featured performer and the producer, unless the recording was made for hire.",
-      "body": "Circular 56 says that for hire-made recordings the employer is the author. An unpublished or digital-only recording should be uploaded as a digital file, up to 500 MB each. A recording published on CD or LP is deposited in that physical format. One published in the US may need a pair of copies of the best edition. A derivative recording, such as a mashup, must name its pre-existing material.",
+      "take": "Choose Sound Recording and name its authors. Upload the file if it is unpublished or digital-only; send the CD or LP if it came out on one.",
+      "body": "Circular 56 says an unpublished or digital-only recording should be uploaded as a digital file, up to 500 MB each, with no physical copy as well. A recording published on CD or LP is deposited in that physical format. One published in the US may need a pair of best-edition copies, with CD ranked first. A derivative recording, such as a mashup, must name its pre-existing material in the limitation of claim. The basics page covers who counts as an author.",
       "do": [
         "Confirm who the authors are before you file."
       ]
@@ -1059,7 +945,9 @@
       ],
       "confidence": "official",
       "sources": [
-        "gema-register"
+        "gema-register",
+        "gema-deadline",
+        "gema-countries"
       ],
       "as_of": "2026-11-20",
       "take": "GEMA's portal wants shares per role that total 100, and a work registered after the deadline is left out of the distribution.",
@@ -1088,7 +976,7 @@
       ],
       "as_of": "2026-11-20",
       "take": "SOCAN gives its own Work Number, and a temporary code is replaced by the international ISWC a few weeks after registration.",
-      "body": "SOCAN says a new work first gets a temporary code, replaced by the ISWC a few weeks later and visible in the member portal catalogue. The Work Number is SOCAN-specific and appears on statements and in its public repertoire search. SOCAN says it assigns IPIs to its members, and that ISRC requests in Canada go to SOPROQ.",
+      "body": "SOCAN says a new work first gets a temporary code, replaced by the ISWC a few weeks later and visible in the member portal catalogue. The Work Number is SOCAN-specific and appears on statements and in its public repertoire search. In Canada, SOCAN says, an ISRC for a recording can be requested from SOPROQ.",
       "do": [
         "Give the ISWC, not a society's work number, to people outside that society."
       ]
@@ -1118,8 +1006,7 @@
         "mlc-register-works",
         "gema-countries",
         "iswc-get",
-        "circ-56a",
-        "sx-owed"
+        "circ-56a"
       ],
       "as_of": "2026-11-20",
       "take": "Tick what applies. The registers differ, so check each one separately, and use the same names and splits in all of them.",
@@ -1145,43 +1032,11 @@
         {
           "name": "The registers",
           "items": [
-            "The song registered with your society and the MLC, with the same shares in each",
-            "The recording registered with SoundExchange as owner or artist",
+            "The registers on the basics page's checklist done, with the same shares in each",
             "Each co-writer registered with their own society",
             "A decision on Copyright Office registration for the song and the recording"
           ]
         }
-      ]
-    },
-    {
-      "id": "meta-mistake-splits-100",
-      "type": "mistake",
-      "title": "Mistake: shares that do not add up to 100 percent",
-      "topic": "hygiene",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "producer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US",
-        "DE",
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "gema-register",
-        "mlc-cwr-guide",
-        "mlc-register-works"
-      ],
-      "as_of": "2026-11-20",
-      "take": "Registers test a work's shares against 100 percent. A short total leaves a share unclaimed, and a full one leaves no room for a late claimant.",
-      "body": "GEMA wants shares per role to total 100. The MLC's CWR guide sets a 100 percent total within a 0.06-point tolerance. In the MLC portal, a work whose claimed shares already reach 100 percent can only be claimed by filing an overclaim. Agree the split in writing before registering, and use the same split everywhere. The split-sheet generator at /music/tools adds the shares as you type.",
-      "do": [
-        "Total the shares before anyone registers.",
-        "Use one agreed split in every register."
       ]
     },
     {
@@ -1207,7 +1062,7 @@
         "gema-countries"
       ],
       "take": "Registers match people on name and number. Use the spelling your society holds, with the IPI number where a form asks for it.",
-      "body": "The MLC's CWR guide requires a publisher's name to agree with the entry held for its IPI name number. In the MLC portal you can search writers by name or IPI number, and it shows existing writers that match what you enter, so you avoid duplicates. GEMA says to look a co-creator up in a creator search, and to enter the creator manually if identical names leave you unsure. The MLC says accurate data is what lets matching, and so payment, happen correctly and promptly.",
+      "body": "The MLC's CWR guide says a publisher sending files must give its name as the IPI database lists it for its IPI name number. In the MLC portal you can search writers by name or IPI number, and it shows existing writers that match what you enter, so you avoid duplicates. GEMA says to look a co-creator up in a creator search, and to enter the creator manually if identical names leave you unsure. The MLC says accurate matching data is what gets you paid correctly and on time.",
       "do": [
         "Copy names from your society's record, not from memory."
       ]
@@ -1248,7 +1103,8 @@
       "url": "https://www.copyright.gov/circs/circ01.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "Benefits of Registration section: public record; registration before suit; prima facie evidence within five years; statutory damages and fees; CBP record. Revised 09/2021."
+      "support": "Benefits of Registration section: public record; registration before suit; prima facie evidence within five years; statutory damages and fees; CBP record. Revised 09/2021.",
+      "edition": "Revised 09/2021"
     },
     "circ-50": {
       "type": "government",
@@ -1275,7 +1131,8 @@
       "url": "https://www.copyright.gov/circs/circ56a.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "Chart of song versus recording; when one application can cover both; Single Application conditions; examples. Revised 03/2021."
+      "support": "Chart of song versus recording; when one application can cover both; Single Application conditions; examples. Revised 03/2021.",
+      "edition": "Revised 03/2021"
     },
     "cisac-formats": {
       "type": "standard",
@@ -1356,7 +1213,25 @@
       "url": "https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/register-works-creators-various-countries",
       "jurisdiction": "DE",
       "retrieved": "2026-11-20",
-      "support": "Co-creators give IP name numbers; each creator registers with their own society; ISWC passed to co-creators; creator search."
+      "support": "Co-creators give IP name numbers; creator search; each creator registers with their own society; ISWC and GEMA work number given at registration status 1, pass the ISWC to co-creators."
+    },
+    "gema-deadline": {
+      "type": "collective",
+      "publisher": "GEMA",
+      "title": "By when do I have to submit a work notification?",
+      "url": "https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/by-when-do-i-have-to-submit-a-work-notification",
+      "jurisdiction": "DE",
+      "retrieved": "2026-11-20",
+      "support": "Works used in a calendar year: deadline 31 January of the next year; other deadlines by category; late works not counted give no right to claim (section 36 of the distribution plan)."
+    },
+    "gema-iswc": {
+      "type": "collective",
+      "publisher": "GEMA",
+      "title": "What is an ISWC? Why does my work not have an ISWC?",
+      "url": "https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/what-is-an-iswc-why-does-my-work-not-have-an-iswc",
+      "jurisdiction": "DE",
+      "retrieved": "2026-11-20",
+      "support": "ISWCs issued only when all contributors are in the IPI database; a contributor outside any society means no ISWC at first."
     },
     "gema-register": {
       "type": "collective",
@@ -1365,7 +1240,7 @@
       "url": "https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/how-register-works",
       "jurisdiction": "DE",
       "retrieved": "2026-11-20",
-      "support": "Portal steps; AR and VR shares total 100 per role; blank creator shares split evenly; 31 January deadline and section 36; ISWC only at registration status 1 and with all contributors in IPI."
+      "support": "Portal steps; AR and VR shares mandatory only for publishers; if entered, they total 100 per role; blank creator shares split evenly."
     },
     "ifpi-faq": {
       "type": "standard",
@@ -1383,7 +1258,7 @@
       "url": "https://isrc.ifpi.org/images/downloads/ISRC_Handbook.pdf",
       "jurisdiction": "INTL",
       "retrieved": "2026-11-20",
-      "support": "Section 3.3 structure; section 5 written form; Annex A.8 to A.10: when a new ISRC is and is not assigned, including the 10-second length rule and remasters.",
+      "support": "3.3 structure; 5 written form; Annex A.8 to A.10 on when a new ISRC is never, always or conditionally needed; A.10.1 remasters; A.10.2 length rule (speed or fade at 10 seconds or more; silence never; verses always).",
       "edition": "4th Edition, 2021"
     },
     "ifpi-home": {
@@ -1506,18 +1381,19 @@
     "mlc-cwr-guide": {
       "type": "collective",
       "publisher": "The Mechanical Licensing Collective",
-      "title": "THE MLC's CWR User Guide (May 2024)",
+      "title": "The MLC's CWR User Guide",
       "url": "https://www.themlc.com/hubfs/CWR%20User%20Guide_May%202024_FINAL.pdf",
-      "jurisdiction": "INTL",
+      "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "CWR for bulk registration; versions 2.1 and 2.2 accepted, 3.1 pending; publisher name must match its IPI record; ownership totals 100 within 0.06; unknown flags; unique file names."
+      "support": "CWR for large volumes; versions 2.1 and 2.2 accepted, 3.1 pending; publisher Sender ID name must match its IPI name number; ownership per right totals 100 within 0.06 or 0; unknown flags; unique file names. Live PDF unchanged on 2026-11-20.",
+      "edition": "May 2024 (as named in the file); still linked from the MLC Help Center on 2026-11-20"
     },
     "mlc-identifiers": {
       "type": "collective",
       "publisher": "The Mechanical Licensing Collective",
       "title": "Know Your Identifiers",
       "url": "https://www.themlc.com/identifiers",
-      "jurisdiction": "INTL",
+      "jurisdiction": "US",
       "retrieved": "2026-11-20",
       "support": "IPI base number kept private versus public name number; ISWC and ISRC issuers; IPN assigned via performers' rights bodies; ISNI; identifiers not required to register."
     },
@@ -1526,9 +1402,18 @@
       "publisher": "The Mechanical Licensing Collective",
       "title": "How to register works with The MLC",
       "url": "https://help.themlc.com/en/support/how-to-register-works-in-the-mlc-portal",
-      "jurisdiction": "INTL",
+      "jurisdiction": "US",
       "retrieved": "2026-11-20",
       "support": "Portal steps: search first, only work title required, alternative title rules, writers by name or IPI, collection shares 0.01 to 100, overclaim when shares reach 100."
+    },
+    "mlc-what-is-cwr": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "What is CWR? (MLC Help Center)",
+      "url": "https://help.themlc.com/en/support/what-is-cwr",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "CWR overseen by CISAC and needs setup with CISAC; for hundreds or thousands of works; may not suit you without thousands; links the May 2024 user guide."
     },
     "musicbiz-msg": {
       "type": "other",
@@ -1537,7 +1422,7 @@
       "url": "https://musicbiz.org/wp-content/uploads/2016/04/MusicMetadataStyleGuide_V2.1.pdf",
       "jurisdiction": "INTL",
       "retrieved": "2026-11-20",
-      "support": "Section 1.4 featured artists; artist name consistency; copyright notice and label name rules; version history shows 2.1 dated 2015-09-29.",
+      "support": "1.4 featured artists; name consistency; copyright notice and label name. Version history: 2.1 dated 2015-09-29. Music Biz IT workgroup page (2026-11-20) still lists V2.1, released 30 Sept 2015; no later edition found.",
       "date": "2015-09-29",
       "edition": "Version 2.1 (September 2015)"
     },
@@ -1559,15 +1444,6 @@
       "jurisdiction": "CA",
       "retrieved": "2026-11-20",
       "support": "Non-member co-writer collects only after joining; sub-published works registered abroad by the sub-publisher via CWR, online or email; otherwise CIS-Net."
-    },
-    "sx-owed": {
-      "type": "collective",
-      "publisher": "SoundExchange",
-      "title": "Artists, Labels & Producers",
-      "url": "https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/",
-      "jurisdiction": "US",
-      "retrieved": "2026-11-20",
-      "support": "'Are you owed royalties?': artists and recording owners must register to be paid; search tool; four status lists and what each means; registering free; SX Direct to search and claim. No claim deadline."
     },
     "sx-register": {
       "type": "collective",

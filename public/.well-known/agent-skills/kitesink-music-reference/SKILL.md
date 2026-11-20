@@ -21,7 +21,8 @@ Its scope line, on every page: "General information on how music rights and roya
 | The whole site as plain text, in one file | https://kitesink.com/llms-full.txt |
 
 Pages: `royalty-basics`, `pros-performance`, `mechanicals-mlc`, `recorded-neighboring`,
-`unclaimed-recovery`, `ai-rights` (the areas written so far), and
+`metadata-registration`, `unclaimed-recovery`, `ai-rights`, `producer-royalties` (the areas written so
+far), and
 `claims`, `glossary`, `reference`, `sources`, `claimable`, `tools`, `ai-tools`.
 
 - An area page holds guidance, steps in order, common mistakes, key numbers, reference tables,

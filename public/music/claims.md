@@ -15,7 +15,7 @@ What this rests on: Copyright Office Circulars 50 and 56, as retrieved 20 Novemb
 
 - Write down who owns the song and who owns the recording for each release
 
-Topics: Publishing, Myths · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+Topics: Publishing, Myths · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
 
 ### Are featured artists paid 45% of US digital performance royalties?
 
@@ -39,7 +39,7 @@ What this rests on: Copyright Office Circular 56 for recordings; application ste
 
 - Read the Office's circular for your type of work before applying
 
-Topics: Myths, Metadata · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+Topics: Myths, Metadata · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf)
 
 ### Do recording owners get paid when a song plays on US AM/FM radio?
 

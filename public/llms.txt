@@ -39,8 +39,10 @@
 - [Performance royalties and PROs](https://kitesink.com/music/pros-performance.md): what performing rights organisations license and pay, joining and registering, live sets, and the US consent decrees
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): reproduction royalties, US rates and the Mechanical Licensing Collective
 - [Recording and neighbouring rights](https://kitesink.com/music/recorded-neighboring.md): royalties for the recording itself: US digital performance and SoundExchange, webcasting rates, performers abroad, and Content ID
+- [Metadata and registration](https://kitesink.com/music/metadata-registration.md): ISRC, ISWC, IPI and ISNI, CWR and DDEX in plain words, US copyright registration, and registering with societies
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): money that was earned but never matched, and how to claim it
 - [AI and music rights](https://kitesink.com/music/ai-rights.md): training on songs and recordings, who owns AI-assisted work, voice and likeness, licensing deals, and the court cases so far, each dated
+- [Producer royalties](https://kitesink.com/music/producer-royalties.md): how producers, mixers and engineers get paid: letters of direction, the pre-1995 route, when a producer is also a writer, and work made for hire
 - [Claims, checked](https://kitesink.com/music/claims.md): common claims about royalties and rights, each with a verdict, what it rests on, and the source
 - [Glossary](https://kitesink.com/music/glossary.md): every term the music field guide uses, in plain words
 - [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): each dated key number and reference table, with a link to the page that holds it

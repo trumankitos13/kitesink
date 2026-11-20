@@ -2,7 +2,7 @@
 
 > The one-person workshop of Truman Kitos-Lindsey: consulting (including an AI concierge service), fitness tools and a sourced training and nutrition reference, music projects and a sourced music rights and royalties reference, and a game. Each link below is a plain-text version of a page on kitesink.com.
 
-The 36 plain-text pages listed in https://kitesink.com/llms.txt, one after another. Each part begins with the address of the file it came from. Text that would repeat is given once: the offers that end every page are at the end of this file, a section that repeats one already given points to it, a field-guide page lists the names of its terms where the glossary part holds their definitions, and each field guide's A-to-Z list of sources keeps only the sources no entry here links, with the address of the full list. Each file at its own address is complete.
+The 38 plain-text pages listed in https://kitesink.com/llms.txt, one after another. Each part begins with the address of the file it came from. Text that would repeat is given once: the offers that end every page are at the end of this file, a section that repeats one already given points to it, a field-guide page lists the names of its terms where the glossary part holds their definitions, and each field guide's A-to-Z list of sources keeps only the sources no entry here links, with the address of the full list. Each file at its own address is complete.
 
 ================================================================
 FILE: https://kitesink.com/index.md
@@ -10278,7 +10278,7 @@ FILE: https://kitesink.com/music.md
 
 # KiteSink Music
 
-Three music projects by Truman Kitos-Lindsey, and a free field guide to music rights and royalties. The guide holds 216 sourced entries in 6 of 15 planned areas. Every entry says who it is for (songwriters, artists, producers, publishers and labels, administrators), where it applies, how well sourced it is, and the date of anything that moves.
+Three music projects by Truman Kitos-Lindsey, and a free field guide to music rights and royalties. The guide holds 269 sourced entries in 8 of 15 planned areas. Every entry says who it is for (songwriters, artists, producers, publishers and labels, administrators), where it applies, how well sourced it is, and the date of anything that moves.
 
 ## Music projects
 
@@ -10319,7 +10319,7 @@ General information on how music rights and royalties work, not legal advice. Fo
 ### B. Infrastructure
 
 - Deal structures: Publishing, admin, label and distribution deals, and what each takes. In preparation.
-- Metadata and registration: ISWC, ISRC, IPI and the registrations that route the money. In preparation.
+- [Metadata and registration](https://kitesink.com/music/metadata-registration.md): ISWC, ISRC, IPI and the registrations that route the money. 32 entries.
 - International societies: Royalties earned abroad, and how they reach you. In preparation.
 - Sync licensing: Music in film, TV, games and adverts. In preparation.
 
@@ -10335,24 +10335,24 @@ General information on how music rights and royalties work, not legal advice. Fo
 
 ### E. Also new
 
-- Producer royalties: Points, letters of direction and SoundExchange. In preparation.
+- [Producer royalties](https://kitesink.com/music/producer-royalties.md): Points, letters of direction and SoundExchange. 21 entries.
 - Distribution and DSPs: Getting released on streaming services, and how they pay. In preparation.
 - Catalogue finance: Valuing, selling and borrowing against a catalogue. In preparation.
 
 ## By reader
 
-- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 117 entries.
-- Artists: Getting paid for the recording, and what a deal takes from it. 97 entries.
-- Producers: Points, letters of direction, SoundExchange, and producers who also write. 64 entries.
-- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 162 entries.
-- Administrators: The detail work: metadata, matching, claims and statements. 129 entries.
+- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 136 entries.
+- Artists: Getting paid for the recording, and what a deal takes from it. 129 entries.
+- Producers: Points, letters of direction, SoundExchange, and producers who also write. 98 entries.
+- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 199 entries.
+- Administrators: The detail work: metadata, matching, claims and statements. 156 entries.
 
 ## Reference
 
 - [Claims, checked](https://kitesink.com/music/claims.md): 14 common claims, each with a verdict, what it rests on, and the source.
-- [Glossary](https://kitesink.com/music/glossary.md): the 31 terms the areas use, in plain words.
-- [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): 16 dated key numbers and 14 reference tables.
-- [Sources and grading](https://kitesink.com/music/sources.md): how entries are graded, and all 129 sources.
+- [Glossary](https://kitesink.com/music/glossary.md): the 34 terms the areas use, in plain words.
+- [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): 17 dated key numbers and 19 reference tables.
+- [Sources and grading](https://kitesink.com/music/sources.md): how entries are graded, and all 169 sources.
 - [Claimable royalties](https://kitesink.com/music/claimable.md): 7 places where royalties can sit unclaimed, and how to claim. As data: https://kitesink.com/music/claimable.json
 - [Tools](https://kitesink.com/music/tools.md): a mechanical rate calculator, an unclaimed-money checklist, an identifier checker, a split-sheet generator and a checked directory of other tools.
 - [AI tools](https://kitesink.com/music/ai-tools.md): 13 AI tools that touch music rights work, with what each one does with your files and your data, its output terms, and the date it was checked.
@@ -10391,7 +10391,7 @@ A song is a musical work. A recording of someone performing it is a sound record
 
 - Write down who owns the song and who owns the recording for every release.
 
-Two copyrights · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+Two copyrights · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · Sources: [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
 
 ### A recording's authors: the performer and producer, unless made for hire
 
@@ -10401,7 +10401,7 @@ That is the starting point for US registration. Ownership can be transferred by 
 
 - Check each contract for who owns the master and for how long.
 
-Two copyrights · Intermediate · Sourced (official) · For: artists, producers, publishers and labels · Where: US · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+Two copyrights · Intermediate · Sourced (official) · For: artists, producers, publishers and labels · Where: US · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
 
 ### Copyright protection starts on creation; registration is a separate step
 
@@ -10411,7 +10411,7 @@ Circular 56 says protection under current law needs neither registration nor pub
 
 - Read the circular for your type of work before applying.
 
-Two copyrights · Intermediate · Sourced (official) · For: songwriters, artists · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+Two copyrights · Intermediate · Sourced (official) · For: songwriters, artists · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf)
 
 ### Mechanical and performance royalties pay for different uses
 
@@ -10451,7 +10451,7 @@ WIPO lists printed sheet music as one form of reproducing a musical work, and Ci
 
 - Ask your publisher or administrator whether print and lyric licensing is included.
 
-Income streams · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+Income streams · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf)
 
 ### The MLC collects US digital mechanicals for songs
 
@@ -10461,7 +10461,7 @@ The Copyright Office designated the MLC under Title I of the Music Modernization
 
 - Register your songs with the MLC, or confirm your publisher has.
 
-Who collects · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.-b](https://www.themlc.com/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
+Who collects · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.-d](https://www.themlc.com/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
 
 ### Performing rights societies collect for public performance of songs
 
@@ -10511,7 +10511,7 @@ To recover statutory damages or fees for a pre-1972 recording, the owner usually
 
 - Read the Copyright Office pages on Titles II and III before relying on either.
 
-Registrations · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+Registrations · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
 
 ### Societies work abroad through reciprocal agreements
 
@@ -10551,7 +10551,7 @@ For US digital mechanicals the collector is the MLC; for public performance it i
 
 - Check each step: registered, matched, and paid to the right account.
 
-How money flows · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.-b](https://www.themlc.com/), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+How money flows · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.-d](https://www.themlc.com/), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 
 ### How money moves from a stream to an artist
 
@@ -10585,7 +10585,7 @@ A song can earn from more than one collector, so one registration is not enough.
 - Register each new song with your society and the MLC.
 - Check that the shares match in every register.
 
-Before release · Registrations · Beginner · Sourced (official) · For: songwriters, administrators · Where: US · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [TMLC n.d.-b](https://www.themlc.com/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com)
+Before release · Registrations · Beginner · Sourced (official) · For: songwriters, administrators · Where: US · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [TMLC n.d.-d](https://www.themlc.com/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com)
 
 ### Register the recording when it is released
 
@@ -10609,7 +10609,7 @@ Circular 50 says a song and a recording usually have to be registered with the C
 - Check that the song and the recording each have their own registration.
 - Read Circular 50 and Circular 56 before filing.
 
-Two copyrights · Beginner · Sourced (official) · For: songwriters, artists · Where: US · Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+Two copyrights · Beginner · Sourced (official) · For: songwriters, artists · Where: US · Sources: [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
 
 ## Key numbers
 
@@ -10630,7 +10630,7 @@ A song and a recording earn through different rights, and different bodies colle
 | Physical mechanical | CDs, vinyl | Reproduce and distribute, 106(1), (3) | The song's publisher, directly or through an agent |
 | Sync and print | Film, ads, games, sheet music | Depends on the use; licensed by contract | The owners of each work, by direct licence |
 
-Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [TMLC n.d.-b](https://www.themlc.com/), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [TMLC n.d.-d](https://www.themlc.com/), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 
 ## Statutory digital performance split for recordings, as the law states it
 
@@ -10673,7 +10673,7 @@ Each kind of money has its own register. Tick what applies to you and check it s
 - Bank and tax details in each payee account
 - The Copyright Office, if you choose to register works (Circulars 50 and 56)
 
-Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [Re:Sound n.d.](https://www.resound.ca/)
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [Re:Sound n.d.](https://www.resound.ca/)
 
 ## Who collects what in the UK, Canada and Germany
 
@@ -10685,7 +10685,7 @@ A basic map, limited to bodies whose pages were read for this guide. Other count
 | Canada | SOCAN (performing and reproduction rights); CMRRA (online services) | Re:Sound: artists and record companies |
 | Germany | GEMA: composers, lyricists and publishers | Not covered here (no page read) |
 
-Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: UK, Canada, Germany · As of 20 November 2026 · Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [SOCAN n.d.-c](https://www.socan.com/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [Re:Sound n.d.](https://www.resound.ca/), [GEMA n.d.-b](https://www.gema.de/en/)
+Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: UK, Canada, Germany · As of 20 November 2026 · Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [SOCAN n.d.-d](https://www.socan.com/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [Re:Sound n.d.](https://www.resound.ca/), [GEMA n.d.-c](https://www.gema.de/en/)
 
 ## Terms
 
@@ -10829,7 +10829,7 @@ Three members of Congress asked in 2024. The Office opened its inquiry with a no
 
 - Check the Copyright Office's PRO page for any follow-up.
 
-Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/policy/pro-issues/)
+Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-i](https://www.copyright.gov/policy/pro-issues/)
 
 ### The Copyright Office says not every PRO discloses what it licenses or how it pays
 
@@ -10839,7 +10839,7 @@ This is the Office's own background statement on its inquiry page, not a finding
 
 - Ask a PRO for its distribution rules before you join.
 
-Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/policy/pro-issues/)
+Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-i](https://www.copyright.gov/policy/pro-issues/)
 
 ### Songview was built so licensees can see each song's owners and shares
 
@@ -10859,7 +10859,7 @@ Per the sign-up page, publishers need signed contracts showing they own, or are 
 
 - Read the SOCAN sign-up page and agreement before applying.
 
-Joining · Beginner · Sourced (official) · For: songwriters, publishers and labels · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-e](https://www.socan.com/sign-up-for-performing-rights/)
+Joining · Beginner · Sourced (official) · For: songwriters, publishers and labels · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-f](https://www.socan.com/sign-up-for-performing-rights/)
 
 ### GEMA charges an admission fee and a yearly fee, and waives the first for younger creators
 
@@ -10879,7 +10879,7 @@ A late cue sheet or agreement registration can miss a distribution, per the cut-
 
 - Check SOCAN's current schedule before relying on a date.
 
-Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-d](https://www.socan.com/socan-royalty-distribution-schedule/)
+Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-e](https://www.socan.com/socan-royalty-distribution-schedule/)
 
 ### Societies may pay from samples or proxy data when counting every play is impractical
 
@@ -10899,7 +10899,7 @@ Members can change the plan at the annual General Assembly. GEMA also says it pa
 
 - Read the GEMA distribution plan for your type of income.
 
-Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-c](https://www.gema.de/en/about-gema/how-gema-distributes-your-money)
+Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-f](https://www.gema.de/en/about-gema/how-gema-distributes-your-money)
 
 ### Live shows abroad are licensed by the local society, so tell your own society
 
@@ -10932,7 +10932,7 @@ WIPO says a society cannot distribute properly without knowing what works were u
 - Keep date, venue and set list for each show.
 - Find where your society takes live reports.
 
-Live · Beginner · Directional (industry practice) · For: songwriters, artists · Where: International, Canada · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-b](https://www.socan.com/about/music-creator/)
+Live · Beginner · Directional (industry practice) · For: songwriters, artists · Where: International, Canada · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-c](https://www.socan.com/about/music-creator/)
 
 ## Key numbers
 
@@ -10965,7 +10965,7 @@ Eligibility and cost differ sharply: SOCAN is free to writers, GEMA charges fees
 | GEMA publisher | Music publisher | EUR 180 once (net), EUR 100 a year |
 | GMR | Select clients by invitation | Not stated on the page |
 
-Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada, Germany, US · As of 20 November 2026 · Sources: [SOCAN n.d.-e](https://www.socan.com/sign-up-for-performing-rights/), [GEMA n.d.-a](https://www.gema.de/en/music-creators/become-a-member), [Global Music Rights n.d.-a](https://globalmusicrights.com/about)
+Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada, Germany, US · As of 20 November 2026 · Sources: [SOCAN n.d.-f](https://www.socan.com/sign-up-for-performing-rights/), [GEMA n.d.-a](https://www.gema.de/en/music-creators/become-a-member), [Global Music Rights n.d.-a](https://globalmusicrights.com/about)
 
 ## Setting up for performance royalties
 
@@ -10984,7 +10984,7 @@ A short order of work: pick a society, register each work with its shares, then 
 - Keep date, venue and set list for each show
 - Send cue sheets for screen uses
 
-Beginner · Directional (industry practice) · For: songwriters, artists, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-b](https://www.socan.com/about/music-creator/)
+Beginner · Directional (industry practice) · For: songwriters, artists, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-c](https://www.socan.com/about/music-creator/)
 
 ## Terms
 
@@ -11423,7 +11423,7 @@ The Copyright Office says the Classics Protection and Access Act added a chapter
 
 - Read the Office's Title II page before relying on any pre-1972 remedy.
 
-Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ### Pre-1972 owners usually file a schedule first, and remedies start 90 days after indexing
 
@@ -11433,7 +11433,7 @@ The Office says the schedule stands in place of the usual registration requireme
 
 - Check the Office schedule database before assuming a recording is listed.
 
-Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ### Web VI: no final rule for section 380.10 webcasters found as of 20 November 2026
 
@@ -11568,7 +11568,7 @@ The Office says remedies last 95 years from the year of first publication, plus 
 | 1947 to 1956 | 15 years after the 95-year term |
 | All other recordings fixed before 15 February 1972 | Ends 15 February 2067 |
 
-Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ## Recording societies SoundExchange lists as partners in this guide's countries
 
@@ -11606,7 +11606,7 @@ Tick what applies to you. Each register is separate, and a lawyer should read an
 - Content ID criteria read before applying
 - References split into single tracks with exclusivity confirmed
 
-Beginner · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: US, UK, Germany, International · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [SoundExchange n.d.-b](https://www.soundexchange.com/international-partners/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [GVL n.d.-b](https://gvl.de/en/node/1411/international-affairs/international-affairs-performers), [YouTube (Google) n.d.-d](https://support.google.com/youtube/answer/1311402), [YouTube (Google) n.d.-a](https://support.google.com/youtube/answer/2605065), [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Beginner · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: US, UK, Germany, International · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [SoundExchange n.d.-b](https://www.soundexchange.com/international-partners/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [GVL n.d.-b](https://gvl.de/en/node/1411/international-affairs/international-affairs-performers), [YouTube (Google) n.d.-d](https://support.google.com/youtube/answer/1311402), [YouTube (Google) n.d.-a](https://support.google.com/youtube/answer/2605065), [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ## Terms
 
@@ -11617,6 +11617,420 @@ Terms used on this page (2), each defined word for word in the glossary part of 
 ---
 
 Source page: https://kitesink.com/music/recorded-neighboring  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
+
+================================================================
+FILE: https://kitesink.com/music/metadata-registration.md
+================================================================
+
+# Metadata and registration: KiteSink music field guide
+
+ISWC, ISRC, IPI and the registrations that route the money. Each entry gives the point, the reasoning, what to do, who it is for, where it applies, how well sourced it is, and its sources.
+Grades: Sourced (law or official) and Directional (reported or industry practice).
+
+## Guidance
+
+### An ISRC is 12 characters: a prefix, a year and a five-digit number
+
+**Two letters and three letters or digits make the prefix, two digits give the year, and five digits finish it. IFPI describes no check digit.**
+
+The prefix belongs to the registrant and is allocated by an ISRC agency. The year element takes the final two digits of the assignment year. The five-digit designation code is picked by the registrant from its range and must not repeat within a year. On paper the code takes the letters ISRC in front and hyphens at three points, which are not part of the code. IFPI's validity test is only whether the string fits this layout.
+
+- Store the 12 characters with no spaces or hyphens.
+- Check the format at /music/tools#identifiers.
+
+ISRC · Beginner · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: International · Sources: [IISRCRAIFPI n.d.-b](https://isrc.ifpi.org/en/isrc-standard/isrc-structure), [IISRCRAIFPI n.d.-c](https://isrc.ifpi.org/images/downloads/ISRC_Handbook.pdf)
+
+### The recording owner assigns the ISRC, directly or through a manager
+
+**Normally it is the original owner who assigns a recording's ISRC. Membership of a trade body is not needed, and a distributor can assign on the owner's behalf.**
+
+IFPI says independent artists, labels and groups can all assign ISRCs, that only the owner may assign to a recording, and that an appointed ISRC manager can do it on the owner's instruction. Most distributors can supply ISRCs or deliver the owner's own. Prefixes come from the agency for your territory; in the US that is the US ISRC Agency at usisrc.org.
+
+- Ask your distributor which ISRCs it assigned, and keep a copy.
+
+ISRC · Beginner · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: International, US · Sources: [IISRCRAIFPI n.d.-f](https://isrc.ifpi.org/en/why-use-isrc/using-isrc), [IISRCRAIFPI n.d.-a](https://isrc.ifpi.org/en/faqs), [US ISRC Agency (RIAA) n.d.](https://www.usisrc.org/)
+
+### Check whether a recording already has an ISRC before you assign one
+
+**IFPI's International ISRC Database and SoundExchange's ISRC Search are both free to search. Neither is guaranteed to list every code.**
+
+IFPI says its database is powered by repertoire data that rights owners submit to SoundExchange, is updated daily, and matches more loosely than its paid assignment service. A track can be missing because its owner never submitted data or a distributor did not enter it. Codes from IFPI's own online assignment appear after around 10 days.
+
+- Search by artist and title, not only by code.
+- Ask a former distributor or label for your ISRCs before you move.
+
+ISRC · Beginner · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: International, US · As of 20 November 2026 · Sources: [IISRCRAIFPI n.d.-a](https://isrc.ifpi.org/en/faqs), [IISRCRAIFPI n.d.-e](https://isrc.ifpi.org/en/), [SoundExchange n.d.-f](https://www.soundexchange.com/register/)
+
+### Seven facts to keep on file for every ISRC
+
+**IFPI says anyone assigning ISRCs must keep the code, main artist, title, version title, duration, content type and first publication date.**
+
+The registrant must give this reference data to IFPI or its designee on request. Content type tells a sound recording from a music video. The first publication date, known as the P-date, ties the code to a specific recording. The version title carries details such as live or extended mix, which is where a remix is told apart from the original.
+
+- Keep these seven fields for every track in one sheet.
+
+ISRC · Intermediate · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: International · Sources: [IISRCRAIFPI n.d.-f](https://isrc.ifpi.org/en/why-use-isrc/using-isrc)
+
+### An ISWC is T, nine digits and a check digit, under ISO 15707:2022
+
+**The code names a song as a creation, not a recording. It shows no shares and does not confer copyright.**
+
+CISAC says the ISWC is a letter T, nine digits for the work and a numeric check digit, written after the letters ISWC, with hyphens or dots allowed for readability. The standard is ISO 15707:2022. The code is permanent: it does not change when a writer moves society or the work enters the public domain. The checker here tests the digit against a published formula, so a pass means consistent, not that the code exists.
+
+- Test an ISWC at /music/tools#identifiers before you reuse it.
+
+ISWC · Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International · As of 20 November 2026 · Sources: [CISACISWCIA n.d.-f](https://www.iswc.org/iswc), [CISACISWCIA n.d.-c](https://www.iswc.org/cmos), [CISACISWCIA n.d.-e](https://www.iswc.org/iswc-usage)
+
+### Only a registration agency can allocate an ISWC, not the writer or publisher
+
+**ISWCs come from the society or agency a work is registered with. For new works, registering the work is the step that gets the number.**
+
+CISAC says creators and publishers may not allocate their own ISWCs, and that a number is assigned as part of registration once all creators are uniquely identified. A publisher can ask its society for access to CISAC's ISWC Allocation Service to get codes before registering. Since a 2020 modernisation ISWCs are assigned centrally, and CISAC says codes can be ready within hours. A society's own numbering system is not replaced, so you will see both.
+
+- Register the work with your society, then read the ISWC from its catalogue.
+
+ISWC · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International · Sources: [CISACISWCIA n.d.-a](https://www.iswc.org/get-iswc), [CISACISWCIA n.d.-f](https://www.iswc.org/iswc), [CISACISWCIA n.d.-e](https://www.iswc.org/iswc-usage), [CISACISWCIA n.d.-d](https://www.iswc.org/creators-publishers)
+
+### A work can end up with two ISWCs, and the preferred one is the one to use
+
+**CISAC says complex registrations have occasionally produced more than one ISWC for a work, and its data marks the preferred one.**
+
+CISAC's open data lists each Preferred ISWC and any archived code merged into it, and asks users to use the preferred one. Since the 2020 changes, duplicates can be merged, or separated again if joined in error. If two codes appear for one song in your files, ask the society which is preferred rather than choosing one.
+
+- Refresh stored ISWCs against the society's catalogue each year.
+
+ISWC · Advanced · Sourced (official) · For: publishers and labels, administrators · Where: International · As of 20 November 2026 · Sources: [CISACISWCIA n.d.-b](https://www.iswc.org/open-data), [CISACISWCIA n.d.-f](https://www.iswc.org/iswc)
+
+### IPI numbers identify writers and publishers across the societies' systems
+
+**The IPI system gives each interested party a base number and each name they use a name number. Societies issue them to members.**
+
+CISAC says the IPI system identifies a person or company with an interest in a work across roles such as composer, arranger and publisher, and that SUISA administers it under CISAC and BIEM rules. The MLC says the base number is kept private and a name number stands for a public name, such as a stage name. SOCAN says it assigns IPIs to its members and that CAE number is the older term.
+
+IPI and ISNI · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International, Canada · Sources: [CISAC n.d.-b](https://www.cisac.org/services/information-services/ipi), [TMLC n.d.-c](https://www.themlc.com/identifiers), [SOCAN 2025c](https://www.socanmagazine.ca/socan-academy/important-codes-numbers-managing-your-metadata-and-royalties/)
+
+### ISNI names a public identity, and anyone can apply through an agency
+
+**An ISNI identifies a public identity, such as an artist name or a band. CISAC calls it voluntary, and isni.org says it is not free.**
+
+isni.org says an ISNI identifies public identities of people, organisations and groups, has 16 characters ending in a check character that can be X, and is issued only through registration agencies, which charge fees. CISAC says pseudonyms get separate ISNIs, linked in the database, and that ISNI can act as a bridge to codes like the IPI. The checker here tests the check character.
+
+IPI and ISNI · Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels · Where: International · As of 20 November 2026 · Sources: [ISNIIA n.d.](https://isni.org/page/faqs/), [CISAC n.d.-c](https://www.cisac.org/services/information-services/international-identifiers)
+
+### CWR is the bulk file format publishers use to register works with societies
+
+**Common Works Registration (CWR), a CISAC file format, carries many work registrations at once. The MLC aims it at hundreds or thousands of works.**
+
+CISAC oversees CWR, and a sender has to be set up with CISAC before using it. Publishers and administrators send registrations in it and get status back from the society. The MLC says it may not suit you without thousands of works; a writer with a few songs uses a portal. Its user guide, dated May 2024 and still the one its help page linked on 20 November 2026, takes versions 2.1 and 2.2 and lists 3.1 as pending. SOCAN says a sub-publisher abroad registers your songs there, by CWR or other means. CISAC's layouts and code lists are not reproduced here.
+
+- Ask your society or administrator which CWR version it takes.
+
+CWR · Advanced · Sourced (official) · For: publishers and labels, administrators · Where: International, US, Canada · As of 20 November 2026 · Sources: [CISAC n.d.-a](https://www.cisac.org/formats), [TMLC n.d.-f](https://help.themlc.com/en/support/what-is-cwr), [TMLC n.d.-e](https://www.themlc.com/hubfs/CWR%20User%20Guide_May%202024_FINAL.pdf), [SOCAN n.d.-a](https://www.socan.com/frequently-asked-questions/)
+
+### ERN delivers the release; DSR reports what it earned
+
+**ERN goes from a label or distributor to the store with the release and its terms. DSR comes back from the store with sales and usage.**
+
+DDEX says ERN tells a digital service about releases and resources, such as recordings and videos, and the terms on which they can be offered. DSR is the report the service sends back so the rights owner can invoice for rights used. As of 20 November 2026 DDEX names ERN 4.3.2 as the latest published version and urges 4.3.x. DSR is a flat-file standard with profiles for different business models. The AI page covers the ERN flags for generative AI.
+
+- Ask your distributor which ERN version it sends.
+
+DDEX · Beginner · Sourced (official) · For: artists, publishers and labels, administrators · Where: International · As of 20 November 2026 · Sources: [DDEX n.d.-c](https://kb.ddex.net/implementing-each-standard/electronic-release-notification-message-suite-(ern)/), [DDEX n.d.-b](https://kb.ddex.net/implementing-each-standard/digital-sales-reporting-message-suite-(dsr)/), [DDEX n.d.-a](https://kb.ddex.net/about-ddex-standards/ddex-standards/)
+
+### DDEX messages are checked against a schema, and invalid ones should be rejected
+
+**DDEX offers a free online validator. Recipients should reject invalid messages, and senders should validate before sending.**
+
+DDEX lists grounds for rejection: failing the XML schema, breaking the profile rules, breaking extra rules the two sides agreed, plain inconsistencies such as different display artists at release and track level for a single, and blank tags in fields that must be filled. Recipients should not guess missing data. DDEX says its validator does not store uploaded messages.
+
+- Run a validation before every delivery.
+
+DDEX · Advanced · Sourced (official) · For: publishers and labels, administrators · Where: International · Sources: [DDEX n.d.-f](https://kb.ddex.net/general-implementation-guidance/validating-ddex-messages/), [DDEX n.d.-e](https://kb.ddex.net/implementing-each-standard/best-practices-for-all-ddex-standards/general-guidance-on-messages/invalid-messages/)
+
+### What a US copyright registration adds, as Circular 1 states it
+
+**Registration adds a public record, a route to court for US works and, if made in time, stronger remedies. Protection itself does not depend on it.**
+
+Circular 1 lists the advantages: a public record of the authorship and ownership facts; registration, or refusal, before a suit over a US work; prima facie evidence of validity when it comes before publication or within the first five years after it; and eligibility for statutory damages and attorneys' fees when it precedes infringement or comes within three months of publication. Circular 56 says registration is not required for protection. When to register, or sue, is a question for a copyright lawyer.
+
+US copyright registration · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ01.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
+
+### Group options let one fee cover several songs, several recordings or an album
+
+**Up to ten unpublished songs, or ten unpublished recordings, can go on one application if the same authors are all named as claimants.**
+
+Circulars 50 and 56 describe group registration of unpublished works by the same authors. For songs, the Office says naming a performing group alone is not enough: every individual who contributed authorship must be named. Circular 56 also covers registering an album as a collective work, and a unit of publication for recordings packaged with artwork. Circular 34 has the rules.
+
+US copyright registration · Intermediate · Sourced (official) · For: songwriters, artists, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
+
+### Each co-writer has to be registered with their own society too
+
+**Registering a song with one society does not register your co-writers elsewhere. Each registers it with their own society.**
+
+GEMA says each creator must register a work with their own society, so a SACEM member registers with SACEM, and asks you to enter co-creators' IP name numbers and pass on the ISWC. SOCAN says that if your co-writer is not a member, you can register the song with the shares and be paid your portion, but that co-writer is not paid until joining SOCAN or a society it works with abroad.
+
+- Share the ISWC and splits with every co-writer.
+
+Society registration · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany, Canada, International · Sources: [GEMA n.d.-d](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/register-works-creators-various-countries), [SOCAN n.d.-a](https://www.socan.com/frequently-asked-questions/)
+
+### GEMA: shares add to 100 percent per role, and late registrations are not paid
+
+**GEMA's portal wants shares per role that total 100, and a work registered after the deadline is left out of the distribution.**
+
+GEMA says performing and mechanical shares, if entered, must add to 100 percent per role, and are mandatory only in the publisher section. Blank creator shares are split evenly by role. For works used in a calendar year, the cut-off falls on 31 January in the year after use, with other deadlines for some categories. A late work is not counted and gives no right to claim, which GEMA ties to its distribution plan. GEMA says the ISWC follows once the work reaches registration status 1.
+
+- Register new works as soon as the split is agreed.
+
+Society registration · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-e](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/how-register-works), [GEMA n.d.-b](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/by-when-do-i-have-to-submit-a-work-notification), [GEMA n.d.-d](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/register-works-creators-various-countries)
+
+### A society's own work number is not the ISWC
+
+**SOCAN gives its own Work Number, and a temporary code is replaced by the international ISWC a few weeks after registration.**
+
+SOCAN says a new work first gets a temporary code, replaced by the ISWC a few weeks later and visible in the member portal catalogue. The Work Number is SOCAN-specific and appears on statements and in its public repertoire search. In Canada, SOCAN says, an ISRC for a recording can be requested from SOPROQ.
+
+- Give the ISWC, not a society's work number, to people outside that society.
+
+Society registration · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN 2025c](https://www.socanmagazine.ca/socan-academy/important-codes-numbers-managing-your-metadata-and-royalties/)
+
+### Style guide: credit featured artists in the artist field, spelled the same everywhere
+
+**The Music Biz style guide, version 2.1, advises putting featured artists in the artist role rather than the title, with one spelling per name.**
+
+Music Biz's Music Metadata Style Guide, version 2.1 of September 2015, advises crediting featured artists at the artist role level unless a contract says otherwise, using only 'feat.' and 'with' where a title shows them, one spelling of each artist and label name across deliveries, and a copyright line of first publication year and holder. It is voluntary guidance, and each store applies its own rules.
+
+- Ask your distributor how it wants featured artists entered.
+
+Credits and hygiene · Intermediate · Directional (reported) · For: artists, producers, publishers and labels, administrators · Where: International, US · As of 20 November 2026 · Sources: [MBAMB 2015](https://musicbiz.org/wp-content/uploads/2016/04/MusicMetadataStyleGuide_V2.1.pdf)
+
+## In order
+
+### Register a song with the Copyright Office: the application points to get right
+
+**Choose Work of the Performing Arts, give the title as written, state who wrote what, and name any pre-existing material.**
+
+Circular 50 says to give the title exactly as it is printed on the work, say whether it is published, and give the year of completion. The author is whoever wrote the music and lyrics, or the employer where the song was made for hire. Describe authorship as lyrics, music or arrangement, and list pre-existing material in the limitation of claim. An application needs a form, a nonrefundable fee and a deposit copy.
+
+- Check current fees on copyright.gov before you file.
+
+At release · US copyright registration · Intermediate · Sourced (official) · For: songwriters, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf)
+
+### Register a recording: choose Sound Recording and send the right deposit
+
+**Choose Sound Recording and name its authors. Upload the file if it is unpublished or digital-only; send the CD or LP if it came out on one.**
+
+Circular 56 says an unpublished or digital-only recording should be uploaded as a digital file, up to 500 MB each, with no physical copy as well. A recording published on CD or LP is deposited in that physical format. One published in the US may need a pair of best-edition copies, with CD ranked first. A derivative recording, such as a mashup, must name its pre-existing material in the limitation of claim. The basics page covers who counts as an author.
+
+- Confirm who the authors are before you file.
+
+At release · US copyright registration · Intermediate · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
+
+## Common mistakes
+
+### Mistake: putting an ISWC in an ISRC field, or the reverse
+
+**An ISRC names one recording and an ISWC names the song. Each code answers a different question, so the wrong one breaks the link.**
+
+IFPI says the ISRC is not used for compositions or lyrics. CISAC says the ISWC does not identify recordings or sheet music. A song has one ISWC, but it can have many recordings, such as a studio take and a remix, each with its own ISRC. A mix-up leaves a recording unattached to its song, or the reverse.
+
+- Copy each code from the register that issued it.
+- Test a code at /music/tools#identifiers before you submit it.
+
+Identifiers · Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International · Sources: [IISRCRAIFPI n.d.-g](https://isrc.ifpi.org/en/why-use-isrc/when-not-to-assign), [CISACISWCIA n.d.-f](https://www.iswc.org/iswc)
+
+### Mistake: reading the ISRC's year as the year the track was recorded
+
+**The two digits show when the code was assigned. IFPI says the recording year belongs in the metadata, not in the code.**
+
+IFPI says the year of reference is normally, but not always, the year the final master was prepared, and it can differ from the year of recording. It exists so that codes from earlier years cannot be assigned twice. A recording released without an ISRC can be given one later, and the year is then the year of assignment.
+
+- Keep the recording year in its own field.
+- Never edit an ISRC to match a date.
+
+ISRC · Intermediate · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: International · Sources: [IISRCRAIFPI n.d.-b](https://isrc.ifpi.org/en/isrc-standard/isrc-structure), [IISRCRAIFPI n.d.-a](https://isrc.ifpi.org/en/faqs)
+
+### Mistake: registering a work with a writer who has no IPI, then waiting for an ISWC
+
+**An ISWC needs every creator identified. A co-writer outside any society can leave the work without a code at first.**
+
+CISAC says registration needs complete metadata, including the IPI name number and role of every creator, and that a code is allocated only when all creators have been uniquely identified. GEMA gives the same reason when a work lacks an ISWC: a contributor who is not in a society, so not in the IPI database, means no ISWC initially.
+
+- Collect each co-writer's society and IPI number at the writing session.
+
+ISWC · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International, Germany · Sources: [CISACISWCIA n.d.-d](https://www.iswc.org/creators-publishers), [CISACISWCIA n.d.-a](https://www.iswc.org/get-iswc), [GEMA n.d.-h](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/what-is-an-iswc-why-does-my-work-not-have-an-iswc)
+
+### Mistake: giving a base number where a form asks for an IPI name number
+
+**People often say IPI for either number. Check which one a form wants, because the base number is the private one.**
+
+The MLC notes that people usually mean the base number when they say IPI, yet the public number is the name number. GEMA asks for each co-creator's IP name number when you register a work, and says you can look one up in a creator search. The split-sheet generator on this site asks for the name number and flags a base number.
+
+- Ask your society for the name number of each name you write under.
+
+IPI and ISNI · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: International, Germany · Sources: [CISAC n.d.-b](https://www.cisac.org/services/information-services/ipi), [TMLC n.d.-c](https://www.themlc.com/identifiers), [GEMA n.d.-d](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/register-works-creators-various-countries)
+
+### Mistake: sending a CWR registration that omits owners or does not reach 100 percent
+
+**The MLC wants every party on a work listed, ownership that totals 100 percent, and no unknown flag on a party you control.**
+
+The MLC's CWR guide (May 2024) asks for ownership records for every party, controlled or not. For each right, ownership shares must total 100 percent, give or take 0.06 points, or zero, and collection shares may not pass 100 percent. Unknown writer or publisher markers are accepted for parties you do not control. A controlled party marked unknown is rejected, because those records form your claim, and a file whose name was used before is rejected too.
+
+- Check totals and party flags before you send a file.
+
+CWR · Advanced · Sourced (official) · For: publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.-e](https://www.themlc.com/hubfs/CWR%20User%20Guide_May%202024_FINAL.pdf)
+
+### Mistake: entering a writer or publisher name that does not match the IPI record
+
+**Registers match people on name and number. Use the spelling your society holds, with the IPI number where a form asks for it.**
+
+The MLC's CWR guide says a publisher sending files must give its name as the IPI database lists it for its IPI name number. In the MLC portal you can search writers by name or IPI number, and it shows existing writers that match what you enter, so you avoid duplicates. GEMA says to look a co-creator up in a creator search, and to enter the creator manually if identical names leave you unsure. The MLC says accurate matching data is what gets you paid correctly and on time.
+
+- Copy names from your society's record, not from memory.
+
+Credits and hygiene · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US, Germany, International · Sources: [TMLC n.d.-e](https://www.themlc.com/hubfs/CWR%20User%20Guide_May%202024_FINAL.pdf), [TMLC n.d.-b](https://help.themlc.com/en/support/how-to-register-works-in-the-mlc-portal), [GEMA n.d.-d](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/register-works-creators-various-countries)
+
+## Key numbers
+
+| Number | What it is | As of | Where | Grade | Sources |
+|---|---|---|---|---|---|
+| $95 one-time fee for a US rights owner prefix | US Rights Owner Prefix fee at the US ISRC Agency: The US ISRC Agency charges this once to allocate a prefix to a rights owner and says no further costs follow. Elsewhere, ask your territory's agency. | 20 November 2026 | US | Sourced (official) | [US ISRC Agency (RIAA) n.d.](https://www.usisrc.org/) |
+
+## Which code identifies what, who issues it and where to look it up
+
+Each code names a different thing. Match the code to what you are describing before you type it into a form.
+
+| Code | What it identifies | Who issues it | Where to look it up |
+|---|---|---|---|
+| ISRC | One sound recording or music video | The recording owner, from a prefix an ISRC agency allocates | International ISRC Database; SoundExchange ISRC Search |
+| ISWC | One musical work (the song, not a recording) | A registration agency, usually a society | ISWC-Network, CISAC's public portal |
+| IPI name number | One name a writer or publisher uses | Societies, through the IPI system | Ask your society; the checker here has no look-up |
+| IPI base number | The person or company behind those names | Allocated by the IPI system | Kept private; your society can tell you |
+| ISNI | The public identity of a person, group or company | An ISNI registration agency; isni.org says ISNI is not free | The ISNI database at isni.org |
+| IPN | A performer on recordings, per the MLC | A performers' rights body such as SoundExchange | Ask the performers' rights body |
+
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: International, US · As of 20 November 2026 · Sources: [IISRCRAIFPI n.d.-a](https://isrc.ifpi.org/en/faqs), [IISRCRAIFPI n.d.-e](https://isrc.ifpi.org/en/), [SoundExchange n.d.-f](https://www.soundexchange.com/register/), [CISACISWCIA n.d.-f](https://www.iswc.org/iswc), [CISAC n.d.-c](https://www.cisac.org/services/information-services/international-identifiers), [CISAC n.d.-b](https://www.cisac.org/services/information-services/ipi), [TMLC n.d.-c](https://www.themlc.com/identifiers), [ISNIIA n.d.](https://isni.org/page/faqs/)
+
+## When a recording needs a new ISRC and when it keeps its code
+
+A creative change to the recording needs a new ISRC; a new format, release or owner does not. Rows follow IFPI's 2021 Handbook, which qualifies the FAQ's 10-second rule.
+
+| What happened | New ISRC | Why, per the ISRC Handbook (2021) |
+|---|---|---|
+| A remix or different mix | Yes | The musical content is different |
+| A live recording of a studio song | Yes | It is a completely different recording |
+| A different studio take | Yes | Takes are different recordings, even with the same players |
+| An edit that mutes or replaces words | Yes | An edited version is a new recording |
+| A cover by other artists | Yes | It is a new recording of the work |
+| A music video with the same audio | Yes | A video differs from the audio recording |
+| Verses or choruses added or cut | Yes | The edit changes the creative content |
+| Length changed only by speed or fade-out | Only if 10 seconds or more | Adding or cutting only silence, ambience or applause never needs one |
+| Same recording in another format or bit rate | No | The code names the recording, not the encoding |
+| Same recording on a compilation or reissue | No | Releases are told apart by product codes |
+| Recording sold or licensed to a new owner | No | The ISRC stays with the recording |
+| A remaster | Only with creative input | Uniform level, EQ, compression or noise fixes do not count |
+
+Intermediate · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: International · As of 20 November 2026 · Sources: [IISRCRAIFPI n.d.-c](https://isrc.ifpi.org/images/downloads/ISRC_Handbook.pdf), [IISRCRAIFPI n.d.-h](https://isrc.ifpi.org/en/why-use-isrc/when-to-assign), [IISRCRAIFPI n.d.-g](https://isrc.ifpi.org/en/why-use-isrc/when-not-to-assign), [IISRCRAIFPI n.d.-a](https://isrc.ifpi.org/en/faqs), [IISRCRAIFPI n.d.-d](https://isrc.ifpi.org/en/why-use-isrc/ownership)
+
+## DDEX standards in plain words: what each message carries
+
+DDEX has ten families of standards, and anyone may use them with a free licence. Six of them are below, as DDEX describes them.
+
+| Standard | What it carries | Usually sent by | Usually sent to |
+|---|---|---|---|
+| ERN | Release and track data, and the terms of offer | Record company or distributor | A digital service |
+| DSR | Sales and usage data, for invoicing the service | A digital service | The rights owner |
+| MEAD | Richer data on releases, recordings and works | Record company or distributor | A digital service |
+| PIE | Richer data on writers, artists and other parties | Record company or distributor | A digital service |
+| CDM | Claims in works and royalty calculations | The rights owner | A digital service |
+| BWARM | Bulk data on works, recordings and claims | A database such as the MLC | Those who ask for it |
+
+Intermediate · Sourced (official) · For: artists, publishers and labels, administrators · Where: International · As of 20 November 2026 · Sources: [DDEX n.d.-a](https://kb.ddex.net/about-ddex-standards/ddex-standards/)
+
+## Which US copyright application fits a song, a recording or both
+
+The Copyright Office treats the song and the recording as two works. One application can cover both only if both are on the same phonorecord and one party claims both.
+
+| Situation | How Circular 56A says to apply |
+|---|---|
+| An artist records someone else's song | Apply for the recording only |
+| A songwriter whose song others record | Apply for the song only |
+| A songwriter records their own song | One application for both is possible |
+| A record company owns the song and the recording | It may use one application for both |
+| The same owner also sells sheet music and the album | Two applications, each with its own deposit |
+| The Single Application | Same phonorecord, one performer-author, and sole owner of both |
+
+Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-f](https://www.copyright.gov/circs/circ56a.pdf), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
+
+## Before release: a metadata checklist for the song and the recording
+
+Tick what applies. The registers differ, so check each one separately, and use the same names and splits in all of them.
+
+**The recording**
+
+- One ISRC per distinct recording, kept on every format and release
+- A new ISRC for each remix, edit and new take
+- Existing ISRCs reused when a recording changes distributor or label
+- Artist, title, version, duration, type and first publication date on file
+
+**The song**
+
+- Every writer named, with a role, and shares that total 100 percent
+- Each writer's society and IPI name number collected
+- An alternative title only for a language variation, a live version or a same-writer remix, the MLC's rule
+- The ISWC copied from your society's catalogue once issued
+
+**The registers**
+
+- The registers on the basics page's checklist done, with the same shares in each
+- Each co-writer registered with their own society
+- A decision on Copyright Office registration for the song and the recording
+
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, International · As of 20 November 2026 · Sources: [IISRCRAIFPI n.d.-h](https://isrc.ifpi.org/en/why-use-isrc/when-to-assign), [IISRCRAIFPI n.d.-g](https://isrc.ifpi.org/en/why-use-isrc/when-not-to-assign), [IISRCRAIFPI n.d.-f](https://isrc.ifpi.org/en/why-use-isrc/using-isrc), [TMLC n.d.-b](https://help.themlc.com/en/support/how-to-register-works-in-the-mlc-portal), [GEMA n.d.-d](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/register-works-creators-various-countries), [CISACISWCIA n.d.-a](https://www.iswc.org/get-iswc), [U.S. Copyright Office n.d.-f](https://www.copyright.gov/circs/circ56a.pdf)
+
+## Identifier checker
+
+Paste or type one identifier. The checker says what kind it is, whether it is in the right form, whether the check digit adds up where the standard has one, and gives the form to store and the form to print. A code can pass every check and still belong to another song or person, so look it up before you rely on it. Nothing you type is sent anywhere or kept.
+
+The checker itself: https://kitesink.com/music/metadata-registration#identifiers
+
+### ISRC (International Standard Recording Code)
+
+- Identifies: A sound recording or music video. Each different recording has its own.
+- Form: 12 characters: a 5-character prefix (2 letters, then 3 letters or digits), 2 digits for the year the code was assigned, and a 5-digit number. Written for people as ISRC AA-6Q7-20-00047. The word ISRC, spaces and hyphens are not part of the code, and lower case is read as capitals.
+- Check digit: None. ISRC has no check digit, so a checker can only test the form.
+- Look it up: [ISRC Search (IFPI)](https://isrcsearch.ifpi.org/)
+- Sources (opened 20 November 2026): [IFPI: ISRC Handbook, 4th edition (2021), sections 3.3 and 5](https://www.ifpi.org/wp-content/uploads/2021/02/ISRC_Handbook.pdf); [IFPI: ISRC structure](https://isrc.ifpi.org/isrc-standard/isrc-structure); [International ISRC Agency: Bulletin 2015/01, validating an ISRC](https://isrc.ifpi.org/images/downloads/Bulletin_2015-01_-_Validating_ISRC_Codes.pdf)
+
+### ISWC (International Standard Musical Work Code)
+
+- Identifies: A musical work: the song as written, not any one recording of it.
+- Form: The letter T, a 9-digit work number and one check digit (ISO 15707:2022). Usually written ISWC T-034.524.680-1; the hyphens and dots are only there to help reading.
+- Check digit: ISO 15707:2022 says the check digit is a weighted modulus 10 and sets out the formula in an annex its public preview leaves out. The checker uses the formula in the ISO committee's 1999 papers: 1 plus each work digit times its position (1 to 9), and the check digit makes the total a multiple of 10. It gives the standard's own example, so a pass reads “consistent with the published formula”.
+- Look it up: [ISWC-Network (CISAC)](https://iswcnet.cisac.org/)
+- Sources (opened 20 November 2026): [ISO 15707:2022, clause 4 (preview)](https://cdn.standards.iteh.ai/samples/83125/8adf68d27507472b892f3370f710813e/ISO-15707-2022.pdf); [ISWC International Agency: the ISWC](https://www.iswc.org/iswc); [ISO/TC 46/SC 9 N 268 (1999): the check digit formula](https://groups.niso.org/higherlogic/ws/public/download/2544/sc9n268.pdf)
+
+### ISNI (International Standard Name Identifier)
+
+- Identifies: The public identity of a person or organisation, such as a performer, a writer or a label. A pseudonym can have its own.
+- Form: 16 characters: 15 digits and a check character, which is a digit or X. Written ISNI 0000 0001 2124 1960; the word ISNI and the spaces are not part of it.
+- Check digit: The check character comes from the first 15 digits by the ISO/IEC 7064 MOD 11-2 method (ISO 27729, Annex A). X stands for 10.
+- Look it up: [ISNI search](https://isni.org/page/search-database/)
+- Sources (opened 20 November 2026): [ISO 27729:2024, clause 4 and Annex A (preview)](https://cdn.standards.iteh.ai/samples/87177/3bea4cd1719644159883964978cc57fa/ISO-27729-2024.pdf); [ISNI: FAQs](https://isni.org/page/faqs/); [IANA: ISNI namespace registration](https://www.iana.org/assignments/urn-namespaces/urn-formal/isni)
+
+### IPI (Interested Party Information)
+
+- Identifies: A writer or publisher in the IPI system the CISAC societies share. Each name has an IPI name number; the IPI base number ties all of one party's names together.
+- Form: Name number: 11 digits. An older 9-digit number is written with two leading zeros. Base number: usually written I-NNNNNNNNN-C, the letter I, nine digits and a final digit.
+- Check digit: No check-digit rule is published for either, so the checker tests the form only. A number in the right form may still be wrong.
+- Look it up: ask your PRO or society for the IPI numbers they hold for you.
+- Sources (opened 20 November 2026): [SUISA: What is the IPI number? (17 April 2025)](https://blog.suisa.ch/en/what-is-the-ipi-number/); [Harry Fox Agency: What is an IPI number?](https://help.harryfox.com/what-is-an-ipi-number); [CISAC: IPI](https://www.cisac.org/services/information-services/ipi); [Wikipedia: Interested Parties Information (the base number pattern; a secondary source)](https://en.wikipedia.org/wiki/Interested_Parties_Information)
+
+---
+
+Source page: https://kitesink.com/music/metadata-registration  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
 General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
@@ -11939,7 +12353,7 @@ Who owns AI-assisted music · Intermediate · Sourced (official) · For: songwri
 
 The Office released Part 3 in pre-publication form on 9 May 2025, and its AI page, checked 20 November 2026, still says a final version will follow with no substantive change expected. The report says training an audio model on recordings to generate new recordings aims at the same market, while using a model to remove unwanted distortion would be more transformative. It says existing or likely licence markets weigh against fair use, and that government intervention in licensing would be premature. It is the Office's view and does not bind courts.
 
-Training and data mining · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office 2025b](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/ai/)
+Training and data mining · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office 2025b](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf), [U.S. Copyright Office n.d.-h](https://www.copyright.gov/ai/)
 
 ### In the EU, rightsholders can reserve their music from commercial text and data mining
 
@@ -12048,7 +12462,7 @@ Lawsuits and tracker · Intermediate · Directional (reported) · For: artists, 
 
 SOCAN's statement of claim was issued on 2 September 2026 and amended on 18 November 2026. SOCAN's page says the claim lists 150 publicly available Suno outputs that it says replicate songs in its repertoire, and that making them available in Canada infringed its performing rights. It says SOCAN has issued no licence to Suno and received no payment. SOCAN is a party, so its page gives one side. No defence or ruling was found.
 
-Lawsuits and tracker · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-a](https://socan.com/socan-ai/ai-lawsuit), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf)
+Lawsuits and tracker · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-b](https://socan.com/socan-ai/ai-lawsuit), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf)
 
 ### Labels and publishers have licensed AI music firms since October 2025
 
@@ -12066,7 +12480,7 @@ Licences and deals · Intermediate · Directional (reported) · For: publishers 
 
 GEMA says the first component covers training, including fine-tuning, with 30 percent of the net income of the model or system and a minimum royalty linked to how much output is produced. It targets providers operating in the German market whatever the place of training. A second component would cover later use of AI-generated music, such as background music. This is GEMA's own proposed model. The sources opened do not name a provider that has signed it.
 
-Licences and deals · Advanced · Sourced (official) · For: publishers and labels, administrators, songwriters · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-d](https://www.gema.de/en/w/generative-ai-licensing-model), [GEMA 2025](https://www.gema.de/en/w/landmark-ruling-gema-against-openai)
+Licences and deals · Advanced · Sourced (official) · For: publishers and labels, administrators, songwriters · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-g](https://www.gema.de/en/w/generative-ai-licensing-model), [GEMA 2025](https://www.gema.de/en/w/landmark-ruling-gema-against-openai)
 
 ### Sweden's STIM announced a collective AI licence in September 2025
 
@@ -12144,7 +12558,7 @@ The release notes in DDEX's ERN standard list the two additions for version 4.3.
 
 - Ask your distributor or label which AI fields it sends to each service.
 
-Platforms and distributors · Advanced · Sourced (official) · For: administrators, publishers and labels · Where: International · As of 20 November 2026 · Sources: [DDEX n.d.](https://ern.ddex.net/electronic-release-notification-message-suite-part-1-definitions-of-messages), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
+Platforms and distributors · Advanced · Sourced (official) · For: administrators, publishers and labels · Where: International · As of 20 November 2026 · Sources: [DDEX n.d.-d](https://ern.ddex.net/electronic-release-notification-message-suite-part-1-definitions-of-messages), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
 
 ### ASCAP, BMI and SOCAN accept partly AI works and reject wholly AI ones
 
@@ -12175,7 +12589,7 @@ GEMA's help page says the box aims to stop payments for content that took no cre
 
 - Tick the box only if AI was not the sole creator of the work.
 
-Registering AI-assisted works · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-e](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai)
+Registering AI-assisted works · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-i](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai)
 
 ## In order
 
@@ -12244,7 +12658,7 @@ Status as of 20 November 2026. Allegations are not findings; check the court or 
 | EU marking duty, AI Act Art. 50(2), existing systems | Deadline 2 Dec 2026 | 24 Jul 2026, Regulation (EU) 2026/1744 | Official Journal |
 | UK AI and copyright | Report out; no reform committed | 18 Mar 2026, report | gov.uk |
 
-Intermediate · Directional (reported) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, Germany, France, UK, Canada · As of 20 November 2026 · Sources: [GPO 2026](https://www.govinfo.gov/content/pkg/BILLS-119s4591rs/xhtml/BILLS-119s4591rs.html), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/ai/), [DSIM 2026](https://www.musicbusinessworldwide.com/files/2026/09/Suno-Answer.pdf), [PUMGCSMESM 2026](https://www.musicbusinessworldwide.com/files/2026/09/26-cv-14275-Dkt.-1-Complaint.pdf), [DULIU 2026](https://www.musicbusinessworldwide.com/files/2026/09/Sony-v-Udio-asnwer.pdf), [PCMGIC 2026](https://storage.courtlistener.com/recap/gov.uscourts.cand.431519/gov.uscourts.cand.431519.685.0.pdf), [Dalugdug 2026a](https://www.musicbusinessworldwide.com/anthropic-seeks-partial-dismissal-in-music-publishers-3b-lyrics-suit-as-CEO-moves-to-drop-the-direct-infringement-claim-against-him/), [LBMJ 2026b](https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2026/16.php), [Buchholz 2025](https://www.lto.de/recht/nachrichten/n/42o1413924-lg-muenchen-i-gema-openai-chatgpt-songtexte-ki), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf), [Dalugdug 2026b](https://www.musicbusinessworldwide.com/judge-refuses-to-dismiss-indie-artists-proposed-class-action-against-suno-clearing-ai-output-and-stream-ripping-claims-for-discovery/), [Stassen 2026b](https://www.musicbusinessworldwide.com/court-declines-to-dismiss-independent-artists-copyright-class-action-against-udio-but-moves-the-case-from-illinois-to-new-york/), [European Commission 2026](https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content), [EPCEUOJEU 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
+Intermediate · Directional (reported) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, Germany, France, UK, Canada · As of 20 November 2026 · Sources: [GPO 2026](https://www.govinfo.gov/content/pkg/BILLS-119s4591rs/xhtml/BILLS-119s4591rs.html), [U.S. Copyright Office n.d.-h](https://www.copyright.gov/ai/), [DSIM 2026](https://www.musicbusinessworldwide.com/files/2026/09/Suno-Answer.pdf), [PUMGCSMESM 2026](https://www.musicbusinessworldwide.com/files/2026/09/26-cv-14275-Dkt.-1-Complaint.pdf), [DULIU 2026](https://www.musicbusinessworldwide.com/files/2026/09/Sony-v-Udio-asnwer.pdf), [PCMGIC 2026](https://storage.courtlistener.com/recap/gov.uscourts.cand.431519/gov.uscourts.cand.431519.685.0.pdf), [Dalugdug 2026a](https://www.musicbusinessworldwide.com/anthropic-seeks-partial-dismissal-in-music-publishers-3b-lyrics-suit-as-CEO-moves-to-drop-the-direct-infringement-claim-against-him/), [LBMJ 2026b](https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2026/16.php), [Buchholz 2025](https://www.lto.de/recht/nachrichten/n/42o1413924-lg-muenchen-i-gema-openai-chatgpt-songtexte-ki), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf), [Dalugdug 2026b](https://www.musicbusinessworldwide.com/judge-refuses-to-dismiss-indie-artists-proposed-class-action-against-suno-clearing-ai-output-and-stream-ripping-claims-for-discovery/), [Stassen 2026b](https://www.musicbusinessworldwide.com/court-declines-to-dismiss-independent-artists-copyright-class-action-against-udio-but-moves-the-case-from-illinois-to-new-york/), [European Commission 2026](https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content), [EPCEUOJEU 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
 
 ## If you use AI in your music
 
@@ -12280,7 +12694,7 @@ A working list for a songwriter, artist, producer or admin who uses AI tools. It
 - Get written permission from the person before using a model of their voice.
 - Have a music lawyer read any voice or likeness licence.
 
-Beginner · Directional (industry practice) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada, Germany, France, International · As of 20 November 2026 · Sources: [U.S. Copyright Office 2023a](https://copyright.gov/ai/ai_policy_guidance.pdf), [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/), [TMLC n.d.-a](https://help.themlc.com/en/support/ai-generated-works), [GEMA n.d.-e](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/)
+Beginner · Directional (industry practice) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada, Germany, France, International · As of 20 November 2026 · Sources: [U.S. Copyright Office 2023a](https://copyright.gov/ai/ai_policy_guidance.pdf), [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/), [TMLC n.d.-a](https://help.themlc.com/en/support/ai-generated-works), [GEMA n.d.-i](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/)
 
 ## Terms
 
@@ -12291,6 +12705,284 @@ Terms used on this page (4), each defined word for word in the glossary part of 
 ---
 
 Source page: https://kitesink.com/music/ai-rights  
+Every music page, as plain text: https://kitesink.com/music.md  
+Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
+
+================================================================
+FILE: https://kitesink.com/music/producer-royalties.md
+================================================================
+
+# Producer royalties: KiteSink music field guide
+
+Points, letters of direction and SoundExchange. Each entry gives the point, the reasoning, what to do, who it is for, where it applies, how well sourced it is, and its sources.
+Grades: Sourced (law or official) and Directional (reported or industry practice).
+
+## Guidance
+
+### Points are a contract term, and this guide states no standard figure
+
+**How many points a producer gets, what they are measured on and when they are paid are all set by the producer's agreement. No law or collective sets them.**
+
+A producer may be paid by a label, an artist or a company, and each agreement says what income counts and which costs come off first. Whether the royalty is paid only after the label has recovered its costs (recoupment) is also a contract matter. Because the terms vary, this guide gives no typical number. A music lawyer should review the agreement.
+
+- Get the points, what they are measured on and the payment timing into a signed written agreement.
+- Have a music lawyer review the agreement before you agree to it.
+
+Points and other routes · Beginner · Directional (industry practice) · For: producers, artists, publishers and labels · Where: International
+
+### Title III of the Music Modernization Act made letters of direction a statutory policy
+
+**Section 114(g)(5) requires the designated collective to adopt a policy for accepting letters of direction. While one is carried out, the person it names is treated as owning that payment.**
+
+Title III of the Music Modernization Act, the Allocation for Music Producers (AMP) Act, added this rule. The statute lets a payee of the recording owner's 50 percent or of the featured artists' 45 percent give a letter, in circumstances the collective decides are appropriate. SoundExchange's page is narrower: it says only featured artists can use its letters. While a letter is in effect, the law treats the payee who gave it as having no claim to that payment.
+
+- Read section 114(g)(5) and SoundExchange's current page before drafting a letter.
+
+Letters of direction · Intermediate · Sourced (official) · For: producers, artists, publishers and labels · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/music-modernization/amp/), [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/)
+
+### One letter follows a recording onto every release it appears on
+
+**SoundExchange applies a letter to a recording wherever it appears, so a track on a single, an album and a compilation is covered on all of them.**
+
+SoundExchange says one letter can list several recordings, or several albums, by one featured artist, and that it follows each recording onto every release. A recording with more than one featured artist needs a letter from each artist; the recorded-music area explains how SoundExchange splits a 'featuring' credit.
+
+- List every recording by that artist in one repertoire chart.
+- Keep each artist's signed letter with the release file.
+
+Letters of direction · Intermediate · Sourced (official) · For: producers, artists · Where: US · As of 20 November 2026 · Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/)
+
+### Letter payments wait for thresholds and stop if the artist's money is held
+
+**Payment starts in the first pay period after the letter is active and the producer's balance passes SoundExchange's threshold. It stops on a recording whose featured-artist money is held.**
+
+SoundExchange's page gives these thresholds: for electronic payment, monthly above $100 and quarterly above $10; for cheques, quarterly above $100. It names a dispute over the featured artist's royalties, or the artist withdrawing registration, as cases where nothing is paid on a recording. Amounts can change.
+
+- Check your payment method and account details before the first payment is due.
+
+Letters of direction · Intermediate · Sourced (official) · For: producers · Where: US · As of 20 November 2026 · Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/)
+
+### SoundExchange handles withholding and reporting on letter payments
+
+**SoundExchange says that since 1 January 2020 artists and producers face backup withholding unless it holds a taxpayer ID, and that it handles the reporting itself. This is not tax advice.**
+
+Before that date, SoundExchange says, artists reported letter payments themselves and gave producers a Form 1099 or 1042 each year as needed. It says the artist no longer needs to do that. SoundExchange gives no tax advice, and neither does this guide. Form W-8 BEN for non-US payees is covered in the basics area.
+
+- Give SoundExchange your taxpayer details in your account.
+- Ask a tax adviser how these payments are taxed for you.
+
+Letters of direction · Intermediate · Sourced (official) · For: producers, artists · Where: US · As of 20 November 2026 · Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/)
+
+### For recordings fixed before 1 November 1995, producers may share 2 percent with no letter
+
+**Section 114(g)(6) lets the collective move 2 percent of an older recording's receipts from the featured artists' share to eligible producers, mixers or engineers, on strict conditions.**
+
+The 2 percent is taken from all receipts for the recording, out of the share otherwise paid to the featured artists (45 percent of receipts), after the collective's costs. The collective adopts a policy and applies it in circumstances it decides are appropriate. The checklist below sets out each condition. This entry rests on the statute alone; no SoundExchange procedure for this route was read for this guide.
+
+- Ask SoundExchange how it applies this route today.
+- Have a music lawyer read the statute and your contract.
+
+Recordings before 1995 · Advanced · Sourced (law) · For: producers · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+
+### A producer who helps write the song may be a joint author, and then registers as a writer
+
+**17 USC 101 defines a joint work as one by two or more authors who intend their contributions to merge into "inseparable or interdependent parts of a unitary whole."**
+
+The statute does not say how much a producer's input to a song has to be for the producer to be a joint author. Where that is unclear or disputed, a music lawyer should advise. A producer who is a writer of the song registers it like any other writer; the PRO and MLC areas give the steps.
+
+- Put every writer's agreed share on a signed split sheet.
+- Register the song where a writer registers; see the PRO and MLC areas.
+
+Producer or writer · Intermediate · Sourced (law) · For: producers, songwriters, publishers and labels · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+
+### Whether a recording is made for hire turns on facts and signed wording
+
+**Calling a recording 'for hire' in an agreement does not settle it. The Copyright Office describes tests that have to be met, and a producer agreement should get legal review.**
+
+Circular 56 says a recording an employee makes in the course of the job is made for hire, with the employer as author. Sound recordings are not among the nine categories Circular 30 lists for commissioned works. Circular 56 describes a commissioned recording as for hire when it is made as a compilation or a contribution to a collective work and the parties agreed in writing. Circular 30 says a commissioned work that fails any of its four conditions is not for hire. How this applies to a given recording is a question for a music lawyer.
+
+- Have a music lawyer review any work-for-hire or ownership wording before you accept it.
+
+Ownership and work for hire · Advanced · Sourced (official) · For: producers, artists, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-c](https://www.copyright.gov/circs/circ30.pdf), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+
+### A letter of direction cannot pay session musicians or backing singers
+
+**SoundExchange says it will not honour a letter for studio musicians or background singers, so a producer's letter is no way to pay them.**
+
+Their statutory share comes through the two escrow funds covered in the recorded-music area. For a transmission licensed outside the statutory licence, section 114(g)(1) says a non-featured artist is paid by the recording owner under the applicable contract or agreement. In the UK, a session player can claim as a performer at PPL.
+
+- Put session payment terms in the session agreement.
+
+Credits and session players · Intermediate · Sourced (official) · For: producers, artists · Where: US, UK · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+### Keep legal names, roles and ISRCs from the session, because the paperwork asks for them
+
+**A SoundExchange letter needs legal names and track details, with ISRCs where available, and PPL asks each performer to pick a role. Missing details slow things down.**
+
+SoundExchange's letter form asks for each performer's legal name and the payee's name and contact details, and its chart asks for track titles, effective dates and ISRCs where available. It says missing items delay activation. PPL's claim route asks each performer to pick a role, and some roles are not payable. Collecting these details at the session is this guide's suggestion, not a rule.
+
+- Write down each contributor's legal name, role and contact when the session ends.
+- Match each letter's track title and ISRC to the released credit.
+
+Credits and session players · Beginner · Sourced (official) · For: producers, artists, administrators · Where: US, UK · As of 20 November 2026 · Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+### In the UK, PPL treats a studio producer as a performer only in specific cases
+
+**PPL says a studio producer may count as a performer when they conduct, or musically direct in a similar way, another performer's live take while it is captured.**
+
+PPL says later edits and remixes do not qualify, though new versions with new audible performances may. A qualifying producer is always listed as non-featured, and PPL's Eligible Studio Producer form has to be completed by the producer and the featured performers. A producer whose own instruments, electronics or vocals are audible can claim for that as any performer can. Some myPPL roles are not payable.
+
+- Read PPL's Eligible Studio Producer form and its performer page before claiming.
+
+Producers abroad · Intermediate · Sourced (official) · For: producers · Where: UK · As of 20 November 2026 · Sources: [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/)
+
+### Producer claims in Canada, Australia, Germany and France are not covered yet
+
+**This area has read producer rules only for SoundExchange in the US and PPL in the UK. It has not checked how producers claim in Canada, Australia, Germany or France.**
+
+The letter of direction is a US statutory route and the studio-producer test is PPL's own rule, so neither says what happens in another country. Until this guide covers those countries, ask the recording-rights society there directly, and a music lawyer there about any producer agreement.
+
+- Ask the recording-rights society in your country how producers claim.
+
+Producers abroad · Beginner · Directional (industry practice) · For: producers, artists · Where: Canada, Australia, Germany, France
+
+## Common mistakes
+
+### Mistake: expecting SoundExchange to pay a producer who has no letter of direction
+
+**SoundExchange's page describes one way to pay a producer, mixer or engineer: a letter of direction from a featured artist. A credit or points in a deal do not do that job.**
+
+Section 114(g)(5) requires the collective to have a policy for accepting letters, and SoundExchange's program takes them from featured artists. Its page names no payment to a producer based on a credit or on a deal with the label. For recordings fixed before 1 November 1995, section 114(g)(6) sets a separate, conditional route, covered below.
+
+- Ask each featured artist for a letter of direction around release.
+- Set up your own SoundExchange account, since letter payments are paid into it.
+
+Letters of direction · Beginner · Sourced (official) · For: producers, artists · Where: US · As of 20 November 2026 · Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+
+### Mistake: copying contract points onto a letter of direction
+
+**A letter states a percentage of one featured artist's share at SoundExchange. Points are measured on whatever base the producer agreement sets, so the two numbers need not match.**
+
+SoundExchange's chart asks for a payment percentage for each recording, measured against the featured artist's share, and tells filers not to enter points or fractions of a percent. The producer agreement may measure points on a different base, so a number cannot simply be carried across. Agreeing what the letter will state belongs in the producer's agreement.
+
+- Agree the letter percentage in writing with the artist.
+- Have a music lawyer help turn the deal into that percentage.
+
+Letters of direction · Advanced · Sourced (official) · For: producers, artists · Where: US · As of 20 November 2026 · Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/)
+
+### Mistake: assuming a producer credit is a songwriting credit
+
+**The Copyright Office names the producer as an author of the recording, unless it was made for hire. Writing the song is separate, so a production credit does not make anyone a songwriter.**
+
+The song and the recording are separate works, as the basics area explains. Circular 56 names the featured performer and the producer, the person who recorded and processed what you hear, as authors of the recording. A producer who also wrote part of the music or lyrics may be a writer of the song as well, but that rests on what they contributed and what the writers agree, not on the production credit.
+
+- Agree in writing who wrote what, and each writer's share, before release.
+- In the split-sheet tool, pick the role for what you wrote and tick 'Also credited as the producer'.
+
+Producer or writer · Beginner · Sourced (official) · For: producers, songwriters, artists · Where: US · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+
+## Four ways a producer can be paid beyond a fee, and what triggers each
+
+Contract points are separate from these. Each route below has its own trigger and its own register, and one does not stand in for another.
+
+| Route | Paid from | What triggers it | Where |
+|---|---|---|---|
+| Letter of direction | A featured artist's share of statutory digital performance money at SoundExchange | The artist signs a letter and SoundExchange accepts it | US |
+| Pre-1995 two percent | Taken from the featured artists' share at SoundExchange | Statutory conditions: a written contract, a certified search for a letter, no objection | US |
+| Writer's share of the song | The song's income, through the song's registrations | Contributing to the song as a writer; shares agreed among the writers | Where the song is registered |
+| PPL studio-producer claim | Performer money at PPL | Directing another performer's live take; form completed with the featured performers | UK |
+
+Intermediate · Sourced (official) · For: producers, artists, publishers and labels · Where: US, UK · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+
+## Conditions for the pre-1995 two percent route, as the statute states them
+
+Every condition has to be met. A written objection from an artist payee stops later payments from that payee's share, though earlier ones stand.
+
+**Who can be paid**
+
+- The person produced, mixed or engineered the recording
+- A written deal with the featured artist, or with a label that helped make or lawfully exploit the recording, giving a share of royalties paid from the artist's
+- A creative contribution to the recording
+- A certification of these points under penalty of perjury, and an accurate copy of that contract, sent to the collective
+
+**Before any payment**
+
+- At least 120 days of reasonable efforts to get a letter from the artist payee, with no written yes or no
+- A certification of those efforts, under penalty of perjury, sent to the collective
+- At least 120 days, before the first payment, of the collective trying to tell the artist payee about it
+- No written objection from the artist payee as of 10 business days before the first distribution
+
+**Afterwards**
+
+- Several eligible people divide the 2 percent equally
+- An objection stops later payment within 10 business days; payments already made stand
+- Where a recording has several artist payees, one payee's objection affects only that payee's share
+
+Advanced · Sourced (law) · For: producers · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
+
+## A producer's checklist before release
+
+Tick what applies. The agreements come first, because the letters and claims that follow rest on them.
+
+**Agreements**
+
+- Points, what they are measured on and payment timing written down
+- Ownership and any work-for-hire wording reviewed by a music lawyer
+- Any songwriting share agreed in writing on a split sheet
+
+**US recording money**
+
+- A letter from each featured artist you are to be paid by
+- Your own SoundExchange account and tax details
+- Repertoire chart with ISRCs and the agreed percentage
+- Older recording: conditions of the pre-1995 route checked
+
+**Credits**
+
+- Legal names and roles recorded for everyone who worked on the track
+- Released credits match the paperwork
+
+**UK**
+
+- Studio-producer claim only if PPL's conditions fit, with the form completed by you and the featured performers
+
+Beginner · Directional (industry practice) · For: producers · Where: US, UK · As of 20 November 2026 · Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
+
+## Terms
+
+Defined on the glossary: https://kitesink.com/music/glossary.md
+
+Terms used on this page (3), each defined word for word in the glossary part of this file (FILE: https://kitesink.com/music/glossary.md): Letter of direction (LOD); Points (a producer's royalty); Work made for hire.
+
+## Split-sheet generator
+
+A split sheet records what the writers of a song agreed: who wrote it, in what role, and each writer's share. It is not a publishing contract, and this page is not legal advice. For anything beyond recording the split, get a music lawyer.
+
+Fill it in together, check that the shares make exactly 100 percent, then print it and have every writer sign and date it. Give every writer a copy.
+
+A sheet holds the song title, any alternate titles and the date agreed; the ISWC, and the ISRC and artist of the recording, if there are any; and whether the song uses samples or interpolations, and which. Samples and interpolations need clearance from the owners of the work they use. This sheet does not clear them.
+
+For each writer it holds their legal name, role, PRO or society, IPI name number, publisher and the publisher's role, and share, with a line to sign and date. Shares are percentages of the song, to two decimal places, and must add up to exactly 100. Split evenly gives three writers 33.34, 33.33 and 33.33. Pick each writer's role for what they wrote. A producer who co-wrote the song gets the role for their part, with "Also credited as the producer" ticked.
+
+Writer roles: These are the writer roles societies use when a song is registered. Arranger, adaptor and translator are for a new version of a song that already exists. If that song is still in copyright, its owners must agree to the new version.
+
+- Composer: Wrote music for the song, but none of the words.
+- Author (lyricist): Wrote words for the song, but none of the music.
+- Composer and author: Wrote both music and words for the song.
+- Arranger: Made a new arrangement of the music of a song that already existed.
+- Adaptor: Reworked the words of a song that already existed, other than by translating them.
+- Translator: Translated the words of a song that already existed into another language.
+
+Publisher roles:
+
+- Original publisher: The publisher the writer signed their share of this song to. A writer who publishes themselves names their own company.
+- Administrator: A company that registers the song and collects for the writer or their publisher under an admin deal, usually without owning it.
+
+The generator itself: https://kitesink.com/music/producer-royalties#split-sheet
+
+---
+
+Source page: https://kitesink.com/music/producer-royalties  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
 General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
@@ -12316,7 +13008,7 @@ What this rests on: Copyright Office Circulars 50 and 56, as retrieved 20 Novemb
 
 - Write down who owns the song and who owns the recording for each release
 
-Topics: Publishing, Myths · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf)
+Topics: Publishing, Myths · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf), [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf)
 
 ### Are featured artists paid 45% of US digital performance royalties?
 
@@ -12340,7 +13032,7 @@ What this rests on: Copyright Office Circular 56 for recordings; application ste
 
 - Read the Office's circular for your type of work before applying
 
-Topics: Myths, Metadata · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-b](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+Topics: Myths, Metadata · Beginner · Sourced (official) · For: songwriters, artists, producers · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/circs/circ56.pdf), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf)
 
 ### Do recording owners get paid when a song plays on US AM/FM radio?
 
@@ -12495,7 +13187,7 @@ FILE: https://kitesink.com/music/glossary.md
 
 # Music business glossary: KiteSink
 
-The 31 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
+The 34 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
 
 - **AI-assisted work and AI-generated output** (AI and music rights; Canada, US): SOCAN's split: an AI-assisted work is made by a person using AI as a tool; an AI-generated output is made with minimal human involvement and cannot be registered. Sources: [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/)
 - **Artist, Performer and Sound Recording Owner (SoundExchange's terms)** (Neighbouring rights; US): SoundExchange uses Artist for the name on the release, Performer for each person who makes up that Artist, and Sound Recording Owner for whoever owns the master, which is separate from owning the song. Sources: [SoundExchange n.d.-c](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/key-terms/)
@@ -12508,15 +13200,17 @@ The 31 terms the KiteSink music field guide uses, in plain words, A to Z. Each n
 - **Featured and non-featured performers** (Neighbouring rights; US): A featured artist is the person or group most prominent on a track. Non-featured performers, such as session musicians and backing singers, are paid through a separate route. Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
 - **ISRC code** (Royalty basics; International, UK): International Standard Recording Code: a 12-character identifier for one recording, made of a rightsholder code, a year and a five-digit number. Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/)
 - **ISWC code** (Royalty basics; International): International Standard Musical Work Code: a number that identifies a song and links it to its rights holders in the society systems. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+- **Letter of direction (LOD)** (Producer royalties; US): Under 17 USC 114(g)(5), an instruction from a payee of the recording owner's or featured artists' share to the designated collective (SoundExchange) to pay part of it to the recording's producer, mixer or sound engineer. Sources: [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [U.S. Copyright Office n.d.-a](https://www.copyright.gov/music-modernization/amp/)
 - **Market-share distribution** (Mechanicals and the MLC; US): How the statute says remaining unclaimed accrued royalties are paid: to identified owners in proportion to their relative market shares in the usage reports, with a share passed on to songwriters. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
-- **Mechanical right** (Royalty basics; International, US): The right to record a song and to make copies of that recording and distribute them. In the US, streaming and download services get it for songs through the MLC's blanket licence. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [TMLC n.d.-b](https://www.themlc.com/)
-- **Musical work (the song)** (Royalty basics; US): The composition: the music plus any words that go with it. Its authors are the people who wrote the music and lyrics, unless it was made for hire. Sources: [U.S. Copyright Office n.d.-a](https://www.copyright.gov/circs/circ50.pdf)
+- **Mechanical right** (Royalty basics; International, US): The right to record a song and to make copies of that recording and distribute them. In the US, streaming and download services get it for songs through the MLC's blanket licence. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [TMLC n.d.-d](https://www.themlc.com/)
+- **Musical work (the song)** (Royalty basics; US): The composition: the music plus any words that go with it. Its authors are the people who wrote the music and lyrics, unless it was made for hire. Sources: [U.S. Copyright Office n.d.-d](https://www.copyright.gov/circs/circ50.pdf)
 - **Neighbouring (related) rights** (Royalty basics; International): Rights that performers, record producers and broadcasters hold, separate from the copyright in the song. Also called related rights. Societies in many countries manage them for broadcasts and public play of recordings. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 - **Notice of intention (NOI)** (Mechanicals and the MLC; US): The notice a person serves on a song's copyright owner, or files with the Copyright Office when the owner cannot be found in its records, to use the compulsory license for physical copies. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
 - **Overclaim** (Mechanicals and the MLC; US): A song where the shares claimed by all members together come to more than 100 percent. The MLC's Overclaims Tool lets owners amend or give up shares and upload documents while it is resolved. Sources: [MLC: tools](https://www.themlc.com/tools)
 - **Performing right** (Royalty basics; US): The right to perform a song publicly, or to authorise others to. US law counts a performance as public where the public can attend, or when it is transmitted to the public. Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
 - **Performing rights organisation (PRO)** (Performance royalties; US): A body that licenses public performance of non-dramatic musical works for their owners. US law calls it a performing rights society. Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
 - **Phonorecord and digital phonorecord delivery (DPD)** (Mechanicals and the MLC; US): A phonorecord is an object that holds recorded sound, such as vinyl or a CD. A DPD is a digital transmission that leaves the recipient with a specific copy: a permanent or limited download, or an on-demand stream. Sources: [U.S. Copyright Office 2018](https://www.copyright.gov/circs/circ73.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Points (a producer's royalty)** (Producer royalties; International): The usual name for a producer's royalty on a record. Each point is one percentage point of whatever base the producer's agreement sets.
 - **Publishing administrator** (Royalty basics; US, International): Industry name for a company that registers songs, collects their income and keeps the records on an owner's behalf, without becoming the owner. Terms vary by contract.
 - **Sound recording (the master)** (Royalty basics; US): A work made by fixing a series of sounds, such as a recorded performance. In US law it excludes sounds that accompany a film or other audiovisual work. Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
 - **Suspense account** (Unclaimed royalties; International): An account where a collective holds royalties while the works in a usage report are still unidentified. A 2020 survey for the US Copyright Office lists checking it against past payouts among some societies' pre-payment steps. Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf)
@@ -12527,6 +13221,7 @@ The 31 terms the KiteSink music field guide uses, in plain words, A to Z. Each n
 - **Unclaimed accrued royalties** (Mechanicals and the MLC; US): Money the MLC has collected but still cannot match to an owner or pay out when the legal minimum holding period ends. The MLC counts both unmatched and unclaimed amounts in it. Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
 - **Unclaimed royalties** (Unclaimed royalties; International): A loose word for royalties that no owner has collected yet. Meanings vary between collectors, and the MLC uses it both for its wider unclaimed accrued royalties and for one part of them. Read each collector's own definition. Sources: [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
 - **Unmatched royalties** (Unclaimed royalties; International, US): Money collected for a use of a song that cannot be paid yet because the song, its owner or the owner's share is still unknown or unfound. In US law it means the owner "has not been identified or located". Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [MLC: unclaimed accrued royalties](https://www.themlc.com/unclaimed-accrued-royalties)
+- **Work made for hire** (Producer royalties; US): A work whose author, in law, is the employer or commissioning party. Either an employee made it within the scope of the job, or it was commissioned for one of nine listed uses under a signed written agreement calling it for hire. Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [U.S. Copyright Office n.d.-c](https://www.copyright.gov/circs/circ30.pdf)
 - **Writer's share and publisher's share** (Royalty basics; International): Common industry names for the part of a song's income that goes to its writers and the part that goes to its publishers. See the note on how societies divide it.
 
 ## Read the areas
@@ -12535,8 +13230,10 @@ The 31 terms the KiteSink music field guide uses, in plain words, A to Z. Each n
 - [Performance royalties](https://kitesink.com/music/pros-performance.md): PROs, public performance, and how plays become pay.
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
 - [Neighbouring rights](https://kitesink.com/music/recorded-neighboring.md): What the recording earns on its own: SoundExchange, PPL and performer shares.
+- [Metadata and registration](https://kitesink.com/music/metadata-registration.md): ISWC, ISRC, IPI and the registrations that route the money.
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
 - [AI and music rights](https://kitesink.com/music/ai-rights.md): Training, outputs, likeness, and the cases and rules so far.
+- [Producer royalties](https://kitesink.com/music/producer-royalties.md): Points, letters of direction and SoundExchange.
 
 ---
 
@@ -12551,7 +13248,7 @@ FILE: https://kitesink.com/music/reference.md
 
 # Music key numbers and reference tables, indexed: KiteSink
 
-An index of the 16 key numbers and 14 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
+An index of the 17 key numbers and 19 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
 
 ## Key numbers
 
@@ -12568,6 +13265,7 @@ An index of the 16 key numbers and 14 reference tables in the KiteSink music fie
 | [Services sent MLC audit notice letters for 2021 to 2023](https://kitesink.com/music/mechanicals-mlc#mech-number-audit-notices) | 49 | DSPs listed on notice letters dated 10 January 2024 | 19 November 2026 | Mechanicals and the MLC |
 | [Commercial broadcasters' nonsubscription streaming rate per performance, 2026](https://kitesink.com/music/recorded-neighboring#nbr-number-broadcasters-2026) | 0.0028 | dollars per performance, commercial broadcasters, 2026 | 20 November 2026 | Neighbouring rights |
 | [Commercial webcasters' nonsubscription rate per performance, 2025](https://kitesink.com/music/recorded-neighboring#nbr-number-webcasters-2025) | 0.0025 | dollars per performance, commercial webcasters, 2025 | 20 November 2026 | Neighbouring rights |
+| [US Rights Owner Prefix fee at the US ISRC Agency](https://kitesink.com/music/metadata-registration#meta-number-us-isrc-prefix) | $95 | one-time fee for a US rights owner prefix | 20 November 2026 | Metadata and registration |
 | [Minimum notice before a US unclaimed distribution](https://kitesink.com/music/unclaimed-recovery#unc-number-notice-days) | 90 | days' minimum notice before an MLC unclaimed distribution | 20 November 2026 | Unclaimed royalties |
 | [Music collections by CISAC member societies in 2025](https://kitesink.com/music/unclaimed-recovery#unc-number-cisac-music) | 14.06 | EUR billion, gross, 2025 | 4 November 2026 | Unclaimed royalties |
 | [Tracks on PPL's repertoire database](https://kitesink.com/music/unclaimed-recovery#unc-number-ppl-tracks) | 28 | million tracks or more | 20 November 2026 | Unclaimed royalties |
@@ -12587,9 +13285,14 @@ An index of the 16 key numbers and 14 reference tables in the KiteSink music fie
 - [The rate periods referred to in MLC and CRB documents](https://kitesink.com/music/mechanicals-mlc#mech-table-rate-periods) (Mechanicals and the MLC)
 - [How long federal remedies run for pre-1972 recordings](https://kitesink.com/music/recorded-neighboring#nbr-table-pre1972-terms) (Neighbouring rights)
 - [Recording societies SoundExchange lists as partners in this guide's countries](https://kitesink.com/music/recorded-neighboring#nbr-table-societies) (Neighbouring rights)
+- [Which code identifies what, who issues it and where to look it up](https://kitesink.com/music/metadata-registration#meta-table-identifiers) (Metadata and registration)
+- [When a recording needs a new ISRC and when it keeps its code](https://kitesink.com/music/metadata-registration#meta-table-isrc-new-or-same) (Metadata and registration)
+- [DDEX standards in plain words: what each message carries](https://kitesink.com/music/metadata-registration#meta-table-ddex) (Metadata and registration)
+- [Which US copyright application fits a song, a recording or both](https://kitesink.com/music/metadata-registration#meta-table-cr-forms) (Metadata and registration)
 - [SoundExchange's four status lists for unclaimed royalties](https://kitesink.com/music/unclaimed-recovery#unc-table-soundexchange-lists) (Unclaimed royalties)
 - [What collectives do with royalties they cannot allocate](https://kitesink.com/music/unclaimed-recovery#unc-table-undistributed-methods) (Unclaimed royalties)
 - [Tracker: pending AI and rights matters, with the date of the latest step found](https://kitesink.com/music/ai-rights#ai-table-tracker) (AI and music rights)
+- [Four ways a producer can be paid beyond a fee, and what triggers each](https://kitesink.com/music/producer-royalties#prod-table-routes) (Producer royalties)
 
 ## The full entries, as plain text
 
@@ -12608,7 +13311,7 @@ FILE: https://kitesink.com/music/sources.md
 
 # Music sources and grading: KiteSink
 
-Where the KiteSink music field guide comes from: how entries are graded and all 129 sources it cites.
+Where the KiteSink music field guide comes from: how entries are graded and all 169 sources it cites.
 
 ## How the entries are graded
 
@@ -12625,9 +13328,9 @@ Each entry records one of four grades. Pages show two labels: Sourced and Direct
 
 Articles and trade press are credited where they are the source of a point. An entry that rests on them alone is graded Directional. Every entry is written in this guide's own words.
 
-## All 129 sources, A to Z
+## All 169 sources, A to Z
 
-Left out of this file for its size: the full reference of each of the 129 sources is at https://kitesink.com/music/sources.md. Every source's address is still in this file: the entries link their own sources, and the 1 that no entry here links are listed below.
+Left out of this file for its size: the full reference of each of the 169 sources is at https://kitesink.com/music/sources.md. Every source's address is still in this file: the entries link their own sources, and the 1 that no entry here links are listed below.
 
 - CISAC (2026). *Global Collections Report 2026 (for 2025 data)*. 4 November 2026. Published 4 November 2026, 2025 data; landing page https://www.cisac.org/Newsroom/global-collections/global-collections-report-2026. International. https://members.cisac.org/CisacPortal/cisacDownloadFileSearch.do?docId=51839&lang=en (Standard, retrieved 20 November 2026, cited 3×)
 

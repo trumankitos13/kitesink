@@ -41,7 +41,7 @@ Who owns AI-assisted music · Intermediate · Sourced (official) · For: songwri
 
 The Office released Part 3 in pre-publication form on 9 May 2025, and its AI page, checked 20 November 2026, still says a final version will follow with no substantive change expected. The report says training an audio model on recordings to generate new recordings aims at the same market, while using a model to remove unwanted distortion would be more transformative. It says existing or likely licence markets weigh against fair use, and that government intervention in licensing would be premature. It is the Office's view and does not bind courts.
 
-Training and data mining · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office 2025b](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/ai/)
+Training and data mining · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office 2025b](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf), [U.S. Copyright Office n.d.-h](https://www.copyright.gov/ai/)
 
 ### In the EU, rightsholders can reserve their music from commercial text and data mining
 
@@ -150,7 +150,7 @@ Lawsuits and tracker · Intermediate · Directional (reported) · For: artists, 
 
 SOCAN's statement of claim was issued on 2 September 2026 and amended on 18 November 2026. SOCAN's page says the claim lists 150 publicly available Suno outputs that it says replicate songs in its repertoire, and that making them available in Canada infringed its performing rights. It says SOCAN has issued no licence to Suno and received no payment. SOCAN is a party, so its page gives one side. No defence or ruling was found.
 
-Lawsuits and tracker · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-a](https://socan.com/socan-ai/ai-lawsuit), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf)
+Lawsuits and tracker · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-b](https://socan.com/socan-ai/ai-lawsuit), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf)
 
 ### Labels and publishers have licensed AI music firms since October 2025
 
@@ -168,7 +168,7 @@ Licences and deals · Intermediate · Directional (reported) · For: publishers 
 
 GEMA says the first component covers training, including fine-tuning, with 30 percent of the net income of the model or system and a minimum royalty linked to how much output is produced. It targets providers operating in the German market whatever the place of training. A second component would cover later use of AI-generated music, such as background music. This is GEMA's own proposed model. The sources opened do not name a provider that has signed it.
 
-Licences and deals · Advanced · Sourced (official) · For: publishers and labels, administrators, songwriters · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-d](https://www.gema.de/en/w/generative-ai-licensing-model), [GEMA 2025](https://www.gema.de/en/w/landmark-ruling-gema-against-openai)
+Licences and deals · Advanced · Sourced (official) · For: publishers and labels, administrators, songwriters · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-g](https://www.gema.de/en/w/generative-ai-licensing-model), [GEMA 2025](https://www.gema.de/en/w/landmark-ruling-gema-against-openai)
 
 ### Sweden's STIM announced a collective AI licence in September 2025
 
@@ -246,7 +246,7 @@ The release notes in DDEX's ERN standard list the two additions for version 4.3.
 
 - Ask your distributor or label which AI fields it sends to each service.
 
-Platforms and distributors · Advanced · Sourced (official) · For: administrators, publishers and labels · Where: International · As of 20 November 2026 · Sources: [DDEX n.d.](https://ern.ddex.net/electronic-release-notification-message-suite-part-1-definitions-of-messages), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
+Platforms and distributors · Advanced · Sourced (official) · For: administrators, publishers and labels · Where: International · As of 20 November 2026 · Sources: [DDEX n.d.-d](https://ern.ddex.net/electronic-release-notification-message-suite-part-1-definitions-of-messages), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
 
 ### ASCAP, BMI and SOCAN accept partly AI works and reject wholly AI ones
 
@@ -277,7 +277,7 @@ GEMA's help page says the box aims to stop payments for content that took no cre
 
 - Tick the box only if AI was not the sole creator of the work.
 
-Registering AI-assisted works · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-e](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai)
+Registering AI-assisted works · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-i](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai)
 
 ## In order
 
@@ -346,7 +346,7 @@ Status as of 20 November 2026. Allegations are not findings; check the court or 
 | EU marking duty, AI Act Art. 50(2), existing systems | Deadline 2 Dec 2026 | 24 Jul 2026, Regulation (EU) 2026/1744 | Official Journal |
 | UK AI and copyright | Report out; no reform committed | 18 Mar 2026, report | gov.uk |
 
-Intermediate · Directional (reported) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, Germany, France, UK, Canada · As of 20 November 2026 · Sources: [GPO 2026](https://www.govinfo.gov/content/pkg/BILLS-119s4591rs/xhtml/BILLS-119s4591rs.html), [U.S. Copyright Office n.d.-d](https://www.copyright.gov/ai/), [DSIM 2026](https://www.musicbusinessworldwide.com/files/2026/09/Suno-Answer.pdf), [PUMGCSMESM 2026](https://www.musicbusinessworldwide.com/files/2026/09/26-cv-14275-Dkt.-1-Complaint.pdf), [DULIU 2026](https://www.musicbusinessworldwide.com/files/2026/09/Sony-v-Udio-asnwer.pdf), [PCMGIC 2026](https://storage.courtlistener.com/recap/gov.uscourts.cand.431519/gov.uscourts.cand.431519.685.0.pdf), [Dalugdug 2026a](https://www.musicbusinessworldwide.com/anthropic-seeks-partial-dismissal-in-music-publishers-3b-lyrics-suit-as-CEO-moves-to-drop-the-direct-infringement-claim-against-him/), [LBMJ 2026b](https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2026/16.php), [Buchholz 2025](https://www.lto.de/recht/nachrichten/n/42o1413924-lg-muenchen-i-gema-openai-chatgpt-songtexte-ki), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf), [Dalugdug 2026b](https://www.musicbusinessworldwide.com/judge-refuses-to-dismiss-indie-artists-proposed-class-action-against-suno-clearing-ai-output-and-stream-ripping-claims-for-discovery/), [Stassen 2026b](https://www.musicbusinessworldwide.com/court-declines-to-dismiss-independent-artists-copyright-class-action-against-udio-but-moves-the-case-from-illinois-to-new-york/), [European Commission 2026](https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content), [EPCEUOJEU 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
+Intermediate · Directional (reported) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, Germany, France, UK, Canada · As of 20 November 2026 · Sources: [GPO 2026](https://www.govinfo.gov/content/pkg/BILLS-119s4591rs/xhtml/BILLS-119s4591rs.html), [U.S. Copyright Office n.d.-h](https://www.copyright.gov/ai/), [DSIM 2026](https://www.musicbusinessworldwide.com/files/2026/09/Suno-Answer.pdf), [PUMGCSMESM 2026](https://www.musicbusinessworldwide.com/files/2026/09/26-cv-14275-Dkt.-1-Complaint.pdf), [DULIU 2026](https://www.musicbusinessworldwide.com/files/2026/09/Sony-v-Udio-asnwer.pdf), [PCMGIC 2026](https://storage.courtlistener.com/recap/gov.uscourts.cand.431519/gov.uscourts.cand.431519.685.0.pdf), [Dalugdug 2026a](https://www.musicbusinessworldwide.com/anthropic-seeks-partial-dismissal-in-music-publishers-3b-lyrics-suit-as-CEO-moves-to-drop-the-direct-infringement-claim-against-him/), [LBMJ 2026b](https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2026/16.php), [Buchholz 2025](https://www.lto.de/recht/nachrichten/n/42o1413924-lg-muenchen-i-gema-openai-chatgpt-songtexte-ki), [PSOCANFCC 2026](https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf), [Dalugdug 2026b](https://www.musicbusinessworldwide.com/judge-refuses-to-dismiss-indie-artists-proposed-class-action-against-suno-clearing-ai-output-and-stream-ripping-claims-for-discovery/), [Stassen 2026b](https://www.musicbusinessworldwide.com/court-declines-to-dismiss-independent-artists-copyright-class-action-against-udio-but-moves-the-case-from-illinois-to-new-york/), [European Commission 2026](https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content), [EPCEUOJEU 2026](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng), [UKGDSITDCMSIPO 2026](https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence)
 
 ## If you use AI in your music
 
@@ -382,7 +382,7 @@ A working list for a songwriter, artist, producer or admin who uses AI tools. It
 - Get written permission from the person before using a model of their voice.
 - Have a music lawyer read any voice or likeness licence.
 
-Beginner · Directional (industry practice) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada, Germany, France, International · As of 20 November 2026 · Sources: [U.S. Copyright Office 2023a](https://copyright.gov/ai/ai_policy_guidance.pdf), [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/), [TMLC n.d.-a](https://help.themlc.com/en/support/ai-generated-works), [GEMA n.d.-e](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/)
+Beginner · Directional (industry practice) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada, Germany, France, International · As of 20 November 2026 · Sources: [U.S. Copyright Office 2023a](https://copyright.gov/ai/ai_policy_guidance.pdf), [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/), [TMLC n.d.-a](https://help.themlc.com/en/support/ai-generated-works), [GEMA n.d.-i](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/)
 
 ## Terms
 

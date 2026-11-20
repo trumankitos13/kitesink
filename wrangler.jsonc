@@ -25,7 +25,7 @@
       "/fitness/basics", "/fitness/technique", "/fitness/hypertrophy", "/fitness/powerlifting", "/fitness/meet",
       "/fitness/conditioning", "/fitness/recovery", "/fitness/nutrition", "/fitness/diet", "/fitness/bodycomp",
       "/fitness/women", "/fitness/health", "/fitness/claims", "/fitness/glossary", "/fitness/reference", "/fitness/sources",
-      "/music/royalty-basics", "/music/pros-performance", "/music/mechanicals-mlc", "/music/recorded-neighboring", "/music/unclaimed-recovery", "/music/ai-rights", "/music/claims", "/music/glossary",
+      "/music/royalty-basics", "/music/pros-performance", "/music/mechanicals-mlc", "/music/recorded-neighboring", "/music/metadata-registration", "/music/unclaimed-recovery", "/music/ai-rights", "/music/producer-royalties", "/music/claims", "/music/glossary",
       "/music/reference", "/music/sources", "/music/claimable", "/music/tools", "/music/ai-tools"
     ]                                    // worker
   },

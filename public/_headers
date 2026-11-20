@@ -131,11 +131,17 @@
 /music/recorded-neighboring
   Link: </music/recorded-neighboring.md>; rel="alternate"; type="text/markdown"
 
+/music/metadata-registration
+  Link: </music/metadata-registration.md>; rel="alternate"; type="text/markdown"
+
 /music/unclaimed-recovery
   Link: </music/unclaimed-recovery.md>; rel="alternate"; type="text/markdown"
 
 /music/ai-rights
   Link: </music/ai-rights.md>; rel="alternate"; type="text/markdown"
+
+/music/producer-royalties
+  Link: </music/producer-royalties.md>; rel="alternate"; type="text/markdown"
 
 /music/claims
   Link: </music/claims.md>; rel="alternate"; type="text/markdown"

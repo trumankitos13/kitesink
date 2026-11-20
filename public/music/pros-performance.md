@@ -123,7 +123,7 @@ Three members of Congress asked in 2024. The Office opened its inquiry with a no
 
 - Check the Copyright Office's PRO page for any follow-up.
 
-Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/policy/pro-issues/)
+Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-i](https://www.copyright.gov/policy/pro-issues/)
 
 ### The Copyright Office says not every PRO discloses what it licenses or how it pays
 
@@ -133,7 +133,7 @@ This is the Office's own background statement on its inquiry page, not a finding
 
 - Ask a PRO for its distribution rules before you join.
 
-Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-e](https://www.copyright.gov/policy/pro-issues/)
+Oversight · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-i](https://www.copyright.gov/policy/pro-issues/)
 
 ### Songview was built so licensees can see each song's owners and shares
 
@@ -153,7 +153,7 @@ Per the sign-up page, publishers need signed contracts showing they own, or are 
 
 - Read the SOCAN sign-up page and agreement before applying.
 
-Joining · Beginner · Sourced (official) · For: songwriters, publishers and labels · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-e](https://www.socan.com/sign-up-for-performing-rights/)
+Joining · Beginner · Sourced (official) · For: songwriters, publishers and labels · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-f](https://www.socan.com/sign-up-for-performing-rights/)
 
 ### GEMA charges an admission fee and a yearly fee, and waives the first for younger creators
 
@@ -173,7 +173,7 @@ A late cue sheet or agreement registration can miss a distribution, per the cut-
 
 - Check SOCAN's current schedule before relying on a date.
 
-Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-d](https://www.socan.com/socan-royalty-distribution-schedule/)
+Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada · As of 20 November 2026 · Sources: [SOCAN n.d.-e](https://www.socan.com/socan-royalty-distribution-schedule/)
 
 ### Societies may pay from samples or proxy data when counting every play is impractical
 
@@ -193,7 +193,7 @@ Members can change the plan at the annual General Assembly. GEMA also says it pa
 
 - Read the GEMA distribution plan for your type of income.
 
-Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-c](https://www.gema.de/en/about-gema/how-gema-distributes-your-money)
+Payments · Intermediate · Sourced (official) · For: songwriters, publishers and labels · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-f](https://www.gema.de/en/about-gema/how-gema-distributes-your-money)
 
 ### Live shows abroad are licensed by the local society, so tell your own society
 
@@ -226,7 +226,7 @@ WIPO says a society cannot distribute properly without knowing what works were u
 - Keep date, venue and set list for each show.
 - Find where your society takes live reports.
 
-Live · Beginner · Directional (industry practice) · For: songwriters, artists · Where: International, Canada · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-b](https://www.socan.com/about/music-creator/)
+Live · Beginner · Directional (industry practice) · For: songwriters, artists · Where: International, Canada · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-c](https://www.socan.com/about/music-creator/)
 
 ## Key numbers
 
@@ -259,7 +259,7 @@ Eligibility and cost differ sharply: SOCAN is free to writers, GEMA charges fees
 | GEMA publisher | Music publisher | EUR 180 once (net), EUR 100 a year |
 | GMR | Select clients by invitation | Not stated on the page |
 
-Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada, Germany, US · As of 20 November 2026 · Sources: [SOCAN n.d.-e](https://www.socan.com/sign-up-for-performing-rights/), [GEMA n.d.-a](https://www.gema.de/en/music-creators/become-a-member), [Global Music Rights n.d.-a](https://globalmusicrights.com/about)
+Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Canada, Germany, US · As of 20 November 2026 · Sources: [SOCAN n.d.-f](https://www.socan.com/sign-up-for-performing-rights/), [GEMA n.d.-a](https://www.gema.de/en/music-creators/become-a-member), [Global Music Rights n.d.-a](https://globalmusicrights.com/about)
 
 ## Setting up for performance royalties
 
@@ -278,7 +278,7 @@ A short order of work: pick a society, register each work with its shares, then 
 - Keep date, venue and set list for each show
 - Send cue sheets for screen uses
 
-Beginner · Directional (industry practice) · For: songwriters, artists, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-b](https://www.socan.com/about/music-creator/)
+Beginner · Directional (industry practice) · For: songwriters, artists, administrators · Where: US, International · Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [SOCAN n.d.-c](https://www.socan.com/about/music-creator/)
 
 ## Terms
 

@@ -247,6 +247,12 @@ export const RULES = [
   }
  ],
  [
+  "/music/metadata-registration",
+  {
+   "Link": "</music/metadata-registration.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
   "/music/unclaimed-recovery",
   {
    "Link": "</music/unclaimed-recovery.md>; rel=\"alternate\"; type=\"text/markdown\""
@@ -256,6 +262,12 @@ export const RULES = [
   "/music/ai-rights",
   {
    "Link": "</music/ai-rights.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
+  "/music/producer-royalties",
+  {
+   "Link": "</music/producer-royalties.md>; rel=\"alternate\"; type=\"text/markdown\""
   }
  ],
  [

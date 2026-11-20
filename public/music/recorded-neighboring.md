@@ -54,7 +54,7 @@ The Copyright Office says the Classics Protection and Access Act added a chapter
 
 - Read the Office's Title II page before relying on any pre-1972 remedy.
 
-Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ### Pre-1972 owners usually file a schedule first, and remedies start 90 days after indexing
 
@@ -64,7 +64,7 @@ The Office says the schedule stands in place of the usual registration requireme
 
 - Check the Office schedule database before assuming a recording is listed.
 
-Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Older recordings · Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ### Web VI: no final rule for section 380.10 webcasters found as of 20 November 2026
 
@@ -199,7 +199,7 @@ The Office says remedies last 95 years from the year of first publication, plus 
 | 1947 to 1956 | 15 years after the 95-year term |
 | All other recordings fixed before 15 February 1972 | Ends 15 February 2067 |
 
-Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Advanced · Sourced (official) · For: artists, producers, publishers and labels · Where: US · As of 20 November 2026 · Sources: [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ## Recording societies SoundExchange lists as partners in this guide's countries
 
@@ -237,7 +237,7 @@ Tick what applies to you. Each register is separate, and a lawyer should read an
 - Content ID criteria read before applying
 - References split into single tracks with exclusivity confirmed
 
-Beginner · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: US, UK, Germany, International · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [SoundExchange n.d.-b](https://www.soundexchange.com/international-partners/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [GVL n.d.-b](https://gvl.de/en/node/1411/international-affairs/international-affairs-performers), [YouTube (Google) n.d.-d](https://support.google.com/youtube/answer/1311402), [YouTube (Google) n.d.-a](https://support.google.com/youtube/answer/2605065), [U.S. Copyright Office n.d.-c](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
+Beginner · Sourced (official) · For: artists, producers, publishers and labels, administrators · Where: US, UK, Germany, International · As of 20 November 2026 · Sources: [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [SoundExchange n.d.-b](https://www.soundexchange.com/international-partners/), [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/), [GVL n.d.-b](https://gvl.de/en/node/1411/international-affairs/international-affairs-performers), [YouTube (Google) n.d.-d](https://support.google.com/youtube/answer/1311402), [YouTube (Google) n.d.-a](https://support.google.com/youtube/answer/2605065), [U.S. Copyright Office n.d.-g](https://www.copyright.gov/music-modernization/pre1972-soundrecordings/)
 
 ## Terms
 
