@@ -92,7 +92,7 @@
       "id": "ai-step-register-ai-material",
       "type": "step",
       "title": "Registering a song that contains AI material with the US Copyright Office",
-      "topic": "copyrightability",
+      "topic": "registration",
       "level": "intermediate",
       "readers": [
         "writer",
@@ -115,38 +115,6 @@
         "Describe your own contribution in the Author Created field.",
         "List the AI-generated material as excluded in Limitation of the Claim.",
         "Ask a music lawyer before filing if ownership of the AI output is unclear."
-      ]
-    },
-    {
-      "id": "ai-mistake-register-wholly-ai",
-      "type": "mistake",
-      "title": "Mistake: registering a song made wholly by AI as your own work",
-      "topic": "registration",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "artist",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US",
-        "CA",
-        "DE"
-      ],
-      "confidence": "official",
-      "sources": [
-        "socan-ai-guidelines",
-        "mlc-ai-help",
-        "usco-mlc-letter",
-        "gema-ai-declaration"
-      ],
-      "as_of": "2026-11-20",
-      "take": "Societies and the MLC treat wholly AI-generated songs as not registrable, so a registration can be removed and royalties held.",
-      "body": "SOCAN will not register AI-generated outputs, may remove them, and puts the responsibility on the member if a work is registered wrongly. The MLC says entirely AI-generated works cannot be registered with it. The Copyright Office told the MLC in 2023 that it may hold royalties on a work that seems to have no human author while it investigates. GEMA's registration form carries a box confirming the work was not made only by AI.",
-      "do": [
-        "Check how much of the writing and performance is yours before you register.",
-        "If you registered one by mistake, tell the society or the MLC so it can be removed."
       ]
     },
     {
@@ -174,7 +142,7 @@
     {
       "id": "ai-note-part3-training",
       "type": "note",
-      "title": "The Copyright Office's training report is still a pre-publication draft",
+      "title": "The Copyright Office's training report exists only as a pre-publication version",
       "topic": "training",
       "level": "intermediate",
       "readers": [
@@ -191,8 +159,8 @@
         "usco-ai-hub"
       ],
       "as_of": "2026-11-20",
-      "take": "Part 3 sees training an audio model to make competing recordings as weakly transformative, and leaves fair use to case-by-case decisions.",
-      "body": "The Office released Part 3 in pre-publication form on 9 May 2025, and its AI page still says a final version will come. The report says training an audio model on recordings to generate new recordings aims at the same market and is at best modestly transformative, while removing noise from recordings is more transformative. It says licences that are available or likely weigh against fair use, and it recommends letting the licensing market develop without government intervention. It is the Office's view, not binding on courts."
+      "take": "Part 3 calls training an audio model to make new recordings for the same market at best modestly transformative, and leaves fair use to case-by-case decisions.",
+      "body": "The Office released Part 3 in pre-publication form on 9 May 2025, and its AI page, checked 20 November 2026, still says a final version will follow with no substantive change expected. The report says training an audio model on recordings to generate new recordings aims at the same market, while using a model to remove unwanted distortion would be more transformative. It says existing or likely licence markets weigh against fair use, and that government intervention in licensing would be premature. It is the Office's view and does not bind courts."
     },
     {
       "id": "ai-note-eu-reservation",
@@ -214,7 +182,7 @@
         "gema-tdm"
       ],
       "as_of": "2026-11-20",
-      "take": "In the EU, commercial text and data mining is allowed unless the rightsholder reserves the use; German law requires online reservations to be machine-readable.",
+      "take": "In the EU, commercial text and data mining of lawfully accessible works is allowed unless the rightsholder reserves the use; German law requires online reservations to be machine-readable.",
       "body": "GEMA's notice explains the rule as Germany applies it in section 44b UrhG, which implements Article 4 of the EU copyright directive of 2019. GEMA says it declared the reservation for the works it represents, including for uses outside Germany, and that licensees who put its repertoire online must signal the reservation in machine-readable form. GEMA's own notice adds that it is not settled whether commercial generative AI falls under the exception. German court rulings on this are in the litigation entries.",
       "do": [
         "Check whether your society has filed a reservation covering your works.",
@@ -244,7 +212,7 @@
         "eu-training-template"
       ],
       "as_of": "2026-11-20",
-      "take": "In the EU, general-purpose AI model providers need a copyright policy and a public training summary; Commission enforcement, with fines, starts 2 August 2026.",
+      "take": "In the EU, general-purpose AI model providers must keep a copyright policy and publish a training summary; Commission enforcement, with fines, began on 2 August 2026.",
       "body": "The Commission says the duties applied from 2 August 2025, its enforcement powers apply from 2 August 2026, and models placed on the market earlier must comply by 2 August 2027. The two public duties are a policy to respect EU copyright, including rights reservations, and a published summary of what content it trained on, for which the Commission published a template (24 July 2025, updated 26 March 2026). The voluntary Code of Practice of 10 July 2025 has a copyright chapter. The summary gives rightsholders something to read; it is not a licence."
     },
     {
@@ -267,7 +235,7 @@
       "sources": [
         "gema-tdm"
       ],
-      "take": "Automated analysis of many digital works to find patterns. In the EU, a commercial use is allowed only where the rightsholder has not reserved it."
+      "take": "Automated analysis of one or more digital works to extract information such as patterns, trends and correlations. In the EU, a commercial use is allowed only where the rightsholder has not reserved it."
     },
     {
       "id": "ai-term-training-summary",
@@ -308,7 +276,8 @@
       "sources": [
         "s4591-rs"
       ],
-      "take": "In the NO FAKES text, a newly made, computer-generated, highly realistic copy of a person's voice or likeness. Authorised remixes, samples and remasters are excluded."
+      "take": "In the NO FAKES bill (S. 4591, not law as of November 2026), a newly made, computer-generated, highly realistic copy of a person's voice or likeness. Authorised remixes, samples and remasters are excluded.",
+      "as_of": "2026-11-20"
     },
     {
       "id": "ai-note-elvis-act",
@@ -354,7 +323,7 @@
       ],
       "as_of": "2026-11-20",
       "take": "Governors signed California bills on 17 September 2024 and New York bills on 11 December 2025; read the statute text before relying on a summary.",
-      "body": "California's governor describes AB 2602 (contracts must say when an AI replica of a performer's voice or likeness will be used, and the performer needs professional representation in the deal) and AB 1836 (no commercial use of a deceased performer's digital replica without estate consent). New York's governor describes S.8420-A (advertisers must identify AI synthetic performers) and S.8391 (heirs or executors must consent to commercial use of a dead person's name, image or likeness). The statute texts and start dates were not read for this entry."
+      "body": "California's governor describes AB 2602 (contracts must say when an AI replica of a performer's voice or likeness will be used, and the performer needs professional representation in the deal) and AB 1836 (no commercial use of a deceased performer's digital replica without estate consent). New York's governor describes S.8420-A (advertisers must identify AI synthetic performers) and S.8391 (heirs or executors must consent to commercial use of a dead person's name, image or likeness). These are the governors' summaries; check each statute's text and start date, with a music lawyer, before relying on it."
     },
     {
       "id": "ai-note-no-fakes-status",
@@ -378,8 +347,8 @@
         "blackburn-nofakes"
       ],
       "as_of": "2026-11-20",
-      "take": "S. 4591 was reported to the Senate on 24 June 2026 (Calendar No. 446); as of 20 November 2026 no floor vote has been found.",
-      "body": "Sen. Coons introduced S. 4591 on 20 May 2026 with Sen. Blackburn, Sen. Klobuchar and others. The Judiciary Committee advanced it unanimously, per the sponsors' release of 18 June 2026, and Sen. Grassley reported it with an amendment on 24 June. A House companion is mentioned in that release. Congress.gov blocks automated reading, so action after June could not be checked there. Until a bill is passed and signed, it changes nothing.",
+      "take": "S. 4591 is a bill, not law. It was reported to the Senate on 24 June 2026 (Calendar No. 446); no Senate or House vote was found as of 20 November 2026.",
+      "body": "Sen. Coons introduced S. 4591 on 20 May 2026 with Sen. Blackburn, Sen. Klobuchar and others. The Judiciary Committee advanced it unanimously, per the sponsors' release of 18 June 2026, and Sen. Grassley reported it with an amendment on 24 June. The release mentions a House companion. Congress.gov blocks automated reading, and on 20 November 2026 govinfo held only the introduced and reported texts. Until a bill is passed and signed, it changes nothing.",
       "do": [
         "Check congress.gov for S. 4591 before relying on this status."
       ]
@@ -447,14 +416,14 @@
         "US",
         "INTL"
       ],
-      "confidence": "reported",
+      "confidence": "official",
       "sources": [
         "spotify-ai-2025",
         "elvis-act"
       ],
       "as_of": "2026-11-20",
       "take": "Spotify allows vocal impersonation only with the impersonated artist's authorisation, and Tennessee law can reach unauthorised voice use.",
-      "body": "Spotify's September 2025 policy says vocal impersonation is allowed in music on its service only when the artist whose voice is imitated has authorised it. Tennessee's ELVIS Act, in force since 1 July 2024, covers real or simulated voices. Other places have other rules. A track that sounds like a named artist can be removed, and an owner may also have a legal claim. A music lawyer can advise on a specific case.",
+      "body": "Spotify's September 2025 policy says vocal impersonation is allowed in music on its service only when the artist whose voice is imitated has authorised it. Tennessee's ELVIS Act, in force since 1 July 2024, covers real or simulated voices. Other places have other rules. A track that imitates a named artist's voice without approval breaks Spotify's policy, and the artist may also have a legal claim. A music lawyer can advise on a specific case.",
       "do": [
         "Get written approval from an artist before releasing a model of their voice.",
         "Use your own voice or a licensed voice model."
@@ -505,7 +474,7 @@
       ],
       "as_of": "2026-11-20",
       "take": "Per the court's own release, Munich Regional Court I largely upheld GEMA's claims against Suno on 31 July 2026 (42 O 763/25); the judgment is not final.",
-      "body": "The 42nd civil chamber ruled on six musical works, not lyrics. It found the works reproducibly contained in Suno models v3.5 and v4 stored on servers in Germany, and held that this storage and the outputs infringed, with the text and data mining exception not applying. It held Suno, not its users, responsible for outputs from simple prompts. It also upheld claims for copying during training in the US and rejected fair use. Suno argued otherwise and the hearing was on 9 March 2026. No appeal result was found. This is a first-instance ruling in one court."
+      "body": "The 42nd civil chamber ruled on six musical works, not lyrics. It found the works reproducibly contained in Suno models v3.5 and v4 stored on servers in Germany, held that this copy was not covered by the text and data mining exception, and found the outputs infringed. It held Suno, not its users, responsible for outputs from simple prompts. It also upheld claims for copying during training in the US and rejected fair use. Suno disputed the claims at the hearing of 9 March 2026. This is a first-instance ruling in one court, and no appeal decision was found."
     },
     {
       "id": "ai-note-labels-suno",
@@ -528,8 +497,8 @@
         "mad-suno-second"
       ],
       "as_of": "2026-11-20",
-      "take": "UMG and Sony's claims against Suno in D. Mass. are allegations; Suno's answer of 1 September 2026 admits it took audio from YouTube.",
-      "body": "In 1:24-cv-11611-FDS, the labels filed a first amended complaint on 25 August 2026 (Dkt. 277) alleging copying of audio from YouTube and getting around its access controls. Suno answered on 1 September 2026 (Dkt. 281), admitting it took audio data from YouTube to train its model and responding to the rest. A second action, 1:26-cv-14275, was filed on 18 September 2026 over 60,202 more recordings and Suno's v6 model. The latest step opened was 18 September 2026; no ruling on the merits was found."
+      "take": "UMG and Sony's claims against Suno in D. Mass. are allegations; Suno's answer of 1 September 2026 admits it trained on audio data taken from YouTube.",
+      "body": "In 1:24-cv-11611-FDS, the labels filed a first amended complaint on 25 August 2026 (Dkt. 277) alleging copying of audio from YouTube and getting around its access controls. Suno answered on 1 September 2026 (Dkt. 281), admitting it used audio data taken from YouTube as training data and denying much of the rest. A second action, 1:26-cv-14275, filed on 18 September 2026, asserts 60,202 recordings and targets Suno's v6 model. The latest step opened was 18 September 2026; no ruling on the merits was found."
     },
     {
       "id": "ai-note-sony-udio",
@@ -552,13 +521,13 @@
         "umg-udio-release"
       ],
       "as_of": "2026-11-20",
-      "take": "Sony's claims against Udio (S.D.N.Y.) are allegations; Udio's answer of 27 August 2026 admits taking audio from YouTube.",
-      "body": "Sony's first case against Uncharted Labs (Udio) is 1:24-cv-04777 (AKH), filed 24 June 2024 per its later complaint. A second, 1:26-cv-6120, was dated 20 July 2026 and asserts 30,117 recordings. Udio's answer in the second case (Dkt. 25, 27 August 2026) admits taking audio data from YouTube. UMG announced a settlement and licences with Udio on 30 October 2025. The latest step opened was 27 August 2026; no ruling on the merits was found."
+      "take": "Sony's claims against Udio (S.D.N.Y.) are allegations; Udio's answer of 27 August 2026 admits it trained on audio data taken from YouTube.",
+      "body": "Sony's first case against Uncharted Labs (Udio) is 1:24-cv-04777 (AKH), filed 24 June 2024 per its later complaint. A second, 1:26-cv-6120, was filed on 20 July 2026 and asserts 30,117 recordings. Udio's answer in the second case (Dkt. 25, 27 August 2026) admits it used audio data taken from YouTube as training data. UMG announced a settlement and licences with Udio on 30 October 2025. The latest step opened was 27 August 2026; no ruling on the merits was found."
     },
     {
       "id": "ai-note-concord-anthropic",
       "type": "note",
-      "title": "Concord v Anthropic: the publishers dropped two claims in April 2026",
+      "title": "Concord v Anthropic: the publishers moved to drop two claims in April 2026",
       "topic": "litigation",
       "level": "advanced",
       "readers": [
@@ -575,8 +544,8 @@
         "mbw-concord-two"
       ],
       "as_of": "2026-11-20",
-      "take": "In the lyrics case against Anthropic, the publishers dropped two secondary-liability claims with prejudice on 20 April 2026; no later ruling has been found.",
-      "body": "In Concord Music Group v. Anthropic (N.D. Cal., 5:24-cv-03811-EKL-SVK, Judge Eumi K. Lee), the publishers filed a notice dropping the second and third counts, contributory and vicarious infringement, with prejudice (Dkt. 685, 20 April 2026). Music Business Worldwide reports a second suit filed in January 2026 and Anthropic motions to dismiss part of it filed on 3 August 2026, set for a 4 November 2026 hearing. The outcome of that hearing was not found. These are allegations and arguments, not findings."
+      "take": "In the first lyrics case against Anthropic, the publishers filed notice on 20 April 2026 dropping two secondary-liability claims with prejudice; a second case is pending.",
+      "body": "In Concord Music Group v. Anthropic (N.D. Cal., 5:24-cv-03811-EKL-SVK, Judge Eumi K. Lee), the publishers filed a notice dropping Counts II and III, contributory and vicarious infringement (Dkt. 685, 20 April 2026); it says Anthropic had not agreed to a stipulation. Music Business Worldwide reports a second suit filed in January 2026 and Anthropic motions to dismiss part of it, filed 3 August 2026 and set for hearing on 4 November 2026. No ruling on those motions was found. These are allegations and arguments, not findings."
     },
     {
       "id": "ai-note-indie-class-actions",
@@ -617,11 +586,12 @@
       ],
       "confidence": "official",
       "sources": [
-        "socan-suno"
+        "socan-suno",
+        "socan-suno-claim"
       ],
       "as_of": "2026-11-20",
-      "take": "SOCAN says it has sued Suno over a sample of 150 outputs and that Suno has neither a SOCAN licence nor paid it; the claims are unproven.",
-      "body": "SOCAN's page says its claim lists 150 publicly available Suno outputs that it says replicate songs in its repertoire, and argues Suno infringed performing rights by making them available in Canada. It says SOCAN has issued no licence to Suno and received no payment. The page links the statement of claim. The court, docket number and filing date were not on the page opened. Check the claim itself for them."
+      "take": "SOCAN sued Suno in the Federal Court of Canada (T-3803-26) over a sample of 150 outputs; it says Suno has neither a licence nor paid it. The claims are unproven.",
+      "body": "SOCAN's statement of claim was issued on 2 September 2026 and amended on 18 November 2026. SOCAN's page says the claim lists 150 publicly available Suno outputs that it says replicate songs in its repertoire, and that making them available in Canada infringed its performing rights. It says SOCAN has issued no licence to Suno and received no payment. SOCAN is a party, so its page gives one side. No defence or ruling was found."
     },
     {
       "id": "ai-table-tracker",
@@ -654,11 +624,11 @@
         "mbw-concord-two",
         "lg-munich-suno",
         "lto-gema-openai",
-        "socan-suno",
+        "socan-suno-claim",
         "mbw-justice-suno",
         "mbw-woulard-udio",
         "eu-marking-code",
-        "cuatrecasas-omnibus",
+        "eu-2026-1744",
         "uk-ai-copyright-report"
       ],
       "as_of": "2026-11-20",
@@ -671,7 +641,7 @@
       ],
       "rows": [
         [
-          "NO FAKES Act, S. 4591",
+          "NO FAKES Act, S. 4591 (a bill, not law)",
           "Reported to Senate; no floor vote found",
           "24 Jun 2026, Calendar No. 446",
           "govinfo bill print"
@@ -679,79 +649,85 @@
         [
           "Copyright Office AI report, Part 3",
           "Pre-publication only; final to follow",
-          "9 May 2025 release; hub unchanged",
+          "9 May 2025 release; hub unchanged 20 Nov 2026",
           "copyright.gov/ai"
         ],
         [
           "UMG and Sony v Suno, D. Mass. 1:24-cv-11611",
-          "Pending",
+          "Pending; allegations",
           "1 Sep 2026, Suno answer (Dkt. 281)",
           "Court filing"
         ],
         [
           "UMG and Sony v Suno II, D. Mass. 1:26-cv-14275",
-          "Pending",
+          "Pending; allegations",
           "18 Sep 2026, complaint",
           "Court filing"
         ],
         [
           "Sony v Udio II, S.D.N.Y. 1:26-cv-6120",
-          "Pending",
+          "Pending; allegations",
           "27 Aug 2026, Udio answer (Dkt. 25)",
           "Court filing"
         ],
         [
-          "Concord v Anthropic, N.D. Cal. 5:24-cv-03811",
-          "Pending; hearing reported for 4 Nov 2026",
-          "20 Apr 2026, counts dropped (Dkt. 685)",
-          "Court filing; MBW"
+          "Concord v Anthropic I, N.D. Cal. 5:24-cv-03811",
+          "Pending",
+          "20 Apr 2026, notice dropping two counts (Dkt. 685)",
+          "Court filing"
+        ],
+        [
+          "Concord v Anthropic II, N.D. Cal.",
+          "Hearing set for 4 Nov 2026 (reported); ruling not found",
+          "3 Aug 2026, motions filed",
+          "MBW (reported)"
         ],
         [
           "GEMA v Suno, Munich I, 42 O 763/25",
-          "Judgment for GEMA, not final",
-          "31 Jul 2026",
+          "Judgment largely for GEMA, not final",
+          "31 Jul 2026, judgment",
           "Court press release"
         ],
         [
           "GEMA v OpenAI, Munich I, 42 O 14139/24",
-          "Judgment for GEMA; appeal not confirmed",
-          "11 Nov 2025",
-          "GEMA; LTO"
+          "Judgment for GEMA, not final",
+          "11 Nov 2025, judgment",
+          "LTO (reported)"
         ],
         [
-          "SOCAN v Suno (Canada)",
+          "SOCAN v Suno, Federal Court (Canada) T-3803-26",
           "Filed; allegations",
-          "Date and court not on page opened",
-          "SOCAN page"
+          "18 Nov 2026, amended claim (issued 2 Sep 2026)",
+          "Court filing"
         ],
         [
           "Justice v Suno (indie class action), D. Mass.",
           "Pending; most claims survive",
-          "20 Aug 2026, dismissal order",
+          "20 Aug 2026, order on motion to dismiss",
           "MBW (reported)"
         ],
         [
           "Woulard v Udio (indie class action)",
           "Transferred to S.D.N.Y.",
-          "3 Aug 2026, order",
+          "3 Aug 2026, transfer order",
           "MBW (reported)"
         ],
         [
-          "EU AI Act Art. 50 and marking code",
+          "EU AI Act transparency duties and labelling code",
           "Duties apply from 2 Aug 2026; code voluntary",
           "10 Jun 2026, final code",
           "European Commission"
         ],
         [
-          "EU Art. 50(2) grace period",
-          "Reported to 2 Dec 2026 for existing systems",
-          "24 Jul 2026, Omnibus published",
-          "Law firm (reported)"
+          "EU marking duty, AI Act Art. 50(2), existing systems",
+          "Deadline 2 Dec 2026",
+          "24 Jul 2026, Regulation (EU) 2026/1744",
+          "Official Journal"
         ],
         [
           "UK AI and copyright",
           "Report out; no reform committed",
-          "18 Mar 2026",
+          "18 Mar 2026, report",
           "gov.uk"
         ]
       ]
@@ -777,11 +753,12 @@
         "merlin-udio",
         "bmg-suno",
         "mbw-wmg-suno",
-        "mbw-kobalt-udio"
+        "mbw-kobalt-udio",
+        "mbw-justice-suno"
       ],
       "as_of": "2026-11-20",
       "take": "UMG, Merlin, Warner, Kobalt and BMG have announced AI deals; none of the sources opened gives money terms, and some rest on trade reports.",
-      "body": "UMG and Udio announced a settlement and licences on 30 October 2025 (UMG release). Merlin and Udio announced a licensing framework on 20 January 2026 for participating members. Music Business Worldwide reports Warner and Suno on 25 November 2025 and Kobalt and Udio on 9 April 2026, the latter with opt-in voices and compositions. BMG's parent posted a BMG and Suno alliance on 14 August 2026 where artists and writers choose to take part. No financial terms were published in these sources.",
+      "body": "UMG and Udio announced a settlement and licences on 30 October 2025 (UMG release). Merlin and Udio announced a licensing framework on 20 January 2026 for participating members. Music Business Worldwide reports Warner and Suno on 25 November 2025 and Kobalt and Udio on 9 April 2026, the latter with opt-in voices and compositions. BMG's parent posted a BMG and Suno alliance on 14 August 2026 (MBW dates the deal 12 August) where artists and writers choose to take part. No financial terms were published in these sources.",
       "do": [
         "Ask your label, publisher or distributor if your catalogue is included and how to opt in or out."
       ]
@@ -871,16 +848,17 @@
       ],
       "confidence": "official",
       "sources": [
-        "eu-marking-code"
+        "eu-marking-code",
+        "eu-2026-1744"
       ],
       "as_of": "2026-11-20",
       "take": "In the EU, AI Act transparency duties apply from 2 August 2026, and a voluntary code on marking and labelling AI content was finalised on 10 June 2026.",
-      "body": "The Commission says the code helps providers and deployers of generative AI meet the transparency duties. From 2 August 2026 clear labelling is required in key cases: deepfakes, AI text about public-interest topics, and telling users when they deal with an AI system. The page does not mention music by name. Whether a given AI song falls under a labelling duty depends on the legal text and the facts, so ask a music lawyer."
+      "body": "The Commission says the code helps providers and deployers of generative AI meet the transparency duties. From 2 August 2026 clear labelling is required in key cases: deepfakes, AI text about public-interest topics, and telling users when they deal with an AI system. Generators already on the market before that date have until 2 December 2026 for machine-readable marking (see the next entry). The page does not mention music by name. Whether a given AI song needs a label depends on the legal text and the facts, so ask a music lawyer."
     },
     {
       "id": "ai-note-art50-grace",
       "type": "note",
-      "title": "Law firms report existing AI generators have until 2 December 2026 to mark outputs",
+      "title": "In the EU, AI generators already on sale have until 2 December 2026 to mark outputs",
       "topic": "eu-uk",
       "level": "advanced",
       "readers": [
@@ -891,13 +869,13 @@
         "DE",
         "FR"
       ],
-      "confidence": "reported",
+      "confidence": "law",
       "sources": [
-        "cuatrecasas-omnibus"
+        "eu-2026-1744"
       ],
       "as_of": "2026-11-20",
-      "take": "One law firm reports an EU grace period to 2 December 2026 for Article 50(2) machine-readable marking by systems already on the market.",
-      "body": "Cuatrecasas says Regulation (EU) 2026/1744, published on 24 July 2026 and in force three days later, gives providers of generative AI systems already placed on the market ahead of 2 August 2026 until 2 December 2026 to meet the marking duty, including systems that generate synthetic audio. The Official Journal text was not read, so this is graded reported. Check the regulation before relying on the date."
+      "take": "In the EU, AI systems generating synthetic audio and placed on the market before 2 August 2026 must meet the Article 50(2) marking duty by 2 December 2026.",
+      "body": "Regulation (EU) 2026/1744, the Digital Omnibus on AI, was published in the Official Journal on 24 July 2026 and entered into force on the third day after. It adds Article 111(4) to the AI Act: providers of AI systems, including general-purpose ones, that generate synthetic audio, images, video or text and were placed on the market before 2 August 2026 must comply with the Article 50(2) marking duty by 2 December 2026. Systems placed on the market later have no such extra time."
     },
     {
       "id": "ai-note-uk-report",
@@ -920,7 +898,7 @@
       ],
       "as_of": "2026-11-20",
       "take": "The UK government's report of 18 March 2026 no longer prefers a wide data mining exception with an opt-out, and says it will not reform copyright until it is confident.",
-      "body": "The report was published on 18 March 2026 with an impact assessment. It proposes gathering more evidence, watching transparency rules abroad and working on best practice for AI transparency. It also proposes exploring options on digital replicas, including whether a new right would help. Nothing in it changes UK law yet. This guide treats the UK separately from the EU."
+      "body": "The report was published on 18 March 2026 with an impact assessment. It proposes gathering more evidence, watching transparency rules abroad and working on best practice for AI transparency. It notes the UK has no duty to label AI-generated content and proposes work with industry on labelling. It also proposes exploring options on digital replicas, including whether a new right would help. Nothing in it changes UK law yet. This guide treats the UK separately from the EU."
     },
     {
       "id": "ai-note-spotify-ai",
@@ -937,13 +915,13 @@
       "territory": [
         "INTL"
       ],
-      "confidence": "reported",
+      "confidence": "official",
       "sources": [
         "spotify-ai-2025"
       ],
       "as_of": "2026-11-20",
       "take": "Spotify's post of 25 September 2025 bars vocal impersonation without the artist's approval and backs AI credits delivered through DDEX.",
-      "body": "Spotify says it took down more than 75 million spam tracks in the previous 12 months and would roll out a spam filter conservatively. AI credits come from labels, distributors and partners. An update on the same page says a beta launched on 16 April that shows AI credits in Song Credits on mobile where artists chose to disclose, and that a missing credit does not mean AI was not used. The page does not give the year of that update; the context suggests 2026.",
+      "body": "Spotify says it took down more than 75 million spam tracks in the previous 12 months and would roll out a spam filter conservatively. AI credits come from labels, distributors and partners. An update on the same page says a beta launched on 16 April that shows AI credits in Song Credits on mobile where artists chose to disclose, and that a missing credit does not mean AI was not used. The update gives no year; it calls the first post last fall, which points to 2026.",
       "do": [
         "Ask your distributor whether it can deliver AI credits to Spotify."
       ]
@@ -968,10 +946,10 @@
         "deezer-2026-07"
       ],
       "as_of": "2026-07-21",
-      "value": "50",
+      "value": "Over 50",
       "unit": "percent of new uploads at the June 2026 peak",
       "sort": 50,
-      "take": "Deezer's own count from its own detector: roughly 90,000 tracks a day that it detects as fully AI-made. It has not been independently checked."
+      "take": "Deezer's own detector count: about 90,000 fully AI tracks a day, not independently checked. The release dates its first AI tagging to both June 2025 and June 2026."
     },
     {
       "id": "ai-number-deezer-streams",
@@ -1001,7 +979,7 @@
     {
       "id": "ai-note-youtube-ai",
       "type": "note",
-      "title": "YouTube asks for labels on realistic AI content and offers face likeness detection",
+      "title": "YouTube requires disclosure of realistic AI content and offers face likeness detection",
       "topic": "platforms",
       "level": "beginner",
       "readers": [
@@ -1012,14 +990,14 @@
       "territory": [
         "INTL"
       ],
-      "confidence": "reported",
+      "confidence": "official",
       "sources": [
         "youtube-altered-content",
         "youtube-likeness-blog"
       ],
       "as_of": "2026-11-20",
-      "take": "YouTube asks creators to disclose realistic AI-made content, including music that is the main focus of a video; its likeness tool described matches faces.",
-      "body": "The YouTube Help page says creators disclose realistic AI-generated or meaningfully altered content in YouTube Studio, and lists music that is the main focus of a video among the examples. Non-realistic content and minor edits need no disclosure. YouTube's blog of 21 April 2026 says likeness detection is offered to agents, managers and the people they represent, and describes matching faces. Voice detection was not described on the pages opened."
+      "take": "YouTube requires creators to disclose realistic AI-made content, including music that is the main focus of a video; its likeness tool described matches faces.",
+      "body": "The YouTube Help page says creators disclose realistic AI-generated or meaningfully altered content in YouTube Studio, and lists music that is the main focus of a video among the examples. Non-realistic content and minor edits need no disclosure. Creators who keep failing to disclose may get a label added or face penalties. YouTube's blog of 21 April 2026 says likeness detection is offered to talent agencies, management companies and the people they represent, and describes matching faces. Voice detection was not described on the pages opened."
     },
     {
       "id": "ai-note-apple-distributors",
@@ -1042,7 +1020,7 @@
       ],
       "as_of": "2026-11-20",
       "take": "Music Business Worldwide reports Apple's four AI transparency tags rely on suppliers; CD Baby says it is working on AI credits with Spotify.",
-      "body": "Per Music Business Worldwide, Apple told partners on 4 March 2026 about tags for art, recording, composition and video, to be used by labels and distributors now and required for new deliveries later. Apple defers to suppliers on what counts as AI-generated. CD Baby's blog of 1 October 2025 says it is working on a standard for AI credits in metadata. Other distributors' own policies, such as DistroKid's and TuneCore's, were not read.",
+      "body": "Per Music Business Worldwide, Apple told partners on 4 March 2026 about tags for artwork, track, composition and music video, which labels and distributors can use now and will have to use for new deliveries later; the specification calls them optional for now. Apple defers to suppliers on what counts as AI-generated. CD Baby's blog of 1 October 2025 says it is working with Spotify and partners on a standard for AI credits in metadata. Ask your own distributor how it handles AI.",
       "do": [
         "Answer your distributor's AI question on the upload form as it is asked."
       ]
@@ -1062,11 +1040,13 @@
       ],
       "confidence": "official",
       "sources": [
-        "ddex-ern-part1"
+        "ddex-ern-part1",
+        "spotify-ai-2025",
+        "uk-ai-copyright-report"
       ],
       "as_of": "2026-11-20",
       "take": "Version 4.3.1 of the DDEX release message adds ways to say a recording, or one contribution, was made fully or partly by a generative AI tool.",
-      "body": "The release notes in DDEX's ERN standard list the two additions for version 4.3.1. These messages are what labels and distributors send to services, so the flag reaches a platform only if your distributor collects the answer and delivers it. The exact element names were not checked. Spotify's post says its AI credits are built with DDEX, and the UK report notes DDEX work on metadata for AI-generated music.",
+      "body": "The release notes in DDEX's ERN standard list the two additions for version 4.3.1; the current version, 4.3.2, keeps them. These messages are what labels and distributors send to services, so the flag reaches a platform only if your distributor collects the answer and delivers it. The exact element names were not checked. Spotify's post says its AI credits standard is developed through DDEX, and the UK report notes DDEX work on metadata for AI-generated music.",
       "do": [
         "Ask your distributor or label which AI fields it sends to each service."
       ]
@@ -1093,9 +1073,10 @@
       ],
       "as_of": "2026-11-20",
       "take": "On 28 October 2025 the three societies aligned: works that combine AI material with human authorship can be registered, entirely AI-made works cannot.",
-      "body": "This is per SOCAN's pages; ASCAP's and BMI's own pages were not read, and BMI's blocked automated access. SOCAN separates AI-generated outputs, which it will not register, from AI-assisted works, which it will. It says members need not explain their AI use at registration for an AI-assisted work, and that the member carries responsibility for registrations. Check your own society's current rules before registering.",
+      "body": "This rests on SOCAN's pages; check ASCAP's and BMI's own pages too. SOCAN separates AI-generated outputs, which it will not register and may remove, from AI-assisted works, which it will. It says members need not explain their AI use at registration for an AI-assisted work, and that the member carries responsibility for registrations. If you registered a wholly AI output by mistake, SOCAN asks you to contact it to have it removed.",
       "do": [
-        "Read your society's AI policy before you register an AI-assisted song."
+        "Read your society's AI policy before you register an AI-assisted song.",
+        "Ask your society to remove any wholly AI work you registered by mistake."
       ]
     },
     {
@@ -1144,7 +1125,7 @@
       ],
       "as_of": "2026-11-20",
       "take": "GEMA's online work registration has a tick box confirming the work was not made only by AI, added as part of its anti-fraud work.",
-      "body": "GEMA's help page says the box aims to stop payments for content that took no creative work. The page's wording is hard to read: it says to tick the box where the work was made entirely or partly without AI. In Germany this means a wholly AI-generated work should not be registered as the member's own. Ask GEMA if you are unsure how your process fits.",
+      "body": "GEMA's help page says the box aims to stop payments for content that took no creative work. The page's wording conflicts: the box confirms the work was not made only by AI, but the next line says to tick it where the work was made entirely or partly without AI. Either way, a wholly AI-generated work cannot be confirmed as the member's own. Ask GEMA if you are unsure how your process fits.",
       "do": [
         "Tick the box only if AI was not the sole creator of the work."
       ]
@@ -1260,14 +1241,16 @@
       "jurisdiction": "US"
     },
     "thaler-sc": {
-      "type": "government",
+      "type": "ruling",
       "publisher": "Supreme Court of the United States",
       "title": "Docket for No. 25-449, Thaler v. Perlmutter",
       "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25-449.html",
       "retrieved": "2026-11-20",
-      "support": "Docket entry of 2 Mar 2026: petition denied.",
+      "support": "Docket entry of 2 Mar 2026: petition for a writ of certiorari denied. Lower court: D.C. Cir. No. 23-5233, decided 18 Mar 2025.",
       "date": "2026-03-02",
-      "jurisdiction": "US"
+      "jurisdiction": "US",
+      "court": "Supreme Court of the United States",
+      "docket": "No. 25-449"
     },
     "usco-part2": {
       "type": "government",
@@ -1280,7 +1263,7 @@
       "jurisdiction": "US"
     },
     "fr-2023-05321": {
-      "type": "regulation",
+      "type": "government",
       "publisher": "U.S. Copyright Office",
       "title": "Copyright Registration Guidance: Works Containing Material Generated by Artificial Intelligence, 88 FR 16190",
       "url": "https://copyright.gov/ai/ai_policy_guidance.pdf",
@@ -1330,11 +1313,11 @@
     },
     "uk-ai-copyright-report": {
       "type": "government",
-      "publisher": "UK Government (DSIT and IPO)",
+      "publisher": "UK Government (DSIT, DCMS and Intellectual Property Office)",
       "title": "Report on Copyright and Artificial Intelligence",
       "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
       "retrieved": "2026-11-20",
-      "support": "Broad exception with opt-out no longer preferred; no reform until confident; proposes removing s.9(3) CDPA protection; AI music may stay protected as sound recordings; digital replica options.",
+      "support": "Opt-out exception no longer preferred; no reform until confident; no UK labelling duty; proposes removing s.9(3) CDPA protection; AI music may stay protected as sound recordings; digital replica options; DDEX metadata work.",
       "date": "2026-03-18",
       "jurisdiction": "UK"
     },
@@ -1364,7 +1347,8 @@
       "url": "https://www.gema.de/documents/d/guest/tdm-vorbehaltserklaerung-2023-12-pdf",
       "retrieved": "2026-11-20",
       "support": "GEMA says it declared the reservation under section 44b(3) UrhG for its repertoire, including uses outside Germany; licensees must signal it machine-readably; quotes Art. 4 DSM Directive.",
-      "jurisdiction": "DE"
+      "jurisdiction": "DE",
+      "date": "2023-12-19"
     },
     "eu-gpai-guidelines": {
       "type": "government",
@@ -1450,7 +1434,7 @@
       "title": "Blackburn, Coons bipartisan bill to protect individuals and creators from deepfakes passes Senate Judiciary Committee",
       "url": "https://www.blackburn.senate.gov/2026/6/blackburn-coons-bipartisan-bill-to-protect-individuals-and-creators-from-deepfakes-passes-senate-judiciary-committee",
       "retrieved": "2026-11-20",
-      "support": "Sponsor release: bill advanced unanimously out of committee; House companion by Reps. Salazar and Dean; promotional in tone.",
+      "support": "Sponsors' release of 18 Jun 2026: bill advanced unanimously out of committee; House companion by Reps. Salazar and Dean; revised version introduced the month before.",
       "date": "2026-06-18",
       "jurisdiction": "US"
     },
@@ -1465,12 +1449,12 @@
       "jurisdiction": "US"
     },
     "spotify-ai-2025": {
-      "type": "other",
+      "type": "company",
       "publisher": "Spotify",
       "title": "Spotify strengthens AI protections for artists, songwriters, and producers",
       "url": "https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/",
       "retrieved": "2026-11-20",
-      "support": "Impersonation policy, spam filter, DDEX-based AI credits; an update on the page describes a beta of AI credits on 16 April.",
+      "support": "Spotify's own policy: impersonation allowed only with the artist's authorisation; spam filter; DDEX-based AI credits. Undated update: beta of AI credits launched 16 April (no year given).",
       "date": "2025-09-25",
       "jurisdiction": "INTL"
     },
@@ -1497,51 +1481,55 @@
     },
     "lg-munich-suno": {
       "type": "government",
-      "publisher": "Landgericht München I (Bavarian Ministry of Justice)",
+      "publisher": "Landgericht München I, press office (published by the Bavarian Ministry of Justice)",
       "title": "Pressemitteilung 16: Urteil GEMA gegen SUNO",
       "url": "https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2026/16.php",
       "retrieved": "2026-11-20",
       "support": "Court press release on the 31 Jul 2026 judgment, 42 O 763/25: claims largely upheld, six works, memorisation, outputs, TDM exception, not final.",
       "date": "2026-07-31",
-      "jurisdiction": "DE"
+      "jurisdiction": "DE",
+      "court": "Landgericht München I (Munich Regional Court I), 42nd civil chamber",
+      "docket": "42 O 763/25"
     },
     "lg-munich-suno-hearing": {
       "type": "government",
-      "publisher": "Landgericht München I (Bavarian Ministry of Justice)",
+      "publisher": "Landgericht München I, press office (published by the Bavarian Ministry of Justice)",
       "title": "Pressemitteilung 6: Verhandlung GEMA gegen Suno Inc.",
       "url": "https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2026/6.php",
       "retrieved": "2026-11-20",
       "support": "Court press release on the hearing of 9 Mar 2026 in 42 O 763/25.",
       "date": "2026-03-09",
-      "jurisdiction": "DE"
+      "jurisdiction": "DE",
+      "court": "Landgericht München I (Munich Regional Court I), 42nd civil chamber",
+      "docket": "42 O 763/25"
     },
     "mad-suno-fac": {
-      "type": "ruling",
-      "publisher": "U.S. District Court for the District of Massachusetts",
+      "type": "filing",
+      "publisher": "Plaintiffs UMG Recordings, Capitol Records and Sony Music Entertainment (filed in D. Mass.)",
       "title": "UMG Recordings, Inc. v. Suno, Inc., First Amended Complaint (Dkt. 277)",
       "url": "https://www.musicbusinessworldwide.com/files/2026/08/gov.uscourts.mad_.272063.277.0_1.pdf",
       "retrieved": "2026-11-20",
-      "support": "Plaintiffs' pleading filed 25 Aug 2026 alleging stream ripping from YouTube and circumvention. Copy hosted by a trade site; allegations only.",
+      "support": "Plaintiffs' amended pleading filed 25 Aug 2026 alleging stream ripping from YouTube and circumvention of its rolling cipher. Copy hosted by a trade site; allegations only.",
       "date": "2026-08-25",
       "court": "D. Mass.",
       "docket": "1:24-cv-11611-FDS",
       "jurisdiction": "US"
     },
     "mad-suno-answer": {
-      "type": "ruling",
-      "publisher": "U.S. District Court for the District of Massachusetts",
+      "type": "filing",
+      "publisher": "Defendant Suno, Inc. (filed in D. Mass.)",
       "title": "UMG Recordings, Inc. v. Suno, Inc., Suno's answer (Dkt. 281)",
       "url": "https://www.musicbusinessworldwide.com/files/2026/09/Suno-Answer.pdf",
       "retrieved": "2026-11-20",
-      "support": "Suno's pleading filed 1 Sep 2026; admits obtaining audio data from YouTube for training and responds to the other allegations. Copy hosted by a trade site.",
+      "support": "Suno's answer filed 1 Sep 2026, para. 7: admits it obtained audio data from YouTube for use as training data; denies the rest of that paragraph. Copy hosted by a trade site.",
       "date": "2026-09-01",
       "court": "D. Mass.",
       "docket": "1:24-cv-11611-FDS",
       "jurisdiction": "US"
     },
     "mad-suno-second": {
-      "type": "ruling",
-      "publisher": "U.S. District Court for the District of Massachusetts",
+      "type": "filing",
+      "publisher": "Plaintiffs UMG, Capitol, Sony Music Entertainment and Sony labels (filed in D. Mass.)",
       "title": "UMG Recordings, Inc. v. Suno, Inc., Complaint (Dkt. 1), second action",
       "url": "https://www.musicbusinessworldwide.com/files/2026/09/26-cv-14275-Dkt.-1-Complaint.pdf",
       "retrieved": "2026-11-20",
@@ -1552,32 +1540,32 @@
       "jurisdiction": "US"
     },
     "nysd-udio-second": {
-      "type": "ruling",
-      "publisher": "U.S. District Court for the Southern District of New York",
+      "type": "filing",
+      "publisher": "Plaintiffs Sony Music Entertainment and Sony labels (filed in S.D.N.Y.)",
       "title": "Sony Music Entertainment v. Uncharted Labs, Inc. (Udio), Complaint, second action",
       "url": "https://www.musicbusinessworldwide.com/files/2026/07/Sony-Udio.pdf",
       "retrieved": "2026-11-20",
-      "support": "Complaint dated 20 Jul 2026 asserting 30,117 recordings; cites the first action 1:24-cv-04777 filed 24 Jun 2024. Allegations only.",
+      "support": "Complaint filed 20 Jul 2026 (date per Udio's answer) asserting 30,117 recordings; cites the first action 1:24-cv-04777 (AKH), filed 24 Jun 2024. Allegations only.",
       "date": "2026-07-20",
       "court": "S.D.N.Y.",
       "docket": "1:26-cv-6120",
       "jurisdiction": "US"
     },
     "nysd-udio-answer": {
-      "type": "ruling",
-      "publisher": "U.S. District Court for the Southern District of New York",
+      "type": "filing",
+      "publisher": "Defendant Uncharted Labs, Inc. d/b/a Udio.com (filed in S.D.N.Y.)",
       "title": "Sony Music Entertainment v. Uncharted Labs, Inc., Udio's answer (Dkt. 25)",
       "url": "https://www.musicbusinessworldwide.com/files/2026/09/Sony-v-Udio-asnwer.pdf",
       "retrieved": "2026-11-20",
-      "support": "Udio's pleading filed 27 Aug 2026 in 1:26-cv-06120-AKH; admits obtaining audio data from YouTube.",
+      "support": "Udio's answer filed 27 Aug 2026 in 1:26-cv-06120-AKH; admits it obtained audio data from YouTube for use as training data. Copy hosted by a trade site.",
       "date": "2026-08-27",
       "court": "S.D.N.Y.",
       "docket": "1:26-cv-06120-AKH",
       "jurisdiction": "US"
     },
     "umg-udio-release": {
-      "type": "other",
-      "publisher": "Universal Music Group",
+      "type": "company",
+      "publisher": "Universal Music Group and Udio (via PR Newswire)",
       "title": "Universal Music Group and Udio announce Udio's first strategic agreements for new licensed AI music creation platform",
       "url": "https://tools.prnewswire.com/en-us/live/20813/release/20251029EN10848",
       "retrieved": "2026-11-20",
@@ -1586,12 +1574,12 @@
       "jurisdiction": "INTL"
     },
     "cand-concord-685": {
-      "type": "ruling",
-      "publisher": "U.S. District Court for the Northern District of California",
+      "type": "filing",
+      "publisher": "Plaintiff publishers (Concord Music Group, Inc. et al.), filed in N.D. Cal.",
       "title": "Concord Music Group, Inc. v. Anthropic PBC, Publishers' notice of voluntary dismissal of Counts II and III with prejudice (Dkt. 685)",
       "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.431519/gov.uscourts.cand.431519.685.0.pdf",
       "retrieved": "2026-11-20",
-      "support": "Notice dated 20 Apr 2026 dismissing contributory and vicarious infringement counts with prejudice.",
+      "support": "Notice filed 20 Apr 2026 dismissing Counts II (contributory) and III (vicarious) with prejudice; footnote 1 says Anthropic had declined to stipulate and the publishers may seek leave to amend.",
       "date": "2026-04-20",
       "court": "N.D. Cal.",
       "docket": "5:24-cv-03811-EKL-SVK",
@@ -1649,18 +1637,8 @@
       "date": "2026-06-10",
       "jurisdiction": "INTL"
     },
-    "cuatrecasas-omnibus": {
-      "type": "article",
-      "publisher": "Cuatrecasas",
-      "site": "Cuatrecasas",
-      "title": "Digital Omnibus on AI has been published",
-      "url": "https://www.cuatrecasas.com/en/latam/intellectual-property/art/digital-omnibus-ai-has-been-published",
-      "retrieved": "2026-11-20",
-      "date": "2026-07-24",
-      "support": "Law-firm summary: Regulation (EU) 2026/1744, OJ 24 Jul 2026; Art. 50(2) marking grace period to 2 Dec 2026 for systems already on the market."
-    },
     "merlin-udio": {
-      "type": "other",
+      "type": "company",
       "publisher": "Merlin",
       "title": "Merlin and Udio partner to advance AI for independent music",
       "url": "https://merlinnetwork.org/merlin-and-udio-partner-to-advance-ai-for-independent-music/",
@@ -1670,12 +1648,12 @@
       "jurisdiction": "INTL"
     },
     "bmg-suno": {
-      "type": "other",
-      "publisher": "Bertelsmann (BMG)",
+      "type": "company",
+      "publisher": "Bertelsmann (BMG's parent company)",
       "title": "BMG and Suno forge AI music alliance",
       "url": "https://www.bertelsmann.com/en/media/news/bmg-and-suno-forge-ai-music-alliance.html",
       "retrieved": "2026-11-20",
-      "support": "Company news item: global alliance covering BMG recordings and publishing; participating artists and songwriters opt in; settles prior use.",
+      "support": "Bertelsmann news item dated 14 Aug 2026: global BMG and Suno alliance covering recordings and publishing; participating artists and songwriters opt in; settles prior use; no terms given.",
       "date": "2026-08-14",
       "jurisdiction": "INTL"
     },
@@ -1731,26 +1709,26 @@
       "jurisdiction": "CA"
     },
     "deezer-2026-07": {
-      "type": "other",
+      "type": "company",
       "publisher": "Deezer",
       "title": "Deezer: AI music has surpassed 50% of new music uploads for the first time",
       "url": "https://newsroom-deezer.com/2026/07/ai-music-exceeds-50-percent-daily-uploads-deezer/",
       "retrieved": "2026-11-20",
-      "support": "Company release with its own figures: peak share above 50% in June 2026, 90,000 a day, 1 to 3% of streams, up to 85% fraud in 2025, detector accuracy claim.",
+      "support": "Deezer's own figures: over 50% of daily uploads at June 2026 peak, about 90,000 a day, 1 to 3% of streams, up to 85% fraud in 2025. Gives June 2025 and June 2026 for its first AI tagging.",
       "date": "2026-07-21",
       "jurisdiction": "INTL"
     },
     "youtube-altered-content": {
-      "type": "other",
-      "publisher": "YouTube Help",
+      "type": "company",
+      "publisher": "YouTube (Google)",
       "title": "Disclosing use of GenAI content",
       "url": "https://support.google.com/youtube/answer/14328491?hl=en",
       "retrieved": "2026-11-20",
-      "support": "Realistic AI-generated or meaningfully altered content must be disclosed; examples include music that is the main focus of a video.",
+      "support": "Help page: creators must disclose realistic AI-made or meaningfully altered content, including music that is the main focus of a video; labels; possible penalties for repeated non-disclosure.",
       "jurisdiction": "INTL"
     },
     "youtube-likeness-blog": {
-      "type": "other",
+      "type": "company",
       "publisher": "YouTube",
       "title": "Expanding likeness detection to the entertainment industry",
       "url": "https://blog.youtube/news-and-events/youtube-likeness-detection-ai-protection/",
@@ -1771,12 +1749,12 @@
       "authors": "Murray Stassen"
     },
     "cdbaby-spotify-ai": {
-      "type": "other",
+      "type": "company",
       "publisher": "CD Baby",
       "title": "What to know about Spotify's new AI protections",
       "url": "https://diymusician.cdbaby.com/?p=32861",
       "retrieved": "2026-11-20",
-      "support": "Distributor blog: working with Spotify on AI credits in track metadata and on impersonation reports; report route is the legal form, Publicity / Likeness.",
+      "support": "CD Baby's own post (by Ryan DiLello): it is working with Spotify and partners on an industry standard for AI credits in track metadata, and on stopping uploads to the wrong artist profile.",
       "date": "2025-10-01",
       "jurisdiction": "INTL"
     },
@@ -1798,6 +1776,29 @@
       "support": "Three societies accept partially AI-generated works; entirely AI-created works are not eligible.",
       "date": "2025-10-28",
       "jurisdiction": "CA"
+    },
+    "socan-suno-claim": {
+      "type": "filing",
+      "publisher": "Plaintiff SOCAN (filed in the Federal Court of Canada)",
+      "title": "Society of Composers, Authors and Music Publishers of Canada v. Suno, Inc., Amended Statement of Claim",
+      "url": "https://www.socan.com/wp-content/uploads/2026/11/ISSUED-Amended-Statement-of-Claim-SOCAN-v-Suno-November-18-2026.pdf",
+      "retrieved": "2026-11-20",
+      "support": "Court File No. T-3803-26, Federal Court; claim issued 2 Sep 2026, amended 18 Nov 2026 under Rule 200; alleges infringement of SOCAN's performing rights in listed works. Allegations only.",
+      "date": "2026-11-18",
+      "court": "Federal Court (Canada)",
+      "docket": "T-3803-26",
+      "jurisdiction": "CA"
+    },
+    "eu-2026-1744": {
+      "type": "statute",
+      "publisher": "European Parliament and Council of the European Union (Official Journal of the EU)",
+      "title": "Regulation (EU) 2026/1744 of 8 July 2026 amending Regulations (EU) 2024/1689, (EU) 2018/1139 and (EU) 2023/1230 (Digital Omnibus on AI)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+      "retrieved": "2026-11-20",
+      "support": "Point (39)(b) adds Art. 111(4) to the AI Act: providers of systems generating synthetic audio, image, video or text placed on the market before 2 Aug 2026 must comply with Art. 50(2) by 2 Dec 2026. OJ L 24.7.2026; in force on the third day.",
+      "date": "2026-07-24",
+      "edition": "OJ L, 2026/1744, 24.7.2026",
+      "jurisdiction": "INTL"
     }
   }
 }
