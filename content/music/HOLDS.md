@@ -21,6 +21,12 @@ changes, copy answers here, tick what is closed, then continue.
       (placeholder; D2, owner reworking)
 - [x] Music agent skill: yes (D23, 2026-11-21); being built
 - [x] public/llms-full.txt size: trim smartly without losing data (D24, 2026-11-21); being done
+- [ ] Approve the batch 9-15 reading lists in `READING-LIST.md` (D25, proposed 2026-11-20). With it:
+      shrink catalog-finance (~10-12 entries, few primary sources; SEC EDGAR blocks automated
+      reading) or merge it into deal-structures? Shrink audits (~12-14)? May MU specimen
+      contracts, Songtrust and Curve be cited for practice-graded deal entries? Keep the Nealy
+      opinion and the IRS treaty table (added beyond the brief)? EUR-Lex returned empty pages
+      for Directives 2014/26 and 2019/790 this time: hand check or retry later
 
 - [x] Remove the three old em dashes in the projects band (D8: yes; done in the hub template, 2026-11-20)
 - [x] AI and music deep-research run (D14: go-ahead 2026-11-20)

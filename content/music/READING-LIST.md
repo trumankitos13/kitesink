@@ -175,3 +175,182 @@ tool's own terms, with the terms URL). Only rows whose own pages were opened are
 Not listed: Jaxsta (in hibernation), Soundful (closed to the public), duetti.com (redirects to an
 unrelated site). Vendor accuracy figures (for example Deezer 99.8 percent, Ircam 99 percent) are
 shown only as the vendor's own claim.
+
+## Batches 9 to 15: remaining areas (phase 3) — PROPOSED 2026-11-20, awaiting owner approval (D25)
+
+Drafted from pages opened on 2026-11-20. Nothing is written for these areas until the owner approves the list.
+
+"Reuse" means the source is already cited in another area. Opened means a plain request returned readable text; no block was worked around.
+
+### Batch 9: Copyright fundamentals (`copyright-fundamentals.json`, ~22 entries, prefix `copy-`)
+
+Already covered elsewhere: work made for hire and joint works (`usc-101`, `circ-30`, batch 6), registration basics (`circ-50`, `circ-56`, batch 2 and 5). Entries here link to those instead of repeating them.
+
+| # | Source | Type | URL |
+| --- | --- | --- | --- |
+| 1 | 17 USC 102 (subject matter) | statute | https://www.law.cornell.edu/uscode/text/17/102 |
+| 2 | 17 USC 201 (ownership) | statute | https://www.law.cornell.edu/uscode/text/17/201 |
+| 3 | 17 USC 203 (termination, post-1977 grants) | statute | https://www.law.cornell.edu/uscode/text/17/203 |
+| 4 | 17 USC 204 (transfers need a signed writing) | statute | https://www.law.cornell.edu/uscode/text/17/204 |
+| 5 | 17 USC 205 (recordation, priority) | statute | https://www.law.cornell.edu/uscode/text/17/205 |
+| 6 | 17 USC 302 (duration, works from 1978) | statute | https://www.law.cornell.edu/uscode/text/17/302 |
+| 7 | 17 USC 304 (duration, subsisting copyrights; 304(c) termination) | statute | https://www.law.cornell.edu/uscode/text/17/304 |
+| 8 | 17 USC 305 (terminal date) | statute | https://www.law.cornell.edu/uscode/text/17/305 |
+| 9 | 17 USC 408 (registration in general) | statute | https://www.law.cornell.edu/uscode/text/17/408 |
+| 10 | 37 CFR 201.10 (notices of termination) | regulation | https://www.law.cornell.edu/cfr/text/37/201.10 |
+| 11 | Copyright Office Circular 15A (duration) | government | https://www.copyright.gov/circs/circ15a.pdf |
+| 12 | Copyright Office Circular 15T (extension of terms) | government | https://www.copyright.gov/circs/circ15t.pdf |
+| 13 | Copyright Office: notice of termination page and Form TCS | government | https://www.copyright.gov/recordation/termination.html |
+| 14 | Copyright Office Circular 12 (recordation of transfers) | government | https://www.copyright.gov/circs/circ12.pdf |
+| 15 | UK CDPA 1988 s.11 and s.90 (first ownership; assignment) | statute | https://www.legislation.gov.uk/ukpga/1988/48/section/11 and /section/90 |
+| 16 | UK CDPA 1988 s.12 and s.13A (duration: musical works; sound recordings) | statute | https://www.legislation.gov.uk/ukpga/1988/48/section/12 and /section/13A |
+| 17 | Canada Copyright Act s.5, 6, 13, 14 (subsistence, term, ownership, reversion) | statute | https://laws-lois.justice.gc.ca/eng/acts/c-42/section-6.html (and -5, -13, -14) |
+| 18 | WIPO: Berne Convention page | government | https://www.wipo.int/en/web/treaties/ip/berne/index |
+
+Reuse: `usc-101`, `usc-106`, `circ-30`, `circ-50`, `circ-56`.
+Blocked or not opened: German UrhG (gesetze-im-internet.de: no connection, not opened); French CPI (Legifrance 403); Australian Copyright Act (legislation.gov.au loads as a script shell); old Circular 15 URL (redirects to an unrelated circular, not used); the WIPO Berne treaty text link (404, not used).
+Practice-graded: none expected; DE, FR and AU rest on the INTL or WIPO entries only.
+
+### Batch 10: Deal structures (`deal-structures.json`, ~16 entries, prefix `deal-`)
+
+Primary text on deal terms barely exists. The sourced entries cover the legal frame (writing, recordation, termination, reversion), UK government findings on contracts and advances, and public specimen contracts. Typical splits, term lengths, advance sizes and what an admin deal "usually" takes are practice-graded.
+
+| # | Source | Type | URL |
+| --- | --- | --- | --- |
+| 1 | MU: specimen agreements index | other | https://musiciansunion.org.uk/legal-money/contracts-and-agreements/specimen-agreements-for-music-business |
+| 2 | MU: specimen distribution agreement | other | https://musiciansunion.org.uk/legal-money/contracts-and-agreements/specimen-agreements-for-music-business/specimen-distribution-agreement |
+| 3 | MU: specimen co-writing agreement | other | https://musiciansunion.org.uk/legal-money/contracts-and-agreements/specimen-agreements-for-music-business/specimen-co-writing-agreement |
+| 4 | MU: specimen production agreement | other | https://musiciansunion.org.uk/legal-money/contracts-and-agreements/specimen-agreements-for-music-business/specimen-production-agreement |
+| 5 | UK CMA: Music and streaming market study, final report (PDF, 29 Nov 2022) | government | https://assets.publishing.service.gov.uk/media/6384f43ee90e077898ccb48e/Music_and_streaming_final_report.pdf |
+| 6 | UK CMA: final report page and executive summary | government | https://www.gov.uk/government/publications/music-and-streaming-market-study-final-report |
+| 7 | UK IPO: Voluntary Code of Good Practice on Transparency in Music Streaming (31 Jan 2024) | government | https://www.gov.uk/guidance/uk-voluntary-code-of-good-practice-on-transparency-in-music-streaming |
+| 8 | UK government: its work on music streaming (remuneration working group) | government | https://www.gov.uk/guidance/the-governments-work-on-music-streaming |
+| 9 | UK IPO: Music creators' earnings in the digital era (executive summary) | government | https://www.gov.uk/government/publications/music-creators-earnings-in-the-digital-era/executive-summary |
+| 10 | Copyright Office: Copyright and the Music Marketplace (2015) | government | https://www.copyright.gov/policy/musiclicensingstudy/copyright-and-the-music-marketplace.pdf |
+| 11 | UK CDPA 1988 s.191HA (assignment of performer's rights in a recording) | statute | https://www.legislation.gov.uk/ukpga/1988/48/section/191HA |
+| 12 | Parliament record: DCMS Committee, Economics of music streaming (HC 50, 2021), listing page only | government | https://api.parliament.uk/committees/publications/6739 |
+| 13 | Songtrust: what a sub-publisher is (practice) | company | https://blog.songtrust.com/what-is-music-sub-publishing |
+| 14 | Curve: a publisher's collection network (practice) | company | https://www.curveroyaltysystems.com/royalties-101-publishing/lesson-7-a-publishers-collection-network |
+
+Reuse: `ppl-performers`. Batch 9 sources `usc-203`, `usc-204`, `usc-205` and Circular 12 also serve this area.
+Blocked or not opened: DCMS report text (committees.parliament.uk and publications.parliament.uk show a Cloudflare challenge); EU Directive 2019/790 Arts 18 to 23 (EUR-Lex returns an empty page); BMI sub-publishing FAQ (403); MMF public guides (themmf.net opened but its resources page shows only a members' notice; corpus `mmf_songroyaltiesguide-1` stays the MMF source); UK IPO contract-adjustment research (not opened).
+Practice-graded: publishing, co-pub and admin splits and terms; label and distribution deal economics; advance and recoupment norms (CMA report may give dated UK facts).
+
+### Batch 11: International societies (`international-societies.json`, ~20 entries, prefix `intl-`)
+
+| # | Source | Type | URL |
+| --- | --- | --- | --- |
+| 1 | CISAC overview | standard | https://www.cisac.org/about/cisac-overview |
+| 2 | CISAC Professional Rules page | standard | https://www.cisac.org/services/business-and-governance/professional-rules |
+| 3 | CISAC regional pages: Europe; Canada/USA | standard | https://www.cisac.org/about/global-reach/europe and /canadausa |
+| 4 | CISAC Global Collections Report 2026 page (reuse `cisac-gcr-2026`) | standard | https://www.cisac.org/Newsroom/global-collections/global-collections-report-2026 |
+| 5 | CISAC IPI page (reuse `cisac-ipi`) | standard | https://www.cisac.org/services/information-services/ipi |
+| 6 | BIEM: about | collective | https://www.biem.org/about/about-biem |
+| 7 | ICE Services: about | company | https://www.iceservices.com/about/ |
+| 8 | UK CRM Regulations 2016 (SI 2016/221), regs 10 to 14, 17, 18, 21 | statute | https://www.legislation.gov.uk/uksi/2016/221/contents/made |
+| 9 | Copyright Office CMO report 2020 (reuse `butler-cmo-2020`) | government | https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf |
+| 10 | WIPO CMO module, music (reuse `wipo-cmo-music`) | government | https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf |
+| 11 | SOCAN: international royalties | collective | https://www.socan.com/about/international-royalties/ |
+| 12 | SOCAN: affiliation agreements list, March 2026 | collective | https://www.socan.com/wp-content/uploads/2026/05/SOCAN_PR_Affiliation_Agreements_List_EN_March-2026.pdf |
+| 13 | SOCAN: Simplified Distribution Rules 2024 | collective | https://www.socan.com/wp-content/uploads/2024/10/Simplified-Distribution-Rules-2024.pdf |
+| 14 | GEMA: international payouts | collective | https://gema.de/en/music-creators/royalties/music-international |
+| 15 | GEMA: relationship with other CMOs (Q&A) | collective | https://www.gema.de/en/w/help/gema/collective-management-organisations/questions-and-answers/which-other-gema-relationship |
+| 16 | GEMA annual report: international networking | collective | https://annualreport.gema.de/en/pacemaker/international-networking |
+| 17 | IRS: tax treaty tables (withholding on foreign royalties) | government | https://www.irs.gov/individuals/international-taxpayers/tax-treaty-tables |
+| 18 | UK IPO: collecting societies codes of conduct | government | https://www.gov.uk/government/publications/collecting-societies-codes-of-conduct |
+| 19 | Songtrust: reciprocal vs direct affiliations (practice) | company | https://blog.songtrust.com/music-publishing-reciprocal-vs-direct-agreements |
+
+Blocked or not opened: EU Directive 2014/26/EU on EUR-Lex (empty response, not opened); PRS international pages (JavaScript-only); APRA AMCOS and SACEM (403 per HOLDS, not retried); BMI sub-publishing FAQ (403); ASCAP (blocked per HOLDS, not retried); ISO pages (bot check, per HOLDS); STIM and other non-brief territories not used.
+Practice-graded: sub-publishing terms and fees, how long foreign money takes, which deductions apply in practice.
+
+### Batch 12: Sync licensing (`sync-licensing.json`, ~15 entries, prefix `sync-`)
+
+No primary source sets sync fees or the terms of a sync or master-use licence. Fees, quotes, MFN clauses, library and production-music terms are practice-graded; the sourced part is the rights (106), cue sheets and what follows.
+
+| # | Source | Type | URL |
+| --- | --- | --- | --- |
+| 1 | SOCAN: audiovisual cue sheet submission | collective | https://www.socan.com/audiovisual-cue-sheet-submission/ |
+| 2 | SOCAN: FAQ, industry standard cue sheet (PDF) | collective | https://www.socan.com/wp-content/uploads/2023/07/FAQ-Industry-standard-cue-sheet.pdf |
+| 3 | SOCAN: cue sheet submission and management guide (Jan 2026 PDF) | collective | https://www.socan.com/wp-content/uploads/2026/01/Cue-Sheet-Submission-and-Management-EN.pdf |
+| 4 | SOCAN Academy: how to complete and submit cue sheets | collective | https://www.socanmagazine.ca/socan-academy/socan-academy-how-to-complete-and-submit-cue-sheets/ |
+| 5 | SOCAN: television broadcast royalties | collective | https://www.socan.com/television-broadcast-royalties/ |
+| 6 | GEMA: audiovisual productions (page renders in German) | collective | https://www.gema.de/en/music-creators/repertoire/audiovisual-productions |
+| 7 | GEMA: AV registration information (English PDF) | collective | https://www.gema.de/fileadmin/user_upload/Musikurheber/Informationen/information_anmeldung_av_produktionen_e.pdf |
+| 8 | GEMA: register films and series | collective | https://gema.de/en/music-creators/repertoire/audiovisual-productions/films-and-series |
+| 9 | CISAC: global format for audiovisual music data (AVR+ release) | standard | https://www.cisac.org/Newsroom/news-releases/cisac-launches-first-global-format-modernise-audiovisual-music-data-and |
+| 10 | CISAC: formats page (AVR) | standard | https://www.cisac.org/formats |
+| 11 | CISAC: AVR+ webinar post | standard | https://www.cisac.org/Newsroom/articles/join-webinar-introducing-avr-new-global-standard-music-av |
+| 12 | GEMA post: harmonised cue sheets (CISAC, publishers, recording industry) | collective | https://www.gema.de/en/w/cisac-publishers-recording-industry-come-together-upgrade-harmonised-music |
+| 13 | WIPO: rights clearance guide for independent filmmakers, ch. 3 | government | https://www.wipo.int/web-publications/rights-clearance-a-guide-for-independent-filmmakers/en/3-rights-assessed-during-clearance.html |
+
+Reuse: `usc-106`, `usc-101`, `socan-faq`, `mlc-what-is-cwr`; the 2015 Copyright Office marketplace report (batch 10) covers sync context.
+Blocked or not opened: PRS cue sheet pages (JavaScript-only); APRA AMCOS cue sheets (403); ASCAP, BMI (blocked per HOLDS); SACEM (403 per HOLDS); CISAC "Global Cue Sheet" page (guessed URL 404; the standard itself and formats.cisac.org/avr not opened, named only in a search result); DDEX cue sheet material not found.
+Practice-graded: sync and master-use fees, quotes, term, territory, MFN, library deals, who files the cue sheet in practice.
+
+### Batch 13: Audits (`audits.json`, ~14 entries, prefix `aud-`)
+
+Primary sources are statutes, one regulation and one transparency code. Contract audit clauses, look-back and objection windows, cost shifting and typical findings are practice-graded.
+
+| # | Source | Type | URL |
+| --- | --- | --- | --- |
+| 1 | 17 USC 115, incl. (d)(3)(L) MLC audits (reuse `usc-115`) | statute | https://www.law.cornell.edu/uscode/text/17/115 |
+| 2 | 37 CFR 380.6 (auditing payments and distributions) | regulation | https://www.law.cornell.edu/cfr/text/37/380.6 |
+| 3 | 37 CFR 210.34 (confidential information, incl. audits) and 210.30 (payee disputes) | regulation | https://www.law.cornell.edu/cfr/text/37/210.34 |
+| 4 | 37 CFR 385.2 (definitions; Part 385 has no separate audit section I could find) | regulation | https://www.law.cornell.edu/cfr/text/37/385.2 |
+| 5 | 17 USC 507 (limitations: three years) | statute | https://www.law.cornell.edu/uscode/text/17/507 |
+| 6 | Warner Chappell Music v Nealy, 601 US ___ (2024), opinion | ruling | https://www.supremecourt.gov/opinions/23pdf/22-1078_4gci.pdf |
+| 7 | UK Limitation Act 1980 s.5 (contract claims) | statute | https://www.legislation.gov.uk/ukpga/1980/58/section/5 |
+| 8 | UK Voluntary Code of Good Practice on Transparency in Music Streaming (audit sections) | government | https://www.gov.uk/guidance/uk-voluntary-code-of-good-practice-on-transparency-in-music-streaming |
+| 9 | UK CRM Regulations 2016, regs 17, 18, 21 (information to right holders; annual transparency report) | statute | https://www.legislation.gov.uk/uksi/2016/221/regulation/17/made |
+| 10 | MLC: DSP audit programme (reuse `mlc-audits`) | collective | https://www.themlc.com/audits-dsp |
+| 11 | UK CMA final report (transparency findings) | government | https://assets.publishing.service.gov.uk/media/6384f43ee90e077898ccb48e/Music_and_streaming_final_report.pdf |
+| 12 | 17 USC 114 (reuse `usc-114`; check (f)(4) for payer recordkeeping when written) | statute | https://www.law.cornell.edu/uscode/text/17/114 |
+
+Blocked or not opened: EU Directive 2019/790 Art 19 and 2014/26/EU (EUR-Lex empty response); SoundExchange audit pages (no audit page found; the service-provider page opened but does not mention audits); DOJ pages (blocked per HOLDS).
+Practice-graded: audit clauses (notice, frequency, look-back, cost shifting, objection windows), what audits commonly find, how to read a distributor or label statement.
+
+### Batch 14: Distribution and DSPs (`distribution-dsps.json`, ~18 entries, prefix `dist-`)
+
+| # | Source | Type | URL |
+| --- | --- | --- | --- |
+| 1 | Spotify for Artists: understanding Spotify royalties | company | https://support.spotify.com/us/artists/article/understanding-spotify-royalties/ |
+| 2 | Spotify for Artists: track monetization eligibility | company | https://support.spotify.com/us/artists/article/track-monetization-eligibility/ |
+| 3 | Spotify for Artists: modernizing the royalty system | company | https://artists.spotify.com/en/blog/modernizing-our-royalty-system |
+| 4 | Deezer Support: Artist-Centric Payment Model | company | https://support.deezer.com/hc/en-gb/articles/360002471277-Artist-Centric-Payment-Model-ACPS |
+| 5 | Deezer: artist remuneration page | company | https://deezer.com/explore/artist-remuneration |
+| 6 | Deezer newsroom: how much does Deezer pay artists (2023) | company | https://newsroom-deezer.com/2023/03/how-much-does-deezer-pay-artists/ |
+| 7 | Deezer newsroom: UMG and Deezer artist-centric model (2023) | company | https://newsroom-deezer.com/2023/09/universal-music-group-and-deezer-to-launch-the-first-comprehensive-artist-centric-music-streaming-model/ |
+| 8 | YouTube Help: your content and YouTube Music | company | https://support.google.com/youtube/answer/6312991?hl=en |
+| 9 | YouTube blog: $8 billion paid to the music industry (company claim) | company | https://blog.youtube/news-and-events/8-billion-youtubes-twin-engine-continues-to-fuel-the-future-of-music/ |
+| 10 | DistroKid terms of service | company | https://distrokid.com/terms/ |
+| 11 | TuneCore terms | company | https://www.tunecore.com/terms |
+| 12 | CD Baby terms of service | company | https://cdbaby.com/terms-of-service/ |
+| 13 | UK IPO: industry agreement on music streaming metadata (May 2023) | government | https://www.gov.uk/government/publications/uk-industry-agreement-on-music-streaming-metadata |
+| 14 | UK IPO: music streaming metadata report and project update | government | https://www.gov.uk/government/publications/music-streaming-metadata-report-and-project-update |
+| 15 | UK IPO blog: music metadata matters (2025) | government | https://ipo.blog.gov.uk/2025/04/26/music-metadata-matters-how-to-get-paid-and-credited/ |
+
+Reuse: `ddex-ern`, `ddex-dsr`, `mlc-statements`, `spotify-ai-2025`, `deezer-2026-07`, `cdbaby-spotify-ai`.
+Blocked or not opened: Apple Music payout page (none found; artists.apple.com opens but has no payout text, the Apple legal page is script-only; the 2021 "penny a stream" figure rests on trade press, not opened); DistroKid home (403, terms page opened); Spotify Loud & Clear (opened but almost all script, not counted); DCMS report text (Cloudflare challenge); Amazon Music, Tidal not tried.
+Practice-graded: what distributors take and charge, payout timing and thresholds in practice, per-stream rate talk, how DSP pools differ from the policy pages.
+
+### Batch 15: Catalog finance (`catalog-finance.json`, ~12 entries, prefix `cat-`; shrink recommended)
+
+Primary filings did not open. Every market figure below is `reported`, and entries about valuation, multiples and loan terms are practice-graded.
+
+| # | Source | Type | URL |
+| --- | --- | --- | --- |
+| 1 | Hipgnosis Songs Fund final results, year to 31 Mar 2020 (RNS, dated; the fund is now Recognition) | filing | https://static1.squarespace.com/static/5937f2f1bebafb1297678ff8/t/5eff4cdee5e0f777e3efa6f7/1593789665762/Song+FY+RNS+%28FINAL%29+.pdf |
+| 2 | Goldman Sachs: global music revenues forecast to double by 2035 | company | https://www.goldmansachs.com/insights/articles/global-music-revenues-are-forecast-to-double-to-200-million-in-2035 |
+| 3 | Luminate: Music Rights and Catalog Acquisitions report 2025 (PDF) | dataset | https://luminatedata.com/wp-content/uploads/2025/11/November_music_catalogs_free_FINAL.pdf |
+| 4 | MIDiA: the ghost of the 2000s and the catalogue acquisition market | article | https://www.midiaresearch.com/blog/the-ghost-of-the-2000s-lingers-over-the-catalogue-acquisition-market |
+| 5 | MIDiA: are prices for publishing catalogue acquisitions justified | article | https://www.midiaresearch.com/blog/are-prices-for-music-publishing-catalogue-acquisitions-justified |
+| 6 | MIDiA: Music catalogue market 2.0 (summary page; full report paywalled) | article | https://www.midiaresearch.com/reports/music-catalogue-market-20-bringing-yesterdays-hits-into-the-business-of-tomorrow |
+| 7 | MBW: Reservoir FY2026 (revenue, acquisitions and advances) | article | https://www.musicbusinessworldwide.com/reservoir-deployed-120m-on-acquisitions-and-advances-in-latest-fiscal-year-as-its-annual-revenues-grew-11-yoy-to-175-7m/ |
+| 8 | Billboard: Reservoir FY2024 earnings | article | https://www.billboard.com/pro/reservoir-media-earnings-revenue-145m-acquisitions |
+| 9 | Copyright Office Circular 12 (security interests, recordation) | government | https://www.copyright.gov/circs/circ12.pdf |
+| 10 | Copyright Office: recordation of transfers and other documents | government | https://www.copyright.gov/recordation/documents |
+| 11 | Copyright Office: Register's 1999 statement on recording security interests | government | https://www.copyright.gov/docs/regstat62499r.html |
+
+Reuse: `usc-101` (transfer of ownership), `usc-205`; Circular 12 from batch 9.
+Blocked or not opened: SEC EDGAR (403, "undeclared automated tool"), so no Reservoir 10-K; Reservoir investor site (no connection); Reservoir ACCESS Newswire release (403); Warner Music Group and UMG investor pages (403); Hipgnosis and Recognition annual report links (redirect to a home page); Goldman Music in the Air report PDFs (404 or not found).
+Practice-graded: valuation multiples, sale and advance terms, royalty-backed loan structures.
