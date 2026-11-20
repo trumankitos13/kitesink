@@ -1,0 +1,643 @@
+{
+  "domain": "claims",
+  "entries": [
+    {
+      "id": "claim-april-2027-claim-deadline",
+      "type": "claim",
+      "title": "Do I have to claim my unclaimed MLC royalties before April 2027?",
+      "domain": "mechanicals-mlc",
+      "tags": [
+        "unclaimed",
+        "mechanicals"
+      ],
+      "verdict": "false",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "mlc-unclaimed",
+        "mlc-pr-2026-09",
+        "mlc-market-share",
+        "usc-115"
+      ],
+      "take": "No. April 2027 is when the MLC plans to start paying out unmatched money by market share. It is a start date, not a cut-off for claims.",
+      "body": "The MLC says it intends to begin in April 2027 with the earliest blanket usage, from January 2021, then to work through the remaining eligible 2021 royalties one month at a time. Money for a song you have claimed and matched before its month comes up is not part of that pool. These are the MLC's plans, so watch its dashboard, and register and match early.",
+      "do": [
+        "Register and match your songs well before your usage months come up",
+        "Watch the MLC's unclaimed dashboard for updated schedules"
+      ],
+      "basis": "MLC unclaimed-royalties page and its 30 September 2026 release; 17 USC 115(d)(3), as of November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-mlc-fee",
+      "type": "claim",
+      "title": "Does the MLC take a fee from my mechanical royalties?",
+      "domain": "mechanicals-mlc",
+      "tags": [
+        "mechanicals",
+        "royalties"
+      ],
+      "verdict": "mostly",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "mlc-audits",
+        "usco-mma-faq"
+      ],
+      "take": "The MLC says it takes no fee out of the mechanical royalties it pays. Digital services fund it separately. That does not cover what your own publisher or administrator keeps.",
+      "body": "The MLC's audits page says its operating budget comes from digital services through an assessment fixed by the Copyright Royalty Judges, and that it deducts no fees from royalties. The Copyright Office FAQ adds voluntary contributions from the services. This is how the MLC describes itself for US digital mechanicals, so check your statements. A publisher or administrator may charge under its own contract.",
+      "do": [
+        "Read the deductions line on each MLC statement",
+        "Ask your publisher or administrator what it keeps"
+      ],
+      "basis": "MLC DSP audits page and Copyright Office MMA FAQ, as retrieved 19 November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-copyright-registration-mlc",
+      "type": "claim",
+      "title": "If my song is registered with the Copyright Office, does the MLC know about it?",
+      "domain": "mechanicals-mlc",
+      "tags": [
+        "metadata",
+        "mechanicals"
+      ],
+      "verdict": "false",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usco-mma-faq",
+        "usco-mma"
+      ],
+      "take": "No. The Copyright Office and the MLC keep separate records. You, or your publisher or administrator, still need to register the song with the MLC to be paid.",
+      "body": "The Copyright Office FAQ says owners with a copyright registration still need to register with the MLC. It also says a song need not be registered with the Office to be eligible for MLC royalties on digital uses. For physical copies, such as CDs and vinyl, the owner must appear in the Office's records. Registration has other effects in copyright law that this answer does not cover.",
+      "do": [
+        "Search the MLC's public database, then claim or register the song",
+        "Ask your publisher or administrator whether it handles the MLC"
+      ],
+      "basis": "Copyright Office Music Modernization Act FAQ and overview page, as retrieved 19 November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-fixed-streaming-rate",
+      "type": "claim",
+      "title": "Does a streaming service pay a fixed mechanical rate per stream?",
+      "domain": "mechanicals-mlc",
+      "tags": [
+        "mechanicals",
+        "royalties"
+      ],
+      "verdict": "false",
+      "level": "intermediate",
+      "readers": [
+        "writer",
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "cfr-385-21"
+      ],
+      "take": "No. US law sets no per-stream amount for mechanicals. It sets a formula that produces a pool for each service offering, which is then divided across plays.",
+      "body": "37 CFR 385.21 takes the greater of a share of service revenue and a content-cost amount, subtracts performance royalties the service pays, applies any per-subscriber floor, then divides the pool by plays. What one stream earns therefore depends on the service, the type of offering and its results. This covers interactive streaming and limited downloads in the US under the MLC's blanket license, for the rate period the regulation states.",
+      "do": [
+        "Read the offering and period on your statement before comparing per-stream figures"
+      ],
+      "basis": "37 CFR 385.21(b), Subpart C, as retrieved 19 November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-131-cents-streaming",
+      "type": "claim",
+      "title": "Is 13.1 cents the streaming mechanical rate?",
+      "domain": "mechanicals-mlc",
+      "tags": [
+        "mechanicals",
+        "myths"
+      ],
+      "verdict": "false",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "cfr-385-11",
+        "fr-2025-21695",
+        "cfr-385-21"
+      ],
+      "take": "No. 13.1 cents is the 2026 US rate per work for physical copies and permanent downloads. Streaming mechanicals come from a formula, not that figure.",
+      "body": "37 CFR 385.11 sets the 2026 rate for physical copies and permanent downloads as 13.1 cents per work, or, if larger, 2.52 cents for each minute or part of one. The Judges' 2026 cost-of-living notice applies those adjusted figures from 1 January to 31 December 2026. Streaming falls under 385.21 and has no fixed per-play amount. A 2027 figure is not given here.",
+      "do": [
+        "Use the 13.1 cent rate only for copies and downloads in 2026"
+      ],
+      "basis": "37 CFR 385.11(a)(1) and 385.21; Federal Register notice of 1 December 2025, as of November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-publisher-share-unclaimed",
+      "type": "claim",
+      "title": "Must publishers pay songwriters a share of unclaimed MLC money they receive?",
+      "domain": "mechanicals-mlc",
+      "tags": [
+        "unclaimed",
+        "publishing"
+      ],
+      "verdict": "true",
+      "level": "intermediate",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-115"
+      ],
+      "take": "Yes. A copyright owner that receives an MLC unclaimed distribution must pay or credit songwriters, and never less than half of what it receives for their works.",
+      "body": "17 USC 115(d)(3)(J)(iv) says this applies despite any agreement to the contrary. The payment is allocated by the reported usage of each song in the periods the distribution covers, and a songwriter's amount cannot be under 50 percent of what the owner received for that songwriter's works. The rule covers money from market-share distributions of unclaimed accrued royalties, not all publishing income. A music lawyer should read any agreement that matters.",
+      "do": [
+        "Ask your publisher how it will credit these payments to you"
+      ],
+      "basis": "17 USC 115(d)(3)(J)(iv), as retrieved 19 November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-black-box",
+      "type": "claim",
+      "title": "Is a \"black box\" the same as unclaimed royalties?",
+      "domain": "unclaimed-recovery",
+      "tags": [
+        "unclaimed",
+        "myths"
+      ],
+      "verdict": "depends",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US",
+        "INTL"
+      ],
+      "confidence": "practice",
+      "sources": [
+        "mlc-unclaimed",
+        "usc-115"
+      ],
+      "take": "Not exactly. Black box is an informal nickname for money no one has allocated. The MLC uses its own terms, and each collector defines its own.",
+      "body": "Industry use of black box varies, and collectives use names such as suspense account for money held while works are unidentified. The MLC counts both unmatched and unclaimed royalties inside what it calls unclaimed accrued royalties. In US law, unmatched means the owner is not yet known or found. Read the collector's own definition before comparing figures.",
+      "do": [
+        "Use each collector's own term when you search for money held for you"
+      ],
+      "basis": "Industry nickname with no official definition; MLC unclaimed page and 17 USC 115, as of November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-pro-covers-everything",
+      "type": "claim",
+      "title": "Does registering with my PRO also get me SoundExchange or MLC money?",
+      "domain": "unclaimed-recovery",
+      "tags": [
+        "royalties",
+        "unclaimed"
+      ],
+      "verdict": "false",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-owed",
+        "mlc-missing-members",
+        "usco-mma"
+      ],
+      "take": "No. A performing rights society, the MLC and SoundExchange each keep their own accounts and pay only what they collect. Each needs its own registration.",
+      "body": "SoundExchange says artists and recording owners must register with it to receive US digital performance royalties. The MLC's Missing Member Lookup lists rightsholders who have not joined but may be owed US digital audio mechanicals. A PRO registration covers neither. Each kind of income has its own register, so a missing one can leave money unpaid.",
+      "do": [
+        "List every collector for each kind of income you earn",
+        "Search the MLC and SoundExchange unregistered lists for your names"
+      ],
+      "basis": "SoundExchange artists page and MLC Missing Member Lookup, as retrieved 19 to 20 November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-worldwide-market-share",
+      "type": "claim",
+      "title": "Do collecting societies worldwide share out unclaimed money by market share?",
+      "domain": "unclaimed-recovery",
+      "tags": [
+        "international",
+        "unclaimed"
+      ],
+      "verdict": "overstated",
+      "level": "advanced",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL",
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "butler-cmo-2020",
+        "usc-115"
+      ],
+      "take": "No. US law tells the MLC to use market share. A 2020 survey of collectives found most of those taking part did not use owner market share for such money.",
+      "body": "The survey was written for the Copyright Office from the answers of anonymous collectives, gathered between January and April 2020. It says that, for works nobody has identified or claimed, the participants usually share the money out without weighing each owner's market share. Its list of methods includes catalogue market share and several pro rata splits among owners already paid. The survey is not a count of every society, and practice varies by society and type of income, so ask your own.",
+      "do": [
+        "Ask each society abroad how it shares out income it cannot allocate"
+      ],
+      "basis": "Butler survey of collective rights management, April 2020 (participating collectives only); 17 USC 115(d)(3)(J).",
+      "as_of": "2020-04-01"
+    },
+    {
+      "id": "claim-master-owns-song",
+      "type": "claim",
+      "title": "Does owning the master mean I own the song?",
+      "domain": "royalty-basics",
+      "tags": [
+        "publishing",
+        "myths"
+      ],
+      "verdict": "false",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "circ-50",
+        "circ-56"
+      ],
+      "take": "No. The song and the recording are two separate works with separate rights, and they can have different owners.",
+      "body": "The Copyright Office treats a song (the music and lyrics) and a recording of someone performing it as two distinct works. Its circular on sound recordings says the copyright in a recording does not cover the underlying music or lyrics. In most cases the two are registered separately. Ownership of either can be transferred by contract, so read the agreements, and have a music lawyer check any deal that moves ownership.",
+      "do": [
+        "Write down who owns the song and who owns the recording for each release"
+      ],
+      "basis": "Copyright Office Circulars 50 and 56, as retrieved 20 November 2026 (US).",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-featured-artists-45",
+      "type": "claim",
+      "title": "Are featured artists paid 45% of US digital performance royalties?",
+      "domain": "royalty-basics",
+      "tags": [
+        "neighboring",
+        "royalties"
+      ],
+      "verdict": "mostly",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114"
+      ],
+      "take": "Only for money collected under the statutory licence. There the law gives featured artists 45 percent, paid by the collective per recording. Other income follows contracts.",
+      "body": "17 USC 114(g)(2) divides receipts from transmissions licensed under the statutory licence: 50 percent to the owner of the digital performance right, 45 percent to featured recording artists, and 2.5 percent each to escrow funds for non-featured musicians and vocalists. The collective may deduct costs first. For transmissions outside that licence, section 114(g)(1) points the artist to the recording owner and the artist's contract.",
+      "do": [
+        "Read your recording contract for income outside the statutory licence"
+      ],
+      "basis": "17 USC 114(g)(1) and (g)(2), as retrieved 20 November 2026.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-registration-to-own",
+      "type": "claim",
+      "title": "Do I have to register with the Copyright Office to own a copyright?",
+      "domain": "royalty-basics",
+      "tags": [
+        "myths",
+        "metadata"
+      ],
+      "verdict": "false",
+      "level": "beginner",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "circ-56",
+        "circ-50"
+      ],
+      "take": "No. For a US sound recording made since 1978, protection starts when it is fixed. Registration is a separate, optional step with its own form, fee and deposit.",
+      "body": "The Copyright Office's sound recordings circular says recordings created after 1 January 1978 are protected automatically and that neither registration nor publication is required. This answer rests on that circular and does not address songs separately. Registering has other effects, and the Office changes its fees, so check its current pages before you apply.",
+      "do": [
+        "Read the Office's circular for your type of work before applying"
+      ],
+      "basis": "Copyright Office Circular 56 for recordings; application steps in Circulars 50 and 56.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-am-fm-recording-owner",
+      "type": "claim",
+      "title": "Do US recording owners get paid when a song plays on AM/FM radio?",
+      "domain": "royalty-basics",
+      "tags": [
+        "neighboring",
+        "performance"
+      ],
+      "verdict": "false",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114",
+        "usc-106"
+      ],
+      "take": "Not under US copyright law. Recording owners hold a performance right only for digital audio transmissions, and ordinary radio broadcasts are carved out of it.",
+      "body": "17 USC 114(a) gives a sound recording owner only some of the section 106 rights and leaves out the general public performance right in clause (4). Clause (6) covers digital audio transmissions. Section 114(d)(1)(A) says a nonsubscription broadcast transmission does not infringe that right. Song owners are different: they hold the performing right, usually licensed through a society. Other countries differ, so do not assume a UK or Canadian rule applies in the US.",
+      "do": [
+        "Check each country's rules before expecting recording income from radio play"
+      ],
+      "basis": "17 USC 106(4), 106(6) and 114(a), (d)(1)(A), as retrieved 20 November 2026 (US).",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "claim-w8ben-non-us",
+      "type": "claim",
+      "title": "Do non-US songwriters need to file Form W-8BEN?",
+      "domain": "royalty-basics",
+      "tags": [
+        "royalties",
+        "international"
+      ],
+      "verdict": "depends",
+      "level": "intermediate",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "US",
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "irs-w8ben"
+      ],
+      "take": "It depends on the payer and your situation. The IRS says a foreign person gives the form when the withholding agent or payer asks for it.",
+      "body": "The IRS page says a non-US person who beneficially owns income that is subject to US withholding hands the form to whoever pays or withholds, when that party asks. This holds whether or not the person seeks a lower rate or an exemption. The page does not say which rate applies to royalties. This is not tax advice: ask a tax adviser how US withholding applies to you.",
+      "do": [
+        "Ask each payer which form it needs from you",
+        "Ask a tax adviser how US withholding applies to you"
+      ],
+      "basis": "IRS page About Form W-8 BEN, as retrieved 20 November 2026 (US).",
+      "as_of": "2026-11-20"
+    }
+  ],
+  "sources": {
+    "butler-cmo-2020": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office (report commissioned from Susan P. Butler)",
+      "title": "Collective Rights Management Practices Around the World: A Survey of CMO Practices to Reduce the Occurrence of Unclaimed Royalties in Musical Works",
+      "url": "https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "Sec. 2 method; sec. 4 data sources and what CMOs ask for; sec. 5B reasons, most prevalent first; sec. 6 lists, $100 and $10 examples, match-rate remarks; sec. 7 suspense accounts, pre-matching; sec. 9 methods, 'most often do not use' owner market share; cultural deductions.",
+      "date": "2020-04-01",
+      "edition": "Butler, April 2020; CMOs anonymous, information gathered January to April 2020",
+      "authors": "Susan P. Butler"
+    },
+    "cfr-385-11": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "37 CFR 385.11: Royalty rates (Subpart B, physical phonorecords, permanent downloads, ringtones)",
+      "url": "https://www.law.cornell.edu/cfr/text/37/385.11",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "(a)(1) 2026 rate 13.1 cents or 2.52 cents per minute, whichever is larger; (a)(2) annual CPI-U adjustment; (b) ringtone 24 cents; (c) bundles.",
+      "edition": "Mirror of the eCFR text; the eCFR page itself is script-driven and could not be read automatically"
+    },
+    "cfr-385-21": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "37 CFR 385.21: Royalty rates and calculations (Subpart C, interactive streaming and limited downloads)",
+      "url": "https://www.law.cornell.edu/cfr/text/37/385.21",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Four-step calculation in (b); Table 1 revenue percentages by year; Table 2 TCC prongs by offering; (c) overtime adjustment for tracks over five minutes.",
+      "edition": "Mirror of the eCFR text"
+    },
+    "circ-50": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "Circular 50: Copyright Registration for Musical Compositions",
+      "url": "https://www.copyright.gov/circs/circ50.pdf",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Song and recording are separate works, usually registered separately, one application only in limited cases (Circular 56A); musical works include accompanying words; author unless made for hire; application, fee, deposit; fees change."
+    },
+    "circ-56": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "Circular 56: Copyright Registration for Sound Recordings",
+      "url": "https://www.copyright.gov/circs/circ56.pdf",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Sound recording defined; distinct from song and phonorecord; authors are featured performer and producer unless work made for hire; recordings after 1 January 1978 protected on fixation; registration not required; digital performance right only."
+    },
+    "fr-2025-21695": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords (2026)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Adjusted 2026 rates 13.1 cents per work and 2.52 cents per minute; CPI-U 324.800 against base 298.012; applies 1 January to 31 December 2026.",
+      "date": "2025-12-01",
+      "edition": "90 FR 55044, Docket 25-CRB-0012-PR COLA (2026)"
+    },
+    "irs-w8ben": {
+      "type": "government",
+      "publisher": "Internal Revenue Service",
+      "title": "About Form W-8 BEN, Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-8-ben",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "A foreign person who is beneficial owner of an amount subject to withholding gives the form to the withholding agent or payer when requested, whether or not claiming a reduced rate or exemption."
+    },
+    "mlc-audits": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "DSP Audits",
+      "url": "https://www.themlc.com/audits-dsp",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Audit rights, process and frequency; assessment funds the budget, no fees deducted; recoveries paid in full; audit adjustments shown on statements; 49 DSPs sent notice letters dated 10 January 2024 for 2021 to 2023."
+    },
+    "mlc-market-share": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "Looking Ahead: Market Share Distributions (one-sheet, Rev. 06/2026)",
+      "url": "https://www.themlc.com/hubfs/Marketing/Website%20Files/MarketShare-OneSheet_June-2026.pdf",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "June 2026 snapshot (85,000+ Members, 53M+ works, over $4B processed, nearly 92% average match rate); plans: keep reprocessing into regular monthly distributions, pro rata by DSP and offering, historical later.",
+      "date": "2026-06-01",
+      "edition": "Rev. 06/2026"
+    },
+    "mlc-missing-members": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "Missing Member Lookup",
+      "url": "https://www.themlc.com/missing-members-lookup",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Searchable list of rightsholders not yet Members who may be owed US digital audio mechanicals; royalties shown exclude historical unmatched royalties."
+    },
+    "mlc-pr-2026-09": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "The MLC Holds Annual Membership Meeting: Highlights More Than $4.2 Billion in Total Royalties Distributed and Announces Date of First Monthly Market Share Distribution",
+      "url": "https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "30 September 2026: April 2027 start, one month at a time from January 2021; pro rata by DSP and offering; more than six years of matching; nearly $5B processed, $4.2B distributed; $239M historical; 100,000 Members; 60M works.",
+      "date": "2026-09-30"
+    },
+    "mlc-unclaimed": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "Unclaimed Accrued Royalties",
+      "url": "https://www.themlc.com/unclaimed-accrued-royalties",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Defines unclaimed accrued royalties as unmatched plus unclaimed; intends to begin distributions in April 2027 through market share, starting with January 2021 blanket usage; dashboard for 2021 usage."
+    },
+    "sx-owed": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "Artists, Labels & Producers",
+      "url": "https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "'Are you owed royalties?': artists and recording owners must register to be paid; search tool; four status lists and what each means; registering free; SX Direct to search and claim. No claim deadline."
+    },
+    "usc-106": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 106: Exclusive rights in copyrighted works",
+      "url": "https://www.law.cornell.edu/uscode/text/17/106",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Clause (1) reproduce, (3) distribute, (4) perform musical works publicly, (6) perform sound recordings publicly by digital audio transmission.",
+      "edition": "Title 17, section 106, as shown by LII"
+    },
+    "usc-114": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 114: Scope of exclusive rights in sound recordings",
+      "url": "https://www.law.cornell.edu/uscode/text/17/114",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "(a) no section 106(4) right for sound recordings; (g)(1) artist payments by contract for transmissions outside the statutory licence; (g)(2) 50 / 2.5 / 2.5 / 45 percent split and escrow funds; (g)(3) costs; (g)(5) letters of direction.",
+      "edition": "Title 17, section 114, as shown by LII"
+    },
+    "usc-115": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 115: Scope of exclusive rights in nondramatic musical works, compulsory license for making and distributing phonorecords",
+      "url": "https://www.law.cornell.edu/uscode/text/17/115",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Subsections (a) and (b) on eligibility and notices; (d) on the blanket license, MLC duties, holding, distribution of unclaimed accrued royalties, songwriter share and audits.",
+      "edition": "Title 17, section 115, as shown by LII"
+    },
+    "usco-mma": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "The Music Modernization Act (overview page)",
+      "url": "https://www.copyright.gov/music-modernization/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Three titles; MLC designated to collect and distribute mechanicals; from 1 January 2021 songwriters and publishers register with the MLC portal to be paid under the blanket license."
+    },
+    "usco-mma-faq": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "Music Modernization Act: Frequently Asked Questions",
+      "url": "https://www.copyright.gov/music-modernization/faq.html",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "NOIs stay for non-digital uses and are no longer accepted for digital; copyright registration is separate from MLC registration; MLC and DLC roles; MLC costs paid by services through voluntary contributions and an assessment."
+    }
+  }
+}
