@@ -77,8 +77,9 @@ eq('category BMR, 80 kg, category 2', F.categoryBmr(80, 2), 1584);
 eq('category BMR per lb matches the table', F.categoryBmr(100 / 2.2, 1), 1000, 1e-9);   // 100 lb at 10 kcal/lb
 eq('a day: light plus an hour of moderate weights and 30 min of low cardio', F.dayMult(1.2, [{ id: 'wt1', min: 60 }, { id: 'aer1', min: 30 }]), 1.4, 1e-9);
 eq('a day with no exercise is the usual day', F.dayMult(1.3, []), 1.3);
-let wk = F.weekMult(1.2, 'wt2', 90, 4);
-eq('week: training day', wk.train, 1.5, 1e-9); eq('week: other days', wk.rest, 1.2); eq('week: average', wk.avg, 1.2 + 0.3 * 4 / 7, 1e-12);
+eq('one activity: an hour of medium cardio adds 0.3', F.activityMult('aer2', 60), 0.3, 1e-12);
+eq('one activity: 90 min of heavy weights adds 0.3', F.activityMult('wt2', 90), 0.3, 1e-12);
+eq('one activity: no minutes adds nothing', F.activityMult('aer3', 0), 0);
 // one resting energy for Energy & macros, the planner and the activity multiplier
 let R = F.resting({ method: 'cat', sex: 'm', kg: 80, bf: 18 });
 eq('resting: category from body fat (men 18% is 2)', R.rmr, 80 * 19.8, 1e-9); same('resting: category 2', String(R.cat), '2');

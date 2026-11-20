@@ -477,11 +477,8 @@
   F.dayMult = function (base, sessions) {
     return sessions.reduce(function (m, x) { var e = F.exercise(x.id); return m + (e && x.min > 0 ? e.m * x.min / 60 : 0); }, base);
   };
-  // one activity done `times` a week: its training days, and the multiplier averaged over the week
-  F.weekMult = function (base, id, min, times) {
-    var e = F.exercise(id), add = e ? e.m * min / 60 : 0;
-    return { train: base + add, rest: base, avg: base + add * times / 7 };
-  };
+  // what one activity adds to its day's multiplier: its multiplier an hour times the hours
+  F.activityMult = function (id, min) { var e = F.exercise(id); return e && min > 0 ? e.m * min / 60 : 0; };
 
   /* ---------- the hero's bar ----------
      heroLoad: the load for a share of a max, to the nearest 2.5 kg and never below the 20 kg bar.
@@ -985,7 +982,7 @@
     var exOpts = F.EXERCISE.map(function (e) { return '<option value="' + e.id + '">' + esc(e.n) + (e.d ? " \u00b7 " + e.d : "") + "</option>"; }).join("");
     $("ac-ex").innerHTML = exOpts;
     $("ac-ex").value = F.exercise(mine.ex) ? mine.ex : "wt1";
-    ["min", "times"].forEach(function (k) { if (mine[k] > 0) $("ac-" + k).value = mine[k]; });
+    if (mine.min > 0) $("ac-min").value = mine.min;
     if (mine.bmr > 0) $("ac-bmr").value = mine.bmr;
     var rows = Array.isArray(mine.rows) ? mine.rows.filter(function (r) { return F.exercise(r[0]); }) : [["wt1", 60], ["aer1", 30]];
     function drawRows() {
@@ -1010,7 +1007,7 @@
     });
     $("ac-add").addEventListener("click", function () { if (rows.length >= 8) return; rows.push(["aer1", 30]); drawRows(); calc(); var s = $("ac-rows").querySelectorAll("select"); s[s.length - 1].focus(); });
     $("ac-ex").addEventListener("change", calc);
-    ["ac-min", "ac-times", "ac-bmr"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    ["ac-min", "ac-bmr"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("ac-bmr-clear").addEventListener("click", function () { $("ac-bmr").value = ""; calc(); $("ac-bmr").focus(); });
     $("ac-go").addEventListener("click", function () {   // take the visitor to Energy & macros, then to its weight box
       if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:tool", { detail: "macros" }));
@@ -1050,21 +1047,23 @@
       var one = mode.get() === "one", b = baseline(), L = F.level(level.get()), out = $("ac-out");
       $("ac-one").hidden = !one; $("ac-day").hidden = one;
       $("ac-need").hidden = !b.example; $("ac-from").textContent = b.example ? b.text.replace("from Energy & macros:", "from Energy & macros\u2019 example inputs:") : b.text;
-      store.set({ ac: { mode: mode.get(), level: level.get(), ex: $("ac-ex").value, min: val("ac-min"), times: val("ac-times"), bmr: val("ac-bmr") || "", rows: rows } });
+      store.set({ ac: { mode: mode.get(), level: level.get(), ex: $("ac-ex").value, min: val("ac-min"), bmr: val("ac-bmr") || "", rows: rows } });
       var perLb = function (kcal) { return b.kg ? (b.imp ? num(kcal / F.lb(b.kg), 1) + " kcal per lb" : num(kcal / b.kg, 1) + " kcal per kg") : ""; };
+      $("ac-use").parentNode.hidden = one;   // one activity is a part of a day, not a day's multiplier
       if (one) {
-        var e = F.exercise($("ac-ex").value), min = val("ac-min"), times = val("ac-times");
-        if (!(min >= 5 && min <= 600 && times >= 1 && times <= 14)) return empty("Check the minutes and the times a week.");
-        var w = F.weekMult(L.m, e.id, min, times);
-        result = w.avg; out.classList.remove("is-empty");
-        $("ac-big-l").textContent = "Your multiplier, averaged over the week";
-        $("ac-big").textContent = "\u00d7 " + num(w.avg, 2);
-        $("ac-sub").textContent = "Training days \u00d7 " + num(w.train, 2) + ", other days \u00d7 " + num(w.rest, 2) + ". Each session burns about " + num(F.round(e.m * min / 60 * b.bmr, 5)) + " kcal.";
-        $("ac-k1-l").textContent = "Maintenance, average"; $("ac-k1").textContent = num(F.round(b.bmr * w.avg, 10)) + " kcal";
-        $("ac-k2-l").textContent = "On a training day"; $("ac-k2").textContent = num(F.round(b.bmr * w.train, 10)) + " kcal";
-        $("ac-k3").textContent = perLb(b.bmr * w.avg);
-        say("ac-say", "Multiplier " + num(w.avg, 2) + " averaged over the week; maintenance about " + num(F.round(b.bmr * w.avg, 10)) + " kilocalories a day.");
+        var e = F.exercise($("ac-ex").value), min = val("ac-min");
+        if (!(min >= 5 && min <= 600)) return empty("Check the minutes.");
+        var add = F.activityMult(e.id, min);
+        result = null; out.classList.remove("is-empty");
+        $("ac-big-l").textContent = "This activity adds";
+        $("ac-big").textContent = "+ " + num(add, 2);
+        $("ac-sub").textContent = num(min) + " min of " + e.n.toLowerCase() + " adds " + num(add, 2) + " to that day\u2019s multiplier: " + num(e.m, 1) + " an hour \u00d7 " + num(min / 60, 2).replace(/\.?0+$/, "") + " h.";
+        $("ac-k1-l").textContent = "Energy for it"; $("ac-k1").textContent = "about " + num(F.round(add * b.bmr, 5)) + " kcal";
+        $("ac-k2-l").textContent = "Resting energy"; $("ac-k2").textContent = num(F.round(b.bmr, 10)) + " kcal";
+        $("ac-k3").textContent = "Build a whole day to see the day\u2019s multiplier with it.";
+        say("ac-say", "Adds " + num(add, 2) + " to the day's multiplier, about " + num(F.round(add * b.bmr, 5)) + " kilocalories.");
       } else {
+        $("ac-k3").hidden = false;
         var m = F.dayMult(L.m, rows.map(function (r) { return { id: r[0], min: +r[1] }; }));
         result = m; out.classList.remove("is-empty");
         $("ac-big-l").textContent = "This day\u2019s multiplier";

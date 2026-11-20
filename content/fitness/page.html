@@ -53,7 +53,7 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.17">
+<link rel="stylesheet" href="/ks.css?v=2027.18">
 <style>
   .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
 
@@ -827,7 +827,7 @@
 
       <!-- ---------- 8. activity multiplier ---------- -->
       <div class="tool" id="activity" role="tabpanel" aria-labelledby="tab-activity">
-        <p class="k-copy tool-intro">Maintenance is resting energy times an activity multiplier. Pick how active your usual day is, then add your training: one activity you do through the week, or everything in a single day.</p>
+        <p class="k-copy tool-intro">Maintenance is resting energy times an activity multiplier. See what one activity adds to it, or build a whole day: how active it is, plus the training in it.</p>
         <div class="tool-grid">
           <div class="k-card tool-in">
             <div class="k-seg" id="ac-mode" role="group" aria-label="Work it out from"><button type="button" value="one">One activity</button><button type="button" value="day">A whole day</button></div>
@@ -846,18 +846,14 @@
               </div>
             </div>
 
-            <div class="k-field"><span class="k-label" id="ac-level-l">Your usual day, outside training</span>
-              <div class="ac-levels" id="ac-level" role="group" aria-labelledby="ac-level-l"></div></div>
-
             <div id="ac-one" class="ac-block">
-              <label class="k-field"><span class="k-label">Training</span><select class="k-select" id="ac-ex"></select></label>
-              <div class="row2">
-                <label class="k-field"><span class="k-label">Minutes a session</span><input class="k-input" id="ac-min" type="number" inputmode="numeric" min="5" max="600" step="5" value="60"></label>
-                <label class="k-field"><span class="k-label">Times a week</span><input class="k-input" id="ac-times" type="number" inputmode="numeric" min="1" max="14" step="1" value="4"></label>
-              </div>
+              <label class="k-field"><span class="k-label">Activity</span><select class="k-select" id="ac-ex"></select></label>
+              <label class="k-field"><span class="k-label">Minutes</span><input class="k-input" id="ac-min" type="number" inputmode="numeric" min="5" max="600" step="5" value="60"></label>
             </div>
 
             <div id="ac-day" class="ac-block" hidden>
+              <div class="k-field"><span class="k-label" id="ac-level-l">Your usual day, outside training</span>
+                <div class="ac-levels" id="ac-level" role="group" aria-labelledby="ac-level-l"></div></div>
               <p class="k-label">Exercise on this day</p>
               <ol class="ac-rows" id="ac-rows" aria-label="Exercise on this day"></ol>
               <p class="k-small" id="ac-none" hidden>No exercise: a rest day.</p>
@@ -967,7 +963,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.17"></script>
-<script src="/fitness.js?v=2027.17"></script>
+<script src="/ks.js?v=2027.18"></script>
+<script src="/fitness.js?v=2027.18"></script>
 </body>
 </html>
