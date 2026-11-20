@@ -56,6 +56,15 @@ changes, copy answers here, tick what is closed, then continue.
 - [ ] RapidCue: what it does (its page never says cue sheets)
 - [ ] Only verified tools are published; the rest stay in tools.json as `check`
 
+## From batch 2a (unclaimed recovery, 2026-11-20)
+
+- [ ] CISAC Global Collections Report: entries use the 2023 edition (2022 data). Newer
+      editions exist; update to the latest?
+- [ ] The Butler 2020 CMO survey and the WIPO 2012 module are dated in each entry. Look for
+      newer sources, or keep them with their dates?
+- [ ] "A PRO keeps its own accounts, separate from the MLC and SoundExchange" rests on Butler
+      and SoundExchange, not a PRO page (PRO pages block automated reading; see C4, C5, C7, C8)
+
 ## Checks by hand (sites that block automated reading)
 
 - [ ] Login needed or not: ASCAP ACE, BMI Repertoire, SoundExchange unregistered search,
