@@ -481,6 +481,16 @@
   .te-wrap { display: grid; gap: 8px; }
   .te-wrap[hidden] { display: none; }
 
+  /* coming back */
+  .cb-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .cb-rows li { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(240,232,214,.16); color: #a9b9a3; font-size: 13px; line-height: 1.45; }
+  .cb-rows li b { display: block; font: 600 11px/1.4 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: #a9b9a3; }
+  .cb-rows li p { margin: 2px 0 0; }
+  .cb-rows li[aria-current] { border-color: #d8b07a; background: rgba(216,176,122,.1); color: #e2d8c2; }
+  .cb-rows li[aria-current] b { color: #d8b07a; }
+  .cb-rows li[aria-current] p span { color: #a9b9a3; }
+  .cb-rows li:not([aria-current]) p:not(:first-of-type) { display: none; }
+
   /* heart-rate zones */
   .zl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
   .zl li { display: grid; gap: 3px; padding: 10px 0 10px 12px; border-top: 1px solid rgba(240,232,214,.14); border-left: 3px solid var(--z, rgba(240,232,214,.3)); }
@@ -488,7 +498,7 @@
   .zl .zh b { font: 700 15px/1.3 var(--k-mono); color: #d8b07a; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .zl span { font-size: 13px; line-height: 1.45; color: #c2ceb9; }
   .zl small { font: 500 11.5px/1.45 var(--k-mono); color: #a9b9a3; }
-  .te-list--one { grid-template-columns: minmax(0, 1fr); }
+  .te-list.te-list--one { grid-template-columns: minmax(0, 1fr); }
 
   /* meet attempt planner */
   .wc { margin-top: 18px; display: grid; gap: 18px; }
@@ -693,6 +703,7 @@
             <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
             <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
             <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+            <button type="button" role="tab" id="tab-comeback" aria-controls="comeback" aria-selected="false">Coming back</button>
             <button type="button" role="tab" id="tab-zones" aria-controls="zones" aria-selected="false">Heart-rate zones</button>
             <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
           </div>
@@ -847,6 +858,40 @@
             <p class="k-small">For sets of up to ten reps the estimate is the average of two published equations, Epley’s and Brzycki’s, shown above; past ten it is Epley’s alone, and the two meet at ten. A set stopped short of failure counts its reps in reserve as reps. Every load on this card inverts that same estimate, so the numbers agree with each other. Both equations work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. {{c:brzycki1993,reynolds2006,lesuer1997}}</p>
           </div>
         </div>
+      </div>
+
+      <!-- ---------- coming back after a break: the guide's return table ---------- -->
+      <div class="tool" id="comeback" role="tabpanel" aria-labelledby="tab-comeback">
+        <p class="k-copy tool-intro">Time off training: what studies saw over a break that long, how to restart and roughly how long getting back takes, from the guide’s {{e:rec-table-return-by-break|return table}}. After a long break it also works out starting loads from your old bests.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Time away</span><input class="k-input" id="cb-n" type="number" inputmode="numeric" min="1" max="999" value="2"></label>
+              <div class="k-field"><span class="k-label" id="cb-unit-l">In</span><div class="k-seg" id="cb-unit" role="group" aria-labelledby="cb-unit-l"><button type="button" value="d">Days</button><button type="button" value="w">Weeks</button><button type="button" value="m">Months</button></div></div>
+            </div>
+            <div class="k-field"><span class="k-label" id="cb-units-l">Loads in</span><div class="k-seg" id="cb-units" role="group" aria-labelledby="cb-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Old best squat</span><span class="with-unit"><input class="k-input" id="cb-squat" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="cb-u">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Old best bench</span><span class="with-unit"><input class="k-input" id="cb-bench" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="cb-u">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Old best deadlift</span><span class="with-unit"><input class="k-input" id="cb-dead" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="cb-u">kg</span></span></label>
+            </div>
+            <p class="k-small">Optional, and used only after many months away. The rows’ edges are KiteSink’s: up to 5 days, 6 days to under a month, 1 to under 4 months, and 4 months or more, with a month counted as 30 days. The one-month line follows the guide: {{e:rec-num-return-ratio|the twice-the-time-off rule}} stops applying there.</p>
+            <div class="te-list te-list--one">{{tools:entry-do:rec-injury-return-rules}}{{tools:entry-do:rec-severe-soreness-warning}}</div>
+            <p class="k-small">Also in the guide: {{e:rec-mistake-restart-old-weights|why your old weights are the wrong place to restart}}, and {{e:rec-maintenance-dose|how little training holds most of your strength}} when time is short.</p>
+          </div>
+          <div class="k-card tool-out" id="cb-out">
+            <p class="k-vh" id="cb-say" role="status"></p>
+            <div><p class="k-label">Your break</p><p class="k-stat"><span id="cb-big">—</span></p><p class="k-small" id="cb-sub">Enter how long you were away.</p></div>
+            <ol class="cb-rows hide-empty" id="cb-rows" aria-label="The guide's rows, by time away"></ol>
+            <p class="k-small hide-empty" id="cb-back"></p>
+            <div class="hide-empty" id="cb-loads-wrap" hidden><p class="k-label">Starting loads</p><table class="ltable"><caption class="k-vh">Starting loads from your old bests</caption><thead><tr><th scope="col">Lift</th><th scope="col">Old best</th><th scope="col">Start at</th></tr></thead><tbody id="cb-loads"></tbody></table><p class="k-small" id="cb-loads-note"></p></div>
+            <div class="te-wrap hide-empty" id="cb-long" hidden>{{tools:entry-do:rec-return-after-long-layoff}}</div>
+          </div>
+        </div>
+        <details class="more tool-src">
+          <summary>The return table</summary>
+          <div>{{tools:table:rec-table-return-by-break}}</div>
+        </details>
       </div>
 
       <!-- ---------- heart-rate zones: the guide's five-zone scale on your maximum ---------- -->

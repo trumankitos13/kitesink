@@ -507,6 +507,16 @@
     return r;
   };
 
+  /* ---------- coming back after a break ----------
+     comebackRow(days): which row of the guide's return table (rec-table-return-by-break) a break
+     falls in. The edges are KiteSink's: up to 5 days; 6 days to under a month; 1 to under 4
+     months; 4 months or more, a month being 30 days. The month line is the guide's: the 2x rule
+     stops there. startLoads(best, pct, step): the guide's 50-60% of an old best, rounded. */
+  F.COMEBACK_DAYS = { d: 1, w: 7, m: 30 };
+  F.comebackDays = function (n, unit) { return n > 0 && F.COMEBACK_DAYS[unit] ? n * F.COMEBACK_DAYS[unit] : NaN; };
+  F.comebackRow = function (days) { return !(days > 0) ? -1 : days <= 5 ? 0 : days < 30 ? 1 : days < 120 ? 2 : 3; };
+  F.startLoads = function (best, pct, step) { return best > 0 ? [F.round(best * pct[0] / 100, step), F.round(best * pct[1] / 100, step)] : null; };
+
   /* ---------- heart-rate zones ----------
      hrMax(age, D): D is #tool-data's hrMax, the guide's age formula (a - b x age; 208 - 0.7 x age,
      Tanaka). hrPick: a measured maximum, when there is one in range, wins over the formula.
@@ -1127,6 +1137,63 @@
       store.set({ loadUnits: u, loadKg: liftKg, loadReps: reps, loadRir: rir, loadFx: fx.get() });
     }
     calc();
+  });
+
+  /* ---------- coming back after a break ----------
+     The guide's return table, one row chosen and the others folded; the 2x rule for the second
+     row; starting loads from My numbers' bests for the last. No week-by-week loads: the guide has none. */
+  boot(function () {
+    if (!$("comeback")) return;
+    var TD = toolData(), T = TD.comeback, mine = saved.cb || {};
+    var LIFTS = [["squat", "Squat"], ["bench", "Bench"], ["dead", "Deadlift"]], kg = {};
+    if (mine.n > 0) $("cb-n").value = mine.n;
+    var unit = seg($("cb-unit"), mine.unit, "w", calc);
+    var units = seg($("cb-units"), mine.units || (ME.units() === "imperial" ? "lb" : ""), "kg", function () { show(); calc(); });
+    function lb() { return units.get() === "lb"; }
+    function show() {
+      LIFTS.forEach(function (l) { setField($("cb-" + l[0]), isFinite(kg[l[0]]) ? Math.round((lb() ? F.lb(kg[l[0]]) : kg[l[0]]) * 10) / 10 : ""); });
+      [].forEach.call(document.querySelectorAll(".cb-u"), function (el) { el.textContent = units.get(); });
+    }
+    LIFTS.forEach(function (l) {
+      kg[l[0]] = ME.val(l[0], NaN);
+      $("cb-" + l[0]).addEventListener("input", function () { var v = val("cb-" + l[0]), p = {}; kg[l[0]] = lb() ? F.kg(v) : v; p[l[0]] = kg[l[0]]; ME.set(p); calc(); });
+    });
+    $("cb-n").addEventListener("input", calc);
+    onMe(function (keys) {
+      if (hits(keys, ["units"]) && ME.units()) units.set(ME.units() === "imperial" ? "lb" : "kg");
+      LIFTS.forEach(function (l) { if (hits(keys, [l[0]]) && document.activeElement !== $("cb-" + l[0])) kg[l[0]] = ME.val(l[0], NaN); });
+      if (hits(keys, ["units", "squat", "bench", "dead"])) { show(); calc(); }
+    });
+    var UNIT = { d: ["day", "days"], w: ["week", "weeks"], m: ["month", "months"] };
+    function span(n, u) { return num(n, n % 1 ? 1 : 0) + " " + UNIT[u][n === 1 ? 0 : 1]; }
+    function calc() {
+      var n = val("cb-n"), u = unit.get(), days = F.comebackDays(n, u), row = n <= 999 ? F.comebackRow(days) : -1, out = $("cb-out");
+      store.set({ cb: { n: isFinite(n) ? n : "", unit: u, units: units.get() } });
+      out.classList.toggle("is-empty", row < 0);
+      if (row < 0 || !T) { $("cb-big").textContent = "\u2014"; $("cb-sub").textContent = "Enter how long you were away (1 to 999)."; $("cb-loads-wrap").hidden = true; $("cb-long").hidden = true; say("cb-say", $("cb-sub").textContent); return; }
+      $("cb-big").textContent = span(n, u);
+      $("cb-sub").textContent = "The guide’s row: " + T.rows[row][0].charAt(0).toLowerCase() + T.rows[row][0].slice(1) + ".";
+      $("cb-rows").innerHTML = T.rows.map(function (r, i) {
+        return "<li" + (i === row ? ' aria-current="true"' : "") + "><b>" + esc(r[0]) + "</b>" + r.slice(1).map(function (c, j) { return "<p><span>" + esc(T.columns[j + 1]) + ":</span> " + esc(c) + "</p>"; }).join("") + "</li>";
+      }).join("");
+      // the second row: twice the time off, by McDonald's rule
+      var R2 = TD.returnRatio, back = "";
+      if (row === 1 && R2) back = "Back to where you were: about " + span(n * R2.factor, u) + ", " + R2.factor + " \u00d7 the time off. ";
+      $("cb-back").innerHTML = back ? esc(back) + '<a href="' + esc(R2.href) + '">The rule of thumb</a> is coaching practice and stops at a month away.' : "";
+      // the last row: starting loads from the old bests, and the restart rules
+      var long = row === 3, L = TD.returnLoad, step = lb() ? 5 : 2.5, got = [];
+      $("cb-long").hidden = !long;
+      if (long && L) LIFTS.forEach(function (l) {
+        if (!(kg[l[0]] > 0)) return;
+        var best = lb() ? F.lb(kg[l[0]]) : kg[l[0]], s = F.startLoads(best, L.pct, step);
+        got.push("<tr><th scope=\"row\">" + l[1] + "</th><td>" + wt(Math.round(best * 10) / 10) + " " + units.get() + "</td><td>" + wt(s[0]) + "\u2013" + wt(s[1]) + " " + units.get() + "</td></tr>");
+      });
+      $("cb-loads-wrap").hidden = !long;
+      $("cb-loads").innerHTML = got.join("") || '<tr><td colspan="3">Enter an old best to see where to start.</td></tr>';
+      $("cb-loads-note").innerHTML = long && L ? esc(L.pct[0] + " to " + L.pct[1] + "% of each old best, rounded to " + step + " " + units.get() + ": ") + '<a href="' + esc(L.href) + '">the guide’s starting point, or lighter</a>.' : "";
+      say("cb-say", span(n, u) + " away: " + T.rows[row][0] + ". " + T.rows[row][2] + "." + (back ? " " + back : ""));
+    }
+    show(); calc();
   });
 
   /* ---------- heart-rate zones ----------

@@ -301,6 +301,19 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   same('resting ranges read from the guide', TD.hrRest.adult.join('-') + ' ' + TD.hrRest.athlete.join('-'), '60-100 40-60');
 }
 
+// ---------- coming back after a break: the guide's return table ----------
+{
+  const row = (n, u) => F.comebackRow(F.comebackDays(n, u));
+  same('comeback: 5 days, 6 days, 29 days, 30 days', [row(5, 'd'), row(6, 'd'), row(29, 'd'), row(30, 'd')].join(' '), '0 1 1 2');
+  same('comeback: 2 weeks, 1 month, 3.9 months, 4 months, 2 years', [row(2, 'w'), row(1, 'm'), row(3.9, 'm'), row(4, 'm'), row(24, 'm')].join(' '), '1 2 2 3 3');
+  ok('comeback: no time away is no row', row(0, 'd') === -1 && row(NaN, 'w') === -1);
+  same('comeback: the rows the edges are set for', TD.comeback.rows.map(r => r[0]).join(' | '), '3 to 5 days | About 2 weeks | About 10 weeks | Many months or years');
+  eq('comeback: 2x the time off, read from the guide', TD.returnRatio.factor, 2);
+  same('comeback: 100 kg starts at 50-60 kg', F.startLoads(100, TD.returnLoad.pct, 2.5).join('-'), '50-60');
+  same('comeback: 142.5 kg rounds to 2.5 kg steps', F.startLoads(142.5, TD.returnLoad.pct, 2.5).join('-'), '72.5-85');
+  same('comeback: 315 lb rounds to 5 lb steps', F.startLoads(315, TD.returnLoad.pct, 5).join('-'), '160-190');
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);
