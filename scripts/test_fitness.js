@@ -242,6 +242,21 @@ async function visit(hash, opts = {}) {
 const TD = JSON.parse(/<script type="application\/json" id="tool-data">([\s\S]*?)<\/script>/.exec(fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8'))[1]);
 ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k !== 'suppItems').every(k => /^\/fitness\/[a-z-]+#[a-z0-9-]+$/.test(TD[k].href) && TD[k].title));
 
+// ---------- 1RM: how hard was that set (reps in reserve count as reps), RIR or RPE ----------
+{
+  eq('rirFromRpe 10', F.rirFromRpe(10), 0); eq('rirFromRpe 9.5 is half a rep', F.rirFromRpe(9.5), 0.5); eq('rirFromRpe 8', F.rirFromRpe(8), 2); eq('rirFromRpe 5', F.rirFromRpe(5), 5);
+  ok('rirFromRpe: below 5 or above 10 is not offered', isNaN(F.rirFromRpe(4.5)) && isNaN(F.rirFromRpe(11)));
+  eq('the default (0 in reserve) is the estimate as it was: 100 x 5', F.oneRm(100, 5 + 0), 114.5833, 0.001);
+  eq('100 x 5 with 2 in reserve reads as 7 reps', F.oneRm(100, 5 + 2), F.oneRm(100, 7), 1e-12);
+  eq('round trip: 5 reps at 2 in reserve from that estimate is 100', F.loadFor(F.oneRm(100, 5 + 2), 5, 2), 100, 1e-9);
+  eq('round trip at RPE 9.5 (half a rep)', F.loadFor(F.oneRm(140, 3 + F.rirFromRpe(9.5)), 3, 0.5), 140, 1e-9);
+  ok('half steps land between whole ones', F.oneRm(100, 5.5) > F.oneRm(100, 5) && F.oneRm(100, 5.5) < F.oneRm(100, 6));
+  const rows = TD.rpe.rows;
+  same('rpe chart rows from the guide: RPE 9.5', F.rpeRow(rows, 9.5).rir, '0-1');
+  same('rpe chart rows: RPE 6 and 5 share the 5-6 row', F.rpeRow(rows, 6).rir + ' ' + F.rpeRow(rows, 5).rir, '4-6 4-6');
+  ok('rpe chart: every whole RPE from 5 to 10 has a row, and 10 - RPE sits in its range', [5, 6, 7, 8, 9, 9.5, 10].every(r => { const row = F.rpeRow(rows, r); const [lo, hi] = row.rir.split('-').map(Number); return F.rirFromRpe(r) >= lo && F.rirFromRpe(r) <= (hi === undefined ? lo : hi); }));
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);

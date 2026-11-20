@@ -79,6 +79,11 @@
     oneRm: function (w, r) { return w * e1Factor(r); },
     // load to use for `reps` reps with `rir` left in the tank: the same estimate, inverted
     loadFor: function (oneRm, reps, rir) { return oneRm / e1Factor(reps + rir); },
+    // RPE to reps in reserve, KiteSink's reading of the guide's chart (pl-table-rpe-rir): 10 - RPE,
+    // so 9.5 is half a rep where the chart says "0-1". The build checks every row agrees. Below 5: none.
+    rirFromRpe: function (rpe) { return rpe >= 5 && rpe <= 10 ? 10 - rpe : NaN; },
+    // the chart's row for an RPE (rows from #tool-data: { rpe: [lo, hi], rir, feel, use })
+    rpeRow: function (rows, rpe) { for (var i = 0; i < rows.length; i++) if (rpe >= rows[i].rpe[0] && rpe <= rows[i].rpe[1]) return rows[i]; return null; },
 
     // Meet attempts. Opener, second and third as fractions of the best single you could
     // lift today. A convention, not a rule: "first" aims for nine good lifts, "bold" ends
@@ -635,6 +640,12 @@
   }
 
   function wt(v) { return num(v, v % 1 ? 1 : 0); }   // 85 → "85", 82.5 → "82.5"
+  // the guide's numbers the build put in the page (scripts/build_fitness.py, TOOL_DATA); read once
+  var TOOL_DATA = null;
+  function toolData() {
+    if (!TOOL_DATA) { try { TOOL_DATA = JSON.parse($("tool-data").textContent); } catch (e) { TOOL_DATA = {}; } }
+    return TOOL_DATA;
+  }
   // a field the visitor is typing in keeps what they typed; every other one shows the new value
   function setField(el, v) { if (el && document.activeElement !== el) el.value = v; }
   // a result built on any example input says so, and which
@@ -1000,41 +1011,69 @@
     paint(); paintLog();
   });
 
-  /* ---------- 3. 1RM & loads ---------- */
+  /* ---------- 3. 1RM & loads ----------
+     "How hard was that set?" counts reps left in reserve as reps (5 with 2 left reads as 7 to
+     failure); it starts at 0, which is the estimate as it always was. Effort reads as reps in
+     reserve or as RPE, from the guide's chart in #tool-data. */
   boot(function () {
+    var TD = toolData(), RPE = TD.rpe ? TD.rpe.rows : [];
     // The lift is kept in kg; the field shows it in the chosen unit, so switching units never changes it.
     var liftKg = saved.loadKg > 0 ? +saved.loadKg : val("l-w");
-    var units = seg($("l-units"), saved.loadUnits, "kg", function () { showLift(); calc(); });
-    function showLift() { if (isFinite(liftKg)) $("l-w").value = Math.round((units.get() === "lb" ? F.lb(liftKg) : liftKg) * 10) / 10; }
+    var units = seg($("l-units"), saved.loadUnits || (ME.units() === "imperial" ? "lb" : ""), "kg", function () { showLift(); calc(); });
+    var fx = seg($("l-fx"), saved.loadFx, "rir", function () { options(); calc(); });
+    function showLift() { if (isFinite(liftKg)) setField($("l-w"), Math.round((units.get() === "lb" ? F.lb(liftKg) : liftKg) * 10) / 10); }
     $("l-w").addEventListener("input", function () { var v = val("l-w"); liftKg = units.get() === "lb" ? F.kg(v) : v; calc(); });
-    ["l-reps", "l-treps", "l-trir"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    ["l-reps", "l-treps", "l-trir", "l-rir"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    $("l-rir").addEventListener("change", calc);
     if (saved.loadReps) $("l-reps").value = saved.loadReps;
-    showLift();
+    onMe(function (keys) { if (hits(keys, ["units"]) && ME.units()) { units.set(ME.units() === "imperial" ? "lb" : "kg"); showLift(); calc(); } });
+    // the options of "How hard was that set?", by reps in reserve or by the chart's RPE
+    var RIRS = [0, 0.5, 1, 2, 3, 4, 5];
+    function options() {
+      var sel = $("l-rir"), cur = parseFloat(sel.value), rpe = fx.get() === "rpe";
+      sel.innerHTML = RIRS.map(function (r) {
+        var row = F.rpeRow(RPE, 10 - r);
+        var label = rpe ? "RPE " + num(10 - r, r % 1 ? 1 : 0) + (row ? ": " + row.feel.charAt(0).toLowerCase() + row.feel.slice(1) : "")
+          : r === 0 ? "0 in reserve: to failure" : r === 0.5 ? "0 to 1 in reserve" : r + " in reserve";
+        return '<option value="' + r + '">' + esc(label) + "</option>";
+      }).join("");
+      sel.value = RIRS.indexOf(cur) >= 0 ? String(cur) : "0";
+    }
+    var savedRir = +saved.loadRir;
+    options(); if (RIRS.indexOf(savedRir) >= 0) $("l-rir").value = String(savedRir);
     function calc() {
       var u = units.get(), step = u === "lb" ? 5 : 2.5, w = u === "lb" ? F.lb(liftKg) : liftKg, reps = val("l-reps"), tr = val("l-treps"), ti = val("l-trir");
-      $("l-unit").textContent = u; $("l-treps-read").textContent = tr + (tr === 1 ? " rep" : " reps"); $("l-trir-read").textContent = ti + " in reserve";
-      var ok = w > 0 && reps >= 1 && reps <= 20;
+      var rir = parseFloat($("l-rir").value) || 0, rpe = fx.get() === "rpe", row = F.rpeRow(RPE, 10 - ti);
+      $("l-unit").textContent = u; $("l-treps-read").textContent = tr + (tr === 1 ? " rep" : " reps");
+      $("l-trir-l").textContent = rpe ? "Target RPE" : "Left in reserve";
+      $("l-trir-read").textContent = rpe ? "RPE " + (10 - ti) + " · " + ti + " in reserve" : ti + " in reserve";
+      $("l-trir").setAttribute("aria-valuetext", rpe ? "RPE " + (10 - ti) + ", " + ti + " in reserve" : ti + " in reserve");
+      $("l-feel").textContent = rpe && row ? "RPE " + (10 - ti) + ": " + row.feel + ". Typical use: " + row.use.charAt(0).toLowerCase() + row.use.slice(1) + "." : "";
+      $("l-feel").hidden = !rpe;
+      $("l-rir-card").hidden = !(rir > 0);
+      var ok = w > 0 && reps >= 1 && reps <= 20 && reps + rir <= 20;
       $("l-out").classList.toggle("is-empty", !ok);
       if (!ok) {
         $("l-e1rm").firstChild.nodeValue = "—"; $("l-load").firstChild.nodeValue = "—"; $("l-rows").innerHTML = ""; $("l-pct").textContent = "";
-        $("l-note").textContent = "Enter a weight and the reps you got with it (20 at most).";
-        say("l-say", "Enter a weight and the reps you got with it.");
+        $("l-note").textContent = reps + rir > 20 && reps <= 20 ? "Reps plus reps in reserve come to more than 20; the equations are not made for that. Use a heavier set." : "Enter a weight and the reps you got with it (20 at most).";
+        say("l-say", $("l-note").textContent);
         return;
       }
       // One estimate (F.oneRm) gives the headline and, inverted, every load below, so the numbers
-      // agree with each other: the load for the reps you entered at 0 RIR is the weight you entered.
-      var e = F.epley(w, reps), b = F.brzycki(w, reps), one = F.oneRm(w, reps);
+      // agree with each other: the load for the reps you entered at the reserve you entered is the weight you entered.
+      var r = reps + rir, e = F.epley(w, r), b = F.brzycki(w, r), one = F.oneRm(w, r);
       $("l-e1rm").firstChild.nodeValue = num(one, one < 100 ? 1 : 0); $("l-e1rm-u").textContent = u;
       $("l-epley").textContent = num(e, 1) + " " + u; $("l-brzycki").textContent = num(b, 1) + " " + u;
       var load = F.loadFor(one, tr, ti);
       $("l-load").firstChild.nodeValue = wt(F.round(load, step)); $("l-load-u").textContent = u;
       $("l-pct").textContent = "≈ " + num(load / one * 100) + "% of the estimate · rounded to the nearest " + step + " " + u;
-      $("l-note").textContent = reps > 10 ? "Above 10 reps these equations drift. Treat this as a rough guide and re-test with a heavier set." : reps === 1 ? "A true single: the estimate is simply what you lifted." : "Estimated from " + wt(Math.round(w * 10) / 10) + " " + u + " × " + reps + ".";
+      var from = wt(Math.round(w * 10) / 10) + " " + u + " × " + reps + (rir > 0 ? " with " + (rir === 0.5 ? "0 to 1" : rir) + " in reserve" + (rpe ? " (RPE " + num(10 - rir, rir % 1 ? 1 : 0) + ")" : "") + ", read as " + num(r, r % 1 ? 1 : 0) + " reps to failure" : "");
+      $("l-note").textContent = r > 10 ? "Estimated from " + from + ". Above 10 reps these equations drift. Treat this as a rough guide and re-test with a heavier set." : r === 1 ? "A true single: the estimate is simply what you lifted." : "Estimated from " + from + ".";
       $("l-rows").innerHTML = [0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6].map(function (p) {
         return "<tr><th scope=\"row\">" + Math.round(p * 100) + "%</th><td>" + wt(F.round(one * p, step)) + " " + u + "</td><td>≈ " + Math.max(1, Math.round(F.repsAt(p))) + "</td></tr>";
       }).join("");
-      say("l-say", "Estimated one-rep max " + wt(Math.round(one * 10) / 10) + " " + u + ". Load " + wt(F.round(load, step)) + " " + u + " for " + tr + (tr === 1 ? " rep" : " reps") + " with " + ti + " in reserve.");
-      store.set({ loadUnits: u, loadKg: liftKg, loadReps: reps });
+      say("l-say", "Estimated one-rep max " + wt(Math.round(one * 10) / 10) + " " + u + ". Load " + wt(F.round(load, step)) + " " + u + " for " + tr + (tr === 1 ? " rep" : " reps") + " with " + ti + " in reserve" + (rpe ? ", RPE " + (10 - ti) : "") + ".");
+      store.set({ loadUnits: u, loadKg: liftKg, loadReps: reps, loadRir: rir, loadFx: fx.get() });
     }
     calc();
   });

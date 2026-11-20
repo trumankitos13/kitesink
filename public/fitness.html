@@ -785,14 +785,25 @@
         <p class="k-copy tool-intro">Enter a set you’ve done. It estimates your one-rep max, then tells you what to put on the bar for a target number of reps with a chosen number left in reserve.</p>
         <div class="tool-grid">
           <div class="k-card tool-in">
-            <div class="k-field"><span class="k-label" id="l-units-l">Units</span><div class="k-seg" id="l-units" role="group" aria-labelledby="l-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="l-units-l">Units</span><div class="k-seg" id="l-units" role="group" aria-labelledby="l-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+              <div class="k-field"><span class="k-label" id="l-fx-l">Effort as</span><div class="k-seg" id="l-fx" role="group" aria-labelledby="l-fx-l"><button type="button" value="rir">RIR</button><button type="button" value="rpe">RPE</button></div></div>
+            </div>
             <div class="row2">
               <label class="k-field"><span class="k-label">Weight lifted</span><span class="with-unit"><input class="k-input" id="l-w" type="number" inputmode="decimal" min="1" step="0.5" value="100"><span id="l-unit">kg</span></span></label>
               <label class="k-field"><span class="k-label">Reps you got</span><input class="k-input" id="l-reps" type="number" inputmode="numeric" min="1" max="20" value="5"></label>
             </div>
+            <label class="k-field"><span class="k-label">How hard was that set? <span class="k-opt">optional</span></span>
+              <select class="k-select" id="l-rir"><option value="0" selected>0 in reserve: to failure</option><option value="0.5">0 to 1 in reserve</option><option value="1">1 in reserve</option><option value="2">2 in reserve</option><option value="3">3 in reserve</option><option value="4">4 in reserve</option><option value="5">5 in reserve</option></select></label>
+            <div class="te-wrap" id="l-rir-card" hidden><div class="te"><p class="te-top"><span>Powerlifting</span><span class="fx-badge moderate">Some support</span></p><p class="te-t"><a href="/fitness/powerlifting#pl-mistake-rpe-guess">Treating RPE as exact when most lifters misjudge reps in reserve</a></p><p class="te-s">People tend to underpredict reps left in the tank, so RPE is a rough guide that improves with practice.</p></div></div>
             <p class="k-label" style="margin-top:4px">What should I load?</p>
             <label class="k-field"><span class="k-label">Target reps<span id="l-treps-read" style="text-transform:none;letter-spacing:0">8 reps</span></span><input class="k-range" id="l-treps" type="range" min="1" max="15" step="1" value="8"></label>
-            <label class="k-field"><span class="k-label">Left in reserve<span id="l-trir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="l-trir" type="range" min="0" max="5" step="1" value="2"></label>
+            <label class="k-field"><span class="k-label"><span id="l-trir-l">Left in reserve</span><span id="l-trir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="l-trir" type="range" min="0" max="5" step="1" value="2" aria-describedby="l-feel"></label>
+            <p class="k-small" id="l-feel"></p>
+            <details class="more">
+              <summary>The RPE chart this reads</summary>
+              <div><div class="tt"><p class="tt-h"><a href="/fitness/powerlifting#pl-table-rpe-rir">RPE to reps in reserve chart</a> <span class="fx-badge moderate">Some support</span></p><div class="tt-scroll" tabindex="0" role="region" aria-label="RPE to reps in reserve chart"><table><thead><tr><th scope="col">RPE</th><th scope="col">Reps in reserve</th><th scope="col">What it feels like</th><th scope="col">Typical use</th></tr></thead><tbody><tr><th scope="row">10</th><td>0</td><td>No repetition left; a true limit</td><td>Max attempts, 1RM tests</td></tr><tr><th scope="row">9.5</th><td>0-1</td><td>No rep left, but you could add a little load</td><td>Heavy top singles</td></tr><tr><th scope="row">9</th><td>1</td><td>One more repetition was possible</td><td>Heavy top sets</td></tr><tr><th scope="row">8</th><td>2</td><td>Two more possible; bar speed still decent</td><td>Main working sets</td></tr><tr><th scope="row">7</th><td>3</td><td>Three more possible; fast and controlled</td><td>Volume work, easier days</td></tr><tr><th scope="row">5-6</th><td>4-6</td><td>Light; plenty left</td><td>Warm-ups, technique work</td></tr></tbody></table></div></div><p class="k-small">KiteSink reads reps in reserve as 10 minus RPE, so RPE 9.5 counts as half a rep in reserve; the chart gives 0 to 1. The estimate treats a set with reps in reserve as the same set taken to failure: 5 reps with 2 in reserve counts as 7 reps.</p></div>
+            </details>
           </div>
           <div class="k-card tool-out" id="l-out">
             <p class="k-vh" id="l-say" role="status"></p>
@@ -806,7 +817,7 @@
               <thead><tr><th scope="col">% of 1RM</th><th scope="col">Load</th><th scope="col">Reps to failure</th></tr></thead>
               <tbody id="l-rows"></tbody>
             </table>
-            <p class="k-small">For sets of up to ten reps the estimate is the average of two published equations, Epley’s and Brzycki’s, shown above; past ten it is Epley’s alone, and the two meet at ten. Every load on this card inverts that same estimate, so the numbers agree with each other. Both equations work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. <span class="cite"><a href="/fitness/sources#src-brzycki1993">Brzycki 1993</a> · <a href="/fitness/sources#src-reynolds2006">Reynolds 2006</a> · <a href="/fitness/sources#src-lesuer1997">LeSuer 1997</a></span></p>
+            <p class="k-small">For sets of up to ten reps the estimate is the average of two published equations, Epley’s and Brzycki’s, shown above; past ten it is Epley’s alone, and the two meet at ten. A set stopped short of failure counts its reps in reserve as reps. Every load on this card inverts that same estimate, so the numbers agree with each other. Both equations work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. <span class="cite"><a href="/fitness/sources#src-brzycki1993">Brzycki 1993</a> · <a href="/fitness/sources#src-reynolds2006">Reynolds 2006</a> · <a href="/fitness/sources#src-lesuer1997">LeSuer 1997</a></span></p>
           </div>
         </div>
       </div>
