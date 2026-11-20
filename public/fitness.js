@@ -409,6 +409,22 @@
   };
   F.PLAN = PLAN;
 
+  /* ---------- navy body fat ----------
+     Hodgdon & Beckett (1984), the US Navy circumference equations, in inches as the Navy and the
+     DoD print them. Men: abdomen at the navel; women: waist at the narrowest and hips at the widest.
+     navy(sex, height, neck, waist, hip) takes centimetres and returns % body fat, or NaN when the
+     tape readings cannot be right (waist not bigger than neck, a non-positive log). */
+  F.navy = function (sex, hCm, neckCm, waistCm, hipCm) {
+    var h = hCm / 2.54, n = neckCm / 2.54, w = waistCm / 2.54, hip = hipCm / 2.54, log = Math.log10 || function (x) { return Math.log(x) / Math.LN10; };
+    if (!(h > 0) || !(n > 0) || !(w > 0)) return NaN;
+    if (sex === "f") {
+      if (!(hip > 0) || !(w + hip - n > 1)) return NaN;
+      return 163.205 * log(w + hip - n) - 97.684 * log(h) - 78.387;
+    }
+    if (!(w - n > 1)) return NaN;
+    return 86.010 * log(w - n) - 70.041 * log(h) + 36.76;
+  };
+
   /* ---------- the hero's bar ----------
      heroLoad: the load for a share of a max, to the nearest 2.5 kg and never below the 20 kg bar.
      plates: what goes on each side, biggest first (so innermost), from 25, 20, 15, 10, 5, 2.5 and
@@ -476,7 +492,7 @@
 
   /* ---------- tabs: one tool at a time; each has its own #hash ---------- */
   boot(function () {
-    var ids = ["macros", "reps", "loads", "travel", "attempts", "plan"].filter(function (id) { return $("tab-" + id) && $(id); });
+    var ids = ["reps", "loads", "attempts", "travel", "macros", "activity", "bodyfat", "plan"].filter(function (id) { return $("tab-" + id) && $(id); });
     var tabs = ids.map(function (id) { return $("tab-" + id); }), panels = ids.map($);
     function show(id, focus) {
       var i = ids.indexOf(id); if (i < 0) return false;
@@ -774,6 +790,67 @@
       say("a-say", allIn ? "Suggested openers: squat " + wt(sets.squat[0]) + ", bench " + wt(sets.bench[0]) + ", deadlift " + wt(sets.dead[0]) + " kilograms. Total if every third goes: " + wt(sum(2)) + " kilograms."
         : "Enter your best single for each lift.");
       store.set({ att: { units: units.get(), style: st, warm: w, squat: kg.squat, bench: kg.bench, dead: kg.dead } });
+    }
+    show(); calc();
+  });
+
+  /* ---------- 7. navy body fat ----------
+     The fields show the chosen unit; the maths runs on centimetres kept in `cm`, so switching
+     units cannot drift what was typed. "Use in Energy & macros" fills that tool's body-fat box,
+     which moves it to the Cunningham equation. */
+  boot(function () {
+    if (!$("bodyfat")) return;
+    var mine = saved.bf || {}, FIELDS = ["h", "neck", "waist", "hip"];
+    var cm = {}; FIELDS.forEach(function (f) { cm[f] = mine[f] > 0 ? +mine[f] : val("bf-" + f); });
+    var kg = mine.kg > 0 ? +mine.kg : NaN;
+    var units = seg($("bf-units"), mine.units || (saved.units === "imperial" ? "in" : ""), "cm", function () { show(); calc(); });
+    var sex = seg($("bf-sex"), mine.sex || saved.sex, "m", function () { calc(); });
+    function inch() { return units.get() === "in"; }
+    function show() {
+      FIELDS.forEach(function (f) { if (isFinite(cm[f])) $("bf-" + f).value = Math.round((inch() ? cm[f] / 2.54 : cm[f]) * 2) / 2; });
+      if (isFinite(kg)) $("bf-kg").value = inch() ? Math.round(F.lb(kg)) : Math.round(kg * 10) / 10;
+      [].forEach.call(document.querySelectorAll(".bf-u"), function (u) { u.textContent = inch() ? "in" : "cm"; });
+      $("bf-kg-u").textContent = inch() ? "lb" : "kg";
+    }
+    FIELDS.forEach(function (f) { $("bf-" + f).addEventListener("input", function () { var v = val("bf-" + f); cm[f] = inch() ? v * 2.54 : v; calc(); }); });
+    $("bf-kg").addEventListener("input", function () { var v = val("bf-kg"); kg = inch() ? F.kg(v) : v; calc(); });
+    $("bf-use").addEventListener("click", function () {
+      var pct = $("bf-out").getAttribute("data-pct"); if (!pct) return;
+      var box = $("m-bf"); if (!box) return;
+      box.value = pct; box.dispatchEvent(new Event("input", { bubbles: true }));
+      $("bf-use").textContent = "Added ✓";
+      clearTimeout($("bf-use")._t); $("bf-use")._t = setTimeout(function () { $("bf-use").textContent = "Use in Energy & macros"; }, 1600);
+    });
+    function calc() {
+      var f = sex.get() === "f";
+      $("bf-hip-wrap").hidden = !f;
+      $("bf-waist-l").innerHTML = f ? 'Waist <span style="text-transform:none;letter-spacing:0">at the narrowest</span>' : 'Abdomen <span style="text-transform:none;letter-spacing:0">at the navel</span>';
+      $("bf-how").textContent = "Stand relaxed and breathe out normally. Keep the tape level and snug on bare skin without pressing in. Neck: just below the larynx (Adam’s apple), the tape sloping down slightly to the front. " +
+        (f ? "Waist: around the narrowest point of the abdomen. Hips: around the widest part of the buttocks, feet together. "
+           : "Abdomen: around the navel, level with the floor. ") +
+        "Measure each one three times and use the average. Weigh and measure at the same time of day, each time.";
+      var pct = F.navy(sex.get(), cm.h, cm.neck, cm.waist, cm.hip);
+      var ok = isFinite(pct) && cm.h >= 120 && cm.h <= 230, out = $("bf-out");
+      out.classList.toggle("is-empty", !ok); out.setAttribute("data-pct", ok ? Math.round(pct * 10) / 10 : "");
+      $("bf-warn").hidden = true;
+      if (!ok) {
+        $("bf-pct").innerHTML = "—<small>%</small>"; $("bf-mass").hidden = true;
+        $("bf-sub").textContent = isFinite(pct) || !(cm.h > 0) ? "Enter your measurements." : (f ? "Waist and hips together must be more than the neck." : "The abdomen must measure more than the neck.");
+        say("bf-say", $("bf-sub").textContent);
+      } else {
+        var shown = Math.max(0, pct);
+        $("bf-pct").innerHTML = num(shown, 1) + "<small>%</small>";
+        $("bf-sub").textContent = "Navy equation for " + (f ? "women" : "men") + ". Expect the true value to lie a few points either side.";
+        if (pct < 3 || pct > 60) { $("bf-warn").hidden = false; $("bf-warn").textContent = "That is outside the range the equations were built on. Check each measurement and the units."; }
+        var mass = isFinite(kg) && kg > 25 && kg < 300;
+        $("bf-mass").hidden = !mass;
+        if (mass) {
+          var fm = kg * shown / 100, u = inch() ? " lb" : " kg", conv = function (x) { return inch() ? F.lb(x) : x; };
+          $("bf-fm").textContent = num(conv(fm), 1) + u; $("bf-lm").textContent = num(conv(kg - fm), 1) + u;
+        }
+        say("bf-say", "Estimated body fat " + num(shown, 1) + " percent" + (mass ? ", " + num(inch() ? F.lb(kg * shown / 100) : kg * shown / 100, 1) + (inch() ? " pounds" : " kilograms") + " of fat." : "."));
+      }
+      store.set({ bf: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "" } });
     }
     show(); calc();
   });

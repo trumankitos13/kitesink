@@ -582,7 +582,7 @@ def md_index(meta, numbers, counts, pages):
     out = ["# KiteSink Fitness", "",
            f"Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds {numbers['n:total']} entries in "
            f"{numbers['n:areas']} areas, and each entry names its sources and says how well supported it is. Around it: common claims "
-           "checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in "
+           "checked against the research, a glossary, an index of key numbers and reference tables, and eight calculators that run in "
            "the browser. Vantix, a periodization app, is the flagship project on the page.",
            "", "## The field guide, by area", ""]
     for name, doms in GROUPS:
@@ -599,7 +599,9 @@ def md_index(meta, numbers, counts, pages):
             f"- Energy and macro calculator: {SITE}/fitness#macros", f"- Effective reps explorer: {SITE}/fitness#reps",
             f"- 1RM and load calculator: {SITE}/fitness#loads", f"- Travel workout builder: {SITE}/fitness#travel",
             f"- Meet attempt planner: {SITE}/fitness#attempts",
-            f"- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): {SITE}/fitness#plan", "",
+            f"- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): {SITE}/fitness#plan",
+            f"- Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): {SITE}/fitness#activity",
+            f"- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): {SITE}/fitness#bodyfat", "",
             "## Vantix", "",
             "Vantix is a periodization app for lifters. Its free core (v1.0) is in progress, with a target of 31 December 2026. Paid tiers (Plus, and Pro for coaches) are planned with no prices set. "
             f"Details and the waiting list: {SITE}/vantix", "",

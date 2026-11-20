@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fitness — Vantix, free calculators &amp; a sourced field guide · KiteSink</title>
-<meta name="description" content="Vantix, the periodization OS, plus six free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
+<meta name="description" content="Vantix, the periodization OS, plus eight free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
 <link rel="canonical" href="https://kitesink.com/fitness">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/fitness.md" title="Plain-text version">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
-<meta property="og:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta property="og:description" content="Vantix, eight free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta property="og:url" content="https://kitesink.com/fitness">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
-<meta name="twitter:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta name="twitter:description" content="Vantix, eight free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -213,6 +213,13 @@
 
   /* ---------- tools ---------- */
   .tool { margin-top: 22px; }
+  .tool-tabs { display: grid; gap: 10px; }
+  .tool-row { display: grid; gap: 6px; min-width: 0; }
+  .tool-row .k-seg { justify-self: start; }
+  .tool-grp { font: 600 11px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-green); text-decoration: none; justify-self: start; }
+  .tool-grp::after { content: " \2192"; }
+  .tool-grp:hover { text-decoration: underline; text-underline-offset: 3px; }
+  @media (min-width: 760px) { .tool-row { grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 12px; } }
   .tool-grid { display: grid; gap: 18px; }
   @media (min-width: 920px) { .tool-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .tool-out { position: sticky; top: 130px; } }
   .tool-in { gap: 18px; }
@@ -401,7 +408,7 @@
       <div class="fx-copy">
         <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
         <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-        <p class="k-lead">Six free calculators and a sourced field guide, with Vantix, the flagship, on the way. Everything runs in your browser.</p>
+        <p class="k-lead">Eight free calculators and a sourced field guide, with Vantix, the flagship, on the way. Everything runs in your browser.</p>
         <!-- The goal picker and its card are shown by /fitness.js, which reads #fx-data (scripts/build_fitness.py writes it from content/fitness/hero.json). Without scripts the cards below do the job. -->
         <div class="fx-pick" id="fx-pick" hidden>
           <p class="k-label" id="fx-pick-l">What are you after?</p>
@@ -534,17 +541,31 @@
   <section id="tools" class="k-band" aria-labelledby="h-tools">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Six calculators. <em>No sign-up.</em></h2></div>
+        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Eight calculators. <em>No sign-up.</em></h2></div>
         <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps nothing.</p>
       </header>
 
-      <div class="k-seg k-seg--scroll" role="tablist" aria-label="Tools">
-        <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
-        <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
-        <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
-        <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
-        <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
-        <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
+      <!-- One tablist, laid out in the field guide's groups. Each row is a plain wrapper, so the tabs
+           still belong to the one list; the arrow keys move through all of them in this order. -->
+      <div class="tool-tabs" role="tablist" aria-label="Tools">
+        <div class="tool-row">
+          <a class="tool-grp" href="#training">Training</a>
+          <div class="k-seg k-seg--scroll">
+            <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
+            <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
+            <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+            <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
+          </div>
+        </div>
+        <div class="tool-row">
+          <a class="tool-grp" href="#food-and-body">Food and body</a>
+          <div class="k-seg k-seg--scroll">
+            <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
+            <button type="button" role="tab" id="tab-activity" aria-controls="activity" aria-selected="false">Activity multiplier</button>
+            <button type="button" role="tab" id="tab-bodyfat" aria-controls="bodyfat" aria-selected="false">Navy body fat</button>
+            <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
+          </div>
+        </div>
       </div>
 
       <!-- ---------- 1. energy & macros ---------- -->
@@ -727,6 +748,41 @@
         </div>
       </div>
 
+      <!-- ---------- 7. navy body fat ---------- -->
+      <div class="tool" id="bodyfat" role="tabpanel" aria-labelledby="tab-bodyfat" hidden>
+        <p class="k-copy tool-intro">The US Navy tape method: a body fat estimate from your height and a few circumferences. All it needs is a tape measure. Like every method, it estimates; use it to follow a trend, measured the same way each time.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="bf-units-l">Units</span><div class="k-seg" id="bf-units" role="group" aria-labelledby="bf-units-l"><button type="button" value="cm">cm</button><button type="button" value="in">in</button></div></div>
+              <div class="k-field"><span class="k-label" id="bf-sex-l">Sex (for the equation)</span><div class="k-seg" id="bf-sex" role="group" aria-labelledby="bf-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="bf-h" type="number" inputmode="decimal" min="50" max="250" step="0.5" value="178"><span class="bf-u">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Neck <span style="text-transform:none;letter-spacing:0">below the larynx</span></span><span class="with-unit"><input class="k-input" id="bf-neck" type="number" inputmode="decimal" min="10" max="80" step="0.5" value="38"><span class="bf-u">cm</span></span></label>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label" id="bf-waist-l">Abdomen <span style="text-transform:none;letter-spacing:0">at the navel</span></span><span class="with-unit"><input class="k-input" id="bf-waist" type="number" inputmode="decimal" min="30" max="250" step="0.5" value="86"><span class="bf-u">cm</span></span></label>
+              <label class="k-field" id="bf-hip-wrap" hidden><span class="k-label">Hips <span style="text-transform:none;letter-spacing:0">at the widest</span></span><span class="with-unit"><input class="k-input" id="bf-hip" type="number" inputmode="decimal" min="30" max="250" step="0.5" value="97"><span class="bf-u">cm</span></span></label>
+            </div>
+            <label class="k-field"><span class="k-label">Body weight <span style="text-transform:none;letter-spacing:0">optional, for fat and lean mass</span></span><span class="with-unit"><input class="k-input" id="bf-kg" type="number" inputmode="decimal" min="25" max="300" step="0.1" placeholder="—"><span id="bf-kg-u">kg</span></span></label>
+            <details class="more">
+              <summary>How to measure</summary>
+              <p class="k-small" id="bf-how"></p>
+            </details>
+          </div>
+          <div class="k-card tool-out is-empty" id="bf-out">
+            <p class="k-vh" id="bf-say" role="status"></p>
+            <div><p class="k-label">Estimated body fat</p><p class="k-stat"><span id="bf-pct">—<small>%</small></span></p><p class="k-small" id="bf-sub">Enter your measurements.</p></div>
+            <div class="kv hide-empty" id="bf-mass" hidden><div><span class="k-label">Fat mass</span><b id="bf-fm">—</b></div><div><span class="k-label">Lean mass</span><b id="bf-lm">—</b></div></div>
+            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="bf-use" type="button">Use in Energy &amp; macros</button></div>
+            <p class="k-small" id="bf-warn" hidden></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">{{bf:note}}</p>
+          </div>
+        </div>
+      </div>
+
+{{ac:panel}}
       <!-- ---------- 6. diet planner ---------- -->
       <div class="tool" id="plan" role="tabpanel" aria-labelledby="tab-plan">
         <p class="k-copy tool-intro">See your weekly deficit, not just a daily number. Pick how many days a week you diet and how hard; the other days stay at maintenance. The planner works out the week, the protein that deficit calls for, and what each kind of day looks like.</p>
