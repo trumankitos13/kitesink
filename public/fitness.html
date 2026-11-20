@@ -220,6 +220,50 @@
   .vx-fine { font-size: 12.5px !important; line-height: 1.5 !important; margin-top: 14px; }
 
   /* ---------- tools ---------- */
+  /* My numbers: one line closed, a grid open */
+  .mine { margin-bottom: 18px; border: 1.5px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); }
+  .mine > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; min-height: 48px; padding: 10px 16px; cursor: pointer; list-style: none; }
+  .mine > summary::-webkit-details-marker { display: none; }
+  .mine-k { font: 600 11px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-green); }
+  .mine-s { flex: 1 1 14em; min-width: 0; font: 500 13px/1.45 var(--k-mono); color: var(--k-ink); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .mine-s.is-none { color: var(--k-mute); }
+  .mine-e { font: 600 12px/1.2 var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
+  .mine[open] .mine-e { text-decoration: none; }
+  .mine[open] .mine-e::after { content: " \2212"; }
+  .mine-body { display: grid; gap: 14px; padding: 4px 16px 16px; border-top: 1px solid var(--k-rule); }
+  .mine-why { max-width: 70ch; margin-top: 10px; }
+  .mine-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 14px; }
+  @media (min-width: 760px) { .mine-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .mine-grid .k-seg { justify-self: start; }
+  .k-opt { text-transform: none; letter-spacing: 0; }
+  .k-input[aria-invalid="true"] { border-color: var(--k-brass-fill); box-shadow: inset 0 0 0 1px var(--k-brass-fill); }
+  /* a result built on example inputs */
+  .ex-note { padding: 8px 12px; border-radius: 10px; background: rgba(216,176,122,.14); border: 1px dashed rgba(216,176,122,.55); color: #f3e3c4 !important; }
+  .ex-note[hidden] { display: none; }
+  /* a field-guide entry as a small card, and a guide table: scripts/build_fitness.py writes both */
+  .te { display: grid; gap: 4px; padding: 10px 12px; border-radius: 12px; background: var(--k-tint); }
+  .te p { margin: 0; }
+  .te-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font: 600 10px/1.3 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
+  .te-t { font: 600 14px/1.3 var(--k-sans); letter-spacing: -.01em; color: var(--k-ink); }
+  .te-t a { color: inherit; text-decoration: none; } .te-t a:hover { color: var(--k-green); text-decoration: underline; }
+  .te-s { font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .te-do { margin: 2px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .tool-out .te { background: rgba(240,232,214,.08); }
+  .tool-out .te-top { color: #a9b9a3; } .tool-out .te-t { color: #f0e8d6; } .tool-out .te-s, .tool-out .te-do { color: #c2ceb9; }
+  .tool-out .te-t a:hover { color: #d8b07a; }
+  .tool-out .fx-badge { background: rgba(240,232,214,.1); color: #f0e8d6; box-shadow: inset 0 0 0 1px rgba(240,232,214,.3); }
+  .tool-out .fx-badge.strong { background: #8fc39b; color: #1f3024; box-shadow: none; }
+  .tool-out .fx-badge.moderate { color: #d8b07a; }
+  .te-list { display: grid; gap: 8px; }
+  .tt { display: grid; gap: 6px; }
+  .tt-h { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font: 600 13.5px/1.35 var(--k-sans); color: var(--k-ink); }
+  .tt-scroll { overflow-x: auto; border: 1px solid var(--k-rule); border-radius: 10px; }
+  .tt-scroll:focus-visible { outline: 2px solid var(--k-green); outline-offset: 2px; }
+  .tt table { width: 100%; border-collapse: collapse; font-size: 12.5px; line-height: 1.4; color: var(--k-copy); }
+  .tt th, .tt td { padding: 7px 9px; text-align: left; vertical-align: top; border-top: 1px solid var(--k-rule); }
+  .tt thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--k-mute); background: var(--k-tint); }
+  .tt tbody th { font-weight: 600; color: var(--k-ink); }
+  .tool-src { margin-top: 18px; }
   .tool { margin-top: 22px; }
   .ac-base { display: grid; gap: 8px; padding: 14px; border-radius: 12px; background: var(--k-tint); }
   .ac-base > .k-label { margin: 0; }
@@ -587,8 +631,33 @@
     <div class="k-wrap">
       <header class="k-shead">
         <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Eight calculators. <em>No sign-up.</em></h2></div>
-        <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps nothing.</p>
+        <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps only your shared numbers.</p>
       </header>
+
+      <!-- My numbers: the body and lift numbers every tool starts from (localStorage ksFit.me). Hidden in
+           the HTML and shown by /fitness.js, which is what saves them. -->
+      <details class="mine" id="mine" hidden>
+        <summary><span class="mine-k">My numbers</span><span class="mine-s" id="me-sum">None yet</span><span class="mine-e">Edit</span></summary>
+        <div class="mine-body">
+          <p class="k-small mine-why">Type a number once and every tool starts from it. A tool uses a number only once you have typed it, here or in the tool; until then it shows an example and says so. Saved in this browser only.</p>
+          <div class="mine-grid">
+            <div class="k-field"><span class="k-label" id="me-units-l">Units</span><div class="k-seg" id="me-units" role="group" aria-labelledby="me-units-l"><button type="button" value="metric" aria-pressed="false">Metric</button><button type="button" value="imperial" aria-pressed="false">Imperial</button></div></div>
+            <div class="k-field"><span class="k-label" id="me-sex-l">Sex <span class="k-opt">for the equations</span></span><div class="k-seg" id="me-sex" role="group" aria-labelledby="me-sex-l"><button type="button" value="m" aria-pressed="false">Male</button><button type="button" value="f" aria-pressed="false">Female</button></div></div>
+            <label class="k-field"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="me-age" type="number" inputmode="numeric" min="16" max="95" placeholder="—"><span>yr</span></span></label>
+            <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="me-kg" type="number" inputmode="decimal" min="30" max="660" step="0.1" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="me-cm" type="number" inputmode="decimal" min="47" max="230" step="0.5" placeholder="—"><span id="me-hu">cm</span></span></label>
+            <label class="k-field"><span class="k-label">Body fat <span class="k-opt" id="me-bf-from"></span></span><span class="with-unit"><input class="k-input" id="me-bf" type="number" inputmode="decimal" min="3" max="60" step="0.1" placeholder="—"><span>%</span></span></label>
+            <label class="k-field"><span class="k-label">Best squat</span><span class="with-unit"><input class="k-input" id="me-squat" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Best bench</span><span class="with-unit"><input class="k-input" id="me-bench" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Best deadlift</span><span class="with-unit"><input class="k-input" id="me-dead" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Max heart rate <span class="k-opt">measured</span></span><span class="with-unit"><input class="k-input" id="me-hrmax" type="number" inputmode="numeric" min="100" max="230" placeholder="—"><span>bpm</span></span></label>
+            <label class="k-field"><span class="k-label">Resting heart rate</span><span class="with-unit"><input class="k-input" id="me-hrrest" type="number" inputmode="numeric" min="30" max="110" placeholder="—"><span>bpm</span></span></label>
+          </div>
+          <p class="k-small" id="me-bad" hidden></p>
+          <div class="k-actions"><button class="k-btn k-btn--sm k-btn--ghost" id="me-clear" type="button">Clear my numbers</button></div>
+          <p class="k-vh" id="me-say" role="status"></p>
+        </div>
+      </details>
 
       <!-- The tools in the field guide's groups: a tablist per group, with the group's link beside it.
            The arrow keys move through every tab, across both rows, in this order. -->
@@ -674,6 +743,7 @@
               </div>
             </div>
             <p class="warn" id="m-warn" hidden></p>
+            <p class="k-small ex-note" id="m-ex" hidden></p>
             <div class="kv hide-empty">
               <div><span class="k-label">Maintenance</span><b id="m-maint">—</b></div>
               <div><span class="k-label">Expected change</span><b id="m-change">—</b></div>
@@ -790,6 +860,7 @@
               <thead><tr><th scope="col">Lift</th><th scope="col">Opener</th><th scope="col">Second</th><th scope="col">Third</th></tr></thead>
               <tbody id="a-rows"></tbody>
             </table>
+            <p class="k-small ex-note" id="a-ex" hidden></p>
             <div class="kv hide-empty"><div><span class="k-label">Total if every third goes</span><b id="a-total">—</b></div><div><span class="k-label">Total on seconds</span><b id="a-total2">—</b></div></div>
             <div class="wk hide-empty"><h3 id="a-warm-h">Warm-up ladder</h3><ol class="wu" id="a-ladder"></ol></div>
             <p class="k-small">These percentages are a common coaching convention, not a rule or a study result: an opener you could lift for a triple, a second that sets up the third, and a third near your best. Meets load in kilograms in 2.5 kg steps, so every attempt is rounded to that. Change a later attempt on the day by how the last one moved.</p>
@@ -824,7 +895,8 @@
             <p class="k-vh" id="bf-say" role="status"></p>
             <div><p class="k-label">Estimated body fat</p><p class="k-stat"><span id="bf-pct">—<small>%</small></span></p><p class="k-small" id="bf-sub">Enter your measurements.</p></div>
             <div class="kv hide-empty" id="bf-mass" hidden><div><span class="k-label">Fat mass</span><b id="bf-fm">—</b></div><div><span class="k-label">Lean mass</span><b id="bf-lm">—</b></div></div>
-            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="bf-use" type="button">Use in Energy &amp; macros</button></div>
+            <p class="k-small ex-note" id="bf-ex" hidden></p>
+            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="bf-use" type="button">Use as my body fat</button></div>
             <p class="k-small" id="bf-warn" hidden></p>
             <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">The equations are the US Navy’s, built on Navy men and women from height and tape measures. Against DXA in 1,407 Army recruits they read about 6 points low on average, with a typical error of about 3.4 points for men and 4.1 for women. A tape used the same way each time is good for following change; one reading is a rough guide. <a href="/fitness/bodycomp#comp-methods-estimate">Every body fat method estimates</a>. <span class="cite"><a href="/fitness/sources#src-hodgdon1984m">Hodgdon 1984a</a> · <a href="/fitness/sources#src-hodgdon1984f">Hodgdon 1984b</a> · <a href="/fitness/sources#src-foulis2023">Foulis 2023</a></span></p>
           </div>
@@ -843,7 +915,7 @@
               <p class="k-small ac-from" id="ac-from"></p>
               <div class="ac-need" id="ac-need" hidden>
                 <p class="k-small">Those are the example inputs. Put in your own weight and body fat for your number.</p>
-                <button class="k-btn k-btn--sm k-btn--ghost" id="ac-go" type="button">Set mine in Energy &amp; macros</button>
+                <button class="k-btn k-btn--sm k-btn--ghost" id="ac-go" type="button">Set mine in My numbers</button>
               </div>
               <div class="ac-own">
                 <label class="k-label" for="ac-bmr">Or type your own BMR</label>
@@ -873,7 +945,7 @@
             <div class="kv hide-empty"><div><span class="k-label" id="ac-k1-l">Maintenance</span><b id="ac-k1">—</b></div><div><span class="k-label" id="ac-k2-l">Resting energy</span><b id="ac-k2">—</b></div></div>
             <p class="k-small hide-empty" id="ac-k3"></p>
             <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="ac-use" type="button">Use in Energy &amp; macros</button></div>
-            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">These are KiteSink’s own working numbers from coaching, not results from a study. Resting energy comes from Energy &amp; macros (by default 10, 9 or 8 kcal per lb of body weight, by body fat category). A usual day is × 1.1 to 1.5, and each hour of training adds 0.1 to 0.4. Use the answer as a starting point and correct it against your weight trend over two or three weeks.</p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">These are KiteSink’s own working numbers from coaching, not results from a study. Resting energy comes from My numbers, worked out the way Energy &amp; macros is set to (by default 10, 9 or 8 kcal per lb of body weight, by body fat category). A usual day is × 1.1 to 1.5, and each hour of training adds 0.1 to 0.4. Use the answer as a starting point and correct it against your weight trend over two or three weeks.</p>
           </div>
         </div>
       </div>
@@ -881,7 +953,7 @@
       <!-- ---------- 6. diet planner ---------- -->
       <div class="tool" id="plan" role="tabpanel" aria-labelledby="tab-plan">
         <p class="k-copy tool-intro">See your weekly deficit, not just a daily number. Pick how many days a week you diet and how hard; the other days stay at maintenance. The planner works out the week, the protein that deficit calls for, and what each kind of day looks like.</p>
-        <p class="d-who"><b>Talk to a doctor before using this</b> if you are under 18, pregnant or breastfeeding, have had an eating disorder, have diabetes or take medication that food intake affects, or have kidney, liver or heart disease. General information, not medical advice. This planner saves nothing.</p>
+        <p class="d-who"><b>Talk to a doctor before using this</b> if you are under 18, pregnant or breastfeeding, have had an eating disorder, have diabetes or take medication that food intake affects, or have kidney, liver or heart disease. General information, not medical advice. This planner keeps only the numbers every tool shares (sex, age, weight, height, body fat); the plan itself is not saved.</p>
         <div class="tool-grid">
           <div class="k-card tool-in">
             <div class="row2">
@@ -922,6 +994,7 @@
           <div class="k-card tool-out d-out" id="d-out">
             <p class="k-vh" id="d-say" role="status"></p>
             <div><p class="k-label" id="d-head-l">Weekly deficit</p><p class="k-stat"><span id="d-head">—</span><small id="d-head-u">kcal a week</small></p><p class="k-small" id="d-sub"></p><p class="d-delta" id="d-delta" hidden></p></div>
+            <p class="k-small ex-note" id="d-ex" hidden></p>
             <div class="hide-empty" id="d-week-wrap">
               <div class="d-head"><p class="k-label">Your week <span class="d-key"><i class="d-dot"></i> training day</span></p><button class="k-btn k-btn--sm d-reset" id="d-reset" type="button" hidden>Reset to suggested days</button></div>
               <p class="k-small">Tap a day to switch it between a diet day and a maintenance day.</p>

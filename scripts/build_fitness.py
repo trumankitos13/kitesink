@@ -600,7 +600,7 @@ def md_index(meta, numbers, counts, pages):
             f"- Energy and macro calculator: {SITE}/fitness#macros", f"- Effective reps explorer: {SITE}/fitness#reps",
             f"- 1RM and load calculator: {SITE}/fitness#loads", f"- Travel workout builder: {SITE}/fitness#travel",
             f"- Meet attempt planner: {SITE}/fitness#attempts",
-            f"- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): {SITE}/fitness#plan",
+            f"- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; keeps only the shared body numbers): {SITE}/fitness#plan",
             f"- Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): {SITE}/fitness#activity",
             f"- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): {SITE}/fitness#bodyfat", "",
             "## Vantix", "",

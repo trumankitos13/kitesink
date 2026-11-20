@@ -638,10 +638,11 @@
   // a field the visitor is typing in keeps what they typed; every other one shows the new value
   function setField(el, v) { if (el && document.activeElement !== el) el.value = v; }
   // a result built on any example input says so, and which
-  function exampleNote(el, names) {
+  // (local: the inputs are this tool's own, not My numbers)
+  function exampleNote(el, names, local) {
     if (!el) return;
     el.hidden = !names.length;
-    el.textContent = names.length ? "Built on example inputs: " + names.join(", ") + ". Put in your own here or in My numbers above for your numbers." : "";
+    el.textContent = names.length ? "Built on example inputs: " + names.join(", ") + ". " + (local ? "Put in your own for your number." : "Put in your own here or in My numbers for your numbers.") : "";
   }
 
   /* My numbers: the shared `me` (see F.meSet). ME.val(field, example) is the visitor's value or the
@@ -764,43 +765,117 @@
     if (location.hash) setTimeout(fromHash, 60);
   });
 
-  /* ---------- 1. energy & macros ---------- */
+  /* ---------- My numbers: a strip above the tabs, one line closed ----------
+     Shows and edits ksFit.me (see ME). Weights and lifts in kg or lb and height in cm or inches,
+     by the site-wide unit setting here; each tool's own unit switch starts from that setting. */
   boot(function () {
-    var units = seg($("m-units"), saved.units, "metric", function () { showBody(); paintUnits(); calc(); });
-    var sex = seg($("m-sex"), saved.sex, "m", calc);
+    var box = $("mine"); if (!box) return;
+    box.hidden = false;
+    var FIELD = { age: "me-age", kg: "me-kg", cm: "me-cm", bf: "me-bf", squat: "me-squat", bench: "me-bench", dead: "me-dead", hrMax: "me-hrmax", hrRest: "me-hrrest" };
+    var MASS = ["kg", "squat", "bench", "dead"];
+    function imp() { return ME.units() === "imperial"; }
+    function toShown(k, v) { return MASS.indexOf(k) >= 0 && imp() ? Math.round(F.lb(v) * 10) / 10 : k === "cm" && imp() ? Math.round(v / 2.54 * 10) / 10 : Math.round(v * 10) / 10; }
+    function fromShown(k, v) { return MASS.indexOf(k) >= 0 && imp() ? F.kg(v) : k === "cm" && imp() ? v * 2.54 : v; }
+    function mass(v) { return imp() ? wt(Math.round(F.lb(v))) : wt(Math.round(v * 10) / 10); }
+    function height(cm) { if (!imp()) return num(cm) + " cm"; var t = Math.round(cm / 2.54); return Math.floor(t / 12) + "′" + (t % 12) + "″"; }
+    function summary() {
+      var m = ME.get(), u = imp() ? " lb" : " kg", bits = [];
+      if (m.own.kg) bits.push(mass(m.kg) + u);
+      if (m.own.cm) bits.push(height(m.cm));
+      if (m.own.age) bits.push(m.age + " yr");
+      if (m.own.sex) bits.push(m.sex === "f" ? "female" : "male");
+      if (m.own.bf) bits.push(num(m.bf, m.bf % 1 ? 1 : 0) + "% fat" + (m.bfFrom === "navy" ? " (navy)" : ""));
+      if (m.own.squat || m.own.bench || m.own.dead) bits.push("S/B/D " + ["squat", "bench", "dead"].map(function (k) { return m.own[k] ? mass(m[k]) : "–"; }).join("/") + u);
+      if (m.own.hrMax || m.own.hrRest) bits.push("HR " + (m.own.hrMax ? "max " + m.hrMax : "") + (m.own.hrMax && m.own.hrRest ? ", " : "") + (m.own.hrRest ? "rest " + m.hrRest : ""));
+      return bits.join(" · ");
+    }
+    function paint(keys) {
+      var m = ME.get(), all = !keys;
+      pressed($("me-units"), imp() ? "imperial" : "metric");
+      pressed($("me-sex"), m.own.sex ? m.sex : "");
+      Object.keys(FIELD).forEach(function (k) {
+        if (all || hits(keys, [k, "units"])) { setField($(FIELD[k]), m.own[k] ? toShown(k, m[k]) : ""); if (document.activeElement !== $(FIELD[k])) $(FIELD[k]).removeAttribute("aria-invalid"); }
+      });
+      [].forEach.call(box.querySelectorAll(".me-wu"), function (el) { el.textContent = imp() ? "lb" : "kg"; });
+      $("me-hu").textContent = imp() ? "in" : "cm";
+      $("me-kg").max = imp() ? 660 : 300; $("me-cm").min = imp() ? 47 : 120; $("me-cm").max = imp() ? 91 : 230;
+      $("me-bf-from").textContent = m.own.bf && m.bfFrom === "navy" ? "from Navy body fat" : "";
+      var s = summary(), el = $("me-sum");
+      el.textContent = s || "None yet. Type them once and every tool starts from them.";
+      el.classList.toggle("is-none", !s);
+      $("me-clear").disabled = !s;
+    }
+    Object.keys(FIELD).forEach(function (k) {
+      var el = $(FIELD[k]);
+      el.addEventListener("input", function () {
+        var v = val(FIELD[k]), bad = el.value !== "" && !F.meOk(k, fromShown(k, v));
+        el.setAttribute("aria-invalid", bad ? "true" : "false");
+        $("me-bad").hidden = !bad;
+        if (bad) { var r = F.ME_RANGE[k]; $("me-bad").textContent = "That is outside what the tools take (" + toShown(k, r[0]) + " to " + toShown(k, r[1]) + "), so it is not saved."; }
+        var patch = {}; patch[k] = el.value === "" ? "" : fromShown(k, v); ME.set(patch);
+      });
+    });
+    $("me-units").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ units: b.value }); paint(); });
+    $("me-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
+    $("me-clear").addEventListener("click", function () { ME.clear(); paint(); say("me-say", "Your numbers are cleared. The tools show their examples again."); $("me-units").querySelector("button").focus(); });
+    onMe(paint);
+    paint();
+  });
+
+  /* ---------- 1. energy & macros ----------
+     Sex, age, weight, height and body fat are My numbers: shown from ME when the visitor has typed
+     them (here, in My numbers or in another tool), else the examples below, and saved to ME only
+     when typed here. Goal, activity and the sliders are this tool's own. */
+  boot(function () {
+    var EX = { kg: 75, cm: 175, age: 30, sex: "m" };   // the examples the fields start with
+    var units = seg($("m-units"), saved.units || ME.units(), "metric", function () { showBody(); paintUnits(); calc(); });
+    var sex = seg($("m-sex"), ME.val("sex", EX.sex), EX.sex, calc);
+    $("m-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });   // pressing the shown one owns it too
     var goal = seg($("m-goal"), saved.goal, "lose", function () { goalChanged(); calc(); });
     var protTouched = !!saved.protTouched;
-    // mTouched: the visitor has changed something here, so the numbers are theirs, not the examples
-    // the fields start with. The activity multiplier only borrows weight and body fat once it is set.
-    var mTouched = saved.mTouched != null ? !!saved.mTouched
-      : saved.kg > 0 && (+saved.kg !== 75 || +saved.cm !== 175 || +saved.age !== 30 || saved.bf > 0);   // saved before the flag existed
-    $("macros").addEventListener("ks:mine", function () { mTouched = true; });   // the navy and activity tools' "Use in" buttons
+    // mTouched: the visitor has changed something here. Kept, with the other old keys, for an older
+    // cached /fitness.js; this script goes by which fields of My numbers are the visitor's.
+    var mTouched = !!saved.mTouched;
     ["input", "click"].forEach(function (t) { $("macros").addEventListener(t, function (e) { if (e.isTrusted && (t === "input" || e.target.closest("button"))) mTouched = true; }, true); });
     // The maths runs on these metric values. The fields only display them, so switching
     // units back and forth cannot drift the number that was entered.
-    var body = { kg: saved.kg > 0 ? +saved.kg : val("m-weight"), cm: saved.cm > 0 ? +saved.cm : val("m-cm") };
+    var body = { kg: ME.val("kg", EX.kg), cm: ME.val("cm", EX.cm) };
     function showBody() {
       var imp = units.get() === "imperial";
-      if (isFinite(body.kg)) $("m-weight").value = imp ? Math.round(F.lb(body.kg)) : Math.round(body.kg * 10) / 10;
-      if (isFinite(body.cm)) {
+      if (isFinite(body.kg)) setField($("m-weight"), imp ? Math.round(F.lb(body.kg)) : Math.round(body.kg * 10) / 10);
+      if (isFinite(body.cm) && [$("m-cm"), $("m-ft"), $("m-in")].indexOf(document.activeElement) < 0) {
         if (imp) { var tot = Math.round(body.cm / 2.54); $("m-ft").value = Math.floor(tot / 12); $("m-in").value = tot % 12; }
         else $("m-cm").value = Math.round(body.cm);
       }
     }
-    $("m-weight").addEventListener("input", function () { var v = val("m-weight"); body.kg = units.get() === "imperial" ? F.kg(v) : v; calc(); });
+    $("m-weight").addEventListener("input", function () { var v = val("m-weight"); body.kg = units.get() === "imperial" ? F.kg(v) : v; ME.set({ kg: body.kg }); calc(); });
     ["m-cm", "m-ft", "m-in"].forEach(function (id) {
       $(id).addEventListener("input", function () {
         var inch = val("m-in");
         body.cm = units.get() === "imperial" ? ((val("m-ft") * 12) + (isFinite(inch) ? inch : 0)) * 2.54 : val("m-cm");
-        calc();
+        ME.set({ cm: body.cm }); calc();
       });
     });
+    $("m-age").addEventListener("input", function () { ME.set({ age: val("m-age") }); });
+    $("m-bf").addEventListener("input", function () { ME.set({ bf: val("m-bf") }); });
     ["m-age", "m-bf", "m-act", "m-rate", "m-fat", "m-diet", "m-meals", "m-cook", "m-avoid"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("m-prot").addEventListener("input", function () { protTouched = true; calc(); });
     $("m-copy").addEventListener("click", function () { copy($("m-prompt").value, $("m-copy")); });
 
-    if (saved.age) $("m-age").value = saved.age;
-    if (saved.bf !== "" && isFinite(saved.bf)) $("m-bf").value = saved.bf;
+    $("m-age").value = ME.val("age", EX.age);
+    $("m-bf").value = ME.val("bf", "");
+    // another tool or My numbers changed a shared number: show it, except in the field being typed in
+    onMe(function (keys) {
+      if (hits(keys, ["units"]) && ME.units()) units.set(ME.units());
+      if (hits(keys, ["kg"]) && document.activeElement !== $("m-weight")) body.kg = ME.val("kg", EX.kg);
+      if (hits(keys, ["cm"]) && [$("m-cm"), $("m-ft"), $("m-in")].indexOf(document.activeElement) < 0) body.cm = ME.val("cm", EX.cm);
+      if (hits(keys, ["age"])) setField($("m-age"), ME.val("age", EX.age));
+      if (hits(keys, ["bf"])) setField($("m-bf"), ME.val("bf", ""));
+      if (hits(keys, ["sex"])) sex.set(ME.val("sex", EX.sex));
+      if (hits(keys, ["units", "kg", "cm", "age", "bf", "sex"])) { showBody(); paintUnits(); calc(); }
+    });
+    // FFMI & goal weight's "Plan this loss"
+    window.addEventListener("ks:goal", function (e) { goal.set(e.detail); goalChanged(); calc(); });
     var rest = restSource("m", saved, function () { return sex.get(); }, function () { calc(); });
     if (saved.pal) {
       if (saved.palCustom && saved.pal >= 1.05 && saved.pal <= 6) setPalOption($("m-act"), +saved.pal);   // one the activity tool put there
@@ -834,6 +909,7 @@
 
       var ok = kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 16 && age <= 95;
       $("m-out").classList.toggle("is-empty", !ok);
+      exampleNote($("m-ex"), ok ? [["sex", "sex"], ["age", "age"], ["kg", "weight"], ["cm", "height"]].filter(function (f) { return !ME.has(f[0]); }).map(function (f) { return f[1]; }) : []);
       if (!ok) {
         $("m-kcal").textContent = "—"; $("m-sub").textContent = "Enter age, height and weight to see your numbers."; $("m-warn").hidden = true;
         $("m-prompt").value = ""; $("m-copy").disabled = true;
@@ -879,10 +955,14 @@
         "For each day give every meal with ingredient weights in grams and its calories and protein, then a daily total against the targets. After day 7 add one consolidated shopping list and two swap options per meal.\n" +
         "Show the arithmetic for each daily total and flag any day that misses a target by more than 5%. Use ordinary supermarket food. Ask me before assuming anything about allergies or medical conditions.";
 
-      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched, mTouched: mTouched, rmrSrc: rest.method(), cat: rest.cat(), palCustom: isCustom($("m-act")) };
+      var patch = { units: units.get(), sex: sex.get(), goal: g, age: age, cm: cm, kg: kg, bf: isFinite(bf) ? bf : "", pal: pal, fatPct: fatPct, protein: prot, protTouched: protTouched, mTouched: mTouched || ME.has("kg"), rmrSrc: rest.method(), cat: rest.cat(), palCustom: isCustom($("m-act")) };
       if (g === "lose") patch.loseRate = rate; else if (g === "gain") patch.gainRate = rate;
       store.set(patch); saved = store.get();
+      // the activity multiplier starts from this tool's resting-energy choice: tell it when that changes
+      var restNow = rest.method() + "|" + rest.cat();
+      if (restNow !== restWas) { restWas = restNow; if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:rest")); }
     }
+    var restWas = "";
 
     showBody(); paintUnits(); goalChanged(); calc();
   });
@@ -999,7 +1079,9 @@
     box.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) pick(b); });
   });
 
-  /* ---------- 5. meet attempts ---------- */
+  /* ---------- 5. meet attempts ----------
+     The three bests are My numbers: the visitor's when typed (here, in My numbers or in Coming
+     back), else the examples the fields start with. */
   boot(function () {
     if (!$("a-rows")) return;
     var LIFTS = [["squat", "Squat", "a-squat"], ["bench", "Bench", "a-bench"], ["dead", "Deadlift", "a-dead"]];
@@ -1008,17 +1090,26 @@
       standard: "Standard: open near 91% and finish on your current best.",
       bold: "Chasing PRs: the third is a small personal best. Take it only if the second moved well."
     };
-    var sv = saved.att || {}, kg = {};
-    var units = seg($("a-units"), sv.units, "kg", function () { show(); calc(); });
+    var sv = saved.att || {}, kg = {}, EX = {};
+    var units = seg($("a-units"), sv.units || (ME.units() === "imperial" ? "lb" : ""), "kg", function () { show(); calc(); });
     var style = seg($("a-style"), sv.style, "first", calc);
     var warm = seg($("a-warm"), sv.warm, "squat", calc);
     LIFTS.forEach(function (l) {
-      kg[l[0]] = sv[l[0]] > 0 ? +sv[l[0]] : val(l[2]);   // kept in kg, shown in the chosen unit
-      $(l[2]).addEventListener("input", function () { var v = val(l[2]); kg[l[0]] = units.get() === "lb" ? F.kg(v) : v; calc(); });
+      EX[l[0]] = val(l[2]);
+      kg[l[0]] = ME.val(l[0], EX[l[0]]);   // kept in kg, shown in the chosen unit
+      $(l[2]).addEventListener("input", function () {
+        var v = val(l[2]), patch = {}; kg[l[0]] = units.get() === "lb" ? F.kg(v) : v;
+        patch[l[0]] = kg[l[0]]; ME.set(patch); calc();
+      });
+    });
+    onMe(function (keys) {
+      if (hits(keys, ["units"]) && ME.units()) units.set(ME.units() === "imperial" ? "lb" : "kg");
+      LIFTS.forEach(function (l) { if (hits(keys, [l[0]]) && document.activeElement !== $(l[2])) kg[l[0]] = ME.val(l[0], EX[l[0]]); });
+      if (hits(keys, ["units", "squat", "bench", "dead"])) { show(); calc(); }
     });
     function show() {
       var u = units.get();
-      LIFTS.forEach(function (l) { if (isFinite(kg[l[0]])) $(l[2]).value = Math.round((u === "lb" ? F.lb(kg[l[0]]) : kg[l[0]]) * 10) / 10; });
+      LIFTS.forEach(function (l) { if (isFinite(kg[l[0]])) setField($(l[2]), Math.round((u === "lb" ? F.lb(kg[l[0]]) : kg[l[0]]) * 10) / 10); });
       [].forEach.call(document.querySelectorAll(".a-unit"), function (el) { el.textContent = u; });
     }
     // A meet loads kilograms, so kilograms always lead; pounds follow when that is the chosen unit.
@@ -1032,6 +1123,7 @@
       }).join("");
       var allIn = valid === LIFTS.length;
       $("a-out").classList.toggle("is-empty", !allIn);
+      exampleNote($("a-ex"), allIn ? LIFTS.filter(function (l) { return !ME.has(l[0]); }).map(function (l) { return l[1].toLowerCase(); }) : []);
       function sum(i) { return LIFTS.reduce(function (t, l) { return t + sets[l[0]][i]; }, 0); }
       $("a-total").innerHTML = allIn ? cell(sum(2)) : "—";
       $("a-total2").innerHTML = allIn ? cell(sum(1)) : "—";
@@ -1049,34 +1141,45 @@
 
   /* ---------- 7. navy body fat ----------
      The fields show the chosen unit; the maths runs on centimetres kept in `cm`, so switching
-     units cannot drift what was typed. "Use in Energy & macros" fills that tool's body-fat box,
-     and its sex, so the category there is the right one. */
+     units cannot drift what was typed. Height, weight and sex are My numbers; the tape readings
+     are this tool's own. "Use as my body fat" saves the result to My numbers, marked as from this
+     tool, so Energy & macros, the activity multiplier and FFMI use it. */
   boot(function () {
     if (!$("bodyfat")) return;
     var mine = saved.navy || {}, FIELDS = ["h", "neck", "waist", "hip"], touched = !!mine.touched;   // touched: the readings are the visitor's, not the examples
     ["input", "click"].forEach(function (t) { $("bodyfat").addEventListener(t, function (e) { if (e.isTrusted && (t === "input" || e.target.closest("button"))) touched = true; }, true); });
-    var cm = {}; FIELDS.forEach(function (f) { cm[f] = mine[f] > 0 ? +mine[f] : val("bf-" + f); });
-    var kg = mine.kg > 0 ? +mine.kg : NaN;
-    var units = seg($("bf-units"), mine.units || (saved.units === "imperial" ? "in" : ""), "cm", function () { show(); calc(); });
-    var sex = seg($("bf-sex"), mine.sex || saved.sex, "m", function () { calc(); });
+    // the tape readings are the visitor's once typed (or saved as theirs before); until then the
+    // result is an example's, and "Use as my body fat" waits for them
+    var tape = !!mine.touched && mine.neck > 0;
+    ["neck", "waist", "hip"].forEach(function (f) { $("bf-" + f).addEventListener("input", function () { tape = true; }); });
+    var EXH = val("bf-h");   // the example height the field starts with
+    var cm = {}; FIELDS.forEach(function (f) { cm[f] = f === "h" ? ME.val("cm", EXH) : mine.touched && mine[f] > 0 ? +mine[f] : val("bf-" + f); });
+    var kg = ME.val("kg", NaN);
+    var units = seg($("bf-units"), mine.units || (ME.units() === "imperial" ? "in" : ""), "cm", function () { show(); calc(); });
+    var sex = seg($("bf-sex"), ME.val("sex", "m"), "m", function () { calc(); });
+    $("bf-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
+    onMe(function (keys) {
+      if (hits(keys, ["units"]) && ME.units()) units.set(ME.units() === "imperial" ? "in" : "cm");
+      if (hits(keys, ["cm"]) && document.activeElement !== $("bf-h")) cm.h = ME.val("cm", EXH);
+      if (hits(keys, ["kg"]) && document.activeElement !== $("bf-kg")) { kg = ME.val("kg", NaN); if (!isFinite(kg)) $("bf-kg").value = ""; }
+      if (hits(keys, ["sex"])) sex.set(ME.val("sex", "m"));
+      if (hits(keys, ["units", "cm", "kg", "sex"])) { show(); calc(); }
+    });
     function inch() { return units.get() === "in"; }
     function show() {
-      FIELDS.forEach(function (f) { if (isFinite(cm[f])) $("bf-" + f).value = Math.round((inch() ? cm[f] / 2.54 : cm[f]) * 2) / 2; });
-      if (isFinite(kg)) $("bf-kg").value = inch() ? Math.round(F.lb(kg)) : Math.round(kg * 10) / 10;
+      FIELDS.forEach(function (f) { if (isFinite(cm[f])) setField($("bf-" + f), Math.round((inch() ? cm[f] / 2.54 : cm[f]) * 2) / 2); });
+      if (isFinite(kg)) setField($("bf-kg"), inch() ? Math.round(F.lb(kg)) : Math.round(kg * 10) / 10);
       [].forEach.call(document.querySelectorAll(".bf-u"), function (u) { u.textContent = inch() ? "in" : "cm"; });
       $("bf-kg-u").textContent = inch() ? "lb" : "kg";
     }
-    FIELDS.forEach(function (f) { $("bf-" + f).addEventListener("input", function () { var v = val("bf-" + f); cm[f] = inch() ? v * 2.54 : v; calc(); }); });
-    $("bf-kg").addEventListener("input", function () { var v = val("bf-kg"); kg = inch() ? F.kg(v) : v; calc(); });
-    $("bf-use").addEventListener("click", function () {
+    FIELDS.forEach(function (f) { $("bf-" + f).addEventListener("input", function () { var v = val("bf-" + f); cm[f] = inch() ? v * 2.54 : v; if (f === "h") ME.set({ cm: cm.h }); calc(); }); });
+    $("bf-kg").addEventListener("input", function () { var v = val("bf-kg"); kg = inch() ? F.kg(v) : v; ME.set({ kg: kg }); calc(); });
+    $("bf-use").addEventListener("click", function () {   // the sex goes too: the body fat category depends on it
       var pct = $("bf-out").getAttribute("data-pct"); if (!pct) return;
-      var box = $("m-bf"); if (!box) return;
-      $("macros").dispatchEvent(new CustomEvent("ks:mine"));
-      var sx = document.querySelector('#m-sex button[value="' + sex.get() + '"]');   // the category depends on it
-      if (sx && sx.getAttribute("aria-pressed") !== "true") sx.click();
-      box.value = pct; box.dispatchEvent(new Event("input", { bubbles: true }));
-      $("bf-use").textContent = "Added ✓";
-      clearTimeout($("bf-use")._t); $("bf-use")._t = setTimeout(function () { $("bf-use").textContent = "Use in Energy & macros"; }, 1600);
+      ME.set({ bf: +pct, sex: sex.get() }, { bfFrom: "navy" });
+      var b = $("bf-use"); b.textContent = "Saved \u2713";
+      clearTimeout(b._t); b._t = setTimeout(function () { b.textContent = "Use as my body fat"; }, 1600);
+      say("bf-say", "Saved " + pct + " percent as your body fat. Energy and macros, the activity multiplier and FFMI use it now.");
     });
     function calc() {
       var f = sex.get() === "f";
@@ -1090,7 +1193,8 @@
       var ok = isFinite(pct) && cm.h >= 120 && cm.h <= 230, out = $("bf-out");
       var usable = ok && pct >= 3 && pct <= 60;   // what Energy & macros' body-fat box accepts
       out.classList.toggle("is-empty", !ok); out.setAttribute("data-pct", usable ? Math.round(pct * 10) / 10 : "");
-      $("bf-use").disabled = !usable;
+      $("bf-use").disabled = !usable || !tape;
+      exampleNote($("bf-ex"), ok && !tape ? ["the tape readings"] : [], true);
       $("bf-warn").hidden = true;
       if (!ok) {
         $("bf-pct").innerHTML = "—<small>%</small>"; $("bf-mass").hidden = true;
@@ -1111,15 +1215,17 @@
         say("bf-say", "Estimated body fat " + num(shown, 1) + " percent" + (mass ? ", " + num(inch() ? F.lb(kg * shown / 100) : kg * shown / 100, 1) + (inch() ? " pounds" : " kilograms") + " of fat." : "."));
       }
       store.set({ navy: { units: units.get(), sex: sex.get(), h: cm.h, neck: cm.neck, waist: cm.waist, hip: cm.hip, kg: isFinite(kg) ? kg : "", pct: isFinite(pct) ? Math.round(pct * 10) / 10 : "", touched: touched } });
+      if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:navy"));   // the activity multiplier reads the result when My numbers has no body fat
     }
     show(); calc();
   });
 
   /* ---------- 8. activity multiplier ----------
-     BMR is body weight times the rate for the body-fat category. Weight, sex and body fat come
-     from Energy & macros (body fat from the navy tool when Energy & macros has none); without a
-     weight there, the tool asks for it there first. A BMR typed here overrides all of that.
-     "Use in Energy & macros" puts the multiplier into that tool's activity list. */
+     BMR is body weight times the rate for the body-fat category, by Energy & macros' resting-energy
+     choice. Weight, sex, height, age and body fat are My numbers (body fat from the navy tool's
+     last result when My numbers has none); without the visitor's own weight it works on the
+     examples and says so. A BMR typed here overrides all of that. "Use in Energy & macros" puts
+     the multiplier into that tool's activity list. */
   boot(function () {
     if (!$("activity")) return;
     var mine = saved.ac || {}, result = null;
@@ -1159,26 +1265,26 @@
     $("ac-ex").addEventListener("change", calc);
     ["ac-min", "ac-bmr"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("ac-bmr-clear").addEventListener("click", function () { $("ac-bmr").value = ""; calc(); $("ac-bmr").focus(); });
-    $("ac-go").addEventListener("click", function () {   // take the visitor to Energy & macros, then to its weight box
-      if (window.CustomEvent) window.dispatchEvent(new CustomEvent("ks:tool", { detail: "macros" }));
-      var t = $("tab-macros"); if (t) t.click();
-      var w = $("m-weight"); if (w) setTimeout(function () { w.focus(); }, 60);
+    $("ac-go").addEventListener("click", function () {   // open My numbers at its weight box
+      var box = $("mine"), w = $("me-kg"); if (!box || !w) return;
+      box.open = true; box.scrollIntoView({ block: "start" }); setTimeout(function () { w.focus(); }, 60);
     });
-    // Energy & macros and the navy tool save as they change; follow them
-    ["macros", "bodyfat"].forEach(function (id) { var p = $(id); if (p) { p.addEventListener("input", function () { setTimeout(calc, 0); }); p.addEventListener("click", function () { setTimeout(calc, 0); }); } });
+    // follow My numbers, Energy & macros' resting-energy choice and the navy tool's result
+    onMe(calc);
+    ["ks:rest", "ks:navy"].forEach(function (name) { window.addEventListener(name, calc); });
 
     function baseline() {   // {bmr, text, example}
       var own = val("ac-bmr");
       $("ac-bmr-clear").hidden = !(own > 0);
       if (own >= 800 && own <= 5000) return { bmr: own, own: true, text: "Your BMR: " + num(own) + " kcal a day." };
-      var m = store.get(), imp = m.units === "imperial";
-      var kg = +m.kg > 30 && +m.kg < 300 ? +m.kg : 75, cm = +m.cm > 120 && +m.cm < 230 ? +m.cm : 175, age = +m.age >= 16 && +m.age <= 95 ? +m.age : 30;
-      var bf = m.bf === "" || m.bf == null ? NaN : +m.bf, from = "";
-      if (!(bf > 0) && m.navy && m.navy.touched && m.navy.pct > 0) { bf = +m.navy.pct; from = " (body fat from Navy body fat)"; }
-      var R = F.resting({ method: m.rmrSrc || "cat", cat: m.cat, sex: m.sex === "f" ? "f" : "m", kg: kg, cm: cm, age: age, bf: bf });
+      var m = store.get(), imp = (ME.units() || m.units) === "imperial";
+      var kg = ME.val("kg", 75), cm = ME.val("cm", 175), age = ME.val("age", 30);
+      var bf = ME.val("bf", NaN), from = ME.has("bf") && ME.get().bfFrom === "navy" ? " (body fat from Navy body fat)" : "";
+      if (!(bf > 0) && m.navy && m.navy.touched && m.navy.pct >= 3 && m.navy.pct <= 60) { bf = +m.navy.pct; from = " (body fat from Navy body fat)"; }
+      var R = F.resting({ method: m.rmrSrc || "cat", cat: m.cat, sex: ME.val("sex", "m"), kg: kg, cm: cm, age: age, bf: bf });
       var who = imp ? num(F.lb(kg)) + " lb" : num(kg, 1) + " kg";
-      return { bmr: R.rmr, kg: kg, imp: imp, example: !m.mTouched,
-        text: num(F.round(R.rmr, 10)) + " kcal a day from Energy & macros: " + who + ", " + R.equation + from + "." };
+      return { bmr: R.rmr, kg: kg, imp: imp, example: !ME.has("kg"),
+        text: num(F.round(R.rmr, 10)) + " kcal a day: " + who + ", " + R.equation + from + "." };
     }
     function setUse(pal) {
       var act = $("m-act"); if (!act) return;
@@ -1196,7 +1302,7 @@
     function calc() {
       var one = mode.get() === "one", b = baseline(), L = F.level(level.get()), out = $("ac-out");
       $("ac-one").hidden = !one; $("ac-day").hidden = one;
-      $("ac-need").hidden = !b.example; $("ac-from").textContent = b.example ? b.text.replace("from Energy & macros:", "from Energy & macros\u2019 example inputs:") : b.text;
+      $("ac-need").hidden = !b.example; $("ac-from").textContent = b.example ? b.text.replace(" kcal a day:", " kcal a day from the example inputs:") : b.text.replace(" kcal a day:", " kcal a day from My numbers:");
       store.set({ ac: { mode: mode.get(), level: level.get(), ex: $("ac-ex").value, min: val("ac-min"), bmr: val("ac-bmr") || "", rows: rows } });
       var perLb = function (kcal) { return b.kg ? (b.imp ? num(kcal / F.lb(b.kg), 1) + " kcal per lb" : num(kcal / b.kg, 1) + " kcal per kg") : ""; };
       $("ac-use").parentNode.hidden = one;   // one activity is a part of a day, not a day's multiplier
@@ -1248,7 +1354,10 @@
     var mine = saved.hero || {}, goal = D.goals[mine.goal] ? mine.goal : null, today = (new Date().getDay() + 6) % 7, sel = today;
     var level = seg(lvEl, mine.level, "mid", function () { paint(true); keep(); });
     var load = 20, shown = "", impulse = 0, t0 = 0, moving = !RM, onScreen = true, frame = 0;
-    if (mine.max >= 20 && mine.max <= 350) maxIn.value = mine.max;
+    // the best squat is My numbers' squat: the visitor's once typed here or in any tool, else the example
+    function showMax() { setField(maxIn, ME.has("squat") ? Math.round(ME.val("squat") * 10) / 10 : D.max); }
+    showMax();
+    onMe(function (keys) { if (hits(keys, ["squat"])) { showMax(); paint(false); keep(); } });
     $("fx-pick").hidden = false; rig.hidden = false;
 
     var k = ""; for (var x = 128; x <= 232; x += 4) if (x < 172 || x > 188) k += '<line x1="' + x + '" y1="71" x2="' + x + '" y2="79"/>';
@@ -1358,7 +1467,11 @@
       var b = e.target.closest(".fx-day"), lv = goal && D.goals[goal].levels[level.get()];
       if (b) showDay([].indexOf.call(days.children, b), lv && lv.week);
     });
-    maxIn.addEventListener("input", function () { paint(false); keep(); });
+    maxIn.addEventListener("input", function () {
+      var v = parseFloat(maxIn.value);
+      if (maxIn.value === "" || (v >= 20 && v <= 350)) ME.set({ squat: maxIn.value === "" ? "" : v });
+      paint(false); keep();
+    });
     pause.addEventListener("click", function () { moving = !moving; setPause(); run(); });
     if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; run(); }).observe(rig);
     document.addEventListener("visibilitychange", run);
@@ -1425,25 +1538,38 @@
     if (q.value) { load(true); render(); }   // a browser can restore the text when you come Back to the page
   });
 
-  /* ---------- 6. diet planner. It saves nothing: it only reads what the macro tool remembered. ---------- */
+  /* ---------- 6. diet planner. It keeps only the shared numbers: sex, age, weight, height and body
+     fat are My numbers, read and written like every tool's; its plan choices are not saved. It reads
+     Energy & macros' resting-energy choice and activity level. ---------- */
   boot(function () {
     if (!$("plan")) return;
     var P = F.PLAN, DAY = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     var DAYLONG = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     var mem = store.get(); // read only
-    var body = { kg: mem.kg > 0 ? +mem.kg : 75, cm: mem.cm > 0 ? +mem.cm : 175 };
-    if (mem.age) $("d-age").value = mem.age;
-    if (mem.bf) $("d-bf").value = mem.bf;
-    var dSex = function () { return mem.sex === "f" ? "f" : "m"; };   // replaced once the sex control exists
+    var EX = { kg: 75, cm: 175, age: 30, sex: "m" };   // the examples the fields start with
+    var body = { kg: ME.val("kg", EX.kg), cm: ME.val("cm", EX.cm) };
+    $("d-age").value = ME.val("age", EX.age);
+    $("d-bf").value = ME.val("bf", "");
+    var dSex = function () { return ME.val("sex", EX.sex); };   // replaced once the sex control exists
     var rest = restSource("d", mem, function () { return dSex(); }, function () { calc(); });
     if (mem.pal) {
       if (mem.palCustom && mem.pal >= 1.05 && mem.pal <= 6) setPalOption($("d-act"), +mem.pal);
       else [].forEach.call($("d-act").options, function (o) { if (parseFloat(o.value) === parseFloat(mem.pal)) $("d-act").value = o.value; });
     }
     var train = [true, true, false, true, true, false, false], days = 3.5, manual = null, last = null, prevBal = null, changed = -1, deltaT = 0;
-    var units = seg($("d-units"), mem.units, "metric", function () { showBody(); calc(); });
-    var sex = seg($("d-sex"), mem.sex, "m", calc);
+    var units = seg($("d-units"), ME.units() || mem.units, "metric", function () { showBody(); calc(); });
+    var sex = seg($("d-sex"), ME.val("sex", EX.sex), EX.sex, calc);
+    $("d-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
     dSex = function () { return sex.get(); };
+    onMe(function (keys) {
+      if (hits(keys, ["units"]) && ME.units()) units.set(ME.units());
+      if (hits(keys, ["kg"]) && document.activeElement !== $("d-w")) body.kg = ME.val("kg", EX.kg);
+      if (hits(keys, ["cm"]) && document.activeElement !== $("d-h")) body.cm = ME.val("cm", EX.cm);
+      if (hits(keys, ["age"])) setField($("d-age"), ME.val("age", EX.age));
+      if (hits(keys, ["bf"])) setField($("d-bf"), ME.val("bf", ""));
+      if (hits(keys, ["sex"])) sex.set(ME.val("sex", EX.sex));
+      if (hits(keys, ["units", "kg", "cm", "age", "bf", "sex"])) { showBody(); calc(); }
+    });
     var phase = seg($("d-phase"), "lose", "lose", function () { manual = null; calc(); });
     var gainPct = seg($("d-gainseg"), "5", "5", calc);
 
@@ -1461,11 +1587,13 @@
     function showBody() {
       var imp = units.get() === "imperial";
       $("d-w-unit").textContent = imp ? "lb" : "kg"; $("d-h-unit").textContent = imp ? "in" : "cm";
-      $("d-w").value = imp ? Math.round(F.lb(body.kg)) : Math.round(body.kg * 10) / 10;
-      $("d-h").value = imp ? Math.round(body.cm / 2.54) : Math.round(body.cm);
+      if (isFinite(body.kg)) setField($("d-w"), imp ? Math.round(F.lb(body.kg)) : Math.round(body.kg * 10) / 10);
+      if (isFinite(body.cm)) setField($("d-h"), imp ? Math.round(body.cm / 2.54) : Math.round(body.cm));
     }
-    $("d-w").addEventListener("input", function () { var v = val("d-w"); body.kg = units.get() === "imperial" ? F.kg(v) : v; calc(); });
-    $("d-h").addEventListener("input", function () { var v = val("d-h"); body.cm = units.get() === "imperial" ? v * 2.54 : v; calc(); });
+    $("d-w").addEventListener("input", function () { var v = val("d-w"); body.kg = units.get() === "imperial" ? F.kg(v) : v; ME.set({ kg: body.kg }); calc(); });
+    $("d-h").addEventListener("input", function () { var v = val("d-h"); body.cm = units.get() === "imperial" ? v * 2.54 : v; ME.set({ cm: body.cm }); calc(); });
+    $("d-age").addEventListener("input", function () { ME.set({ age: val("d-age") }); });
+    $("d-bf").addEventListener("input", function () { ME.set({ bf: val("d-bf") }); });
     ["d-age", "d-bf", "d-act", "d-own", "d-size"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("d-size").addEventListener("change", function () { say("d-say", summary()); });
 
@@ -1515,6 +1643,7 @@
       $("d-lose").hidden = ph !== "lose"; $("d-gain").hidden = ph !== "gain"; $("d-train-wrap").hidden = ph !== "lose"; $("d-week-wrap").hidden = ph !== "lose";
       var ok = kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 18 && age <= 95;
       $("d-out").classList.toggle("is-empty", !ok);
+      exampleNote($("d-ex"), ok ? [["sex", "sex"], ["age", "age"], ["kg", "weight"], ["cm", "height"]].filter(function (f) { return !ME.has(f[0]); }).map(function (f) { return f[1]; }) : []);
       if (!ok) { $("d-head").textContent = "—"; $("d-sub").textContent = "Enter age (18 or over), height and weight to see a plan."; $("d-cards").innerHTML = ""; $("d-req").innerHTML = ""; $("d-warn").hidden = true; return; }
       rest.paint();
       var r = F.plan({ sex: sex.get(), kg: kg, cm: cm, age: age, bf: bf, pal: parseFloat($("d-act").value), maint: own >= 1000 && own <= 6000 ? own : 0, method: rest.method(), cat: rest.cat(),

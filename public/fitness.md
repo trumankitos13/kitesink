@@ -39,7 +39,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - 1RM and load calculator: https://kitesink.com/fitness#loads
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
-- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): https://kitesink.com/fitness#plan
+- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; keeps only the shared body numbers): https://kitesink.com/fitness#plan
 - Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): https://kitesink.com/fitness#activity
 - Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): https://kitesink.com/fitness#bodyfat
 
