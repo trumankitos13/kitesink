@@ -32,9 +32,10 @@ VERDICTS = {"true", "mostly", "depends", "overstated", "false"}
 CLAIM_TAGS = {"royalties", "mechanicals", "performance", "neighboring", "publishing", "metadata",
               "unclaimed", "ai", "contracts", "international", "myths"}
 WHEN = {"before-release", "at-release", "after-release", "yearly", "on-dispute"}
-SRC_TYPES = {"statute", "regulation", "ruling", "government", "collective", "standard", "article", "dataset", "other"}
+SRC_TYPES = {"statute", "regulation", "ruling", "filing", "government", "collective", "company", "standard", "article", "dataset", "other"}
 # The grade an entry may claim given its strongest source type.
 GRADE_FROM = {"statute": "law", "regulation": "law", "ruling": "law",
+              "filing": "official", "company": "official",
               "government": "official", "collective": "official", "standard": "official",
               "dataset": "official", "article": "reported", "other": "reported"}
 RANK = {"practice": 0, "reported": 1, "official": 2, "law": 3}
@@ -114,7 +115,7 @@ def check_sources(path, sources, used, offline):
             if len(s.get("support", "")) > 240: err(f"{w}: support for an article is a pointer in your own words, 240 characters at most")
         elif not s.get("publisher"):
             err(f"{w}: needs publisher (the body that issued it)")
-        if st == "ruling":
+        if st in ("ruling", "filing"):
             for f in ("court", "docket", "date"):
                 if not s.get(f): err(f"{w}: a ruling needs {f}")
         if st in ("collective", "standard", "dataset", "other") and len(s.get("support", "")) > 240:

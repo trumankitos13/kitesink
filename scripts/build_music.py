@@ -148,8 +148,8 @@ WHEN = OrderedDict([
 ])
 KIND_ORDER = {"note": 0, "step": 1, "mistake": 2}
 SRC_TYPE = OrderedDict([
-    ("statute", "Statute"), ("regulation", "Regulation"), ("ruling", "Ruling"), ("government", "Government"),
-    ("collective", "Collecting body"), ("standard", "Standard"), ("dataset", "Dataset"), ("article", "Article"), ("other", "Reference"),
+    ("statute", "Statute"), ("regulation", "Regulation"), ("ruling", "Ruling"), ("filing", "Court filing"), ("government", "Government"),
+    ("collective", "Collecting body"), ("company", "Company's own statement"), ("standard", "Standard"), ("dataset", "Dataset"), ("article", "Article"), ("other", "Reference"),
 ])
 # Said once on the sources page and in its twin.
 ARTICLE_NOTE = ("Articles and trade press are credited where they are the source of a point. An entry that rests on them alone "

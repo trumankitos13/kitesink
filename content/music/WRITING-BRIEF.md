@@ -154,11 +154,16 @@ MIDiA, IFPI, Luminate, BPI) are always `reported`.
 }
 ```
 
-- `type`: `statute` | `regulation` | `ruling` | `government` (agency guidance, reports,
-  forms) | `collective` (MLC, PRO, society, SoundExchange, HFA own documents) | `standard`
-  (CISAC, DDEX, IFPI, ISO) | `article` (trade press, guides, blogs) | `dataset` | `other`.
+- `type`: `statute` | `regulation` | `ruling` (a court decision or CRB determination) | `filing` (a
+  complaint, answer or motion: it shows only what a party says; an entry resting on it says
+  "alleges" and is never `law`) | `government` (agency guidance, reports, forms, bills) |
+  `collective` (MLC, PRO, society, SoundExchange, HFA own documents) | `company` (a company's own
+  published policy, terms or announcement, as the source for that company's own policy or deal) |
+  `standard` (CISAC, DDEX, IFPI, ISO) | `article` (trade press, law-firm notes, guides, blogs) |
+  `dataset` | `other`. `filing` and `company` support `official`; `article` and `other` only
+  `reported`.
 - `publisher` is the body; an `article` also gives `authors` (as published) and `site`.
-- A `ruling` gives `court`, `docket` and `date`.
+- A `ruling` or `filing` gives `court`, `docket` and `date`.
 - `url` must open the exact item; `retrieved` is the date you opened it.
 - `support` is for the reviewer and is not published. For US government text it may quote
   the passage; for anything else it is a pointer in your own words, 240 characters at most.
