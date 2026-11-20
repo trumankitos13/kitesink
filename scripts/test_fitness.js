@@ -314,6 +314,16 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   same('comeback: 315 lb rounds to 5 lb steps', F.startLoads(315, TD.returnLoad.pct, 5).join('-'), '160-190');
 }
 
+// ---------- weekly sets: helper sets at half credit, read against the guide's lines ----------
+{
+  eq('sets: helper credit read from the guide is a half', TD.setsHelper.credit, 0.5);
+  eq('sets: 8 direct + 3 helper = 9.5', F.weeklySets(8, 3, TD.setsHelper.credit), 9.5, 1e-12);
+  eq('sets: blanks count as none', F.weeklySets(NaN, 5, 0.5), 2.5, 1e-12);
+  same('sets: the lines read from the guide', TD.sets.min + ' ' + TD.sets.range.join('-'), '10 12-20');
+  same('sets: band edges 9.5 / 10 / 11.5 / 12 / 20 / 20.5', [9.5, 10, 11.5, 12, 20, 20.5].map(n => F.setsBand(n, TD.sets)).join(' '), 'below meets meets in in above');
+  same('sets: nothing entered is no band', F.setsBand(0, TD.sets), 'none');
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);

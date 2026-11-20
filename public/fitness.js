@@ -507,6 +507,13 @@
     return r;
   };
 
+  /* ---------- weekly sets per muscle ----------
+     weeklySets: direct sets plus helper sets at the guide's credit (half, hyp-volume-dose-response).
+     setsBand(n, D): D is #tool-data's sets: below the general line (at least min), meets it, inside
+     the trained-men range, or above it, where the guide finds no clear ceiling. */
+  F.weeklySets = function (direct, helper, credit) { return (direct > 0 ? +direct : 0) + (helper > 0 ? +helper : 0) * credit; };
+  F.setsBand = function (n, D) { return !(n > 0) ? "none" : n < D.min ? "below" : n < D.range[0] ? "meets" : n <= D.range[1] ? "in" : "above"; };
+
   /* ---------- coming back after a break ----------
      comebackRow(days): which row of the guide's return table (rec-table-return-by-break) a break
      falls in. The edges are KiteSink's: up to 5 days; 6 days to under a month; 1 to under 4
@@ -1070,6 +1077,52 @@
     $("r-add").addEventListener("click", function () { var reps = val("r-reps"), rir = val("r-rir"); if (log.length < 30) log.push({ reps: reps, rir: rir, eff: F.effective(reps, rir) }); paintLog(); });
     $("r-clear").addEventListener("click", function () { log = []; paintLog(); });
     paint(); paintLog();
+  });
+
+  /* ---------- weekly sets per muscle ----------
+     Six groups (KiteSink's list), direct and helper sets each; saved as sets{group: [direct, helper]}. */
+  boot(function () {
+    if (!$("sets")) return;
+    var TD = toolData(), D = TD.sets, credit = TD.setsHelper ? TD.setsHelper.credit : 0.5, mine = saved.sets || {};
+    var G = [["shoulders", "Shoulders"], ["back", "Back"], ["chest", "Chest"], ["abs", "Abdominals"], ["legs", "Legs"], ["arms", "Arms"]];
+    G.forEach(function (g) {
+      var s = Array.isArray(mine[g[0]]) ? mine[g[0]] : [];
+      if (s[0] > 0) $("st-" + g[0] + "-d").value = s[0];
+      if (s[1] > 0) $("st-" + g[0] + "-h").value = s[1];
+      ["d", "h"].forEach(function (k) { $("st-" + g[0] + "-" + k).addEventListener("input", calc); });
+    });
+    $("st-clear").addEventListener("click", function () { G.forEach(function (g) { $("st-" + g[0] + "-d").value = ""; $("st-" + g[0] + "-h").value = ""; }); calc(); $("st-" + G[0][0] + "-d").focus(); });
+    var READ = {
+      below: function () { return "Below the guide’s general line: " + D.general.charAt(0).toLowerCase() + D.general.slice(1) + "."; },
+      meets: function () { return "Meets the general line (" + D.general.charAt(0).toLowerCase() + D.general.slice(1) + "), under the " + D.range[0] + "\u2013" + D.range[1] + " seen in trained men."; },
+      "in": function () { return "Inside the " + D.range[0] + "\u2013" + D.range[1] + " a review found for trained men."; },
+      above: function () { return "Above " + D.range[1] + ". Newer data show no clear ceiling, but each set adds less than the one before."; }
+    };
+    function calc() {
+      var out = $("st-out"), save = {}, rows = [], fast = false, any = false, top = Math.max(30, D.range[1] * 1.5);
+      G.forEach(function (g) {
+        var d = val("st-" + g[0] + "-d"), h = val("st-" + g[0] + "-h"), n = F.weeklySets(d, h, credit), band = F.setsBand(n, D);
+        save[g[0]] = [d > 0 ? d : 0, h > 0 ? h : 0];
+        if (band === "none") return;
+        any = true; if (band === "above") fast = true;
+        rows.push('<li class="' + band + '"><b>' + g[1] + "</b><em>" + num(n, n % 1 ? 1 : 0) + " sets</em>" +
+          '<div class="st-bar" aria-hidden="true"><i style="width:' + Math.min(100, n / top * 100) + '%"></i><s style="left:' + (D.min / top * 100) + '%"></s><s style="left:' + (D.range[0] / top * 100) + '%"></s><s style="left:' + (D.range[1] / top * 100) + '%"></s></div>' +
+          "<span>" + (h > 0 ? num(d > 0 ? d : 0) + " direct + " + num(h) + " helper \u00d7 " + num(credit, 1) + ". " : "") + READ[band]() + "</span></li>");
+      });
+      store.set({ sets: save });
+      out.classList.toggle("is-empty", !any);
+      $("st-fast").hidden = !fast;
+      if (!any) { $("st-big").textContent = "\u2014"; $("st-sub").textContent = "Enter the hard sets a muscle group gets in a week."; $("st-list").innerHTML = ""; say("st-say", $("st-sub").textContent); return; }
+      var counts = { below: 0, meets: 0, "in": 0, above: 0 };
+      rows.forEach(function (r) { counts[/class="(\w+)"/.exec(r)[1]]++; });
+      $("st-big").textContent = rows.length + (rows.length === 1 ? " group" : " groups");
+      $("st-sub").textContent = [["in", "inside " + D.range[0] + "\u2013" + D.range[1]], ["meets", "at the general line"], ["below", "below " + D.min], ["above", "above " + D.range[1]]]
+        .filter(function (x) { return counts[x[0]]; }).map(function (x) { return counts[x[0]] + " " + x[1]; }).join(" \u00b7 ") + ".";
+      $("st-list").innerHTML = rows.join("");
+      $("st-key").innerHTML = "The marks on each bar: " + D.min + ", the general line; " + D.range[0] + " and " + D.range[1] + ", the range for trained men. From the guide’s <a href=\"" + esc(D.href) + "\">weekly-sets lines</a>; helper sets count " + num(credit, 1) + " (<a href=\"" + esc(TD.setsHelper.href) + "\">why</a>).";
+      say("st-say", G.map(function (g) { var n = F.weeklySets(val("st-" + g[0] + "-d"), val("st-" + g[0] + "-h"), credit); return n > 0 ? g[1] + " " + num(n, n % 1 ? 1 : 0) : ""; }).filter(Boolean).join(", ") + " sets a week. " + $("st-sub").textContent);
+    }
+    calc();
   });
 
   /* ---------- 3. 1RM & loads ----------

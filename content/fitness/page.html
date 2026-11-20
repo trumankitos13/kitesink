@@ -481,6 +481,23 @@
   .te-wrap { display: grid; gap: 8px; }
   .te-wrap[hidden] { display: none; }
 
+  /* weekly sets */
+  .st-in { width: 100%; border-collapse: collapse; }
+  .st-in th, .st-in td { padding: 4px 6px 4px 0; text-align: left; vertical-align: middle; }
+  .st-in thead th { font: 600 10px/1.4 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
+  .st-in tbody th { font: 600 14px/1.3 var(--k-sans); color: var(--k-ink); }
+  .st-in td { width: 32%; }
+  .st-in .k-input { min-height: 44px; }
+  .st-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .st-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; padding: 9px 0; border-top: 1px solid rgba(240,232,214,.14); font-size: 13px; line-height: 1.4; color: #c2ceb9; }
+  .st-list li > b { font: 600 14px/1.3 var(--k-sans); color: #f0e8d6; }
+  .st-list li > em { font: 600 14px/1.3 var(--k-mono); font-style: normal; color: #d8b07a; font-variant-numeric: tabular-nums; }
+  .st-list li > span { grid-column: 1 / -1; }
+  .st-bar { grid-column: 1 / -1; position: relative; height: 8px; border-radius: 4px; background: rgba(240,232,214,.12); }
+  .st-bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: #8fc39b; }
+  .st-bar s { position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(240,232,214,.5); }
+  .st-list .below .st-bar i { background: #d8a652; } .st-list .above .st-bar i { background: #e3936e; }
+
   /* coming back */
   .cb-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
   .cb-rows li { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(240,232,214,.16); color: #a9b9a3; font-size: 13px; line-height: 1.45; }
@@ -701,6 +718,7 @@
           <a class="tool-grp" href="#training">Training</a>
           <div class="k-seg k-seg--scroll" role="tablist" aria-label="Training tools">
             <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
+            <button type="button" role="tab" id="tab-sets" aria-controls="sets" aria-selected="false">Weekly sets</button>
             <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
             <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
             <button type="button" role="tab" id="tab-comeback" aria-controls="comeback" aria-selected="false">Coming back</button>
@@ -814,6 +832,36 @@
             <p class="k-small" id="r-msg"></p>
             <p class="k-vh" id="r-say" role="status"></p>
             <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)"><b style="color:#f0e8d6">Read this as a heuristic, not a measurement.</b> No study has tested a cut-off at five reps. What the research supports is softer: growth tends to improve as sets end nearer to failure, and going all the way to failure adds little over stopping just short. {{c:nuckols,robinson2024,refalo2023}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- weekly sets per muscle: the guide's weekly-sets lines ---------- -->
+      <div class="tool" id="sets" role="tabpanel" aria-labelledby="tab-sets">
+        <p class="k-copy tool-intro">Count the hard sets each muscle group gets in a week. A set where the muscle only helps counts half a set, as in the {{e:hyp-volume-dose-response|dose-response analysis}}, and each total is read against the guide’s {{e:hyp-table-rest-and-sets|weekly-sets lines}}.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <table class="st-in"><caption class="k-vh">Hard sets a week, by muscle group</caption>
+              <thead><tr><th scope="col">Muscle group</th><th scope="col" id="st-d-h">Direct sets</th><th scope="col" id="st-h-h">Helper sets</th></tr></thead>
+              <tbody>
+              <tr><th scope="row" id="st-shoulders-n">Shoulders</th><td><input class="k-input" id="st-shoulders-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-shoulders-n st-d-h"></td><td><input class="k-input" id="st-shoulders-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-shoulders-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-back-n">Back</th><td><input class="k-input" id="st-back-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-back-n st-d-h"></td><td><input class="k-input" id="st-back-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-back-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-chest-n">Chest</th><td><input class="k-input" id="st-chest-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-chest-n st-d-h"></td><td><input class="k-input" id="st-chest-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-chest-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-abs-n">Abdominals</th><td><input class="k-input" id="st-abs-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-abs-n st-d-h"></td><td><input class="k-input" id="st-abs-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-abs-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-legs-n">Legs</th><td><input class="k-input" id="st-legs-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-legs-n st-d-h"></td><td><input class="k-input" id="st-legs-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-legs-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-arms-n">Arms</th><td><input class="k-input" id="st-arms-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-arms-n st-d-h"></td><td><input class="k-input" id="st-arms-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-arms-n st-h-h"></td></tr>
+              </tbody>
+            </table>
+            <p class="k-small">Direct: the muscle is the target, as the chest is in a bench press. Helper: it works without being the target, as the triceps do in a bench press or the biceps in a row. A hard set is one taken close to failure. The six groups are KiteSink’s.</p>
+            <div class="k-actions"><button class="k-btn k-btn--sm k-btn--ghost" id="st-clear" type="button">Clear the week</button></div>
+          </div>
+          <div class="k-card tool-out" id="st-out">
+            <p class="k-vh" id="st-say" role="status"></p>
+            <div><p class="k-label">Your week</p><p class="k-stat"><span id="st-big">—</span></p><p class="k-small" id="st-sub">Enter the hard sets a muscle group gets in a week.</p></div>
+            <ol class="st-list hide-empty" id="st-list" aria-label="Weekly sets by muscle group"></ol>
+            <p class="k-small hide-empty" id="st-key"></p>
+            <div class="te-wrap hide-empty" id="st-fast" hidden>{{tools:entry-do:hyp-mistake-volume-too-fast}}</div>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">This counts sets. <a href="/vantix">Vantix</a> reads each set’s reps in reserve and lets you set the band per muscle.</p>
           </div>
         </div>
       </div>
