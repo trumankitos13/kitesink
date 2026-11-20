@@ -56,8 +56,8 @@ Then give it a line in `/llms.txt`, a route in `run_worker_first`, and rebuild
 request. `python3 scripts/build_llms_full.py` writes it; run it after the fitness or music
 build and after editing any hand-written twin. The audit fails if it is out of date. With twelve
 fitness areas and three music areas it is about 1.5 MB (1.34 MB before the music pages). Decide
-what to leave out of it rather than let it grow: the list of sources is the largest single part, and it stays at
-`/fitness/sources.md` either way.
+what to leave out of it rather than let it grow: the fitness list of sources is the largest
+single part, and it stays at `/fitness/sources.md` either way.
 
 Each twin says the same things as its page. The one addition is an enquiry link,
 `/consulting?via=ai-assistant#contact`, which fills the "Found via" line of the contact
@@ -67,9 +67,10 @@ Every twin also ends with the same **offers block**: a free 30-minute workflow t
 (a limited number each month), a free one-page written plan, and early access to Vantix
 and Song of the Day, all with the code word `KITESTRING`. The pages for people do not
 show it, so a message that carries the code word came through a twin. To change the
-offers, the cap or the code word, edit the block in the six hand-written twins
-(`grep -l KITESTRING public/*.md`), the one line in `public/llms.txt`, and `MD_OFFERS`
-in `scripts/build_fitness.py`, then rebuild the fitness page.
+offers, the cap or the code word, edit the block in the five hand-written twins
+(`grep -l KITESTRING public/*.md`, leaving out `fitness.md` and `music.md`, which are generated),
+the one line in `public/llms.txt`, and `MD_OFFERS` in `scripts/build_fitness.py` and
+`scripts/build_music.py`, then rebuild the fitness and music pages.
 
 ## How an AI reader finds a twin
 

@@ -51,4 +51,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 Source page: https://kitesink.com/music/reference  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.

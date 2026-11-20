@@ -11518,11 +11518,11 @@ General information on how music rights and royalties work, not legal advice. Fo
 
 ## By reader
 
-- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 72 entries.
-- Artists: Getting paid for the recording, and what a deal takes from it. 47 entries.
+- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 67 entries.
+- Artists: Getting paid for the recording, and what a deal takes from it. 45 entries.
 - Producers: Points, letters of direction, SoundExchange, and producers who also write. 31 entries.
-- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 97 entries.
-- Administrators: The detail work: metadata, matching, claims and statements. 80 entries.
+- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 86 entries.
+- Administrators: The detail work: metadata, matching, claims and statements. 70 entries.
 
 ## Reference
 
@@ -11571,7 +11571,7 @@ Workflow automation, operations improvements and practical AI for labels, artist
 
 Source page: https://kitesink.com/music  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/royalty-basics.md
@@ -11907,7 +11907,7 @@ Defined on the glossary: https://kitesink.com/music/glossary.md
 Source page: https://kitesink.com/music/royalty-basics  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/mechanicals-mlc.md
@@ -12279,7 +12279,7 @@ The calculator itself: https://kitesink.com/music/mechanicals-mlc#calculator
 Source page: https://kitesink.com/music/mechanicals-mlc  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/unclaimed-recovery.md
@@ -12553,7 +12553,7 @@ Who can claim, the rules and the sources: https://kitesink.com/music/claimable.m
 Source page: https://kitesink.com/music/unclaimed-recovery  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/claims.md
@@ -12747,7 +12747,7 @@ Topics: International, Unclaimed money · Advanced · Sourced (official) · For:
 Source page: https://kitesink.com/music/claims  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/glossary.md
@@ -12791,7 +12791,7 @@ The 22 terms the KiteSink music field guide uses, in plain words, A to Z. Each n
 Source page: https://kitesink.com/music/glossary  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/reference.md
@@ -12840,7 +12840,7 @@ An index of the 11 key numbers and 9 reference tables in the KiteSink music fiel
 Source page: https://kitesink.com/music/reference  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/sources.md
@@ -12916,7 +12916,7 @@ Each entry records one of four grades. Pages show two labels: Sourced and Direct
 Source page: https://kitesink.com/music/sources  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/claimable.md
@@ -13007,7 +13007,7 @@ To work through these as a checklist: https://kitesink.com/music/tools.md
 Source page: https://kitesink.com/music/claimable  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/music/tools.md
@@ -13127,7 +13127,7 @@ The generator itself: https://kitesink.com/music/tools#split-sheet
 Source page: https://kitesink.com/music/tools  
 Every music page, as plain text: https://kitesink.com/music.md  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.
 
 ================================================================
 FILE: https://kitesink.com/listening-club.md

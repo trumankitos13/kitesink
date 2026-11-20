@@ -38,11 +38,11 @@ General information on how music rights and royalties work, not legal advice. Fo
 
 ## By reader
 
-- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 72 entries.
-- Artists: Getting paid for the recording, and what a deal takes from it. 47 entries.
+- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 67 entries.
+- Artists: Getting paid for the recording, and what a deal takes from it. 45 entries.
 - Producers: Points, letters of direction, SoundExchange, and producers who also write. 31 entries.
-- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 97 entries.
-- Administrators: The detail work: metadata, matching, claims and statements. 80 entries.
+- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 86 entries.
+- Administrators: The detail work: metadata, matching, claims and statements. 70 entries.
 
 ## Reference
 
@@ -101,4 +101,4 @@ Ask through https://kitesink.com/consulting?via=ai-assistant#contact or email he
 
 Source page: https://kitesink.com/music  
 Maintained by Truman Kitos-Lindsey, KiteSink (https://kitesink.com).  
-General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-19.
+General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer. Last updated 2026-11-20.

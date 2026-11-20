@@ -1998,13 +1998,20 @@ def hub_reference(pages, numbers):
     return '<ul class="hub-cards hub-cards--ref" aria-labelledby="h-reference">\n        ' + "\n        ".join(cards) + "\n      </ul>"
 
 
+def reader_total(data, pages, r):
+    """How many entries are for reader r, as the hub and its twin both say: every entry of a written
+    area except terms (those live on the glossary), plus the claims for that reader."""
+    return (sum(1 for d in pages.areas for e in data[d]["entries"] if r in e.get("readers", []) and e["type"] != "term")
+            + sum(1 for c in data["claims"]["entries"] if r in c.get("readers", [])))
+
+
 def hub_readers(data, pages):
     """Five ways in, one per reader: how many entries are for them, and the areas with most of them.
     Each link carries ?reader=, which the area page's script turns into its reader filter."""
     out = []
     for r, (label, blurb) in READERS.items():
         per = Counter({d: sum(1 for e in data[d]["entries"] if r in e.get("readers", []) and e["type"] != "term") for d in pages.areas})
-        n = sum(per.values()) + sum(1 for c in data["claims"]["entries"] if r in c.get("readers", []))
+        n = reader_total(data, pages, r)
         top = [d for d, k in sorted(per.items(), key=lambda x: (-x[1], list(DOMAINS).index(x[0]))) if k][:3]
         links = "".join(f'<li><a href="{pages.url(d)}?reader={r}">{esc(DOMAINS[d][0])} <b>{per[d]}</b></a></li>' for d in top)
         out.append(f'<li class="mr-path" id="for-{r}"><h3 class="mr-path-t">{esc(label)}</h3><p class="mr-path-b">{esc(blurb)}</p>'
@@ -2075,7 +2082,7 @@ def md_index(meta, data, numbers, counts, pages):
         out.append("")
     out += ["## By reader", ""]
     for r, (label, blurb) in READERS.items():
-        n = sum(1 for d in pages.areas for e in data[d]["entries"] if r in e.get("readers", []))
+        n = reader_total(data, pages, r)
         out.append(f"- {label}: {blurb} {count_of(n, 'entry', 'entries')}.")
     ref = []
     if pages.has("claims"):
