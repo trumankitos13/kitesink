@@ -77,6 +77,7 @@ General information on how music rights and royalties work, not legal advice. Fo
 - [Sources and grading](https://kitesink.com/music/sources.md): how entries are graded, and all 102 sources.
 - [Claimable royalties](https://kitesink.com/music/claimable.md): 7 places where royalties can sit unclaimed, and how to claim. As data: https://kitesink.com/music/claimable.json
 - [Tools](https://kitesink.com/music/tools.md): a mechanical rate calculator, an unclaimed-money checklist, an identifier checker, a split-sheet generator and a checked directory of other tools.
+- [AI tools](https://kitesink.com/music/ai-tools.md): 13 AI tools that touch music rights work, with what each one does with your files and your data, its output terms, and the date it was checked.
 
 ## How the entries are graded
 

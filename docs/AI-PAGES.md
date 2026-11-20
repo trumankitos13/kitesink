@@ -15,8 +15,8 @@ engines are told not to index them. Anyone with the address can read them.
 | `/fitness/claims`, `glossary`, `reference`, `sources` | `/fitness/claims.md`, `glossary.md`, `reference.md`, `sources.md` |
 | `/vantix` | `/vantix.md` |
 | `/music` (the hub) | `/music.md` |
-| `/music/royalty-basics`, `mechanicals-mlc`, `unclaimed-recovery` (the areas written so far) | `/music/<area>.md`, one file per area |
-| `/music/claims`, `glossary`, `reference`, `sources`, `claimable`, `tools` | `/music/claims.md`, `glossary.md`, `reference.md`, `sources.md`, `claimable.md`, `tools.md` |
+| `/music/royalty-basics`, `mechanicals-mlc`, `unclaimed-recovery`, `ai-rights` (the areas written so far) | `/music/<area>.md`, one file per area |
+| `/music/claims`, `glossary`, `reference`, `sources`, `claimable`, `tools`, `ai-tools` | `/music/claims.md`, `glossary.md`, `reference.md`, `sources.md`, `claimable.md`, `tools.md`, `ai-tools.md` |
 | `/listening-club` | `/listening-club.md` |
 | `/about` | `/about.md` |
 

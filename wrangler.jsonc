@@ -26,7 +26,7 @@
       "/fitness/conditioning", "/fitness/recovery", "/fitness/nutrition", "/fitness/diet", "/fitness/bodycomp",
       "/fitness/women", "/fitness/health", "/fitness/claims", "/fitness/glossary", "/fitness/reference", "/fitness/sources",
       "/music/royalty-basics", "/music/mechanicals-mlc", "/music/unclaimed-recovery", "/music/ai-rights", "/music/claims", "/music/glossary",
-      "/music/reference", "/music/sources", "/music/claimable", "/music/tools"
+      "/music/reference", "/music/sources", "/music/claimable", "/music/tools", "/music/ai-tools"
     ]                                    // worker
   },
   "compatibility_flags": ["nodejs_compat"]

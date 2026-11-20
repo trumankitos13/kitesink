@@ -112,6 +112,27 @@ changes, copy answers here, tick what is closed, then continue.
 - [ ] Not read: ASCAP's and BMI's own AI pages (BMI blocks automated reading); the CA and NY
       replica statute texts. The entries point readers to check and to a music lawyer
 
+## From batch 8 (AI tools directory, 2026-11-20)
+
+- [ ] Keep the Gemini Apps (personal accounts) row? Not on the approved list; added as the
+      consumer counterpart of the Workspace row, as with the two Claude rows
+- [ ] ValuePunks never calls itself AI ("automated, model-based" estimates): keep it in an AI
+      directory?
+- [ ] Pex AI Song Detector (status check): any service terms beyond the June 2026 privacy
+      notice? Are its benchmarks published?
+- [ ] Stable Audio (status check): app access and plans (pages are JavaScript-only); any
+      separate stableaudio.com terms?
+- [ ] ElevenLabs Music Terms contradict themselves on the free plan (table lists commercial
+      media rights; main terms say non-commercial, no downloads). Row says non-commercial
+- [ ] Old terms: Beatoven (5 Jun 2024), Kits (Oct 2024), Reprtoir (20 Jun 2020): still current?
+      Sureel's terms date prints as "10/11/24" (ambiguous, not used)
+- [ ] Not in the directory because blocked or unreadable: OpenAI business terms (403), Udio and
+      Boomy (JavaScript-only), Muso.ai terms (403), Musixmatch (403), Believe (403),
+      Vermillio (no response), Deezer detector (no terms or access page). Curve, Salt, Bridger:
+      no URLs found
+- [ ] Left out as not AI tools: Infinite Catalog, beatBread, Royalty Exchange; Hume (no
+      music-rights use)
+
 ## Checks by hand (sites that block automated reading)
 
 - [ ] Login needed or not: ASCAP ACE, BMI Repertoire, SoundExchange unregistered search,

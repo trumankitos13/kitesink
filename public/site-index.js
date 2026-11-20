@@ -131,6 +131,8 @@ window.KS_INDEX = [
     d: "Where unclaimed music royalties are held, by holder and territory, and how each one is claimed.", w: "unclaimed royalties holders territory claim deadline mlc soundexchange ppl cmrra data" },
   { t: "Music rights tools", h: "/music/tools", s: "music", k: "Tool", shelf: "tools", now: true,
     d: "A mechanical rate calculator, an unclaimed-money checklist, an identifier checker, a split-sheet generator and a checked directory.", w: "calculator mechanical rate checklist isrc iswc isni ipi check digit split sheet directory" },
+  { t: "AI tools for music rights work", h: "/music/ai-tools", s: "music", k: "Tool", shelf: "tools",
+    d: "AI tools for music rights work, with what each does with your files and data, and its output terms.", w: "ai detection generator voice likeness metadata terms training data directory" },
   { t: "Song of the Day", h: "/song-of-the-day", s: "music", k: "Project", shelf: "current", now: true, status: "Coming soon",
     d: "One curated song every day, with the story behind it. An iOS app.", w: "sotd daily music discovery iphone app" },
   { t: "Stage First", h: "/stage-first", s: "music", k: "Project", shelf: "current", now: true, status: "Prototype", wip: true,

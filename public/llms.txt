@@ -45,6 +45,7 @@
 - [Sources and grading](https://kitesink.com/music/sources.md): how music entries are graded, and every source
 - [Claimable royalties](https://kitesink.com/music/claimable.md): where unclaimed royalties are held, by holder and territory, and how to claim; also as data at https://kitesink.com/music/claimable.json
 - [Music tools](https://kitesink.com/music/tools.md): the mechanical rate calculator, the unclaimed-money checklist, the identifier checker, the split-sheet generator, and a checked directory of other tools
+- [AI tools](https://kitesink.com/music/ai-tools.md): AI tools that touch music rights work, with what each one does with your files and your data, its output terms, and the date it was checked
 - [Album Listening Club](https://kitesink.com/listening-club.md): dates, format and how to join
 
 ## Offers

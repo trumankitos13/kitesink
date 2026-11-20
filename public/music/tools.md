@@ -105,6 +105,8 @@ The generator itself: https://kitesink.com/music/tools#split-sheet
 
 ## Other tools worth knowing
 
+AI tools have a directory of their own, with what each one does with your files and your data: https://kitesink.com/music/ai-tools.md
+
 ### Works and repertoire searches
 
 - [SESAC Repertory](https://www.sesac.com/repertory/) (SESAC): Search works SESAC represents by title, work number, writer, publisher or artist; shows SESAC's share and its writers and publishers. You accept extra terms of use before searching; SESAC warns results may be incomplete. Access: Free, no login. For: songwriters, publishers and labels, administrators. Where: US. Checked 20 November 2026.

@@ -21,7 +21,7 @@ Its scope line, on every page: "General information on how music rights and roya
 | The whole site as plain text, in one file | https://kitesink.com/llms-full.txt |
 
 Pages: `royalty-basics`, `mechanicals-mlc`, `unclaimed-recovery`, `ai-rights` (the areas written so far), and
-`claims`, `glossary`, `reference`, `sources`, `claimable`, `tools`.
+`claims`, `glossary`, `reference`, `sources`, `claimable`, `tools`, `ai-tools`.
 
 - An area page holds guidance, steps in order, common mistakes, key numbers, reference tables,
   a checklist and the terms it uses. The overview lists every planned area; one not written
@@ -35,6 +35,9 @@ Pages: `royalty-basics`, `mechanicals-mlc`, `unclaimed-recovery`, `ai-rights` (t
 - `tools`: a mechanical rate calculator with the US rates by year, an unclaimed-money
   checklist, an identifier checker, a split-sheet generator, and a checked directory of other
   tools.
+- `ai-tools`: AI tools that touch music rights work, grouped by job, each with what you give
+  it, what its terms say about outputs and your data (with a short quote and the terms' address),
+  and the date it was checked; accuracy and licensed-data claims are the vendor's own.
 
 The overview, https://kitesink.com/music.md, also describes the music projects (Song of the
 Day, Stage First, the Album Listening Club).

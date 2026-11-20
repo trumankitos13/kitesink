@@ -281,5 +281,11 @@ export const RULES = [
   {
    "Link": "</music/tools.md>; rel=\"alternate\"; type=\"text/markdown\""
   }
+ ],
+ [
+  "/music/ai-tools",
+  {
+   "Link": "</music/ai-tools.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
  ]
 ];

@@ -44,7 +44,7 @@
       "access": "free-login",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "The pricing page lists Audio AI (auto-tagging, similarity search) as an add-on for paid plans. The terms do not mention AI.",
+      "note": "Pricing lists Audio AI (auto-tagging, similarity search) as a paid-plan add-on. The terms, last updated 20 June 2020, do not mention AI.",
       "uploads": "Track and work metadata and files, royalty statements, imports from other services",
       "output_terms": {
         "summary": "Users stay responsible for their content, and the terms give Reprtoir only the rights needed to run the service. They say nothing about model training or who owns AI tagging results, so ask the vendor.",
@@ -96,10 +96,10 @@
       "access": "waitlist",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "Attribution percentages are the vendor's own claim. The site says it belongs to Warner Music Group but runs independently.",
+      "note": "Attribution shares are the vendor's own claim; its terms say they may not be conclusive. The site says it is a Warner Music Group company.",
       "uploads": "Works and recordings registered with permission settings per work",
       "output_terms": {
-        "summary": "Assets stay the user's property. Sureel takes a perpetual, irrevocable licence to use them to run and improve the service, including training features; the opt-out covers only its GenAI service, not attribution.",
+        "summary": "Assets stay the user's. Sureel takes a perpetual, irrevocable licence to use them to run and improve the service, training included; the opt-out covers its GenAI service only. Reports are for internal use unless Sureel agrees.",
         "terms_url": "https://www.sureel.ai/terms-of-use",
         "quote": "Sureel makes no claim of ownership to the Assets"
       }
@@ -121,7 +121,7 @@
       "access": "enterprise",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Vendor says it beats competing detectors and publishes no figures. No service terms found; check by hand.",
+      "note": "The claim that it beats rival detectors is the vendor's own; the page gives no figures. No service terms found; check by hand.",
       "uploads": "An audio file sent through the API or an AI-agent connector",
       "output_terms": {
         "summary": "Only a privacy notice was found. It covers account and rightsholder data, not what happens to submitted audio or detection results. Service terms with output and training terms were not located.",
@@ -150,7 +150,7 @@
       "note": "Suno's help page says Suno owns free-plan songs; the terms only limit free-plan use to non-commercial. Terms effective 3 Sept 2026.",
       "uploads": "Text prompts, lyrics, audio recordings and voice samples",
       "output_terms": {
-        "summary": "Pro and Premier: Suno assigns its rights in the output, with no promise that copyright exists. Free tier: non-commercial use only. Suno holds a perpetual licence to user content, including to improve its AI models.",
+        "summary": "Pro and Premier: Suno assigns its rights in outputs, with no promise of copyright; commercial use needs a permitted download. Free tier: non-commercial only. Suno takes a perpetual licence to user content, including to improve its models.",
         "terms_url": "https://suno.com/terms",
         "quote": "If you are a user of the free or basic tier of the Service then you covenant and agree that you will only use such Outputs for your lawful, personal and non-commercial purposes."
       }
@@ -173,10 +173,10 @@
       "access": "free-login",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "The vendor claims its tracks are cleared for wide commercial use; that is its own claim. The terms bar free users from commercial use.",
+      "note": "The claim that tracks are cleared for wide commercial use is the vendor's own. Its Music Terms (9 Oct 2026) set the rights plan by plan.",
       "uploads": "Text prompts and lyrics; optionally own tracks to make a style or vocal",
       "output_terms": {
-        "summary": "The user keeps rights in input and output. Free users: non-commercial use only; paid users may use it commercially. ElevenLabs takes a perpetual licence to improve its services; training opt-out is in account settings.",
+        "summary": "The user keeps rights in input and output. Free plan: no downloads, non-commercial use only. Plans below Enterprise Music exclude film, TV, radio and studio games. ElevenLabs takes a perpetual licence to improve services; training opt-out.",
         "terms_url": "https://elevenlabs.io/terms-of-use",
         "quote": "as between you and ElevenLabs, you retain all rights in and to your Output"
       }
@@ -198,7 +198,7 @@
       "access": "paid",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "Beatoven says it is Fairly Trained certified; that is its own claim. Terms last updated 5 June 2024. No free tier is described on the page.",
+      "note": "Fairly Trained status is the vendor's own claim. Terms dated 5 June 2024. The FAQ allows sampling stems in remixes; the terms do not.",
       "uploads": "A text description of the music wanted; the user's own video if submitted",
       "output_terms": {
         "summary": "Beatoven, not the user, owns copyright in generated music. The user's licence covers use synced with their own project only: no streaming distribution, no use in other AI. Beatoven keeps a perpetual licence to submitted content.",
@@ -251,10 +251,10 @@
       "access": "free-login",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "Free for creators; Pro is priced per valuation. The site says the method is a DCF model, and data-room connection is marked coming soon.",
+      "note": "Free for creators; Pro priced per valuation. Home page and terms never say AI; the terms say automated, model-based. Data room coming soon.",
       "uploads": "Revenue per rights category, song lists or ISWCs, and royalty statements",
       "output_terms": {
-        "summary": "The user keeps all rights in uploaded data. ValuePunks may use it to run the service and make the user's reports, and to build aggregated, de-identified data it owns for benchmarking and model evaluation. No sale of data.",
+        "summary": "The user keeps rights in uploaded data. ValuePunks uses it to run the service and owns aggregated, de-identified data for benchmarking and model evaluation. Reports: own use and advisers; publishing needs consent unless the plan allows.",
         "terms_url": "https://www.valuepunks.com/terms/",
         "quote": "As between you and ValuePunks, you retain all right, title, and interest in and to your Customer Data."
       }
@@ -290,7 +290,7 @@
       "url": "https://support.google.com/youtube/answer/16440338",
       "owner": "YouTube (Google)",
       "group": "voice-likeness",
-      "what": "Lets enrolled creators find uploads where their face appears AI-altered and ask for removal. Faces only for now; audio matching is described as planned.",
+      "what": "Lets enrolled creators find uploads where their face appears AI-altered and ask for removal. Faces for now; voice detection is described as rolling out.",
       "readers": [
         "artist"
       ],
@@ -300,7 +300,7 @@
       "access": "free-login",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "Needs a channel and a verified adult owner or manager. It checks likeness, not recordings, so it is not a rights-claiming tool.",
+      "note": "Needs a channel and a verified adult owner or manager. It matches likeness, not recordings; removals go through privacy complaints.",
       "uploads": "Government ID, a short selfie video and optionally a voice sample",
       "output_terms": {
         "summary": "Templates and ID data run the detection and are kept up to three years after last sign-in. Use for improving likeness models is optional and revocable. Data is not used to train Google generative AI without consent.",
@@ -367,7 +367,7 @@
     {
       "id": "ait-google-workspace-gemini",
       "name": "Gemini in Google Workspace",
-      "url": "https://support.google.com/a/answer/15706919",
+      "url": "https://knowledge.workspace.google.com/admin/generative-ai/generative-ai-in-google-workspace-privacy-hub",
       "owner": "Google",
       "group": "assistants",
       "what": "Gemini features inside Gmail, Docs, Drive and Meet, plus the Gemini app, for organisations on a qualifying Workspace edition.",
@@ -384,11 +384,11 @@
       "access": "paid",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "Applies only to qualifying Workspace editions; the consumer Gemini app has different terms (next row).",
+      "note": "Hub last updated 6 Oct 2026. Applies only to qualifying Workspace editions; personal Gemini accounts have different terms (next row).",
       "uploads": "Prompts and the Workspace files, mail and meetings the user points it at",
       "output_terms": {
         "summary": "Prompts count as customer data. Google says customer data is not used to tune its generative models unless the customer permits it. The hub page does not say who owns outputs.",
-        "terms_url": "https://support.google.com/a/answer/15706919",
+        "terms_url": "https://knowledge.workspace.google.com/admin/generative-ai/generative-ai-in-google-workspace-privacy-hub",
         "quote": "Your content is not human reviewed or otherwise used for Generative AI model training outside your domain without permission."
       }
     },
