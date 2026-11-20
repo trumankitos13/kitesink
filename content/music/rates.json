@@ -85,8 +85,8 @@
       "title": "37 CFR 385.11: Royalty rates (Subpart B, physical phonorecords, permanent downloads, ringtones)",
       "url": "https://www.law.cornell.edu/cfr/text/37/385.11",
       "jurisdiction": "US",
-      "retrieved": "2026-11-19",
-      "support": "(a)(1) 2026 rate 13.1 cents or 2.52 cents per minute, whichever is larger; (a)(2) annual CPI-U adjustment; (b) ringtone 24 cents; (c) bundles.",
+      "retrieved": "2026-11-20",
+      "support": "(a)(1) 2026 rate 13.1 cents or 2.52 cents per minute, whichever is larger; (a)(2) annual CPI-U adjustment; (b) ringtone 24 cents; (c) bundles. LII lists last amendment 90 FR 55045, Dec. 1, 2025.",
       "edition": "Mirror of the eCFR text; the eCFR page itself is script-driven and could not be read automatically"
     },
     "cfr-385-21": {
@@ -95,20 +95,20 @@
       "title": "37 CFR 385.21: Royalty rates and calculations (Subpart C, interactive streaming and limited downloads)",
       "url": "https://www.law.cornell.edu/cfr/text/37/385.21",
       "jurisdiction": "US",
-      "retrieved": "2026-11-19",
-      "support": "Four-step calculation in (b); Table 1 revenue percentages by year; Table 2 TCC prongs by offering; (c) overtime adjustment for tracks over five minutes.",
+      "retrieved": "2026-11-20",
+      "support": "Table 1 to (b)(1): 2023 15.1, 2024 15.2, 2025 15.25, 2026 15.3, 2027 15.35 percent of service provider revenue. LII amendment note: 87 FR 80458 (30 Dec 2022), as amended 89 FR 19274.",
       "edition": "Mirror of the eCFR text"
     },
     "fr-2025-21695": {
       "type": "regulation",
       "publisher": "Copyright Royalty Board",
-      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords (2026)",
+      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords",
       "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm",
       "jurisdiction": "US",
-      "retrieved": "2026-11-19",
+      "retrieved": "2026-11-20",
       "support": "Adjusted 2026 rates 13.1 cents per work and 2.52 cents per minute; CPI-U 324.800 against base 298.012; applies 1 January to 31 December 2026.",
       "date": "2025-12-01",
-      "edition": "90 FR 55044, Docket 25-CRB-0012-PR COLA (2026)"
+      "edition": "90 FR 55044-55045 (revised 385.11(a)(1) text at 55045), Docket 25-CRB-0012-PR COLA (2026)"
     },
     "fr-2022-27237": {
       "type": "regulation",
@@ -119,23 +119,23 @@
       "retrieved": "2026-11-20",
       "support": "Regulatory text, 37 CFR 385.11(a)(1): for 2023, 12.0 cents or 2.31 cents per minute of playing time or fraction, whichever is larger. Docket 21-CRB-0001-PR (2023-2027).",
       "date": "2022-12-16",
-      "edition": "87 FR 76937"
+      "edition": "87 FR 76937-76942, Docket 21-CRB-0001-PR (2023-2027)"
     },
     "fr-2023-28075": {
       "type": "regulation",
       "publisher": "Copyright Royalty Board",
-      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords; Correction (2024)",
+      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords; Correction",
       "url": "https://www.govinfo.gov/content/pkg/FR-2023-12-21/html/2023-28075.htm",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "The adjusted rates for 2024 are 12.4 cents per work and 2.38 cents per minute. This correction replaced the per-minute figure in the 12 Dec 2023 notice (88 FR 86058).",
+      "support": "The adjusted rates for 2024 are 12.4 cents per work and 2.38 cents per minute. Corrects the 12 Dec 2023 notice (88 FR 86058, doc 2023-27290), which gave 2.39 cents per minute and omitted the CPI-U workings (307.671).",
       "date": "2023-12-21",
-      "edition": "88 FR 88253, Docket 23-CRB-0014-PR-COLA (2024)"
+      "edition": "88 FR 88253-88254, Docket 23-CRB-0014-PR-COLA (2024)"
     },
     "fr-2024-27819": {
       "type": "regulation",
       "publisher": "Copyright Royalty Board",
-      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords (2025)",
+      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords",
       "url": "https://www.govinfo.gov/content/pkg/FR-2024-11-27/html/2024-27819.htm",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",

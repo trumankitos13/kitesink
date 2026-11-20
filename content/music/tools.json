@@ -49,9 +49,9 @@
         "US"
       ],
       "access": "free-no-login",
-      "status": "verified",
+      "status": "check",
       "checked": "2026-11-20",
-      "note": "Tools page says anyone may use it at no charge."
+      "note": "Holder's tools page says it is free to anyone; the portal page showed no text to automated reading. Open by hand."
     },
     {
       "id": "tool-mlc-missing-members",
@@ -78,7 +78,7 @@
       "url": "https://www.themlc.com/dashboards",
       "owner": "The MLC",
       "group": "unclaimed",
-      "what": "Public charts of blanket, historical and unclaimed accrued royalties by month and by service. Totals only, nothing per song or per person.",
+      "what": "Public MLC pages charting royalty totals: blanket royalties since 2021, historical 2007-2020 by rate period and service, and unclaimed 2021 usage by month.",
       "readers": [
         "writer",
         "publisher-label",
@@ -90,7 +90,7 @@
       "access": "free-no-login",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "Three dashboards; the unclaimed one covers 2021 usage."
+      "note": "Each dashboard sits on a public MLC page that opened without sign-in."
     },
     {
       "id": "tool-mlc-matching-claiming",
@@ -98,7 +98,7 @@
       "url": "https://www.themlc.com/tools",
       "owner": "The MLC",
       "group": "unclaimed",
-      "what": "Member tools to claim missing shares of registered songs and to propose links between unmatched recordings and your songs.",
+      "what": "Portal tools to claim missing shares of registered songs and to propose matches between unmatched recordings and your songs.",
       "readers": [
         "writer",
         "publisher-label",
@@ -108,9 +108,9 @@
         "US"
       ],
       "access": "free-login",
-      "status": "check",
+      "status": "verified",
       "checked": "2026-11-20",
-      "note": "The tools page places them in the Member Hub but does not say whether login is required or free."
+      "note": "Sign in to the Member Hub (matching also in the Songwriter Hub). The MLC says connecting with it is free."
     },
     {
       "id": "tool-django-music-publisher",
@@ -118,7 +118,7 @@
       "url": "https://github.com/matijakolaric-com/django-music-publisher",
       "owner": "Matija Kolaric",
       "group": "metadata",
-      "what": "Open-source software you host yourself to keep song metadata, register works and handle publishing royalty data.",
+      "what": "Open-source software you install and run yourself to keep song metadata, register and license works and process publishing royalties.",
       "readers": [
         "publisher-label",
         "admin"
@@ -129,7 +129,7 @@
       "access": "free-no-login",
       "status": "verified",
       "checked": "2026-11-20",
-      "note": "MIT licence per the repository; needs technical skill to run."
+      "note": "MIT licence per the repository; installed from PyPI and needs technical skill to run."
     },
     {
       "id": "tool-songview",
@@ -137,7 +137,7 @@
       "url": "https://www.songview.com/",
       "owner": "ASCAP, BMI, GMR and SESAC",
       "group": "works-search",
-      "what": "Landing page for the joint US performance-rights ownership data, with links out to the ASCAP and BMI public searches.",
+      "what": "Joint ASCAP and BMI project, with GMR and SESAC, that reconciles US performing-rights ownership shares; links out to the ASCAP and BMI searches.",
       "readers": [
         "writer",
         "publisher-label",
@@ -149,7 +149,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page describes the system but not login or cost of the searches it links to."
+      "note": "Landing page has no search of its own and states no login or cost for the searches it links to."
     },
     {
       "id": "tool-bmi-repertoire",
@@ -169,7 +169,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page showed only a human-verification form to automated reading; open by hand to confirm."
+      "note": "Showed a human-verification page to automated reading; open by hand to confirm what it shows and any login."
     },
     {
       "id": "tool-ascap-ace",
@@ -197,7 +197,7 @@
       "url": "https://www.sesac.com/repertory/",
       "owner": "SESAC",
       "group": "works-search",
-      "what": "Search SESAC's repertory for works it licenses.",
+      "what": "Search works SESAC represents by title, work number, writer, publisher or artist; shows SESAC's share and its writers and publishers.",
       "readers": [
         "writer",
         "publisher-label",
@@ -206,10 +206,10 @@
       "territory": [
         "US"
       ],
-      "access": "unknown",
-      "status": "check",
+      "access": "free-no-login",
+      "status": "verified",
       "checked": "2026-11-20",
-      "note": "Blocked automated reading (403). Open by hand to confirm."
+      "note": "You accept extra terms of use before searching; SESAC warns results may be incomplete."
     },
     {
       "id": "tool-prs-works-search",
@@ -217,7 +217,7 @@
       "url": "https://www.prsformusic.com/works/searching-works",
       "owner": "PRS for Music",
       "group": "works-search",
-      "what": "Search the PRS works database by title, writer, publisher or code. Reaches full detail through a member account.",
+      "what": "PRS for Music page on searching its works database by title, writer, publisher or code.",
       "readers": [
         "writer",
         "publisher-label",
@@ -226,10 +226,10 @@
       "territory": [
         "UK"
       ],
-      "access": "members",
+      "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Search results suggest member login; a public view was not confirmed."
+      "note": "Only the page title loaded for automated reading; search fields, public view and login are unconfirmed."
     },
     {
       "id": "tool-gema-repertoire",
@@ -249,7 +249,27 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page links to the search but does not say whether login is needed or what it omits."
+      "note": "Page links to the search on portal.gema.de, which showed no text to automated reading; login and coverage unconfirmed."
+    },
+    {
+      "id": "tool-socan-repertoire",
+      "name": "SOCAN public repertoire search",
+      "url": "https://www.socan.com/jsp/en/mem/pubRepertoireSearch.jsp",
+      "owner": "SOCAN",
+      "group": "works-search",
+      "what": "Search works SOCAN can license, including foreign works, by title, creator, publisher, performer or work number. Leaves out AV productions and cues.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "CA"
+      ],
+      "access": "free-no-login",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Opened 2026-11-20 but showed a maintenance notice; confirm the search works and is the current one."
     },
     {
       "id": "tool-isrc-search",
@@ -270,7 +290,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "The tool page is script-driven; only the SoundExchange home page describes it as free and open."
+      "note": "Tool page is script-driven and showed no text to automated reading; data source and access unconfirmed."
     },
     {
       "id": "tool-iswc-net",
@@ -290,7 +310,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page content did not load for automated reading; access level unconfirmed."
+      "note": "Only the page title loaded for automated reading; search scope and access unconfirmed."
     },
     {
       "id": "tool-isni",
@@ -312,7 +332,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Home page links to a search but does not say whether search is free or needs login."
+      "note": "Home page links to a database search but states no cost or login; the search page returned 403 to automated reading."
     },
     {
       "id": "tool-usco-public-records",
@@ -334,7 +354,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page content did not load for automated reading; coverage and access unconfirmed."
+      "note": "Only the page title loaded for automated reading; coverage and access unconfirmed."
     },
     {
       "id": "tool-ddex-validator",
@@ -354,7 +374,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page content did not load for automated reading; supported messages and access unconfirmed."
+      "note": "Only the page title loaded for automated reading; supported messages and access unconfirmed."
     },
     {
       "id": "tool-curve-royalty-tools",
@@ -379,9 +399,9 @@
       "id": "tool-session-studio",
       "name": "Session Studio",
       "url": "https://www.sessionstudio.com/",
-      "owner": "Session Studio",
+      "owner": "Session.ID Limited",
       "group": "splits-contracts",
-      "what": "Collaboration app that records who did what on a song, to settle credits before release.",
+      "what": "Free app on web, desktop and mobile for sharing song ideas with collaborators and keeping song credits organised.",
       "readers": [
         "writer",
         "artist",
@@ -393,7 +413,7 @@
       "access": "free-login",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page says the app is free; it does not state whether an account is required."
+      "note": "Page says the app is free and has sign-up buttons; it does not state whether an account is required."
     },
     {
       "id": "tool-rapidcue",
@@ -401,7 +421,7 @@
       "url": "https://rapidcue.com/",
       "owner": "RapidCue",
       "group": "sync-cue",
-      "what": "Web app for submitting cue sheets, with links to ASCAP and BMI.",
+      "what": "Web Edition application site with resources for batch submitters and links to the ASCAP and BMI searches.",
       "readers": [
         "publisher-label",
         "admin",
@@ -413,7 +433,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page does not state what it does, who may use it, or the cost."
+      "note": "Home page does not say it handles cue sheets, who may use it, login or cost. Confirm by hand."
     },
     {
       "id": "tool-valuepunks",
@@ -421,7 +441,7 @@
       "url": "https://valuepunks.com/",
       "owner": "ValuePunks",
       "group": "valuation",
-      "what": "Catalogue valuation tool that gives a quick indicative range from revenue by rights type.",
+      "what": "Estimates a value range for a catalogue from last year's revenue by rights type, using a discounted cash flow model.",
       "readers": [
         "writer",
         "artist",
@@ -434,7 +454,7 @@
       "access": "free-login",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page says free for artists, labels and songwriters; login need not confirmed."
+      "note": "Page says the standard report is free; whether an account is required is not stated."
     },
     {
       "id": "tool-music-business-toolbox",
@@ -442,7 +462,7 @@
       "url": "https://musicbusinesstoolbox.com/",
       "owner": "Music Business Toolbox",
       "group": "splits-contracts",
-      "what": "Set of templates and calculators for splits, budgets and contracts, with a free tier and a paid tier.",
+      "what": "Music business templates and calculators, including split agreements, budgets and contracts, in a paid subscription with a small free set.",
       "readers": [
         "writer",
         "artist",
@@ -451,10 +471,10 @@
       "territory": [
         "INTL"
       ],
-      "access": "unknown",
-      "status": "check",
+      "access": "paid",
+      "status": "verified",
       "checked": "2026-11-20",
-      "note": "Page lists free and premium tiers; which tools are free and whether login is needed is unclear."
+      "note": "Split, budget and contract tools are in the paid tier; the free tier has a checklist and guides."
     },
     {
       "id": "tool-songtrust-resources",
@@ -474,17 +494,17 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Page does not say which items are free or need an email."
+      "note": "Page does not label items as free or gated; some downloads link to forms. Estimator access unconfirmed."
     },
     {
       "id": "tool-hfa-songfile",
       "name": "Harry Fox Agency",
       "url": "https://www.harryfox.com/",
       "owner": "Harry Fox Agency",
-      "group": "works-search",
-      "what": "Publisher-side rights agency; its older public Songfile search is a possible lookup.",
+      "group": "splits-contracts",
+      "what": "Harry Fox Agency site, now a joint Rumblefish and HFA platform; links to Songfile, a service for licensing cover songs.",
       "readers": [
-        "writer",
+        "artist",
         "publisher-label",
         "admin"
       ],
@@ -494,7 +514,7 @@
       "access": "unknown",
       "status": "check",
       "checked": "2026-11-20",
-      "note": "Blocked automated reading (403). Open by hand to confirm what it offers today."
+      "note": "Home page shows no public song search and no prices; Songfile itself was not opened."
     }
   ]
 }
