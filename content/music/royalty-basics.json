@@ -56,8 +56,8 @@
         "circ-50",
         "circ-56"
       ],
-      "take": "The song (music and lyrics) and the recording of it are two works, each with its own owner and its own income.",
-      "body": "A song is a musical work. A recording of someone performing it is a sound recording. US law treats them as distinct works, and a registration for one does not cover the other. Royalty systems follow the same split, which is why one stream can create payments to more than one set of people.",
+      "take": "The song (music and lyrics) and the recording of it are two works, each with its own rights and its own income.",
+      "body": "A song is a musical work. A recording of someone performing it is a sound recording. US law treats them as distinct works, and their owners can be different people. The rest of this page follows that split: each work earns through its own rights and its own collectors.",
       "do": [
         "Write down who owns the song and who owns the recording for every release."
       ]
@@ -82,7 +82,7 @@
       "sources": [
         "circ-50"
       ],
-      "take": "The composition: the music plus any words that go with it. Songwriters, composers and their publishers own and collect on it."
+      "take": "The composition: the music plus any words that go with it. Its authors are the people who wrote the music and lyrics, unless it was made for hire."
     },
     {
       "id": "roy-term-sound-recording",
@@ -109,7 +109,7 @@
     {
       "id": "roy-who-owns-recording",
       "type": "note",
-      "title": "Who owns a recording: performers and producers, unless it is for hire",
+      "title": "A recording's authors: the performer and producer, unless made for hire",
       "topic": "copyrights",
       "level": "intermediate",
       "readers": [
@@ -124,8 +124,8 @@
       "sources": [
         "circ-56"
       ],
-      "take": "The Copyright Office names the featured performer and the producer as the authors of a recording, with an employer or commissioning party as author in work-made-for-hire cases.",
-      "body": "That is the starting point in US registration practice. In real deals ownership is often moved by contract, so the owner on paper can differ from the author. Read the agreement for each release, and have a music lawyer review anything that transfers ownership.",
+      "take": "The Copyright Office names the featured performer and the producer as authors of a sound recording. For a work made for hire, the employer or hiring party is the author.",
+      "body": "That is the starting point for US registration. Ownership can be transferred by contract, so the owner on paper may differ from the author. Read the agreement for each release, and have a music lawyer review anything that transfers ownership.",
       "do": [
         "Check each contract for who owns the master and for how long."
       ]
@@ -149,9 +149,9 @@
         "circ-56"
       ],
       "take": "A registration for a song covers its music and lyrics, not the recorded performance. Recordings are normally registered on their own.",
-      "body": "The Copyright Office says the two are usually registered separately, with narrow cases where one application can cover both. The same habit shows up at royalty bodies: a song registration does not put the recording on file, and the reverse is also true.",
+      "body": "Circular 50 says a song and a recording usually have to be registered with the Copyright Office separately. Only in limited cases can a single application cover both, and the Office points to Circular 56A for those.",
       "do": [
-        "Check separately that the song and the recording are each on file.",
+        "Check that the song and the recording each have their own registration.",
         "Read Circular 50 and Circular 56 before filing."
       ]
     },
@@ -173,8 +173,8 @@
         "circ-56",
         "circ-50"
       ],
-      "take": "In the US a recording is protected from the moment it is fixed. Registering with the Copyright Office is a separate step with its own form, fee and deposit.",
-      "body": "Circular 56 says neither registration nor publication is needed for protection under current law. Circulars 50 and 56 explain how to apply: a completed application, a fee that changes over time, and a copy of the work. Check the Office's current fee schedule before you file.",
+      "take": "A US sound recording made since 1978 is protected from the moment it is fixed. Registering with the Copyright Office is a separate step with its own form, fee and deposit.",
+      "body": "Circular 56 says protection under current law needs neither registration nor publication. Circulars 50 and 56 explain how to apply: a completed application, a filing fee and a copy of the work. The Office warns that its fees change, so check the current list before you file.",
       "do": [
         "Read the circular for your type of work before applying."
       ],
@@ -202,7 +202,9 @@
         "usc-114",
         "usc-101",
         "mlc-home",
-        "sx-owed"
+        "sx-owed",
+        "songview",
+        "wipo-cmo-music"
       ],
       "as_of": "2026-11-20",
       "take": "A song and a recording earn through different rights, and different bodies collect them. This table covers the main US routes.",
@@ -233,21 +235,21 @@
         ],
         [
           "Sound recording sales and licences",
-          "Copies, deals and licences from the recording owner",
-          "Contract with the owner",
-          "The label or distributor, by contract"
+          "Copies, downloads and direct licences of the recording",
+          "Reproduce and distribute, 106(1), (3)",
+          "The recording owner; artists are paid under their contracts"
         ],
         [
           "Physical mechanical",
           "CDs, vinyl",
-          "Reproduce and distribute",
-          "Publishers or their licensing agents (ask yours)"
+          "Reproduce and distribute, 106(1), (3)",
+          "The song's publisher, directly or through an agent"
         ],
         [
           "Sync and print",
           "Film, ads, games, sheet music",
-          "Contract, by use",
-          "The owners of each work"
+          "Depends on the use; licensed by contract",
+          "The owners of each work, by direct licence"
         ]
       ]
     },
@@ -289,14 +291,15 @@
         "admin"
       ],
       "territory": [
-        "INTL"
+        "INTL",
+        "US"
       ],
       "confidence": "official",
       "sources": [
         "wipo-cmo-music",
         "mlc-home"
       ],
-      "take": "The right to record a song and to make and distribute copies of that recording. Digital streams and downloads count as copies for US mechanical licensing."
+      "take": "The right to record a song and to make copies of that recording and distribute them. In the US, streaming and download services get it for songs through the MLC's blanket licence."
     },
     {
       "id": "roy-term-performing-right",
@@ -310,15 +313,14 @@
         "admin"
       ],
       "territory": [
-        "US",
-        "INTL"
+        "US"
       ],
       "confidence": "law",
       "sources": [
         "usc-106",
         "usc-101"
       ],
-      "take": "The right to perform a song publicly, or to authorise others to. The US statute treats a performance as public at an open place or when sent to the public."
+      "take": "The right to perform a song publicly, or to authorise others to. US law counts a performance as public where the public can attend, or when it is transmitted to the public."
     },
     {
       "id": "roy-no-us-performance-right-recording",
@@ -339,7 +341,7 @@
         "usc-106"
       ],
       "take": "A US sound recording owner has a performance right only for digital audio transmissions, not the broader right that song owners hold.",
-      "body": "Section 114 leaves out section 106(4) for sound recordings and keeps clause (6), the digital audio transmission right. This is why the US recording side has one dedicated route for digital performance, and why outside the US, where neighbouring rights work differently, the money looks different.",
+      "body": "Section 114(a) gives a sound recording owner only four of the section 106 rights, (1), (2), (3) and (6), leaving out the general performance right in (4). Clause (6) covers digital audio transmissions, so the US recording side has one dedicated route for performance money.",
       "do": [
         "Do not assume a UK or Canadian recording royalty has a US equivalent."
       ]
@@ -361,8 +363,8 @@
       ],
       "confidence": "practice",
       "sources": [],
-      "take": "Putting music in a video, ad or game is a negotiated licence. If an existing recording is used, the song owner and the recording owner each have to agree.",
-      "body": "Sync fees are set by deal, not by a fixed rate, and are paid to the owners of each work, not collected by a society. Because the song and the recording are separate works, one licence for one side does not cover the other. A music lawyer should review a sync deal.",
+      "take": "Putting music in a film, ad or game is licensed by deal. In practice, using an existing recording means clearing both the song and the recording.",
+      "body": "Sync is agreed case by case between the user and the owners of each work, and this guide gives no fee levels. Clearing one side does not clear the other. A music lawyer should review a sync licence before it is signed.",
       "do": [
         "Ask the owner of each side for a written licence before the music is used."
       ]
@@ -379,6 +381,7 @@
         "admin"
       ],
       "territory": [
+        "US",
         "INTL"
       ],
       "confidence": "official",
@@ -387,7 +390,7 @@
         "circ-50"
       ],
       "take": "Printed sheet music counts as a reproduction of the song. Lyrics are part of the song, so using them is also a use of the song.",
-      "body": "WIPO lists printed sheet music among the forms of reproduction of a musical work, and the Copyright Office describes a musical composition as music with any lyrics. Print and lyrics licensing is usually a smaller income stream, handled by publishers and their licensing partners.",
+      "body": "WIPO lists printed sheet music as one form of reproducing a musical work, and Circular 50 treats the words that go with the music as part of the musical work. Who licenses print and lyrics varies, so do not assume it is covered.",
       "do": [
         "Ask your publisher or administrator whether print and lyric licensing is included."
       ]
@@ -410,38 +413,12 @@
       "sources": [
         "wipo-cmo-music"
       ],
-      "take": "Rights held by performers, record producers and broadcasters, separate from the song's copyright. Many countries pay them when recordings are broadcast or played in public."
-    },
-    {
-      "id": "roy-number-cisac-music",
-      "type": "number",
-      "title": "Music collected by CISAC societies in 2022",
-      "topic": "streams",
-      "level": "intermediate",
-      "readers": [
-        "writer",
-        "artist",
-        "producer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "cisac-gcr-2023"
-      ],
-      "as_of": "2023-10-26",
-      "value": "10.83",
-      "unit": "EUR billion, music, gross, 2022",
-      "sort": 10.83,
-      "take": "CISAC societies collected EUR 10.83 bn for music in 2022, before costs are deducted. It covers songs, not recordings."
+      "take": "Rights that performers, record producers and broadcasters hold, separate from the copyright in the song. Also called related rights. Societies in many countries manage them for broadcasts and public play of recordings."
     },
     {
       "id": "roy-number-cisac-digital",
       "type": "number",
-      "title": "Digital was 35% of all CISAC collections in 2022",
+      "title": "Digital was 35% of CISAC collections, all repertoires, in 2022",
       "topic": "streams",
       "level": "intermediate",
       "readers": [
@@ -484,7 +461,7 @@
         "usco-mma"
       ],
       "take": "The MLC collects mechanical royalties from eligible US streaming and download services under the blanket licence, then pays the song's owners.",
-      "body": "The Copyright Office designated the MLC for this job. Services send the MLC usage data and money each month. The MLC matches usage to registered songs and pays self-administered writers, publishers, administrators and foreign societies. Songs that are not registered or matched can hold unpaid money.",
+      "body": "The Copyright Office designated the MLC under Title I of the Music Modernization Act. Services send it usage data and royalties each month, and it pays members monthly for registered songs it can match. Registering, claiming and matching are covered on the mechanicals page.",
       "do": [
         "Register your songs with the MLC, or confirm your publisher has."
       ],
@@ -504,15 +481,15 @@
       "territory": [
         "US"
       ],
-      "confidence": "law",
+      "confidence": "official",
       "sources": [
         "usc-101",
         "songview"
       ],
-      "take": "In the US, ASCAP, BMI and SESAC license public performance of songs for their members, and GMR works as a fourth.",
-      "body": "The statute describes a performing rights society as a body licensing public performance of non-dramatic musical works for owners, naming ASCAP, BMI and SESAC. Songview, a shared system of those societies, reconciles their ownership data.",
+      "take": "In the US, a performing rights society licenses public performance of songs for their owners. The statute names ASCAP, BMI and SESAC; Songview also lists GMR.",
+      "body": "Section 101 describes a performing rights society as a body that licenses public performance of nondramatic musical works for their copyright owners. Songview, a joint project of ASCAP, BMI, GMR and SESAC, reconciles their song ownership data and feeds the ASCAP and BMI public databases.",
       "do": [
-        "Join one society as a writer and register each song with it."
+        "Join a performing rights society as a writer and register each song with it."
       ],
       "as_of": "2026-11-20"
     },
@@ -536,36 +513,11 @@
         "usc-114"
       ],
       "take": "SoundExchange pays recording owners and artists for digital play on non-interactive services, but only those who have registered with it.",
-      "body": "SoundExchange names services such as SiriusXM and Pandora, and says artists and owners must register to be paid. It keeps lists of unregistered creators. Registering is free. What these services pay per play is decided by the Copyright Royalty Board.",
+      "body": "SoundExchange names services such as SiriusXM and Pandora, and says recording artists and owners must register with it to be paid. The U.S. Copyright Royalty Board decides what these services pay. Its lists of creators owed money are covered on the unclaimed-money page.",
       "do": [
         "Register as artist and, if you own the master, as a recording owner."
       ],
       "as_of": "2026-11-20"
-    },
-    {
-      "id": "roy-labels-distributors",
-      "type": "note",
-      "title": "Labels and distributors pay recording income by contract",
-      "topic": "collectors",
-      "level": "beginner",
-      "readers": [
-        "artist",
-        "publisher-label"
-      ],
-      "territory": [
-        "US",
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "usc-114",
-        "wipo-cmo-music"
-      ],
-      "take": "Outside the statutory digital performance licence, a featured artist is paid by the recording owner under their contract.",
-      "body": "Section 114(g) says such an artist is entitled to payments from the owner as the artist's contract provides. WIPO notes record companies sign direct contracts with performers. Which party pays, and what it deducts, depends on the deal, so ask a music lawyer to review it.",
-      "do": [
-        "Ask your label or distributor for the statement terms in writing."
-      ]
     },
     {
       "id": "roy-writer-publisher-share",
@@ -579,15 +531,14 @@
         "admin"
       ],
       "territory": [
-        "INTL",
-        "US"
+        "INTL"
       ],
       "confidence": "official",
       "sources": [
         "wipo-cmo-music"
       ],
-      "take": "Many societies pay a work's income to the composer and the publisher separately, in proportions set by their contract or society rules.",
-      "body": "WIPO says a typical work has two parties with a claim, the composer and the publisher, and that the division follows the contract between them, the rules of the society, or both. This guide does not state a standard percentage; check your agreement and your society's rules.",
+      "take": "Where a song has a publisher, a society divides its income between the writer and the publisher, by their contract, the society's rules, or both.",
+      "body": "WIPO notes that most musical works have at least a composer and a publisher as rights holders, and that a society's rules may set a minimum part for the composer. This guide gives no standard percentage; check your publishing agreement and your society's distribution rules.",
       "do": [
         "Read your publishing contract and your society's rules for the split."
       ]
@@ -608,7 +559,7 @@
       ],
       "confidence": "practice",
       "sources": [],
-      "take": "The two parts into which a song's income is divided. The writer's share is paid to the writer and the publisher's share to the publisher or administrator."
+      "take": "Common industry names for the part of a song's income that goes to its writers and the part that goes to its publishers. See the note on how societies divide it."
     },
     {
       "id": "roy-publisher",
@@ -650,32 +601,7 @@
       ],
       "confidence": "practice",
       "sources": [],
-      "take": "A company that registers songs, collects income and keeps records for a rights owner, for a fee, without owning the songs. It differs from a publisher that owns a share."
-    },
-    {
-      "id": "roy-mistake-overclaim",
-      "type": "mistake",
-      "title": "Mistake: registering shares that add up to more than 100 percent",
-      "topic": "shares",
-      "level": "intermediate",
-      "readers": [
-        "writer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US"
-      ],
-      "confidence": "official",
-      "sources": [
-        "mlc-tools"
-      ],
-      "take": "An overclaim occurs when the shares filed for a song at the MLC add up to more than 100 percent.",
-      "body": "The MLC says an overclaim should be resolved promptly so payments are accurate, and it provides a tool for amending or relinquishing shares and sharing evidence. Agree each co-writer's split before registering, and use the same split everywhere.",
-      "do": [
-        "Agree and record each co-writer's percentage before you register."
-      ],
-      "as_of": "2026-11-20"
+      "take": "Industry name for a company that registers songs, collects their income and keeps the records on an owner's behalf, without becoming the owner. Terms vary by contract."
     },
     {
       "id": "roy-table-digital-performance-split",
@@ -696,7 +622,7 @@
         "usc-114"
       ],
       "as_of": "2026-11-20",
-      "take": "Section 114(g) divides the statutory digital performance receipts four ways. It does not cover other income from a recording.",
+      "take": "Section 114(g)(2) sets how the designated collective divides statutory licence money for digital transmission of recordings, after any costs it deducts. Other income is not covered.",
       "columns": [
         "Payee",
         "Share",
@@ -704,24 +630,24 @@
       ],
       "rows": [
         [
-          "Owner of the recording",
+          "Recording owner (holder of the digital performance right)",
           "50 percent",
-          "The collective, to the owner"
+          "Paid by the collective"
         ],
         [
           "Featured recording artists",
           "45 percent",
-          "The collective, per recording"
+          "Paid by the collective, per recording"
         ],
         [
           "Non-featured musicians",
           "2.5 percent",
-          "A fund run with the AFM"
+          "Escrow fund; administrator chosen jointly by recording owners and the AFM"
         ],
         [
           "Non-featured vocalists",
           "2.5 percent",
-          "A fund run with AFTRA"
+          "Escrow fund; administrator chosen jointly by recording owners and AFTRA"
         ]
       ]
     },
@@ -762,30 +688,30 @@
           "items": [
             "A performing rights society, as a writer",
             "Each song at the MLC, directly or through a publisher or administrator",
-            "Songs you share: written agreement on every split",
-            "Your details in the ASCAP and BMI public searches"
+            "Recordings of your songs matched in the MLC Matching Tool",
+            "Songs you share: the same agreed splits in every register",
+            "Your details in the ASCAP and BMI public databases"
           ]
         },
         {
           "name": "If you make recordings",
           "items": [
             "SoundExchange as artist, and as recording owner if you own the master",
-            "An ISRC on each recording, from your distributor or agency",
-            "Recordings matched to songs in the MLC Matching Tool"
+            "An ISRC on each recording (in the UK, PPL issues them)"
           ]
         },
         {
           "name": "If you are outside the US",
           "items": [
             "Your home society for songs and for recordings",
-            "PPL for UK performers and recordings",
+            "PPL for UK performers and recording rightsholders",
             "Re:Sound for Canadian recordings"
           ]
         },
         {
           "name": "For everyone",
           "items": [
-            "Tax details in each payee account",
+            "Bank and tax details in each payee account",
             "The Copyright Office, if you choose to register works (Circulars 50 and 56)"
           ]
         }
@@ -810,11 +736,11 @@
         "mlc-home",
         "songview"
       ],
-      "take": "Register the song with your society and the MLC, then check the matching and the public databases.",
-      "body": "The MLC lets members register songs one by one, in bulk or by CWR files, and advises checking its claiming tool first because someone may already have registered the song. Once registered, watch the matching tool as new recording data arrives.",
+      "take": "Register each new song with your performing rights society and with the MLC, then check that every register shows the same details.",
+      "body": "A song can earn from more than one collector, so one registration is not enough. Register with the MLC directly or through a publisher or administrator. The mechanicals page covers the MLC's search, claim and matching tools step by step.",
       "do": [
-        "Search the MLC's public tool before adding a song.",
-        "Register the song, then confirm the shares match everywhere."
+        "Register each new song with your society and the MLC.",
+        "Check that the shares match in every register."
       ],
       "when": "before-release",
       "as_of": "2026-11-20"
@@ -836,11 +762,10 @@
       "confidence": "official",
       "sources": [
         "sx-owed",
-        "mlc-tools",
-        "ppl-rrh"
+        "mlc-tools"
       ],
-      "take": "Register with SoundExchange, give the recording an ISRC, and link it to the song so the song's owners are paid.",
-      "body": "SoundExchange says artists and owners must register to receive digital performance money. PPL explains that an ISRC identifies a recording, with 12 characters including a code for the rightsholder. The MLC's matching tool lets users connect recordings to songs.",
+      "take": "Register with SoundExchange, make sure the recording has an ISRC, and check it is linked to the song so the song's owners are paid.",
+      "body": "SoundExchange says recording artists and owners must be registered to receive its digital performance royalties. The ISRC identifies the recording, and the MLC's Matching Tool uses it to connect recordings to songs, so give the code to your co-writers or publisher.",
       "do": [
         "Register with SoundExchange for each role you hold.",
         "Check the match to the song in the MLC Matching Tool."
@@ -890,34 +815,6 @@
       "take": "International Standard Musical Work Code: a number that identifies a song and links it to its rights holders in the society systems."
     },
     {
-      "id": "roy-mistake-one-body",
-      "type": "mistake",
-      "title": "Mistake: registering with one body and thinking all the money is covered",
-      "topic": "registration",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "artist",
-        "producer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US"
-      ],
-      "confidence": "official",
-      "sources": [
-        "sx-owed",
-        "mlc-home",
-        "usc-101"
-      ],
-      "take": "SoundExchange, the MLC and a performing rights society each pay for different rights. A registration at one does not trigger payment from another.",
-      "body": "A writer-artist can be owed from several places: songs from a society and the MLC, recordings from SoundExchange. Each pays only those who are on its books, so a gap in one register stays a gap.",
-      "do": [
-        "Use the checklist on this page and tick each register separately."
-      ]
-    },
-    {
       "id": "roy-later-topics",
       "type": "note",
       "title": "Pre-1972 recordings and producer letters of direction have their own rules",
@@ -937,10 +834,10 @@
         "usco-mma",
         "usc-114"
       ],
-      "take": "Recordings from before 15 February 1972 have federal remedies under Title II, and producers can be paid through a letter of direction under Title III.",
-      "body": "Title II covers sound recordings fixed before that date and relies on schedules filed with the Copyright Office. Title III lets a collective accept written instructions to pay producers, mixers and engineers a share of statutory digital performance money. Neither is covered here; see their own pages.",
+      "take": "Title II of the Music Modernization Act gives federal remedies to recordings fixed before 15 February 1972. Title III lets producers, mixers and engineers be paid by letter of direction.",
+      "body": "To recover statutory damages or fees for a pre-1972 recording, the owner usually has to file a schedule with the Copyright Office first. Under section 114(g)(5), SoundExchange can accept a letter from the artist or recording owner sending part of their digital performance money to a producer, mixer or engineer. Neither is covered in detail here.",
       "do": [
-        "Look at the Copyright Office's Title II and Title III pages."
+        "Read the Copyright Office pages on Titles II and III before relying on either."
       ],
       "as_of": "2026-11-20"
     },
@@ -971,7 +868,7 @@
         "gema"
       ],
       "as_of": "2026-11-20",
-      "take": "A basic map of bodies with pages read for this guide. Other countries and rights are not shown, and rules differ by body.",
+      "take": "A basic map, limited to bodies whose pages were read for this guide. Other countries and rights are not shown, and rules differ by body.",
       "columns": [
         "Country",
         "Songs",
@@ -980,18 +877,18 @@
       "rows": [
         [
           "UK",
-          "Check the society for your territory (not read here)",
-          "PPL: rightsholders and performers"
+          "Not covered here (no society page read)",
+          "PPL: recording rightsholders and performers"
         ],
         [
           "Canada",
-          "SOCAN (performing, reproduction); CMRRA (reproduction)",
+          "SOCAN (performing and reproduction rights); CMRRA (online services)",
           "Re:Sound: artists and record companies"
         ],
         [
           "Germany",
-          "GEMA: composers, lyricists, publishers",
-          "Check the local body (not read here)"
+          "GEMA: composers, lyricists and publishers",
+          "Not covered here (no page read)"
         ]
       ]
     },
@@ -1039,12 +936,13 @@
       "sources": [
         "ppl-calc",
         "ppl-rrh",
+        "ppl-performers",
         "resound"
       ],
-      "take": "In the UK and Canada, bodies such as PPL and Re:Sound collect on recordings and pay rightsholders and performers. It is a separate account from songwriter income.",
-      "body": "PPL says rightsholders can ask it to collect international royalties, and Re:Sound tells those who performed on or made released recordings that they may be owed. A US artist should check, per country, who collects and what registration is needed.",
+      "take": "In the UK and Canada, PPL and Re:Sound deal with money for recordings on behalf of performers and recording owners. It is a separate account from songwriter income.",
+      "body": "PPL says rightsholder members can ask it to collect royalties from abroad, and Re:Sound tells anyone who performed on or made released recordings that they may be owed. Each body has its own rules on who qualifies, so a US artist should check country by country.",
       "do": [
-        "Register with PPL or Re:Sound if your recordings are played in those countries."
+        "Ask PPL or Re:Sound whether you qualify for recordings played in those countries."
       ],
       "as_of": "2026-11-20"
     },
@@ -1067,37 +965,12 @@
         "ppl-calc",
         "ppl-performers"
       ],
-      "take": "PPL matches reported plays against its database of more than 28 million recordings, then pays half to rightsholders and half to qualifying performers.",
-      "body": "A performer must qualify for a track before the performer share is paid; if not, that portion goes to the rightsholder. Several performers on one recording share by agreement or PPL's allocation policy. The share is often called equitable remuneration.",
+      "take": "For UK public play and broadcasts, PPL matches reported use against its database of over 28 million recordings and, after costs, pays half to rightsholders and half to qualifying performers.",
+      "body": "PPL checks that a performer qualifies for a track before paying the performer share; if not, that part goes to the rightsholder. Several performers on one recording share by agreement or under PPL's allocation policy. PPL says the performer share is sometimes called equitable remuneration.",
       "do": [
         "Check in myPPL that you are credited on each recording."
       ],
       "as_of": "2026-11-20"
-    },
-    {
-      "id": "roy-deductions",
-      "type": "note",
-      "title": "Society reports show what was collected, not what was paid",
-      "topic": "international",
-      "level": "intermediate",
-      "readers": [
-        "writer",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "INTL"
-      ],
-      "confidence": "official",
-      "sources": [
-        "cisac-gcr-2023",
-        "wipo-cmo-music"
-      ],
-      "take": "CISAC's collection totals are gross, before societies deduct costs. Deductions can include running costs and, in many societies, cultural or social funds.",
-      "body": "WIPO says societies may deduct administration costs and other charges before distributing. CISAC states that its figures are gross collections. So a large headline number does not show what writers and publishers receive.",
-      "do": [
-        "Read your society's distribution rules for deductions."
-      ]
     },
     {
       "id": "roy-flow-song",
@@ -1116,11 +989,11 @@
       "confidence": "official",
       "sources": [
         "mlc-home",
-        "wipo-cmo-music",
-        "songview"
+        "usc-101",
+        "wipo-cmo-music"
       ],
-      "take": "A service reports a play and pays a collective. The collective matches it to registered owners and pays them. A publisher then pays the writer under their deal.",
-      "body": "For digital mechanicals, the MLC receives monthly usage and money, matches it, and pays members. For performance money the society does the same for its members. If a publisher is involved, the writer's share reaches the writer under the contract. Unmatched money stays unpaid.",
+      "take": "A service reports plays and pays a collector, which matches them to registered songs and pays the owners on file. A writer may be paid by the collector directly or through a publisher.",
+      "body": "For US digital mechanicals the collector is the MLC; for public performance it is a performing rights society. WIPO notes that societies usually take both writers and publishers as members. Where a publisher receives the writer's money, the writer is paid a share under the publishing contract. A song that is not registered or matched stays unpaid.",
       "do": [
         "Check each step: registered, matched, and paid to the right account."
       ],
@@ -1146,8 +1019,8 @@
         "sx-owed",
         "wipo-cmo-music"
       ],
-      "take": "Digital performance money goes through SoundExchange and is split by statute. Other recording income goes to the owner, who pays the artist as agreed.",
-      "body": "Section 114(g)(2) sets the split for money collected under the statutory licence. Section 114(g)(1) says outside that licence the artist is paid under the artist's contract. A label or distributor usually receives the streaming income, and the deal fixes the artist's share and deductions.",
+      "take": "Statutory digital performance money goes through SoundExchange and is split by law. Other recording income reaches the artist through the recording owner, as the contract says.",
+      "body": "Section 114(g)(2) sets the split for money collected under the statutory licence. For a transmission licensed outside it, section 114(g)(1) entitles a featured artist to payment from the recording owner under the artist's contract. WIPO notes that recording contracts often include a recoupable advance. Have a music lawyer review the deal.",
       "do": [
         "Ask for the royalty statement that shows each source of income."
       ],
@@ -1156,7 +1029,7 @@
     {
       "id": "roy-w8ben",
       "type": "note",
-      "title": "Form W-8BEN: a form that non-US payees may be asked to give",
+      "title": "Form W-8 BEN: a form non-US payees may be asked to give",
       "topic": "tax",
       "level": "intermediate",
       "readers": [
@@ -1172,37 +1045,11 @@
       "sources": [
         "irs-w8ben"
       ],
-      "take": "A foreign individual who owns income subject to US withholding gives Form W-8BEN to the payer when asked. It is not tax advice.",
-      "body": "The IRS says the payer or withholding agent receives the form on request, whether or not the person is claiming a reduced rate or an exemption. What rate applies and whether a tax treaty helps depends on the person's situation, so speak to a tax adviser.",
+      "take": "The IRS says a foreign person who is the \"beneficial owner of an amount subject to withholding\" gives this form to whoever withholds the tax or makes the payment.",
+      "body": "The IRS page says to submit it when the withholding agent or payer asks, whether or not you claim a reduced rate or an exemption. It does not say which rate applies to royalties. This guide is not tax advice; ask a tax adviser how US withholding applies to you.",
       "do": [
-        "Ask the payer which form it needs.",
+        "Ask each payer which form it needs from you.",
         "Ask a tax adviser how US withholding applies to you."
-      ],
-      "as_of": "2026-11-20"
-    },
-    {
-      "id": "roy-mistake-tax-forms",
-      "type": "mistake",
-      "title": "Mistake: leaving tax details out of payee accounts",
-      "topic": "tax",
-      "level": "beginner",
-      "readers": [
-        "writer",
-        "artist",
-        "publisher-label",
-        "admin"
-      ],
-      "territory": [
-        "US"
-      ],
-      "confidence": "official",
-      "sources": [
-        "mlc-tools"
-      ],
-      "take": "A payee account without current tax details can slow or reduce payment. The MLC tells members to refresh their bank and tax paperwork.",
-      "body": "The MLC's tools page reminds members to keep contact, bank and tax information current in their member settings so they receive what they are owed. The same habit applies at any payer. Tax rules vary, so ask a tax adviser about yours.",
-      "do": [
-        "Check tax and bank details in each payee account each year."
       ],
       "as_of": "2026-11-20"
     }
@@ -1303,7 +1150,7 @@
       "url": "https://www.law.cornell.edu/uscode/text/17/114",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "(a) no section 106(4) right for sound recordings; (g)(1) artist payments by contract outside the statutory licence; (g)(2) 50 / 2.5 / 2.5 / 45 percent split; letters of direction.",
+      "support": "(a) no section 106(4) right for sound recordings; (g)(1) artist payments by contract for transmissions outside the statutory licence; (g)(2) 50 / 2.5 / 2.5 / 45 percent split and escrow funds; (g)(3) costs; (g)(5) letters of direction.",
       "edition": "Title 17, section 114, as shown by LII"
     },
     "circ-50": {
@@ -1313,7 +1160,7 @@
       "url": "https://www.copyright.gov/circs/circ50.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "Song and recording are separate works; a song registration covers music and lyrics, not the recorded performance; application, fee and deposit; author of the song."
+      "support": "Song and recording are separate works, usually registered separately, one application only in limited cases (Circular 56A); musical works include accompanying words; author unless made for hire; application, fee, deposit; fees change."
     },
     "circ-56": {
       "type": "government",
@@ -1322,7 +1169,7 @@
       "url": "https://www.copyright.gov/circs/circ56.pdf",
       "jurisdiction": "US",
       "retrieved": "2026-11-20",
-      "support": "Sound recording defined; distinct from underlying song and from phonorecord; authors are featured performer and producer unless work made for hire; registration not required for protection; digital performance right only."
+      "support": "Sound recording defined; distinct from song and phonorecord; authors are featured performer and producer unless work made for hire; recordings after 1 January 1978 protected on fixation; registration not required; digital performance right only."
     },
     "usco-pre1972": {
       "type": "government",
@@ -1367,7 +1214,7 @@
       "url": "https://www.ppluk.com/royalties/how-royalties-are-calculated/",
       "jurisdiction": "UK",
       "retrieved": "2026-11-20",
-      "support": "UK public play and broadcast money: one half to the recording rightsholder, one half to qualifying performers (equitable remuneration); PPL repertoire database 28 million recordings; international agreements with CMOs."
+      "support": "UK public play and broadcast money, after costs: one half to the recording rightsholder, one half to qualifying performers (equitable remuneration); several performers share by agreement or allocation policy; 28 million recordings."
     },
     "ppl-rrh": {
       "type": "collective",
@@ -1385,7 +1232,7 @@
       "url": "https://www.socan.com/",
       "jurisdiction": "CA",
       "retrieved": "2026-11-20",
-      "support": "Licenses music and collects and distributes royalties in Canada and abroad; manages performing and reproduction rights; serves creators and publishers."
+      "support": "Home page: licenses music and collects and distributes royalties in Canada and around the world; administers performing and reproduction rights for creators and publishers."
     },
     "resound": {
       "type": "collective",
@@ -1394,7 +1241,7 @@
       "url": "https://www.resound.ca/",
       "jurisdiction": "CA",
       "retrieved": "2026-11-20",
-      "support": "Canadian not-for-profit that licenses performance rights for artists and record companies; those who performed on or made released recordings may be owed royalties."
+      "support": "Home page: Canadian not-for-profit licensing company seeking fair pay for artists and record companies for their performance rights; those who performed on or made released recordings may be owed."
     },
     "gema": {
       "type": "collective",
@@ -1403,7 +1250,7 @@
       "url": "https://www.gema.de/en/",
       "jurisdiction": "DE",
       "retrieved": "2026-11-20",
-      "support": "German society for composers, lyricists and publishers; over 100,000 members; members register works and are paid when works are performed or reproduced."
+      "support": "Home page: society for composers, lyricists and music publishers; more than 100,000 members; creators and publishers become members, register works and get royalties."
     }
   }
 }
