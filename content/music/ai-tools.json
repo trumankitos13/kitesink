@@ -1,0 +1,424 @@
+{
+  "kind": "ai-tools",
+  "groups": [
+    {
+      "id": "metadata-matching",
+      "label": "Metadata and matching"
+    },
+    {
+      "id": "detection-attribution",
+      "label": "AI-content detection and attribution"
+    },
+    {
+      "id": "generators",
+      "label": "Licensed generators and output terms"
+    },
+    {
+      "id": "catalogue-analysis",
+      "label": "Catalogue and statement analysis"
+    },
+    {
+      "id": "voice-likeness",
+      "label": "Voice and likeness"
+    },
+    {
+      "id": "assistants",
+      "label": "AI assistants: data-use terms"
+    }
+  ],
+  "tools": [
+    {
+      "id": "ait-reprtoir",
+      "name": "Reprtoir",
+      "url": "https://reprtoir.com/",
+      "owner": "Reprtoir SAS",
+      "group": "metadata-matching",
+      "what": "Cloud workspace where labels and publishers keep track and work metadata, build release packages and process royalty statements; AI tagging is an add-on.",
+      "readers": [
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "The pricing page lists Audio AI (auto-tagging, similarity search) as an add-on for paid plans. The terms do not mention AI.",
+      "uploads": "Track and work metadata and files, royalty statements, imports from other services",
+      "output_terms": {
+        "summary": "Users stay responsible for their content, and the terms give Reprtoir only the rights needed to run the service. They say nothing about model training or who owns AI tagging results, so ask the vendor.",
+        "terms_url": "https://reprtoir.com/terms",
+        "quote": "The only rights granted to the Owner in relation to content provided by Users are those necessary to operate and maintain Reprtoir."
+      }
+    },
+    {
+      "id": "ait-ircam-aimd",
+      "name": "AIMD AI Music Detector",
+      "url": "https://www.ircamamplify.com/",
+      "owner": "Ircam Amplify",
+      "group": "detection-attribution",
+      "what": "Scores whether a track was made by an AI music generator, through an API, SDK or hosted platform. A score for human review, not a legal finding.",
+      "readers": [
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "enterprise",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "The 99 percent accuracy and under 1 percent false-positive figures on its site are the vendor's own claim. Access is by request form.",
+      "uploads": "Audio files, sent through an API, an SDK or the hosted platform",
+      "output_terms": {
+        "summary": "The client keeps rights in submitted audio and in the results. Ircam says it will not train models on submitted audio or client-identifiable results unless the service order agrees, and deletes files after analysis.",
+        "terms_url": "https://app.ircamamplify.io/terms-and-conditions-en.pdf",
+        "quote": "Ircam Amplify shall not use submitted audio content or Client-identifiable analytical outputs to train or fine-tune any artificial intelligence or machine learning model"
+      }
+    },
+    {
+      "id": "ait-sureel",
+      "name": "Sureel",
+      "url": "https://www.sureel.ai/",
+      "owner": "Sureel Inc.",
+      "group": "detection-attribution",
+      "what": "Lets rights owners set AI training and generation permissions per work, checks AI inputs and outputs against them, and reports which works shaped an output.",
+      "readers": [
+        "writer",
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "waitlist",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Attribution percentages are the vendor's own claim. The site says it belongs to Warner Music Group but runs independently.",
+      "uploads": "Works and recordings registered with permission settings per work",
+      "output_terms": {
+        "summary": "Assets stay the user's property. Sureel takes a perpetual, irrevocable licence to use them to run and improve the service, including training features; the opt-out covers only its GenAI service, not attribution.",
+        "terms_url": "https://www.sureel.ai/terms-of-use",
+        "quote": "Sureel makes no claim of ownership to the Assets"
+      }
+    },
+    {
+      "id": "ait-pex-ai-song-detector",
+      "name": "Pex AI Song Detector",
+      "url": "https://pex.com/ai-song-detector/",
+      "owner": "Vobile (Pex)",
+      "group": "detection-attribution",
+      "what": "API and AI-agent connector that says whether a submitted track looks AI-generated and, when confident, which generator made it.",
+      "readers": [
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "enterprise",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Vendor says it beats competing detectors and publishes no figures. No service terms found; check by hand.",
+      "uploads": "An audio file sent through the API or an AI-agent connector",
+      "output_terms": {
+        "summary": "Only a privacy notice was found. It covers account and rightsholder data, not what happens to submitted audio or detection results. Service terms with output and training terms were not located.",
+        "terms_url": "https://pex.com/privacy-policy/",
+        "quote": null
+      }
+    },
+    {
+      "id": "ait-suno",
+      "name": "Suno",
+      "url": "https://suno.com/",
+      "owner": "Suno, Inc.",
+      "group": "generators",
+      "what": "Text and lyrics to song generator with editing tools, stem separation and a voice feature built from the user's own recordings.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Suno's help page says Suno owns free-plan songs; the terms only limit free-plan use to non-commercial. Terms effective 3 Sept 2026.",
+      "uploads": "Text prompts, lyrics, audio recordings and voice samples",
+      "output_terms": {
+        "summary": "Pro and Premier: Suno assigns its rights in the output, with no promise that copyright exists. Free tier: non-commercial use only. Suno holds a perpetual licence to user content, including to improve its AI models.",
+        "terms_url": "https://suno.com/terms",
+        "quote": "If you are a user of the free or basic tier of the Service then you covenant and agree that you will only use such Outputs for your lawful, personal and non-commercial purposes."
+      }
+    },
+    {
+      "id": "ait-elevenlabs-music",
+      "name": "ElevenLabs Music",
+      "url": "https://elevenlabs.io/music",
+      "owner": "ElevenLabs",
+      "group": "generators",
+      "what": "Generates songs from text prompts, with controls to regenerate one section and to write vocals in several languages.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "The vendor claims its tracks are cleared for wide commercial use; that is its own claim. The terms bar free users from commercial use.",
+      "uploads": "Text prompts and lyrics; optionally own tracks to make a style or vocal",
+      "output_terms": {
+        "summary": "The user keeps rights in input and output. Free users: non-commercial use only; paid users may use it commercially. ElevenLabs takes a perpetual licence to improve its services; training opt-out is in account settings.",
+        "terms_url": "https://elevenlabs.io/terms-of-use",
+        "quote": "as between you and ElevenLabs, you retain all rights in and to your Output"
+      }
+    },
+    {
+      "id": "ait-beatoven",
+      "name": "Beatoven.ai",
+      "url": "https://www.beatoven.ai/",
+      "owner": "Beatoven Private Limited",
+      "group": "generators",
+      "what": "Generates background music and sound effects from a text description, for use in videos, games and podcasts.",
+      "readers": [
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "paid",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Beatoven says it is Fairly Trained certified; that is its own claim. Terms last updated 5 June 2024. No free tier is described on the page.",
+      "uploads": "A text description of the music wanted; the user's own video if submitted",
+      "output_terms": {
+        "summary": "Beatoven, not the user, owns copyright in generated music. The user's licence covers use synced with their own project only: no streaming distribution, no use in other AI. Beatoven keeps a perpetual licence to submitted content.",
+        "terms_url": "https://www.beatoven.ai/tos",
+        "quote": "Beatoven shall own and be the copyright owner of Your AI Music but you shall control the exercise of your rights pursuant to the License"
+      }
+    },
+    {
+      "id": "ait-stable-audio",
+      "name": "Stable Audio",
+      "url": "https://stability.ai/stable-audio",
+      "owner": "Stability AI",
+      "group": "generators",
+      "what": "Text-to-audio and music models from Stability AI, offered as a web app, an API, open-weights downloads and an enterprise licence.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Stability says Stable Audio 3.0 is trained on fully licensed data; that is its own claim. App pricing did not load; check access.",
+      "uploads": "Text prompts and, for editing or extending, existing audio",
+      "output_terms": {
+        "summary": "Stability assigns its rights in outputs to the user, subject to the terms. Inputs and outputs can feed its service improvement; users may opt out of model training. Terms effective 31 July 2025.",
+        "terms_url": "https://stability.ai/terms-of-use",
+        "quote": "So as between Stability and you, you own the Output (to the extent permitted by applicable law)."
+      }
+    },
+    {
+      "id": "ait-valuepunks",
+      "name": "ValuePunks",
+      "url": "https://www.valuepunks.com/",
+      "owner": "Tribe Music Group AG",
+      "group": "catalogue-analysis",
+      "what": "Estimates what a music catalogue is worth with a discounted-cash-flow model fed by revenue figures or royalty statements. An estimate, not an appraisal.",
+      "readers": [
+        "writer",
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Free for creators; Pro is priced per valuation. The site says the method is a DCF model, and data-room connection is marked coming soon.",
+      "uploads": "Revenue per rights category, song lists or ISWCs, and royalty statements",
+      "output_terms": {
+        "summary": "The user keeps all rights in uploaded data. ValuePunks may use it to run the service and make the user's reports, and to build aggregated, de-identified data it owns for benchmarking and model evaluation. No sale of data.",
+        "terms_url": "https://www.valuepunks.com/terms/",
+        "quote": "As between you and ValuePunks, you retain all right, title, and interest in and to your Customer Data."
+      }
+    },
+    {
+      "id": "ait-kits-ai",
+      "name": "Kits.ai",
+      "url": "https://kits.ai/",
+      "owner": "Arpeggi, Inc.",
+      "group": "voice-likeness",
+      "what": "Converts a vocal recording into another voice, trains custom voice models from the user's own recordings and separates vocals.",
+      "readers": [
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Kits says its library voices are ethically licensed; that is its own claim. Each library voice has its own licence. Terms dated 2 Oct 2024.",
+      "uploads": "Audio files of the user's own voice or a voice they have authority to use",
+      "output_terms": {
+        "summary": "Custom voice models belong to the company; the user may use the model and its output commercially. Accounts opened since 2 Oct 2024 allow training on voice files and outputs unless opted out by email, for future files only.",
+        "terms_url": "https://kits.ai/terms-of-service",
+        "quote": "we may use your Provided Voice Files (as defined below) and AI Model Output to train or otherwise improve our Services"
+      }
+    },
+    {
+      "id": "ait-youtube-likeness-detection",
+      "name": "YouTube likeness detection",
+      "url": "https://support.google.com/youtube/answer/16440338",
+      "owner": "YouTube (Google)",
+      "group": "voice-likeness",
+      "what": "Lets enrolled creators find uploads where their face appears AI-altered and ask for removal. Faces only for now; audio matching is described as planned.",
+      "readers": [
+        "artist"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Needs a channel and a verified adult owner or manager. It checks likeness, not recordings, so it is not a rights-claiming tool.",
+      "uploads": "Government ID, a short selfie video and optionally a voice sample",
+      "output_terms": {
+        "summary": "Templates and ID data run the detection and are kept up to three years after last sign-in. Use for improving likeness models is optional and revocable. Data is not used to train Google generative AI without consent.",
+        "terms_url": "https://support.google.com/youtube/answer/16440338",
+        "quote": "The data you provide to set up likeness detection isn’t used to train Google’s generative AI models without your consent."
+      }
+    },
+    {
+      "id": "ait-claude-business",
+      "name": "Claude for Work and API",
+      "url": "https://claude.com/pricing",
+      "owner": "Anthropic",
+      "group": "assistants",
+      "what": "Business and API plans of Anthropic's Claude assistant. Listed for the data-use terms that apply to music business documents.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "paid",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Commercial terms effective 17 June 2025; the data-use help article was dated 18 Aug 2026. Consumer plans differ; see the next row.",
+      "uploads": "Prompts, documents and files the user chooses to send",
+      "output_terms": {
+        "summary": "Customers keep their inputs and own the outputs; Anthropic assigns its rights, if any. Anthropic is barred from training on customer content. Its help page adds that feedback reports or data a customer opts in may be used.",
+        "terms_url": "https://www.anthropic.com/legal/commercial-terms",
+        "quote": "Anthropic may not train models on Customer Content from Services."
+      }
+    },
+    {
+      "id": "ait-claude-consumer",
+      "name": "Claude Free, Pro and Max",
+      "url": "https://claude.com/pricing",
+      "owner": "Anthropic",
+      "group": "assistants",
+      "what": "Consumer plans of Anthropic's Claude assistant. Listed for the data-use terms that apply when a person pastes their own contracts or statements into it.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "The consumer help article (16 Mar 2026) frames training as a setting the user chooses; the terms say it happens unless the user opts out.",
+      "uploads": "Prompts, documents and files the user chooses to send",
+      "output_terms": {
+        "summary": "Users keep inputs and Anthropic assigns its rights in outputs. Chats may be used for model training unless the user opts out in account settings; flagged or rated chats can still be used. Terms effective 8 Oct 2025.",
+        "terms_url": "https://www.anthropic.com/legal/consumer-terms",
+        "quote": "including training our models, unless you opt out of training through your account settings."
+      }
+    },
+    {
+      "id": "ait-google-workspace-gemini",
+      "name": "Gemini in Google Workspace",
+      "url": "https://support.google.com/a/answer/15706919",
+      "owner": "Google",
+      "group": "assistants",
+      "what": "Gemini features inside Gmail, Docs, Drive and Meet, plus the Gemini app, for organisations on a qualifying Workspace edition.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "paid",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Applies only to qualifying Workspace editions; the consumer Gemini app has different terms (next row).",
+      "uploads": "Prompts and the Workspace files, mail and meetings the user points it at",
+      "output_terms": {
+        "summary": "Prompts count as customer data. Google says customer data is not used to tune its generative models unless the customer permits it. The hub page does not say who owns outputs.",
+        "terms_url": "https://support.google.com/a/answer/15706919",
+        "quote": "Your content is not human reviewed or otherwise used for Generative AI model training outside your domain without permission."
+      }
+    },
+    {
+      "id": "ait-gemini-apps-consumer",
+      "name": "Gemini Apps (personal accounts)",
+      "url": "https://support.google.com/gemini/answer/13594961",
+      "owner": "Google",
+      "group": "assistants",
+      "what": "Google's consumer Gemini chat apps. Listed for what happens to chats pasted in from a personal account.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Privacy hub last updated 19 Nov 2026. Google still uses some chat data in anonymised form whatever the setting says.",
+      "uploads": "Prompts, uploaded files, audio and screen shares",
+      "output_terms": {
+        "summary": "Chats can be reviewed by people and used to improve Google's models, with a setting to stop future chats being used for generative AI training. Temporary chats are not used. The page does not say who owns outputs.",
+        "terms_url": "https://support.google.com/gemini/answer/13594961",
+        "quote": "You can stop your future chats from being reviewed to train generative AI models anytime in your Gemini History settings."
+      }
+    }
+  ]
+}
