@@ -1,0 +1,500 @@
+{
+  "kind": "tools",
+  "groups": [
+    {
+      "id": "works-search",
+      "label": "Works and repertoire searches"
+    },
+    {
+      "id": "recordings",
+      "label": "Recordings and identifiers"
+    },
+    {
+      "id": "unclaimed",
+      "label": "Unclaimed money"
+    },
+    {
+      "id": "metadata",
+      "label": "Metadata and file formats"
+    },
+    {
+      "id": "splits-contracts",
+      "label": "Splits and agreements"
+    },
+    {
+      "id": "sync-cue",
+      "label": "Sync and cue sheets"
+    },
+    {
+      "id": "valuation",
+      "label": "Catalogue valuation"
+    }
+  ],
+  "tools": [
+    {
+      "id": "tool-mlc-public-search",
+      "name": "MLC Public Work Search",
+      "url": "https://portal.themlc.com/search",
+      "owner": "The MLC",
+      "group": "works-search",
+      "what": "Look up who owns which share of a song in the MLC database. Shows ownership data only, not what a song has earned.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "free-no-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Tools page says anyone may use it at no charge."
+    },
+    {
+      "id": "tool-mlc-missing-members",
+      "name": "MLC Missing Member Lookup",
+      "url": "https://www.themlc.com/missing-members-lookup",
+      "owner": "The MLC",
+      "group": "unclaimed",
+      "what": "Search a name to see whether the MLC may hold US digital mechanicals for a rightsholder who has not joined. Leaves out historical unmatched money.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "free-no-login",
+      "status": "verified",
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "tool-mlc-dashboards",
+      "name": "MLC royalty dashboards",
+      "url": "https://www.themlc.com/dashboards",
+      "owner": "The MLC",
+      "group": "unclaimed",
+      "what": "Public charts of blanket, historical and unclaimed accrued royalties by month and by service. Totals only, nothing per song or per person.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "free-no-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "Three dashboards; the unclaimed one covers 2021 usage."
+    },
+    {
+      "id": "tool-mlc-matching-claiming",
+      "name": "MLC Matching and Claiming tools",
+      "url": "https://www.themlc.com/tools",
+      "owner": "The MLC",
+      "group": "unclaimed",
+      "what": "Member tools to claim missing shares of registered songs and to propose links between unmatched recordings and your songs.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "free-login",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "The tools page places them in the Member Hub but does not say whether login is required or free."
+    },
+    {
+      "id": "tool-django-music-publisher",
+      "name": "Django Music Publisher",
+      "url": "https://github.com/matijakolaric-com/django-music-publisher",
+      "owner": "Matija Kolaric",
+      "group": "metadata",
+      "what": "Open-source software you host yourself to keep song metadata, register works and handle publishing royalty data.",
+      "readers": [
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-no-login",
+      "status": "verified",
+      "checked": "2026-11-20",
+      "note": "MIT licence per the repository; needs technical skill to run."
+    },
+    {
+      "id": "tool-songview",
+      "name": "Songview",
+      "url": "https://www.songview.com/",
+      "owner": "ASCAP, BMI, GMR and SESAC",
+      "group": "works-search",
+      "what": "Landing page for the joint US performance-rights ownership data, with links out to the ASCAP and BMI public searches.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page describes the system but not login or cost of the searches it links to."
+    },
+    {
+      "id": "tool-bmi-repertoire",
+      "name": "BMI Repertoire",
+      "url": "https://repertoire.bmi.com/",
+      "owner": "BMI",
+      "group": "works-search",
+      "what": "Search BMI's catalogue for works, writers and publishers to see ownership shares held at BMI.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page showed only a human-verification form to automated reading; open by hand to confirm."
+    },
+    {
+      "id": "tool-ascap-ace",
+      "name": "ASCAP ACE Repertory",
+      "url": "https://www.ascap.com/repertory",
+      "owner": "ASCAP",
+      "group": "works-search",
+      "what": "Search ASCAP's repertory for works and their ownership data.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Blocked automated reading (403). Open by hand to confirm what it shows and any login."
+    },
+    {
+      "id": "tool-sesac-repertory",
+      "name": "SESAC Repertory",
+      "url": "https://www.sesac.com/repertory/",
+      "owner": "SESAC",
+      "group": "works-search",
+      "what": "Search SESAC's repertory for works it licenses.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Blocked automated reading (403). Open by hand to confirm."
+    },
+    {
+      "id": "tool-prs-works-search",
+      "name": "PRS works search",
+      "url": "https://www.prsformusic.com/works/searching-works",
+      "owner": "PRS for Music",
+      "group": "works-search",
+      "what": "Search the PRS works database by title, writer, publisher or code. Reaches full detail through a member account.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "UK"
+      ],
+      "access": "members",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Search results suggest member login; a public view was not confirmed."
+    },
+    {
+      "id": "tool-gema-repertoire",
+      "name": "GEMA repertoire search",
+      "url": "https://www.gema.de/en/music-creators/repertoire",
+      "owner": "GEMA",
+      "group": "works-search",
+      "what": "Link to GEMA's online works search, set beside a separate login and registration option.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "DE"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page links to the search but does not say whether login is needed or what it omits."
+    },
+    {
+      "id": "tool-isrc-search",
+      "name": "ISRC Search",
+      "url": "https://isrc.soundexchange.com/",
+      "owner": "SoundExchange",
+      "group": "recordings",
+      "what": "Look up recording identifiers (ISRCs) held in SoundExchange data, to find or check a code for a track.",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "The tool page is script-driven; only the SoundExchange home page describes it as free and open."
+    },
+    {
+      "id": "tool-iswc-net",
+      "name": "ISWC Network",
+      "url": "https://iswcnet.cisac.org/",
+      "owner": "CISAC",
+      "group": "metadata",
+      "what": "Portal for looking up and managing international identifiers (ISWC) for musical works.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page content did not load for automated reading; access level unconfirmed."
+    },
+    {
+      "id": "tool-isni",
+      "name": "ISNI database",
+      "url": "https://isni.org/",
+      "owner": "ISNI International Agency",
+      "group": "metadata",
+      "what": "Public database of persistent identifiers for creators and organisations, useful to tell similarly named people apart.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Home page links to a search but does not say whether search is free or needs login."
+    },
+    {
+      "id": "tool-usco-public-records",
+      "name": "US Copyright Office Public Records",
+      "url": "https://publicrecords.copyright.gov/",
+      "owner": "US Copyright Office",
+      "group": "works-search",
+      "what": "Search copyright registrations and recorded documents held by the Copyright Office.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page content did not load for automated reading; coverage and access unconfirmed."
+    },
+    {
+      "id": "tool-ddex-validator",
+      "name": "DDEX Validator",
+      "url": "https://ddex-validator.ddex.net/",
+      "owner": "DDEX",
+      "group": "metadata",
+      "what": "Online checker for delivery messages in the DDEX standard before sending them to a service.",
+      "readers": [
+        "publisher-label",
+        "admin",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page content did not load for automated reading; supported messages and access unconfirmed."
+    },
+    {
+      "id": "tool-curve-royalty-tools",
+      "name": "Curve Royalty Tools",
+      "url": "https://tools.curveroyaltysystems.com/",
+      "owner": "Curve Royalty Systems",
+      "group": "splits-contracts",
+      "what": "Royalty calculation tools from a statement-software vendor.",
+      "readers": [
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Fetch returned HTTP 402; whether it is free, login or paid is unconfirmed."
+    },
+    {
+      "id": "tool-session-studio",
+      "name": "Session Studio",
+      "url": "https://www.sessionstudio.com/",
+      "owner": "Session Studio",
+      "group": "splits-contracts",
+      "what": "Collaboration app that records who did what on a song, to settle credits before release.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page says the app is free; it does not state whether an account is required."
+    },
+    {
+      "id": "tool-rapidcue",
+      "name": "RapidCue",
+      "url": "https://rapidcue.com/",
+      "owner": "RapidCue",
+      "group": "sync-cue",
+      "what": "Web app for submitting cue sheets, with links to ASCAP and BMI.",
+      "readers": [
+        "publisher-label",
+        "admin",
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page does not state what it does, who may use it, or the cost."
+    },
+    {
+      "id": "tool-valuepunks",
+      "name": "ValuePunks",
+      "url": "https://valuepunks.com/",
+      "owner": "ValuePunks",
+      "group": "valuation",
+      "what": "Catalogue valuation tool that gives a quick indicative range from revenue by rights type.",
+      "readers": [
+        "writer",
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "free-login",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page says free for artists, labels and songwriters; login need not confirmed."
+    },
+    {
+      "id": "tool-music-business-toolbox",
+      "name": "Music Business Toolbox",
+      "url": "https://musicbusinesstoolbox.com/",
+      "owner": "Music Business Toolbox",
+      "group": "splits-contracts",
+      "what": "Set of templates and calculators for splits, budgets and contracts, with a free tier and a paid tier.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page lists free and premium tiers; which tools are free and whether login is needed is unclear."
+    },
+    {
+      "id": "tool-songtrust-resources",
+      "name": "Songtrust resource centre",
+      "url": "https://www.songtrust.com/resource-center",
+      "owner": "Songtrust",
+      "group": "metadata",
+      "what": "Guides, checklists and a split sheet from a publishing administrator, plus a streaming-royalty estimator.",
+      "readers": [
+        "writer",
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Page does not say which items are free or need an email."
+    },
+    {
+      "id": "tool-hfa-songfile",
+      "name": "Harry Fox Agency",
+      "url": "https://www.harryfox.com/",
+      "owner": "Harry Fox Agency",
+      "group": "works-search",
+      "what": "Publisher-side rights agency; its older public Songfile search is a possible lookup.",
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "access": "unknown",
+      "status": "check",
+      "checked": "2026-11-20",
+      "note": "Blocked automated reading (403). Open by hand to confirm what it offers today."
+    }
+  ]
+}

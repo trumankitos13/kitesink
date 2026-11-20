@@ -1,0 +1,259 @@
+{
+  "kind": "claimable",
+  "rows": [
+    {
+      "id": "clm-mlc-unclaimed-accrued",
+      "holder": "The MLC",
+      "pot": "Unclaimed accrued US digital mechanicals under the blanket licence, 2021 usage onward",
+      "money_type": "mechanical",
+      "territory": [
+        "US"
+      ],
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "who_can_claim": "Songwriters, publishers and administrators whose songs earned US streaming mechanicals that the MLC could not match or pay out.",
+      "how_to_claim": "Register the songs with the MLC, claim any missing shares, and propose matches for unmatched recordings. Remaining money is then shared by market share.",
+      "rule": "The MLC plans to start market-share payouts in April 2027, beginning with January 2021 usage, one month at a time. This is a start date, not a deadline.",
+      "cost": "Free to join and register",
+      "link": "https://www.themlc.com/unclaimed-accrued-royalties",
+      "link_label": "Unclaimed accrued royalties",
+      "confidence": "official",
+      "sources": [
+        "mlc-unclaimed",
+        "mlc-pr-2026-09"
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "clm-mlc-historical-unmatched",
+      "holder": "The MLC",
+      "pot": "Historical unmatched US streaming mechanicals from 2007 to 2020",
+      "money_type": "mechanical",
+      "territory": [
+        "US"
+      ],
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "who_can_claim": "Owners of musical works used in US streaming before 2021 whose use the services could not match to a copyright owner.",
+      "how_to_claim": "Join the MLC, register your works, then use its matching tool to propose links between unmatched recordings and your songs. Approved matches are paid with interest.",
+      "rule": "As of November 2026 the MLC says its market-share process for what stays unmatched has not begun. It gives no claim cut-off date on the page.",
+      "cost": "Free to join and register",
+      "link": "https://www.themlc.com/historical-royalties",
+      "link_label": "Historical royalties",
+      "confidence": "official",
+      "sources": [
+        "mlc-historical"
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "clm-mlc-missing-members",
+      "holder": "The MLC",
+      "pot": "US digital mechanicals held for rightsholders who have not yet joined the MLC",
+      "money_type": "mechanical",
+      "territory": [
+        "US"
+      ],
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "who_can_claim": "Writers, publishers and collective bodies listed in the lookup under their own name or the name they collect under.",
+      "how_to_claim": "Search your name in the Missing Member Lookup. If it appears, sign up as an MLC Member to collect the digital audio mechanicals owed to you.",
+      "rule": "The lookup leaves out historical unmatched royalties, so a hit shows only part of what may be owed. The page states no claim cut-off.",
+      "cost": "Free lookup and free to join",
+      "link": "https://www.themlc.com/missing-members-lookup",
+      "link_label": "Missing Member Lookup",
+      "confidence": "official",
+      "sources": [
+        "mlc-missing-members",
+        "mlc-historical"
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "clm-songwriter-share-unclaimed",
+      "holder": "Publishers and administrators that receive unclaimed distributions",
+      "pot": "The songwriter's share of any unclaimed accrued royalties a publisher receives from the MLC",
+      "money_type": "mechanical",
+      "territory": [
+        "US"
+      ],
+      "readers": [
+        "writer",
+        "publisher-label",
+        "admin"
+      ],
+      "who_can_claim": "Songwriters whose works a publisher licenses or administers for US digital mechanicals, or their authorised agents.",
+      "how_to_claim": "When your publisher or administrator receives an MLC unclaimed distribution, ask for the payment or credit due to you and for the usage data behind it.",
+      "rule": "By statute the songwriter is paid or credited by usage, and never less than half of what the owner received for that songwriter's works, whatever the contract says.",
+      "cost": "No fee set by law",
+      "link": "https://www.law.cornell.edu/uscode/text/17/115",
+      "link_label": "17 USC 115(d)(3)(J)(iv)",
+      "confidence": "law",
+      "sources": [
+        "usc-115"
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "clm-soundexchange-unregistered",
+      "holder": "SoundExchange",
+      "pot": "US digital performance royalties for unregistered artists and sound recording owners",
+      "money_type": "neighboring",
+      "territory": [
+        "US"
+      ],
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "who_can_claim": "Recording artists, performers and sound recording owners who have not registered, and are named on recordings played on non-interactive services.",
+      "how_to_claim": "Use the search on SoundExchange's page to see if you appear on one of its unregistered lists. Then register for free and claim your recordings in SX Direct.",
+      "rule": "The page says registration is required to be paid. It gives no time limit for claiming, so check with SoundExchange before assuming money is safe.",
+      "cost": "Free to register",
+      "link": "https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/#are-you-owed-royalties",
+      "link_label": "Are you owed royalties?",
+      "confidence": "official",
+      "sources": [
+        "sx-owed"
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "clm-cmrra-unclaimed-works",
+      "holder": "CMRRA",
+      "pot": "Canadian online mechanicals for recordings or shares not yet matched to a work",
+      "money_type": "mechanical",
+      "territory": [
+        "CA"
+      ],
+      "readers": [
+        "publisher-label",
+        "admin",
+        "writer"
+      ],
+      "who_can_claim": "Publishers that own or control musical works and hold a CMRRA Direct account; writers usually go through their publisher.",
+      "how_to_claim": "Get a CMRRA Direct publisher account, open Unclaimed Works, match unmatched recordings to your works, and add missing ownership shares for review.",
+      "rule": "After CMRRA verifies the submission, its quarterly invoicing covers past and current use. The page gives no claim cut-off date.",
+      "cost": "No fee stated on the page",
+      "link": "https://cmrra.ca/unclaimed-works/",
+      "link_label": "Unclaimed Works Portal",
+      "confidence": "official",
+      "sources": [
+        "cmrra-unclaimed"
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "clm-ppl-performer-claim",
+      "holder": "PPL",
+      "pot": "UK recorded-music royalties for performers missing from a recording's line-up",
+      "money_type": "neighboring",
+      "territory": [
+        "UK"
+      ],
+      "readers": [
+        "artist",
+        "producer"
+      ],
+      "who_can_claim": "Performers on a recording in PPL's repertoire that was played in public or broadcast, if the performance qualifies by country or residence.",
+      "how_to_claim": "Join PPL as a performer and submit a performer claim in myPPL if you are not on the line-up. PPL may ask for evidence. Missing tracks go to the rightsholder.",
+      "rule": "The page states no claim deadline. It notes that UK performers' equitable remuneration rights last 70 years from when the recording is made or released.",
+      "cost": "No fee stated on the page",
+      "link": "https://www.ppluk.com/royalties/uk-royalties/performers/",
+      "link_label": "PPL performer claims",
+      "confidence": "official",
+      "sources": [
+        "ppl-performers"
+      ],
+      "as_of": "2026-11-20"
+    }
+  ],
+  "sources": {
+    "usc-115": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 115: Scope of exclusive rights in nondramatic musical works, compulsory license for making and distributing phonorecords",
+      "url": "https://www.law.cornell.edu/uscode/text/17/115",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Subsections (a) and (b) on eligibility and notices; (d) on the blanket license, MLC duties, holding, distribution of unclaimed accrued royalties, songwriter share and audits.",
+      "edition": "Title 17, section 115, as shown by LII"
+    },
+    "mlc-unclaimed": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "Unclaimed Accrued Royalties",
+      "url": "https://www.themlc.com/unclaimed-accrued-royalties",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Defines unclaimed accrued royalties as unmatched plus unclaimed; intends to begin distributions in April 2027 through market share, starting with January 2021 blanket usage; dashboard for 2021 usage."
+    },
+    "mlc-historical": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "Historical Royalties",
+      "url": "https://www.themlc.com/historical-royalties",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "2007 to 2020 streaming; 21 DSPs; liability limit for transfer by 15 Feb 2021; about $427M cut to about $397M; first matched payouts given as May 2022 and June 2022; market share for remainder not begun (Nov 2026 data).",
+      "edition": "Dashboard text states data current as of November 2026"
+    },
+    "mlc-missing-members": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "Missing Member Lookup",
+      "url": "https://www.themlc.com/missing-members-lookup",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "Searchable list of rightsholders not yet Members who may be owed US digital audio mechanicals; royalties shown exclude historical unmatched royalties."
+    },
+    "mlc-pr-2026-09": {
+      "type": "collective",
+      "publisher": "The Mechanical Licensing Collective",
+      "title": "The MLC Holds Annual Membership Meeting: Highlights More Than $4.2 Billion in Total Royalties Distributed and Announces Date of First Monthly Market Share Distribution",
+      "url": "https://www.themlc.com/news/the-mlc-holds-annual-membership-meeting-highlights-more-than-4.2-billion-in-total-royalties-distributed-and-announces-date-of-first-monthly-market-share-distribution",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-19",
+      "support": "30 September 2026: April 2027 start, one month at a time from January 2021; pro rata by DSP and offering; more than six years of matching; nearly $5B processed, $4.2B distributed; $239M historical; 100,000 Members; 60M works.",
+      "date": "2026-09-30"
+    },
+    "sx-owed": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "For artists, labels and producers: are you owed royalties?",
+      "url": "https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "'Are you owed royalties' section: registration needed to be paid; search with four unregistered lists; registration and SX Direct free; no time limit given. Fetch tool only (403 direct)."
+    },
+    "cmrra-unclaimed": {
+      "type": "collective",
+      "publisher": "CMRRA",
+      "title": "Unclaimed Works Portal",
+      "url": "https://cmrra.ca/unclaimed-works/",
+      "jurisdiction": "CA",
+      "retrieved": "2026-11-20",
+      "support": "Publishers with a CMRRA Direct account match unmatched recordings and add missing shares via the Unclaimed Works menu; quarterly invoicing follows. No fee stated. Fetch tool only (403 direct)."
+    },
+    "ppl-performers": {
+      "type": "collective",
+      "publisher": "PPL",
+      "title": "Performers: claiming and eligibility",
+      "url": "https://www.ppluk.com/royalties/uk-royalties/performers/",
+      "jurisdiction": "UK",
+      "retrieved": "2026-11-20",
+      "support": "Performer claim via myPPL if not on line-up; recording must be in repertoire and played or broadcast; qualifying-country rule; no fee or deadline stated. Fetch tool only (403 direct)."
+    }
+  }
+}
