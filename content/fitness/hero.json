@@ -16,7 +16,7 @@
     "travel": "Travel workout", "attempts": "Meet attempts", "plan": "Diet planner",
     "activity": "Activity multiplier", "bodyfat": "Navy body fat", "ffmi": "FFMI & goal weight",
     "zones": "Heart-rate zones", "comeback": "Coming back",
-    "sets": "Weekly sets"
+    "sets": "Weekly sets", "supplements": "Supplements"
   },
   "goals": [
     {

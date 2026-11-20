@@ -324,6 +324,18 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   same('sets: nothing entered is no band', F.setsBand(0, TD.sets), 'none');
 }
 
+// ---------- supplement checker: the guide's rows and entries, joined by name ----------
+{
+  same('caffeine: 3-6 mg per kg read from the guide', TD.caffeine.mgkg.join('-'), '3-6');
+  same('caffeine: 80 kg is 240-480 mg', F.caffeine(80, TD.caffeine.mgkg).join('-'), '240-480');
+  ok('caffeine: no weight, no dose', F.caffeine(NaN, TD.caffeine.mgkg) === null);
+  const items = F.suppItems(TD), byName = n => items.find(x => x.name.toLowerCase() === n.toLowerCase());
+  ok('supplements: one item per name; caffeine joins both tables and its entries', items.filter(x => /^caffeine$/i.test(x.name)).length === 1 && byName('Caffeine').row && byName('Caffeine').fat && byName('Caffeine').entries.length === 2);
+  ok('supplements: every row of both tables is an item', TD.supps.rows.every(r => byName(r.name)) && TD.fatLoss.rows.every(r => byName(r.name)));
+  ok('supplements: every single entry the build resolved has a title, short answer, grade and home', TD.suppItems.every(g => g.entries.length && g.entries.every(e => e.t && e.take && e.cl && /^\/fitness\/[a-z-]+#/.test(e.href))));
+  ok('supplements: the fat-loss rows carry findings and cautions, no dose', TD.fatLoss.rows.every(r => r.found && r.cautions && !('dose' in r)));
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);

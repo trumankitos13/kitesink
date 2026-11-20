@@ -507,6 +507,24 @@
     return r;
   };
 
+  /* ---------- supplements ----------
+     caffeine(kg, mgkg): the dose range studied (nut-num-caffeine, mg per kg) for a body weight.
+     suppItems(D): one list from #tool-data: the supplement table's rows, the fat-loss table's rows
+     and the single entries, joined by name (the caffeine row of each table is one item). */
+  F.caffeine = function (kg, mgkg) { return kg > 0 && mgkg ? [Math.round(kg * mgkg[0]), Math.round(kg * mgkg[1])] : null; };
+  F.suppItems = function (D) {
+    var out = [], by = {};
+    function item(name, group) {
+      var k = name.toLowerCase();
+      if (!by[k]) { by[k] = { name: name, group: group, entries: [] }; out.push(by[k]); }
+      return by[k];
+    }
+    ((D.supps || {}).rows || []).forEach(function (r) { item(r.name, "lift").row = r; });
+    ((D.fatLoss || {}).rows || []).forEach(function (r) { item(r.name, "fat").fat = r; });
+    (D.suppItems || []).forEach(function (g) { var it = item(g.name, g.group || "health"); it.entries = it.entries.concat(g.entries); });
+    return out;
+  };
+
   /* ---------- weekly sets per muscle ----------
      weeklySets: direct sets plus helper sets at the guide's credit (half, hyp-volume-dose-response).
      setsBand(n, D): D is #tool-data's sets: below the general line (at least min), meets it, inside
@@ -1595,6 +1613,57 @@
       say("ff-say", "FFMI " + num(r.ffmi, 1) + ". Lean mass " + mass(r.lean) + "." + (r.goal != null ? " At " + target + " percent body fat, if lean mass holds: " + mass(r.goal) + "." : ""));
     }
     show(); calc();
+  });
+
+  /* ---------- supplement checker ----------
+     A filter and a button per supplement; the card prints the guide's rows and entries for it, in
+     its words. Only caffeine is worked out, for My numbers' weight (example 75 kg). Saves nothing. */
+  boot(function () {
+    if (!$("supplements")) return;
+    var TD = toolData(), ITEMS = F.suppItems(TD), cur = 0, EXKG = 75;
+    var GROUPS = [["lift", "For lifters"], ["fat", "Sold for fat loss"], ["health", "Health and other"]];
+    $("sp-pick").innerHTML = GROUPS.map(function (g) {
+      return '<div class="sp-grp" data-g="' + g[0] + '" role="group" aria-labelledby="sp-g-' + g[0] + '"><p class="k-label" id="sp-g-' + g[0] + '">' + g[1] + '</p><div class="k-chips">' +
+        ITEMS.map(function (it, i) { return it.group === g[0] ? '<button class="k-tog" type="button" data-i="' + i + '" aria-pressed="false">' + esc(it.name) + "</button>" : ""; }).join("") + "</div></div>";
+    }).join("");
+    function badge(cls, label) { return '<span class="fx-badge ' + esc(cls) + '">' + esc(label) + "</span>"; }
+    function card(e) {
+      return '<div class="te"><p class="te-top"><span>' + esc(e.area) + "</span>" + badge(e.c, e.cl) + '</p><p class="te-t"><a href="' + esc(e.href) + '">' + esc(e.t) + '</a></p><p class="te-s">' + esc(e.take) + "</p>" +
+        (e.do && e.do.length ? '<ul class="te-do">' + e.do.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
+    }
+    function src(d) { return '<small>From the guide’s <a href="' + esc(d.href) + '">' + esc(d.title.charAt(0).toLowerCase() + d.title.slice(1)) + "</a>.</small>"; }
+    function show(i, announce) {
+      cur = i; var it = ITEMS[i]; if (!it) return;
+      [].forEach.call($("sp-pick").querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", +b.getAttribute("data-i") === i ? "true" : "false"); });
+      var h = '<div class="sp-card"><div class="sp-top"><p class="k-label">Supplement</p>' + (it.row ? badge(it.row.evidence.split(" ")[0].toLowerCase(), "Evidence: " + it.row.evidence) : "") + "</div><h3>" + esc(it.name) + "</h3><dl class=\"sp-kv\">";
+      if (it.row) h += "<div><dt>What it does</dt><dd>" + esc(it.row.does) + "</dd></div><div><dt>Typical dose</dt><dd>" + esc(it.row.dose) + src(TD.supps) + "</dd></div>";
+      if (it.fat) h += "<div><dt>For fat loss, what trials found</dt><dd>" + esc(it.fat.found) + "</dd></div><div><dt>Cautions</dt><dd>" + esc(it.fat.cautions) + src(TD.fatLoss) + "</dd></div>";
+      h += "</dl>";
+      var caf = /^caffeine$/i.test(it.name) && TD.caffeine, kg = ME.val("kg", EXKG);
+      if (caf) {
+        var r = F.caffeine(kg, TD.caffeine.mgkg);
+        h += '<p class="sp-dose">For ' + num(kg, 1) + " kg: <b>" + r[0] + "\u2013" + r[1] + " mg</b>: " + TD.caffeine.mgkg[0] + " to " + TD.caffeine.mgkg[1] + ' mg per kg, the range in <a href="' + esc(TD.caffeine.href) + '">the dose card below</a>, times your weight.</p>';
+      }
+      h += it.entries.length ? '<div class="te-list te-list--one">' + it.entries.map(card).join("") + "</div>" : "";
+      h += "</div>";
+      $("sp-card").innerHTML = h;
+      exampleNote($("sp-ex"), caf && !ME.has("kg") ? ["weight"] : []);
+      if (announce) say("sp-say", it.name + (it.row ? ". Evidence: " + it.row.evidence + "." : "."));
+    }
+    $("sp-pick").addEventListener("click", function (e) { var b = e.target.closest("button[data-i]"); if (b) show(+b.getAttribute("data-i"), true); });
+    $("sp-q").addEventListener("input", function () {
+      var q = $("sp-q").value.trim().toLowerCase(), n = 0, first = -1;
+      [].forEach.call($("sp-pick").querySelectorAll("button"), function (b) {
+        var i = +b.getAttribute("data-i"), it = ITEMS[i];
+        var text = [it.name, it.row && it.row.does, it.fat && it.fat.found].concat(it.entries.map(function (e) { return e.t; })).join(" ").toLowerCase();
+        var hit = !q || text.indexOf(q) >= 0; b.hidden = !hit; if (hit) { n++; if (first < 0) first = i; }
+      });
+      [].forEach.call($("sp-pick").querySelectorAll(".sp-grp"), function (g) { g.hidden = !g.querySelector("button:not([hidden])"); });
+      $("sp-count").textContent = !q ? "" : n ? n + (n === 1 ? " match." : " matches.") : "Nothing in the guide by that name. Try one word.";
+      if (q && n && ITEMS[cur] && $("sp-pick").querySelector('button[data-i="' + cur + '"]').hidden) show(first, true);
+    });
+    onMe(function (keys) { if (hits(keys, ["kg"])) show(cur); });
+    show(0);
   });
 
   /* ---------- 8. activity multiplier ----------
