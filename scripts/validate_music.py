@@ -5,8 +5,11 @@ Checks the schema in content/music/WRITING-BRIEF.md: ids, types, enums (readers,
 confidence), writing limits, as_of on anything that moves, every cited source defined and
 every defined source cited, source fields by type, and that each source URL answers.
 A URL that is blocked (401, 403, 429) is a warning: the owner checks it by hand.
+The three data files (claimable.json, tools.json, rates.json) are recognised by their "kind"
+key and checked against content/music/DATA-PAGES.md instead.
 Exit 1 on any error."""
 import json, re, sys, urllib.request, urllib.error
+from collections import Counter
 from datetime import date
 from pathlib import Path
 
@@ -94,11 +97,211 @@ def entry_text(e):
         parts += g.get("items") or []
     return " ".join(p for p in parts if isinstance(p, str))
 
+def check_sources(path, sources, used, offline):
+    """Every defined source cited, and each source's fields and URL (the same rules for every file)."""
+    for key in sources:
+        if key not in used: err(f"{path}: source {key!r} is never cited")
+    for key, s in sources.items():
+        w = f"{path} source {key}"
+        if not ID_RE.match(key): err(f"{w}: key must be lowercase-hyphenated, e.g. fr-2025-21695")
+        st = s.get("type")
+        if st not in SRC_TYPES: err(f"{w}: type must be one of {sorted(SRC_TYPES)}")
+        for f in ("title", "url", "retrieved"):
+            if not s.get(f): err(f"{w}: missing {f}")
+        if st == "article":
+            if not s.get("site"): err(f"{w}: an article needs site (the publication's name)")
+            if not s.get("authors"): warn(f"{w}: an article usually names its authors; give them if published")
+            if len(s.get("support", "")) > 240: err(f"{w}: support for an article is a pointer in your own words, 240 characters at most")
+        elif not s.get("publisher"):
+            err(f"{w}: needs publisher (the body that issued it)")
+        if st == "ruling":
+            for f in ("court", "docket", "date"):
+                if not s.get(f): err(f"{w}: a ruling needs {f}")
+        if st in ("collective", "standard", "dataset", "other") and len(s.get("support", "")) > 240:
+            err(f"{w}: support is a pointer in your own words, 240 characters at most")
+        check_date("retrieved", s.get("retrieved"), w, True)
+        if s.get("date"): check_date("date", s.get("date"), w, False)
+        url = s.get("url")
+        if url and not url.startswith("https://"): warn(f"{w}: url is not https")
+        if url and not offline:
+            code = url_status(url)
+            if code in (401, 403, 429): warn(f"{w}: URL blocked automated reading ({code}); owner checks by hand: {url}")
+            elif code != 200: err(f"{w}: URL answered {code}: {url}")
+
+# ----------------------------------------------------------------- the three data files (DATA-PAGES.md)
+MONEY_TYPES = {"mechanical", "performance", "neighboring", "other"}
+TOOL_GROUPS = ["works-search", "recordings", "unclaimed", "metadata", "splits-contracts", "sync-cue", "valuation"]
+ACCESS = {"free-no-login", "free-login", "members", "licensees", "paid", "unknown"}
+TOOL_STATUS = {"verified", "check"}
+
+def check_text(w, label, v):
+    """The voice and standing-correction rules, for any published string."""
+    if not isinstance(v, str):
+        return
+    if "—" in v: err(f"{w}: {label} uses an em dash; use a full stop, comma or colon")
+    for rx, why in STANDING:
+        if rx.search(v): err(f"{w}: {label}: standing correction: {why}")
+    if re.search(r"\b(game[- ]changer|unlock|supercharge|secret|hack|skyrocket)\b", v, re.I): warn(f"{w}: {label} sounds like marketing")
+    if re.search(r"\byou should (sign|terminate|sue|file suit)\b", v, re.I): err(f"{w}: {label} reads as legal advice")
+
+def check_list(w, label, v, allowed, lo=1, hi=None):
+    if not isinstance(v, list) or len(v) < lo or (hi and len(v) > hi) or any(x not in allowed for x in v) or len(set(v)) != len(v):
+        err(f"{w}: {label}: {lo}-{hi or 'any'} distinct of {sorted(allowed)}")
+
+def check_link(w, label, url, offline, required=True, hard=True):
+    """A link a page shows (not a source): https, and it answers. hard=False turns a bad answer into a warning."""
+    if not url:
+        if required: err(f"{w}: {label} is missing")
+        return
+    if not isinstance(url, str) or not url.startswith("https://"):
+        err(f"{w}: {label} must be an https:// address"); return
+    if offline:
+        return
+    code = url_status(url)
+    if code in (401, 403, 429): warn(f"{w}: {label} blocked automated reading ({code}); owner checks by hand: {url}")
+    elif code != 200: (err if hard else warn)(f"{w}: {label} answered {code}: {url}")
+
+def cite(w, srcs, sources, used, conf=None):
+    if not isinstance(srcs, list) or not srcs:
+        err(f"{w}: needs at least one source"); return
+    for k in srcs:
+        if k not in sources: err(f"{w}: source key {k!r} is not defined")
+        used.add(k)
+    if conf in ("law", "official"):
+        best = max((RANK[GRADE_FROM.get(sources.get(k, {}).get("type"), "reported")] for k in srcs), default=0)
+        if best < RANK[conf]:
+            err(f"{w}: confidence {conf} needs a source of that kind (law: statute, regulation or ruling; official: the responsible body's own document)")
+
+def check_claimable(path, data, offline):
+    sources = data.get("sources")
+    if not isinstance(sources, dict): err(f"{path}: needs a sources object"); sources = {}
+    rows = data.get("rows")
+    if not isinstance(rows, list) or not rows: err(f"{path}: needs rows, a non-empty list"); rows = []
+    used, ids = set(), set()
+    for i, r in enumerate(rows):
+        w = f"{path} row {i} ({r.get('id')})"
+        rid = r.get("id", "")
+        if not ID_RE.match(rid) or not rid.startswith("clm-"): err(f"{w}: id must be lowercase-hyphenated and start with clm-")
+        if rid in ids: err(f"{w}: duplicate id")
+        ids.add(rid)
+        text_len("holder", r.get("holder"), 2, 80, w)
+        text_len("pot", r.get("pot"), 20, 200, w)
+        text_len("who_can_claim", r.get("who_can_claim"), 20, 200, w)
+        text_len("how_to_claim", r.get("how_to_claim"), 20, 240, w)
+        text_len("rule", r.get("rule"), 20, 200, w)
+        text_len("cost", r.get("cost"), 2, 60, w)
+        text_len("link_label", r.get("link_label"), 2, 40, w)
+        if r.get("money_type") not in MONEY_TYPES: err(f"{w}: money_type must be one of {sorted(MONEY_TYPES)}")
+        check_list(w, "territory", r.get("territory"), TERRITORY)
+        check_list(w, "readers", r.get("readers"), READERS, 1, 5)
+        if r.get("confidence") not in ("law", "official"):
+            err(f"{w}: confidence must be law or official; a row the holder's own page or the law does not back goes to HOLDS.md")
+        cite(w, r.get("sources"), sources, used, r.get("confidence"))
+        check_date("as_of", r.get("as_of"), w, True)
+        check_link(w, "link", r.get("link"), offline)
+        for f in ("holder", "pot", "who_can_claim", "how_to_claim", "rule", "cost", "link_label"):
+            check_text(w, f, r.get(f))
+    check_sources(path, sources, used, offline)
+    return len(rows), Counter(r.get("money_type") for r in rows)
+
+def check_tools(path, data, offline):
+    groups = data.get("groups")
+    if not isinstance(groups, list) or not groups: err(f"{path}: needs groups, a non-empty list"); groups = []
+    gids = [g.get("id") for g in groups]
+    for g in groups:
+        if g.get("id") not in TOOL_GROUPS: err(f"{path}: group {g.get('id')!r} is not one of the fixed groups {TOOL_GROUPS}")
+        if not g.get("label"): err(f"{path}: group {g.get('id')!r} has no label")
+    if len(set(gids)) != len(gids): err(f"{path}: a group is listed twice")
+    tools = data.get("tools")
+    if not isinstance(tools, list) or not tools: err(f"{path}: needs tools, a non-empty list"); tools = []
+    ids = set()
+    for i, t in enumerate(tools):
+        w = f"{path} tool {i} ({t.get('id')})"
+        tid = t.get("id", "")
+        if not ID_RE.match(tid) or not tid.startswith("tool-"): err(f"{w}: id must be lowercase-hyphenated and start with tool-")
+        if tid in ids: err(f"{w}: duplicate id")
+        ids.add(tid)
+        text_len("name", t.get("name"), 2, 80, w)
+        text_len("owner", t.get("owner"), 2, 80, w)
+        text_len("what", t.get("what"), 30, 160, w)
+        if t.get("note") is not None: text_len("note", t.get("note"), 1, 140, w)
+        if t.get("group") not in gids: err(f"{w}: group {t.get('group')!r} is not one of this file's groups")
+        check_list(w, "readers", t.get("readers"), READERS, 1, 5)
+        check_list(w, "territory", t.get("territory"), TERRITORY)
+        if t.get("access") not in ACCESS: err(f"{w}: access must be one of {sorted(ACCESS)}")
+        status = t.get("status")
+        if status not in TOOL_STATUS: err(f"{w}: status must be verified or check")
+        check_date("checked", t.get("checked"), w, status == "verified")
+        # a verified tool was opened by the writer and the reviewer: a dead link is an error; a 'check' row only warns
+        check_link(w, "url", t.get("url"), offline, hard=status == "verified")
+        for f in ("name", "owner", "what", "note"):
+            check_text(w, f, t.get(f))
+    return len(tools), Counter(t.get("status") for t in tools)
+
+def is_num(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+def check_rates(path, data, offline):
+    sources = data.get("sources")
+    if not isinstance(sources, dict): err(f"{path}: needs a sources object"); sources = {}
+    used = set()
+    check_date("as_of", data.get("as_of"), path, True)
+    phys = data.get("physical")
+    if not isinstance(phys, list) or not phys:
+        err(f"{path}: physical needs at least one year: the calculator cannot run without one"); phys = []
+    def years(rows, label):
+        seen = set()
+        for i, r in enumerate(rows):
+            w = f"{path} {label} {i} ({r.get('year')})"
+            y = r.get("year")
+            if not isinstance(y, int) or isinstance(y, bool) or not (2000 <= y <= 2100): err(f"{w}: year must be a whole year like 2026")
+            elif y in seen: err(f"{w}: the year {y} is listed twice")
+            else:
+                seen.add(y)
+                if not (2023 <= y <= 2027): warn(f"{w}: {y} is outside Phonorecords IV (2023-2027); check the source")
+            cite(w, r.get("sources"), sources, used)
+            yield w, r
+    for w, r in years(phys, "physical"):
+        pw, pm = r.get("per_work_cents"), r.get("per_minute_cents")
+        if not is_num(pw) or pw <= 0: err(f"{w}: per_work_cents must be a positive number")
+        if not is_num(pm) or pm <= 0: err(f"{w}: per_minute_cents must be a positive number")
+        if is_num(pw) and is_num(pm) and pw > 0 and pm > 0:
+            if pm >= pw: err(f"{w}: per_minute_cents should be well below per_work_cents; check the figures")
+            # the calculator's maths (DATA-PAGES.md section 3) on a 5:01 track, in hundredths of a cent
+            hw, hm = round(pw * 100), round(pm * 100)
+            if abs(hw - pw * 100) > 1e-6 or abs(hm - pm * 100) > 1e-6:
+                err(f"{w}: rates are given to at most two decimal places of a cent")
+            per_copy = max(hw, hm * 6)
+            if per_copy <= 0: err(f"{w}: the calculator would give no rate")
+    sp = data.get("streaming_revenue_percent", [])
+    if not isinstance(sp, list): err(f"{path}: streaming_revenue_percent must be a list"); sp = []
+    for w, r in years(sp, "streaming_revenue_percent"):
+        v = r.get("percent")
+        if not is_num(v) or not (0 < v < 100): err(f"{w}: percent must be a number between 0 and 100")
+    ring = data.get("ringtone_cents")
+    if ring is not None:
+        w = f"{path} ringtone_cents"
+        if not isinstance(ring, dict) or not is_num(ring.get("value")) or ring.get("value") <= 0:
+            err(f"{w}: needs value, a positive number")
+        else:
+            cite(w, ring.get("sources"), sources, used)
+    check_sources(path, sources, used, offline)
+    return len(phys), Counter({"physical years": len(phys), "streaming years": len(sp)})
+
+DATA_KINDS = {"claimable": check_claimable, "tools": check_tools, "rates": check_rates}
+
+
 def check_file(path, offline):
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
     except Exception as e:
         err(f"{path}: not valid JSON ({e})"); return None
+    if "kind" in data:
+        if data["kind"] not in DATA_KINDS:
+            err(f"{path}: kind must be one of {sorted(DATA_KINDS)}"); return None
+        n, tally = DATA_KINDS[data["kind"]](path, data, offline)
+        print(f"{path}: {data['kind']}, {n} rows {dict(tally)}; {len(data.get('sources', {}))} sources")
+        return None
     dom = data.get("domain")
     if dom not in DOMAINS | {"claims"}:
         err(f"{path}: domain must be one of {sorted(DOMAINS | {'claims'})}")
@@ -187,34 +390,7 @@ def check_file(path, offline):
             if "—" in v: err(f"{w}: {field} uses an em dash; use a full stop, comma or colon")
             if re.search(r"\b(game[- ]changer|unlock|supercharge|secret|hack|skyrocket)\b", v, re.I): warn(f"{w}: {field} sounds like marketing")
             if re.search(r"\byou should (sign|terminate|sue|file suit)\b", v, re.I): err(f"{w}: {field} reads as legal advice")
-    for key in sources:
-        if key not in used: err(f"{path}: source {key!r} is never cited")
-    for key, s in sources.items():
-        w = f"{path} source {key}"
-        if not ID_RE.match(key): err(f"{w}: key must be lowercase-hyphenated, e.g. fr-2025-21695")
-        st = s.get("type")
-        if st not in SRC_TYPES: err(f"{w}: type must be one of {sorted(SRC_TYPES)}")
-        for f in ("title", "url", "retrieved"):
-            if not s.get(f): err(f"{w}: missing {f}")
-        if st == "article":
-            if not s.get("site"): err(f"{w}: an article needs site (the publication's name)")
-            if not s.get("authors"): warn(f"{w}: an article usually names its authors; give them if published")
-            if len(s.get("support", "")) > 240: err(f"{w}: support for an article is a pointer in your own words, 240 characters at most")
-        elif not s.get("publisher"):
-            err(f"{w}: needs publisher (the body that issued it)")
-        if st == "ruling":
-            for f in ("court", "docket", "date"):
-                if not s.get(f): err(f"{w}: a ruling needs {f}")
-        if st in ("collective", "standard", "dataset", "other") and len(s.get("support", "")) > 240:
-            err(f"{w}: support is a pointer in your own words, 240 characters at most")
-        check_date("retrieved", s.get("retrieved"), w, True)
-        if s.get("date"): check_date("date", s.get("date"), w, False)
-        url = s.get("url")
-        if url and not url.startswith("https://"): warn(f"{w}: url is not https")
-        if url and not offline:
-            code = url_status(url)
-            if code in (401, 403, 429): warn(f"{w}: URL blocked automated reading ({code}); owner checks by hand: {url}")
-            elif code != 200: err(f"{w}: URL answered {code}: {url}")
+    check_sources(path, sources, used, offline)
     return data
 
 def main():
@@ -223,7 +399,6 @@ def main():
     if not args:
         print(__doc__); return 2
     total = 0
-    from collections import Counter
     for p in args:
         d = check_file(p, offline)
         if d:
