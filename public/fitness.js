@@ -458,9 +458,9 @@
     { id: "high", n: "High", d: "Construction or other hard labour", steps: "20,000 steps or more", m: 1.5 }
   ];
   F.EXERCISE = [
-    { id: "aer1", n: "Cardio, low", d: "HR \u2264130", m: 0.2 },
-    { id: "aer2", n: "Cardio, medium", d: "HR 130\u2013155", m: 0.3 },
-    { id: "aer3", n: "Cardio, high", d: "HR 155\u2013180", m: 0.4 },
+    { id: "aer1", n: "Cardio, low", d: "HR \u2264130", m: 0.2, hr: 130 },      // hr: the band's top, beats a minute
+    { id: "aer2", n: "Cardio, medium", d: "HR 130\u2013155", m: 0.3, hr: 155 },
+    { id: "aer3", n: "Cardio, high", d: "HR 155\u2013180", m: 0.4, hr: 180 },
     { id: "hiit", n: "HIIT", d: "", m: 0.3 },
     { id: "wt1", n: "Weight training, moderate", d: "", m: 0.1 },
     { id: "wt2", n: "Weight training, high intensity", d: "", m: 0.2 }
@@ -505,6 +505,30 @@
     var r = { fat: fat, lean: lean, ffmi: v, norm: N ? v + N.k * (N.h - m) : NaN, goal: null, lose: null };
     if (o.target > 0 && o.target < o.bf) { r.goal = lean / (1 - o.target / 100); r.lose = o.kg - r.goal; }
     return r;
+  };
+
+  /* ---------- heart-rate zones ----------
+     hrMax(age, D): D is #tool-data's hrMax, the guide's age formula (a - b x age; 208 - 0.7 x age,
+     Tanaka). hrPick: a measured maximum, when there is one in range, wins over the formula.
+     zones(max, rows): rows are the five-zone scale's % of max; each bound rounds to a beat.
+     hrBand(bpm): the activity multiplier's fixed cardio band a heart rate falls in (KiteSink's). */
+  F.hrMax = function (age, D) { return D && age >= 16 && age <= 95 ? D.a - D.b * age : NaN; };
+  F.hrPick = function (o, D) {
+    var given = o.max !== "" && o.max != null, max = given ? +o.max : NaN, rest = o.rest === "" || o.rest == null ? NaN : +o.rest, r = {};
+    if (given && !(max >= 100 && max <= 230)) { r.err = "max"; return r; }   // a maximum typed wrong is not swapped for the formula
+    if (given) { r.max = max; r.from = "max"; }
+    else if (o.age >= 16 && o.age <= 95) { r.max = F.hrMax(+o.age, D); r.from = "age"; }
+    else { r.err = "age"; return r; }
+    if (isFinite(rest)) { if (rest < 30 || rest > 110) r.restErr = "range"; else if (rest >= r.max) r.restErr = "max"; else r.rest = rest; }
+    return r;
+  };
+  F.zones = function (max, rows) {
+    return (rows || []).map(function (z) { return { zone: z.zone, pct: z.pct, lo: Math.round(max * z.pct[0] / 100), hi: Math.round(max * z.pct[1] / 100) }; });
+  };
+  F.hrBand = function (bpm) {
+    var c = F.EXERCISE.filter(function (e) { return e.hr; });
+    for (var i = 0; i < c.length; i++) if (bpm <= c[i].hr) return c[i];
+    return null;
   };
 
   /* ---------- weight class finder ----------
@@ -1103,6 +1127,62 @@
       store.set({ loadUnits: u, loadKg: liftKg, loadReps: reps, loadRir: rir, loadFx: fx.get() });
     }
     calc();
+  });
+
+  /* ---------- heart-rate zones ----------
+     Age, a measured maximum and resting heart rate are My numbers (example age: 40). The five
+     zones, how they feel, the talk test and the time in each come from the guide's two zone tables. */
+  boot(function () {
+    if (!$("zones")) return;
+    var TD = toolData(), ROWS = TD.zones ? TD.zones.rows : [], FEEL = TD.zoneFeel ? TD.zoneFeel.rows : [], EXAGE = val("z-age"), hz = saved.hz || {};
+    var src = seg($("z-src"), ME.has("hrMax") ? "max" : hz.src, "age", function () { paintSrc(); calc(); });
+    $("z-age").value = ME.val("age", EXAGE);
+    $("z-max").value = ME.val("hrMax", "");
+    $("z-rest").value = ME.val("hrRest", "");
+    function paintSrc() { var m = src.get() === "max"; $("z-age-wrap").hidden = m; $("z-max-wrap").hidden = !m; }
+    $("z-age").addEventListener("input", function () { ME.set({ age: val("z-age") }); calc(); });
+    $("z-max").addEventListener("input", function () { ME.set({ hrMax: val("z-max") }); calc(); });
+    $("z-rest").addEventListener("input", function () { ME.set({ hrRest: val("z-rest") }); calc(); });
+    onMe(function (keys) {
+      if (hits(keys, ["age"])) setField($("z-age"), ME.val("age", EXAGE));
+      if (hits(keys, ["hrMax"])) setField($("z-max"), ME.val("hrMax", ""));
+      if (hits(keys, ["hrRest"])) setField($("z-rest"), ME.val("hrRest", ""));
+      if (hits(keys, ["age", "hrMax", "hrRest"])) calc();
+    });
+    var COL = ["#8fc39b", "#b9cf8c", "#d8b07a", "#e3936e", "#e07a6a"];
+    function calc() {
+      var useMax = src.get() === "max", r = F.hrPick({ age: val("z-age"), max: useMax ? $("z-max").value : "", rest: $("z-rest").value }, TD.hrMax);
+      store.set({ hz: { src: src.get() } });
+      var ok = isFinite(r.max), out = $("z-out");
+      out.classList.toggle("is-empty", !ok);
+      exampleNote($("z-ex"), ok && !useMax && !ME.has("age") ? ["age"] : []);
+      if (!ok) {
+        $("z-hrmax").textContent = "\u2014";
+        $("z-sub").textContent = useMax ? "Enter a maximum between 100 and 230 beats a minute." : "Enter an age between 16 and 95.";
+        say("z-say", $("z-sub").textContent); return;
+      }
+      var max = Math.round(r.max);
+      $("z-hrmax").textContent = max;
+      $("z-sub").innerHTML = r.from === "max" ? "Your measured maximum." : esc(TD.hrMax.a + " \u2212 " + TD.hrMax.b + " \u00d7 " + val("z-age") + " = " + num(r.max, 1)) +
+        ", <a href=\"" + esc(TD.hrMax.href) + "\">the age formula</a>. It gives the average for your age, not your own maximum.";
+      $("z-list").innerHTML = F.zones(max, ROWS).map(function (z, i) {
+        var f = FEEL[i] || {}, mid = (z.lo + z.hi) / 2, band = F.hrBand(mid);
+        return '<li style="--z:' + COL[i] + '"><p class="zh">Zone ' + z.zone + (f.name ? " \u00b7 " + esc(f.name) : "") + "<b>" + z.lo + "\u2013" + z.hi + " bpm</b></p>" +
+          "<span>" + esc(f.feel || "") + (f.talk ? ". Talk test: " + esc(f.talk.charAt(0).toLowerCase() + f.talk.slice(1)) : "") + ".</span>" +
+          "<small>" + z.pct[0] + "\u2013" + z.pct[1] + "% of max \u00b7 " + esc((ROWS[i] || {}).time || "") + " a session on the Norwegian scale \u00b7 activity multiplier: " + (band ? esc(band.n.toLowerCase()) : "above its highest band") + "</small></li>";
+      }).join("");
+      var R = TD.hrRest, rest = r.rest, txt = "";
+      if (r.restErr === "max") txt = "A resting heart rate must be below the maximum. Check the two numbers.";
+      else if (r.restErr) txt = "Enter a resting heart rate between 30 and 110, measured after 10 minutes at rest.";
+      else if (isFinite(rest)) txt = "Resting " + rest + " bpm: " + (rest < R.athlete[0] ? "below the " + R.athlete[0] + " to " + R.athlete[1] + " given for well-trained athletes"
+        : rest < R.adult[0] ? "inside the " + R.athlete[0] + " to " + R.athlete[1] + " given for well-trained athletes, below the adult range of " + R.adult[0] + " to " + R.adult[1]
+        : rest <= R.adult[1] ? "inside the adult range of " + R.adult[0] + " to " + R.adult[1] : "above the adult range of " + R.adult[0] + " to " + R.adult[1]) +
+        ". Readings that stay high or low are worth raising with a clinician.";
+      $("z-rest-read").innerHTML = txt ? esc(txt) + ' <a href="' + esc(R.href) + '">Resting heart rate in the guide</a>.' : "";
+      var zs = F.zones(max, ROWS);
+      say("z-say", "Maximum " + max + " beats a minute. " + zs.map(function (z) { return "Zone " + z.zone + ": " + z.lo + " to " + z.hi; }).join(". ") + "." + (txt ? " " + txt : ""));
+    }
+    paintSrc(); calc();
   });
 
   /* ---------- 4. travel workout ---------- */

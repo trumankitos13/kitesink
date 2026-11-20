@@ -481,6 +481,15 @@
   .te-wrap { display: grid; gap: 8px; }
   .te-wrap[hidden] { display: none; }
 
+  /* heart-rate zones */
+  .zl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .zl li { display: grid; gap: 3px; padding: 10px 0 10px 12px; border-top: 1px solid rgba(240,232,214,.14); border-left: 3px solid var(--z, rgba(240,232,214,.3)); }
+  .zl .zh { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font: 600 15px/1.3 var(--k-sans); color: #f0e8d6; }
+  .zl .zh b { font: 700 15px/1.3 var(--k-mono); color: #d8b07a; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .zl span { font-size: 13px; line-height: 1.45; color: #c2ceb9; }
+  .zl small { font: 500 11.5px/1.45 var(--k-mono); color: #a9b9a3; }
+  .te-list--one { grid-template-columns: minmax(0, 1fr); }
+
   /* meet attempt planner */
   .wc { margin-top: 18px; display: grid; gap: 18px; }
   @media (min-width: 920px) { .wc { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .wc-cards { grid-column: 1 / -1; } }
@@ -684,6 +693,7 @@
             <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
             <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
             <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+            <button type="button" role="tab" id="tab-zones" aria-controls="zones" aria-selected="false">Heart-rate zones</button>
             <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
           </div>
         </div>
@@ -835,6 +845,35 @@
               <tbody id="l-rows"></tbody>
             </table>
             <p class="k-small">For sets of up to ten reps the estimate is the average of two published equations, Epley’s and Brzycki’s, shown above; past ten it is Epley’s alone, and the two meet at ten. A set stopped short of failure counts its reps in reserve as reps. Every load on this card inverts that same estimate, so the numbers agree with each other. Both equations work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. {{c:brzycki1993,reynolds2006,lesuer1997}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- heart-rate zones: the guide's five-zone scale on your maximum ---------- -->
+      <div class="tool" id="zones" role="tabpanel" aria-labelledby="tab-zones">
+        <p class="k-copy tool-intro">Five heart-rate zones as shares of your maximum, from the {{e:cond-table-five-zone-scale|five-zone scale}} used in Norwegian endurance sport, with how each one feels and the talk test. A maximum you have measured beats one from your age.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-field"><span class="k-label" id="z-src-l">Maximum heart rate from</span><div class="k-seg" id="z-src" role="group" aria-labelledby="z-src-l"><button type="button" value="age">My age</button><button type="button" value="max">My measured max</button></div></div>
+            <div class="row2">
+              <label class="k-field" id="z-age-wrap"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="z-age" type="number" inputmode="numeric" min="16" max="95" value="40"><span>yr</span></span></label>
+              <label class="k-field" id="z-max-wrap" hidden><span class="k-label">Maximum heart rate</span><span class="with-unit"><input class="k-input" id="z-max" type="number" inputmode="numeric" min="100" max="230" placeholder="—"><span>bpm</span></span></label>
+              <label class="k-field"><span class="k-label">Resting heart rate <span class="k-opt">optional</span></span><span class="with-unit"><input class="k-input" id="z-rest" type="number" inputmode="numeric" min="30" max="110" placeholder="—"><span>bpm</span></span></label>
+            </div>
+            <p class="k-small">Resting heart rate is shown for context and does not move the zones: the table gives them as shares of maximum, and the guide has no source for zones built on the gap between resting and maximum.</p>
+            <div class="te-list te-list--one">{{tools:entry-do:hlth-mistake-age-formula}}{{tools:entry:cond-mistake-heart-rate-short-intervals}}</div>
+            <details class="more">
+              <summary>The tables this reads</summary>
+              <div>{{tools:table:cond-table-five-zone-scale}}{{tools:table:hlth-tbl-hr-zones}}</div>
+            </details>
+          </div>
+          <div class="k-card tool-out" id="z-out">
+            <p class="k-vh" id="z-say" role="status"></p>
+            <div><p class="k-label">Maximum heart rate</p><p class="k-stat"><span id="z-hrmax">—</span><small>bpm</small></p><p class="k-small" id="z-sub">Enter your age or your measured maximum.</p></div>
+            <ol class="zl hide-empty" id="z-list" aria-label="Your heart-rate zones"></ol>
+            <p class="k-small hide-empty" id="z-rest-read"></p>
+            <p class="k-small ex-note" id="z-ex" hidden></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">Each zone’s last line places its middle in the <a href="#activity">activity multiplier</a>’s cardio bands (130 and under, 130 to 155, 155 to 180 beats a minute). Those bands are KiteSink’s own fixed numbers, not the guide’s, and they do not move with your maximum.</p>
           </div>
         </div>
       </div>

@@ -285,6 +285,22 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   ok('ffmi: the reference rows are read by sex', TD.ffmiRef.rows.filter(x => x.sex === 'f').map(x => x.value).join() === '16.3,23.9' && TD.ffmiRef.rows.some(x => x.value === 25 && x.sex === 'm'));
 }
 
+// ---------- heart-rate zones: the guide's age formula and five-zone scale ----------
+{
+  eq('hrMax(40) = 208 - 0.7 x 40 = 180', F.hrMax(40, TD.hrMax), 180, 1e-9);
+  same('zones at 180: the five ranges', F.zones(180, TD.zones.rows).map(z => z.lo + '-' + z.hi).join(' '), '99-135 135-153 153-162 162-171 171-180');
+  let r = F.hrPick({ age: 40, max: 190 }, TD.hrMax);
+  ok('a measured maximum overrides the age formula', r.max === 190 && r.from === 'max');
+  r = F.hrPick({ age: 40, max: '' }, TD.hrMax);
+  ok('no measured maximum: from age', r.max === 180 && r.from === 'age');
+  ok('a maximum out of range is an error, not a fallback', F.hrPick({ age: 40, max: 300 }, TD.hrMax).err === 'max');
+  ok('resting at or above the maximum is rejected', F.hrPick({ age: 40, max: 100, rest: 100 }, TD.hrMax).restErr === 'max' && F.hrPick({ age: 40, rest: 55 }, TD.hrMax).rest === 55);
+  ok('resting out of range is rejected', F.hrPick({ age: 40, rest: 20 }, TD.hrMax).restErr === 'range');
+  same('zone middles in the activity bands at 180: low, medium, high, high, high', F.zones(180, TD.zones.rows).map(z => F.hrBand((z.lo + z.hi) / 2).id).join(' '), 'aer1 aer2 aer3 aer3 aer3');
+  ok('above 180 there is no band', F.hrBand(181) === null && F.hrBand(130).id === 'aer1' && F.hrBand(130.5).id === 'aer2');
+  same('resting ranges read from the guide', TD.hrRest.adult.join('-') + ' ' + TD.hrRest.athlete.join('-'), '60-100 40-60');
+}
+
 // ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
 {
   const J = x => JSON.stringify(x);
