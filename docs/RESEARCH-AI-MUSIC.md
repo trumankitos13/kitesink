@@ -96,3 +96,52 @@ Coverage is uneven. The 22 surviving claims cover only scope items 1, 2 (federal
 - What is the latest docket step in Concord v. Anthropic after the 15 July 2026 summary-judgment hearing, and what are the current docket, ruling or appeal status for GEMA v Suno and for OpenAI's possible appeal to OLG München?
 - What is the status of the major labels' cases against Suno and Udio (courts, dockets, settlements and licensing deals), and what licence models have GEMA, SACEM and STIM published for AI companies?
 - What are the current published AI policies of DSPs, distributors and PROs/the MLC (Spotify, Deezer tagging, YouTube, DistroKid, ASCAP/BMI/SOCAN/PRS/GEMA/SACEM registration rules, DDEX AI fields), and which AI rights-work tools can be verified for terms, pricing and output ownership?
+
+## Gap research, 2026-11-20 (single-agent passes, not 3-vote verified)
+
+Two follow-up agents filled gaps the verified run left. Each fact below was read on the page
+named; trade press is marked. These feed the batch 7 and 8 reading lists and are re-verified
+by the writer and reviewer before anything is published.
+
+**Litigation and deals**
+- UMG and Sony v Suno, D. Mass. 1:24-cv-11611-FDS: first amended complaint 25 Aug 2026 (UMG
+  and Sony only); second action 1:26-cv-14275 filed 18 Sep 2026 (filings hosted by MBW).
+- Sony v Uncharted Labs (Udio), S.D.N.Y. 1:26-cv-6120 (July 2026, caption read).
+- Deals: UMG-Udio (PR Newswire, 29/30 Oct 2025), Merlin-Udio (Merlin, 20 Jan 2026);
+  reported only (MBW): WMG-Udio 19 Nov 2025, WMG-Suno 25 Nov 2025, Kobalt-Udio 9 Apr 2026,
+  BMG-Suno 12 Aug 2026.
+- GEMA v Suno: Munich Regional Court I, 42 O 763/25, judgment 31 Jul 2026, largely for GEMA
+  (court press release). A Beck record lists OLG Munich 6 U 2314/26 e as the appeal instance,
+  filing party unconfirmed. GEMA says OpenAI appealed the Nov 2025 ruling.
+- Concord v Anthropic after April 2026: reported only (MBW): August 2026 partial dismissal
+  motions, hearing 4 Nov 2026; outcome seen only in a blocked MLex snippet.
+- Indie-artist class actions: Woulard v Udio transferred to S.D.N.Y. (3 Aug 2026); Justice v
+  Suno, D. Mass., claims proceed (20 Aug 2026). Reported only (MBW).
+
+**State laws**: Tennessee ELVIS Act text (capitol.tn.gov); California AB 2602 and AB 1836
+(governor, 17 Sep 2024); New York S.8391 and S.8420-A (governor, 11 Dec 2025); Illinois PA
+104-0282 not readable (ilga.gov 503).
+
+**Collecting societies**: GEMA licensing model (30% of net income plus a minimum) and TDM
+reservation; STIM collective AI licence (CISAC, 9 Sep 2025); SOCAN and Musical AI (Jul 2026);
+SACEM opt-out (reported only). PRS pages unreadable.
+
+**EU**: GPAI Code of Practice (10 Jul 2025); GPAI obligations from 2 Aug 2025, enforcement from
+2 Aug 2026, older models by 2 Aug 2027 (Commission guidelines page); training-content summary
+template (24 Jul 2025, updated 26 Mar 2026). AI Omnibus 2026/1744 and the 2 Dec 2026 grace
+period: law-firm reports only (EUR-Lex unreadable).
+
+**Platforms**: Spotify (25 Sep 2025: impersonation policy, spam filter, DDEX AI credits);
+Deezer (21 Jul 2026: fully AI tracks above 50% of daily uploads at peak, 1-3% of streams);
+YouTube altered-content disclosure and likeness detection (21 Apr 2026); Apple Music
+transparency tags, DistroKid disclosure, TuneCore/Believe blocking (reported only); CD Baby
+blog (1 Oct 2025).
+
+**Registration**: ASCAP/BMI/SOCAN alignment and SOCAN guidelines (28 Oct 2025): AI-assisted
+works registrable, wholly AI works not; MLC help page (meaningful human authorship); Copyright
+Office letter to the MLC (20 Apr 2023); GEMA "not created exclusively by AI" declaration; DDEX
+ERN 4.3.1 AI flags.
+
+**AI tools**: see the batch 8 table in `content/music/READING-LIST.md`. Suno's ownership wording
+conflicts between its help page and a trade report; Udio terms unreadable; OpenAI business
+terms blocked. Vendor accuracy figures are self-reported.
