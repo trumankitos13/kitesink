@@ -307,7 +307,7 @@ A basic map, limited to bodies whose pages were read for this guide. Other count
 | Canada | SOCAN (performing and reproduction rights); CMRRA (online services) | Re:Sound: artists and record companies |
 | Germany | GEMA: composers, lyricists and publishers | Not covered here (no page read) |
 
-Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: UK, Canada, Germany · As of 20 November 2026 · Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [SOCAN n.d.-b](https://www.socan.com/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [Re:Sound n.d.](https://www.resound.ca/), [GEMA n.d.-a](https://www.gema.de/en/)
+Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: UK, Canada, Germany · As of 20 November 2026 · Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [SOCAN n.d.-c](https://www.socan.com/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [Re:Sound n.d.](https://www.resound.ca/), [GEMA n.d.-b](https://www.gema.de/en/)
 
 ## Terms
 

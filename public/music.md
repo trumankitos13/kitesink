@@ -1,6 +1,6 @@
 # KiteSink Music
 
-Three music projects by Truman Kitos-Lindsey, and a free field guide to music rights and royalties. The guide holds 161 sourced entries in 4 of 15 planned areas. Every entry says who it is for (songwriters, artists, producers, publishers and labels, administrators), where it applies, how well sourced it is, and the date of anything that moves.
+Three music projects by Truman Kitos-Lindsey, and a free field guide to music rights and royalties. The guide holds 192 sourced entries in 5 of 15 planned areas. Every entry says who it is for (songwriters, artists, producers, publishers and labels, administrators), where it applies, how well sourced it is, and the date of anything that moves.
 
 ## Music projects
 
@@ -34,7 +34,7 @@ General information on how music rights and royalties work, not legal advice. Fo
 ### A. The money
 
 - [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns. 36 entries.
-- Performance royalties: PROs, public performance, and how plays become pay. In preparation.
+- [Performance royalties](https://kitesink.com/music/pros-performance.md): PROs, public performance, and how plays become pay. 31 entries.
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective. 43 entries.
 - Neighbouring rights: What the recording earns on its own: SoundExchange, PPL and performer shares. In preparation.
 
@@ -63,18 +63,18 @@ General information on how music rights and royalties work, not legal advice. Fo
 
 ## By reader
 
-- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 93 entries.
-- Artists: Getting paid for the recording, and what a deal takes from it. 69 entries.
-- Producers: Points, letters of direction, SoundExchange, and producers who also write. 44 entries.
-- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 118 entries.
-- Administrators: The detail work: metadata, matching, claims and statements. 101 entries.
+- Songwriters: Getting paid for the song: registration, performance and mechanical royalties, splits. 117 entries.
+- Artists: Getting paid for the recording, and what a deal takes from it. 75 entries.
+- Producers: Points, letters of direction, SoundExchange, and producers who also write. 45 entries.
+- Publishers and labels: Running a catalogue: registration, collection, deals and audits. 141 entries.
+- Administrators: The detail work: metadata, matching, claims and statements. 122 entries.
 
 ## Reference
 
 - [Claims, checked](https://kitesink.com/music/claims.md): 14 common claims, each with a verdict, what it rests on, and the source.
-- [Glossary](https://kitesink.com/music/glossary.md): the 26 terms the areas use, in plain words.
-- [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): 13 dated key numbers and 10 reference tables.
-- [Sources and grading](https://kitesink.com/music/sources.md): how entries are graded, and all 102 sources.
+- [Glossary](https://kitesink.com/music/glossary.md): the 29 terms the areas use, in plain words.
+- [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): 14 dated key numbers and 12 reference tables.
+- [Sources and grading](https://kitesink.com/music/sources.md): how entries are graded, and all 113 sources.
 - [Claimable royalties](https://kitesink.com/music/claimable.md): 7 places where royalties can sit unclaimed, and how to claim. As data: https://kitesink.com/music/claimable.json
 - [Tools](https://kitesink.com/music/tools.md): a mechanical rate calculator, an unclaimed-money checklist, an identifier checker, a split-sheet generator and a checked directory of other tools.
 - [AI tools](https://kitesink.com/music/ai-tools.md): 13 AI tools that touch music rights work, with what each one does with your files and your data, its output terms, and the date it was checked.

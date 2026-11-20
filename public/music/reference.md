@@ -1,12 +1,13 @@
 # Music key numbers and reference tables, indexed: KiteSink
 
-An index of the 13 key numbers and 10 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
+An index of the 14 key numbers and 12 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
 
 ## Key numbers
 
 | Number | Value | Unit | As of | Area |
 |---|---|---|---|---|
 | [Digital was 42% of CISAC collections, all repertoires, in 2025](https://kitesink.com/music/royalty-basics#roy-number-cisac-digital) | 42.4 | percent of EUR 15.5 bn, all repertoires, 2025 | 4 November 2026 | Royalty basics |
+| [In 2021 the DOJ put ASCAP and BMI at about 90 percent of performance licensing](https://kitesink.com/music/pros-performance#pro-number-market-share) | 90 | percent of US public performance licensing, ASCAP and BMI | 15 January 2021 | Performance royalties |
 | [Physical and download mechanical rate per work, 2026](https://kitesink.com/music/mechanicals-mlc#mech-rate-physical-2026) | 13.1 | cents per work, physical and downloads, 2026 | 19 November 2026 | Mechanicals and the MLC |
 | [Per-minute alternative for long tracks, 2026](https://kitesink.com/music/mechanicals-mlc#mech-rate-permin-2026) | 2.52 | cents per minute or fraction, 2026 | 19 November 2026 | Mechanicals and the MLC |
 | [Ringtone mechanical rate](https://kitesink.com/music/mechanicals-mlc#mech-rate-ringtone) | 24 | cents per ringtone, per work | 19 November 2026 | Mechanicals and the MLC |
@@ -25,6 +26,8 @@ An index of the 13 key numbers and 10 reference tables in the KiteSink music fie
 - [Income streams and who collects each in the US](https://kitesink.com/music/royalty-basics#roy-table-streams-us) (Royalty basics)
 - [Statutory digital performance split for recordings, as the law states it](https://kitesink.com/music/royalty-basics#roy-table-digital-performance-split) (Royalty basics)
 - [Who collects what in the UK, Canada and Germany](https://kitesink.com/music/royalty-basics#roy-table-international) (Royalty basics)
+- [ASCAP, BMI, SESAC and GMR compared on facts the sources state](https://kitesink.com/music/pros-performance#pro-table-us-pros) (Performance royalties)
+- [Joining terms at SOCAN, GEMA and GMR as their pages state them](https://kitesink.com/music/pros-performance#pro-table-join) (Performance royalties)
 - [Streaming content-cost prongs by type of offering](https://kitesink.com/music/mechanicals-mlc#mech-table-streaming-prongs) (Mechanicals and the MLC)
 - [MLC scale figures differ by date, so quote the date](https://kitesink.com/music/mechanicals-mlc#mech-table-mlc-snapshots) (Mechanicals and the MLC)
 - [Three pools of MLC money and where each stands](https://kitesink.com/music/mechanicals-mlc#mech-table-money-pools) (Mechanicals and the MLC)
@@ -36,6 +39,7 @@ An index of the 13 key numbers and 10 reference tables in the KiteSink music fie
 ## The full entries, as plain text
 
 - [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
+- [Performance royalties](https://kitesink.com/music/pros-performance.md): PROs, public performance, and how plays become pay.
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
 - [AI and music rights](https://kitesink.com/music/ai-rights.md): Training, outputs, likeness, and the cases and rules so far.

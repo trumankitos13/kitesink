@@ -168,7 +168,7 @@ Licences and deals · Intermediate · Directional (reported) · For: publishers 
 
 GEMA says the first component covers training, including fine-tuning, with 30 percent of the net income of the model or system and a minimum royalty linked to how much output is produced. It targets providers operating in the German market whatever the place of training. A second component would cover later use of AI-generated music, such as background music. This is GEMA's own proposed model. The sources opened do not name a provider that has signed it.
 
-Licences and deals · Advanced · Sourced (official) · For: publishers and labels, administrators, songwriters · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-b](https://www.gema.de/en/w/generative-ai-licensing-model), [GEMA 2025](https://www.gema.de/en/w/landmark-ruling-gema-against-openai)
+Licences and deals · Advanced · Sourced (official) · For: publishers and labels, administrators, songwriters · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-d](https://www.gema.de/en/w/generative-ai-licensing-model), [GEMA 2025](https://www.gema.de/en/w/landmark-ruling-gema-against-openai)
 
 ### Sweden's STIM announced a collective AI licence in September 2025
 
@@ -277,7 +277,7 @@ GEMA's help page says the box aims to stop payments for content that took no cre
 
 - Tick the box only if AI was not the sole creator of the work.
 
-Registering AI-assisted works · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-c](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai)
+Registering AI-assisted works · Intermediate · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: Germany · As of 20 November 2026 · Sources: [GEMA n.d.-e](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai)
 
 ## In order
 
@@ -382,7 +382,7 @@ A working list for a songwriter, artist, producer or admin who uses AI tools. It
 - Get written permission from the person before using a model of their voice.
 - Have a music lawyer read any voice or likeness licence.
 
-Beginner · Directional (industry practice) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada, Germany, France, International · As of 20 November 2026 · Sources: [U.S. Copyright Office 2023a](https://copyright.gov/ai/ai_policy_guidance.pdf), [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/), [TMLC n.d.-a](https://help.themlc.com/en/support/ai-generated-works), [GEMA n.d.-c](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/)
+Beginner · Directional (industry practice) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US, UK, Canada, Germany, France, International · As of 20 November 2026 · Sources: [U.S. Copyright Office 2023a](https://copyright.gov/ai/ai_policy_guidance.pdf), [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/), [TMLC n.d.-a](https://help.themlc.com/en/support/ai-generated-works), [GEMA n.d.-e](https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai), [Spotify 2025](https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/)
 
 ## Terms
 

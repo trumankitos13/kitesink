@@ -229,6 +229,12 @@ export const RULES = [
   }
  ],
  [
+  "/music/pros-performance",
+  {
+   "Link": "</music/pros-performance.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
   "/music/mechanicals-mlc",
   {
    "Link": "</music/mechanicals-mlc.md>; rel=\"alternate\"; type=\"text/markdown\""

@@ -113,6 +113,8 @@ window.KS_INDEX = [
   /* the pages under /music/, in the order of the hub: one line each */
   { t: "Royalty basics", h: "/music/royalty-basics", s: "music", k: "Notes", shelf: "tools",
     d: "The two copyrights in a song, the royalties each one earns, and who collects and pays them.", w: "composition recording master publishing performance mechanical neighbouring sync royalty streams" },
+  { t: "Performance royalties and PROs", h: "/music/pros-performance", s: "music", k: "Notes", shelf: "tools",
+    d: "What performing rights organisations license and pay, joining and registering, live sets, and the US consent decrees.", w: "pro performing rights ascap bmi sesac gmr socan gema public performance blanket licence consent decree songview live setlist" },
   { t: "Mechanical royalties and the MLC", h: "/music/mechanicals-mlc", s: "music", k: "Notes", shelf: "tools",
     d: "US mechanical rates, the Mechanical Licensing Collective, registering and matching works.", w: "mechanicals mlc statutory rate section 115 blanket licence phonorecords crb streaming" },
   { t: "Unclaimed royalties", h: "/music/unclaimed-recovery", s: "music", k: "Notes", shelf: "tools",

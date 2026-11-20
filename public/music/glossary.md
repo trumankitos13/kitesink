@@ -1,11 +1,13 @@
 # Music business glossary: KiteSink
 
-The 26 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
+The 29 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
 
 - **AI-assisted work and AI-generated output** (AI and music rights; Canada, US): SOCAN's split: an AI-assisted work is made by a person using AI as a tool; an AI-generated output is made with minimal human involvement and cannot be registered. Sources: [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/)
 - **Black box** (Unclaimed royalties; International): Informal industry name for a pool of collected royalties that nobody has been able to allocate. It is a nickname, not a legal or official term; collectives use names such as suspense account.
+- **Blanket licence (performing right)** (Performance royalties; International): One licence that lets a user perform any work in a society's repertoire, including foreign works it represents under reciprocal deals, with no song-by-song clearance. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 - **Blanket license (digital)** (Mechanicals and the MLC; US): Since 1 January 2021, a qualifying digital service can get one license through the MLC that covers every song open to the compulsory license, in place of song-by-song notices. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
 - **Compulsory (mechanical) license** (Mechanicals and the MLC; US): A US legal route to record and distribute your own version of a song once recordings of it have been released in the US with the owner's permission. You must meet the conditions and pay the statutory rate. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
+- **Cue sheet** (Performance royalties; International): A list of the music in a TV or film programme, with each work and use, sent to a society so it can pay the writers and publishers.
 - **Digital replica** (AI and music rights; US): In the NO FAKES bill (S. 4591, not law as of November 2026), a newly made, computer-generated, highly realistic copy of a person's voice or likeness. Authorised remixes, samples and remasters are excluded. Sources: [GPO 2026](https://www.govinfo.gov/content/pkg/BILLS-119s4591rs/xhtml/BILLS-119s4591rs.html)
 - **ISRC code** (Royalty basics; International, UK): International Standard Recording Code: a 12-character identifier for one recording, made of a rightsholder code, a year and a five-digit number. Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/)
 - **ISWC code** (Royalty basics; International): International Standard Musical Work Code: a number that identifies a song and links it to its rights holders in the society systems. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
@@ -16,6 +18,7 @@ The 26 terms the KiteSink music field guide uses, in plain words, A to Z. Each n
 - **Notice of intention (NOI)** (Mechanicals and the MLC; US): The notice a person serves on a song's copyright owner, or files with the Copyright Office when the owner cannot be found in its records, to use the compulsory license for physical copies. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
 - **Overclaim** (Mechanicals and the MLC; US): A song where the shares claimed by all members together come to more than 100 percent. The MLC's Overclaims Tool lets owners amend or give up shares and upload documents while it is resolved. Sources: [MLC: tools](https://www.themlc.com/tools)
 - **Performing right** (Royalty basics; US): The right to perform a song publicly, or to authorise others to. US law counts a performance as public where the public can attend, or when it is transmitted to the public. Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
+- **Performing rights organisation (PRO)** (Performance royalties; US): A body that licenses public performance of non-dramatic musical works for their owners. US law calls it a performing rights society. Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
 - **Phonorecord and digital phonorecord delivery (DPD)** (Mechanicals and the MLC; US): A phonorecord is an object that holds recorded sound, such as vinyl or a CD. A DPD is a digital transmission that leaves the recipient with a specific copy: a permanent or limited download, or an on-demand stream. Sources: [U.S. Copyright Office 2018](https://www.copyright.gov/circs/circ73.pdf), [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
 - **Publishing administrator** (Royalty basics; US, International): Industry name for a company that registers songs, collects their income and keeps the records on an owner's behalf, without becoming the owner. Terms vary by contract.
 - **Sound recording (the master)** (Royalty basics; US): A work made by fixing a series of sounds, such as a recorded performance. In US law it excludes sounds that accompany a film or other audiovisual work. Sources: [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101)
@@ -32,6 +35,7 @@ The 26 terms the KiteSink music field guide uses, in plain words, A to Z. Each n
 ## Read the areas
 
 - [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
+- [Performance royalties](https://kitesink.com/music/pros-performance.md): PROs, public performance, and how plays become pay.
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
 - [AI and music rights](https://kitesink.com/music/ai-rights.md): Training, outputs, likeness, and the cases and rules so far.

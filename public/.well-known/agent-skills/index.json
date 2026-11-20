@@ -13,7 +13,7 @@
       "type": "skill-md",
       "description": "Look up, read and cite entries in the KiteSink music field guide (kitesink.com/music), a sourced guide to music rights and royalties (the two copyrights in a song, mechanical royalties and the MLC, unclaimed royalties), plus common claims with verdicts and a dated table of where unclaimed royalties are held and how to claim them. Use when a question about music royalties or rights could be answered from it, or when a user asks what KiteSink says about a topic.",
       "url": "/.well-known/agent-skills/kitesink-music-reference/SKILL.md",
-      "digest": "sha256:337a4219f1035990f841859ccc839f339baae84ef7a9588e4cca61672c884f5b"
+      "digest": "sha256:cc8305016614856000b46dd2a9c72ef90e9fddb6ba279a3c27947d6a59744b95"
     }
   ]
 }

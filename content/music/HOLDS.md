@@ -92,6 +92,21 @@ changes, copy answers here, tick what is closed, then continue.
 - [ ] iswc.org's usage page shows an example (T-345246800-1) whose check digit fails the
       formula; a typo on their page, noted only
 
+## From batch 3 (PROs and performance royalties, 2026-11-20)
+
+- [ ] ASCAP and BMI block automated reading: nothing in the area rests on their pages. Hand
+      check membership and payment pages, how each pays a writer with no publisher, and BMI's
+      foreign live performance form (bmi.com/creators/detail/forms) so those facts can be added
+- [ ] PRS for Music (JavaScript-only), APRA AMCOS (403) and SACEM (403): no UK, AU or FR entries
+      yet; hand check join and live-reporting pages
+- [ ] justice.gov search blocks automated reading: confirm no ASCAP/BMI decree action after
+      15 Jan 2021 (the statement asked for reviews every five years, so one was due about Jan 2026)
+- [ ] "Join only one PRO": no opened source states it. Add a practice-graded mistake entry?
+- [ ] SOCAN distribution schedule lists only 2026 dates: recheck when 2027 dates appear
+- [ ] Candidate claims (not added): ASCAP and BMI at about 90% (DOJ, Jan 2021); can a publisher
+      pull streaming rights from ASCAP or BMI; does a venue's ASCAP licence cover GMR songs; can
+      a writer apply to GMR
+
 ## From batch 7 (AI and music rights, 2026-11-20)
 
 - [ ] congress.gov blocks automated reading: check S. 4591 (NO FAKES) for any action after

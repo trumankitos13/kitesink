@@ -1,6 +1,6 @@
 # Music sources and grading: KiteSink
 
-Where the KiteSink music field guide comes from: how entries are graded and all 102 sources it cites.
+Where the KiteSink music field guide comes from: how entries are graded and all 113 sources it cites.
 
 ## How the entries are graded
 
@@ -17,7 +17,7 @@ Each entry records one of four grades. Pages show two labels: Sourced and Direct
 
 Articles and trade press are credited where they are the source of a point. An entry that rests on them alone is graded Directional. Every entry is written in this guide's own words.
 
-## All 102 sources, A to Z
+## All 113 sources, A to Z
 
 - United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 115: Scope of exclusive rights in nondramatic musical works, compulsory license for making and distributing phonorecords*. Title 17, section 115, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/115 (Statute, retrieved 19 November 2026, cited 23×)
 - U.S. Copyright Office (n.d.). *37 CFR 210.32: Musical works database usability, interoperability, and usage restrictions*. Mirror of the eCFR text. US. https://www.law.cornell.edu/cfr/text/37/210.32 (Regulation, retrieved 19 November 2026, cited 1×)
@@ -57,9 +57,13 @@ Articles and trade press are credited where they are the source of a point. An e
 - Rafaela Fornitani (2026). After Universal, Warner, and Merlin deals, now Udio inks licensing agreement with Kobalt. *Music Business Worldwide*. 9 April 2026. https://www.musicbusinessworldwide.com/after-universal-warner-and-merlin-deals-now-udio-inks-licensing-agreement-with-kobalt (Article, retrieved 20 November 2026, cited 1×)
 - GEMA (2023). *Website Text- und Datamining Rechtevorbehaltserklärung (rights reservation notice)*. 19 December 2023. Germany. https://www.gema.de/documents/d/guest/tdm-vorbehaltserklaerung-2023-12-pdf (Collecting body, retrieved 20 November 2026, cited 2×)
 - GEMA (2025). *Europe's first landmark ruling on AI: GEMA prevails against OpenAI*. 11 November 2025. Germany. https://www.gema.de/en/w/landmark-ruling-gema-against-openai (Collecting body, retrieved 20 November 2026, cited 2×)
+- GEMA (n.d.). *Become a GEMA member now: All infos*. Germany. https://www.gema.de/en/music-creators/become-a-member (Collecting body, retrieved 20 November 2026, cited 2×)
 - GEMA (n.d.). *GEMA: For composers, lyricists and music publishers*. Germany. https://www.gema.de/en/ (Collecting body, retrieved 20 November 2026, cited 1×)
+- GEMA (n.d.). *This is how GEMA distributes your money*. Germany. https://www.gema.de/en/about-gema/how-gema-distributes-your-money (Collecting body, retrieved 20 November 2026, cited 1×)
 - GEMA (n.d.). *Two components, one goal: music creators shall receive fair shares through effective AI licensing*. Germany. https://www.gema.de/en/w/generative-ai-licensing-model (Collecting body, retrieved 20 November 2026, cited 1×)
 - GEMA (n.d.). *Why do I have to confirm during the work declaration process that my work was not created exclusively by AI?*. Germany. https://www.gema.de/en/w/help/creators/works-repertoire/submit-a-notification-for-your-works/confirm-work-not-created-exclusively-by-ai (Collecting body, retrieved 20 November 2026, cited 2×)
+- Global Music Rights (n.d.). *Global Music Rights | ABOUT*. US. https://globalmusicrights.com/about (Collecting body, retrieved 20 November 2026, cited 3×)
+- Global Music Rights (n.d.). *Global Music Rights | FAQ*. US. https://globalmusicrights.com/FAQ (Collecting body, retrieved 20 November 2026, cited 3×)
 - U.S. Government Publishing Office (2026). *S. 4591, NO FAKES Act of 2026, reported in the Senate (Calendar No. 446)*. 24 June 2026. US. https://www.govinfo.gov/content/pkg/BILLS-119s4591rs/xhtml/BILLS-119s4591rs.html (Government, retrieved 20 November 2026, cited 5×)
 - The Harry Fox Agency (n.d.). *Does HFA have a public database search? What happened to the Songfile public search?*. US. https://help.harryfox.com/does-hfa-have-a-public-database-search-what-happened-to-the-songfile-public-search (Collecting body, retrieved 19 November 2026, cited 1×)
 - Internal Revenue Service (n.d.). *About Form W-8 BEN, Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)*. US. https://www.irs.gov/forms-pubs/about-form-w-8-ben (Government, retrieved 20 November 2026, cited 2×)
@@ -84,12 +88,16 @@ Articles and trade press are credited where they are the source of a point. An e
 - Plaintiffs UMG, Capitol, Sony Music Entertainment and Sony labels (filed in D. Mass.) (2026). *UMG Recordings, Inc. v. Suno, Inc., Complaint (Dkt. 1), second action*. US. https://www.musicbusinessworldwide.com/files/2026/09/26-cv-14275-Dkt.-1-Complaint.pdf (Court filing, retrieved 20 November 2026, cited 2×)
 - Plaintiffs UMG Recordings, Capitol Records and Sony Music Entertainment (filed in D. Mass.) (2026). *UMG Recordings, Inc. v. Suno, Inc., First Amended Complaint (Dkt. 277)*. US. https://www.musicbusinessworldwide.com/files/2026/08/gov.uscourts.mad_.272063.277.0_1.pdf (Court filing, retrieved 20 November 2026, cited 1×)
 - Re:Sound (n.d.). *Re:Sound Music Licensing Company (home page)*. Canada. https://www.resound.ca/ (Collecting body, retrieved 20 November 2026, cited 3×)
-- Songview (ASCAP, BMI, GMR and SESAC) (n.d.). *Songview*. US. https://www.songview.com (Collecting body, retrieved 20 November 2026, cited 4×)
+- Songview (ASCAP, BMI, GMR and SESAC) (n.d.). *Songview*. US. https://www.songview.com (Collecting body, retrieved 20 November 2026, cited 5×)
+- SESAC (n.d.). *SESAC | About Us*. US. https://www.sesac.com/about/ (Collecting body, retrieved 20 November 2026, cited 1×)
 - SOCAN (2025). *ASCAP, BMI and SOCAN announce alignment on AI registration policies*. 28 October 2025. Canada. https://www.socanmagazine.ca/annoucements/ascap-bmi-and-socan-announce-alignment-on-ai-registration-policies/ (Collecting body, retrieved 20 November 2026, cited 1×)
 - SOCAN (2025). *SOCAN AI registration guidelines*. 28 October 2025. Canada. https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/ (Collecting body, retrieved 20 November 2026, cited 3×)
 - SOCAN (2026). *SOCAN announces collaboration with Musical AI to advance music creator attribution, remuneration and transparency in AI*. 20 July 2026. Canada. https://www.socan.com/socan-announces-collaboration-with-musical-ai-to-advance-music-creator-attribution-remuneration-and-transparency-in-ai/ (Collecting body, retrieved 20 November 2026, cited 1×)
 - SOCAN (n.d.). *Innovation Must Respect Human Creativity (SOCAN v. Suno)*. Canada. https://socan.com/socan-ai/ai-lawsuit (Collecting body, retrieved 20 November 2026, cited 1×)
+- SOCAN (n.d.). *Music Creators*. Canada. https://www.socan.com/about/music-creator/ (Collecting body, retrieved 20 November 2026, cited 2×)
 - SOCAN (n.d.). *SOCAN (home page)*. Canada. https://www.socan.com/ (Collecting body, retrieved 20 November 2026, cited 1×)
+- SOCAN (n.d.). *SOCAN Royalty Distribution Schedule*. Canada. https://www.socan.com/socan-royalty-distribution-schedule/ (Collecting body, retrieved 20 November 2026, cited 1×)
+- SOCAN (n.d.). *Sign Up for Performing Rights*. Canada. https://www.socan.com/sign-up-for-performing-rights/ (Collecting body, retrieved 20 November 2026, cited 2×)
 - SoundExchange (n.d.). *Artists, Labels & Producers*. US. https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/ (Collecting body, retrieved 20 November 2026, cited 11×)
 - Spotify (2025). *Spotify strengthens AI protections for artists, songwriters, and producers*. International. https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/ (Company's own statement, retrieved 20 November 2026, cited 4×)
 - Murray Stassen (2025). Warner Music Group strikes 'landmark' deal with Suno; settles copyright lawsuit against AI music generator. *Music Business Worldwide*. 25 November 2025. https://www.musicbusinessworldwide.com/warner-music-group-settles-with-suno-strikes-first-of-its-kind-deal-with-ai-song-generator/ (Article, retrieved 20 November 2026, cited 1×)
@@ -113,12 +121,15 @@ Articles and trade press are credited where they are the source of a point. An e
 - U.S. Copyright Office (n.d.). *Circular 56: Copyright Registration for Sound Recordings*. US. https://www.copyright.gov/circs/circ56.pdf (Government, retrieved 20 November 2026, cited 7×)
 - U.S. Copyright Office (n.d.). *Classics Protection and Access Act (Title II of the Music Modernization Act)*. US. https://www.copyright.gov/music-modernization/pre1972-soundrecordings/ (Government, retrieved 20 November 2026, cited 1×)
 - U.S. Copyright Office (n.d.). *Copyright and Artificial Intelligence (initiative hub)*. US. https://www.copyright.gov/ai/ (Government, retrieved 20 November 2026, cited 2×)
+- U.S. Copyright Office (n.d.). *Issues Related to Performing Rights Organizations*. Policy study page as read 2026-11-20. US. https://www.copyright.gov/policy/pro-issues/ (Government, retrieved 20 November 2026, cited 2×)
 - UK Government (DSIT, DCMS and Intellectual Property Office) (2026). *Report on Copyright and Artificial Intelligence*. 18 March 2026. UK. https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence (Government, retrieved 20 November 2026, cited 4×)
 - Universal Music Group and Udio (via PR Newswire) (2025). *Universal Music Group and Udio announce Udio's first strategic agreements for new licensed AI music creation platform*. International. https://tools.prnewswire.com/en-us/live/20813/release/20251029EN10848 (Company's own statement, retrieved 20 November 2026, cited 2×)
-- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 101: Definitions*. Title 17, section 101, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/101 (Statute, retrieved 20 November 2026, cited 5×)
-- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 106: Exclusive rights in copyrighted works*. Title 17, section 106, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/106 (Statute, retrieved 20 November 2026, cited 5×)
+- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 101: Definitions*. Title 17, section 101, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/101 (Statute, retrieved 20 November 2026, cited 7×)
+- United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 106: Exclusive rights in copyrighted works*. Title 17, section 106, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/106 (Statute, retrieved 20 November 2026, cited 6×)
 - United States Congress (Cornell LII copy of the U.S. Code) (n.d.). *17 U.S.C. 114: Scope of exclusive rights in sound recordings*. Title 17, section 114, as shown by LII. US. https://www.law.cornell.edu/uscode/text/17/114 (Statute, retrieved 20 November 2026, cited 8×)
-- World Intellectual Property Organization (2012). *Educational Material on Collective Management of Copyright and Related Rights, Module 2: Management of copyright and related rights in the field of music*. 30 August 2012. Module 2, 30 August 2012. International. https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf (Government, retrieved 20 November 2026, cited 14×)
+- US Department of Justice, Antitrust Division (2021). *Antitrust Consent Decree Review - ASCAP and BMI 2019*. 15 January 2021. Page as updated 15 January 2021. US. https://www.justice.gov/atr/antitrust-consent-decree-review-ascap-and-bmi-2019 (Government, retrieved 20 November 2026, cited 1×)
+- US Department of Justice, Antitrust Division (2021). *Statement of the Department of Justice on the Closing of the Antitrust Division's Review of the ASCAP and BMI Consent Decrees*. 15 January 2021. Remarks of Assistant Attorney General Makan Delrahim, 15 January 2021. US. https://www.justice.gov/atr/page/file/1355391/dl (Government, retrieved 20 November 2026, cited 12×)
+- World Intellectual Property Organization (2012). *Educational Material on Collective Management of Copyright and Related Rights, Module 2: Management of copyright and related rights in the field of music*. 30 August 2012. Module 2, 30 August 2012. International. https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf (Government, retrieved 20 November 2026, cited 22×)
 - YouTube (Google) (n.d.). *Disclosing use of GenAI content*. International. https://support.google.com/youtube/answer/14328491?hl=en (Company's own statement, retrieved 20 November 2026, cited 1×)
 - YouTube (2026). *Expanding likeness detection to the entertainment industry*. International. https://blog.youtube/news-and-events/youtube-likeness-detection-ai-protection/ (Company's own statement, retrieved 20 November 2026, cited 1×)
 
