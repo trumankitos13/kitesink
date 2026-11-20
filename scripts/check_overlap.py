@@ -5,7 +5,8 @@ DIR holds the private source material as .txt (or .pdf, converted with pdftotext
 outside the repository: pass a path in the session's scratch area, never a tracked folder.
 
 Every published text field (entries: title, take, body, do, basis, table cells, checklist
-items; claimable rows: pot, who_can_claim, how_to_claim, rule, cost; tools: what, note) is
+items; claimable rows: pot, who_can_claim, how_to_claim, rule, cost; tools: what, note;
+ai-tools: what, note, uploads, output_terms.summary, but not output_terms.quote) is
 compared with every corpus file, word by word after lower-casing and dropping punctuation.
   ERROR  a run of 8 or more words in common
   review a run of 6 or 7 words in common (read it; common phrases are fine)
@@ -46,8 +47,11 @@ def entry_fields(e):
     out = []
     for k in ("title", "take", "body", "basis",                                   # area entries
               "pot", "who_can_claim", "how_to_claim", "rule", "cost",            # claimable rows
-              "what", "note"):                                                   # tools rows
+              "what", "note", "uploads"):                                        # tools and ai-tools rows
         if isinstance(e.get(k), str): out.append((k, e[k]))
+    terms = e.get("output_terms")                                                # ai-tools rows: the own-words summary;
+    if isinstance(terms, dict) and isinstance(terms.get("summary"), str):       # the quote is the vendor's words, not checked
+        out.append(("output_terms.summary", terms["summary"]))
     for i, x in enumerate(e.get("do") or []): out.append((f"do[{i}]", x))
     for r, row in enumerate(e.get("rows") or []):
         for c, cell in enumerate(row): out.append((f"rows[{r}][{c}]", str(cell)))

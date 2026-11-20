@@ -185,6 +185,15 @@
       "description": "A US mechanical rate calculator, a checklist of places to look for unclaimed royalties, and a directory of other music rights tools, each checked before it is listed.",
       "h1": "Tools, <em>checked before they are listed.</em>",
       "lead": "Two tools built here, a mechanical rate calculator and an unclaimed-money checklist, and a directory of other tools worth knowing. Each outside tool was opened and checked, and carries the date."
+    },
+    {
+      "slug": "ai-tools",
+      "kind": "ai-tools",
+      "label": "AI tools",
+      "title": "AI tools for music rights work: what each does with your files and data · KiteSink",
+      "description": "{{n:ai-tools}} AI tools that touch music rights work, by the job they do: what each one does, what you give it, and what its own terms say about outputs and your data. Each checked and dated.",
+      "h1": "AI tools, <em>and what they do with your files.</em>",
+      "lead": "AI tools for metadata, detection, generation, catalogue analysis, voice and everyday work. What you hand each one, what its terms say about who owns the output and whether your files train its models, and the date it was read."
     }
   ]
 }

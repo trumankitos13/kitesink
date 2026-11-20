@@ -5,8 +5,8 @@ Checks the schema in content/music/WRITING-BRIEF.md: ids, types, enums (readers,
 confidence), writing limits, as_of on anything that moves, every cited source defined and
 every defined source cited, source fields by type, and that each source URL answers.
 A URL that is blocked (401, 403, 429) is a warning: the owner checks it by hand.
-The three data files (claimable.json, tools.json, rates.json) are recognised by their "kind"
-key and checked against content/music/DATA-PAGES.md instead.
+The data files (claimable.json, tools.json, rates.json, ai-tools.json) are recognised by their
+"kind" key and checked against content/music/DATA-PAGES.md instead.
 Exit 1 on any error."""
 import json, re, sys, urllib.request, urllib.error
 from collections import Counter
@@ -128,7 +128,7 @@ def check_sources(path, sources, used, offline):
             if code in (401, 403, 429): warn(f"{w}: URL blocked automated reading ({code}); owner checks by hand: {url}")
             elif code != 200: err(f"{w}: URL answered {code}: {url}")
 
-# ----------------------------------------------------------------- the three data files (DATA-PAGES.md)
+# ----------------------------------------------------------------- the data files (DATA-PAGES.md)
 MONEY_TYPES = {"mechanical", "performance", "neighboring", "other"}
 TOOL_GROUPS = ["works-search", "recordings", "unclaimed", "metadata", "splits-contracts", "sync-cue", "valuation"]
 ACCESS = {"free-no-login", "free-login", "members", "licensees", "paid", "unknown"}
@@ -204,13 +204,16 @@ def check_claimable(path, data, offline):
     check_sources(path, sources, used, offline)
     return len(rows), Counter(r.get("money_type") for r in rows)
 
-def check_tools(path, data, offline):
+def check_directory(path, data, offline, prefix, fixed_groups, access):
+    """The rows tools.json and ai-tools.json share (DATA-PAGES.md sections 2 and 4). Returns the rows."""
     groups = data.get("groups")
     if not isinstance(groups, list) or not groups: err(f"{path}: needs groups, a non-empty list"); groups = []
     gids = [g.get("id") for g in groups]
     for g in groups:
-        if g.get("id") not in TOOL_GROUPS: err(f"{path}: group {g.get('id')!r} is not one of the fixed groups {TOOL_GROUPS}")
+        if g.get("id") not in fixed_groups: err(f"{path}: group {g.get('id')!r} is not one of the fixed groups {list(fixed_groups)}")
         if not g.get("label"): err(f"{path}: group {g.get('id')!r} has no label")
+        elif isinstance(fixed_groups, dict) and g.get("id") in fixed_groups and g["label"] != fixed_groups[g["id"]]:
+            err(f"{path}: group {g['id']!r} is labelled {fixed_groups[g['id']]!r} (DATA-PAGES.md), not {g['label']!r}")
     if len(set(gids)) != len(gids): err(f"{path}: a group is listed twice")
     tools = data.get("tools")
     if not isinstance(tools, list) or not tools: err(f"{path}: needs tools, a non-empty list"); tools = []
@@ -218,7 +221,7 @@ def check_tools(path, data, offline):
     for i, t in enumerate(tools):
         w = f"{path} tool {i} ({t.get('id')})"
         tid = t.get("id", "")
-        if not ID_RE.match(tid) or not tid.startswith("tool-"): err(f"{w}: id must be lowercase-hyphenated and start with tool-")
+        if not ID_RE.match(tid) or not tid.startswith(prefix): err(f"{w}: id must be lowercase-hyphenated and start with {prefix}")
         if tid in ids: err(f"{w}: duplicate id")
         ids.add(tid)
         text_len("name", t.get("name"), 2, 80, w)
@@ -228,7 +231,7 @@ def check_tools(path, data, offline):
         if t.get("group") not in gids: err(f"{w}: group {t.get('group')!r} is not one of this file's groups")
         check_list(w, "readers", t.get("readers"), READERS, 1, 5)
         check_list(w, "territory", t.get("territory"), TERRITORY)
-        if t.get("access") not in ACCESS: err(f"{w}: access must be one of {sorted(ACCESS)}")
+        if t.get("access") not in access: err(f"{w}: access must be one of {sorted(access)}")
         status = t.get("status")
         if status not in TOOL_STATUS: err(f"{w}: status must be verified or check")
         check_date("checked", t.get("checked"), w, status == "verified")
@@ -236,6 +239,64 @@ def check_tools(path, data, offline):
         check_link(w, "url", t.get("url"), offline, hard=status == "verified")
         for f in ("name", "owner", "what", "note"):
             check_text(w, f, t.get(f))
+    return tools
+
+def check_tools(path, data, offline):
+    tools = check_directory(path, data, offline, "tool-", TOOL_GROUPS, ACCESS)
+    return len(tools), Counter(t.get("status") for t in tools)
+
+# ai-tools.json (DATA-PAGES.md section 4): the tools.json rows plus uploads and output_terms.
+AI_TOOL_GROUPS = {"metadata-matching": "Metadata and matching", "detection-attribution": "AI-content detection and attribution",
+                  "generators": "Licensed generators and output terms", "catalogue-analysis": "Catalogue and statement analysis",
+                  "voice-likeness": "Voice and likeness", "assistants": "AI assistants: data-use terms"}
+AI_ACCESS = ACCESS | {"waitlist", "enterprise"}
+AI_TOOL_KEYS = {"id", "name", "url", "owner", "group", "what", "readers", "territory", "access", "status", "checked", "note",
+                "uploads", "output_terms"}
+AI_TERMS_KEYS = {"summary", "terms_url", "quote"}
+# A vendor's accuracy figure or "licensed data" claim, which the note must mark as the vendor's own.
+VENDOR_CLAIM = re.compile(r"\b\d+(\.\d+)?\s?(%|percent)|\baccura(te|cy)\b|\bprecision\b|\bfalse[- ]positive|"
+                          r"\blicen[cs]ed\s+(data|training|music|content|catalogu?e?s?|recordings|works|material|sources?)\b|"
+                          r"\btrained (only )?on licen[cs]ed\b|\b(ethically|fairly|responsibly)[- ](trained|sourced)\b", re.I)
+VENDOR_MARK = re.compile(r"\b(vendor|own claim|its own|their own|the company says|says it|claims?|according to)\b", re.I)
+
+def check_ai_tools(path, data, offline):
+    if data.get("sources"):
+        err(f"{path}: ai-tools.json has no sources object; each row's output_terms.terms_url is its source")
+    tools = check_directory(path, data, offline, "ait-", AI_TOOL_GROUPS, AI_ACCESS)
+    for i, t in enumerate(tools):
+        w = f"{path} tool {i} ({t.get('id')})"
+        odd = sorted(set(t) - AI_TOOL_KEYS)
+        if odd: err(f"{w}: unknown field(s) {odd}; the row's fields are in DATA-PAGES.md section 4")
+        verified = t.get("status") == "verified"
+        text_len("uploads", t.get("uploads"), 3, 120, w)
+        check_text(w, "uploads", t.get("uploads"))
+        terms = t.get("output_terms")
+        if not isinstance(terms, dict):
+            err(f"{w}: output_terms must be an object: {{summary, terms_url, quote}}"); terms = {}
+        else:
+            odd = sorted(set(terms) - AI_TERMS_KEYS)
+            if odd: err(f"{w}: output_terms has unknown field(s) {odd}")
+            if "quote" not in terms: err(f"{w}: output_terms.quote is required: a short quote from the terms, or null")
+        tw = f"{w} output_terms"
+        text_len("summary", terms.get("summary"), 20, 240, tw)
+        check_text(tw, "summary", terms.get("summary"))
+        check_link(tw, "terms_url", terms.get("terms_url"), offline, hard=verified)
+        q = terms.get("quote")
+        if q is not None:
+            if not isinstance(q, str) or not q.strip():
+                err(f"{tw}: quote must be a short quote from the terms, or null")
+            else:
+                if len(q) > 200: err(f"{tw}: quote is {len(q)} chars (200 at most); quote briefly")
+                if q != q.strip() or "  " in q: warn(f"{tw}: quote has stray whitespace")
+                if q.strip()[:1] in "\"\u201c" or q.strip()[-1:] in "\"\u201d":
+                    err(f"{tw}: quote is given without its quotation marks; the page adds them")
+                for rx, why in STANDING:
+                    if rx.search(q): err(f"{tw}: quote: standing correction: {why}")
+                if "\u2014" in q: warn(f"{tw}: quote has an em dash; shorten the quote (with an ellipsis) so the page shows none")
+        claimed = [f for f, v in (("what", t.get("what")), ("uploads", t.get("uploads")), ("note", t.get("note")),
+                                  ("output_terms.summary", terms.get("summary"))) if isinstance(v, str) and VENDOR_CLAIM.search(v)]
+        if claimed and not (isinstance(t.get("note"), str) and VENDOR_MARK.search(t["note"])):
+            err(f"{w}: {', '.join(claimed)} states a vendor accuracy or licensed-data claim; note must say it is the vendor's own claim")
     return len(tools), Counter(t.get("status") for t in tools)
 
 def is_num(v):
@@ -288,7 +349,7 @@ def check_rates(path, data, offline):
     check_sources(path, sources, used, offline)
     return len(phys), Counter({"physical years": len(phys), "streaming years": len(sp)})
 
-DATA_KINDS = {"claimable": check_claimable, "tools": check_tools, "rates": check_rates}
+DATA_KINDS = {"claimable": check_claimable, "tools": check_tools, "rates": check_rates, "ai-tools": check_ai_tools}
 
 
 def check_file(path, offline):

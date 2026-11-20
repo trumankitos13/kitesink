@@ -174,6 +174,36 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
   is older than its data. The hub's projects band (Song of the Day, Stage First, Listening Club,
   For music teams) is in `content/music/templates/hub.html`, and its part of the twin in
   `templates/hub.md`. What waits on the owner is in `content/music/HOLDS.md`.
+- **Launching `/music/ai-tools` (the AI tools directory):** the build already knows the page
+  (`content/music/DATA-PAGES.md` section 4, the `ai-tools` row of `content/music/routes.json`). It
+  writes nothing for it until `content/music/ai-tools.json` exists with at least one
+  `"status": "verified"` row; until then the hub shows the AI tools card and the AI band's line as
+  "In preparation". When the file arrives, in this order:
+  1. `python3 scripts/validate_music.py content/music/ai-tools.json` (opens every `url` and
+     `terms_url`) and `python3 scripts/check_overlap.py content/music/ai-tools.json --corpus <dir>`.
+  2. `python3 scripts/build_music.py`. It writes `public/music/ai-tools.html` and `.md`, links the
+     hub's AI tools card and the AI band to it, adds it to the music navigation and to `pages` in
+     `public/music/search.json` (the tools are not search rows, as on `/music/tools`), points the
+     `/music/tools` directory and its twin at it, and lists it in `public/music.md`.
+  3. `wrangler.jsonc`: add `"/music/ai-tools"` to `run_worker_first`, after `"/music/tools"`.
+  4. `public/site-index.js`: after the "Music rights tools" entry, add
+     `{ t: "AI tools for music rights work", h: "/music/ai-tools", s: "music", k: "Tool", shelf: "tools",`
+     `d: "AI tools for music rights work, with what each does with your files and data, and its output terms.", w: "ai detection generator voice likeness metadata terms training data directory" },`
+  5. `public/sitemap.xml`: after the `/music/tools` line, add
+     `<url><loc>https://kitesink.com/music/ai-tools</loc><lastmod>YYYY-MM-DD</lastmod><priority>0.7</priority></url>`
+     (the build date).
+  6. `public/llms.txt`: after the "Music tools" line, add
+     `- [AI tools](https://kitesink.com/music/ai-tools.md): AI tools that touch music rights work, with what each one does with your files and your data, its output terms, and the date it was checked`
+  7. `public/.well-known/agent-skills/kitesink-music-reference/SKILL.md`: add `` `ai-tools` `` to
+     the `Pages:` paragraph right after `` `tools` `` (the audit wants the pages in the order of
+     `routes.json`), and a bullet under it: "`ai-tools`: AI tools that touch music rights work,
+     grouped by job, each with what you give it, what its terms say about outputs and your data
+     (with a short quote and the terms' address), and the date it was checked; accuracy and
+     licensed-data claims are the vendor's own." Then `python3 scripts/build_agent_files.py`.
+  8. `docs/AI-PAGES.md`: add `ai-tools` to the `/music/claims, ...` row of the twins table.
+  9. `python3 scripts/build_llms_full.py`, then `python3 scripts/check_site.py`.
+  If the file has no verified row yet, stop after step 2: the page is not written, and steps 3 to 8
+  would make the audit fail.
 - **Plain-text twins:** when a fact changes on a page that has a twin (`public/<page>.md`),
   change the twin too. See `docs/AI-PAGES.md`.
 

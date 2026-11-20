@@ -17,6 +17,8 @@ Inputs (in content/music/, or KS_MUSIC_SRC):
                         unclaimed-money checklist reads
     rates.json          the mechanical rates (optional; DATA-PAGES.md): the rate calculator
     tools.json          the external tools directory (optional; DATA-PAGES.md)
+    ai-tools.json       the AI tools directory (optional; DATA-PAGES.md section 4): the page
+                        /music/ai-tools and its twin, written once the file has a verified row
     routes.json         one row per page under /music/: slug, kind, title, description, h1, lead
     meta.json           the "last updated" date, the scope line, source labels, the hub's tools
     templates/sub.html  the one shell every page under /music/ is poured into
@@ -33,6 +35,7 @@ Outputs (in public/, or KS_MUSIC_OUT):
     music/claimable.json                    the claimable rows as public data (no `support`)
     music/tools.html and music/tools.md     KiteSink's two tools and the directory, written when
                                             any of claimable.json, rates.json or tools.json exists
+    music/ai-tools.html and music/ai-tools.md   the AI tools directory, when ai-tools.json has a verified row
     music.html and music.md                 the hub and its twin, ONLY when HUB_LIVE is True
 
 Every entry has one home page under /music/: a term lives on the glossary, a claim on the
@@ -163,6 +166,16 @@ TOOL_GROUPS = OrderedDict([
     ("works-search", "Works and repertoire searches"), ("recordings", "Recordings and identifiers"), ("unclaimed", "Unclaimed money"),
     ("metadata", "Metadata and file formats"), ("splits-contracts", "Splits and agreements"), ("sync-cue", "Sync and cue sheets"),
     ("valuation", "Catalogue valuation"),
+])
+# The AI tools directory (DATA-PAGES.md section 4): its own file and page, read after the three above. Not one of
+# DATA_FILES: it does not make /music/tools. Its rows are tools.json rows plus uploads and output_terms.
+AI_FILE = "ai-tools"
+AI_ACCESS = OrderedDict(list(ACCESS.items())[:-1] + [("waitlist", "Waitlist or invitation"), ("enterprise", "Enterprise, through sales")]
+                        + list(ACCESS.items())[-1:])
+AI_TOOL_GROUPS = OrderedDict([
+    ("metadata-matching", "Metadata and matching"), ("detection-attribution", "AI-content detection and attribution"),
+    ("generators", "Licensed generators and output terms"), ("catalogue-analysis", "Catalogue and statement analysis"),
+    ("voice-likeness", "Voice and likeness"), ("assistants", "AI assistants: data-use terms"),
 ])
 # The area page each KiteSink tool is also embedded on (near the top), when that area (and the tool's data, if it needs any) exist.
 TOOL_HOMES = {"mechanicals-mlc": "calculator", "unclaimed-recovery": "checklist",
@@ -389,7 +402,7 @@ def load():
         for key, src in d.get("sources", {}).items():
             lib.add(name, key, src)
         data[name] = d
-    for name in DATA_FILES:
+    for name in DATA_FILES + (AI_FILE,):
         f = SRC / f"{name}.json"
         if not f.is_file():
             continue          # not written yet: the page or tool that reads it shows as in preparation
@@ -786,9 +799,9 @@ def md_sources(lib, meta, pages, corrections):
 
 
 # ----------------------------------------------------------------- the pages under /music/
-KINDS = ("area", "claims", "glossary", "reference", "sources", "claimable", "tools")
+KINDS = ("area", "claims", "glossary", "reference", "sources", "claimable", "tools", "ai-tools")
 REF_KINDS = ("claims", "glossary", "reference", "sources")
-TOOL_KINDS = ("claimable", "tools")
+TOOL_KINDS = ("claimable", "tools", "ai-tools")
 
 
 def load_routes():
@@ -834,7 +847,9 @@ class Pages:
     """The pages under /music/ that this build writes, and which one is the home of each entry.
     An area gets a page when its file exists. A reference page is written when it has something
     to show: claims when there are claims, the glossary when there are terms, the reference
-    index when there are numbers or tables, and the sources page when anything is cited."""
+    index when there are numbers or tables, and the sources page when anything is cited. The data
+    pages likewise: claimable when it has rows, tools when any of its files exists, and the AI tools
+    directory when ai-tools.json has a verified row."""
 
     def __init__(self, routes, data, present, lib):
         self.areas = present
@@ -846,6 +861,7 @@ class Pages:
             "sources": bool(lib.by_id),
             "claimable": bool(data.get("claimable", {}).get("rows")),
             "tools": any(name in data for name in DATA_FILES),
+            "ai-tools": bool(verified_tools(data, AI_FILE)),
         }
         self.routes = [r for r in routes if (r["area"] in present if r["kind"] == "area" else has[r["kind"]])]
         self.all_routes = routes
@@ -1279,6 +1295,8 @@ def build_subpages(lib, meta, data, numbers, pages):
                 sections = page_claimable(lib, data, pages, r)
             elif r["kind"] == "tools":
                 sections = page_tools(lib, data, pages, r)
+            elif r["kind"] == "ai-tools":
+                sections = page_ai_tools(data, pages, r)
             else:
                 sections = page_reference(data, pages, r)
         total.update(tally)
@@ -1306,6 +1324,8 @@ def build_subpages(lib, meta, data, numbers, pages):
         out[PUBLIC / "music" / "claimable.json"] = claimable_public(lib, data["claimable"], meta)
     if pages.has("tools"):
         out[PUBLIC / "music" / f"{pages.slug['tools']}.md"] = md_tools(lib, meta, data, pages)
+    if pages.has("ai-tools"):
+        out[PUBLIC / "music" / f"{pages.slug['ai-tools']}.md"] = md_ai_tools(meta, data, pages)
     return out, built, total
 
 
@@ -1804,13 +1824,14 @@ def tool_row(t):
             f' <span class="ot-owner">{esc(t["owner"])}</span></p><p class="ot-what">{esc(t["what"])}</p>{note}<p class="g-facts">{facts}</p></li>')
 
 
-def verified_tools(data):
-    return [t for t in data.get("tools", {}).get("tools", []) if t.get("status") == "verified"]
+def verified_tools(data, name="tools"):
+    """The rows a directory publishes: tools.json's, or ai-tools.json's with name=AI_FILE."""
+    return [t for t in data.get(name, {}).get("tools", []) if t.get("status") == "verified"]
 
 
-def tool_group_labels(data):
-    own = {g["id"]: g["label"] for g in data.get("tools", {}).get("groups", []) if g.get("id") and g.get("label")}
-    return OrderedDict((g, own.get(g, label)) for g, label in TOOL_GROUPS.items())
+def tool_group_labels(data, name="tools", fixed=TOOL_GROUPS):
+    own = {g["id"]: g["label"] for g in data.get(name, {}).get("groups", []) if g.get("id") and g.get("label")}
+    return OrderedDict((g, own.get(g, label)) for g, label in fixed.items())
 
 
 def page_tools(lib, data, pages, route):
@@ -1850,16 +1871,134 @@ def page_tools(lib, data, pages, route):
             '<div class="gx-main"><p class="gx-count" id="ot-count" aria-live="polite"></p><div id="ot-list">' + "\n".join(groups) + "</div>"
             '<p class="gx-empty" id="ot-empty" hidden>No tool matches. <button type="button" class="k-linkbtn" data-reset="tools">Clear the filters</button></p></div></div>'
         )
+        if pages.has("ai-tools"):
+            inner += ai_tools_pointer(pages)
         aside = f'{count_of(len(tools), "tool")}, grouped by what they do. Narrow by who you are or where you work.'
         sections.append(("directory", "Other tools", len(tools), band("directory", "Directory", "Other tools <em>worth knowing.</em>", aside, inner)))
     else:
         sections.append(("directory", "Other tools", None, band("directory", "Directory", "Other tools <em>worth knowing.</em>", "",
                          '<p class="k-small">In preparation: a directory of outside tools for works searches, identifiers, unclaimed money, '
-                         'metadata, splits, sync and valuation, each opened and checked before it is listed.</p>')))
+                         'metadata, splits, sync and valuation, each opened and checked before it is listed.</p>'
+                         + (ai_tools_pointer(pages) if pages.has("ai-tools") else ""))))
     n_src, src = sources_band(lib, pages)
     if n_src:
         sections.append(("sources", "Sources", n_src, src))
     return sections
+
+
+# ----------------------------------------------------------------- the AI tools directory (ai-tools.json)
+AI_SCOPE = ("Covers AI tools that touch music rights work whose own pages and terms could be opened and read, on the date each row "
+            "gives. A tool not listed is not a judgment on it. Terms change, often: read the current terms before you upload anything, "
+            "above all music you do not own outright or have not cleared with your co-writers and rightsholders.")
+AI_CLAIMS = ("Accuracy figures, detection rates and claims that a model was trained only on licensed data are the vendor's own: "
+             "KiteSink has not tested any tool, and a row that mentions one says so in its note.")
+AI_METHOD = [
+    ("Opened and checked", "A tool is listed only after its own page and its terms were opened and read by two people. Each row carries the date."),
+    ("You give it", "What the tool asks you to hand over: audio, stems, lyrics, statements, a catalogue export, a voice sample or a prompt."),
+    ("Outputs and your data", "Our summary of the tool's terms on that date: who owns what it makes, and whether what you upload, or what it makes, "
+                              "may be used to train its models. Where its own pages disagree, the row says so."),
+    ("Their terms say", "A short quote from the terms themselves, with a link to them, so you can check our summary against the tool's own words."),
+    ("Vendor claims", AI_CLAIMS),
+    ("No ranking", "Grouped by what each tool does, in our words. No ranking, no paid placement, no affiliate links."),
+]
+
+
+def ai_tools_pointer(pages):
+    return (f'<p class="k-small">AI tools have a directory of their own, with what each one does with your files and your data: '
+            f'<a class="k-inline" href="{pages.url("ai-tools")}">the AI tools directory</a>.</p>')
+
+
+def ai_tool_row(t):
+    """One AI tool: the tools.json row (name, owner, what, note, access, readers, territory, checked) plus what you give
+    it and what its terms say about outputs and your data, with the vendor's own words quoted and linked."""
+    terms = t["output_terms"]
+    facts = (f'<span><b>Access</b> {esc(AI_ACCESS[t["access"]])}</span>'
+             f'<span><b>For</b> {esc(and_list(READERS[r][0] for r in t["readers"]))}</span>'
+             f'<span><b>Where</b> {esc(terr_label(t["territory"]))}</span>'
+             + (f'<span><b>Checked</b> {esc(date_label(t["checked"]))}</span>' if t.get("checked") else ""))
+    link = (f'<a class="k-inline" href="{esc(terms["terms_url"])}" target="_blank" rel="noopener">Read the terms'
+            f'<span class="k-vh"> of {esc(t["name"])} (opens in a new tab)</span></a>')
+    said = (f'<div><dt>Their terms say</dt><dd><q>{esc(terms["quote"])}</q> {link}</dd></div>' if terms.get("quote")
+            else f'<div><dt>Their terms</dt><dd>{link}</dd></div>')
+    note = f'<p class="ot-note">{esc(t["note"])}</p>' if t.get("note") else ""
+    return (f'<li class="ot" id="{esc(t["id"])}" data-r="{esc(" ".join(t["readers"]))}" data-tr="{esc(" ".join(t["territory"]))}" data-g="{esc(t["group"])}">'
+            f'<p class="ot-name"><a href="{esc(t["url"])}" target="_blank" rel="noopener">{esc(t["name"])}<span class="k-vh"> (opens in a new tab)</span></a>'
+            f' <span class="ot-owner">{esc(t["owner"])}</span></p><p class="ot-what">{esc(t["what"])}</p>'
+            f'<dl class="cl-facts"><div><dt>You give it</dt><dd>{esc(t["uploads"])}</dd></div>'
+            f'<div><dt>Outputs and your data</dt><dd>{esc(terms["summary"])}</dd></div>{said}</dl>'
+            f'{note}<p class="g-facts">{facts}</p></li>')
+
+
+def page_ai_tools(data, pages, route):
+    """/music/ai-tools: the verified rows of ai-tools.json, grouped, with the reader and territory filters of the
+    /music/tools directory (the same ids, so /music-ref.js runs it), then how a row is checked. No sources band:
+    each row's terms link is its source."""
+    tools = verified_tools(data, AI_FILE)
+    labels = tool_group_labels(data, AI_FILE, AI_TOOL_GROUPS)
+    n_r = Counter(r for t in tools for r in t["readers"])
+    named = terr_options(tools)
+    n_t = Counter({c: sum(1 for t in tools if in_territory(t, c)) for c in TERRITORY})
+    rail = ('<div class="gx-rail" id="ot-rail">'
+            + facet("reader", [(r, READERS[r][0]) for r in READERS if n_r[r]], "Reader", counts=n_r)
+            + facet("territory", [(c, TERRITORY[c]) for c in named], "Territory", counts=n_t,
+                    note=INTL_NOTE if "INTL" in named and len(named) > 1 else "") + "</div>")
+    groups = []
+    for g, label in labels.items():
+        mine = [t for t in tools if t["group"] == g]
+        if mine:
+            groups.append(f'<section class="ot-g" data-g="{g}" aria-labelledby="og-{g}"><h3 class="fx-label ot-gh" id="og-{g}">{esc(label)}</h3>'
+                          '<ul class="ot-list">' + "".join(ai_tool_row(t) for t in mine) + "</ul></section>")
+    latest = max(t["checked"] for t in tools)
+    about = (f'<p class="k-small fr-note" id="about-data">AI tools that touch music rights work, grouped by the job they do. For each one: '
+             'what it does, what you give it, and what its own terms say about who owns the output and whether your files train its '
+             f'models, in our words with a short quote and a link to the terms. {esc(AI_CLAIMS)} {esc(AI_SCOPE)} As plain text: '
+             f'<a class="k-inline" href="/music/{route["slug"]}.md">{route["slug"]}.md</a>. Newest row checked {esc(date_label(latest))}.</p>')
+    inner = (
+        about
+        + '<div class="gx"><details class="gx-filters" id="ot-filters" open><summary>Filters <span id="ot-active"></span></summary>' + rail + "</details>"
+        '<div class="gx-main"><p class="gx-count" id="ot-count" aria-live="polite"></p><div id="ot-list">' + "\n".join(groups) + "</div>"
+        '<p class="gx-empty" id="ot-empty" hidden>No tool matches. <button type="button" class="k-linkbtn" data-reset="tools">Clear the filters</button></p></div></div>'
+    )
+    aside = f'{count_of(len(tools), "tool")}, grouped by what they do. Narrow by who you are or where you work.'
+    sections = [("directory", "The directory", len(tools), band("directory", "Directory", "AI tools, <em>by the job they do.</em>", aside, inner))]
+    method = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in AI_METHOD)
+    more = ""
+    if pages.has("ai-rights"):
+        more = (f'<p class="k-small">For the law, the licensing deals and the court cases, read '
+                f'<a class="k-inline" href="{pages.url("ai-rights")}">AI and music rights</a>.</p>')
+    sections.append(("method", "How a row is checked", None, band("method", "Method", "How a row <em>is checked.</em>", "",
+                     f'<dl class="cl-facts">{method}</dl>{more}')))
+    return sections
+
+
+def md_ai_tools(meta, data, pages):
+    tools = verified_tools(data, AI_FILE)
+    slug = pages.slug["ai-tools"]
+    out = ["# AI tools for music rights work: KiteSink", "",
+           f"{count_of(len(tools), 'AI tool')} that touch music rights work, grouped by the job they do. For each: what it does, what you "
+           "give it, and what its own terms say about who owns the output and whether your files train its models, in our words with a "
+           "short quote and a link to the terms.", "", AI_CLAIMS, "", AI_SCOPE, ""]
+    for g, label in tool_group_labels(data, AI_FILE, AI_TOOL_GROUPS).items():
+        mine = [t for t in tools if t["group"] == g]
+        if not mine:
+            continue
+        out += [f"## {label}", ""]
+        for t in mine:
+            terms = t["output_terms"]
+            out += [f"### {t['name']}", "",
+                    f"- [{t['name']}]({t['url']}) ({t['owner']}): {t['what']}",
+                    f"- You give it: {t['uploads']}",
+                    f"- Outputs and your data: {terms['summary']}",
+                    (f"- Their terms say: \"{terms['quote']}\" ([the terms]({terms['terms_url']}))" if terms.get("quote")
+                     else f"- Their terms: {terms['terms_url']}")]
+            if t.get("note"):
+                out.append(f"- Note: {t['note']}")
+            out += [f"- Access: {AI_ACCESS[t['access']]}. For: {', '.join(READERS[r][0].lower() for r in t['readers'])}. "
+                    f"Where: {terr_label(t['territory'])}." + (f" Checked {date_label(t['checked'])}." if t.get("checked") else ""), ""]
+    out += ["## How a row is checked", ""] + [f"- {k}: {v}" for k, v in AI_METHOD] + [""]
+    if pages.has("ai-rights"):
+        out += [f"For the law, the licensing deals and the court cases: {SITE}/music/{pages.slug['ai-rights']}.md", ""]
+    return "\n".join(out) + md_footer(meta, "/" + slug)
 
 
 def dataset_jsonld(claimable, route, meta):
@@ -1989,6 +2128,8 @@ def md_tools(lib, meta, data, pages):
     tools = verified_tools(data)
     if not tools:
         out += ["In preparation.", ""]
+    if pages.has("ai-tools"):
+        out += [f"AI tools have a directory of their own, with what each one does with your files and your data: {SITE}/music/{pages.slug['ai-tools']}.md", ""]
     for g, label in tool_group_labels(data).items():
         mine = [t for t in tools if t["group"] == g]
         if mine:
@@ -2089,11 +2230,22 @@ def hub_tools(meta, pages):
     return '<ul class="hub-cards mr-tools" aria-labelledby="h-tools">\n        ' + "\n        ".join(cards) + "\n      </ul>"
 
 
+def hub_ai_tools(data, pages):
+    """The AI band's line for the AI tools directory: a link once the page is written, else in preparation."""
+    if not pages.has("ai-tools"):
+        return ('<p class="mr-ai-soon">The AI tools directory is in preparation: AI tools that touch music rights work, with what '
+                'each one does with your files and your data.</p>')
+    n = len(verified_tools(data, AI_FILE))
+    return (f'<p class="mr-ai-n"><a class="k-btn" href="{pages.url("ai-tools")}">Open the AI tools directory</a> '
+            f'<span>{count_of(n, "tool")}: what each one does with your files and your data, each checked and dated.</span></p>')
+
+
 def hub_ai(data, pages, counts):
-    """The AI band: the AI area's topics and the claims tagged AI, or a note that it is coming."""
+    """The AI band: the AI area's topics and the claims tagged AI, or a note that it is coming; then the AI tools directory."""
     if not pages.has("ai-rights"):
         return ('<p class="mr-ai-soon">The AI area is in preparation: training on songs and recordings, who owns AI-assisted work, '
-                'voice and likeness, licensing deals, and the court cases so far. Each entry will carry the date it was true.</p>')
+                'voice and likeness, licensing deals, and the court cases so far. Each entry will carry the date it was true.</p>'
+                + hub_ai_tools(data, pages))
     d = data["ai-rights"]
     topics = "".join(f'<li><a href="{pages.url("ai-rights")}">{esc(t["label"])}</a></li>' for t in d.get("topics", []))
     claims = [c for c in data["claims"]["entries"] if "ai" in c.get("tags", []) or c["domain"] == "ai-rights"]
@@ -2102,7 +2254,8 @@ def hub_ai(data, pages, counts):
     return (f'<p class="mr-ai-n"><a class="k-btn" href="{pages.url("ai-rights")}">Read the AI area</a> '
             f'<span>{count_of(counts["ai-rights"], "entry", "entries")}, each dated.</span></p>'
             + (f'<ul class="fr-terms mr-ai-topics" aria-label="AI topics">{topics}</ul>' if topics else "")
-            + (f'<ul class="fr-claims mr-ai-claims" aria-label="Claims about AI">{qs}</ul>' if qs else ""))
+            + (f'<ul class="fr-claims mr-ai-claims" aria-label="Claims about AI">{qs}</ul>' if qs else "")
+            + hub_ai_tools(data, pages))
 
 
 def check_hub(hub, pages, built):
@@ -2158,6 +2311,9 @@ def md_index(meta, data, numbers, counts, pages):
     if pages.has("tools"):
         ref.append(f"- [Tools]({twin('tools')}): a mechanical rate calculator, an unclaimed-money checklist, an identifier checker, "
                    "a split-sheet generator and a checked directory of other tools.")
+    if pages.has("ai-tools"):
+        ref.append(f"- [AI tools]({twin('ai-tools')}): {numbers['n:ai-tools']} AI tools that touch music rights work, with what each one does "
+                   "with your files and your data, its output terms, and the date it was checked.")
     if ref:
         out += ["", "## Reference", ""] + ref
     out += ["", "## How the entries are graded", ""] + md_grading() + [""]
@@ -2193,10 +2349,12 @@ def build():
     numbers = {"n:steps": kinds["step"], "n:claims": n_claims, "n:terms": kinds["term"], "n:numbers": kinds["number"],
                "n:tables": kinds["table"], "n:sources": len(lib.by_id), "n:total": total, "n:areas": len(present),
                "n:planned": len(DOMAINS), "n:pages": len(pages.routes), "updated": meta["updated_label"],
-               "n:claimable": len(data.get("claimable", {}).get("rows", [])), "n:tools": len(verified_tools(data))}
+               "n:claimable": len(data.get("claimable", {}).get("rows", [])), "n:tools": len(verified_tools(data)),
+               "n:ai-tools": len(verified_tools(data, AI_FILE))}
     stats = {"areas": len(present), "entries": total, "pages": len(pages.routes), "sources": len(lib.by_id), "claims": n_claims,
              "numbers": kinds["number"], "tables": kinds["table"], "terms": kinds["term"], "steps": kinds["step"],
              "claimable rows": len(data.get("claimable", {}).get("rows", [])), "listed tools": len(verified_tools(data)),
+             "listed AI tools": len(verified_tools(data, AI_FILE)),
              "rate years": len(data.get("rates", {}).get("physical", []))}
     out = OrderedDict()
     if not pages.routes:
@@ -2238,7 +2396,7 @@ def main():
         p.write_text(text, encoding="utf-8")
     print(f"built /music/: {stats['areas']} of {len(DOMAINS)} areas, {stats['entries']} entries on {stats['pages']} pages, each entry with "
           "exactly one home; " + ", ".join(f"{stats[k]} {k}" for k in ("sources", "claims", "numbers", "tables", "terms", "steps",
-                                                                         "claimable rows", "listed tools", "rate years"))
+                                                                         "claimable rows", "listed tools", "listed AI tools", "rate years"))
           + ("; hub written" if HUB_LIVE else "; hub not written (HUB_LIVE is False)"))
     return 0
 

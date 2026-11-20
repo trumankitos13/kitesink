@@ -45,6 +45,11 @@ slug to the `Pages:` paragraph of the music agent skill (see Agent discovery bel
 `/music/search.json` (the hub's search index) and `/music/claimable.json` (the claimable table
 as data, linked from its twin) are not twins.
 
+`/music/ai-tools` (the AI tools directory, from `content/music/ai-tools.json`) is ready in the
+build but not written yet: it appears when that file has a verified row. Its launch steps (the
+route, the site index, the sitemap, `llms.txt`, the skill's `Pages:` paragraph and this table)
+are in `README.md` under "Launching `/music/ai-tools`".
+
 `/fitness/search.json` and `/fitness/ids.json` are not twins. They are data for the hub's
 own scripts: the search index, and the map that sends an old `/fitness#<id>` link to the
 page that holds that id now.
