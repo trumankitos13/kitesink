@@ -1609,12 +1609,11 @@ ID_FORMATS = [
      "form": "16 characters: 15 digits and a check character, which is a digit or X. Written ISNI 0000 0001 2124 1960; the word "
              "ISNI and the spaces are not part of it.",
      "check": "The check character comes from the first 15 digits by the ISO/IEC 7064 MOD 11-2 method (ISO 27729, Annex A). "
-              "X stands for 10. ORCID iDs use the same method.",
+              "X stands for 10.",
      "lookup": ("ISNI search", "https://isni.org/page/search-database/"),
      "sources": [("ISO 27729:2024, clause 4 and Annex A (preview)", "https://cdn.standards.iteh.ai/samples/87177/3bea4cd1719644159883964978cc57fa/ISO-27729-2024.pdf"),
                  ("ISNI: FAQs", "https://isni.org/page/faqs/"),
-                 ("IANA: ISNI namespace registration", "https://www.iana.org/assignments/urn-namespaces/urn-formal/isni"),
-                 ("ORCID: structure of the ORCID iD", "https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier")]},
+                 ("IANA: ISNI namespace registration", "https://www.iana.org/assignments/urn-namespaces/urn-formal/isni")]},
     {"id": "ipi", "name": "IPI", "long": "Interested Party Information",
      "what": "A writer or publisher in the IPI system the CISAC societies share. Each name has an IPI name number; the IPI base "
              "number ties all of one party's names together.",
