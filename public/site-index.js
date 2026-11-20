@@ -117,6 +117,8 @@ window.KS_INDEX = [
     d: "What performing rights organisations license and pay, joining and registering, live sets, and the US consent decrees.", w: "pro performing rights ascap bmi sesac gmr socan gema public performance blanket licence consent decree songview live setlist" },
   { t: "Mechanical royalties and the MLC", h: "/music/mechanicals-mlc", s: "music", k: "Notes", shelf: "tools",
     d: "US mechanical rates, the Mechanical Licensing Collective, registering and matching works.", w: "mechanicals mlc statutory rate section 115 blanket licence phonorecords crb streaming" },
+  { t: "Recording and neighbouring rights", h: "/music/recorded-neighboring", s: "music", k: "Notes", shelf: "tools",
+    d: "Royalties for the recording itself: US digital performance and SoundExchange, webcasting rates, performers abroad, and Content ID.", w: "sound recording neighbouring rights soundexchange webcasting rates 114 featured non-featured ppl gvl content id pre-1972 letter of direction" },
   { t: "Unclaimed royalties", h: "/music/unclaimed-recovery", s: "music", k: "Notes", shelf: "tools",
     d: "Why money goes unmatched, where it is held, and how to search for it and claim it.", w: "unclaimed black box unmatched royalties claim search recovery mlc soundexchange" },
   { t: "AI and music rights", h: "/music/ai-rights", s: "music", k: "Notes", shelf: "tools",

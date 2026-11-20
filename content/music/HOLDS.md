@@ -107,6 +107,19 @@ changes, copy answers here, tick what is closed, then continue.
       pull streaming rights from ASCAP or BMI; does a venue's ASCAP licence cover GMR songs; can
       a writer apply to GMR
 
+## From batch 4 (recorded and neighbouring rights, 2026-11-20)
+
+- [ ] AFM & SAG-AFTRA Intellectual Property Rights Distribution Fund: afmsagaftrafund.org is
+      JavaScript-only and afm-sagaftrafund.org does not resolve from the session. The fund is not
+      named; non-featured entries rest on 114(g)(2) and SoundExchange. Hand check
+- [ ] Re:Sound (challenge page) and ACTRA RACS (connection refused): Canada appears only through
+      SoundExchange's partner list. Hand check
+- [ ] eCRB docket 23-CRB-0012-WR (Web VI): any determination for section 380.10 webcasters not
+      yet in the Federal Register? The page says "not found as of 20 November 2026"
+- [ ] Candidate claims (not added): does a letter of direction need every featured artist; are
+      session musicians paid by SoundExchange; does PPL pay any performer; Content ID for a full
+      album; a US performance right for pre-1972 recordings
+
 ## From batch 7 (AI and music rights, 2026-11-20)
 
 - [ ] congress.gov blocks automated reading: check S. 4591 (NO FAKES) for any action after

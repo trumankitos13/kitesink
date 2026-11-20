@@ -1,6 +1,6 @@
 # Music key numbers and reference tables, indexed: KiteSink
 
-An index of the 14 key numbers and 12 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
+An index of the 16 key numbers and 14 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
 
 ## Key numbers
 
@@ -15,6 +15,8 @@ An index of the 14 key numbers and 12 reference tables in the KiteSink music fie
 | [Historical unmatched royalties that services transferred to the MLC](https://kitesink.com/music/mechanicals-mlc#mech-number-historical-transferred) | 397 | million USD, approx., after Phono III adjustments | 19 November 2026 | Mechanicals and the MLC |
 | [Historical royalties distributed by September 2026](https://kitesink.com/music/mechanicals-mlc#mech-number-historical-distributed) | 239 | million USD, approx., historical royalties | 30 September 2026 | Mechanicals and the MLC |
 | [Services sent MLC audit notice letters for 2021 to 2023](https://kitesink.com/music/mechanicals-mlc#mech-number-audit-notices) | 49 | DSPs listed on notice letters dated 10 January 2024 | 19 November 2026 | Mechanicals and the MLC |
+| [Commercial broadcasters' nonsubscription streaming rate per performance, 2026](https://kitesink.com/music/recorded-neighboring#nbr-number-broadcasters-2026) | 0.0028 | dollars per performance, commercial broadcasters, 2026 | 20 November 2026 | Neighbouring rights |
+| [Commercial webcasters' nonsubscription rate per performance, 2025](https://kitesink.com/music/recorded-neighboring#nbr-number-webcasters-2025) | 0.0025 | dollars per performance, commercial webcasters, 2025 | 20 November 2026 | Neighbouring rights |
 | [Minimum notice before a US unclaimed distribution](https://kitesink.com/music/unclaimed-recovery#unc-number-notice-days) | 90 | days' minimum notice before an MLC unclaimed distribution | 20 November 2026 | Unclaimed royalties |
 | [Music collections by CISAC member societies in 2025](https://kitesink.com/music/unclaimed-recovery#unc-number-cisac-music) | 14.06 | EUR billion, gross, 2025 | 4 November 2026 | Unclaimed royalties |
 | [Tracks on PPL's repertoire database](https://kitesink.com/music/unclaimed-recovery#unc-number-ppl-tracks) | 28 | million tracks or more | 20 November 2026 | Unclaimed royalties |
@@ -32,6 +34,8 @@ An index of the 14 key numbers and 12 reference tables in the KiteSink music fie
 - [MLC scale figures differ by date, so quote the date](https://kitesink.com/music/mechanicals-mlc#mech-table-mlc-snapshots) (Mechanicals and the MLC)
 - [Three pools of MLC money and where each stands](https://kitesink.com/music/mechanicals-mlc#mech-table-money-pools) (Mechanicals and the MLC)
 - [The rate periods referred to in MLC and CRB documents](https://kitesink.com/music/mechanicals-mlc#mech-table-rate-periods) (Mechanicals and the MLC)
+- [How long federal remedies run for pre-1972 recordings](https://kitesink.com/music/recorded-neighboring#nbr-table-pre1972-terms) (Neighbouring rights)
+- [Recording societies SoundExchange lists as partners in this guide's countries](https://kitesink.com/music/recorded-neighboring#nbr-table-societies) (Neighbouring rights)
 - [SoundExchange's four status lists for unclaimed royalties](https://kitesink.com/music/unclaimed-recovery#unc-table-soundexchange-lists) (Unclaimed royalties)
 - [What collectives do with royalties they cannot allocate](https://kitesink.com/music/unclaimed-recovery#unc-table-undistributed-methods) (Unclaimed royalties)
 - [Tracker: pending AI and rights matters, with the date of the latest step found](https://kitesink.com/music/ai-rights#ai-table-tracker) (AI and music rights)
@@ -41,6 +45,7 @@ An index of the 14 key numbers and 12 reference tables in the KiteSink music fie
 - [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
 - [Performance royalties](https://kitesink.com/music/pros-performance.md): PROs, public performance, and how plays become pay.
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
+- [Neighbouring rights](https://kitesink.com/music/recorded-neighboring.md): What the recording earns on its own: SoundExchange, PPL and performer shares.
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
 - [AI and music rights](https://kitesink.com/music/ai-rights.md): Training, outputs, likeness, and the cases and rules so far.
 

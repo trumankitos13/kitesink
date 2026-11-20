@@ -241,6 +241,12 @@ export const RULES = [
   }
  ],
  [
+  "/music/recorded-neighboring",
+  {
+   "Link": "</music/recorded-neighboring.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
   "/music/unclaimed-recovery",
   {
    "Link": "</music/unclaimed-recovery.md>; rel=\"alternate\"; type=\"text/markdown\""

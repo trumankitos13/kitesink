@@ -1,14 +1,16 @@
 # Music business glossary: KiteSink
 
-The 29 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
+The 31 terms the KiteSink music field guide uses, in plain words, A to Z. Each names the area it comes from.
 
 - **AI-assisted work and AI-generated output** (AI and music rights; Canada, US): SOCAN's split: an AI-assisted work is made by a person using AI as a tool; an AI-generated output is made with minimal human involvement and cannot be registered. Sources: [SOCAN 2025b](https://www.socanmagazine.ca/socan-academy/socan-ai-registration-guidelines/)
+- **Artist, Performer and Sound Recording Owner (SoundExchange's terms)** (Neighbouring rights; US): SoundExchange uses Artist for the name on the release, Performer for each person who makes up that Artist, and Sound Recording Owner for whoever owns the master, which is separate from owning the song. Sources: [SoundExchange n.d.-c](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/key-terms/)
 - **Black box** (Unclaimed royalties; International): Informal industry name for a pool of collected royalties that nobody has been able to allocate. It is a nickname, not a legal or official term; collectives use names such as suspense account.
 - **Blanket licence (performing right)** (Performance royalties; International): One licence that lets a user perform any work in a society's repertoire, including foreign works it represents under reciprocal deals, with no song-by-song clearance. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 - **Blanket license (digital)** (Mechanicals and the MLC; US): Since 1 January 2021, a qualifying digital service can get one license through the MLC that covers every song open to the compulsory license, in place of song-by-song notices. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115), [Copyright Office: MMA FAQ](https://www.copyright.gov/music-modernization/faq.html)
 - **Compulsory (mechanical) license** (Mechanicals and the MLC; US): A US legal route to record and distribute your own version of a song once recordings of it have been released in the US with the owner's permission. You must meet the conditions and pay the statutory rate. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
 - **Cue sheet** (Performance royalties; International): A list of the music in a TV or film programme, with each work and use, sent to a society so it can pay the writers and publishers.
 - **Digital replica** (AI and music rights; US): In the NO FAKES bill (S. 4591, not law as of November 2026), a newly made, computer-generated, highly realistic copy of a person's voice or likeness. Authorised remixes, samples and remasters are excluded. Sources: [GPO 2026](https://www.govinfo.gov/content/pkg/BILLS-119s4591rs/xhtml/BILLS-119s4591rs.html)
+- **Featured and non-featured performers** (Neighbouring rights; US): A featured artist is the person or group most prominent on a track. Non-featured performers, such as session musicians and backing singers, are paid through a separate route. Sources: [SoundExchange n.d.-d](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/letters-of-direction/), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114)
 - **ISRC code** (Royalty basics; International, UK): International Standard Recording Code: a 12-character identifier for one recording, made of a rightsholder code, a year and a five-digit number. Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/)
 - **ISWC code** (Royalty basics; International): International Standard Musical Work Code: a number that identifies a song and links it to its rights holders in the society systems. Sources: [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 - **Market-share distribution** (Mechanicals and the MLC; US): How the statute says remaining unclaimed accrued royalties are paid: to identified owners in proportion to their relative market shares in the usage reports, with a share passed on to songwriters. Sources: [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115)
@@ -37,6 +39,7 @@ The 29 terms the KiteSink music field guide uses, in plain words, A to Z. Each n
 - [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
 - [Performance royalties](https://kitesink.com/music/pros-performance.md): PROs, public performance, and how plays become pay.
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
+- [Neighbouring rights](https://kitesink.com/music/recorded-neighboring.md): What the recording earns on its own: SoundExchange, PPL and performer shares.
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
 - [AI and music rights](https://kitesink.com/music/ai-rights.md): Training, outputs, likeness, and the cases and rules so far.
 

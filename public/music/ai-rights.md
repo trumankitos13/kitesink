@@ -226,7 +226,7 @@ Platforms and distributors · Beginner · Sourced (official) · For: artists, pr
 
 The YouTube Help page says creators disclose realistic AI-generated or meaningfully altered content in YouTube Studio, and lists music that is the main focus of a video among the examples. Non-realistic content and minor edits need no disclosure. Creators who keep failing to disclose may get a label added or face penalties. YouTube's blog of 21 April 2026 says likeness detection is offered to talent agencies, management companies and the people they represent, and describes matching faces. Voice detection was not described on the pages opened.
 
-Platforms and distributors · Beginner · Sourced (official) · For: artists, producers, administrators · Where: International · As of 20 November 2026 · Sources: [YouTube (Google) n.d.](https://support.google.com/youtube/answer/14328491?hl=en), [YouTube 2026](https://blog.youtube/news-and-events/youtube-likeness-detection-ai-protection/)
+Platforms and distributors · Beginner · Sourced (official) · For: artists, producers, administrators · Where: International · As of 20 November 2026 · Sources: [YouTube (Google) n.d.-b](https://support.google.com/youtube/answer/14328491?hl=en), [YouTube 2026](https://blog.youtube/news-and-events/youtube-likeness-detection-ai-protection/)
 
 ### Apple Music's AI tags depend on what labels and distributors declare
 
