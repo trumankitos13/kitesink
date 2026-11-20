@@ -296,6 +296,37 @@
   @media (min-width: 760px) and (max-width: 1059px) { .ways { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (min-width: 1060px) { .ways { grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: 1120px; } }
   @media (max-width: 759px) { .ways .way:last-child { grid-column: 1 / -1; } }
+
+  /* cards in the row: a little tighter, so every project fills about the same height with real content */
+  .feats .feat .k-pc { padding: clamp(20px, 3vw, 38px); }
+  .feats .feat .k-pc-title { font-size: clamp(28px, 3.4vw, 44px); }
+  .team-steps, .learn-tools { border: 1px solid var(--pc-rule); border-radius: 14px; padding: clamp(16px, 2vw, 22px); background: var(--pc-tint, rgba(255,255,255,.05)); }
+  .team-steps-h { margin: 0 0 10px; font: 600 11px/1.3 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--pc-accent); }
+  .team-steps ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: st; }
+  .team-steps li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 2px 10px; counter-increment: st; }
+  .team-steps li::before { content: "0" counter(st); grid-row: 1 / span 2; font: 600 12px/1.6 var(--k-mono); color: var(--pc-accent); }
+  .team-steps li b { color: var(--pc-ink); font-weight: 600; }
+  .team-steps li span { color: var(--pc-copy); font-size: 14.5px; line-height: 1.5; }
+  .team-steps-foot { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--pc-rule); color: var(--pc-copy); font-size: 14.5px; line-height: 1.5; }
+  .team-steps-foot b { color: var(--pc-ink); }
+  .k-card--pine .trio b, .k-card--pine .k-pc-title, .k-card--pine .k-pc-tag { color: var(--pc-ink); }
+  .k-card--pine .trio span, .k-card--pine p { color: var(--pc-copy); }
+  .k-card--pine .feat-links .k-chip { color: var(--pc-ink); border-color: rgba(240,232,214,.35); }
+  .learn-side { display: grid; gap: 18px; align-content: start; }
+  .learn-stats { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; font: 500 12px/1.4 var(--k-mono); color: var(--pc-copy); }
+  .learn-stats b { font: 700 20px/1 var(--k-sans); color: var(--pc-ink); margin-right: 4px; }
+  .learn-tools ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .learn-tools li { display: grid; gap: 1px; }
+  .learn-tools a { color: var(--pc-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--pc-rule); }
+  .learn-tools a:hover { color: var(--pc-accent); }
+  .learn-tools span { color: var(--pc-copy); font-size: 13.5px; }
+  @media (max-width: 759px) { .team-steps-foot { display: none; } .team-steps li span { font-size: 14px; } }
+
+  /* small labels inside the cards must not take the cards' body-text size */
+  .feat .k-pc .team-steps-h { font: 600 11px/1.3 var(--k-mono); letter-spacing: .12em; }
+  .feat .k-pc .learn-stats { font: 500 12px/1.4 var(--k-mono); }
+  .feat .k-pc .team-steps-foot { font-size: 14.5px; }
+  .feats .feat .k-pc p { font-size: clamp(15px, 1.35vw, 16.5px); }
 </style>
 </head>
 <body class="ks-paper k2 mr mr-hub">
@@ -392,6 +423,7 @@
               <li><i>01</i><b>The Daily</b><span>A print feature, every morning: why it matters, the facts, the lineage, liner notes.</span></li>
               <li><i>02</i><b>The Almanac</b><span>Collect what stays with you; your Library redraws it as a portrait of your year.</span></li>
               <li><i>03</i><b>The Story</b><span>Music as literature, not algorithm.</span></li>
+              <li><i>04</i><b>The Friday Pressing</b><span>Every Friday, the week&rsquo;s seven picks gathered into one edition, with the records you kept.</span></li>
             </ul>
             <div class="feat-links">
               <a class="k-btn feat-btn" href="/song-of-the-day">See the app</a>
@@ -479,14 +511,33 @@
     </section>
 
     <!-- ===================== FOR MUSIC TEAMS ===================== -->
-    <section class="feat" id="for-teams" data-for="team" aria-labelledby="h-teams" style="padding-bottom:clamp(52px,8vw,96px)">
-      <article class="k-pc k-card--pine team k-reveal" style="--pc-bg:#23402b;--pc-ink:#f0e8d6;--pc-copy:#c2ceb9;--pc-accent:#d8b07a;--pc-rule:transparent">
-        <div>
-          <p class="k-pc-tag">KiteSink Consulting · for music teams</p>
-          <h2 class="k-pc-title" id="h-teams" style="margin-top:10px;font-size:clamp(26px,4vw,40px)">Work in music? Better systems behind it.</h2>
-          <p style="margin-top:12px">Workflow automation, operations improvements and practical AI for labels, artist teams and music companies.</p>
+    <section class="feat" id="for-teams" data-for="team" aria-labelledby="h-teams">
+      <article class="k-pc k-card--pine k-reveal" style="--pc-bg:#23402b;--pc-ink:#f0e8d6;--pc-copy:#c2ceb9;--pc-accent:#d8b07a;--pc-rule:rgba(240,232,214,.18)">
+        <div class="feat-grid">
+          <div class="feat-copy">
+            <div class="k-pc-top"><span class="k-pc-tag">KiteSink Consulting &middot; for music teams</span></div>
+            <h2 class="k-pc-title" id="h-teams">Work in music? Better systems behind it.</h2>
+            <p>I help music businesses untangle repetitive work and awkward handoffs, improve their operations, and build practical tools around their data. For labels, artist teams, music companies and independent businesses whose tools haven&rsquo;t caught up with the work.</p>
+            <ul class="trio">
+              <li><i>01</i><b>Workflow automation</b><span>Connect the steps between your tools: data entry, file handling, intake and task routing, with exceptions brought back to a person.</span></li>
+              <li><i>02</i><b>Operations improvements</b><span>Find where work slows down, clarify who owns the next step, and make handoffs easier to follow.</span></li>
+              <li><i>03</i><b>AI and data</b><span>Make information easier to extract, classify, search and report on, with human checks where it matters.</span></li>
+            </ul>
+            <div class="feat-links">
+              <a class="k-btn k-btn--cream" href="/consulting">See Consulting</a>
+              <a class="k-chip" href="/consulting#contact">Tell me what&rsquo;s stuck</a>
+            </div>
+          </div>
+          <div class="team-steps">
+            <p class="team-steps-h">How a project runs</p>
+            <ol>
+              <li><b>Understand the workflow</b><span>Walk through the real steps, the tools you use, and where people work around them.</span></li>
+              <li><b>Build and test</b><span>Try it against realistic cases, including missing information and the exceptions people actually face.</span></li>
+              <li><b>Document and hand over</b><span>Clear instructions, clear ownership, and a practical way for your team to keep it running.</span></li>
+            </ol>
+            <p class="team-steps-foot"><b>New: the AI concierge.</b> A one-time or ongoing role for any industry: I watch how the work gets done, then build ways to make it faster.</p>
+          </div>
         </div>
-        <a class="k-btn k-btn--cream" href="/consulting" style="justify-self:start">See Consulting</a>
       </article>
     </section>
 
@@ -495,21 +546,34 @@
       <article class="k-pc k-pc--learn k-reveal">
         <div class="feat-grid">
           <div class="feat-copy">
-            <p class="k-pc-tag">KiteSink field guide &middot; rights and royalties</p>
+            <div class="k-pc-top"><span class="k-pc-tag">KiteSink field guide &middot; rights and royalties</span></div>
             <h2 class="k-pc-title" id="h-learn">Here to learn? Start with where the money comes from.</h2>
             <p>119 sourced entries on how a song earns money and how that money is collected and paid, each saying who it is for, where it applies and when it was true. Free to read, no sign-up.</p>
+            <p class="learn-stats"><span><b>119</b> sourced entries</span><span><b>3</b> of 15 areas written</span><span><b>4</b> free tools</span></p>
             <div class="feat-links">
               <a class="k-btn feat-btn" href="#field-guide">Read the field guide</a>
               <a class="k-chip" href="/music/tools">Free tools</a>
               <a class="k-chip" href="/music/claims">Claims, checked</a>
             </div>
           </div>
+          <div class="learn-side">
           <ol class="learn-list" aria-label="Good places to start">
             <li><span class="n">01</span><span><b>Royalty basics.</b> The two copyrights in a song, and what each one earns.</span></li>
             <li><span class="n">02</span><span><b>Mechanicals and the MLC.</b> US rates, and how streaming mechanicals are paid.</span></li>
             <li><span class="n">03</span><span><b>Unclaimed royalties.</b> Money that was earned but never matched, and how to look for yours.</span></li>
             <li><span class="n">04</span><span><b>Claims, checked.</b> Common beliefs about music money, each with a verdict and its source.</span></li>
+            <li><span class="n">05</span><span><b>Five ways in.</b> Start from who you are: songwriter, artist, producer, publisher or administrator.</span></li>
           </ol>
+          <div class="learn-tools">
+            <p class="team-steps-h">Free tools, nothing to sign up for</p>
+            <ul>
+              <li><a href="/music/tools#calculator">Mechanical rate calculator</a><span>US rate per copy, by year</span></li>
+              <li><a href="/music/tools#checklist">Unclaimed-money checklist</a><span>Where to look for money owed to you</span></li>
+              <li><a href="/music/tools#identifiers">Identifier checker</a><span>ISRC, ISWC, ISNI and IPI</span></li>
+              <li><a href="/music/tools#split-sheet">Split-sheet generator</a><span>Record who wrote what, then print</span></li>
+            </ul>
+          </div>
+          </div>
         </div>
       </article>
     </section>

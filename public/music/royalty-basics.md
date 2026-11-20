@@ -237,7 +237,7 @@ Two copyrights · Beginner · Sourced (official) · For: songwriters, artists ·
 
 | Number | What it is | As of | Where | Grade | Sources |
 |---|---|---|---|---|---|
-| 35 percent of EUR 12.1 bn, all repertoires, 2022 | Digital was 35% of CISAC collections, all repertoires, in 2022: Digital income reached EUR 4.17 bn, about a third of all CISAC society collections across every repertoire in 2022. | 26 October 2023 | International | Sourced (official) | [CISAC 2023](https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf) |
+| 42.4 percent of EUR 15.5 bn, all repertoires, 2025 | Digital was 42% of CISAC collections, all repertoires, in 2025: Digital was EUR 6.57 bn. The MLC joined in 2025 and inflates the rise (+27.9%); without it digital grew +11.6%. | 4 November 2026 | International | Sourced (official) | [CISAC 2026](https://members.cisac.org/CisacPortal/cisacDownloadFileSearch.do?docId=51839&lang=en) |
 
 ## Income streams and who collects each in the US
 

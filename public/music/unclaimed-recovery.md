@@ -104,7 +104,7 @@ She calls this very controversial in the industry when the sums are large, their
 
 - Ask your society, and any society abroad that collects for you, what it deducts and why.
 
-Undistributed money · Advanced · Directional (reported) · For: songwriters, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [CISAC 2023](https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf)
+Undistributed money · Advanced · Directional (reported) · For: songwriters, publishers and labels, administrators · Where: International · As of 1 April 2020 · Sources: [COSB 2020](https://www.copyright.gov/policy/unclaimed-royalties/cmo-full-report.pdf), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf), [CISAC 2026](https://members.cisac.org/CisacPortal/cisacDownloadFileSearch.do?docId=51839&lang=en)
 
 ### US study: hold money for an owner who is known but cannot be found
 
@@ -179,7 +179,7 @@ Mistakes · Beginner · Sourced (official) · For: songwriters, artists, produce
 | Number | What it is | As of | Where | Grade | Sources |
 |---|---|---|---|---|---|
 | 90 days' minimum notice before an MLC unclaimed distribution | Minimum notice before a US unclaimed distribution: Section 115 makes the MLC publicize any pending distribution of unclaimed money across the industry at least this many days before it is paid. | 20 November 2026 | US | Sourced (law) | [17 USC 115](https://www.law.cornell.edu/uscode/text/17/115) |
-| 10.83 EUR billion, gross, 2022 | Music collections by CISAC member societies in 2022: Scale only: gross collections before deductions, from CISAC's 2023 report. It gives no unclaimed total, so do not read this as money waiting. | 26 October 2023 | International | Sourced (official) | [CISAC 2023](https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf) |
+| 14.06 EUR billion, gross, 2025 | Music collections by CISAC member societies in 2025: Scale only: gross, before deductions, from CISAC's 2026 report. The MLC joined in 2025: +11.9%, or +5.3% without it. Not an unclaimed total. | 4 November 2026 | International | Sourced (official) | [CISAC 2026](https://members.cisac.org/CisacPortal/cisacDownloadFileSearch.do?docId=51839&lang=en) |
 | 28 million tracks or more | Tracks on PPL's repertoire database: PPL says its repertoire database holds over 28 million tracks. Members search it for recordings they performed on before they claim. | 20 November 2026 | UK | Sourced (official) | [PPL: performers](https://www.ppluk.com/royalties/uk-royalties/performers/) |
 
 ## SoundExchange's four status lists for unclaimed royalties

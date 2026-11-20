@@ -6,7 +6,7 @@ An index of the 11 key numbers and 9 reference tables in the KiteSink music fiel
 
 | Number | Value | Unit | As of | Area |
 |---|---|---|---|---|
-| [Digital was 35% of CISAC collections, all repertoires, in 2022](https://kitesink.com/music/royalty-basics#roy-number-cisac-digital) | 35 | percent of EUR 12.1 bn, all repertoires, 2022 | 26 October 2023 | Royalty basics |
+| [Digital was 42% of CISAC collections, all repertoires, in 2025](https://kitesink.com/music/royalty-basics#roy-number-cisac-digital) | 42.4 | percent of EUR 15.5 bn, all repertoires, 2025 | 4 November 2026 | Royalty basics |
 | [Physical and download mechanical rate per work, 2026](https://kitesink.com/music/mechanicals-mlc#mech-rate-physical-2026) | 13.1 | cents per work, physical and downloads, 2026 | 19 November 2026 | Mechanicals and the MLC |
 | [Per-minute alternative for long tracks, 2026](https://kitesink.com/music/mechanicals-mlc#mech-rate-permin-2026) | 2.52 | cents per minute or fraction, 2026 | 19 November 2026 | Mechanicals and the MLC |
 | [Ringtone mechanical rate](https://kitesink.com/music/mechanicals-mlc#mech-rate-ringtone) | 24 | cents per ringtone, per work | 19 November 2026 | Mechanicals and the MLC |
@@ -15,7 +15,7 @@ An index of the 11 key numbers and 9 reference tables in the KiteSink music fiel
 | [Historical royalties distributed by September 2026](https://kitesink.com/music/mechanicals-mlc#mech-number-historical-distributed) | 239 | million USD, approx., historical royalties | 30 September 2026 | Mechanicals and the MLC |
 | [Services sent MLC audit notice letters for 2021 to 2023](https://kitesink.com/music/mechanicals-mlc#mech-number-audit-notices) | 49 | DSPs listed on notice letters dated 10 January 2024 | 19 November 2026 | Mechanicals and the MLC |
 | [Minimum notice before a US unclaimed distribution](https://kitesink.com/music/unclaimed-recovery#unc-number-notice-days) | 90 | days' minimum notice before an MLC unclaimed distribution | 20 November 2026 | Unclaimed royalties |
-| [Music collections by CISAC member societies in 2022](https://kitesink.com/music/unclaimed-recovery#unc-number-cisac-music) | 10.83 | EUR billion, gross, 2022 | 26 October 2023 | Unclaimed royalties |
+| [Music collections by CISAC member societies in 2025](https://kitesink.com/music/unclaimed-recovery#unc-number-cisac-music) | 14.06 | EUR billion, gross, 2025 | 4 November 2026 | Unclaimed royalties |
 | [Tracks on PPL's repertoire database](https://kitesink.com/music/unclaimed-recovery#unc-number-ppl-tracks) | 28 | million tracks or more | 20 November 2026 | Unclaimed royalties |
 
 ## Reference tables
