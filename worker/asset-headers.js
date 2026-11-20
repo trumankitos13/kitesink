@@ -241,6 +241,12 @@ export const RULES = [
   }
  ],
  [
+  "/music/ai-rights",
+  {
+   "Link": "</music/ai-rights.md>; rel=\"alternate\"; type=\"text/markdown\""
+  }
+ ],
+ [
   "/music/claims",
   {
    "Link": "</music/claims.md>; rel=\"alternate\"; type=\"text/markdown\""

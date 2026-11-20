@@ -92,6 +92,26 @@ changes, copy answers here, tick what is closed, then continue.
 - [ ] iswc.org's usage page shows an example (T-345246800-1) whose check digit fails the
       formula; a typo on their page, noted only
 
+## From batch 7 (AI and music rights, 2026-11-20)
+
+- [ ] congress.gov blocks automated reading: check S. 4591 (NO FAKES) for any action after
+      24 Jun 2026 (govinfo holds only the introduced and reported texts)
+- [ ] US dockets by hand (CourtListener needs a login): Suno I and II, Udio II, Concord I and
+      II, Justice, Woulard. Above all: any ruling after the 4 Nov 2026 hearing in Concord II,
+      and whether the Dkt. 685 dismissal in Concord I took effect (Anthropic had not stipulated)
+- [ ] GEMA v Suno appeal: one commentary names OLG München 6 U 2314/26 e; nothing else
+      confirms it, so it is not in the content
+- [ ] US filings are cited from copies hosted on Music Business Worldwide; swap to PACER or
+      CourtListener links if you prefer
+- [ ] cisac-stim is a CISAC post about STIM's licence, graded official: acceptable?
+- [ ] Deezer's AI-upload figures are kept at reported (self-reported detector statistics,
+      not a company policy): agree?
+- [ ] Source conflicts the entries flag: Deezer's two start dates for AI tagging (June 2025 /
+      June 2026), Spotify's undated "16 April" update (read as 2026), the GEMA checkbox wording,
+      the BMG-Suno deal date (MBW 12 Aug, Bertelsmann 14 Aug)
+- [ ] Not read: ASCAP's and BMI's own AI pages (BMI blocks automated reading); the CA and NY
+      replica statute texts. The entries point readers to check and to a music lawyer
+
 ## Checks by hand (sites that block automated reading)
 
 - [ ] Login needed or not: ASCAP ACE, BMI Repertoire, SoundExchange unregistered search,

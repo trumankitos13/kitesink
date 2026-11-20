@@ -83,7 +83,7 @@ The Copyright Office designated the MLC under Title I of the Music Modernization
 
 - Register your songs with the MLC, or confirm your publisher has.
 
-Who collects · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.](https://www.themlc.com/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
+Who collects · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.-b](https://www.themlc.com/), [Copyright Office: MMA overview](https://www.copyright.gov/music-modernization/)
 
 ### Performing rights societies collect for public performance of songs
 
@@ -173,7 +173,7 @@ For US digital mechanicals the collector is the MLC; for public performance it i
 
 - Check each step: registered, matched, and paid to the right account.
 
-How money flows · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.](https://www.themlc.com/), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+How money flows · Beginner · Sourced (official) · For: songwriters, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [TMLC n.d.-b](https://www.themlc.com/), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 
 ### How money moves from a stream to an artist
 
@@ -207,7 +207,7 @@ A song can earn from more than one collector, so one registration is not enough.
 - Register each new song with your society and the MLC.
 - Check that the shares match in every register.
 
-Before release · Registrations · Beginner · Sourced (official) · For: songwriters, administrators · Where: US · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [TMLC n.d.](https://www.themlc.com/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com)
+Before release · Registrations · Beginner · Sourced (official) · For: songwriters, administrators · Where: US · As of 20 November 2026 · Sources: [MLC: tools](https://www.themlc.com/tools), [TMLC n.d.-b](https://www.themlc.com/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com)
 
 ### Register the recording when it is released
 
@@ -252,7 +252,7 @@ A song and a recording earn through different rights, and different bodies colle
 | Physical mechanical | CDs, vinyl | Reproduce and distribute, 106(1), (3) | The song's publisher, directly or through an agent |
 | Sync and print | Film, ads, games, sheet music | Depends on the use; licensed by contract | The owners of each work, by direct licence |
 
-Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [TMLC n.d.](https://www.themlc.com/), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
+Beginner · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: US · As of 20 November 2026 · Sources: [USCCLIIC n.d.-b](https://www.law.cornell.edu/uscode/text/17/106), [USCCLIIC n.d.-c](https://www.law.cornell.edu/uscode/text/17/114), [USCCLIIC n.d.-a](https://www.law.cornell.edu/uscode/text/17/101), [TMLC n.d.-b](https://www.themlc.com/), [SoundExchange: artists, labels and producers](https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/), [SASCAPBMIGMRSESAC n.d.](https://www.songview.com), [WIPO 2012](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_emat_2014_2.pdf)
 
 ## Statutory digital performance split for recordings, as the law states it
 
@@ -307,7 +307,7 @@ A basic map, limited to bodies whose pages were read for this guide. Other count
 | Canada | SOCAN (performing and reproduction rights); CMRRA (online services) | Re:Sound: artists and record companies |
 | Germany | GEMA: composers, lyricists and publishers | Not covered here (no page read) |
 
-Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: UK, Canada, Germany · As of 20 November 2026 · Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [SOCAN n.d.](https://www.socan.com/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [Re:Sound n.d.](https://www.resound.ca/), [GEMA n.d.](https://www.gema.de/en/)
+Intermediate · Sourced (official) · For: songwriters, artists, producers, publishers and labels, administrators · Where: UK, Canada, Germany · As of 20 November 2026 · Sources: [PPL n.d.-b](https://www.ppluk.com/royalties/uk-royalties/recording-rightsholders/), [SOCAN n.d.-b](https://www.socan.com/), [CMRRA Unclaimed Works Portal](https://cmrra.ca/unclaimed-works/), [Re:Sound n.d.](https://www.resound.ca/), [GEMA n.d.-a](https://www.gema.de/en/)
 
 ## Terms
 

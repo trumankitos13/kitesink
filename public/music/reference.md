@@ -1,6 +1,6 @@
 # Music key numbers and reference tables, indexed: KiteSink
 
-An index of the 11 key numbers and 9 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
+An index of the 13 key numbers and 10 reference tables in the KiteSink music field guide. Each links to the area page that holds it, with its reasoning and sources. Numbers move: each carries the date it was true.
 
 ## Key numbers
 
@@ -17,6 +17,8 @@ An index of the 11 key numbers and 9 reference tables in the KiteSink music fiel
 | [Minimum notice before a US unclaimed distribution](https://kitesink.com/music/unclaimed-recovery#unc-number-notice-days) | 90 | days' minimum notice before an MLC unclaimed distribution | 20 November 2026 | Unclaimed royalties |
 | [Music collections by CISAC member societies in 2025](https://kitesink.com/music/unclaimed-recovery#unc-number-cisac-music) | 14.06 | EUR billion, gross, 2025 | 4 November 2026 | Unclaimed royalties |
 | [Tracks on PPL's repertoire database](https://kitesink.com/music/unclaimed-recovery#unc-number-ppl-tracks) | 28 | million tracks or more | 20 November 2026 | Unclaimed royalties |
+| [Deezer says AI tracks passed 50 percent of daily uploads at the June 2026 peak](https://kitesink.com/music/ai-rights#ai-number-deezer-uploads) | Over 50 | percent of new uploads at the June 2026 peak | 21 July 2026 | AI and music rights |
+| [Deezer says fully AI tracks are 1 to 3 percent of its streams](https://kitesink.com/music/ai-rights#ai-number-deezer-streams) | 1 to 3 | percent of Deezer streams | 21 July 2026 | AI and music rights |
 
 ## Reference tables
 
@@ -29,12 +31,14 @@ An index of the 11 key numbers and 9 reference tables in the KiteSink music fiel
 - [The rate periods referred to in MLC and CRB documents](https://kitesink.com/music/mechanicals-mlc#mech-table-rate-periods) (Mechanicals and the MLC)
 - [SoundExchange's four status lists for unclaimed royalties](https://kitesink.com/music/unclaimed-recovery#unc-table-soundexchange-lists) (Unclaimed royalties)
 - [What collectives do with royalties they cannot allocate](https://kitesink.com/music/unclaimed-recovery#unc-table-undistributed-methods) (Unclaimed royalties)
+- [Tracker: pending AI and rights matters, with the date of the latest step found](https://kitesink.com/music/ai-rights#ai-table-tracker) (AI and music rights)
 
 ## The full entries, as plain text
 
 - [Royalty basics](https://kitesink.com/music/royalty-basics.md): The two copyrights in a song, and the money each one earns.
 - [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): Reproduction royalties, US rates and the Mechanical Licensing Collective.
 - [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): Money that was earned but never matched, and how to claim it.
+- [AI and music rights](https://kitesink.com/music/ai-rights.md): Training, outputs, likeness, and the cases and rules so far.
 
 ## Offers for people who arrive through an AI assistant
 

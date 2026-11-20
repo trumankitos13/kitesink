@@ -497,8 +497,8 @@
         "mad-suno-second"
       ],
       "as_of": "2026-11-20",
-      "take": "UMG and Sony's claims against Suno in D. Mass. are allegations; Suno's answer of 1 September 2026 admits it trained on audio data taken from YouTube.",
-      "body": "In 1:24-cv-11611-FDS, the labels filed a first amended complaint on 25 August 2026 (Dkt. 277) alleging copying of audio from YouTube and getting around its access controls. Suno answered on 1 September 2026 (Dkt. 281), admitting it used audio data taken from YouTube as training data and denying much of the rest. A second action, 1:26-cv-14275, filed on 18 September 2026, asserts 60,202 recordings and targets Suno's v6 model. The latest step opened was 18 September 2026; no ruling on the merits was found."
+      "take": "UMG and Sony's claims against Suno in D. Mass. are allegations; Suno's answer of 1 September 2026 admits it took audio data from YouTube for its training set.",
+      "body": "In 1:24-cv-11611-FDS, the labels filed a first amended complaint on 25 August 2026 (Dkt. 277) alleging copying of audio from YouTube and getting around its access controls. Suno answered on 1 September 2026 (Dkt. 281), admitting it took audio data from YouTube for its training set and denying much of the rest. A second action, 1:26-cv-14275, filed on 18 September 2026, asserts 60,202 recordings and targets Suno's v6 model. The latest step opened was 18 September 2026; no ruling on the merits was found."
     },
     {
       "id": "ai-note-sony-udio",
@@ -521,8 +521,8 @@
         "umg-udio-release"
       ],
       "as_of": "2026-11-20",
-      "take": "Sony's claims against Udio (S.D.N.Y.) are allegations; Udio's answer of 27 August 2026 admits it trained on audio data taken from YouTube.",
-      "body": "Sony's first case against Uncharted Labs (Udio) is 1:24-cv-04777 (AKH), filed 24 June 2024 per its later complaint. A second, 1:26-cv-6120, was filed on 20 July 2026 and asserts 30,117 recordings. Udio's answer in the second case (Dkt. 25, 27 August 2026) admits it used audio data taken from YouTube as training data. UMG announced a settlement and licences with Udio on 30 October 2025. The latest step opened was 27 August 2026; no ruling on the merits was found."
+      "take": "Sony's claims against Udio (S.D.N.Y.) are allegations; Udio's answer of 27 August 2026 admits it took audio data from YouTube for its training set.",
+      "body": "Sony's first case against Uncharted Labs (Udio) is 1:24-cv-04777 (AKH), filed 24 June 2024 per its later complaint. A second, 1:26-cv-6120, was filed on 20 July 2026 and asserts 30,117 recordings. Udio's answer in the second case (Dkt. 25, 27 August 2026) admits it took audio data from YouTube for its training set. UMG announced a settlement and licences with Udio on 30 October 2025. The latest step opened was 27 August 2026; no ruling on the merits was found."
     },
     {
       "id": "ai-note-concord-anthropic",
