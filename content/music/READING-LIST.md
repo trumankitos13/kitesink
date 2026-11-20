@@ -123,3 +123,55 @@ are proposed from the AI and music research run when it lands.
 | 5 | Copyright Office Circular 30 (works made for hire) and Circular 56 | government |
 | 6 | PPL and other society pages on producer and session-performer claims that open | collective |
 | 7 | Music Business Association Metadata Style Guide: credits (corpus F8) | other |
+
+## Batches 7 and 8: AI (phase 2) — PROPOSED 2026-11-20
+
+Drafted from the verified AI research run and two gap-research passes
+(`docs/RESEARCH-AI-MUSIC.md`). Every item below was opened in research on 2026-11-20 unless
+marked. Trade press is graded `reported` and used only where no primary source exists. Items
+marked "blocked" are not cited until the owner checks them by hand.
+
+### Batch 7: AI and rights (`ai-rights.json`, ~30 entries, with a dated tracker table)
+
+| # | Source | Type |
+| --- | --- | --- |
+| 1 | Copyright Office AI hub; Part 1 (digital replicas), Part 2 (copyrightability), Part 3 pre-publication (training) | government |
+| 2 | Copyright registration guidance for works containing AI material, 88 FR 16190 (2023) | regulation |
+| 3 | Copyright Office letter to the MLC on AI-created works (20 April 2023) | government |
+| 4 | NO FAKES Act of 2026, S. 4591 reported text (govinfo); Senate sponsor release (status; congress.gov blocked) | statute (bill) |
+| 5 | Tennessee ELVIS Act, HB2091 text (capitol.tn.gov) | statute |
+| 6 | California governor: AB 2602 and AB 1836 signed (17 Sept 2024) | government |
+| 7 | New York governor: S.8391 and S.8420-A signed (11 Dec 2025) | government |
+| 8 | Illinois Public Act 104-0282 (blocked: ilga.gov 503; owner hand check) | statute |
+| 9 | Munich Regional Court I press release, GEMA v Suno, 42 O 763/25 (31 July 2026) | ruling |
+| 10 | GEMA: ruling against OpenAI (11 Nov 2025) and Suno ruling page (appeal by OpenAI) | collective |
+| 11 | UMG/Sony v Suno amended complaint and second action (D. Mass.); Sony v Udio (S.D.N.Y.) | ruling (filings) |
+| 12 | Concord v Anthropic filings (N.D. Cal.); later steps reported only (MBW) | ruling / article |
+| 13 | Indie-artist class actions v Suno and Udio (orders Aug 2026; reported, MBW) | article |
+| 14 | Label and publisher deals: UMG-Udio (PR Newswire), Merlin-Udio (Merlin), WMG-Udio, WMG-Suno, BMG-Suno, Kobalt-Udio (MBW, reported) | collective / article |
+| 15 | GEMA generative AI licensing model and TDM reservation; STIM collective AI licence (CISAC); SOCAN and Musical AI; SACEM opt-out (reported) | collective / article |
+| 16 | EU: GPAI Code of Practice; GPAI guidelines (dates); training-content summary template; Code of Practice on marking and labelling (Art. 50) | government |
+| 17 | AI Omnibus Regulation (EU) 2026/1744 and the Art. 50(2) grace period (EUR-Lex unreadable; law-firm reports, graded reported) | article |
+| 18 | UK Report on Copyright and AI (18 March 2026) | government |
+| 19 | Society registration rules: SOCAN (ASCAP/BMI/SOCAN alignment, guidelines), MLC help page, GEMA declaration | collective |
+| 20 | Platform policies: Spotify (Sept 2025), Deezer (July 2026 data), YouTube altered-content help and likeness detection, Apple Music transparency tags (reported), DistroKid, TuneCore/Believe (reported), CD Baby blog | other / article |
+| 21 | DDEX ERN 4.3.1 release notes (AI flags) | standard |
+
+### Batch 8: AI tools directory (`ai-tools.json`, a directory like tools.json)
+
+Format: the `tools.json` schema plus two fields, `uploads` (what the user gives the tool) and
+`output_terms` (who owns outputs and whether inputs train models, quoted briefly from the
+tool's own terms, with the terms URL). Only rows whose own pages were opened are `verified`.
+
+| Group | Candidates opened in research | Blocked or not yet opened |
+| --- | --- | --- |
+| Metadata and matching | Vobile Pex, Reprtoir (pricing and terms read), Muso.ai | Musixmatch, Curve, Salt, Bridger |
+| AI-content detection and attribution | Deezer AI detection (business), Deezer detector (consumer), Ircam Amplify, Pex AI Song Detector, Sureel | Vermillio (503), Believe |
+| Licensed generators and output terms | Suno (terms read; help page and trade report disagree on ownership wording), ElevenLabs Music (terms read), Stable Audio (terms read), Beatoven | Udio (terms not readable), Boomy |
+| Catalogue and statement analysis | Reprtoir, beatBread (data science, not AI) | ValuePunks, Royalty Exchange, Infinite Catalog |
+| Voice and likeness | YouTube likeness detection, Kits.ai | Vermillio, Hume; Loti and Musical AI domains no longer resolve to those companies |
+| AI assistants (data-use terms) | Anthropic (commercial terms and privacy page), Google Workspace privacy hub | OpenAI business terms (403) |
+
+Not listed: Jaxsta (in hibernation), Soundful (closed to the public), duetti.com (redirects to an
+unrelated site). Vendor accuracy figures (for example Deezer 99.8 percent, Ircam 99 percent) are
+shown only as the vendor's own claim.
