@@ -1,0 +1,1089 @@
+{
+  "domain": "recorded-neighboring",
+  "topics": [
+    {
+      "id": "licensing",
+      "label": "Statutory and direct licences"
+    },
+    {
+      "id": "payments",
+      "label": "SoundExchange and payments"
+    },
+    {
+      "id": "performers",
+      "label": "Performers and producers"
+    },
+    {
+      "id": "rates",
+      "label": "Rates and status"
+    },
+    {
+      "id": "older",
+      "label": "Older recordings"
+    },
+    {
+      "id": "abroad",
+      "label": "Neighbouring rights abroad"
+    },
+    {
+      "id": "content-id",
+      "label": "YouTube Content ID"
+    }
+  ],
+  "entries": [
+    {
+      "id": "nbr-note-two-routes",
+      "type": "note",
+      "title": "Non-interactive services license by statute; interactive services license from the owner",
+      "topic": "licensing",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "publisher-label",
+        "admin",
+        "producer"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114"
+      ],
+      "take": "Section 114 gives non-interactive digital services a statutory licence at rates the Judges set. An interactive service needs a licence from the recording owner.",
+      "body": "A service is interactive when a listener can receive a programme made for them, or a chosen recording on request (section 114(j)(7)). The statutory licence in section 114(d)(2) is for non-interactive services that meet its conditions. For plays licensed outside it, section 114(g)(1) says featured and non-featured artists are paid by the owner under their own contracts, and section 114(d)(3) limits how long an exclusive licence to an interactive service may run.",
+      "do": [
+        "Check whether listeners can pick tracks before assuming statutory rates apply."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-mistake-radio-pays",
+      "type": "mistake",
+      "title": "Mistake: expecting US radio airplay to pay the recording owner",
+      "topic": "licensing",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114",
+        "usc-106",
+        "fr-2026-04632"
+      ],
+      "take": "An ordinary over-the-air AM or FM broadcast is outside the US digital performance right, so it earns the recording owner no performance royalty under US law.",
+      "body": "Section 106(6) covers only digital audio transmissions. Section 114(d)(1)(A) exempts a nonsubscription broadcast transmission, and section 114(j)(3) defines that as one made by a terrestrial station licensed by the FCC. A station's own online stream is a different transmission: for 2026, commercial broadcasters have a set rate for those streams (see the rates topic). Song owners hold a separate performing right under section 106(4).",
+      "do": [
+        "Look to digital services, not US radio, for the recording owner's performance income."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-sx-collective",
+      "type": "note",
+      "title": "The Judges name the collective for the statutory licence, and for now it is SoundExchange",
+      "topic": "payments",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usc-114",
+        "fr-2026-04632",
+        "sx-dpr"
+      ],
+      "take": "The CRB rules name SoundExchange as the collective for the current rate period. Services send it payments and play reports, and it divides the money.",
+      "body": "Section 114(g)(2) assigns the dividing of statutory licence receipts to a nonprofit that the Copyright Royalty Judges pick. For the present rate period, the 2026 commercial broadcaster rule names SoundExchange as that body. SoundExchange says services pay it together with playlists, and that it passes the money to artists and owners. The same rule leaves out plays the service licensed directly from the owner.",
+      "do": [
+        "Register in every role you hold before expecting a payment."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-term-roles",
+      "type": "term",
+      "title": "Artist, Performer and Sound Recording Owner (SoundExchange's terms)",
+      "topic": "payments",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-key"
+      ],
+      "take": "SoundExchange uses Artist for the name on the release, Performer for each person who makes up that Artist, and Sound Recording Owner for whoever owns the master, which is separate from owning the song."
+    },
+    {
+      "id": "nbr-note-collab-split",
+      "type": "note",
+      "title": "A \"featuring\" credit splits the featured share equally unless artists say otherwise",
+      "topic": "payments",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod",
+        "usc-114"
+      ],
+      "take": "SoundExchange treats \"Artist A featuring Artist B\" as a collaboration and divides the featured-artist share 50/50, unless both artists tell it another split.",
+      "body": "SoundExchange gives this as the example of a track with two featured artists. The 45 percent featured-artist share in section 114(g)(2)(D) is divided between them first, and only then does any letter of direction apply to either artist's part. A different split has to come from the artists themselves.",
+      "do": [
+        "Tell SoundExchange the agreed split if it is not equal."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-mistake-owner-only",
+      "type": "mistake",
+      "title": "Mistake: registering only as the owner and never as the performer",
+      "topic": "payments",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-owed",
+        "usc-114",
+        "sx-key"
+      ],
+      "take": "SoundExchange pays registered artists and registered owners separately. An artist who owns the master holds two roles and needs to register in both.",
+      "body": "SoundExchange says artists and owners of recordings both have to register before it pays them, and it keeps separate lists of unregistered artists, performers and owners. Section 114(g)(2) pays the owner share and the featured-artist share to different payees. An independent artist who registers in only one role can leave the other share waiting, and each person in a group can be missing from the performer side.",
+      "do": [
+        "Register once as artist and once as owner if you hold both roles.",
+        "Check that every member of a group has claimed."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-term-featured",
+      "type": "term",
+      "title": "Featured and non-featured performers",
+      "topic": "performers",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod",
+        "usc-114"
+      ],
+      "take": "A featured artist is the person or group most prominent on a track. Non-featured performers, such as session musicians and backing singers, are paid through a separate route."
+    },
+    {
+      "id": "nbr-note-nonfeatured",
+      "type": "note",
+      "title": "Non-featured musicians and vocalists are paid through funds, not directly by SoundExchange",
+      "topic": "performers",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114",
+        "sx-lod",
+        "sx-dpr"
+      ],
+      "take": "Section 114(g)(2) sends 2.5 percent to non-featured musicians and 2.5 percent to non-featured vocalists, through independent administrators.",
+      "body": "Each 2.5 percent goes into an escrow account run by an independent administrator. The musicians' administrator is appointed jointly by owners and the American Federation of Musicians, or its successor. The vocalists' one is appointed jointly by owners and AFTRA, the radio and television performers union, or its successor. Payment is to those who performed, union members or not. SoundExchange says it does not pay non-featured artists directly.",
+      "do": [
+        "Ask the fund administrator, not SoundExchange, about a session or backing-vocal share."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-term-lod",
+      "type": "term",
+      "title": "Letter of direction",
+      "topic": "performers",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "usc-114"
+      ],
+      "take": "A written instruction from a featured artist or recording owner telling the collective to pay part of their share to a producer, mixer or engineer who worked on the recording. Section 114(g)(5) requires a policy on them.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-step-lod",
+      "type": "step",
+      "title": "A letter of direction needs a signed form, a repertoire chart and a percentage",
+      "topic": "performers",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod"
+      ],
+      "take": "SoundExchange asks for a signed form, a chart of the tracks covered with a percentage for each, and proof of any electronic signature. Allow at least two weeks.",
+      "body": "The percentage is a share of the featured artist's royalties on that track. SoundExchange says a letter can pay only creative participants, not labels, lenders or advance companies, and pays a company only if the creative participant solely owns it. Payment starts in the first pay period in which the payee's balance passes SoundExchange's threshold. For electronic payment the page gives $100 monthly and $10 quarterly; cheques are quarterly above $100.",
+      "do": [
+        "Download the current form and chart from SoundExchange before drafting.",
+        "Have a music lawyer review the percentage and any producer agreement."
+      ],
+      "when": "at-release",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-mistake-lod-multi",
+      "type": "mistake",
+      "title": "Mistake: one letter of direction for a track with two featured artists",
+      "topic": "performers",
+      "level": "advanced",
+      "readers": [
+        "producer",
+        "artist",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-lod"
+      ],
+      "take": "SoundExchange does not pay a producer off the top. A track with two featured artists needs a letter from each, and each reaches only that artist's share.",
+      "body": "A producer who wants payment on both shares needs both letters. The percentage in a letter applies only to that artist's allocation. One letter cannot cover tracks by several different featured artists. Payment also stops for a track whose featured-artist royalties become ineligible, for example during a dispute between featured artists.",
+      "do": [
+        "Collect a letter from every featured artist on the track."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-pre1972-licence",
+      "type": "note",
+      "title": "Pre-1972 recordings now sit inside federal law, including a statutory licence",
+      "topic": "older",
+      "level": "advanced",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usco-pre1972"
+      ],
+      "take": "Title II of the Music Modernization Act gave federal remedies to recordings fixed before 15 February 1972 and applies a licensing regime like the one for later recordings.",
+      "body": "The Copyright Office says the Classics Protection and Access Act added a chapter 14 to Title 17. For non-interactive digital streaming such as web radio, satellite services and cable TV music channels, it brings in a statutory licensing scheme modelled on the one for later recordings. Existing limits such as fair use also apply. The pages used here do not describe how SoundExchange registers or pays pre-1972 owners.",
+      "do": [
+        "Read the Office's Title II page before relying on any pre-1972 remedy."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-table-pre1972-terms",
+      "type": "table",
+      "title": "How long federal remedies run for pre-1972 recordings",
+      "topic": "older",
+      "level": "advanced",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usco-pre1972"
+      ],
+      "take": "The Office says remedies last 95 years from the year of first publication, plus an additional period that depends on when the recording was first published.",
+      "columns": [
+        "First published",
+        "Additional period beyond the 95-year term"
+      ],
+      "rows": [
+        [
+          "Before 1923",
+          "Ended 31 December 2021"
+        ],
+        [
+          "1923 to 1946",
+          "5 years after the 95-year term"
+        ],
+        [
+          "1947 to 1956",
+          "15 years after the 95-year term"
+        ],
+        [
+          "All other recordings fixed before 15 February 1972",
+          "Ends 15 February 2067"
+        ]
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-pre1972-schedule",
+      "type": "note",
+      "title": "Pre-1972 owners usually file a schedule first, and remedies start 90 days after indexing",
+      "topic": "older",
+      "level": "advanced",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usco-pre1972"
+      ],
+      "take": "To recover statutory damages or attorneys' fees for a pre-1972 recording, owners must typically file a schedule with the Copyright Office. Only later uses count.",
+      "body": "The Office says the schedule stands in place of the usual registration requirement, and that remedies apply only to uses more than 90 days after the schedule is indexed. Where a transmitting service filed a notice of contact information, the owner must also send it a notice that it is not authorised to use the recording, identified in a conforming schedule. The Office keeps a database of indexed schedules. A music lawyer should review any claim before a notice goes out.",
+      "do": [
+        "Check the Office schedule database before assuming a recording is listed."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-number-broadcasters-2026",
+      "type": "number",
+      "title": "Commercial broadcasters' nonsubscription streaming rate per performance, 2026",
+      "topic": "rates",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "fr-2026-04632"
+      ],
+      "value": "0.0028",
+      "unit": "dollars per performance, commercial broadcasters, 2026",
+      "sort": 0.0028,
+      "take": "The Web VI rate for a commercial broadcaster's online nonsubscription stream in 2026. It rises each year to $0.0032 in 2030.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-number-webcasters-2025",
+      "type": "number",
+      "title": "Commercial webcasters' nonsubscription rate per performance, 2025",
+      "topic": "rates",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "cfr-380-10"
+      ],
+      "value": "0.0025",
+      "unit": "dollars per performance, nonsubscription webcasters, 2025",
+      "sort": 0.0025,
+      "take": "The last rate printed in 37 CFR 380.10. Subscription services paid $0.0032. No 2026 figure appeared in that section on the date shown.",
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-web6-status",
+      "type": "note",
+      "title": "Web VI status: four 2026 final rules are out, but the main webcaster rate was not found",
+      "topic": "rates",
+      "level": "advanced",
+      "readers": [
+        "artist",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "official",
+      "sources": [
+        "crb-home",
+        "fr-2026-04632",
+        "fr-2021-20621",
+        "cfr-380-10"
+      ],
+      "take": "Final Web VI rules covering 2026 to 2030 were published on 10 March 2026 for four categories. Section 380.10 still showed 2025 rates when checked.",
+      "body": "Web V set rates for 2021 to 2025. The CRB announced Web VI final rules for noncommercial educational webcasters, Educational Media Foundation, commercial broadcasters and certain public radio stations, plus one for new subscription services. For the commercial and noncommercial webcasters in section 380.10, no final Web VI rule was found in the Federal Register or the eCFR on 20 November 2026. The CRB homepage dates its announcement 13 March; the Federal Register notices are dated 10 March.",
+      "do": [
+        "Before quoting a webcaster rate, check docket 23-CRB-0012-WR at the CRB."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-mistake-rate-artist-pay",
+      "type": "mistake",
+      "title": "Mistake: reading a per-performance rate as what an artist is paid",
+      "topic": "rates",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US"
+      ],
+      "confidence": "law",
+      "sources": [
+        "fr-2026-04632",
+        "usc-114"
+      ],
+      "take": "A rate such as $0.0028 is what a service owes for one performance. The collective then divides it between owners, featured artists and the non-featured funds.",
+      "body": "The rule counts each instance of any part of a recording played to a listener, and leaves out incidental uses and plays the service licensed directly from the owner. The collective may deduct reasonable costs under section 114(g)(3) before dividing the rest 50 percent to the owner, 45 percent to featured artists and 5 percent to the non-featured funds. An artist's pay also depends on their own contracts and on any letter of direction.",
+      "do": [
+        "Work out an artist share from the statutory split, not from the headline rate."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-rome-wppt",
+      "type": "note",
+      "title": "Rome and the WPPT set a floor, and a country can limit the money right",
+      "topic": "abroad",
+      "level": "advanced",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "wipo-rome-summary",
+        "wipo-wppt-summary"
+      ],
+      "take": "Both WIPO treaties give performers and producers a single equitable remuneration for secondary use of published recordings, but a country may limit or deny it.",
+      "body": "WIPO says under the Rome Convention (1961) the user pays one equitable remuneration to performers, producers or both, and states may decline to apply it or limit it. For the WPPT (1996), WIPO adds that a party that reserves on this right may be met with reciprocity: others may deny it national treatment. The WPPT also gives on-demand making-available rights. This is why payment to a foreign performer depends on the country and the society.",
+      "do": [
+        "Check each society's own rules instead of assuming a treaty guarantees payment."
+      ]
+    },
+    {
+      "id": "nbr-note-ppl-qualify",
+      "type": "note",
+      "title": "PPL pays a performer only for a 'qualifying performance'",
+      "topic": "abroad",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer"
+      ],
+      "territory": [
+        "UK"
+      ],
+      "confidence": "official",
+      "sources": [
+        "ppl-performers",
+        "ppl-calc"
+      ],
+      "take": "A UK performer claim has to pass a test based on where the performance took place or where the performer lives or is a citizen.",
+      "body": "PPL says a performance qualifies in one of two ways, by the country of performance or by the performer's country of residence or citizenship, and in each case the country must be one that UK law treats as qualifying. PPL updates the list now and then; it covers all EU states plus many others. When a performer does not qualify, PPL pays that performance's allocation to the rightsholder instead.",
+      "do": [
+        "Read PPL's Performer Qualification Rules to see whether your country and recording qualify."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-sx-national-treatment",
+      "type": "note",
+      "title": "SoundExchange says some countries withhold payment from US artists on nationality grounds",
+      "topic": "abroad",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "UK",
+        "FR",
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-national-treatment",
+        "ppl-performers"
+      ],
+      "take": "SoundExchange's page names the UK, France and Japan as countries that do not pay US creators for play on their AM and FM radio, and it campaigns against that.",
+      "body": "The page is advocacy and carries no date. It frames the issue as national treatment. It also gives an estimate of the lost money, which is SoundExchange's own figure and is not repeated here. The rule PPL publishes turns on where a performance took place or where the performer lives or is a citizen. Treat the page as SoundExchange's position, and check each society's current rules.",
+      "do": [
+        "Ask the society directly whether a US recording or performer qualifies."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-sx-international",
+      "type": "note",
+      "title": "SoundExchange can collect abroad for members who sign an international mandate",
+      "topic": "abroad",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "US",
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-intl"
+      ],
+      "take": "SoundExchange says members who complete an international mandate can have it collect neighbouring rights money abroad through its agreements with foreign societies.",
+      "body": "It says it holds over 100 agreements with at least 75 societies, covering 93 percent of the global neighbouring rights market; these are its own figures. A creator registers, becomes a member, picks territories and submits recordings through SoundExchange Direct. Its partner list includes PPL (UK), GVL (Germany), SCPP and ADAMI (France), PPCA (Australia) and Re:Sound (Canada). Whether a society pays a given performer is still that society's rule.",
+      "do": [
+        "Ask which territories and roles the mandate covers, and have its terms reviewed before signing."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-gvl",
+      "type": "note",
+      "title": "GVL pays German performers and producers, and takes international rights by assignment",
+      "topic": "abroad",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "DE"
+      ],
+      "confidence": "official",
+      "sources": [
+        "gvl-home",
+        "gvl-intl"
+      ],
+      "take": "GVL is the German society for performers and sound recording producers. Its international service requires an agreement that transfers international rights to GVL.",
+      "body": "GVL says more than 180,000 rights holders place neighbouring rights with it, and it reports upwards of 70 international agreements with foreign societies. It says performers report their contributions to productions in its portal, with three years from each distribution year, and that it passes on foreign money without deductions for international payments. Foreign societies run their own distributions, and GVL says it cannot influence their calculations.",
+      "do": [
+        "Have a music lawyer read the assignment terms before signing."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-table-societies",
+      "type": "table",
+      "title": "Recording societies in the UK, Germany, Canada, France and Australia, as the sources state",
+      "topic": "abroad",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label"
+      ],
+      "territory": [
+        "UK",
+        "DE",
+        "CA",
+        "FR",
+        "AU"
+      ],
+      "confidence": "official",
+      "sources": [
+        "ppl-calc",
+        "gvl-home",
+        "sx-intl"
+      ],
+      "take": "Who handles recording money in five countries, limited to what the pages say. Smaller territories are not covered here; consulting can point you further.",
+      "columns": [
+        "Country",
+        "Society",
+        "What the sources say"
+      ],
+      "rows": [
+        [
+          "UK",
+          "PPL",
+          "Splits public play and broadcast money half to rightsholders, half to qualifying performers, after costs"
+        ],
+        [
+          "Germany",
+          "GVL",
+          "German society for performers and record producers; international rights are assigned by agreement"
+        ],
+        [
+          "Canada",
+          "Re:Sound",
+          "Listed by SoundExchange as its partner; check Re:Sound for its rules"
+        ],
+        [
+          "France",
+          "SCPP and ADAMI",
+          "Both listed by SoundExchange as partners; their own rules are not covered here"
+        ],
+        [
+          "Australia",
+          "PPCA",
+          "Listed by SoundExchange as a partner; its own rules are not covered here"
+        ]
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-note-cid-eligibility",
+      "type": "note",
+      "title": "Content ID is for owners with exclusive rights to a large body of material",
+      "topic": "content-id",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "publisher-label",
+        "admin",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "yt-cid-how",
+        "yt-cid-qualify"
+      ],
+      "take": "YouTube approves Content ID only for owners holding exclusive rights to a large catalogue of original material that is uploaded often, and who show a need.",
+      "body": "YouTube's help pages say eligibility depends on whether the material suits claiming through Content ID and on a need the owner can show, with evidence of the content the owner controls exclusively. An approved owner signs an agreement that limits references to exclusive content and states the territories if not worldwide. YouTube points others to tools such as the copyright complaint webform and the Enterprise Copyright Match Tool.",
+      "do": [
+        "Check the criteria on YouTube Help before applying for direct access."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-mistake-cid-reference",
+      "type": "mistake",
+      "title": "Mistake: sending a full album, remaster or licensed track as a Content ID reference",
+      "topic": "content-id",
+      "level": "intermediate",
+      "readers": [
+        "artist",
+        "publisher-label",
+        "admin",
+        "producer"
+      ],
+      "territory": [
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "yt-cid-eligible",
+        "yt-cid-how"
+      ],
+      "take": "References must be exclusive, distinct and given one per piece. YouTube lists full albums, remasters and non-exclusive licences as ineligible.",
+      "body": "YouTube says exclusive rights must cover the territories claimed. It names karaoke, remasters, sound-alikes, some dubbed content, Creative Commons and public domain recordings, and content licensed non-exclusively as ineligible. Full album recordings must be split into single songs. It says abuse or error can lead to disabled references, released claims or an ended partnership.",
+      "do": [
+        "Split releases into single-track references and confirm exclusivity by territory."
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-table-who-pays",
+      "type": "table",
+      "title": "Who pays whom for a recording's performance money",
+      "topic": "payments",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US",
+        "UK",
+        "DE",
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "usc-114",
+        "sx-dpr",
+        "ppl-calc",
+        "gvl-home",
+        "sx-intl"
+      ],
+      "take": "A map of the routes covered in this guide. Each has its own registration and rules, and rates and shares are dated.",
+      "columns": [
+        "Use",
+        "Who pays",
+        "Who collects",
+        "Who receives"
+      ],
+      "rows": [
+        [
+          "US non-interactive digital service",
+          "The service, under the statutory licence",
+          "SoundExchange",
+          "Owner 50, featured artists 45, non-featured funds 5 (percent)"
+        ],
+        [
+          "US interactive service",
+          "The service, under a direct licence",
+          "The recording owner",
+          "Artists as their contracts say (section 114(g)(1))"
+        ],
+        [
+          "US AM or FM broadcast",
+          "No US digital performance right applies",
+          "Not applicable",
+          "Not applicable for the recording"
+        ],
+        [
+          "UK public play and broadcast",
+          "UK users of recordings",
+          "PPL",
+          "Half rightsholders, half qualifying performers"
+        ],
+        [
+          "Germany",
+          "Users of recordings",
+          "GVL",
+          "Performers and producers"
+        ],
+        [
+          "Abroad, for a US member",
+          "Foreign users",
+          "The foreign society, via a SoundExchange mandate",
+          "The member who signed the mandate"
+        ]
+      ],
+      "as_of": "2026-11-20"
+    },
+    {
+      "id": "nbr-checklist-recording-money",
+      "type": "checklist",
+      "title": "Recording income checklist",
+      "topic": "payments",
+      "level": "beginner",
+      "readers": [
+        "artist",
+        "producer",
+        "publisher-label",
+        "admin"
+      ],
+      "territory": [
+        "US",
+        "UK",
+        "DE",
+        "INTL"
+      ],
+      "confidence": "official",
+      "sources": [
+        "sx-owed",
+        "sx-lod",
+        "sx-intl",
+        "ppl-performers",
+        "gvl-intl",
+        "yt-cid-qualify",
+        "usco-pre1972"
+      ],
+      "take": "Tick what applies to you. Each register is separate, and a lawyer should read any agreement that assigns rights.",
+      "groups": [
+        {
+          "name": "In the US",
+          "items": [
+            "Registered with SoundExchange as artist, in every role you hold",
+            "Registered as recording owner too, if you own the master",
+            "Every member of a group has claimed their performer share",
+            "Letters of direction filed for producers, mixers or engineers you agreed to pay",
+            "Older masters checked against the Copyright Office schedule database"
+          ]
+        },
+        {
+          "name": "Abroad",
+          "items": [
+            "International mandate terms read, with the territories listed",
+            "PPL qualification rules checked for UK use",
+            "GVL agreement read before signing, if you work in Germany"
+          ]
+        },
+        {
+          "name": "Online video",
+          "items": [
+            "Content ID criteria read before applying",
+            "References split into single tracks with exclusivity confirmed"
+          ]
+        }
+      ],
+      "as_of": "2026-11-20"
+    }
+  ],
+  "sources": {
+    "usc-106": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 106: Exclusive rights in copyrighted works",
+      "url": "https://www.law.cornell.edu/uscode/text/17/106",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Clause (1) reproduce, (3) distribute, (4) perform musical works publicly, (6) perform sound recordings publicly by digital audio transmission.",
+      "edition": "Title 17, section 106, as shown by LII"
+    },
+    "usc-114": {
+      "type": "statute",
+      "publisher": "United States Congress (Cornell LII copy of the U.S. Code)",
+      "title": "17 U.S.C. 114: Scope of exclusive rights in sound recordings",
+      "url": "https://www.law.cornell.edu/uscode/text/17/114",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "(a) no section 106(4) right for sound recordings; (g)(1) artist payments by contract for transmissions outside the statutory licence; (g)(2) 50 / 2.5 / 2.5 / 45 percent split and escrow funds; (g)(3) costs; (g)(5) letters of direction.",
+      "edition": "Title 17, section 114, as shown by LII"
+    },
+    "usco-pre1972": {
+      "type": "government",
+      "publisher": "U.S. Copyright Office",
+      "title": "Classics Protection and Access Act (Title II of the Music Modernization Act)",
+      "url": "https://www.copyright.gov/music-modernization/pre1972-soundrecordings/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Federal remedies for unauthorized use of sound recordings fixed before 15 February 1972; schedules filed with the Office; term and transition periods."
+    },
+    "sx-owed": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "Artists, Labels & Producers",
+      "url": "https://www.soundexchange.com/what-we-do/for-artists-labels-and-producers/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "'Are you owed royalties?': artists and recording owners must register to be paid; search tool; four status lists and what each means; registering free; SX Direct to search and claim. No claim deadline."
+    },
+    "ppl-calc": {
+      "type": "collective",
+      "publisher": "PPL",
+      "title": "How royalties are calculated",
+      "url": "https://www.ppluk.com/royalties/how-royalties-are-calculated/",
+      "jurisdiction": "UK",
+      "retrieved": "2026-11-20",
+      "support": "UK public play and broadcast money, after costs: one half to the recording rightsholder, one half to qualifying performers (equitable remuneration); several performers share by agreement or allocation policy; 28 million recordings."
+    },
+    "ppl-performers": {
+      "type": "collective",
+      "publisher": "PPL",
+      "title": "Performers",
+      "url": "https://www.ppluk.com/royalties/uk-royalties/performers/",
+      "jurisdiction": "UK",
+      "retrieved": "2026-11-20",
+      "support": "Audible contributions count; some roles non-payable; myPPL line-up claim, evidence; missing track: ask rightsholder; studio producer only if directing live performance, own form signed by featured performers; over 28 million tracks."
+    },
+    "cfr-380-10": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board (Cornell LII copy of the Code of Federal Regulations)",
+      "title": "37 CFR 380.10: Royalty fees for the public performance of sound recordings and the making of ephemeral recordings",
+      "url": "https://www.law.cornell.edu/cfr/text/37/380.10",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "(a) \"For the year 2025\": commercial webcasters $0.0032 per Performance for subscription services and $0.0025 for nonsubscription; the eCFR text as of 2026-11-18 reads the same.",
+      "edition": "Section 380.10 as shown by LII; eCFR current text checked 2026-11-18"
+    },
+    "fr-2026-04632": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "Determination of Rates and Terms for Digital Performance of Sound Recordings and Making of Ephemeral Copies To Facilitate Those Performances (Web VI): commercial broadcasters, final rule",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-03-10/html/2026-04632.htm",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Sec. 380.41(a): 2026 $0.0028 per Performance rising to $0.0032 in 2030; Sec. 380.40 defines Collective (SoundExchange for the current rate period) and Performance (excludes plays licensed directly by the owner).",
+      "date": "2026-03-10",
+      "edition": "91 FR 11458, Docket 23-CRB-0012-WR (2026-2030)"
+    },
+    "fr-2021-20621": {
+      "type": "ruling",
+      "publisher": "Copyright Royalty Judges",
+      "title": "Determination of Rates and Terms for Digital Performance of Sound Recordings and Making of Ephemeral Copies To Facilitate Those Performances (Web V): final rule and order",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2021-10-27/html/2021-20621.htm",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Summary: final determination of rates and terms for the period 1 January 2021 to 31 December 2025.",
+      "court": "Copyright Royalty Judges, Library of Congress",
+      "docket": "19-CRB-0005-WR (2021-2025)",
+      "date": "2021-10-27",
+      "edition": "86 FR 59452"
+    },
+    "crb-home": {
+      "type": "government",
+      "publisher": "Copyright Royalty Board",
+      "title": "Copyright Royalty Board home page: announcement of Web VI final rules",
+      "url": "https://www.crb.gov/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Announcement dated 13 March 2026: four final rules (noncommercial educational webcasters, Educational Media Foundation, commercial broadcasters, certain public radio) plus one for new subscription services, 2026 to 2030.",
+      "date": "2026-03-13"
+    },
+    "sx-dpr": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "Digital performance royalties: The Basics",
+      "url": "https://www.soundexchange.com/digital-performance-royalties/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Services pay SoundExchange with playlists; rates are set by the CRB; 45 percent to featured artists, 5 percent to a fund for non-featured artists, 50 percent to the rights owner."
+    },
+    "sx-lod": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "Overview of Letters of Direction (LODs)",
+      "url": "https://www.soundexchange.com/what-we-do/for-artists-managers-and-producers/letters-of-direction/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Who an LOD can pay; no off-the-top payment; paperwork; two-week minimum; payment thresholds; non-featured artists are not paid directly; 50/50 default for a \"featuring\" credit."
+    },
+    "sx-key": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "Key terms for creators",
+      "url": "https://www.soundexchange.com/what-we-do/for-artists-managers-and-producers/key-terms/",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Defines Artist, Performer and Sound Recording Owner; Performers claim a percentage recording by recording once the Artist registers."
+    },
+    "sx-intl": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "International royalties and international partners",
+      "url": "https://www.soundexchange.com/international-partners/",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "Members complete an International Mandate; 100+ agreements with 75+ societies, 93 percent of the market (its figures); partner list includes PPL, GVL, SCPP, ADAMI, PPCA, Re:Sound."
+    },
+    "sx-national-treatment": {
+      "type": "collective",
+      "publisher": "SoundExchange",
+      "title": "National Treatment (advocacy page)",
+      "url": "https://soundexchange.com/advocacy/national-treatment-feature/",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "SoundExchange says UK, France and Japan are among countries not paying US creators for play on AM/FM radio abroad; undated advocacy page."
+    },
+    "gvl-home": {
+      "type": "collective",
+      "publisher": "GVL",
+      "title": "GVL: Collecting society for performers and labels (English home page)",
+      "url": "https://gvl.de/en",
+      "jurisdiction": "DE",
+      "retrieved": "2026-11-20",
+      "support": "German society for performing artists and producers; over 180,000 rights holders entrust it with neighbouring rights."
+    },
+    "gvl-intl": {
+      "type": "collective",
+      "publisher": "GVL",
+      "title": "International affairs: performers",
+      "url": "https://gvl.de/en/node/1411/international-affairs/international-affairs-performers",
+      "jurisdiction": "DE",
+      "retrieved": "2026-11-20",
+      "support": "70+ international representation agreements; rights assigned by agreement; contributions reported in the portal, three years per distribution year; foreign money passed on without deductions."
+    },
+    "wipo-rome-summary": {
+      "type": "government",
+      "publisher": "World Intellectual Property Organization",
+      "title": "Summary of the Rome Convention for the Protection of Performers, Producers of Phonograms and Broadcasting Organisations (1961)",
+      "url": "https://www.wipo.int/en/web/treaties/ip/rome/summary_rome",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "Secondary uses of published phonograms give rise to a single equitable remuneration to performers, producers or both; states may not apply or may limit it."
+    },
+    "wipo-wppt-summary": {
+      "type": "government",
+      "publisher": "World Intellectual Property Organization",
+      "title": "Summary of the WIPO Performances and Phonograms Treaty (WPPT) (1996)",
+      "url": "https://www.wipo.int/en/web/treaties/ip/wppt/summary_wppt",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "Single equitable remuneration for broadcasting or communication to the public; a party may restrict or, with a reservation, deny it; others may then deny national treatment; making-available right."
+    },
+    "yt-cid-how": {
+      "type": "company",
+      "publisher": "YouTube (Google)",
+      "title": "How Content ID works",
+      "url": "https://support.google.com/youtube/answer/2797370",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "Content ID scans uploads against owners' reference files; claim can block, monetize or track, by country; owners must meet criteria; erroneous claims can end access."
+    },
+    "yt-cid-qualify": {
+      "type": "company",
+      "publisher": "YouTube (Google)",
+      "title": "Qualify for Content ID",
+      "url": "https://support.google.com/youtube/answer/1311402",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "Eligibility rests on claimable content and demonstrated need; exclusive rights evidence; agreement; other tools listed."
+    },
+    "yt-cid-eligible": {
+      "type": "company",
+      "publisher": "YouTube (Google)",
+      "title": "Content eligible for Content ID",
+      "url": "https://support.google.com/youtube/answer/2605065",
+      "jurisdiction": "INTL",
+      "retrieved": "2026-11-20",
+      "support": "Guidelines: exclusive rights per territory; distinct references; individual references, not full albums; examples of ineligible content; enforcement for abuse or error."
+    }
+  }
+}
