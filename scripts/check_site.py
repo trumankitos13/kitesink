@@ -21,6 +21,14 @@ SPECIAL_PAGES = {PUBLIC / "404.html", PUBLIC / "repost.html", PUBLIC / "blog/_te
 # wants a line in llms.txt and a route in run_worker_first in wrangler.jsonc.
 FITNESS_ROUTES = json.loads((ROOT / "content" / "fitness" / "routes.json").read_text(encoding="utf-8"))["routes"]
 FITNESS_SUBPAGES = tuple(route["slug"] for route in FITNESS_ROUTES)
+# The pages under /music/, in the order of the hub. content/music/routes.json has a row for every
+# planned page, but scripts/build_music.py writes one only once it has something to show (an area
+# once its file exists), so the listed ones are the rows whose page is in public/music/. The
+# `build_music.py --check` audit below fails if a page the data calls for is missing or out of date.
+# Like the fitness pages, each is listed (site-index.js, sitemap.xml) and has a twin (llms.txt,
+# run_worker_first in wrangler.jsonc).
+MUSIC_ROUTES = json.loads((ROOT / "content" / "music" / "routes.json").read_text(encoding="utf-8"))["routes"]
+MUSIC_SUBPAGES = tuple(route["slug"] for route in MUSIC_ROUTES if (PUBLIC / "music" / f"{route['slug']}.html").is_file())
 # Kept at their addresses but hidden on purpose: not in the site index or the sitemap,
 # not linked from any listed page, and marked noindex. The audit holds them to that.
 # (They may link to each other and to listed pages.)
@@ -160,6 +168,7 @@ TWINS = {
     "/": "index.md", "/consulting": "consulting.md", "/fitness": "fitness.md", "/vantix": "vantix.md",
     "/music": "music.md", "/listening-club": "listening-club.md", "/about": "about.md",
     **{f"/fitness/{slug}": f"fitness/{slug}.md" for slug in FITNESS_SUBPAGES},
+    **{f"/music/{slug}": f"music/{slug}.md" for slug in MUSIC_SUBPAGES},
 }
 
 
@@ -282,6 +291,16 @@ def audit_fitness_build() -> list[str]:
     return []
 
 
+def audit_music_build() -> list[str]:
+    """/music, the pages under it, their twins, search.json and claimable.json are generated
+    (scripts/build_music.py); fail if any of them is older than its data."""
+    import subprocess
+    result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_music.py"), "--check"], capture_output=True, text=True)
+    if result.returncode:
+        return ["music: " + (result.stdout.strip() or result.stderr.strip().splitlines()[-1])]
+    return []
+
+
 def audit_llms_full() -> list[str]:
     """/llms-full.txt is every twin in one file; fail if a twin changed and it was not rebuilt."""
     import subprocess
@@ -364,7 +383,7 @@ def audit_asset_versions() -> list[str]:
     visitors can get a new page with an old cached stylesheet."""
     seen: dict[str, set[str]] = {}
     for path in sorted(PUBLIC.rglob("*.html")):
-        for name, version in re.findall(r"""["']/(ks\.css|ks\.js|site-index\.js|fitness\.js|fitness\.css|fitness-ref\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
+        for name, version in re.findall(r"""["']/(ks\.css|ks\.js|site-index\.js|fitness\.js|fitness\.css|fitness-ref\.js|music-ref\.css|music-ref\.js|music-tools\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
             seen.setdefault(name, set()).add(version or "(none)")
     issues = [f"public: pages request different versions of /{name}: {', '.join(sorted(v))}" for name, v in seen.items() if len(v) > 1]
     # ks.js fetches /site-index.js itself (for the Find palette) and must name the same release
@@ -410,6 +429,8 @@ def audit(path: Path) -> list[str]:
         add("unlisted page must be noindex")
     if path.parent == PUBLIC / "fitness" and "noindex" in meta_names.get("robots", "").lower():
         add("a listed fitness page must not be noindex")
+    if path.parent == PUBLIC / "music" and "noindex" in meta_names.get("robots", "").lower():
+        add("a listed music page must not be noindex")
 
     if path == PUBLIC / "404.html":
         if "noindex" not in meta_names.get("robots", "").lower():
@@ -456,6 +477,7 @@ def main() -> int:
     issues += audit_twins()
     issues += audit_fitness_build()
     issues += audit_fitness_homes()
+    issues += audit_music_build()
     issues += audit_llms_full()
     issues += audit_agent_files()
 

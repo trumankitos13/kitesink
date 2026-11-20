@@ -1,0 +1,66 @@
+{
+  "updated": "2026-11-20",
+  "updated_label": "20 November 2026",
+  "scope_line": "General information on how music rights and royalties work, not legal advice. For a contract, a termination notice or a dispute, talk to a music lawyer.",
+  "scope_line_status": "Approved by the owner 2026-11-20 (Holds & Inputs D1). Change it here; every page and twin picks it up on the next build.",
+  "labels": {
+    "usc-115": "17 USC 115",
+    "cfr-210-32": "37 CFR 210.32",
+    "cfr-385-2": "37 CFR 385.2",
+    "cfr-385-11": "37 CFR 385.11",
+    "cfr-385-21": "37 CFR 385.21",
+    "crb-phono-v": "CRB Phonorecords V docket",
+    "cmrra-unclaimed": "CMRRA Unclaimed Works Portal",
+    "hfa-public-search": "HFA help: public search",
+    "mlc-audits": "MLC: DSP audits",
+    "mlc-historical": "MLC: historical royalties",
+    "mlc-missing-members": "MLC: Missing Member Lookup",
+    "mlc-statements": "MLC Help Center: statement types",
+    "mlc-tools": "MLC: tools",
+    "mlc-unclaimed": "MLC: unclaimed accrued royalties",
+    "ppl-performers": "PPL: performers",
+    "sx-owed": "SoundExchange: artists, labels and producers",
+    "usco-mlc-dlc": "Copyright Office: MLC and DLC boards",
+    "usco-mma": "Copyright Office: MMA overview",
+    "usco-mma-faq": "Copyright Office: MMA FAQ"
+  },
+  "source_keys": {},
+  "tools": [
+    {
+      "title": "Claimable royalties",
+      "blurb": "Where unclaimed money is held, by body and territory, and how each one is searched and claimed.",
+      "href": "/music/claimable",
+      "live": false
+    },
+    {
+      "title": "Tools and calculators",
+      "blurb": "A mechanical rate calculator, an unclaimed-money checklist, an identifier checker, a split-sheet generator, and a checked directory of other tools.",
+      "href": "/music/tools",
+      "live": false
+    },
+    {
+      "title": "Identifier checker",
+      "blurb": "Whether an ISRC, ISWC, ISNI or IPI number is in the right form, and whether its check digit adds up where it has one.",
+      "href": "/music/tools#identifiers",
+      "live": false
+    },
+    {
+      "title": "Split-sheet generator",
+      "blurb": "Who wrote a song and each writer's share, checked to 100 percent, ready to print and sign. Not a contract.",
+      "href": "/music/tools#split-sheet",
+      "live": false
+    },
+    {
+      "title": "AI tools directory",
+      "blurb": "AI tools that touch music rights, with what each one does with your files and your data.",
+      "href": "/music/ai-tools",
+      "live": false
+    },
+    {
+      "title": "For music teams",
+      "blurb": "Workflow automation and practical AI for labels, publishers and artist teams.",
+      "href": "/consulting",
+      "live": true
+    }
+  ]
+}

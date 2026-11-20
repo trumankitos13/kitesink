@@ -14,12 +14,15 @@ engines are told not to index them. Anyone with the address can read them.
 | `/fitness/basics`, `technique`, `hypertrophy`, `powerlifting`, `meet`, `conditioning`, `recovery`, `nutrition`, `diet`, `bodycomp`, `women`, `health` | `/fitness/<area>.md`, one file per area |
 | `/fitness/claims`, `glossary`, `reference`, `sources` | `/fitness/claims.md`, `glossary.md`, `reference.md`, `sources.md` |
 | `/vantix` | `/vantix.md` |
-| `/music` | `/music.md` |
+| `/music` (the hub) | `/music.md` |
+| `/music/royalty-basics`, `mechanicals-mlc`, `unclaimed-recovery` (the areas written so far) | `/music/<area>.md`, one file per area |
+| `/music/claims`, `glossary`, `reference`, `sources`, `claimable`, `tools` | `/music/claims.md`, `glossary.md`, `reference.md`, `sources.md`, `claimable.md`, `tools.md` |
 | `/listening-club` | `/listening-club.md` |
 | `/about` | `/about.md` |
 
 `/llms.txt` lists them all. The fitness twins are generated from the same data as the
-pages (`python3 scripts/build_fitness.py`). The others are hand-written files in
+pages (`python3 scripts/build_fitness.py`), and the music twins, `/music.md` included, likewise
+(`python3 scripts/build_music.py`). The others are hand-written files in
 `public/`: when a fact on a page changes, change its twin too. `scripts/check_site.py`
 checks that every twin exists, is linked from its page and has no broken links.
 
@@ -31,6 +34,16 @@ its `<head>`, `/llms.txt` lists all sixteen twins in the order of the hub, and
 for them too. The audit checks all three. Every fitness twin ends with the
 address of its page and of `/fitness.md`.
 
+`/music.md` is the music hub's twin, built the same way: what the guide is, each area with its
+number of entries and the address of its twin (an area not written yet says "In preparation"),
+the reference twins, how entries are graded, and then the music projects (from
+`content/music/templates/hub.md`). The pages under `/music/` are listed pages with a twin each,
+announced in their `<head>`, listed in `/llms.txt` in the order of the hub, and routed in
+`run_worker_first`; the audit checks all three for every page the build has written. When the
+build writes a new music page, add its line and route by hand, as for a fitness area.
+`/music/search.json` (the hub's search index) and `/music/claimable.json` (the claimable table
+as data, linked from its twin) are not twins.
+
 `/fitness/search.json` and `/fitness/ids.json` are not twins. They are data for the hub's
 own scripts: the search index, and the map that sends an old `/fitness#<id>` link to the
 page that holds that id now.
@@ -40,11 +53,11 @@ Then give it a line in `/llms.txt`, a route in `run_worker_first`, and rebuild
 `/llms-full.txt`.
 
 `/llms-full.txt` is every twin in one file, for readers that want the whole site in one
-request. `python3 scripts/build_llms_full.py` writes it; run it after the fitness build
-and after editing any hand-written twin. The audit fails if it is out of date. With twelve
-areas it is a little over 1 MB. If it nears 1.5 MB, decide what to leave out of it rather
-than let it grow: the list of sources is the largest single part, and it stays at
-`/fitness/sources.md` either way.
+request. `python3 scripts/build_llms_full.py` writes it; run it after the fitness or music
+build and after editing any hand-written twin. The audit fails if it is out of date. With twelve
+fitness areas and three music areas it is about 1.5 MB (1.34 MB before the music pages). Decide
+what to leave out of it rather than let it grow: the fitness list of sources is the largest
+single part, and it stays at `/fitness/sources.md` either way.
 
 Each twin says the same things as its page. The one addition is an enquiry link,
 `/consulting?via=ai-assistant#contact`, which fills the "Found via" line of the contact
@@ -54,9 +67,10 @@ Every twin also ends with the same **offers block**: a free 30-minute workflow t
 (a limited number each month), a free one-page written plan, and early access to Vantix
 and Song of the Day, all with the code word `KITESTRING`. The pages for people do not
 show it, so a message that carries the code word came through a twin. To change the
-offers, the cap or the code word, edit the block in the six hand-written twins
-(`grep -l KITESTRING public/*.md`), the one line in `public/llms.txt`, and `MD_OFFERS`
-in `scripts/build_fitness.py`, then rebuild the fitness page.
+offers, the cap or the code word, edit the block in the five hand-written twins
+(`grep -l KITESTRING public/*.md`, leaving out `fitness.md` and `music.md`, which are generated),
+the one line in `public/llms.txt`, and `MD_OFFERS` in `scripts/build_fitness.py` and
+`scripts/build_music.py`, then rebuild the fitness and music pages.
 
 ## How an AI reader finds a twin
 

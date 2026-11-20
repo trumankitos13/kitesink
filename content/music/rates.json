@@ -1,0 +1,147 @@
+{
+  "kind": "rates",
+  "physical": [
+    {
+      "year": 2023,
+      "per_work_cents": 12.0,
+      "per_minute_cents": 2.31,
+      "sources": [
+        "fr-2022-27237"
+      ]
+    },
+    {
+      "year": 2024,
+      "per_work_cents": 12.4,
+      "per_minute_cents": 2.38,
+      "sources": [
+        "fr-2023-28075"
+      ]
+    },
+    {
+      "year": 2025,
+      "per_work_cents": 12.7,
+      "per_minute_cents": 2.45,
+      "sources": [
+        "fr-2024-27819"
+      ]
+    },
+    {
+      "year": 2026,
+      "per_work_cents": 13.1,
+      "per_minute_cents": 2.52,
+      "sources": [
+        "fr-2025-21695"
+      ]
+    }
+  ],
+  "streaming_revenue_percent": [
+    {
+      "year": 2023,
+      "percent": 15.1,
+      "sources": [
+        "cfr-385-21"
+      ]
+    },
+    {
+      "year": 2024,
+      "percent": 15.2,
+      "sources": [
+        "cfr-385-21"
+      ]
+    },
+    {
+      "year": 2025,
+      "percent": 15.25,
+      "sources": [
+        "cfr-385-21"
+      ]
+    },
+    {
+      "year": 2026,
+      "percent": 15.3,
+      "sources": [
+        "cfr-385-21"
+      ]
+    },
+    {
+      "year": 2027,
+      "percent": 15.35,
+      "sources": [
+        "cfr-385-21"
+      ]
+    }
+  ],
+  "ringtone_cents": {
+    "value": 24,
+    "sources": [
+      "cfr-385-11"
+    ]
+  },
+  "as_of": "2026-11-20",
+  "sources": {
+    "cfr-385-11": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "37 CFR 385.11: Royalty rates (Subpart B, physical phonorecords, permanent downloads, ringtones)",
+      "url": "https://www.law.cornell.edu/cfr/text/37/385.11",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "(a)(1) 2026 rate 13.1 cents or 2.52 cents per minute, whichever is larger; (a)(2) annual CPI-U adjustment; (b) ringtone 24 cents; (c) bundles. LII lists last amendment 90 FR 55045, Dec. 1, 2025.",
+      "edition": "Mirror of the eCFR text; the eCFR page itself is script-driven and could not be read automatically"
+    },
+    "cfr-385-21": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "37 CFR 385.21: Royalty rates and calculations (Subpart C, interactive streaming and limited downloads)",
+      "url": "https://www.law.cornell.edu/cfr/text/37/385.21",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Table 1 to (b)(1): 2023 15.1, 2024 15.2, 2025 15.25, 2026 15.3, 2027 15.35 percent of service provider revenue. LII amendment note: 87 FR 80458 (30 Dec 2022), as amended 89 FR 19274.",
+      "edition": "Mirror of the eCFR text"
+    },
+    "fr-2025-21695": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-01/html/2025-21695.htm",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Adjusted 2026 rates 13.1 cents per work and 2.52 cents per minute; CPI-U 324.800 against base 298.012; applies 1 January to 31 December 2026.",
+      "date": "2025-12-01",
+      "edition": "90 FR 55044-55045 (revised 385.11(a)(1) text at 55045), Docket 25-CRB-0012-PR COLA (2026)"
+    },
+    "fr-2022-27237": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "Determination of Royalty Rates and Terms for Making and Distributing Phonorecords (Phonorecords IV)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2022-12-16/html/2022-27237.htm",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "Regulatory text, 37 CFR 385.11(a)(1): for 2023, 12.0 cents or 2.31 cents per minute of playing time or fraction, whichever is larger. Docket 21-CRB-0001-PR (2023-2027).",
+      "date": "2022-12-16",
+      "edition": "87 FR 76937-76942, Docket 21-CRB-0001-PR (2023-2027)"
+    },
+    "fr-2023-28075": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords; Correction",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2023-12-21/html/2023-28075.htm",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "The adjusted rates for 2024 are 12.4 cents per work and 2.38 cents per minute. Corrects the 12 Dec 2023 notice (88 FR 86058, doc 2023-27290), which gave 2.39 cents per minute and omitted the CPI-U workings (307.671).",
+      "date": "2023-12-21",
+      "edition": "88 FR 88253-88254, Docket 23-CRB-0014-PR-COLA (2024)"
+    },
+    "fr-2024-27819": {
+      "type": "regulation",
+      "publisher": "Copyright Royalty Board",
+      "title": "Cost of Living Adjustment to Royalty Rates and Terms for Making and Distributing Phonorecords",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2024-11-27/html/2024-27819.htm",
+      "jurisdiction": "US",
+      "retrieved": "2026-11-20",
+      "support": "The adjusted rates for 2025 are 12.7 cents per work and 2.45 cents per minute. Dated 22 Nov 2024.",
+      "date": "2024-11-27",
+      "edition": "89 FR 93477, Docket 24-CRB-0010-PR-COLA (2025)"
+    }
+  }
+}
