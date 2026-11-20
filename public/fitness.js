@@ -604,7 +604,11 @@
     var tabs = ids.map(function (id) { return $("tab-" + id); }), panels = ids.map($);
     function show(id, focus) {
       var i = ids.indexOf(id); if (i < 0) return false;
-      tabs.forEach(function (t, j) { t.setAttribute("aria-selected", j === i ? "true" : "false"); t.tabIndex = j === i ? 0 : -1; });
+      tabs.forEach(function (t, j) { t.setAttribute("aria-selected", j === i ? "true" : "false"); t.tabIndex = -1; });
+      // one Tab stop per tablist (a row of the field guide's groups): its chosen tab, else its first
+      [].forEach.call(document.querySelectorAll("#tools [role=tablist]"), function (list) {
+        var own = list.contains(tabs[i]) ? tabs[i] : list.querySelector("[role=tab]"); if (own) own.tabIndex = 0;
+      });
       panels.forEach(function (p, j) { p.hidden = j !== i; });
       if (focus) tabs[i].focus();
       var bar = tabs[i].parentNode; // centre the tab in its own strip; never move the page
@@ -614,8 +618,10 @@
     tabs.forEach(function (t, i) {
       t.addEventListener("click", function () { show(ids[i]); history.replaceState(null, "", "#" + ids[i]); });
       t.addEventListener("keydown", function (e) {
-        var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0; if (!d) return;
-        e.preventDefault(); var n = ids[(i + d + ids.length) % ids.length]; show(n, true); history.replaceState(null, "", "#" + n);
+        var n = e.key === "ArrowRight" ? ids[(i + 1) % ids.length] : e.key === "ArrowLeft" ? ids[(i - 1 + ids.length) % ids.length]
+          : e.key === "Home" ? ids[0] : e.key === "End" ? ids[ids.length - 1] : null;
+        if (!n) return;
+        e.preventDefault(); show(n, true); history.replaceState(null, "", "#" + n);
       });
     });
     function fromHash() {
@@ -667,7 +673,7 @@
     if (saved.bf !== "" && isFinite(saved.bf)) $("m-bf").value = saved.bf;
     var rest = restSource("m", saved, function () { return sex.get(); }, function () { calc(); });
     if (saved.pal) {
-      if (saved.palCustom && saved.pal >= 1.05 && saved.pal <= 4) setPalOption($("m-act"), +saved.pal);   // one the activity tool put there
+      if (saved.palCustom && saved.pal >= 1.05 && saved.pal <= 6) setPalOption($("m-act"), +saved.pal);   // one the activity tool put there
       else [].forEach.call($("m-act").options, function (o) { if (parseFloat(o.value) === parseFloat(saved.pal)) $("m-act").value = o.value; }); // 2 must find "2.0"
     }
     if (saved.fatPct) $("m-fat").value = saved.fatPct;
@@ -1051,7 +1057,7 @@
       setPalOption(act, pal); act.dispatchEvent(new Event("input", { bubbles: true })); act.dispatchEvent(new Event("change", { bubbles: true }));
     }
     $("ac-use").addEventListener("click", function () {
-      if (!result) return; $("macros").dispatchEvent(new CustomEvent("ks:mine")); setUse(result);
+      if (!result) return; setUse(result);
       var b = $("ac-use"); b.textContent = "Added \u2713"; clearTimeout(b._t); b._t = setTimeout(function () { b.textContent = "Use in Energy & macros"; }, 1600);
     });
 
@@ -1080,6 +1086,7 @@
         say("ac-say", "Adds " + num(add, 2) + " to the day's multiplier, about " + num(F.round(add * b.bmr, 5)) + " kilocalories.");
       } else {
         if (rows.some(function (r) { return !(+r[1] >= 5 && +r[1] <= 600); })) return empty("Each exercise needs between 5 and 600 minutes.");
+        if (rows.reduce(function (t, r) { return t + +r[1]; }, 0) > 600) return empty("That is more than 10 hours of exercise in a day. Check the minutes.");
         var m = F.dayMult(L.m, rows.map(function (r) { return { id: r[0], min: +r[1] }; }));
         result = m; out.classList.remove("is-empty");
         $("ac-big-l").textContent = "This day\u2019s multiplier";
@@ -1302,7 +1309,7 @@
     var dSex = function () { return mem.sex === "f" ? "f" : "m"; };   // replaced once the sex control exists
     var rest = restSource("d", mem, function () { return dSex(); }, function () { calc(); });
     if (mem.pal) {
-      if (mem.palCustom && mem.pal >= 1.05 && mem.pal <= 4) setPalOption($("d-act"), +mem.pal);
+      if (mem.palCustom && mem.pal >= 1.05 && mem.pal <= 6) setPalOption($("d-act"), +mem.pal);
       else [].forEach.call($("d-act").options, function (o) { if (parseFloat(o.value) === parseFloat(mem.pal)) $("d-act").value = o.value; });
     }
     var train = [true, true, false, true, true, false, false], days = 3.5, manual = null, last = null, prevBal = null, changed = -1, deltaT = 0;
@@ -1424,7 +1431,7 @@
       $("d-req").innerHTML = req.map(function (x) { return '<li' + (x[2] ? ' class="is-watch"' : "") + '><span class="d-req-k">' + x[0] + "</span> " + x[1] + "</li>"; }).join("");
       $("d-warn").innerHTML = warns.map(function (w) { return '<p class="warn">' + w + "</p>"; }).join(""); $("d-warn").hidden = !warns.length;
       $("d-maint").textContent = r.own ? "Maintenance: your figure, " + kc(r.maint) + " kcal a day." :
-        "Maintenance: resting " + kc(r.rmr) + " kcal (" + r.equation + ") × " + num(parseFloat($("d-act").value), 1) + " = " + kc(r.maint) + " kcal a day, training included. If your own tracking says otherwise, enter that figure above.";
+        "Maintenance: resting " + kc(r.rmr) + " kcal (" + r.equation + ") × " + num(parseFloat($("d-act").value), 1) + " = " + kc(r.maint) + " kcal a day, " + (r.method === "cat" && !isCustom($("d-act")) ? "before training (add it with the activity multiplier)" : "training included") + ". If your own tracking says otherwise, enter that figure above.";
       // what changed, made visible
       var bal = Math.round(r.weekBalance);
       if (prevBal !== null && bal !== prevBal && !booting) {

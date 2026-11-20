@@ -53,7 +53,7 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.19">
+<link rel="stylesheet" href="/ks.css?v=2027.20">
 <style>
   .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
 
@@ -252,7 +252,6 @@
   .ac-x { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-copy); cursor: pointer; font: 600 16px/1 var(--k-sans); }
   .ac-x:hover { border-color: var(--k-green); color: var(--k-green); }
   .tool-tabs { display: grid; gap: 10px; }
-  @media (max-width: 519px) { .rest-row { grid-template-columns: minmax(0, 1fr); } }
   .tool-row { display: grid; gap: 6px; min-width: 0; }
   .tool-row .k-seg { justify-self: start; }
   .tool-grp { font: 600 11px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-green); text-decoration: none; justify-self: start; }
@@ -266,6 +265,8 @@
   #vantix { padding-top: clamp(26px, 4vw, 44px); }
   .k-hero { padding-bottom: clamp(26px, 3.4vw, 40px); }
   .row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .row2.rest-row { align-items: end; }
+  @media (max-width: 519px) { .row2.rest-row { grid-template-columns: minmax(0, 1fr); } }   /* after .row2, so it wins */
   .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .with-unit { position: relative; }
   .with-unit .k-input { padding-right: 44px; }
@@ -963,7 +964,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.19"></script>
-<script src="/fitness.js?v=2027.19"></script>
+<script src="/ks.js?v=2027.20"></script>
+<script src="/fitness.js?v=2027.20"></script>
 </body>
 </html>
