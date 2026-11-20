@@ -575,7 +575,7 @@
     src.value = ["cat", "mifflin", "cunningham"].indexOf(mem.rmrSrc) >= 0 ? mem.rmrSrc : legacy ? (mem.bf > 0 ? "cunningham" : "mifflin") : "cat";
     cat.value = mem.cat >= 1 && mem.cat <= 3 ? String(mem.cat) : "2";
     var shown = src.value === "cat" ? "cat" : "eq";
-    fill(shown === "cat" ? CAT : EQ, act.value, shown === "cat" ? "1.2" : "1.6");
+    fill(shown === "cat" ? CAT : EQ, act.value, shown === "cat" ? "1.3" : "1.6");   // default day level: Moderate
     function paint() {
       var isCat = src.value === "cat", hasBf = bf && parseFloat(bf.value) > 0, f = sexOf() === "f";
       var cut = f ? ["24% or less", "25\u201334%", "35% or more"] : ["15% or less", "16\u201325%", "26% or more"];
@@ -585,7 +585,7 @@
       if (want !== shown) {
         shown = want;
         var custom = act.selectedOptions[0] && act.selectedOptions[0].hasAttribute("data-custom") ? act.selectedOptions[0] : null;
-        fill(want === "cat" ? CAT : EQ, null, want === "cat" ? "1.2" : "1.6");
+        fill(want === "cat" ? CAT : EQ, null, want === "cat" ? "1.3" : "1.6");
         if (custom) custom.selected = true;   // by the option, not its value: 1.40 must not land on a preset 1.4
       }
     }
@@ -1000,7 +1000,7 @@
     levelEl.innerHTML = F.LEVELS.map(function (l) {
       return '<button type="button" class="ac-lv" value="' + l.id + '" aria-pressed="false"><b>' + esc(l.n) + '<span>\u00d7 ' + l.m.toFixed(1) + "</span></b><small>" + esc(l.d) + "</small><small>" + esc(l.steps) + "</small></button>";
     }).join("");
-    var level = seg(levelEl, mine.level, "light", calc);
+    var level = seg(levelEl, mine.level, "moderate", calc);
     var exOpts = F.EXERCISE.map(function (e) { return '<option value="' + e.id + '">' + esc(e.n) + (e.d ? " \u00b7 " + e.d : "") + "</option>"; }).join("");
     $("ac-ex").innerHTML = exOpts;
     $("ac-ex").value = F.exercise(mine.ex) ? mine.ex : "wt1";
