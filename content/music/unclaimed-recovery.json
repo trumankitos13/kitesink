@@ -518,7 +518,7 @@
       "sources": [
         "butler-cmo-2020",
         "wipo-cmo-music",
-        "cisac-gcr-2023"
+        "cisac-gcr-2026"
       ],
       "take": "The author of the 2020 survey writes that most societies in continental Europe and Latin America deduct part of collections for social, cultural or educational purposes.",
       "body": "She calls this very controversial in the industry when the sums are large, their use is unclear, or they come from foreign rights holders without permission. WIPO's 2012 music module says such deductions are common in many countries and are not cost recovery, so rights holders and other societies have to accept them beforehand. CISAC's collection figures are gross, before these deductions.",
@@ -731,7 +731,7 @@
     {
       "id": "unc-number-cisac-music",
       "type": "number",
-      "title": "Music collections by CISAC member societies in 2022",
+      "title": "Music collections by CISAC member societies in 2025",
       "topic": "undistributed",
       "level": "intermediate",
       "readers": [
@@ -743,13 +743,13 @@
       ],
       "confidence": "official",
       "sources": [
-        "cisac-gcr-2023"
+        "cisac-gcr-2026"
       ],
-      "value": "10.83",
-      "unit": "EUR billion, gross, 2022",
-      "sort": 10.83,
-      "take": "Scale only: gross collections before deductions, from CISAC's 2023 report. It gives no unclaimed total, so do not read this as money waiting.",
-      "as_of": "2023-10-26"
+      "value": "14.06",
+      "unit": "EUR billion, gross, 2025",
+      "sort": 14.06,
+      "take": "Scale only: gross, before deductions, from CISAC's 2026 report. The MLC joined in 2025: +11.9%, or +5.3% without it. Not an unclaimed total.",
+      "as_of": "2026-11-04"
     },
     {
       "id": "unc-number-ppl-tracks",
@@ -875,16 +875,16 @@
       "authors": "Tarja Koskinen-Olsson and Nicholas Lowe",
       "edition": "Module 2, 30 August 2012"
     },
-    "cisac-gcr-2023": {
+    "cisac-gcr-2026": {
       "type": "standard",
       "publisher": "CISAC",
-      "title": "Global Collections Report 2023 (for 2022 data)",
-      "url": "https://www.cisac.org/sites/main/files/files/2023-11/COM23-0846_CISAC_Global_Collections_Report_2023_for_2022_data_2023-10-26_EN%20%287%29.pdf",
+      "title": "Global Collections Report 2026 (for 2025 data)",
+      "url": "https://members.cisac.org/CisacPortal/cisacDownloadFileSearch.do?docId=51839&lang=en",
       "jurisdiction": "INTL",
       "retrieved": "2026-11-20",
-      "support": "Music collections EUR 10.83 bn in 2022, up 28.0%; About the report: gross collections before deductions for administrative, cultural or social purposes; 225 members in 116 countries or territories.",
-      "date": "2023-10-26",
-      "edition": "Published 26 October 2023, 2022 data"
+      "support": "Printed pp. 8-9, 11, 18, 26, 35-37, 90: total EUR 15.5bn (+11.3%, +5.3% without The MLC); music EUR 14.06bn; digital EUR 6.57bn, 42.4%; digital music 45.6%; gross before deductions.",
+      "date": "2026-11-04",
+      "edition": "Published 4 November 2026, 2025 data; landing page https://www.cisac.org/Newsroom/global-collections/global-collections-report-2026"
     }
   }
 }
