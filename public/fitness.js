@@ -715,6 +715,14 @@
      ===================================================================== */
   function $(id) { return document.getElementById(id); }
   if (!$("tools")) return;
+  // A page older than this script (a tab restored or reached with Back after a release, whose
+  // HTML predates #tool-data) would start tools without the markup they need. Load the page
+  // once more to get the HTML that goes with this script; a flag for the session stops a loop,
+  // and if the old page comes back anyway, each tool still starts on its own inside boot().
+  try {
+    if (!$("tool-data")) { if (!sessionStorage.getItem("ksFitReload")) { sessionStorage.setItem("ksFitReload", "1"); location.reload(); return; } }
+    else sessionStorage.removeItem("ksFitReload");
+  } catch (e) {}
 
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
   function num(v, d) { return Number(v).toLocaleString("en-US", { maximumFractionDigits: d || 0, minimumFractionDigits: d || 0 }); }
@@ -723,6 +731,9 @@
   // a segmented button group that behaves like a radio set: seg(el, wanted, fallback, onChange) → getter.
   // `wanted` usually comes from localStorage, so anything that isn't one of the buttons falls back.
   function seg(el, wanted, fallback, onChange) {
+    // A page older than this script (a restored tab, the back button) may lack a newer control:
+    // the tool then runs without it instead of failing to start.
+    if (!el) return { get: function () { return fallback; }, set: function () {} };
     var values = [].map.call(el.querySelectorAll("button"), function (b) { return b.value; });
     var cur = values.indexOf(String(wanted)) >= 0 ? String(wanted) : fallback; pressed(el, cur);
     el.addEventListener("click", function (e) {
@@ -775,7 +786,7 @@
   // a table's numbers (#tool-data) with its printed words, row by row
   function withWords(key, words) {
     var d = toolData()[key], rows = d && d.rows ? d.rows : [], printed = guideTable(d && d.e).rows;
-    return rows.map(function (r, i) { var c = printed[i] || []; var o = {}; for (var k in r) o[k] = r[k]; for (var w in words) o[w] = c[words[w]]; return o; });
+    return rows.map(function (r, i) { var c = printed[i] || []; var o = {}; for (var k in r) o[k] = r[k]; for (var w in words) if (c[words[w]] !== undefined) o[w] = c[words[w]]; return o; });   // no printed cell: keep the row's own
   }
   // a field the visitor is typing in keeps what they typed; every other one shows the new value
   function setField(el, v) { if (el && document.activeElement !== el) el.value = v; }
