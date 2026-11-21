@@ -85,7 +85,7 @@
     // RPE to reps in reserve, KiteSink's reading of the guide's chart (pl-table-rpe-rir): 10 - RPE,
     // so 9.5 is half a rep where the chart says "0-1". The build checks every row agrees. Below 5: none.
     rirFromRpe: function (rpe) { return rpe >= 5 && rpe <= 10 ? 10 - rpe : NaN; },
-    // the chart's row for an RPE (rows from #tool-data: { rpe: [lo, hi], rir, feel, use })
+    // the chart's row for an RPE (rows: { rpe: [lo, hi], … }: #tool-data's numbers, with the page's words)
     rpeRow: function (rows, rpe) { for (var i = 0; i < rows.length; i++) if (rpe >= rows[i].rpe[0] && rpe <= rows[i].rpe[1]) return rows[i]; return null; },
     // the RPEs the chart offers, highest first: each row's own, a range ("5-6") as each whole step in it
     rpeOptions: function (rows) {
@@ -93,7 +93,7 @@
       (rows || []).forEach(function (r) {
         var vs = [];
         if (r.rpe[0] === r.rpe[1]) vs.push(r.rpe[0]); else for (var v = Math.floor(r.rpe[1]); v >= Math.ceil(r.rpe[0]); v--) vs.push(v);
-        vs.forEach(function (v) { if (v >= 5 && v <= 10) out.push({ rpe: v, rir: 10 - v }); });
+        vs.forEach(function (v) { var rir = F.rirFromRpe(v); if (isFinite(rir)) out.push({ rpe: v, rir: rir }); });
       });
       return out;
     },
@@ -522,19 +522,20 @@
 
   /* ---------- supplements ----------
      caffeine(kg, mgkg): the dose range studied (nut-num-caffeine, mg per kg) for a body weight.
-     suppItems(D): one list from #tool-data: the supplement table's rows, the fat-loss table's rows
-     and the single entries, joined by name (the caffeine row of each table is one item). */
+     suppItems(lift, fat, groups): one list from the supplement table's rows and the fat-loss
+     table's rows (each a list of its cells, as the page prints them) and #tool-data's named
+     groups of single entries, joined by name (the caffeine row of each table is one item). */
   F.caffeine = function (kg, mgkg) { return kg > 0 && mgkg ? [Math.round(kg * mgkg[0]), Math.round(kg * mgkg[1])] : null; };
-  F.suppItems = function (D) {
+  F.suppItems = function (lift, fat, groups) {
     var out = [], by = {};
     function item(name, group) {
       var k = name.toLowerCase();
       if (!by[k]) { by[k] = { name: name, group: group, entries: [] }; out.push(by[k]); }
       return by[k];
     }
-    ((D.supps || {}).rows || []).forEach(function (r) { item(r.name, "lift").row = r; });
-    ((D.fatLoss || {}).rows || []).forEach(function (r) { item(r.name, "fat").fat = r; });
-    (D.suppItems || []).forEach(function (g) { var it = item(g.name, g.group || "health"); it.entries = it.entries.concat(g.entries); });
+    (lift || []).forEach(function (r) { item(r[0], "lift").row = { name: r[0], evidence: r[1], does: r[2], dose: r[3] }; });
+    (fat || []).forEach(function (r) { item(r[0], "fat").fat = { name: r[0], found: r[1], cautions: r[2] }; });
+    (groups || []).forEach(function (g) { var it = item(g.name, g.group || "health"); it.entries = it.entries.concat(g.entries); });
     return out;
   };
 
@@ -731,7 +732,7 @@
     return { get: function () { return cur; }, set: function (v) { cur = v; pressed(el, cur); } };
   }
   var store = {
-    get: function () { try { return JSON.parse(localStorage.getItem("ksFit") || "{}") || {}; } catch (e) { return {}; } },
+    get: function () { try { return F.parseBlob(localStorage.getItem("ksFit")); } catch (e) { return {}; } },
     set: function (patch) { try { var s = store.get(); for (var k in patch) s[k] = patch[k]; localStorage.setItem("ksFit", JSON.stringify(s)); } catch (e) {} }
   };
   var saved = store.get();
@@ -754,11 +755,27 @@
   }
 
   function wt(v) { return num(v, v % 1 ? 1 : 0); }   // 85 → "85", 82.5 → "82.5"
-  // the guide's numbers the build put in the page (scripts/build_fitness.py, TOOL_DATA); read once
+  // the guide's numbers the build put in the page (scripts/build_fitness.py, TOOL_SHIP); read once
   var TOOL_DATA = null;
   function toolData() {
     if (!TOOL_DATA) { try { TOOL_DATA = JSON.parse($("tool-data").textContent); } catch (e) { TOOL_DATA = {}; } }
     return TOOL_DATA;
+  }
+  // The words of a guide table or entry come from the one copy the build printed in the page
+  // ({{tools:table:…}}, {{tools:entry:…}}), never from a second copy in #tool-data.
+  // guideTable(id) → { href, title, columns, rows }: its cells' text, as printed.
+  function guideTable(id) {
+    var t = id && document.querySelector('.tt[data-entry="' + id + '"]'); if (!t) return { href: "", title: "", columns: [], rows: [] };
+    var a = t.querySelector(".tt-h a");
+    function cells(tr) { return [].map.call(tr.children, function (c) { return c.textContent; }); }
+    return { href: a.getAttribute("href"), title: a.textContent, columns: cells(t.querySelector("thead tr")), rows: [].map.call(t.querySelectorAll("tbody tr"), cells) };
+  }
+  // a printed entry card, copied for a script to show elsewhere
+  function guideCard(id) { var c = document.querySelector('.te[data-entry="' + id + '"]'); return c ? c.cloneNode(true) : null; }
+  // a table's numbers (#tool-data) with its printed words, row by row
+  function withWords(key, words) {
+    var d = toolData()[key], rows = d && d.rows ? d.rows : [], printed = guideTable(d && d.e).rows;
+    return rows.map(function (r, i) { var c = printed[i] || []; var o = {}; for (var k in r) o[k] = r[k]; for (var w in words) o[w] = c[words[w]]; return o; });
   }
   // a field the visitor is typing in keeps what they typed; every other one shows the new value
   function setField(el, v) { if (el && document.activeElement !== el) el.value = v; }
@@ -1170,8 +1187,9 @@
     });
     $("st-clear").addEventListener("click", function () { G.forEach(function (g) { $("st-" + g[0] + "-d").value = ""; $("st-" + g[0] + "-h").value = ""; }); calc(); $("st-" + G[0][0] + "-d").focus(); });
     var READ = {
-      below: function () { return "Below the guide’s general line: " + D.general.charAt(0).toLowerCase() + D.general.slice(1) + "."; },
-      meets: function () { return "Meets the general line (" + D.general.charAt(0).toLowerCase() + D.general.slice(1) + "), under the " + D.range[0] + "\u2013" + D.range[1] + " seen in trained men."; },
+      // the row reads "At least <min> per muscle"; the build fails if it stops doing so
+      below: function () { return "Below the guide’s general line: at least " + D.min + " per muscle."; },
+      meets: function () { return "Meets the general line (at least " + D.min + " per muscle), under the " + D.range[0] + "\u2013" + D.range[1] + " seen in trained men."; },
       "in": function () { return "Inside the " + D.range[0] + "\u2013" + D.range[1] + " a review found for trained men."; },
       above: function () { return "Above " + D.range[1] + ". Newer data show no clear ceiling, but each set adds less than the one before."; }
     };
@@ -1207,7 +1225,7 @@
      failure); it starts at 0, which is the estimate as it always was. Effort reads as reps in
      reserve or as RPE, from the guide's chart in #tool-data. */
   boot(function () {
-    var TD = toolData(), RPE = TD.rpe ? TD.rpe.rows : [];
+    var RPE = withWords("rpe", { rir: 1, feel: 2, use: 3 });
     // The lift is kept in kg; the field shows it in the chosen unit, so switching units never changes it.
     var liftKg = saved.loadKg > 0 ? +saved.loadKg : val("l-w");
     var units = seg($("l-units"), saved.loadUnits || (ME.units() === "imperial" ? "lb" : ""), "kg", function () { showLift(); calc(); });
@@ -1276,7 +1294,7 @@
      row; starting loads from My numbers' bests for the last. No week-by-week loads: the guide has none. */
   boot(function () {
     if (!$("comeback")) return;
-    var TD = toolData(), T = TD.comeback, mine = saved.cb || {};
+    var TD = toolData(), T = TD.comeback ? guideTable(TD.comeback.e) : null, mine = saved.cb || {};
     var LIFTS = [["squat", "Squat"], ["bench", "Bench"], ["dead", "Deadlift"]], kg = {};
     if (mine.n > 0) $("cb-n").value = mine.n;
     var unit = seg($("cb-unit"), mine.unit, "w", calc);
@@ -1333,7 +1351,8 @@
      zones, how they feel, the talk test and the time in each come from the guide's two zone tables. */
   boot(function () {
     if (!$("zones")) return;
-    var TD = toolData(), ROWS = TD.zones ? TD.zones.rows : [], FEEL = TD.zoneFeel ? TD.zoneFeel.rows : [], EXAGE = val("z-age"), hz = saved.hz || {};
+    var TD = toolData(), ROWS = withWords("zones", { time: 3 }), EXAGE = val("z-age"), hz = saved.hz || {};
+    var FEEL = guideTable(TD.zoneFeel && TD.zoneFeel.e).rows.map(function (c) { return { name: c[0].replace(/^\d+ /, ""), feel: c[1], talk: c[2] }; });
     var src = seg($("z-src"), ME.has("hrMax") ? "max" : hz.src, "age", function () { paintSrc(); calc(); });
     $("z-age").value = ME.val("age", EXAGE);
     $("z-max").value = ME.val("hrMax", "");
@@ -1608,7 +1627,7 @@
      1.80 m, 25%). The landmarks are the guide's FFMI table, by sex, from #tool-data. */
   boot(function () {
     if (!$("ffmi")) return;
-    var TD = toolData(), REF = TD.ffmiRef ? TD.ffmiRef.rows : [], N = TD.ffmiNorm, mine = saved.ff || {};
+    var TD = toolData(), REF = withWords("ffmiRef", { group: 0, shown: 1 }), N = TD.ffmiNorm, mine = saved.ff || {};
     var EX = { kg: val("ff-w"), cm: val("ff-h"), bf: val("ff-bf"), sex: "m" };
     var body = { kg: ME.val("kg", EX.kg), cm: ME.val("cm", EX.cm) };
     $("ff-bf").value = ME.val("bf", EX.bf);
@@ -1684,33 +1703,33 @@
      its words. Only caffeine is worked out, for My numbers' weight (example 75 kg). Saves nothing. */
   boot(function () {
     if (!$("supplements")) return;
-    var TD = toolData(), ITEMS = F.suppItems(TD), cur = 0, EXKG = 75;
+    var TD = toolData(), SUP = guideTable(TD.supps && TD.supps.e), FAT = guideTable(TD.fatLoss && TD.fatLoss.e);
+    var ITEMS = F.suppItems(SUP.rows, FAT.rows, TD.suppItems), cur = 0, EXKG = 75;
     var GROUPS = [["lift", "For lifters"], ["fat", "Sold for fat loss"], ["health", "Health and other"]];
     $("sp-pick").innerHTML = GROUPS.map(function (g) {
       return '<div class="sp-grp" data-g="' + g[0] + '" role="group" aria-labelledby="sp-g-' + g[0] + '"><p class="k-label" id="sp-g-' + g[0] + '">' + g[1] + '</p><div class="k-chips">' +
         ITEMS.map(function (it, i) { return it.group === g[0] ? '<button class="k-tog" type="button" data-i="' + i + '" aria-pressed="false">' + esc(it.name) + "</button>" : ""; }).join("") + "</div></div>";
     }).join("");
     function badge(cls, label) { return '<span class="fx-badge ' + esc(cls) + '">' + esc(label) + "</span>"; }
-    function card(e) {
-      return '<div class="te"><p class="te-top"><span>' + esc(e.area) + "</span>" + badge(e.c, e.cl) + '</p><p class="te-t"><a href="' + esc(e.href) + '">' + esc(e.t) + '</a></p><p class="te-s">' + esc(e.take) + "</p>" +
-        (e.do && e.do.length ? '<ul class="te-do">' + e.do.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
-    }
     function src(d) { return '<small>From the guide’s <a href="' + esc(d.href) + '">' + esc(d.title.charAt(0).toLowerCase() + d.title.slice(1)) + "</a>.</small>"; }
     function show(i, announce) {
       cur = i; var it = ITEMS[i]; if (!it) return;
       [].forEach.call($("sp-pick").querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", +b.getAttribute("data-i") === i ? "true" : "false"); });
       var h = '<div class="sp-card"><div class="sp-top"><p class="k-label">Supplement</p>' + (it.row ? badge(it.row.evidence.split(" ")[0].toLowerCase(), "Evidence: " + it.row.evidence) : "") + "</div><h3>" + esc(it.name) + "</h3><dl class=\"sp-kv\">";
-      if (it.row) h += "<div><dt>What it does</dt><dd>" + esc(it.row.does) + "</dd></div><div><dt>Typical dose</dt><dd>" + esc(it.row.dose) + src(TD.supps) + "</dd></div>";
-      if (it.fat) h += "<div><dt>For fat loss, what trials found</dt><dd>" + esc(it.fat.found) + "</dd></div><div><dt>Cautions</dt><dd>" + esc(it.fat.cautions) + src(TD.fatLoss) + "</dd></div>";
+      if (it.row) h += "<div><dt>What it does</dt><dd>" + esc(it.row.does) + "</dd></div><div><dt>Typical dose</dt><dd>" + esc(it.row.dose) + src(SUP) + "</dd></div>";
+      if (it.fat) h += "<div><dt>For fat loss, what trials found</dt><dd>" + esc(it.fat.found) + "</dd></div><div><dt>Cautions</dt><dd>" + esc(it.fat.cautions) + src(FAT) + "</dd></div>";
       h += "</dl>";
       var caf = /^caffeine$/i.test(it.name) && TD.caffeine, kg = ME.val("kg", EXKG);
       if (caf) {
         var r = F.caffeine(kg, TD.caffeine.mgkg);
         h += '<p class="sp-dose">For ' + num(kg, 1) + " kg: <b>" + r[0] + "\u2013" + r[1] + " mg</b>: " + TD.caffeine.mgkg[0] + " to " + TD.caffeine.mgkg[1] + ' mg per kg, the range in <a href="' + esc(TD.caffeine.href) + '">the dose card below</a>, times your weight.</p>';
       }
-      h += it.entries.length ? '<div class="te-list te-list--one">' + it.entries.map(card).join("") + "</div>" : "";
+      h += it.entries.length ? '<div class="te-list te-list--one" data-cards></div>' : "";
       h += "</div>";
       $("sp-card").innerHTML = h;
+      // the entries' cards, copied from the folded section below, where the build printed them once
+      var list = $("sp-card").querySelector("[data-cards]");
+      if (list) it.entries.forEach(function (id) { var c = guideCard(id); if (c) list.appendChild(c); });
       exampleNote($("sp-ex"), caf && !ME.has("kg") ? ["weight"] : []);
       if (announce) say("sp-say", it.name + (it.row ? ". Evidence: " + it.row.evidence + "." : "."));
     }
@@ -1719,7 +1738,7 @@
       var q = $("sp-q").value.trim().toLowerCase(), n = 0, first = -1;
       [].forEach.call($("sp-pick").querySelectorAll("button"), function (b) {
         var i = +b.getAttribute("data-i"), it = ITEMS[i];
-        var text = [it.name, it.row && it.row.does, it.fat && it.fat.found].concat(it.entries.map(function (e) { return e.t; })).join(" ").toLowerCase();
+        var text = [it.name, it.row && it.row.does, it.fat && it.fat.found].concat(it.entries.map(function (id) { var c = document.querySelector('.te[data-entry="' + id + '"] .te-t'); return c ? c.textContent : ""; })).join(" ").toLowerCase();
         var hit = !q || text.indexOf(q) >= 0; b.hidden = !hit; if (hit) { n++; if (first < 0) first = i; }
       });
       [].forEach.call($("sp-pick").querySelectorAll(".sp-grp"), function (g) { g.hidden = !g.querySelector("button:not([hidden])"); });

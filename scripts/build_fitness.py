@@ -1684,7 +1684,7 @@ def td_rpe(e, spec):
         for v in (rpe[0], rpe[1]):
             if not (rir[0] <= 10 - v <= rir[1]):
                 raise ToolDataError(f"rpe: RPE {r[0]} is {r[1]} in reserve, which 10 - RPE does not give")
-        out.append({"rpe": rpe, "rir": r[1], "feel": r[2], "use": r[3]})
+        out.append({"rpe": rpe, "rir": r[1], "rirRange": rir, "feel": r[2], "use": r[3]})
     if out[0]["rpe"] != [10, 10] or out[-1]["rpe"][0] < 5:
         raise ToolDataError("rpe: the chart must run from RPE 10 down to no lower than 5")
     return {"rows": out}
@@ -1811,7 +1811,7 @@ def entry_brief(eid, idx, pages):
 def entry_card(eid, idx, pages, with_do=False):
     b = entry_brief(eid, idx, pages)
     do = ('<ul class="te-do">' + "".join(f"<li>{esc(x)}</li>" for x in b["do"]) + "</ul>") if with_do and b["do"] else ""
-    return (f'<div class="te"><p class="te-top"><span>{esc(b["area"])}</span><span class="fx-badge {esc(b["c"])}">{esc(b["cl"])}</span></p>'
+    return (f'<div class="te" data-entry="{esc(eid)}"><p class="te-top"><span>{esc(b["area"])}</span><span class="fx-badge {esc(b["c"])}">{esc(b["cl"])}</span></p>'
             f'<p class="te-t"><a href="{esc(b["href"])}">{esc(b["t"])}</a></p><p class="te-s">{esc(b["take"])}</p>{do}</div>')
 
 
@@ -1821,13 +1821,14 @@ def tool_table(eid, idx, pages):
         raise ToolDataError(f"{{{{tools:table:{eid}}}}}: {eid} is a {e['type']}, not a table")
     head = "".join(f'<th scope="col">{esc(c)}</th>' for c in e["columns"])
     body = "".join("<tr>" + "".join((f'<th scope="row">{esc(c)}</th>' if i == 0 else f"<td>{esc(c)}</td>") for i, c in enumerate(r)) + "</tr>" for r in e["rows"])
-    return (f'<div class="tt"><p class="tt-h"><a href="{esc(pages.href(eid, None))}">{esc(e["title"])}</a> '
+    return (f'<div class="tt" data-entry="{esc(eid)}"><p class="tt-h"><a href="{esc(pages.href(eid, None))}">{esc(e["title"])}</a> '
             f'<span class="fx-badge {esc(e["confidence"])}">{esc(CONF[e["confidence"]])}</span></p>'
             f'<div class="tt-scroll" tabindex="0" role="region" aria-label="{esc(e["title"])}"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div></div>')
 
 
 def tool_data(data, pages):
-    """content/fitness/tool-data.json, read against the guide: {key: {entry's href and title, parsed numbers}}."""
+    """content/fitness/tool-data.json, read against the guide: {key: {the entry's id and href, all it parses}}.
+    Only the numbers the scripts need reach the page (see TOOL_SHIP); the prose stays in the markup."""
     spec = json.loads((SRC / TOOL_DATA).read_text(encoding="utf-8"))
     idx, out, problems = guide_index(data), OrderedDict(), []
     items = spec.get("data", {})
@@ -1849,17 +1850,64 @@ def tool_data(data, pages):
         except ToolDataError as err:
             problems.append(str(err))
             continue
-        out[key] = dict({"href": pages.href(eid, None), "title": e["title"]}, **parsed)
+        out[key] = dict({"e": eid, "href": pages.href(eid, None)}, **parsed)
     groups = []
     for g in spec.get("supplements", []):
         missing = [i for i in g.get("entries", []) if i not in idx]
         if missing or not g.get("name"):
             problems.append(f"supplements: {g.get('name') or '?'} names {', '.join(missing) or 'no entries'}, not in the field guide")
             continue
-        groups.append({"name": g["name"], "group": g.get("group", ""), "entries": [entry_brief(i, idx, pages) for i in g["entries"]]})
+        groups.append({"name": g["name"], "group": g.get("group", ""), "entries": list(g["entries"])})
     out["suppItems"] = groups
     if problems:
         raise SystemExit("content/fitness/tool-data.json, read against the field guide:\n  " + "\n  ".join(problems))
+    return out
+
+
+# What of each parsed piece reaches the page, as #tool-data: numbers (and the entry's id and
+# address), never prose. A table whose words a script shows is read from the copy the build
+# printed in the page ({{tools:table:…}}), so each guide table and entry ships once.
+#   key: (fields kept, {list field: the fields kept in each of its rows}, prints its table?)
+TOOL_SHIP = {
+    "zones": ((), {"rows": ("zone", "pct")}, True), "zoneFeel": ((), {}, True),
+    "hrMax": (("a", "b"), {}, False), "hrRest": (("adult", "athlete"), {}, False),
+    "ffmiRef": ((), {"rows": ("value", "above", "sex")}, True), "ffmiNorm": (("k", "h"), {}, False),
+    "rpe": ((), {"rows": ("rpe", "rirRange")}, True), "ipf": (("m", "f"), {}, False),
+    "comeback": ((), {}, True), "returnRatio": (("factor",), {}, False), "returnLoad": (("pct",), {}, False),
+    "supps": ((), {}, True), "fatLoss": ((), {}, True), "caffeine": (("mgkg",), {}, False),
+    "sets": (("min", "range"), {}, False), "setsHelper": (("credit",), {}, False), "arith": (("kg", "bf", "cm", "target"), {}, False),
+}
+
+
+def tool_ship(td, page, data):
+    """The #tool-data the page carries (see TOOL_SHIP), after checking the page holds, once each,
+    every table a script reads its words from and every card the supplement checker shows."""
+    idx, problems, out = guide_index(data), [], OrderedDict()
+    if sorted(TOOL_SHIP) != sorted(k for k in td if k != "suppItems"):
+        problems.append("TOOL_SHIP must name every key of tool-data.json once")
+    for kind in ("tt", "te"):
+        seen = Counter(re.findall(r'<div class="' + kind + r'" data-entry="([a-z0-9-]+)"', page))
+        problems += [f"{i} is printed {n} times; a guide {'table' if kind == 'tt' else 'card'} ships once" for i, n in seen.items() if n > 1]
+    for key, (keep, lists, printed) in TOOL_SHIP.items():
+        if key not in td:
+            continue
+        d, eid = td[key], td[key]["e"]
+        item = {"e": eid, "href": d["href"]}
+        item.update((f, d[f]) for f in keep)
+        item.update((f, [{c: r[c] for c in cols} for r in d[f]]) for f, cols in lists.items())
+        out[key] = item
+        if printed and f'<div class="tt" data-entry="{eid}">' not in page:
+            problems.append(f"{key}: the script reads the words of {eid} from the page, and page.html does not print it ({{{{tools:table:{eid}}}}})")
+    for g in td["suppItems"]:
+        for eid in g["entries"]:
+            card = re.search(r'<div class="te" data-entry="' + re.escape(eid) + r'">(.*?)</div>', page)
+            if not card:
+                problems.append(f"supplements: page.html does not print the card {eid}, which the checker shows")
+            elif idx[eid][1].get("do") and 'class="te-do"' not in card.group(1):
+                problems.append(f"supplements: print {eid} with its do list ({{{{tools:entry-do:{eid}}}}}); the checker shows it")
+    out["suppItems"] = td["suppItems"]
+    if problems:
+        raise SystemExit("content/fitness/page.html and tool-data.json:\n  " + "\n  ".join(problems))
     return out
 
 
@@ -1918,7 +1966,7 @@ def fill_tools(page, data, pages):
     if problems:
         raise SystemExit("content/fitness/page.html:\n  " + "\n  ".join(problems))
     check_site_index(tabs, word)
-    blob = json.dumps(td, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    blob = json.dumps(tool_ship(td, page, data), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     for token, value in (("{{tools:data}}", blob), ("{{tools:n}}", word), ("{{tools:N}}", word.capitalize())):
         if token == "{{tools:data}}" and token not in page:
             raise SystemExit("content/fitness/page.html has no {{tools:data}}")

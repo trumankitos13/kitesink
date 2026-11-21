@@ -115,8 +115,10 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
   build checks every id, area and tool in it, so a renamed entry fails the build, not the page.
   - **The calculators' numbers** come from the guide, never typed into `fitness.js`.
     `content/fitness/tool-data.json` names the entry behind each (the zone scale, the IPF classes,
-    the FFMI landmarks, the RPE chart, the supplement rows…); the build parses it into `#tool-data`
-    and stops if an entry goes or a table's columns or rows change shape. In `page.html`,
+    the FFMI landmarks, the RPE chart, the supplement rows…); the build parses it and stops if an
+    entry goes or a table's columns or rows change shape. Each guide table and entry ships once:
+    the page prints it (the no-script view and the visible source) and `#tool-data` carries only
+    the numbers, which the scripts join to the printed words (`TOOL_SHIP` in the build script). In `page.html`,
     `{{e:<id>}}` links an entry, `{{tools:entry:<id>}}` shows it as a card, `{{tools:table:<id>}}`
     prints a guide table, and the count of calculators is filled from the tabs. A new tool needs
     a tab, a label in `hero.json`'s `tools`, a row in `public/site-index.js` and a line in the

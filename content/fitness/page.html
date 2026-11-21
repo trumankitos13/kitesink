@@ -494,6 +494,8 @@
   /* supplements */
   #sp-pick { display: grid; gap: 14px; }
   #sp-pick .k-tog[hidden] { display: none; }
+  /* the checker shows each card with its do list; the folded copy below, the no-script view, shows it without */
+  .tool-src .te-do { display: none; }
   .sp-grp { display: grid; gap: 6px; }
   .sp-grp[hidden] { display: none; }
   .sp-grp .k-chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -1176,7 +1178,7 @@
         </div>
         <details class="more tool-src">
           <summary>Everything the checker reads, as the guide prints it</summary>
-          <div>{{tools:table:nut-table-supplements}}{{tools:table:wom-table-fat-loss-ingredients}}<div class="te-list">{{tools:entry:hlth-creatine-older}}{{tools:entry:nut-num-caffeine}}{{tools:entry:wom-caffeine-clearance}}{{tools:entry:hlth-vitamin-d}}{{tools:entry:nut-vitamin-d-athletes}}{{tools:entry:hlth-omega-3}}{{tools:entry:nut-antioxidants-adaptation}}{{tools:entry:nut-mistake-antioxidant-pills}}{{tools:entry:nut-glutamine}}{{tools:entry:wom-iron-deficiency}}{{tools:entry:wom-table-melatonin-trials}}</div></div>
+          <div>{{tools:table:nut-table-supplements}}{{tools:table:wom-table-fat-loss-ingredients}}<div class="te-list">{{tools:entry-do:hlth-creatine-older}}{{tools:entry-do:nut-num-caffeine}}{{tools:entry-do:wom-caffeine-clearance}}{{tools:entry-do:hlth-vitamin-d}}{{tools:entry-do:nut-vitamin-d-athletes}}{{tools:entry-do:hlth-omega-3}}{{tools:entry-do:nut-antioxidants-adaptation}}{{tools:entry-do:nut-mistake-antioxidant-pills}}{{tools:entry-do:nut-glutamine}}{{tools:entry-do:wom-iron-deficiency}}{{tools:entry-do:wom-table-melatonin-trials}}</div></div>
         </details>
       </div>
 

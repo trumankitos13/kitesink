@@ -240,7 +240,22 @@ async function visit(hash, opts = {}) {
 
 // ---------- the calculators' guide numbers: scripts/build_fitness.py puts them in the hub as #tool-data ----------
 const TD = JSON.parse(/<script type="application\/json" id="tool-data">([\s\S]*?)<\/script>/.exec(fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8'))[1]);
-ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k !== 'suppItems').every(k => /^\/fitness\/[a-z-]+#[a-z0-9-]+$/.test(TD[k].href) && TD[k].title));
+const HUB = fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8');
+ok('tool data: every piece names its guide entry and its home', Object.keys(TD).filter(k => k !== 'suppItems').every(k => /^[a-z]+-[a-z0-9-]+$/.test(TD[k].e) && TD[k].href.endsWith('#' + TD[k].e)));
+// #tool-data carries numbers, never a guide's words: those are printed once, in the page
+(function walk(v, key) {
+  if (typeof v === 'string') { if (!['e', 'href', 'name', 'group', 'sex', 'entry'].includes(key)) { fail++; console.log('FAIL tool data carries prose under ' + key + ': ' + v); } }
+  else if (Array.isArray(v)) v.forEach(x => walk(x, key === 'entries' ? 'entry' : key));
+  else if (v && typeof v === 'object') Object.keys(v).forEach(k => walk(v[k], k));
+})(TD, '');
+console.log('ok   tool data: numbers and addresses only, ' + JSON.stringify(TD).length + ' bytes');
+// a table the build printed in the page, as cell text (what the scripts read)
+const unesc = s => s.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&amp;/g, '&');
+function printedTable(id) {
+  const m = new RegExp('<div class="tt" data-entry="' + id + '">[\\s\\S]*?<tbody>([\\s\\S]*?)</tbody>').exec(HUB);
+  return m ? [...m[1].matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map(r => [...r[1].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map(c => unesc(c[1]))) : null;
+}
+ok('every guide table and card is printed once', [...HUB.matchAll(/<div class="(?:tt|te)" data-entry="([^"]+)"/g)].map(m => m[1]).every((id, i, a) => a.indexOf(id) === i));
 
 // ---------- 1RM: how hard was that set (reps in reserve count as reps), RIR or RPE ----------
 {
@@ -252,9 +267,10 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   eq('round trip at RPE 9.5 (half a rep)', F.loadFor(F.oneRm(140, 3 + F.rirFromRpe(9.5)), 3, 0.5), 140, 1e-9);
   ok('half steps land between whole ones', F.oneRm(100, 5.5) > F.oneRm(100, 5) && F.oneRm(100, 5.5) < F.oneRm(100, 6));
   const rows = TD.rpe.rows;
-  same('rpe chart rows from the guide: RPE 9.5', F.rpeRow(rows, 9.5).rir, '0-1');
-  same('rpe chart rows: RPE 6 and 5 share the 5-6 row', F.rpeRow(rows, 6).rir + ' ' + F.rpeRow(rows, 5).rir, '4-6 4-6');
-  ok('rpe chart: every whole RPE from 5 to 10 has a row, and 10 - RPE sits in its range', [5, 6, 7, 8, 9, 9.5, 10].every(r => { const row = F.rpeRow(rows, r); const [lo, hi] = row.rir.split('-').map(Number); return F.rirFromRpe(r) >= lo && F.rirFromRpe(r) <= (hi === undefined ? lo : hi); }));
+  same('rpe chart rows from the guide: RPE 9.5', F.rpeRow(rows, 9.5).rirRange.join('-'), '0-1');
+  same('rpe chart rows: RPE 6 and 5 share the 5-6 row', F.rpeRow(rows, 6).rirRange.join('-') + ' ' + F.rpeRow(rows, 5).rirRange.join('-'), '4-6 4-6');
+  ok('rpe chart: every whole RPE from 5 to 10 has a row, and 10 - RPE sits in its range', [5, 6, 7, 8, 9, 9.5, 10].every(r => { const [lo, hi] = F.rpeRow(rows, r).rirRange; return F.rirFromRpe(r) >= lo && F.rirFromRpe(r) <= hi; }));
+  same('rpe chart: the words are printed once, in the 1RM tool', printedTable(TD.rpe.e).map(r => r[1]).join(' '), '0 0-1 1 2 3 4-6');
 }
 
 // ---------- weight class finder: the IPF classes from the guide's class table ----------
@@ -307,7 +323,7 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   same('comeback: 5 days, 6 days, 29 days, 30 days', [row(5, 'd'), row(6, 'd'), row(29, 'd'), row(30, 'd')].join(' '), '0 1 1 2');
   same('comeback: 2 weeks, 1 month, 3.9 months, 4 months, 2 years', [row(2, 'w'), row(1, 'm'), row(3.9, 'm'), row(4, 'm'), row(24, 'm')].join(' '), '1 2 2 3 3');
   ok('comeback: no time away is no row', row(0, 'd') === -1 && row(NaN, 'w') === -1);
-  same('comeback: the rows the edges are set for', TD.comeback.rows.map(r => r[0]).join(' | '), '3 to 5 days | About 2 weeks | About 10 weeks | Many months or years');
+  same('comeback: the rows the edges are set for', printedTable(TD.comeback.e).map(r => r[0]).join(' | '), '3 to 5 days | About 2 weeks | About 10 weeks | Many months or years');
   eq('comeback: 2x the time off, read from the guide', TD.returnRatio.factor, 2);
   same('comeback: 100 kg starts at 50-60 kg', F.startLoads(100, TD.returnLoad.pct, 2.5).join('-'), '50-60');
   same('comeback: 142.5 kg rounds to 2.5 kg steps', F.startLoads(142.5, TD.returnLoad.pct, 2.5).join('-'), '72.5-85');
@@ -329,11 +345,12 @@ ok('tool data: every piece names its guide entry', Object.keys(TD).filter(k => k
   same('caffeine: 3-6 mg per kg read from the guide', TD.caffeine.mgkg.join('-'), '3-6');
   same('caffeine: 80 kg is 240-480 mg', F.caffeine(80, TD.caffeine.mgkg).join('-'), '240-480');
   ok('caffeine: no weight, no dose', F.caffeine(NaN, TD.caffeine.mgkg) === null);
-  const items = F.suppItems(TD), byName = n => items.find(x => x.name.toLowerCase() === n.toLowerCase());
+  const SUP = printedTable(TD.supps.e), FAT = printedTable(TD.fatLoss.e);
+  const items = F.suppItems(SUP, FAT, TD.suppItems), byName = n => items.find(x => x.name.toLowerCase() === n.toLowerCase());
   ok('supplements: one item per name; caffeine joins both tables and its entries', items.filter(x => /^caffeine$/i.test(x.name)).length === 1 && byName('Caffeine').row && byName('Caffeine').fat && byName('Caffeine').entries.length === 2);
-  ok('supplements: every row of both tables is an item', TD.supps.rows.every(r => byName(r.name)) && TD.fatLoss.rows.every(r => byName(r.name)));
-  ok('supplements: every single entry the build resolved has a title, short answer, grade and home', TD.suppItems.every(g => g.entries.length && g.entries.every(e => e.t && e.take && e.cl && /^\/fitness\/[a-z-]+#/.test(e.href))));
-  ok('supplements: the fat-loss rows carry findings and cautions, no dose', TD.fatLoss.rows.every(r => r.found && r.cautions && !('dose' in r)));
+  ok('supplements: every row of both tables is an item', SUP.length === 7 && SUP.every(r => byName(r[0]).row) && FAT.every(r => byName(r[0]).fat));
+  ok('supplements: every single entry is a card printed in the page', TD.suppItems.every(g => g.entries.length && g.entries.every(id => HUB.includes('<div class="te" data-entry="' + id + '">'))));
+  ok('supplements: the fat-loss rows carry findings and cautions, no dose', FAT.every(r => r.length === 3 && r[1] && r[2]) && byName('Yohimbine').fat.cautions === 'Raises heart rate; can provoke anxiety');
 }
 
 // ---------- review fixes ----------
