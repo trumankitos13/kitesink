@@ -817,6 +817,39 @@
   function onMe(fn) { window.addEventListener("ks:me", function (e) { fn(e.detail && e.detail.keys || []); }); }
   function hits(keys, list) { return keys.some(function (k) { return list.indexOf(k) >= 0; }); }
 
+  /* unitField(el, o): one number box showing a value kept in metric (kg, cm), in the unit its tool
+     shows, so switching units never drifts what was typed. Every tool's weight, height, lift,
+     age, body fat and heart-rate box goes through it. o:
+       kind     "mass" (kg | lb), "len" (cm | in) or "plain" (no unit: years, %, bpm)
+       imp      a function, true while the tool shows pounds or inches
+       per      [metric, imperial]: shown to the nearest 1/per (10: one decimal, 2: halves, 1: whole,
+                100: hundredths); without it the value shows as it is
+       me       the My numbers field it reads and saves (optional), with example: what it shows when
+                the visitor has none (NaN: an empty box); without me, value: where it starts
+       accept   (shown number, typed text) → may this input be saved to My numbers? (yes by default)
+       input    called after each input, with the new metric value
+     A box the visitor is typing in is never rewritten. With `me`, a change to that field anywhere
+     else is shown here first; the tool's own ks:me handler, registered after its boxes, then
+     repaints. get() is the metric value; show() redraws it in the current unit. */
+  function unitField(el, o) {
+    var kind = o.kind || "plain", v = o.me ? ME.val(o.me, o.example) : o.value;
+    function imp() { return kind !== "plain" && !!(o.imp && o.imp()); }
+    function shown(x) {
+      var s = kind === "mass" && imp() ? F.lb(x) : kind === "len" && imp() ? x / 2.54 : x, per = o.per && o.per[imp() ? 1 : 0];
+      return per ? Math.round(s * per) / per : s;
+    }
+    function metric(x) { return kind === "mass" && imp() ? F.kg(x) : kind === "len" && imp() ? x * 2.54 : x; }
+    function show() { setField(el, isFinite(v) ? shown(v) : ""); }
+    el.addEventListener("input", function () {
+      var x = parseFloat(el.value);
+      v = isFinite(x) ? metric(x) : NaN;
+      if (o.me && (!o.accept || o.accept(x, el.value))) { var p = {}; p[o.me] = isFinite(v) ? v : ""; ME.set(p); }
+      if (o.input) o.input(v);
+    });
+    if (o.me) onMe(function (keys) { if (hits(keys, [o.me]) && document.activeElement !== el) { v = ME.val(o.me, o.example); show(); } });
+    return { el: el, get: function () { return v; }, set: function (x) { v = x; show(); }, show: show, shown: shown, metric: metric };
+  }
+
   /* Resting energy, shared by Energy & macros and the diet planner: a "from" choice (body weight
      x body-fat category, KiteSink's default; or a published equation), a category for when body
      fat is not given, and activity options to match: the category method pairs with KiteSink's
@@ -929,8 +962,13 @@
     var FIELD = { age: "me-age", kg: "me-kg", cm: "me-cm", bf: "me-bf", squat: "me-squat", bench: "me-bench", dead: "me-dead", hrMax: "me-hrmax", hrRest: "me-hrrest" };
     var MASS = ["kg", "squat", "bench", "dead"];
     function imp() { return ME.units() === "imperial"; }
-    function toShown(k, v) { return MASS.indexOf(k) >= 0 && imp() ? Math.round(F.lb(v) * 10) / 10 : k === "cm" && imp() ? Math.round(v / 2.54 * 10) / 10 : Math.round(v * 10) / 10; }
-    function fromShown(k, v) { return MASS.indexOf(k) >= 0 && imp() ? F.kg(v) : k === "cm" && imp() ? v * 2.54 : v; }
+    // every box to one decimal, in the site-wide unit
+    var box$ = {};
+    Object.keys(FIELD).forEach(function (k) {
+      box$[k] = unitField($(FIELD[k]), { kind: MASS.indexOf(k) >= 0 ? "mass" : k === "cm" ? "len" : "plain", imp: imp, per: [10, 10], me: k, example: NaN, input: function () { unsaved(); } });
+    });
+    function toShown(k, v) { return box$[k].shown(v); }
+    function fromShown(k, v) { return box$[k].metric(v); }
     function mass(v) { return imp() ? wt(Math.round(F.lb(v))) : wt(Math.round(v * 10) / 10); }
     function height(cm) { if (!imp()) return num(cm) + " cm"; var t = Math.round(cm / 2.54); return Math.floor(t / 12) + "′" + (t % 12) + "″"; }
     function summary() {
@@ -948,9 +986,7 @@
       var m = ME.get(), all = !keys;
       pressed($("me-units"), imp() ? "imperial" : "metric");
       pressed($("me-sex"), m.own.sex ? m.sex : "");
-      Object.keys(FIELD).forEach(function (k) {
-        if (all || hits(keys, [k, "units"])) setField($(FIELD[k]), m.own[k] ? toShown(k, m[k]) : "");
-      });
+      if (all || hits(keys, ["units"])) Object.keys(FIELD).forEach(function (k) { box$[k].set(ME.val(k, NaN)); });
       unsaved();
       [].forEach.call(box.querySelectorAll(".me-wu"), function (el) { el.textContent = imp() ? "lb" : "kg"; });
       $("me-hu").textContent = imp() ? "in" : "cm";
@@ -961,14 +997,6 @@
       el.classList.toggle("is-none", !s);
       $("me-clear").disabled = !s;
     }
-    Object.keys(FIELD).forEach(function (k) {
-      var el = $(FIELD[k]);
-      el.addEventListener("input", function () {
-        var v = val(FIELD[k]);
-        var patch = {}; patch[k] = el.value === "" ? "" : fromShown(k, v); ME.set(patch);
-        unsaved();
-      });
-    });
     // A field holding a number the tools do not take says so, and says what they use instead,
     // for as long as it holds it: the field never shows a number other than the saved one silently.
     var NAME = { age: "Age", kg: "Weight", cm: "Height", bf: "Body fat", squat: "Best squat", bench: "Best bench", dead: "Best deadlift", hrMax: "Max heart rate", hrRest: "Resting heart rate" };
@@ -1010,18 +1038,21 @@
     // cached /fitness.js; this script goes by which fields of My numbers are the visitor's.
     var mTouched = !!saved.mTouched;
     ["input", "click"].forEach(function (t) { $("macros").addEventListener(t, function (e) { if (e.isTrusted && (t === "input" || e.target.closest("button"))) mTouched = true; }, true); });
-    // The maths runs on these metric values. The fields only display them, so switching
-    // units back and forth cannot drift the number that was entered.
-    var body = { kg: ME.val("kg", EX.kg), cm: ME.val("cm", EX.cm) };
+    // The maths runs on metric values; the boxes only display them (unitField), so switching
+    // units back and forth cannot drift the number that was entered. Height in imperial is two
+    // boxes, feet and inches, so it keeps its own code here.
+    function imp() { return units.get() === "imperial"; }
+    var kgBox = unitField($("m-weight"), { kind: "mass", imp: imp, per: [10, 1], me: "kg", example: EX.kg, input: function () { calc(); } });
+    var ageBox = unitField($("m-age"), { me: "age", example: EX.age, input: function () { calc(); } });
+    var bfBox = unitField($("m-bf"), { me: "bf", example: NaN, input: function () { calc(); } });
+    var body = { cm: ME.val("cm", EX.cm) };
     function showBody() {
-      var imp = units.get() === "imperial";
-      if (isFinite(body.kg)) setField($("m-weight"), imp ? Math.round(F.lb(body.kg)) : Math.round(body.kg * 10) / 10);
+      kgBox.show();
       if (isFinite(body.cm) && [$("m-cm"), $("m-ft"), $("m-in")].indexOf(document.activeElement) < 0) {
-        if (imp) { var tot = Math.round(body.cm / 2.54); $("m-ft").value = Math.floor(tot / 12); $("m-in").value = tot % 12; }
+        if (imp()) { var tot = Math.round(body.cm / 2.54); $("m-ft").value = Math.floor(tot / 12); $("m-in").value = tot % 12; }
         else $("m-cm").value = Math.round(body.cm);
       }
     }
-    $("m-weight").addEventListener("input", function () { var v = val("m-weight"); body.kg = units.get() === "imperial" ? F.kg(v) : v; ME.set({ kg: body.kg }); calc(); });
     ["m-cm", "m-ft", "m-in"].forEach(function (id) {
       $(id).addEventListener("input", function () {
         var inch = val("m-in");
@@ -1029,21 +1060,16 @@
         ME.set({ cm: body.cm }); calc();
       });
     });
-    $("m-age").addEventListener("input", function () { ME.set({ age: val("m-age") }); });
-    $("m-bf").addEventListener("input", function () { ME.set({ bf: val("m-bf") }); });
-    ["m-age", "m-bf", "m-act", "m-rate", "m-fat", "m-diet", "m-meals", "m-cook", "m-avoid"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    ["m-act", "m-rate", "m-fat", "m-diet", "m-meals", "m-cook", "m-avoid"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("m-prot").addEventListener("input", function () { protTouched = true; calc(); });
     $("m-copy").addEventListener("click", function () { copy($("m-prompt").value, $("m-copy")); });
 
-    $("m-age").value = ME.val("age", EX.age);
-    $("m-bf").value = ME.val("bf", "");
-    // another tool or My numbers changed a shared number: show it, except in the field being typed in
+    ageBox.show(); bfBox.show();
+    // another tool or My numbers changed a shared number: the boxes show it (except the one being
+    // typed in); height, sex and units are handled here, then the tool repaints
     onMe(function (keys) {
       if (hits(keys, ["units"]) && ME.units()) units.set(ME.units());
-      if (hits(keys, ["kg"]) && document.activeElement !== $("m-weight")) body.kg = ME.val("kg", EX.kg);
       if (hits(keys, ["cm"]) && [$("m-cm"), $("m-ft"), $("m-in")].indexOf(document.activeElement) < 0) body.cm = ME.val("cm", EX.cm);
-      if (hits(keys, ["age"])) setField($("m-age"), ME.val("age", EX.age));
-      if (hits(keys, ["bf"])) setField($("m-bf"), ME.val("bf", ""));
       if (hits(keys, ["sex"])) sex.set(ME.val("sex", EX.sex));
       if (hits(keys, ["units", "kg", "cm", "age", "bf", "sex"])) { showBody(); paintUnits(); calc(); }
     });
@@ -1071,7 +1097,7 @@
     }
 
     function calc() {
-      var imp = units.get() === "imperial", kg = body.kg, cm = body.cm;
+      var imp = units.get() === "imperial", kg = kgBox.get(), cm = body.cm;
       var age = val("m-age"), bf = val("m-bf"), g = goal.get(), rate = val("m-rate");
       var act = $("m-act").selectedOptions[0] || $("m-act").options[1];
       var prot = val("m-prot"), fatPct = val("m-fat"), pal = parseFloat(act.value);
@@ -1226,12 +1252,12 @@
      reserve or as RPE, from the guide's chart in #tool-data. */
   boot(function () {
     var RPE = withWords("rpe", { rir: 1, feel: 2, use: 3 });
-    // The lift is kept in kg; the field shows it in the chosen unit, so switching units never changes it.
-    var liftKg = saved.loadKg > 0 ? +saved.loadKg : val("l-w");
     var units = seg($("l-units"), saved.loadUnits || (ME.units() === "imperial" ? "lb" : ""), "kg", function () { showLift(); calc(); });
     var fx = seg($("l-fx"), saved.loadFx, "rir", function () { options(); calc(); });
-    function showLift() { if (isFinite(liftKg)) setField($("l-w"), Math.round((units.get() === "lb" ? F.lb(liftKg) : liftKg) * 10) / 10); }
-    $("l-w").addEventListener("input", function () { var v = val("l-w"); liftKg = units.get() === "lb" ? F.kg(v) : v; calc(); });
+    // The lift is this tool's own (a set, not a best): kept in kg, shown in the chosen unit to one
+    // decimal, so switching units never changes it.
+    var lift = unitField($("l-w"), { kind: "mass", imp: function () { return units.get() === "lb"; }, per: [10, 10], value: saved.loadKg > 0 ? +saved.loadKg : val("l-w"), input: function () { calc(); } });
+    function showLift() { lift.show(); }
     ["l-reps", "l-treps", "l-trir", "l-rir"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("l-rir").addEventListener("change", calc);
     if (saved.loadReps) $("l-reps").value = saved.loadReps;
@@ -1253,7 +1279,7 @@
     var savedRir = +saved.loadRir;
     options(); if (RIRS.indexOf(savedRir) >= 0) $("l-rir").value = String(savedRir);
     function calc() {
-      var u = units.get(), step = u === "lb" ? 5 : 2.5, w = u === "lb" ? F.lb(liftKg) : liftKg, reps = val("l-reps"), tr = val("l-treps"), ti = val("l-trir");
+      var u = units.get(), step = u === "lb" ? 5 : 2.5, liftKg = lift.get(), w = u === "lb" ? F.lb(liftKg) : liftKg, reps = val("l-reps"), tr = val("l-treps"), ti = val("l-trir");
       var rir = parseFloat($("l-rir").value) || 0, rpe = fx.get() === "rpe", row = F.rpeRow(RPE, 10 - ti);
       $("l-unit").textContent = u; $("l-treps-read").textContent = tr + (tr === 1 ? " rep" : " reps");
       $("l-trir-l").textContent = rpe ? "Target RPE" : "Left in reserve";
@@ -1300,23 +1326,21 @@
     var unit = seg($("cb-unit"), mine.unit, "w", calc);
     var units = seg($("cb-units"), mine.units || (ME.units() === "imperial" ? "lb" : ""), "kg", function () { show(); calc(); });
     function lb() { return units.get() === "lb"; }
+    var box = {};   // old bests: My numbers' bests (no example: empty until typed), to one decimal
+    LIFTS.forEach(function (l) { box[l[0]] = unitField($("cb-" + l[0]), { kind: "mass", imp: lb, per: [10, 10], me: l[0], example: NaN, input: function () { calc(); } }); });
     function show() {
-      LIFTS.forEach(function (l) { setField($("cb-" + l[0]), isFinite(kg[l[0]]) ? Math.round((lb() ? F.lb(kg[l[0]]) : kg[l[0]]) * 10) / 10 : ""); });
+      LIFTS.forEach(function (l) { box[l[0]].show(); });
       [].forEach.call(document.querySelectorAll(".cb-u"), function (el) { el.textContent = units.get(); });
     }
-    LIFTS.forEach(function (l) {
-      kg[l[0]] = ME.val(l[0], NaN);
-      $("cb-" + l[0]).addEventListener("input", function () { var v = val("cb-" + l[0]), p = {}; kg[l[0]] = lb() ? F.kg(v) : v; p[l[0]] = kg[l[0]]; ME.set(p); calc(); });
-    });
     $("cb-n").addEventListener("input", calc);
     onMe(function (keys) {
       if (hits(keys, ["units"]) && ME.units()) units.set(ME.units() === "imperial" ? "lb" : "kg");
-      LIFTS.forEach(function (l) { if (hits(keys, [l[0]]) && document.activeElement !== $("cb-" + l[0])) kg[l[0]] = ME.val(l[0], NaN); });
       if (hits(keys, ["units", "squat", "bench", "dead"])) { show(); calc(); }
     });
     var UNIT = { d: ["day", "days"], w: ["week", "weeks"], m: ["month", "months"] };
     function span(n, u) { return num(n, n % 1 ? 1 : 0) + " " + UNIT[u][n === 1 ? 0 : 1]; }
     function calc() {
+      LIFTS.forEach(function (l) { kg[l[0]] = box[l[0]].get(); });
       var n = val("cb-n"), u = unit.get(), days = F.comebackDays(n, u), row = n <= 999 ? F.comebackRow(days) : -1, out = $("cb-out");
       store.set({ cb: { n: isFinite(n) ? n : "", unit: u, units: units.get() } });
       out.classList.toggle("is-empty", row < 0);
@@ -1354,19 +1378,13 @@
     var TD = toolData(), ROWS = withWords("zones", { time: 3 }), EXAGE = val("z-age"), hz = saved.hz || {};
     var FEEL = guideTable(TD.zoneFeel && TD.zoneFeel.e).rows.map(function (c) { return { name: c[0].replace(/^\d+ /, ""), feel: c[1], talk: c[2] }; });
     var src = seg($("z-src"), ME.has("hrMax") ? "max" : hz.src, "age", function () { paintSrc(); calc(); });
-    $("z-age").value = ME.val("age", EXAGE);
-    $("z-max").value = ME.val("hrMax", "");
-    $("z-rest").value = ME.val("hrRest", "");
+    [["z-age", "age", EXAGE], ["z-max", "hrMax", NaN], ["z-rest", "hrRest", NaN]].forEach(function (f) {
+      unitField($(f[0]), { me: f[1], example: f[2], input: function () { calc(); } }).show();
+    });
     function paintSrc() { var m = src.get() === "max"; $("z-age-wrap").hidden = m; $("z-max-wrap").hidden = !m; }
-    $("z-age").addEventListener("input", function () { ME.set({ age: val("z-age") }); calc(); });
-    $("z-max").addEventListener("input", function () { ME.set({ hrMax: val("z-max") }); calc(); });
-    $("z-rest").addEventListener("input", function () { ME.set({ hrRest: val("z-rest") }); calc(); });
     onMe(function (keys) {
       // a measured maximum arriving from My numbers switches to it; cleared there, back to age
       if (hits(keys, ["hrMax"]) && document.activeElement !== $("z-max")) { src.set(ME.has("hrMax") ? "max" : "age"); paintSrc(); }
-      if (hits(keys, ["age"])) setField($("z-age"), ME.val("age", EXAGE));
-      if (hits(keys, ["hrMax"])) setField($("z-max"), ME.val("hrMax", ""));
-      if (hits(keys, ["hrRest"])) setField($("z-rest"), ME.val("hrRest", ""));
       if (hits(keys, ["age", "hrMax", "hrRest"])) calc();
     });
     var COL = ["#8fc39b", "#b9cf8c", "#d8b07a", "#e3936e", "#e07a6a"];
@@ -1460,28 +1478,26 @@
     var units = seg($("a-units"), sv.units || (ME.units() === "imperial" ? "lb" : ""), "kg", function () { show(); calc(); });
     var style = seg($("a-style"), sv.style, "first", calc);
     var warm = seg($("a-warm"), sv.warm, "squat", calc);
+    function lb() { return units.get() === "lb"; }
+    var box = {};   // kept in kg, shown in the chosen unit to one decimal; examples: what the boxes start with
     LIFTS.forEach(function (l) {
       EX[l[0]] = val(l[2]);
-      kg[l[0]] = ME.val(l[0], EX[l[0]]);   // kept in kg, shown in the chosen unit
-      $(l[2]).addEventListener("input", function () {
-        var v = val(l[2]), patch = {}; kg[l[0]] = units.get() === "lb" ? F.kg(v) : v;
-        patch[l[0]] = kg[l[0]]; ME.set(patch); calc();
-      });
+      box[l[0]] = unitField($(l[2]), { kind: "mass", imp: lb, per: [10, 10], me: l[0], example: EX[l[0]], input: function () { calc(); } });
     });
     onMe(function (keys) {
       if (hits(keys, ["units"]) && ME.units()) units.set(ME.units() === "imperial" ? "lb" : "kg");
-      LIFTS.forEach(function (l) { if (hits(keys, [l[0]]) && document.activeElement !== $(l[2])) kg[l[0]] = ME.val(l[0], EX[l[0]]); });
       if (hits(keys, ["units", "squat", "bench", "dead"])) { show(); calc(); }
     });
     function show() {
       var u = units.get();
-      LIFTS.forEach(function (l) { if (isFinite(kg[l[0]])) setField($(l[2]), Math.round((u === "lb" ? F.lb(kg[l[0]]) : kg[l[0]]) * 10) / 10); });
+      LIFTS.forEach(function (l) { box[l[0]].show(); });
       [].forEach.call(document.querySelectorAll(".a-unit"), function (el) { el.textContent = u; });
     }
     // A meet loads kilograms, so kilograms always lead; pounds follow when that is the chosen unit.
     function cell(v) { return wt(v) + " kg" + (units.get() === "lb" ? "<small>" + num(F.lb(v)) + " lb</small>" : ""); }
     function calc() {
       var st = style.get(), sets = {}, valid = 0;
+      LIFTS.forEach(function (l) { kg[l[0]] = box[l[0]].get(); });
       $("a-style-note").textContent = NOTES[st];
       $("a-rows").innerHTML = LIFTS.map(function (l) {
         var ok = kg[l[0]] > 0; if (ok) { sets[l[0]] = F.attempts(kg[l[0]], st); valid++; }
@@ -1510,23 +1526,23 @@
      first as a meet uses them. It names classes and gaps; the cards under it say what cutting costs. */
   boot(function () {
     if (!$("wc-out")) return;
-    var T = toolData().ipf, EX = val("wc-kg"), kg = ME.val("kg", EX);
+    var T = toolData().ipf;
     var jr = !!(saved.att || {}).junior; $("wc-jr").checked = jr;
     var sex = seg($("wc-sex"), ME.val("sex", "m"), "m", calc);
     $("wc-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
     function lb() { var b = document.querySelector('#a-units [aria-pressed="true"]'); return !!b && b.value === "lb"; }
-    function show() { if (isFinite(kg)) setField($("wc-kg"), lb() ? Math.round(F.lb(kg) * 10) / 10 : Math.round(kg * 100) / 100); $("wc-u").textContent = lb() ? "lb" : "kg"; }
+    // body weight: My numbers' (example: what the box starts with), to 0.01 kg or 0.1 lb
+    var kgBox = unitField($("wc-kg"), { kind: "mass", imp: lb, per: [100, 10], me: "kg", example: val("wc-kg"), input: function () { calc(); } });
+    function show() { kgBox.show(); $("wc-u").textContent = lb() ? "lb" : "kg"; }
     function both(v) { var d = F.places(v); return num(v, d) + " kg" + (lb() ? " (" + num(F.lb(v), d) + " lb)" : ""); }
-    $("wc-kg").addEventListener("input", function () { var v = val("wc-kg"); kg = lb() ? F.kg(v) : v; ME.set({ kg: kg }); calc(); });
     $("wc-jr").addEventListener("change", function () { jr = $("wc-jr").checked; store.set({ att: Object.assign({}, store.get().att, { junior: jr }) }); calc(); });
     $("a-units").addEventListener("click", function () { setTimeout(function () { show(); calc(); }, 0); });
     onMe(function (keys) {
-      if (hits(keys, ["kg"]) && document.activeElement !== $("wc-kg")) kg = ME.val("kg", EX);
       if (hits(keys, ["sex"])) sex.set(ME.val("sex", "m"));
       if (hits(keys, ["kg", "sex", "units"])) { show(); calc(); }
     });
     function calc() {
-      var r = kg >= 30 && kg <= 300 ? F.ipfClass(kg, sex.get(), jr, T) : null, out = $("wc-out");
+      var kg = kgBox.get(), r = kg >= 30 && kg <= 300 ? F.ipfClass(kg, sex.get(), jr, T) : null, out = $("wc-out");
       out.classList.toggle("is-empty", !r);
       exampleNote($("wc-ex"), r ? [["sex", "sex"], ["kg", "body weight"]].filter(function (f) { return !ME.has(f[0]); }).map(function (f) { return f[1]; }) : []);
       if (!r) { $("wc-class").textContent = "\u2014"; $("wc-sub").textContent = "Enter a body weight between 30 and 300 kg."; $("wc-below").textContent = ""; say("wc-say", $("wc-sub").textContent); return; }
@@ -1554,28 +1570,29 @@
     // result is an example's, and "Use as my body fat" waits for them
     var tape = F.navyTyped(mine);
     ["neck", "waist", "hip"].forEach(function (f) { $("bf-" + f).addEventListener("input", function () { tape = true; }); });
-    var EXH = val("bf-h");   // the example height the field starts with
-    var cm = {}; FIELDS.forEach(function (f) { cm[f] = f === "h" ? ME.val("cm", EXH) : mine.touched && mine[f] > 0 ? +mine[f] : val("bf-" + f); });
-    var kg = ME.val("kg", NaN);
     var units = seg($("bf-units"), mine.units || (ME.units() === "imperial" ? "in" : ""), "cm", function () { show(); calc(); });
+    function inch() { return units.get() === "in"; }
+    // height is My numbers' (example: the height the box starts with); the tape readings are this
+    // tool's, from its last save once typed; all to the nearest half unit. Weight is My numbers'.
+    var box = {};
+    FIELDS.forEach(function (f) {
+      var o = { kind: "len", imp: inch, per: [2, 2], input: function () { calc(); } };
+      if (f === "h") { o.me = "cm"; o.example = val("bf-h"); } else o.value = mine.touched && mine[f] > 0 ? +mine[f] : val("bf-" + f);
+      box[f] = unitField($("bf-" + f), o);
+    });
+    var kgBox = unitField($("bf-kg"), { kind: "mass", imp: inch, per: [10, 1], me: "kg", example: NaN, input: function () { calc(); } });
     var sex = seg($("bf-sex"), ME.val("sex", "m"), "m", function () { calc(); });
     $("bf-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
     onMe(function (keys) {
       if (hits(keys, ["units"]) && ME.units()) units.set(ME.units() === "imperial" ? "in" : "cm");
-      if (hits(keys, ["cm"]) && document.activeElement !== $("bf-h")) cm.h = ME.val("cm", EXH);
-      if (hits(keys, ["kg"]) && document.activeElement !== $("bf-kg")) { kg = ME.val("kg", NaN); if (!isFinite(kg)) $("bf-kg").value = ""; }
       if (hits(keys, ["sex"])) sex.set(ME.val("sex", "m"));
       if (hits(keys, ["units", "cm", "kg", "sex"])) { show(); calc(); }
     });
-    function inch() { return units.get() === "in"; }
     function show() {
-      FIELDS.forEach(function (f) { if (isFinite(cm[f])) setField($("bf-" + f), Math.round((inch() ? cm[f] / 2.54 : cm[f]) * 2) / 2); });
-      if (isFinite(kg)) setField($("bf-kg"), inch() ? Math.round(F.lb(kg)) : Math.round(kg * 10) / 10);
+      FIELDS.forEach(function (f) { box[f].show(); }); kgBox.show();
       [].forEach.call(document.querySelectorAll(".bf-u"), function (u) { u.textContent = inch() ? "in" : "cm"; });
       $("bf-kg-u").textContent = inch() ? "lb" : "kg";
     }
-    FIELDS.forEach(function (f) { $("bf-" + f).addEventListener("input", function () { var v = val("bf-" + f); cm[f] = inch() ? v * 2.54 : v; if (f === "h") ME.set({ cm: cm.h }); calc(); }); });
-    $("bf-kg").addEventListener("input", function () { var v = val("bf-kg"); kg = inch() ? F.kg(v) : v; ME.set({ kg: kg }); calc(); });
     $("bf-use").addEventListener("click", function () {   // the sex goes too: the body fat category depends on it
       var pct = $("bf-out").getAttribute("data-pct"); if (!pct) return;
       ME.set({ bf: +pct, sex: sex.get() }, { bfFrom: "navy" });
@@ -1584,7 +1601,8 @@
       say("bf-say", "Saved " + pct + " percent as your body fat. Energy and macros, the activity multiplier and FFMI use it now.");
     });
     function calc() {
-      var f = sex.get() === "f";
+      var f = sex.get() === "f", kg = kgBox.get(), cm = {};
+      FIELDS.forEach(function (k) { cm[k] = box[k].get(); });
       $("bf-hip-wrap").hidden = !f;
       $("bf-waist-l").innerHTML = f ? 'Waist <span style="text-transform:none;letter-spacing:0">at the narrowest</span>' : 'Abdomen <span style="text-transform:none;letter-spacing:0">at the navel</span>';
       $("bf-how").textContent = "Stand relaxed and breathe out normally. Keep the tape level and snug on bare skin without pressing in. Neck: just below the larynx (Adam’s apple), the tape sloping down slightly to the front. " +
@@ -1629,28 +1647,23 @@
     if (!$("ffmi")) return;
     var TD = toolData(), REF = withWords("ffmiRef", { group: 0, shown: 1 }), N = TD.ffmiNorm, mine = saved.ff || {};
     var EX = { kg: val("ff-w"), cm: val("ff-h"), bf: val("ff-bf"), sex: "m" };
-    var body = { kg: ME.val("kg", EX.kg), cm: ME.val("cm", EX.cm) };
-    $("ff-bf").value = ME.val("bf", EX.bf);
     if (mine.target >= 3 && mine.target < 60) $("ff-t").value = mine.target;
     var units = seg($("ff-units"), mine.units || ME.units(), "metric", function () { show(); calc(); });
     var sex = seg($("ff-sex"), ME.val("sex", EX.sex), EX.sex, calc);
     $("ff-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
     function imp() { return units.get() === "imperial"; }
     function mass(v) { return num(imp() ? F.lb(v) : v, 1) + (imp() ? " lb" : " kg"); }
+    var kgBox = unitField($("ff-w"), { kind: "mass", imp: imp, per: [10, 10], me: "kg", example: EX.kg, input: function () { calc(); } });
+    var cmBox = unitField($("ff-h"), { kind: "len", imp: imp, per: [2, 2], me: "cm", example: EX.cm, input: function () { calc(); } });
+    var bfBox = unitField($("ff-bf"), { me: "bf", example: EX.bf, input: function () { calc(); } });
+    bfBox.show();
     function show() {
-      if (isFinite(body.kg)) setField($("ff-w"), imp() ? Math.round(F.lb(body.kg) * 10) / 10 : Math.round(body.kg * 10) / 10);
-      if (isFinite(body.cm)) setField($("ff-h"), imp() ? Math.round(body.cm / 2.54 * 2) / 2 : Math.round(body.cm * 2) / 2);
+      kgBox.show(); cmBox.show();
       $("ff-w-u").textContent = imp() ? "lb" : "kg"; $("ff-h-u").textContent = imp() ? "in" : "cm";
     }
-    $("ff-w").addEventListener("input", function () { var v = val("ff-w"); body.kg = imp() ? F.kg(v) : v; ME.set({ kg: body.kg }); calc(); });
-    $("ff-h").addEventListener("input", function () { var v = val("ff-h"); body.cm = imp() ? v * 2.54 : v; ME.set({ cm: body.cm }); calc(); });
-    $("ff-bf").addEventListener("input", function () { ME.set({ bf: val("ff-bf") }); calc(); });
     $("ff-t").addEventListener("input", calc);
     onMe(function (keys) {
       if (hits(keys, ["units"]) && ME.units()) units.set(ME.units());
-      if (hits(keys, ["kg"]) && document.activeElement !== $("ff-w")) body.kg = ME.val("kg", EX.kg);
-      if (hits(keys, ["cm"]) && document.activeElement !== $("ff-h")) body.cm = ME.val("cm", EX.cm);
-      if (hits(keys, ["bf"])) setField($("ff-bf"), ME.val("bf", EX.bf));
       if (hits(keys, ["sex"])) sex.set(ME.val("sex", EX.sex));
       if (hits(keys, ["units", "kg", "cm", "bf", "sex"])) { show(); calc(); }
     });
@@ -1659,7 +1672,7 @@
       var tab = $("tab-macros"); if (tab) { tab.click(); tab.focus(); }
     });
     function calc() {
-      var kg = body.kg, cm = body.cm, bf = val("ff-bf"), target = val("ff-t"), f = sex.get() === "f";
+      var kg = kgBox.get(), cm = cmBox.get(), bf = val("ff-bf"), target = val("ff-t"), f = sex.get() === "f";
       var me = ME.get(), fromNavy = ME.has("bf") && me.bfFrom === "navy" && document.activeElement !== $("ff-bf") && Math.abs(bf - me.bf) < 1e-9;
       $("ff-bf-from").hidden = !fromNavy; $("ff-bf-from").textContent = fromNavy ? "Body fat from Navy body fat, a tape estimate." : "";
       var ok = kg >= 30 && kg <= 300 && cm >= 120 && cm <= 230 && bf >= 3 && bf <= 60, out = $("ff-out");
@@ -1884,9 +1897,10 @@
     var level = seg(lvEl, mine.level, "mid", function () { paint(true); keep(); });
     var load = 20, shown = "", impulse = 0, t0 = 0, moving = !RM, onScreen = true, frame = 0;
     // the best squat is My numbers' squat: the visitor's once typed here or in any tool, else the example
-    function showMax() { setField(maxIn, ME.has("squat") ? Math.round(ME.val("squat") * 10) / 10 : D.max); }
-    showMax();
-    onMe(function (keys) { if (hits(keys, ["squat"])) { showMax(); paint(false); keep(); } });
+    // saved from 20 to 350 kg only, the range the bar draws; empty clears it
+    unitField(maxIn, { kind: "mass", per: [10, 10], me: "squat", example: D.max, accept: function (v, raw) { return raw === "" || (v >= 20 && v <= 350); },
+      input: function () { paint(false); keep(); } }).show();
+    onMe(function (keys) { if (hits(keys, ["squat"])) { paint(false); keep(); } });
     $("fx-pick").hidden = false; rig.hidden = false;
 
     var k = ""; for (var x = 128; x <= 232; x += 4) if (x < 172 || x > 188) k += '<line x1="' + x + '" y1="71" x2="' + x + '" y2="79"/>';
@@ -1996,11 +2010,6 @@
       var b = e.target.closest(".fx-day"), lv = goal && D.goals[goal].levels[level.get()];
       if (b) showDay([].indexOf.call(days.children, b), lv && lv.week);
     });
-    maxIn.addEventListener("input", function () {
-      var v = parseFloat(maxIn.value);
-      if (maxIn.value === "" || (v >= 20 && v <= 350)) ME.set({ squat: maxIn.value === "" ? "" : v });
-      paint(false); keep();
-    });
     pause.addEventListener("click", function () { moving = !moving; setPause(); run(); });
     if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; run(); }).observe(rig);
     document.addEventListener("visibilitychange", run);
@@ -2076,9 +2085,6 @@
     var DAYLONG = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     var mem = store.get(); // read only
     var EX = { kg: 75, cm: 175, age: 30, sex: "m" };   // the examples the fields start with
-    var body = { kg: ME.val("kg", EX.kg), cm: ME.val("cm", EX.cm) };
-    $("d-age").value = ME.val("age", EX.age);
-    $("d-bf").value = ME.val("bf", "");
     var dSex = function () { return ME.val("sex", EX.sex); };   // replaced once the sex control exists
     var rest = restSource("d", mem, function () { return dSex(); }, function () { calc(); });
     if (mem.pal) {
@@ -2087,15 +2093,17 @@
     }
     var train = [true, true, false, true, true, false, false], days = 3.5, manual = null, last = null, prevBal = null, changed = -1, deltaT = 0;
     var units = seg($("d-units"), ME.units() || mem.units, "metric", function () { showBody(); calc(); });
+    function imp() { return units.get() === "imperial"; }
+    var kgBox = unitField($("d-w"), { kind: "mass", imp: imp, per: [10, 1], me: "kg", example: EX.kg, input: function () { calc(); } });
+    var cmBox = unitField($("d-h"), { kind: "len", imp: imp, per: [1, 1], me: "cm", example: EX.cm, input: function () { calc(); } });
+    var ageBox = unitField($("d-age"), { me: "age", example: EX.age, input: function () { calc(); } });
+    var bfBox = unitField($("d-bf"), { me: "bf", example: NaN, input: function () { calc(); } });
+    ageBox.show(); bfBox.show();
     var sex = seg($("d-sex"), ME.val("sex", EX.sex), EX.sex, calc);
     $("d-sex").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ME.set({ sex: b.value }); });
     dSex = function () { return sex.get(); };
     onMe(function (keys) {
       if (hits(keys, ["units"]) && ME.units()) units.set(ME.units());
-      if (hits(keys, ["kg"]) && document.activeElement !== $("d-w")) body.kg = ME.val("kg", EX.kg);
-      if (hits(keys, ["cm"]) && document.activeElement !== $("d-h")) body.cm = ME.val("cm", EX.cm);
-      if (hits(keys, ["age"])) setField($("d-age"), ME.val("age", EX.age));
-      if (hits(keys, ["bf"])) setField($("d-bf"), ME.val("bf", ""));
       if (hits(keys, ["sex"])) sex.set(ME.val("sex", EX.sex));
       if (hits(keys, ["units", "kg", "cm", "age", "bf", "sex"])) { showBody(); calc(); }
     });
@@ -2116,14 +2124,9 @@
     function showBody() {
       var imp = units.get() === "imperial";
       $("d-w-unit").textContent = imp ? "lb" : "kg"; $("d-h-unit").textContent = imp ? "in" : "cm";
-      if (isFinite(body.kg)) setField($("d-w"), imp ? Math.round(F.lb(body.kg)) : Math.round(body.kg * 10) / 10);
-      if (isFinite(body.cm)) setField($("d-h"), imp ? Math.round(body.cm / 2.54) : Math.round(body.cm));
+      kgBox.show(); cmBox.show();
     }
-    $("d-w").addEventListener("input", function () { var v = val("d-w"); body.kg = units.get() === "imperial" ? F.kg(v) : v; ME.set({ kg: body.kg }); calc(); });
-    $("d-h").addEventListener("input", function () { var v = val("d-h"); body.cm = units.get() === "imperial" ? v * 2.54 : v; ME.set({ cm: body.cm }); calc(); });
-    $("d-age").addEventListener("input", function () { ME.set({ age: val("d-age") }); });
-    $("d-bf").addEventListener("input", function () { ME.set({ bf: val("d-bf") }); });
-    ["d-age", "d-bf", "d-act", "d-own", "d-size"].forEach(function (id) { $(id).addEventListener("input", calc); });
+    ["d-act", "d-own", "d-size"].forEach(function (id) { $(id).addEventListener("input", calc); });
     $("d-size").addEventListener("change", function () { say("d-say", summary()); });
 
     function kgText(kg) { var imp = units.get() === "imperial"; return num(Math.abs(imp ? F.lb(kg) : kg), 2) + (imp ? " lb" : " kg"); }
@@ -2168,7 +2171,7 @@
     }
 
     function calc() {
-      var ph = phase.get(), kg = body.kg, cm = body.cm, age = val("d-age"), bf = val("d-bf"), own = val("d-own");
+      var ph = phase.get(), kg = kgBox.get(), cm = cmBox.get(), age = val("d-age"), bf = val("d-bf"), own = val("d-own");
       $("d-lose").hidden = ph !== "lose"; $("d-gain").hidden = ph !== "gain"; $("d-train-wrap").hidden = ph !== "lose"; $("d-week-wrap").hidden = ph !== "lose";
       var ok = kg > 30 && kg < 300 && cm > 120 && cm < 230 && age >= 18 && age <= 95;
       $("d-out").classList.toggle("is-empty", !ok);

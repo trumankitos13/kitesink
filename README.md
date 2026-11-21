@@ -127,6 +127,9 @@ source/                     ← archived ORIGINAL design-tool exports (.dc.html)
     visitor's only once they type it; tools show examples otherwise, say so, and never save them.
     `KSFit.migrate` builds it once from the keys the tools saved before; the tools still write
     those keys too, for a cached older `fitness.js`. `node scripts/test_fitness.js` covers both.
+    Every number box that holds a weight, height, lift, age, body fat or heart rate goes through
+    `unitField` in `fitness.js`: the value is kept in metric, shown in the tool's unit with that
+    box's rounding, saved to My numbers on input and updated when it changes elsewhere.
   The audit fails if a page is older than its data. Every entry names its source and how well
   supported it is; keep it that way.
   - **The hub** lists every page under it as a card, grouped as `GROUPS` in the build script
