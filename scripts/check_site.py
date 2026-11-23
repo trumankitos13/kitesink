@@ -21,6 +21,14 @@ SPECIAL_PAGES = {PUBLIC / "404.html", PUBLIC / "repost.html", PUBLIC / "blog/_te
 # wants a line in llms.txt and a route in run_worker_first in wrangler.jsonc.
 FITNESS_ROUTES = json.loads((ROOT / "content" / "fitness" / "routes.json").read_text(encoding="utf-8"))["routes"]
 FITNESS_SUBPAGES = tuple(route["slug"] for route in FITNESS_ROUTES)
+# The pages under /music/, in the order of the hub. content/music/routes.json has a row for every
+# planned page, but scripts/build_music.py writes one only once it has something to show (an area
+# once its file exists), so the listed ones are the rows whose page is in public/music/. The
+# `build_music.py --check` audit below fails if a page the data calls for is missing or out of date.
+# Like the fitness pages, each is listed (site-index.js, sitemap.xml) and has a twin (llms.txt,
+# run_worker_first in wrangler.jsonc).
+MUSIC_ROUTES = json.loads((ROOT / "content" / "music" / "routes.json").read_text(encoding="utf-8"))["routes"]
+MUSIC_SUBPAGES = tuple(route["slug"] for route in MUSIC_ROUTES if (PUBLIC / "music" / f"{route['slug']}.html").is_file())
 # Kept at their addresses but hidden on purpose: not in the site index or the sitemap,
 # not linked from any listed page, and marked noindex. The audit holds them to that.
 # (They may link to each other and to listed pages.)
@@ -160,6 +168,7 @@ TWINS = {
     "/": "index.md", "/consulting": "consulting.md", "/fitness": "fitness.md", "/vantix": "vantix.md",
     "/music": "music.md", "/listening-club": "listening-club.md", "/about": "about.md",
     **{f"/fitness/{slug}": f"fitness/{slug}.md" for slug in FITNESS_SUBPAGES},
+    **{f"/music/{slug}": f"music/{slug}.md" for slug in MUSIC_SUBPAGES},
 }
 
 
@@ -282,6 +291,16 @@ def audit_fitness_build() -> list[str]:
     return []
 
 
+def audit_music_build() -> list[str]:
+    """/music, the pages under it, their twins, search.json and claimable.json are generated
+    (scripts/build_music.py); fail if any of them is older than its data."""
+    import subprocess
+    result = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_music.py"), "--check"], capture_output=True, text=True)
+    if result.returncode:
+        return ["music: " + (result.stdout.strip() or result.stderr.strip().splitlines()[-1])]
+    return []
+
+
 def audit_llms_full() -> list[str]:
     """/llms-full.txt is every twin in one file; fail if a twin changed and it was not rebuilt."""
     import subprocess
@@ -291,28 +310,23 @@ def audit_llms_full() -> list[str]:
     return []
 
 
-def audit_fitness_skill() -> list[str]:
-    """The kitesink-fitness-reference skill describes internals that scripts/build_fitness.py
-    owns. Fail when they drift apart: the pages it names, the layout of search.json, and how
-    an entry is found in its page's twin (a heading, a bold glossary item or a table row)."""
-    label = "public/.well-known/agent-skills/kitesink-fitness-reference/SKILL.md"
-    skill_path = ROOT / label
-    if not skill_path.is_file():
-        return []
-    skill = skill_path.read_text(encoding="utf-8")
+def audit_skill_search(label: str, skill: str, section: str, subpages: tuple[str, ...]) -> list[str]:
+    """What a field-guide skill says about its section, held to the build that owns it: the
+    pages it names (its "Pages:" paragraph), the layout of /<section>/search.json, and how an
+    entry is found in its page's twin (a heading, a bold glossary item or a table row)."""
     issues: list[str] = []
     pages_line = re.search(r"^Pages: (.*?)\n\n", skill, re.M | re.S)
-    named = re.findall(r"`([a-z]+)`", pages_line.group(1)) if pages_line else []
-    if named != list(FITNESS_SUBPAGES):
-        issues.append(f"{label}: names the pages {named}, but the pages under /fitness/ are {list(FITNESS_SUBPAGES)}")
-    search_path = PUBLIC / "fitness" / "search.json"
+    named = re.findall(r"`([a-z-]+)`", pages_line.group(1)) if pages_line else []
+    if named != list(subpages):
+        issues.append(f"{label}: names the pages {named}, but the pages under /{section}/ are {list(subpages)}")
+    search_path = PUBLIC / section / "search.json"
     if not search_path.is_file():
-        return issues + ["public/fitness/search.json: missing (the fitness skill relies on it)"]
+        return issues + [f"public/{section}/search.json: missing (the {section} skill relies on it)"]
     search = json.loads(search_path.read_text(encoding="utf-8"))
     if sorted(search) != ["areas", "kinds", "pages", "rows"]:
         return issues + [f"{label}: says search.json holds pages, kinds, areas and rows; it holds {sorted(search)}"]
-    if search["pages"] != list(FITNESS_SUBPAGES):
-        issues.append(f"{label}: search.json lists the pages {search['pages']}, not the pages under /fitness/")
+    if search["pages"] != list(subpages):
+        issues.append(f"{label}: search.json lists the pages {search['pages']}, not the pages under /{section}/")
     twins: dict[str, str] = {}
     lost = []
     for row in search["rows"]:
@@ -323,13 +337,61 @@ def audit_fitness_skill() -> list[str]:
             break
         page = search["pages"][row[1]]
         if page not in twins:
-            twin = PUBLIC / "fitness" / f"{page}.md"
+            twin = PUBLIC / section / f"{page}.md"
             twins[page] = twin.read_text(encoding="utf-8") if twin.is_file() else ""
         title = re.escape(row[4])
         if not any(re.search(p, twins[page], re.M) for p in (rf"^#{{2,4}} {title}\s*$", rf"^- \*\*{title}\*\*", rf"^\|.*\| {title}:")):
             lost.append(f"{row[0]} on {page}")
     if lost:
         issues.append(f"{label}: {len(lost)} entries cannot be found in their twin the way the skill says, e.g. {', '.join(lost[:3])}")
+    return issues
+
+
+def audit_fitness_skill() -> list[str]:
+    """The kitesink-fitness-reference skill describes internals that scripts/build_fitness.py
+    owns. Fail when they drift apart: the pages it names, the layout of search.json, and how
+    an entry is found in its page's twin (a heading, a bold glossary item or a table row)."""
+    label = "public/.well-known/agent-skills/kitesink-fitness-reference/SKILL.md"
+    skill_path = ROOT / label
+    if not skill_path.is_file():
+        return []
+    return audit_skill_search(label, skill_path.read_text(encoding="utf-8"), "fitness", FITNESS_SUBPAGES)
+
+
+# The keys of /music/claimable.json and of each of its rows, as the music skill names them.
+# scripts/build_music.py writes the file from content/music/claimable.json (DATA-PAGES.md).
+CLAIMABLE_KEYS = ["name", "url", "publisher", "note", "dateModified", "rows", "sources"]
+CLAIMABLE_ROW_KEYS = ["id", "holder", "pot", "money_type", "territory", "readers", "who_can_claim", "how_to_claim",
+                      "rule", "cost", "link", "link_label", "confidence", "sources", "as_of"]
+
+
+def audit_music_skill() -> list[str]:
+    """The kitesink-music-reference skill describes internals that scripts/build_music.py owns.
+    Fail when they drift apart: the pages it names (the music pages written so far), the layout
+    of search.json, how an entry is found in its twin, the keys of claimable.json, and the
+    scope line, which must be the one in content/music/meta.json word for word."""
+    label = "public/.well-known/agent-skills/kitesink-music-reference/SKILL.md"
+    skill_path = ROOT / label
+    if not skill_path.is_file():
+        return []
+    skill = skill_path.read_text(encoding="utf-8")
+    issues = audit_skill_search(label, skill, "music", MUSIC_SUBPAGES)
+    claimable_path = PUBLIC / "music" / "claimable.json"
+    if not claimable_path.is_file():
+        issues.append("public/music/claimable.json: missing (the music skill relies on it)")
+    else:
+        claimable = json.loads(claimable_path.read_text(encoding="utf-8"))
+        if list(claimable) != CLAIMABLE_KEYS:
+            issues.append(f"{label}: says claimable.json holds {CLAIMABLE_KEYS}; it holds {list(claimable)}")
+        odd = sorted({key for row in claimable.get("rows", []) for key in row} ^ set(CLAIMABLE_ROW_KEYS))
+        if odd:
+            issues.append(f"{label}: the claimable.json row keys differ from the ones the skill names: {odd}")
+        unnamed = [key for key in CLAIMABLE_KEYS + CLAIMABLE_ROW_KEYS if f"`{key}`" not in skill]
+        if unnamed:
+            issues.append(f"{label}: does not name the claimable.json keys {unnamed}")
+    scope = json.loads((ROOT / "content" / "music" / "meta.json").read_text(encoding="utf-8")).get("scope_line", "")
+    if scope and f'"{scope}"' not in skill:
+        issues.append(f"{label}: must quote the scope line in content/music/meta.json word for word")
     return issues
 
 
@@ -351,6 +413,7 @@ def audit_agent_files() -> list[str]:
         if path.is_file() and path not in known:
             issues.append(f"{path.relative_to(ROOT).as_posix()}: published under /.well-known/ but not in the skills index; list it or add a rule for it here")
     issues += audit_fitness_skill()
+    issues += audit_music_skill()
     robots = (PUBLIC / "robots.txt").read_text(encoding="utf-8")
     signal = re.search(r"^User-agent: \*\n(?:.*\n)*?Content-Signal: (.+)$", robots, re.M)
     keys = dict(part.strip().split("=", 1) for part in signal.group(1).split(",")) if signal else {}
@@ -364,7 +427,7 @@ def audit_asset_versions() -> list[str]:
     visitors can get a new page with an old cached stylesheet."""
     seen: dict[str, set[str]] = {}
     for path in sorted(PUBLIC.rglob("*.html")):
-        for name, version in re.findall(r"""["']/(ks\.css|ks\.js|site-index\.js|fitness\.js|fitness\.css|fitness-ref\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
+        for name, version in re.findall(r"""["']/(ks\.css|ks\.js|site-index\.js|fitness\.js|fitness\.css|fitness-ref\.js|music-ref\.css|music-ref\.js|music-tools\.js)(?:\?v=([^"']*))?["']""", path.read_text(encoding="utf-8")):
             seen.setdefault(name, set()).add(version or "(none)")
     issues = [f"public: pages request different versions of /{name}: {', '.join(sorted(v))}" for name, v in seen.items() if len(v) > 1]
     # ks.js fetches /site-index.js itself (for the Find palette) and must name the same release
@@ -410,6 +473,8 @@ def audit(path: Path) -> list[str]:
         add("unlisted page must be noindex")
     if path.parent == PUBLIC / "fitness" and "noindex" in meta_names.get("robots", "").lower():
         add("a listed fitness page must not be noindex")
+    if path.parent == PUBLIC / "music" and "noindex" in meta_names.get("robots", "").lower():
+        add("a listed music page must not be noindex")
 
     if path == PUBLIC / "404.html":
         if "noindex" not in meta_names.get("robots", "").lower():
@@ -456,6 +521,7 @@ def main() -> int:
     issues += audit_twins()
     issues += audit_fitness_build()
     issues += audit_fitness_homes()
+    issues += audit_music_build()
     issues += audit_llms_full()
     issues += audit_agent_files()
 

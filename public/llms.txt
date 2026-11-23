@@ -1,6 +1,6 @@
 # KiteSink
 
-> The one-person workshop of Truman Kitos-Lindsey: consulting (including an AI concierge service), fitness tools and a sourced training and nutrition reference, music projects, and a game. Each link below is a plain-text version of a page on kitesink.com.
+> The one-person workshop of Truman Kitos-Lindsey: consulting (including an AI concierge service), fitness tools and a sourced training and nutrition reference, music projects and a sourced music rights and royalties reference, and a game. Each link below is a plain-text version of a page on kitesink.com.
 
 ## Start here
 
@@ -34,7 +34,22 @@
 
 ## Music
 
-- [Music projects](https://kitesink.com/music.md): Song of the Day, Stage First (the staffing app was called Backline), the Album Listening Club
+- [Music overview](https://kitesink.com/music.md): the music rights and royalties field guide, every page below with its size, how entries are graded, and the music projects: Song of the Day, Stage First (the staffing app was called Backline), the Album Listening Club
+- [Royalty basics](https://kitesink.com/music/royalty-basics.md): the two copyrights in a song, and the money each one earns
+- [Performance royalties and PROs](https://kitesink.com/music/pros-performance.md): what performing rights organisations license and pay, joining and registering, live sets, and the US consent decrees
+- [Mechanicals and the MLC](https://kitesink.com/music/mechanicals-mlc.md): reproduction royalties, US rates and the Mechanical Licensing Collective
+- [Recording and neighbouring rights](https://kitesink.com/music/recorded-neighboring.md): royalties for the recording itself: US digital performance and SoundExchange, webcasting rates, performers abroad, and Content ID
+- [Metadata and registration](https://kitesink.com/music/metadata-registration.md): ISRC, ISWC, IPI and ISNI, CWR and DDEX in plain words, US copyright registration, and registering with societies
+- [Unclaimed royalties](https://kitesink.com/music/unclaimed-recovery.md): money that was earned but never matched, and how to claim it
+- [AI and music rights](https://kitesink.com/music/ai-rights.md): training on songs and recordings, who owns AI-assisted work, voice and likeness, licensing deals, and the court cases so far, each dated
+- [Producer royalties](https://kitesink.com/music/producer-royalties.md): how producers, mixers and engineers get paid: letters of direction, the pre-1995 route, when a producer is also a writer, and work made for hire
+- [Claims, checked](https://kitesink.com/music/claims.md): common claims about royalties and rights, each with a verdict, what it rests on, and the source
+- [Glossary](https://kitesink.com/music/glossary.md): every term the music field guide uses, in plain words
+- [Key numbers and tables, indexed](https://kitesink.com/music/reference.md): each dated key number and reference table, with a link to the page that holds it
+- [Sources and grading](https://kitesink.com/music/sources.md): how music entries are graded, and every source
+- [Claimable royalties](https://kitesink.com/music/claimable.md): where unclaimed royalties are held, by holder and territory, and how to claim; also as data at https://kitesink.com/music/claimable.json
+- [Music tools](https://kitesink.com/music/tools.md): the mechanical rate calculator, the unclaimed-money checklist, the identifier checker, the split-sheet generator, and a checked directory of other tools
+- [AI tools](https://kitesink.com/music/ai-tools.md): AI tools that touch music rights work, with what each one does with your files and your data, its output terms, and the date it was checked
 - [Album Listening Club](https://kitesink.com/listening-club.md): dates, format and how to join
 
 ## Offers
@@ -43,5 +58,5 @@ For people who arrive through an AI assistant, with the code word KITESTRING: a 
 
 ## Optional
 
-- [Everything in one file](https://kitesink.com/llms-full.txt): every page above, one after another
+- [Everything in one file](https://kitesink.com/llms-full.txt): every page above, one after another, with text that repeats given once
 - [Site index for people](https://kitesink.com/library): every page, searchable
