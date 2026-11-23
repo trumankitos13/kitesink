@@ -541,7 +541,7 @@ Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](h
 
 ## Body composition arithmetic
 
-The five sums used in this area, worked for a person of 80 kg (176 lb), 1.80 m (5 ft 11 in) and 25 percent body fat.
+The six sums used in this area, worked for a person of 80 kg (176 lb), 1.80 m (5 ft 11 in) and 25 percent body fat.
 
 | What you want | Sum | Worked example |
 |---|---|---|

@@ -2,6 +2,18 @@
   "note": "The corrections log on /fitness/sources and in sources.md, shown newest first. Add a row whenever a published entry or calculator changes what it says. date is YYYY-MM-DD. entry is the id of the entry that changed (the build links it to its home page); for anything else, give href instead.",
   "corrections": [
     {
+      "date": "2026-11-20",
+      "title": "Rest between sets and sets per week: a guide",
+      "entry": "hyp-table-rest-and-sets",
+      "note": "The row on rest and growth names Ahtiainen 2005; that trial is now in the table's source list too. It was cited in the row but missing from the sources."
+    },
+    {
+      "date": "2026-11-20",
+      "title": "Body composition arithmetic",
+      "entry": "comp-table-arithmetic",
+      "note": "The short answer now says six sums, was five; the table has six rows."
+    },
+    {
       "date": "2026-11-16",
       "title": "Meet attempt planner: first-meet setting",
       "href": "/fitness#attempts",

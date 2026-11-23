@@ -1,5 +1,6 @@
-// Zero-dependency checks for public/fitness.js: the calculator maths, the hub's search ranking, and the
-// script in the hub's <head> that forwards old /fitness#<id> links.  Run: node scripts/test_fitness.js
+// Zero-dependency checks for public/fitness.js: the calculator maths (on the guide numbers the build puts in
+// the hub), My numbers and its migration, the hub's search ranking, and the script in the hub's <head> that
+// forwards old /fitness#<id> links.  Run after python3 scripts/build_fitness.py: node scripts/test_fitness.js
 const fs = require('fs'), vm = require('vm');
 const ctx = { window: {}, document: { getElementById: () => null }, Math, console };
 ctx.window.window = ctx.window;
@@ -235,6 +236,209 @@ async function visit(hash, opts = {}) {
   eq('gain: +5% over maintenance', p.maintDay.kcal, 2848 * 1.05, 0.01);
   // energy availability needs body fat
   ok('energy availability only with body fat', isNaN(plan({ phase: 'lose', days: 7, size: 20 }).ea) && plan({ phase: 'lose', days: 7, size: 20, bf: 20 }).ea > 0);
+}
+
+// ---------- the calculators' guide numbers: scripts/build_fitness.py puts them in the hub as #tool-data ----------
+const TD = JSON.parse(/<script type="application\/json" id="tool-data">([\s\S]*?)<\/script>/.exec(fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8'))[1]);
+const HUB = fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8');
+ok('tool data: every piece names its guide entry and its home', Object.keys(TD).filter(k => k !== 'suppItems').every(k => /^[a-z]+-[a-z0-9-]+$/.test(TD[k].e) && TD[k].href.endsWith('#' + TD[k].e)));
+// #tool-data carries numbers, never a guide's words: those are printed once, in the page
+(function walk(v, key) {
+  if (typeof v === 'string') { if (!['e', 'href', 'name', 'group', 'sex', 'entry'].includes(key)) { fail++; console.log('FAIL tool data carries prose under ' + key + ': ' + v); } }
+  else if (Array.isArray(v)) v.forEach(x => walk(x, key === 'entries' ? 'entry' : key));
+  else if (v && typeof v === 'object') Object.keys(v).forEach(k => walk(v[k], k));
+})(TD, '');
+console.log('ok   tool data: numbers and addresses only, ' + JSON.stringify(TD).length + ' bytes');
+// a table the build printed in the page, as cell text (what the scripts read)
+const unesc = s => s.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&amp;/g, '&');
+function printedTable(id) {
+  const m = new RegExp('<div class="tt" data-entry="' + id + '">[\\s\\S]*?<tbody>([\\s\\S]*?)</tbody>').exec(HUB);
+  return m ? [...m[1].matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map(r => [...r[1].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map(c => unesc(c[1]))) : null;
+}
+ok('every guide table and card is printed once', [...HUB.matchAll(/<div class="(?:tt|te)" data-entry="([^"]+)"/g)].map(m => m[1]).every((id, i, a) => a.indexOf(id) === i));
+
+// ---------- 1RM: how hard was that set (reps in reserve count as reps), RIR or RPE ----------
+{
+  eq('rirFromRpe 10', F.rirFromRpe(10), 0); eq('rirFromRpe 9.5 is half a rep', F.rirFromRpe(9.5), 0.5); eq('rirFromRpe 8', F.rirFromRpe(8), 2); eq('rirFromRpe 5', F.rirFromRpe(5), 5);
+  ok('rirFromRpe: below 5 or above 10 is not offered', isNaN(F.rirFromRpe(4.5)) && isNaN(F.rirFromRpe(11)));
+  eq('the default (0 in reserve) is the estimate as it was: 100 x 5', F.oneRm(100, 5 + 0), 114.5833, 0.001);
+  eq('100 x 5 with 2 in reserve reads as 7 reps', F.oneRm(100, 5 + 2), F.oneRm(100, 7), 1e-12);
+  eq('round trip: 5 reps at 2 in reserve from that estimate is 100', F.loadFor(F.oneRm(100, 5 + 2), 5, 2), 100, 1e-9);
+  eq('round trip at RPE 9.5 (half a rep)', F.loadFor(F.oneRm(140, 3 + F.rirFromRpe(9.5)), 3, 0.5), 140, 1e-9);
+  ok('half steps land between whole ones', F.oneRm(100, 5.5) > F.oneRm(100, 5) && F.oneRm(100, 5.5) < F.oneRm(100, 6));
+  const rows = TD.rpe.rows;
+  same('rpe chart rows from the guide: RPE 9.5', F.rpeRow(rows, 9.5).rirRange.join('-'), '0-1');
+  same('rpe chart rows: RPE 6 and 5 share the 5-6 row', F.rpeRow(rows, 6).rirRange.join('-') + ' ' + F.rpeRow(rows, 5).rirRange.join('-'), '4-6 4-6');
+  ok('rpe chart: every whole RPE from 5 to 10 has a row, and 10 - RPE sits in its range', [5, 6, 7, 8, 9, 9.5, 10].every(r => { const [lo, hi] = F.rpeRow(rows, r).rirRange; return F.rirFromRpe(r) >= lo && F.rirFromRpe(r) <= hi; }));
+  same('rpe chart: the words are printed once, in the 1RM tool', printedTable(TD.rpe.e).map(r => r[1]).join(' '), '0 0-1 1 2 3 4-6');
+}
+
+// ---------- weight class finder: the IPF classes from the guide's class table ----------
+{
+  const C = (kg, sex, jr) => F.ipfClass(kg, sex, jr, TD.ipf).name;
+  same('class: 59.00 kg is the 59 class (a limit includes its number)', C(59.00, 'm', false), '59');
+  same('class: 59.01 kg is the 66 class', C(59.01, 'm', false), '66');
+  same('class: 120.0 kg is the 120 class, 120.01 is 120+', C(120, 'm', false) + ' ' + C(120.01, 'm', false), '120 120+');
+  same('class: 52 kg is 59 for an open lifter, 53 for a junior', C(52, 'm', false) + ' ' + C(52, 'm', true), '59 53');
+  same('class: women 84.0 and 84.01', C(84.0, 'f', false) + ' ' + C(84.01, 'f', false), '84 84+');
+  same('class: women 43 is a junior class only', C(42, 'f', false) + ' ' + C(42, 'f', true), '47 43');
+  const r = F.ipfClass(80, 'm', false, TD.ipf);
+  ok('class: 80 kg is 3 under 83; the class below is 74, a cut of 6 kg, 7.5% of body weight', r.name === '83' && Math.abs(r.under - 3) < 1e-9 && r.below.name === '74' && Math.abs(r.below.cut - 6) < 1e-9 && Math.abs(r.below.pct - 7.5) < 1e-9);
+  ok('class: the lightest open class has none below; the open class has no limit', F.ipfClass(55, 'm', false, TD.ipf).below === null && F.ipfClass(130, 'm', false, TD.ipf).open);
+  ok('class: no weight, no class', F.ipfClass(NaN, 'm', false, TD.ipf) === null);
+}
+
+// ---------- FFMI & goal weight: the guide's worked example (comp-table-arithmetic) ----------
+{
+  const r = F.ffmi({ kg: 80, cm: 180, bf: 25, target: 15 }, TD.ffmiNorm);
+  eq('ffmi: fat 80 x 0.25', r.fat, 20, 1e-9); eq('ffmi: lean 80 - 20', r.lean, 60, 1e-9); eq('ffmi: 60 / 1.8 squared = 18.5', r.ffmi, 18.52, 0.01);
+  eq('ffmi: target 15% if lean holds, 60 / 0.85 = 70.6', r.goal, 70.6, 0.02); eq('ffmi: to lose 9.4', r.lose, 9.4, 0.02);
+  eq('ffmi: at 1.80 m the height adjustment is nothing', r.norm, r.ffmi, 1e-9);
+  const s = F.ffmi({ kg: 70, cm: 170, bf: 15, target: 10 }, TD.ffmiNorm);
+  eq('ffmi: height-normalised at 1.70 m adds 6.3 x 0.10', s.norm - s.ffmi, TD.ffmiNorm.k * 0.1, 1e-9);
+  same('ffmi: the adjustment read from the guide is 6.3 x (1.80 - h)', TD.ffmiNorm.k + ' ' + TD.ffmiNorm.h, '6.3 1.8');
+  ok('ffmi: a target at or above body fat now gives no goal weight', F.ffmi({ kg: 80, cm: 180, bf: 25, target: 25 }).goal === null && F.ffmi({ kg: 80, cm: 180, bf: 25, target: 30 }).lose === null);
+  ok('ffmi: the reference rows are read by sex', TD.ffmiRef.rows.filter(x => x.sex === 'f').map(x => x.value).join() === '16.3,23.9' && TD.ffmiRef.rows.some(x => x.value === 25 && x.sex === 'm'));
+}
+
+// ---------- heart-rate zones: the guide's age formula and five-zone scale ----------
+{
+  eq('hrMax(40) = 208 - 0.7 x 40 = 180', F.hrMax(40, TD.hrMax), 180, 1e-9);
+  same('zones at 180: the five ranges', F.zones(180, TD.zones.rows).map(z => z.lo + '-' + z.hi).join(' '), '99-135 135-153 153-162 162-171 171-180');
+  let r = F.hrPick({ age: 40, max: 190 }, TD.hrMax);
+  ok('a measured maximum overrides the age formula', r.max === 190 && r.from === 'max');
+  r = F.hrPick({ age: 40, max: '' }, TD.hrMax);
+  ok('no measured maximum: from age', r.max === 180 && r.from === 'age');
+  ok('a maximum out of range is an error, not a fallback', F.hrPick({ age: 40, max: 300 }, TD.hrMax).err === 'max');
+  ok('resting at or above the maximum is rejected', F.hrPick({ age: 40, max: 100, rest: 100 }, TD.hrMax).restErr === 'max' && F.hrPick({ age: 40, rest: 55 }, TD.hrMax).rest === 55);
+  ok('resting out of range is rejected', F.hrPick({ age: 40, rest: 20 }, TD.hrMax).restErr === 'range');
+  same('zone middles in the activity bands at 180: low, medium, high, high, high', F.zones(180, TD.zones.rows).map(z => F.hrBand((z.lo + z.hi) / 2).id).join(' '), 'aer1 aer2 aer3 aer3 aer3');
+  ok('above 180 there is no band', F.hrBand(181) === null && F.hrBand(130).id === 'aer1' && F.hrBand(130.5).id === 'aer2');
+  same('resting ranges read from the guide', TD.hrRest.adult.join('-') + ' ' + TD.hrRest.athlete.join('-'), '60-100 40-60');
+}
+
+// ---------- coming back after a break: the guide's return table ----------
+{
+  const row = (n, u) => F.comebackRow(F.comebackDays(n, u));
+  same('comeback: 5 days, 6 days, 29 days, 30 days', [row(5, 'd'), row(6, 'd'), row(29, 'd'), row(30, 'd')].join(' '), '0 1 1 2');
+  same('comeback: 2 weeks, 1 month, 3.9 months, 4 months, 2 years', [row(2, 'w'), row(1, 'm'), row(3.9, 'm'), row(4, 'm'), row(24, 'm')].join(' '), '1 2 2 3 3');
+  ok('comeback: no time away is no row', row(0, 'd') === -1 && row(NaN, 'w') === -1);
+  same('comeback: the rows the edges are set for', printedTable(TD.comeback.e).map(r => r[0]).join(' | '), '3 to 5 days | About 2 weeks | About 10 weeks | Many months or years');
+  eq('comeback: 2x the time off, read from the guide', TD.returnRatio.factor, 2);
+  same('comeback: 100 kg starts at 50-60 kg', F.startLoads(100, TD.returnLoad.pct, 2.5).join('-'), '50-60');
+  same('comeback: 142.5 kg rounds to 2.5 kg steps', F.startLoads(142.5, TD.returnLoad.pct, 2.5).join('-'), '72.5-85');
+  same('comeback: 315 lb rounds to 5 lb steps', F.startLoads(315, TD.returnLoad.pct, 5).join('-'), '160-190');
+}
+
+// ---------- weekly sets: helper sets at half credit, read against the guide's lines ----------
+{
+  eq('sets: helper credit read from the guide is a half', TD.setsHelper.credit, 0.5);
+  eq('sets: 8 direct + 3 helper = 9.5', F.weeklySets(8, 3, TD.setsHelper.credit), 9.5, 1e-12);
+  eq('sets: blanks count as none', F.weeklySets(NaN, 5, 0.5), 2.5, 1e-12);
+  same('sets: the lines read from the guide', TD.sets.min + ' ' + TD.sets.range.join('-'), '10 12-20');
+  same('sets: band edges 9.5 / 10 / 11.5 / 12 / 20 / 20.5', [9.5, 10, 11.5, 12, 20, 20.5].map(n => F.setsBand(n, TD.sets)).join(' '), 'below meets meets in in above');
+  same('sets: nothing entered is no band', F.setsBand(0, TD.sets), 'none');
+}
+
+// ---------- supplement checker: the guide's rows and entries, joined by name ----------
+{
+  same('caffeine: 3-6 mg per kg read from the guide', TD.caffeine.mgkg.join('-'), '3-6');
+  same('caffeine: 80 kg is 240-480 mg', F.caffeine(80, TD.caffeine.mgkg).join('-'), '240-480');
+  ok('caffeine: no weight, no dose', F.caffeine(NaN, TD.caffeine.mgkg) === null);
+  const SUP = printedTable(TD.supps.e), FAT = printedTable(TD.fatLoss.e);
+  const items = F.suppItems(SUP, FAT, TD.suppItems), byName = n => items.find(x => x.name.toLowerCase() === n.toLowerCase());
+  ok('supplements: one item per name; caffeine joins both tables and its entries', items.filter(x => /^caffeine$/i.test(x.name)).length === 1 && byName('Caffeine').row && byName('Caffeine').fat && byName('Caffeine').entries.length === 2);
+  ok('supplements: every row of both tables is an item', SUP.length === 7 && SUP.every(r => byName(r[0]).row) && FAT.every(r => byName(r[0]).fat));
+  ok('supplements: every single entry is a card printed in the page', TD.suppItems.every(g => g.entries.length && g.entries.every(id => HUB.includes('<div class="te" data-entry="' + id + '">'))));
+  ok('supplements: the fat-loss rows carry findings and cautions, no dose', FAT.every(r => r.length === 3 && r[1] && r[2]) && byName('Yohimbine').fat.cautions === 'Raises heart rate; can provoke anxiety');
+}
+
+// ---------- review fixes ----------
+{
+  const J = x => JSON.stringify(x);
+  // navy: only typed tape readings carry over
+  const X = F.NAVY_EXAMPLES;
+  ok('navy examples match the fields the page starts with', ['h', 'neck', 'waist', 'hip'].every(k => new RegExp('id="bf-' + k + '"[^>]*value="' + X[k] + '"').test(fs.readFileSync(require('path').join(__dirname, '..', 'public', 'fitness.html'), 'utf8'))));
+  let m = F.migrate({ navy: { touched: true, sex: 'm', h: 178, neck: 38, waist: 86, hip: 97, kg: '', pct: 17.9 } });
+  same('migrate: navy touched by a click, example readings: nothing carried', J(m.own), '{}');
+  m = F.migrate({ navy: { touched: true, sex: 'f', h: 178, neck: 38, waist: 86, hip: 97, kg: 64, pct: 30.1 } });
+  ok('migrate: navy example readings, but a typed weight (no example): the weight only', m.kg === 64 && !m.own.bf && !m.own.cm && !m.own.sex);
+  m = F.migrate({ navy: { touched: true, sex: 'm', h: 178, neck: 40, waist: 92, hip: 97, kg: '', pct: 21.5 } });
+  ok('migrate: navy readings that differ from the example carry height, sex and body fat', m.bf === 21.5 && m.bfFrom === 'navy' && m.cm === 178 && m.sex === 'm');
+  m = F.migrate({ navy: { touched: true, sex: 'f', h: 165, neck: 38, waist: 86, hip: 101, pct: 33 } });
+  ok('migrate: for a woman a typed hip counts', m.bf === 33);
+  m = F.migrate({ navy: { touched: true, tape: false, sex: 'm', h: 181, neck: 40, waist: 92, pct: 21.5 } });
+  ok('migrate: the new tape flag decides when it is saved (false)', !m.own.bf && !m.own.cm);
+  ok('migrate: the new tape flag decides when it is saved (true, example readings)', F.migrate({ navy: { touched: true, tape: true, h: 178, neck: 38, waist: 86, pct: 17.9 } }).bf === 17.9);
+  ok('navyTyped: untouched is never typed', !F.navyTyped({ touched: false, neck: 41, waist: 95 }) && !F.navyTyped(null));
+  // weight class: two decimals when the hundredths matter
+  same('places: 59.01 needs two, 59.0 and 6.5 one', [59.01, 59, 6.5, 0.01, 6.99].map(F.places).join(' '), '2 1 1 2 2');
+  const r = F.ipfClass(59.01, 'm', false, TD.ipf);
+  ok('class: 59.01 is 6.99 under 66 and 0.01 over 59', r.name === '66' && Math.abs(r.under - 6.99) < 1e-9 && Math.abs(r.below.cut - 0.01) < 1e-9);
+  ok('class: each sex has a junior class from the table', TD.ipf.m.filter(c => c.junior).length === 1 && TD.ipf.f.filter(c => c.junior).length === 1);
+  // the RPE options come from the chart
+  same('rpe options from the chart', F.rpeOptions(TD.rpe.rows).map(o => o.rpe + ':' + o.rir).join(' '), '10:0 9.5:0.5 9:1 8:2 7:3 6:4 5:5');
+  // FFMI starts from the guide's worked example
+  same('FFMI example inputs are the guide\'s worked example', [TD.arith.kg, TD.arith.cm, TD.arith.bf, TD.arith.target].join(' '), '80 180 25 15');
+  ok('the FFMI reference rows are sexed from their labels', TD.ffmiRef.rows.map(x => x.sex).join('') === 'ffmmmmm');
+}
+
+// ---------- my numbers: the shared `me`, and migrating what the tools saved before it ----------
+{
+  const J = x => JSON.stringify(x);
+  const mig = b => F.migrate(b);
+  same('migrate: nothing saved is an empty me', J(mig({})), J({ v: 1, units: '', own: {} }));
+  same('migrate: not an object is an empty me', J(mig(null)) + J(mig([1, 2])) + J(mig('x')), J(F.meEmpty()).repeat(3));
+  same('migrate: corrupt JSON reads as nothing', J(mig(F.parseBlob('{"kg": 80,'))), J(F.meEmpty()));
+  same('migrate: a JSON array reads as nothing', J(F.parseBlob('[1]')), '{}');
+  // the examples every tool saved on its first visit are nobody's numbers
+  const untouched = { units: 'metric', sex: 'm', kg: 75, cm: 175, age: 30, bf: '', pal: 1.6, mTouched: false,
+    att: { units: 'kg', style: 'first', warm: 'squat', squat: 140, bench: 90, dead: 170 }, hero: { goal: null, level: 'mid', max: 100 },
+    navy: { units: 'cm', sex: 'm', h: 178, neck: 38, waist: 86, hip: 97, kg: '', pct: 17.9, touched: false } };
+  same('migrate: untouched defaults own nothing', J(mig(untouched).own), '{}');
+  same('migrate: units carry over without owning anything', mig(untouched).units, 'metric');
+  // mTouched: the body fields are the visitor's
+  let m = mig({ units: 'imperial', sex: 'f', kg: 61.2, cm: 166, age: 41, bf: 27, mTouched: true });
+  same('migrate: mTouched owns sex, age, weight, height and body fat', Object.keys(m.own).sort().join(), 'age,bf,cm,kg,sex');
+  ok('migrate: mTouched keeps the values and marks body fat as typed', m.kg === 61.2 && m.cm === 166 && m.age === 41 && m.bf === 27 && m.sex === 'f' && m.bfFrom === 'typed' && m.units === 'imperial');
+  m = mig({ kg: 80, cm: 180, age: 30, bf: '', mTouched: true });
+  ok('migrate: an empty body fat is not owned', !m.own.bf && !('bf' in m) && !m.bfFrom);
+  // before the flag existed: values that differ from 75 / 175 / 30 were the visitor's
+  ok('migrate: pre-flag, a weight other than 75 is the visitor\'s', mig({ kg: 82, cm: 175, age: 30 }).own.kg === 1);
+  ok('migrate: pre-flag, body fat alone is enough', mig({ kg: 75, cm: 175, age: 30, bf: 20 }).bf === 20);
+  ok('migrate: pre-flag, 75 / 175 / 30 with no body fat is the example', J(mig({ kg: 75, cm: 175, age: 30, bf: '' }).own) === '{}');
+  ok('migrate: mTouched false wins over the old inference', J(mig({ kg: 90, cm: 190, age: 44, mTouched: false }).own) === '{}');
+  // the navy tool: fills what is empty, and its result is the body fat when none was typed
+  m = mig({ navy: { touched: true, sex: 'm', h: 180, kg: 92, pct: 17 } });
+  ok('migrate: navy only fills sex, height, weight and body fat (from navy)', m.cm === 180 && m.kg === 92 && m.bf === 17 && m.bfFrom === 'navy' && m.sex === 'm');
+  m = mig({ units: 'metric', sex: 'm', kg: 92, cm: 180, age: 35, bf: 18, pal: 1.6, mTouched: true, navy: { touched: true, pct: 17, h: 178, kg: 90 } });
+  ok('migrate: a typed body fat and body numbers beat the navy tool\'s', m.bf === 18 && m.bfFrom === 'typed' && m.cm === 180 && m.kg === 92);
+  ok('migrate: untouched navy readings are examples', J(mig({ navy: { touched: false, h: 178, kg: 80, pct: 17.9 } }).own) === '{}');
+  ok('migrate: a navy reading out of range is skipped', mig({ navy: { touched: true, pct: 72, h: 180 } }).bf === undefined);
+  // Meet attempts has no flag: a lift is the visitor's only when it is not the example
+  m = mig({ att: { units: 'lb', squat: 150, bench: 90, dead: 200.5 } });
+  ok('migrate: attempts only, lifts that differ from 140 / 90 / 170', m.squat === 150 && m.dead === 200.5 && !m.own.bench);
+  ok('migrate: the hero\'s best squat when it is not 100', mig({ hero: { max: 120 } }).squat === 120 && !mig({ hero: { max: 100 } }).own.squat);
+  ok('migrate: attempts beat the hero for the squat', mig({ att: { squat: 150 }, hero: { max: 120 } }).squat === 150);
+  ok('migrate: the 1RM tool\'s set weight is not a best', J(mig({ loadKg: 120, loadReps: 5 }).own) === '{}');
+  // the returning visitor the browser pass uses, and idempotence
+  const visitor = { units: 'metric', sex: 'm', kg: 92, cm: 180, age: 35, bf: 18, pal: 1.6, mTouched: true, navy: { touched: true, pct: 17, h: 180, kg: 92 } };
+  const once = mig(visitor);
+  same('migrate: twice is the same as once', J(mig(Object.assign({}, visitor, { me: once }))), J(once));
+  same('migrate: an existing me is kept, cleaned', J(mig({ kg: 50, mTouched: true, me: { v: 1, kg: 999, own: { kg: 1 }, units: 'x' } })), J(F.meEmpty()));
+  // own marking
+  let r = F.meSet(F.meEmpty(), { kg: 80, cm: '' });
+  ok('meSet: a value in range is set and owned', r.me.kg === 80 && r.me.own.kg === 1 && J(r.changed) === '["kg"]');
+  r = F.meSet(r.me, { kg: 12 });
+  ok('meSet: a value out of range changes nothing', r.me.kg === 80 && r.changed.length === 0);
+  r = F.meSet(r.me, { kg: '' });
+  ok('meSet: clearing a field un-owns it', !('kg' in r.me) && !r.me.own.kg && J(r.changed) === '["kg"]');
+  r = F.meSet(F.meEmpty(), { bf: 17.5 }, { bfFrom: 'navy' });
+  ok('meSet: body fat remembers where it came from', r.me.bfFrom === 'navy' && F.meSet(r.me, { bf: 17.5 }).changed.join() === 'bf' && F.meSet(r.me, { bf: 17.5 }).me.bfFrom === 'typed');
+  ok('meSet: the same value again changes nothing', F.meSet(F.meSet(F.meEmpty(), { age: 40 }).me, { age: '40' }).changed.length === 0);
+  ok('meSet: units are a setting, not an owned number', F.meSet(F.meEmpty(), { units: 'imperial' }).me.units === 'imperial' && J(F.meSet(F.meEmpty(), { units: 'imperial' }).me.own) === '{}');
+  ok('meSet: unknown keys are ignored', F.meSet(F.meEmpty(), { pal: 1.6, goal: 'lose' }).changed.length === 0);
+  ok('meSet: the input is not changed', (() => { const a = F.meEmpty(); F.meSet(a, { kg: 80 }); return J(a) === J(F.meEmpty()); })());
 }
 
 (async () => {
