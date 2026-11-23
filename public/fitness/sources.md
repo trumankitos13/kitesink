@@ -1,6 +1,6 @@
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 1018 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 1021 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -18,6 +18,8 @@ Articles are credited where an author's analysis or position shaped an entry. Ev
 
 What changed after an entry was published, newest first.
 
+- **2026-11-20 · Rest between sets and sets per week: a guide**: The row on rest and growth names Ahtiainen 2005; that trial is now in the table's source list too. It was cited in the row but missing from the sources. (https://kitesink.com/fitness/hypertrophy#hyp-table-rest-and-sets)
+- **2026-11-20 · Body composition arithmetic**: The short answer now says six sums, was five; the table has six rows. (https://kitesink.com/fitness/bodycomp#comp-table-arithmetic)
 - **2026-11-16 · Meet attempt planner: first-meet setting**: The first-meet setting now suggests 85%, 90% and 95% of a best single, was 88%, 94% and 98%, to match the first-meet ranges in the meet area. Basis: McDonald's first-meet advice. (https://kitesink.com/fitness#attempts)
 - **2026-11-16 · Attempt selection ranges, first meet and experienced**: Added first-meet rows (80-85%, 85-92%, 92-95%) so the table matches the opener, second and third numbers. Basis: McDonald's first-meet advice; no study covers first meets. (https://kitesink.com/fitness/meet#meet-table-attempts)
 - **2026-11-16 · Practise the lifts in competition style and hold four principles**: The straight bar path over mid-foot now applies to the squat and deadlift only; the bench travels in a shallow arc. The entry had applied it to all three lifts. Basis: McDonald's bench guide. (https://kitesink.com/fitness/powerlifting#pl-specificity-technique)
@@ -94,7 +96,7 @@ What changed after an entry was published, newest first.
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 1018 sources, A to Z
+## All 1021 sources, A to Z
 
 - Aasa U, Svartholm I, Andersson F et al. (2017). Injuries among weightlifters and powerlifters: a systematic review. *British Journal of Sports Medicine* 51(4):211-219. https://doi.org/10.1136/bjsports-2016-096037 (Systematic review, cited 2×)
 - Abad CC, Prado ML, Ugrinowitsch C et al. (2011). Combination of General and Specific Warm-Ups Improves Leg-Press One Repetition Maximum Compared With Specific Warm-Up in Trained Individuals. *Journal of Strength and Conditioning Research* 25(8):2242-2245. https://doi.org/10.1519/jsc.0b013e3181e8611b (Trial, cited 1×)
@@ -107,7 +109,7 @@ What changed after an entry was published, newest first.
 - Ackland TR, Lohman TG, Sundgot-Borgen J et al. (2012). Current Status of Body Composition Assessment in Sport. *Sports Medicine* 42(3):227-249. https://doi.org/10.2165/11597140-000000000-00000 (Position stand, cited 5×)
 - American College of Sports Medicine (2009). Progression Models in Resistance Training for Healthy Adults. *Medicine & Science in Sports & Exercise* 41(3):687-708. https://doi.org/10.1249/MSS.0b013e3181915670 (Position stand, cited 13×)
 - American Diabetes Association Professional Practice Committee for Diabetes*, Bajaj M, McCoy RG et al. (2025). 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. *Diabetes Care* 49(Supplement_1):S27-S49. https://doi.org/10.2337/dc26-s002 (Guideline, cited 4×)
-- Ahtiainen JP, Pakarinen A, Alen M et al. (2005). Short vs. Long Rest Period Between the Sets in Hypertrophic Resistance Training: Influence on Muscle Strength, Size, and Hormonal Adaptations in Trained Men. *The Journal of Strength and Conditioning Research* 19(3):572. https://doi.org/10.1519/15604.1 (Trial, cited 2×)
+- Ahtiainen JP, Pakarinen A, Alen M et al. (2005). Short vs. Long Rest Period Between the Sets in Hypertrophic Resistance Training: Influence on Muscle Strength, Size, and Hormonal Adaptations in Trained Men. *The Journal of Strength and Conditioning Research* 19(3):572. https://doi.org/10.1519/15604.1 (Trial, cited 3×)
 - Akl EA, Oxman AD, Herrin J et al. (2011). Using alternative statistical formats for presenting risks and risk reductions. *Cochrane Database of Systematic Reviews*:CD006776. https://doi.org/10.1002/14651858.CD006776.pub2 (Systematic review, cited 1×)
 - Alhassan S, Kim S, Bersamin A et al. (2008). Dietary adherence and weight loss success among overweight women: results from the A TO Z weight loss study. *International Journal of Obesity* 32(6):985-991. https://doi.org/10.1038/ijo.2008.8 (Trial, cited 3×)
 - Almond CSD, Shin AY, Fortescue EB et al. (2005). Hyponatremia among Runners in the Boston Marathon. *New England Journal of Medicine* 352(15):1550-1556. https://doi.org/10.1056/NEJMoa043901 (Cohort study, cited 1×)
@@ -296,6 +298,7 @@ What changed after an entry was published, newest first.
 - Foster C, Rundell KW, Snyder AC et al. (1999). Evidence for restricted muscle blood flow during speed skating. *Medicine & Science in Sports & Exercise* 31(10):1433. https://doi.org/10.1097/00005768-199910000-00012 (Trial, cited 1×)
 - Foster-Powell K, Holt SH, Brand-Miller JC (2002). International table of glycemic index and glycemic load values: 2002. *The American Journal of Clinical Nutrition* 76(1):5-56. https://doi.org/10.1093/ajcn/76.1.5 (Review, cited 2×)
 - Fothergill E, Guo J, Howard L et al. (2016). Persistent metabolic adaptation 6 years after “The Biggest Loser” competition. *Obesity* 24(8):1612-1619. https://doi.org/10.1002/oby.21538 (Cohort study, cited 1×)
+- Foulis SA, Friedl KE, Spiering BA et al. (2023). Body composition changes during 8 weeks of military training are not accurately captured by circumference-based assessments. *Frontiers in Physiology* 14:1183836. https://doi.org/10.3389/fphys.2023.1183836 (Cohort study, cited 1×)
 - Fradkin AJ, Zazryn TR, Smoliga JM (2010). Effects of Warming-up on Physical Performance: A Systematic Review With Meta-analysis. *Journal of Strength and Conditioning Research* 24(1):140-148. https://doi.org/10.1519/jsc.0b013e3181c643a0 (Meta-analysis, cited 2×)
 - Fragala MS, Cadore EL, Dorgo S et al. (2019). Resistance Training for Older Adults: Position Statement From the National Strength and Conditioning Association. *Journal of Strength and Conditioning Research* 33(8):2019-2052. https://doi.org/10.1519/jsc.0000000000003230 (Position stand, cited 2×)
 - Frankenfield D, Roth-Yousey L, Compher C (2005). Comparison of Predictive Equations for Resting Metabolic Rate in Healthy Nonobese and Obese Adults: A Systematic Review. *Journal of the American Dietetic Association* 105(5):775-789. https://doi.org/10.1016/j.jada.2005.02.005 (Systematic review, cited 4×)
@@ -383,6 +386,8 @@ What changed after an entry was published, newest first.
 - Hickmott LM, Chilibeck PD, Shaw KA et al. (2022). The Effect of Load and Volume Autoregulation on Muscular Strength and Hypertrophy: A Systematic Review and Meta-Analysis. *Sports Medicine - Open* 8(1). https://doi.org/10.1186/s40798-021-00404-9 (Meta-analysis, cited 2×)
 - Hickson RC, Bomze HA, Holloszy JO (1977). Linear increase in aerobic power induced by a strenuous program of endurance exercise. *Journal of Applied Physiology* 42(3):372-376. https://doi.org/10.1152/jappl.1977.42.3.372 (Trial, cited 1×)
 - Hirshkowitz M, Whiton K, Albert SM et al. (2015). National Sleep Foundation’s sleep time duration recommendations: methodology and results summary. *Sleep Health* 1(1):40-43. https://doi.org/10.1016/j.sleh.2014.12.010 (Position stand, cited 1×)
+- Hodgdon JA, Beckett MB (1984). Prediction of percent body fat for U.S. Navy men from body circumferences and height. *Naval Health Research Center, Report 84-11*. https://apps.dtic.mil/sti/citations/ADA143890 (Reference, cited 1×)
+- Hodgdon JA, Beckett MB (1984). Prediction of percent body fat for U.S. Navy women from body circumferences and height. *Naval Health Research Center, Report 84-29*. https://apps.dtic.mil/sti/html/tr/ADA146456/index.html (Reference, cited 1×)
 - Hooper DR, Szivak TK, Comstock BA et al. (2014). Effects of Fatigue From Resistance Training on Barbell Back Squat Biomechanics. *Journal of Strength and Conditioning Research* 28(4):1127-1134. https://doi.org/10.1097/jsc.0000000000000237 (Trial, cited 1×)
 - Hopker J, Passfield L, Coleman D et al. (2009). The Effects of Training on Gross Efficiency in Cycling: A Review. *International Journal of Sports Medicine* 30(12):845-850. https://doi.org/10.1055/s-0029-1237712 (Review, cited 1×)
 - Hornberger TA (2011). Mechanotransduction and the regulation of mTORC1 signaling in skeletal muscle. *The International Journal of Biochemistry & Cell Biology* 43(9):1267-1276. https://doi.org/10.1016/j.biocel.2011.05.007 (Review, cited 2×)

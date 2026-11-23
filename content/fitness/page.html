@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fitness — Vantix, free calculators &amp; a sourced field guide · KiteSink</title>
-<meta name="description" content="Vantix, the periodization OS, plus six free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
+<meta name="description" content="Vantix, the periodization OS, plus {{tools:n}} free calculators and a sourced field guide to training, eating and health. Search every entry, or read by area: from training basics and technique to nutrition, body composition and health.">
 <link rel="canonical" href="https://kitesink.com/fitness">
 <link rel="alternate" type="text/markdown" href="https://kitesink.com/fitness.md" title="Plain-text version">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KiteSink">
 <meta property="og:title" content="Fitness — tools &amp; notes for people who lift">
-<meta property="og:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta property="og:description" content="Vantix, {{tools:n}} free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta property="og:url" content="https://kitesink.com/fitness">
 <meta property="og:image" content="https://kitesink.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fitness — tools &amp; notes for people who lift">
-<meta name="twitter:description" content="Vantix, six free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
+<meta name="twitter:description" content="Vantix, {{tools:n}} free calculators, and a sourced field guide to training, eating and health. Search it, or read by area.">
 <meta name="twitter:image" content="https://kitesink.com/og-image.png">
 <meta name="theme-color" content="#ece2cb">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -53,9 +53,118 @@
   window.addEventListener("pageswap", function (e) { if (e.viewTransition && root.classList.contains("fwd")) e.viewTransition.skipTransition(); });
 })();
 </script>
-<link rel="stylesheet" href="/ks.css?v=2027.14">
+<link rel="stylesheet" href="/ks.css?v=2027.25">
 <style>
-  .hero-note { margin-top: 22px; padding: 14px 16px; border-left: 3px solid var(--k-brass-fill); background: var(--k-tint); border-radius: 0 10px 10px 0; max-width: 64ch; font-size: 14.5px; line-height: 1.55; color: var(--k-copy); }
+  .hero-note { margin-top: clamp(20px, 3vw, 30px); max-width: 72ch; font: 500 11.5px/1.6 var(--k-mono); color: var(--k-mute); }
+
+  /* ---------- hero: the goal picker, the bar, the week ----------
+     On a phone: the words and the picker, then the card, then the search. On a wide screen:
+     the words, the picker and the search on the left, the card on the right. The picker and
+     the card are hidden in the HTML and shown by /fitness.js, like the search box. */
+  .fx { display: grid; gap: clamp(24px, 3.4vw, 52px); grid-template-areas: "copy" "rig" "find"; }
+  .fx > * { min-width: 0; }
+  .fx-copy { grid-area: copy; } .fx-rig { grid-area: rig; } .fx-find { grid-area: find; }
+  .fx-find .hub-find { margin-top: 0; }
+  .fx-find .hero-note { margin-top: 22px; }
+  /* the headline's last words follow the goal: they slide up and out, the new ones up and in */
+  .fx-word { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .08em; margin-bottom: -.08em; }
+  .fx-word span { display: inline-block; }
+  @keyframes fx-w-out { to { translate: 0 -105%; opacity: 0; } }
+  @keyframes fx-w-in { from { translate: 0 105%; opacity: 0; } }
+  .fx-word span.out { animation: fx-w-out .26s ease-in forwards; }
+  .fx-word span.in { animation: fx-w-in .38s var(--k-ease); }
+  @media (min-width: 980px) {
+    .fx { grid-template-columns: minmax(0, 1fr) minmax(340px, 400px); grid-template-rows: auto 1fr; grid-template-areas: "copy rig" "find rig"; align-items: start; row-gap: 26px; }
+    .fx-rig { rotate: -.8deg; margin-top: 18px; }
+  }
+  .fx-pick { margin-top: clamp(22px, 3vw, 30px); }
+  .fx-pick > .k-label { display: block; margin-bottom: 10px; }
+  .fx-goals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 660px; }
+  @media (min-width: 700px) { .fx-goals { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .fx-goal { display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: center; gap: 0 10px; min-height: 58px; padding: 9px 11px; text-align: left; cursor: pointer; font: inherit; color: var(--k-ink);
+    border: 1.5px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); transition: background .2s, border-color .2s, color .2s, translate .2s var(--k-ease), box-shadow .2s; }
+  .fx-goal:hover { border-color: var(--k-green); translate: 0 -2px; box-shadow: var(--k-shadow); }
+  .fx-goal-ic { grid-row: 1 / span 2; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--k-tint); color: var(--k-green); transition: background .2s, color .2s; }
+  .fx-goal-ic svg { width: 20px; height: 20px; }
+  .fx-goal-t { align-self: end; font: 600 14.5px/1.2 var(--k-sans); letter-spacing: -.015em; }
+  .fx-goal-s { align-self: start; font: 500 10.5px/1.35 var(--k-mono); color: var(--k-mute); }
+  @media (max-width: 520px) { .fx-goal { min-height: 52px; } .fx-goal-s { display: none; } .fx-goal-t { grid-row: 1 / span 2; align-self: center; } }
+  .fx-goal[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); box-shadow: var(--k-shadow); }
+  .fx-goal[aria-pressed="true"] .fx-goal-ic { background: var(--k-on-green); color: var(--k-green-fill); }
+  .fx-goal[aria-pressed="true"] .fx-goal-s { color: var(--k-on-green-mute); }
+  @keyframes fx-pop { 0% { rotate: 0deg; scale: 1; } 35% { rotate: -14deg; scale: 1.15; } 70% { rotate: 8deg; } 100% { rotate: 0deg; scale: 1; } }
+  .fx-level { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 14px; }
+  .fx-clear { border: 0; background: none; padding: 0 2px; min-height: 40px; cursor: pointer; font: 600 12px var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
+
+  .fx-rig { --fx-bar: #8a7a58; --fx-bar-hi: #b5a582; --fx-iron: #3a3222; --fx-edge: rgba(29,24,16,.35);
+    border: 1.5px solid var(--k-rule-strong); border-radius: 18px; background: var(--k-raised); box-shadow: var(--k-shadow); padding: 16px; display: grid; gap: 12px; }
+  html[data-theme="dark"] .fx-rig { --fx-bar: #9d8d69; --fx-bar-hi: #c9b991; --fx-iron: #4a4131; --fx-edge: rgba(242,234,214,.28); }
+  .fx-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 10px; }
+  .fx-kg { font: 800 clamp(24px, 3vw, 30px)/1 var(--k-sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; color: var(--k-ink); }
+  .fx-max { display: flex; align-items: center; gap: 6px; }
+  .fx-max label { font: 600 10px/1.2 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--k-mute); text-align: right; max-width: 7ch; }
+  .fx-max .with-unit { position: relative; }
+  .fx-max .with-unit .k-input { width: 92px; min-height: 40px; padding: 0 28px 0 10px; font: 600 14px var(--k-mono); font-variant-numeric: tabular-nums; }
+  .fx-max .with-unit span { right: 9px; font-size: 11px; }
+  .fx-pause { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-ink); cursor: pointer; display: grid; place-items: center; }
+  .fx-pause:hover { border-color: var(--k-green); color: var(--k-green); }
+  .fx-pause svg { width: 14px; height: 14px; }
+  .fx-plates { grid-column: 1 / -1; font: 500 11px/1.4 var(--k-mono); color: var(--k-mute); }
+  .fx-bar { display: block; width: 100%; height: auto; overflow: visible; }
+  .fx-plate { stroke: var(--fx-edge); stroke-width: 1; }
+  @keyframes fx-in-l { from { translate: -46px 0; opacity: 0; } }
+  @keyframes fx-in-r { from { translate: 46px 0; opacity: 0; } }
+  .fx-rx { margin: 0; font: 700 17px/1.3 var(--k-sans); letter-spacing: -.015em; color: var(--k-ink); text-wrap: balance; }
+  .fx-rx > span { color: var(--k-green); }
+  .fx-rx small { display: block; margin-top: 4px; font: 500 11px/1.5 var(--k-mono); letter-spacing: 0; color: var(--k-mute); }
+  .fx-rx small span { color: var(--k-brass); }
+  .fx-wk { border-top: 1px dashed var(--k-rule-strong); padding-top: 12px; display: grid; gap: 8px; }
+  .fx-wk-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .fx-leg { display: flex; gap: 10px; font: 500 10.5px var(--k-mono); color: var(--k-mute); }
+  .fx-leg i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 4px; }
+  .fx-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+  .fx-day { display: grid; justify-items: center; gap: 5px; padding: 7px 0 8px; border: 0; border-radius: 8px; background: transparent; cursor: pointer; font: inherit; color: inherit; transition: background .2s; }
+  .fx-day:hover { background: var(--k-tint); }
+  .fx-day .dl { font: 600 10px/1 var(--k-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--k-mute); }
+  .fx-day .blk { width: 100%; max-width: 34px; height: 22px; border-radius: 5px; background: var(--k-tint); box-shadow: inset 0 0 0 1px var(--k-rule); }
+  .fx-day.lift .blk, .fx-leg .lift { background: var(--k-green-fill); box-shadow: none; }
+  .fx-day.cardio .blk, .fx-leg .cardio { background: var(--k-tan); box-shadow: none; }
+  .fx-day.meet .blk, .fx-leg .meet { background: var(--k-brass-fill); box-shadow: none; }
+  .fx-day.empty .blk { background: transparent; box-shadow: inset 0 0 0 1.5px var(--k-rule-strong); }
+  .fx-day.today .dl { color: var(--k-ink); }
+  .fx-day.today .dl::after { content: ""; display: block; width: 4px; height: 4px; margin: 3px auto 0; border-radius: 50%; background: var(--k-brass-fill); }
+  .fx-day[aria-pressed="true"] { background: var(--k-tint); box-shadow: inset 0 0 0 1.5px var(--k-ink); }
+  @keyframes fx-blk { from { opacity: 0; translate: 0 6px; } }
+  .fx-say-day { min-height: 2.9em; margin: 0; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .fx-say-day b { color: var(--k-ink); font-weight: 600; }
+  .fx-ent { display: grid; gap: 4px; padding: 10px 12px; border-radius: 12px; background: var(--k-tint); }
+  .fx-ent-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .fx-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 20px; font: 600 10.5px/1.2 var(--k-mono); white-space: nowrap; background: var(--k-tint); color: var(--k-ink); box-shadow: inset 0 0 0 1px var(--k-rule-strong); }
+  .fx-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .fx-badge.strong { background: var(--k-green-fill); color: var(--k-on-green); box-shadow: none; }
+  .fx-badge.moderate { color: var(--k-brass); }
+  .fx-ent b { font: 600 14.5px/1.3 var(--k-sans); letter-spacing: -.01em; color: var(--k-ink); }
+  .fx-ent b a { text-decoration: none; } .fx-ent b a:hover { color: var(--k-green); text-decoration: underline; }
+  .fx-ent p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .fx-ent .cite { font-size: 10.5px; }
+  .fx-then { display: flex; flex-wrap: wrap; gap: 6px; }
+  .fx-then:empty { display: none; }
+  .fx-chip { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 5px 10px; border-radius: 20px; border: 1.5px solid var(--k-rule-strong); font: 600 12px/1.2 var(--k-sans); color: var(--k-ink); text-decoration: none; white-space: nowrap; }
+  .fx-chip:hover { border-color: var(--k-green); color: var(--k-green); }
+  .fx-chip small { font: 500 10px var(--k-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--k-mute); }
+  .fx-fade { transition: opacity .2s; } .fx-fade.swap { opacity: 0; }
+  /* what the chosen goal points at further down: a ring and a tick, never a dimmed neighbour */
+  .hub-card.fx-match, .vx-card.fx-match { outline: 3px solid var(--k-green); outline-offset: 4px; }
+  .k-seg [role="tab"].fx-match { box-shadow: inset 0 0 0 2px var(--k-green); }
+  .hub-card.fx-match { position: relative; }
+  .hub-card.fx-match::after { content: "\2713  Fits your goal"; position: absolute; top: -12px; right: 12px; padding: 5px 9px; border-radius: 20px; background: var(--k-green-fill); color: var(--k-on-green); font: 700 10px/1 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; }
+  @media (prefers-reduced-motion: no-preference) {
+    .fx-goal[aria-pressed="true"] .fx-goal-ic svg { animation: fx-pop .6s var(--k-ease); }
+    .fx-plate.in-l { animation: fx-in-l .42s var(--k-ease) both; }
+    .fx-plate.in-r { animation: fx-in-r .42s var(--k-ease) both; }
+    .fx-days.go .blk { animation: fx-blk .35s var(--k-ease) both; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fx-pause { display: none; } .fx-goal, .fx-fade { transition: none; } }
   .cite { font: 500 11.5px/1.5 var(--k-mono); color: var(--k-mute); white-space: normal; }
   .cite a { color: inherit; text-decoration: underline; text-decoration-color: var(--k-rule-strong); text-underline-offset: 2px; }
   .cite a:hover { color: var(--k-green); text-decoration-color: currentColor; }
@@ -111,7 +220,98 @@
   .vx-fine { font-size: 12.5px !important; line-height: 1.5 !important; margin-top: 14px; }
 
   /* ---------- tools ---------- */
+  /* My numbers: one line closed, a grid open */
+  .mine { margin-bottom: 18px; border: 1.5px solid var(--k-rule-strong); border-radius: 14px; background: var(--k-raised); }
+  .mine > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; min-height: 48px; padding: 10px 16px; cursor: pointer; list-style: none; }
+  .mine > summary::-webkit-details-marker { display: none; }
+  .mine-k { font: 600 11px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-green); }
+  .mine-s { flex: 1 1 14em; min-width: 0; font: 500 13px/1.45 var(--k-mono); color: var(--k-ink); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .mine-s.is-none { color: var(--k-mute); }
+  .mine-e { font: 600 12px/1.2 var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
+  .mine[open] .mine-e { text-decoration: none; }
+  .mine[open] .mine-e::after { content: " \2212"; }
+  .mine-body { display: grid; gap: 14px; padding: 4px 16px 16px; border-top: 1px solid var(--k-rule); }
+  .mine-why { max-width: 70ch; margin-top: 10px; }
+  .mine-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 14px; }
+  @media (min-width: 760px) { .mine-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .mine-grid .k-seg { justify-self: start; flex-wrap: nowrap; }
+  @media (max-width: 759px) { .mine-grid > .k-field:nth-child(-n+2) { grid-column: 1 / -1; } }
+  .k-opt { text-transform: none; letter-spacing: 0; }
+  .k-input[aria-invalid="true"] { border-color: var(--k-brass-fill); box-shadow: inset 0 0 0 1px var(--k-brass-fill); }
+  /* a result built on example inputs */
+  .ex-note { padding: 8px 12px; border-radius: 10px; background: rgba(216,176,122,.14); border: 1px dashed rgba(216,176,122,.55); color: #f3e3c4 !important; }
+  .ex-note[hidden] { display: none; }
+  /* a field-guide entry as a small card, and a guide table: scripts/build_fitness.py writes both */
+  .te { display: grid; gap: 4px; align-content: start; padding: 10px 12px; border-radius: 12px; background: var(--k-tint); }
+  .te p { margin: 0; }
+  .te-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font: 600 10px/1.3 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
+  .te-t { font: 600 14px/1.3 var(--k-sans); letter-spacing: -.01em; color: var(--k-ink); }
+  .te-t a { color: inherit; text-decoration: none; } .te-t a:hover { color: var(--k-green); text-decoration: underline; }
+  .te-s { font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  .te-do { margin: 2px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.45; color: var(--k-copy); }
+  /* on the light cards, the brass of a "some support" badge is a shade darker for 4.5:1 (the dark theme resets it below) */
+  .te .fx-badge.moderate, .tt-h .fx-badge.moderate { color: #6b440d; }
+  .tool-out .te { background: rgba(240,232,214,.08); }
+  .tool-out .te-top { color: #c2ceb9; } .tool-out .te-t { color: #f0e8d6; } .tool-out .te-s, .tool-out .te-do { color: #c2ceb9; }
+  .tool-out .te-t a:hover { color: #d8b07a; }
+  /* badges on the dark results card: a darker chip so every grade's text holds 4.5:1 */
+  .tool-out .fx-badge { background: rgba(0,0,0,.28); color: #f0e8d6; box-shadow: inset 0 0 0 1px rgba(240,232,214,.3); }
+  .tool-out .fx-badge.strong { background: #8fc39b; color: #1f3024; box-shadow: none; }
+  .tool-out .fx-badge.moderate { color: #ecc994; }
+  html[data-theme="dark"] .te .fx-badge.moderate, html[data-theme="dark"] .tt-h .fx-badge.moderate { color: var(--k-brass); }
+  html[data-theme="dark"] .tool-out .fx-badge.moderate { color: #ecc994; }
+  .te-list { display: grid; gap: 8px; }
+  .tt { display: grid; gap: 6px; }
+  .tt-h { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font: 600 13.5px/1.35 var(--k-sans); color: var(--k-ink); }
+  .tt-scroll { overflow-x: auto; border: 1px solid var(--k-rule); border-radius: 10px; }
+  .tt-scroll:focus-visible { outline: 2px solid var(--k-green); outline-offset: 2px; }
+  .tt table { width: 100%; border-collapse: collapse; font-size: 12.5px; line-height: 1.4; color: var(--k-copy); }
+  .tt th, .tt td { padding: 7px 9px; text-align: left; vertical-align: top; border-top: 1px solid var(--k-rule); }
+  .tt thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--k-mute); background: var(--k-tint); }
+  .tt tbody th { font-weight: 600; color: var(--k-ink); }
+  .tool-src { margin-top: 18px; }
   .tool { margin-top: 22px; }
+  .ac-base { display: grid; gap: 8px; padding: 14px; border-radius: 12px; background: var(--k-tint); }
+  .ac-base > .k-label { margin: 0; }
+  .ac-from { color: var(--k-ink) !important; }
+  .ac-need { display: grid; gap: 10px; justify-items: start; }
+  .ac-own { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 10px; }
+  .ac-own .k-label { grid-column: 1 / -1; }
+  .ac-own .with-unit { max-width: 180px; }
+  .ac-clear { border: 0; background: none; padding: 0; min-height: 40px; cursor: pointer; font: 600 12px var(--k-mono); color: var(--k-green); text-decoration: underline; text-underline-offset: 3px; }
+  .ac-levels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .ac-lv { display: grid; gap: 2px; padding: 10px 12px; text-align: left; border: 1.5px solid var(--k-rule-strong); border-radius: 12px; background: transparent; color: var(--k-ink); cursor: pointer; font: inherit; transition: background .2s, border-color .2s; }
+  .ac-lv:hover { border-color: var(--k-green); }
+  .ac-lv b { display: flex; justify-content: space-between; gap: 8px; font: 600 14.5px/1.25 var(--k-sans); }
+  .ac-lv b span { font: 600 12px/1.6 var(--k-mono); color: var(--k-green); }
+  .ac-lv small { font-size: 12.5px; line-height: 1.35; color: var(--k-copy); }
+  .ac-lv small + small { font: 500 11px/1.4 var(--k-mono); color: var(--k-mute); }
+  .ac-lv[aria-pressed="true"] { background: var(--k-green-fill); border-color: var(--k-green-fill); color: var(--k-on-green); }
+  .ac-lv[aria-pressed="true"] b span, .ac-lv[aria-pressed="true"] small { color: var(--k-on-green-mute); }
+  .ac-block { display: grid; gap: 14px; }
+  .ac-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .ac-rows li { display: grid; grid-template-columns: minmax(0, 1fr) 96px 40px; gap: 6px; align-items: center; }
+  .ac-rows .k-select, .ac-rows .k-input { min-height: 44px; }
+  .ac-rows .with-unit .k-input { padding-right: 36px; }
+  .ac-rows .with-unit span { right: 8px; }
+  @media (max-width: 560px) {
+    .ac-rows { gap: 10px; }
+    .ac-rows li { grid-template-columns: minmax(0, 1fr) 40px; padding-bottom: 10px; border-bottom: 1px solid var(--k-rule); }
+    .ac-rows li .k-select { grid-column: 1 / -1; }
+  }
+  .ac-x { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--k-rule-strong); background: transparent; color: var(--k-copy); cursor: pointer; font: 600 16px/1 var(--k-sans); }
+  .ac-x:hover { border-color: var(--k-green); color: var(--k-green); }
+  .tool-tabs { display: grid; gap: 10px; }
+  .tool-row { display: grid; gap: 6px; min-width: 0; }
+  .tool-row .k-seg { justify-self: start; }
+  /* a row of tabs that overflows (a phone) fades at the edge that has more to scroll to */
+  .tool-row .k-seg--scroll { --fl: 0px; --fr: 0px; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); }
+  .tool-row .k-seg--scroll.fade-l { --fl: 32px; } .tool-row .k-seg--scroll.fade-r { --fr: 32px; }
+  @media (prefers-reduced-motion: no-preference) { .tool-row .k-seg--scroll { scroll-behavior: smooth; } }
+  .tool-grp { font: 600 11px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--k-green); text-decoration: none; justify-self: start; }
+  .tool-grp::after { content: " \2192"; }
+  .tool-grp:hover { text-decoration: underline; text-underline-offset: 3px; }
+  @media (min-width: 760px) { .tool-row { grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 12px; } }
   .tool-grid { display: grid; gap: 18px; }
   @media (min-width: 920px) { .tool-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .tool-out { position: sticky; top: 130px; } }
   .tool-in { gap: 18px; }
@@ -119,10 +319,12 @@
   #vantix { padding-top: clamp(26px, 4vw, 44px); }
   .k-hero { padding-bottom: clamp(26px, 3.4vw, 40px); }
   .row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .row2.rest-row { align-items: end; }
+  @media (max-width: 519px) { .row2.rest-row { grid-template-columns: minmax(0, 1fr); } }   /* after .row2, so it wins */
   .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .with-unit { position: relative; }
   .with-unit .k-input { padding-right: 44px; }
-  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; }
+  .with-unit span { position: absolute; right: 12px; top: 50%; translate: 0 -50%; font: 500 12px var(--k-mono); color: var(--k-mute); pointer-events: none; z-index: 2; }   /* above the input: ks.css lifts inputs in a card to z-index 1 */
   .tool-out { background: #23402b; color: #f0e8d6; border-color: transparent; gap: 16px; }
   .tool-out .k-label { color: #a9b9a3; }
   .tool-out .k-stat, .tool-out .k-h3 { color: #f0e8d6; }
@@ -278,7 +480,83 @@
   .hub-n { margin-top: auto; padding-top: 10px; font: 500 12px/1.4 var(--k-mono); color: var(--k-mute); }
   .hub-n::after { content: " \2192"; color: var(--k-green); }
 
+  /* FFMI: the published groups as a list, with you in your place */
+  .ff-ref { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 2px; }
+  .ff-ref li { display: grid; grid-template-columns: 4.2em minmax(0, 1fr); gap: 4px 10px; align-items: baseline; padding: 6px 0; border-top: 1px solid rgba(240,232,214,.14); font-size: 13px; line-height: 1.35; color: #c2ceb9; }
+  .ff-ref li b { font: 600 13px/1.3 var(--k-mono); color: #f0e8d6; font-variant-numeric: tabular-nums; }
+  .ff-ref li i { grid-column: 2; display: block; height: 5px; border-radius: 3px; background: rgba(240,232,214,.25); }
+  .ff-ref li.you { color: #f0e8d6; font-weight: 600; }
+  .ff-ref li.you b { color: #d8b07a; }
+  .ff-ref li.you i { background: #d8b07a; }
+  .te-wrap { display: grid; gap: 8px; }
+  .te-wrap[hidden] { display: none; }
+
+  /* supplements */
+  #sp-pick { display: grid; gap: 14px; }
+  #sp-pick .k-tog[hidden] { display: none; }
+  /* the checker shows each card with its do list; the folded copy below, the no-script view, shows it without */
+  .tool-src .te-do { display: none; }
+  .sp-grp { display: grid; gap: 6px; }
+  .sp-grp[hidden] { display: none; }
+  .sp-grp .k-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .sp-card { display: grid; gap: 10px; }
+  .sp-card h3 { margin: 0; font: 800 clamp(22px, 3vw, 28px)/1.1 var(--k-sans); letter-spacing: -.03em; color: #f0e8d6; }
+  .sp-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; }
+  .sp-kv { margin: 0; display: grid; gap: 8px; }
+  .sp-kv div { padding-top: 8px; border-top: 1px solid rgba(240,232,214,.14); }
+  .sp-kv dt { font: 600 10.5px/1.5 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
+  .sp-kv dd { margin: 2px 0 0; font-size: 14.5px; line-height: 1.5; color: #f0e8d6; }
+  .sp-kv dd small { display: block; margin-top: 2px; font-size: 12.5px; color: #c2ceb9; }
+  .sp-dose { padding: 10px 12px; border-radius: 10px; background: rgba(216,176,122,.14); color: #f3e3c4; font-size: 14px; line-height: 1.5; }
+  .sp-dose b { font: 700 18px/1.3 var(--k-mono); color: #f0e8d6; }
+
+  /* weekly sets */
+  .st-in { width: 100%; border-collapse: collapse; }
+  .st-in th, .st-in td { padding: 4px 6px 4px 0; text-align: left; vertical-align: middle; }
+  .st-in thead th { font: 600 10px/1.4 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k-mute); }
+  .st-in tbody th { font: 600 14px/1.3 var(--k-sans); color: var(--k-ink); }
+  .st-in td { width: 32%; }
+  .st-in .k-input { min-height: 44px; }
+  .st-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .st-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; padding: 9px 0; border-top: 1px solid rgba(240,232,214,.14); font-size: 13px; line-height: 1.4; color: #c2ceb9; }
+  .st-list li > b { font: 600 14px/1.3 var(--k-sans); color: #f0e8d6; }
+  .st-list li > em { font: 600 14px/1.3 var(--k-mono); font-style: normal; color: #d8b07a; font-variant-numeric: tabular-nums; }
+  .st-list li > span { grid-column: 1 / -1; }
+  .st-bar { grid-column: 1 / -1; position: relative; height: 8px; border-radius: 4px; background: rgba(240,232,214,.12); }
+  .st-bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: #8fc39b; }
+  .st-bar s { position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(240,232,214,.5); }
+  .st-list .below .st-bar i { background: #d8a652; } .st-list .above .st-bar i { background: #e3936e; }
+
+  /* coming back */
+  .cb-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .cb-rows li { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(240,232,214,.16); color: #a9b9a3; font-size: 13px; line-height: 1.45; }
+  .cb-rows li b { display: block; font: 600 11px/1.4 var(--k-mono); letter-spacing: .1em; text-transform: uppercase; color: #a9b9a3; }
+  .cb-rows li p { margin: 2px 0 0; }
+  .cb-rows li[aria-current] { border-color: #d8b07a; background: rgba(216,176,122,.1); color: #e2d8c2; }
+  .cb-rows li[aria-current] b { color: #d8b07a; }
+  .cb-rows li[aria-current] p span { color: #a9b9a3; }
+  .cb-rows li:not([aria-current]) p:not(:first-of-type) { display: none; }
+
+  /* heart-rate zones */
+  .zl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .zl li { display: grid; gap: 3px; padding: 10px 0 10px 12px; border-top: 1px solid rgba(240,232,214,.14); border-left: 3px solid var(--z, rgba(240,232,214,.3)); }
+  .zl .zh { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font: 600 15px/1.3 var(--k-sans); color: #f0e8d6; }
+  .zl .zh b { font: 700 15px/1.3 var(--k-mono); color: #d8b07a; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .zl span { font-size: 13px; line-height: 1.45; color: #c2ceb9; }
+  .zl small { font: 500 11.5px/1.45 var(--k-mono); color: #a9b9a3; }
+  .te-list.te-list--one { grid-template-columns: minmax(0, 1fr); }
+
   /* meet attempt planner */
+  .wc { margin-top: 18px; display: grid; gap: 18px; }
+  @media (min-width: 920px) { .wc { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 24px; } .wc-cards { grid-column: 1 / -1; } }
+  .wc-in { display: grid; gap: 14px; }
+  .wc-h { margin: 0; font: 700 19px/1.25 var(--k-sans); letter-spacing: -.02em; color: var(--k-ink); }
+  .wc .tool-out { position: static; }
+  .wc-cards { display: grid; gap: 8px; }
+  .te-list { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
+  .k-check { display: flex; align-items: flex-start; gap: 10px; min-height: 44px; padding: 10px 0; font-size: 14.5px; line-height: 1.4; color: var(--k-ink); cursor: pointer; }
+  .k-check input { width: 20px; height: 20px; margin: 0; flex: none; accent-color: var(--k-green-fill); }
+  .k-check small { color: var(--k-mute); font-size: 12.5px; }
   .att { width: 100%; border-collapse: collapse; font: 500 14px/1.3 var(--k-mono); font-variant-numeric: tabular-nums; }
   .att th, .att td { padding: 10px 6px 10px 0; text-align: left; border-top: 1px solid rgba(240,232,214,.16); }
   .att thead th { border-top: 0; font: 600 10px/1.4 var(--k-mono); letter-spacing: .12em; text-transform: uppercase; color: #a9b9a3; }
@@ -296,23 +574,66 @@
 <main id="main">
 
   <section class="k-hero k-wrap" aria-labelledby="page-title">
-    <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
-    <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em>lift.</em></h1>
-    <p class="k-lead">Vantix is the flagship. Its free core is in progress; until it ships, six free calculators and a field guide cover the ground: {{n:total}} sourced entries in {{n:areas}} areas, from training basics to health. Everything runs in your browser.</p>
-    <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
-    <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
-      <label class="k-label" for="f-q">Search every entry</label>
-      <div class="hub-find-row">
-        <input class="k-input" id="f-q" type="search" placeholder="Protein, deload, zone 2, RIR…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="f-hint">
-        <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-clear" hidden>Clear</button>
+    <div class="fx" id="fx">
+      <div class="fx-copy">
+        <p class="k-seclabel"><span class="k-num">02</span><span style="view-transition-name:sec-fitness">Fitness</span></p>
+        <h1 class="k-h1" id="page-title">Tools &amp; notes for people who <em class="fx-word"><span id="fx-word">lift.</span></em></h1>
+        <p class="k-lead">{{tools:N}} free calculators and a sourced field guide, with Vantix, the flagship, on the way. Everything runs in your browser.</p>
+        <!-- The goal picker and its card are shown by /fitness.js, which reads #fx-data (scripts/build_fitness.py writes it from content/fitness/hero.json). Without scripts the cards below do the job. -->
+        <div class="fx-pick" id="fx-pick" hidden>
+          <p class="k-label" id="fx-pick-l">What are you after?</p>
+          <div class="fx-goals" id="fx-goals" role="group" aria-labelledby="fx-pick-l">
+            {{hero:goals}}
+          </div>
+          <div class="fx-level">
+            <span class="k-label" id="fx-lv-l">Lifting for</span>
+            <div class="k-seg" id="fx-lv" role="group" aria-labelledby="fx-lv-l"><button type="button" value="new">Under a year</button><button type="button" value="mid">1–3 years</button><button type="button" value="adv">3+ years</button></div>
+            <button type="button" class="fx-clear" id="fx-clear" hidden>Clear</button>
+          </div>
+        </div>
       </div>
-      <p class="k-small" id="f-hint">Looks in the title, the short answer and the glossary terms of all {{n:total}} entries. A result opens on its own page.</p>
-      <p class="hub-find-count" id="f-count"></p>
-      <p class="k-vh" id="f-say" role="status" aria-live="polite"></p>
-      <ol class="hub-hits" id="f-list" aria-label="Search results" hidden></ol>
-      <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-more" hidden>Show every result</button>
+      <div class="fx-rig" id="fx-rig" hidden>
+        <div class="fx-top">
+          <span class="fx-kg" id="fx-kg">20 kg</span>
+          <div class="fx-max"><label for="fx-max">Best squat</label><span class="with-unit"><input class="k-input" id="fx-max" type="number" inputmode="decimal" min="20" max="350" step="2.5" value="100"><span>kg</span></span>
+            <button type="button" class="fx-pause" id="fx-pause" aria-pressed="false" aria-label="Stop the bar moving"></button></div>
+          <span class="fx-plates" id="fx-plates">The empty bar.</span>
+        </div>
+        <svg class="fx-bar" viewBox="0 0 360 140" aria-hidden="true" focusable="false">
+          <g transform="translate(0 -5)">
+            <path id="fx-shaft" d="M8 75 Q180 75 352 75" fill="none" stroke="var(--fx-bar)" stroke-width="5" stroke-linecap="round"/>
+            <g id="fx-knurl" stroke="var(--fx-bar-hi)" stroke-width="1" opacity=".7"></g>
+            <g id="fx-l"></g><g id="fx-r"></g>
+          </g>
+        </svg>
+        <p class="fx-rx fx-fade" id="fx-rx"></p>
+        <div class="fx-wk">
+          <div class="fx-wk-top"><span class="k-label" id="fx-wk-t">A typical week</span><span class="fx-leg" aria-hidden="true"><span><i class="lift"></i>Lift</span><span><i class="cardio"></i>Cardio</span><span id="fx-leg-meet" hidden><i class="meet"></i>Meet</span></span></div>
+          <div class="fx-days" id="fx-days" role="group" aria-labelledby="fx-wk-t"></div>
+          <p class="fx-say-day" id="fx-day"></p>
+        </div>
+        <div class="fx-ent fx-fade" id="fx-ent"></div>
+        <div class="fx-then" id="fx-then"></div>
+        <p class="k-vh" id="fx-say" role="status" aria-live="polite"></p>
+      </div>
+      <div class="fx-find">
+        <!-- Shown by /fitness.js, which also loads its index (/fitness/search.json) when the box is first used. Without scripts the cards below do the job. -->
+        <div class="hub-find" id="find" role="search" aria-label="The field guide" hidden>
+          <label class="k-label" for="f-q">Search every entry</label>
+          <div class="hub-find-row">
+            <input class="k-input" id="f-q" type="search" placeholder="Protein, deload, zone 2, RIR…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="f-hint">
+            <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-clear" hidden>Clear</button>
+          </div>
+          <p class="k-small" id="f-hint">Looks in the title, the short answer and the glossary terms of all {{n:total}} entries. A result opens on its own page.</p>
+          <p class="hub-find-count" id="f-count"></p>
+          <p class="k-vh" id="f-say" role="status" aria-live="polite"></p>
+          <ol class="hub-hits" id="f-list" aria-label="Search results" hidden></ol>
+          <button type="button" class="k-btn k-btn--ghost k-btn--sm" id="f-more" hidden>Show every result</button>
+        </div>
+        <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains. Each one names its source and says how well supported it is. They’re general information, not medical advice.</p>
+      </div>
     </div>
-    <p class="hero-note">I’m not a coach or a dietitian. These are working notes from someone who trains. Each one names its source and says how well supported it is. They’re general information, not medical advice.</p>
+    <script type="application/json" id="fx-data">{{hero:data}}</script>
   </section>
 
   <nav class="k-subnav" aria-label="On this page"><div class="k-wrap">
@@ -390,17 +711,63 @@
   <section id="tools" class="k-band" aria-labelledby="h-tools">
     <div class="k-wrap">
       <header class="k-shead">
-        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">Six calculators. <em>No sign-up.</em></h2></div>
-        <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps nothing.</p>
+        <div><span class="k-num">Free tools</span> <h2 class="k-h2" id="h-tools">{{tools:N}} calculators. <em>No sign-up.</em></h2></div>
+        <p class="k-small" style="max-width:34ch">Your inputs stay in this browser and go nowhere else. The diet planner keeps only your shared numbers.</p>
       </header>
 
-      <div class="k-seg k-seg--scroll" role="tablist" aria-label="Tools">
-        <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
-        <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
-        <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
-        <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
-        <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
-        <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
+      <!-- My numbers: the body and lift numbers every tool starts from (localStorage ksFit.me). Hidden in
+           the HTML and shown by /fitness.js, which is what saves them. -->
+      <details class="mine" id="mine" hidden>
+        <summary><span class="mine-k">My numbers</span><span class="mine-s" id="me-sum">None yet</span><span class="mine-e">Edit</span></summary>
+        <div class="mine-body">
+          <p class="k-small mine-why">Type a number once and every tool starts from it. A tool uses a number only once you have typed it, here or in the tool; until then it shows an example and says so. Saved in this browser only.</p>
+          <div class="mine-grid">
+            <div class="k-field"><span class="k-label" id="me-units-l">Units</span><div class="k-seg" id="me-units" role="group" aria-labelledby="me-units-l"><button type="button" value="metric" aria-pressed="false">Metric</button><button type="button" value="imperial" aria-pressed="false">Imperial</button></div></div>
+            <div class="k-field"><span class="k-label" id="me-sex-l">Sex <span class="k-opt">for the equations</span></span><div class="k-seg" id="me-sex" role="group" aria-labelledby="me-sex-l"><button type="button" value="m" aria-pressed="false">Male</button><button type="button" value="f" aria-pressed="false">Female</button></div></div>
+            <label class="k-field"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="me-age" type="number" inputmode="numeric" min="16" max="95" placeholder="—"><span>yr</span></span></label>
+            <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="me-kg" type="number" inputmode="decimal" min="30" max="660" step="0.1" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="me-cm" type="number" inputmode="decimal" min="47" max="230" step="0.5" placeholder="—"><span id="me-hu">cm</span></span></label>
+            <label class="k-field"><span class="k-label">Body fat <span class="k-opt" id="me-bf-from"></span></span><span class="with-unit"><input class="k-input" id="me-bf" type="number" inputmode="decimal" min="3" max="60" step="0.1" placeholder="—"><span>%</span></span></label>
+            <label class="k-field"><span class="k-label">Best squat</span><span class="with-unit"><input class="k-input" id="me-squat" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Best bench</span><span class="with-unit"><input class="k-input" id="me-bench" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Best deadlift</span><span class="with-unit"><input class="k-input" id="me-dead" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="me-wu">kg</span></span></label>
+            <label class="k-field"><span class="k-label">Max heart rate <span class="k-opt">measured</span></span><span class="with-unit"><input class="k-input" id="me-hrmax" type="number" inputmode="numeric" min="100" max="230" placeholder="—"><span>bpm</span></span></label>
+            <label class="k-field"><span class="k-label">Resting heart rate</span><span class="with-unit"><input class="k-input" id="me-hrrest" type="number" inputmode="numeric" min="30" max="110" placeholder="—"><span>bpm</span></span></label>
+          </div>
+          <p class="k-small" id="me-bad" role="status" hidden></p>
+          <div class="k-actions"><button class="k-btn k-btn--sm k-btn--ghost" id="me-clear" type="button">Clear my numbers</button></div>
+          <p class="k-vh" id="me-say" role="status"></p>
+        </div>
+      </details>
+
+      <!-- The tools in the field guide's groups: a tablist per group, with the group's link beside it.
+           The arrow keys move through every tab, across both rows, in this order; /fitness.js reads
+           the tabs from here. A row that overflows scrolls, with a fade at the edge that has more.
+           The heading's count of calculators is the number of tabs; the build fills it in. -->
+      <div class="tool-tabs">
+        <div class="tool-row">
+          <a class="tool-grp" href="#training">Training</a>
+          <div class="k-seg k-seg--scroll" role="tablist" aria-label="Training tools">
+            <button type="button" role="tab" id="tab-reps" aria-controls="reps" aria-selected="false">Effective reps</button>
+            <button type="button" role="tab" id="tab-sets" aria-controls="sets" aria-selected="false">Weekly sets</button>
+            <button type="button" role="tab" id="tab-loads" aria-controls="loads" aria-selected="false">1RM &amp; loads</button>
+            <button type="button" role="tab" id="tab-attempts" aria-controls="attempts" aria-selected="false">Meet attempts</button>
+            <button type="button" role="tab" id="tab-comeback" aria-controls="comeback" aria-selected="false">Coming back</button>
+            <button type="button" role="tab" id="tab-zones" aria-controls="zones" aria-selected="false">Heart-rate zones</button>
+            <button type="button" role="tab" id="tab-travel" aria-controls="travel" aria-selected="false">Travel workout</button>
+          </div>
+        </div>
+        <div class="tool-row">
+          <a class="tool-grp" href="#food-and-body">Food and body</a>
+          <div class="k-seg k-seg--scroll" role="tablist" aria-label="Food and body tools">
+            <button type="button" role="tab" id="tab-macros" aria-controls="macros" aria-selected="true">Energy &amp; macros</button>
+            <button type="button" role="tab" id="tab-activity" aria-controls="activity" aria-selected="false">Activity multiplier</button>
+            <button type="button" role="tab" id="tab-plan" aria-controls="plan" aria-selected="false">Diet planner</button>
+            <button type="button" role="tab" id="tab-bodyfat" aria-controls="bodyfat" aria-selected="false">Navy body fat</button>
+            <button type="button" role="tab" id="tab-ffmi" aria-controls="ffmi" aria-selected="false">FFMI &amp; goal weight</button>
+            <button type="button" role="tab" id="tab-supplements" aria-controls="supplements" aria-selected="false">Supplements</button>
+          </div>
+        </div>
       </div>
 
       <!-- ---------- 1. energy & macros ---------- -->
@@ -427,6 +794,10 @@
                   <option value="1.8" data-short="active">Active · on your feet or training hard</option>
                   <option value="2.0" data-short="very active">Vigorous · physical job + hard training</option>
                 </select></label>
+            </div>
+            <div class="row2 rest-row">
+              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="m-src"><option value="cat">Body fat category</option><option value="mifflin">Mifflin-St Jeor</option><option value="cunningham">Cunningham</option></select></label>
+              <label class="k-field" id="m-cat-wrap"><span class="k-label">Category</span><select class="k-select" id="m-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
             </div>
             <div class="k-field"><span class="k-label" id="m-goal-l">Goal</span><div class="k-seg" id="m-goal" role="group" aria-labelledby="m-goal-l"><button type="button" value="lose">Lose fat</button><button type="button" value="hold">Maintain</button><button type="button" value="gain">Gain muscle</button></div></div>
             <label class="k-field" id="m-rate-wrap"><span class="k-label"><span id="m-rate-label">Rate of loss</span><span id="m-rate-read" style="text-transform:none;letter-spacing:0">0.50% of body weight / week</span></span><input class="k-range" id="m-rate" type="range" min="0.25" max="1" step="0.05" value="0.5"></label>
@@ -460,13 +831,14 @@
               </div>
             </div>
             <p class="warn" id="m-warn" hidden></p>
+            <p class="k-small ex-note" id="m-ex" hidden></p>
             <div class="kv hide-empty">
               <div><span class="k-label">Maintenance</span><b id="m-maint">—</b></div>
               <div><span class="k-label">Expected change</span><b id="m-change">—</b></div>
               <div><span class="k-label">Resting energy</span><b id="m-rmr">—</b><span class="k-small" id="m-eq" style="font-size:12px">Mifflin-St Jeor</span></div>
               <div><span class="k-label">Activity level</span><b id="m-pal">—</b></div>
             </div>
-            <p class="k-small">A starting estimate. The best equation lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. {{c:mifflin1990,frankenfield2005,cunningham1991,fao2004}}</p>
+            <p class="k-small">A starting estimate. Resting energy starts from KiteSink’s own working numbers: 10, 9 or 8 kcal per lb of body weight by body fat category, with day levels of × 1.1 to 1.5 and training added in the activity multiplier. The published equations are there to choose instead; the best of them lands within 10% of measured resting energy for most people, not all. Run it for two or three weeks, watch the trend on the scale, then adjust. {{c:mifflin1990,frankenfield2005,cunningham1991,fao2004}}</p>
           </div>
         </div>
       </div>
@@ -496,19 +868,60 @@
         </div>
       </div>
 
+      <!-- ---------- weekly sets per muscle: the guide's weekly-sets lines ---------- -->
+      <div class="tool" id="sets" role="tabpanel" aria-labelledby="tab-sets">
+        <p class="k-copy tool-intro">Count the hard sets each muscle group gets in a week. A set where the muscle only helps counts half a set, as in the {{e:hyp-volume-dose-response|dose-response analysis}}, and each total is read against the guide’s {{e:hyp-table-rest-and-sets|weekly-sets lines}}.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <table class="st-in"><caption class="k-vh">Hard sets a week, by muscle group</caption>
+              <thead><tr><th scope="col">Muscle group</th><th scope="col" id="st-d-h">Direct sets</th><th scope="col" id="st-h-h">Helper sets</th></tr></thead>
+              <tbody>
+              <tr><th scope="row" id="st-shoulders-n">Shoulders</th><td><input class="k-input" id="st-shoulders-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-shoulders-n st-d-h"></td><td><input class="k-input" id="st-shoulders-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-shoulders-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-back-n">Back</th><td><input class="k-input" id="st-back-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-back-n st-d-h"></td><td><input class="k-input" id="st-back-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-back-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-chest-n">Chest</th><td><input class="k-input" id="st-chest-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-chest-n st-d-h"></td><td><input class="k-input" id="st-chest-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-chest-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-abs-n">Abdominals</th><td><input class="k-input" id="st-abs-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-abs-n st-d-h"></td><td><input class="k-input" id="st-abs-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-abs-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-legs-n">Legs</th><td><input class="k-input" id="st-legs-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-legs-n st-d-h"></td><td><input class="k-input" id="st-legs-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-legs-n st-h-h"></td></tr>
+              <tr><th scope="row" id="st-arms-n">Arms</th><td><input class="k-input" id="st-arms-d" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-arms-n st-d-h"></td><td><input class="k-input" id="st-arms-h" type="number" inputmode="decimal" min="0" max="60" step="1" placeholder="0" aria-labelledby="st-arms-n st-h-h"></td></tr>
+              </tbody>
+            </table>
+            <p class="k-small">Direct: the muscle is the target, as the chest is in a bench press. Helper: it works without being the target, as the triceps do in a bench press or the biceps in a row. A hard set is one taken close to failure. The six groups are KiteSink’s.</p>
+            <div class="k-actions"><button class="k-btn k-btn--sm k-btn--ghost" id="st-clear" type="button">Clear the week</button></div>
+          </div>
+          <div class="k-card tool-out" id="st-out">
+            <p class="k-vh" id="st-say" role="status"></p>
+            <div><p class="k-label">Your week</p><p class="k-stat"><span id="st-big">—</span></p><p class="k-small" id="st-sub">Enter the hard sets a muscle group gets in a week.</p></div>
+            <ol class="st-list hide-empty" id="st-list" aria-label="Weekly sets by muscle group"></ol>
+            <p class="k-small hide-empty" id="st-key"></p>
+            <div class="te-wrap hide-empty" id="st-fast" hidden>{{tools:entry-do:hyp-mistake-volume-too-fast}}</div>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">This counts sets. <a href="/vantix">Vantix</a> reads each set’s reps in reserve and lets you set the band per muscle.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- ---------- 3. 1RM & loads ---------- -->
       <div class="tool" id="loads" role="tabpanel" aria-labelledby="tab-loads">
         <p class="k-copy tool-intro">Enter a set you’ve done. It estimates your one-rep max, then tells you what to put on the bar for a target number of reps with a chosen number left in reserve.</p>
         <div class="tool-grid">
           <div class="k-card tool-in">
-            <div class="k-field"><span class="k-label" id="l-units-l">Units</span><div class="k-seg" id="l-units" role="group" aria-labelledby="l-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="l-units-l">Units</span><div class="k-seg" id="l-units" role="group" aria-labelledby="l-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+              <div class="k-field"><span class="k-label" id="l-fx-l">Effort as</span><div class="k-seg" id="l-fx" role="group" aria-labelledby="l-fx-l"><button type="button" value="rir">RIR</button><button type="button" value="rpe">RPE</button></div></div>
+            </div>
             <div class="row2">
               <label class="k-field"><span class="k-label">Weight lifted</span><span class="with-unit"><input class="k-input" id="l-w" type="number" inputmode="decimal" min="1" step="0.5" value="100"><span id="l-unit">kg</span></span></label>
               <label class="k-field"><span class="k-label">Reps you got</span><input class="k-input" id="l-reps" type="number" inputmode="numeric" min="1" max="20" value="5"></label>
             </div>
+            <label class="k-field"><span class="k-label">How hard was that set? <span class="k-opt">optional</span></span>
+              <select class="k-select" id="l-rir"><option value="0" selected>0 in reserve: to failure</option><option value="0.5">0 to 1 in reserve</option><option value="1">1 in reserve</option><option value="2">2 in reserve</option><option value="3">3 in reserve</option><option value="4">4 in reserve</option><option value="5">5 in reserve</option></select></label>
+            <div class="te-wrap" id="l-rir-card" hidden>{{tools:entry:pl-mistake-rpe-guess}}</div>
             <p class="k-label" style="margin-top:4px">What should I load?</p>
             <label class="k-field"><span class="k-label">Target reps<span id="l-treps-read" style="text-transform:none;letter-spacing:0">8 reps</span></span><input class="k-range" id="l-treps" type="range" min="1" max="15" step="1" value="8"></label>
-            <label class="k-field"><span class="k-label">Left in reserve<span id="l-trir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="l-trir" type="range" min="0" max="5" step="1" value="2"></label>
+            <label class="k-field"><span class="k-label"><span id="l-trir-l">Left in reserve</span><span id="l-trir-read" style="text-transform:none;letter-spacing:0">2 in reserve</span></span><input class="k-range" id="l-trir" type="range" min="0" max="5" step="1" value="2" aria-describedby="l-feel"></label>
+            <p class="k-small" id="l-feel"></p>
+            <details class="more">
+              <summary>The RPE chart this reads</summary>
+              <div>{{tools:table:pl-table-rpe-rir}}<p class="k-small">KiteSink reads reps in reserve as 10 minus RPE, so RPE 9.5 counts as half a rep in reserve; the chart gives 0 to 1. The estimate treats a set with reps in reserve as the same set taken to failure: 5 reps with 2 in reserve counts as 7 reps.</p></div>
+            </details>
           </div>
           <div class="k-card tool-out" id="l-out">
             <p class="k-vh" id="l-say" role="status"></p>
@@ -522,7 +935,70 @@
               <thead><tr><th scope="col">% of 1RM</th><th scope="col">Load</th><th scope="col">Reps to failure</th></tr></thead>
               <tbody id="l-rows"></tbody>
             </table>
-            <p class="k-small">For sets of up to ten reps the estimate is the average of two published equations, Epley’s and Brzycki’s, shown above; past ten it is Epley’s alone, and the two meet at ten. Every load on this card inverts that same estimate, so the numbers agree with each other. Both equations work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. {{c:brzycki1993,reynolds2006,lesuer1997}}</p>
+            <p class="k-small">For sets of up to ten reps the estimate is the average of two published equations, Epley’s and Brzycki’s, shown above; past ten it is Epley’s alone, and the two meet at ten. A set stopped short of failure counts its reps in reserve as reps. Every load on this card inverts that same estimate, so the numbers agree with each other. Both equations work best from sets of ten reps or fewer, and common equations have under-estimated the deadlift. {{c:brzycki1993,reynolds2006,lesuer1997}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- coming back after a break: the guide's return table ---------- -->
+      <div class="tool" id="comeback" role="tabpanel" aria-labelledby="tab-comeback">
+        <p class="k-copy tool-intro">Time off training: what studies saw over a break that long, how to restart and roughly how long getting back takes, from the guide’s {{e:rec-table-return-by-break|return table}}. After a long break it also works out starting loads from your old bests.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Time away</span><input class="k-input" id="cb-n" type="number" inputmode="numeric" min="1" max="999" value="2"></label>
+              <div class="k-field"><span class="k-label" id="cb-unit-l">In</span><div class="k-seg" id="cb-unit" role="group" aria-labelledby="cb-unit-l"><button type="button" value="d">Days</button><button type="button" value="w">Weeks</button><button type="button" value="m">Months</button></div></div>
+            </div>
+            <div class="k-field"><span class="k-label" id="cb-units-l">Loads in</span><div class="k-seg" id="cb-units" role="group" aria-labelledby="cb-units-l"><button type="button" value="kg">kg</button><button type="button" value="lb">lb</button></div></div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Old best squat</span><span class="with-unit"><input class="k-input" id="cb-squat" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="cb-u">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Old best bench</span><span class="with-unit"><input class="k-input" id="cb-bench" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="cb-u">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Old best deadlift</span><span class="with-unit"><input class="k-input" id="cb-dead" type="number" inputmode="decimal" min="1" step="0.5" placeholder="—"><span class="cb-u">kg</span></span></label>
+            </div>
+            <p class="k-small">Optional, and used only after many months away. The rows’ edges are KiteSink’s: up to 5 days, 6 days to under a month, 1 to under 4 months, and 4 months or more, with a month counted as 30 days. The one-month line follows the guide: {{e:rec-num-return-ratio|the twice-the-time-off rule}} stops applying there.</p>
+            <div class="te-list te-list--one">{{tools:entry-do:rec-injury-return-rules}}{{tools:entry-do:rec-severe-soreness-warning}}</div>
+            <p class="k-small">Also in the guide: {{e:rec-mistake-restart-old-weights|why your old weights are the wrong place to restart}}, and {{e:rec-maintenance-dose|how little training holds most of your strength}} when time is short.</p>
+          </div>
+          <div class="k-card tool-out" id="cb-out">
+            <p class="k-vh" id="cb-say" role="status"></p>
+            <div><p class="k-label">Your break</p><p class="k-stat"><span id="cb-big">—</span></p><p class="k-small" id="cb-sub">Enter how long you were away.</p></div>
+            <ol class="cb-rows hide-empty" id="cb-rows" aria-label="The guide's rows, by time away"></ol>
+            <p class="k-small hide-empty" id="cb-back"></p>
+            <div class="hide-empty" id="cb-loads-wrap" hidden><p class="k-label">Starting loads</p><table class="ltable"><caption class="k-vh">Starting loads from your old bests</caption><thead><tr><th scope="col">Lift</th><th scope="col">Old best</th><th scope="col">Start at</th></tr></thead><tbody id="cb-loads"></tbody></table><p class="k-small" id="cb-loads-note"></p></div>
+            <div class="te-wrap hide-empty" id="cb-long" hidden>{{tools:entry-do:rec-return-after-long-layoff}}</div>
+          </div>
+        </div>
+        <details class="more tool-src">
+          <summary>The return table</summary>
+          <div>{{tools:table:rec-table-return-by-break}}</div>
+        </details>
+      </div>
+
+      <!-- ---------- heart-rate zones: the guide's five-zone scale on your maximum ---------- -->
+      <div class="tool" id="zones" role="tabpanel" aria-labelledby="tab-zones">
+        <p class="k-copy tool-intro">Five heart-rate zones as shares of your maximum, from the {{e:cond-table-five-zone-scale|five-zone scale}} used in Norwegian endurance sport, with how each one feels and the talk test. A maximum you have measured beats one from your age.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-field"><span class="k-label" id="z-src-l">Maximum heart rate from</span><div class="k-seg" id="z-src" role="group" aria-labelledby="z-src-l"><button type="button" value="age">My age</button><button type="button" value="max">My measured max</button></div></div>
+            <div class="row2">
+              <label class="k-field" id="z-age-wrap"><span class="k-label">Age</span><span class="with-unit"><input class="k-input" id="z-age" type="number" inputmode="numeric" min="16" max="95" value="40"><span>yr</span></span></label>
+              <label class="k-field" id="z-max-wrap" hidden><span class="k-label">Maximum heart rate</span><span class="with-unit"><input class="k-input" id="z-max" type="number" inputmode="numeric" min="100" max="230" placeholder="—"><span>bpm</span></span></label>
+              <label class="k-field"><span class="k-label">Resting heart rate <span class="k-opt">optional</span></span><span class="with-unit"><input class="k-input" id="z-rest" type="number" inputmode="numeric" min="30" max="110" placeholder="—"><span>bpm</span></span></label>
+            </div>
+            <p class="k-small">Resting heart rate is shown for context and does not move the zones: the table gives them as shares of maximum, and the guide has no source for zones built on the gap between resting and maximum.</p>
+            <div class="te-list te-list--one">{{tools:entry-do:hlth-mistake-age-formula}}{{tools:entry:cond-mistake-heart-rate-short-intervals}}</div>
+            <details class="more">
+              <summary>The tables this reads</summary>
+              <div>{{tools:table:cond-table-five-zone-scale}}{{tools:table:hlth-tbl-hr-zones}}</div>
+            </details>
+          </div>
+          <div class="k-card tool-out" id="z-out">
+            <p class="k-vh" id="z-say" role="status"></p>
+            <div><p class="k-label">Maximum heart rate</p><p class="k-stat"><span id="z-hrmax">—</span><small>bpm</small></p><p class="k-small" id="z-sub">Enter your age or your measured maximum.</p></div>
+            <ol class="zl hide-empty" id="z-list" aria-label="Your heart-rate zones"></ol>
+            <p class="k-small hide-empty" id="z-rest-read"></p>
+            <p class="k-small ex-note" id="z-ex" hidden></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">Each zone’s last line places its middle in the <a href="#activity">activity multiplier</a>’s cardio bands (130 and under, 130 to 155, 155 to 180 beats a minute). Those bands are KiteSink’s own fixed numbers, not the guide’s, and they do not move with your maximum.</p>
           </div>
         </div>
       </div>
@@ -576,9 +1052,179 @@
               <thead><tr><th scope="col">Lift</th><th scope="col">Opener</th><th scope="col">Second</th><th scope="col">Third</th></tr></thead>
               <tbody id="a-rows"></tbody>
             </table>
+            <p class="k-small ex-note" id="a-ex" hidden></p>
             <div class="kv hide-empty"><div><span class="k-label">Total if every third goes</span><b id="a-total">—</b></div><div><span class="k-label">Total on seconds</span><b id="a-total2">—</b></div></div>
             <div class="wk hide-empty"><h3 id="a-warm-h">Warm-up ladder</h3><ol class="wu" id="a-ladder"></ol></div>
             <p class="k-small">These percentages are a common coaching convention, not a rule or a study result: an opener you could lift for a triple, a second that sets up the third, and a third near your best. Meets load in kilograms in 2.5 kg steps, so every attempt is rounded to that. Change a later attempt on the day by how the last one moved.</p>
+          </div>
+        </div>
+
+        <!-- weight class finder: the IPF classes from the guide's class table (#tool-data) -->
+        <section class="k-card wc" aria-labelledby="wc-h">
+          <div class="wc-in">
+            <h3 class="wc-h" id="wc-h">Which IPF weight class?</h3>
+            <p class="k-small">Your class by the IPF’s 2026 limits, from the guide’s {{e:meet-table-ipf-classes|class table}}. A limit includes its own number: 59.0 kg is the 59 kg class. Other federations draw other lines: {{e:meet-federations-differ|classes differ between federations}}.</p>
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="wc-sex-l">Classes for</span><div class="k-seg" id="wc-sex" role="group" aria-labelledby="wc-sex-l"><button type="button" value="m">Men</button><button type="button" value="f">Women</button></div></div>
+              <label class="k-field"><span class="k-label">Body weight</span><span class="with-unit"><input class="k-input" id="wc-kg" type="number" inputmode="decimal" min="30" max="300" step="0.05" value="80"><span id="wc-u">kg</span></span></label>
+            </div>
+            <label class="k-check"><input type="checkbox" id="wc-jr"><span>Sub-junior or junior lifter <small>(the lightest class is theirs only)</small></span></label>
+          </div>
+          <div class="k-card tool-out wc-out" id="wc-out">
+            <p class="k-vh" id="wc-say" role="status"></p>
+            <div><p class="k-label">Your class</p><p class="k-stat"><span id="wc-class">—</span></p><p class="k-small" id="wc-sub">Enter your body weight.</p></div>
+            <p class="k-small" id="wc-below"></p>
+            <p class="k-small ex-note" id="wc-ex" hidden></p>
+          </div>
+          <div class="wc-cards">
+            <p class="k-label">Before you think about a cut</p>
+            <div class="te-list">{{tools:entry:meet-step-register-class}}{{tools:entry:pl-weight-class-choice}}{{tools:entry:claim-water-cut-first-meet}}{{tools:entry:pl-num-cut-prevalence}}{{tools:entry:pl-cut-risks}}</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ---------- 7. navy body fat ---------- -->
+      <div class="tool" id="bodyfat" role="tabpanel" aria-labelledby="tab-bodyfat">
+        <p class="k-copy tool-intro">The US Navy tape method: a body fat estimate from your height and a few circumferences. All it needs is a tape measure. Like every method, it estimates; use it to follow a trend, measured the same way each time.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="bf-units-l">Units</span><div class="k-seg" id="bf-units" role="group" aria-labelledby="bf-units-l"><button type="button" value="cm">cm</button><button type="button" value="in">in</button></div></div>
+              <div class="k-field"><span class="k-label" id="bf-sex-l">Sex (for the equation)</span><div class="k-seg" id="bf-sex" role="group" aria-labelledby="bf-sex-l"><button type="button" value="m">Male</button><button type="button" value="f">Female</button></div></div>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="bf-h" type="number" inputmode="decimal" min="50" max="250" step="0.5" value="178"><span class="bf-u">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Neck <span style="text-transform:none;letter-spacing:0">below the larynx</span></span><span class="with-unit"><input class="k-input" id="bf-neck" type="number" inputmode="decimal" min="10" max="80" step="0.5" value="38"><span class="bf-u">cm</span></span></label>
+            </div>
+            <div class="row2">
+              <label class="k-field"><span class="k-label" id="bf-waist-l">Abdomen <span style="text-transform:none;letter-spacing:0">at the navel</span></span><span class="with-unit"><input class="k-input" id="bf-waist" type="number" inputmode="decimal" min="30" max="250" step="0.5" value="86"><span class="bf-u">cm</span></span></label>
+              <label class="k-field" id="bf-hip-wrap" hidden><span class="k-label">Hips <span style="text-transform:none;letter-spacing:0">at the widest</span></span><span class="with-unit"><input class="k-input" id="bf-hip" type="number" inputmode="decimal" min="30" max="250" step="0.5" value="97"><span class="bf-u">cm</span></span></label>
+            </div>
+            <label class="k-field"><span class="k-label">Body weight <span style="text-transform:none;letter-spacing:0">optional, for fat and lean mass</span></span><span class="with-unit"><input class="k-input" id="bf-kg" type="number" inputmode="decimal" min="25" max="300" step="0.1" placeholder="—"><span id="bf-kg-u">kg</span></span></label>
+            <details class="more">
+              <summary>How to measure</summary>
+              <p class="k-small" id="bf-how"></p>
+            </details>
+          </div>
+          <div class="k-card tool-out is-empty" id="bf-out">
+            <p class="k-vh" id="bf-say" role="status"></p>
+            <div><p class="k-label">Estimated body fat</p><p class="k-stat"><span id="bf-pct">—<small>%</small></span></p><p class="k-small" id="bf-sub">Enter your measurements.</p></div>
+            <div class="kv hide-empty" id="bf-mass" hidden><div><span class="k-label">Fat mass</span><b id="bf-fm">—</b></div><div><span class="k-label">Lean mass</span><b id="bf-lm">—</b></div></div>
+            <p class="k-small ex-note" id="bf-ex" hidden></p>
+            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="bf-use" type="button">Use as my body fat</button></div>
+            <p class="k-small" id="bf-warn" hidden></p>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">The equations are the US Navy’s, built on Navy men and women from height and tape measures. Against DXA in 1,407 Army recruits they read about 6 points low on average, with a typical error of about 3.4 points for men and 4.1 for women. A tape used the same way each time is good for following change; one reading is a rough guide. <a href="/fitness/bodycomp#comp-methods-estimate">Every body fat method estimates</a>. {{c:hodgdon1984m,hodgdon1984f,foulis2023}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- FFMI & goal weight: the guide's body composition arithmetic ---------- -->
+      <div class="tool" id="ffmi" role="tabpanel" aria-labelledby="tab-ffmi">
+        <p class="k-copy tool-intro">How much of you is lean mass, your fat-free mass index (FFMI) beside published groups, and the weight a target body fat comes to if your lean mass holds. The sums are the field guide’s {{e:comp-table-arithmetic|body composition arithmetic}}, worked on your numbers.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="row2">
+              <div class="k-field"><span class="k-label" id="ff-units-l">Units</span><div class="k-seg" id="ff-units" role="group" aria-labelledby="ff-units-l"><button type="button" value="metric">Metric</button><button type="button" value="imperial">Imperial</button></div></div>
+              <div class="k-field"><span class="k-label" id="ff-sex-l">Compare with</span><div class="k-seg" id="ff-sex" role="group" aria-labelledby="ff-sex-l"><button type="button" value="m">Men</button><button type="button" value="f">Women</button></div></div>
+            </div>
+            <div class="row3">
+              <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="ff-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="{{tools:val:arith.kg}}"><span id="ff-w-u">kg</span></span></label>
+              <label class="k-field"><span class="k-label">Height</span><span class="with-unit"><input class="k-input" id="ff-h" type="number" inputmode="decimal" min="47" max="230" step="0.5" value="{{tools:val:arith.cm}}"><span id="ff-h-u">cm</span></span></label>
+              <label class="k-field"><span class="k-label">Body fat</span><span class="with-unit"><input class="k-input" id="ff-bf" type="number" inputmode="decimal" min="3" max="60" step="0.1" value="{{tools:val:arith.bf}}"><span>%</span></span></label>
+            </div>
+            <p class="k-small" id="ff-bf-from" hidden></p>
+            <label class="k-field"><span class="k-label">Target body fat</span><span class="with-unit"><input class="k-input" id="ff-t" type="number" inputmode="decimal" min="3" max="59" step="0.5" value="{{tools:val:arith.target}}"><span>%</span></span></label>
+            <p class="k-small">No body fat figure? <a href="#bodyfat">Navy body fat</a> estimates one from a tape measure. Every method estimates: {{e:comp-methods-estimate|how far each one can be off}}.</p>
+            <details class="more">
+              <summary>The sums this uses</summary>
+              <div>{{tools:table:comp-table-arithmetic}}</div>
+            </details>
+          </div>
+          <div class="k-card tool-out" id="ff-out">
+            <p class="k-vh" id="ff-say" role="status"></p>
+            <div><p class="k-label">Your FFMI</p><p class="k-stat"><span id="ff-ffmi">—</span><small>kg/m²</small></p><p class="k-small" id="ff-sub">Enter weight, height and body fat.</p></div>
+            <div class="kv hide-empty"><div><span class="k-label">Lean mass</span><b id="ff-lean">—</b></div><div><span class="k-label">Fat mass</span><b id="ff-fat">—</b></div></div>
+            <div class="hide-empty"><p class="k-label" id="ff-ref-h">Beside published groups</p><ol class="ff-ref" id="ff-ref" aria-labelledby="ff-ref-h"></ol><p class="k-small" id="ff-norm"></p></div>
+            <div class="te-wrap hide-empty" id="ff-25">{{tools:entry:comp-ffmi-not-a-drug-test}}</div>
+            <div class="kv hide-empty" id="ff-goal-kv"><div><span class="k-label" id="ff-goal-l">Weight at 15%, if lean mass holds</span><b id="ff-goal">—</b></div><div><span class="k-label">Fat to lose</span><b id="ff-lose">—</b></div></div>
+            <p class="k-small hide-empty" id="ff-weeks"></p>
+            <div class="k-actions hide-empty" id="ff-plan-wrap"><button class="k-btn k-btn--sm" id="ff-plan" type="button">Plan this loss in Energy &amp; macros</button></div>
+            <div class="te-wrap hide-empty" id="ff-hi" hidden><p class="warn" id="ff-hi-t"></p>{{tools:entry:comp-mistake-ffmi-high-fat}}</div>
+            <p class="k-small ex-note" id="ff-ex" hidden></p>
+            <div class="te-wrap hide-empty">{{tools:entry:comp-mistake-all-loss-is-fat}}</div>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">The goal weight assumes every kilo lost is fat. How much of a loss is lean depends on how lean you start, as {{e:comp-table-forbes|Forbes’s review of feeding studies}} shows; its people were not lifting, so no second figure is worked out here. FFMI landmarks are from {{e:comp-table-ffmi-reference|published samples}} measured in different ways: rough guides, not grades.</p>
+          </div>
+        </div>
+        <details class="more tool-src">
+          <summary>The FFMI reference table</summary>
+          <div>{{tools:table:comp-table-ffmi-reference}}{{tools:entry:comp-kouri-ceiling}}</div>
+        </details>
+      </div>
+
+      <!-- ---------- supplement checker: the guide's supplement rows and entries, one at a time ---------- -->
+      <div class="tool" id="supplements" role="tabpanel" aria-labelledby="tab-supplements">
+        <p class="k-copy tool-intro">Pick a supplement and read what the field guide found: the evidence, what it does, the dose studied and the cautions, in the guide’s own words. The one sum is a caffeine dose for your weight. None of it is a recommendation; ask a doctor or pharmacist before you start anything, above all with a medicine.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <label class="k-field"><span class="k-label">Find a supplement</span><input class="k-input" id="sp-q" type="search" autocomplete="off" spellcheck="false" placeholder="e.g. creatine, iron" aria-describedby="sp-count"></label>
+            <p class="k-small" id="sp-count" aria-live="polite"></p>
+            <div id="sp-pick"></div>
+          </div>
+          <div class="k-card tool-out" id="sp-out">
+            <p class="k-vh" id="sp-say" role="status"></p>
+            <div id="sp-card"><p class="k-label">Supplement</p><p class="k-small">Pick one to read the guide on it.</p></div>
+            <p class="k-small ex-note" id="sp-ex" hidden></p>
+          </div>
+        </div>
+        <details class="more tool-src">
+          <summary>Everything the checker reads, as the guide prints it</summary>
+          <div>{{tools:table:nut-table-supplements}}{{tools:table:wom-table-fat-loss-ingredients}}<div class="te-list">{{tools:entry-do:hlth-creatine-older}}{{tools:entry-do:nut-num-caffeine}}{{tools:entry-do:wom-caffeine-clearance}}{{tools:entry-do:hlth-vitamin-d}}{{tools:entry-do:nut-vitamin-d-athletes}}{{tools:entry-do:hlth-omega-3}}{{tools:entry-do:nut-antioxidants-adaptation}}{{tools:entry-do:nut-mistake-antioxidant-pills}}{{tools:entry-do:nut-glutamine}}{{tools:entry-do:wom-iron-deficiency}}{{tools:entry-do:wom-table-melatonin-trials}}</div></div>
+        </details>
+      </div>
+
+      <!-- ---------- 8. activity multiplier ---------- -->
+      <div class="tool" id="activity" role="tabpanel" aria-labelledby="tab-activity">
+        <p class="k-copy tool-intro">Maintenance is resting energy times an activity multiplier. See what one activity adds to it, or build a whole day: how active it is, plus the training in it.</p>
+        <div class="tool-grid">
+          <div class="k-card tool-in">
+            <div class="k-seg" id="ac-mode" role="group" aria-label="Work it out from"><button type="button" value="one">One activity</button><button type="button" value="day">A whole day</button></div>
+
+            <div class="ac-base">
+              <p class="k-label">Resting energy (BMR)</p>
+              <p class="k-small ac-from" id="ac-from"></p>
+              <div class="ac-need" id="ac-need" hidden>
+                <p class="k-small">Those are the example inputs. Put in your own weight and body fat for your number.</p>
+                <button class="k-btn k-btn--sm k-btn--ghost" id="ac-go" type="button">Set mine in My numbers</button>
+              </div>
+              <div class="ac-own">
+                <label class="k-label" for="ac-bmr">Or type your own BMR</label>
+                <span class="with-unit"><input class="k-input" id="ac-bmr" type="number" inputmode="numeric" min="800" max="5000" step="10" placeholder="—"><span>kcal</span></span>
+                <button type="button" class="ac-clear" id="ac-bmr-clear" hidden>Use Energy &amp; macros</button>
+              </div>
+            </div>
+
+            <div id="ac-one" class="ac-block">
+              <label class="k-field"><span class="k-label">Activity</span><select class="k-select" id="ac-ex"></select></label>
+              <label class="k-field"><span class="k-label">Minutes</span><input class="k-input" id="ac-min" type="number" inputmode="numeric" min="5" max="600" step="5" value="60"></label>
+            </div>
+
+            <div id="ac-day" class="ac-block" hidden>
+              <div class="k-field"><span class="k-label" id="ac-level-l">Your usual day, outside training</span>
+                <div class="ac-levels" id="ac-level" role="group" aria-labelledby="ac-level-l"></div></div>
+              <p class="k-label">Exercise on this day</p>
+              <ol class="ac-rows" id="ac-rows" aria-label="Exercise on this day"></ol>
+              <p class="k-small" id="ac-none" hidden>No exercise: a rest day.</p>
+              <div><button class="k-btn k-btn--sm k-btn--ghost" id="ac-add" type="button">Add exercise</button></div>
+            </div>
+            <p class="k-small">Running, cycling, rowing and the like count as cardio: pick the intensity by heart rate (HR, beats a minute).</p>
+          </div>
+          <div class="k-card tool-out is-empty" id="ac-out">
+            <p class="k-vh" id="ac-say" role="status"></p>
+            <div><p class="k-label" id="ac-big-l">Your multiplier</p><p class="k-stat"><span id="ac-big">—</span></p><p class="k-small" id="ac-sub"></p></div>
+            <div class="kv hide-empty"><div><span class="k-label" id="ac-k1-l">Maintenance</span><b id="ac-k1">—</b></div><div><span class="k-label" id="ac-k2-l">Resting energy</span><b id="ac-k2">—</b></div></div>
+            <p class="k-small hide-empty" id="ac-k3"></p>
+            <div class="k-actions hide-empty"><button class="k-btn k-btn--sm" id="ac-use" type="button">Use in Energy &amp; macros</button></div>
+            <p class="k-small" style="padding-top:14px;border-top:1px solid rgba(240,232,214,.18)">These are KiteSink’s own working numbers from coaching, not results from a study. Resting energy comes from My numbers, worked out the way Energy &amp; macros is set to (by default 10, 9 or 8 kcal per lb of body weight, by body fat category). A usual day is × 1.1 to 1.5, and each hour of training adds 0.1 to 0.4. Use the answer as a starting point and correct it against your weight trend over two or three weeks.</p>
           </div>
         </div>
       </div>
@@ -586,7 +1232,7 @@
       <!-- ---------- 6. diet planner ---------- -->
       <div class="tool" id="plan" role="tabpanel" aria-labelledby="tab-plan">
         <p class="k-copy tool-intro">See your weekly deficit, not just a daily number. Pick how many days a week you diet and how hard; the other days stay at maintenance. The planner works out the week, the protein that deficit calls for, and what each kind of day looks like.</p>
-        <p class="d-who"><b>Talk to a doctor before using this</b> if you are under 18, pregnant or breastfeeding, have had an eating disorder, have diabetes or take medication that food intake affects, or have kidney, liver or heart disease. General information, not medical advice. This planner saves nothing.</p>
+        <p class="d-who"><b>Talk to a doctor before using this</b> if you are under 18, pregnant or breastfeeding, have had an eating disorder, have diabetes or take medication that food intake affects, or have kidney, liver or heart disease. General information, not medical advice. This planner keeps only the numbers every tool shares (sex, age, weight, height, body fat); the plan itself is not saved.</p>
         <div class="tool-grid">
           <div class="k-card tool-in">
             <div class="row2">
@@ -599,7 +1245,11 @@
               <label class="k-field"><span class="k-label">Weight</span><span class="with-unit"><input class="k-input" id="d-w" type="number" inputmode="decimal" min="30" max="660" step="0.1" value="75"><span id="d-w-unit">kg</span></span></label>
             </div>
             <label class="k-field"><span class="k-label">Body fat <span style="text-transform:none;letter-spacing:0">optional, sharpens protein</span></span><span class="with-unit"><input class="k-input" id="d-bf" type="number" inputmode="decimal" min="3" max="60" placeholder="—"><span>%</span></span></label>
-            <label class="k-field"><span class="k-label">Activity, training included</span>
+            <div class="row2 rest-row">
+              <label class="k-field"><span class="k-label">Resting energy from</span><select class="k-select" id="d-src"><option value="cat">Body fat category</option><option value="mifflin">Mifflin-St Jeor</option><option value="cunningham">Cunningham</option></select></label>
+              <label class="k-field" id="d-cat-wrap"><span class="k-label">Category</span><select class="k-select" id="d-cat"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+            </div>
+            <label class="k-field"><span class="k-label">Activity</span>
               <select class="k-select" id="d-act">
                 <option value="1.4">Sedentary · mostly sitting</option>
                 <option value="1.6" selected>Light · desk job, regular training</option>
@@ -623,6 +1273,7 @@
           <div class="k-card tool-out d-out" id="d-out">
             <p class="k-vh" id="d-say" role="status"></p>
             <div><p class="k-label" id="d-head-l">Weekly deficit</p><p class="k-stat"><span id="d-head">—</span><small id="d-head-u">kcal a week</small></p><p class="k-small" id="d-sub"></p><p class="d-delta" id="d-delta" hidden></p></div>
+            <p class="k-small ex-note" id="d-ex" hidden></p>
             <div class="hide-empty" id="d-week-wrap">
               <div class="d-head"><p class="k-label">Your week <span class="d-key"><i class="d-dot"></i> training day</span></p><button class="k-btn k-btn--sm d-reset" id="d-reset" type="button" hidden>Reset to suggested days</button></div>
               <p class="k-small">Tap a day to switch it between a diet day and a maintenance day.</p>
@@ -641,6 +1292,7 @@
           <a class="k-btn" href="/vantix">See Vantix</a>
         </aside>
       </div>
+      <script type="application/json" id="tool-data">{{tools:data}}</script>
     </div>
   </section>
 
@@ -670,7 +1322,7 @@
 
 <div data-ks="footer"></div>
 
-<script src="/ks.js?v=2027.14"></script>
-<script src="/fitness.js?v=2027.14"></script>
+<script src="/ks.js?v=2027.25"></script>
+<script src="/fitness.js?v=2027.25"></script>
 </body>
 </html>

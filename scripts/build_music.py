@@ -1263,7 +1263,7 @@ def render_sub(template, route, pages, sections, numbers, meta, head=""):
         "head": head, "foot": "",
     }
     if any(hook in fills["body"] for hook in ("data-rate-calc", "data-unclaimed", "data-id-check", "data-split-sheet")):
-        fills["foot"] = '<script src="/music-tools.js?v=2027.14"></script>'
+        fills["foot"] = '<script src="/music-tools.js?v=2027.25"></script>'
 
     def fill(m):
         if m.group(1) not in fills:

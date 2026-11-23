@@ -1,6 +1,6 @@
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and thirteen calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -30,7 +30,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 190 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 131 key numbers and 63 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1018 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1021 sources.
 
 ## Calculators (on the page, no sign-up)
 
@@ -39,7 +39,15 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - 1RM and load calculator: https://kitesink.com/fitness#loads
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
-- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): https://kitesink.com/fitness#plan
+- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; keeps only the shared body numbers): https://kitesink.com/fitness#plan
+- Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): https://kitesink.com/fitness#activity
+- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): https://kitesink.com/fitness#bodyfat
+- FFMI and goal weight (fat and lean mass, the fat-free mass index beside published groups, and the weight at a target body fat if lean mass holds): https://kitesink.com/fitness#ffmi
+- Heart-rate zones (five zones as shares of a measured or age-estimated maximum, with how each feels): https://kitesink.com/fitness#zones
+- Weekly sets per muscle (direct sets plus helper sets at half credit, read against the guide's weekly-sets lines): https://kitesink.com/fitness#sets
+- Coming back after a break (what to expect and how to restart, by time away, with starting loads after a long layoff): https://kitesink.com/fitness#comeback
+- Supplement checker (the guide's evidence, doses and cautions for common supplements, and a caffeine dose for your weight): https://kitesink.com/fitness#supplements
+The 1RM calculator also takes how hard the set was (reps in reserve or RPE), and the meet attempt planner finds an IPF weight class. A shared My numbers panel holds weight, height, age, body fat, best lifts and heart rates once for every tool, in the browser only.
 
 ## Vantix
 

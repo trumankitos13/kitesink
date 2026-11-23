@@ -148,7 +148,7 @@ FILE: https://kitesink.com/fitness.md
 
 # KiteSink Fitness
 
-Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and six calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
+Free training and nutrition reference by Truman Kitos-Lindsey. The field guide holds 1131 entries in 12 areas, and each entry names its sources and says how well supported it is. Around it: common claims checked against the research, a glossary, an index of key numbers and reference tables, and thirteen calculators that run in the browser. Vantix, a periodization app, is the flagship project on the page.
 
 ## The field guide, by area
 
@@ -178,7 +178,7 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - [Claims, checked](https://kitesink.com/fitness/claims.md): 69 common claims, each with a verdict, who was studied, and the source.
 - [Glossary](https://kitesink.com/fitness/glossary.md): the 190 terms the areas use, in plain words. Each term is defined here once.
 - [Key numbers and tables, indexed](https://kitesink.com/fitness/reference.md): 131 key numbers and 63 reference tables, each with a link to the page that holds it.
-- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1018 sources.
+- [Sources and corrections](https://kitesink.com/fitness/sources.md): how entries are graded, the corrections log, and all 1021 sources.
 
 ## Calculators (on the page, no sign-up)
 
@@ -187,7 +187,15 @@ Free training and nutrition reference by Truman Kitos-Lindsey. The field guide h
 - 1RM and load calculator: https://kitesink.com/fitness#loads
 - Travel workout builder: https://kitesink.com/fitness#travel
 - Meet attempt planner: https://kitesink.com/fitness#attempts
-- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; saves nothing): https://kitesink.com/fitness#plan
+- Diet planner (a weekly deficit from a chosen number of diet days a week, with protein that rises with the deficit; keeps only the shared body numbers): https://kitesink.com/fitness#plan
+- Activity multiplier (the daily activity factor from one activity or a whole day of them, on your own resting energy): https://kitesink.com/fitness#activity
+- Navy body fat (the US Navy tape method: height, neck, waist and, for women, hips): https://kitesink.com/fitness#bodyfat
+- FFMI and goal weight (fat and lean mass, the fat-free mass index beside published groups, and the weight at a target body fat if lean mass holds): https://kitesink.com/fitness#ffmi
+- Heart-rate zones (five zones as shares of a measured or age-estimated maximum, with how each feels): https://kitesink.com/fitness#zones
+- Weekly sets per muscle (direct sets plus helper sets at half credit, read against the guide's weekly-sets lines): https://kitesink.com/fitness#sets
+- Coming back after a break (what to expect and how to restart, by time away, with starting loads after a long layoff): https://kitesink.com/fitness#comeback
+- Supplement checker (the guide's evidence, doses and cautions for common supplements, and a caffeine dose for your weight): https://kitesink.com/fitness#supplements
+The 1RM calculator also takes how hard the set was (reps in reserve or RPE), and the meet attempt planner finds an IPF weight class. A shared My numbers panel holds weight, height, age, body fat, best lifts and heart rates once for every tool, in the browser only.
 
 ## Vantix
 
@@ -2878,7 +2886,7 @@ A reading of the research on rest and weekly sets. Treat each line as a starting
 | Weekly sets, trained men | 12-20 per muscle | Baz-Valle 2022; newer data show no clear ceiling |
 | Rest vs growth | 2 or 5 minutes | Similar growth in trained men (Ahtiainen 2005) |
 
-Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000), [Baz-Valle 2022](https://doi.org/10.2478/hukin-2022-0017), [Bernárdez-Vázquez 2022](https://doi.org/10.3389/fspor.2022.949021), [Zhang 2025](https://doi.org/10.1007/s40279-025-02176-8)
+Some support · Sources: [Senna 2016](https://doi.org/10.1519/jsc.0000000000001142), [de Salles 2009](https://doi.org/10.2165/11315230-000000000-00000), [Baz-Valle 2022](https://doi.org/10.2478/hukin-2022-0017), [Bernárdez-Vázquez 2022](https://doi.org/10.3389/fspor.2022.949021), [Zhang 2025](https://doi.org/10.1007/s40279-025-02176-8), [Ahtiainen 2005](https://doi.org/10.1519/15604.1)
 
 ## How big a fixed weight jump is on heavy and light lifts
 
@@ -7442,7 +7450,7 @@ Anabolic drugs in trials · Beginner · Some support · Sources: [Bhasin 1996](h
 
 ## Body composition arithmetic
 
-The five sums used in this area, worked for a person of 80 kg (176 lb), 1.80 m (5 ft 11 in) and 25 percent body fat.
+The six sums used in this area, worked for a person of 80 kg (176 lb), 1.80 m (5 ft 11 in) and 25 percent body fat.
 
 | What you want | Sum | Worked example |
 |---|---|---|
@@ -10125,7 +10133,7 @@ FILE: https://kitesink.com/fitness/sources.md
 
 # Fitness sources, grading and corrections: KiteSink
 
-Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 1018 sources. Each source was checked against its record.
+Where the KiteSink fitness field guide comes from: how entries are graded, what has been corrected, and all 1021 sources. Each source was checked against its record.
 
 ## How the entries are graded
 
@@ -10139,6 +10147,8 @@ Articles are credited where an author's analysis or position shaped an entry. Ev
 
 What changed after an entry was published, newest first.
 
+- **2026-11-20 · Rest between sets and sets per week: a guide**: The row on rest and growth names Ahtiainen 2005; that trial is now in the table's source list too. It was cited in the row but missing from the sources. (https://kitesink.com/fitness/hypertrophy#hyp-table-rest-and-sets)
+- **2026-11-20 · Body composition arithmetic**: The short answer now says six sums, was five; the table has six rows. (https://kitesink.com/fitness/bodycomp#comp-table-arithmetic)
 - **2026-11-16 · Meet attempt planner: first-meet setting**: The first-meet setting now suggests 85%, 90% and 95% of a best single, was 88%, 94% and 98%, to match the first-meet ranges in the meet area. Basis: McDonald's first-meet advice. (https://kitesink.com/fitness#attempts)
 - **2026-11-16 · Attempt selection ranges, first meet and experienced**: Added first-meet rows (80-85%, 85-92%, 92-95%) so the table matches the opener, second and third numbers. Basis: McDonald's first-meet advice; no study covers first meets. (https://kitesink.com/fitness/meet#meet-table-attempts)
 - **2026-11-16 · Practise the lifts in competition style and hold four principles**: The straight bar path over mid-foot now applies to the squat and deadlift only; the bench travels in a shallow arc. The entry had applied it to all three lifts. Basis: McDonald's bench guide. (https://kitesink.com/fitness/powerlifting#pl-specificity-technique)
@@ -10215,13 +10225,16 @@ What changed after an entry was published, newest first.
 - **2026-11-14 · Can your body only use 30 grams of protein per meal?**: Added that the trial used milk protein, which is mostly slow-digesting casein. The verdict did not change. (https://kitesink.com/fitness/claims#claim-protein-meal-cap)
 - **2026-11-14 · 1RM and load calculator**: The estimate became the average of the Epley and Brzycki equations for sets of up to ten reps; it was Epley alone. 100 kg × 5 now reads 115 kg, not 117. (https://kitesink.com/fitness#loads)
 
-## All 1018 sources, A to Z
+## All 1021 sources, A to Z
 
-Left out of this file for its size: the full reference of each of the 1018 sources is at https://kitesink.com/fitness/sources.md. Every source's address is still in this file: the entries link their own sources, and the 9 that no entry here links are listed below.
+Left out of this file for its size: the full reference of each of the 1021 sources is at https://kitesink.com/fitness/sources.md. Every source's address is still in this file: the entries link their own sources, and the 12 that no entry here links are listed below.
 
 - Brzycki M (1993). Strength Testing—Predicting a One-Rep Max from Reps-to-Fatigue. *Journal of Physical Education, Recreation &amp; Dance* 64(1):88-90. https://doi.org/10.1080/07303084.1993.10606684 (Reference, cited 1×)
 - Cunningham J (1991). Body composition as a determinant of energy expenditure: a synthetic review and a proposed general prediction equation. *The American Journal of Clinical Nutrition* 54(6):963-969. https://doi.org/10.1093/ajcn/54.6.963 (Review, cited 2×)
 - FAO (2010). Fats and fatty acids in human nutrition: report of an expert consultation. *FAO Food and Nutrition Paper 91*. https://www.fao.org/4/i1953e/i1953e00.pdf (Guideline, cited 1×)
+- Foulis SA, Friedl KE, Spiering BA et al. (2023). Body composition changes during 8 weeks of military training are not accurately captured by circumference-based assessments. *Frontiers in Physiology* 14:1183836. https://doi.org/10.3389/fphys.2023.1183836 (Cohort study, cited 1×)
+- Hodgdon JA, Beckett MB (1984). Prediction of percent body fat for U.S. Navy men from body circumferences and height. *Naval Health Research Center, Report 84-11*. https://apps.dtic.mil/sti/citations/ADA143890 (Reference, cited 1×)
+- Hodgdon JA, Beckett MB (1984). Prediction of percent body fat for U.S. Navy women from body circumferences and height. *Naval Health Research Center, Report 84-29*. https://apps.dtic.mil/sti/html/tr/ADA146456/index.html (Reference, cited 1×)
 - LeSuer DA, McCormick JH, Mayhew JL et al. (1997). The Accuracy of Prediction Equations for Estimating 1-RM Performance in the Bench Press, Squat, and Deadlift. *Journal of Strength and Conditioning Research* 11(4):211-213. https://doi.org/10.1519/00124278-199711000-00001 (Trial, cited 1×)
 - Mifflin M, St Jeor S, Hill L et al. (1990). A new predictive equation for resting energy expenditure in healthy individuals. *The American Journal of Clinical Nutrition* 51(2):241-247. https://doi.org/10.1093/ajcn/51.2.241 (Trial, cited 2×)
 - National Institute for Health and Care Excellence (2025). Overweight and obesity management (NG246): physical activity and diet. *NICE guideline NG246, recommendations 1.16.8 to 1.16.11*. https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet (Guideline, cited 1×)
