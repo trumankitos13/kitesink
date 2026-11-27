@@ -13,8 +13,20 @@
 // git-<name> program), a git on a line that changes where git reads config or which program it runs
 // (git -c with a key off its short list, --config-env, --exec-path=, GIT_CONFIG_*, HOME,
 // XDG_CONFIG_HOME, EDITOR and other GIT_* variables, a git config write of such a key), a shell
-// reading a script from stdin, or a script file that doesn't exist yet is refused. The line is read the way bash reads it (quotes,
-// escapes, $'…', brace expansion, substitutions, heredocs), every wrapper it knows (env, command,
+// reading a script from stdin, or a script file that doesn't exist yet is refused.
+//
+// Variables (AST-46 Review 2): the Bash tool runs commands in zsh, so the line is read for zsh as well
+// as bash. Refused anywhere: a variable named at run time (export "$v"=…, read "$v", printf -v "$v",
+// declare -n r="$v", (( $v = 1 )), ${!v:=…}); a shell table or startup variable that runs code (zsh
+// functions[] commands[] options[] aliases[], PS4, BASH_ENV, ENV, ZDOTDIR, CDPATH, fpath, hook arrays);
+// zsh forms that run code or change how a line is read (${(…)} flags, $~x, a ( glued to a word as in
+// *(e:…:), setopt, emulate, set -o with an unknown option, zmodload, zstyle -e, hash with a path).
+// Refused only when git runs on the same line, because git reads HOME and the rest from the shell:
+// arithmetic on a variable (zsh and bash evaluate a value such as HOME=5 as an assignment in (( )),
+// $[ ], let, [[ -eq ]], subscripts, ${x:offset}, zsh printf %d, typeset -i and integer variables such
+// as SECONDS), and any shell builtin not on a short list (a builtin can set a variable; a program can't).
+//
+// The line is read the way bash reads it (quotes, escapes, $'…', brace expansion, substitutions, heredocs), every wrapper it knows (env, command,
 // exec, nohup, nice, timeout, sudo, xargs, find -exec, watch, script -c, bash/sh -c, eval, trap,
 // source, npx and the package managers' exec/dlx/run) is unwrapped, and any other command that has
 // git, gh, wrangler or a runner as a later word is checked from that word on (stdbuf, caffeinate,
@@ -38,6 +50,13 @@ const OPAQUE = '\0'; // text the shell fills in at run time: $VAR, ${...}, $(...
 const SPLIT = '\x01'; // follows OPAQUE when the expansion was unquoted: the shell may split it into more words
 const opaque = (w) => w.includes(OPAQUE);
 const shown = (w) => String(w).replace(/\0\x01?/g, '$…');
+
+// The shared state of the line being checked, for what the lexer finds that matters only when git
+// runs on the line (arithmetic on a variable, an unknown builtin). verdict() sets it.
+let LINE = null;
+const risky = (why, shared = LINE) => { if (shared) shared.gitRisk ??= why; };
+const RUN_TIME_NAME = 'a variable named at run time (it could be HOME, GIT_CONFIG_PARAMETERS, PS4 or a zsh table such as functions[])';
+const ARITH_RISK = 'arithmetic on a variable (zsh and bash evaluate a value such as HOME=5 in it as an assignment)';
 
 // ---------- lexing (Keyring's guard lexer, staging parts dropped) ----------
 
@@ -67,9 +86,25 @@ function arithmeticEnd(src, i) {
 }
 
 function expansion(src, i, lines, inDq = false) {
+  // zsh: $=x and $^x split or distribute x, $+x tests it, $~x makes its value a glob pattern.
+  const z = src[i] === '$' && src.slice(i + 1).match(/^[=^~+]+(?=[A-Za-z_{0-9@*#?$!-])/);
+  if (z) {
+    if (z[0].includes('~')) refuse('a zsh $~… (it makes the value a glob pattern, and a glob qualifier in it can run code)');
+    const e = expansion(`$${src.slice(i + 1 + z[0].length)}`, 0, lines, inDq);
+    return e < 0 ? -1 : i + z[0].length + e;
+  }
   if (src.startsWith('$((', i)) {
     const end = arithmeticEnd(src, i + 1);
-    if (end > 0) { checkExpansionAssign(src.slice(i + 3, end - 2), true); scanExpansions(src.slice(i + 3, end - 2), lines); return end; }
+    if (end > 0) { checkArith(src.slice(i + 3, end - 2)); scanExpansions(src.slice(i + 3, end - 2), lines); return end; }
+  }
+  if (src.startsWith('$[', i)) { // $[ … ]: old arithmetic, in bash and zsh
+    let k = i + 1;
+    for (let depth = 0; k < src.length; k++) {
+      if (src[k] === '\\') { k++; continue; }
+      if (src[k] === '[') depth++;
+      else if (src[k] === ']' && --depth === 0) break;
+    }
+    if (k < src.length) { checkArith(src.slice(i + 2, k)); scanExpansions(src.slice(i + 2, k), lines); return k + 1; }
   }
   if (src.startsWith('$(', i)) { const end = subEnd(src, i + 2); lines.push(src.slice(i + 2, end - 1)); return end; }
   if (src[i] === '`') {
@@ -99,12 +134,14 @@ function expansion(src, i, lines, inDq = false) {
     if (end < 0) refuse('an unclosed ${');
     const inner = src.slice(i + 2, end);
     if (inner.includes('\\\n')) refuse('a backslash-newline inside ${…}');
-    checkExpansionAssign(inner, false);
+    checkBrace(inner);
+    if (src[end + 1] === '[') risky(`a zsh subscript after \${…} (${ARITH_RISK})`);
     for (let k = 0; k < inner.length; k++) if (inner[k] === '$' || inner[k] === '`') { const e = expansion(inner, k, lines); if (e > 0) k = e - 1; }
     return end + 1;
   }
-  const m = src.slice(i + 1).match(/^([A-Za-z_]\w*|[0-9@*#?$!-])/);
-  if (m && /^[A-Za-z_]/.test(m[0]) && src.startsWith('\\\n', i + 1 + m[0].length)) refuse('a variable name continued onto the next line');
+  const m = src.slice(i + 1).match(/^(#?[A-Za-z_]\w*|[0-9@*#?$!-])/);
+  if (m && /[A-Za-z_]/.test(m[0]) && src.startsWith('\\\n', i + 1 + m[0].length)) refuse('a variable name continued onto the next line');
+  if (m && src[i + 1 + m[0].length] === '[') risky(`a zsh subscript $${m[0]}[…] (${ARITH_RISK})`);
   return m ? i + 1 + m[0].length : -1;
 }
 
@@ -179,13 +216,15 @@ function scanExpansions(text, lines) {
 // substitution's command goes on `lines` to be checked on its own. ( and ) come through as { op }.
 function lex(src, lines, start = 0, nested = false) {
   const items = [], heredocs = [];
-  let words = [], redirs = [], stdin = false, cur = '', mask = '', any = false, redirect = false, redirIn = false, i = start, depth = 0;
+  let words = [], redirs = [], fdvars = [], stdin = false, cur = '', mask = '', any = false, redirect = false, redirIn = false, i = start, depth = 0;
   const add = (t, unquoted = false) => { cur += t; mask += (unquoted ? '1' : '0').repeat(t.length); };
   const endWord = () => {
     if (nested && any && !redirect && !words.length && cur === 'case' && mask === '1111') refuse('a case statement inside $(…), <(…) or >(…)');
     if (any) {
       if (redirect) { redirs.push(cur); if (redirIn) stdin = true; redirect = false; }
       else {
+        // zsh: a word starting with an unquoted = is the path of the command named after it (=git).
+        if (cur.length > 1 && cur[0] === '=' && cur[1] !== '=' && mask[0] === '1') { cur = `${OPAQUE}/${cur.slice(1)}`; mask = `00${mask.slice(1)}`; }
         const g = globbed(cur, mask);
         words.push(...braceExpand(cur, mask).map((w) => (g ? w + OPAQUE : w)));
       }
@@ -194,8 +233,8 @@ function lex(src, lines, start = 0, nested = false) {
   };
   const endCmd = (op) => {
     endWord();
-    if (words.length || redirs.length || stdin) items.push({ words, redirs, stdin });
-    words = []; redirs = []; stdin = false;
+    if (words.length || redirs.length || stdin || fdvars.length) items.push({ words, redirs, stdin, fdvars });
+    words = []; redirs = []; fdvars = []; stdin = false;
     if (op) items.push({ op });
   };
   const bodies = () => {
@@ -261,7 +300,10 @@ function lex(src, lines, start = 0, nested = false) {
     if (c === ' ' || c === '\t') { endWord(); i++; continue; }
     if (c === '\n') { endCmd(); items.push({ sep: '\n' }); i++; bodies(); continue; }
     if (c === '<' || c === '>' || (c === '&' && src[i + 1] === '>')) {
-      if (any && /^\d+$/.test(cur) && !redirect) { cur = ''; mask = ''; any = false; } else endWord();
+      if (any && /^\d+$/.test(cur) && !redirect) { cur = ''; mask = ''; any = false; }
+      // {NAME}>file: bash and zsh put the new file descriptor's number in NAME.
+      else if (any && !redirect && /^\{[A-Za-z_]\w*\}$/.test(cur) && !mask.includes('0')) { fdvars.push(cur.slice(1, -1)); cur = ''; mask = ''; any = false; }
+      else endWord();
       if (src.startsWith('<<<', i)) { i += 3; redirect = true; redirIn = true; continue; }
       if (src.startsWith('<<', i)) {
         const strip = src[i + 2] === '-';
@@ -297,11 +339,29 @@ function lex(src, lines, start = 0, nested = false) {
       items.push({ sep });
       continue;
     }
-    if (c === '(' && src[i + 1] === '(' && !any && !words.length) { // (( arithmetic )): a test; only its substitutions run
+    // (( arithmetic )) and for (( … )): a test or a loop header; only its substitutions run.
+    if (c === '(' && src[i + 1] === '(' && !any && (!words.length || (words.length === 1 && words[0] === 'for'))) {
       const end = arithmeticEnd(src, i);
-      if (end > 0) { checkExpansionAssign(src.slice(i + 2, end - 2), true); scanExpansions(src.slice(i + 2, end - 2), lines); i = end; continue; }
+      if (end > 0) { checkArith(src.slice(i + 2, end - 2)); scanExpansions(src.slice(i + 2, end - 2), lines); i = end; continue; }
     }
-    if (c === '(') { depth++; endCmd(c); i++; continue; }
+    if (c === '(') {
+      // A ( after a word is a syntax error in bash, and in zsh a glob qualifier or pattern: *(e:…:) and
+      // *(+f) run code. Allowed: a function definition f() or f (), an array a=( … ), a pattern
+      // group in [[ … ]] or a case pattern (a).
+      if (any || words.length) {
+        const fname = any ? (mask.includes('0') ? '' : cur) : words[words.length - 1];
+        const lead = any ? words : words.slice(0, -1);
+        const fnDef = /^[ \t]*\)/.test(src.slice(i + 1)) && /^[A-Za-z_][\w.:-]*$/.test(fname)
+          && (lead.length === 0 || (lead.length === 1 && lead[0] === 'function'));
+        const array = any && /^[A-Za-z_]\w*(\[[^\]]*\])?\+?=$/.test(cur) && mask[cur.length - 1] === '1';
+        const pattern = !any && (words[0] === '[[' || (words[0] === 'case' && words[words.length - 1] === 'in'));
+        const subshell = !any && words.every((w) => KEYWORDS.has(w) && !['case', 'for', 'select', 'in', 'time'].includes(w));
+        if (!fnDef && !array && !pattern && !subshell) refuse(`a ( right after ${shown(any ? cur : words[words.length - 1])} (zsh reads it as a glob qualifier or pattern, and a qualifier such as (e:…:) or (+f) runs code)`);
+      } else if (items.at(-1)?.op === ')' && !(items.at(-2)?.op === '(' && items.at(-3)?.words)) {
+        refuse('a ( right after a ) (zsh reads (…)(…) as a pattern with a glob qualifier, which can run code)');
+      }
+      depth++; endCmd(c); i++; continue;
+    }
     if (c === ')') {
       if (nested && depth === 0) {
         endCmd();
@@ -409,40 +469,193 @@ const CONFIG_WHY = 'only a short list of harmless keys can be set; config can na
 // Variables that change where git reads config (GIT_CONFIG_*, HOME, XDG_CONFIG_HOME), its exec path
 // or a program it runs (GIT_SSH_COMMAND, EDITOR, ...). Every GIT_* name not on the safe list counts.
 // Set anywhere on the line (as a prefix, by export, read, for, env, a sourced file), they make every
-// git command on the line refused, wherever it comes in the line.
-const GIT_ENV = /^(GIT_\w+|HOME|XDG_CONFIG_HOME|EDITOR|VISUAL|PAGER|SSH_ASKPASS)$/;
+// git command on the line refused, wherever it comes in the line. PATH (zsh: path) picks the git
+// program itself; LD_*/DYLD_* load code into it.
+const GIT_ENV = /^(GIT_\w+|HOME|XDG_CONFIG_HOME|EDITOR|VISUAL|PAGER|SSH_ASKPASS|PATH|path|LD_\w+|DYLD_\w+)$/;
 const GIT_ENV_SAFE = /^GIT_((AUTHOR|COMMITTER)_(NAME|EMAIL|DATE)|TRACE\w*|TERMINAL_PROMPT|OPTIONAL_LOCKS|CONFIG_NOSYSTEM|MERGE_AUTOEDIT|ADVICE|FLUSH|(LITERAL|GLOB|NOGLOB|ICASE)_PATHSPECS|INDEX_FILE|DIR|WORK_TREE|CEILING_DIRECTORIES|DISCOVERY_ACROSS_FILESYSTEM|PROGRESS_DELAY|NO_REPLACE_OBJECTS)$/;
 const GIT_ENV_PROGRAM = /^(GIT_EDITOR|GIT_SEQUENCE_EDITOR|GIT_PAGER|EDITOR|VISUAL|PAGER)$/;
-const GIT_ENV_NAMES = /GIT_\w+|XDG_CONFIG_HOME|HOME|EDITOR|VISUAL|PAGER|SSH_ASKPASS/g;
 const ENV_WHY = 'it changes where git reads config or which program it runs, so an alias, include file or hook there can push';
 
+// Variables that are code, or that make the shell run or read code, whoever runs next: zsh's tables of
+// functions, aliases, command paths, options and named directories; prompts (PS4 runs $(…) under set
+// -x); startup files another shell reads (BASH_ENV, ENV, ZDOTDIR); CDPATH and fpath; hook arrays.
+// Refused wherever they are set.
+const SHELL_SPECIAL = /^(functions|functions_source|dis_functions|dis_functions_source|aliases|galiases|saliases|dis_aliases|dis_galiases|dis_saliases|builtins|dis_builtins|reswords|dis_reswords|commands|options|nameddirs|userdirs|patchars|dis_patchars|modules|parameters|history|historywords|mapfile|\w+_functions|BASH_CMDS|BASH_ALIASES|BASH_ENV|ENV|ZDOTDIR|CDPATH|cdpath|FPATH|fpath|MODULE_PATH|module_path|NULLCMD|READNULLCMD|PS[0-4]|PROMPT[0-4]?|RPROMPT2?|RPS[12]|SPROMPT|PROMPT_COMMAND|FCEDIT|TMPPREFIX)$/;
+const SPECIAL_WHY = 'it holds code, a command path, a shell option, a prompt that runs $(…), or a file another shell reads at start';
+// zsh and bash integer variables: a value assigned to one is evaluated as arithmetic (SECONDS='HOME=5').
+const INT_SPECIAL = /^(SECONDS|COLUMNS|LINES|HISTSIZE|SAVEHIST|TMOUT|KEYTIMEOUT|LISTMAX|MAILCHECK|PERIOD|SHLVL|OPTIND|OPTERR|ERRNO|DIRSTACKSIZE|LOGCHECK|TRY_BLOCK_ERROR|TRY_BLOCK_INTERRUPT|ZLE_RPROMPT_INDENT|RANDOM|SRANDOM|HISTFILESIZE|LINENO|BAUD|UID|EUID|GID|EGID|FUNCNEST|BASH_ARGV0)$/;
+
+function checkNameSet(name, where) {
+  if (SHELL_SPECIAL.test(name)) refuse(`setting ${name}${where} (${SPECIAL_WHY})`);
+}
 function noteEnv(name, value, state) {
+  checkNameSet(name, '');
+  if (INT_SPECIAL.test(name) && !(value !== undefined && /^-?\d*$/.test(value))) risky(ARITH_RISK, state.shared);
   if (!GIT_ENV.test(name) || GIT_ENV_SAFE.test(name)) return;
   if (GIT_ENV_PROGRAM.test(name) && noOp(value)) return;
-  state.shared.gitEnv ??= name;
+  state.shared.gitRisk ??= `${name} set`;
 }
-// NAME=value, NAME+=value or NAME[i]=value.
+// NAME=value, NAME+=value or NAME[i]=value (a subscript is arithmetic).
 function noteAssign(word, state) {
   const m = word.match(/^([A-Za-z_]\w*)(\[[^\]]*\])?(\+)?=([\s\S]*)$/);
-  if (m) noteEnv(m[1], m[2] || m[3] ? undefined : m[4], state);
+  if (m) {
+    noteEnv(m[1], m[2] || m[3] ? undefined : m[4], state);
+    if (m[2] && !/^\[\s*-?\d*\s*\]$/.test(m[2])) checkArith(m[2].slice(1, -1).replace(/\0\x01?/g, '$x'));
+  }
   return m;
 }
-// Words of a builtin that sets, exports or unsets variables: export HOME, read GIT_DIR, printf -vHOME,
-// declare -n r=HOME.
-function noteNamed(word, state) {
+// A word naming a variable to a builtin that sets, exports or unsets one (export HOME, read GIT_DIR,
+// printf -v HOME, declare -n r=HOME, zsh read 'HOME?prompt'). A name filled in at run time is refused.
+function noteNamed(word, state, nameref = false) {
+  const eq = word.indexOf('=');
+  if (opaque(eq < 0 ? word : word.slice(0, eq))) refuse(RUN_TIME_NAME);
   const m = noteAssign(word, state);
-  const text = m && !GIT_ENV.test(m[1]) ? m[4] : m ? '' : word;
-  for (const n of text.match(GIT_ENV_NAMES) ?? []) noteEnv(n, undefined, state);
+  const names = m ? (nameref ? m[4] : '') : word;
+  if (nameref && opaque(names)) refuse(`a nameref to ${RUN_TIME_NAME}`);
+  for (const n of names.match(/[A-Za-z_]\w*/g) ?? []) noteEnv(n, undefined, state);
 }
-const ASSIGNERS = new Set(['export', 'declare', 'typeset', 'local', 'readonly', 'read', 'unset', 'mapfile', 'readarray', 'getopts', 'let']);
 
-// ${HOME:=x}, ${GIT_DIR=x} and (( HOME = 1 )) assign too; they are refused where the lexer meets them.
-function checkExpansionAssign(text, arithmetic) {
-  const re = arithmetic ? /([A-Za-z_]\w*)\s*(\[[^\]]*\])?\s*(<<|>>|[-+*/%&|^])?=(?!=)|(\+\+|--)\s*([A-Za-z_]\w*)|([A-Za-z_]\w*)\s*(\+\+|--)/g : /^([A-Za-z_]\w*):?=/g;
+// Arithmetic text: (( … )), $(( … )), $[ … ], let, a subscript. An assignment to a git or special
+// variable, or to one named at run time, is refused; any variable in it makes git on the line refused.
+function checkArith(text) {
+  const re = /([A-Za-z_]\w*)\s*(\[[^\]]*\])?\s*(<<|>>|[-+*/%&|^])?=(?!=)|(\+\+|--)\s*([A-Za-z_]\w*)|([A-Za-z_]\w*)\s*(\+\+|--)/g;
   for (const m of text.matchAll(re)) {
     const name = m[1] ?? m[5] ?? m[6];
-    if (GIT_ENV.test(name) && !GIT_ENV_SAFE.test(name)) refuse(`an assignment to ${name} inside ${arithmetic ? '(( ))' : '${…}'} (${ENV_WHY})`);
+    checkNameSet(name, ' in arithmetic');
+    if (GIT_ENV.test(name) && !GIT_ENV_SAFE.test(name)) refuse(`an assignment to ${name} inside (( )) (${ENV_WHY})`);
   }
+  if (/(\$\{?[\w@*#?$!-]*\}?|\$\([^)]*\)|`[^`]*`|\0\x01?)\s*(\[[^\]]*\])?\s*((<<|>>|[-+*/%&|^])?=(?!=)|\+\+|--)|(\+\+|--)\s*[$`\0]/.test(text)) refuse(`an assignment in arithmetic to ${RUN_TIME_NAME}`);
+  const bare = text.replace(/\b0[xX][0-9a-fA-F]+\b|\b\d+#\w+\b|\b\d+(\.\d+)?([eE][-+]?\d+)?\b/g, '');
+  if (/[A-Za-z_$`\0@]/.test(bare)) risky(ARITH_RISK);
+}
+
+// The inside of ${…}: zsh flags ${(…)} and ${~…} are refused; ${NAME=…}, ${NAME:=…} and zsh's
+// ${NAME::=…} assign; a subscript or an offset is arithmetic.
+function checkBrace(inner) {
+  if (/^[=^+#!~]*\(/.test(inner)) refuse('a zsh ${(…)} parameter flag (flags such as (e), (P) and (l:…:) run code, name a variable at run time or do arithmetic)');
+  if (/^[=^+#!]*~/.test(inner)) refuse('a zsh ${~…} (it makes the value a glob pattern, and a glob qualifier in it can run code)');
+  const m = inner.match(/^([=^+#!]*)([A-Za-z_]\w*|\d+|[@*#?$!-])?/);
+  const pre = m[1], name = m[2];
+  let rest = inner.slice(m[0].length);
+  if (name === undefined) { if (rest) risky(`a \${…} form the guard can't read (${ARITH_RISK})`); return; }
+  if (rest[0] === '[') {
+    let k = 0;
+    for (let depth = 0; k < rest.length; k++) { if (rest[k] === '[') depth++; else if (rest[k] === ']' && --depth === 0) break; }
+    const sub = rest.slice(1, k);
+    if (!/^\s*(-?\d+|[@*])\s*$/.test(sub)) checkArith(sub);
+    rest = rest.slice(k + 1);
+  }
+  if (/^:{0,2}=/.test(rest)) {
+    if (pre.includes('!')) refuse(`an indirect \${!…=} (it assigns ${RUN_TIME_NAME})`);
+    checkNameSet(name, ' inside ${…}');
+    if (GIT_ENV.test(name) && !GIT_ENV_SAFE.test(name)) refuse(`an assignment to ${name} inside \${…} (${ENV_WHY})`);
+    if (INT_SPECIAL.test(name)) risky(ARITH_RISK);
+    return;
+  }
+  if (rest[0] === ':' && !/^:[-+?]/.test(rest)) risky(`a \${…:…} offset or zsh modifier (${ARITH_RISK})`);
+}
+
+// Shell builtins (bash 3-5 and zsh, with zsh's module builtins). A builtin can set a shell variable; a
+// program can't. On a line that runs git, a builtin that isn't SAFE or checked below is refused.
+const BUILTINS = new Set(('- . : [ alias autoload bg bind bindkey break builtin bye caller cd chdir command compadd comparguments '
+  + 'compcall compctl compdescribe compfiles compgen complete compgroups compopt compquote compset comptags comptry compvalues '
+  + 'continue declare dirs disable disown echo echotc echoti emulate enable eval exec exit export false fc fg float functions '
+  + 'getln getopts hash help history integer jobs kill let limit local log logout mapfile noglob nocorrect popd print printf '
+  + 'private pushd pushln pwd r read readarray readonly rehash repeat return sched set setopt shift shopt source suspend test '
+  + 'times trap true ttyctl type typeset ulimit umask unalias unfunction unhash unlimit unset unsetopt vared wait whence where '
+  + 'which zcompile zformat zle zmodload zparseopts zregexparse zstyle sysread syswrite sysopen sysseek syserror zsystem strftime '
+  + 'zstat zpty ztcp zsocket zselect zftp pcre_compile pcre_match pcre_study zprof ztie zuntie zgetattr zsetattr zdelattr '
+  + 'zlistattr getcap setcap cap clone zcurses').split(' '));
+const SAFE_BUILTINS = new Set(['-', '.', ':', '[', 'alias', 'builtin', 'cd', 'chdir', 'command', 'echo', 'eval', 'exec', 'false',
+  'noglob', 'nocorrect', 'popd', 'pushd', 'pwd', 'source', 'test', 'true', 'type', 'whence', 'where', 'which', 'trap', 'unalias', 'help']);
+const TYPESET = new Set(['export', 'declare', 'typeset', 'local', 'readonly', 'integer', 'float', 'private']);
+// Builtins whose words are variable names: each is checked; any but read and unset count as a risk.
+const NAME_TAKERS = new Set(['read', 'unset', 'getopts', 'mapfile', 'readarray', 'vared', 'zparseopts', 'zformat', 'strftime',
+  'zstat', 'sysread', 'zregexparse', 'getln', 'zstyle', 'pcre_match', 'zselect']);
+const COUNTS = new Set(['exit', 'return', 'shift', 'break', 'continue', 'repeat']);
+const SET_OPTIONS = /^(errexit|nounset|xtrace|verbose|pipefail|noclobber|errtrace|functrace)$/;
+const PRINTF_TEXT = /%(?![-# +0']*\d*(\.\d+)?[sbq])/; // a conversion other than %s, %b, %q: zsh evaluates its argument
+
+function checkPrintfFormat(fmt, state, what) {
+  if (fmt !== undefined && (opaque(fmt) || PRINTF_TEXT.test(fmt.replace(/%%/g, '')))) risky(`${what} with a numeric or run-time format (${ARITH_RISK})`, state.shared);
+}
+
+// The builtins that set variables, run code or change how the shell reads a line.
+function checkBuiltin(name, rest, state) {
+  if (TYPESET.has(name)) {
+    let nameref = false;
+    if (name === 'integer' || name === 'float') risky(ARITH_RISK, state.shared);
+    for (const x of rest) {
+      if (/^[-+]./.test(x) && !x.includes('=')) {
+        if (opaque(x)) refuse(`${name} with options filled in at run time`);
+        if (/[^xrglaAuUtp]/.test(x.slice(1))) risky(`${name} ${x} (integer, float, nameref, tied and other typed variables evaluate or alias a value)`, state.shared);
+        if (x.includes('n')) nameref = true;
+        continue;
+      }
+      noteNamed(x, state, nameref);
+    }
+    return;
+  }
+  if (NAME_TAKERS.has(name)) {
+    if (name === 'zstyle' && rest.some((x) => /^-[a-zA-Z]*e/.test(x) || opaque(x))) refuse('zstyle -e (it stores code that zstyle -s, -a or -b runs later)');
+    if (!['read', 'unset'].includes(name)) risky(`the shell builtin ${name}`, state.shared);
+    const words = name === 'getopts' ? rest.filter((x) => !/^-/.test(x)).slice(0, 2) : rest;
+    for (const x of words) {
+      if (/^[-+]./.test(x) && !opaque(x)) continue;
+      noteNamed(x, state);
+    }
+    return;
+  }
+  if (name === 'printf') {
+    let k = 0;
+    for (; k < rest.length; k++) {
+      const x = rest[k];
+      if (x === '--') { k++; break; }
+      if (x === '-v') { noteNamed(rest[++k] ?? '', state); continue; }
+      if (/^-v./.test(x)) { noteNamed(x.slice(2), state); continue; }
+      if (!/^-./.test(x)) break;
+    }
+    return checkPrintfFormat(rest[k], state, 'printf');
+  }
+  if (name === 'print') {
+    for (let k = 0; k < rest.length; k++) {
+      const x = rest[k];
+      if (x === '--' || x === '-' || !/^[-+]./.test(x) || opaque(x)) return;
+      for (let c = 1; c < x.length; c++) {
+        if ('rnlNcRE'.includes(x[c])) continue;
+        const arg = c < x.length - 1 ? x.slice(c + 1) : rest[++k] ?? '';
+        if (x[c] === 'v') noteNamed(arg, state);
+        else if (x[c] === 'f') checkPrintfFormat(arg, state, 'print -f');
+        else risky(`print -${x[c]} (an option the guard doesn't check)`, state.shared);
+        break;
+      }
+    }
+    return;
+  }
+  if (name === 'let') { risky(ARITH_RISK, state.shared); rest.forEach((x) => checkArith(x.replace(/\0\x01?/g, '$x'))); return; }
+  if (name === 'set') {
+    for (let k = 0; k < rest.length; k++) {
+      const x = rest[k];
+      if (x === '--' || x === '-' || !/^[-+]/.test(x)) return; // the rest are positional parameters
+      if (opaque(x)) refuse('set with options filled in at run time');
+      if (!/^[-+][euxvo]+$/.test(x)) refuse(`set ${x} (only -e, -u, -x, -v and -o ${SET_OPTIONS.source.slice(2, -2).split('|').join(', ')}: other options change how the shell reads a line or set an array)`);
+      if (x.includes('o')) {
+        const o = rest[++k];
+        if (o !== undefined && !SET_OPTIONS.test(o)) refuse(`set ${x} ${shown(o)} (zsh and bash options such as GLOB_SUBST or PROMPT_SUBST change how a line is read and can make a value run code)`);
+      }
+    }
+    return;
+  }
+  if (COUNTS.has(name)) {
+    const n = name === 'shift' && rest[0] === '-p' ? rest[1] : rest[0];
+    if (n !== undefined && !/^\d+$/.test(n)) risky(`${name} with a count that isn't a number (${ARITH_RISK})`, state.shared);
+    return;
+  }
+  if (name === 'hash' && rest.some((x) => x.includes('=') || /^-[a-zA-Z]*[dp]/.test(x) || opaque(x))) refuse('hash with a path or a named directory (it changes which program a command name runs, or where cd ~name goes)');
+  if (name === 'enable' && rest.some((x) => /^-[a-zA-Z]*f/.test(x) || opaque(x))) refuse('enable -f (it loads a builtin from a shared library)');
+  if (['setopt', 'unsetopt', 'emulate'].includes(name)) refuse(`${name} (zsh options such as GLOB_SUBST, EXTENDED_GLOB or PROMPT_SUBST change how a line is read and can make a value run code)`);
+  if (['zmodload', 'sched', 'zpty', 'ztcp', 'zsocket'].includes(name)) refuse(`${name} (it loads zsh modules or runs commands the guard can't see)`);
+  if (BUILTINS.has(name) && !SAFE_BUILTINS.has(name)) risky(`the shell builtin ${name}`, state.shared);
 }
 
 // git config: reads and unsets are fine; a write must be of a key on the safe list.
@@ -478,7 +691,7 @@ const GIT_RUNS = {
 
 function checkGit(args, state, depth, fromXargs) {
   state.shared.git = true;
-  if (state.shared.gitEnv) refuse(`git with ${state.shared.gitEnv} set on the same line (${ENV_WHY})`);
+  if (state.shared.gitRisk) refuse(`git with ${state.shared.gitRisk} on the same line (${ENV_WHY})`);
   let i = 0;
   for (; i < args.length; i++) {
     const a = args[i];
@@ -774,11 +987,16 @@ function checkSimple(input, state, depth, fromXargs = false, stdin = false) {
   for (;;) {
     if (w[0] === 'coproc') {
       w.shift();
-      if (/^[A-Za-z_]\w*$/.test(w[0] ?? '') && (KEYWORDS.has(w[1]) || ['(('].includes(w[1]))) w.shift();
+      if (/^[A-Za-z_]\w*$/.test(w[0] ?? '') && (KEYWORDS.has(w[1]) || ['(('].includes(w[1]))) noteNamed(w.shift(), state); // coproc NAME { … } sets NAME
       continue;
     }
     if (w[0] === 'time' && w[1] === '-p') { w.splice(0, 2); continue; }
-    if (['for', 'select'].includes(w[0]) && w[1] !== undefined) noteNamed(w[1], state); // for HOME in …
+    if (['for', 'select'].includes(w[0])) { // for HOME in …; zsh: for k v in …
+      for (let k = 1; k < w.length && !['in', 'do', ';'].includes(w[k]); k++) noteNamed(w[k], state);
+    }
+    if (w[0] === '[[') { // -eq and the rest compare arithmetic expressions
+      w.forEach((x, k) => { if (/^-(eq|ne|lt|le|gt|ge)$/.test(x) && !(/^-?\d+$/.test(w[k - 1] ?? '') && /^-?\d+$/.test(w[k + 1] ?? ''))) risky(ARITH_RISK, state.shared); });
+    }
     if (['for', 'select', 'case', '[['].includes(w[0])) return; // a loop's list, a case word or a [[ test ]], not a command
     if (!w.length || !(KEYWORDS.has(w[0]) || /^[A-Za-z_]\w*(\[[^\]]*\])?\+?=/.test(w[0]))) break;
     noteAssign(w[0], state);
@@ -788,20 +1006,26 @@ function checkSimple(input, state, depth, fromXargs = false, stdin = false) {
   const head = w[0];
   // A name whose last part the shell fills in at run time: it could be anything.
   const base = head.slice(head.lastIndexOf('/') + 1);
-  if (opaque(base) || base === '') refuse(`a command named at run time (${shown(head)})`);
+  // H${x}OME=… or $(echo HOME)=… is a command name, not an assignment, but refuse it all the same.
+  if (opaque(base) || base === '' || (opaque(head) && head.includes('='))) refuse(`a command named at run time (${shown(head)})`);
   let name = normalName(head);
   let rest = w.slice(1);
   const dashed = name.match(/^git-([a-z][\w-]*)$/); // git-push, $(git --exec-path)/git-push
   if (dashed && !['git-lfs', 'git-receive-pack', 'git-upload-pack'].includes(name) || name === 'git-lfs') { rest = [name === 'git-lfs' ? 'lfs' : dashed[1], ...rest]; name = 'git'; }
-  if (ASSIGNERS.has(name) || (name === 'printf' && rest.some((x) => x.startsWith('-v')))) rest.forEach((x) => noteNamed(x, state));
+  if (!head.includes('/')) checkBuiltin(name, rest, state);
   if (name in REFUSED && REFUSED[name]) refuse(REFUSED[name]);
   if (name === 'alias') { if (rest.some((x) => x.includes('='))) refuse('defining an alias (the guard reads the name, not what it stands for)'); return; }
   if (CODE_FLAGS[name]) checkInlineCode(name, rest);
   switch (name) {
-    case 'cd': case 'pushd': state.cwd = cdTo(state.cwd, rest.filter((x) => !/^-[LPe@]+$/.test(x))[0]); return;
+    case 'cd': case 'pushd': case 'chdir': {
+      // zsh: cd OLD NEW swaps text in $PWD, ~name is a named directory, +N/-N a stack entry.
+      const args = rest.filter((x) => !/^-[LPqse@]+$/.test(x));
+      state.cwd = args.length > 1 || /^([-+]\d+|~[^/])/.test(args[0] ?? '') ? null : cdTo(state.cwd, args[0]);
+      return;
+    }
     case 'popd': state.cwd = null; return;
     case 'command': if (['-v', '-V'].includes(rest[0])) return; // falls through
-    case 'builtin': case 'nohup':
+    case 'builtin': case 'nohup': case 'noglob': case 'nocorrect': case '-':
       return checkSimple(stripOptions(rest, []), state, depth, fromXargs, stdin);
     case 'exec': return checkSimple(stripOptions(rest, ['-a']), state, depth, fromXargs, stdin);
     case 'nice': return checkSimple(stripOptions(rest, ['-n', '--adjustment']), state, depth, fromXargs, stdin);
@@ -921,6 +1145,7 @@ function checkLine(src, state, depth = 0) {
     if (it.op === '(') { saved.push(state.cwd); prev = null; continue; }
     if (it.op === ')') { if (saved.length) state.cwd = saved.pop(); continue; }
     const piped = prev === '|' || prev === '|&';
+    for (const n of it.fdvars ?? []) noteEnv(n, '10', state);
     checkSimple(it.words, state, depth, false, it.stdin || piped);
     prev = null;
   }
@@ -933,12 +1158,15 @@ export function verdict(command, cwd = process.cwd()) {
     if (src.includes('\0')) refuse('a NUL character');
     const dir = typeof cwd === 'string' && cwd.startsWith('/') ? cwd : null;
     const shared = {};
+    LINE = shared;
     checkLine(src, { cwd: dir, shared });
     // A variable set after the git command (or in a function it calls) still reaches it.
-    if (shared.git && shared.gitEnv) refuse(`git with ${shared.gitEnv} set on the same line (${ENV_WHY})`);
+    if (shared.git && shared.gitRisk) refuse(`git with ${shared.gitRisk} on the same line (${ENV_WHY})`);
     return null;
   } catch (e) {
     if (e instanceof Refuse) return e.message;
     return `the guard couldn't read this command (${e.message})`;
+  } finally {
+    LINE = null;
   }
 }
