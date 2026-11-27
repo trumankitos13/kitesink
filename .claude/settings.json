@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(wrangler deploy:*)",
+      "Bash(wrangler publish:*)",
+      "Bash(npx wrangler deploy:*)",
+      "Bash(npx wrangler publish:*)",
+      "mcp__github__merge_pull_request",
+      "mcp__github__enable_pr_auto_merge",
+      "mcp__github__push_files",
+      "mcp__github__create_or_update_file",
+      "mcp__github__delete_file",
+      "mcp__github__update_pull_request_branch",
+      "mcp__Github_MCP__merge_pull_request",
+      "mcp__Github_MCP__push_files",
+      "mcp__Github_MCP__create_or_update_file",
+      "mcp__Github_MCP__delete_file",
+      "mcp__Github_MCP__update_pull_request_branch"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Monitor",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard-bash.mjs\" || exit 2",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
