@@ -9,8 +9,11 @@
 // verdict(command, cwd) returns null to let the line run, or the reason it refuses.
 //
 // It is a deny-list for those commands and fails closed around them: a line it can't lex, a command
-// named at run time, a git or gh alias it can't resolve, a shell reading a script from stdin, or a
-// script file that doesn't exist yet is refused. The line is read the way bash reads it (quotes,
+// named at run time, a gh alias, a git subcommand that isn't a built-in it knows (an alias or a
+// git-<name> program), a git on a line that changes where git reads config or which program it runs
+// (git -c with a key off its short list, --config-env, --exec-path=, GIT_CONFIG_*, HOME,
+// XDG_CONFIG_HOME, EDITOR and other GIT_* variables, a git config write of such a key), a shell
+// reading a script from stdin, or a script file that doesn't exist yet is refused. The line is read the way bash reads it (quotes,
 // escapes, $'…', brace expansion, substitutions, heredocs), every wrapper it knows (env, command,
 // exec, nohup, nice, timeout, sudo, xargs, find -exec, watch, script -c, bash/sh -c, eval, trap,
 // source, npx and the package managers' exec/dlx/run) is unwrapped, and any other command that has
@@ -21,11 +24,10 @@
 //
 // It is a filter, not a sandbox. Known gaps that need deliberate evasion: a program in another
 // language (python3 x.py, node x.js, a Makefile) that runs git push itself (inline -c/-e code is
-// scanned, script files are not); a git hook the agent writes; a glob that matches a file the
-// agent made; ssh to another host. That is why settings.json also denies the plain forms,
+// scanned, script files are not); a git hook, git config file or git/ssh/editor program on PATH that
+// the agent writes with another tool; a glob that matches a file the agent made; ssh to another host. That is why settings.json also denies the plain forms,
 // AGENTS.md states the rule, and branch protection on main still matters. The hook fails open only
 // if it runs past its 30 s timeout (a Claude Code limit).
-import { execFileSync } from 'node:child_process';
 import { readFileSync, statSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { posix } from 'node:path';
@@ -67,7 +69,7 @@ function arithmeticEnd(src, i) {
 function expansion(src, i, lines, inDq = false) {
   if (src.startsWith('$((', i)) {
     const end = arithmeticEnd(src, i + 1);
-    if (end > 0) { scanExpansions(src.slice(i + 3, end - 2), lines); return end; }
+    if (end > 0) { checkExpansionAssign(src.slice(i + 3, end - 2), true); scanExpansions(src.slice(i + 3, end - 2), lines); return end; }
   }
   if (src.startsWith('$(', i)) { const end = subEnd(src, i + 2); lines.push(src.slice(i + 2, end - 1)); return end; }
   if (src[i] === '`') {
@@ -97,6 +99,7 @@ function expansion(src, i, lines, inDq = false) {
     if (end < 0) refuse('an unclosed ${');
     const inner = src.slice(i + 2, end);
     if (inner.includes('\\\n')) refuse('a backslash-newline inside ${…}');
+    checkExpansionAssign(inner, false);
     for (let k = 0; k < inner.length; k++) if (inner[k] === '$' || inner[k] === '`') { const e = expansion(inner, k, lines); if (e > 0) k = e - 1; }
     return end + 1;
   }
@@ -296,7 +299,7 @@ function lex(src, lines, start = 0, nested = false) {
     }
     if (c === '(' && src[i + 1] === '(' && !any && !words.length) { // (( arithmetic )): a test; only its substitutions run
       const end = arithmeticEnd(src, i);
-      if (end > 0) { scanExpansions(src.slice(i + 2, end - 2), lines); i = end; continue; }
+      if (end > 0) { checkExpansionAssign(src.slice(i + 2, end - 2), true); scanExpansions(src.slice(i + 2, end - 2), lines); i = end; continue; }
     }
     if (c === '(') { depth++; endCmd(c); i++; continue; }
     if (c === ')') {
@@ -341,11 +344,6 @@ function stripOptions(words, takes) {
   return words.slice(k);
 }
 
-function git(dir, args) {
-  try { return execFileSync('git', ['-C', dir, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], timeout: 2000 }).trim(); }
-  catch { return null; }
-}
-
 function cdTo(cwd, target) {
   if (target === undefined || target === '~') return homedir();
   if (opaque(target) || target === '-') return null;
@@ -381,25 +379,115 @@ function checkScriptFile(path, state, depth, what) {
 
 // ---------- git ----------
 
+// The git subcommands this guard can classify: git's own built-ins, which no alias can shadow. Any
+// other name is refused: it is an alias or a git-<name> program, and git reads aliases from the
+// repo, global and system config, include files, $HOME, $XDG_CONFIG_HOME and GIT_CONFIG_* variables,
+// which the guard can't all see. (subtree, svn, lfs, send-pack and http-push are external or push.)
 const GIT_BUILTIN = new Set(('add am annotate apply archive bisect blame branch bundle cat-file check-attr check-ignore '
-  + 'check-ref-format checkout cherry cherry-pick clean clone column commit commit-tree config count-objects credential '
-  + 'describe diff diff-files diff-index diff-tree difftool fetch for-each-ref format-patch fsck gc grep hash-object '
-  + 'help init lfs log ls-files ls-remote ls-tree maintenance merge merge-base mergetool mktree mv name-rev notes '
-  + 'pull push range-diff read-tree rebase reflog remote repack replace reset restore rev-list rev-parse revert rm '
-  + 'shortlog show show-ref sparse-checkout stash status submodule switch symbolic-ref tag update-index update-ref var '
-  + 'verify-commit version whatchanged worktree write-tree subtree svn send-pack http-push').split(' '));
+  + 'check-mailmap check-ref-format checkout cherry cherry-pick clean clone column commit commit-tree config count-objects '
+  + 'credential describe diff diff-files diff-index diff-tree difftool fetch for-each-ref format-patch fsck gc grep '
+  + 'hash-object help init interpret-trailers log ls-files ls-remote ls-tree maintenance merge merge-base merge-file '
+  + 'merge-tree mergetool mktree mv name-rev notes pack-refs prune pull push range-diff read-tree rebase reflog remote '
+  + 'repack replace rerere reset restore rev-list rev-parse revert rm shortlog show show-branch show-ref sparse-checkout '
+  + 'stage stash status stripspace submodule switch symbolic-ref tag update-index update-ref var verify-commit '
+  + 'verify-pack verify-tag version whatchanged worktree write-tree').split(' '));
 const PUSH_WHY = 'git push (agents commit locally; Truman pushes)';
 
+// Config keys that may be set inline (git -c) or by git config: none names a program git runs, a
+// file of more config, hooks or an alias. Matched case-insensitively, as git does.
+const GIT_SAFE_KEYS = new RegExp('^(user\\.(name|email)|color\\.[\\w.-]+|advice\\.[\\w-]+|core\\.(quotepath|autocrlf|safecrlf|filemode|ignorecase|abbrev|precomposeunicode|longpaths)'
+  + '|init\\.defaultbranch|(commit|tag)\\.gpgsign|gc\\.auto|maintenance\\.auto|push\\.(default|autosetupremote)|pull\\.(rebase|ff)'
+  + '|rebase\\.(autostash|autosquash|updaterefs)|merge\\.(ff|conflictstyle)|fetch\\.prune|diff\\.(renames|algorithm|mnemonicprefix|noprefix)'
+  + '|status\\.[\\w-]+|safe\\.directory|column\\.[\\w-]+|log\\.(decorate|date|follow|abbrevcommit|showroot)|branch\\.autosetup(merge|rebase)|protocol\\.version)$', 'i');
+// Keys and variables that name a program: allowed only set to one that does nothing (GIT_EDITOR=true).
+const GIT_PROGRAM_KEYS = /^(core\.(editor|pager)|sequence\.editor|pager\.[\w-]+)$/i;
+const NO_OP_PROGRAM = new Set(['true', ':', 'cat', 'false']);
+const noOp = (v) => v !== undefined && !opaque(v) && NO_OP_PROGRAM.has(v.trim());
+const gitConfigOk = (key, value) => !opaque(key) && (GIT_SAFE_KEYS.test(key) || (GIT_PROGRAM_KEYS.test(key) && noOp(value)));
+const CONFIG_WHY = 'only a short list of harmless keys can be set; config can name a program git runs, an alias or an include file';
+
+// Variables that change where git reads config (GIT_CONFIG_*, HOME, XDG_CONFIG_HOME), its exec path
+// or a program it runs (GIT_SSH_COMMAND, EDITOR, ...). Every GIT_* name not on the safe list counts.
+// Set anywhere on the line (as a prefix, by export, read, for, env, a sourced file), they make every
+// git command on the line refused, wherever it comes in the line.
+const GIT_ENV = /^(GIT_\w+|HOME|XDG_CONFIG_HOME|EDITOR|VISUAL|PAGER|SSH_ASKPASS)$/;
+const GIT_ENV_SAFE = /^GIT_((AUTHOR|COMMITTER)_(NAME|EMAIL|DATE)|TRACE\w*|TERMINAL_PROMPT|OPTIONAL_LOCKS|CONFIG_NOSYSTEM|MERGE_AUTOEDIT|ADVICE|FLUSH|(LITERAL|GLOB|NOGLOB|ICASE)_PATHSPECS|INDEX_FILE|DIR|WORK_TREE|CEILING_DIRECTORIES|DISCOVERY_ACROSS_FILESYSTEM|PROGRESS_DELAY|NO_REPLACE_OBJECTS)$/;
+const GIT_ENV_PROGRAM = /^(GIT_EDITOR|GIT_SEQUENCE_EDITOR|GIT_PAGER|EDITOR|VISUAL|PAGER)$/;
+const GIT_ENV_NAMES = /GIT_\w+|XDG_CONFIG_HOME|HOME|EDITOR|VISUAL|PAGER|SSH_ASKPASS/g;
+const ENV_WHY = 'it changes where git reads config or which program it runs, so an alias, include file or hook there can push';
+
+function noteEnv(name, value, state) {
+  if (!GIT_ENV.test(name) || GIT_ENV_SAFE.test(name)) return;
+  if (GIT_ENV_PROGRAM.test(name) && noOp(value)) return;
+  state.shared.gitEnv ??= name;
+}
+// NAME=value, NAME+=value or NAME[i]=value.
+function noteAssign(word, state) {
+  const m = word.match(/^([A-Za-z_]\w*)(\[[^\]]*\])?(\+)?=([\s\S]*)$/);
+  if (m) noteEnv(m[1], m[2] || m[3] ? undefined : m[4], state);
+  return m;
+}
+// Words of a builtin that sets, exports or unsets variables: export HOME, read GIT_DIR, printf -vHOME,
+// declare -n r=HOME.
+function noteNamed(word, state) {
+  const m = noteAssign(word, state);
+  const text = m && !GIT_ENV.test(m[1]) ? m[4] : m ? '' : word;
+  for (const n of text.match(GIT_ENV_NAMES) ?? []) noteEnv(n, undefined, state);
+}
+const ASSIGNERS = new Set(['export', 'declare', 'typeset', 'local', 'readonly', 'read', 'unset', 'mapfile', 'readarray', 'getopts', 'let']);
+
+// ${HOME:=x}, ${GIT_DIR=x} and (( HOME = 1 )) assign too; they are refused where the lexer meets them.
+function checkExpansionAssign(text, arithmetic) {
+  const re = arithmetic ? /([A-Za-z_]\w*)\s*(\[[^\]]*\])?\s*(<<|>>|[-+*/%&|^])?=(?!=)|(\+\+|--)\s*([A-Za-z_]\w*)|([A-Za-z_]\w*)\s*(\+\+|--)/g : /^([A-Za-z_]\w*):?=/g;
+  for (const m of text.matchAll(re)) {
+    const name = m[1] ?? m[5] ?? m[6];
+    if (GIT_ENV.test(name) && !GIT_ENV_SAFE.test(name)) refuse(`an assignment to ${name} inside ${arithmetic ? '(( ))' : '${…}'} (${ENV_WHY})`);
+  }
+}
+
+// git config: reads and unsets are fine; a write must be of a key on the safe list.
+function checkGitConfig(rest) {
+  const pos = [], opts = [];
+  for (let k = 0; k < rest.length; k++) {
+    const a = rest[k];
+    if (a === '--') { pos.push(...rest.slice(k + 1)); break; }
+    if (['-f', '--file', '--blob', '--type', '--default', '--comment', '--value', '--url'].includes(a)) { k++; continue; }
+    if (a.startsWith('-') && a.length > 1) { opts.push(a); continue; }
+    pos.push(a);
+  }
+  if (opts.some((o) => /^(--get|--get-all|--get-regexp|--get-urlmatch|--get-color|--get-colorbool|--list|-l|--unset|--unset-all|--remove-section)$/.test(o))) return;
+  if (opts.some((o) => /^(-e|--edit|--rename-section)$/.test(o)) || ['edit', 'rename-section'].includes(pos[0])) refuse(`git config ${opts.find((o) => /^(-e|--edit|--rename-section)$/.test(o)) ?? pos[0]} (${CONFIG_WHY})`);
+  if (['list', 'get', 'unset', 'remove-section'].includes(pos[0])) return;
+  const names = pos[0] === 'set' ? pos.slice(1) : pos;
+  if (names.length === 0 || (pos[0] !== 'set' && names.length === 1)) return; // git config <key> reads it
+  if (!gitConfigOk(names[0], names[1])) refuse(`git config ${shown(names[0])} (${CONFIG_WHY})`);
+}
+
+function checkInlineConfig(kv) {
+  const eq = kv.indexOf('=');
+  const key = eq < 0 ? kv : kv.slice(0, eq);
+  if (!gitConfigOk(key, eq < 0 ? undefined : kv.slice(eq + 1))) refuse(`git -c ${shown(key)} (${CONFIG_WHY})`);
+}
+
+// Subcommand options that name a program git runs, more config, or hooks to copy in.
+const GIT_RUNS = {
+  clone: /^(--upload-pack|--config|--template)(=|$)|^-[lsqvn]*[uc]/, fetch: /^--upload-pack(=|$)/, pull: /^--upload-pack(=|$)/,
+  'ls-remote': /^(--upload-pack(=|$)|-u)/, archive: /^--exec(=|$)/, init: /^--template(=|$)/,
+  grep: /^(--open-files-in-pager(=|$)|-[A-Za-z]*O)/, difftool: /^(--extcmd(=|$)|-[A-Za-z]*x)/,
+};
+
 function checkGit(args, state, depth, fromXargs) {
-  let dir = state.cwd, i = 0;
-  const configs = [];
+  state.shared.git = true;
+  if (state.shared.gitEnv) refuse(`git with ${state.shared.gitEnv} set on the same line (${ENV_WHY})`);
+  let i = 0;
   for (; i < args.length; i++) {
     const a = args[i];
-    if (a === '-C') { dir = cdTo(dir, args[++i]); continue; }
-    if (a === '-c' || a === '--config-env') { configs.push(args[++i] ?? ''); continue; }
-    if (a.startsWith('--config-env=')) { configs.push(a.slice(13)); continue; }
-    if (['--git-dir', '--work-tree', '--namespace', '--exec-path', '--super-prefix', '--attr-source', '--list-cmds'].includes(a)) { i++; continue; }
-    if (/^--(git-dir|work-tree|namespace|exec-path|super-prefix|attr-source|list-cmds)=/.test(a)) continue;
+    if (a === '-C') { i++; continue; }
+    if (a === '-c') { checkInlineConfig(args[++i] ?? ''); continue; }
+    if (a === '--config-env' || a.startsWith('--config-env=')) refuse(`git --config-env (it reads config from a variable; ${CONFIG_WHY})`);
+    if (a.startsWith('--exec-path=')) refuse('git --exec-path=… (it runs git commands from another folder)');
+    if (['--git-dir', '--work-tree', '--namespace', '--super-prefix', '--attr-source'].includes(a)) { i++; continue; }
+    if (/^--(git-dir|work-tree|namespace|super-prefix|attr-source|list-cmds)=/.test(a)) continue;
     if (/^(-p|--paginate|-P|--no-pager|--bare|--no-replace-objects|--no-lazy-fetch|--literal-pathspecs|--glob-pathspecs|--noglob-pathspecs|--icase-pathspecs|--no-optional-locks|--no-advice|--exec-path|--html-path|--man-path|--info-path|--version|--help|-h|-v)$/.test(a)) continue;
     if (!a.startsWith('-')) break;
     if (opaque(a)) refuse('a git option filled in at run time');
@@ -411,13 +499,11 @@ function checkGit(args, state, depth, fromXargs) {
   const rest = args.slice(i + 1);
   if (sub === 'push') refuse(PUSH_WHY);
   if (sub === 'send-pack' || sub === 'http-push') refuse(`git ${sub} (it writes to a remote; Truman pushes)`);
-  if (['subtree', 'lfs'].includes(sub) && rest.some((w) => w === 'push' || opaque(w))) refuse(`git ${sub} push (Truman pushes)`);
-  if (sub === 'svn' && rest.some((w) => ['dcommit', 'set-tree'].includes(w) || opaque(w))) refuse('git svn dcommit (it pushes)');
-  if (sub === 'config') {
-    const pos = rest.filter((w) => !w.startsWith('-'));
-    const reads = rest.some((w) => /^(--get|--get-all|--get-regexp|--list|-l|--show-origin|--name-only)$/.test(w));
-    if (!reads && pos.length >= 1 && (opaque(pos[0]) || /^(alias|include|includeif)\./i.test(pos[0]))) state.configWrite = true;
-  }
+  if (sub === 'subtree' && rest.some((w) => w === 'push' || opaque(w))) refuse(`git ${sub} push (Truman pushes)`);
+  if (!GIT_BUILTIN.has(sub)) refuse(`git ${sub}, which isn't a built-in git command this guard knows (an alias or an external git-${sub} could push; type the full command)`);
+  const runs = GIT_RUNS[sub];
+  if (runs && rest.some((w) => runs.test(w) || w.startsWith(OPAQUE))) refuse(`git ${sub} with an option that names a program, config or hooks (or one filled in at run time)`);
+  if (sub === 'config') checkGitConfig(rest);
   if (sub === 'submodule' && rest.includes('foreach')) {
     const cmd = rest.slice(rest.indexOf('foreach') + 1).filter((w) => !w.startsWith('--'));
     if (cmd.some(opaque)) refuse('a git submodule foreach command built at run time');
@@ -431,19 +517,6 @@ function checkGit(args, state, depth, fromXargs) {
     });
   }
   if (sub === 'bisect' && rest[0] === 'run') checkSimple(rest.slice(1), { ...state }, depth + 1, true);
-  if (!GIT_BUILTIN.has(sub)) {
-    // An alias (inline with -c, or in the config the cwd sees) can stand for a push.
-    const inline = configs.findLast((c) => c.toLowerCase().startsWith(`alias.${sub.toLowerCase()}=`));
-    if (configs.some((c) => opaque(c) && /^alias\./i.test(c))) refuse('git -c alias.… filled in at run time');
-    if (!inline && state.configWrite) refuse(`git ${sub} after a git config write on the same line (it may be an alias set there)`);
-    if (!inline && !dir) refuse(`git ${sub} from a folder the guard can't tell, so it can't read whether ${sub} is an alias`);
-    const alias = inline ? inline.slice(inline.indexOf('=') + 1) : git(dir, ['config', '--get', `alias.${sub}`]);
-    if (alias) {
-      const inner = { ...state, cwd: dir };
-      if (alias.startsWith('!')) checkLine(alias.slice(1), inner, depth + 1);
-      else checkGit([...configs.flatMap((c) => ['-c', c]), ...alias.split(/\s+/).filter(Boolean), ...rest], inner, depth + 1, fromXargs);
-    } else if (fromXargs) refuse(`git ${sub}, which isn't a git command this guard knows, under xargs, find or a wrapper`);
-  }
 }
 
 // ---------- gh ----------
@@ -705,8 +778,10 @@ function checkSimple(input, state, depth, fromXargs = false, stdin = false) {
       continue;
     }
     if (w[0] === 'time' && w[1] === '-p') { w.splice(0, 2); continue; }
+    if (['for', 'select'].includes(w[0]) && w[1] !== undefined) noteNamed(w[1], state); // for HOME in …
     if (['for', 'select', 'case', '[['].includes(w[0])) return; // a loop's list, a case word or a [[ test ]], not a command
     if (!w.length || !(KEYWORDS.has(w[0]) || /^[A-Za-z_]\w*(\[[^\]]*\])?\+?=/.test(w[0]))) break;
+    noteAssign(w[0], state);
     w.shift();
   }
   if (!w.length) { if (fromXargs) refuse('a command whose name comes from xargs, find or a wrapper'); return; }
@@ -718,6 +793,7 @@ function checkSimple(input, state, depth, fromXargs = false, stdin = false) {
   let rest = w.slice(1);
   const dashed = name.match(/^git-([a-z][\w-]*)$/); // git-push, $(git --exec-path)/git-push
   if (dashed && !['git-lfs', 'git-receive-pack', 'git-upload-pack'].includes(name) || name === 'git-lfs') { rest = [name === 'git-lfs' ? 'lfs' : dashed[1], ...rest]; name = 'git'; }
+  if (ASSIGNERS.has(name) || (name === 'printf' && rest.some((x) => x.startsWith('-v')))) rest.forEach((x) => noteNamed(x, state));
   if (name in REFUSED && REFUSED[name]) refuse(REFUSED[name]);
   if (name === 'alias') { if (rest.some((x) => x.includes('='))) refuse('defining an alias (the guard reads the name, not what it stands for)'); return; }
   if (CODE_FLAGS[name]) checkInlineCode(name, rest);
@@ -856,7 +932,10 @@ export function verdict(command, cwd = process.cwd()) {
     const src = String(command ?? '');
     if (src.includes('\0')) refuse('a NUL character');
     const dir = typeof cwd === 'string' && cwd.startsWith('/') ? cwd : null;
-    checkLine(src, { cwd: dir });
+    const shared = {};
+    checkLine(src, { cwd: dir, shared });
+    // A variable set after the git command (or in a function it calls) still reaches it.
+    if (shared.git && shared.gitEnv) refuse(`git with ${shared.gitEnv} set on the same line (${ENV_WHY})`);
     return null;
   } catch (e) {
     if (e instanceof Refuse) return e.message;

@@ -7,10 +7,12 @@
 //
 // It is also the Reviewer's backstop: Claude Code skips an agent file's frontmatter hooks (the
 // Reviewer's read-only-bash.mjs) while the repo folder isn't trusted, but runs this one, and names
-// the agent in agent_type. For a read-only agent it applies the read-only check too.
+// the agent in agent_type. For a read-only agent it applies the read-only check too, matching the
+// name case-insensitively and with or without a plugin prefix (Reviewer, kitesink:reviewer).
 import { readFileSync } from 'node:fs';
 
 const READ_ONLY_AGENTS = new Set(['reviewer']);
+const agentName = (t) => (typeof t === 'string' ? t.trim().toLowerCase().split(':').pop().trim() : '');
 let why, readOnly = false;
 try {
   const { verdict } = await import('./guard-bash-lib.mjs');
@@ -20,7 +22,7 @@ try {
   // Monitor runs a shell command like Bash does, or opens a WebSocket (no shell, nothing to check).
   const wsOnly = input?.tool_name === 'Monitor' && command === undefined && typeof input?.tool_input?.ws?.url === 'string';
   why = wsOnly ? null : typeof command === 'string' ? verdict(command, input?.cwd) : 'the hook got no command to check';
-  if (!why && !wsOnly && READ_ONLY_AGENTS.has(input?.agent_type)) {
+  if (!why && !wsOnly && READ_ONLY_AGENTS.has(agentName(input?.agent_type))) {
     const ro = await import('./read-only-bash-lib.mjs');
     why = ro.verdict(command);
     readOnly = !!why;

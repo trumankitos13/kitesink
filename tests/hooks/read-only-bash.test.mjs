@@ -50,6 +50,20 @@ test('AST-46#1 the repo-wide guard applies the read-only check only to the revie
   assert.match(runHook(guardCommand(), 'touch notes.txt', { agentType: 'reviewer' }).stderr, /^Blocked for the read-only Reviewer/);
 });
 
+// Claude Code may name the agent with another case or a plugin prefix; the backstop still applies.
+for (const agentType of ['Reviewer', 'REVIEWER', 'kitesink:reviewer', 'Some-Plugin:Reviewer', ' reviewer ']) {
+  test(`AST-46#1 the repo-wide guard treats agent_type ${JSON.stringify(agentType)} as the read-only reviewer`, () => {
+    const r = runHook(guardCommand(), 'touch notes.txt', { agentType });
+    assert.equal(r.status, 2, r.stderr);
+    assert.match(r.stderr, /^Blocked for the read-only Reviewer/);
+  });
+}
+for (const agentType of ['builder', 'kitesink:builder', 'reviewer-helper', 'reviewer:builder']) {
+  test(`AST-46#1 the repo-wide guard leaves agent_type ${JSON.stringify(agentType)} to the deny list only`, () => {
+    assert.equal(runHook(guardCommand(), 'touch notes.txt', { agentType }).status, 0);
+  });
+}
+
 for (const cmd of READS) {
   test(`AST-46#1 reviewer hook allows a read: ${JSON.stringify(cmd)}`, () => {
     const r = runHook(hook, cmd);
