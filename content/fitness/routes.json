@@ -5,8 +5,8 @@
       "slug": "basics",
       "kind": "area",
       "area": "basics",
-      "title": "Training basics: starting out and building a programme · KiteSink Fitness",
-      "description": "Sourced guidance for the first years of lifting: starting out, building a first programme, training for strength or size, choosing loads, warming up and realistic time frames, with key numbers and reference tables.",
+      "title": "Training basics for new lifters · KiteSink Fitness",
+      "description": "Sourced guidance for the first years of lifting: a first programme, choosing loads, warming up and realistic time frames, plus key numbers and tables.",
       "h1": "Training basics: starting out, <em>then building on it.</em>",
       "lead": "Starting out, building a first programme, training for strength or size, choosing loads, warming up, and how long progress takes."
     },
@@ -15,7 +15,7 @@
       "kind": "area",
       "area": "technique",
       "title": "Technique: how to do the main lifts · KiteSink Fitness",
-      "description": "Sourced guidance on lifting technique: bench press, rows, deadlifts, squats and the smaller lifts, breathing and grip, and how to change an ingrained habit, with checklists, key numbers and reference tables.",
+      "description": "Sourced guidance on lifting technique: bench, rows, deadlifts, squats, breathing and grip, and changing an ingrained habit, with key numbers and tables.",
       "h1": "Technique: the main lifts, <em>one cue at a time.</em>",
       "lead": "Bench press, rows, deadlifts, squats and the smaller lifts: set-up, common faults, breathing and grip, and how to change a habit."
     },
@@ -24,7 +24,7 @@
       "kind": "area",
       "area": "hypertrophy",
       "title": "Hypertrophy: training for muscle size · KiteSink Fitness",
-      "description": "Sourced guidance on training for muscle size: volume, effort, load, frequency and recovery, the common mistakes, key numbers and reference tables. Each entry says how well supported it is.",
+      "description": "Sourced guidance on training for muscle size: volume, effort, load, frequency and recovery, common mistakes, key numbers and tables, each entry graded.",
       "h1": "Hypertrophy: training for <em>muscle size.</em>",
       "lead": "Volume, effort, load, frequency and recovery: what the research supports, the common mistakes, and the numbers worth remembering."
     },
@@ -32,8 +32,8 @@
       "slug": "powerlifting",
       "kind": "area",
       "area": "powerlifting",
-      "title": "Powerlifting: a bigger squat, bench press and deadlift · KiteSink Fitness",
-      "description": "Sourced guidance on getting stronger in the squat, bench press and deadlift: programming, effort, technique, accessories and recovery, with key numbers and reference tables.",
+      "title": "Powerlifting: squat, bench and deadlift · KiteSink Fitness",
+      "description": "Sourced guidance on a stronger squat, bench press and deadlift: programming, effort, technique, accessories and recovery, with key numbers and tables.",
       "h1": "Powerlifting: a bigger squat, <em>bench press and deadlift.</em>",
       "lead": "Programming, effort, technique, accessories and recovery for the three competition lifts, with the numbers and tables to plan around."
     },
@@ -41,8 +41,8 @@
       "slug": "meet",
       "kind": "area",
       "area": "meet",
-      "title": "Meet day: your first powerlifting meet, in order · KiteSink Fitness",
-      "description": "A first powerlifting meet in order, from signing up to the drive home: a timeline, a bag checklist, the rules that catch people out, key numbers and reference tables.",
+      "title": "Your first powerlifting meet, in order · KiteSink Fitness",
+      "description": "A first powerlifting meet in order, from signing up to the drive home: a timeline, a bag checklist, the rules that catch people out, and key numbers.",
       "h1": "Meet day: your first competition, <em>in order.</em>",
       "lead": "A timeline from signing up to the drive home and a bag list that remembers your ticks, then the guidance, numbers and tables behind them. Rules differ between federations: check yours."
     },
@@ -50,8 +50,8 @@
       "slug": "conditioning",
       "kind": "area",
       "area": "conditioning",
-      "title": "Conditioning: cardio, intervals and how they fit with lifting · KiteSink Fitness",
-      "description": "Sourced guidance on conditioning: steady cardio, intervals and sprints, what each costs, cardio for fat loss, fasted cardio and fitting it around lifting, with key numbers and reference tables.",
+      "title": "Conditioning: cardio, intervals, lifting · KiteSink Fitness",
+      "description": "Sourced guidance on conditioning: steady cardio, intervals, cardio for fat loss, fasted cardio and fitting it around lifting, with key numbers and tables.",
       "h1": "Conditioning: cardio that <em>fits with lifting.</em>",
       "lead": "Steady work, intervals and sprints: what each does, what it costs, how it fits around lifting, and where to start."
     },
@@ -59,8 +59,8 @@
       "slug": "recovery",
       "kind": "area",
       "area": "recovery",
-      "title": "Recovery: rest, fatigue and coming back after time off · KiteSink Fitness",
-      "description": "Sourced guidance on recovery: overreaching and overtraining, the signs worth watching, rest days and easy days, soreness, layoffs, and training while dieting or under stress, with key numbers and reference tables.",
+      "title": "Recovery: rest, fatigue and time off · KiteSink Fitness",
+      "description": "Sourced guidance on recovery: overreaching, rest and easy days, soreness, layoffs, and training while dieting or stressed, with key numbers and tables.",
       "h1": "Recovery: rest, fatigue <em>and coming back.</em>",
       "lead": "Overreaching and overtraining, the signs worth watching, rest days and easy days, soreness, and returning after a layoff."
     },
@@ -69,7 +69,7 @@
       "kind": "area",
       "area": "nutrition",
       "title": "Nutrition: eating to support training · KiteSink Fitness",
-      "description": "Sourced guidance on eating to support training: energy, protein, macros, timing, supplements and tracking, the common mistakes, key numbers and reference tables.",
+      "description": "Sourced guidance on eating to support training: energy, protein, macros, timing, supplements and tracking, with key numbers and reference tables.",
       "h1": "Nutrition: eating to <em>support training.</em>",
       "lead": "Energy, protein, macros, timing, supplements and tracking: what to eat to support training, and how to track it honestly."
     },
@@ -78,7 +78,7 @@
       "kind": "area",
       "area": "diet",
       "title": "Diet: losing or gaining weight on purpose · KiteSink Fitness",
-      "description": "Sourced guidance on losing or gaining weight on purpose: setting a deficit or a surplus, keeping muscle, hunger, plateaus and pace, with key numbers and reference tables.",
+      "description": "Sourced guidance on losing or gaining weight on purpose: deficits and surpluses, keeping muscle, hunger, plateaus and pace, with key numbers and tables.",
       "h1": "Diet: losing or gaining weight <em>on purpose.</em>",
       "lead": "Setting a deficit or a surplus, keeping muscle, handling hunger and plateaus, and how fast to go."
     },
@@ -86,8 +86,8 @@
       "slug": "bodycomp",
       "kind": "area",
       "area": "bodycomp",
-      "title": "Body composition: fat, lean mass and how to track them · KiteSink Fitness",
-      "description": "Sourced guidance on body composition: fat and lean mass, measuring and tracking, body fat levels, water and stalls, metabolic rate and the limits of muscle gain, with key numbers and reference tables.",
+      "title": "Body composition and how to track it · KiteSink Fitness",
+      "description": "Sourced guidance on body composition: fat and lean mass, tracking, body fat levels, water and stalls, and limits of muscle gain, with key numbers.",
       "h1": "Body composition: fat, lean mass <em>and how to track them.</em>",
       "lead": "What the body is made of, how to measure and track it, body fat levels, water and stalls, metabolic rate, and the limits of muscle gain."
     },
@@ -95,8 +95,8 @@
       "slug": "women",
       "kind": "area",
       "area": "women",
-      "title": "Women: what the training and nutrition research shows · KiteSink Fitness",
-      "description": "Sourced guidance on training and nutrition research in women: how women and men differ, strength and muscle gain, the menstrual cycle and contraception, energy availability, diets and supplements, with key numbers and reference tables.",
+      "title": "Women: training and nutrition research · KiteSink Fitness",
+      "description": "Sourced research on training and nutrition in women: sex differences, strength and muscle gain, the menstrual cycle, energy availability and supplements.",
       "h1": "Women: what the research <em>on women shows.</em>",
       "lead": "How women and men differ, strength and muscle gain, the menstrual cycle and contraception, energy availability, and how to read the research."
     },
@@ -105,7 +105,7 @@
       "kind": "area",
       "area": "health",
       "title": "Health: training for a long working life · KiteSink Fitness",
-      "description": "Sourced guidance on training for health: activity guidelines, aerobic fitness, strength, bones, sleep and the markers worth knowing, with key numbers and reference tables.",
+      "description": "Sourced guidance on training for health: activity guidelines, aerobic fitness, strength, bones, sleep and markers worth knowing, with key numbers and tables.",
       "h1": "Health: training for <em>a long working life.</em>",
       "lead": "Activity guidelines, aerobic fitness, strength, bones, sleep and the markers worth knowing."
     },
@@ -113,14 +113,14 @@
       "slug": "claims",
       "kind": "claims",
       "title": "Fitness claims, checked against the research · KiteSink",
-      "description": "{{n:claims}} common claims about training, eating and health, each with a verdict, the reason, who was studied and the source. Filter by area, verdict, topic or evidence.",
+      "description": "{{n:claims}} common claims about training, eating and health, each with a verdict, the reason, who was studied and the source. Filter by area or evidence.",
       "h1": "{{n:claims}} things <em>people say.</em>",
       "lead": "Common claims about training, eating and health. Each has a verdict, the reason, who was studied, and the paper. Open one to read it."
     },
     {
       "slug": "glossary",
       "kind": "glossary",
-      "title": "Fitness glossary: training and nutrition terms in plain words · KiteSink",
+      "title": "Fitness glossary: training terms in plain words · KiteSink",
       "description": "{{n:terms}} training, nutrition and health terms defined in plain words, from RIR and taper to TDEE and ApoB. Search, or narrow by area.",
       "h1": "{{n:terms}} terms, <em>in plain words.</em>",
       "lead": "Every term the field guide uses, defined once. Search, or narrow by area."
@@ -129,7 +129,7 @@
       "slug": "reference",
       "kind": "reference", "label": "Numbers and tables",
       "title": "Fitness key numbers and reference tables, indexed · KiteSink",
-      "description": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables in the KiteSink fitness field guide. Each links to the page that holds it, with its reasoning and sources.",
+      "description": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables in the KiteSink fitness guide, each linked to its page, reasoning and sources.",
       "h1": "Numbers and tables, <em>indexed.</em>",
       "lead": "An index of the {{n:numbers}} key numbers and {{n:tables}} reference tables. Each links to the area page that holds it, with its reasoning and sources."
     },
